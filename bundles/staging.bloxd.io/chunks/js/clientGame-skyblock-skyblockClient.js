@@ -1,597 +1,597 @@
 export const id = 25;
 export const ids = [25];
 export const modules = {
-  36990: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Nu,
-      h: () => Ou,
-      k: () => cu,
-      n: () => bu
+  36946: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => QG,
+      d: () => KG,
+      g: () => fG,
+      j: () => pG
     });
-    var su = ju(34547),
-      Uu = ju(36992),
-      Zu = ju(36998),
-      Xu = ju(8942),
-      lu = ju(1499),
-      qu = ju(58),
-      fu = ju(65),
-      Cu = ju(1154);
+    var wG = ZG(34472),
+      SG = ZG(36951),
+      LG = ZG(36955),
+      yG = ZG(8759),
+      kG = ZG(1389),
+      UG = ZG(51),
+      YG = ZG(59),
+      VG = ZG(1067);
 
-    function bu() {
-      var uu;
-      return (0, lu.g)(Uu.c, (0, Uu.l)()), (0, Cu.jsx)(Cu.Fragment, {
-        children: null === (uu = (0, Uu.l)()) || void 0 === uu ? void 0 : uu.content
+    function pG() {
+      var GG;
+      return (0, kG.j)(SG.c, (0, SG.l)()), (0, VG.jsx)(VG.Fragment, {
+        children: null === (GG = (0, SG.l)()) || void 0 === GG ? void 0 : GG.content
       })
     }
 
-    function cu(uu) {
-      var Eu;
+    function fG(GG) {
+      var bG;
       let {
-        show: ju
-      } = uu;
-      (0, lu.g)(Uu.c, (0, Uu.l)());
-      const fu = null === (Eu = (0, Uu.l)()) || void 0 === Eu ? void 0 : Eu.menu;
-      return (0, qu.useEffect)((() => {
-        var uu;
-        ju || (null === fu || void 0 === fu || null === (uu = fu.onClose) || void 0 === uu || uu.call(fu), (0, Zu.q)())
-      }), [ju, fu]), (0, qu.useEffect)((() => ju ? (0, Xu.f)(Zu.x, Zu.h) : void 0), [ju]), (0, Cu.jsx)(su.b, {
-        showing: ju,
+        show: ZG
+      } = GG;
+      (0, kG.j)(SG.c, (0, SG.l)());
+      const YG = null === (bG = (0, SG.l)()) || void 0 === bG ? void 0 : bG.menu;
+      return (0, UG.useEffect)((() => {
+        var GG;
+        ZG || (null === YG || void 0 === YG || null === (GG = YG.onClose) || void 0 === GG || GG.call(YG), (0, LG.m)())
+      }), [ZG, YG]), (0, UG.useEffect)((() => ZG ? (0, yG.g)(LG.t, LG.f) : void 0), [ZG]), (0, VG.jsx)(wG.b, {
+        showing: ZG,
         globallyUniqueKey: "clientGameMenu",
-        children: null === fu || void 0 === fu ? void 0 : fu.content
+        children: null === YG || void 0 === YG ? void 0 : YG.content
       })
     }
 
-    function Nu(uu) {
+    function QG(GG) {
       let {
-        placement: Eu = "bottom"
-      } = uu;
-      return (0, Cu.jsx)("div", {
-        id: `clientGameHud-${Eu}`,
+        placement: bG = "bottom"
+      } = GG;
+      return (0, VG.jsx)("div", {
+        id: `clientGameHud-${bG}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function Ou(uu) {
+    function KG(GG) {
       let {
-        children: Eu,
-        placement: ju = "bottom"
-      } = uu;
-      const [su, Uu] = (0, qu.useState)(null);
-      return (0, qu.useEffect)((() => {
-        Uu(document.getElementById(`clientGameHud-${ju}`))
-      }), [ju]), su ? (0, fu.createPortal)(Eu, su) : null
+        children: bG,
+        placement: ZG = "bottom"
+      } = GG;
+      const [wG, SG] = (0, UG.useState)(null);
+      return (0, UG.useEffect)((() => {
+        SG(document.getElementById(`clientGameHud-${ZG}`))
+      }), [ZG]), wG ? (0, YG.createPortal)(bG, wG) : null
     }
   },
-  4997: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => hu,
-      e: () => Du
+  4851: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => dG,
+      e: () => JG
     });
-    var su = ju(1105),
-      Uu = ju.n(su),
-      Zu = ju(58),
-      Xu = ju(1244),
-      lu = ju(4999),
-      qu = ju(1964),
-      fu = ju(2543),
-      Cu = ju(5003),
-      bu = ju(1154);
-    const cu = new WeakMap;
-    let Nu = 0;
+    var wG = ZG(1006),
+      SG = ZG.n(wG),
+      LG = ZG(51),
+      yG = ZG(1151),
+      kG = ZG(4858),
+      UG = ZG(1876),
+      YG = ZG(2409),
+      VG = ZG(4864),
+      pG = ZG(1067);
+    const fG = new WeakMap;
+    let QG = 0;
 
-    function Ou(uu) {
-      let Eu = cu.get(uu);
-      return void 0 === Eu && (Eu = Nu++, cu.set(uu, Eu)), Eu
+    function KG(GG) {
+      let bG = fG.get(GG);
+      return void 0 === bG && (bG = QG++, fG.set(GG, bG)), bG
     }
 
-    function Yu(uu) {
+    function hG(GG) {
       let {
-        piece: Eu
-      } = uu;
-      return "space" === Eu.kind ? (0, bu.jsx)(bu.Fragment, {
-        children: Eu.text
-      }) : (0, bu.jsx)("span", {
+        piece: bG
+      } = GG;
+      return "space" === bG.kind ? (0, pG.jsx)(pG.Fragment, {
+        children: bG.text
+      }) : (0, pG.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${Eu.delayMs}ms`
+          "--word-delay": `${bG.delayMs}ms`
         },
-        children: (0, bu.jsx)(lu.e, {
-          text: "icon" === Eu.kind ? `[[${Eu.icon}]]` : Eu.text
+        children: (0, pG.jsx)(kG.b, {
+          text: "icon" === bG.kind ? `[[${bG.icon}]]` : bG.text
         })
       })
     }
 
-    function hu(uu) {
+    function dG(GG) {
       let {
-        display: Eu
-      } = uu;
+        display: bG
+      } = GG;
       const {
-        selectedLanguage: ju
-      } = (0, Xu.A)(), su = (0, Zu.useMemo)((() => (0, Cu.e)((0, Cu.i)(Eu).plan.pieces)), [Eu, ju.code]);
-      return (0, bu.jsxs)("div", {
-        className: Uu()("Dialogue", {
-          DialogueAnimateIn: !1 !== Eu.animateIn
+        selectedLanguage: ZG
+      } = (0, yG.w)(), wG = (0, LG.useMemo)((() => (0, VG.d)((0, VG.f)(bG).plan.pieces)), [bG, ZG.code]);
+      return (0, pG.jsxs)("div", {
+        className: SG()("Dialogue", {
+          DialogueAnimateIn: !1 !== bG.animateIn
         }),
-        children: [Eu.speakerName && (0, bu.jsx)(qu.d, {
-          text: Eu.speakerName,
+        children: [bG.speakerName && (0, pG.jsx)(UG.c, {
+          text: bG.speakerName,
           className: "DialogueSpeaker"
-        }), (0, bu.jsx)("p", {
+        }), (0, pG.jsx)("p", {
           className: "DialogueLine",
-          children: su.map(((uu, Eu) => 1 === uu.length && "space" === uu[0].kind ? uu[0].text : (0, bu.jsx)("span", {
+          children: wG.map(((GG, bG) => 1 === GG.length && "space" === GG[0].kind ? GG[0].text : (0, pG.jsx)("span", {
             className: "DialogueGlue",
-            children: uu.map(((uu, Eu) => (0, bu.jsx)(Yu, {
-              piece: uu
-            }, Eu)))
-          }, Eu)))
+            children: GG.map(((GG, bG) => (0, pG.jsx)(hG, {
+              piece: GG
+            }, bG)))
+          }, bG)))
         })]
       })
     }
-    const Du = (0, Zu.memo)((function() {
-      const uu = (0, fu.h)("dialogue");
-      return (0, bu.jsx)("div", {
+    const JG = (0, LG.memo)((function() {
+      const GG = (0, YG.i)("dialogue");
+      return (0, pG.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: uu && (0, bu.jsx)(hu, {
-          display: uu
-        }, Ou(uu))
+        children: GG && (0, pG.jsx)(dG, {
+          display: GG
+        }, KG(GG))
       })
     }))
   },
-  4999: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => lu
+  4858: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => kG
     });
-    var su = ju(58),
-      Uu = ju(337),
-      Zu = ju(1971),
-      Xu = ju(1154);
+    var wG = ZG(51),
+      SG = ZG(333),
+      LG = ZG(1889),
+      yG = ZG(1067);
 
-    function lu(uu) {
+    function kG(GG) {
       let {
-        text: Eu
-      } = uu;
-      const ju = [];
-      let lu = "";
-      return (0, Uu.gc)(Eu).forEach(((uu, Eu) => {
-        if ("string" === typeof uu || !(0, Zu.h)(uu.icon)) return void(lu += "string" === typeof uu ? uu : uu.icon);
-        const Uu = Math.max(0, lu.trimEnd().search(/\S{1,12}$/));
-        ju.push((0, Xu.jsxs)(su.Fragment, {
-          children: [lu.slice(0, Uu), (0, Xu.jsxs)("span", {
+        text: bG
+      } = GG;
+      const ZG = [];
+      let kG = "";
+      return (0, SG.xc)(bG).forEach(((GG, bG) => {
+        if ("string" === typeof GG || !(0, LG.e)(GG.icon)) return void(kG += "string" === typeof GG ? GG : GG.icon);
+        const SG = Math.max(0, kG.trimEnd().search(/\S{1,12}$/));
+        ZG.push((0, yG.jsxs)(wG.Fragment, {
+          children: [kG.slice(0, SG), (0, yG.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [lu.slice(Uu), (0, Xu.jsx)("span", {
+            children: [kG.slice(SG), (0, yG.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": uu.icon,
-              children: (0, Xu.jsx)(Zu.d, {
-                itemName: uu.icon,
+              "aria-label": GG.icon,
+              children: (0, yG.jsx)(LG.b, {
+                itemName: GG.icon,
                 amount: 0
               })
             })]
           })]
-        }, Eu)), lu = ""
-      })), ju.push(lu), (0, Xu.jsx)(Xu.Fragment, {
-        children: ju
+        }, bG)), kG = ""
+      })), ZG.push(kG), (0, yG.jsx)(yG.Fragment, {
+        children: ZG
       })
     }
   },
-  34547: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Zu
+  34472: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => LG
     });
-    var su = ju(4723),
-      Uu = ju(4726);
+    var wG = ZG(4558),
+      SG = ZG(4561);
 
-    function Zu(uu) {
+    function LG(GG) {
       let {
-        children: Eu,
-        showing: ju,
-        globallyUniqueKey: Zu,
-        alwaysMountChildren: Xu = !1,
-        doGameplayStartStopOnShow: lu = !0,
-        keepsMovement: qu = !1
-      } = uu;
-      return (0, Uu.e)(!0, ju, Zu, qu), (0, su.e)(lu, ju), ju || Xu ? Eu : null
+        children: bG,
+        showing: ZG,
+        globallyUniqueKey: LG,
+        alwaysMountChildren: yG = !1,
+        doGameplayStartStopOnShow: kG = !0,
+        keepsMovement: UG = !1
+      } = GG;
+      return (0, SG.e)(!0, ZG, LG, UG), (0, wG.d)(kG, ZG), ZG || yG ? bG : null
     }
   },
-  5003: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Vu,
-      i: () => Ku
+  4864: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => lG,
+      f: () => cG
     });
-    var su = ju(5011),
-      Uu = ju(337);
-    const Zu = 120,
-      Xu = 260,
-      lu = 1.15,
-      qu = 1.2,
-      fu = 2,
-      Cu = 1.08,
-      bu = .8,
-      cu = .95,
-      Nu = 8,
-      Ou = "[\"')\\]\u300d\u300f\uff09]*",
-      Yu = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Ou}$`),
-      hu = new RegExp(`[?\uff1f]${Ou}$`),
-      Du = new RegExp(`[!\uff01]${Ou}$`),
-      gu = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      Mu = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      eu = new RegExp(`[${Mu}]`),
-      Gu = new RegExp(`[${Mu}]|[^${Mu}]+`, "g"),
-      pu = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var wG = ZG(4871),
+      SG = ZG(333);
+    const LG = 120,
+      yG = 260,
+      kG = 1.15,
+      UG = 1.2,
+      YG = 2,
+      VG = 1.08,
+      pG = .8,
+      fG = .95,
+      QG = 8,
+      KG = "[\"')\\]\u300d\u300f\uff09]*",
+      hG = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${KG}$`),
+      dG = new RegExp(`[?\uff1f]${KG}$`),
+      JG = new RegExp(`[!\uff01]${KG}$`),
+      rG = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      zG = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      EG = new RegExp(`[${zG}]`),
+      oG = new RegExp(`[${zG}]|[^${zG}]+`, "g"),
+      XG = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function wu(uu) {
-      let Eu = 2166136261;
-      for (let ju = 0; ju < uu.length; ju++) Eu ^= uu.charCodeAt(ju), Eu = Math.imul(Eu, 16777619);
-      return (Eu >>> 0) / 4294967295 * 2 - 1
+    function uG(GG) {
+      let bG = 2166136261;
+      for (let ZG = 0; ZG < GG.length; ZG++) bG ^= GG.charCodeAt(ZG), bG = Math.imul(bG, 16777619);
+      return (bG >>> 0) / 4294967295 * 2 - 1
     }
 
-    function Ju(uu) {
-      var Eu;
-      if (eu.test(uu)) return 1;
-      const ju = uu.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        su = ju.replace(/[^0-9]/g, "");
-      if (su.length > 0 && !/\p{L}/u.test(ju)) return Math.min(su.length, 4);
-      const Uu = null !== (Eu = ju.match(pu)) && void 0 !== Eu ? Eu : [];
-      if (0 === Uu.length) {
-        var Zu, Xu;
-        const uu = null !== (Zu = null === (Xu = ju.match(/\p{L}/gu)) || void 0 === Xu ? void 0 : Xu.length) && void 0 !== Zu ? Zu : 0;
-        return 0 === uu ? 0 : Math.min(Math.max(1, Math.round(uu / 2.5)), Nu)
+    function iG(GG) {
+      var bG;
+      if (EG.test(GG)) return 1;
+      const ZG = GG.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        wG = ZG.replace(/[^0-9]/g, "");
+      if (wG.length > 0 && !/\p{L}/u.test(ZG)) return Math.min(wG.length, 4);
+      const SG = null !== (bG = ZG.match(XG)) && void 0 !== bG ? bG : [];
+      if (0 === SG.length) {
+        var LG, yG;
+        const GG = null !== (LG = null === (yG = ZG.match(/\p{L}/gu)) || void 0 === yG ? void 0 : yG.length) && void 0 !== LG ? LG : 0;
+        return 0 === GG ? 0 : Math.min(Math.max(1, Math.round(GG / 2.5)), QG)
       }
-      const lu = ju.replace(/[^\p{L}]/gu, ""),
-        qu = Uu.length > 1 && "e" === Uu.at(-1) && lu.endsWith("e") && !lu.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(uu.replace(/[^\p{L}]/gu, ""));
-      return Math.min(Uu.length - (qu ? 1 : 0), Nu)
+      const kG = ZG.replace(/[^\p{L}]/gu, ""),
+        UG = SG.length > 1 && "e" === SG.at(-1) && kG.endsWith("e") && !kG.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(GG.replace(/[^\p{L}]/gu, ""));
+      return Math.min(SG.length - (UG ? 1 : 0), QG)
     }
 
-    function du(uu) {
-      return uu.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function CG(GG) {
+      return GG.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function au(uu) {
-      const Eu = uu.replace(/[^\p{L}]/gu, "");
-      return Eu.length >= 2 && Eu === Eu.toUpperCase() && Eu !== Eu.toLowerCase()
+    function WG(GG) {
+      const bG = GG.replace(/[^\p{L}]/gu, "");
+      return bG.length >= 2 && bG === bG.toUpperCase() && bG !== bG.toLowerCase()
     }
 
-    function Pu(uu, Eu) {
-      var ju;
-      const Nu = Eu && (0, su.l)(Eu),
-        Ou = null !== (ju = null === Nu || void 0 === Nu ? void 0 : Nu.syllableMs) && void 0 !== ju ? ju : su.e,
-        Mu = function(uu) {
-          const Eu = [];
-          for (const su of (0, Uu.gc)(uu))
-            if ("string" === typeof su)
-              for (const uu of su.split(/(\s+)/)) {
-                if ("" === uu) continue;
-                if (/^\s+$/.test(uu)) {
-                  Eu.push({
+    function mG(GG, bG) {
+      var ZG;
+      const QG = bG && (0, wG.i)(bG),
+        KG = null !== (ZG = null === QG || void 0 === QG ? void 0 : QG.syllableMs) && void 0 !== ZG ? ZG : wG.d,
+        zG = function(GG) {
+          const bG = [];
+          for (const wG of (0, SG.xc)(GG))
+            if ("string" === typeof wG)
+              for (const GG of wG.split(/(\s+)/)) {
+                if ("" === GG) continue;
+                if (/^\s+$/.test(GG)) {
+                  bG.push({
                     kind: "space",
-                    text: uu
+                    text: GG
                   });
                   continue
                 }
-                if (!eu.test(uu)) {
-                  Eu.push({
+                if (!EG.test(GG)) {
+                  bG.push({
                     kind: "word",
-                    text: uu,
+                    text: GG,
                     delayMs: 0
                   });
                   continue
                 }
-                let su = !0;
-                for (const Uu of null !== (ju = uu.match(Gu)) && void 0 !== ju ? ju : []) {
-                  var ju;
-                  const uu = Eu.at(-1);
-                  su || "word" !== (null === uu || void 0 === uu ? void 0 : uu.kind) || eu.test(Uu) || /[\p{L}\p{N}]/u.test(Uu) ? (su || Eu.push({
+                let wG = !0;
+                for (const SG of null !== (ZG = GG.match(oG)) && void 0 !== ZG ? ZG : []) {
+                  var ZG;
+                  const GG = bG.at(-1);
+                  wG || "word" !== (null === GG || void 0 === GG ? void 0 : GG.kind) || EG.test(SG) || /[\p{L}\p{N}]/u.test(SG) ? (wG || bG.push({
                     kind: "space",
                     text: "\u200b"
-                  }), Eu.push({
+                  }), bG.push({
                     kind: "word",
-                    text: Uu,
+                    text: SG,
                     delayMs: 0
-                  }), su = !1) : uu.text += Uu
+                  }), wG = !1) : GG.text += SG
                 }
-              } else Eu.push({
+              } else bG.push({
                 kind: "icon",
-                text: su.icon,
+                text: wG.icon,
                 delayMs: 0
               });
-          return Eu
-        }(uu),
-        pu = [];
-      let Pu = [];
-      for (const su of Mu) "space" !== su.kind && (Pu.push(su), Yu.test(su.text) && (pu.push(Pu), Pu = []));
-      pu.push(Pu);
-      const ou = [];
-      let ku = 0;
-      for (const su of pu) {
-        var mu, vu;
-        const uu = null !== (mu = null === (vu = su.at(-1)) || void 0 === vu ? void 0 : vu.text) && void 0 !== mu ? mu : "",
-          Eu = hu.test(uu),
-          ju = Du.test(uu),
-          Uu = su.map((uu => "word" === uu.kind ? Ju(uu.text) : 1)),
-          Mu = Uu.findLastIndex((uu => uu > 0));
-        for (const [hu, Du] of su.entries()) {
-          const uu = "word" === Du.kind,
-            su = Uu[hu];
-          Du.delayMs = ku;
-          for (let Uu = 0; Nu && Uu < su; Uu++) {
+          return bG
+        }(GG),
+        XG = [];
+      let mG = [];
+      for (const wG of zG) "space" !== wG.kind && (mG.push(wG), hG.test(wG.text) && (XG.push(mG), mG = []));
+      XG.push(mG);
+      const IG = [];
+      let FG = 0;
+      for (const wG of XG) {
+        var vG, aG;
+        const GG = null !== (vG = null === (aG = wG.at(-1)) || void 0 === aG ? void 0 : aG.text) && void 0 !== vG ? vG : "",
+          bG = dG.test(GG),
+          ZG = JG.test(GG),
+          SG = wG.map((GG => "word" === GG.kind ? iG(GG.text) : 1)),
+          zG = SG.findLastIndex((GG => GG > 0));
+        for (const [dG, JG] of wG.entries()) {
+          const GG = "word" === JG.kind,
+            wG = SG[dG];
+          JG.delayMs = FG;
+          for (let SG = 0; QG && SG < wG; SG++) {
             const {
-              intonation: Zu
-            } = Nu;
-            let Xu = Mu > 0 ? -Zu.declineSemitones * (hu / Mu) : 0;
-            Xu += wu(`${du(Du.text)}|${Uu}`) * Zu.variationSemitones;
-            const Yu = Math.min(1, Zu.variationSemitones);
-            let gu = Nu.glideSemitones,
-              eu = 1;
-            ju && (Xu += Zu.exclaimLiftSemitones, eu *= lu), Eu && hu === Mu && (Xu += Zu.questionRiseSemitones * (su > 1 ? .5 + .5 * Uu / (su - 1) : 1), Uu === su - 1 && (gu = Math.abs(gu) + Zu.questionRiseSemitones / 2)), uu && au(Du.text) && (Xu += fu * Yu, eu *= qu), su > 1 && 0 === Uu && (Xu += bu * Yu, eu *= Cu), ou.push({
-              atMs: ku + Uu * Ou,
-              semitones: Xu,
-              glideSemitones: gu,
-              durationMs: Uu < su - 1 ? Math.min(Nu.durationMs, Ou * cu) : Nu.durationMs,
-              level: eu
+              intonation: LG
+            } = QG;
+            let yG = zG > 0 ? -LG.declineSemitones * (dG / zG) : 0;
+            yG += uG(`${CG(JG.text)}|${SG}`) * LG.variationSemitones;
+            const hG = Math.min(1, LG.variationSemitones);
+            let rG = QG.glideSemitones,
+              EG = 1;
+            ZG && (yG += LG.exclaimLiftSemitones, EG *= kG), bG && dG === zG && (yG += LG.questionRiseSemitones * (wG > 1 ? .5 + .5 * SG / (wG - 1) : 1), SG === wG - 1 && (rG = Math.abs(rG) + LG.questionRiseSemitones / 2)), GG && WG(JG.text) && (yG += YG * hG, EG *= UG), wG > 1 && 0 === SG && (yG += pG * hG, EG *= VG), IG.push({
+              atMs: FG + SG * KG,
+              semitones: yG,
+              glideSemitones: rG,
+              durationMs: SG < wG - 1 ? Math.min(QG.durationMs, KG * fG) : QG.durationMs,
+              level: EG
             })
           }
-          ku += su * Ou + (Yu.test(Du.text) ? Xu : gu.test(Du.text) ? Zu : 0)
+          FG += wG * KG + (hG.test(JG.text) ? yG : rG.test(JG.text) ? LG : 0)
         }
       }
       return {
-        pieces: Mu.map((uu => "space" === uu.kind ? uu : "icon" === uu.kind ? {
+        pieces: zG.map((GG => "space" === GG.kind ? GG : "icon" === GG.kind ? {
           kind: "icon",
-          icon: uu.text,
-          delayMs: uu.delayMs
+          icon: GG.text,
+          delayMs: GG.delayMs
         } : {
           kind: "word",
-          text: uu.text,
-          delayMs: uu.delayMs
+          text: GG.text,
+          delayMs: GG.delayMs
         })),
-        blips: ou
+        blips: IG
       }
     }
-    var ou = ju(1244),
-      ku = ju(1303),
-      mu = ju(1995);
+    var IG = ZG(1151),
+      FG = ZG(1204),
+      vG = ZG(1903);
 
-    function vu(uu) {
-      if ("string" === typeof uu) return uu;
-      const Eu = ku.h.get().getCurrentLanguageCode();
-      return (0, ou.u)(Eu, uu.translationKey, (0, ou.r)(uu.params, mu.e.shown))
+    function aG(GG) {
+      if ("string" === typeof GG) return GG;
+      const bG = FG.d.get().getCurrentLanguageCode();
+      return (0, IG.o)(bG, GG.translationKey, (0, IG.k)(GG.params, vG.b.shown))
     }
 
-    function Ku(uu) {
-      const Eu = void 0 === uu.voice ? null : (0, su.o)(uu.voice),
-        ju = Eu && (0, su.l)(Eu);
+    function cG(GG) {
+      const bG = void 0 === GG.voice ? null : (0, wG.j)(GG.voice),
+        ZG = bG && (0, wG.i)(bG);
       return {
-        plan: Pu(vu(uu.line), ju),
-        synth: ju
+        plan: mG(aG(GG.line), ZG),
+        synth: ZG
       }
     }
 
-    function Vu(uu) {
-      const Eu = [];
-      let ju = [];
-      for (const [Uu, Zu] of uu.entries()) {
-        var su;
-        "space" === Zu.kind && (" " !== Zu.text || "icon" !== (null === (su = uu[Uu + 1]) || void 0 === su ? void 0 : su.kind)) ? (ju.length > 0 && Eu.push(ju), Eu.push([Zu]), ju = []) : ju.push(Zu)
+    function lG(GG) {
+      const bG = [];
+      let ZG = [];
+      for (const [SG, LG] of GG.entries()) {
+        var wG;
+        "space" === LG.kind && (" " !== LG.text || "icon" !== (null === (wG = GG[SG + 1]) || void 0 === wG ? void 0 : wG.kind)) ? (ZG.length > 0 && bG.push(ZG), bG.push([LG]), ZG = []) : ZG.push(LG)
       }
-      return ju.length > 0 && Eu.push(ju), Eu
+      return ZG.length > 0 && bG.push(ZG), bG
     }
   },
-  8942: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Zu,
-      f: () => Uu
+  8759: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => LG,
+      g: () => SG
     });
-    let su = null;
-    const Uu = function(uu) {
-        const Eu = {
-          cycle: uu,
+    let wG = null;
+    const SG = function(GG) {
+        const bG = {
+          cycle: GG,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return su = Eu, () => {
-          su === Eu && (su = null)
+        return wG = bG, () => {
+          wG === bG && (wG = null)
         }
       },
-      Zu = () => {
-        var uu;
-        return null !== (uu = su) && void 0 !== uu && uu.canCycle() ? su.cycle : null
+      LG = () => {
+        var GG;
+        return null !== (GG = wG) && void 0 !== GG && GG.canCycle() ? wG.cycle : null
       }
   },
-  36998: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Zu,
-      h: () => Yu,
-      j: () => hu,
-      k: () => lu,
-      o: () => cu,
-      q: () => Du,
-      r: () => bu,
-      t: () => Mu,
-      x: () => Ou,
-      y: () => gu
+  36955: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => LG,
+      f: () => hG,
+      h: () => dG,
+      j: () => kG,
+      k: () => fG,
+      m: () => JG,
+      p: () => pG,
+      r: () => zG,
+      t: () => KG,
+      x: () => rG
     });
-    var su = ju(22),
-      Uu = ju(24);
-    const Zu = "clientGameInventoryButtonsChanged",
-      Xu = new Map;
+    var wG = ZG(17),
+      SG = ZG(19);
+    const LG = "clientGameInventoryButtonsChanged",
+      yG = new Map;
 
-    function lu() {
-      return [...Xu.values()].sort(((uu, Eu) => {
-        var ju, su;
-        return (null !== (ju = uu.order) && void 0 !== ju ? ju : 0) - (null !== (su = Eu.order) && void 0 !== su ? su : 0)
+    function kG() {
+      return [...yG.values()].sort(((GG, bG) => {
+        var ZG, wG;
+        return (null !== (ZG = GG.order) && void 0 !== ZG ? ZG : 0) - (null !== (wG = bG.order) && void 0 !== wG ? wG : 0)
       }))
     }
-    let qu = null;
+    let UG = null;
 
-    function fu(uu) {
-      qu = uu
+    function YG(GG) {
+      UG = GG
     }
-    let Cu = !1;
+    let VG = !1;
 
-    function bu(uu) {
-      Cu = !0;
+    function pG(GG) {
+      VG = !0;
       try {
-        uu.onClick()
+        GG.onClick()
       } finally {
-        Cu = !1
+        VG = !1
       }
-      uu.panel && "clientGame" === su.d.get("openInGameMenuName") && fu(uu.id)
+      GG.panel && "clientGame" === wG.e.get("openInGameMenuName") && YG(GG.id)
     }
 
-    function cu() {
-      return Cu
+    function fG() {
+      return VG
     }
 
-    function Nu() {
-      return lu().filter((uu => uu.panel && !uu.disabled))
+    function QG() {
+      return kG().filter((GG => GG.panel && !GG.disabled))
     }
 
-    function Ou(uu) {
-      const Eu = Nu(),
-        ju = Eu.findIndex((uu => uu.id === qu));
-      return !(ju < 0 || Eu.length < 2) && (bu(Eu[(ju + uu + Eu.length) % Eu.length]), !0)
+    function KG(GG) {
+      const bG = QG(),
+        ZG = bG.findIndex((GG => GG.id === UG));
+      return !(ZG < 0 || bG.length < 2) && (pG(bG[(ZG + GG + bG.length) % bG.length]), !0)
     }
 
-    function Yu() {
-      return null !== qu && Nu().length > 1
+    function hG() {
+      return null !== UG && QG().length > 1
     }
 
-    function hu() {
-      fu(null)
+    function dG() {
+      YG(null)
     }
 
-    function Du() {
-      "inventory" !== su.d.get("openInGameMenuName") && fu(null)
+    function JG() {
+      "inventory" !== wG.e.get("openInGameMenuName") && YG(null)
     }
 
-    function gu() {
-      const uu = qu;
-      return fu(null), uu
+    function rG() {
+      const GG = UG;
+      return YG(null), GG
     }
 
-    function Mu(uu) {
-      return Xu.set(uu.id, uu), Uu.h.TY(Zu, lu(), !0), () => {
-        Xu.get(uu.id) === uu && (Xu.delete(uu.id), Uu.h.TY(Zu, lu()))
+    function zG(GG) {
+      return yG.set(GG.id, GG), SG.l.xh(LG, kG(), !0), () => {
+        yG.get(GG.id) === GG && (yG.delete(GG.id), SG.l.xh(LG, kG()))
       }
     }
   },
-  36992: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => lu,
-      e: () => hu,
-      g: () => Du,
-      k: () => cu,
-      l: () => fu,
-      m: () => Yu,
-      n: () => Nu,
-      o: () => Cu
+  36951: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => kG,
+      f: () => dG,
+      i: () => JG,
+      j: () => fG,
+      l: () => YG,
+      m: () => hG,
+      n: () => QG,
+      q: () => VG
     });
-    var su = ju(22),
-      Uu = ju(24),
-      Zu = ju(1343),
-      Xu = ju(36998);
-    const lu = "clientGameUiChanged";
-    let qu = null;
+    var wG = ZG(17),
+      SG = ZG(19),
+      LG = ZG(1251),
+      yG = ZG(36955);
+    const kG = "clientGameUiChanged";
+    let UG = null;
 
-    function fu() {
-      return qu
+    function YG() {
+      return UG
     }
 
-    function Cu(uu, Eu) {
-      const ju = {
-        content: uu,
-        menu: Eu
+    function VG(GG, bG) {
+      const ZG = {
+        content: GG,
+        menu: bG
       };
-      return qu = ju, Uu.h.TY(lu, qu, !0), () => {
-        qu === ju && (qu = null, Ou = !1, hu(), Uu.h.TY(lu, null))
+      return UG = ZG, SG.l.xh(kG, UG, !0), () => {
+        UG === ZG && (UG = null, KG = !1, dG(), SG.l.xh(kG, null))
       }
     }
-    let bu = null;
+    let pG = null;
 
-    function cu() {
-      return bu
+    function fG() {
+      return pG
     }
 
-    function Nu(uu) {
-      return bu = uu, () => {
-        bu === uu && (bu = null)
+    function QG(GG) {
+      return pG = GG, () => {
+        pG === GG && (pG = null)
       }
     }
-    let Ou = !1;
+    let KG = !1;
 
-    function Yu() {
-      const uu = su.d.get("openInGameMenuName");
-      "clientGame" !== uu && (Ou = "inventory" === uu), (0, Xu.o)() || (0, Xu.j)(), (0, Zu.t)(Zu.b), su.d.set({
+    function hG() {
+      const GG = wG.e.get("openInGameMenuName");
+      "clientGame" !== GG && (KG = "inventory" === GG), (0, yG.k)() || (0, yG.h)(), (0, LG.z)(LG.e), wG.e.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function hu() {
-      gu(!1)
+    function dG() {
+      rG(!1)
     }
 
-    function Du() {
-      gu(Ou)
+    function JG() {
+      rG(KG)
     }
 
-    function gu(uu) {
-      "clientGame" === su.d.get("openInGameMenuName") && su.d.set({
-        openInGameMenuName: uu ? "inventory" : null
-      }), uu || (0, Xu.j)(), Ou = !1
+    function rG(GG) {
+      "clientGame" === wG.e.get("openInGameMenuName") && wG.e.set({
+        openInGameMenuName: GG ? "inventory" : null
+      }), GG || (0, yG.h)(), KG = !1
     }
   },
-  38834: (uu, Eu, ju) => {
-    function su(uu, Eu, ju) {
-      const su = new Set,
-        Uu = new ResizeObserver(ju),
-        Zu = () => {
-          const Eu = new Set(document.querySelectorAll(uu));
-          let Zu = !1;
-          for (const uu of su) Eu.has(uu) || (Uu.unobserve(uu), su.delete(uu), Zu = !0);
-          for (const uu of Eu) su.has(uu) || (Uu.observe(uu), Xu.observe(uu, {
+  38925: (GG, bG, ZG) => {
+    function wG(GG, bG, ZG) {
+      const wG = new Set,
+        SG = new ResizeObserver(ZG),
+        LG = () => {
+          const bG = new Set(document.querySelectorAll(GG));
+          let LG = !1;
+          for (const GG of wG) bG.has(GG) || (SG.unobserve(GG), wG.delete(GG), LG = !0);
+          for (const GG of bG) wG.has(GG) || (SG.observe(GG), yG.observe(GG, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), su.add(uu));
-          Zu && ju()
+          }), wG.add(GG));
+          LG && ZG()
         },
-        Xu = new MutationObserver((Eu => {
-          Eu.some((uu => "attributes" === uu.type)) && ju(), Eu.some((Eu => function(uu, Eu, ju) {
-            if ("childList" !== uu.type) return !1;
-            for (const su of uu.addedNodes)
-              if (su instanceof Element && (su.matches(Eu) || su.querySelector(Eu))) return !0;
-            for (const su of uu.removedNodes)
-              if (su instanceof Element)
-                for (const uu of ju)
-                  if (su.contains(uu)) return !0;
+        yG = new MutationObserver((bG => {
+          bG.some((GG => "attributes" === GG.type)) && ZG(), bG.some((bG => function(GG, bG, ZG) {
+            if ("childList" !== GG.type) return !1;
+            for (const wG of GG.addedNodes)
+              if (wG instanceof Element && (wG.matches(bG) || wG.querySelector(bG))) return !0;
+            for (const wG of GG.removedNodes)
+              if (wG instanceof Element)
+                for (const GG of ZG)
+                  if (wG.contains(GG)) return !0;
             return !1
-          }(Eu, uu, su))) && Zu()
+          }(bG, GG, wG))) && LG()
         }));
-      Xu.observe(document.body, {
+      yG.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const lu of Eu) Uu.observe(lu);
-      return window.addEventListener("resize", ju), Zu(), ju(), () => {
-        Uu.disconnect(), Xu.disconnect(), window.removeEventListener("resize", ju)
+      for (const kG of bG) SG.observe(kG);
+      return window.addEventListener("resize", ZG), LG(), ZG(), () => {
+        SG.disconnect(), yG.disconnect(), window.removeEventListener("resize", ZG)
       }
     }
-    ju.d(Eu, {
-      e: () => su
+    ZG.d(bG, {
+      c: () => wG
     })
   },
-  9091: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => lu,
-      e: () => qu
+  8926: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => kG,
+      i: () => UG
     });
-    var su = ju(22),
-      Uu = ju(1369),
-      Zu = ju(91);
-    const Xu = {
+    var wG = ZG(17),
+      SG = ZG(1287),
+      LG = ZG(80);
+    const yG = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -634,41 +634,41 @@ export const modules = {
       }
     };
 
-    function lu() {
-      return (0, Zu.isMobile)() && "function" === typeof navigator.vibrate
+    function kG() {
+      return (0, LG.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const qu = new class {
-      constructor(uu) {
-        this.deps = uu, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const UG = new class {
+      constructor(GG) {
+        this.deps = GG, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(uu, Eu) {
-        var ju;
+      play(GG, bG) {
+        var ZG;
         if (!this.deps.enabled()) return;
-        const su = Xu[uu],
-          Uu = null !== Eu && void 0 !== Eu ? Eu : su.pattern;
-        if (null === Uu) return void console.warn("No vibration pattern for", uu);
-        const Zu = this.deps.now();
-        Zu - this.lastAnyAt < 40 && su.priority < this.playingPriority || Zu - (null !== (ju = this.lastAt.get(uu)) && void 0 !== ju ? ju : -1 / 0) < su.minGapMs || Zu < this.playingUntil && su.priority < this.playingPriority || (this.lastAt.set(uu, Zu), this.lastAnyAt = Zu, this.playingUntil = Zu + Uu.reduce(((uu, Eu) => uu + Eu), 0), this.playingPriority = su.priority, this.deps.vibrate(Uu))
+        const wG = yG[GG],
+          SG = null !== bG && void 0 !== bG ? bG : wG.pattern;
+        if (null === SG) return void console.warn("No vibration pattern for", GG);
+        const LG = this.deps.now();
+        LG - this.lastAnyAt < 40 && wG.priority < this.playingPriority || LG - (null !== (ZG = this.lastAt.get(GG)) && void 0 !== ZG ? ZG : -1 / 0) < wG.minGapMs || LG < this.playingUntil && wG.priority < this.playingPriority || (this.lastAt.set(GG, LG), this.lastAnyAt = LG, this.playingUntil = LG + SG.reduce(((GG, bG) => GG + bG), 0), this.playingPriority = wG.priority, this.deps.vibrate(SG))
       }
     }({
-      vibrate: uu => {
-        navigator.vibrate([...uu])
+      vibrate: GG => {
+        navigator.vibrate([...GG])
       },
       now: () => performance.now(),
-      enabled: () => lu() && su.d.get("isTouchScreen") && su.d.get("clientEscMenuOptions").vibration && !(0, Uu.c)()
+      enabled: () => kG() && wG.e.get("isTouchScreen") && wG.e.get("clientEscMenuOptions").vibration && !(0, SG.f)()
     })
   },
-  5011: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Uu,
-      h: () => su,
-      j: () => Zu,
-      l: () => qu,
-      o: () => Xu
+  4871: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => SG,
+      e: () => wG,
+      g: () => LG,
+      i: () => UG,
+      j: () => yG
     });
-    const su = ["sine", "triangle", "square", "sawtooth"],
-      Uu = 55,
-      Zu = {
+    const wG = ["sine", "triangle", "square", "sawtooth"],
+      SG = 55,
+      LG = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -807,39 +807,39 @@ export const modules = {
         }
       };
 
-    function Xu(uu) {
-      return "string" !== typeof uu ? uu : Object.hasOwn(Zu, uu) ? Zu[uu] : null
+    function yG(GG) {
+      return "string" !== typeof GG ? GG : Object.hasOwn(LG, GG) ? LG[GG] : null
     }
 
-    function lu(uu, Eu, ju) {
-      return Math.min(ju, Math.max(Eu, uu))
+    function kG(GG, bG, ZG) {
+      return Math.min(ZG, Math.max(bG, GG))
     }
 
-    function qu(uu) {
-      const Eu = lu(uu.durationMs, 10, 500),
-        ju = lu(uu.attackMs, 0, Eu),
+    function UG(GG) {
+      const bG = kG(GG.durationMs, 10, 500),
+        ZG = kG(GG.attackMs, 0, bG),
         {
-          intonation: Uu
-        } = uu;
+          intonation: SG
+        } = GG;
       return {
-        waveform: su.includes(uu.waveform) ? uu.waveform : "sine",
-        pitchHz: lu(uu.pitchHz, 20, 4e3),
-        glideSemitones: lu(uu.glideSemitones, -24, 24),
-        durationMs: Eu,
-        attackMs: ju,
-        releaseMs: lu(uu.releaseMs, 0, Eu - ju),
-        lowpassHz: null === uu.lowpassHz ? null : lu(uu.lowpassHz, 20, 2e4),
-        volume: lu(uu.volume, 0, 2),
+        waveform: wG.includes(GG.waveform) ? GG.waveform : "sine",
+        pitchHz: kG(GG.pitchHz, 20, 4e3),
+        glideSemitones: kG(GG.glideSemitones, -24, 24),
+        durationMs: bG,
+        attackMs: ZG,
+        releaseMs: kG(GG.releaseMs, 0, bG - ZG),
+        lowpassHz: null === GG.lowpassHz ? null : kG(GG.lowpassHz, 20, 2e4),
+        volume: kG(GG.volume, 0, 2),
         intonation: {
-          variationSemitones: lu(Uu.variationSemitones, 0, 6),
-          declineSemitones: lu(Uu.declineSemitones, 0, 12),
-          questionRiseSemitones: lu(Uu.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: lu(Uu.exclaimLiftSemitones, 0, 12)
+          variationSemitones: kG(SG.variationSemitones, 0, 6),
+          declineSemitones: kG(SG.declineSemitones, 0, 12),
+          questionRiseSemitones: kG(SG.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: kG(SG.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: lu(uu.syllableMs, 25, 200)
+        syllableMs: kG(GG.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

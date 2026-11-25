@@ -1,66 +1,66 @@
 export const id = 40;
 export const ids = [40];
 export const modules = {
-  4886: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      startMemoryDebug: () => Cu
+  4723: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      startMemoryDebug: () => VG
     });
-    var su = ju(3017),
-      Uu = ju(2943);
-    const Zu = 6e4,
-      Xu = 5,
-      lu = ["wasmMainMiB", "wasmWorkersMiB", "jsHeapMiB", "gpuMiB", "footprintMiB", "footprintBudgetMiB", "decodedAudioMiB", "storedChunks", "knownChunks", "liveParticleSystems", "renderDistance", "sheds", "gcFull60s", "gcHighS"];
-    var qu = ju(687);
-    const fu = [];
+    var wG = ZG(2868),
+      SG = ZG(2801);
+    const LG = 6e4,
+      yG = 5,
+      kG = ["wasmMainMiB", "wasmWorkersMiB", "jsHeapMiB", "gpuMiB", "footprintMiB", "footprintBudgetMiB", "decodedAudioMiB", "storedChunks", "knownChunks", "liveParticleSystems", "renderDistance", "sheds", "gcFull60s", "gcHighS"];
+    var UG = ZG(636);
+    const YG = [];
 
-    function Cu() {
-      (0, Uu.r)() && (0, Uu.v)(cu), bu(), setInterval(bu, Zu)
+    function VG() {
+      (0, SG.n)() && (0, SG.u)(fG), pG(), setInterval(pG, LG)
     }
 
-    function bu() {
-      var uu;
+    function pG() {
+      var GG;
       const {
-        client: Eu,
-        playedS: ju,
-        snapshot: Zu
-      } = (0, qu.m)(), Cu = null !== (uu = Zu.wasmMainMiB) && void 0 !== uu ? uu : function() {
+        client: bG,
+        playedS: ZG,
+        snapshot: LG
+      } = (0, UG.o)(), VG = null !== (GG = LG.wasmMainMiB) && void 0 !== GG ? GG : function() {
         try {
-          return (0, qu.A)((0, su.z)().buffer.byteLength)
+          return (0, UG.M)((0, wG.y)().buffer.byteLength)
         } catch {
           return null
         }
-      }(), bu = function(uu) {
+      }(), pG = function(GG) {
         let {
-          client: Eu,
-          playedS: ju,
-          hidden: su,
-          snapshot: Uu
-        } = uu;
-        const Zu = [`client=${null!==Eu&&void 0!==Eu?Eu:"none"}`];
-        null !== ju && Zu.push(`playedS=${ju}`);
-        const Xu = Uu.pageAgeS;
-        "number" === typeof Xu && Zu.push(`pageAgeS=${Xu}`), Zu.push("hidden=" + (su ? 1 : 0));
-        for (const qu of lu) {
-          const uu = Uu[qu];
-          "number" === typeof uu && Number.isFinite(uu) && Zu.push(`${qu}=${uu}`)
+          client: bG,
+          playedS: ZG,
+          hidden: wG,
+          snapshot: SG
+        } = GG;
+        const LG = [`client=${null!==bG&&void 0!==bG?bG:"none"}`];
+        null !== ZG && LG.push(`playedS=${ZG}`);
+        const yG = SG.pageAgeS;
+        "number" === typeof yG && LG.push(`pageAgeS=${yG}`), LG.push("hidden=" + (wG ? 1 : 0));
+        for (const UG of kG) {
+          const GG = SG[UG];
+          "number" === typeof GG && Number.isFinite(GG) && LG.push(`${UG}=${GG}`)
         }
-        return Zu.join(" ")
+        return LG.join(" ")
       }({
-        client: Eu,
-        playedS: ju,
+        client: bG,
+        playedS: ZG,
         hidden: document.hidden,
         snapshot: {
-          ...Zu,
-          wasmMainMiB: Cu
+          ...LG,
+          wasmMainMiB: VG
         }
       });
-      (0, Uu.r)() ? (fu.push(bu), fu.length >= Xu && cu()) : (0, Uu.k)("memory", bu)
+      (0, SG.n)() ? (YG.push(pG), YG.length >= yG && fG()) : (0, SG.j)("memory", pG)
     }
 
-    function cu() {
-      for (const uu of fu.splice(0))(0, Uu.k)("memory", uu)
+    function fG() {
+      for (const GG of YG.splice(0))(0, SG.j)("memory", GG)
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

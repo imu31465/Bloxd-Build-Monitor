@@ -1,553 +1,553 @@
 export const id = 250;
 export const ids = [250];
 export const modules = {
-  41402: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      openCharacterPreview: () => Tu
+  41579: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      openCharacterPreview: () => HG
     });
-    var su = ju(38462),
-      Uu = ju(2893),
-      Zu = ju(628),
-      Xu = ju(37554),
-      lu = ju(2338),
-      qu = ju(37541),
-      fu = ju(40092),
-      Cu = ju(40346),
-      bu = ju(41314),
-      cu = ju(37488),
-      Nu = ju(40503),
-      Ou = ju(37671),
-      Yu = ju(40514),
-      hu = ju(41360),
-      Du = ju(37482),
-      gu = ju(1278),
-      Mu = ju(2329),
-      eu = ju(37644),
-      Gu = ju(37731);
-    class pu {
-      constructor(uu, Eu) {
-        this.pose = uu, this.nodes = void 0, this.nodes = uu.boneNames.map((uu => Eu.get(uu)))
+    var wG = ZG(38503),
+      SG = ZG(2751),
+      LG = ZG(580),
+      yG = ZG(37503),
+      kG = ZG(2228),
+      UG = ZG(37491),
+      YG = ZG(40197),
+      VG = ZG(40467),
+      pG = ZG(41476),
+      fG = ZG(37432),
+      QG = ZG(40629),
+      KG = ZG(37618),
+      hG = ZG(40644),
+      dG = ZG(41527),
+      JG = ZG(37429),
+      rG = ZG(1177),
+      zG = ZG(2222),
+      EG = ZG(37580),
+      oG = ZG(37685);
+    class XG {
+      constructor(GG, bG) {
+        this.pose = GG, this.nodes = void 0, this.nodes = GG.boneNames.map((GG => bG.get(GG)))
       }
-      write(uu) {
-        this.pose.pose(uu);
+      write(GG) {
+        this.pose.pose(GG);
         const {
-          rotations: Eu
+          rotations: bG
         } = this.pose;
-        for (let ju = 0; ju < this.nodes.length; ju++) {
-          const uu = 4 * ju;
-          this.nodes[ju].rotationQuaternion.set(Eu[uu], Eu[uu + 1], Eu[uu + 2], Eu[uu + 3])
+        for (let ZG = 0; ZG < this.nodes.length; ZG++) {
+          const GG = 4 * ZG;
+          this.nodes[ZG].rotationQuaternion.set(bG[GG], bG[GG + 1], bG[GG + 2], bG[GG + 3])
         }
       }
     }
 
-    function wu(uu) {
-      uu.unfreezeWorldMatrix();
-      for (const Eu of uu.getChildren()) wu(Eu)
+    function uG(GG) {
+      GG.unfreezeWorldMatrix();
+      for (const bG of GG.getChildren()) uG(bG)
     }
 
-    function Ju(uu, Eu) {
-      uu.isVisible = Eu;
-      for (const ju of uu.getChildMeshes()) ju.isVisible = Eu
+    function iG(GG, bG) {
+      GG.isVisible = bG;
+      for (const ZG of GG.getChildMeshes()) ZG.isVisible = bG
     }
-    class du {
-      constructor(uu, Eu, ju) {
-        this.vY = uu, this.thinInstMgr = Eu, this.mV = ju, this.modelCache = {}, this.attachmentsByType = {}, this.shownBones = [], this.cosmeticNames = {}
+    class CG {
+      constructor(GG, bG, ZG) {
+        this.Ah = GG, this.thinInstMgr = bG, this.Ql = ZG, this.modelCache = {}, this.attachmentsByType = {}, this.shownBones = [], this.cosmeticNames = {}
       }
-      loadModel(uu, Eu, ju) {
-        const su = (0, eu.f)(uu, Eu);
-        return su in this.modelCache || (this.modelCache[su] = (async () => {
+      loadModel(GG, bG, ZG) {
+        const wG = (0, EG.d)(GG, bG);
+        return wG in this.modelCache || (this.modelCache[wG] = (async () => {
           try {
-            const su = await (0, eu.j)(uu, this.vY),
-              Uu = new Map;
-            for (const uu of su.getNodes()) Uu.set(uu.name, uu);
-            const Zu = (0, eu.b)(null !== Eu && void 0 !== Eu ? Eu : uu, this.vY);
-            (0, eu.k)(su, Zu, {
-              keepTransforms: void 0 !== ju,
-              onProcessedMesh: uu => {
-                (0, eu.l)(uu), this.vY.hsu(uu, !1), uu.isVisible = !1
+            const wG = await (0, EG.f)(GG, this.Ah),
+              SG = new Map;
+            for (const GG of wG.getNodes()) SG.set(GG.name, GG);
+            const LG = (0, EG.c)(null !== bG && void 0 !== bG ? bG : GG, this.Ah);
+            (0, EG.j)(wG, LG, {
+              keepTransforms: void 0 !== ZG,
+              onProcessedMesh: GG => {
+                (0, EG.m)(GG), this.Ah.FwG(GG, !1), GG.isVisible = !1
               }
             });
-            for (const uu of su.rootNodes) wu(uu);
-            const Xu = void 0 === ju ? null : (0, Gu.g)(ju, (uu => {
-              var Eu, ju;
-              return null !== (Eu = null === (ju = Uu.get(uu)) || void 0 === ju ? void 0 : ju.rotationQuaternion) && void 0 !== Eu ? Eu : null
+            for (const GG of wG.rootNodes) uG(GG);
+            const yG = void 0 === ZG ? null : (0, oG.g)(ZG, (GG => {
+              var bG, ZG;
+              return null !== (bG = null === (ZG = SG.get(GG)) || void 0 === ZG ? void 0 : ZG.rotationQuaternion) && void 0 !== bG ? bG : null
             }));
             return {
-              nodesByName: Uu,
-              bones: null === Xu ? null : new pu(Xu, Uu)
+              nodesByName: SG,
+              bones: null === yG ? null : new XG(yG, SG)
             }
-          } catch (Uu) {
-            throw delete this.modelCache[su], console.error(`Failed to load preview attachment ${su}:`, Uu), Uu
+          } catch (SG) {
+            throw delete this.modelCache[wG], console.error(`Failed to load preview attachment ${wG}:`, SG), SG
           }
-        })()), this.modelCache[su]
+        })()), this.modelCache[wG]
       }
-      async update(uu, Eu) {
-        var ju;
+      async update(GG, bG) {
+        var ZG;
         const {
-          thinInstMgr: su,
-          mV: Uu
+          thinInstMgr: wG,
+          Ql: SG
         } = this;
-        this.cosmeticNames[uu] = Eu;
-        const Zu = this.attachmentsByType[uu];
-        if (Zu)
+        this.cosmeticNames[GG] = bG;
+        const LG = this.attachmentsByType[GG];
+        if (LG)
           for (const {
-              mesh: lu,
-              destNode: qu,
-              bones: fu
+              mesh: kG,
+              destNode: UG,
+              bones: YG
             }
-            of Zu) {
-            null !== fu && (0, gu.nb)(this.shownBones, fu), Ju(lu, !1);
-            const uu = su.getNamedNode(Uu, qu);
-            su.detachTransformNodeIfFound(lu, Uu, uu)
+            of LG) {
+            null !== YG && (0, rG.lb)(this.shownBones, YG), iG(kG, !1);
+            const GG = wG.getNamedNode(SG, UG);
+            wG.detachTransformNodeIfFound(kG, SG, GG)
           }
-        this.attachmentsByType[uu] = [];
-        const Xu = (0, Mu.m)(uu, Eu);
-        if (null !== Xu && void 0 !== Xu && null !== (ju = Xu.attachments) && void 0 !== ju && ju.length)
-          for (const lu of Xu.attachments) {
-            let ju;
+        this.attachmentsByType[GG] = [];
+        const yG = (0, zG.k)(GG, bG);
+        if (null !== yG && void 0 !== yG && null !== (ZG = yG.attachments) && void 0 !== ZG && ZG.length)
+          for (const kG of yG.attachments) {
+            let ZG;
             try {
-              ju = await this.loadModel(lu.modelGlb, lu.texture, lu.animation)
+              ZG = await this.loadModel(kG.modelGlb, kG.texture, kG.animation)
             } catch {
               continue
             }
-            if (this.cosmeticNames[uu] !== Eu) return;
-            const Zu = ju.nodesByName.get(lu.modelNode);
-            if (!Zu) {
-              console.error(`Preview attachment node ${lu.modelNode} not found in ${lu.modelGlb}`);
+            if (this.cosmeticNames[GG] !== bG) return;
+            const LG = ZG.nodesByName.get(kG.modelNode);
+            if (!LG) {
+              console.error(`Preview attachment node ${kG.modelNode} not found in ${kG.modelGlb}`);
               continue
             }
-            Ju(Zu, !0), (0, eu.s)(Zu, lu.overlayColour);
-            const Xu = su.getNamedNode(Uu, lu.destNode);
-            su.attachTransformNode(Zu, Uu, Xu), this.attachmentsByType[uu].push({
-              mesh: Zu,
-              destNode: lu.destNode,
-              bones: ju.bones
-            }), null !== ju.bones && this.shownBones.push(ju.bones)
+            iG(LG, !0), (0, EG.r)(LG, kG.overlayColour);
+            const yG = wG.getNamedNode(SG, kG.destNode);
+            wG.attachTransformNode(LG, SG, yG), this.attachmentsByType[GG].push({
+              mesh: LG,
+              destNode: kG.destNode,
+              bones: ZG.bones
+            }), null !== ZG.bones && this.shownBones.push(ZG.bones)
           }
       }
-      writePoses(uu) {
-        for (const Eu of this.shownBones) Eu.write(uu)
+      writePoses(GG) {
+        for (const bG of this.shownBones) bG.write(GG)
       }
     }
-    var au = ju(37568),
-      Pu = (ju(41335), ju(40742), ju(41338), ju(34588));
-    let ou, ku, mu, vu, Ku, Vu, ru, Qu, iu, Wu;
-    const Su = document.createElement("canvas");
-    async function Iu() {
-      await new Promise((uu => {
+    var WG = ZG(37511),
+      mG = (ZG(41502), ZG(40865), ZG(41509), ZG(34519));
+    let IG, FG, vG, aG, cG, lG, jG, PG, MG, AG;
+    const sG = document.createElement("canvas");
+    async function qG() {
+      await new Promise((GG => {
         setTimeout((() => {
-          uu()
+          GG()
         }), 100)
       }))
     }
-    Su.classList.add("CharCustomisationPreviewCanvas");
-    const Fu = {};
+    sG.classList.add("CharCustomisationPreviewCanvas");
+    const nG = {};
 
-    function Bu(uu, Eu) {
-      Su.width = uu, Su.height = Eu, ou.resize()
+    function gG(GG, bG) {
+      sG.width = GG, sG.height = bG, IG.resize()
     }
-    let Lu = 0;
-    class tu {
-      constructor(uu, Eu) {
-        this.framing = Eu, this.ready = Wu, this.dev = {
-          canvas: () => Su,
-          isolateHead(uu) {
-            const Eu = Vu.getNodeNames(ru);
-            for (let ju = 0; ju < Eu.length; ju++) "HeadMesh" !== Eu[ju] && "__root__" !== Eu[ju] && "TorsoNode" !== Eu[ju] && Vu.setNodeEnabled(ru, ju, !1);
-            if (uu) {
-              const uu = Vu.getNamedNode(ru, "HeadMesh");
-              Vu.setNodeDisableColorWrite(ru, uu, !0, (uu => {
-                const Eu = new Yu.StandardMaterial(`${uu.name}_depthOnly`, uu.hV());
-                return Eu.disableColorWrite = !0, Eu
+    let eG = 0;
+    class RG {
+      constructor(GG, bG) {
+        this.framing = bG, this.ready = AG, this.dev = {
+          canvas: () => sG,
+          isolateHead(GG) {
+            const bG = lG.getNodeNames(jG);
+            for (let ZG = 0; ZG < bG.length; ZG++) "HeadMesh" !== bG[ZG] && "__root__" !== bG[ZG] && "TorsoNode" !== bG[ZG] && lG.setNodeEnabled(jG, ZG, !1);
+            if (GG) {
+              const GG = lG.getNamedNode(jG, "HeadMesh");
+              lG.setNodeDisableColorWrite(jG, GG, !0, (GG => {
+                const bG = new hG.StandardMaterial(`${GG.name}_depthOnly`, GG.Dv());
+                return bG.disableColorWrite = !0, bG
               }))
             }
-            Vu.setPosition(ru, 0, -12, 0)
+            lG.setPosition(jG, 0, -12, 0)
           }
         }, this.closed = !1, this.resetCamera();
-        const ju = uu.getBoundingClientRect();
-        Bu(ju.width, ju.height), Lu++, ou.stopRenderLoop(), ou.runRenderLoop((() => {
-          var uu, Eu;
-          null === (uu = Qu) || void 0 === uu || uu.render(ou.getDeltaTime()), null === (Eu = iu) || void 0 === Eu || Eu.writePoses(performance.now() / 1e3), mu.render()
+        const ZG = GG.getBoundingClientRect();
+        gG(ZG.width, ZG.height), eG++, IG.stopRenderLoop(), IG.runRenderLoop((() => {
+          var GG, bG;
+          null === (GG = PG) || void 0 === GG || GG.render(IG.getDeltaTime()), null === (bG = MG) || void 0 === bG || bG.writePoses(performance.now() / 1e3), vG.render()
         }))
       }
       isReady() {
-        return !!vu
+        return !!aG
       }
-      setCosmetic(uu, Eu) {
-        ! function(uu, Eu) {
-          if (!vu) return;
-          const Xu = (0, Uu.c)();
-          Xu.Wm(!1), su.b.Player.meshApi.updatePlayerCosmetic(Xu.FQ, ru, uu, Eu, !0), "cape" === uu && (Eu === Zu.h ? Ku.Wk(!1) : (Ku.Wk(!0), Ku.material.diffuseTexture = new hu.c(ju(39150)(`./cape_${Eu}.png`), Ku.hV(), {
+      setCosmetic(GG, bG) {
+        ! function(GG, bG) {
+          if (!aG) return;
+          const yG = (0, SG.i)();
+          yG.Tm(!1), wG.d.Player.meshApi.updatePlayerCosmetic(yG.sA, jG, GG, bG, !0), "cape" === GG && (bG === LG.g ? cG.DW(!1) : (cG.DW(!0), cG.material.diffuseTexture = new dG.d(ZG(39198)(`./cape_${bG}.png`), cG.Dv(), {
             invertY: !1,
-            samplingMode: hu.c.NEAREST_NEAREST_MIPLINEAR
+            samplingMode: dG.d.NEAREST_NEAREST_MIPLINEAR
           })));
-          Fu[uu] = iu.update(uu, Eu)
-        }(uu, Eu)
+          nG[GG] = MG.update(GG, bG)
+        }(GG, bG)
       }
-      playEmote(uu) {
-        if (!Qu) return;
-        if (!uu) return void Qu.stopAnimation(qu.f.Emote);
-        const Eu = (0, Xu.d)((0, lu.k)(uu).animation);
-        Qu.startAnimation(Eu, qu.f.Emote, 0, lu.e)
+      playEmote(GG) {
+        if (!PG) return;
+        if (!GG) return void PG.stopAnimation(UG.h.Emote);
+        const bG = (0, yG.i)((0, kG.j)(GG).animation);
+        PG.startAnimation(bG, UG.h.Emote, 0, kG.d)
       }
-      async untilDrawn(uu) {
-        if (await Iu(), "cape" === uu && Ku) {
-          const uu = Ku.material,
-            Eu = null === uu || void 0 === uu ? void 0 : uu.diffuseTexture;
-          Eu && !Eu.isReady() && (await new Promise((uu => {
-            Eu.onLoadObservable.addOnce((() => {
-              uu()
+      async untilDrawn(GG) {
+        if (await qG(), "cape" === GG && cG) {
+          const GG = cG.material,
+            bG = null === GG || void 0 === GG ? void 0 : GG.diffuseTexture;
+          bG && !bG.isReady() && (await new Promise((GG => {
+            bG.onLoadObservable.addOnce((() => {
+              GG()
             }))
-          })), await Iu())
+          })), await qG())
         }
-        Fu[uu] && (await Fu[uu], await Iu()), await mu.whenReadyAsync(), await new Promise((uu => {
-          mu.onAfterRenderObservable.addOnce((() => {
-            uu()
+        nG[GG] && (await nG[GG], await qG()), await vG.whenReadyAsync(), await new Promise((GG => {
+          vG.onAfterRenderObservable.addOnce((() => {
+            GG()
           }))
         }))
       }
-      setOrbit(uu) {
-        xu(uu)
+      setOrbit(GG) {
+        TG(GG)
       }
       resetCamera() {
-        ku.inertialAlphaOffset = 0, ku.inertialBetaOffset = 0, ku.inertialRadiusOffset = 0, xu(Pu.b[this.framing])
+        FG.inertialAlphaOffset = 0, FG.inertialBetaOffset = 0, FG.inertialRadiusOffset = 0, TG(mG.b[this.framing])
       }
-      resize(uu, Eu) {
-        Bu(uu, Eu)
+      resize(GG, bG) {
+        gG(GG, bG)
       }
       close() {
-        this.closed || (this.closed = !0, Lu--, 0 === Lu && ou.stopRenderLoop())
+        this.closed || (this.closed = !0, eG--, 0 === eG && IG.stopRenderLoop())
       }
     }
 
-    function xu(uu) {
+    function TG(GG) {
       let {
-        yaw: Eu,
-        pitch: ju,
-        radius: su,
-        target: Uu
-      } = uu;
-      ku.alpha = Eu, ku.beta = ju, su && (ku.radius = su), Uu && ku.target.set(Uu[0], Uu[1], Uu[2])
+        yaw: bG,
+        pitch: ZG,
+        radius: wG,
+        target: SG
+      } = GG;
+      FG.alpha = bG, FG.beta = ZG, wG && (FG.radius = wG), SG && FG.target.set(SG[0], SG[1], SG[2])
     }
 
-    function Tu(uu, Eu) {
-      return uu.appendChild(Su), ou || function() {
-        ou = new fu.c(Su, !0, {
+    function HG(GG, bG) {
+      return GG.appendChild(sG), IG || function() {
+        IG = new YG.b(sG, !0, {
           preserveDrawingBuffer: !0
         });
-        const uu = (0, Uu.c)();
-        ou.bsu = uu.tO.engine.bsu, mu = new Cu.b(ou), mu.clearColor = new Ou.b(0, 0, 0, 0), mu.ambientColor = new Ou.Color3(1, 1, 1), ku = new bu.d("Vh", 0, 0, 1, cu.dO.Zero(), mu), ku.attachControl(Su, !0), ku.panningSensibility = 0, Wu = (0, su.t)("Player", mu, !0).then((Eu => {
-          vu = Eu.meshApi, Ku = Eu.capeMesh, Vu = uu.tO.oV;
-          const ju = 8.33;
-          ru = (0, su.h)("Player", ju, !0, !0), Vu.setPosition(ru, 0, -8.33, 0);
-          const Uu = Vu.getNamedNode(ru, "BodyMesh");
-          Vu.attachTransformNode(Ku, ru, Uu), Vu.set(ru, "aOpacity", 1), Vu.jW(ru, "aOpacity", 1), iu = new du(mu, Vu, ru), Qu = new Du.AnimatorState, Qu.Uc = uu, Qu.thinInstMgr = Vu, Qu.mV = ru, Qu.rju = Vu.csu(ru, 0), Qu.modelLifeformType = "Player", Qu.nodeNameAliases = (0, au.d)("Player").nodeNameAliases;
-          const Zu = Ku.EW().boundingBox;
-          Ku.position.y = ((24 - Zu.maximum.y + Zu.minimum.y) / 2 - 1 / 32) / ju, Ku.position.z = -1 / ju, Ku.rotationQuaternion = null;
-          const Xu = Math.PI / 18,
-            lu = Zu.maximum.y / ju;
-          Ku.rotation.x = Xu;
-          const qu = Math.cos(Xu),
-            fu = Math.sin(Xu);
-          Ku.position.y += lu * (1 - qu) + 0 * fu, Ku.position.z -= lu * fu + 0 * (1 - qu);
-          const Cu = new Yu.StandardMaterial("capeMaterial", Ku.hV());
-          Ku.material = Cu;
-          const bu = new Ou.Color3(1, 1, 1);
-          Cu.diffuseColor = new Ou.Color3, Cu.specularColor = new Ou.Color3, Cu.emissiveColor = new Ou.Color3, Cu.ambientColor = new Ou.Color3, bu.scaleToRef(.43, Cu.diffuseColor), bu.scaleToRef(1.75, Cu.ambientColor), Cu.freeze();
-          const hu = new Nu.c("light", new cu.dO(-.1, 1, -.3), mu);
-          hu.diffuse = new Ou.Color3(1, 1, 1), hu.specular = new Ou.Color3(1, 1, 1), hu.groundColor = new Ou.Color3(.5, .5, .5)
+        const GG = (0, SG.i)();
+        IG.iwG = GG.HK.engine.iwG, vG = new VG.d(IG), vG.clearColor = new KG.e(0, 0, 0, 0), vG.ambientColor = new KG.Color3(1, 1, 1), FG = new pG.d("nd", 0, 0, 1, fG.mK.Zero(), vG), FG.attachControl(sG, !0), FG.panningSensibility = 0, AG = (0, wG.y)("Player", vG, !0).then((bG => {
+          aG = bG.meshApi, cG = bG.capeMesh, lG = GG.HK.Vl;
+          const ZG = 8.33;
+          jG = (0, wG.l)("Player", ZG, !0, !0), lG.setPosition(jG, 0, -8.33, 0);
+          const SG = lG.getNamedNode(jG, "BodyMesh");
+          lG.attachTransformNode(cG, jG, SG), lG.set(jG, "aOpacity", 1), lG.Gs(jG, "aOpacity", 1), MG = new CG(vG, lG, jG), PG = new JG.AnimatorState, PG.wf = GG, PG.thinInstMgr = lG, PG.Ql = jG, PG.DZG = lG.CwG(jG, 0), PG.modelLifeformType = "Player", PG.nodeNameAliases = (0, WG.e)("Player").nodeNameAliases;
+          const LG = cG.HA().boundingBox;
+          cG.position.y = ((24 - LG.maximum.y + LG.minimum.y) / 2 - 1 / 32) / ZG, cG.position.z = -1 / ZG, cG.rotationQuaternion = null;
+          const yG = Math.PI / 18,
+            kG = LG.maximum.y / ZG;
+          cG.rotation.x = yG;
+          const UG = Math.cos(yG),
+            YG = Math.sin(yG);
+          cG.position.y += kG * (1 - UG) + 0 * YG, cG.position.z -= kG * YG + 0 * (1 - UG);
+          const VG = new hG.StandardMaterial("capeMaterial", cG.Dv());
+          cG.material = VG;
+          const pG = new KG.Color3(1, 1, 1);
+          VG.diffuseColor = new KG.Color3, VG.specularColor = new KG.Color3, VG.emissiveColor = new KG.Color3, VG.ambientColor = new KG.Color3, pG.scaleToRef(.43, VG.diffuseColor), pG.scaleToRef(1.75, VG.ambientColor), VG.freeze();
+          const dG = new QG.d("light", new fG.mK(-.1, 1, -.3), vG);
+          dG.diffuse = new KG.Color3(1, 1, 1), dG.specular = new KG.Color3(1, 1, 1), dG.groundColor = new KG.Color3(.5, .5, .5)
         }))
-      }(), new tu(uu, Eu)
+      }(), new RG(GG, bG)
     }
   },
-  39141: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => cu
+  39195: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => fG
     });
-    var su = ju(37577),
-      Uu = ju(37589),
-      Zu = ju(37833),
-      Xu = ju(37595),
-      lu = ju(37582);
+    var wG = ZG(37523),
+      SG = ZG(37541),
+      LG = ZG(37803),
+      yG = ZG(37547),
+      kG = ZG(37532);
 
-    function qu(uu) {
-      return `\n\t\t\t\t${(0,lu.D)(uu,"mat2","rotate",[{name:"ang",type:"float"}],`\
+    function UG(GG) {
+      return `\n\t\t\t\t${(0,kG.z)(GG,"mat2","rotate",[{name:"ang",type:"float"}],`\
       n\ t\ t\ t\ t\ t$ {
-        (0, lu.I)(uu, "float", "s", "sin(ang)")
+        (0, kG.B)(GG, "float", "s", "sin(ang)")
       }\
       n\ t\ t\ t\ t\ t$ {
-        (0, lu.I)(uu, "float", "c", "cos(ang)")
+        (0, kG.B)(GG, "float", "c", "cos(ang)")
       }\
       n\ t\ t\ t\ t\ treturn $ {
-        (0, lu.r)(uu, "mat2", "c", "s", "-s", "c")
+        (0, kG.m)(GG, "mat2", "c", "s", "-s", "c")
       };\
       n\ t\ t\ t\ t`)}\n\t\t\t`
     }
 
-    function fu(uu, Eu) {
-      let ju = (0, lu.Ab)(uu, "skele" + (Eu - 1));
-      for (let Uu = Eu - 2; Uu >= 0; Uu--) ju = (0, lu.ub)(uu, `boneIdx == ${Uu}`, (0, lu.Ab)(uu, `skele${Uu}`), ju);
-      const su = "bone.yz + rotate(bone.x) * pivot - pivot";
-      return `\n\t\t\t\t${(0,lu.I)(uu,"int","boneIdx",(0,lu.xb)(uu,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,lu.I)(uu,"vec3","bone",ju)}\n\t\t\t\t${(0,lu.I)(uu,"vec2","pivot",(0,lu.r)(uu,"vec2","0.0",`${(0,lu.Fb)(uu,"position")}.z`))}\n\t\t\t\t${(0,lu.bb)(uu)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${su}));`:`positionUpdated.yz += ${su};`}\n\t\t`
+    function YG(GG, bG) {
+      let ZG = (0, kG.ub)(GG, "skele" + (bG - 1));
+      for (let SG = bG - 2; SG >= 0; SG--) ZG = (0, kG.nb)(GG, `boneIdx == ${SG}`, (0, kG.ub)(GG, `skele${SG}`), ZG);
+      const wG = "bone.yz + rotate(bone.x) * pivot - pivot";
+      return `\n\t\t\t\t${(0,kG.B)(GG,"int","boneIdx",(0,kG.qb)(GG,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,kG.B)(GG,"vec3","bone",ZG)}\n\t\t\t\t${(0,kG.B)(GG,"vec2","pivot",(0,kG.m)(GG,"vec2","0.0",`${(0,kG.Cb)(GG,"position")}.z`))}\n\t\t\t\t${(0,kG.V)(GG)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${wG}));`:`positionUpdated.yz += ${wG};`}\n\t\t`
     }
 
-    function Cu(uu) {
-      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,lu.r)(uu,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
+    function VG(GG) {
+      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,kG.m)(GG,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
     }
-    const bu = {
+    const pG = {
         x: 0,
         y: 0,
         z: 0,
-        sju(uu, Eu) {
-          return this.x = uu[Eu], this.y = uu[Eu + 1], this.z = uu[Eu + 2], this
+        hZG(GG, bG) {
+          return this.x = GG[bG], this.y = GG[bG + 1], this.z = GG[bG + 2], this
         }
       },
-      cu = {
+      fG = {
         name: "Cape",
         className: "CapeMaterialPlugin",
         priority: 200,
-        defines: (uu, Eu) => ({
-          ...(0, su.b)("CAPE"),
-          BLOXD_CAPE_BONES: `${uu}`,
-          BLOXD_CAPE_MAX_Y: (0, Uu.fb)(Eu)
+        defines: (GG, bG) => ({
+          ...(0, wG.c)("CAPE"),
+          BLOXD_CAPE_BONES: `${GG}`,
+          BLOXD_CAPE_MAX_Y: (0, SG.tb)(bG)
         }),
-        getUniforms(uu) {
-          return (0, Zu.b)(function(uu) {
-            const Eu = [];
-            for (let ju = 0; ju < uu; ju++) Eu.push({
-              name: `skele${ju}`,
+        getUniforms(GG) {
+          return (0, LG.d)(function(GG) {
+            const bG = [];
+            for (let ZG = 0; ZG < GG; ZG++) bG.push({
+              name: `skele${ZG}`,
               type: "highp vec3"
             });
-            return Eu
-          }(this.skeleLen), "vertex", uu)
+            return bG
+          }(this.skeleLen), "vertex", GG)
         },
-        bind(uu) {
-          for (let Eu = 0; Eu < this.skeleLen; Eu++) uu.updateVector3(`skele${Eu}`, bu.sju(this.skele, 3 * Eu))
+        bind(GG) {
+          for (let bG = 0; bG < this.skeleLen; bG++) GG.updateVector3(`skele${bG}`, pG.hZG(this.skele, 3 * bG))
         },
         uniformsVersion() {
           return this.bonesVersion
         },
-        getCustomCode(uu, Eu) {
-          return "vertex" !== uu ? null : {
-            CUSTOM_VERTEX_DEFINITIONS: qu(Eu),
-            CUSTOM_VERTEX_UPDATE_POSITION: fu(Eu, this.skeleLen),
-            CUSTOM_VERTEX_UPDATE_NORMAL: Cu(Eu)
+        getCustomCode(GG, bG) {
+          return "vertex" !== GG ? null : {
+            CUSTOM_VERTEX_DEFINITIONS: UG(bG),
+            CUSTOM_VERTEX_UPDATE_POSITION: YG(bG, this.skeleLen),
+            CUSTOM_VERTEX_UPDATE_NORMAL: VG(bG)
           }
         }
       };
-    (0, Xu.m)(cu)
+    (0, yG.n)(fG)
   },
-  39038: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Cu,
-      e: () => bu
+  39097: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => VG,
+      f: () => pG
     });
-    var su = ju(37577),
-      Uu = ju(37833),
-      Zu = ju(37582),
-      Xu = ju(37595);
-    const lu = "bloxdTextLodBias",
-      qu = [{
-        name: lu,
+    var wG = ZG(37523),
+      SG = ZG(37803),
+      LG = ZG(37532),
+      yG = ZG(37547);
+    const kG = "bloxdTextLodBias",
+      UG = [{
+        name: kG,
         type: "float"
       }],
-      fu = "bloxdTextSample",
-      Cu = {
+      YG = "bloxdTextSample",
+      VG = {
         planes: -.5,
         boards: -.5
       },
-      bu = {
+      pG = {
         name: "TextSampler",
         className: "TextSamplerMaterialPlugin",
         priority: 60,
-        defines: () => (0, su.b)("TEXT_SAMPLER"),
-        getUniforms: uu => (0, Uu.b)(qu, "fragment", uu),
-        bind(uu) {
-          uu.updateFloat(lu, this.lodBias)
+        defines: () => (0, wG.c)("TEXT_SAMPLER"),
+        getUniforms: GG => (0, SG.d)(UG, "fragment", GG),
+        bind(GG) {
+          GG.updateFloat(kG, this.lodBias)
         },
         uniformsVersion: () => 0,
-        getCustomCode(uu, Eu) {
-          if ("fragment" !== uu) return null;
-          const ju = (0, Zu.M)(Eu, `vec4 ${fu}(sampler2D s, vec2 uv, float bias)`, `fn ${fu}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
-            su = (0, Zu.M)(Eu, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
-            Uu = `${(0,Zu.V)(Eu,"vDiffuseUV")} + uvOffset`,
-            Xu = (0, Zu.M)(Eu, `${fu}(diffuseSampler, ${Uu}, ${(0,Zu.Ab)(Eu,lu)})`, `${fu}(diffuseSampler, diffuseSamplerSampler, ${Uu}, ${(0,Zu.Ab)(Eu,lu)})`);
+        getCustomCode(GG, bG) {
+          if ("fragment" !== GG) return null;
+          const ZG = (0, LG.G)(bG, `vec4 ${YG}(sampler2D s, vec2 uv, float bias)`, `fn ${YG}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
+            wG = (0, LG.G)(bG, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
+            SG = `${(0,LG.P)(bG,"vDiffuseUV")} + uvOffset`,
+            yG = (0, LG.G)(bG, `${YG}(diffuseSampler, ${SG}, ${(0,LG.ub)(bG,kG)})`, `${YG}(diffuseSampler, diffuseSamplerSampler, ${SG}, ${(0,LG.ub)(bG,kG)})`);
           return {
-            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${ju} {\n\t\t\t\t\t${(0,Zu.I)(Eu,"vec4","texel",su)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,Zu.r)(Eu,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,Zu.r)(Eu,"vec3","0.0")}, ${(0,Zu.r)(Eu,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
-            [(0, Zu.J)(Eu)]: `baseColor = ${Xu};`
+            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${ZG} {\n\t\t\t\t\t${(0,LG.B)(bG,"vec4","texel",wG)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,LG.m)(bG,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,LG.m)(bG,"vec3","0.0")}, ${(0,LG.m)(bG,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
+            [(0, LG.C)(bG)]: `baseColor = ${yG};`
           }
         }
       };
-    (0, Xu.m)(bu)
+    (0, yG.n)(pG)
   },
-  41338: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      CapeMaterialPlugin: () => eu,
-      HueTintMaterialPlugin: () => Gu,
-      LifeformMaterialPlugin: () => pu,
-      OverlayMaterialPlugin: () => wu
+  41509: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      CapeMaterialPlugin: () => EG,
+      HueTintMaterialPlugin: () => oG,
+      LifeformMaterialPlugin: () => XG,
+      OverlayMaterialPlugin: () => uG
     });
-    var su = ju(41346),
-      Uu = ju(38386);
-    class Zu extends((0, su.g)(Uu.e)) {}(0, su.k)(Uu.e, Zu);
-    var Xu = ju(37571);
-    class lu extends((0, su.g)(Xu.g)) {}(0, su.k)(Xu.g, lu);
-    var qu = ju(38236);
-    class fu extends((0, su.g)(qu.f)) {}(0, su.k)(qu.f, fu);
-    var Cu = ju(37816),
-      bu = ju(40514),
-      cu = ju(37811);
-    class Nu extends((0, su.g)(cu.e)) {
-      constructor(uu, Eu, ju) {
-        super(uu, Eu, ju), (0, Cu.h)(uu)
+    var wG = ZG(41515),
+      SG = ZG(38416);
+    class LG extends((0, wG.g)(SG.b)) {}(0, wG.i)(SG.b, LG);
+    var yG = ZG(37518);
+    class kG extends((0, wG.g)(yG.e)) {}(0, wG.i)(yG.e, kG);
+    var UG = ZG(38256);
+    class YG extends((0, wG.g)(UG.h)) {}(0, wG.i)(UG.h, YG);
+    var VG = ZG(37788),
+      pG = ZG(40644),
+      fG = ZG(37782);
+    class QG extends((0, wG.g)(fG.f)) {
+      constructor(GG, bG, ZG) {
+        super(GG, bG, ZG), (0, VG.h)(GG)
       }
-      dispose(uu) {
-        (0, Cu.k)(this._material), super.dispose(uu)
+      dispose(GG) {
+        (0, VG.k)(this._material), super.dispose(GG)
       }
-    }(0, su.k)(cu.e, Nu), (0, cu.g)({
-      disableUnusedSpecularTerm: su.e,
-      isLightingDisabled: uu => uu instanceof bu.StandardMaterial && uu.disableLighting
+    }(0, wG.i)(fG.f, QG), (0, fG.h)({
+      disableUnusedSpecularTerm: wG.e,
+      isLightingDisabled: GG => GG instanceof pG.StandardMaterial && GG.disableLighting
     });
-    var Ou = ju(39038);
-    class Yu extends((0, su.g)(Ou.e)) {}(0, su.k)(Ou.e, Yu);
-    var hu = ju(39141),
-      Du = ju(37684),
-      gu = ju(38494),
-      Mu = ju(37637);
-    class eu extends((0, su.g)(hu.d)) {}(0, su.k)(hu.d, eu);
-    class Gu extends((0, su.g)(Du.b)) {}(0, su.k)(Du.b, Gu);
-    class pu extends((0, su.g)(gu.m)) {}(0, su.k)(gu.m, pu);
-    class wu extends((0, su.g)(Mu.b)) {}(0, su.k)(Mu.b, wu)
+    var KG = ZG(39097);
+    class hG extends((0, wG.g)(KG.f)) {}(0, wG.i)(KG.f, hG);
+    var dG = ZG(39195),
+      JG = ZG(37629),
+      rG = ZG(38546),
+      zG = ZG(37576);
+    class EG extends((0, wG.g)(dG.c)) {}(0, wG.i)(dG.c, EG);
+    class oG extends((0, wG.g)(JG.b)) {}(0, wG.i)(JG.b, oG);
+    class XG extends((0, wG.g)(rG.o)) {}(0, wG.i)(rG.o, XG);
+    class uG extends((0, wG.g)(zG.c)) {}(0, wG.i)(zG.c, uG)
   },
-  41346: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Fu,
-      g: () => gu,
-      k: () => Hu
+  41515: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => nG,
+      g: () => rG,
+      i: () => tG
     });
-    var su = ju(40514),
-      Uu = ju(41353),
-      Zu = ju(41400),
-      Xu = ju(41360),
-      lu = ju(38209),
-      qu = ju(38218),
-      fu = ju(38220),
-      Cu = ju(38226),
-      bu = ju(37621),
-      cu = ju(37630),
-      Nu = ju(41364),
-      Ou = ju(37595),
-      Yu = ju(37603),
-      hu = ju(37582);
+    var wG = ZG(40644),
+      SG = ZG(41519),
+      LG = ZG(41574),
+      yG = ZG(41527),
+      kG = ZG(38218),
+      UG = ZG(38234),
+      YG = ZG(38238),
+      VG = ZG(38243),
+      pG = ZG(37559),
+      fG = ZG(37567),
+      QG = ZG(41531),
+      KG = ZG(37547),
+      hG = ZG(37550),
+      dG = ZG(37532);
 
-    function Du(uu, Eu) {
-      return Object.assign((function(uu, ju, su, Uu) {
-        return Eu(this.featureState, uu, ju, su, Uu)
+    function JG(GG, bG) {
+      return Object.assign((function(GG, ZG, wG, SG) {
+        return bG(this.featureState, GG, ZG, wG, SG)
       }), {
-        yN: uu
+        BQ: GG
       })
     }
 
-    function gu(uu) {
-      const Eu = class extends Nu.e {
-          constructor(Eu, ju) {
-            const su = (0, Yu.$)(Eu),
-              Uu = su && (0, Yu.z)(su, uu.name);
-            for (var Zu = arguments.length, Xu = new Array(Zu > 2 ? Zu - 2 : 0), lu = 2; lu < Zu; lu++) Xu[lu - 2] = arguments[lu];
-            super(Eu, uu.name, uu.priority, Uu ? Uu.defines : uu.defines(...Xu), !1), this.featureState = void 0, this.featureState = ju, this._pluginManager._addPlugin(this), this._enable(!0), (0, Yu.D)(this._material, uu, this.featureState, this._pluginDefineNames)
+    function rG(GG) {
+      const bG = class extends QG.b {
+          constructor(bG, ZG) {
+            const wG = (0, hG.eb)(bG),
+              SG = wG && (0, hG.z)(wG, GG.name);
+            for (var LG = arguments.length, yG = new Array(LG > 2 ? LG - 2 : 0), kG = 2; kG < LG; kG++) yG[kG - 2] = arguments[kG];
+            super(bG, GG.name, GG.priority, SG ? SG.defines : GG.defines(...yG), !1), this.featureState = void 0, this.featureState = ZG, this._pluginManager._addPlugin(this), this._enable(!0), (0, hG.B)(this._material, GG, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return uu.className
+            return GG.className
           }
-          isCompatible(uu) {
-            return uu === hu.c.GLSL || uu === hu.c.WGSL
+          isCompatible(GG) {
+            return GG === dG.c.GLSL || GG === dG.c.WGSL
           }
         },
-        ju = (0, Ou.h)(uu);
-      for (const [su, Uu] of Object.entries(Ou.b)) {
-        const Zu = uu[su];
-        if (Zu) {
-          const uu = ju[su];
-          Object.defineProperty(Eu.prototype, Uu, {
-            value: Du(Zu, uu),
+        ZG = (0, KG.j)(GG);
+      for (const [wG, SG] of Object.entries(KG.e)) {
+        const LG = GG[wG];
+        if (LG) {
+          const GG = ZG[wG];
+          Object.defineProperty(bG.prototype, SG, {
+            value: JG(LG, GG),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return Eu
+      return bG
     }
-    class Mu extends(gu(lu.c)) {}
-    var eu = ju(40092),
-      Gu = ju(41366),
-      pu = ju(41373);
+    class zG extends(rG(kG.c)) {}
+    var EG = ZG(40197),
+      oG = ZG(41539),
+      XG = ZG(41544);
 
-    function wu(uu, Eu, ju) {
-      return (0, pu.g)(ju, Eu.urls, (() => async function(uu, Eu, ju) {
+    function uG(GG, bG, ZG) {
+      return (0, XG.g)(ZG, bG.urls, (() => async function(GG, bG, ZG) {
         const {
-          width: su
-        } = uu[0].getSize(), Uu = uu.map(((uu, ju) => {
-          var Uu;
-          const Zu = Math.round(uu.getSize().height / su),
-            Xu = null === Eu || void 0 === Eu ? void 0 : Eu[ju];
+          width: wG
+        } = GG[0].getSize(), SG = GG.map(((GG, ZG) => {
+          var SG;
+          const LG = Math.round(GG.getSize().height / wG),
+            yG = null === bG || void 0 === bG ? void 0 : bG[ZG];
           return {
-            pixels: Xu && Xu.byteLength === su * su * Zu * 4 ? Xu : null !== (Uu = Ju.get(uu.getInternalTexture())) && void 0 !== Uu ? Uu : uu._readPixelsSync(),
-            layers: Zu
+            pixels: yG && yG.byteLength === wG * wG * LG * 4 ? yG : null !== (SG = iG.get(GG.getInternalTexture())) && void 0 !== SG ? SG : GG._readPixelsSync(),
+            layers: LG
           }
-        })), Zu = ju.wO().getCaps().texture2DArrayMaxLayerCount, lu = (0, pu.e)(Uu, su, Zu).map((uu => {
+        })), LG = ZG.CK().getCaps().texture2DArrayMaxLayerCount, kG = (0, XG.c)(SG, wG, LG).map((GG => {
           let {
-            pixels: Eu,
-            layers: Uu
-          } = uu;
+            pixels: bG,
+            layers: SG
+          } = GG;
           return {
-            atlas: new Gu.d(Eu, su, su, Uu, eu.c.TEXTUREFORMAT_RGBA, ju, !0, !1, Xu.c.NEAREST_NEAREST_MIPLINEAR),
-            layers: Uu
+            atlas: new oG.b(bG, wG, wG, SG, EG.b.TEXTUREFORMAT_RGBA, ZG, !0, !1, yG.d.NEAREST_NEAREST_MIPLINEAR),
+            layers: SG
           }
         }));
-        return uu.forEach(((uu, Eu) => {
-          const su = uu.getInternalTexture();
-          Ju.has(su) || (! function(uu, Eu) {
-            const ju = Eu.createRawTexture(new Uint8Array(4), 1, 1, eu.c.TEXTUREFORMAT_RGBA, !1, !1, Xu.c.NEAREST_SAMPLINGMODE);
-            uu._hardwareTexture.release(), Eu.unbindAllTextures(), ju._swapAndDie(uu, !1)
-          }(su, ju.wO()), Ju.set(su, Uu[Eu].pixels))
-        })), lu
-      }(uu, Eu.pixels, ju)))
+        return GG.forEach(((GG, bG) => {
+          const wG = GG.getInternalTexture();
+          iG.has(wG) || (! function(GG, bG) {
+            const ZG = bG.createRawTexture(new Uint8Array(4), 1, 1, EG.b.TEXTUREFORMAT_RGBA, !1, !1, yG.d.NEAREST_SAMPLINGMODE);
+            GG._hardwareTexture.release(), bG.unbindAllTextures(), ZG._swapAndDie(GG, !1)
+          }(wG, ZG.CK()), iG.set(wG, SG[bG].pixels))
+        })), kG
+      }(GG, bG.pixels, ZG)))
     }
-    const Ju = new WeakMap;
-    var du = ju(38232);
-    class au extends(gu(qu.h)) {
-      constructor(uu, Eu) {
-        super(uu, Eu), this.loaded = new Set, this.mirrors = void 0, this.mirrors = Eu.textures.map((uu => uu.mirror)), this.mirrors.forEach(((uu, Eu) => {
-          uu.onLoadObservable.add((uu => {
-            this.setTextureArrayData(uu, Eu).catch((uu => {
-              console.error(`Failed to build the texture arrays, at atlas ${Eu}`, uu)
+    const iG = new WeakMap;
+    var CG = ZG(38248);
+    class WG extends(rG(UG.i)) {
+      constructor(GG, bG) {
+        super(GG, bG), this.loaded = new Set, this.mirrors = void 0, this.mirrors = bG.textures.map((GG => GG.mirror)), this.mirrors.forEach(((GG, bG) => {
+          GG.onLoadObservable.add((GG => {
+            this.setTextureArrayData(GG, bG).catch((GG => {
+              console.error(`Failed to build the texture arrays, at atlas ${bG}`, GG)
             }))
           }))
-        })), (0, du.i)(Eu, uu.shaderLanguage)
+        })), (0, CG.k)(bG, GG.shaderLanguage)
       }
-      async setTextureArrayData(uu, Eu) {
-        const ju = this.featureState,
+      async setTextureArrayData(GG, bG) {
+        const ZG = this.featureState,
           {
-            width: su,
-            height: Uu
-          } = uu.getSize(),
-          Zu = this._material.shaderLanguage;
-        if (!ju.useWebGL2) return void(0, du.e)(this._material, ju, Eu, su, Math.round(Uu / su), Zu);
-        if (this.loaded.add(Eu), this.loaded.size < this.mirrors.length) return;
-        const Xu = await wu(this.mirrors, ju.sources, this._material.hV());
-        (0, du.b)(this._material, ju, Xu, su, Zu)
+            width: wG,
+            height: SG
+          } = GG.getSize(),
+          LG = this._material.shaderLanguage;
+        if (!ZG.useWebGL2) return void(0, CG.f)(this._material, ZG, bG, wG, Math.round(SG / wG), LG);
+        if (this.loaded.add(bG), this.loaded.size < this.mirrors.length) return;
+        const yG = await uG(this.mirrors, ZG.sources, this._material.Dv());
+        (0, CG.c)(this._material, ZG, yG, wG, LG)
       }
     }
-    var Pu = ju(41378),
-      ou = ju(40574),
-      ku = ju(37488),
-      mu = ju(41387),
-      vu = ju(40668),
-      Ku = ju(40556),
-      Vu = ju(41329),
-      ru = ju(37969),
-      Qu = ju(41394);
-    class iu extends Pu.d {
+    var mG = ZG(41552),
+      IG = ZG(40681),
+      FG = ZG(37432),
+      vG = ZG(41560),
+      aG = ZG(40795),
+      cG = ZG(40673),
+      lG = ZG(41498),
+      jG = ZG(37962),
+      PG = ZG(41565);
+    class MG extends mG.b {
       getData() {
         return null
       }
@@ -556,399 +556,399 @@ export const modules = {
         super._rebuild()
       }
     }
-    const Wu = {
-      Mesh: mu.d,
-      TransformNode: Vu.e,
-      qO: Pu.d,
-      VertexBuffer: Pu.e,
-      BoundingInfo: ou.c,
-      dO: ku.dO,
-      ArenaBuffer: iu,
-      SubMesh: Ku.e,
-      VertexData: vu.b,
-      MirroredGeometry: Qu.e,
-      meshFromArrays: Qu.h,
-      plainMeshFromArrays: Qu.k
+    const AG = {
+      Mesh: vG.d,
+      TransformNode: lG.d,
+      VK: mG.b,
+      VertexBuffer: mG.c,
+      BoundingInfo: IG.c,
+      mK: FG.mK,
+      ArenaBuffer: MG,
+      SubMesh: cG.c,
+      VertexData: aG.e,
+      MirroredGeometry: PG.e,
+      meshFromArrays: PG.g,
+      plainMeshFromArrays: PG.k
     };
-    (0, ru.d)(Wu);
-    var Su = ju(37816);
-    class Iu extends(gu(Cu.h)) {
-      constructor(uu, Eu) {
-        if (super(uu, Eu), uu instanceof su.StandardMaterial && Eu.dirLightCount > 0) {
-          const Eu = uu,
-            ju = Eu._blockDirtyMechanism;
-          Eu._blockDirtyMechanism = !0, uu.disableLighting = !0, Eu._blockDirtyMechanism = ju;
-          const su = (0, Yu.$)(uu);
-          su && (su.disableLighting = !0, (0, Yu.Z)(su))
-        }(0, Su.h)(uu)
+    (0, jG.d)(AG);
+    var sG = ZG(37788);
+    class qG extends(rG(VG.l)) {
+      constructor(GG, bG) {
+        if (super(GG, bG), GG instanceof wG.StandardMaterial && bG.dirLightCount > 0) {
+          const bG = GG,
+            ZG = bG._blockDirtyMechanism;
+          bG._blockDirtyMechanism = !0, GG.disableLighting = !0, bG._blockDirtyMechanism = ZG;
+          const wG = (0, hG.eb)(GG);
+          wG && (wG.disableLighting = !0, (0, hG.cb)(wG))
+        }(0, sG.h)(GG)
       }
-      dispose(uu) {
-        (0, Su.k)(this._material), super.dispose(uu)
+      dispose(GG) {
+        (0, sG.k)(this._material), super.dispose(GG)
       }
     }
 
-    function Fu(uu, Eu) {
-      if (!(Eu instanceof su.StandardMaterial) || Eu.specularTexture) return;
+    function nG(GG, bG) {
+      if (!(bG instanceof wG.StandardMaterial) || bG.specularTexture) return;
       const {
-        r: ju,
-        g: Uu,
-        b: Zu
-      } = Eu.specularColor;
-      0 === ju && 0 === Uu && 0 === Zu && (uu.SPECULARTERM = !1)
-    }(0, Cu.d)({
-      disableUnusedSpecularTerm: Fu
+        r: ZG,
+        g: SG,
+        b: LG
+      } = bG.specularColor;
+      0 === ZG && 0 === SG && 0 === LG && (GG.SPECULARTERM = !1)
+    }(0, VG.h)({
+      disableUnusedSpecularTerm: nG
     });
-    var Bu = ju(37704),
-      Lu = ju(37977);
-    const tu = new RegExp(`^#define ${fu.c}\\s*$`, "m");
-    class xu extends(gu(fu.f)) {
-      constructor(uu, Eu) {
-        super(uu, Eu), this.fO = !1, Eu.ditherOnlyWhileFading && (Lu.h.add(uu), this.prewarmDitherTwins(uu))
+    var gG = ZG(37647),
+      eG = ZG(37980);
+    const RG = new RegExp(`^#define ${YG.c}\\s*$`, "m");
+    class TG extends(rG(YG.f)) {
+      constructor(GG, bG) {
+        super(GG, bG), this.pK = !1, bG.ditherOnlyWhileFading && (eG.f.add(GG), this.prewarmDitherTwins(GG))
       }
-      prewarmDitherTwins(uu) {
-        const Eu = new WeakSet;
-        uu.onEffectCreatedObservable.add((ju => {
+      prewarmDitherTwins(GG) {
+        const bG = new WeakSet;
+        GG.onEffectCreatedObservable.add((ZG => {
           let {
-            effect: su,
-            subMesh: Uu
-          } = ju;
-          if (this.featureState.prewarmingDither || Eu.has(su)) return;
-          Eu.add(su);
-          const Zu = null === Uu || void 0 === Uu ? void 0 : Uu.getMesh();
-          Zu && !tu.test(su.defines) && uu.hV().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(Zu) || Eu.delete(su)
+            effect: wG,
+            subMesh: SG
+          } = ZG;
+          if (this.featureState.prewarmingDither || bG.has(wG)) return;
+          bG.add(wG);
+          const LG = null === SG || void 0 === SG ? void 0 : SG.getMesh();
+          LG && !RG.test(wG.defines) && GG.Dv().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(LG) || bG.delete(wG)
           }))
         }))
       }
-      prewarmDither(uu) {
-        if (this.fO || uu.Gw()) return !1;
-        const Eu = new Ku.e(0, 0, 0, 0, 0, uu, void 0, !1, !1);
+      prewarmDither(GG) {
+        if (this.pK || GG.Tu()) return !1;
+        const bG = new cG.c(0, 0, 0, 0, 0, GG, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(uu, Eu)
+          this._material.isReadyForSubMesh(GG, bG)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== Eu.effect
+        return null !== bG.effect
       }
-      dispose(uu) {
-        this.fO = !0, super.dispose(uu)
+      dispose(GG) {
+        this.pK = !0, super.dispose(GG)
       }
     }
-    const Tu = new Map;
+    const HG = new Map;
 
-    function Hu(uu, Eu) {
-      Tu.set(uu, Eu)
+    function tG(GG, bG) {
+      HG.set(GG, bG)
     }
-    Hu(lu.c, Mu), Hu(qu.h, au), Hu(fu.f, xu), Hu(Cu.h, Iu), (0, bu.b)({
-      create: (uu, Eu) => {
-        const ju = new su.StandardMaterial(uu.name, Eu);
-        return (0, Bu.s)(uu, ju), ju.detailMap._pluginDefineNames
+    tG(kG.c, zG), tG(UG.i, WG), tG(YG.f, TG), tG(VG.l, qG), (0, pG.c)({
+      create: (GG, bG) => {
+        const ZG = new wG.StandardMaterial(GG.name, bG);
+        return (0, gG.r)(GG, ZG), ZG.detailMap._pluginDefineNames
       },
-      write: (uu, Eu, ju) => {
-        (0, Bu.Y)(uu.mirror, Eu, ju)
+      write: (GG, bG, ZG) => {
+        (0, gG.U)(GG.mirror, bG, ZG)
       },
-      addFeature: (uu, Eu, ju) => {
-        const su = Tu.get(Eu.feature);
-        if (!su) throw new Error(`${Eu.feature.name} has no plugin class (registerPluginClass)`);
-        new su(uu.mirror, Eu.state, ...ju)
+      addFeature: (GG, bG, ZG) => {
+        const wG = HG.get(bG.feature);
+        if (!wG) throw new Error(`${bG.feature.name} has no plugin class (registerPluginClass)`);
+        new wG(GG.mirror, bG.state, ...ZG)
       },
-      texture: (uu, Eu, ju) => {
+      texture: (GG, bG, ZG) => {
         let {
-          url: su,
-          noMipmap: Uu,
-          invertY: Zu,
-          samplingMode: lu,
-          data: qu,
-          sets: fu
-        } = ju;
-        if (!qu) {
-          const ju = new Xu.c(su, Eu, Uu, Zu, lu);
-          return Object.assign(ju, fu), void(0, cu.G)(uu, ju)
+          url: wG,
+          noMipmap: SG,
+          invertY: LG,
+          samplingMode: kG,
+          data: UG,
+          sets: YG
+        } = ZG;
+        if (!UG) {
+          const ZG = new yG.d(wG, bG, SG, LG, kG);
+          return Object.assign(ZG, YG), void(0, fG.G)(GG, ZG)
         }
-        const Cu = {},
-          bu = new Promise(((uu, Eu) => {
-            Cu.onLoad = uu, Cu.onError = (uu, ju) => {
-              Eu(new Error(`${qu.context}: ${(null===ju||void 0===ju?void 0:ju.message)||uu||"Failed to load texture"}`))
+        const VG = {},
+          pG = new Promise(((GG, bG) => {
+            VG.onLoad = GG, VG.onError = (GG, ZG) => {
+              bG(new Error(`${UG.context}: ${(null===ZG||void 0===ZG?void 0:ZG.message)||GG||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: Nu,
-            bytes: Ou,
-            label: Yu
-          } = qu,
-          hu = {
-            noMipmap: Uu,
+            mimeType: QG,
+            bytes: KG,
+            label: hG
+          } = UG,
+          dG = {
+            noMipmap: SG,
             invertY: !1,
-            samplingMode: lu,
-            ...Cu,
-            mimeType: Nu,
+            samplingMode: kG,
+            ...VG,
+            mimeType: QG,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          Du = new Xu.c(null, Eu, hu);
-        Bu.v.set(Du, bu), Object.assign(Du, fu), Du.updateURL(su, Ou);
-        const gu = Du.getInternalTexture();
-        gu && (gu.label = Yu), uu.uvSet = Du.coordinatesIndex, uu.matrix.set((0, Bu.Q)(Du)), (0, cu.G)(uu, Du)
+          JG = new yG.d(null, bG, dG);
+        gG.u.set(JG, pG), Object.assign(JG, YG), JG.updateURL(wG, KG);
+        const rG = JG.getInternalTexture();
+        rG && (rG.label = hG), GG.uvSet = JG.coordinatesIndex, GG.matrix.set((0, gG.M)(JG)), (0, fG.G)(GG, JG)
       },
-      cube: (uu, Eu, ju) => {
+      cube: (GG, bG, ZG) => {
         let {
-          rootUrl: su,
-          files: Zu,
-          noMipmap: lu,
-          luminance: qu
-        } = ju;
+          rootUrl: wG,
+          files: LG,
+          noMipmap: kG,
+          luminance: UG
+        } = ZG;
         const {
-          samplingMode: fu
-        } = uu.sampler, Cu = fu === (0, cu.z)(lu) ? null : () => {
-          (0, Bu.O)(bu, fu)
-        }, bu = new Uu.e(su, Eu, null, lu, Zu, Cu, null, (0, cu.x)(qu));
-        bu.coordinatesMode = Xu.c.SKYBOX_MODE, (0, cu.G)(uu, bu)
+          samplingMode: YG
+        } = GG.sampler, VG = YG === (0, fG.x)(kG) ? null : () => {
+          (0, gG.K)(pG, YG)
+        }, pG = new SG.b(wG, bG, null, kG, LG, VG, null, (0, fG.v)(UG));
+        pG.coordinatesMode = yG.d.SKYBOX_MODE, (0, fG.G)(GG, pG)
       },
-      canvas: (uu, Eu, ju) => {
+      canvas: (GG, bG, ZG) => {
         let {
-          width: su,
-          height: Uu,
-          mipmaps: lu,
-          samplingMode: qu,
-          hasAlpha: fu = !1,
-          wrap: Cu = Xu.c.CLAMP_ADDRESSMODE
-        } = ju;
-        const bu = new Zu.d(Eu, {
-          width: su,
-          height: Uu
-        }, uu, lu, qu);
-        bu.hasAlpha = fu, bu.wrapU = Cu, bu.wrapV = Cu;
-        const cu = (0, Bu.G)(bu);
-        return (0, Bu.I)(cu, bu), cu
+          width: wG,
+          height: SG,
+          mipmaps: kG,
+          samplingMode: UG,
+          hasAlpha: YG = !1,
+          wrap: VG = yG.d.CLAMP_ADDRESSMODE
+        } = ZG;
+        const pG = new LG.b(bG, {
+          width: wG,
+          height: SG
+        }, GG, kG, UG);
+        pG.hasAlpha = YG, pG.wrapU = VG, pG.wrapV = VG;
+        const fG = (0, gG.B)(pG);
+        return (0, gG.E)(fG, pG), fG
       }
     })
   },
-  41394: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Cu,
-      h: () => bu,
-      k: () => cu
+  41565: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => VG,
+      g: () => pG,
+      k: () => fG
     });
-    var su = ju(41378),
-      Uu = ju(40319),
-      Zu = ju(40574),
-      Xu = ju(40676),
-      lu = ju(41387),
-      qu = ju(40668),
-      fu = ju(37867);
-    class Cu extends Xu.b {
+    var wG = ZG(41552),
+      SG = ZG(40447),
+      LG = ZG(40681),
+      yG = ZG(40797),
+      kG = ZG(41560),
+      UG = ZG(40795),
+      YG = ZG(37845);
+    class VG extends yG.e {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (uu, Eu) => {
-          this.releaseUnlessInstanced(Eu)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (GG, bG) => {
+          this.releaseUnlessInstanced(bG)
         }, this.onLinked = null
       }
-      link(uu) {
-        var Eu;
-        (0, fu.p)(uu), this.model = uu, null === (Eu = this.onLinked) || void 0 === Eu || Eu.call(this, uu)
+      link(GG) {
+        var bG;
+        (0, YG.n)(GG), this.model = GG, null === (bG = this.onLinked) || void 0 === bG || bG.call(this, GG)
       }
       relink() {
         this.release();
-        const uu = [];
-        for (const Uu of Object.values(this._vertexBuffers))
-          if (!Uu.getIsInstanced()) {
+        const GG = [];
+        for (const SG of Object.values(this._vertexBuffers))
+          if (!SG.getIsInstanced()) {
             const {
-              byteOffset: Eu,
-              byteStride: ju,
-              type: su,
-              normalized: Zu
-            } = Uu;
-            uu.push({
-              kind: Uu.getKind(),
-              data: Uu.getData(),
-              offset: Eu,
-              stride: ju,
-              components: Uu.getSize(),
-              glType: su,
-              isNormalized: Zu
+              byteOffset: bG,
+              byteStride: ZG,
+              type: wG,
+              normalized: LG
+            } = SG;
+            GG.push({
+              kind: SG.getKind(),
+              data: SG.getData(),
+              offset: bG,
+              stride: ZG,
+              components: SG.getSize(),
+              glType: wG,
+              isNormalized: LG
             })
-          } const Eu = this._indices.length ? this._indices : null,
+          } const bG = this._indices.length ? this._indices : null,
           {
-            minimum: ju,
-            maximum: su
+            minimum: ZG,
+            maximum: wG
           } = this.extend;
-        this.link(new fu.f(uu, Eu, this.getTotalVertices(), new Float64Array(ju.Osu()), new Float64Array(su.Osu())))
+        this.link(new YG.f(GG, bG, this.getTotalVertices(), new Float64Array(ZG.mwG()), new Float64Array(wG.mwG())))
       }
-      copy(uu) {
-        if (!this.model) return super.copy(uu);
-        const Eu = new Cu(uu, this.hV()),
-          ju = this.Ysu(void 0, !0);
-        ju && Eu.setIndices(ju);
-        let Xu = !1;
-        for (const Zu in this._vertexBuffers) {
-          const uu = this._vertexBuffers[Zu],
-            ju = uu.getData();
-          if (!ju) continue;
-          const lu = uu.getSize(),
+      copy(GG) {
+        if (!this.model) return super.copy(GG);
+        const bG = new VG(GG, this.Dv()),
+          ZG = this.IwG(void 0, !0);
+        ZG && bG.setIndices(ZG);
+        let yG = !1;
+        for (const LG in this._vertexBuffers) {
+          const GG = this._vertexBuffers[LG],
+            ZG = GG.getData();
+          if (!ZG) continue;
+          const kG = GG.getSize(),
             {
-              type: qu,
-              byteOffset: fu,
-              byteStride: Cu,
-              normalized: bu
-            } = uu;
-          Xu ||= uu.isUpdatable();
-          const cu = uu.getIsInstanced() ? (ju instanceof Array ? 4 * ju.length : ju.byteLength) / Cu : this.getTotalVertices(),
-            Nu = (0, Uu.s)(ju, lu, qu, fu, Cu, cu, !0),
-            Ou = {
-              updatable: uu.isUpdatable(),
-              stride: lu,
-              type: qu,
-              normalized: bu,
+              type: UG,
+              byteOffset: YG,
+              byteStride: VG,
+              normalized: pG
+            } = GG;
+          yG ||= GG.isUpdatable();
+          const fG = GG.getIsInstanced() ? (ZG instanceof Array ? 4 * ZG.length : ZG.byteLength) / VG : this.getTotalVertices(),
+            QG = (0, SG.m)(ZG, kG, UG, YG, VG, fG, !0),
+            KG = {
+              updatable: GG.isUpdatable(),
+              stride: kG,
+              type: UG,
+              normalized: pG,
               takeBufferOwnership: !0,
-              instanced: uu.getIsInstanced()
+              instanced: GG.getIsInstanced()
             };
-          Eu.setVerticesBuffer(new su.e(this.wO(), Nu, Zu, Ou), cu)
+          bG.setVerticesBuffer(new wG.c(this.CK(), QG, LG, KG), fG)
         }
-        return Eu._updatable = Xu, Eu._boundingInfo = new Zu.c(this.extend.minimum, this.extend.maximum), Eu.relink(), Eu
+        return bG._updatable = yG, bG._boundingInfo = new LG.c(this.extend.minimum, this.extend.maximum), bG.relink(), bG
       }
-      static mergeMeshes(uu, Eu, ju, su, Uu, Zu) {
-        const qu = uu[0].hV(),
-          fu = new lu.d(uu[0].name + "_merged", qu),
-          bu = new Cu(Xu.b.RandomId(), qu, void 0, !1, fu);
+      static mergeMeshes(GG, bG, ZG, wG, SG, LG) {
+        const UG = GG[0].Dv(),
+          YG = new kG.d(GG[0].name + "_merged", UG),
+          pG = new VG(yG.e.RandomId(), UG, void 0, !1, YG);
         try {
-          if (!lu.d.MergeMeshes(uu, Eu, ju, fu, Uu, Zu)) return fu.dispose(), null
-        } catch (cu) {
-          throw fu.dispose(), cu
+          if (!kG.d.MergeMeshes(GG, bG, ZG, YG, SG, LG)) return YG.dispose(), null
+        } catch (fG) {
+          throw YG.dispose(), fG
         }
-        return bu.relink(), fu
+        return pG.relink(), YG
       }
-      removeVerticesData(uu) {
-        this.releaseUnlessInstanced(uu), super.removeVerticesData(uu)
+      removeVerticesData(GG) {
+        this.releaseUnlessInstanced(GG), super.removeVerticesData(GG)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(uu) {
-        var Eu;
-        uu && null !== (Eu = this.getVertexBuffer(uu)) && void 0 !== Eu && Eu.getIsInstanced() || this.release()
+      releaseUnlessInstanced(GG) {
+        var bG;
+        GG && null !== (bG = this.getVertexBuffer(GG)) && void 0 !== bG && bG.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, fu.x)(this.model), this.model = null)
+        this.model && ((0, YG.v)(this.model), this.model = null)
       }
     }
 
-    function bu(uu, Eu, ju) {
-      let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new lu.d(uu, ju);
-      const Uu = (0, fu.n)(Eu),
+    function pG(GG, bG, ZG) {
+      let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new kG.d(GG, ZG);
+      const SG = (0, YG.k)(bG),
         {
-          positions: Zu,
-          normals: bu,
-          uvs: cu,
-          indices: Nu,
-          named: Ou = {}
-        } = Eu,
-        Yu = new qu.b;
-      Yu.positions = Zu, Yu.normals = null !== bu && void 0 !== bu ? bu : null, Yu.uvs = null !== cu && void 0 !== cu ? cu : null, Yu.indices = Nu;
-      const hu = new Cu(Xu.b.RandomId(), ju, Yu, !1, su);
+          positions: LG,
+          normals: pG,
+          uvs: fG,
+          indices: QG,
+          named: KG = {}
+        } = bG,
+        hG = new UG.e;
+      hG.positions = LG, hG.normals = null !== pG && void 0 !== pG ? pG : null, hG.uvs = null !== fG && void 0 !== fG ? fG : null, hG.indices = QG;
+      const dG = new VG(yG.e.RandomId(), ZG, hG, !1, wG);
       for (const {
-          kind: Xu,
-          components: lu
+          kind: yG,
+          components: kG
         }
-        of Uu.vertexAttributes) Xu in Ou && su.setVerticesData(Xu, Ou[Xu], !1, lu);
-      return hu.link(Uu), su
+        of SG.vertexAttributes) yG in KG && wG.setVerticesData(yG, KG[yG], !1, kG);
+      return dG.link(SG), wG
     }
 
-    function cu(uu, Eu, ju) {
-      let su = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const Uu = new lu.d(uu, ju),
+    function fG(GG, bG, ZG) {
+      let wG = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const SG = new kG.d(GG, ZG),
         {
-          positions: Zu,
-          normals: Xu,
-          uvs: fu,
-          indices: Cu
-        } = Eu;
-      return Object.assign(new qu.b, {
-        positions: Zu,
-        normals: Xu,
-        uvs: fu,
-        indices: Cu
-      }).applyToMesh(Uu, su), Uu
+          positions: LG,
+          normals: yG,
+          uvs: YG,
+          indices: VG
+        } = bG;
+      return Object.assign(new UG.e, {
+        positions: LG,
+        normals: yG,
+        uvs: YG,
+        indices: VG
+      }).applyToMesh(SG, wG), SG
     }
   },
-  41373: (uu, Eu, ju) => {
-    function su(uu, Eu, ju) {
-      const su = Eu * Eu * 4,
-        Uu = uu[0].layers,
-        Zu = Uu * (uu.length - 1) + uu[uu.length - 1].layers,
-        Xu = new Uint8Array(Zu * su);
-      uu.forEach(((Eu, ju) => {
-        const Zu = ju + 1 < uu.length ? Math.min(Eu.layers, Uu) : Eu.layers;
-        Xu.set(new Uint8Array(Eu.pixels.buffer, Eu.pixels.byteOffset, Zu * su), ju * Uu * su)
+  41544: (GG, bG, ZG) => {
+    function wG(GG, bG, ZG) {
+      const wG = bG * bG * 4,
+        SG = GG[0].layers,
+        LG = SG * (GG.length - 1) + GG[GG.length - 1].layers,
+        yG = new Uint8Array(LG * wG);
+      GG.forEach(((bG, ZG) => {
+        const LG = ZG + 1 < GG.length ? Math.min(bG.layers, SG) : bG.layers;
+        yG.set(new Uint8Array(bG.pixels.buffer, bG.pixels.byteOffset, LG * wG), ZG * SG * wG)
       }));
-      const lu = Math.max(1, Math.min(Zu, ju || Zu));
-      if (lu === Zu) return [{
-        pixels: Xu,
-        layers: Zu
+      const kG = Math.max(1, Math.min(LG, ZG || LG));
+      if (kG === LG) return [{
+        pixels: yG,
+        layers: LG
       }];
-      const qu = [];
-      for (let fu = 0; fu < Zu; fu += lu) {
-        const uu = Math.min(Zu, fu + lu);
-        qu.push({
-          pixels: Xu.slice(fu * su, uu * su),
-          layers: uu - fu
+      const UG = [];
+      for (let YG = 0; YG < LG; YG += kG) {
+        const GG = Math.min(LG, YG + kG);
+        UG.push({
+          pixels: yG.slice(YG * wG, GG * wG),
+          layers: GG - YG
         })
       }
-      return qu
+      return UG
     }
-    ju.d(Eu, {
-      e: () => su,
-      g: () => Zu
+    ZG.d(bG, {
+      c: () => wG,
+      g: () => LG
     });
-    const Uu = new WeakMap;
+    const SG = new WeakMap;
 
-    function Zu(uu, Eu, ju) {
-      var su, Zu;
-      const Xu = null !== (su = Uu.get(uu)) && void 0 !== su ? su : new Map;
-      Uu.set(uu, Xu);
-      const lu = null !== (Zu = Xu.get(Eu[0])) && void 0 !== Zu ? Zu : [];
-      Xu.set(Eu[0], lu);
-      const qu = lu.find((uu => uu.urls.length === Eu.length && uu.urls.every(((uu, ju) => uu === Eu[ju]))));
-      if (qu) return qu.built;
-      const fu = {
-        urls: [...Eu],
-        built: ju()
+    function LG(GG, bG, ZG) {
+      var wG, LG;
+      const yG = null !== (wG = SG.get(GG)) && void 0 !== wG ? wG : new Map;
+      SG.set(GG, yG);
+      const kG = null !== (LG = yG.get(bG[0])) && void 0 !== LG ? LG : [];
+      yG.set(bG[0], kG);
+      const UG = kG.find((GG => GG.urls.length === bG.length && GG.urls.every(((GG, ZG) => GG === bG[ZG]))));
+      if (UG) return UG.built;
+      const YG = {
+        urls: [...bG],
+        built: ZG()
       };
-      return lu.push(fu), fu.built.catch((() => {
-        lu.splice(lu.indexOf(fu), 1)
-      })), fu.built
+      return kG.push(YG), YG.built.catch((() => {
+        kG.splice(kG.indexOf(YG), 1)
+      })), YG.built
     }
   },
-  39150: (uu, Eu, ju) => {
-    var su = {
-      "./cape_cow_cream.png": 28124,
-      "./cape_cow_normal.png": 28133,
-      "./cape_creator_level1.png": 28138,
-      "./cape_creator_level2.png": 28147,
-      "./cape_creator_level3.png": 28151,
-      "./cape_none.png": 28154,
-      "./cape_pig.png": 28163,
-      "./cape_sheep.png": 28172,
-      "./cape_super.png": 28176,
-      "./cape_super_inverted.png": 28181,
-      "./cape_youtuber.png": 28188
+  39198: (GG, bG, ZG) => {
+    var wG = {
+      "./cape_cow_cream.png": 28096,
+      "./cape_cow_normal.png": 28105,
+      "./cape_creator_level1.png": 28112,
+      "./cape_creator_level2.png": 28120,
+      "./cape_creator_level3.png": 28126,
+      "./cape_none.png": 28135,
+      "./cape_pig.png": 28140,
+      "./cape_sheep.png": 28143,
+      "./cape_super.png": 28146,
+      "./cape_super_inverted.png": 28155,
+      "./cape_youtuber.png": 28164
     };
 
-    function Uu(uu) {
-      var Eu = Zu(uu);
-      return ju(Eu)
+    function SG(GG) {
+      var bG = LG(GG);
+      return ZG(bG)
     }
 
-    function Zu(uu) {
-      if (!ju.o(su, uu)) {
-        var Eu = new Error("Cannot find module '" + uu + "'");
-        throw Eu.code = "MODULE_NOT_FOUND", Eu
+    function LG(GG) {
+      if (!ZG.o(wG, GG)) {
+        var bG = new Error("Cannot find module '" + GG + "'");
+        throw bG.code = "MODULE_NOT_FOUND", bG
       }
-      return su[uu]
+      return wG[GG]
     }
-    Uu.keys = function() {
-      return Object.keys(su)
-    }, Uu.resolve = Zu, uu.exports = Uu, Uu.id = 39150
+    SG.keys = function() {
+      return Object.keys(wG)
+    }, SG.resolve = LG, GG.exports = SG, SG.id = 39198
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

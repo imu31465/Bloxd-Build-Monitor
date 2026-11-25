@@ -1,228 +1,228 @@
 export const id = 113;
 export const ids = [113];
 export const modules = {
-  5155: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Ou,
-      f: () => Mu,
-      h: () => Yu,
-      l: () => gu
+  5019: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => KG,
+      e: () => zG,
+      f: () => hG,
+      g: () => rG
     });
-    var su = ju(58),
-      Uu = ju(5158),
-      Zu = ju(4528),
-      Xu = ju(1419),
-      lu = ju(5179),
-      qu = ju(1105),
-      fu = ju.n(qu),
-      Cu = ju(1405),
-      bu = ju(1779),
-      cu = ju(5182),
-      Nu = ju(1154);
+    var wG = ZG(51),
+      SG = ZG(5021),
+      LG = ZG(4396),
+      yG = ZG(1320),
+      kG = ZG(5039),
+      UG = ZG(1006),
+      YG = ZG.n(UG),
+      VG = ZG(1311),
+      pG = ZG(1702),
+      fG = ZG(5042),
+      QG = ZG(1067);
 
-    function Ou(uu) {
+    function KG(GG) {
       let {
-        label: Eu,
-        onClick: ju,
-        checked: su,
-        circleInfoText: Uu,
-        className: lu,
-        disabled: qu,
-        note: Cu
-      } = uu;
-      return (0, Nu.jsxs)("div", {
-        "aria-disabled": qu || void 0,
+        label: bG,
+        onClick: ZG,
+        checked: wG,
+        circleInfoText: SG,
+        className: kG,
+        disabled: UG,
+        note: VG
+      } = GG;
+      return (0, QG.jsxs)("div", {
+        "aria-disabled": UG || void 0,
         "data-pad-focusable": !0,
-        className: fu()("SettingBox CheckboxContainer", {
-          [lu]: lu,
-          SettingBoxDisabled: qu
+        className: YG()("SettingBox CheckboxContainer", {
+          [kG]: kG,
+          SettingBoxDisabled: UG
         }),
         onClick: () => {
-          qu || ju(!su)
+          UG || ZG(!wG)
         },
-        children: [(0, Nu.jsxs)("div", {
+        children: [(0, QG.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, Nu.jsx)("label", {
+          children: [(0, QG.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, Nu.jsx)(Zu.d, {
+            children: (0, QG.jsx)(LG.e, {
               className: "SettingsCheckbox",
-              checked: su,
-              disabled: qu,
+              checked: wG,
+              disabled: UG,
               onChange: () => {}
             })
-          }), (0, Nu.jsxs)("div", {
+          }), (0, QG.jsxs)("div", {
             className: "CheckboxText",
-            children: [Eu, Uu && (0, Nu.jsx)("span", {
-              onClick: uu => uu.stopPropagation(),
-              children: (0, Nu.jsx)(Xu.c, {
+            children: [bG, SG && (0, QG.jsx)("span", {
+              onClick: GG => GG.stopPropagation(),
+              children: (0, QG.jsx)(yG.d, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: Uu
+                hoverInfo: SG
               })
             })]
           })]
-        }), Cu && (0, Nu.jsx)("div", {
+        }), VG && (0, QG.jsx)("div", {
           className: "SettingNote",
-          children: Cu
+          children: VG
         })]
       })
     }
 
-    function Yu(uu) {
+    function hG(GG) {
       let {
-        name: Eu,
-        onChange: ju,
-        min: Uu,
-        max: Zu,
-        step: lu,
-        initValue: qu,
-        circleInfoText: Cu,
-        format: bu,
-        className: cu,
-        padStep: Ou,
-        disabled: Yu = !1,
-        selectableMax: hu,
-        cappedNote: gu,
-        onChangeComplete: Mu
-      } = uu;
-      const [eu, Gu] = (0, su.useState)(qu), pu = (0, su.useRef)(qu);
-      (0, su.useEffect)((() => {
-        pu.current = qu, Gu(qu)
-      }), [qu]);
-      const wu = void 0 !== hu && hu < Zu,
-        Ju = wu ? {
-          "--slider-selectable": (hu - Uu) / (Zu - Uu)
+        name: bG,
+        onChange: ZG,
+        min: SG,
+        max: LG,
+        step: kG,
+        initValue: UG,
+        circleInfoText: VG,
+        format: pG,
+        className: fG,
+        padStep: KG,
+        disabled: hG = !1,
+        selectableMax: dG,
+        cappedNote: rG,
+        onChangeComplete: zG
+      } = GG;
+      const [EG, oG] = (0, wG.useState)(UG), XG = (0, wG.useRef)(UG);
+      (0, wG.useEffect)((() => {
+        XG.current = UG, oG(UG)
+      }), [UG]);
+      const uG = void 0 !== dG && dG < LG,
+        iG = uG ? {
+          "--slider-selectable": (dG - SG) / (LG - SG)
         } : void 0;
-      return (0, Nu.jsxs)("div", {
-        className: fu()("SettingBox SettingsSliderDiv", {
-          [cu]: cu,
-          SettingBoxDisabled: Yu,
-          SliderCapped: wu
+      return (0, QG.jsxs)("div", {
+        className: YG()("SettingBox SettingsSliderDiv", {
+          [fG]: fG,
+          SettingBoxDisabled: hG,
+          SliderCapped: uG
         }),
-        style: Ju,
-        children: [(0, Nu.jsxs)("div", {
+        style: iG,
+        children: [(0, QG.jsxs)("div", {
           className: "SliderText",
-          children: [`${Eu}: ${bu?bu(eu):eu}`, Cu && (0, Nu.jsx)(Xu.c, {
+          children: [`${bG}: ${pG?pG(EG):EG}`, VG && (0, QG.jsx)(yG.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Cu
+            hoverInfo: VG
           })]
-        }), (0, Nu.jsx)("div", {
+        }), (0, QG.jsx)("div", {
           className: "SliderDiv",
-          children: (0, Nu.jsx)(Du, {
-            value: eu,
-            min: Uu,
-            max: Zu,
-            step: lu,
-            onChange: uu => {
-              if (wu && uu >= hu && eu === hu) return;
-              const Eu = wu ? Math.min(uu, hu) : uu;
-              pu.current = Eu, Gu(Eu), ju(Eu)
+          children: (0, QG.jsx)(JG, {
+            value: EG,
+            min: SG,
+            max: LG,
+            step: kG,
+            onChange: GG => {
+              if (uG && GG >= dG && EG === dG) return;
+              const bG = uG ? Math.min(GG, dG) : GG;
+              XG.current = bG, oG(bG), ZG(bG)
             },
-            onChangeComplete: Mu && (() => {
-              Mu(pu.current)
+            onChangeComplete: zG && (() => {
+              zG(XG.current)
             }),
-            format: bu,
-            padStep: Ou,
-            disabled: Yu
+            format: pG,
+            padStep: KG,
+            disabled: hG
           })
-        }), wu && gu && (0, Nu.jsx)("div", {
+        }), uG && rG && (0, QG.jsx)("div", {
           className: "SettingNote",
-          children: gu
+          children: rG
         })]
       })
     }
-    const hu = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const dG = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function Du(uu) {
-      var Eu;
+    function JG(GG) {
+      var bG;
       let {
-        value: ju,
-        min: Zu,
-        max: Xu,
-        step: lu,
-        onChange: qu,
-        orientation: fu,
-        reverse: Cu,
-        setIsChanging: bu,
-        tooltip: Ou,
-        labels: Yu,
-        handleLabel: Du,
-        format: gu,
-        onChangeStart: Mu,
-        onChangeComplete: eu,
-        padStep: Gu,
-        disabled: pu = !1
-      } = uu;
-      const wu = (0, su.useRef)(null),
-        Ju = (0, su.useRef)(null);
-      (0, su.useLayoutEffect)((() => {
-        var uu, Eu, ju;
-        const su = null !== (uu = null === (Eu = wu.current) || void 0 === Eu ? void 0 : Eu.querySelector(".rangeslider")) && void 0 !== uu ? uu : null;
-        null === su || void 0 === su || su.setAttribute("data-pad-slider", ""), null === su || void 0 === su || su.setAttribute("data-pad-focusable", ""), null === su || void 0 === su || null === (ju = su.querySelector(".rangeslider__handle")) || void 0 === ju || ju.setAttribute("data-pad-slider-handle", ""), Ju.current = su
-      }), []), (0, su.useLayoutEffect)((() => {
-        var uu, Eu;
-        pu ? null === (uu = Ju.current) || void 0 === uu || uu.setAttribute("aria-disabled", "true") : null === (Eu = Ju.current) || void 0 === Eu || Eu.removeAttribute("aria-disabled")
-      }), [pu]);
-      const du = (null !== (Eu = String(lu).split(".")[1]) && void 0 !== Eu ? Eu : "").length,
-        au = uu => {
-          const Eu = Number((Math.round((uu - Zu) / lu) * lu + Zu).toFixed(du));
-          return Math.min(Xu, Math.max(Zu, Eu))
+        value: ZG,
+        min: LG,
+        max: yG,
+        step: kG,
+        onChange: UG,
+        orientation: YG,
+        reverse: VG,
+        setIsChanging: pG,
+        tooltip: KG,
+        labels: hG,
+        handleLabel: JG,
+        format: rG,
+        onChangeStart: zG,
+        onChangeComplete: EG,
+        padStep: oG,
+        disabled: XG = !1
+      } = GG;
+      const uG = (0, wG.useRef)(null),
+        iG = (0, wG.useRef)(null);
+      (0, wG.useLayoutEffect)((() => {
+        var GG, bG, ZG;
+        const wG = null !== (GG = null === (bG = uG.current) || void 0 === bG ? void 0 : bG.querySelector(".rangeslider")) && void 0 !== GG ? GG : null;
+        null === wG || void 0 === wG || wG.setAttribute("data-pad-slider", ""), null === wG || void 0 === wG || wG.setAttribute("data-pad-focusable", ""), null === wG || void 0 === wG || null === (ZG = wG.querySelector(".rangeslider__handle")) || void 0 === ZG || ZG.setAttribute("data-pad-slider-handle", ""), iG.current = wG
+      }), []), (0, wG.useLayoutEffect)((() => {
+        var GG, bG;
+        XG ? null === (GG = iG.current) || void 0 === GG || GG.setAttribute("aria-disabled", "true") : null === (bG = iG.current) || void 0 === bG || bG.removeAttribute("aria-disabled")
+      }), [XG]);
+      const CG = (null !== (bG = String(kG).split(".")[1]) && void 0 !== bG ? bG : "").length,
+        WG = GG => {
+          const bG = Number((Math.round((GG - LG) / kG) * kG + LG).toFixed(CG));
+          return Math.min(yG, Math.max(LG, bG))
         },
-        Pu = (0, su.useRef)(eu);
-      Pu.current = eu, (0, su.useEffect)((() => {
-        const uu = wu.current;
-        if (!uu) return;
-        const Eu = uu => {
-          var Eu;
-          hu.has(uu.key) && (null === (Eu = Pu.current) || void 0 === Eu || Eu.call(Pu))
+        mG = (0, wG.useRef)(EG);
+      mG.current = EG, (0, wG.useEffect)((() => {
+        const GG = uG.current;
+        if (!GG) return;
+        const bG = GG => {
+          var bG;
+          dG.has(GG.key) && (null === (bG = mG.current) || void 0 === bG || bG.call(mG))
         };
-        return uu.addEventListener("keyup", Eu), () => {
-          uu.removeEventListener("keyup", Eu)
+        return GG.addEventListener("keyup", bG), () => {
+          GG.removeEventListener("keyup", bG)
         }
       }), []);
-      const ou = (0, su.useRef)(!1);
-      return (0, cu.e)(Ju, {
-        adjust: uu => {
-          if (pu) return;
-          const Eu = null !== Gu && void 0 !== Gu ? Gu : Math.max(lu, Math.round((Xu - Zu) / 20 / lu) * lu),
-            su = au(ju + uu * Eu * (Cu ? -1 : 1));
-          su !== ju && (null === Mu || void 0 === Mu || Mu(), qu(su), null === eu || void 0 === eu || eu())
+      const IG = (0, wG.useRef)(!1);
+      return (0, fG.f)(iG, {
+        adjust: GG => {
+          if (XG) return;
+          const bG = null !== oG && void 0 !== oG ? oG : Math.max(kG, Math.round((yG - LG) / 20 / kG) * kG),
+            wG = WG(ZG + GG * bG * (VG ? -1 : 1));
+          wG !== ZG && (null === zG || void 0 === zG || zG(), UG(wG), null === EG || void 0 === EG || EG())
         },
-        setFraction: uu => {
-          if (pu) return;
-          const Eu = au(Zu + (Cu ? 1 - uu : uu) * (Xu - Zu));
-          Eu !== ju && (ou.current || (ou.current = !0, null === Mu || void 0 === Mu || Mu()), qu(Eu))
+        setFraction: GG => {
+          if (XG) return;
+          const bG = WG(LG + (VG ? 1 - GG : GG) * (yG - LG));
+          bG !== ZG && (IG.current || (IG.current = !0, null === zG || void 0 === zG || zG()), UG(bG))
         },
         endDrag: () => {
-          ou.current && (ou.current = !1, null === eu || void 0 === eu || eu())
+          IG.current && (IG.current = !1, null === EG || void 0 === EG || EG())
         }
-      }), (0, Nu.jsx)("div", {
-        ref: wu,
+      }), (0, QG.jsx)("div", {
+        ref: uG,
         style: {
           display: "contents"
         },
-        children: (0, Nu.jsx)(Uu.c, {
-          value: ju,
-          min: Zu,
-          max: Xu,
-          step: lu,
-          onChange: qu,
-          orientation: fu,
-          reverse: Cu,
-          tooltip: Ou,
-          labels: Yu,
-          handleLabel: Du,
-          format: gu,
+        children: (0, QG.jsx)(SG.e, {
+          value: ZG,
+          min: LG,
+          max: yG,
+          step: kG,
+          onChange: UG,
+          orientation: YG,
+          reverse: VG,
+          tooltip: KG,
+          labels: hG,
+          handleLabel: JG,
+          format: rG,
           onChangeStart: () => {
-            null === Mu || void 0 === Mu || Mu(), null === bu || void 0 === bu || bu(!0)
+            null === zG || void 0 === zG || zG(), null === pG || void 0 === pG || pG(!0)
           },
           onChangeComplete: () => {
-            null === bu || void 0 === bu || bu(!1), null === eu || void 0 === eu || eu()
+            null === pG || void 0 === pG || pG(!1), null === EG || void 0 === EG || EG()
           }
         })
       })
     }
-    async function gu() {
-      const uu = Cu.NotificationProvider.showPromptPopup({
+    async function rG() {
+      const GG = VG.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -230,456 +230,456 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await uu.getResult() && (0, bu.reloadBloxd)()
+      !0 === await GG.getResult() && (0, pG.reloadBloxd)()
     }
 
-    function Mu(uu) {
+    function zG(GG) {
       let {
-        label: Eu,
-        options: ju,
-        value: su,
-        onChange: Uu,
-        circleInfoText: Zu
-      } = uu;
-      return (0, Nu.jsxs)("div", {
+        label: bG,
+        options: ZG,
+        value: wG,
+        onChange: SG,
+        circleInfoText: LG
+      } = GG;
+      return (0, QG.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, Nu.jsxs)("div", {
+        children: [(0, QG.jsxs)("div", {
           className: "SliderText",
-          children: [Eu, Zu && (0, Nu.jsx)(Xu.c, {
+          children: [bG, LG && (0, QG.jsx)(yG.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Zu
+            hoverInfo: LG
           })]
-        }), (0, Nu.jsx)(lu.c, {
-          ariaLabel: Eu,
-          options: ju,
-          value: su,
-          onChange: Uu
+        }), (0, QG.jsx)(kG.c, {
+          ariaLabel: bG,
+          options: ZG,
+          value: wG,
+          onChange: SG
         })]
       })
     }
   },
-  6863: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      default: () => yu
+  6668: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      default: () => OG
     });
-    var su = ju(58),
-      Uu = ju(1580),
-      Zu = ju(6764),
-      Xu = ju(1278),
-      lu = ju(349),
-      qu = ju(1600),
-      fu = ju(1393),
-      Cu = ju(1570),
-      bu = ju(1506),
-      cu = ju(1419),
-      Nu = ju(1667),
-      Ou = ju(2716),
-      Yu = ju(2861),
-      hu = ju(4737),
-      Du = ju(1178),
-      gu = ju(1559),
-      Mu = ju(91),
-      eu = ju(1244);
-    const Gu = ju.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
-    var pu = ju(1105),
-      wu = ju.n(pu),
-      Ju = ju(1116),
-      du = ju(1405),
-      au = ju(6761),
-      Pu = ju(1154);
-    const ou = (0, su.lazy)((() => Promise.all([ju.e(109), ju.e(78), ju.e(136), ju.e(135), ju.e(114), ju.e(402)]).then((() => ju(6796))).then((uu => ({
-      default: uu.ShaderPackPublishForm
+    var wG = ZG(51),
+      SG = ZG(1457),
+      LG = ZG(6561),
+      yG = ZG(1177),
+      kG = ZG(352),
+      UG = ZG(1490),
+      YG = ZG(1302),
+      VG = ZG(1444),
+      pG = ZG(1393),
+      fG = ZG(1320),
+      QG = ZG(1557),
+      KG = ZG(2575),
+      hG = ZG(2719),
+      dG = ZG(4573),
+      JG = ZG(1092),
+      rG = ZG(1431),
+      zG = ZG(80),
+      EG = ZG(1151);
+    const oG = ZG.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
+    var XG = ZG(1006),
+      uG = ZG.n(XG),
+      iG = ZG(1016),
+      CG = ZG(1311),
+      WG = ZG(6559),
+      mG = ZG(1067);
+    const IG = (0, wG.lazy)((() => Promise.all([ZG.e(109), ZG.e(78), ZG.e(136), ZG.e(135), ZG.e(114), ZG.e(402)]).then((() => ZG(6591))).then((GG => ({
+      default: GG.ShaderPackPublishForm
     })))));
 
-    function ku(uu) {
+    function FG(GG) {
       let {
-        details: Eu,
-        owner: ju,
-        onChanged: Uu
-      } = uu;
+        details: bG,
+        owner: ZG,
+        onChanged: SG
+      } = GG;
       const {
-        t: Xu
-      } = (0, eu.A)(), lu = (0, Cu.useNavigatePreserveSearch)(), {
-        userContext: qu
-      } = (0, Du.c)(), [cu, Nu] = (0, su.useState)(!1), [Ou, Yu] = (0, su.useState)(null), [hu, Mu] = (0, su.useState)(!1), {
-        packId: Gu,
-        name: pu,
-        description: ku,
-        live: mu
-      } = Eu;
-      async function vu(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Uu;
-        Nu(!0), Yu(null);
+        t: yG
+      } = (0, EG.w)(), kG = (0, VG.useNavigatePreserveSearch)(), {
+        userContext: UG
+      } = (0, JG.e)(), [fG, QG] = (0, wG.useState)(!1), [KG, hG] = (0, wG.useState)(null), [dG, zG] = (0, wG.useState)(!1), {
+        packId: oG,
+        name: XG,
+        description: FG,
+        live: vG
+      } = bG;
+      async function aG(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SG;
+        QG(!0), hG(null);
         try {
-          await uu(), Eu()
-        } catch (ju) {
-          console.error("Failed to change a shader pack", ju), Yu((0, au.x)(ju, Xu, "shaderPackListing:ownerActionFailed"))
+          await GG(), bG()
+        } catch (ZG) {
+          console.error("Failed to change a shader pack", ZG), hG((0, WG.z)(ZG, yG, "shaderPackListing:ownerActionFailed"))
         } finally {
-          Nu(!1)
+          QG(!1)
         }
       }
-      const Ku = (0, au.s)(qu);
-      return (0, Pu.jsxs)("section", {
+      const cG = (0, WG.s)(UG);
+      return (0, mG.jsxs)("section", {
         className: "ShaderPackOwnerPanel",
-        children: [(0, Pu.jsx)("h2", {
+        children: [(0, mG.jsx)("h2", {
           className: "ShaderPackSectionTitle",
-          children: Xu("general:manage")
-        }), (0, au.T)(ju, !(null === mu || void 0 === mu || !mu.renderId), Date.now(), Xu).map((uu => (0, Pu.jsxs)("div", {
-          className: wu()("ShaderPackOwnerNotice", {
-            Warning: "warning" === uu.tone
+          children: yG("general:manage")
+        }), (0, WG.Z)(ZG, !(null === vG || void 0 === vG || !vG.renderId), Date.now(), yG).map((GG => (0, mG.jsxs)("div", {
+          className: uG()("ShaderPackOwnerNotice", {
+            Warning: "warning" === GG.tone
           }),
-          children: [(0, Pu.jsx)(Ju.e, {
-            name: "warning" === uu.tone ? "triangle-exclamation" : "circle-info"
-          }), (0, Pu.jsxs)("div", {
-            children: [uu.text, uu.detail && (0, Pu.jsx)("pre", {
+          children: [(0, mG.jsx)(iG.c, {
+            name: "warning" === GG.tone ? "triangle-exclamation" : "circle-info"
+          }), (0, mG.jsxs)("div", {
+            children: [GG.text, GG.detail && (0, mG.jsx)("pre", {
               className: "ShaderPackOwnerNoticeDetail",
-              children: uu.detail
+              children: GG.detail
             })]
           })]
-        }, uu.text))), Eu.ban && (0, Pu.jsxs)("div", {
+        }, GG.text))), bG.ban && (0, mG.jsxs)("div", {
           className: "ShaderPackOwnerNotice Warning",
-          children: [(0, Pu.jsx)(Ju.e, {
+          children: [(0, mG.jsx)(iG.c, {
             name: "ban"
-          }), (0, Pu.jsxs)("div", {
-            children: ["Banned by ", Eu.ban.byName, " on ", new Date(Eu.ban.at).toLocaleString()]
+          }), (0, mG.jsxs)("div", {
+            children: ["Banned by ", bG.ban.byName, " on ", new Date(bG.ban.at).toLocaleString()]
           })]
-        }), Ou && (0, Pu.jsx)("div", {
+        }), KG && (0, mG.jsx)("div", {
           className: "ShaderPackOwnerError",
-          children: Ou
-        }), (0, Pu.jsxs)("div", {
+          children: KG
+        }), (0, mG.jsxs)("div", {
           className: "ShaderPackOwnerActions",
-          children: [(0, Pu.jsxs)(bu.$, {
-            disabled: cu,
+          children: [(0, mG.jsxs)(pG.K, {
+            disabled: fG,
             onClick: () => {
               !async function() {
-                const uu = await du.NotificationProvider.showInputPopup({
+                const GG = await CG.NotificationProvider.showInputPopup({
                   title: "shaderPackListing:renameTitle",
-                  initialValue: pu,
-                  maxLength: Zu.F,
+                  initialValue: XG,
+                  maxLength: LG.B,
                   submitText: "general:save",
-                  validate: uu => uu.trim().length < Zu.I ? Xu("shaderPackListing:nameTooShort", {
-                    min: String(Zu.I)
+                  validate: GG => GG.trim().length < LG.C ? yG("shaderPackListing:nameTooShort", {
+                    min: String(LG.C)
                   }) : null
                 }).getResult();
-                "notificationTornDown" !== uu && "submit" === (null === uu || void 0 === uu ? void 0 : uu.type) && uu.value.trim() !== pu && await vu((() => gu.b.updateShaderPack(qu, {
-                  packId: Gu,
-                  name: uu.value.trim()
+                "notificationTornDown" !== GG && "submit" === (null === GG || void 0 === GG ? void 0 : GG.type) && GG.value.trim() !== XG && await aG((() => rG.d.updateShaderPack(UG, {
+                  packId: oG,
+                  name: GG.value.trim()
                 })))
               }()
             },
-            children: [(0, Pu.jsx)(Ju.e, {
+            children: [(0, mG.jsx)(iG.c, {
               name: "pen"
-            }), " ", Xu("shaderPackListing:rename")]
-          }), (0, Pu.jsxs)(bu.$, {
-            disabled: cu,
+            }), " ", yG("shaderPackListing:rename")]
+          }), (0, mG.jsxs)(pG.K, {
+            disabled: fG,
             onClick: () => {
               !async function() {
-                const uu = await du.NotificationProvider.showInputPopup({
+                const GG = await CG.NotificationProvider.showInputPopup({
                   title: "shaderPackListing:editDescription",
-                  initialValue: ku,
-                  maxLength: Zu.x,
+                  initialValue: FG,
+                  maxLength: LG.q,
                   multiline: !0,
                   allowEmptySubmit: !0,
                   submitText: "general:save"
                 }).getResult();
-                "notificationTornDown" !== uu && "submit" === (null === uu || void 0 === uu ? void 0 : uu.type) && uu.value.trim() !== ku && await vu((() => gu.b.updateShaderPack(qu, {
-                  packId: Gu,
-                  description: uu.value.trim()
+                "notificationTornDown" !== GG && "submit" === (null === GG || void 0 === GG ? void 0 : GG.type) && GG.value.trim() !== FG && await aG((() => rG.d.updateShaderPack(UG, {
+                  packId: oG,
+                  description: GG.value.trim()
                 })))
               }()
             },
-            children: [(0, Pu.jsx)(Ju.e, {
+            children: [(0, mG.jsx)(iG.c, {
               name: "file-lines"
-            }), " ", Xu("shaderPackListing:editDescription")]
-          }), (0, Pu.jsxs)(bu.$, {
-            disabled: cu || ju.isBanned && !ju.listed,
+            }), " ", yG("shaderPackListing:editDescription")]
+          }), (0, mG.jsxs)(pG.K, {
+            disabled: fG || ZG.isBanned && !ZG.listed,
             onClick: () => {
-              vu((() => gu.b.updateShaderPack(qu, {
-                packId: Gu,
-                listed: !ju.listed
+              aG((() => rG.d.updateShaderPack(UG, {
+                packId: oG,
+                listed: !ZG.listed
               })))
             },
-            children: [(0, Pu.jsx)(Ju.e, {
-              name: ju.listed ? "eye-slash" : "eye"
-            }), " ", Xu(ju.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
-          }), !ju.isBanned && (0, Pu.jsxs)(bu.f, {
-            disabled: cu,
+            children: [(0, mG.jsx)(iG.c, {
+              name: ZG.listed ? "eye-slash" : "eye"
+            }), " ", yG(ZG.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
+          }), !ZG.isBanned && (0, mG.jsxs)(pG.d, {
+            disabled: fG,
             onClick: () => {
-              Mu(!hu)
+              zG(!dG)
             },
-            children: [(0, Pu.jsx)(Ju.e, {
+            children: [(0, mG.jsx)(iG.c, {
               name: "upload"
-            }), " ", Xu("shaderPackListing:uploadVersion")]
-          }), (0, Pu.jsxs)(bu.U, {
-            disabled: cu || ju.isBanned,
+            }), " ", yG("shaderPackListing:uploadVersion")]
+          }), (0, mG.jsxs)(pG.E, {
+            disabled: fG || ZG.isBanned,
             onClick: () => {
               !async function() {
-                !0 === await du.NotificationProvider.showPromptPopup({
+                !0 === await CG.NotificationProvider.showPromptPopup({
                   title: "shaderPackListing:deleteTitle",
                   subtitle: "shaderPackListing:deleteSubtitle",
                   confirmText: "general:delete",
                   cancelText: "general:cancel",
                   destructive: !0
-                }).getResult() && await vu((() => gu.b.deleteShaderPack(qu, Gu)), (() => {
-                  lu(`${au.R}?section=mine`, {
+                }).getResult() && await aG((() => rG.d.deleteShaderPack(UG, oG)), (() => {
+                  kG(`${WG.X}?section=mine`, {
                     replace: !0
                   })
                 }))
               }()
             },
-            children: [(0, Pu.jsx)(Ju.e, {
+            children: [(0, mG.jsx)(iG.c, {
               name: "trash-can"
-            }), " ", Xu("general:delete")]
-          }), Ku && (0, Pu.jsxs)(bu.U, {
-            disabled: cu,
+            }), " ", yG("general:delete")]
+          }), cG && (0, mG.jsxs)(pG.E, {
+            disabled: fG,
             onClick: () => {
-              vu((() => gu.b.setShaderPackBanned(qu, Gu, !ju.isBanned)))
+              aG((() => rG.d.setShaderPackBanned(UG, oG, !ZG.isBanned)))
             },
-            children: [(0, Pu.jsx)(Ju.e, {
-              name: ju.isBanned ? "circle-check" : "ban"
-            }), " ", ju.isBanned ? "Unban" : "Ban"]
+            children: [(0, mG.jsx)(iG.c, {
+              name: ZG.isBanned ? "circle-check" : "ban"
+            }), " ", ZG.isBanned ? "Unban" : "Ban"]
           })]
-        }), hu && (0, Pu.jsx)(su.Suspense, {
-          fallback: (0, Pu.jsx)(fu.b, {}),
-          children: (0, Pu.jsx)(ou, {
+        }), dG && (0, mG.jsx)(wG.Suspense, {
+          fallback: (0, mG.jsx)(YG.b, {}),
+          children: (0, mG.jsx)(IG, {
             existing: {
-              packId: Gu,
-              name: pu,
-              description: ku
+              packId: oG,
+              name: XG,
+              description: FG
             },
             onPublished: () => {
-              Mu(!1), Uu()
+              zG(!1), SG()
             }
           })
         })]
       })
     }
-    var mu = ju(65),
-      vu = ju(1955),
-      Ku = ju(1330),
-      Vu = ju(5182),
-      ru = ju(1255),
-      Qu = ju(6771),
-      iu = ju(6768),
-      Wu = ju(6779);
+    var vG = ZG(59),
+      aG = ZG(1873),
+      cG = ZG(1239),
+      lG = ZG(5042),
+      jG = ZG(1163),
+      PG = ZG(6576),
+      MG = ZG(6567),
+      AG = ZG(6583);
 
-    function Su(uu) {
+    function sG(GG) {
       let {
-        item: Eu
-      } = uu;
+        item: bG
+      } = GG;
       const {
-        t: ju
-      } = (0, eu.A)(), [Uu] = (0, Qu.f)(), [Xu, lu] = (0, su.useState)(Uu), [qu, fu] = (0, su.useState)(!1), [Cu, bu] = (0, su.useState)(!1), {
-        s3Url: cu
-      } = ru.clientSideServerUrls, {
-        width: Nu,
-        height: Ou
-      } = Zu.z.large, Yu = (0, Zu.C)(cu, Eu, Xu, "large"), {
-        renderVersion: hu
-      } = Eu;
-      return (0, Pu.jsxs)("div", {
+        t: ZG
+      } = (0, EG.w)(), [SG] = (0, PG.i)(), [yG, kG] = (0, wG.useState)(SG), [UG, YG] = (0, wG.useState)(!1), [VG, pG] = (0, wG.useState)(!1), {
+        s3Url: fG
+      } = jG.clientSideServerUrls, {
+        width: QG,
+        height: KG
+      } = LG.u.large, hG = (0, LG.v)(fG, bG, yG, "large"), {
+        renderVersion: dG
+      } = bG;
+      return (0, mG.jsxs)("div", {
         className: "ShaderPackPreviews",
-        children: [(0, Pu.jsx)(Wu.b, {
-          selected: Xu,
-          onSelect: uu => {
-            lu(uu), fu(!1)
+        children: [(0, mG.jsx)(AG.b, {
+          selected: yG,
+          onSelect: GG => {
+            kG(GG), YG(!1)
           },
-          imageUrl: uu => (0, Zu.C)(cu, Eu, uu, "thumb")
-        }), (0, Pu.jsxs)("div", {
+          imageUrl: GG => (0, LG.v)(fG, bG, GG, "thumb")
+        }), (0, mG.jsxs)("div", {
           className: "ShaderPackPreviewStage",
-          children: [!qu && (0, Pu.jsxs)("button", {
+          children: [!UG && (0, mG.jsxs)("button", {
             type: "button",
             className: "ShaderPackPreviewMain",
-            title: null === hu ? void 0 : ju("shaderPackListing:fullSize"),
-            disabled: null === hu,
+            title: null === dG ? void 0 : ZG("shaderPackListing:fullSize"),
+            disabled: null === dG,
             onClick: () => {
-              bu(!0)
+              pG(!0)
             },
-            children: [(0, Pu.jsx)("img", {
-              src: Yu,
-              width: Nu,
-              height: Ou,
-              alt: ju(au.ab[Xu]),
+            children: [(0, mG.jsx)("img", {
+              src: hG,
+              width: QG,
+              height: KG,
+              alt: ZG(WG.jb[yG]),
               draggable: !1
-            }), (0, Pu.jsx)(iu.c, {
-              item: Eu
+            }), (0, mG.jsx)(MG.b, {
+              item: bG
             })]
-          }), !qu && null !== hu && (0, Pu.jsxs)(Lu, {
+          }), !UG && null !== dG && (0, mG.jsxs)(eG, {
             side: "Right",
             onClick: () => {
-              fu(!0)
+              YG(!0)
             },
-            children: [(0, Pu.jsx)(Ju.e, {
+            children: [(0, mG.jsx)(iG.c, {
               name: "arrows-left-right"
-            }), " ", ju("shaderPackListing:compare")]
-          }), qu && null !== hu && (0, Pu.jsx)(Bu, {
-            item: Eu,
-            packUrl: Yu,
-            baselineUrl: (0, Zu.t)(cu, hu, Xu, "large")
-          }), qu && (0, Pu.jsx)(Lu, {
+            }), " ", ZG("shaderPackListing:compare")]
+          }), UG && null !== dG && (0, mG.jsx)(gG, {
+            item: bG,
+            packUrl: hG,
+            baselineUrl: (0, LG.n)(fG, dG, yG, "large")
+          }), UG && (0, mG.jsx)(eG, {
             side: "Left",
             onClick: () => {
-              fu(!1)
+              YG(!1)
             },
-            children: ju("shaderPackListing:withPack")
-          }), qu && (0, Pu.jsx)(Lu, {
+            children: ZG("shaderPackListing:withPack")
+          }), UG && (0, mG.jsx)(eG, {
             side: "Right",
             onClick: () => {
-              fu(!1)
+              YG(!1)
             },
-            children: ju("shaderPackListing:withoutPack")
+            children: ZG("shaderPackListing:withoutPack")
           })]
-        }), Cu && (0, Pu.jsx)(Iu, {
-          fullUrl: (0, Zu.C)(cu, Eu, Xu, "full"),
-          largeUrl: Yu,
-          alt: ju(au.ab[Xu]),
+        }), VG && (0, mG.jsx)(qG, {
+          fullUrl: (0, LG.v)(fG, bG, yG, "full"),
+          largeUrl: hG,
+          alt: ZG(WG.jb[yG]),
           onClose: () => {
-            bu(!1)
+            pG(!1)
           }
         })]
       })
     }
 
-    function Iu(uu) {
+    function qG(GG) {
       let {
-        fullUrl: Eu,
-        largeUrl: ju,
-        alt: Uu,
-        onClose: Zu
-      } = uu;
-      const Xu = (0, su.useRef)(null);
-      return (0, Ku.w)("popup", Xu, Zu), (0, su.useEffect)((() => {
-        function uu(uu) {
-          "Escape" === uu.key && (uu.stopPropagation(), Zu())
+        fullUrl: bG,
+        largeUrl: ZG,
+        alt: SG,
+        onClose: LG
+      } = GG;
+      const yG = (0, wG.useRef)(null);
+      return (0, cG.w)("popup", yG, LG), (0, wG.useEffect)((() => {
+        function GG(GG) {
+          "Escape" === GG.key && (GG.stopPropagation(), LG())
         }
-        return window.addEventListener("keydown", uu, !0), () => {
-          window.removeEventListener("keydown", uu, !0)
+        return window.addEventListener("keydown", GG, !0), () => {
+          window.removeEventListener("keydown", GG, !0)
         }
-      }), [Zu]), (0, mu.createPortal)((0, Pu.jsxs)("div", {
-        ref: Xu,
+      }), [LG]), (0, vG.createPortal)((0, mG.jsxs)("div", {
+        ref: yG,
         className: "ShaderPackFullSize",
-        onClick: Zu,
-        children: [(0, Pu.jsx)("img", {
+        onClick: LG,
+        children: [(0, mG.jsx)("img", {
           className: "ShaderPackFullSizeImage",
-          src: Eu,
-          alt: Uu,
+          src: bG,
+          alt: SG,
           draggable: !1,
           style: {
-            backgroundImage: `url(${ju})`
+            backgroundImage: `url(${ZG})`
           }
-        }), (0, Pu.jsx)(bu.l, {
+        }), (0, mG.jsx)(pG.j, {
           className: "ShaderPackFullSizeClose",
-          onClick: Zu
+          onClick: LG
         })]
       }), document.body)
     }
-    const Fu = 5;
+    const nG = 5;
 
-    function Bu(uu) {
+    function gG(GG) {
       let {
-        item: Eu,
-        packUrl: ju,
-        baselineUrl: Uu
-      } = uu;
+        item: bG,
+        packUrl: ZG,
+        baselineUrl: SG
+      } = GG;
       const {
-        t: Xu
-      } = (0, eu.A)(), [lu, qu] = (0, su.useState)(50), fu = (0, su.useRef)(!1), Cu = (0, su.useRef)(null), {
-        width: bu,
-        height: cu
-      } = Zu.z.large;
+        t: yG
+      } = (0, EG.w)(), [kG, UG] = (0, wG.useState)(50), YG = (0, wG.useRef)(!1), VG = (0, wG.useRef)(null), {
+        width: pG,
+        height: fG
+      } = LG.u.large;
 
-      function Nu(uu) {
-        qu((Eu => (0, vu.c)(Eu + uu, 0, 100)))
+      function QG(GG) {
+        UG((bG => (0, aG.d)(bG + GG, 0, 100)))
       }
 
-      function Ou(uu) {
-        const Eu = uu.currentTarget.getBoundingClientRect();
-        qu((0, vu.c)((uu.clientX - Eu.left) / Eu.width * 100, 0, 100))
+      function KG(GG) {
+        const bG = GG.currentTarget.getBoundingClientRect();
+        UG((0, aG.d)((GG.clientX - bG.left) / bG.width * 100, 0, 100))
       }
-      return (0, Vu.e)(Cu, {
-        adjust: uu => {
-          Nu(uu * Fu)
+      return (0, lG.f)(VG, {
+        adjust: GG => {
+          QG(GG * nG)
         },
-        setFraction: uu => {
-          qu(100 * uu)
+        setFraction: GG => {
+          UG(100 * GG)
         },
         endDrag: () => {}
-      }), (0, Pu.jsxs)("div", {
-        ref: Cu,
+      }), (0, mG.jsxs)("div", {
+        ref: VG,
         className: "ShaderPackCompare",
         "data-pad-slider": "",
         "data-pad-focusable": "",
         role: "slider",
         tabIndex: 0,
-        "aria-label": Xu("shaderPackListing:compare"),
+        "aria-label": yG("shaderPackListing:compare"),
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": Math.round(lu),
+        "aria-valuenow": Math.round(kG),
         style: {
-          "--split": `${lu}%`
+          "--split": `${kG}%`
         },
-        onKeyDown: function(uu) {
-          const Eu = "ArrowLeft" === uu.key ? -Fu : "ArrowRight" === uu.key ? Fu : 0;
-          0 !== Eu && (uu.preventDefault(), Nu(Eu))
+        onKeyDown: function(GG) {
+          const bG = "ArrowLeft" === GG.key ? -nG : "ArrowRight" === GG.key ? nG : 0;
+          0 !== bG && (GG.preventDefault(), QG(bG))
         },
-        onPointerDown: uu => {
-          fu.current = !0, uu.currentTarget.setPointerCapture(uu.pointerId), Ou(uu)
+        onPointerDown: GG => {
+          YG.current = !0, GG.currentTarget.setPointerCapture(GG.pointerId), KG(GG)
         },
-        onPointerMove: uu => {
-          fu.current && Ou(uu)
+        onPointerMove: GG => {
+          YG.current && KG(GG)
         },
         onPointerUp: () => {
-          fu.current = !1
+          YG.current = !1
         },
         onPointerCancel: () => {
-          fu.current = !1
+          YG.current = !1
         },
-        children: [(0, Pu.jsx)("img", {
+        children: [(0, mG.jsx)("img", {
           className: "ShaderPackCompareBaseline",
-          src: Uu,
-          width: bu,
-          height: cu,
+          src: SG,
+          width: pG,
+          height: fG,
           alt: "",
           draggable: !1,
           style: {
-            backgroundImage: `url(${ju})`
+            backgroundImage: `url(${ZG})`
           }
-        }), (0, Pu.jsx)("div", {
+        }), (0, mG.jsx)("div", {
           className: "ShaderPackCompareLine"
-        }), (0, Pu.jsx)("img", {
+        }), (0, mG.jsx)("img", {
           className: "ShaderPackComparePack",
-          src: ju,
-          width: bu,
-          height: cu,
+          src: ZG,
+          width: pG,
+          height: fG,
           alt: "",
           draggable: !1
-        }), (0, Pu.jsx)(iu.c, {
-          item: Eu,
+        }), (0, mG.jsx)(MG.b, {
+          item: bG,
           className: "ShaderPackCompareNotice"
         })]
       })
     }
 
-    function Lu(uu) {
+    function eG(GG) {
       let {
-        side: Eu,
-        onClick: ju,
-        children: su
-      } = uu;
-      return (0, Pu.jsx)("button", {
+        side: bG,
+        onClick: ZG,
+        children: wG
+      } = GG;
+      return (0, mG.jsx)("button", {
         type: "button",
-        className: `ShaderPackStageButton ${Eu}`,
-        onClick: ju,
-        children: (0, Pu.jsx)("span", {
+        className: `ShaderPackStageButton ${bG}`,
+        onClick: ZG,
+        children: (0, mG.jsx)("span", {
           className: "ShaderPackStageButtonFace SmallTextBold",
-          children: su
+          children: wG
         })
       })
     }
-    var tu = ju(5155),
-      xu = ju(326),
-      Tu = ju(6854);
-    const Hu = {
+    var RG = ZG(5019),
+      TG = ZG(318),
+      HG = ZG(6661);
+    const tG = {
       compiler: "shaderPack:compilerUnavailable",
       download: "shaderPackListing:useDownloadFailed",
       apiVersion: "shaderPackListing:useOtherApiVersion",
@@ -688,399 +688,399 @@ export const modules = {
       save: "shaderPack:saveFailed"
     };
 
-    function Au(uu) {
+    function DG(GG) {
       const {
-        userContext: Eu
-      } = (0, Du.c)(), [Uu, Zu] = (0, su.useState)(null), [Xu, lu] = (0, su.useState)(!1), [qu, fu] = (0, su.useState)(!1), [Cu, bu] = (0, su.useState)(null), cu = null === uu || void 0 === uu ? void 0 : uu.packId, Nu = null === uu || void 0 === uu ? void 0 : uu.sourceHash;
-      return (0, su.useEffect)((() => {
-        if (lu(!1), bu(null), void 0 === cu) return;
-        let uu = !1;
-        return Promise.all([(0, Mu.hasUsableWebGpuAdapter)(), (0, Tu.e)()]).then((Eu => {
-          let [ju, su] = Eu;
-          var Uu;
-          uu || (Zu(ju), lu((null === su || void 0 === su || null === (Uu = su.listing) || void 0 === Uu ? void 0 : Uu.packId) === cu && su.listing.sourceHash === Nu))
-        })).catch((Eu => {
-          console.error("Failed to check whether this shader pack can be used", Eu), uu || Zu(!1)
+        userContext: bG
+      } = (0, JG.e)(), [SG, LG] = (0, wG.useState)(null), [yG, kG] = (0, wG.useState)(!1), [UG, YG] = (0, wG.useState)(!1), [VG, pG] = (0, wG.useState)(null), fG = null === GG || void 0 === GG ? void 0 : GG.packId, QG = null === GG || void 0 === GG ? void 0 : GG.sourceHash;
+      return (0, wG.useEffect)((() => {
+        if (kG(!1), pG(null), void 0 === fG) return;
+        let GG = !1;
+        return Promise.all([(0, zG.hasUsableWebGpuAdapter)(), (0, HG.e)()]).then((bG => {
+          let [ZG, wG] = bG;
+          var SG;
+          GG || (LG(ZG), kG((null === wG || void 0 === wG || null === (SG = wG.listing) || void 0 === SG ? void 0 : SG.packId) === fG && wG.listing.sourceHash === QG))
+        })).catch((bG => {
+          console.error("Failed to check whether this shader pack can be used", bG), GG || LG(!1)
         })), () => {
-          uu = !0
+          GG = !0
         }
-      }), [cu, Nu]), {
-        webGpuUsable: Uu,
-        inUse: Xu,
-        busy: qu,
-        errorKey: Cu,
+      }), [fG, QG]), {
+        webGpuUsable: SG,
+        inUse: yG,
+        busy: UG,
+        errorKey: VG,
         use: () => {
-          null !== uu && async function(uu) {
-            fu(!0), bu(null);
+          null !== GG && async function(GG) {
+            YG(!0), pG(null);
             try {
               const {
-                installListedShaderPack: su
-              } = await Promise.all([ju.e(78), ju.e(136), ju.e(115)]).then((() => ju(40753))), Uu = await su({
-                packId: uu.packId,
-                sourceHash: uu.sourceHash,
-                name: uu.name,
-                ownerName: uu.ownerName,
-                description: uu.description
+                installListedShaderPack: wG
+              } = await Promise.all([ZG.e(78), ZG.e(136), ZG.e(115)]).then((() => ZG(40874))), SG = await wG({
+                packId: GG.packId,
+                sourceHash: GG.sourceHash,
+                name: GG.name,
+                ownerName: GG.ownerName,
+                description: GG.description
               });
-              if ("failed" === Uu.kind) return void bu(Hu[Uu.reason]);
-              lu(!0), gu.b.recordShaderPackDownload(Eu, uu.packId).catch((uu => {
-                console.error("Failed to count a shader pack's download", uu)
-              })), (0, tu.l)()
-            } catch (su) {
-              console.error("Failed to use the shader pack", su), bu("shaderPack:unexpectedError")
+              if ("failed" === SG.kind) return void pG(tG[SG.reason]);
+              kG(!0), rG.d.recordShaderPackDownload(bG, GG.packId).catch((GG => {
+                console.error("Failed to count a shader pack's download", GG)
+              })), (0, RG.g)()
+            } catch (wG) {
+              console.error("Failed to use the shader pack", wG), pG("shaderPack:unexpectedError")
             } finally {
-              fu(!1)
+              YG(!1)
             }
-          }(uu)
+          }(GG)
         }
       }
     }
 
-    function nu(uu) {
+    function NG(GG) {
       let {
-        packUse: Eu
-      } = uu;
+        packUse: bG
+      } = GG;
       const {
-        t: ju
-      } = (0, eu.A)(), {
-        webGpuUsable: su,
-        inUse: Uu,
-        busy: Zu,
-        errorKey: Xu,
-        use: lu
-      } = Eu;
-      return (0, Pu.jsxs)("div", {
+        t: ZG
+      } = (0, EG.w)(), {
+        webGpuUsable: wG,
+        inUse: SG,
+        busy: LG,
+        errorKey: yG,
+        use: kG
+      } = bG;
+      return (0, mG.jsxs)("div", {
         className: "ShaderPackUse",
-        children: [(0, Pu.jsxs)(bu.p, {
-          disabled: !0 !== su || Uu,
-          loading: Zu,
-          onClick: lu,
-          children: [(0, Pu.jsx)(Ju.e, {
-            name: Uu ? "check" : "download"
-          }), " ", ju(Uu ? "shaderPackListing:inUse" : "shaderPackListing:use")]
-        }), !1 === su && (0, Pu.jsx)("div", {
+        children: [(0, mG.jsxs)(pG.k, {
+          disabled: !0 !== wG || SG,
+          loading: LG,
+          onClick: kG,
+          children: [(0, mG.jsx)(iG.c, {
+            name: SG ? "check" : "download"
+          }), " ", ZG(SG ? "shaderPackListing:inUse" : "shaderPackListing:use")]
+        }), !1 === wG && (0, mG.jsx)("div", {
           className: "ShaderPackUseNote",
-          children: ju((0, xu.g)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), Xu && (0, Pu.jsx)("div", {
+          children: ZG((0, TG.k)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), yG && (0, mG.jsx)("div", {
           className: "ShaderPackUseNote Error",
-          children: ju(Xu)
+          children: ZG(yG)
         })]
       })
     }
 
-    function yu() {
-      var uu;
+    function OG() {
+      var GG;
       const {
-        t: Eu
-      } = (0, eu.A)(), ju = (0, Cu.useNavigatePreserveSearch)(), {
-        packId: Zu
-      } = (0, Uu.B)(), {
-        userContext: Xu,
-        isUserContextUpdating: lu
-      } = (0, Du.c)(), [cu, Ou] = (0, su.useState)(null), [Yu, Mu] = (0, su.useState)(null), [Gu, pu] = (0, su.useState)(0), wu = (0, su.useRef)(0);
+        t: bG
+      } = (0, EG.w)(), ZG = (0, VG.useNavigatePreserveSearch)(), {
+        packId: LG
+      } = (0, SG.v)(), {
+        userContext: yG,
+        isUserContextUpdating: kG
+      } = (0, JG.e)(), [fG, KG] = (0, wG.useState)(null), [hG, zG] = (0, wG.useState)(null), [oG, XG] = (0, wG.useState)(0), uG = (0, wG.useRef)(0);
 
-      function Ju() {
-        var uu;
-        null !== (uu = (0, Cu.getPreviousLocation)()) && void 0 !== uu && uu.startsWith(au.R) ? ju(-1) : ju(au.R)
-      }(0, hu.b)(Ju), (0, Qu.b)(), (0, su.useEffect)((() => {
-        if (lu || void 0 === Zu) return;
-        const uu = ++wu.current;
-        Mu(null), gu.b.getShaderPack(Xu, Zu).then((Eu => {
-          wu.current === uu && Ou(Eu)
-        })).catch((Eu => {
-          wu.current === uu && (console.error("Failed to get the shader pack", Eu), Ou(null), Mu({
-            error: Eu
+      function iG() {
+        var GG;
+        null !== (GG = (0, VG.getPreviousLocation)()) && void 0 !== GG && GG.startsWith(WG.X) ? ZG(-1) : ZG(WG.X)
+      }(0, dG.e)(iG), (0, PG.d)(), (0, wG.useEffect)((() => {
+        if (kG || void 0 === LG) return;
+        const GG = ++uG.current;
+        zG(null), rG.d.getShaderPack(yG, LG).then((bG => {
+          uG.current === GG && KG(bG)
+        })).catch((bG => {
+          uG.current === GG && (console.error("Failed to get the shader pack", bG), KG(null), zG({
+            error: bG
           }))
         }))
-      }), [Zu, Xu, lu, Gu]);
-      const du = () => {
-          pu((uu => uu + 1))
+      }), [LG, yG, kG, oG]);
+      const CG = () => {
+          XG((GG => GG + 1))
         },
-        ou = (null === cu || void 0 === cu ? void 0 : cu.packId) === Zu ? cu : null,
-        mu = (0, Qu.g)(),
-        vu = Au(null !== (uu = null === ou || void 0 === ou ? void 0 : ou.live) && void 0 !== uu ? uu : null),
-        Ku = null !== ou && void 0 !== ou && ou.live ? (0, Pu.jsx)(zu, {
-          item: ou.live,
-          favourites: mu,
-          packUse: vu
+        IG = (null === fG || void 0 === fG ? void 0 : fG.packId) === LG ? fG : null,
+        vG = (0, PG.k)(),
+        aG = DG(null !== (GG = null === IG || void 0 === IG ? void 0 : IG.live) && void 0 !== GG ? GG : null),
+        cG = null !== IG && void 0 !== IG && IG.live ? (0, mG.jsx)(xG, {
+          item: IG.live,
+          favourites: vG,
+          packUse: aG
         }) : null;
-      return (0, Pu.jsxs)("article", {
+      return (0, mG.jsxs)("article", {
         className: "ShaderPackInformation AnimFadeIn",
-        children: [null !== ou && (0, Pu.jsx)(Nu.d, {
-          meta: (0, qu.ab)(ou.name)
-        }), (0, Pu.jsx)(bu.d, {
-          onClick: Ju,
-          children: Eu("shaderPackListing:backToPacks")
-        }), null === ou && null === Yu && (0, Pu.jsx)("div", {
+        children: [null !== IG && (0, mG.jsx)(QG.c, {
+          meta: (0, UG.$)(IG.name)
+        }), (0, mG.jsx)(pG.b, {
+          onClick: iG,
+          children: bG("shaderPackListing:backToPacks")
+        }), null === IG && null === hG && (0, mG.jsx)("div", {
           className: "ShaderPackInformationMessage",
-          children: (0, Pu.jsx)(fu.b, {})
-        }), null !== Yu && (0, Pu.jsxs)("div", {
+          children: (0, mG.jsx)(YG.b, {})
+        }), null !== hG && (0, mG.jsxs)("div", {
           className: "ShaderPackInformationMessage",
-          children: [(0, au.x)(Yu.error, Eu, "shaderPackListing:loadPackFailed"), (0, Pu.jsx)(bu.f, {
-            onClick: du,
-            children: Eu("general:tryAgain")
+          children: [(0, WG.z)(hG.error, bG, "shaderPackListing:loadPackFailed"), (0, mG.jsx)(pG.d, {
+            onClick: CG,
+            children: bG("general:tryAgain")
           })]
-        }), null !== ou && null === Yu && (0, Pu.jsxs)("div", {
+        }), null !== IG && null === hG && (0, mG.jsxs)("div", {
           className: "ShaderPackInformationBody",
-          children: [(0, Pu.jsxs)("header", {
+          children: [(0, mG.jsxs)("header", {
             className: "ShaderPackInformationHeader",
-            children: [(0, Pu.jsx)("h1", {
+            children: [(0, mG.jsx)("h1", {
               className: "FullyFancyText",
-              children: ou.name
-            }), Ku]
-          }), ou.live && (0, Pu.jsx)(Su, {
-            item: ou.live
-          }), ou.live && (0, Pu.jsx)(Ru, {
-            item: ou.live,
-            ownerPreview: ou.ownerPreview,
-            bloxdhubSlug: ou.bloxdhubSlug,
-            actions: Ku
-          }), ou.owner && (0, Pu.jsx)(ku, {
-            details: ou,
-            owner: ou.owner,
-            onChanged: du
+              children: IG.name
+            }), cG]
+          }), IG.live && (0, mG.jsx)(sG, {
+            item: IG.live
+          }), IG.live && (0, mG.jsx)(BG, {
+            item: IG.live,
+            ownerPreview: IG.ownerPreview,
+            bloxdhubSlug: IG.bloxdhubSlug,
+            actions: cG
+          }), IG.owner && (0, mG.jsx)(FG, {
+            details: IG,
+            owner: IG.owner,
+            onChanged: CG
           })]
         })]
       })
     }
 
-    function zu(uu) {
+    function xG(GG) {
       let {
-        item: Eu,
-        favourites: ju,
-        packUse: su
-      } = uu;
-      const Uu = ju.isFavourite(Eu.packId);
-      return (0, Pu.jsxs)("div", {
+        item: bG,
+        favourites: ZG,
+        packUse: wG
+      } = GG;
+      const SG = ZG.isFavourite(bG.packId);
+      return (0, mG.jsxs)("div", {
         className: "ShaderPackInformationActions",
-        children: [Mu.featureFlags.settings.canUseShaderPacks && (0, Pu.jsx)(nu, {
-          packUse: su
-        }), (0, Pu.jsx)(bu.A, {
+        children: [zG.featureFlags.settings.canUseShaderPacks && (0, mG.jsx)(NG, {
+          packUse: wG
+        }), (0, mG.jsx)(pG.o, {
           className: "ShaderPackInformationLike",
           onClick: () => {
-            ju.toggle(Eu.packId)
+            ZG.toggle(bG.packId)
           },
-          isLiked: !0 === Uu,
-          isLoading: null === Uu
+          isLiked: !0 === SG,
+          isLoading: null === SG
         })]
       })
     }
 
-    function Ru(uu) {
+    function BG(GG) {
       let {
-        item: Eu,
-        ownerPreview: ju,
-        bloxdhubSlug: su,
-        actions: Uu
-      } = uu;
+        item: bG,
+        ownerPreview: ZG,
+        bloxdhubSlug: wG,
+        actions: SG
+      } = GG;
       const {
-        t: lu
-      } = (0, eu.A)(), qu = (0, Yu.q)(), fu = null === su ? null : (0, Zu.f)(su);
-      return (0, Pu.jsxs)("div", {
+        t: kG
+      } = (0, EG.w)(), UG = (0, hG.r)(), YG = null === wG ? null : (0, LG.c)(wG);
+      return (0, mG.jsxs)("div", {
         className: "ShaderPackFacts",
-        children: [Eu.description && (0, Pu.jsx)("p", {
+        children: [bG.description && (0, mG.jsx)("p", {
           className: "ShaderPackDescription",
-          children: Eu.description
-        }), (0, Pu.jsxs)("div", {
+          children: bG.description
+        }), (0, mG.jsxs)("div", {
           className: "ShaderPackFeatureList",
-          children: [(null !== ju || null !== fu) && (0, Pu.jsx)("div", {
+          children: [(null !== ZG || null !== YG) && (0, mG.jsx)("div", {
             className: "ShaderPackAuthor",
-            children: null !== ju ? (0, Pu.jsxs)(Pu.Fragment, {
-              children: [(0, Pu.jsx)(Ou.f, {
-                playerSocialPreview: ju,
+            children: null !== ZG ? (0, mG.jsxs)(mG.Fragment, {
+              children: [(0, mG.jsx)(KG.h, {
+                playerSocialPreview: ZG,
                 showLocation: !1,
                 linkToProfile: !0
-              }), null !== fu && (0, Pu.jsx)("a", {
+              }), null !== YG && (0, mG.jsx)("a", {
                 className: "ShaderPackBloxdhubLogo",
-                href: fu,
+                href: YG,
                 target: "_blank",
                 rel: "noopener noreferrer",
-                children: (0, Pu.jsx)("img", {
-                  src: Gu,
-                  alt: Zu.c
+                children: (0, mG.jsx)("img", {
+                  src: oG,
+                  alt: LG.b
                 })
               })]
-            }) : (0, Pu.jsxs)("a", {
+            }) : (0, mG.jsxs)("a", {
               className: "ShaderPackBloxdhubName",
-              href: fu,
+              href: YG,
               target: "_blank",
               rel: "noopener noreferrer",
-              children: [Zu.c, (0, Pu.jsx)("img", {
-                src: Gu,
+              children: [LG.b, (0, mG.jsx)("img", {
+                src: oG,
                 alt: ""
               })]
             })
-          }), au.y.filter((uu => Eu.features.includes(uu))).map((uu => (0, Pu.jsx)(Cu.LinkPreserveSearch, {
+          }), WG.D.filter((GG => bG.features.includes(GG))).map((GG => (0, mG.jsx)(VG.LinkPreserveSearch, {
             className: "ShaderPackFeature",
-            to: (0, au.H)(uu),
-            children: lu(au.I[uu])
-          }, uu)))]
-        }), Uu, (0, Pu.jsxs)("dl", {
+            to: (0, WG.R)(GG),
+            children: kG(WG.S[GG])
+          }, GG)))]
+        }), SG, (0, mG.jsxs)("dl", {
           className: "ShaderPackFactList",
-          children: [(0, Pu.jsxs)("div", {
-            children: [(0, Pu.jsx)("dt", {
-              children: lu("shaderPackListing:downloads")
-            }), (0, Pu.jsx)("dd", {
-              children: (0, Xu.S)(Eu.downloads)
+          children: [(0, mG.jsxs)("div", {
+            children: [(0, mG.jsx)("dt", {
+              children: kG("shaderPackListing:downloads")
+            }), (0, mG.jsx)("dd", {
+              children: (0, yG.O)(bG.downloads)
             })]
-          }), (0, Pu.jsx)(uE, {
-            label: lu("shaderPackListing:updated"),
-            time: Eu.listedUpdatedAt,
-            now: qu
-          }), (0, Pu.jsx)(uE, {
-            label: lu("shaderPackListing:created"),
-            time: Eu.publishedAt,
-            now: qu
-          }), null !== Eu.gpuCost && (0, Pu.jsxs)("div", {
-            children: [(0, Pu.jsx)("dt", {
-              children: lu("shaderPackListing:lag")
-            }), (0, Pu.jsx)("dd", {
-              children: lu("shaderPackListing:lagPercent", {
-                percent: String((0, au.N)(Eu.gpuCost))
+          }), (0, mG.jsx)(Gb, {
+            label: kG("shaderPackListing:updated"),
+            time: bG.listedUpdatedAt,
+            now: UG
+          }), (0, mG.jsx)(Gb, {
+            label: kG("shaderPackListing:created"),
+            time: bG.publishedAt,
+            now: UG
+          }), null !== bG.gpuCost && (0, mG.jsxs)("div", {
+            children: [(0, mG.jsx)("dt", {
+              children: kG("shaderPackListing:lag")
+            }), (0, mG.jsx)("dd", {
+              children: kG("shaderPackListing:lagPercent", {
+                percent: String((0, WG.W)(bG.gpuCost))
               })
             })]
-          }), (0, Pu.jsxs)("div", {
-            children: [(0, Pu.jsx)("dt", {
-              children: lu("shaderPackListing:size")
-            }), (0, Pu.jsx)("dd", {
-              children: lu("shaderPackListing:sizeValue", {
-                kilobytes: String((0, au.M)(Eu.sourceBytes))
+          }), (0, mG.jsxs)("div", {
+            children: [(0, mG.jsx)("dt", {
+              children: kG("shaderPackListing:size")
+            }), (0, mG.jsx)("dd", {
+              children: kG("shaderPackListing:sizeValue", {
+                kilobytes: String((0, WG.V)(bG.sourceBytes))
               })
             })]
-          }), (0, Pu.jsxs)("div", {
-            children: [(0, Pu.jsx)("dt", {
-              children: lu("shaderPackListing:files")
-            }), (0, Pu.jsx)("dd", {
-              children: Eu.fileCount
+          }), (0, mG.jsxs)("div", {
+            children: [(0, mG.jsx)("dt", {
+              children: kG("shaderPackListing:files")
+            }), (0, mG.jsx)("dd", {
+              children: bG.fileCount
             })]
           })]
         })]
       })
     }
 
-    function uE(uu) {
+    function Gb(GG) {
       let {
-        label: Eu,
-        time: ju,
-        now: su
-      } = uu;
+        label: bG,
+        time: ZG,
+        now: wG
+      } = GG;
       const {
-        t: Uu,
-        selectedLanguage: Zu
-      } = (0, eu.A)(), Xu = new Date(ju);
-      let qu = Xu.toLocaleDateString();
-      if (su - ju <= 30 * lu.h) {
-        const uu = (0, eu.n)(Zu.code, "shaderPackListing:timeAgo");
-        qu = Uu("shaderPackListing:timeAgo", {
-          time: (0, lu._)(uu, ju, su)
+        t: SG,
+        selectedLanguage: LG
+      } = (0, EG.w)(), yG = new Date(ZG);
+      let UG = yG.toLocaleDateString();
+      if (wG - ZG <= 30 * kG.j) {
+        const GG = (0, EG.j)(LG.code, "shaderPackListing:timeAgo");
+        UG = SG("shaderPackListing:timeAgo", {
+          time: (0, kG.lb)(GG, ZG, wG)
         })
       }
-      return (0, Pu.jsx)(cu.e, {
-        tooltipInner: Xu.toLocaleString(),
-        children: (0, Pu.jsxs)("div", {
-          children: [(0, Pu.jsx)("dt", {
-            children: Eu
-          }), (0, Pu.jsx)("dd", {
-            children: qu
+      return (0, mG.jsx)(fG.h, {
+        tooltipInner: yG.toLocaleString(),
+        children: (0, mG.jsxs)("div", {
+          children: [(0, mG.jsx)("dt", {
+            children: bG
+          }), (0, mG.jsx)("dd", {
+            children: UG
           })]
         })
       })
     }
   },
-  5179: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Xu
+  5039: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => yG
     });
-    var su = ju(1105),
-      Uu = ju.n(su),
-      Zu = ju(1154);
+    var wG = ZG(1006),
+      SG = ZG.n(wG),
+      LG = ZG(1067);
 
-    function Xu(uu) {
+    function yG(GG) {
       let {
-        options: Eu,
-        value: ju,
-        onChange: su,
-        ariaLabel: Xu,
-        className: lu,
-        reselectable: qu = !1,
-        keepsFocus: fu = !1,
-        padTabs: Cu
-      } = uu;
-      const bu = void 0 !== Cu;
-      return (0, Zu.jsx)("div", {
-        className: Uu()("SegmentedToggle", lu),
+        options: bG,
+        value: ZG,
+        onChange: wG,
+        ariaLabel: yG,
+        className: kG,
+        reselectable: UG = !1,
+        keepsFocus: YG = !1,
+        padTabs: VG
+      } = GG;
+      const pG = void 0 !== VG;
+      return (0, LG.jsx)("div", {
+        className: SG()("SegmentedToggle", kG),
         role: "group",
-        "aria-label": Xu,
-        "data-pad-tabs": Cu,
-        children: Eu.map((uu => {
-          const Eu = uu.value === ju;
-          return (0, Zu.jsx)("button", {
+        "aria-label": yG,
+        "data-pad-tabs": VG,
+        children: bG.map((GG => {
+          const bG = GG.value === ZG;
+          return (0, LG.jsx)("button", {
             type: "button",
-            "aria-pressed": Eu,
-            "data-pad-tab": bu || void 0,
-            "data-pad-selected": bu && Eu ? "true" : void 0,
-            "data-pad-default-focus": bu && Eu || void 0,
-            "aria-label": uu.ariaLabel,
-            title: uu.ariaLabel,
-            className: Uu()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: Eu
+            "aria-pressed": bG,
+            "data-pad-tab": pG || void 0,
+            "data-pad-selected": pG && bG ? "true" : void 0,
+            "data-pad-default-focus": pG && bG || void 0,
+            "aria-label": GG.ariaLabel,
+            title: GG.ariaLabel,
+            className: SG()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: bG
             }),
-            onMouseDown: fu ? uu => {
-              uu.preventDefault()
+            onMouseDown: YG ? GG => {
+              GG.preventDefault()
             } : void 0,
             onClick: () => {
-              Eu && !qu || su(uu.value)
+              bG && !UG || wG(GG.value)
             },
-            children: uu.label
-          }, uu.value)
+            children: GG.label
+          }, GG.value)
         }))
       })
     }
   },
-  5182: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Zu,
-      e: () => Xu
+  5042: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => LG,
+      f: () => yG
     });
-    var su = ju(58);
-    const Uu = new WeakMap,
-      Zu = uu => {
-        var Eu;
-        const ju = uu.closest("[data-pad-slider]");
-        return ju && null !== (Eu = Uu.get(ju)) && void 0 !== Eu ? Eu : null
+    var wG = ZG(51);
+    const SG = new WeakMap,
+      LG = GG => {
+        var bG;
+        const ZG = GG.closest("[data-pad-slider]");
+        return ZG && null !== (bG = SG.get(ZG)) && void 0 !== bG ? bG : null
       },
-      Xu = (uu, Eu) => {
-        const ju = (0, su.useRef)(Eu);
-        ju.current = Eu, (0, su.useEffect)((() => {
-          if (uu.current) return ((uu, Eu) => (Uu.set(uu, Eu), () => {
-            Uu.get(uu) === Eu && Uu.delete(uu)
-          }))(uu.current, {
-            adjust: uu => {
-              ju.current.adjust(uu)
+      yG = (GG, bG) => {
+        const ZG = (0, wG.useRef)(bG);
+        ZG.current = bG, (0, wG.useEffect)((() => {
+          if (GG.current) return ((GG, bG) => (SG.set(GG, bG), () => {
+            SG.get(GG) === bG && SG.delete(GG)
+          }))(GG.current, {
+            adjust: GG => {
+              ZG.current.adjust(GG)
             },
-            setFraction: uu => {
-              ju.current.setFraction(uu)
+            setFraction: GG => {
+              ZG.current.setFraction(GG)
             },
             endDrag: () => {
-              ju.current.endDrag()
+              ZG.current.endDrag()
             }
           })
-        }), [uu])
+        }), [GG])
       }
   },
-  6854: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Uu,
-      e: () => Zu
+  6661: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => SG,
+      e: () => LG
     });
-    var su = ju(31);
-    const Uu = "shaderPack";
-    async function Zu() {
-      var uu;
-      let Eu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (uu = await su.h.getItem(Uu, Eu)) && void 0 !== uu ? uu : null
+    var wG = ZG(29);
+    const SG = "shaderPack";
+    async function LG() {
+      var GG;
+      let bG = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (GG = await wG.e.getItem(SG, bG)) && void 0 !== GG ? GG : null
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

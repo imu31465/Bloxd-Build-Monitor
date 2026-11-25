@@ -1,78 +1,78 @@
 export const id = 247;
 export const ids = [247];
 export const modules = {
-  38432: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => fu,
-      e: () => su,
-      g: () => lu,
-      h: () => Uu,
-      j: () => Xu,
-      l: () => Zu
+  38468: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => YG,
+      f: () => wG,
+      j: () => kG,
+      n: () => SG,
+      r: () => yG,
+      s: () => LG
     });
-    const su = 1.001,
-      Uu = .501,
-      Zu = .025,
-      Xu = .75,
-      lu = .08,
-      qu = 4;
+    const wG = 1.001,
+      SG = .501,
+      LG = .025,
+      yG = .75,
+      kG = .08,
+      UG = 4;
 
-    function fu() {
-      const uu = Uu,
-        Eu = Zu,
-        ju = uu - Eu / 2,
-        su = (2 * uu - 2 * Eu) / (2 * qu - 1),
-        Xu = [];
-      for (const Uu of [-ju, ju])
-        for (const Zu of [-ju, ju])
-          for (let ju = 0; ju < qu; ju++) {
-            const lu = -uu + Eu + su * (2 * ju + .5);
-            Xu.push([su, Eu, Eu, lu, Uu, Zu]), Xu.push([Eu, su, Eu, Uu, lu, Zu]), Xu.push([Eu, Eu, su, Uu, Zu, lu])
+    function YG() {
+      const GG = SG,
+        bG = LG,
+        ZG = GG - bG / 2,
+        wG = (2 * GG - 2 * bG) / (2 * UG - 1),
+        yG = [];
+      for (const SG of [-ZG, ZG])
+        for (const LG of [-ZG, ZG])
+          for (let ZG = 0; ZG < UG; ZG++) {
+            const kG = -GG + bG + wG * (2 * ZG + .5);
+            yG.push([wG, bG, bG, kG, SG, LG]), yG.push([bG, wG, bG, SG, kG, LG]), yG.push([bG, bG, wG, SG, LG, kG])
           }
-      for (const Uu of [-ju, ju])
-        for (const uu of [-ju, ju])
-          for (const su of [-ju, ju]) Xu.push([Eu, Eu, Eu, Uu, uu, su]);
-      return Xu
+      for (const SG of [-ZG, ZG])
+        for (const GG of [-ZG, ZG])
+          for (const wG of [-ZG, ZG]) yG.push([bG, bG, bG, SG, GG, wG]);
+      return yG
     }
   },
-  38754: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      A: () => eu,
-      D: () => cu,
-      H: () => Yu,
-      J: () => Du,
-      L: () => Uu,
-      b: () => Cu,
-      e: () => qu,
-      f: () => Mu,
-      j: () => fu,
-      l: () => lu,
-      m: () => Xu,
-      n: () => Zu,
-      r: () => wu,
-      s: () => Nu,
-      v: () => pu,
-      w: () => Ju,
-      y: () => Gu
+  38837: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      D: () => fG,
+      E: () => hG,
+      I: () => JG,
+      K: () => SG,
+      d: () => VG,
+      e: () => UG,
+      f: () => zG,
+      g: () => YG,
+      j: () => kG,
+      k: () => yG,
+      m: () => LG,
+      o: () => uG,
+      p: () => QG,
+      t: () => XG,
+      x: () => iG,
+      y: () => oG,
+      z: () => EG
     });
-    var su = ju(9490);
+    var wG = ZG(9341);
 
-    function Uu(uu) {
-      return Math.floor(uu).toLocaleString("en-US")
+    function SG(GG) {
+      return Math.floor(GG).toLocaleString("en-US")
     }
-    const Zu = 2e3,
-      Xu = .005,
-      lu = .001,
-      qu = 2,
-      fu = "Fluid Tank",
-      Cu = "Coolant Mixer",
-      bu = 144;
+    const LG = 2e3,
+      yG = .005,
+      kG = .001,
+      UG = 2,
+      YG = "Fluid Tank",
+      VG = "Coolant Mixer",
+      pG = 144;
 
-    function cu(uu) {
-      const Eu = uu.split("|")[0];
-      return (0, su.h)(Eu) ? Eu === su.c ? "cryo" : "water" : null
+    function fG(GG) {
+      const bG = GG.split("|")[0];
+      return (0, wG.l)(bG) ? bG === wG.e ? "cryo" : "water" : null
     }
-    const Nu = [
+    const QG = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 1, 0],
@@ -80,43 +80,43 @@ export const modules = {
         [0, 0, 1],
         [0, 0, -1]
       ],
-      Ou = 63;
+      KG = 63;
 
-    function Yu(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const ju = Eu ? function(uu, Eu, ju) {
-        const su = Nu.findIndex((su => {
-          let [Uu, Zu, Xu] = su;
-          return Uu === uu && Zu === Eu && Xu === ju
+    function hG(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const ZG = bG ? function(GG, bG, ZG) {
+        const wG = QG.findIndex((wG => {
+          let [SG, LG, yG] = wG;
+          return SG === GG && LG === bG && yG === ZG
         }));
-        return su < 0 ? 0 : 1 << su
-      }(Eu[0], Eu[1], Eu[2]) : 0;
-      return "maker" === uu ? {
-        kind: uu,
-        faces: ju
-      } : "user" === uu ? {
-        kind: uu,
-        faces: Ou & ~ju
+        return wG < 0 ? 0 : 1 << wG
+      }(bG[0], bG[1], bG[2]) : 0;
+      return "maker" === GG ? {
+        kind: GG,
+        faces: ZG
+      } : "user" === GG ? {
+        kind: GG,
+        faces: KG & ~ZG
       } : {
-        kind: uu,
-        faces: Ou
+        kind: GG,
+        faces: KG
       }
     }
 
-    function hu(uu) {
-      return "pipe" === uu || "tank" === uu || "maker" === uu
+    function dG(GG) {
+      return "pipe" === GG || "tank" === GG || "maker" === GG
     }
 
-    function Du(uu, Eu, ju) {
-      return 0 !== (uu.faces & 1 << ju) && 0 !== (Eu.faces & 1 << (1 ^ ju)) && (hu(uu.kind) || hu(Eu.kind))
+    function JG(GG, bG, ZG) {
+      return 0 !== (GG.faces & 1 << ZG) && 0 !== (bG.faces & 1 << (1 ^ ZG)) && (dG(GG.kind) || dG(bG.kind))
     }
-    const gu = (uu, Eu, ju, su) => ({
-        input: uu,
-        inputAmount: su,
-        output: Eu,
-        outputAmount: ju
+    const rG = (GG, bG, ZG, wG) => ({
+        input: GG,
+        inputAmount: wG,
+        output: bG,
+        outputAmount: ZG
       }),
-      Mu = {
+      zG = {
         Condenser: {
           kind: "Condenser",
           opMs: 2e3,
@@ -135,7 +135,7 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [1, 2, 3],
-          recipes: [gu("Uranium Grit", "Uranium Pellet", 1, 12), gu("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          recipes: [rG("Uranium Grit", "Uranium Pellet", 1, 12), rG("Spent Pellet", "Plutonium Pellet", 1, 4)],
           powerPerOp: 600,
           waterPerOp: 24
         },
@@ -156,36 +156,36 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [],
-          recipes: [gu("Biomass", "", 0, 1)],
+          recipes: [rG("Biomass", "", 0, 1)],
           powerPerOp: 720,
           waterPerOp: 144,
-          cryoMade: bu,
+          cryoMade: pG,
           couplable: !0,
           couplerSlot: 1
         }
       };
 
-    function eu(uu, Eu) {
-      return 1e3 * (null !== Eu && void 0 !== Eu ? Eu : 0) / uu.opMs
+    function EG(GG, bG) {
+      return 1e3 * (null !== bG && void 0 !== bG ? bG : 0) / GG.opMs
     }
 
-    function Gu(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const ju = eu(Mu["Coolant Mixer"], bu) * Eu;
-      return uu <= 0 ? 0 : Math.ceil(uu / ju - 1e-9)
+    function oG(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const ZG = EG(zG["Coolant Mixer"], pG) * bG;
+      return GG <= 0 ? 0 : Math.ceil(GG / ZG - 1e-9)
     }
-    const pu = "baf2Water",
-      wu = "baf2waterclose",
-      Ju = "baf2wateropen"
+    const XG = "baf2Water",
+      uG = "baf2waterclose",
+      iG = "baf2wateropen"
   },
-  38745: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Ku,
-      f: () => Vu
+  38822: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => cG,
+      f: () => lG
     });
-    var su = ju(9409),
-      Uu = ju(9442);
-    const Zu = [
+    var wG = ZG(9249),
+      SG = ZG(9292);
+    const LG = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
@@ -193,45 +193,45 @@ export const modules = {
       [0, 1, 0],
       [0, -1, 0]
     ];
-    var Xu = ju(9459),
-      lu = ju(38582),
-      qu = ju(9456);
-    const fu = {
+    var yG = ZG(9309),
+      kG = ZG(38641),
+      UG = ZG(9303);
+    const YG = {
       1: [0, -1],
       2: [-1, 0],
       3: [0, 1],
       4: [1, 0]
     };
 
-    function Cu(uu) {
-      let [Eu, ju] = uu;
-      return [-ju, Eu]
+    function VG(GG) {
+      let [bG, ZG] = GG;
+      return [-ZG, bG]
     }
 
-    function bu(uu, Eu) {
-      return uu[0] === Eu[0] && uu[1] === Eu[1]
+    function pG(GG, bG) {
+      return GG[0] === bG[0] && GG[1] === bG[1]
     }
 
-    function cu(uu, Eu) {
-      return uu[0] * Eu[0] + uu[1] * Eu[1] === 0
+    function fG(GG, bG) {
+      return GG[0] * bG[0] + GG[1] * bG[1] === 0
     }
-    const Nu = [
+    const QG = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
-    var Ou = ju(9485);
+    var KG = ZG(9334);
 
-    function Yu(uu, Eu, ju, su, Uu) {
-      return Eu < Ou.p || Eu >= Ou.p + Ou.q || Math.floor(uu / Ou.w) === Math.floor(su / Ou.w) && Math.floor(ju / Ou.w) === Math.floor(Uu / Ou.w)
+    function hG(GG, bG, ZG, wG, SG) {
+      return bG < KG.n || bG >= KG.n + KG.q || Math.floor(GG / KG.s) === Math.floor(wG / KG.s) && Math.floor(ZG / KG.s) === Math.floor(SG / KG.s)
     }
-    const hu = "Splitter",
-      Du = "Sorting Gate",
-      gu = new Set(Ou.G),
-      Mu = new Set([...Ou.G, "Belt Loader", "Fast Loader", Du]),
-      eu = new Set(Ou.s),
-      Gu = [
+    const dG = "Splitter",
+      JG = "Sorting Gate",
+      rG = new Set(KG.G),
+      zG = new Set([...KG.G, "Belt Loader", "Fast Loader", JG]),
+      EG = new Set(KG.r),
+      oG = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 0, 1],
@@ -240,259 +240,259 @@ export const modules = {
         [0, -1, 0]
       ];
 
-    function pu(uu) {
-      var Eu, ju;
-      return null !== (Eu = null === (ju = su.f[uu]) || void 0 === ju ? void 0 : ju.meta.rootName) && void 0 !== Eu ? Eu : ""
+    function XG(GG) {
+      var bG, ZG;
+      return null !== (bG = null === (ZG = wG.l[GG]) || void 0 === ZG ? void 0 : ZG.meta.rootName) && void 0 !== bG ? bG : ""
     }
 
-    function wu(uu) {
-      return pu(uu) === Ou.f && (0, Ou.P)(su.f[uu].name)
+    function uG(GG) {
+      return XG(GG) === KG.g && (0, KG.Q)(wG.l[GG].name)
     }
-    var Ju = ju(9448),
-      du = ju(9467);
-    const au = [
+    var iG = ZG(9295),
+      CG = ZG(9320);
+    const WG = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
 
-    function Pu(uu) {
-      var Eu, ju;
-      const Uu = null === (Eu = su.f[uu]) || void 0 === Eu ? void 0 : Eu.meta;
-      return (null === Uu || void 0 === Uu ? void 0 : Uu.rootName) !== du.m ? null : {
-        rot: null !== (ju = Uu.rot) && void 0 !== ju ? ju : 1,
-        half: (0, du.f)(Uu.rootName, Uu.metaStr)
+    function mG(GG) {
+      var bG, ZG;
+      const SG = null === (bG = wG.l[GG]) || void 0 === bG ? void 0 : bG.meta;
+      return (null === SG || void 0 === SG ? void 0 : SG.rootName) !== CG.q ? null : {
+        rot: null !== (ZG = SG.rot) && void 0 !== ZG ? ZG : 1,
+        half: (0, CG.i)(SG.rootName, SG.metaStr)
       }
     }
 
-    function ou(uu, Eu, ju, su) {
-      return Pu(uu(Eu, ju, su))
+    function IG(GG, bG, ZG, wG) {
+      return mG(GG(bG, ZG, wG))
     }
 
-    function ku(uu, Eu, ju, su, Uu) {
+    function FG(GG, bG, ZG, wG, SG) {
       let {
-        rot: Zu,
-        half: Xu
-      } = Uu;
-      const [lu, qu] = (0, du.l)(Zu, Xu), fu = ou(uu, Eu + lu, ju, su + qu);
-      return null !== fu && fu.rot === Zu && fu.half === du.o[Xu]
+        rot: LG,
+        half: yG
+      } = SG;
+      const [kG, UG] = (0, CG.m)(LG, yG), YG = IG(GG, bG + kG, ZG, wG + UG);
+      return null !== YG && YG.rot === LG && YG.half === CG.s[yG]
     }
-    var mu = ju(38751);
-    const vu = [new class {
+    var vG = ZG(38829);
+    const aG = [new class {
       constructor() {
-        this.reshapeOffsets = Nu
+        this.reshapeOffsets = QG
       }
-      handles(uu) {
-        var Eu;
-        return "Stairs" === (null === (Eu = su.f[uu]) || void 0 === Eu ? void 0 : Eu.model)
+      handles(GG) {
+        var bG;
+        return "Stairs" === (null === (bG = wG.l[GG]) || void 0 === bG ? void 0 : bG.model)
       }
-      affects(uu) {
-        return this.handles(uu)
+      affects(GG) {
+        return this.handles(GG)
       }
-      shape(uu, Eu, ju, Uu, Zu) {
-        const Xu = this.stairsOf(Zu),
-          lu = this.cornerAt(uu, Eu, ju, Uu, Xu),
-          fu = Xu.half === qu.d.top ? "top" : "bot";
-        return (0, su.g)(`${su.f[Zu].meta.rootName}|meta|rot${Xu.rot}|${fu}${null===lu?"":`|${lu}`}`)
+      shape(GG, bG, ZG, SG, LG) {
+        const yG = this.stairsOf(LG),
+          kG = this.cornerAt(GG, bG, ZG, SG, yG),
+          YG = yG.half === UG.d.top ? "top" : "bot";
+        return (0, wG.p)(`${wG.l[LG].meta.rootName}|meta|rot${yG.rot}|${YG}${null===kG?"":`|${kG}`}`)
       }
-      stairsOf(uu) {
+      stairsOf(GG) {
         const {
-          rot: Eu,
-          halfblockPlacement: ju
-        } = su.f[uu].meta;
+          rot: bG,
+          halfblockPlacement: ZG
+        } = wG.l[GG].meta;
         return {
-          rot: Eu,
-          half: ju
+          rot: bG,
+          half: ZG
         }
       }
-      stairsAt(uu, Eu, ju, su) {
-        const Uu = uu(Eu, ju, su);
-        return this.handles(Uu) ? this.stairsOf(Uu) : null
+      stairsAt(GG, bG, ZG, wG) {
+        const SG = GG(bG, ZG, wG);
+        return this.handles(SG) ? this.stairsOf(SG) : null
       }
-      cornerAt(uu, Eu, ju, su, Uu) {
+      cornerAt(GG, bG, ZG, wG, SG) {
         let {
-          rot: Zu,
-          half: Xu
-        } = Uu;
-        const lu = fu[Zu],
-          qu = Uu => {
-            let [lu, qu] = Uu;
-            const fu = this.stairsAt(uu, Eu + lu, ju, su + qu);
-            return null !== fu && fu.rot === Zu && fu.half === Xu
+          rot: LG,
+          half: yG
+        } = SG;
+        const kG = YG[LG],
+          UG = SG => {
+            let [kG, UG] = SG;
+            const YG = this.stairsAt(GG, bG + kG, ZG, wG + UG);
+            return null !== YG && YG.rot === LG && YG.half === yG
           },
-          Nu = this.stairsAt(uu, Eu + lu[0], ju, su + lu[1]);
-        if (null !== Nu && Nu.half === Xu) {
-          const uu = fu[Nu.rot];
-          if (cu(lu, uu) && !qu([-uu[0], -uu[1]])) return bu(uu, Cu(lu)) ? "outerLeft" : "outerRight"
+          QG = this.stairsAt(GG, bG + kG[0], ZG, wG + kG[1]);
+        if (null !== QG && QG.half === yG) {
+          const GG = YG[QG.rot];
+          if (fG(kG, GG) && !UG([-GG[0], -GG[1]])) return pG(GG, VG(kG)) ? "outerLeft" : "outerRight"
         }
-        const Ou = this.stairsAt(uu, Eu - lu[0], ju, su - lu[1]);
-        if (null !== Ou && Ou.half === Xu) {
-          const uu = fu[Ou.rot];
-          if (cu(lu, uu) && !qu(uu)) return bu(uu, Cu(lu)) ? "innerLeft" : "innerRight"
+        const KG = this.stairsAt(GG, bG - kG[0], ZG, wG - kG[1]);
+        if (null !== KG && KG.half === yG) {
+          const GG = YG[KG.rot];
+          if (fG(kG, GG) && !UG(GG)) return pG(GG, VG(kG)) ? "innerLeft" : "innerRight"
         }
         return null
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = Zu, this.rootIds = new Set(Uu.h.map((uu => (0, su.g)(uu))))
+        this.reshapeOffsets = LG, this.rootIds = new Set(SG.g.map((GG => (0, wG.p)(GG))))
       }
-      handles(uu) {
-        var Eu;
-        const ju = null === (Eu = su.f[uu]) || void 0 === Eu ? void 0 : Eu.meta;
-        return void 0 !== ju && this.rootIds.has(ju.rootId)
+      handles(GG) {
+        var bG;
+        const ZG = null === (bG = wG.l[GG]) || void 0 === bG ? void 0 : bG.meta;
+        return void 0 !== ZG && this.rootIds.has(ZG.rootId)
       }
-      affects(uu) {
-        return this.handles(uu)
+      affects(GG) {
+        return this.handles(GG)
       }
-      placedBy(uu) {
-        return su.f[uu].meta.rootName === Uu.t ? null : Uu.t
+      placedBy(GG) {
+        return wG.l[GG].meta.rootName === SG.n ? null : SG.n
       }
-      shape(uu, Eu, ju, Zu, Xu) {
+      shape(GG, bG, ZG, LG, yG) {
         const {
-          rootId: lu,
-          rootName: qu,
-          rot: fu
-        } = su.f[Xu].meta;
-        let Cu = 0;
-        return Uu.z[fu].forEach(((Uu, Xu) => {
-          var qu;
-          let [bu, cu, Nu] = Uu;
-          const Ou = null === (qu = su.f[uu(Eu + bu, ju + cu, Zu + Nu)]) || void 0 === qu ? void 0 : qu.meta;
-          (null === Ou || void 0 === Ou ? void 0 : Ou.rootId) === lu && Ou.rot === fu && (Cu |= 1 << Xu)
-        })), (0, su.g)((0, Uu.f)(qu, fu, Cu))
+          rootId: kG,
+          rootName: UG,
+          rot: YG
+        } = wG.l[yG].meta;
+        let VG = 0;
+        return SG.v[YG].forEach(((SG, yG) => {
+          var UG;
+          let [pG, fG, QG] = SG;
+          const KG = null === (UG = wG.l[GG(bG + pG, ZG + fG, LG + QG)]) || void 0 === UG ? void 0 : UG.meta;
+          (null === KG || void 0 === KG ? void 0 : KG.rootId) === kG && KG.rot === YG && (VG |= 1 << yG)
+        })), (0, wG.p)((0, SG.f)(UG, YG, VG))
       }
-    }, ...Xu.b.map((uu => new lu.e(uu))), new class {
+    }, ...yG.d.map((GG => new kG.c(GG))), new class {
       constructor() {
-        this.reshapeOffsets = Gu
+        this.reshapeOffsets = oG
       }
-      handles(uu) {
-        const Eu = pu(uu);
-        return gu.has(Eu) || Eu === Ou.f
+      handles(GG) {
+        const bG = XG(GG);
+        return rG.has(bG) || bG === KG.g
       }
-      affects(uu) {
-        const Eu = pu(uu);
-        return Mu.has(Eu) || eu.has(Eu) || Eu === hu || Eu === Ou.f || void 0 !== Ou.c[Eu]
+      affects(GG) {
+        const bG = XG(GG);
+        return zG.has(bG) || EG.has(bG) || bG === dG || bG === KG.g || void 0 !== KG.b[bG]
       }
-      shape(uu, Eu, ju, Uu, Zu, Xu) {
+      shape(GG, bG, ZG, SG, LG, yG) {
         const {
-          rootName: lu,
-          rot: qu
-        } = su.f[Zu].meta;
-        return lu === Ou.f ? Xu ? Zu : function(uu, Eu, ju, Uu, Zu) {
-          const [Xu, lu] = Ou.e[Zu - 1];
-          for (let qu = 1; qu <= Ou.F; qu++) {
-            const [fu, Cu] = [Eu - Xu * qu, Uu - lu * qu], bu = uu(fu, ju, Cu);
-            if (pu(bu) === Ou.f && su.f[bu].meta.rot === Zu && Yu(Eu, ju, Uu, fu, Cu)) return (0, su.g)((0, Ou.$)(Zu, !wu(bu)))
+          rootName: kG,
+          rot: UG
+        } = wG.l[LG].meta;
+        return kG === KG.g ? yG ? LG : function(GG, bG, ZG, SG, LG) {
+          const [yG, kG] = KG.e[LG - 1];
+          for (let UG = 1; UG <= KG.C; UG++) {
+            const [YG, VG] = [bG - yG * UG, SG - kG * UG], pG = GG(YG, ZG, VG);
+            if (XG(pG) === KG.g && wG.l[pG].meta.rot === LG && hG(bG, ZG, SG, YG, VG)) return (0, wG.p)((0, KG.V)(LG, !uG(pG)))
           }
-          return (0, su.g)((0, Ou.$)(Zu, !1))
-        }(uu, Eu, ju, Uu, qu) : (0, su.g)((0, Ou.H)(lu, qu, function(uu, Eu, ju, Uu, Zu) {
-          const [Xu, lu] = Ou.e[Zu - 1], qu = (Zu, Xu) => function(uu, Eu, ju) {
-            var Uu;
-            const Zu = null === (Uu = su.f[uu]) || void 0 === Uu ? void 0 : Uu.meta;
-            if (!Zu) return !1;
-            const Xu = Zu.rootName,
-              lu = Mu.has(Xu) || wu(uu);
-            if (!lu && !eu.has(Xu) && Xu !== hu) return !1;
-            const [qu, fu] = Ou.e[Zu.rot - 1];
-            if (lu && qu === -Eu && fu === -ju) return !0;
-            if (eu.has(Xu)) return qu === Eu && fu === ju;
-            const Cu = su.f[uu].name;
-            return (Xu === hu ? (0, Ou.X)(Cu, qu, fu) : Xu === Du ? [(0, Ou.K)(Cu, qu, fu)] : []).some((uu => {
-              let [su, Uu] = uu;
-              return su === -Eu && Uu === -ju
+          return (0, wG.p)((0, KG.V)(LG, !1))
+        }(GG, bG, ZG, SG, UG) : (0, wG.p)((0, KG.K)(kG, UG, function(GG, bG, ZG, SG, LG) {
+          const [yG, kG] = KG.e[LG - 1], UG = (LG, yG) => function(GG, bG, ZG) {
+            var SG;
+            const LG = null === (SG = wG.l[GG]) || void 0 === SG ? void 0 : SG.meta;
+            if (!LG) return !1;
+            const yG = LG.rootName,
+              kG = zG.has(yG) || uG(GG);
+            if (!kG && !EG.has(yG) && yG !== dG) return !1;
+            const [UG, YG] = KG.e[LG.rot - 1];
+            if (kG && UG === -bG && YG === -ZG) return !0;
+            if (EG.has(yG)) return UG === bG && YG === ZG;
+            const VG = wG.l[GG].name;
+            return (yG === dG ? (0, KG.U)(VG, UG, YG) : yG === JG ? [(0, KG.N)(VG, UG, YG)] : []).some((GG => {
+              let [wG, SG] = GG;
+              return wG === -bG && SG === -ZG
             }))
-          }(uu(Eu + Zu, ju, Uu + Xu), Zu, Xu), fu = uu(Eu - Xu, ju, Uu - lu), Cu = pu(fu) === hu && su.f[fu].meta.rot === Zu, bu = 1 === Ou.c[pu(uu(Eu, ju - 1, Uu))] || -1 === Ou.c[pu(uu(Eu, ju + 1, Uu))];
-          if (bu || Cu || qu(-Xu, -lu)) return null;
-          const cu = qu(-lu, Xu),
-            Nu = qu(lu, -Xu);
-          if (cu === Nu) return null;
-          return cu ? "turnLeft" : "turnRight"
-        }(uu, Eu, ju, Uu, qu)))
+          }(GG(bG + LG, ZG, SG + yG), LG, yG), YG = GG(bG - yG, ZG, SG - kG), VG = XG(YG) === dG && wG.l[YG].meta.rot === LG, pG = 1 === KG.b[XG(GG(bG, ZG - 1, SG))] || -1 === KG.b[XG(GG(bG, ZG + 1, SG))];
+          if (pG || VG || UG(-yG, -kG)) return null;
+          const fG = UG(-kG, yG),
+            QG = UG(kG, -yG);
+          if (fG === QG) return null;
+          return fG ? "turnLeft" : "turnRight"
+        }(GG, bG, ZG, SG, UG)))
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = au, this.rootId = (0, su.g)(du.m)
+        this.reshapeOffsets = WG, this.rootId = (0, wG.p)(CG.q)
       }
-      handles(uu) {
-        var Eu;
-        return (null === (Eu = su.f[uu]) || void 0 === Eu ? void 0 : Eu.meta.rootId) === this.rootId
+      handles(GG) {
+        var bG;
+        return (null === (bG = wG.l[GG]) || void 0 === bG ? void 0 : bG.meta.rootId) === this.rootId
       }
-      affects(uu) {
-        return this.handles(uu)
+      affects(GG) {
+        return this.handles(GG)
       }
-      shape(uu, Eu, ju, Uu, Zu, Xu) {
-        const lu = Pu(Zu);
-        return (0, su.g)((qu = lu.rot, null !== (fu = Xu ? this.reshapedHalf(uu, Eu, ju, Uu, lu) : this.placedHalf(uu, Eu, ju, Uu, lu.rot)) ? (0, du.e)(du.m, qu, fu) : 1 === qu ? du.m : `${du.m}|meta|rot${qu}`));
-        var qu, fu
+      shape(GG, bG, ZG, SG, LG, yG) {
+        const kG = mG(LG);
+        return (0, wG.p)((UG = kG.rot, null !== (YG = yG ? this.reshapedHalf(GG, bG, ZG, SG, kG) : this.placedHalf(GG, bG, ZG, SG, kG.rot)) ? (0, CG.e)(CG.q, UG, YG) : 1 === UG ? CG.q : `${CG.q}|meta|rot${UG}`));
+        var UG, YG
       }
-      placedHalf(uu, Eu, ju, su, Uu) {
-        const [Zu, Xu] = Ju.e[Uu];
-        for (const [lu, qu] of [
+      placedHalf(GG, bG, ZG, wG, SG) {
+        const [LG, yG] = iG.c[SG];
+        for (const [kG, UG] of [
             ["right", 1],
             ["left", -1]
           ]) {
-          const fu = Eu + qu * Zu,
-            Cu = su + qu * Xu,
-            bu = ou(uu, fu, ju, Cu);
-          if (null !== bu && bu.rot === Uu && (null === bu.half || !ku(uu, fu, ju, Cu, bu))) return lu
+          const YG = bG + UG * LG,
+            VG = wG + UG * yG,
+            pG = IG(GG, YG, ZG, VG);
+          if (null !== pG && pG.rot === SG && (null === pG.half || !FG(GG, YG, ZG, VG, pG))) return kG
         }
         return null
       }
-      reshapedHalf(uu, Eu, ju, su, Uu) {
-        if (null !== Uu.half && ku(uu, Eu, ju, su, Uu)) return Uu.half;
-        for (const Zu of ["right", "left"]) {
-          const [Xu, lu] = (0, du.l)(Uu.rot, Zu), qu = ou(uu, Eu + Xu, ju, su + lu);
-          if (null !== qu && qu.rot === Uu.rot && qu.half === du.o[Zu]) return Zu
+      reshapedHalf(GG, bG, ZG, wG, SG) {
+        if (null !== SG.half && FG(GG, bG, ZG, wG, SG)) return SG.half;
+        for (const LG of ["right", "left"]) {
+          const [yG, kG] = (0, CG.m)(SG.rot, LG), UG = IG(GG, bG + yG, ZG, wG + kG);
+          if (null !== UG && UG.rot === SG.rot && UG.half === CG.s[LG]) return LG
         }
         return null
       }
-    }, new mu.b];
+    }, new vG.b];
 
-    function Ku(uu, Eu, ju, su, Uu) {
-      let Zu = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      for (const Xu of vu)
-        if (Xu.handles(Uu)) return Xu.shape(uu, Eu, ju, su, Uu, Zu);
-      return Uu
+    function cG(GG, bG, ZG, wG, SG) {
+      let LG = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      for (const yG of aG)
+        if (yG.handles(SG)) return yG.shape(GG, bG, ZG, wG, SG, LG);
+      return SG
     }
 
-    function Vu(uu) {
-      for (const su of vu) {
-        var Eu, ju;
-        if (su.handles(uu)) return null !== (Eu = null === (ju = su.placedBy) || void 0 === ju ? void 0 : ju.call(su, uu)) && void 0 !== Eu ? Eu : null
+    function lG(GG) {
+      for (const wG of aG) {
+        var bG, ZG;
+        if (wG.handles(GG)) return null !== (bG = null === (ZG = wG.placedBy) || void 0 === ZG ? void 0 : ZG.call(wG, GG)) && void 0 !== bG ? bG : null
       }
       return null
     }
   },
-  38751: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => du,
-      f: () => eu,
-      h: () => Mu
+  38829: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => CG,
+      c: () => EG,
+      g: () => zG
     });
-    var su = ju(9409),
-      Uu = ju(9429),
-      Zu = ju(9490),
-      Xu = ju(38754),
-      lu = ju(9485);
-    const qu = (0, Xu.H)("pipe"),
-      fu = (0, Xu.H)("tank"),
-      Cu = (0, Xu.H)("port"),
-      bu = "Reactor Port";
+    var wG = ZG(9249),
+      SG = ZG(9280),
+      LG = ZG(9341),
+      yG = ZG(38837),
+      kG = ZG(9334);
+    const UG = (0, yG.E)("pipe"),
+      YG = (0, yG.E)("tank"),
+      VG = (0, yG.E)("port"),
+      pG = "Reactor Port";
 
-    function cu(uu, Eu, ju) {
-      const su = new Set([Zu.e, Zu.c, bu, ...Eu, ...ju, ...uu ? [Xu.j] : []]);
+    function fG(GG, bG, ZG) {
+      const wG = new Set([LG.f, LG.e, pG, ...bG, ...ZG, ...GG ? [yG.g] : []]);
       return {
-        makers: new Set(Eu),
-        roots: su
+        makers: new Set(bG),
+        roots: wG
       }
     }
-    const Nu = {
-        water: cu(!0, ["Condenser"], ["Centrifuge", "Synthesizer", Xu.b]),
-        cryo: cu(!1, [Xu.b], [])
+    const QG = {
+        water: fG(!0, ["Condenser"], ["Centrifuge", "Synthesizer", yG.d]),
+        cryo: fG(!1, [yG.d], [])
       },
-      Ou = new Set([...Nu.water.roots, ...Nu.cryo.roots]),
-      Yu = {
+      KG = new Set([...QG.water.roots, ...QG.cryo.roots]),
+      hG = {
         nx: [-1, 0, 0],
         ny: [0, -1, 0],
         nz: [0, 0, -1],
@@ -500,127 +500,127 @@ export const modules = {
         py: [0, 1, 0],
         pz: [0, 0, 1]
       },
-      hu = Uu.e.map((uu => Yu[uu])),
-      Du = hu.map((uu => {
-        let [Eu, ju, su] = uu;
-        return Xu.s.findIndex((uu => {
-          let [Uu, Zu, Xu] = uu;
-          return Uu === Eu && Zu === ju && Xu === su
+      dG = SG.f.map((GG => hG[GG])),
+      JG = dG.map((GG => {
+        let [bG, ZG, wG] = GG;
+        return yG.p.findIndex((GG => {
+          let [SG, LG, yG] = GG;
+          return SG === bG && LG === ZG && yG === wG
         }))
       }));
 
-    function gu(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const ju = su.f[uu],
-        Uu = null === ju || void 0 === ju ? void 0 : ju.meta.rootName,
-        cu = Nu[Eu];
-      if (!Uu || !cu.roots.has(Uu)) return null;
-      if ((0, Zu.h)(Uu)) return (0, Xu.D)(ju.name) === Eu ? qu : null;
-      if (Uu === Xu.j) return fu;
-      if (Uu === bu) return ju.name.endsWith("|Water") ? Cu : null;
-      const [Ou, Yu] = lu.e[(ju.meta.rot || 1) - 1];
-      return (0, Xu.H)(cu.makers.has(Uu) ? "maker" : "user", [-Ou, 0, -Yu])
+    function rG(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const ZG = wG.l[GG],
+        SG = null === ZG || void 0 === ZG ? void 0 : ZG.meta.rootName,
+        fG = QG[bG];
+      if (!SG || !fG.roots.has(SG)) return null;
+      if ((0, LG.l)(SG)) return (0, yG.D)(ZG.name) === bG ? UG : null;
+      if (SG === yG.g) return YG;
+      if (SG === pG) return ZG.name.endsWith("|Water") ? VG : null;
+      const [KG, hG] = kG.e[(ZG.meta.rot || 1) - 1];
+      return (0, yG.E)(fG.makers.has(SG) ? "maker" : "user", [-KG, 0, -hG])
     }
 
-    function Mu(uu, Eu, ju, Uu) {
-      let Zu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+    function zG(GG, bG, ZG, SG) {
+      let LG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
       const {
-        makers: lu
-      } = Nu[Zu];
-      return hu.some(((fu, Cu) => {
-        var bu, cu;
-        let [Nu, Ou, Yu] = fu;
-        const hu = uu(Eu + Nu, ju + Ou, Uu + Yu),
-          Mu = gu(hu, Zu);
-        return null !== Mu && lu.has(null !== (bu = null === (cu = su.f[hu]) || void 0 === cu ? void 0 : cu.meta.rootName) && void 0 !== bu ? bu : "") && !(0, Xu.J)(qu, Mu, Du[Cu])
+        makers: kG
+      } = QG[LG];
+      return dG.some(((YG, VG) => {
+        var pG, fG;
+        let [QG, KG, hG] = YG;
+        const dG = GG(bG + QG, ZG + KG, SG + hG),
+          zG = rG(dG, LG);
+        return null !== zG && kG.has(null !== (pG = null === (fG = wG.l[dG]) || void 0 === fG ? void 0 : fG.meta.rootName) && void 0 !== pG ? pG : "") && !(0, yG.I)(UG, zG, JG[VG])
       }))
     }
 
-    function eu(uu) {
-      const Eu = su.f[uu];
-      return Eu ? (0, Xu.D)(Eu.name) : null
+    function EG(GG) {
+      const bG = wG.l[GG];
+      return bG ? (0, yG.D)(bG.name) : null
     }
-    let Gu = null;
+    let oG = null;
 
-    function pu(uu) {
-      if (!Gu) {
-        Gu = new Map;
-        for (const uu of ["water", "cryo"])
-          for (let Eu = 0; Eu < 64; Eu++)
-            for (const ju of [!1, !0]) Gu.set((0, Zu.l)(uu, Eu, ju), {
-              XN: uu,
-              mask: Eu,
-              full: ju
+    function XG(GG) {
+      if (!oG) {
+        oG = new Map;
+        for (const GG of ["water", "cryo"])
+          for (let bG = 0; bG < 64; bG++)
+            for (const ZG of [!1, !0]) oG.set((0, LG.m)(GG, bG, ZG), {
+              UQ: GG,
+              mask: bG,
+              full: ZG
             })
       }
-      return Gu.get(uu)
+      return oG.get(GG)
     }
-    const wu = new Map(Array.from({
-      length: Zu.g + 1
-    }, ((uu, Eu) => [(0, Zu.p)(Eu), Eu])));
+    const uG = new Map(Array.from({
+      length: LG.j + 1
+    }, ((GG, bG) => [(0, LG.q)(bG), bG])));
 
-    function Ju(uu, Eu, ju, Uu, Zu, Xu) {
-      return hu.some(((lu, qu) => {
-        var fu, Cu, bu;
-        let [cu, Nu, Ou] = lu;
-        if (0 === (Xu >> qu & 1)) return !1;
-        const Yu = null !== (fu = null === (Cu = su.f[uu(Eu + cu, ju + Nu, Uu + Ou)]) || void 0 === Cu ? void 0 : Cu.name) && void 0 !== fu ? fu : "",
-          hu = pu(Yu);
-        return hu ? hu.XN === Zu && hu.full : (null !== (bu = function(uu) {
-          var Eu;
-          return null !== (Eu = wu.get(uu)) && void 0 !== Eu ? Eu : null
-        }(Yu)) && void 0 !== bu ? bu : 0) > 0
+    function iG(GG, bG, ZG, SG, LG, yG) {
+      return dG.some(((kG, UG) => {
+        var YG, VG, pG;
+        let [fG, QG, KG] = kG;
+        if (0 === (yG >> UG & 1)) return !1;
+        const hG = null !== (YG = null === (VG = wG.l[GG(bG + fG, ZG + QG, SG + KG)]) || void 0 === VG ? void 0 : VG.name) && void 0 !== YG ? YG : "",
+          dG = XG(hG);
+        return dG ? dG.UQ === LG && dG.full : (null !== (pG = function(GG) {
+          var bG;
+          return null !== (bG = uG.get(GG)) && void 0 !== bG ? bG : null
+        }(hG)) && void 0 !== pG ? pG : 0) > 0
       }))
     }
-    class du {
+    class CG {
       constructor() {
-        this.reshapeOffsets = hu
+        this.reshapeOffsets = dG
       }
-      handles(uu) {
-        return null !== eu(uu)
+      handles(GG) {
+        return null !== EG(GG)
       }
-      affects(uu) {
-        var Eu, ju;
-        return Ou.has(null !== (Eu = null === (ju = su.f[uu]) || void 0 === ju ? void 0 : ju.meta.rootName) && void 0 !== Eu ? Eu : "")
+      affects(GG) {
+        var bG, ZG;
+        return KG.has(null !== (bG = null === (ZG = wG.l[GG]) || void 0 === ZG ? void 0 : ZG.meta.rootName) && void 0 !== bG ? bG : "")
       }
-      placedBy(uu) {
-        var Eu;
-        return (null === (Eu = su.f[uu]) || void 0 === Eu ? void 0 : Eu.meta.rootName) === Zu.c ? Zu.e : null
+      placedBy(GG) {
+        var bG;
+        return (null === (bG = wG.l[GG]) || void 0 === bG ? void 0 : bG.meta.rootName) === LG.e ? LG.f : null
       }
-      shape(uu, Eu, ju, Uu, lu, fu) {
-        var Cu, bu, cu;
-        const Nu = null !== (Cu = null === (bu = su.f[lu]) || void 0 === bu ? void 0 : bu.name) && void 0 !== Cu ? Cu : "",
-          Ou = fu || Nu !== Zu.e ? null !== (cu = (0, Xu.D)(Nu)) && void 0 !== cu ? cu : "water" : function(uu, Eu, ju, su) {
-            return hu.some(((Uu, Zu) => {
-              let [lu, fu, Cu] = Uu;
-              const bu = gu(uu(Eu + lu, ju + fu, su + Cu), "cryo");
-              return null !== bu && "port" !== bu.kind && (0, Xu.J)(qu, bu, Du[Zu])
+      shape(GG, bG, ZG, SG, kG, YG) {
+        var VG, pG, fG;
+        const QG = null !== (VG = null === (pG = wG.l[kG]) || void 0 === pG ? void 0 : pG.name) && void 0 !== VG ? VG : "",
+          KG = YG || QG !== LG.f ? null !== (fG = (0, yG.D)(QG)) && void 0 !== fG ? fG : "water" : function(GG, bG, ZG, wG) {
+            return dG.some(((SG, LG) => {
+              let [kG, YG, VG] = SG;
+              const pG = rG(GG(bG + kG, ZG + YG, wG + VG), "cryo");
+              return null !== pG && "port" !== pG.kind && (0, yG.I)(UG, pG, JG[LG])
             })) ? "cryo" : "water"
-          }(uu, Eu, ju, Uu),
-          Yu = function(uu, Eu, ju, su) {
-            let Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              Zu = 0;
-            return hu.forEach(((lu, fu) => {
-              let [Cu, bu, cu] = lu;
-              const Nu = gu(uu(Eu + Cu, ju + bu, su + cu), Uu);
-              Nu && (0, Xu.J)(qu, Nu, Du[fu]) && (Zu |= 1 << fu)
-            })), Zu
-          }(uu, Eu, ju, Uu, Ou),
-          Mu = fu ? function(uu) {
-            var Eu;
-            return !0 === (null === (Eu = pu(uu)) || void 0 === Eu ? void 0 : Eu.full)
-          }(Nu) : Ju(uu, Eu, ju, Uu, Ou, Yu);
-        return (0, su.g)((0, Zu.l)(Ou, Yu, Mu))
+          }(GG, bG, ZG, SG),
+          hG = function(GG, bG, ZG, wG) {
+            let SG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              LG = 0;
+            return dG.forEach(((kG, YG) => {
+              let [VG, pG, fG] = kG;
+              const QG = rG(GG(bG + VG, ZG + pG, wG + fG), SG);
+              QG && (0, yG.I)(UG, QG, JG[YG]) && (LG |= 1 << YG)
+            })), LG
+          }(GG, bG, ZG, SG, KG),
+          zG = YG ? function(GG) {
+            var bG;
+            return !0 === (null === (bG = XG(GG)) || void 0 === bG ? void 0 : bG.full)
+          }(QG) : iG(GG, bG, ZG, SG, KG, hG);
+        return (0, wG.p)((0, LG.m)(KG, hG, zG))
       }
     }
   },
-  38533: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => su,
-      f: () => Zu
+  38602: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => wG,
+      f: () => LG
     });
-    const su = ["Chest", "Loot Chest", "Moonstone Chest"],
-      Uu = [{
+    const wG = ["Chest", "Loot Chest", "Moonstone Chest"],
+      SG = [{
         name: "Workbench",
         exactMatch: !0
       }, {
@@ -640,10 +640,10 @@ export const modules = {
         exactMatch: !1
       }];
 
-    function Zu(uu) {
-      return Uu.find((Eu => Eu.exactMatch ? uu === Eu.name : uu.includes(Eu.name)))
+    function LG(GG) {
+      return SG.find((bG => bG.exactMatch ? GG === bG.name : GG.includes(bG.name)))
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

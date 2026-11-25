@@ -1,22 +1,22 @@
 export const id = 14;
 export const ids = [14];
 export const modules = {
-  38882: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Xu
+  38975: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => yG
     });
-    const su = 4,
-      Uu = 12e3,
-      Zu = 1e3;
-    class Xu {
+    const wG = 4,
+      SG = 12e3,
+      LG = 1e3;
+    class yG {
       constructor() {
         let {
-          limit: uu = su,
-          windowMs: Eu = Uu,
-          spacingMs: ju = Zu,
-          now: Xu = Date.now
+          limit: GG = wG,
+          windowMs: bG = SG,
+          spacingMs: ZG = LG,
+          now: yG = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = uu, this.windowMs = Eu, this.spacingMs = ju, this.now = Xu
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = GG, this.windowMs = bG, this.spacingMs = ZG, this.now = yG
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -25,61 +25,61 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const uu of this.priority) uu.flush();
+        for (const GG of this.priority) GG.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const uu = this.now();
-        this.sent.push(uu), this.lastSentAt = uu, this.schedule(), this.notify()
+        const GG = this.now();
+        this.sent.push(GG), this.lastSentAt = GG, this.schedule(), this.notify()
       }
-      addPriority(uu) {
-        return this.priority.add(uu), () => {
-          this.priority.delete(uu)
+      addPriority(GG) {
+        return this.priority.add(GG), () => {
+          this.priority.delete(GG)
         }
       }
-      subscribe(uu) {
-        return this.listeners.add(uu), () => {
-          this.listeners.delete(uu)
+      subscribe(GG) {
+        return this.listeners.add(GG), () => {
+          this.listeners.delete(GG)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const uu of this.priority)
-          if (uu.waiting()) return !0;
+        for (const GG of this.priority)
+          if (GG.waiting()) return !0;
         return !1
       }
       prune() {
-        const uu = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= uu;) this.sent.shift()
+        const GG = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= GG;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const uu = this.now(),
-          Eu = this.lastSentAt + this.spacingMs,
-          ju = Math.min(Eu > uu ? Eu : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        ju !== 1 / 0 && (this.timer = setTimeout((() => {
+        const GG = this.now(),
+          bG = this.lastSentAt + this.spacingMs,
+          ZG = Math.min(bG > GG ? bG : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        ZG !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, ju - uu)))
+        }), Math.max(0, ZG - GG)))
       }
       notify() {
-        for (const uu of this.listeners) uu()
+        for (const GG of this.listeners) GG()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  38851: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => su
+  38950: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => wG
     });
-    class su {
-      constructor(uu, Eu, ju) {
-        this.TY = uu, this.beforeOpen = Eu, this.afterClose = ju, this.open = !1, this.fO = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.fO && (this.open = !0, this.beforeOpen(this), this.emit())
+    class wG {
+      constructor(GG, bG, ZG) {
+        this.xh = GG, this.beforeOpen = bG, this.afterClose = ZG, this.open = !1, this.pK = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.pK && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -92,234 +92,234 @@ export const modules = {
       showOrRefresh() {
         this.open ? this.emit() : this.show()
       }
-      closePanel(uu) {
-        this.open = !1, this.onClosed(), this.emit(), this.afterClose(uu)
+      closePanel(GG) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(GG)
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.fO = !0
+        this.open = !1, this.emit(), this.pK = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.fO || (this.snapshot = this.buildSnapshot(), this.TY(this.snapshot))
+        this.pK || (this.snapshot = this.buildSnapshot(), this.xh(this.snapshot))
       }
     }
   },
-  39592: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      default: () => Cj
+  39717: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      default: () => VZ
     });
-    var su = ju(58);
-    var Uu = ju(22),
-      Zu = ju(1969),
-      Xu = ju(24),
-      lu = ju(36992),
-      qu = ju(1105),
-      fu = ju.n(qu),
-      Cu = ju(1499),
-      bu = ju(1244),
-      cu = ju(4719),
-      Nu = ju(1398),
-      Ou = ju(1506),
-      Yu = ju(1971),
-      hu = ju(1419),
-      Du = ju(1964),
-      gu = ju(2027),
-      Mu = ju(207);
-    const eu = ju(39600),
-      Gu = Object.fromEntries(eu.keys().map((uu => [uu.replace(/^\.\/(.*)\.webp$/, "$1"), eu(uu)]))),
-      pu = new Set;
+    var wG = ZG(51);
+    var SG = ZG(17),
+      LG = ZG(1887),
+      yG = ZG(19),
+      kG = ZG(36951),
+      UG = ZG(1006),
+      YG = ZG.n(UG),
+      VG = ZG(1389),
+      pG = ZG(1151),
+      fG = ZG(4549),
+      QG = ZG(1304),
+      KG = ZG(1393),
+      hG = ZG(1889),
+      dG = ZG(1320),
+      JG = ZG(1876),
+      rG = ZG(1945),
+      zG = ZG(200);
+    const EG = ZG(39724),
+      oG = Object.fromEntries(EG.keys().map((GG => [GG.replace(/^\.\/(.*)\.webp$/, "$1"), EG(GG)]))),
+      XG = new Set;
 
-    function wu(uu, Eu) {
-      const ju = Eu ? uu : `${uu}-uncaught`,
-        su = (0, Mu.c)(Gu, ju);
-      return void 0 !== su || pu.has(ju) || (pu.add(ju), console.warn(`Containment Breach has no mugshot ${ju}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), su
+    function uG(GG, bG) {
+      const ZG = bG ? GG : `${GG}-uncaught`,
+        wG = (0, zG.c)(oG, ZG);
+      return void 0 !== wG || XG.has(ZG) || (XG.add(ZG), console.warn(`Containment Breach has no mugshot ${ZG}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), wG
     }
-    var Ju = ju(1154);
-    const du = "containmentBreach",
-      au = "Gold Coin";
+    var iG = ZG(1067);
+    const CG = "containmentBreach",
+      WG = "Gold Coin";
 
-    function Pu(uu) {
+    function mG(GG) {
       let {
-        open: Eu,
-        onDismiss: ju,
-        title: su,
-        className: Uu,
-        decor: Zu,
-        headerExtra: Xu,
-        status: lu,
-        statusRefused: qu = !1,
-        children: Cu
-      } = uu;
-      const bu = `${Uu}Title`;
-      return (0, Ju.jsx)(cu.c, {
-        show: Eu,
-        close: ju,
+        open: bG,
+        onDismiss: ZG,
+        title: wG,
+        className: SG,
+        decor: LG,
+        headerExtra: yG,
+        status: kG,
+        statusRefused: UG = !1,
+        children: VG
+      } = GG;
+      const pG = `${SG}Title`;
+      return (0, iG.jsx)(fG.b, {
+        show: bG,
+        close: ZG,
         togglePointerLock: !1,
         className: "ContainmentBoardOverlay",
-        children: (0, Ju.jsxs)("section", {
-          className: fu()("ContainmentBoardPanel", Uu),
+        children: (0, iG.jsxs)("section", {
+          className: YG()("ContainmentBoardPanel", SG),
           role: "dialog",
           "aria-modal": "true",
-          "aria-labelledby": bu,
-          children: [Zu && (0, Ju.jsx)("div", {
+          "aria-labelledby": pG,
+          children: [LG && (0, iG.jsx)("div", {
             className: "BoardDecor",
             "aria-hidden": "true",
-            children: Zu
-          }), (0, Ju.jsxs)("header", {
+            children: LG
+          }), (0, iG.jsxs)("header", {
             className: "BoardHeader",
-            children: [(0, Ju.jsx)("h2", {
-              id: bu,
+            children: [(0, iG.jsx)("h2", {
+              id: pG,
               className: "VisuallyHidden",
-              children: su
-            }), Xu, (0, Ju.jsx)(Ou.l, {
-              onClick: ju
+              children: wG
+            }), yG, (0, iG.jsx)(KG.j, {
+              onClick: ZG
             })]
-          }), (0, Ju.jsx)("div", {
+          }), (0, iG.jsx)("div", {
             className: "BoardBody",
-            children: Cu
-          }), void 0 !== lu && (0, Ju.jsx)("footer", {
-            className: fu()("BoardStatus", {
-              Refused: qu
+            children: VG
+          }), void 0 !== kG && (0, iG.jsx)("footer", {
+            className: YG()("BoardStatus", {
+              Refused: UG
             }),
-            children: lu
+            children: kG
           })]
         })
       })
     }
 
-    function ou(uu) {
+    function IG(GG) {
       let {
-        itemName: Eu
-      } = uu;
-      return (0, Ju.jsx)(Yu.d, {
-        itemName: Eu,
+        itemName: bG
+      } = GG;
+      return (0, iG.jsx)(hG.b, {
+        itemName: bG,
         amount: 0
       })
     }
 
-    function ku(uu) {
+    function FG(GG) {
       let {
-        anomalyId: Eu,
-        caught: ju
-      } = uu;
-      const Uu = (0, su.useRef)(null);
-      return (0, Nu.d)(Uu, !ju), (0, Ju.jsx)("span", {
-        ref: Uu,
-        className: fu()("BoardMugshot", {
-          Uncaught: !ju
+        anomalyId: bG,
+        caught: ZG
+      } = GG;
+      const SG = (0, wG.useRef)(null);
+      return (0, QG.e)(SG, !ZG), (0, iG.jsx)("span", {
+        ref: SG,
+        className: YG()("BoardMugshot", {
+          Uncaught: !ZG
         }),
-        children: (0, Ju.jsx)("img", {
-          src: wu(Eu, ju),
+        children: (0, iG.jsx)("img", {
+          src: uG(bG, ZG),
           alt: "",
           draggable: !1
         })
       })
     }
 
-    function mu(uu) {
+    function vG(GG) {
       let {
-        itemName: Eu,
-        amount: ju,
-        dl: su,
-        inTile: Uu = !1
-      } = uu;
-      return (0, Ju.jsx)(hu.e, {
+        itemName: bG,
+        amount: ZG,
+        Ik: wG,
+        inTile: SG = !1
+      } = GG;
+      return (0, iG.jsx)(dG.h, {
         delayShow: 200,
-        hoverOnly: Uu,
+        hoverOnly: SG,
         placement: "top",
         tooltipClassName: "BoardChipTooltipBox",
-        tooltipInner: (0, Ju.jsx)(Ku, {
-          itemName: Eu,
-          amount: ju,
-          dl: su
+        tooltipInner: (0, iG.jsx)(cG, {
+          itemName: bG,
+          amount: ZG,
+          Ik: wG
         }),
-        children: (0, Ju.jsxs)("span", {
-          className: fu()("BoardChip", {
-            Short: void 0 !== su && su < ju
+        children: (0, iG.jsxs)("span", {
+          className: YG()("BoardChip", {
+            Short: void 0 !== wG && wG < ZG
           }),
-          children: [(0, Ju.jsx)("span", {
+          children: [(0, iG.jsx)("span", {
             className: "BoardChipIcon",
-            children: (0, Ju.jsx)(ou, {
-              itemName: Eu
+            children: (0, iG.jsx)(IG, {
+              itemName: bG
             })
-          }), ju.toLocaleString()]
+          }), ZG.toLocaleString()]
         })
       })
     }
-    const vu = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
+    const aG = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
 
-    function Ku(uu) {
-      var Eu;
+    function cG(GG) {
+      var bG;
       let {
-        itemName: ju,
-        amount: su,
-        dl: Uu
-      } = uu;
+        itemName: ZG,
+        amount: wG,
+        Ik: SG
+      } = GG;
       const {
-        t: Zu
-      } = (0, bu.A)(), Xu = (0, gu.d)("itemInfo", (uu => uu[ju])), {
-        lore: lu,
-        droppedBy: qu
-      } = function(uu) {
-        if ("string" !== typeof uu) return {
-          lore: uu,
+        t: LG
+      } = (0, pG.w)(), yG = (0, rG.c)("itemInfo", (GG => GG[ZG])), {
+        lore: kG,
+        droppedBy: UG
+      } = function(GG) {
+        if ("string" !== typeof GG) return {
+          lore: GG,
           droppedBy: null
         };
-        const Eu = vu.exec(uu);
-        return null === Eu ? {
-          lore: uu,
+        const bG = aG.exec(GG);
+        return null === bG ? {
+          lore: GG,
           droppedBy: null
         } : {
-          lore: "" === Eu[1] ? void 0 : Eu[1],
-          droppedBy: Eu[2]
+          lore: "" === bG[1] ? void 0 : bG[1],
+          droppedBy: bG[2]
         }
-      }(null === Xu || void 0 === Xu ? void 0 : Xu.description);
-      return (0, Ju.jsxs)("div", {
+      }(null === yG || void 0 === yG ? void 0 : yG.description);
+      return (0, iG.jsxs)("div", {
         className: "BoardChipTooltip",
-        children: [(0, Ju.jsxs)("div", {
+        children: [(0, iG.jsxs)("div", {
           className: "BoardChipTooltipHeader",
-          children: [(0, Ju.jsx)("span", {
+          children: [(0, iG.jsx)("span", {
             className: "BoardChipTooltipIcon",
-            children: (0, Ju.jsx)(ou, {
-              itemName: ju
+            children: (0, iG.jsx)(IG, {
+              itemName: ZG
             })
-          }), (0, Ju.jsx)(Du.d, {
-            text: null !== (Eu = null === Xu || void 0 === Xu ? void 0 : Xu.displayName) && void 0 !== Eu ? Eu : ju,
+          }), (0, iG.jsx)(JG.c, {
+            text: null !== (bG = null === yG || void 0 === yG ? void 0 : yG.displayName) && void 0 !== bG ? bG : ZG,
             className: "BoardChipTooltipName"
           })]
-        }), (void 0 !== lu || null !== qu) && (0, Ju.jsxs)("div", {
+        }), (void 0 !== kG || null !== UG) && (0, iG.jsxs)("div", {
           className: "BoardChipTooltipBody",
-          children: [void 0 !== lu && (0, Ju.jsx)(Du.d, {
-            text: lu,
+          children: [void 0 !== kG && (0, iG.jsx)(JG.c, {
+            text: kG,
             className: "BoardChipTooltipDescription"
-          }), null !== qu && (0, Ju.jsxs)("span", {
+          }), null !== UG && (0, iG.jsxs)("span", {
             className: "BoardChipTooltipSource",
-            children: [(0, Ju.jsx)("span", {
+            children: [(0, iG.jsx)("span", {
               className: "BoardChipTooltipLabel",
-              children: Zu(`${du}:chipDroppedBy`)
-            }), qu]
+              children: LG(`${CG}:chipDroppedBy`)
+            }), UG]
           })]
-        }), void 0 !== Uu && (0, Ju.jsxs)("div", {
-          className: fu()("BoardChipTooltipHeld", {
-            Short: Uu < su
+        }), void 0 !== SG && (0, iG.jsxs)("div", {
+          className: YG()("BoardChipTooltipHeld", {
+            Short: SG < wG
           }),
-          children: [(0, Ju.jsx)("span", {
+          children: [(0, iG.jsx)("span", {
             className: "BoardChipTooltipLabel",
-            children: Zu(`${du}:chipYouHave`)
-          }), (0, Ju.jsxs)("span", {
+            children: LG(`${CG}:chipYouHave`)
+          }), (0, iG.jsxs)("span", {
             className: "BoardChipTooltipCount",
-            children: [(0, Ju.jsx)("span", {
+            children: [(0, iG.jsx)("span", {
               className: "BoardChipTooltipHeldAmount",
-              children: Uu.toLocaleString()
-            }), ` / ${su.toLocaleString()}`]
-          }), (0, Ju.jsx)("span", {
+              children: SG.toLocaleString()
+            }), ` / ${wG.toLocaleString()}`]
+          }), (0, iG.jsx)("span", {
             className: "BoardChipTooltipMeter",
-            children: (0, Ju.jsx)("span", {
+            children: (0, iG.jsx)("span", {
               style: {
-                width: (su > 0 ? 100 * Math.min(1, Uu / su) : 100) + "%"
+                width: (wG > 0 ? 100 * Math.min(1, SG / wG) : 100) + "%"
               }
             })
           })]
@@ -327,81 +327,81 @@ export const modules = {
       })
     }
 
-    function Vu(uu) {
+    function lG(GG) {
       let {
-        icon: Eu,
-        name: ju,
-        selected: su,
-        locked: Uu,
-        className: Zu,
-        buttonRef: Xu,
-        onSelect: lu,
-        children: qu
-      } = uu;
-      return (0, Ju.jsxs)("button", {
-        ref: Xu,
+        icon: bG,
+        name: ZG,
+        selected: wG,
+        locked: SG,
+        className: LG,
+        buttonRef: yG,
+        onSelect: kG,
+        children: UG
+      } = GG;
+      return (0, iG.jsxs)("button", {
+        ref: yG,
         type: "button",
-        className: fu()("BoardTile", Zu, {
-          Selected: su,
-          Locked: Uu
+        className: YG()("BoardTile", LG, {
+          Selected: wG,
+          Locked: SG
         }),
-        onClick: lu,
-        children: [(0, Ju.jsx)("span", {
+        onClick: kG,
+        children: [(0, iG.jsx)("span", {
           className: "BoardTileIcon",
-          children: Eu
-        }), (0, Ju.jsx)("span", {
+          children: bG
+        }), (0, iG.jsx)("span", {
           className: "BoardTileName",
-          children: ju
-        }), qu]
+          children: ZG
+        }), UG]
       })
     }
 
-    function ru(uu) {
+    function jG(GG) {
       let {
-        icon: Eu,
-        name: ju,
-        children: su
-      } = uu;
-      return (0, Ju.jsxs)("header", {
+        icon: bG,
+        name: ZG,
+        children: wG
+      } = GG;
+      return (0, iG.jsxs)("header", {
         className: "BoardDetailHeader",
-        children: [(0, Ju.jsx)("span", {
+        children: [(0, iG.jsx)("span", {
           className: "BoardDetailIcon",
-          children: Eu
-        }), (0, Ju.jsxs)("div", {
+          children: bG
+        }), (0, iG.jsxs)("div", {
           className: "BoardDetailHeading",
-          children: [(0, Ju.jsx)("h3", {
-            children: ju
-          }), (0, Ju.jsx)("span", {
+          children: [(0, iG.jsx)("h3", {
+            children: ZG
+          }), (0, iG.jsx)("span", {
             className: "BoardDetailStatus",
-            children: su
+            children: wG
           })]
         })]
       })
     }
 
-    function Qu(uu) {
+    function PG(GG) {
       let {
-        coins: Eu,
-        children: ju
-      } = uu;
-      return (0, Ju.jsxs)("div", {
+        coins: bG,
+        children: ZG
+      } = GG;
+      return (0, iG.jsxs)("div", {
         className: "BoardWallet",
-        children: [(0, Ju.jsx)(mu, {
-          itemName: au,
-          amount: Eu
-        }), ju]
+        children: [(0, iG.jsx)(vG, {
+          itemName: WG,
+          amount: bG
+        }), ZG]
       })
     }
-    var iu = ju(38851);
-    const Wu = "containmentCodexView";
-    class Su extends iu.d {
+    var MG = ZG(38950);
+    const AG = "containmentCodexView";
+    class sG extends MG.c {
       constructor() {
-        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = uu => {
-          this.selectedId = uu, this.emit()
+        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = GG => {
+          this.selectedId = GG, this.emit()
         }
       }
-      NO(uu) {
-        this.entries = uu.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
+      hK(GG) {
+        this.entries = GG.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
       }
       buildSnapshot() {
         return {
@@ -411,55 +411,55 @@ export const modules = {
         }
       }
     }
-    const Iu = {
-        codexAnyDifficulty: `${du}:codexNeedsAny`,
-        codexNormalOnly: `${du}:codexNeedsNormal`,
-        codexHardOnly: `${du}:codexNeedsHard`
+    const qG = {
+        codexAnyDifficulty: `${CG}:codexNeedsAny`,
+        codexNormalOnly: `${CG}:codexNeedsNormal`,
+        codexHardOnly: `${CG}:codexNeedsHard`
       },
-      Fu = {
+      nG = {
         codexContained: "Contained",
         codexEncountered: "Sighted",
         codexUnidentified: "Unknown"
       },
-      Bu = {
-        codexContained: `${du}:codexContainedBadge`,
-        codexEncountered: `${du}:codexEncounteredBadge`,
-        codexUnidentified: `${du}:codexUnidentifiedBadge`
+      gG = {
+        codexContained: `${CG}:codexContainedBadge`,
+        codexEncountered: `${CG}:codexEncounteredBadge`,
+        codexUnidentified: `${CG}:codexUnidentifiedBadge`
       },
-      Lu = ["94%", "81%", "88%", "46%", "72%"];
+      eG = ["94%", "81%", "88%", "46%", "72%"];
 
-    function tu(uu) {
+    function RG(GG) {
       let {
-        entry: Eu
-      } = uu;
+        entry: bG
+      } = GG;
       const {
-        t: ju
-      } = (0, bu.A)();
-      return (0, Ju.jsx)("span", {
-        className: fu()("BoardBadge", Fu[Eu.codexEntryState]),
-        children: ju(Bu[Eu.codexEntryState])
+        t: ZG
+      } = (0, pG.w)();
+      return (0, iG.jsx)("span", {
+        className: YG()("BoardBadge", nG[bG.codexEntryState]),
+        children: ZG(gG[bG.codexEntryState])
       })
     }
 
-    function xu(uu) {
+    function TG(GG) {
       const {
-        t: Eu
-      } = (0, bu.A)();
-      return "codexUnidentified" === uu.codexEntryState ? Eu(`${du}:codexUnidentifiedName`) : uu.codexEntryName
+        t: bG
+      } = (0, pG.w)();
+      return "codexUnidentified" === GG.codexEntryState ? bG(`${CG}:codexUnidentifiedName`) : GG.codexEntryName
     }
 
-    function Tu(uu) {
+    function HG(GG) {
       let {
-        entry: Eu
-      } = uu;
-      return "codexUnidentified" === Eu.codexEntryState ? (0, Ju.jsx)(ou, {
+        entry: bG
+      } = GG;
+      return "codexUnidentified" === bG.codexEntryState ? (0, iG.jsx)(IG, {
         itemName: "Book"
-      }) : (0, Ju.jsxs)("span", {
+      }) : (0, iG.jsxs)("span", {
         className: "CodexPhoto",
-        children: [(0, Ju.jsx)(ku, {
-          anomalyId: Eu.codexEntryId,
-          caught: "codexContained" === Eu.codexEntryState
-        }), (0, Ju.jsx)("img", {
+        children: [(0, iG.jsx)(FG, {
+          anomalyId: bG.codexEntryId,
+          caught: "codexContained" === bG.codexEntryState
+        }), (0, iG.jsx)("img", {
           className: "CodexPaperclip",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGNggIIXb97/X7V57/+Wvtn/GZDBqs17UQTgClahScBATHrlf5ySeHWimo9NMbokCp9OkmD/oasGCaJLAAC5ZUIBS85GiAAAAABJRU5ErkJggg==",
           alt: "",
@@ -468,27 +468,27 @@ export const modules = {
       })
     }
 
-    function Hu(uu) {
+    function tG(GG) {
       let {
-        entry: Eu,
-        selected: ju,
-        onSelect: su
-      } = uu;
-      const Uu = "codexUnidentified" === Eu.codexEntryState;
-      return (0, Ju.jsxs)(Vu, {
-        icon: (0, Ju.jsx)(Tu, {
-          entry: Eu
+        entry: bG,
+        selected: ZG,
+        onSelect: wG
+      } = GG;
+      const SG = "codexUnidentified" === bG.codexEntryState;
+      return (0, iG.jsxs)(lG, {
+        icon: (0, iG.jsx)(HG, {
+          entry: bG
         }),
-        name: xu(Eu),
-        selected: ju,
-        locked: Uu,
-        className: fu()("CodexFolder", Fu[Eu.codexEntryState]),
+        name: TG(bG),
+        selected: ZG,
+        locked: SG,
+        className: YG()("CodexFolder", nG[bG.codexEntryState]),
         onSelect: () => {
-          su(Eu.codexEntryId)
+          wG(bG.codexEntryId)
         },
-        children: [!Uu && (0, Ju.jsx)(tu, {
-          entry: Eu
-        }), Uu && (0, Ju.jsx)("img", {
+        children: [!SG && (0, iG.jsx)(RG, {
+          entry: bG
+        }), SG && (0, iG.jsx)("img", {
           className: "CodexSeal",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAARElEQVR4nGNggIIGHp7/MAzjw+TAnMf+/mB8RkQEjOGKYZLIgsiK4AqQJZA1gBXAOHgVwCRQJJEdCVOEYj8yQPciTAEAz0hgyamUqskAAAAASUVORK5CYII=",
           alt: "",
@@ -497,176 +497,176 @@ export const modules = {
       })
     }
 
-    function Au(uu) {
+    function DG(GG) {
       let {
-        count: Eu
-      } = uu;
-      const ju = [];
-      for (let su = Math.min(Eu, 25); su > 0; su -= 5) ju.push(Math.min(su, 5));
-      return (0, Ju.jsx)("span", {
+        count: bG
+      } = GG;
+      const ZG = [];
+      for (let wG = Math.min(bG, 25); wG > 0; wG -= 5) ZG.push(Math.min(wG, 5));
+      return (0, iG.jsx)("span", {
         className: "CodexTallyMarks",
         "aria-hidden": "true",
-        children: ju.map(((uu, Eu) => (0, Ju.jsx)("span", {
-          className: fu()("CodexTallyGroup", {
-            Gate: 5 === uu
+        children: ZG.map(((GG, bG) => (0, iG.jsx)("span", {
+          className: YG()("CodexTallyGroup", {
+            Gate: 5 === GG
           }),
           children: Array.from({
-            length: Math.min(uu, 4)
-          }, ((uu, Eu) => (0, Ju.jsx)("span", {
+            length: Math.min(GG, 4)
+          }, ((GG, bG) => (0, iG.jsx)("span", {
             className: "CodexTallyMark"
-          }, Eu)))
-        }, Eu)))
+          }, bG)))
+        }, bG)))
       })
     }
 
-    function nu(uu) {
+    function NG(GG) {
       let {
-        contained: Eu,
-        total: ju
-      } = uu;
+        contained: bG,
+        total: ZG
+      } = GG;
       const {
-        t: su
-      } = (0, bu.A)();
-      return (0, Ju.jsxs)("div", {
+        t: wG
+      } = (0, pG.w)();
+      return (0, iG.jsxs)("div", {
         className: "CodexProgress",
-        children: [su(`${du}:codexProgress`, {
-          contained: String(Eu),
-          total: String(ju)
-        }), (0, Ju.jsx)("span", {
+        children: [wG(`${CG}:codexProgress`, {
+          contained: String(bG),
+          total: String(ZG)
+        }), (0, iG.jsx)("span", {
           className: "CodexProgressMeter",
-          children: (0, Ju.jsx)("span", {
+          children: (0, iG.jsx)("span", {
             style: {
-              width: Eu / ju * 100 + "%"
+              width: bG / ZG * 100 + "%"
             }
           })
         })]
       })
     }
 
-    function yu(uu) {
+    function OG(GG) {
       let {
-        entry: Eu,
-        fileNumber: ju
-      } = uu;
+        entry: bG,
+        fileNumber: ZG
+      } = GG;
       const {
-        t: su
-      } = (0, bu.A)(), Uu = "codexContained" === Eu.codexEntryState;
-      return (0, Ju.jsx)("section", {
+        t: wG
+      } = (0, pG.w)(), SG = "codexContained" === bG.codexEntryState;
+      return (0, iG.jsx)("section", {
         className: "BoardDetail",
-        children: (0, Ju.jsxs)("article", {
-          className: fu()("CodexDossier", Fu[Eu.codexEntryState]),
-          children: [(0, Ju.jsx)("span", {
+        children: (0, iG.jsxs)("article", {
+          className: YG()("CodexDossier", nG[bG.codexEntryState]),
+          children: [(0, iG.jsx)("span", {
             className: "CodexFileNumber",
-            children: su(`${du}:codexFileNumber`, {
-              number: String(ju).padStart(3, "0")
+            children: wG(`${CG}:codexFileNumber`, {
+              number: String(ZG).padStart(3, "0")
             })
-          }), (0, Ju.jsx)(ru, {
-            icon: (0, Ju.jsx)(Tu, {
-              entry: Eu
+          }), (0, iG.jsx)(jG, {
+            icon: (0, iG.jsx)(HG, {
+              entry: bG
             }),
-            name: xu(Eu),
-            children: (0, Ju.jsx)(tu, {
-              entry: Eu
+            name: TG(bG),
+            children: (0, iG.jsx)(RG, {
+              entry: bG
             })
-          }), Uu && (0, Ju.jsxs)(Ju.Fragment, {
-            children: [(0, Ju.jsx)("p", {
+          }), SG && (0, iG.jsxs)(iG.Fragment, {
+            children: [(0, iG.jsx)("p", {
               className: "BoardDescription",
-              children: Eu.codexEntryLore
-            }), (0, Ju.jsxs)("p", {
+              children: bG.codexEntryLore
+            }), (0, iG.jsxs)("p", {
               className: "CodexTally",
-              children: [su(`${du}:codexContainments`, {
-                count: String(Eu.codexEntryContainedCount)
-              }), (0, Ju.jsx)(Au, {
-                count: Eu.codexEntryContainedCount
+              children: [wG(`${CG}:codexContainments`, {
+                count: String(bG.codexEntryContainedCount)
+              }), (0, iG.jsx)(DG, {
+                count: bG.codexEntryContainedCount
               })]
-            }), (0, Ju.jsx)("span", {
+            }), (0, iG.jsx)("span", {
               className: "CodexClosedStamp",
               "aria-hidden": "true",
-              children: su(`${du}:codexContainedBadge`)
+              children: wG(`${CG}:codexContainedBadge`)
             })]
-          }), !Uu && (0, Ju.jsxs)(Ju.Fragment, {
-            children: [(0, Ju.jsxs)("div", {
+          }), !SG && (0, iG.jsxs)(iG.Fragment, {
+            children: [(0, iG.jsxs)("div", {
               className: "CodexRedaction",
-              children: [Lu.map((uu => (0, Ju.jsx)("span", {
+              children: [eG.map((GG => (0, iG.jsx)("span", {
                 className: "CodexRedactedLine",
                 style: {
-                  width: uu
+                  width: GG
                 }
-              }, uu))), (0, Ju.jsx)("p", {
+              }, GG))), (0, iG.jsx)("p", {
                 className: "CodexRedacted",
-                children: su(`${du}:codexRedacted`)
+                children: wG(`${CG}:codexRedacted`)
               })]
-            }), "" !== Eu.codexEntryHint && (0, Ju.jsxs)("aside", {
+            }), "" !== bG.codexEntryHint && (0, iG.jsxs)("aside", {
               className: "CodexNote",
-              children: [(0, Ju.jsx)("h4", {
-                children: su(`${du}:codexHintLabel`)
-              }), (0, Ju.jsx)("p", {
-                children: Eu.codexEntryHint
+              children: [(0, iG.jsx)("h4", {
+                children: wG(`${CG}:codexHintLabel`)
+              }), (0, iG.jsx)("p", {
+                children: bG.codexEntryHint
               })]
-            }), (0, Ju.jsx)("p", {
+            }), (0, iG.jsx)("p", {
               className: "CodexClearance",
-              children: su(Iu[Eu.codexEntryDifficulty])
+              children: wG(qG[bG.codexEntryDifficulty])
             })]
           })]
         })
       })
     }
 
-    function zu(uu) {
+    function xG(GG) {
       let {
-        controller: Eu
-      } = uu;
-      const ju = (0, Cu.g)(Wu, Eu.getSnapshot()),
+        controller: bG
+      } = GG;
+      const ZG = (0, VG.j)(AG, bG.getSnapshot()),
         {
-          t: su
-        } = (0, bu.A)();
-      if (0 === ju.entries.length) return null;
-      const Uu = ju.entries.find((uu => uu.codexEntryId === ju.selectedId)),
-        Zu = ju.entries.filter((uu => "codexContained" === uu.codexEntryState)).length,
-        Xu = ju.entries.map((uu => uu.codexEntryId)).sort().indexOf(Uu.codexEntryId) + 1;
-      return (0, Ju.jsxs)(Pu, {
-        open: ju.open,
-        onDismiss: Eu.dismiss,
-        title: su(`${du}:codexTitle`),
+          t: wG
+        } = (0, pG.w)();
+      if (0 === ZG.entries.length) return null;
+      const SG = ZG.entries.find((GG => GG.codexEntryId === ZG.selectedId)),
+        LG = ZG.entries.filter((GG => "codexContained" === GG.codexEntryState)).length,
+        yG = ZG.entries.map((GG => GG.codexEntryId)).sort().indexOf(SG.codexEntryId) + 1;
+      return (0, iG.jsxs)(mG, {
+        open: ZG.open,
+        onDismiss: bG.dismiss,
+        title: wG(`${CG}:codexTitle`),
         className: "ContainmentCodexPanel",
-        headerExtra: (0, Ju.jsx)(nu, {
-          contained: Zu,
-          total: ju.entries.length
+        headerExtra: (0, iG.jsx)(NG, {
+          contained: LG,
+          total: ZG.entries.length
         }),
-        children: [(0, Ju.jsx)("div", {
+        children: [(0, iG.jsx)("div", {
           className: "BoardTiles",
-          children: ju.entries.map((uu => (0, Ju.jsx)(Hu, {
-            entry: uu,
-            selected: uu === Uu,
-            onSelect: Eu.select
-          }, uu.codexEntryId)))
-        }), (0, Ju.jsx)(yu, {
-          entry: Uu,
-          fileNumber: Xu
+          children: ZG.entries.map((GG => (0, iG.jsx)(tG, {
+            entry: GG,
+            selected: GG === SG,
+            onSelect: bG.select
+          }, GG.codexEntryId)))
+        }), (0, iG.jsx)(OG, {
+          entry: SG,
+          fileNumber: yG
         })]
       })
     }
-    var Ru = ju(349);
-    class uE extends iu.d {
-      constructor(uu, Eu, ju, su, Uu, Zu) {
-        super(uu, Eu, ju), this.pacer = su, this.command = Uu, this.predict = Zu, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = uu => {
-          this.selectedId = uu, this.emit()
-        }, this.act = (uu, Eu) => {
-          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${uu} ${Eu}`, this.rollBack)) return;
-          const ju = this.predict(this.board, uu, Eu);
-          null !== ju && (this.board = ju.board, this.notice = ju.notice, this.emit())
+    var BG = ZG(352);
+    class Gb extends MG.c {
+      constructor(GG, bG, ZG, wG, SG, LG) {
+        super(GG, bG, ZG), this.pacer = wG, this.command = SG, this.predict = LG, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = GG => {
+          this.selectedId = GG, this.emit()
+        }, this.act = (GG, bG) => {
+          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${GG} ${bG}`, this.rollBack)) return;
+          const ZG = this.predict(this.board, GG, bG);
+          null !== ZG && (this.board = ZG.board, this.notice = ZG.notice, this.emit())
         }, this.rollBack = () => {
           this.board !== this.confirmed && (this.board = this.confirmed, this.notice = null)
-        }, this.unsubscribePacer = su.subscribe((() => {
+        }, this.unsubscribePacer = wG.subscribe((() => {
           this.emit()
         }))
       }
-      NO(uu) {
-        const Eu = this.messageOpens(uu);
-        if (Eu && this.open) return this.board === this.confirmed && (this.board = uu), this.confirmed = uu, void this.emit();
-        if (this.board = uu, this.confirmed = uu, this.pacer.onReply(), Eu) return this.notice = null, this.selectedId = this.openingSelection(uu), void this.show();
-        const ju = this.messageNotice(uu);
-        null !== ju && (this.notice = ju), this.emit()
+      hK(GG) {
+        const bG = this.messageOpens(GG);
+        if (bG && this.open) return this.board === this.confirmed && (this.board = GG), this.confirmed = GG, void this.emit();
+        if (this.board = GG, this.confirmed = GG, this.pacer.onReply(), bG) return this.notice = null, this.selectedId = this.openingSelection(GG), void this.show();
+        const ZG = this.messageNotice(GG);
+        null !== ZG && (this.notice = ZG), this.emit()
       }
       dispose() {
         this.unsubscribePacer(), super.dispose()
@@ -676,153 +676,153 @@ export const modules = {
       }
     }
 
-    function EE(uu, Eu) {
-      return uu.loadoutCoins >= Eu.loadoutCostCoins && Eu.loadoutCostParts.every((Eu => function(uu, Eu) {
-        return jE(uu, Eu).loadoutHeldPartAmount
-      }(uu, Eu.loadoutPartCurrency) >= Eu.loadoutPartAmount))
+    function bb(GG, bG) {
+      return GG.loadoutCoins >= bG.loadoutCostCoins && bG.loadoutCostParts.every((bG => function(GG, bG) {
+        return Zb(GG, bG).loadoutHeldPartAmount
+      }(GG, bG.loadoutPartCurrency) >= bG.loadoutPartAmount))
     }
 
-    function jE(uu, Eu) {
-      return uu.loadoutHeldParts.find((uu => uu.loadoutHeldPartCurrency === Eu))
+    function Zb(GG, bG) {
+      return GG.loadoutHeldParts.find((GG => GG.loadoutHeldPartCurrency === bG))
     }
 
-    function sE(uu, Eu) {
-      return uu.loadoutSlots.find((uu => uu.loadoutSlotKind === Eu))
+    function wb(GG, bG) {
+      return GG.loadoutSlots.find((GG => GG.loadoutSlotKind === bG))
     }
 
-    function UE(uu) {
-      return uu.loadoutPerks.filter((uu => uu.loadoutPerkEquipped)).length >= uu.loadoutMaxPerks
+    function Sb(GG) {
+      return GG.loadoutPerks.filter((GG => GG.loadoutPerkEquipped)).length >= GG.loadoutMaxPerks
     }
 
-    function ZE(uu, Eu, ju) {
-      for (const Uu of uu.loadoutSlots) {
-        const su = Uu.loadoutSlotOptions.find((uu => uu.loadoutOptionId === ju));
-        if (su) return "loadoutArmour" === Uu.loadoutSlotKind ? lE(uu, Uu, su, Eu) : XE(uu, Uu, su, Eu)
+    function Lb(GG, bG, ZG) {
+      for (const SG of GG.loadoutSlots) {
+        const wG = SG.loadoutSlotOptions.find((GG => GG.loadoutOptionId === ZG));
+        if (wG) return "loadoutArmour" === SG.loadoutSlotKind ? kb(GG, SG, wG, bG) : yb(GG, SG, wG, bG)
       }
-      const su = uu.loadoutPerks.find((uu => uu.loadoutPerkId === ju));
-      return su ? function(uu, Eu, ju) {
-        const su = Eu.loadoutPerkOwned,
-          Uu = Eu.loadoutPerkEquipped,
-          Zu = Eu.loadoutPerkName,
-          Xu = UE(uu);
-        if ("loadoutUnlock" === ju) {
-          if (su || !EE(uu, Eu.loadoutPerkCost)) return null;
-          const ju = {
-            ...Eu,
+      const wG = GG.loadoutPerks.find((GG => GG.loadoutPerkId === ZG));
+      return wG ? function(GG, bG, ZG) {
+        const wG = bG.loadoutPerkOwned,
+          SG = bG.loadoutPerkEquipped,
+          LG = bG.loadoutPerkName,
+          yG = Sb(GG);
+        if ("loadoutUnlock" === ZG) {
+          if (wG || !bb(GG, bG.loadoutPerkCost)) return null;
+          const ZG = {
+            ...bG,
             loadoutPerkOwned: !0,
-            loadoutPerkEquipped: !Xu
+            loadoutPerkEquipped: !yG
           };
           return {
-            board: fE(CE(uu, Eu.loadoutPerkCost), ju),
-            notice: bE(Xu ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", Zu)
+            board: Yb(Vb(GG, bG.loadoutPerkCost), ZG),
+            notice: pb(yG ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", LG)
           }
         }
-        if ("loadoutUpgrade" === ju || !su || "loadoutEquip" === ju === Uu || !Uu && Xu) return null;
+        if ("loadoutUpgrade" === ZG || !wG || "loadoutEquip" === ZG === SG || !SG && yG) return null;
         return {
-          board: fE(uu, {
-            ...Eu,
-            loadoutPerkEquipped: !Uu
+          board: Yb(GG, {
+            ...bG,
+            loadoutPerkEquipped: !SG
           }),
-          notice: bE(Uu ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", Zu)
+          notice: pb(SG ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", LG)
         }
-      }(uu, su, Eu) : null
+      }(GG, wG, bG) : null
     }
 
-    function XE(uu, Eu, ju, su) {
-      const Uu = ju.loadoutOptionOwnedTier,
-        Zu = ju.loadoutOptionName;
-      if ("loadoutEquip" === su) return 0 === Uu ? null : {
-        board: qE(uu, Eu, ju.loadoutOptionId, null),
-        notice: bE("loadoutNoticeEquipped", Zu)
+    function yb(GG, bG, ZG, wG) {
+      const SG = ZG.loadoutOptionOwnedTier,
+        LG = ZG.loadoutOptionName;
+      if ("loadoutEquip" === wG) return 0 === SG ? null : {
+        board: Ub(GG, bG, ZG.loadoutOptionId, null),
+        notice: pb("loadoutNoticeEquipped", LG)
       };
-      const Xu = "loadoutUnlock" === su;
-      if (Xu && 0 !== Uu || "loadoutUpgrade" === su && (0 === Uu || Uu >= ju.loadoutOptionTiers.length) || "loadoutUnequip" === su) return null;
-      const lu = ju.loadoutOptionTiers[Uu].loadoutTierCost;
-      if (!EE(uu, lu)) return null;
-      const qu = {
-          ...ju,
-          loadoutOptionOwnedTier: Uu + 1
+      const yG = "loadoutUnlock" === wG;
+      if (yG && 0 !== SG || "loadoutUpgrade" === wG && (0 === SG || SG >= ZG.loadoutOptionTiers.length) || "loadoutUnequip" === wG) return null;
+      const kG = ZG.loadoutOptionTiers[SG].loadoutTierCost;
+      if (!bb(GG, kG)) return null;
+      const UG = {
+          ...ZG,
+          loadoutOptionOwnedTier: SG + 1
         },
-        fu = Xu ? ju.loadoutOptionId : Eu.loadoutSlotEquippedId;
+        YG = yG ? ZG.loadoutOptionId : bG.loadoutSlotEquippedId;
       return {
-        board: qE(CE(uu, lu), Eu, fu, qu),
-        notice: Xu ? bE("loadoutNoticeUnlocked", Zu) : bE("loadoutNoticeUpgraded", Zu, Uu + 1)
+        board: Ub(Vb(GG, kG), bG, YG, UG),
+        notice: yG ? pb("loadoutNoticeUnlocked", LG) : pb("loadoutNoticeUpgraded", LG, SG + 1)
       }
     }
 
-    function lE(uu, Eu, ju, su) {
-      const Uu = ju.loadoutOptionOwnedTier > 0,
-        Zu = ju.loadoutOptionName;
-      if ("loadoutEquip" === su && Uu) return {
-        board: qE(uu, Eu, ju.loadoutOptionId, null),
-        notice: bE("loadoutNoticeEquipped", Zu)
+    function kb(GG, bG, ZG, wG) {
+      const SG = ZG.loadoutOptionOwnedTier > 0,
+        LG = ZG.loadoutOptionName;
+      if ("loadoutEquip" === wG && SG) return {
+        board: Ub(GG, bG, ZG.loadoutOptionId, null),
+        notice: pb("loadoutNoticeEquipped", LG)
       };
-      const Xu = ju.loadoutOptionTiers[0].loadoutTierCost;
-      return "loadoutUnlock" !== su || Uu || !EE(uu, Xu) ? null : {
-        board: qE(CE(uu, Xu), Eu, ju.loadoutOptionId, {
-          ...ju,
+      const yG = ZG.loadoutOptionTiers[0].loadoutTierCost;
+      return "loadoutUnlock" !== wG || SG || !bb(GG, yG) ? null : {
+        board: Ub(Vb(GG, yG), bG, ZG.loadoutOptionId, {
+          ...ZG,
           loadoutOptionOwnedTier: 1
         }),
-        notice: bE("loadoutNoticeUnlocked", Zu)
+        notice: pb("loadoutNoticeUnlocked", LG)
       }
     }
 
-    function qE(uu, Eu, ju, su) {
-      const Uu = {
-        ...Eu,
-        loadoutSlotEquippedId: ju,
-        loadoutSlotOptions: Eu.loadoutSlotOptions.map((uu => null !== su && uu.loadoutOptionId === su.loadoutOptionId ? su : uu))
+    function Ub(GG, bG, ZG, wG) {
+      const SG = {
+        ...bG,
+        loadoutSlotEquippedId: ZG,
+        loadoutSlotOptions: bG.loadoutSlotOptions.map((GG => null !== wG && GG.loadoutOptionId === wG.loadoutOptionId ? wG : GG))
       };
       return {
-        ...uu,
-        loadoutSlots: uu.loadoutSlots.map((uu => uu === Eu ? Uu : uu))
+        ...GG,
+        loadoutSlots: GG.loadoutSlots.map((GG => GG === bG ? SG : GG))
       }
     }
 
-    function fE(uu, Eu) {
+    function Yb(GG, bG) {
       return {
-        ...uu,
-        loadoutPerks: uu.loadoutPerks.map((uu => uu.loadoutPerkId === Eu.loadoutPerkId ? Eu : uu))
+        ...GG,
+        loadoutPerks: GG.loadoutPerks.map((GG => GG.loadoutPerkId === bG.loadoutPerkId ? bG : GG))
       }
     }
 
-    function CE(uu, Eu) {
+    function Vb(GG, bG) {
       return {
-        ...uu,
-        loadoutCoins: uu.loadoutCoins - Eu.loadoutCostCoins,
-        loadoutHeldParts: uu.loadoutHeldParts.map((uu => {
-          const ju = Eu.loadoutCostParts.find((Eu => Eu.loadoutPartCurrency === uu.loadoutHeldPartCurrency));
-          return ju ? {
-            ...uu,
-            loadoutHeldPartAmount: uu.loadoutHeldPartAmount - ju.loadoutPartAmount
-          } : uu
+        ...GG,
+        loadoutCoins: GG.loadoutCoins - bG.loadoutCostCoins,
+        loadoutHeldParts: GG.loadoutHeldParts.map((GG => {
+          const ZG = bG.loadoutCostParts.find((bG => bG.loadoutPartCurrency === GG.loadoutHeldPartCurrency));
+          return ZG ? {
+            ...GG,
+            loadoutHeldPartAmount: GG.loadoutHeldPartAmount - ZG.loadoutPartAmount
+          } : GG
         }))
       }
     }
 
-    function bE(uu, Eu) {
+    function pb(GG, bG) {
       return {
-        loadoutNoticeKey: uu,
+        loadoutNoticeKey: GG,
         loadoutNoticeRefused: !1,
-        loadoutNoticeName: Eu,
+        loadoutNoticeName: bG,
         loadoutNoticeTier: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0
       }
     }
-    const cE = "containmentLoadoutView";
-    class NE extends uE {
-      constructor(uu, Eu, ju, su) {
-        super(uu, Eu, ju, su, "loadout", ZE), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = uu => {
-          this.slot = uu, this.selectedId = OE(this.board, uu), this.emit()
+    const fb = "containmentLoadoutView";
+    class Qb extends Gb {
+      constructor(GG, bG, ZG, wG) {
+        super(GG, bG, ZG, wG, "loadout", Lb), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = GG => {
+          this.slot = GG, this.selectedId = Kb(this.board, GG), this.emit()
         }
       }
-      messageOpens(uu) {
-        return uu.loadoutMessageOpens
+      messageOpens(GG) {
+        return GG.loadoutMessageOpens
       }
-      messageNotice(uu) {
-        return uu.loadoutNotice
+      messageNotice(GG) {
+        return GG.loadoutNotice
       }
-      openingSelection(uu) {
-        return OE(uu, this.slot)
+      openingSelection(GG) {
+        return Kb(GG, this.slot)
       }
       buildSnapshot() {
         return {
@@ -836,765 +836,765 @@ export const modules = {
       }
     }
 
-    function OE(uu, Eu) {
-      if ("loadoutPerks" === Eu) {
-        var ju;
-        const Eu = uu.loadoutPerks;
-        return (null !== (ju = Eu.find((uu => uu.loadoutPerkEquipped))) && void 0 !== ju ? ju : Eu[0]).loadoutPerkId
+    function Kb(GG, bG) {
+      if ("loadoutPerks" === bG) {
+        var ZG;
+        const bG = GG.loadoutPerks;
+        return (null !== (ZG = bG.find((GG => GG.loadoutPerkEquipped))) && void 0 !== ZG ? ZG : bG[0]).loadoutPerkId
       }
-      return sE(uu, Eu).loadoutSlotEquippedId
+      return wb(GG, bG).loadoutSlotEquippedId
     }
-    const YE = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
-    var hE = ju(37282),
-      DE = ju(1330);
-    const gE = {
-        loadoutPrimary: `${du}:loadoutSlotPrimary`,
-        loadoutSecondary: `${du}:loadoutSlotSecondary`,
-        loadoutOffensive: `${du}:loadoutSlotOffensive`,
-        loadoutSelfHelp: `${du}:loadoutSlotSelfHelp`,
-        loadoutArmour: `${du}:loadoutSlotArmour`,
-        loadoutPerks: `${du}:loadoutSlotPerks`
+    const hb = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
+    var db = ZG(37224),
+      Jb = ZG(1239);
+    const rb = {
+        loadoutPrimary: `${CG}:loadoutSlotPrimary`,
+        loadoutSecondary: `${CG}:loadoutSlotSecondary`,
+        loadoutOffensive: `${CG}:loadoutSlotOffensive`,
+        loadoutSelfHelp: `${CG}:loadoutSlotSelfHelp`,
+        loadoutArmour: `${CG}:loadoutSlotArmour`,
+        loadoutPerks: `${CG}:loadoutSlotPerks`
       },
-      ME = {
+      zb = {
         section: "right",
-        Hc: "bottom",
+        Df: "bottom",
         act: "top"
       },
-      eE = (0, su.createContext)({
+      Eb = (0, wG.createContext)({
         step: null,
         targetRef: () => {}
       });
 
-    function GE() {
+    function ob() {
       const {
-        step: uu,
-        targetRef: Eu
-      } = (0, su.useContext)(eE);
-      return (ju, su) => (null === uu || void 0 === uu ? void 0 : uu.kind) === ju && uu.id === su ? Eu : void 0
+        step: GG,
+        targetRef: bG
+      } = (0, wG.useContext)(Eb);
+      return (ZG, wG) => (null === GG || void 0 === GG ? void 0 : GG.kind) === ZG && GG.id === wG ? bG : void 0
     }
 
-    function pE(uu, Eu) {
-      const ju = Eu.loadoutTargetId;
-      if ("loadoutPerks" === Eu.loadoutTargetSection) {
-        const Eu = uu.loadoutPerks.find((uu => uu.loadoutPerkId === ju));
+    function Xb(GG, bG) {
+      const ZG = bG.loadoutTargetId;
+      if ("loadoutPerks" === bG.loadoutTargetSection) {
+        const bG = GG.loadoutPerks.find((GG => GG.loadoutPerkId === ZG));
         return {
-          name: Eu.loadoutPerkName,
-          owned: Eu.loadoutPerkOwned,
-          equipped: Eu.loadoutPerkEquipped
+          name: bG.loadoutPerkName,
+          owned: bG.loadoutPerkOwned,
+          equipped: bG.loadoutPerkEquipped
         }
       }
-      const su = sE(uu, Eu.loadoutTargetSection),
-        Uu = su.loadoutSlotOptions.find((uu => uu.loadoutOptionId === ju));
+      const wG = wb(GG, bG.loadoutTargetSection),
+        SG = wG.loadoutSlotOptions.find((GG => GG.loadoutOptionId === ZG));
       return {
-        name: Uu.loadoutOptionName,
-        owned: Uu.loadoutOptionOwnedTier > 0,
-        equipped: su.loadoutSlotEquippedId === ju
+        name: SG.loadoutOptionName,
+        owned: SG.loadoutOptionOwnedTier > 0,
+        equipped: wG.loadoutSlotEquippedId === ZG
       }
     }
 
-    function wE(uu, Eu, ju, su) {
-      const [Uu, Zu] = uu(`${du}:${Eu}`, {
-        [ju]: "\x01"
+    function ub(GG, bG, ZG, wG) {
+      const [SG, LG] = GG(`${CG}:${bG}`, {
+        [ZG]: "\x01"
       }).split("\x01");
-      return (0, Ju.jsxs)(Ju.Fragment, {
-        children: [Uu, (0, Ju.jsx)("span", {
+      return (0, iG.jsxs)(iG.Fragment, {
+        children: [SG, (0, iG.jsx)("span", {
           className: "LoadoutWalkthroughName",
-          children: su
-        }), Zu]
+          children: wG
+        }), LG]
       })
     }
 
-    function JE(uu) {
+    function ib(GG) {
       let {
-        view: Eu,
-        onDismiss: ju,
-        children: Uu
-      } = uu;
+        view: bG,
+        onDismiss: ZG,
+        children: SG
+      } = GG;
       const {
-        t: Zu
-      } = (0, bu.A)(), Xu = Eu.loadout, lu = Eu.open ? Xu.loadoutWalkthrough.map((uu => ({
-        target: uu,
-        info: pE(Xu, uu)
-      }))).find((uu => {
+        t: LG
+      } = (0, pG.w)(), yG = bG.loadout, kG = bG.open ? yG.loadoutWalkthrough.map((GG => ({
+        target: GG,
+        info: Xb(yG, GG)
+      }))).find((GG => {
         let {
-          info: Eu
-        } = uu;
-        return !Eu.equipped
+          info: bG
+        } = GG;
+        return !bG.equipped
       })) : void 0;
-      let qu = null,
-        fu = null;
-      if (void 0 !== lu) {
+      let UG = null,
+        YG = null;
+      if (void 0 !== kG) {
         const {
-          target: uu,
-          info: ju
-        } = lu;
-        Eu.slot !== uu.loadoutTargetSection ? (qu = {
+          target: GG,
+          info: ZG
+        } = kG;
+        bG.slot !== GG.loadoutTargetSection ? (UG = {
           kind: "section",
-          id: uu.loadoutTargetSection
-        }, fu = wE(Zu, "loadoutWalkthroughSection", "section", Zu(gE[uu.loadoutTargetSection]))) : Eu.selectedId !== uu.loadoutTargetId ? (qu = {
-          kind: "Hc",
-          id: uu.loadoutTargetId
-        }, fu = wE(Zu, "loadoutWalkthroughPick", "name", ju.name)) : (qu = {
+          id: GG.loadoutTargetSection
+        }, YG = ub(LG, "loadoutWalkthroughSection", "section", LG(rb[GG.loadoutTargetSection]))) : bG.selectedId !== GG.loadoutTargetId ? (UG = {
+          kind: "Df",
+          id: GG.loadoutTargetId
+        }, YG = ub(LG, "loadoutWalkthroughPick", "name", ZG.name)) : (UG = {
           kind: "act",
-          id: uu.loadoutTargetId
-        }, fu = wE(Zu, ju.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", ju.name))
+          id: GG.loadoutTargetId
+        }, YG = ub(LG, ZG.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", ZG.name))
       }
-      const Cu = null === qu ? null : function(uu) {
-          return `${uu.kind}:${uu.id}`
-        }(qu),
-        [cu, Nu] = (0, su.useState)(null),
-        Ou = (0, su.useCallback)((uu => {
-          Nu((Eu => null !== uu ? {
-            key: Cu,
-            node: uu
-          } : (null === Eu || void 0 === Eu ? void 0 : Eu.key) === Cu ? null : Eu))
-        }), [Cu]),
-        Yu = null !== Cu && (null === cu || void 0 === cu ? void 0 : cu.key) === Cu ? cu.node : null;
-      return (0, Ju.jsxs)(eE.Provider, {
+      const VG = null === UG ? null : function(GG) {
+          return `${GG.kind}:${GG.id}`
+        }(UG),
+        [fG, QG] = (0, wG.useState)(null),
+        KG = (0, wG.useCallback)((GG => {
+          QG((bG => null !== GG ? {
+            key: VG,
+            node: GG
+          } : (null === bG || void 0 === bG ? void 0 : bG.key) === VG ? null : bG))
+        }), [VG]),
+        hG = null !== VG && (null === fG || void 0 === fG ? void 0 : fG.key) === VG ? fG.node : null;
+      return (0, iG.jsxs)(Eb.Provider, {
         value: {
-          step: qu,
-          targetRef: Ou
+          step: UG,
+          targetRef: KG
         },
-        children: [Uu, null !== qu && null !== Yu && (0, Ju.jsx)(dE, {
-          target: Yu,
-          placement: ME[qu.kind],
-          onDismiss: ju,
-          children: fu
-        }, Cu)]
+        children: [SG, null !== UG && null !== hG && (0, iG.jsx)(Cb, {
+          target: hG,
+          placement: zb[UG.kind],
+          onDismiss: ZG,
+          children: YG
+        }, VG)]
       })
     }
 
-    function dE(uu) {
+    function Cb(GG) {
       let {
-        target: Eu,
-        placement: ju,
-        onDismiss: Uu,
-        children: Zu
-      } = uu;
+        target: bG,
+        placement: ZG,
+        onDismiss: SG,
+        children: LG
+      } = GG;
       const {
-        t: Xu
-      } = (0, bu.A)(), lu = (0, su.useRef)(Eu);
-      return lu.current = Eu, (0, DE.w)("popup", lu, Uu), (0, Ju.jsxs)(hE.d, {
-        target: Eu,
-        placement: ju,
+        t: yG
+      } = (0, pG.w)(), kG = (0, wG.useRef)(bG);
+      return kG.current = bG, (0, Jb.w)("popup", kG, SG), (0, iG.jsxs)(db.e, {
+        target: bG,
+        placement: ZG,
         className: "LoadoutWalkthroughStep",
         spotlightMargin: 10,
-        children: [(0, Ju.jsxs)("div", {
+        children: [(0, iG.jsxs)("div", {
           className: "LoadoutWalkthroughHeader",
-          children: [(0, Ju.jsx)("img", {
+          children: [(0, iG.jsx)("img", {
             className: "LoadoutWalkthroughPortrait",
-            src: YE,
+            src: hb,
             alt: "",
             draggable: !1
-          }), (0, Ju.jsx)("span", {
+          }), (0, iG.jsx)("span", {
             className: "LoadoutWalkthroughSpeaker",
-            children: Xu(`${du}:operatorName`)
-          }), (0, Ju.jsx)(Ou.l, {
-            onClick: Uu,
-            ariaLabel: Xu(`${du}:loadoutWalkthroughClose`),
+            children: yG(`${CG}:operatorName`)
+          }), (0, iG.jsx)(KG.j, {
+            onClick: SG,
+            ariaLabel: yG(`${CG}:loadoutWalkthroughClose`),
             padIgnore: !0
           })]
-        }), (0, Ju.jsx)("p", {
+        }), (0, iG.jsx)("p", {
           className: "LoadoutWalkthroughText",
-          children: Zu
+          children: LG
         })]
       })
     }
-    const aE = new Set(["loadoutStatReload", "loadoutStatResupply"]);
+    const Wb = new Set(["loadoutStatReload", "loadoutStatResupply"]);
 
-    function PE(uu) {
+    function mb(GG) {
       let {
-        cost: Eu,
-        loadout: ju
-      } = uu;
+        cost: bG,
+        loadout: ZG
+      } = GG;
       const {
-        t: su
-      } = (0, bu.A)();
-      return Eu.loadoutCostCoins <= 0 && 0 === Eu.loadoutCostParts.length ? (0, Ju.jsx)("span", {
+        t: wG
+      } = (0, pG.w)();
+      return bG.loadoutCostCoins <= 0 && 0 === bG.loadoutCostParts.length ? (0, iG.jsx)("span", {
         className: "LoadoutCost",
-        children: su(`${du}:loadoutFree`)
-      }) : (0, Ju.jsxs)("span", {
+        children: wG(`${CG}:loadoutFree`)
+      }) : (0, iG.jsxs)("span", {
         className: "LoadoutCost",
-        children: [Eu.loadoutCostCoins > 0 && (0, Ju.jsx)(mu, {
-          itemName: au,
-          amount: Eu.loadoutCostCoins,
-          dl: ju.loadoutCoins
-        }), Eu.loadoutCostParts.map((uu => {
-          const Eu = jE(ju, uu.loadoutPartCurrency);
-          return (0, Ju.jsx)(mu, {
-            itemName: Eu.loadoutHeldPartItem,
-            amount: uu.loadoutPartAmount,
-            dl: Eu.loadoutHeldPartAmount
-          }, uu.loadoutPartCurrency)
+        children: [bG.loadoutCostCoins > 0 && (0, iG.jsx)(vG, {
+          itemName: WG,
+          amount: bG.loadoutCostCoins,
+          Ik: ZG.loadoutCoins
+        }), bG.loadoutCostParts.map((GG => {
+          const bG = Zb(ZG, GG.loadoutPartCurrency);
+          return (0, iG.jsx)(vG, {
+            itemName: bG.loadoutHeldPartItem,
+            amount: GG.loadoutPartAmount,
+            Ik: bG.loadoutHeldPartAmount
+          }, GG.loadoutPartCurrency)
         }))]
       })
     }
-    const oE = {
-      loadoutStatFireRate: `${du}:loadoutUnitPerMinute`,
-      loadoutStatReload: `${du}:loadoutUnitSeconds`,
-      loadoutStatResupply: `${du}:loadoutUnitSeconds`
+    const Ib = {
+      loadoutStatFireRate: `${CG}:loadoutUnitPerMinute`,
+      loadoutStatReload: `${CG}:loadoutUnitSeconds`,
+      loadoutStatResupply: `${CG}:loadoutUnitSeconds`
     };
 
-    function kE(uu) {
-      return "loadoutStatPotency" === uu.loadoutStatKind ? (0, Ru.N)(uu.loadoutStatValue) : String(uu.loadoutStatValue)
+    function Fb(GG) {
+      return "loadoutStatPotency" === GG.loadoutStatKind ? (0, BG.X)(GG.loadoutStatValue) : String(GG.loadoutStatValue)
     }
 
-    function mE(uu) {
-      var Eu;
+    function vb(GG) {
+      var bG;
       let {
-        option: ju
-      } = uu;
+        option: ZG
+      } = GG;
       const {
-        t: su
-      } = (0, bu.A)(), Uu = ju.loadoutOptionTiers, Zu = null === (Eu = Uu[0]) || void 0 === Eu ? void 0 : Eu.loadoutTierStats.map((uu => uu.loadoutStatKind));
-      if (!Zu || 0 === Zu.length) return null;
-      const Xu = ju.loadoutOptionOwnedTier,
-        lu = (uu, Eu) => {
-          var ju;
-          return null === (ju = Uu[uu]) || void 0 === ju ? void 0 : ju.loadoutTierStats.find((uu => uu.loadoutStatKind === Eu))
+        t: wG
+      } = (0, pG.w)(), SG = ZG.loadoutOptionTiers, LG = null === (bG = SG[0]) || void 0 === bG ? void 0 : bG.loadoutTierStats.map((GG => GG.loadoutStatKind));
+      if (!LG || 0 === LG.length) return null;
+      const yG = ZG.loadoutOptionOwnedTier,
+        kG = (GG, bG) => {
+          var ZG;
+          return null === (ZG = SG[GG]) || void 0 === ZG ? void 0 : ZG.loadoutTierStats.find((GG => GG.loadoutStatKind === bG))
         };
-      return (0, Ju.jsxs)("table", {
+      return (0, iG.jsxs)("table", {
         className: "LoadoutTierTable",
-        children: [(0, Ju.jsx)("thead", {
-          children: (0, Ju.jsxs)("tr", {
-            children: [(0, Ju.jsx)("th", {}), Uu.map(((uu, Eu) => (0, Ju.jsx)("th", {
-              className: fu()({
-                Current: Eu + 1 === Xu,
-                Next: Eu === Xu
+        children: [(0, iG.jsx)("thead", {
+          children: (0, iG.jsxs)("tr", {
+            children: [(0, iG.jsx)("th", {}), SG.map(((GG, bG) => (0, iG.jsx)("th", {
+              className: YG()({
+                Current: bG + 1 === yG,
+                Next: bG === yG
               }),
-              children: su(`${du}:loadoutTier`, {
-                tier: (0, Ru.N)(Eu + 1)
+              children: wG(`${CG}:loadoutTier`, {
+                tier: (0, BG.X)(bG + 1)
               })
-            }, Eu)))]
+            }, bG)))]
           })
-        }), (0, Ju.jsx)("tbody", {
-          children: Zu.map((uu => {
-            const Eu = oE[uu];
-            return (0, Ju.jsxs)("tr", {
-              children: [(0, Ju.jsxs)("th", {
+        }), (0, iG.jsx)("tbody", {
+          children: LG.map((GG => {
+            const bG = Ib[GG];
+            return (0, iG.jsxs)("tr", {
+              children: [(0, iG.jsxs)("th", {
                 scope: "row",
-                children: [su(`${du}:${uu}`), Eu && (0, Ju.jsx)("span", {
+                children: [wG(`${CG}:${GG}`), bG && (0, iG.jsx)("span", {
                   className: "LoadoutStatUnit",
-                  children: su(Eu)
+                  children: wG(bG)
                 })]
-              }), Uu.map(((Eu, ju) => {
-                const su = lu(ju, uu),
-                  Uu = ju > 0 ? lu(ju - 1, uu) : void 0,
-                  Zu = su && Uu ? su.loadoutStatValue - Uu.loadoutStatValue : 0,
-                  qu = aE.has(uu) ? Zu < 0 : Zu > 0,
-                  Cu = ju === Xu;
-                return (0, Ju.jsxs)("td", {
-                  className: fu()({
-                    Current: ju + 1 === Xu,
-                    Next: Cu,
-                    Gain: qu,
-                    Owned: ju < Xu
+              }), SG.map(((bG, ZG) => {
+                const wG = kG(ZG, GG),
+                  SG = ZG > 0 ? kG(ZG - 1, GG) : void 0,
+                  LG = wG && SG ? wG.loadoutStatValue - SG.loadoutStatValue : 0,
+                  UG = Wb.has(GG) ? LG < 0 : LG > 0,
+                  VG = ZG === yG;
+                return (0, iG.jsxs)("td", {
+                  className: YG()({
+                    Current: ZG + 1 === yG,
+                    Next: VG,
+                    Gain: UG,
+                    Owned: ZG < yG
                   }),
-                  children: [Cu && qu && (0, Ju.jsx)("span", {
+                  children: [VG && UG && (0, iG.jsx)("span", {
                     className: "LoadoutGainArrow",
                     "aria-hidden": "true",
-                    children: Zu < 0 ? "\u25bc" : "\u25b2"
-                  }), su ? kE(su) : "-"]
-                }, ju)
+                    children: LG < 0 ? "\u25bc" : "\u25b2"
+                  }), wG ? Fb(wG) : "-"]
+                }, ZG)
               }))]
-            }, uu)
+            }, GG)
           }))
         })]
       })
     }
 
-    function vE(uu) {
+    function ab(GG) {
       let {
-        view: Eu,
-        controller: ju,
-        slot: su,
-        option: Uu
-      } = uu;
+        view: bG,
+        controller: ZG,
+        slot: wG,
+        option: SG
+      } = GG;
       const {
-        t: Zu
-      } = (0, bu.A)(), Xu = Eu.loadout, lu = Uu.loadoutOptionOwnedTier, qu = Uu.loadoutOptionTiers.length, fu = su.loadoutSlotEquippedId === Uu.loadoutOptionId, Cu = lu < qu ? Uu.loadoutOptionTiers[lu].loadoutTierCost : null, cu = null !== Cu && EE(Xu, Cu), Nu = Uu.loadoutOptionId, Yu = GE();
-      return (0, Ju.jsxs)(Ju.Fragment, {
-        children: [(0, Ju.jsx)(VE, {
-          icon: Uu.loadoutOptionIcon,
-          name: Uu.loadoutOptionName,
-          status: 0 === lu ? Zu(`${du}:loadoutLocked`) : qu > 1 ? Zu(`${du}:loadoutTier`, {
-            tier: (0, Ru.N)(lu)
+        t: LG
+      } = (0, pG.w)(), yG = bG.loadout, kG = SG.loadoutOptionOwnedTier, UG = SG.loadoutOptionTiers.length, YG = wG.loadoutSlotEquippedId === SG.loadoutOptionId, VG = kG < UG ? SG.loadoutOptionTiers[kG].loadoutTierCost : null, fG = null !== VG && bb(yG, VG), QG = SG.loadoutOptionId, hG = ob();
+      return (0, iG.jsxs)(iG.Fragment, {
+        children: [(0, iG.jsx)(lb, {
+          icon: SG.loadoutOptionIcon,
+          name: SG.loadoutOptionName,
+          status: 0 === kG ? LG(`${CG}:loadoutLocked`) : UG > 1 ? LG(`${CG}:loadoutTier`, {
+            tier: (0, BG.X)(kG)
           }) : null,
-          locked: 0 === lu,
-          equipped: fu
-        }), (0, Ju.jsx)("p", {
+          locked: 0 === kG,
+          equipped: YG
+        }), (0, iG.jsx)("p", {
           className: "BoardDescription",
-          children: Uu.loadoutOptionDescription
-        }), (0, Ju.jsx)(mE, {
-          option: Uu
-        }), (0, Ju.jsxs)("div", {
-          ref: Yu("act", Nu),
+          children: SG.loadoutOptionDescription
+        }), (0, iG.jsx)(vb, {
+          option: SG
+        }), (0, iG.jsxs)("div", {
+          ref: hG("act", QG),
           className: "BoardActions",
-          children: [null !== Cu && (0, Ju.jsxs)("div", {
+          children: [null !== VG && (0, iG.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, Ju.jsx)(PE, {
-              cost: Cu,
-              loadout: Xu
-            }), (0, Ju.jsx)(Ou.p, {
-              disabled: !cu || Eu.pending,
+            children: [(0, iG.jsx)(mb, {
+              cost: VG,
+              loadout: yG
+            }), (0, iG.jsx)(KG.k, {
+              disabled: !fG || bG.pending,
               onClick: () => {
-                ju.act(0 === lu ? "loadoutUnlock" : "loadoutUpgrade", Nu)
+                ZG.act(0 === kG ? "loadoutUnlock" : "loadoutUpgrade", QG)
               },
-              children: 0 === lu ? Zu(`${du}:loadoutUnlock`) : Zu(`${du}:loadoutUpgrade`, {
-                tier: (0, Ru.N)(lu + 1)
+              children: 0 === kG ? LG(`${CG}:loadoutUnlock`) : LG(`${CG}:loadoutUpgrade`, {
+                tier: (0, BG.X)(kG + 1)
               })
             })]
-          }), null === Cu && qu > 1 && (0, Ju.jsx)("span", {
+          }), null === VG && UG > 1 && (0, iG.jsx)("span", {
             className: "BoardHint",
-            children: Zu(`${du}:loadoutMaxed`)
-          }), lu > 0 && !fu && (0, Ju.jsx)(Ou.f, {
-            disabled: Eu.pending,
+            children: LG(`${CG}:loadoutMaxed`)
+          }), kG > 0 && !YG && (0, iG.jsx)(KG.d, {
+            disabled: bG.pending,
             onClick: () => {
-              ju.act("loadoutEquip", Nu)
+              ZG.act("loadoutEquip", QG)
             },
-            children: Zu(`${du}:loadoutEquip`)
+            children: LG(`${CG}:loadoutEquip`)
           })]
         })]
       })
     }
 
-    function KE(uu) {
+    function cb(GG) {
       let {
-        view: Eu,
-        controller: ju,
-        perk: su
-      } = uu;
+        view: bG,
+        controller: ZG,
+        perk: wG
+      } = GG;
       const {
-        t: Uu
-      } = (0, bu.A)(), Zu = Eu.loadout, Xu = UE(Zu), lu = su.loadoutPerkId, qu = GE();
-      return (0, Ju.jsxs)(Ju.Fragment, {
-        children: [(0, Ju.jsx)(VE, {
-          icon: su.loadoutPerkIcon,
-          name: su.loadoutPerkName,
-          status: su.loadoutPerkOwned ? null : Uu(`${du}:loadoutLocked`),
-          locked: !su.loadoutPerkOwned,
-          equipped: su.loadoutPerkEquipped
-        }), (0, Ju.jsx)("p", {
+        t: SG
+      } = (0, pG.w)(), LG = bG.loadout, yG = Sb(LG), kG = wG.loadoutPerkId, UG = ob();
+      return (0, iG.jsxs)(iG.Fragment, {
+        children: [(0, iG.jsx)(lb, {
+          icon: wG.loadoutPerkIcon,
+          name: wG.loadoutPerkName,
+          status: wG.loadoutPerkOwned ? null : SG(`${CG}:loadoutLocked`),
+          locked: !wG.loadoutPerkOwned,
+          equipped: wG.loadoutPerkEquipped
+        }), (0, iG.jsx)("p", {
           className: "BoardDescription",
-          children: su.loadoutPerkDescription
-        }), (0, Ju.jsxs)("div", {
-          ref: qu("act", lu),
+          children: wG.loadoutPerkDescription
+        }), (0, iG.jsxs)("div", {
+          ref: UG("act", kG),
           className: "BoardActions",
-          children: [!su.loadoutPerkOwned && (0, Ju.jsxs)("div", {
+          children: [!wG.loadoutPerkOwned && (0, iG.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, Ju.jsx)(PE, {
-              cost: su.loadoutPerkCost,
-              loadout: Zu
-            }), (0, Ju.jsx)(Ou.p, {
-              disabled: !EE(Zu, su.loadoutPerkCost) || Eu.pending,
+            children: [(0, iG.jsx)(mb, {
+              cost: wG.loadoutPerkCost,
+              loadout: LG
+            }), (0, iG.jsx)(KG.k, {
+              disabled: !bb(LG, wG.loadoutPerkCost) || bG.pending,
               onClick: () => {
-                ju.act("loadoutUnlock", lu)
+                ZG.act("loadoutUnlock", kG)
               },
-              children: Uu(`${du}:loadoutUnlock`)
+              children: SG(`${CG}:loadoutUnlock`)
             })]
-          }), su.loadoutPerkOwned && !su.loadoutPerkEquipped && (0, Ju.jsx)(Ou.f, {
-            disabled: Xu || Eu.pending,
+          }), wG.loadoutPerkOwned && !wG.loadoutPerkEquipped && (0, iG.jsx)(KG.d, {
+            disabled: yG || bG.pending,
             onClick: () => {
-              ju.act("loadoutEquip", lu)
+              ZG.act("loadoutEquip", kG)
             },
-            children: Uu(`${du}:loadoutEquip`)
-          }), su.loadoutPerkOwned && !su.loadoutPerkEquipped && Xu && (0, Ju.jsx)("span", {
+            children: SG(`${CG}:loadoutEquip`)
+          }), wG.loadoutPerkOwned && !wG.loadoutPerkEquipped && yG && (0, iG.jsx)("span", {
             className: "BoardHint",
-            children: Uu(`${du}:loadoutSocketsFullHint`)
-          }), su.loadoutPerkEquipped && (0, Ju.jsx)(Ou.$, {
-            disabled: Eu.pending,
+            children: SG(`${CG}:loadoutSocketsFullHint`)
+          }), wG.loadoutPerkEquipped && (0, iG.jsx)(KG.K, {
+            disabled: bG.pending,
             onClick: () => {
-              ju.act("loadoutUnequip", lu)
+              ZG.act("loadoutUnequip", kG)
             },
-            children: Uu(`${du}:loadoutUnequip`)
+            children: SG(`${CG}:loadoutUnequip`)
           })]
         })]
       })
     }
 
-    function VE(uu) {
+    function lb(GG) {
       let {
-        icon: Eu,
-        name: ju,
-        status: su,
-        locked: Uu,
-        equipped: Zu
-      } = uu;
+        icon: bG,
+        name: ZG,
+        status: wG,
+        locked: SG,
+        equipped: LG
+      } = GG;
       const {
-        t: Xu
-      } = (0, bu.A)();
-      return (0, Ju.jsxs)(ru, {
-        icon: (0, Ju.jsx)(ou, {
-          itemName: Eu
+        t: yG
+      } = (0, pG.w)();
+      return (0, iG.jsxs)(jG, {
+        icon: (0, iG.jsx)(IG, {
+          itemName: bG
         }),
-        name: ju,
-        children: [null !== su && (0, Ju.jsx)("span", {
-          className: fu()("LoadoutStatusText", {
-            Locked: Uu
+        name: ZG,
+        children: [null !== wG && (0, iG.jsx)("span", {
+          className: YG()("LoadoutStatusText", {
+            Locked: SG
           }),
-          children: su
-        }), Zu && (0, Ju.jsx)("span", {
+          children: wG
+        }), LG && (0, iG.jsx)("span", {
           className: "BoardBadge",
-          children: Xu(`${du}:loadoutEquippedBadge`)
+          children: yG(`${CG}:loadoutEquippedBadge`)
         })]
       })
     }
 
-    function rE(uu) {
+    function jb(GG) {
       let {
-        view: Eu,
-        controller: ju
-      } = uu;
-      const su = Eu.loadout;
-      if ("loadoutPerks" === Eu.slot) {
-        const uu = su.loadoutPerks.find((uu => uu.loadoutPerkId === Eu.selectedId));
-        return (0, Ju.jsx)("section", {
+        view: bG,
+        controller: ZG
+      } = GG;
+      const wG = bG.loadout;
+      if ("loadoutPerks" === bG.slot) {
+        const GG = wG.loadoutPerks.find((GG => GG.loadoutPerkId === bG.selectedId));
+        return (0, iG.jsx)("section", {
           className: "BoardDetail",
-          children: uu && (0, Ju.jsx)(KE, {
-            view: Eu,
-            controller: ju,
-            perk: uu
+          children: GG && (0, iG.jsx)(cb, {
+            view: bG,
+            controller: ZG,
+            perk: GG
           })
         })
       }
-      const Uu = sE(su, Eu.slot),
-        Zu = Uu.loadoutSlotOptions.find((uu => uu.loadoutOptionId === Eu.selectedId));
-      return (0, Ju.jsx)("section", {
+      const SG = wb(wG, bG.slot),
+        LG = SG.loadoutSlotOptions.find((GG => GG.loadoutOptionId === bG.selectedId));
+      return (0, iG.jsx)("section", {
         className: "BoardDetail",
-        children: Zu && (0, Ju.jsx)(vE, {
-          view: Eu,
-          controller: ju,
-          slot: Uu,
-          option: Zu
+        children: LG && (0, iG.jsx)(ab, {
+          view: bG,
+          controller: ZG,
+          slot: SG,
+          option: LG
         })
       })
     }
 
-    function QE(uu) {
+    function Pb(GG) {
       let {
-        owned: Eu,
-        total: ju
-      } = uu;
-      return ju <= 1 ? null : (0, Ju.jsx)("span", {
+        owned: bG,
+        total: ZG
+      } = GG;
+      return ZG <= 1 ? null : (0, iG.jsx)("span", {
         className: "LoadoutPips",
         children: Array.from({
-          length: ju
-        }, ((uu, ju) => (0, Ju.jsx)("span", {
-          className: fu()("LoadoutPip", {
-            Filled: ju < Eu
+          length: ZG
+        }, ((GG, ZG) => (0, iG.jsx)("span", {
+          className: YG()("LoadoutPip", {
+            Filled: ZG < bG
           })
-        }, ju)))
+        }, ZG)))
       })
     }
 
-    function iE(uu) {
+    function Mb(GG) {
       let {
-        view: Eu,
-        controller: ju
-      } = uu;
+        view: bG,
+        controller: ZG
+      } = GG;
       const {
-        t: su
-      } = (0, bu.A)(), Uu = Eu.loadout, Zu = GE();
-      return (0, Ju.jsxs)("nav", {
+        t: wG
+      } = (0, pG.w)(), SG = bG.loadout, LG = ob();
+      return (0, iG.jsxs)("nav", {
         className: "LoadoutKit",
-        "aria-label": su(`${du}:loadoutKit`),
-        children: [Uu.loadoutSlots.map((uu => {
-          const Uu = uu.loadoutSlotOptions.find((Eu => Eu.loadoutOptionId === uu.loadoutSlotEquippedId));
-          return (0, Ju.jsxs)("button", {
-            ref: Zu("section", uu.loadoutSlotKind),
+        "aria-label": wG(`${CG}:loadoutKit`),
+        children: [SG.loadoutSlots.map((GG => {
+          const SG = GG.loadoutSlotOptions.find((bG => bG.loadoutOptionId === GG.loadoutSlotEquippedId));
+          return (0, iG.jsxs)("button", {
+            ref: LG("section", GG.loadoutSlotKind),
             type: "button",
-            className: fu()("LoadoutKitSlot", {
-              Selected: Eu.slot === uu.loadoutSlotKind
+            className: YG()("LoadoutKitSlot", {
+              Selected: bG.slot === GG.loadoutSlotKind
             }),
             onClick: () => {
-              ju.selectSlot(uu.loadoutSlotKind)
+              ZG.selectSlot(GG.loadoutSlotKind)
             },
-            children: [(0, Ju.jsx)("span", {
+            children: [(0, iG.jsx)("span", {
               className: "LoadoutKitIcon",
-              children: Uu && (0, Ju.jsx)(ou, {
-                itemName: Uu.loadoutOptionIcon
+              children: SG && (0, iG.jsx)(IG, {
+                itemName: SG.loadoutOptionIcon
               })
-            }), (0, Ju.jsxs)("span", {
+            }), (0, iG.jsxs)("span", {
               className: "LoadoutKitText",
-              children: [(0, Ju.jsxs)("span", {
+              children: [(0, iG.jsxs)("span", {
                 className: "LoadoutKitTop",
-                children: [(0, Ju.jsx)("span", {
+                children: [(0, iG.jsx)("span", {
                   className: "LoadoutKitLabel",
-                  children: su(gE[uu.loadoutSlotKind])
-                }), Uu && (0, Ju.jsx)(QE, {
-                  owned: Uu.loadoutOptionOwnedTier,
-                  total: Uu.loadoutOptionTiers.length
+                  children: wG(rb[GG.loadoutSlotKind])
+                }), SG && (0, iG.jsx)(Pb, {
+                  owned: SG.loadoutOptionOwnedTier,
+                  total: SG.loadoutOptionTiers.length
                 })]
-              }), (0, Ju.jsx)("span", {
+              }), (0, iG.jsx)("span", {
                 className: "LoadoutKitName",
-                children: null === Uu || void 0 === Uu ? void 0 : Uu.loadoutOptionName
+                children: null === SG || void 0 === SG ? void 0 : SG.loadoutOptionName
               })]
             })]
-          }, uu.loadoutSlotKind)
-        })), (0, Ju.jsx)(WE, {
-          view: Eu,
-          controller: ju
+          }, GG.loadoutSlotKind)
+        })), (0, iG.jsx)(Ab, {
+          view: bG,
+          controller: ZG
         })]
       })
     }
 
-    function WE(uu) {
+    function Ab(GG) {
       let {
-        view: Eu,
-        controller: ju
-      } = uu;
+        view: bG,
+        controller: ZG
+      } = GG;
       const {
-        t: su
-      } = (0, bu.A)(), Uu = Eu.loadout, Zu = Uu.loadoutPerks.filter((uu => uu.loadoutPerkEquipped)), Xu = GE();
-      return (0, Ju.jsxs)("button", {
-        ref: Xu("section", "loadoutPerks"),
+        t: wG
+      } = (0, pG.w)(), SG = bG.loadout, LG = SG.loadoutPerks.filter((GG => GG.loadoutPerkEquipped)), yG = ob();
+      return (0, iG.jsxs)("button", {
+        ref: yG("section", "loadoutPerks"),
         type: "button",
-        className: fu()("LoadoutKitSlot", "LoadoutPerks", {
-          Selected: "loadoutPerks" === Eu.slot
+        className: YG()("LoadoutKitSlot", "LoadoutPerks", {
+          Selected: "loadoutPerks" === bG.slot
         }),
         onClick: () => {
-          ju.selectSlot("loadoutPerks")
+          ZG.selectSlot("loadoutPerks")
         },
-        children: [(0, Ju.jsxs)("span", {
+        children: [(0, iG.jsxs)("span", {
           className: "LoadoutKitTop",
-          children: [(0, Ju.jsx)("span", {
+          children: [(0, iG.jsx)("span", {
             className: "LoadoutKitLabel",
-            children: su(gE.loadoutPerks)
-          }), (0, Ju.jsx)("span", {
+            children: wG(rb.loadoutPerks)
+          }), (0, iG.jsx)("span", {
             className: "LoadoutPerkCount",
-            children: su(`${du}:loadoutPerkCount`, {
-              equipped: String(Zu.length),
-              max: String(Uu.loadoutMaxPerks)
+            children: wG(`${CG}:loadoutPerkCount`, {
+              equipped: String(LG.length),
+              max: String(SG.loadoutMaxPerks)
             })
           })]
-        }), (0, Ju.jsx)("span", {
+        }), (0, iG.jsx)("span", {
           className: "LoadoutSockets",
           children: Array.from({
-            length: Uu.loadoutMaxPerks
-          }, ((uu, Eu) => {
-            const ju = Zu[Eu];
-            return (0, Ju.jsxs)("span", {
-              className: fu()("LoadoutSocket", {
-                Filled: ju,
-                Empty: !ju
+            length: SG.loadoutMaxPerks
+          }, ((GG, bG) => {
+            const ZG = LG[bG];
+            return (0, iG.jsxs)("span", {
+              className: YG()("LoadoutSocket", {
+                Filled: ZG,
+                Empty: !ZG
               }),
-              children: [(0, Ju.jsx)("span", {
+              children: [(0, iG.jsx)("span", {
                 className: "LoadoutSocketWell",
-                children: ju && (0, Ju.jsx)(ou, {
-                  itemName: ju.loadoutPerkIcon
+                children: ZG && (0, iG.jsx)(IG, {
+                  itemName: ZG.loadoutPerkIcon
                 })
-              }), (0, Ju.jsx)("span", {
+              }), (0, iG.jsx)("span", {
                 className: "LoadoutSocketName",
-                children: ju ? ju.loadoutPerkName : su(`${du}:loadoutPerkSocketEmpty`)
+                children: ZG ? ZG.loadoutPerkName : wG(`${CG}:loadoutPerkSocketEmpty`)
               })]
-            }, Eu)
+            }, bG)
           }))
         })]
       })
     }
 
-    function SE(uu) {
+    function sb(GG) {
       let {
-        icon: Eu,
-        name: ju,
-        selected: su,
-        equipped: Uu,
-        locked: Zu,
-        ownedTier: Xu,
-        tiers: lu,
-        buttonRef: qu,
-        onSelect: fu
-      } = uu;
+        icon: bG,
+        name: ZG,
+        selected: wG,
+        equipped: SG,
+        locked: LG,
+        ownedTier: yG,
+        tiers: kG,
+        buttonRef: UG,
+        onSelect: YG
+      } = GG;
       const {
-        t: Cu
-      } = (0, bu.A)();
-      return (0, Ju.jsxs)(Vu, {
-        icon: (0, Ju.jsx)(ou, {
-          itemName: Eu
+        t: VG
+      } = (0, pG.w)();
+      return (0, iG.jsxs)(lG, {
+        icon: (0, iG.jsx)(IG, {
+          itemName: bG
         }),
-        name: ju,
-        selected: su,
-        locked: Zu,
-        buttonRef: qu,
-        onSelect: fu,
-        children: [Uu && (0, Ju.jsx)("span", {
+        name: ZG,
+        selected: wG,
+        locked: LG,
+        buttonRef: UG,
+        onSelect: YG,
+        children: [SG && (0, iG.jsx)("span", {
           className: "BoardBadge",
-          children: Cu(`${du}:loadoutEquippedBadge`)
-        }), Zu && (0, Ju.jsx)("span", {
+          children: VG(`${CG}:loadoutEquippedBadge`)
+        }), LG && (0, iG.jsx)("span", {
           className: "BoardBadge Muted",
-          children: Cu(`${du}:loadoutLocked`)
-        }), !Zu && (0, Ju.jsx)(QE, {
-          owned: Xu,
-          total: lu
+          children: VG(`${CG}:loadoutLocked`)
+        }), !LG && (0, iG.jsx)(Pb, {
+          owned: yG,
+          total: kG
         })]
       })
     }
 
-    function IE(uu) {
+    function qb(GG) {
       let {
-        view: Eu,
-        controller: ju
-      } = uu;
-      const su = Eu.loadout,
-        Uu = GE();
-      if ("loadoutPerks" === Eu.slot) return (0, Ju.jsx)("div", {
+        view: bG,
+        controller: ZG
+      } = GG;
+      const wG = bG.loadout,
+        SG = ob();
+      if ("loadoutPerks" === bG.slot) return (0, iG.jsx)("div", {
         className: "BoardTiles",
-        children: su.loadoutPerks.map((uu => (0, Ju.jsx)(SE, {
-          icon: uu.loadoutPerkIcon,
-          name: uu.loadoutPerkName,
-          selected: Eu.selectedId === uu.loadoutPerkId,
-          equipped: uu.loadoutPerkEquipped,
-          locked: !uu.loadoutPerkOwned,
+        children: wG.loadoutPerks.map((GG => (0, iG.jsx)(sb, {
+          icon: GG.loadoutPerkIcon,
+          name: GG.loadoutPerkName,
+          selected: bG.selectedId === GG.loadoutPerkId,
+          equipped: GG.loadoutPerkEquipped,
+          locked: !GG.loadoutPerkOwned,
           ownedTier: 0,
           tiers: 0,
-          buttonRef: Uu("Hc", uu.loadoutPerkId),
+          buttonRef: SG("Df", GG.loadoutPerkId),
           onSelect: () => {
-            ju.select(uu.loadoutPerkId)
+            ZG.select(GG.loadoutPerkId)
           }
-        }, uu.loadoutPerkId)))
+        }, GG.loadoutPerkId)))
       });
-      const Zu = sE(su, Eu.slot);
-      return (0, Ju.jsx)("div", {
+      const LG = wb(wG, bG.slot);
+      return (0, iG.jsx)("div", {
         className: "BoardTiles",
-        children: Zu.loadoutSlotOptions.map((uu => (0, Ju.jsx)(SE, {
-          icon: uu.loadoutOptionIcon,
-          name: uu.loadoutOptionName,
-          selected: Eu.selectedId === uu.loadoutOptionId,
-          equipped: Zu.loadoutSlotEquippedId === uu.loadoutOptionId,
-          locked: 0 === uu.loadoutOptionOwnedTier,
-          ownedTier: uu.loadoutOptionOwnedTier,
-          tiers: uu.loadoutOptionTiers.length,
-          buttonRef: Uu("Hc", uu.loadoutOptionId),
+        children: LG.loadoutSlotOptions.map((GG => (0, iG.jsx)(sb, {
+          icon: GG.loadoutOptionIcon,
+          name: GG.loadoutOptionName,
+          selected: bG.selectedId === GG.loadoutOptionId,
+          equipped: LG.loadoutSlotEquippedId === GG.loadoutOptionId,
+          locked: 0 === GG.loadoutOptionOwnedTier,
+          ownedTier: GG.loadoutOptionOwnedTier,
+          tiers: GG.loadoutOptionTiers.length,
+          buttonRef: SG("Df", GG.loadoutOptionId),
           onSelect: () => {
-            ju.select(uu.loadoutOptionId)
+            ZG.select(GG.loadoutOptionId)
           }
-        }, uu.loadoutOptionId)))
+        }, GG.loadoutOptionId)))
       })
     }
 
-    function FE(uu) {
+    function nb(GG) {
       let {
-        loadout: Eu
-      } = uu;
-      return (0, Ju.jsx)(Qu, {
-        coins: Eu.loadoutCoins,
-        children: Eu.loadoutHeldParts.filter((uu => uu.loadoutHeldPartAmount > 0)).map((uu => (0, Ju.jsx)(mu, {
-          itemName: uu.loadoutHeldPartItem,
-          amount: uu.loadoutHeldPartAmount
-        }, uu.loadoutHeldPartCurrency)))
+        loadout: bG
+      } = GG;
+      return (0, iG.jsx)(PG, {
+        coins: bG.loadoutCoins,
+        children: bG.loadoutHeldParts.filter((GG => GG.loadoutHeldPartAmount > 0)).map((GG => (0, iG.jsx)(vG, {
+          itemName: GG.loadoutHeldPartItem,
+          amount: GG.loadoutHeldPartAmount
+        }, GG.loadoutHeldPartCurrency)))
       })
     }
 
-    function BE(uu) {
+    function gb(GG) {
       let {
-        controller: Eu
-      } = uu;
-      const ju = (0, Cu.g)(cE, Eu.getSnapshot()),
+        controller: bG
+      } = GG;
+      const ZG = (0, VG.j)(fb, bG.getSnapshot()),
         {
-          t: su
-        } = (0, bu.A)();
-      if (null === ju.loadout) return null;
-      const Uu = ju.notice;
-      return (0, Ju.jsx)(JE, {
-        view: ju,
-        onDismiss: Eu.dismiss,
-        children: (0, Ju.jsxs)(Pu, {
-          open: ju.open,
-          onDismiss: Eu.dismiss,
-          title: su(`${du}:loadoutTitle`),
+          t: wG
+        } = (0, pG.w)();
+      if (null === ZG.loadout) return null;
+      const SG = ZG.notice;
+      return (0, iG.jsx)(ib, {
+        view: ZG,
+        onDismiss: bG.dismiss,
+        children: (0, iG.jsxs)(mG, {
+          open: ZG.open,
+          onDismiss: bG.dismiss,
+          title: wG(`${CG}:loadoutTitle`),
           className: "ContainmentLoadoutPanel",
-          headerExtra: (0, Ju.jsx)(FE, {
-            loadout: ju.loadout
+          headerExtra: (0, iG.jsx)(nb, {
+            loadout: ZG.loadout
           }),
-          statusRefused: null === Uu || void 0 === Uu ? void 0 : Uu.loadoutNoticeRefused,
-          status: (0, Ju.jsxs)(Ju.Fragment, {
-            children: [(0, Ju.jsx)("span", {
+          statusRefused: null === SG || void 0 === SG ? void 0 : SG.loadoutNoticeRefused,
+          status: (0, iG.jsxs)(iG.Fragment, {
+            children: [(0, iG.jsx)("span", {
               className: "LoadoutRadioBadge",
-              children: su(`${du}:loadoutRadioBadge`)
-            }), null !== Uu && su(`${du}:${Uu.loadoutNoticeKey}`, {
-              name: Uu.loadoutNoticeName,
-              tier: (0, Ru.N)(Uu.loadoutNoticeTier),
-              max: String(ju.loadout.loadoutMaxPerks)
+              children: wG(`${CG}:loadoutRadioBadge`)
+            }), null !== SG && wG(`${CG}:${SG.loadoutNoticeKey}`, {
+              name: SG.loadoutNoticeName,
+              tier: (0, BG.X)(SG.loadoutNoticeTier),
+              max: String(ZG.loadout.loadoutMaxPerks)
             })]
           }),
-          children: [(0, Ju.jsx)(iE, {
-            view: ju,
-            controller: Eu
-          }), (0, Ju.jsx)(IE, {
-            view: ju,
-            controller: Eu
-          }), (0, Ju.jsx)(rE, {
-            view: ju,
-            controller: Eu
+          children: [(0, iG.jsx)(Mb, {
+            view: ZG,
+            controller: bG
+          }), (0, iG.jsx)(qb, {
+            view: ZG,
+            controller: bG
+          }), (0, iG.jsx)(jb, {
+            view: ZG,
+            controller: bG
           })]
         })
       })
     }
 
-    function LE(uu, Eu, ju) {
-      const su = uu.locatorEntries.find((uu => uu.locatorEntryId === ju));
-      if (!su) return null;
-      const Uu = su.locatorEntryName;
-      if ("locatorDisarm" === Eu) return su.locatorEntryArmed ? {
-        board: tE(uu, null),
-        notice: xE("locatorNoticeDisarmed", Uu)
+    function eb(GG, bG, ZG) {
+      const wG = GG.locatorEntries.find((GG => GG.locatorEntryId === ZG));
+      if (!wG) return null;
+      const SG = wG.locatorEntryName;
+      if ("locatorDisarm" === bG) return wG.locatorEntryArmed ? {
+        board: Rb(GG, null),
+        notice: Tb("locatorNoticeDisarmed", SG)
       } : null;
-      if ("locatorArm" === Eu) return su.locatorEntryOwned && !su.locatorEntryArmed ? {
-        board: tE(uu, ju),
-        notice: xE("locatorNoticeArmed", Uu)
+      if ("locatorArm" === bG) return wG.locatorEntryOwned && !wG.locatorEntryArmed ? {
+        board: Rb(GG, ZG),
+        notice: Tb("locatorNoticeArmed", SG)
       } : null;
-      if (su.locatorEntryOwned || uu.locatorCoins < su.locatorEntryPrice) return null;
-      const Zu = tE({
-        ...uu,
-        locatorCoins: uu.locatorCoins - su.locatorEntryPrice
-      }, ju);
+      if (wG.locatorEntryOwned || GG.locatorCoins < wG.locatorEntryPrice) return null;
+      const LG = Rb({
+        ...GG,
+        locatorCoins: GG.locatorCoins - wG.locatorEntryPrice
+      }, ZG);
       return {
         board: {
-          ...Zu,
-          locatorEntries: Zu.locatorEntries.map((uu => uu.locatorEntryId === ju ? {
-            ...uu,
+          ...LG,
+          locatorEntries: LG.locatorEntries.map((GG => GG.locatorEntryId === ZG ? {
+            ...GG,
             locatorEntryOwned: !0
-          } : uu))
+          } : GG))
         },
-        notice: xE("locatorNoticeBought", Uu)
+        notice: Tb("locatorNoticeBought", SG)
       }
     }
 
-    function tE(uu, Eu) {
+    function Rb(GG, bG) {
       return {
-        ...uu,
-        locatorEntries: uu.locatorEntries.map((uu => {
-          const ju = uu.locatorEntryId === Eu;
-          return uu.locatorEntryArmed === ju ? uu : {
-            ...uu,
-            locatorEntryArmed: ju
+        ...GG,
+        locatorEntries: GG.locatorEntries.map((GG => {
+          const ZG = GG.locatorEntryId === bG;
+          return GG.locatorEntryArmed === ZG ? GG : {
+            ...GG,
+            locatorEntryArmed: ZG
           }
         }))
       }
     }
 
-    function xE(uu, Eu) {
+    function Tb(GG, bG) {
       return {
-        locatorNoticeKey: uu,
+        locatorNoticeKey: GG,
         locatorNoticeRefused: !1,
-        locatorNoticeName: Eu
+        locatorNoticeName: bG
       }
     }
-    const TE = "containmentLocatorView";
-    class HE extends uE {
-      constructor(uu, Eu, ju, su) {
-        super(uu, Eu, ju, su, "locator", LE), this.snapshot = this.buildSnapshot()
+    const Hb = "containmentLocatorView";
+    class tb extends Gb {
+      constructor(GG, bG, ZG, wG) {
+        super(GG, bG, ZG, wG, "locator", eb), this.snapshot = this.buildSnapshot()
       }
-      messageOpens(uu) {
-        return uu.locatorMessageOpens
+      messageOpens(GG) {
+        return GG.locatorMessageOpens
       }
-      messageNotice(uu) {
-        return uu.locatorNotice
+      messageNotice(GG) {
+        return GG.locatorNotice
       }
-      openingSelection(uu) {
-        var Eu;
-        const ju = uu.locatorEntries;
-        return (null !== (Eu = ju.find((uu => uu.locatorEntryArmed))) && void 0 !== Eu ? Eu : ju[0]).locatorEntryId
+      openingSelection(GG) {
+        var bG;
+        const ZG = GG.locatorEntries;
+        return (null !== (bG = ZG.find((GG => GG.locatorEntryArmed))) && void 0 !== bG ? bG : ZG[0]).locatorEntryId
       }
       buildSnapshot() {
         return {
@@ -1606,245 +1606,245 @@ export const modules = {
         }
       }
     }
-    const AE = {
-        locatorContained: `${du}:locatorFlavourContained`,
-        locatorEncountered: `${du}:locatorFlavourEncountered`,
-        locatorUnseen: `${du}:locatorFlavourUnseen`
+    const Db = {
+        locatorContained: `${CG}:locatorFlavourContained`,
+        locatorEncountered: `${CG}:locatorFlavourEncountered`,
+        locatorUnseen: `${CG}:locatorFlavourUnseen`
       },
-      nE = {
+      Nb = {
         codexAnyDifficulty: null,
-        codexNormalOnly: `${du}:locatorAttunedNormal`,
-        codexHardOnly: `${du}:locatorAttunedHard`
+        codexNormalOnly: `${CG}:locatorAttunedNormal`,
+        codexHardOnly: `${CG}:locatorAttunedHard`
       };
 
-    function yE() {
-      return (0, Ju.jsx)(Ju.Fragment, {
+    function Ob() {
+      return (0, iG.jsx)(iG.Fragment, {
         children: Array.from({
           length: 5
-        }, ((uu, Eu) => (0, Ju.jsx)("span", {
+        }, ((GG, bG) => (0, iG.jsx)("span", {
           className: "LocatorFly",
-          children: (0, Ju.jsx)("img", {
+          children: (0, iG.jsx)("img", {
             src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgoBboMlb5LyUjD8YgNtHyJ6/d+Q/CILa1lz9YAbo4DCDLYxjQv3gt3AYQG90AdHkUQ/qhkjAb0BURkgcDmAQMo7sSXR7deyiGoIvDvIOsGasB+ACyBmTNACS0go3ibhumAAAAAElFTkSuQmCC",
             alt: "",
             draggable: !1
           })
-        }, Eu)))
+        }, bG)))
       })
     }
 
-    function zE(uu) {
+    function xb(GG) {
       let {
-        entry: Eu
-      } = uu;
+        entry: bG
+      } = GG;
       const {
-        t: ju
-      } = (0, bu.A)();
-      return Eu.locatorEntryArmed ? (0, Ju.jsx)("span", {
+        t: ZG
+      } = (0, pG.w)();
+      return bG.locatorEntryArmed ? (0, iG.jsx)("span", {
         className: "BoardBadge Armed",
-        children: ju(`${du}:locatorArmedBadge`)
-      }) : Eu.locatorEntryOwned ? (0, Ju.jsx)("span", {
+        children: ZG(`${CG}:locatorArmedBadge`)
+      }) : bG.locatorEntryOwned ? (0, iG.jsx)("span", {
         className: "BoardBadge",
-        children: ju(`${du}:locatorOwnedBadge`)
+        children: ZG(`${CG}:locatorOwnedBadge`)
       }) : null
     }
 
-    function RE(uu) {
+    function Bb(GG) {
       let {
-        entry: Eu,
-        coins: ju,
-        inTile: su = !1
-      } = uu;
-      return (0, Ju.jsx)(mu, {
-        itemName: au,
-        amount: Eu.locatorEntryPrice,
-        dl: ju,
-        inTile: su
+        entry: bG,
+        coins: ZG,
+        inTile: wG = !1
+      } = GG;
+      return (0, iG.jsx)(vG, {
+        itemName: WG,
+        amount: bG.locatorEntryPrice,
+        Ik: ZG,
+        inTile: wG
       })
     }
 
-    function uj(uu) {
+    function GZ(GG) {
       let {
-        view: Eu,
-        controller: ju,
-        entry: su
-      } = uu;
+        view: bG,
+        controller: ZG,
+        entry: wG
+      } = GG;
       const {
-        t: Uu
-      } = (0, bu.A)(), Zu = su.locatorEntryId, Xu = Eu.locators.locatorEntries.find((uu => uu.locatorEntryArmed && uu !== su));
-      return (0, Ju.jsxs)("div", {
+        t: SG
+      } = (0, pG.w)(), LG = wG.locatorEntryId, yG = bG.locators.locatorEntries.find((GG => GG.locatorEntryArmed && GG !== wG));
+      return (0, iG.jsxs)("div", {
         className: "BoardActions",
-        children: [su.locatorEntryArmed && (0, Ju.jsx)(Ou.$, {
-          disabled: Eu.pending,
+        children: [wG.locatorEntryArmed && (0, iG.jsx)(KG.K, {
+          disabled: bG.pending,
           onClick: () => {
-            ju.act("locatorDisarm", Zu)
+            ZG.act("locatorDisarm", LG)
           },
-          children: Uu(`${du}:locatorDisarm`)
-        }), su.locatorEntryOwned && !su.locatorEntryArmed && (0, Ju.jsx)(Ou.f, {
-          disabled: Eu.pending,
+          children: SG(`${CG}:locatorDisarm`)
+        }), wG.locatorEntryOwned && !wG.locatorEntryArmed && (0, iG.jsx)(KG.d, {
+          disabled: bG.pending,
           onClick: () => {
-            ju.act("locatorArm", Zu)
+            ZG.act("locatorArm", LG)
           },
-          children: Uu(`${du}:locatorArm`)
-        }), !su.locatorEntryOwned && (0, Ju.jsxs)("div", {
+          children: SG(`${CG}:locatorArm`)
+        }), !wG.locatorEntryOwned && (0, iG.jsxs)("div", {
           className: "LocatorBuy",
-          children: [(0, Ju.jsx)(RE, {
-            entry: su,
-            coins: Eu.locators.locatorCoins
-          }), (0, Ju.jsx)(Ou.p, {
-            disabled: Eu.locators.locatorCoins < su.locatorEntryPrice || Eu.pending,
+          children: [(0, iG.jsx)(Bb, {
+            entry: wG,
+            coins: bG.locators.locatorCoins
+          }), (0, iG.jsx)(KG.k, {
+            disabled: bG.locators.locatorCoins < wG.locatorEntryPrice || bG.pending,
             onClick: () => {
-              ju.act("locatorBuy", Zu)
+              ZG.act("locatorBuy", LG)
             },
-            children: Uu(`${du}:locatorBuy`)
+            children: SG(`${CG}:locatorBuy`)
           })]
-        }), Xu && !su.locatorEntryArmed && (0, Ju.jsx)("span", {
+        }), yG && !wG.locatorEntryArmed && (0, iG.jsx)("span", {
           className: "BoardHint",
-          children: Uu(`${du}:locatorReplacesHint`, {
-            name: Xu.locatorEntryName
+          children: SG(`${CG}:locatorReplacesHint`, {
+            name: yG.locatorEntryName
           })
         })]
       })
     }
 
-    function Ej(uu) {
+    function bZ(GG) {
       let {
-        entry: Eu
-      } = uu;
-      return "locatorUnseen" === Eu.locatorEntryStanding ? (0, Ju.jsx)(ou, {
+        entry: bG
+      } = GG;
+      return "locatorUnseen" === bG.locatorEntryStanding ? (0, iG.jsx)(IG, {
         itemName: "Compass"
-      }) : (0, Ju.jsx)(ku, {
-        anomalyId: Eu.locatorEntryId,
-        caught: "locatorContained" === Eu.locatorEntryStanding
+      }) : (0, iG.jsx)(FG, {
+        anomalyId: bG.locatorEntryId,
+        caught: "locatorContained" === bG.locatorEntryStanding
       })
     }
 
-    function jj(uu) {
+    function ZZ(GG) {
       let {
-        view: Eu,
-        controller: ju,
-        entry: su
-      } = uu;
+        view: bG,
+        controller: ZG,
+        entry: wG
+      } = GG;
       const {
-        t: Uu
-      } = (0, bu.A)(), Zu = nE[su.locatorEntryDifficulty];
-      return (0, Ju.jsxs)("section", {
+        t: SG
+      } = (0, pG.w)(), LG = Nb[wG.locatorEntryDifficulty];
+      return (0, iG.jsxs)("section", {
         className: "BoardDetail",
-        children: [(0, Ju.jsxs)("div", {
-          className: fu()("LocatorLabel", {
-            Armed: su.locatorEntryArmed
+        children: [(0, iG.jsxs)("div", {
+          className: YG()("LocatorLabel", {
+            Armed: wG.locatorEntryArmed
           }),
-          children: [(0, Ju.jsx)(ru, {
-            icon: (0, Ju.jsx)(Ej, {
-              entry: su
+          children: [(0, iG.jsx)(jG, {
+            icon: (0, iG.jsx)(bZ, {
+              entry: wG
             }),
-            name: Uu(`${du}:locatorName`, {
-              name: su.locatorEntryName
+            name: SG(`${CG}:locatorName`, {
+              name: wG.locatorEntryName
             }),
-            children: (0, Ju.jsx)(zE, {
-              entry: su
+            children: (0, iG.jsx)(xb, {
+              entry: wG
             })
-          }), (0, Ju.jsx)("p", {
+          }), (0, iG.jsx)("p", {
             className: "BoardDescription",
-            children: Uu(su.locatorEntryArmed ? `${du}:locatorFlavourArmed` : AE[su.locatorEntryStanding])
-          }), null !== Zu && (0, Ju.jsx)("p", {
+            children: SG(wG.locatorEntryArmed ? `${CG}:locatorFlavourArmed` : Db[wG.locatorEntryStanding])
+          }), null !== LG && (0, iG.jsx)("p", {
             className: "LocatorAttuned",
-            children: Uu(Zu)
-          }), (0, Ju.jsx)("p", {
+            children: SG(LG)
+          }), (0, iG.jsx)("p", {
             className: "BoardDescription LocatorUsage",
-            children: Uu(`${du}:locatorUsage`)
+            children: SG(`${CG}:locatorUsage`)
           })]
-        }), (0, Ju.jsx)(uj, {
-          view: Eu,
-          controller: ju,
-          entry: su
+        }), (0, iG.jsx)(GZ, {
+          view: bG,
+          controller: ZG,
+          entry: wG
         })]
       })
     }
 
-    function sj(uu) {
+    function wZ(GG) {
       let {
-        controller: Eu
-      } = uu;
-      const ju = (0, Cu.g)(TE, Eu.getSnapshot()),
+        controller: bG
+      } = GG;
+      const ZG = (0, VG.j)(Hb, bG.getSnapshot()),
         {
-          t: su
-        } = (0, bu.A)(),
-        Uu = ju.locators;
-      if (null === Uu) return null;
-      const Zu = Uu.locatorEntries.find((uu => uu.locatorEntryId === ju.selectedId)),
-        Xu = ju.notice;
-      return (0, Ju.jsxs)(Pu, {
-        open: ju.open,
-        onDismiss: Eu.dismiss,
-        title: su(`${du}:locatorTitle`),
+          t: wG
+        } = (0, pG.w)(),
+        SG = ZG.locators;
+      if (null === SG) return null;
+      const LG = SG.locatorEntries.find((GG => GG.locatorEntryId === ZG.selectedId)),
+        yG = ZG.notice;
+      return (0, iG.jsxs)(mG, {
+        open: ZG.open,
+        onDismiss: bG.dismiss,
+        title: wG(`${CG}:locatorTitle`),
         className: "ContainmentLocatorPanel",
-        decor: (0, Ju.jsx)(yE, {}),
-        headerExtra: (0, Ju.jsx)(Qu, {
-          coins: Uu.locatorCoins
+        decor: (0, iG.jsx)(Ob, {}),
+        headerExtra: (0, iG.jsx)(PG, {
+          coins: SG.locatorCoins
         }),
-        statusRefused: null === Xu || void 0 === Xu ? void 0 : Xu.locatorNoticeRefused,
-        status: (0, Ju.jsxs)(Ju.Fragment, {
-          children: [(0, Ju.jsx)("span", {
+        statusRefused: null === yG || void 0 === yG ? void 0 : yG.locatorNoticeRefused,
+        status: (0, iG.jsxs)(iG.Fragment, {
+          children: [(0, iG.jsx)("span", {
             className: "LocatorKeeperBadge",
-            children: su(`${du}:locatorKeeperName`)
-          }), null !== Xu && su(`${du}:${Xu.locatorNoticeKey}`, {
-            name: Xu.locatorNoticeName
+            children: wG(`${CG}:locatorKeeperName`)
+          }), null !== yG && wG(`${CG}:${yG.locatorNoticeKey}`, {
+            name: yG.locatorNoticeName
           })]
         }),
-        children: [(0, Ju.jsx)("div", {
+        children: [(0, iG.jsx)("div", {
           className: "BoardTiles",
-          children: Uu.locatorEntries.map((uu => (0, Ju.jsxs)(Vu, {
-            icon: (0, Ju.jsx)(Ej, {
-              entry: uu
+          children: SG.locatorEntries.map((GG => (0, iG.jsxs)(lG, {
+            icon: (0, iG.jsx)(bZ, {
+              entry: GG
             }),
-            name: uu.locatorEntryName,
-            selected: uu === Zu,
+            name: GG.locatorEntryName,
+            selected: GG === LG,
             locked: !1,
-            className: fu()("LocatorTag", {
-              Armed: uu.locatorEntryArmed
+            className: YG()("LocatorTag", {
+              Armed: GG.locatorEntryArmed
             }),
             onSelect: () => {
-              Eu.select(uu.locatorEntryId)
+              bG.select(GG.locatorEntryId)
             },
-            children: [(0, Ju.jsx)(zE, {
-              entry: uu
-            }), !uu.locatorEntryOwned && (0, Ju.jsx)(RE, {
-              entry: uu,
-              coins: Uu.locatorCoins,
+            children: [(0, iG.jsx)(xb, {
+              entry: GG
+            }), !GG.locatorEntryOwned && (0, iG.jsx)(Bb, {
+              entry: GG,
+              coins: SG.locatorCoins,
               inTile: !0
             })]
-          }, uu.locatorEntryId)))
-        }), (0, Ju.jsx)(jj, {
-          view: ju,
-          controller: Eu,
-          entry: Zu
+          }, GG.locatorEntryId)))
+        }), (0, iG.jsx)(ZZ, {
+          view: ZG,
+          controller: bG,
+          entry: LG
         })]
       })
     }
 
-    function Uj(uu) {
+    function SZ(GG) {
       let {
-        loadout: Eu,
-        codex: ju,
-        locator: su
-      } = uu;
-      return (0, Ju.jsxs)(Ju.Fragment, {
-        children: [(0, Ju.jsx)(BE, {
-          controller: Eu
-        }), (0, Ju.jsx)(zu, {
-          controller: ju
-        }), (0, Ju.jsx)(sj, {
-          controller: su
+        loadout: bG,
+        codex: ZG,
+        locator: wG
+      } = GG;
+      return (0, iG.jsxs)(iG.Fragment, {
+        children: [(0, iG.jsx)(gb, {
+          controller: bG
+        }), (0, iG.jsx)(xG, {
+          controller: ZG
+        }), (0, iG.jsx)(wZ, {
+          controller: wG
         })]
       })
     }
-    var Zj = ju(38882);
-    class Xj {
-      constructor(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.sendCommand = uu, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new Zj.b({
+    var LZ = ZG(38975);
+    class yZ {
+      constructor(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.sendCommand = GG, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new LZ.d({
           spacingMs: 0,
-          now: Eu
+          now: bG
         }), this.budget.subscribe((() => {
           this.notify()
         }))
@@ -1852,17 +1852,17 @@ export const modules = {
       isPending() {
         return this.awaitingReply || this.budget.isPacing()
       }
-      send(uu, Eu) {
+      send(GG, bG) {
         return !this.isPending() && (this.awaitingReply = !0, this.replyTimer = setTimeout((() => {
-          this.replyTimer = null, this.awaitingReply = !1, Eu(), this.notify()
-        }), 8e3), this.budget.start(), this.sendCommand(uu), !0)
+          this.replyTimer = null, this.awaitingReply = !1, bG(), this.notify()
+        }), 8e3), this.budget.start(), this.sendCommand(GG), !0)
       }
       onReply() {
         this.awaitingReply = !1, this.clearReplyTimer()
       }
-      subscribe(uu) {
-        return this.listeners.add(uu), () => {
-          this.listeners.delete(uu)
+      subscribe(GG) {
+        return this.listeners.add(GG), () => {
+          this.listeners.delete(GG)
         }
       }
       dispose() {
@@ -1872,177 +1872,177 @@ export const modules = {
         null !== this.replyTimer && (clearTimeout(this.replyTimer), this.replyTimer = null)
       }
       notify() {
-        for (const uu of this.listeners) uu()
+        for (const GG of this.listeners) GG()
       }
     }
-    var lj = ju(38873);
-    const qj = new Map([
-      ["npc_general", YE],
-      ["npc_tentacle_guy", lj]
+    var kZ = ZG(38971);
+    const UZ = new Map([
+      ["npc_general", hb],
+      ["npc_tentacle_guy", kZ]
     ]);
 
-    function fj(uu) {
-      const Eu = qj.get(uu);
-      if (void 0 === Eu) return null;
-      const ju = document.createElement("img");
-      return ju.src = Eu, ju.alt = "", ju.draggable = !1, ju.style.imageRendering = "pixelated", ju
+    function YZ(GG) {
+      const bG = UZ.get(GG);
+      if (void 0 === bG) return null;
+      const ZG = document.createElement("img");
+      return ZG.src = bG, ZG.alt = "", ZG.draggable = !1, ZG.style.imageRendering = "pixelated", ZG
     }
-    const Cj = function() {
-      let uu, Eu = !1,
-        ju = null,
-        qu = null;
-      const fu = [],
-        Cu = uu => {
-          for (const Eu of fu) Eu !== uu && Eu.close();
-          (0, lu.m)()
+    const VZ = function() {
+      let GG, bG = !1,
+        ZG = null,
+        UG = null;
+      const YG = [],
+        VG = GG => {
+          for (const bG of YG) bG !== GG && bG.close();
+          (0, kG.m)()
         },
-        bu = uu => {
-          uu && (0, lu.g)()
+        pG = GG => {
+          GG && (0, kG.i)()
         },
-        cu = new Xj((Eu => {
-          uu.sendCommand(Eu)
+        fG = new yZ((bG => {
+          GG.sendCommand(bG)
         })),
-        Nu = new NE((uu => {
-          Xu.h.TY(cE, uu, !0)
-        }), Cu, bu, cu),
-        Ou = new Su((uu => {
-          Xu.h.TY(Wu, uu, !0)
-        }), Cu, bu),
-        Yu = new HE((uu => {
-          Xu.h.TY(TE, uu, !0)
-        }), Cu, bu, cu);
-      fu.push(Nu, Ou, Yu);
+        QG = new Qb((GG => {
+          yG.l.xh(fb, GG, !0)
+        }), VG, pG, fG),
+        KG = new sG((GG => {
+          yG.l.xh(AG, GG, !0)
+        }), VG, pG),
+        hG = new tb((GG => {
+          yG.l.xh(Hb, GG, !0)
+        }), VG, pG, fG);
+      YG.push(QG, KG, hG);
       return {
-        onCreate: Eu => {
-          uu = Eu, ju = (0, lu.o)(null, {
-            content: (0, su.createElement)(Uj, {
-              loadout: Nu,
-              codex: Ou,
-              locator: Yu
+        onCreate: bG => {
+          GG = bG, ZG = (0, kG.q)(null, {
+            content: (0, wG.createElement)(SZ, {
+              loadout: QG,
+              codex: KG,
+              locator: hG
             }),
             onClose: () => {
-              for (const uu of fu) uu.close()
+              for (const GG of YG) GG.close()
             }
-          }), qu = (0, Zu.e)(fj)
+          }), UG = (0, LG.g)(YZ)
         },
-        onReceivedMessageFromServer: (uu, Eu) => {
-          "containmentLoadout" === uu ? Nu.NO(Eu) : "containmentLoadoutClose" === uu ? Nu.isOpen() && (Nu.close(), (0, lu.e)()) : "containmentCodex" === uu ? Ou.NO(Eu) : "containmentLocator" === uu && Yu.NO(Eu)
+        onReceivedMessageFromServer: (GG, bG) => {
+          "containmentLoadout" === GG ? QG.hK(bG) : "containmentLoadoutClose" === GG ? QG.isOpen() && (QG.close(), (0, kG.f)()) : "containmentCodex" === GG ? KG.hK(bG) : "containmentLocator" === GG && hG.hK(bG)
         },
-        Tb: () => {
-          Eu || Uu.d.get("loadingOverlayVisible") || (Eu = !0, uu.sendCommand("containmentEntered"))
+        Tp: () => {
+          bG || SG.e.get("loadingOverlayVisible") || (bG = !0, GG.sendCommand("containmentEntered"))
         },
         onClose: () => {
-          var uu, Eu;
-          null === (uu = ju) || void 0 === uu || uu(), ju = null, null === (Eu = qu) || void 0 === Eu || Eu(), qu = null;
-          for (const ju of fu) ju.dispose();
-          cu.dispose()
+          var GG, bG;
+          null === (GG = ZG) || void 0 === GG || GG(), ZG = null, null === (bG = UG) || void 0 === bG || bG(), UG = null;
+          for (const ZG of YG) ZG.dispose();
+          fG.dispose()
         }
       }
     }
   },
-  39600: (uu, Eu, ju) => {
-    var su = {
-      "./breach-zero-uncaught.webp": 39605,
-      "./breach-zero.webp": 39613,
-      "./brood-father-uncaught.webp": 39618,
-      "./brood-father.webp": 39621,
-      "./carousel-uncaught.webp": 39623,
-      "./carousel.webp": 39631,
-      "./deadlock-uncaught.webp": 39638,
-      "./deadlock.webp": 39643,
-      "./frost-revenant-uncaught.webp": 39650,
-      "./frost-revenant.webp": 39654,
-      "./hollow-choir-uncaught.webp": 39658,
-      "./hollow-choir.webp": 39667,
-      "./magma-warden-uncaught.webp": 39672,
-      "./magma-warden.webp": 39678,
-      "./patient-zero-uncaught.webp": 39685,
-      "./patient-zero.webp": 39688,
-      "./siege-engine-uncaught.webp": 39697,
-      "./siege-engine.webp": 39703,
-      "./warp-stalker-uncaught.webp": 39710,
-      "./warp-stalker.webp": 39714
+  39724: (GG, bG, ZG) => {
+    var wG = {
+      "./breach-zero-uncaught.webp": 39727,
+      "./breach-zero.webp": 39732,
+      "./brood-father-uncaught.webp": 39737,
+      "./brood-father.webp": 39741,
+      "./carousel-uncaught.webp": 39750,
+      "./carousel.webp": 39754,
+      "./deadlock-uncaught.webp": 39762,
+      "./deadlock.webp": 39764,
+      "./frost-revenant-uncaught.webp": 39769,
+      "./frost-revenant.webp": 39775,
+      "./hollow-choir-uncaught.webp": 39784,
+      "./hollow-choir.webp": 39790,
+      "./magma-warden-uncaught.webp": 39793,
+      "./magma-warden.webp": 39798,
+      "./patient-zero-uncaught.webp": 39801,
+      "./patient-zero.webp": 39808,
+      "./siege-engine-uncaught.webp": 39815,
+      "./siege-engine.webp": 39820,
+      "./warp-stalker-uncaught.webp": 39828,
+      "./warp-stalker.webp": 39830
     };
 
-    function Uu(uu) {
-      var Eu = Zu(uu);
-      return ju(Eu)
+    function SG(GG) {
+      var bG = LG(GG);
+      return ZG(bG)
     }
 
-    function Zu(uu) {
-      if (!ju.o(su, uu)) {
-        var Eu = new Error("Cannot find module '" + uu + "'");
-        throw Eu.code = "MODULE_NOT_FOUND", Eu
+    function LG(GG) {
+      if (!ZG.o(wG, GG)) {
+        var bG = new Error("Cannot find module '" + GG + "'");
+        throw bG.code = "MODULE_NOT_FOUND", bG
       }
-      return su[uu]
+      return wG[GG]
     }
-    Uu.keys = function() {
-      return Object.keys(su)
-    }, Uu.resolve = Zu, uu.exports = Uu, Uu.id = 39600
+    SG.keys = function() {
+      return Object.keys(wG)
+    }, SG.resolve = LG, GG.exports = SG, SG.id = 39724
   },
-  39605: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
+  39727: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
   },
-  39613: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
+  39732: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
   },
-  39618: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
+  39737: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
   },
-  39621: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/brood-father.e48391955a574c1155fa.webp"
+  39741: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/brood-father.e48391955a574c1155fa.webp"
   },
-  39623: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
+  39750: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
   },
-  39631: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
+  39754: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
   },
-  39638: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
+  39762: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
   },
-  39643: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
+  39764: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
   },
-  39650: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
+  39769: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
   },
-  39654: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
+  39775: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
   },
-  39658: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
+  39784: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
   },
-  39667: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
+  39790: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
   },
-  39672: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
+  39793: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
   },
-  39678: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
+  39798: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
   },
-  39685: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
+  39801: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
   },
-  39688: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
+  39808: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
   },
-  39697: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
+  39815: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
   },
-  39703: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
+  39820: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
   },
-  39710: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
+  39828: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
   },
-  39714: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
+  39830: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
   },
-  38873: uu => {
-    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
+  38971: GG => {
+    GG.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

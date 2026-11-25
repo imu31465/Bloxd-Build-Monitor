@@ -1,12 +1,12 @@
 export const id = 236;
 export const ids = [236];
 export const modules = {
-  37506: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Uu
+  37463: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => SG
     });
-    var su = ju(37514);
-    class Uu {
+    var wG = ZG(37465);
+    class SG {
       static get LastCreatedEngine() {
         return 0 === this.Instances.length ? null : this.Instances[this.Instances.length - 1]
       }
@@ -14,178 +14,178 @@ export const modules = {
         return this._LastCreatedScene
       }
     }
-    Uu.Instances = [], Uu.OnEnginesDisposedObservable = new su.d, Uu._LastCreatedScene = null, Uu.UseFallbackTexture = !0, Uu.FallbackTexture = ""
+    SG.Instances = [], SG.OnEnginesDisposedObservable = new wG.c, SG._LastCreatedScene = null, SG.UseFallbackTexture = !0, SG.FallbackTexture = ""
   },
-  37504: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => su
+  37456: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => wG
     });
-    class su {
-      static SetMatrixPrecision(uu) {
-        if (su.MatrixTrackPrecisionChange = !1, uu && !su.MatrixUse64Bits && su.MatrixTrackedMatrices)
-          for (let Eu = 0; Eu < su.MatrixTrackedMatrices.length; ++Eu) {
-            const uu = su.MatrixTrackedMatrices[Eu],
-              ju = uu._m;
-            uu._m = new Array(16);
-            for (let Eu = 0; Eu < 16; ++Eu) uu._m[Eu] = ju[Eu]
+    class wG {
+      static SetMatrixPrecision(GG) {
+        if (wG.MatrixTrackPrecisionChange = !1, GG && !wG.MatrixUse64Bits && wG.MatrixTrackedMatrices)
+          for (let bG = 0; bG < wG.MatrixTrackedMatrices.length; ++bG) {
+            const GG = wG.MatrixTrackedMatrices[bG],
+              ZG = GG._m;
+            GG._m = new Array(16);
+            for (let bG = 0; bG < 16; ++bG) GG._m[bG] = ZG[bG]
           }
-        su.MatrixUse64Bits = uu, su.MatrixCurrentType = su.MatrixUse64Bits ? Array : Float32Array, su.MatrixTrackedMatrices = null
+        wG.MatrixUse64Bits = GG, wG.MatrixCurrentType = wG.MatrixUse64Bits ? Array : Float32Array, wG.MatrixTrackedMatrices = null
       }
     }
-    su.MatrixUse64Bits = !1, su.MatrixTrackPrecisionChange = !0, su.MatrixCurrentType = Float32Array, su.MatrixTrackedMatrices = []
+    wG.MatrixUse64Bits = !1, wG.MatrixTrackPrecisionChange = !0, wG.MatrixCurrentType = Float32Array, wG.MatrixTrackedMatrices = []
   },
-  37525: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => lu,
-      e: () => fu,
-      i: () => qu,
-      k: () => su,
-      o: () => Zu,
-      q: () => Xu
+  37475: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => kG,
+      c: () => YG,
+      f: () => UG,
+      i: () => wG,
+      l: () => LG,
+      n: () => yG
     });
-    class su {}
+    class wG {}
 
-    function Uu(uu) {
-      uu.updateFlag = su._UpdateFlagSeed++
+    function SG(GG) {
+      GG.updateFlag = wG._UpdateFlagSeed++
     }
 
-    function Zu(uu, Eu, ju) {
-      let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      const Uu = uu.Osu(),
-        Zu = Eu.Osu(),
-        Xu = Uu[0],
-        lu = Uu[1],
-        qu = Uu[2],
-        fu = Uu[3],
-        Cu = Uu[4],
-        bu = Uu[5],
-        cu = Uu[6],
-        Nu = Uu[7],
-        Ou = Uu[8],
-        Yu = Uu[9],
-        hu = Uu[10],
-        Du = Uu[11],
-        gu = Uu[12],
-        Mu = Uu[13],
-        eu = Uu[14],
-        Gu = Uu[15],
-        pu = Zu[0],
-        wu = Zu[1],
-        Ju = Zu[2],
-        du = Zu[3],
-        au = Zu[4],
-        Pu = Zu[5],
-        ou = Zu[6],
-        ku = Zu[7],
-        mu = Zu[8],
-        vu = Zu[9],
-        Ku = Zu[10],
-        Vu = Zu[11],
-        ru = Zu[12],
-        Qu = Zu[13],
-        iu = Zu[14],
-        Wu = Zu[15];
-      ju[su] = Xu * pu + lu * au + qu * mu + fu * ru, ju[su + 1] = Xu * wu + lu * Pu + qu * vu + fu * Qu, ju[su + 2] = Xu * Ju + lu * ou + qu * Ku + fu * iu, ju[su + 3] = Xu * du + lu * ku + qu * Vu + fu * Wu, ju[su + 4] = Cu * pu + bu * au + cu * mu + Nu * ru, ju[su + 5] = Cu * wu + bu * Pu + cu * vu + Nu * Qu, ju[su + 6] = Cu * Ju + bu * ou + cu * Ku + Nu * iu, ju[su + 7] = Cu * du + bu * ku + cu * Vu + Nu * Wu, ju[su + 8] = Ou * pu + Yu * au + hu * mu + Du * ru, ju[su + 9] = Ou * wu + Yu * Pu + hu * vu + Du * Qu, ju[su + 10] = Ou * Ju + Yu * ou + hu * Ku + Du * iu, ju[su + 11] = Ou * du + Yu * ku + hu * Vu + Du * Wu, ju[su + 12] = gu * pu + Mu * au + eu * mu + Gu * ru, ju[su + 13] = gu * wu + Mu * Pu + eu * vu + Gu * Qu, ju[su + 14] = gu * Ju + Mu * ou + eu * Ku + Gu * iu, ju[su + 15] = gu * du + Mu * ku + eu * Vu + Gu * Wu
+    function LG(GG, bG, ZG) {
+      let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      const SG = GG.mwG(),
+        LG = bG.mwG(),
+        yG = SG[0],
+        kG = SG[1],
+        UG = SG[2],
+        YG = SG[3],
+        VG = SG[4],
+        pG = SG[5],
+        fG = SG[6],
+        QG = SG[7],
+        KG = SG[8],
+        hG = SG[9],
+        dG = SG[10],
+        JG = SG[11],
+        rG = SG[12],
+        zG = SG[13],
+        EG = SG[14],
+        oG = SG[15],
+        XG = LG[0],
+        uG = LG[1],
+        iG = LG[2],
+        CG = LG[3],
+        WG = LG[4],
+        mG = LG[5],
+        IG = LG[6],
+        FG = LG[7],
+        vG = LG[8],
+        aG = LG[9],
+        cG = LG[10],
+        lG = LG[11],
+        jG = LG[12],
+        PG = LG[13],
+        MG = LG[14],
+        AG = LG[15];
+      ZG[wG] = yG * XG + kG * WG + UG * vG + YG * jG, ZG[wG + 1] = yG * uG + kG * mG + UG * aG + YG * PG, ZG[wG + 2] = yG * iG + kG * IG + UG * cG + YG * MG, ZG[wG + 3] = yG * CG + kG * FG + UG * lG + YG * AG, ZG[wG + 4] = VG * XG + pG * WG + fG * vG + QG * jG, ZG[wG + 5] = VG * uG + pG * mG + fG * aG + QG * PG, ZG[wG + 6] = VG * iG + pG * IG + fG * cG + QG * MG, ZG[wG + 7] = VG * CG + pG * FG + fG * lG + QG * AG, ZG[wG + 8] = KG * XG + hG * WG + dG * vG + JG * jG, ZG[wG + 9] = KG * uG + hG * mG + dG * aG + JG * PG, ZG[wG + 10] = KG * iG + hG * IG + dG * cG + JG * MG, ZG[wG + 11] = KG * CG + hG * FG + dG * lG + JG * AG, ZG[wG + 12] = rG * XG + zG * WG + EG * vG + oG * jG, ZG[wG + 13] = rG * uG + zG * mG + EG * aG + oG * PG, ZG[wG + 14] = rG * iG + zG * IG + EG * cG + oG * MG, ZG[wG + 15] = rG * CG + zG * FG + EG * lG + oG * AG
     }
 
-    function Xu(uu, Eu, ju) {
-      let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      Zu(uu, Eu, ju.Osu(), su), Uu(ju)
+    function yG(GG, bG, ZG) {
+      let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      LG(GG, bG, ZG.mwG(), wG), SG(ZG)
     }
 
-    function lu(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const su = uu.Osu();
-      Eu[ju] = su[0], Eu[ju + 1] = su[1], Eu[ju + 2] = su[2], Eu[ju + 3] = su[3], Eu[ju + 4] = su[4], Eu[ju + 5] = su[5], Eu[ju + 6] = su[6], Eu[ju + 7] = su[7], Eu[ju + 8] = su[8], Eu[ju + 9] = su[9], Eu[ju + 10] = su[10], Eu[ju + 11] = su[11], Eu[ju + 12] = su[12], Eu[ju + 13] = su[13], Eu[ju + 14] = su[14], Eu[ju + 15] = su[15]
+    function kG(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const wG = GG.mwG();
+      bG[ZG] = wG[0], bG[ZG + 1] = wG[1], bG[ZG + 2] = wG[2], bG[ZG + 3] = wG[3], bG[ZG + 4] = wG[4], bG[ZG + 5] = wG[5], bG[ZG + 6] = wG[6], bG[ZG + 7] = wG[7], bG[ZG + 8] = wG[8], bG[ZG + 9] = wG[9], bG[ZG + 10] = wG[10], bG[ZG + 11] = wG[11], bG[ZG + 12] = wG[12], bG[ZG + 13] = wG[13], bG[ZG + 14] = wG[14], bG[ZG + 15] = wG[15]
     }
 
-    function qu(uu, Eu) {
-      const ju = fu(uu, Eu.Osu());
-      return ju && Uu(Eu), ju
+    function UG(GG, bG) {
+      const ZG = YG(GG, bG.mwG());
+      return ZG && SG(bG), ZG
     }
 
-    function fu(uu, Eu) {
-      const ju = uu.Osu(),
-        su = ju[0],
-        Uu = ju[1],
-        Zu = ju[2],
-        Xu = ju[3],
-        lu = ju[4],
-        qu = ju[5],
-        fu = ju[6],
-        Cu = ju[7],
-        bu = ju[8],
-        cu = ju[9],
-        Nu = ju[10],
-        Ou = ju[11],
-        Yu = ju[12],
-        hu = ju[13],
-        Du = ju[14],
-        gu = ju[15],
-        Mu = Nu * gu - Du * Ou,
-        eu = cu * gu - hu * Ou,
-        Gu = cu * Du - hu * Nu,
-        pu = bu * gu - Yu * Ou,
-        wu = bu * Du - Nu * Yu,
-        Ju = bu * hu - Yu * cu,
-        du = +(qu * Mu - fu * eu + Cu * Gu),
-        au = -(lu * Mu - fu * pu + Cu * wu),
-        Pu = +(lu * eu - qu * pu + Cu * Ju),
-        ou = -(lu * Gu - qu * wu + fu * Ju),
-        ku = su * du + Uu * au + Zu * Pu + Xu * ou;
-      if (0 === ku) return !1;
-      const mu = 1 / ku,
-        vu = fu * gu - Du * Cu,
-        Ku = qu * gu - hu * Cu,
-        Vu = qu * Du - hu * fu,
-        ru = lu * gu - Yu * Cu,
-        Qu = lu * Du - Yu * fu,
-        iu = lu * hu - Yu * qu,
-        Wu = fu * Ou - Nu * Cu,
-        Su = qu * Ou - cu * Cu,
-        Iu = qu * Nu - cu * fu,
-        Fu = lu * Ou - bu * Cu,
-        Bu = lu * Nu - bu * fu,
-        Lu = lu * cu - bu * qu,
-        tu = -(Uu * Mu - Zu * eu + Xu * Gu),
-        xu = +(su * Mu - Zu * pu + Xu * wu),
-        Tu = -(su * eu - Uu * pu + Xu * Ju),
-        Hu = +(su * Gu - Uu * wu + Zu * Ju),
-        Au = +(Uu * vu - Zu * Ku + Xu * Vu),
-        nu = -(su * vu - Zu * ru + Xu * Qu),
-        yu = +(su * Ku - Uu * ru + Xu * iu),
-        zu = -(su * Vu - Uu * Qu + Zu * iu),
-        Ru = -(Uu * Wu - Zu * Su + Xu * Iu),
-        uE = +(su * Wu - Zu * Fu + Xu * Bu),
-        EE = -(su * Su - Uu * Fu + Xu * Lu),
-        jE = +(su * Iu - Uu * Bu + Zu * Lu);
-      return Eu[0] = du * mu, Eu[1] = tu * mu, Eu[2] = Au * mu, Eu[3] = Ru * mu, Eu[4] = au * mu, Eu[5] = xu * mu, Eu[6] = nu * mu, Eu[7] = uE * mu, Eu[8] = Pu * mu, Eu[9] = Tu * mu, Eu[10] = yu * mu, Eu[11] = EE * mu, Eu[12] = ou * mu, Eu[13] = Hu * mu, Eu[14] = zu * mu, Eu[15] = jE * mu, !0
+    function YG(GG, bG) {
+      const ZG = GG.mwG(),
+        wG = ZG[0],
+        SG = ZG[1],
+        LG = ZG[2],
+        yG = ZG[3],
+        kG = ZG[4],
+        UG = ZG[5],
+        YG = ZG[6],
+        VG = ZG[7],
+        pG = ZG[8],
+        fG = ZG[9],
+        QG = ZG[10],
+        KG = ZG[11],
+        hG = ZG[12],
+        dG = ZG[13],
+        JG = ZG[14],
+        rG = ZG[15],
+        zG = QG * rG - JG * KG,
+        EG = fG * rG - dG * KG,
+        oG = fG * JG - dG * QG,
+        XG = pG * rG - hG * KG,
+        uG = pG * JG - QG * hG,
+        iG = pG * dG - hG * fG,
+        CG = +(UG * zG - YG * EG + VG * oG),
+        WG = -(kG * zG - YG * XG + VG * uG),
+        mG = +(kG * EG - UG * XG + VG * iG),
+        IG = -(kG * oG - UG * uG + YG * iG),
+        FG = wG * CG + SG * WG + LG * mG + yG * IG;
+      if (0 === FG) return !1;
+      const vG = 1 / FG,
+        aG = YG * rG - JG * VG,
+        cG = UG * rG - dG * VG,
+        lG = UG * JG - dG * YG,
+        jG = kG * rG - hG * VG,
+        PG = kG * JG - hG * YG,
+        MG = kG * dG - hG * UG,
+        AG = YG * KG - QG * VG,
+        sG = UG * KG - fG * VG,
+        qG = UG * QG - fG * YG,
+        nG = kG * KG - pG * VG,
+        gG = kG * QG - pG * YG,
+        eG = kG * fG - pG * UG,
+        RG = -(SG * zG - LG * EG + yG * oG),
+        TG = +(wG * zG - LG * XG + yG * uG),
+        HG = -(wG * EG - SG * XG + yG * iG),
+        tG = +(wG * oG - SG * uG + LG * iG),
+        DG = +(SG * aG - LG * cG + yG * lG),
+        NG = -(wG * aG - LG * jG + yG * PG),
+        OG = +(wG * cG - SG * jG + yG * MG),
+        xG = -(wG * lG - SG * PG + LG * MG),
+        BG = -(SG * AG - LG * sG + yG * qG),
+        Gb = +(wG * AG - LG * nG + yG * gG),
+        bb = -(wG * sG - SG * nG + yG * eG),
+        Zb = +(wG * qG - SG * gG + LG * eG);
+      return bG[0] = CG * vG, bG[1] = RG * vG, bG[2] = DG * vG, bG[3] = BG * vG, bG[4] = WG * vG, bG[5] = TG * vG, bG[6] = NG * vG, bG[7] = Gb * vG, bG[8] = mG * vG, bG[9] = HG * vG, bG[10] = OG * vG, bG[11] = bb * vG, bG[12] = IG * vG, bG[13] = tG * vG, bG[14] = xG * vG, bG[15] = Zb * vG, !0
     }
-    su._UpdateFlagSeed = 0
+    wG._UpdateFlagSeed = 0
   },
-  37494: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Yu,
-      i: () => Ou,
-      l: () => eu,
-      m: () => Du,
-      p: () => bu,
-      t: () => cu,
-      u: () => Nu
+  37439: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => hG,
+      g: () => KG,
+      h: () => EG,
+      j: () => JG,
+      m: () => pG,
+      p: () => fG,
+      t: () => QG
     });
-    var su = ju(37496),
-      Uu = ju(37498),
-      Zu = ju(37504),
-      Xu = ju(37506),
-      lu = ju(37519),
-      qu = ju(37525),
-      fu = ju(37532);
-    const Cu = uu => parseInt(uu.toString().replace(/\W/g, ""));
-    class bu {
+    var wG = ZG(37443),
+      SG = ZG(37448),
+      LG = ZG(37456),
+      yG = ZG(37463),
+      kG = ZG(37471),
+      UG = ZG(37475),
+      YG = ZG(37484);
+    const VG = GG => parseInt(GG.toString().replace(/\W/g, ""));
+    class pG {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.x = uu, this.y = Eu
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.x = GG, this.y = bG
       }
       toString() {
         return `{X: ${this.x} Y: ${this.y}}`
@@ -194,145 +194,145 @@ export const modules = {
         return "Vector2"
       }
       getHashCode() {
-        let uu = Cu(this.x);
-        return uu = 397 * uu ^ Cu(this.y), uu
+        let GG = VG(this.x);
+        return GG = 397 * GG ^ VG(this.y), GG
       }
-      toArray(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return uu[Eu] = this.x, uu[Eu + 1] = this.y, this
+      toArray(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return GG[bG] = this.x, GG[bG + 1] = this.y, this
       }
-      sju(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return bu.FromArrayToRef(uu, Eu, this), this
+      hZG(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return pG.FromArrayToRef(GG, bG, this), this
       }
-      Osu() {
+      mwG() {
         return [this.x, this.y]
       }
-      yJ(uu) {
-        return this.x = uu.x, this.y = uu.y, this
+      oW(GG) {
+        return this.x = GG.x, this.y = GG.y, this
       }
-      T6(uu, Eu) {
-        return this.x = uu, this.y = Eu, this
+      fGG(GG, bG) {
+        return this.x = GG, this.y = bG, this
       }
-      set(uu, Eu) {
-        return this.T6(uu, Eu)
+      set(GG, bG) {
+        return this.fGG(GG, bG)
       }
-      k_(uu) {
-        return this.T6(uu, uu)
+      N7(GG) {
+        return this.fGG(GG, GG)
       }
-      add(uu) {
-        return new bu(this.x + uu.x, this.y + uu.y)
+      add(GG) {
+        return new pG(this.x + GG.x, this.y + GG.y)
       }
-      addToRef(uu, Eu) {
-        return Eu.x = this.x + uu.x, Eu.y = this.y + uu.y, Eu
+      addToRef(GG, bG) {
+        return bG.x = this.x + GG.x, bG.y = this.y + GG.y, bG
       }
-      addInPlace(uu) {
-        return this.x += uu.x, this.y += uu.y, this
+      addInPlace(GG) {
+        return this.x += GG.x, this.y += GG.y, this
       }
-      addInPlaceFromFloats(uu, Eu) {
-        return this.x += uu, this.y += Eu, this
+      addInPlaceFromFloats(GG, bG) {
+        return this.x += GG, this.y += bG, this
       }
-      addVector3(uu) {
-        return new bu(this.x + uu.x, this.y + uu.y)
+      addVector3(GG) {
+        return new pG(this.x + GG.x, this.y + GG.y)
       }
-      subtract(uu) {
-        return new bu(this.x - uu.x, this.y - uu.y)
+      subtract(GG) {
+        return new pG(this.x - GG.x, this.y - GG.y)
       }
-      subtractToRef(uu, Eu) {
-        return Eu.x = this.x - uu.x, Eu.y = this.y - uu.y, Eu
+      subtractToRef(GG, bG) {
+        return bG.x = this.x - GG.x, bG.y = this.y - GG.y, bG
       }
-      Qsu(uu) {
-        return this.x -= uu.x, this.y -= uu.y, this
+      twG(GG) {
+        return this.x -= GG.x, this.y -= GG.y, this
       }
-      multiplyInPlace(uu) {
-        return this.x *= uu.x, this.y *= uu.y, this
+      multiplyInPlace(GG) {
+        return this.x *= GG.x, this.y *= GG.y, this
       }
-      multiply(uu) {
-        return new bu(this.x * uu.x, this.y * uu.y)
+      multiply(GG) {
+        return new pG(this.x * GG.x, this.y * GG.y)
       }
-      multiplyToRef(uu, Eu) {
-        return Eu.x = this.x * uu.x, Eu.y = this.y * uu.y, Eu
+      multiplyToRef(GG, bG) {
+        return bG.x = this.x * GG.x, bG.y = this.y * GG.y, bG
       }
-      multiplyByFloats(uu, Eu) {
-        return new bu(this.x * uu, this.y * Eu)
+      multiplyByFloats(GG, bG) {
+        return new pG(this.x * GG, this.y * bG)
       }
-      divide(uu) {
-        return new bu(this.x / uu.x, this.y / uu.y)
+      divide(GG) {
+        return new pG(this.x / GG.x, this.y / GG.y)
       }
-      divideToRef(uu, Eu) {
-        return Eu.x = this.x / uu.x, Eu.y = this.y / uu.y, Eu
+      divideToRef(GG, bG) {
+        return bG.x = this.x / GG.x, bG.y = this.y / GG.y, bG
       }
-      divideInPlace(uu) {
-        return this.x = this.x / uu.x, this.y = this.y / uu.y, this
+      divideInPlace(GG) {
+        return this.x = this.x / GG.x, this.y = this.y / GG.y, this
       }
-      minimizeInPlace(uu) {
-        return this.minimizeInPlaceFromFloats(uu.x, uu.y)
+      minimizeInPlace(GG) {
+        return this.minimizeInPlaceFromFloats(GG.x, GG.y)
       }
-      maximizeInPlace(uu) {
-        return this.maximizeInPlaceFromFloats(uu.x, uu.y)
+      maximizeInPlace(GG) {
+        return this.maximizeInPlaceFromFloats(GG.x, GG.y)
       }
-      minimizeInPlaceFromFloats(uu, Eu) {
-        return this.x = Math.min(uu, this.x), this.y = Math.min(Eu, this.y), this
+      minimizeInPlaceFromFloats(GG, bG) {
+        return this.x = Math.min(GG, this.x), this.y = Math.min(bG, this.y), this
       }
-      maximizeInPlaceFromFloats(uu, Eu) {
-        return this.x = Math.max(uu, this.x), this.y = Math.max(Eu, this.y), this
+      maximizeInPlaceFromFloats(GG, bG) {
+        return this.x = Math.max(GG, this.x), this.y = Math.max(bG, this.y), this
       }
-      subtractFromFloats(uu, Eu) {
-        return new bu(this.x - uu, this.y - Eu)
+      subtractFromFloats(GG, bG) {
+        return new pG(this.x - GG, this.y - bG)
       }
-      subtractFromFloatsToRef(uu, Eu, ju) {
-        return ju.x = this.x - uu, ju.y = this.y - Eu, ju
+      subtractFromFloatsToRef(GG, bG, ZG) {
+        return ZG.x = this.x - GG, ZG.y = this.y - bG, ZG
       }
-      nZ() {
-        return new bu(-this.x, -this.y)
+      By() {
+        return new pG(-this.x, -this.y)
       }
       negateInPlace() {
         return this.x *= -1, this.y *= -1, this
       }
-      negateToRef(uu) {
-        return uu.x = -this.x, uu.y = -this.y, uu
+      negateToRef(GG) {
+        return GG.x = -this.x, GG.y = -this.y, GG
       }
-      scaleInPlace(uu) {
-        return this.x *= uu, this.y *= uu, this
+      scaleInPlace(GG) {
+        return this.x *= GG, this.y *= GG, this
       }
-      scale(uu) {
-        return new bu(this.x * uu, this.y * uu)
+      scale(GG) {
+        return new pG(this.x * GG, this.y * GG)
       }
-      scaleToRef(uu, Eu) {
-        return Eu.x = this.x * uu, Eu.y = this.y * uu, Eu
+      scaleToRef(GG, bG) {
+        return bG.x = this.x * GG, bG.y = this.y * GG, bG
       }
-      scaleAndAddToRef(uu, Eu) {
-        return Eu.x += this.x * uu, Eu.y += this.y * uu, Eu
+      scaleAndAddToRef(GG, bG) {
+        return bG.x += this.x * GG, bG.y += this.y * GG, bG
       }
-      equals(uu) {
-        return uu && this.x === uu.x && this.y === uu.y
+      equals(GG) {
+        return GG && this.x === GG.x && this.y === GG.y
       }
-      equalsWithEpsilon(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : su.c;
-        return uu && (0, lu.WithinEpsilon)(this.x, uu.x, Eu) && (0, lu.WithinEpsilon)(this.y, uu.y, Eu)
+      equalsWithEpsilon(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wG.d;
+        return GG && (0, kG.WithinEpsilon)(this.x, GG.x, bG) && (0, kG.WithinEpsilon)(this.y, GG.y, bG)
       }
-      BXu(uu, Eu) {
-        return this.x === uu && this.y === Eu
+      ZkG(GG, bG) {
+        return this.x === GG && this.y === bG
       }
       floor() {
-        return new bu(Math.floor(this.x), Math.floor(this.y))
+        return new pG(Math.floor(this.x), Math.floor(this.y))
       }
-      floorToRef(uu) {
-        return uu.x = Math.floor(this.x), uu.y = Math.floor(this.y), uu
+      floorToRef(GG) {
+        return GG.x = Math.floor(this.x), GG.y = Math.floor(this.y), GG
       }
       fract() {
-        return new bu(this.x - Math.floor(this.x), this.y - Math.floor(this.y))
+        return new pG(this.x - Math.floor(this.x), this.y - Math.floor(this.y))
       }
-      fractToRef(uu) {
-        return uu.x = this.x - Math.floor(this.x), uu.y = this.y - Math.floor(this.y), uu
+      fractToRef(GG) {
+        return GG.x = this.x - Math.floor(this.x), GG.y = this.y - Math.floor(this.y), GG
       }
-      rotate(uu) {
-        return this.rotateToRef(uu, new bu)
+      rotate(GG) {
+        return this.rotateToRef(GG, new pG)
       }
-      rotateToRef(uu, Eu) {
-        const ju = Math.cos(uu),
-          su = Math.sin(uu);
-        return Eu.x = ju * this.x - su * this.y, Eu.y = su * this.x + ju * this.y, Eu
+      rotateToRef(GG, bG) {
+        const ZG = Math.cos(GG),
+          wG = Math.sin(GG);
+        return bG.x = ZG * this.x - wG * this.y, bG.y = wG * this.x + ZG * this.y, bG
       }
       length() {
         return Math.sqrt(this.x * this.x + this.y * this.y)
@@ -343,359 +343,359 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      normalizeFromLength(uu) {
-        return 0 === uu || 1 === uu ? this : this.scaleInPlace(1 / uu)
+      normalizeFromLength(GG) {
+        return 0 === GG || 1 === GG ? this : this.scaleInPlace(1 / GG)
       }
       normalizeToNew() {
-        const uu = new bu;
-        return this.normalizeToRef(uu), uu
+        const GG = new pG;
+        return this.normalizeToRef(GG), GG
       }
-      normalizeToRef(uu) {
-        const Eu = this.length();
-        return 0 === Eu || 1 === Eu ? (uu.x = this.x, uu.y = this.y, uu) : this.scaleToRef(1 / Eu, uu)
+      normalizeToRef(GG) {
+        const bG = this.length();
+        return 0 === bG || 1 === bG ? (GG.x = this.x, GG.y = this.y, GG) : this.scaleToRef(1 / bG, GG)
       }
       clone() {
-        return new bu(this.x, this.y)
+        return new pG(this.x, this.y)
       }
-      dot(uu) {
-        return this.x * uu.x + this.y * uu.y
+      dot(GG) {
+        return this.x * GG.x + this.y * GG.y
       }
       static Zero() {
-        return new bu(0, 0)
+        return new pG(0, 0)
       }
       static One() {
-        return new bu(1, 1)
+        return new pG(1, 1)
       }
       static Random() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new bu((0, lu.RandomRange)(uu, Eu), (0, lu.RandomRange)(uu, Eu))
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new pG((0, kG.RandomRange)(GG, bG), (0, kG.RandomRange)(GG, bG))
       }
       static RandomToRef() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return (arguments.length > 2 ? arguments[2] : void 0).T6((0, lu.RandomRange)(uu, Eu), (0, lu.RandomRange)(uu, Eu))
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return (arguments.length > 2 ? arguments[2] : void 0).fGG((0, kG.RandomRange)(GG, bG), (0, kG.RandomRange)(GG, bG))
       }
       static get ZeroReadOnly() {
-        return bu._ZeroReadOnly
+        return pG._ZeroReadOnly
       }
-      static FromArray(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new bu(uu[Eu], uu[Eu + 1])
+      static FromArray(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new pG(GG[bG], GG[bG + 1])
       }
-      static FromArrayToRef(uu, Eu, ju) {
-        return ju.x = uu[Eu], ju.y = uu[Eu + 1], ju
+      static FromArrayToRef(GG, bG, ZG) {
+        return ZG.x = GG[bG], ZG.y = GG[bG + 1], ZG
       }
-      static FromFloatsToRef(uu, Eu, ju) {
-        return ju.T6(uu, Eu), ju
+      static FromFloatsToRef(GG, bG, ZG) {
+        return ZG.fGG(GG, bG), ZG
       }
-      static CatmullRom(uu, Eu, ju, su, Uu) {
-        const Zu = Uu * Uu,
-          Xu = Uu * Zu,
-          lu = .5 * (2 * Eu.x + (-uu.x + ju.x) * Uu + (2 * uu.x - 5 * Eu.x + 4 * ju.x - su.x) * Zu + (-uu.x + 3 * Eu.x - 3 * ju.x + su.x) * Xu),
-          qu = .5 * (2 * Eu.y + (-uu.y + ju.y) * Uu + (2 * uu.y - 5 * Eu.y + 4 * ju.y - su.y) * Zu + (-uu.y + 3 * Eu.y - 3 * ju.y + su.y) * Xu);
-        return new bu(lu, qu)
+      static CatmullRom(GG, bG, ZG, wG, SG) {
+        const LG = SG * SG,
+          yG = SG * LG,
+          kG = .5 * (2 * bG.x + (-GG.x + ZG.x) * SG + (2 * GG.x - 5 * bG.x + 4 * ZG.x - wG.x) * LG + (-GG.x + 3 * bG.x - 3 * ZG.x + wG.x) * yG),
+          UG = .5 * (2 * bG.y + (-GG.y + ZG.y) * SG + (2 * GG.y - 5 * bG.y + 4 * ZG.y - wG.y) * LG + (-GG.y + 3 * bG.y - 3 * ZG.y + wG.y) * yG);
+        return new pG(kG, UG)
       }
-      static ClampToRef(uu, Eu, ju, su) {
-        return su.x = (0, lu.Clamp)(uu.x, Eu.x, ju.x), su.y = (0, lu.Clamp)(uu.y, Eu.y, ju.y), su
+      static ClampToRef(GG, bG, ZG, wG) {
+        return wG.x = (0, kG.Clamp)(GG.x, bG.x, ZG.x), wG.y = (0, kG.Clamp)(GG.y, bG.y, ZG.y), wG
       }
-      static Clamp(uu, Eu, ju) {
-        const su = (0, lu.Clamp)(uu.x, Eu.x, ju.x),
-          Uu = (0, lu.Clamp)(uu.y, Eu.y, ju.y);
-        return new bu(su, Uu)
+      static Clamp(GG, bG, ZG) {
+        const wG = (0, kG.Clamp)(GG.x, bG.x, ZG.x),
+          SG = (0, kG.Clamp)(GG.y, bG.y, ZG.y);
+        return new pG(wG, SG)
       }
-      static Hermite(uu, Eu, ju, su, Uu) {
-        const Zu = Uu * Uu,
-          Xu = Uu * Zu,
-          lu = 2 * Xu - 3 * Zu + 1,
-          qu = -2 * Xu + 3 * Zu,
-          fu = Xu - 2 * Zu + Uu,
-          Cu = Xu - Zu,
-          cu = uu.x * lu + ju.x * qu + Eu.x * fu + su.x * Cu,
-          Nu = uu.y * lu + ju.y * qu + Eu.y * fu + su.y * Cu;
-        return new bu(cu, Nu)
+      static Hermite(GG, bG, ZG, wG, SG) {
+        const LG = SG * SG,
+          yG = SG * LG,
+          kG = 2 * yG - 3 * LG + 1,
+          UG = -2 * yG + 3 * LG,
+          YG = yG - 2 * LG + SG,
+          VG = yG - LG,
+          fG = GG.x * kG + ZG.x * UG + bG.x * YG + wG.x * VG,
+          QG = GG.y * kG + ZG.y * UG + bG.y * YG + wG.y * VG;
+        return new pG(fG, QG)
       }
-      static Hermite1stDerivative(uu, Eu, ju, su, Uu) {
-        return this.Hermite1stDerivativeToRef(uu, Eu, ju, su, Uu, new bu)
+      static Hermite1stDerivative(GG, bG, ZG, wG, SG) {
+        return this.Hermite1stDerivativeToRef(GG, bG, ZG, wG, SG, new pG)
       }
-      static Hermite1stDerivativeToRef(uu, Eu, ju, su, Uu, Zu) {
-        const Xu = Uu * Uu;
-        return Zu.x = 6 * (Xu - Uu) * uu.x + (3 * Xu - 4 * Uu + 1) * Eu.x + 6 * (-Xu + Uu) * ju.x + (3 * Xu - 2 * Uu) * su.x, Zu.y = 6 * (Xu - Uu) * uu.y + (3 * Xu - 4 * Uu + 1) * Eu.y + 6 * (-Xu + Uu) * ju.y + (3 * Xu - 2 * Uu) * su.y, Zu
+      static Hermite1stDerivativeToRef(GG, bG, ZG, wG, SG, LG) {
+        const yG = SG * SG;
+        return LG.x = 6 * (yG - SG) * GG.x + (3 * yG - 4 * SG + 1) * bG.x + 6 * (-yG + SG) * ZG.x + (3 * yG - 2 * SG) * wG.x, LG.y = 6 * (yG - SG) * GG.y + (3 * yG - 4 * SG + 1) * bG.y + 6 * (-yG + SG) * ZG.y + (3 * yG - 2 * SG) * wG.y, LG
       }
-      static Lerp(uu, Eu, ju) {
-        return bu.LerpToRef(uu, Eu, ju, new bu)
+      static Lerp(GG, bG, ZG) {
+        return pG.LerpToRef(GG, bG, ZG, new pG)
       }
-      static LerpToRef(uu, Eu, ju, su) {
-        return su.x = uu.x + (Eu.x - uu.x) * ju, su.y = uu.y + (Eu.y - uu.y) * ju, su
+      static LerpToRef(GG, bG, ZG, wG) {
+        return wG.x = GG.x + (bG.x - GG.x) * ZG, wG.y = GG.y + (bG.y - GG.y) * ZG, wG
       }
-      static Dot(uu, Eu) {
-        return uu.x * Eu.x + uu.y * Eu.y
+      static Dot(GG, bG) {
+        return GG.x * bG.x + GG.y * bG.y
       }
-      static Normalize(uu) {
-        return bu.NormalizeToRef(uu, new bu)
+      static Normalize(GG) {
+        return pG.NormalizeToRef(GG, new pG)
       }
-      static NormalizeToRef(uu, Eu) {
-        return uu.normalizeToRef(Eu), Eu
+      static NormalizeToRef(GG, bG) {
+        return GG.normalizeToRef(bG), bG
       }
-      static Minimize(uu, Eu) {
-        const ju = uu.x < Eu.x ? uu.x : Eu.x,
-          su = uu.y < Eu.y ? uu.y : Eu.y;
-        return new bu(ju, su)
+      static Minimize(GG, bG) {
+        const ZG = GG.x < bG.x ? GG.x : bG.x,
+          wG = GG.y < bG.y ? GG.y : bG.y;
+        return new pG(ZG, wG)
       }
-      static Maximize(uu, Eu) {
-        const ju = uu.x > Eu.x ? uu.x : Eu.x,
-          su = uu.y > Eu.y ? uu.y : Eu.y;
-        return new bu(ju, su)
+      static Maximize(GG, bG) {
+        const ZG = GG.x > bG.x ? GG.x : bG.x,
+          wG = GG.y > bG.y ? GG.y : bG.y;
+        return new pG(ZG, wG)
       }
-      static Transform(uu, Eu) {
-        return bu.TransformToRef(uu, Eu, new bu)
+      static Transform(GG, bG) {
+        return pG.TransformToRef(GG, bG, new pG)
       }
-      static TransformToRef(uu, Eu, ju) {
-        const su = Eu.m,
-          Uu = uu.x * su[0] + uu.y * su[4] + su[12],
-          Zu = uu.x * su[1] + uu.y * su[5] + su[13];
-        return ju.x = Uu, ju.y = Zu, ju
+      static TransformToRef(GG, bG, ZG) {
+        const wG = bG.m,
+          SG = GG.x * wG[0] + GG.y * wG[4] + wG[12],
+          LG = GG.x * wG[1] + GG.y * wG[5] + wG[13];
+        return ZG.x = SG, ZG.y = LG, ZG
       }
-      static PointInTriangle(uu, Eu, ju, su) {
-        const Uu = .5 * (-ju.y * su.x + Eu.y * (-ju.x + su.x) + Eu.x * (ju.y - su.y) + ju.x * su.y),
-          Zu = Uu < 0 ? -1 : 1,
-          Xu = (Eu.y * su.x - Eu.x * su.y + (su.y - Eu.y) * uu.x + (Eu.x - su.x) * uu.y) * Zu,
-          lu = (Eu.x * ju.y - Eu.y * ju.x + (Eu.y - ju.y) * uu.x + (ju.x - Eu.x) * uu.y) * Zu;
-        return Xu > 0 && lu > 0 && Xu + lu < 2 * Uu * Zu
+      static PointInTriangle(GG, bG, ZG, wG) {
+        const SG = .5 * (-ZG.y * wG.x + bG.y * (-ZG.x + wG.x) + bG.x * (ZG.y - wG.y) + ZG.x * wG.y),
+          LG = SG < 0 ? -1 : 1,
+          yG = (bG.y * wG.x - bG.x * wG.y + (wG.y - bG.y) * GG.x + (bG.x - wG.x) * GG.y) * LG,
+          kG = (bG.x * ZG.y - bG.y * ZG.x + (bG.y - ZG.y) * GG.x + (ZG.x - bG.x) * GG.y) * LG;
+        return yG > 0 && kG > 0 && yG + kG < 2 * SG * LG
       }
-      static Distance(uu, Eu) {
-        return Math.sqrt(bu.DistanceSquared(uu, Eu))
+      static Distance(GG, bG) {
+        return Math.sqrt(pG.DistanceSquared(GG, bG))
       }
-      static DistanceSquared(uu, Eu) {
-        const ju = uu.x - Eu.x,
-          su = uu.y - Eu.y;
-        return ju * ju + su * su
+      static DistanceSquared(GG, bG) {
+        const ZG = GG.x - bG.x,
+          wG = GG.y - bG.y;
+        return ZG * ZG + wG * wG
       }
-      static Center(uu, Eu) {
-        return bu.CenterToRef(uu, Eu, new bu)
+      static Center(GG, bG) {
+        return pG.CenterToRef(GG, bG, new pG)
       }
-      static CenterToRef(uu, Eu, ju) {
-        return ju.T6((uu.x + Eu.x) / 2, (uu.y + Eu.y) / 2)
+      static CenterToRef(GG, bG, ZG) {
+        return ZG.fGG((GG.x + bG.x) / 2, (GG.y + bG.y) / 2)
       }
-      static DistanceOfPointFromSegment(uu, Eu, ju) {
-        const su = bu.DistanceSquared(Eu, ju);
-        if (0 === su) return bu.Distance(uu, Eu);
-        const Uu = ju.subtract(Eu),
-          Zu = Math.max(0, Math.min(1, bu.Dot(uu.subtract(Eu), Uu) / su)),
-          Xu = Eu.add(Uu.multiplyByFloats(Zu, Zu));
-        return bu.Distance(uu, Xu)
+      static DistanceOfPointFromSegment(GG, bG, ZG) {
+        const wG = pG.DistanceSquared(bG, ZG);
+        if (0 === wG) return pG.Distance(GG, bG);
+        const SG = ZG.subtract(bG),
+          LG = Math.max(0, Math.min(1, pG.Dot(GG.subtract(bG), SG) / wG)),
+          yG = bG.add(SG.multiplyByFloats(LG, LG));
+        return pG.Distance(GG, yG)
       }
     }
-    bu._V8PerformanceHack = new bu(.5, .5), bu._ZeroReadOnly = bu.Zero();
-    class cu {
+    pG._V8PerformanceHack = new pG(.5, .5), pG._ZeroReadOnly = pG.Zero();
+    class fG {
       get x() {
         return this._x
       }
-      set x(uu) {
-        this._x = uu, this._isDirty = !0
+      set x(GG) {
+        this._x = GG, this._isDirty = !0
       }
       get y() {
         return this._y
       }
-      set y(uu) {
-        this._y = uu, this._isDirty = !0
+      set y(GG) {
+        this._y = GG, this._isDirty = !0
       }
       get z() {
         return this._z
       }
-      set z(uu) {
-        this._z = uu, this._isDirty = !0
+      set z(GG) {
+        this._z = GG, this._isDirty = !0
       }
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this._isDirty = !0, this._x = uu, this._y = Eu, this._z = ju
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this._isDirty = !0, this._x = GG, this._y = bG, this._z = ZG
       }
       toString() {
         return `{X: ${this._x} Y: ${this._y} Z: ${this._z}}`
       }
       getClassName() {
-        return "dO"
+        return "mK"
       }
       getHashCode() {
-        let uu = Cu(this._x);
-        return uu = 397 * uu ^ Cu(this._y), uu = 397 * uu ^ Cu(this._z), uu
+        let GG = VG(this._x);
+        return GG = 397 * GG ^ VG(this._y), GG = 397 * GG ^ VG(this._z), GG
       }
-      Osu() {
+      mwG() {
         return [this._x, this._y, this._z]
       }
-      toArray(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return uu[Eu] = this._x, uu[Eu + 1] = this._y, uu[Eu + 2] = this._z, this
+      toArray(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return GG[bG] = this._x, GG[bG + 1] = this._y, GG[bG + 2] = this._z, this
       }
-      sju(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return cu.FromArrayToRef(uu, Eu, this), this
+      hZG(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return fG.FromArrayToRef(GG, bG, this), this
       }
       toQuaternion() {
-        return Ou.RotationYawPitchRoll(this._y, this._x, this._z)
+        return KG.RotationYawPitchRoll(this._y, this._x, this._z)
       }
-      addInPlace(uu) {
-        return this._x += uu._x, this._y += uu._y, this._z += uu._z, this._isDirty = !0, this
+      addInPlace(GG) {
+        return this._x += GG._x, this._y += GG._y, this._z += GG._z, this._isDirty = !0, this
       }
-      addInPlaceFromFloats(uu, Eu, ju) {
-        return this._x += uu, this._y += Eu, this._z += ju, this._isDirty = !0, this
+      addInPlaceFromFloats(GG, bG, ZG) {
+        return this._x += GG, this._y += bG, this._z += ZG, this._isDirty = !0, this
       }
-      add(uu) {
-        return new cu(this._x + uu._x, this._y + uu._y, this._z + uu._z)
+      add(GG) {
+        return new fG(this._x + GG._x, this._y + GG._y, this._z + GG._z)
       }
-      addToRef(uu, Eu) {
-        return Eu._x = this._x + uu._x, Eu._y = this._y + uu._y, Eu._z = this._z + uu._z, Eu._isDirty = !0, Eu
+      addToRef(GG, bG) {
+        return bG._x = this._x + GG._x, bG._y = this._y + GG._y, bG._z = this._z + GG._z, bG._isDirty = !0, bG
       }
-      Qsu(uu) {
-        return this._x -= uu._x, this._y -= uu._y, this._z -= uu._z, this._isDirty = !0, this
+      twG(GG) {
+        return this._x -= GG._x, this._y -= GG._y, this._z -= GG._z, this._isDirty = !0, this
       }
-      subtract(uu) {
-        return new cu(this._x - uu._x, this._y - uu._y, this._z - uu._z)
+      subtract(GG) {
+        return new fG(this._x - GG._x, this._y - GG._y, this._z - GG._z)
       }
-      subtractToRef(uu, Eu) {
-        return this.subtractFromFloatsToRef(uu._x, uu._y, uu._z, Eu)
+      subtractToRef(GG, bG) {
+        return this.subtractFromFloatsToRef(GG._x, GG._y, GG._z, bG)
       }
-      subtractFromFloats(uu, Eu, ju) {
-        return new cu(this._x - uu, this._y - Eu, this._z - ju)
+      subtractFromFloats(GG, bG, ZG) {
+        return new fG(this._x - GG, this._y - bG, this._z - ZG)
       }
-      subtractFromFloatsToRef(uu, Eu, ju, su) {
-        return su._x = this._x - uu, su._y = this._y - Eu, su._z = this._z - ju, su._isDirty = !0, su
+      subtractFromFloatsToRef(GG, bG, ZG, wG) {
+        return wG._x = this._x - GG, wG._y = this._y - bG, wG._z = this._z - ZG, wG._isDirty = !0, wG
       }
-      nZ() {
-        return new cu(-this._x, -this._y, -this._z)
+      By() {
+        return new fG(-this._x, -this._y, -this._z)
       }
       negateInPlace() {
         return this._x *= -1, this._y *= -1, this._z *= -1, this._isDirty = !0, this
       }
-      negateToRef(uu) {
-        return uu._x = -1 * this._x, uu._y = -1 * this._y, uu._z = -1 * this._z, uu._isDirty = !0, uu
+      negateToRef(GG) {
+        return GG._x = -1 * this._x, GG._y = -1 * this._y, GG._z = -1 * this._z, GG._isDirty = !0, GG
       }
-      scaleInPlace(uu) {
-        return this._x *= uu, this._y *= uu, this._z *= uu, this._isDirty = !0, this
+      scaleInPlace(GG) {
+        return this._x *= GG, this._y *= GG, this._z *= GG, this._isDirty = !0, this
       }
-      scale(uu) {
-        return new cu(this._x * uu, this._y * uu, this._z * uu)
+      scale(GG) {
+        return new fG(this._x * GG, this._y * GG, this._z * GG)
       }
-      scaleToRef(uu, Eu) {
-        return Eu._x = this._x * uu, Eu._y = this._y * uu, Eu._z = this._z * uu, Eu._isDirty = !0, Eu
+      scaleToRef(GG, bG) {
+        return bG._x = this._x * GG, bG._y = this._y * GG, bG._z = this._z * GG, bG._isDirty = !0, bG
       }
-      getNormalToRef(uu) {
-        const Eu = this.length();
-        let ju = Math.acos(this._y / Eu);
-        const su = Math.atan2(this._z, this._x);
-        ju > Math.PI / 2 ? ju -= Math.PI / 2 : ju += Math.PI / 2;
-        const Uu = Eu * Math.sin(ju) * Math.cos(su),
-          Zu = Eu * Math.cos(ju),
-          Xu = Eu * Math.sin(ju) * Math.sin(su);
-        return uu.set(Uu, Zu, Xu), uu
+      getNormalToRef(GG) {
+        const bG = this.length();
+        let ZG = Math.acos(this._y / bG);
+        const wG = Math.atan2(this._z, this._x);
+        ZG > Math.PI / 2 ? ZG -= Math.PI / 2 : ZG += Math.PI / 2;
+        const SG = bG * Math.sin(ZG) * Math.cos(wG),
+          LG = bG * Math.cos(ZG),
+          yG = bG * Math.sin(ZG) * Math.sin(wG);
+        return GG.set(SG, LG, yG), GG
       }
-      applyRotationQuaternionToRef(uu, Eu) {
-        const ju = this._x,
-          su = this._y,
-          Uu = this._z,
-          Zu = uu._x,
-          Xu = uu._y,
-          lu = uu._z,
-          qu = uu._w,
-          fu = 2 * (Xu * Uu - lu * su),
-          Cu = 2 * (lu * ju - Zu * Uu),
-          bu = 2 * (Zu * su - Xu * ju);
-        return Eu._x = ju + qu * fu + Xu * bu - lu * Cu, Eu._y = su + qu * Cu + lu * fu - Zu * bu, Eu._z = Uu + qu * bu + Zu * Cu - Xu * fu, Eu._isDirty = !0, Eu
+      applyRotationQuaternionToRef(GG, bG) {
+        const ZG = this._x,
+          wG = this._y,
+          SG = this._z,
+          LG = GG._x,
+          yG = GG._y,
+          kG = GG._z,
+          UG = GG._w,
+          YG = 2 * (yG * SG - kG * wG),
+          VG = 2 * (kG * ZG - LG * SG),
+          pG = 2 * (LG * wG - yG * ZG);
+        return bG._x = ZG + UG * YG + yG * pG - kG * VG, bG._y = wG + UG * VG + kG * YG - LG * pG, bG._z = SG + UG * pG + LG * VG - yG * YG, bG._isDirty = !0, bG
       }
-      applyRotationQuaternionInPlace(uu) {
-        return this.applyRotationQuaternionToRef(uu, this)
+      applyRotationQuaternionInPlace(GG) {
+        return this.applyRotationQuaternionToRef(GG, this)
       }
-      applyRotationQuaternion(uu) {
-        return this.applyRotationQuaternionToRef(uu, new cu)
+      applyRotationQuaternion(GG) {
+        return this.applyRotationQuaternionToRef(GG, new fG)
       }
-      scaleAndAddToRef(uu, Eu) {
-        return Eu._x += this._x * uu, Eu._y += this._y * uu, Eu._z += this._z * uu, Eu._isDirty = !0, Eu
+      scaleAndAddToRef(GG, bG) {
+        return bG._x += this._x * GG, bG._y += this._y * GG, bG._z += this._z * GG, bG._isDirty = !0, bG
       }
-      projectOnPlane(uu, Eu) {
-        return this.projectOnPlaneToRef(uu, Eu, new cu)
+      projectOnPlane(GG, bG) {
+        return this.projectOnPlaneToRef(GG, bG, new fG)
       }
-      projectOnPlaneToRef(uu, Eu, ju) {
-        const su = uu.normal,
-          Uu = uu.d,
-          Zu = hu.dO[0];
-        this.subtractToRef(Eu, Zu), Zu.normalize();
-        const Xu = cu.Dot(Zu, su);
-        if (Math.abs(Xu) < 1e-10) ju.k_(1 / 0);
+      projectOnPlaneToRef(GG, bG, ZG) {
+        const wG = GG.normal,
+          SG = GG.d,
+          LG = dG.mK[0];
+        this.subtractToRef(bG, LG), LG.normalize();
+        const yG = fG.Dot(LG, wG);
+        if (Math.abs(yG) < 1e-10) ZG.N7(1 / 0);
         else {
-          const uu = -(cu.Dot(Eu, su) + Uu) / Xu,
-            lu = Zu.scaleInPlace(uu);
-          Eu.addToRef(lu, ju)
+          const GG = -(fG.Dot(bG, wG) + SG) / yG,
+            kG = LG.scaleInPlace(GG);
+          bG.addToRef(kG, ZG)
         }
-        return ju
+        return ZG
       }
-      equals(uu) {
-        return uu && this._x === uu._x && this._y === uu._y && this._z === uu._z
+      equals(GG) {
+        return GG && this._x === GG._x && this._y === GG._y && this._z === GG._z
       }
-      equalsWithEpsilon(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : su.c;
-        return uu && (0, lu.WithinEpsilon)(this._x, uu._x, Eu) && (0, lu.WithinEpsilon)(this._y, uu._y, Eu) && (0, lu.WithinEpsilon)(this._z, uu._z, Eu)
+      equalsWithEpsilon(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wG.d;
+        return GG && (0, kG.WithinEpsilon)(this._x, GG._x, bG) && (0, kG.WithinEpsilon)(this._y, GG._y, bG) && (0, kG.WithinEpsilon)(this._z, GG._z, bG)
       }
-      BXu(uu, Eu, ju) {
-        return this._x === uu && this._y === Eu && this._z === ju
+      ZkG(GG, bG, ZG) {
+        return this._x === GG && this._y === bG && this._z === ZG
       }
-      multiplyInPlace(uu) {
-        return this._x *= uu._x, this._y *= uu._y, this._z *= uu._z, this._isDirty = !0, this
+      multiplyInPlace(GG) {
+        return this._x *= GG._x, this._y *= GG._y, this._z *= GG._z, this._isDirty = !0, this
       }
-      multiply(uu) {
-        return this.multiplyByFloats(uu._x, uu._y, uu._z)
+      multiply(GG) {
+        return this.multiplyByFloats(GG._x, GG._y, GG._z)
       }
-      multiplyToRef(uu, Eu) {
-        return Eu._x = this._x * uu._x, Eu._y = this._y * uu._y, Eu._z = this._z * uu._z, Eu._isDirty = !0, Eu
+      multiplyToRef(GG, bG) {
+        return bG._x = this._x * GG._x, bG._y = this._y * GG._y, bG._z = this._z * GG._z, bG._isDirty = !0, bG
       }
-      multiplyByFloats(uu, Eu, ju) {
-        return new cu(this._x * uu, this._y * Eu, this._z * ju)
+      multiplyByFloats(GG, bG, ZG) {
+        return new fG(this._x * GG, this._y * bG, this._z * ZG)
       }
-      divide(uu) {
-        return new cu(this._x / uu._x, this._y / uu._y, this._z / uu._z)
+      divide(GG) {
+        return new fG(this._x / GG._x, this._y / GG._y, this._z / GG._z)
       }
-      divideToRef(uu, Eu) {
-        return Eu._x = this._x / uu._x, Eu._y = this._y / uu._y, Eu._z = this._z / uu._z, Eu._isDirty = !0, Eu
+      divideToRef(GG, bG) {
+        return bG._x = this._x / GG._x, bG._y = this._y / GG._y, bG._z = this._z / GG._z, bG._isDirty = !0, bG
       }
-      divideInPlace(uu) {
-        return this._x = this._x / uu._x, this._y = this._y / uu._y, this._z = this._z / uu._z, this._isDirty = !0, this
+      divideInPlace(GG) {
+        return this._x = this._x / GG._x, this._y = this._y / GG._y, this._z = this._z / GG._z, this._isDirty = !0, this
       }
-      minimizeInPlace(uu) {
-        return this.minimizeInPlaceFromFloats(uu._x, uu._y, uu._z)
+      minimizeInPlace(GG) {
+        return this.minimizeInPlaceFromFloats(GG._x, GG._y, GG._z)
       }
-      maximizeInPlace(uu) {
-        return this.maximizeInPlaceFromFloats(uu._x, uu._y, uu._z)
+      maximizeInPlace(GG) {
+        return this.maximizeInPlaceFromFloats(GG._x, GG._y, GG._z)
       }
-      minimizeInPlaceFromFloats(uu, Eu, ju) {
-        return uu < this._x && (this.x = uu), Eu < this._y && (this.y = Eu), ju < this._z && (this.z = ju), this
+      minimizeInPlaceFromFloats(GG, bG, ZG) {
+        return GG < this._x && (this.x = GG), bG < this._y && (this.y = bG), ZG < this._z && (this.z = ZG), this
       }
-      maximizeInPlaceFromFloats(uu, Eu, ju) {
-        return uu > this._x && (this.x = uu), Eu > this._y && (this.y = Eu), ju > this._z && (this.z = ju), this
+      maximizeInPlaceFromFloats(GG, bG, ZG) {
+        return GG > this._x && (this.x = GG), bG > this._y && (this.y = bG), ZG > this._z && (this.z = ZG), this
       }
-      isNonUniformWithinEpsilon(uu) {
-        const Eu = Math.abs(this._x),
-          ju = Math.abs(this._y);
-        if (!(0, lu.WithinEpsilon)(Eu, ju, uu)) return !0;
-        const su = Math.abs(this._z);
-        return !(0, lu.WithinEpsilon)(Eu, su, uu) || !(0, lu.WithinEpsilon)(ju, su, uu)
+      isNonUniformWithinEpsilon(GG) {
+        const bG = Math.abs(this._x),
+          ZG = Math.abs(this._y);
+        if (!(0, kG.WithinEpsilon)(bG, ZG, GG)) return !0;
+        const wG = Math.abs(this._z);
+        return !(0, kG.WithinEpsilon)(bG, wG, GG) || !(0, kG.WithinEpsilon)(ZG, wG, GG)
       }
       get isNonUniform() {
-        const uu = Math.abs(this._x);
-        if (uu !== Math.abs(this._y)) return !0;
-        return uu !== Math.abs(this._z)
+        const GG = Math.abs(this._x);
+        if (GG !== Math.abs(this._y)) return !0;
+        return GG !== Math.abs(this._z)
       }
-      floorToRef(uu) {
-        return uu._x = Math.floor(this._x), uu._y = Math.floor(this._y), uu._z = Math.floor(this._z), uu._isDirty = !0, uu
+      floorToRef(GG) {
+        return GG._x = Math.floor(this._x), GG._y = Math.floor(this._y), GG._z = Math.floor(this._z), GG._isDirty = !0, GG
       }
       floor() {
-        return new cu(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z))
+        return new fG(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z))
       }
-      fractToRef(uu) {
-        return uu._x = this._x - Math.floor(this._x), uu._y = this._y - Math.floor(this._y), uu._z = this._z - Math.floor(this._z), uu._isDirty = !0, uu
+      fractToRef(GG) {
+        return GG._x = this._x - Math.floor(this._x), GG._y = this._y - Math.floor(this._y), GG._z = this._z - Math.floor(this._z), GG._isDirty = !0, GG
       }
       fract() {
-        return new cu(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z))
+        return new fG(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z))
       }
       length() {
         return Math.sqrt(this.lengthSquared())
@@ -709,438 +709,438 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      reorderInPlace(uu) {
-        if ("xyz" === (uu = uu.toLowerCase())) return this;
-        const Eu = hu.dO[0].yJ(this);
-        return this.x = Eu[uu[0]], this.y = Eu[uu[1]], this.z = Eu[uu[2]], this
+      reorderInPlace(GG) {
+        if ("xyz" === (GG = GG.toLowerCase())) return this;
+        const bG = dG.mK[0].oW(this);
+        return this.x = bG[GG[0]], this.y = bG[GG[1]], this.z = bG[GG[2]], this
       }
-      rotateByQuaternionToRef(uu, Eu) {
-        return uu.toRotationMatrix(hu.Matrix[0]), cu.TransformCoordinatesToRef(this, hu.Matrix[0], Eu), Eu
+      rotateByQuaternionToRef(GG, bG) {
+        return GG.toRotationMatrix(dG.Matrix[0]), fG.TransformCoordinatesToRef(this, dG.Matrix[0], bG), bG
       }
-      rotateByQuaternionAroundPointToRef(uu, Eu, ju) {
-        return this.subtractToRef(Eu, hu.dO[0]), hu.dO[0].rotateByQuaternionToRef(uu, hu.dO[0]), Eu.addToRef(hu.dO[0], ju), ju
+      rotateByQuaternionAroundPointToRef(GG, bG, ZG) {
+        return this.subtractToRef(bG, dG.mK[0]), dG.mK[0].rotateByQuaternionToRef(GG, dG.mK[0]), bG.addToRef(dG.mK[0], ZG), ZG
       }
-      cross(uu) {
-        return cu.CrossToRef(this, uu, new cu)
+      cross(GG) {
+        return fG.CrossToRef(this, GG, new fG)
       }
-      normalizeFromLength(uu) {
-        return 0 === uu || 1 === uu ? this : this.scaleInPlace(1 / uu)
+      normalizeFromLength(GG) {
+        return 0 === GG || 1 === GG ? this : this.scaleInPlace(1 / GG)
       }
       normalizeToNew() {
-        return this.normalizeToRef(new cu)
+        return this.normalizeToRef(new fG)
       }
-      normalizeToRef(uu) {
-        const Eu = this.length();
-        return 0 === Eu || 1 === Eu ? (uu._x = this._x, uu._y = this._y, uu._z = this._z, uu._isDirty = !0, uu) : this.scaleToRef(1 / Eu, uu)
+      normalizeToRef(GG) {
+        const bG = this.length();
+        return 0 === bG || 1 === bG ? (GG._x = this._x, GG._y = this._y, GG._z = this._z, GG._isDirty = !0, GG) : this.scaleToRef(1 / bG, GG)
       }
       clone() {
-        return new cu(this._x, this._y, this._z)
+        return new fG(this._x, this._y, this._z)
       }
-      yJ(uu) {
-        return this.T6(uu._x, uu._y, uu._z)
+      oW(GG) {
+        return this.fGG(GG._x, GG._y, GG._z)
       }
-      T6(uu, Eu, ju) {
-        return this._x = uu, this._y = Eu, this._z = ju, this._isDirty = !0, this
+      fGG(GG, bG, ZG) {
+        return this._x = GG, this._y = bG, this._z = ZG, this._isDirty = !0, this
       }
-      set(uu, Eu, ju) {
-        return this.T6(uu, Eu, ju)
+      set(GG, bG, ZG) {
+        return this.fGG(GG, bG, ZG)
       }
-      k_(uu) {
-        return this._x = this._y = this._z = uu, this._isDirty = !0, this
+      N7(GG) {
+        return this._x = this._y = this._z = GG, this._isDirty = !0, this
       }
-      static GetClipFactor(uu, Eu, ju, su) {
-        const Uu = cu.Dot(uu, ju);
-        return (Uu - su) / (Uu - cu.Dot(Eu, ju))
+      static GetClipFactor(GG, bG, ZG, wG) {
+        const SG = fG.Dot(GG, ZG);
+        return (SG - wG) / (SG - fG.Dot(bG, ZG))
       }
-      static GetAngleBetweenVectors(uu, Eu, ju) {
-        const su = uu.normalizeToRef(hu.dO[1]),
-          Uu = Eu.normalizeToRef(hu.dO[2]);
-        let Zu = cu.Dot(su, Uu);
-        Zu = (0, lu.Clamp)(Zu, -1, 1);
-        const Xu = Math.acos(Zu),
-          qu = hu.dO[3];
-        return cu.CrossToRef(su, Uu, qu), cu.Dot(qu, ju) > 0 ? isNaN(Xu) ? 0 : Xu : isNaN(Xu) ? -Math.PI : -Math.acos(Zu)
+      static GetAngleBetweenVectors(GG, bG, ZG) {
+        const wG = GG.normalizeToRef(dG.mK[1]),
+          SG = bG.normalizeToRef(dG.mK[2]);
+        let LG = fG.Dot(wG, SG);
+        LG = (0, kG.Clamp)(LG, -1, 1);
+        const yG = Math.acos(LG),
+          UG = dG.mK[3];
+        return fG.CrossToRef(wG, SG, UG), fG.Dot(UG, ZG) > 0 ? isNaN(yG) ? 0 : yG : isNaN(yG) ? -Math.PI : -Math.acos(LG)
       }
-      static GetAngleBetweenVectorsOnPlane(uu, Eu, ju) {
-        hu.dO[0].yJ(uu);
-        const su = hu.dO[0];
-        hu.dO[1].yJ(Eu);
-        const Uu = hu.dO[1];
-        hu.dO[2].yJ(ju);
-        const Zu = hu.dO[2],
-          Xu = hu.dO[3],
-          qu = hu.dO[4];
-        su.normalize(), Uu.normalize(), Zu.normalize(), cu.CrossToRef(Zu, su, Xu), cu.CrossToRef(Xu, Zu, qu);
-        const fu = Math.atan2(cu.Dot(Uu, Xu), cu.Dot(Uu, qu));
-        return (0, lu.NormalizeRadians)(fu)
+      static GetAngleBetweenVectorsOnPlane(GG, bG, ZG) {
+        dG.mK[0].oW(GG);
+        const wG = dG.mK[0];
+        dG.mK[1].oW(bG);
+        const SG = dG.mK[1];
+        dG.mK[2].oW(ZG);
+        const LG = dG.mK[2],
+          yG = dG.mK[3],
+          UG = dG.mK[4];
+        wG.normalize(), SG.normalize(), LG.normalize(), fG.CrossToRef(LG, wG, yG), fG.CrossToRef(yG, LG, UG);
+        const YG = Math.atan2(fG.Dot(SG, yG), fG.Dot(SG, UG));
+        return (0, kG.NormalizeRadians)(YG)
       }
-      static PitchYawRollToMoveBetweenPointsToRef(uu, Eu, ju) {
-        const su = Du.dO[0];
-        return Eu.subtractToRef(uu, su), ju._y = Math.atan2(su.x, su.z) || 0, ju._x = Math.atan2(Math.sqrt(su.x ** 2 + su.z ** 2), su.y) || 0, ju._z = 0, ju._isDirty = !0, ju
+      static PitchYawRollToMoveBetweenPointsToRef(GG, bG, ZG) {
+        const wG = JG.mK[0];
+        return bG.subtractToRef(GG, wG), ZG._y = Math.atan2(wG.x, wG.z) || 0, ZG._x = Math.atan2(Math.sqrt(wG.x ** 2 + wG.z ** 2), wG.y) || 0, ZG._z = 0, ZG._isDirty = !0, ZG
       }
-      static PitchYawRollToMoveBetweenPoints(uu, Eu) {
-        const ju = cu.Zero();
-        return cu.PitchYawRollToMoveBetweenPointsToRef(uu, Eu, ju)
+      static PitchYawRollToMoveBetweenPoints(GG, bG) {
+        const ZG = fG.Zero();
+        return fG.PitchYawRollToMoveBetweenPointsToRef(GG, bG, ZG)
       }
-      static SlerpToRef(uu, Eu, ju, Uu) {
-        ju = (0, lu.Clamp)(ju, 0, 1);
-        const Zu = hu.dO[0],
-          Xu = hu.dO[1];
-        Zu.yJ(uu);
-        const qu = Zu.length();
-        Zu.normalizeFromLength(qu), Xu.yJ(Eu);
-        const fu = Xu.length();
-        Xu.normalizeFromLength(fu);
-        const Cu = cu.Dot(Zu, Xu);
-        let bu, Nu;
-        if (Cu < 1 - su.c) {
-          const uu = Math.acos(Cu),
-            Eu = 1 / Math.sin(uu);
-          bu = Math.sin((1 - ju) * uu) * Eu, Nu = Math.sin(ju * uu) * Eu
-        } else bu = 1 - ju, Nu = ju;
-        return Zu.scaleInPlace(bu), Xu.scaleInPlace(Nu), Uu.yJ(Zu).addInPlace(Xu), Uu.scaleInPlace((0, lu.Lerp)(qu, fu, ju)), Uu
+      static SlerpToRef(GG, bG, ZG, SG) {
+        ZG = (0, kG.Clamp)(ZG, 0, 1);
+        const LG = dG.mK[0],
+          yG = dG.mK[1];
+        LG.oW(GG);
+        const UG = LG.length();
+        LG.normalizeFromLength(UG), yG.oW(bG);
+        const YG = yG.length();
+        yG.normalizeFromLength(YG);
+        const VG = fG.Dot(LG, yG);
+        let pG, QG;
+        if (VG < 1 - wG.d) {
+          const GG = Math.acos(VG),
+            bG = 1 / Math.sin(GG);
+          pG = Math.sin((1 - ZG) * GG) * bG, QG = Math.sin(ZG * GG) * bG
+        } else pG = 1 - ZG, QG = ZG;
+        return LG.scaleInPlace(pG), yG.scaleInPlace(QG), SG.oW(LG).addInPlace(yG), SG.scaleInPlace((0, kG.Lerp)(UG, YG, ZG)), SG
       }
-      static SmoothToRef(uu, Eu, ju, su, Uu) {
-        return cu.SlerpToRef(uu, Eu, 0 === su ? 1 : ju / su, Uu), Uu
+      static SmoothToRef(GG, bG, ZG, wG, SG) {
+        return fG.SlerpToRef(GG, bG, 0 === wG ? 1 : ZG / wG, SG), SG
       }
-      static FromArray(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new cu(uu[Eu], uu[Eu + 1], uu[Eu + 2])
+      static FromArray(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new fG(GG[bG], GG[bG + 1], GG[bG + 2])
       }
-      static FromFloatArray(uu, Eu) {
-        return cu.FromArray(uu, Eu)
+      static FromFloatArray(GG, bG) {
+        return fG.FromArray(GG, bG)
       }
-      static FromArrayToRef(uu, Eu, ju) {
-        return ju._x = uu[Eu], ju._y = uu[Eu + 1], ju._z = uu[Eu + 2], ju._isDirty = !0, ju
+      static FromArrayToRef(GG, bG, ZG) {
+        return ZG._x = GG[bG], ZG._y = GG[bG + 1], ZG._z = GG[bG + 2], ZG._isDirty = !0, ZG
       }
-      static FromFloatArrayToRef(uu, Eu, ju) {
-        return cu.FromArrayToRef(uu, Eu, ju)
+      static FromFloatArrayToRef(GG, bG, ZG) {
+        return fG.FromArrayToRef(GG, bG, ZG)
       }
-      static FromFloatsToRef(uu, Eu, ju, su) {
-        return su.T6(uu, Eu, ju), su
+      static FromFloatsToRef(GG, bG, ZG, wG) {
+        return wG.fGG(GG, bG, ZG), wG
       }
       static Zero() {
-        return new cu(0, 0, 0)
+        return new fG(0, 0, 0)
       }
       static One() {
-        return new cu(1, 1, 1)
+        return new fG(1, 1, 1)
       }
       static Up() {
-        return new cu(0, 1, 0)
+        return new fG(0, 1, 0)
       }
       static get UpReadOnly() {
-        return cu._UpReadOnly
+        return fG._UpReadOnly
       }
       static get DownReadOnly() {
-        return cu._DownReadOnly
+        return fG._DownReadOnly
       }
       static get RightReadOnly() {
-        return cu._RightReadOnly
+        return fG._RightReadOnly
       }
       static get LeftReadOnly() {
-        return cu._LeftReadOnly
+        return fG._LeftReadOnly
       }
       static get LeftHandedForwardReadOnly() {
-        return cu._LeftHandedForwardReadOnly
+        return fG._LeftHandedForwardReadOnly
       }
       static get RightHandedForwardReadOnly() {
-        return cu._RightHandedForwardReadOnly
+        return fG._RightHandedForwardReadOnly
       }
       static get LeftHandedBackwardReadOnly() {
-        return cu._LeftHandedBackwardReadOnly
+        return fG._LeftHandedBackwardReadOnly
       }
       static get RightHandedBackwardReadOnly() {
-        return cu._RightHandedBackwardReadOnly
+        return fG._RightHandedBackwardReadOnly
       }
       static get ZeroReadOnly() {
-        return cu._ZeroReadOnly
+        return fG._ZeroReadOnly
       }
       static get OneReadOnly() {
-        return cu._OneReadOnly
+        return fG._OneReadOnly
       }
       static Down() {
-        return new cu(0, -1, 0)
+        return new fG(0, -1, 0)
       }
       static Forward() {
-        return new cu(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? -1 : 1)
+        return new fG(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? -1 : 1)
       }
       static Backward() {
-        return new cu(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? 1 : -1)
+        return new fG(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? 1 : -1)
       }
       static Right() {
-        return new cu(1, 0, 0)
+        return new fG(1, 0, 0)
       }
       static Left() {
-        return new cu(-1, 0, 0)
+        return new fG(-1, 0, 0)
       }
       static Random() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new cu((0, lu.RandomRange)(uu, Eu), (0, lu.RandomRange)(uu, Eu), (0, lu.RandomRange)(uu, Eu))
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new fG((0, kG.RandomRange)(GG, bG), (0, kG.RandomRange)(GG, bG), (0, kG.RandomRange)(GG, bG))
       }
       static RandomToRef() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return (arguments.length > 2 ? arguments[2] : void 0).T6((0, lu.RandomRange)(uu, Eu), (0, lu.RandomRange)(uu, Eu), (0, lu.RandomRange)(uu, Eu))
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return (arguments.length > 2 ? arguments[2] : void 0).fGG((0, kG.RandomRange)(GG, bG), (0, kG.RandomRange)(GG, bG), (0, kG.RandomRange)(GG, bG))
       }
-      static TransformCoordinates(uu, Eu) {
-        const ju = cu.Zero();
-        return cu.TransformCoordinatesToRef(uu, Eu, ju), ju
+      static TransformCoordinates(GG, bG) {
+        const ZG = fG.Zero();
+        return fG.TransformCoordinatesToRef(GG, bG, ZG), ZG
       }
-      static TransformCoordinatesToRef(uu, Eu, ju) {
-        return cu.TransformCoordinatesFromFloatsToRef(uu._x, uu._y, uu._z, Eu, ju), ju
+      static TransformCoordinatesToRef(GG, bG, ZG) {
+        return fG.TransformCoordinatesFromFloatsToRef(GG._x, GG._y, GG._z, bG, ZG), ZG
       }
-      static TransformCoordinatesFromFloatsToRef(uu, Eu, ju, su, Uu) {
-        const Zu = su.m,
-          Xu = uu * Zu[0] + Eu * Zu[4] + ju * Zu[8] + Zu[12],
-          lu = uu * Zu[1] + Eu * Zu[5] + ju * Zu[9] + Zu[13],
-          qu = uu * Zu[2] + Eu * Zu[6] + ju * Zu[10] + Zu[14],
-          fu = 1 / (uu * Zu[3] + Eu * Zu[7] + ju * Zu[11] + Zu[15]);
-        return Uu._x = Xu * fu, Uu._y = lu * fu, Uu._z = qu * fu, Uu._isDirty = !0, Uu
+      static TransformCoordinatesFromFloatsToRef(GG, bG, ZG, wG, SG) {
+        const LG = wG.m,
+          yG = GG * LG[0] + bG * LG[4] + ZG * LG[8] + LG[12],
+          kG = GG * LG[1] + bG * LG[5] + ZG * LG[9] + LG[13],
+          UG = GG * LG[2] + bG * LG[6] + ZG * LG[10] + LG[14],
+          YG = 1 / (GG * LG[3] + bG * LG[7] + ZG * LG[11] + LG[15]);
+        return SG._x = yG * YG, SG._y = kG * YG, SG._z = UG * YG, SG._isDirty = !0, SG
       }
-      static TransformNormal(uu, Eu) {
-        const ju = cu.Zero();
-        return cu.TransformNormalToRef(uu, Eu, ju), ju
+      static TransformNormal(GG, bG) {
+        const ZG = fG.Zero();
+        return fG.TransformNormalToRef(GG, bG, ZG), ZG
       }
-      static TransformNormalToRef(uu, Eu, ju) {
-        return this.TransformNormalFromFloatsToRef(uu._x, uu._y, uu._z, Eu, ju), ju
+      static TransformNormalToRef(GG, bG, ZG) {
+        return this.TransformNormalFromFloatsToRef(GG._x, GG._y, GG._z, bG, ZG), ZG
       }
-      static TransformNormalFromFloatsToRef(uu, Eu, ju, su, Uu) {
-        const Zu = su.m;
-        return Uu._x = uu * Zu[0] + Eu * Zu[4] + ju * Zu[8], Uu._y = uu * Zu[1] + Eu * Zu[5] + ju * Zu[9], Uu._z = uu * Zu[2] + Eu * Zu[6] + ju * Zu[10], Uu._isDirty = !0, Uu
+      static TransformNormalFromFloatsToRef(GG, bG, ZG, wG, SG) {
+        const LG = wG.m;
+        return SG._x = GG * LG[0] + bG * LG[4] + ZG * LG[8], SG._y = GG * LG[1] + bG * LG[5] + ZG * LG[9], SG._z = GG * LG[2] + bG * LG[6] + ZG * LG[10], SG._isDirty = !0, SG
       }
-      static CatmullRom(uu, Eu, ju, su, Uu) {
-        const Zu = Uu * Uu,
-          Xu = Uu * Zu,
-          lu = .5 * (2 * Eu._x + (-uu._x + ju._x) * Uu + (2 * uu._x - 5 * Eu._x + 4 * ju._x - su._x) * Zu + (-uu._x + 3 * Eu._x - 3 * ju._x + su._x) * Xu),
-          qu = .5 * (2 * Eu._y + (-uu._y + ju._y) * Uu + (2 * uu._y - 5 * Eu._y + 4 * ju._y - su._y) * Zu + (-uu._y + 3 * Eu._y - 3 * ju._y + su._y) * Xu),
-          fu = .5 * (2 * Eu._z + (-uu._z + ju._z) * Uu + (2 * uu._z - 5 * Eu._z + 4 * ju._z - su._z) * Zu + (-uu._z + 3 * Eu._z - 3 * ju._z + su._z) * Xu);
-        return new cu(lu, qu, fu)
+      static CatmullRom(GG, bG, ZG, wG, SG) {
+        const LG = SG * SG,
+          yG = SG * LG,
+          kG = .5 * (2 * bG._x + (-GG._x + ZG._x) * SG + (2 * GG._x - 5 * bG._x + 4 * ZG._x - wG._x) * LG + (-GG._x + 3 * bG._x - 3 * ZG._x + wG._x) * yG),
+          UG = .5 * (2 * bG._y + (-GG._y + ZG._y) * SG + (2 * GG._y - 5 * bG._y + 4 * ZG._y - wG._y) * LG + (-GG._y + 3 * bG._y - 3 * ZG._y + wG._y) * yG),
+          YG = .5 * (2 * bG._z + (-GG._z + ZG._z) * SG + (2 * GG._z - 5 * bG._z + 4 * ZG._z - wG._z) * LG + (-GG._z + 3 * bG._z - 3 * ZG._z + wG._z) * yG);
+        return new fG(kG, UG, YG)
       }
-      static Clamp(uu, Eu, ju) {
-        const su = new cu;
-        return cu.ClampToRef(uu, Eu, ju, su), su
+      static Clamp(GG, bG, ZG) {
+        const wG = new fG;
+        return fG.ClampToRef(GG, bG, ZG, wG), wG
       }
-      static ClampToRef(uu, Eu, ju, su) {
-        let Uu = uu._x;
-        Uu = Uu > ju._x ? ju._x : Uu, Uu = Uu < Eu._x ? Eu._x : Uu;
-        let Zu = uu._y;
-        Zu = Zu > ju._y ? ju._y : Zu, Zu = Zu < Eu._y ? Eu._y : Zu;
-        let Xu = uu._z;
-        return Xu = Xu > ju._z ? ju._z : Xu, Xu = Xu < Eu._z ? Eu._z : Xu, su.T6(Uu, Zu, Xu), su
+      static ClampToRef(GG, bG, ZG, wG) {
+        let SG = GG._x;
+        SG = SG > ZG._x ? ZG._x : SG, SG = SG < bG._x ? bG._x : SG;
+        let LG = GG._y;
+        LG = LG > ZG._y ? ZG._y : LG, LG = LG < bG._y ? bG._y : LG;
+        let yG = GG._z;
+        return yG = yG > ZG._z ? ZG._z : yG, yG = yG < bG._z ? bG._z : yG, wG.fGG(SG, LG, yG), wG
       }
-      static CheckExtends(uu, Eu, ju) {
-        Eu.minimizeInPlace(uu), ju.maximizeInPlace(uu)
+      static CheckExtends(GG, bG, ZG) {
+        bG.minimizeInPlace(GG), ZG.maximizeInPlace(GG)
       }
-      static Hermite(uu, Eu, ju, su, Uu) {
-        const Zu = Uu * Uu,
-          Xu = Uu * Zu,
-          lu = 2 * Xu - 3 * Zu + 1,
-          qu = -2 * Xu + 3 * Zu,
-          fu = Xu - 2 * Zu + Uu,
-          Cu = Xu - Zu,
-          bu = uu._x * lu + ju._x * qu + Eu._x * fu + su._x * Cu,
-          Nu = uu._y * lu + ju._y * qu + Eu._y * fu + su._y * Cu,
-          Ou = uu._z * lu + ju._z * qu + Eu._z * fu + su._z * Cu;
-        return new cu(bu, Nu, Ou)
+      static Hermite(GG, bG, ZG, wG, SG) {
+        const LG = SG * SG,
+          yG = SG * LG,
+          kG = 2 * yG - 3 * LG + 1,
+          UG = -2 * yG + 3 * LG,
+          YG = yG - 2 * LG + SG,
+          VG = yG - LG,
+          pG = GG._x * kG + ZG._x * UG + bG._x * YG + wG._x * VG,
+          QG = GG._y * kG + ZG._y * UG + bG._y * YG + wG._y * VG,
+          KG = GG._z * kG + ZG._z * UG + bG._z * YG + wG._z * VG;
+        return new fG(pG, QG, KG)
       }
-      static Hermite1stDerivative(uu, Eu, ju, su, Uu) {
-        const Zu = new cu;
-        return this.Hermite1stDerivativeToRef(uu, Eu, ju, su, Uu, Zu), Zu
+      static Hermite1stDerivative(GG, bG, ZG, wG, SG) {
+        const LG = new fG;
+        return this.Hermite1stDerivativeToRef(GG, bG, ZG, wG, SG, LG), LG
       }
-      static Hermite1stDerivativeToRef(uu, Eu, ju, su, Uu, Zu) {
-        const Xu = Uu * Uu;
-        return Zu._x = 6 * (Xu - Uu) * uu._x + (3 * Xu - 4 * Uu + 1) * Eu._x + 6 * (-Xu + Uu) * ju._x + (3 * Xu - 2 * Uu) * su._x, Zu._y = 6 * (Xu - Uu) * uu._y + (3 * Xu - 4 * Uu + 1) * Eu._y + 6 * (-Xu + Uu) * ju._y + (3 * Xu - 2 * Uu) * su._y, Zu._z = 6 * (Xu - Uu) * uu._z + (3 * Xu - 4 * Uu + 1) * Eu._z + 6 * (-Xu + Uu) * ju._z + (3 * Xu - 2 * Uu) * su._z, Zu._isDirty = !0, Zu
+      static Hermite1stDerivativeToRef(GG, bG, ZG, wG, SG, LG) {
+        const yG = SG * SG;
+        return LG._x = 6 * (yG - SG) * GG._x + (3 * yG - 4 * SG + 1) * bG._x + 6 * (-yG + SG) * ZG._x + (3 * yG - 2 * SG) * wG._x, LG._y = 6 * (yG - SG) * GG._y + (3 * yG - 4 * SG + 1) * bG._y + 6 * (-yG + SG) * ZG._y + (3 * yG - 2 * SG) * wG._y, LG._z = 6 * (yG - SG) * GG._z + (3 * yG - 4 * SG + 1) * bG._z + 6 * (-yG + SG) * ZG._z + (3 * yG - 2 * SG) * wG._z, LG._isDirty = !0, LG
       }
-      static Lerp(uu, Eu, ju) {
-        const su = new cu(0, 0, 0);
-        return cu.LerpToRef(uu, Eu, ju, su), su
+      static Lerp(GG, bG, ZG) {
+        const wG = new fG(0, 0, 0);
+        return fG.LerpToRef(GG, bG, ZG, wG), wG
       }
-      static LerpToRef(uu, Eu, ju, su) {
-        return su._x = uu._x + (Eu._x - uu._x) * ju, su._y = uu._y + (Eu._y - uu._y) * ju, su._z = uu._z + (Eu._z - uu._z) * ju, su._isDirty = !0, su
+      static LerpToRef(GG, bG, ZG, wG) {
+        return wG._x = GG._x + (bG._x - GG._x) * ZG, wG._y = GG._y + (bG._y - GG._y) * ZG, wG._z = GG._z + (bG._z - GG._z) * ZG, wG._isDirty = !0, wG
       }
-      static Dot(uu, Eu) {
-        return uu._x * Eu._x + uu._y * Eu._y + uu._z * Eu._z
+      static Dot(GG, bG) {
+        return GG._x * bG._x + GG._y * bG._y + GG._z * bG._z
       }
-      dot(uu) {
-        return this._x * uu._x + this._y * uu._y + this._z * uu._z
+      dot(GG) {
+        return this._x * GG._x + this._y * GG._y + this._z * GG._z
       }
-      static Cross(uu, Eu) {
-        const ju = new cu;
-        return cu.CrossToRef(uu, Eu, ju), ju
+      static Cross(GG, bG) {
+        const ZG = new fG;
+        return fG.CrossToRef(GG, bG, ZG), ZG
       }
-      static CrossToRef(uu, Eu, ju) {
-        const su = uu._y * Eu._z - uu._z * Eu._y,
-          Uu = uu._z * Eu._x - uu._x * Eu._z,
-          Zu = uu._x * Eu._y - uu._y * Eu._x;
-        return ju.T6(su, Uu, Zu), ju
+      static CrossToRef(GG, bG, ZG) {
+        const wG = GG._y * bG._z - GG._z * bG._y,
+          SG = GG._z * bG._x - GG._x * bG._z,
+          LG = GG._x * bG._y - GG._y * bG._x;
+        return ZG.fGG(wG, SG, LG), ZG
       }
-      static Normalize(uu) {
-        const Eu = cu.Zero();
-        return cu.NormalizeToRef(uu, Eu), Eu
+      static Normalize(GG) {
+        const bG = fG.Zero();
+        return fG.NormalizeToRef(GG, bG), bG
       }
-      static NormalizeToRef(uu, Eu) {
-        return uu.normalizeToRef(Eu), Eu
+      static NormalizeToRef(GG, bG) {
+        return GG.normalizeToRef(bG), bG
       }
-      static Project(uu, Eu, ju, su) {
-        const Uu = new cu;
-        return cu.ProjectToRef(uu, Eu, ju, su, Uu), Uu
+      static Project(GG, bG, ZG, wG) {
+        const SG = new fG;
+        return fG.ProjectToRef(GG, bG, ZG, wG, SG), SG
       }
-      static ProjectToRef(uu, Eu, ju, su, Uu) {
-        const Zu = su.width,
-          lu = su.height,
-          qu = su.x,
-          fu = su.y,
-          Cu = hu.Matrix[1],
-          bu = Xu.b.LastCreatedEngine?.isNDCHalfZRange,
-          Nu = bu ? 1 : .5,
-          Ou = bu ? 0 : .5;
-        Yu.FromValuesToRef(Zu / 2, 0, 0, 0, 0, -lu / 2, 0, 0, 0, 0, Nu, 0, qu + Zu / 2, lu / 2 + fu, Ou, 1, Cu);
-        const Du = hu.Matrix[0];
-        return Eu.multiplyToRef(ju, Du), Du.multiplyToRef(Cu, Du), cu.TransformCoordinatesToRef(uu, Du, Uu), Uu
+      static ProjectToRef(GG, bG, ZG, wG, SG) {
+        const LG = wG.width,
+          kG = wG.height,
+          UG = wG.x,
+          YG = wG.y,
+          VG = dG.Matrix[1],
+          pG = yG.c.LastCreatedEngine?.isNDCHalfZRange,
+          QG = pG ? 1 : .5,
+          KG = pG ? 0 : .5;
+        hG.FromValuesToRef(LG / 2, 0, 0, 0, 0, -kG / 2, 0, 0, 0, 0, QG, 0, UG + LG / 2, kG / 2 + YG, KG, 1, VG);
+        const JG = dG.Matrix[0];
+        return bG.multiplyToRef(ZG, JG), JG.multiplyToRef(VG, JG), fG.TransformCoordinatesToRef(GG, JG, SG), SG
       }
-      static Reflect(uu, Eu) {
-        return this.ReflectToRef(uu, Eu, new cu)
+      static Reflect(GG, bG) {
+        return this.ReflectToRef(GG, bG, new fG)
       }
-      static ReflectToRef(uu, Eu, ju) {
-        const su = Du.dO[0];
-        return su.yJ(Eu).scaleInPlace(2 * cu.Dot(uu, Eu)), ju.yJ(uu).Qsu(su)
+      static ReflectToRef(GG, bG, ZG) {
+        const wG = JG.mK[0];
+        return wG.oW(bG).scaleInPlace(2 * fG.Dot(GG, bG)), ZG.oW(GG).twG(wG)
       }
-      static UnprojectFromTransform(uu, Eu, ju, su, Uu) {
-        return this.Unproject(uu, Eu, ju, su, Uu, Yu.IdentityReadOnly)
+      static UnprojectFromTransform(GG, bG, ZG, wG, SG) {
+        return this.Unproject(GG, bG, ZG, wG, SG, hG.IdentityReadOnly)
       }
-      static Unproject(uu, Eu, ju, su, Uu, Zu) {
-        const Xu = new cu;
-        return cu.UnprojectToRef(uu, Eu, ju, su, Uu, Zu, Xu), Xu
+      static Unproject(GG, bG, ZG, wG, SG, LG) {
+        const yG = new fG;
+        return fG.UnprojectToRef(GG, bG, ZG, wG, SG, LG, yG), yG
       }
-      static UnprojectToRef(uu, Eu, ju, su, Uu, Zu, Xu) {
-        return cu.UnprojectFloatsToRef(uu._x, uu._y, uu._z, Eu, ju, su, Uu, Zu, Xu), Xu
+      static UnprojectToRef(GG, bG, ZG, wG, SG, LG, yG) {
+        return fG.UnprojectFloatsToRef(GG._x, GG._y, GG._z, bG, ZG, wG, SG, LG, yG), yG
       }
-      static UnprojectFloatsToRef(uu, Eu, ju, su, Uu, Zu, lu, qu, fu) {
-        const Cu = hu.Matrix[0];
-        Zu.multiplyToRef(lu, Cu), Cu.multiplyToRef(qu, Cu), Cu.invert();
-        const bu = hu.dO[0];
-        return bu.x = uu / su * 2 - 1, bu.y = -(Eu / Uu * 2 - 1), Xu.b.LastCreatedEngine?.isNDCHalfZRange ? bu.z = ju : bu.z = 2 * ju - 1, cu.TransformCoordinatesToRef(bu, Cu, fu), fu
+      static UnprojectFloatsToRef(GG, bG, ZG, wG, SG, LG, kG, UG, YG) {
+        const VG = dG.Matrix[0];
+        LG.multiplyToRef(kG, VG), VG.multiplyToRef(UG, VG), VG.invert();
+        const pG = dG.mK[0];
+        return pG.x = GG / wG * 2 - 1, pG.y = -(bG / SG * 2 - 1), yG.c.LastCreatedEngine?.isNDCHalfZRange ? pG.z = ZG : pG.z = 2 * ZG - 1, fG.TransformCoordinatesToRef(pG, VG, YG), YG
       }
-      static Minimize(uu, Eu) {
-        const ju = new cu;
-        return ju.yJ(uu), ju.minimizeInPlace(Eu), ju
+      static Minimize(GG, bG) {
+        const ZG = new fG;
+        return ZG.oW(GG), ZG.minimizeInPlace(bG), ZG
       }
-      static Maximize(uu, Eu) {
-        const ju = new cu;
-        return ju.yJ(uu), ju.maximizeInPlace(Eu), ju
+      static Maximize(GG, bG) {
+        const ZG = new fG;
+        return ZG.oW(GG), ZG.maximizeInPlace(bG), ZG
       }
-      static Distance(uu, Eu) {
-        return Math.sqrt(cu.DistanceSquared(uu, Eu))
+      static Distance(GG, bG) {
+        return Math.sqrt(fG.DistanceSquared(GG, bG))
       }
-      static DistanceSquared(uu, Eu) {
-        const ju = uu._x - Eu._x,
-          su = uu._y - Eu._y,
-          Uu = uu._z - Eu._z;
-        return ju * ju + su * su + Uu * Uu
+      static DistanceSquared(GG, bG) {
+        const ZG = GG._x - bG._x,
+          wG = GG._y - bG._y,
+          SG = GG._z - bG._z;
+        return ZG * ZG + wG * wG + SG * SG
       }
-      static ProjectOnTriangleToRef(uu, Eu, ju, Uu, Zu) {
-        const Xu = hu.dO[0],
-          qu = hu.dO[1],
-          fu = hu.dO[2],
-          Cu = hu.dO[3],
-          bu = hu.dO[4];
-        ju.subtractToRef(Eu, Xu), Uu.subtractToRef(Eu, qu), Uu.subtractToRef(ju, fu);
-        const Nu = Xu.length(),
-          Ou = qu.length(),
-          Yu = fu.length();
-        if (Nu < su.c || Ou < su.c || Yu < su.c) return Zu.yJ(Eu), cu.Distance(uu, Eu);
-        uu.subtractToRef(Eu, bu), cu.CrossToRef(Xu, qu, Cu);
-        const Du = Cu.length();
-        if (Du < su.c) return Zu.yJ(Eu), cu.Distance(uu, Eu);
-        Cu.normalizeFromLength(Du);
-        let gu = bu.length();
-        if (gu < su.c) return Zu.yJ(Eu), 0;
-        bu.normalizeFromLength(gu);
-        const Mu = cu.Dot(Cu, bu),
-          eu = hu.dO[5],
-          Gu = hu.dO[6];
-        eu.yJ(Cu).scaleInPlace(-gu * Mu), Gu.yJ(uu).addInPlace(eu);
-        const pu = hu.dO[4],
-          wu = hu.dO[5],
-          Ju = hu.dO[7],
-          du = hu.dO[8];
-        pu.yJ(Xu).scaleInPlace(1 / Nu), du.yJ(qu).scaleInPlace(1 / Ou), pu.addInPlace(du).scaleInPlace(-1), wu.yJ(Xu).scaleInPlace(-1 / Nu), du.yJ(fu).scaleInPlace(1 / Yu), wu.addInPlace(du).scaleInPlace(-1), Ju.yJ(fu).scaleInPlace(-1 / Yu), du.yJ(qu).scaleInPlace(-1 / Ou), Ju.addInPlace(du).scaleInPlace(-1);
-        const au = hu.dO[9];
-        let Pu;
-        au.yJ(Gu).Qsu(Eu), cu.CrossToRef(pu, au, du), Pu = cu.Dot(du, Cu);
-        const ou = Pu;
-        au.yJ(Gu).Qsu(ju), cu.CrossToRef(wu, au, du), Pu = cu.Dot(du, Cu);
-        const ku = Pu;
-        au.yJ(Gu).Qsu(Uu), cu.CrossToRef(Ju, au, du), Pu = cu.Dot(du, Cu);
-        const mu = Pu,
-          vu = hu.dO[10];
-        let Ku, Vu;
-        ou > 0 && ku < 0 ? (vu.yJ(Xu), Ku = Eu, Vu = ju) : ku > 0 && mu < 0 ? (vu.yJ(fu), Ku = ju, Vu = Uu) : (vu.yJ(qu).scaleInPlace(-1), Ku = Uu, Vu = Eu);
-        const ru = hu.dO[9],
-          Qu = hu.dO[4];
-        Ku.subtractToRef(Gu, du), Vu.subtractToRef(Gu, ru), cu.CrossToRef(du, ru, Qu);
-        if (!(cu.Dot(Qu, Cu) < 0)) return Zu.yJ(Gu), Math.abs(gu * Mu);
-        const iu = hu.dO[5];
-        cu.CrossToRef(vu, Qu, iu), iu.normalize();
-        const Wu = hu.dO[9];
-        Wu.yJ(Ku).Qsu(Gu);
-        const Su = Wu.length();
-        if (Su < su.c) return Zu.yJ(Ku), cu.Distance(uu, Ku);
-        Wu.normalizeFromLength(Su);
-        const Iu = cu.Dot(iu, Wu),
-          Fu = hu.dO[7];
-        Fu.yJ(Gu).addInPlace(iu.scaleInPlace(Su * Iu)), du.yJ(Fu).Qsu(Ku), gu = vu.length(), vu.normalizeFromLength(gu);
-        let Bu = cu.Dot(du, vu) / Math.max(gu, su.c);
-        return Bu = (0, lu.Clamp)(Bu, 0, 1), Fu.yJ(Ku).addInPlace(vu.scaleInPlace(Bu * gu)), Zu.yJ(Fu), cu.Distance(uu, Fu)
+      static ProjectOnTriangleToRef(GG, bG, ZG, SG, LG) {
+        const yG = dG.mK[0],
+          UG = dG.mK[1],
+          YG = dG.mK[2],
+          VG = dG.mK[3],
+          pG = dG.mK[4];
+        ZG.subtractToRef(bG, yG), SG.subtractToRef(bG, UG), SG.subtractToRef(ZG, YG);
+        const QG = yG.length(),
+          KG = UG.length(),
+          hG = YG.length();
+        if (QG < wG.d || KG < wG.d || hG < wG.d) return LG.oW(bG), fG.Distance(GG, bG);
+        GG.subtractToRef(bG, pG), fG.CrossToRef(yG, UG, VG);
+        const JG = VG.length();
+        if (JG < wG.d) return LG.oW(bG), fG.Distance(GG, bG);
+        VG.normalizeFromLength(JG);
+        let rG = pG.length();
+        if (rG < wG.d) return LG.oW(bG), 0;
+        pG.normalizeFromLength(rG);
+        const zG = fG.Dot(VG, pG),
+          EG = dG.mK[5],
+          oG = dG.mK[6];
+        EG.oW(VG).scaleInPlace(-rG * zG), oG.oW(GG).addInPlace(EG);
+        const XG = dG.mK[4],
+          uG = dG.mK[5],
+          iG = dG.mK[7],
+          CG = dG.mK[8];
+        XG.oW(yG).scaleInPlace(1 / QG), CG.oW(UG).scaleInPlace(1 / KG), XG.addInPlace(CG).scaleInPlace(-1), uG.oW(yG).scaleInPlace(-1 / QG), CG.oW(YG).scaleInPlace(1 / hG), uG.addInPlace(CG).scaleInPlace(-1), iG.oW(YG).scaleInPlace(-1 / hG), CG.oW(UG).scaleInPlace(-1 / KG), iG.addInPlace(CG).scaleInPlace(-1);
+        const WG = dG.mK[9];
+        let mG;
+        WG.oW(oG).twG(bG), fG.CrossToRef(XG, WG, CG), mG = fG.Dot(CG, VG);
+        const IG = mG;
+        WG.oW(oG).twG(ZG), fG.CrossToRef(uG, WG, CG), mG = fG.Dot(CG, VG);
+        const FG = mG;
+        WG.oW(oG).twG(SG), fG.CrossToRef(iG, WG, CG), mG = fG.Dot(CG, VG);
+        const vG = mG,
+          aG = dG.mK[10];
+        let cG, lG;
+        IG > 0 && FG < 0 ? (aG.oW(yG), cG = bG, lG = ZG) : FG > 0 && vG < 0 ? (aG.oW(YG), cG = ZG, lG = SG) : (aG.oW(UG).scaleInPlace(-1), cG = SG, lG = bG);
+        const jG = dG.mK[9],
+          PG = dG.mK[4];
+        cG.subtractToRef(oG, CG), lG.subtractToRef(oG, jG), fG.CrossToRef(CG, jG, PG);
+        if (!(fG.Dot(PG, VG) < 0)) return LG.oW(oG), Math.abs(rG * zG);
+        const MG = dG.mK[5];
+        fG.CrossToRef(aG, PG, MG), MG.normalize();
+        const AG = dG.mK[9];
+        AG.oW(cG).twG(oG);
+        const sG = AG.length();
+        if (sG < wG.d) return LG.oW(cG), fG.Distance(GG, cG);
+        AG.normalizeFromLength(sG);
+        const qG = fG.Dot(MG, AG),
+          nG = dG.mK[7];
+        nG.oW(oG).addInPlace(MG.scaleInPlace(sG * qG)), CG.oW(nG).twG(cG), rG = aG.length(), aG.normalizeFromLength(rG);
+        let gG = fG.Dot(CG, aG) / Math.max(rG, wG.d);
+        return gG = (0, kG.Clamp)(gG, 0, 1), nG.oW(cG).addInPlace(aG.scaleInPlace(gG * rG)), LG.oW(nG), fG.Distance(GG, nG)
       }
-      static Center(uu, Eu) {
-        return cu.CenterToRef(uu, Eu, cu.Zero())
+      static Center(GG, bG) {
+        return fG.CenterToRef(GG, bG, fG.Zero())
       }
-      static CenterToRef(uu, Eu, ju) {
-        return ju.T6((uu._x + Eu._x) / 2, (uu._y + Eu._y) / 2, (uu._z + Eu._z) / 2)
+      static CenterToRef(GG, bG, ZG) {
+        return ZG.fGG((GG._x + bG._x) / 2, (GG._y + bG._y) / 2, (GG._z + bG._z) / 2)
       }
-      static RotationFromAxis(uu, Eu, ju) {
-        const su = new cu;
-        return cu.RotationFromAxisToRef(uu, Eu, ju, su), su
+      static RotationFromAxis(GG, bG, ZG) {
+        const wG = new fG;
+        return fG.RotationFromAxisToRef(GG, bG, ZG, wG), wG
       }
-      static RotationFromAxisToRef(uu, Eu, ju, su) {
-        const Uu = hu.Quaternion[0];
-        return Ou.RotationQuaternionFromAxisToRef(uu, Eu, ju, Uu), Uu.toEulerAnglesToRef(su), su
+      static RotationFromAxisToRef(GG, bG, ZG, wG) {
+        const SG = dG.Quaternion[0];
+        return KG.RotationQuaternionFromAxisToRef(GG, bG, ZG, SG), SG.toEulerAnglesToRef(wG), wG
       }
     }
-    cu._V8PerformanceHack = new cu(.5, .5, .5), cu._UpReadOnly = cu.Up(), cu._DownReadOnly = cu.Down(), cu._LeftHandedForwardReadOnly = cu.Forward(!1), cu._RightHandedForwardReadOnly = cu.Forward(!0), cu._LeftHandedBackwardReadOnly = cu.Backward(!1), cu._RightHandedBackwardReadOnly = cu.Backward(!0), cu._RightReadOnly = cu.Right(), cu._LeftReadOnly = cu.Left(), cu._ZeroReadOnly = cu.Zero(), cu._OneReadOnly = cu.One();
-    class Nu {
+    fG._V8PerformanceHack = new fG(.5, .5, .5), fG._UpReadOnly = fG.Up(), fG._DownReadOnly = fG.Down(), fG._LeftHandedForwardReadOnly = fG.Forward(!1), fG._RightHandedForwardReadOnly = fG.Forward(!0), fG._LeftHandedBackwardReadOnly = fG.Backward(!1), fG._RightHandedBackwardReadOnly = fG.Backward(!0), fG._RightReadOnly = fG.Right(), fG._LeftReadOnly = fG.Left(), fG._ZeroReadOnly = fG.Zero(), fG._OneReadOnly = fG.One();
+    class QG {
       get x() {
         return this._x
       }
-      set x(uu) {
-        this._x = uu, this._isDirty = !0
+      set x(GG) {
+        this._x = GG, this._isDirty = !0
       }
       get y() {
         return this._y
       }
-      set y(uu) {
-        this._y = uu, this._isDirty = !0
+      set y(GG) {
+        this._y = GG, this._isDirty = !0
       }
       get z() {
         return this._z
       }
-      set z(uu) {
-        this._z = uu, this._isDirty = !0
+      set z(GG) {
+        this._z = GG, this._isDirty = !0
       }
       get w() {
         return this._w
       }
-      set w(uu) {
-        this._w = uu, this._isDirty = !0
+      set w(GG) {
+        this._w = GG, this._isDirty = !0
       }
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this._isDirty = !0, this._x = uu, this._y = Eu, this._z = ju, this._w = su
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this._isDirty = !0, this._x = GG, this._y = bG, this._z = ZG, this._w = wG
       }
       toString() {
         return `{X: ${this._x} Y: ${this._y} Z: ${this._z} W: ${this._w}}`
@@ -1149,121 +1149,121 @@ export const modules = {
         return "Vector4"
       }
       getHashCode() {
-        let uu = Cu(this._x);
-        return uu = 397 * uu ^ Cu(this._y), uu = 397 * uu ^ Cu(this._z), uu = 397 * uu ^ Cu(this._w), uu
+        let GG = VG(this._x);
+        return GG = 397 * GG ^ VG(this._y), GG = 397 * GG ^ VG(this._z), GG = 397 * GG ^ VG(this._w), GG
       }
-      Osu() {
+      mwG() {
         return [this._x, this._y, this._z, this._w]
       }
-      toArray(uu, Eu) {
-        return void 0 === Eu && (Eu = 0), uu[Eu] = this._x, uu[Eu + 1] = this._y, uu[Eu + 2] = this._z, uu[Eu + 3] = this._w, this
+      toArray(GG, bG) {
+        return void 0 === bG && (bG = 0), GG[bG] = this._x, GG[bG + 1] = this._y, GG[bG + 2] = this._z, GG[bG + 3] = this._w, this
       }
-      sju(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Nu.FromArrayToRef(uu, Eu, this), this
+      hZG(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return QG.FromArrayToRef(GG, bG, this), this
       }
-      addInPlace(uu) {
-        return this.x += uu._x, this.y += uu._y, this.z += uu._z, this.w += uu._w, this
+      addInPlace(GG) {
+        return this.x += GG._x, this.y += GG._y, this.z += GG._z, this.w += GG._w, this
       }
-      addInPlaceFromFloats(uu, Eu, ju, su) {
-        return this.x += uu, this.y += Eu, this.z += ju, this.w += su, this
+      addInPlaceFromFloats(GG, bG, ZG, wG) {
+        return this.x += GG, this.y += bG, this.z += ZG, this.w += wG, this
       }
-      add(uu) {
-        return new Nu(this._x + uu.x, this._y + uu.y, this._z + uu.z, this._w + uu.w)
+      add(GG) {
+        return new QG(this._x + GG.x, this._y + GG.y, this._z + GG.z, this._w + GG.w)
       }
-      addToRef(uu, Eu) {
-        return Eu.x = this._x + uu.x, Eu.y = this._y + uu.y, Eu.z = this._z + uu.z, Eu.w = this._w + uu.w, Eu
+      addToRef(GG, bG) {
+        return bG.x = this._x + GG.x, bG.y = this._y + GG.y, bG.z = this._z + GG.z, bG.w = this._w + GG.w, bG
       }
-      Qsu(uu) {
-        return this.x -= uu.x, this.y -= uu.y, this.z -= uu.z, this.w -= uu.w, this
+      twG(GG) {
+        return this.x -= GG.x, this.y -= GG.y, this.z -= GG.z, this.w -= GG.w, this
       }
-      subtract(uu) {
-        return new Nu(this._x - uu.x, this._y - uu.y, this._z - uu.z, this._w - uu.w)
+      subtract(GG) {
+        return new QG(this._x - GG.x, this._y - GG.y, this._z - GG.z, this._w - GG.w)
       }
-      subtractToRef(uu, Eu) {
-        return Eu.x = this._x - uu.x, Eu.y = this._y - uu.y, Eu.z = this._z - uu.z, Eu.w = this._w - uu.w, Eu
+      subtractToRef(GG, bG) {
+        return bG.x = this._x - GG.x, bG.y = this._y - GG.y, bG.z = this._z - GG.z, bG.w = this._w - GG.w, bG
       }
-      subtractFromFloats(uu, Eu, ju, su) {
-        return new Nu(this._x - uu, this._y - Eu, this._z - ju, this._w - su)
+      subtractFromFloats(GG, bG, ZG, wG) {
+        return new QG(this._x - GG, this._y - bG, this._z - ZG, this._w - wG)
       }
-      subtractFromFloatsToRef(uu, Eu, ju, su, Uu) {
-        return Uu.x = this._x - uu, Uu.y = this._y - Eu, Uu.z = this._z - ju, Uu.w = this._w - su, Uu
+      subtractFromFloatsToRef(GG, bG, ZG, wG, SG) {
+        return SG.x = this._x - GG, SG.y = this._y - bG, SG.z = this._z - ZG, SG.w = this._w - wG, SG
       }
-      nZ() {
-        return new Nu(-this._x, -this._y, -this._z, -this._w)
+      By() {
+        return new QG(-this._x, -this._y, -this._z, -this._w)
       }
       negateInPlace() {
         return this.x *= -1, this.y *= -1, this.z *= -1, this.w *= -1, this
       }
-      negateToRef(uu) {
-        return uu.x = -this._x, uu.y = -this._y, uu.z = -this._z, uu.w = -this._w, uu
+      negateToRef(GG) {
+        return GG.x = -this._x, GG.y = -this._y, GG.z = -this._z, GG.w = -this._w, GG
       }
-      scaleInPlace(uu) {
-        return this.x *= uu, this.y *= uu, this.z *= uu, this.w *= uu, this
+      scaleInPlace(GG) {
+        return this.x *= GG, this.y *= GG, this.z *= GG, this.w *= GG, this
       }
-      scale(uu) {
-        return new Nu(this._x * uu, this._y * uu, this._z * uu, this._w * uu)
+      scale(GG) {
+        return new QG(this._x * GG, this._y * GG, this._z * GG, this._w * GG)
       }
-      scaleToRef(uu, Eu) {
-        return Eu.x = this._x * uu, Eu.y = this._y * uu, Eu.z = this._z * uu, Eu.w = this._w * uu, Eu
+      scaleToRef(GG, bG) {
+        return bG.x = this._x * GG, bG.y = this._y * GG, bG.z = this._z * GG, bG.w = this._w * GG, bG
       }
-      scaleAndAddToRef(uu, Eu) {
-        return Eu.x += this._x * uu, Eu.y += this._y * uu, Eu.z += this._z * uu, Eu.w += this._w * uu, Eu
+      scaleAndAddToRef(GG, bG) {
+        return bG.x += this._x * GG, bG.y += this._y * GG, bG.z += this._z * GG, bG.w += this._w * GG, bG
       }
-      equals(uu) {
-        return uu && this._x === uu.x && this._y === uu.y && this._z === uu.z && this._w === uu.w
+      equals(GG) {
+        return GG && this._x === GG.x && this._y === GG.y && this._z === GG.z && this._w === GG.w
       }
-      equalsWithEpsilon(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : su.c;
-        return uu && (0, lu.WithinEpsilon)(this._x, uu.x, Eu) && (0, lu.WithinEpsilon)(this._y, uu.y, Eu) && (0, lu.WithinEpsilon)(this._z, uu.z, Eu) && (0, lu.WithinEpsilon)(this._w, uu.w, Eu)
+      equalsWithEpsilon(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wG.d;
+        return GG && (0, kG.WithinEpsilon)(this._x, GG.x, bG) && (0, kG.WithinEpsilon)(this._y, GG.y, bG) && (0, kG.WithinEpsilon)(this._z, GG.z, bG) && (0, kG.WithinEpsilon)(this._w, GG.w, bG)
       }
-      BXu(uu, Eu, ju, su) {
-        return this._x === uu && this._y === Eu && this._z === ju && this._w === su
+      ZkG(GG, bG, ZG, wG) {
+        return this._x === GG && this._y === bG && this._z === ZG && this._w === wG
       }
-      multiplyInPlace(uu) {
-        return this.x *= uu.x, this.y *= uu.y, this.z *= uu.z, this.w *= uu.w, this
+      multiplyInPlace(GG) {
+        return this.x *= GG.x, this.y *= GG.y, this.z *= GG.z, this.w *= GG.w, this
       }
-      multiply(uu) {
-        return new Nu(this._x * uu.x, this._y * uu.y, this._z * uu.z, this._w * uu.w)
+      multiply(GG) {
+        return new QG(this._x * GG.x, this._y * GG.y, this._z * GG.z, this._w * GG.w)
       }
-      multiplyToRef(uu, Eu) {
-        return Eu.x = this._x * uu.x, Eu.y = this._y * uu.y, Eu.z = this._z * uu.z, Eu.w = this._w * uu.w, Eu
+      multiplyToRef(GG, bG) {
+        return bG.x = this._x * GG.x, bG.y = this._y * GG.y, bG.z = this._z * GG.z, bG.w = this._w * GG.w, bG
       }
-      multiplyByFloats(uu, Eu, ju, su) {
-        return new Nu(this._x * uu, this._y * Eu, this._z * ju, this._w * su)
+      multiplyByFloats(GG, bG, ZG, wG) {
+        return new QG(this._x * GG, this._y * bG, this._z * ZG, this._w * wG)
       }
-      divide(uu) {
-        return new Nu(this._x / uu.x, this._y / uu.y, this._z / uu.z, this._w / uu.w)
+      divide(GG) {
+        return new QG(this._x / GG.x, this._y / GG.y, this._z / GG.z, this._w / GG.w)
       }
-      divideToRef(uu, Eu) {
-        return Eu.x = this._x / uu.x, Eu.y = this._y / uu.y, Eu.z = this._z / uu.z, Eu.w = this._w / uu.w, Eu
+      divideToRef(GG, bG) {
+        return bG.x = this._x / GG.x, bG.y = this._y / GG.y, bG.z = this._z / GG.z, bG.w = this._w / GG.w, bG
       }
-      divideInPlace(uu) {
-        return this.divideToRef(uu, this)
+      divideInPlace(GG) {
+        return this.divideToRef(GG, this)
       }
-      minimizeInPlace(uu) {
-        return uu.x < this._x && (this.x = uu.x), uu.y < this._y && (this.y = uu.y), uu.z < this._z && (this.z = uu.z), uu.w < this._w && (this.w = uu.w), this
+      minimizeInPlace(GG) {
+        return GG.x < this._x && (this.x = GG.x), GG.y < this._y && (this.y = GG.y), GG.z < this._z && (this.z = GG.z), GG.w < this._w && (this.w = GG.w), this
       }
-      maximizeInPlace(uu) {
-        return uu.x > this._x && (this.x = uu.x), uu.y > this._y && (this.y = uu.y), uu.z > this._z && (this.z = uu.z), uu.w > this._w && (this.w = uu.w), this
+      maximizeInPlace(GG) {
+        return GG.x > this._x && (this.x = GG.x), GG.y > this._y && (this.y = GG.y), GG.z > this._z && (this.z = GG.z), GG.w > this._w && (this.w = GG.w), this
       }
-      minimizeInPlaceFromFloats(uu, Eu, ju, su) {
-        return this.x = Math.min(uu, this._x), this.y = Math.min(Eu, this._y), this.z = Math.min(ju, this._z), this.w = Math.min(su, this._w), this
+      minimizeInPlaceFromFloats(GG, bG, ZG, wG) {
+        return this.x = Math.min(GG, this._x), this.y = Math.min(bG, this._y), this.z = Math.min(ZG, this._z), this.w = Math.min(wG, this._w), this
       }
-      maximizeInPlaceFromFloats(uu, Eu, ju, su) {
-        return this.x = Math.max(uu, this._x), this.y = Math.max(Eu, this._y), this.z = Math.max(ju, this._z), this.w = Math.max(su, this._w), this
+      maximizeInPlaceFromFloats(GG, bG, ZG, wG) {
+        return this.x = Math.max(GG, this._x), this.y = Math.max(bG, this._y), this.z = Math.max(ZG, this._z), this.w = Math.max(wG, this._w), this
       }
-      floorToRef(uu) {
-        return uu.x = Math.floor(this._x), uu.y = Math.floor(this._y), uu.z = Math.floor(this._z), uu.w = Math.floor(this._w), uu
+      floorToRef(GG) {
+        return GG.x = Math.floor(this._x), GG.y = Math.floor(this._y), GG.z = Math.floor(this._z), GG.w = Math.floor(this._w), GG
       }
       floor() {
-        return new Nu(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z), Math.floor(this._w))
+        return new QG(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z), Math.floor(this._w))
       }
-      fractToRef(uu) {
-        return uu.x = this._x - Math.floor(this._x), uu.y = this._y - Math.floor(this._y), uu.z = this._z - Math.floor(this._z), uu.w = this._w - Math.floor(this._w), uu
+      fractToRef(GG) {
+        return GG.x = this._x - Math.floor(this._x), GG.y = this._y - Math.floor(this._y), GG.z = this._z - Math.floor(this._z), GG.w = this._w - Math.floor(this._w), GG
       }
       fract() {
-        return new Nu(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z), this._w - Math.floor(this._w))
+        return new QG(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z), this._w - Math.floor(this._w))
       }
       length() {
         return Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z + this._w * this._w)
@@ -1274,176 +1274,176 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      normalizeFromLength(uu) {
-        return 0 === uu || 1 === uu ? this : this.scaleInPlace(1 / uu)
+      normalizeFromLength(GG) {
+        return 0 === GG || 1 === GG ? this : this.scaleInPlace(1 / GG)
       }
       normalizeToNew() {
-        return this.normalizeToRef(new Nu)
+        return this.normalizeToRef(new QG)
       }
-      normalizeToRef(uu) {
-        const Eu = this.length();
-        return 0 === Eu || 1 === Eu ? (uu.x = this._x, uu.y = this._y, uu.z = this._z, uu.w = this._w, uu) : this.scaleToRef(1 / Eu, uu)
+      normalizeToRef(GG) {
+        const bG = this.length();
+        return 0 === bG || 1 === bG ? (GG.x = this._x, GG.y = this._y, GG.z = this._z, GG.w = this._w, GG) : this.scaleToRef(1 / bG, GG)
       }
       toVector3() {
-        return new cu(this._x, this._y, this._z)
+        return new fG(this._x, this._y, this._z)
       }
       clone() {
-        return new Nu(this._x, this._y, this._z, this._w)
+        return new QG(this._x, this._y, this._z, this._w)
       }
-      yJ(uu) {
-        return this.x = uu.x, this.y = uu.y, this.z = uu.z, this.w = uu.w, this
+      oW(GG) {
+        return this.x = GG.x, this.y = GG.y, this.z = GG.z, this.w = GG.w, this
       }
-      T6(uu, Eu, ju, su) {
-        return this.x = uu, this.y = Eu, this.z = ju, this.w = su, this
+      fGG(GG, bG, ZG, wG) {
+        return this.x = GG, this.y = bG, this.z = ZG, this.w = wG, this
       }
-      set(uu, Eu, ju, su) {
-        return this.T6(uu, Eu, ju, su)
+      set(GG, bG, ZG, wG) {
+        return this.fGG(GG, bG, ZG, wG)
       }
-      k_(uu) {
-        return this.x = this.y = this.z = this.w = uu, this
+      N7(GG) {
+        return this.x = this.y = this.z = this.w = GG, this
       }
-      dot(uu) {
-        return this._x * uu.x + this._y * uu.y + this._z * uu.z + this._w * uu.w
+      dot(GG) {
+        return this._x * GG.x + this._y * GG.y + this._z * GG.z + this._w * GG.w
       }
-      static FromArray(uu, Eu) {
-        return Eu || (Eu = 0), new Nu(uu[Eu], uu[Eu + 1], uu[Eu + 2], uu[Eu + 3])
+      static FromArray(GG, bG) {
+        return bG || (bG = 0), new QG(GG[bG], GG[bG + 1], GG[bG + 2], GG[bG + 3])
       }
-      static FromArrayToRef(uu, Eu, ju) {
-        return ju.x = uu[Eu], ju.y = uu[Eu + 1], ju.z = uu[Eu + 2], ju.w = uu[Eu + 3], ju
+      static FromArrayToRef(GG, bG, ZG) {
+        return ZG.x = GG[bG], ZG.y = GG[bG + 1], ZG.z = GG[bG + 2], ZG.w = GG[bG + 3], ZG
       }
-      static FromFloatArrayToRef(uu, Eu, ju) {
-        return Nu.FromArrayToRef(uu, Eu, ju), ju
+      static FromFloatArrayToRef(GG, bG, ZG) {
+        return QG.FromArrayToRef(GG, bG, ZG), ZG
       }
-      static FromFloatsToRef(uu, Eu, ju, su, Uu) {
-        return Uu.x = uu, Uu.y = Eu, Uu.z = ju, Uu.w = su, Uu
+      static FromFloatsToRef(GG, bG, ZG, wG, SG) {
+        return SG.x = GG, SG.y = bG, SG.z = ZG, SG.w = wG, SG
       }
       static Zero() {
-        return new Nu(0, 0, 0, 0)
+        return new QG(0, 0, 0, 0)
       }
       static One() {
-        return new Nu(1, 1, 1, 1)
+        return new QG(1, 1, 1, 1)
       }
       static Random() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new Nu((0, lu.RandomRange)(uu, Eu), (0, lu.RandomRange)(uu, Eu), (0, lu.RandomRange)(uu, Eu), (0, lu.RandomRange)(uu, Eu))
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new QG((0, kG.RandomRange)(GG, bG), (0, kG.RandomRange)(GG, bG), (0, kG.RandomRange)(GG, bG), (0, kG.RandomRange)(GG, bG))
       }
       static RandomToRef() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          ju = arguments.length > 2 ? arguments[2] : void 0;
-        return ju.x = (0, lu.RandomRange)(uu, Eu), ju.y = (0, lu.RandomRange)(uu, Eu), ju.z = (0, lu.RandomRange)(uu, Eu), ju.w = (0, lu.RandomRange)(uu, Eu), ju
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          ZG = arguments.length > 2 ? arguments[2] : void 0;
+        return ZG.x = (0, kG.RandomRange)(GG, bG), ZG.y = (0, kG.RandomRange)(GG, bG), ZG.z = (0, kG.RandomRange)(GG, bG), ZG.w = (0, kG.RandomRange)(GG, bG), ZG
       }
-      static Clamp(uu, Eu, ju) {
-        return Nu.ClampToRef(uu, Eu, ju, new Nu)
+      static Clamp(GG, bG, ZG) {
+        return QG.ClampToRef(GG, bG, ZG, new QG)
       }
-      static ClampToRef(uu, Eu, ju, su) {
-        return su.x = (0, lu.Clamp)(uu.x, Eu.x, ju.x), su.y = (0, lu.Clamp)(uu.y, Eu.y, ju.y), su.z = (0, lu.Clamp)(uu.z, Eu.z, ju.z), su.w = (0, lu.Clamp)(uu.w, Eu.w, ju.w), su
+      static ClampToRef(GG, bG, ZG, wG) {
+        return wG.x = (0, kG.Clamp)(GG.x, bG.x, ZG.x), wG.y = (0, kG.Clamp)(GG.y, bG.y, ZG.y), wG.z = (0, kG.Clamp)(GG.z, bG.z, ZG.z), wG.w = (0, kG.Clamp)(GG.w, bG.w, ZG.w), wG
       }
-      static CheckExtends(uu, Eu, ju) {
-        Eu.minimizeInPlace(uu), ju.maximizeInPlace(uu)
+      static CheckExtends(GG, bG, ZG) {
+        bG.minimizeInPlace(GG), ZG.maximizeInPlace(GG)
       }
       static get ZeroReadOnly() {
-        return Nu._ZeroReadOnly
+        return QG._ZeroReadOnly
       }
-      static Normalize(uu) {
-        return Nu.NormalizeToRef(uu, new Nu)
+      static Normalize(GG) {
+        return QG.NormalizeToRef(GG, new QG)
       }
-      static NormalizeToRef(uu, Eu) {
-        return uu.normalizeToRef(Eu), Eu
+      static NormalizeToRef(GG, bG) {
+        return GG.normalizeToRef(bG), bG
       }
-      static Minimize(uu, Eu) {
-        const ju = new Nu;
-        return ju.yJ(uu), ju.minimizeInPlace(Eu), ju
+      static Minimize(GG, bG) {
+        const ZG = new QG;
+        return ZG.oW(GG), ZG.minimizeInPlace(bG), ZG
       }
-      static Maximize(uu, Eu) {
-        const ju = new Nu;
-        return ju.yJ(uu), ju.maximizeInPlace(Eu), ju
+      static Maximize(GG, bG) {
+        const ZG = new QG;
+        return ZG.oW(GG), ZG.maximizeInPlace(bG), ZG
       }
-      static Distance(uu, Eu) {
-        return Math.sqrt(Nu.DistanceSquared(uu, Eu))
+      static Distance(GG, bG) {
+        return Math.sqrt(QG.DistanceSquared(GG, bG))
       }
-      static DistanceSquared(uu, Eu) {
-        const ju = uu.x - Eu.x,
-          su = uu.y - Eu.y,
-          Uu = uu.z - Eu.z,
-          Zu = uu.w - Eu.w;
-        return ju * ju + su * su + Uu * Uu + Zu * Zu
+      static DistanceSquared(GG, bG) {
+        const ZG = GG.x - bG.x,
+          wG = GG.y - bG.y,
+          SG = GG.z - bG.z,
+          LG = GG.w - bG.w;
+        return ZG * ZG + wG * wG + SG * SG + LG * LG
       }
-      static Center(uu, Eu) {
-        return Nu.CenterToRef(uu, Eu, new Nu)
+      static Center(GG, bG) {
+        return QG.CenterToRef(GG, bG, new QG)
       }
-      static CenterToRef(uu, Eu, ju) {
-        return ju.x = (uu.x + Eu.x) / 2, ju.y = (uu.y + Eu.y) / 2, ju.z = (uu.z + Eu.z) / 2, ju.w = (uu.w + Eu.w) / 2, ju
+      static CenterToRef(GG, bG, ZG) {
+        return ZG.x = (GG.x + bG.x) / 2, ZG.y = (GG.y + bG.y) / 2, ZG.z = (GG.z + bG.z) / 2, ZG.w = (GG.w + bG.w) / 2, ZG
       }
-      static TransformCoordinates(uu, Eu) {
-        return Nu.TransformCoordinatesToRef(uu, Eu, new Nu)
+      static TransformCoordinates(GG, bG) {
+        return QG.TransformCoordinatesToRef(GG, bG, new QG)
       }
-      static TransformCoordinatesToRef(uu, Eu, ju) {
-        return Nu.TransformCoordinatesFromFloatsToRef(uu._x, uu._y, uu._z, Eu, ju), ju
+      static TransformCoordinatesToRef(GG, bG, ZG) {
+        return QG.TransformCoordinatesFromFloatsToRef(GG._x, GG._y, GG._z, bG, ZG), ZG
       }
-      static TransformCoordinatesFromFloatsToRef(uu, Eu, ju, su, Uu) {
-        const Zu = su.m,
-          Xu = uu * Zu[0] + Eu * Zu[4] + ju * Zu[8] + Zu[12],
-          lu = uu * Zu[1] + Eu * Zu[5] + ju * Zu[9] + Zu[13],
-          qu = uu * Zu[2] + Eu * Zu[6] + ju * Zu[10] + Zu[14],
-          fu = uu * Zu[3] + Eu * Zu[7] + ju * Zu[11] + Zu[15];
-        return Uu.x = Xu, Uu.y = lu, Uu.z = qu, Uu.w = fu, Uu
+      static TransformCoordinatesFromFloatsToRef(GG, bG, ZG, wG, SG) {
+        const LG = wG.m,
+          yG = GG * LG[0] + bG * LG[4] + ZG * LG[8] + LG[12],
+          kG = GG * LG[1] + bG * LG[5] + ZG * LG[9] + LG[13],
+          UG = GG * LG[2] + bG * LG[6] + ZG * LG[10] + LG[14],
+          YG = GG * LG[3] + bG * LG[7] + ZG * LG[11] + LG[15];
+        return SG.x = yG, SG.y = kG, SG.z = UG, SG.w = YG, SG
       }
-      static TransformNormal(uu, Eu) {
-        return Nu.TransformNormalToRef(uu, Eu, new Nu)
+      static TransformNormal(GG, bG) {
+        return QG.TransformNormalToRef(GG, bG, new QG)
       }
-      static TransformNormalToRef(uu, Eu, ju) {
-        const su = Eu.m,
-          Uu = uu.x * su[0] + uu.y * su[4] + uu.z * su[8],
-          Zu = uu.x * su[1] + uu.y * su[5] + uu.z * su[9],
-          Xu = uu.x * su[2] + uu.y * su[6] + uu.z * su[10];
-        return ju.x = Uu, ju.y = Zu, ju.z = Xu, ju.w = uu.w, ju
+      static TransformNormalToRef(GG, bG, ZG) {
+        const wG = bG.m,
+          SG = GG.x * wG[0] + GG.y * wG[4] + GG.z * wG[8],
+          LG = GG.x * wG[1] + GG.y * wG[5] + GG.z * wG[9],
+          yG = GG.x * wG[2] + GG.y * wG[6] + GG.z * wG[10];
+        return ZG.x = SG, ZG.y = LG, ZG.z = yG, ZG.w = GG.w, ZG
       }
-      static TransformNormalFromFloatsToRef(uu, Eu, ju, su, Uu, Zu) {
-        const Xu = Uu.m;
-        return Zu.x = uu * Xu[0] + Eu * Xu[4] + ju * Xu[8], Zu.y = uu * Xu[1] + Eu * Xu[5] + ju * Xu[9], Zu.z = uu * Xu[2] + Eu * Xu[6] + ju * Xu[10], Zu.w = su, Zu
+      static TransformNormalFromFloatsToRef(GG, bG, ZG, wG, SG, LG) {
+        const yG = SG.m;
+        return LG.x = GG * yG[0] + bG * yG[4] + ZG * yG[8], LG.y = GG * yG[1] + bG * yG[5] + ZG * yG[9], LG.z = GG * yG[2] + bG * yG[6] + ZG * yG[10], LG.w = wG, LG
       }
-      static FromVector3(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new Nu(uu._x, uu._y, uu._z, Eu)
+      static FromVector3(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new QG(GG._x, GG._y, GG._z, bG)
       }
-      static Dot(uu, Eu) {
-        return uu.x * Eu.x + uu.y * Eu.y + uu.z * Eu.z + uu.w * Eu.w
+      static Dot(GG, bG) {
+        return GG.x * bG.x + GG.y * bG.y + GG.z * bG.z + GG.w * bG.w
       }
     }
-    Nu._V8PerformanceHack = new Nu(.5, .5, .5, .5), Nu._ZeroReadOnly = Nu.Zero();
-    class Ou {
+    QG._V8PerformanceHack = new QG(.5, .5, .5, .5), QG._ZeroReadOnly = QG.Zero();
+    class KG {
       get x() {
         return this._x
       }
-      set x(uu) {
-        this._x = uu, this._isDirty = !0
+      set x(GG) {
+        this._x = GG, this._isDirty = !0
       }
       get y() {
         return this._y
       }
-      set y(uu) {
-        this._y = uu, this._isDirty = !0
+      set y(GG) {
+        this._y = GG, this._isDirty = !0
       }
       get z() {
         return this._z
       }
-      set z(uu) {
-        this._z = uu, this._isDirty = !0
+      set z(GG) {
+        this._z = GG, this._isDirty = !0
       }
       get w() {
         return this._w
       }
-      set w(uu) {
-        this._w = uu, this._isDirty = !0
+      set w(GG) {
+        this._w = GG, this._isDirty = !0
       }
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this._isDirty = !0, this._x = uu, this._y = Eu, this._z = ju, this._w = su
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this._isDirty = !0, this._x = GG, this._y = bG, this._z = ZG, this._w = wG
       }
       toString() {
         return `{X: ${this._x} Y: ${this._y} Z: ${this._z} W: ${this._w}}`
@@ -1452,109 +1452,109 @@ export const modules = {
         return "Quaternion"
       }
       getHashCode() {
-        let uu = Cu(this._x);
-        return uu = 397 * uu ^ Cu(this._y), uu = 397 * uu ^ Cu(this._z), uu = 397 * uu ^ Cu(this._w), uu
+        let GG = VG(this._x);
+        return GG = 397 * GG ^ VG(this._y), GG = 397 * GG ^ VG(this._z), GG = 397 * GG ^ VG(this._w), GG
       }
-      Osu() {
+      mwG() {
         return [this._x, this._y, this._z, this._w]
       }
-      toArray(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return uu[Eu] = this._x, uu[Eu + 1] = this._y, uu[Eu + 2] = this._z, uu[Eu + 3] = this._w, this
+      toArray(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return GG[bG] = this._x, GG[bG + 1] = this._y, GG[bG + 2] = this._z, GG[bG + 3] = this._w, this
       }
-      sju(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Ou.FromArrayToRef(uu, Eu, this)
+      hZG(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return KG.FromArrayToRef(GG, bG, this)
       }
-      equals(uu) {
-        return uu && this._x === uu._x && this._y === uu._y && this._z === uu._z && this._w === uu._w
+      equals(GG) {
+        return GG && this._x === GG._x && this._y === GG._y && this._z === GG._z && this._w === GG._w
       }
-      equalsWithEpsilon(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : su.c;
-        return uu && (0, lu.WithinEpsilon)(this._x, uu._x, Eu) && (0, lu.WithinEpsilon)(this._y, uu._y, Eu) && (0, lu.WithinEpsilon)(this._z, uu._z, Eu) && (0, lu.WithinEpsilon)(this._w, uu._w, Eu)
+      equalsWithEpsilon(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wG.d;
+        return GG && (0, kG.WithinEpsilon)(this._x, GG._x, bG) && (0, kG.WithinEpsilon)(this._y, GG._y, bG) && (0, kG.WithinEpsilon)(this._z, GG._z, bG) && (0, kG.WithinEpsilon)(this._w, GG._w, bG)
       }
-      isApprox(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : su.c;
-        return uu && ((0, lu.WithinEpsilon)(this._x, uu._x, Eu) && (0, lu.WithinEpsilon)(this._y, uu._y, Eu) && (0, lu.WithinEpsilon)(this._z, uu._z, Eu) && (0, lu.WithinEpsilon)(this._w, uu._w, Eu) || (0, lu.WithinEpsilon)(this._x, -uu._x, Eu) && (0, lu.WithinEpsilon)(this._y, -uu._y, Eu) && (0, lu.WithinEpsilon)(this._z, -uu._z, Eu) && (0, lu.WithinEpsilon)(this._w, -uu._w, Eu))
+      isApprox(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wG.d;
+        return GG && ((0, kG.WithinEpsilon)(this._x, GG._x, bG) && (0, kG.WithinEpsilon)(this._y, GG._y, bG) && (0, kG.WithinEpsilon)(this._z, GG._z, bG) && (0, kG.WithinEpsilon)(this._w, GG._w, bG) || (0, kG.WithinEpsilon)(this._x, -GG._x, bG) && (0, kG.WithinEpsilon)(this._y, -GG._y, bG) && (0, kG.WithinEpsilon)(this._z, -GG._z, bG) && (0, kG.WithinEpsilon)(this._w, -GG._w, bG))
       }
       clone() {
-        return new Ou(this._x, this._y, this._z, this._w)
+        return new KG(this._x, this._y, this._z, this._w)
       }
-      yJ(uu) {
-        return this._x = uu._x, this._y = uu._y, this._z = uu._z, this._w = uu._w, this._isDirty = !0, this
+      oW(GG) {
+        return this._x = GG._x, this._y = GG._y, this._z = GG._z, this._w = GG._w, this._isDirty = !0, this
       }
-      T6(uu, Eu, ju, su) {
-        return this._x = uu, this._y = Eu, this._z = ju, this._w = su, this._isDirty = !0, this
+      fGG(GG, bG, ZG, wG) {
+        return this._x = GG, this._y = bG, this._z = ZG, this._w = wG, this._isDirty = !0, this
       }
-      set(uu, Eu, ju, su) {
-        return this.T6(uu, Eu, ju, su)
+      set(GG, bG, ZG, wG) {
+        return this.fGG(GG, bG, ZG, wG)
       }
-      k_(uu) {
-        return this.T6(uu, uu, uu, uu)
+      N7(GG) {
+        return this.fGG(GG, GG, GG, GG)
       }
-      add(uu) {
-        return new Ou(this._x + uu._x, this._y + uu._y, this._z + uu._z, this._w + uu._w)
+      add(GG) {
+        return new KG(this._x + GG._x, this._y + GG._y, this._z + GG._z, this._w + GG._w)
       }
-      addInPlace(uu) {
-        return this._x += uu._x, this._y += uu._y, this._z += uu._z, this._w += uu._w, this._isDirty = !0, this
+      addInPlace(GG) {
+        return this._x += GG._x, this._y += GG._y, this._z += GG._z, this._w += GG._w, this._isDirty = !0, this
       }
-      addToRef(uu, Eu) {
-        return Eu._x = this._x + uu._x, Eu._y = this._y + uu._y, Eu._z = this._z + uu._z, Eu._w = this._w + uu._w, Eu._isDirty = !0, Eu
+      addToRef(GG, bG) {
+        return bG._x = this._x + GG._x, bG._y = this._y + GG._y, bG._z = this._z + GG._z, bG._w = this._w + GG._w, bG._isDirty = !0, bG
       }
-      addInPlaceFromFloats(uu, Eu, ju, su) {
-        return this._x += uu, this._y += Eu, this._z += ju, this._w += su, this._isDirty = !0, this
+      addInPlaceFromFloats(GG, bG, ZG, wG) {
+        return this._x += GG, this._y += bG, this._z += ZG, this._w += wG, this._isDirty = !0, this
       }
-      subtractToRef(uu, Eu) {
-        return Eu._x = this._x - uu._x, Eu._y = this._y - uu._y, Eu._z = this._z - uu._z, Eu._w = this._w - uu._w, Eu._isDirty = !0, Eu
+      subtractToRef(GG, bG) {
+        return bG._x = this._x - GG._x, bG._y = this._y - GG._y, bG._z = this._z - GG._z, bG._w = this._w - GG._w, bG._isDirty = !0, bG
       }
-      subtractFromFloats(uu, Eu, ju, su) {
-        return this.subtractFromFloatsToRef(uu, Eu, ju, su, new Ou)
+      subtractFromFloats(GG, bG, ZG, wG) {
+        return this.subtractFromFloatsToRef(GG, bG, ZG, wG, new KG)
       }
-      subtractFromFloatsToRef(uu, Eu, ju, su, Uu) {
-        return Uu._x = this._x - uu, Uu._y = this._y - Eu, Uu._z = this._z - ju, Uu._w = this._w - su, Uu._isDirty = !0, Uu
+      subtractFromFloatsToRef(GG, bG, ZG, wG, SG) {
+        return SG._x = this._x - GG, SG._y = this._y - bG, SG._z = this._z - ZG, SG._w = this._w - wG, SG._isDirty = !0, SG
       }
-      subtract(uu) {
-        return new Ou(this._x - uu._x, this._y - uu._y, this._z - uu._z, this._w - uu._w)
+      subtract(GG) {
+        return new KG(this._x - GG._x, this._y - GG._y, this._z - GG._z, this._w - GG._w)
       }
-      Qsu(uu) {
-        return this._x -= uu._x, this._y -= uu._y, this._z -= uu._z, this._w -= uu._w, this._isDirty = !0, this
+      twG(GG) {
+        return this._x -= GG._x, this._y -= GG._y, this._z -= GG._z, this._w -= GG._w, this._isDirty = !0, this
       }
-      scale(uu) {
-        return new Ou(this._x * uu, this._y * uu, this._z * uu, this._w * uu)
+      scale(GG) {
+        return new KG(this._x * GG, this._y * GG, this._z * GG, this._w * GG)
       }
-      scaleToRef(uu, Eu) {
-        return Eu._x = this._x * uu, Eu._y = this._y * uu, Eu._z = this._z * uu, Eu._w = this._w * uu, Eu._isDirty = !0, Eu
+      scaleToRef(GG, bG) {
+        return bG._x = this._x * GG, bG._y = this._y * GG, bG._z = this._z * GG, bG._w = this._w * GG, bG._isDirty = !0, bG
       }
-      scaleInPlace(uu) {
-        return this._x *= uu, this._y *= uu, this._z *= uu, this._w *= uu, this._isDirty = !0, this
+      scaleInPlace(GG) {
+        return this._x *= GG, this._y *= GG, this._z *= GG, this._w *= GG, this._isDirty = !0, this
       }
-      scaleAndAddToRef(uu, Eu) {
-        return Eu._x += this._x * uu, Eu._y += this._y * uu, Eu._z += this._z * uu, Eu._w += this._w * uu, Eu._isDirty = !0, Eu
+      scaleAndAddToRef(GG, bG) {
+        return bG._x += this._x * GG, bG._y += this._y * GG, bG._z += this._z * GG, bG._w += this._w * GG, bG._isDirty = !0, bG
       }
-      multiply(uu) {
-        const Eu = new Ou(0, 0, 0, 1);
-        return this.multiplyToRef(uu, Eu), Eu
+      multiply(GG) {
+        const bG = new KG(0, 0, 0, 1);
+        return this.multiplyToRef(GG, bG), bG
       }
-      multiplyToRef(uu, Eu) {
-        const ju = this._x * uu._w + this._y * uu._z - this._z * uu._y + this._w * uu._x,
-          su = -this._x * uu._z + this._y * uu._w + this._z * uu._x + this._w * uu._y,
-          Uu = this._x * uu._y - this._y * uu._x + this._z * uu._w + this._w * uu._z,
-          Zu = -this._x * uu._x - this._y * uu._y - this._z * uu._z + this._w * uu._w;
-        return Eu.T6(ju, su, Uu, Zu), Eu
+      multiplyToRef(GG, bG) {
+        const ZG = this._x * GG._w + this._y * GG._z - this._z * GG._y + this._w * GG._x,
+          wG = -this._x * GG._z + this._y * GG._w + this._z * GG._x + this._w * GG._y,
+          SG = this._x * GG._y - this._y * GG._x + this._z * GG._w + this._w * GG._z,
+          LG = -this._x * GG._x - this._y * GG._y - this._z * GG._z + this._w * GG._w;
+        return bG.fGG(ZG, wG, SG, LG), bG
       }
-      multiplyInPlace(uu) {
-        return this.multiplyToRef(uu, this)
+      multiplyInPlace(GG) {
+        return this.multiplyToRef(GG, this)
       }
-      multiplyByFloats(uu, Eu, ju, su) {
-        return this._x *= uu, this._y *= Eu, this._z *= ju, this._w *= su, this._isDirty = !0, this
+      multiplyByFloats(GG, bG, ZG, wG) {
+        return this._x *= GG, this._y *= bG, this._z *= ZG, this._w *= wG, this._isDirty = !0, this
       }
-      divide(uu) {
+      divide(GG) {
         throw new ReferenceError("Can not divide a quaternion")
       }
-      divideToRef(uu, Eu) {
+      divideToRef(GG, bG) {
         throw new ReferenceError("Can not divide a quaternion")
       }
-      divideInPlace(uu) {
+      divideInPlace(GG) {
         throw new ReferenceError("Can not divide a quaternion")
       }
       minimizeInPlace() {
@@ -1569,48 +1569,48 @@ export const modules = {
       maximizeInPlaceFromFloats() {
         throw new ReferenceError("Can not maximize a quaternion")
       }
-      nZ() {
-        return this.negateToRef(new Ou)
+      By() {
+        return this.negateToRef(new KG)
       }
       negateInPlace() {
         return this._x = -this._x, this._y = -this._y, this._z = -this._z, this._w = -this._w, this._isDirty = !0, this
       }
-      negateToRef(uu) {
-        return uu._x = -this._x, uu._y = -this._y, uu._z = -this._z, uu._w = -this._w, uu._isDirty = !0, uu
+      negateToRef(GG) {
+        return GG._x = -this._x, GG._y = -this._y, GG._z = -this._z, GG._w = -this._w, GG._isDirty = !0, GG
       }
-      BXu(uu, Eu, ju, su) {
-        return this._x === uu && this._y === Eu && this._z === ju && this._w === su
+      ZkG(GG, bG, ZG, wG) {
+        return this._x === GG && this._y === bG && this._z === ZG && this._w === wG
       }
-      floorToRef(uu) {
+      floorToRef(GG) {
         throw new ReferenceError("Can not floor a quaternion")
       }
       floor() {
         throw new ReferenceError("Can not floor a quaternion")
       }
-      fractToRef(uu) {
+      fractToRef(GG) {
         throw new ReferenceError("Can not fract a quaternion")
       }
       fract() {
         throw new ReferenceError("Can not fract a quaternion")
       }
-      conjugateToRef(uu) {
-        return uu.T6(-this._x, -this._y, -this._z, this._w), uu
+      conjugateToRef(GG) {
+        return GG.fGG(-this._x, -this._y, -this._z, this._w), GG
       }
       conjugateInPlace() {
         return this._x *= -1, this._y *= -1, this._z *= -1, this._isDirty = !0, this
       }
       conjugate() {
-        return new Ou(-this._x, -this._y, -this._z, this._w)
+        return new KG(-this._x, -this._y, -this._z, this._w)
       }
       invert() {
-        const uu = this.conjugate(),
-          Eu = this.lengthSquared();
-        return 0 == Eu || 1 == Eu || uu.scaleInPlace(1 / Eu), uu
+        const GG = this.conjugate(),
+          bG = this.lengthSquared();
+        return 0 == bG || 1 == bG || GG.scaleInPlace(1 / bG), GG
       }
       invertInPlace() {
         this.conjugateInPlace();
-        const uu = this.lengthSquared();
-        return 0 == uu || 1 == uu || this.scaleInPlace(1 / uu), this
+        const GG = this.lengthSquared();
+        return 0 == GG || 1 == GG || this.scaleInPlace(1 / GG), this
       }
       lengthSquared() {
         return this._x * this._x + this._y * this._y + this._z * this._z + this._w * this._w
@@ -1621,266 +1621,266 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      normalizeFromLength(uu) {
-        return 0 === uu || 1 === uu ? this : this.scaleInPlace(1 / uu)
+      normalizeFromLength(GG) {
+        return 0 === GG || 1 === GG ? this : this.scaleInPlace(1 / GG)
       }
       normalizeToNew() {
-        const uu = new Ou(0, 0, 0, 1);
-        return this.normalizeToRef(uu), uu
+        const GG = new KG(0, 0, 0, 1);
+        return this.normalizeToRef(GG), GG
       }
-      normalizeToRef(uu) {
-        const Eu = this.length();
-        return 0 === Eu || 1 === Eu ? uu.T6(this._x, this._y, this._z, this._w) : this.scaleToRef(1 / Eu, uu)
+      normalizeToRef(GG) {
+        const bG = this.length();
+        return 0 === bG || 1 === bG ? GG.fGG(this._x, this._y, this._z, this._w) : this.scaleToRef(1 / bG, GG)
       }
       toEulerAngles() {
-        const uu = cu.Zero();
-        return this.toEulerAnglesToRef(uu), uu
+        const GG = fG.Zero();
+        return this.toEulerAnglesToRef(GG), GG
       }
-      toEulerAnglesToRef(uu) {
-        const Eu = this._z,
-          ju = this._x,
-          su = this._y,
-          Uu = this._w,
-          Zu = su * Eu - ju * Uu,
-          Xu = .4999999;
-        if (Zu < -Xu) uu._y = 2 * Math.atan2(su, Uu), uu._x = Math.PI / 2, uu._z = 0, uu._isDirty = !0;
-        else if (Zu > Xu) uu._y = 2 * Math.atan2(su, Uu), uu._x = -Math.PI / 2, uu._z = 0, uu._isDirty = !0;
+      toEulerAnglesToRef(GG) {
+        const bG = this._z,
+          ZG = this._x,
+          wG = this._y,
+          SG = this._w,
+          LG = wG * bG - ZG * SG,
+          yG = .4999999;
+        if (LG < -yG) GG._y = 2 * Math.atan2(wG, SG), GG._x = Math.PI / 2, GG._z = 0, GG._isDirty = !0;
+        else if (LG > yG) GG._y = 2 * Math.atan2(wG, SG), GG._x = -Math.PI / 2, GG._z = 0, GG._isDirty = !0;
         else {
-          const Xu = Uu * Uu,
-            lu = Eu * Eu,
-            qu = ju * ju,
-            fu = su * su;
-          uu._z = Math.atan2(2 * (ju * su + Eu * Uu), -lu - qu + fu + Xu), uu._x = Math.asin(-2 * Zu), uu._y = Math.atan2(2 * (Eu * ju + su * Uu), lu - qu - fu + Xu), uu._isDirty = !0
+          const yG = SG * SG,
+            kG = bG * bG,
+            UG = ZG * ZG,
+            YG = wG * wG;
+          GG._z = Math.atan2(2 * (ZG * wG + bG * SG), -kG - UG + YG + yG), GG._x = Math.asin(-2 * LG), GG._y = Math.atan2(2 * (bG * ZG + wG * SG), kG - UG - YG + yG), GG._isDirty = !0
         }
-        return uu
+        return GG
       }
-      toAlphaBetaGammaToRef(uu) {
-        const Eu = this._z,
-          ju = this._x,
-          su = this._y,
-          Uu = this._w,
-          Zu = Math.sqrt(ju * ju + su * su),
-          Xu = Math.sqrt(Eu * Eu + Uu * Uu),
-          lu = 2 * Math.atan2(Zu, Xu),
-          qu = 2 * Math.atan2(Eu, Uu),
-          fu = 2 * Math.atan2(su, ju),
-          Cu = (qu + fu) / 2,
-          bu = (qu - fu) / 2;
-        return uu.set(bu, lu, Cu), uu
+      toAlphaBetaGammaToRef(GG) {
+        const bG = this._z,
+          ZG = this._x,
+          wG = this._y,
+          SG = this._w,
+          LG = Math.sqrt(ZG * ZG + wG * wG),
+          yG = Math.sqrt(bG * bG + SG * SG),
+          kG = 2 * Math.atan2(LG, yG),
+          UG = 2 * Math.atan2(bG, SG),
+          YG = 2 * Math.atan2(wG, ZG),
+          VG = (UG + YG) / 2,
+          pG = (UG - YG) / 2;
+        return GG.set(pG, kG, VG), GG
       }
-      toRotationMatrix(uu) {
-        return Yu.FromQuaternionToRef(this, uu), uu
+      toRotationMatrix(GG) {
+        return hG.FromQuaternionToRef(this, GG), GG
       }
-      fromRotationMatrix(uu) {
-        return Ou.FromRotationMatrixToRef(uu, this), this
+      fromRotationMatrix(GG) {
+        return KG.FromRotationMatrixToRef(GG, this), this
       }
-      dot(uu) {
-        return this._x * uu._x + this._y * uu._y + this._z * uu._z + this._w * uu._w
+      dot(GG) {
+        return this._x * GG._x + this._y * GG._y + this._z * GG._z + this._w * GG._w
       }
       toAxisAngle() {
-        const uu = cu.Zero();
+        const GG = fG.Zero();
         return {
-          axis: uu,
-          angle: this.toAxisAngleToRef(uu)
+          axis: GG,
+          angle: this.toAxisAngleToRef(GG)
         }
       }
-      toAxisAngleToRef(uu) {
-        let Eu;
-        const ju = Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z),
-          su = this._w;
-        return ju > 0 ? (Eu = 2 * Math.atan2(ju, su), uu.set(this._x / ju, this._y / ju, this._z / ju)) : (Eu = 0, uu.set(1, 0, 0)), Eu
+      toAxisAngleToRef(GG) {
+        let bG;
+        const ZG = Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z),
+          wG = this._w;
+        return ZG > 0 ? (bG = 2 * Math.atan2(ZG, wG), GG.set(this._x / ZG, this._y / ZG, this._z / ZG)) : (bG = 0, GG.set(1, 0, 0)), bG
       }
-      static FromRotationMatrix(uu) {
-        const Eu = new Ou;
-        return Ou.FromRotationMatrixToRef(uu, Eu), Eu
+      static FromRotationMatrix(GG) {
+        const bG = new KG;
+        return KG.FromRotationMatrixToRef(GG, bG), bG
       }
-      static FromRotationMatrixToRef(uu, Eu) {
-        const ju = uu.m,
-          su = ju[0],
-          Uu = ju[4],
-          Zu = ju[8],
-          Xu = ju[1],
-          lu = ju[5],
-          qu = ju[9],
-          fu = ju[2],
-          Cu = ju[6],
-          bu = ju[10],
-          cu = su + lu + bu;
-        let Nu;
-        return cu > 0 ? (Nu = .5 / Math.sqrt(cu + 1), Eu._w = .25 / Nu, Eu._x = (Cu - qu) * Nu, Eu._y = (Zu - fu) * Nu, Eu._z = (Xu - Uu) * Nu, Eu._isDirty = !0) : su > lu && su > bu ? (Nu = 2 * Math.sqrt(1 + su - lu - bu), Eu._w = (Cu - qu) / Nu, Eu._x = .25 * Nu, Eu._y = (Uu + Xu) / Nu, Eu._z = (Zu + fu) / Nu, Eu._isDirty = !0) : lu > bu ? (Nu = 2 * Math.sqrt(1 + lu - su - bu), Eu._w = (Zu - fu) / Nu, Eu._x = (Uu + Xu) / Nu, Eu._y = .25 * Nu, Eu._z = (qu + Cu) / Nu, Eu._isDirty = !0) : (Nu = 2 * Math.sqrt(1 + bu - su - lu), Eu._w = (Xu - Uu) / Nu, Eu._x = (Zu + fu) / Nu, Eu._y = (qu + Cu) / Nu, Eu._z = .25 * Nu, Eu._isDirty = !0), Eu
+      static FromRotationMatrixToRef(GG, bG) {
+        const ZG = GG.m,
+          wG = ZG[0],
+          SG = ZG[4],
+          LG = ZG[8],
+          yG = ZG[1],
+          kG = ZG[5],
+          UG = ZG[9],
+          YG = ZG[2],
+          VG = ZG[6],
+          pG = ZG[10],
+          fG = wG + kG + pG;
+        let QG;
+        return fG > 0 ? (QG = .5 / Math.sqrt(fG + 1), bG._w = .25 / QG, bG._x = (VG - UG) * QG, bG._y = (LG - YG) * QG, bG._z = (yG - SG) * QG, bG._isDirty = !0) : wG > kG && wG > pG ? (QG = 2 * Math.sqrt(1 + wG - kG - pG), bG._w = (VG - UG) / QG, bG._x = .25 * QG, bG._y = (SG + yG) / QG, bG._z = (LG + YG) / QG, bG._isDirty = !0) : kG > pG ? (QG = 2 * Math.sqrt(1 + kG - wG - pG), bG._w = (LG - YG) / QG, bG._x = (SG + yG) / QG, bG._y = .25 * QG, bG._z = (UG + VG) / QG, bG._isDirty = !0) : (QG = 2 * Math.sqrt(1 + pG - wG - kG), bG._w = (yG - SG) / QG, bG._x = (LG + YG) / QG, bG._y = (UG + VG) / QG, bG._z = .25 * QG, bG._isDirty = !0), bG
       }
-      static Dot(uu, Eu) {
-        return uu._x * Eu._x + uu._y * Eu._y + uu._z * Eu._z + uu._w * Eu._w
+      static Dot(GG, bG) {
+        return GG._x * bG._x + GG._y * bG._y + GG._z * bG._z + GG._w * bG._w
       }
-      static AreClose(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .1;
-        const su = Ou.Dot(uu, Eu);
-        return 1 - su * su <= ju
+      static AreClose(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .1;
+        const wG = KG.Dot(GG, bG);
+        return 1 - wG * wG <= ZG
       }
-      static SmoothToRef(uu, Eu, ju, su, Uu) {
-        let Zu = 0 === su ? 1 : ju / su;
-        return Zu = (0, lu.Clamp)(Zu, 0, 1), Ou.SlerpToRef(uu, Eu, Zu, Uu), Uu
+      static SmoothToRef(GG, bG, ZG, wG, SG) {
+        let LG = 0 === wG ? 1 : ZG / wG;
+        return LG = (0, kG.Clamp)(LG, 0, 1), KG.SlerpToRef(GG, bG, LG, SG), SG
       }
       static Zero() {
-        return new Ou(0, 0, 0, 0)
+        return new KG(0, 0, 0, 0)
       }
-      static Inverse(uu) {
-        return new Ou(-uu._x, -uu._y, -uu._z, uu._w)
+      static Inverse(GG) {
+        return new KG(-GG._x, -GG._y, -GG._z, GG._w)
       }
-      static InverseToRef(uu, Eu) {
-        return Eu.set(-uu._x, -uu._y, -uu._z, uu._w), Eu
+      static InverseToRef(GG, bG) {
+        return bG.set(-GG._x, -GG._y, -GG._z, GG._w), bG
       }
       static Identity() {
-        return new Ou(0, 0, 0, 1)
+        return new KG(0, 0, 0, 1)
       }
-      static IsIdentity(uu) {
-        return uu && 0 === uu._x && 0 === uu._y && 0 === uu._z && 1 === uu._w
+      static IsIdentity(GG) {
+        return GG && 0 === GG._x && 0 === GG._y && 0 === GG._z && 1 === GG._w
       }
-      static RotationAxis(uu, Eu) {
-        return Ou.RotationAxisToRef(uu, Eu, new Ou)
+      static RotationAxis(GG, bG) {
+        return KG.RotationAxisToRef(GG, bG, new KG)
       }
-      static RotationAxisToRef(uu, Eu, ju) {
-        ju._w = Math.cos(Eu / 2);
-        const su = Math.sin(Eu / 2) / uu.length();
-        return ju._x = uu._x * su, ju._y = uu._y * su, ju._z = uu._z * su, ju._isDirty = !0, ju
+      static RotationAxisToRef(GG, bG, ZG) {
+        ZG._w = Math.cos(bG / 2);
+        const wG = Math.sin(bG / 2) / GG.length();
+        return ZG._x = GG._x * wG, ZG._y = GG._y * wG, ZG._z = GG._z * wG, ZG._isDirty = !0, ZG
       }
-      static FromArray(uu, Eu) {
-        return Eu || (Eu = 0), new Ou(uu[Eu], uu[Eu + 1], uu[Eu + 2], uu[Eu + 3])
+      static FromArray(GG, bG) {
+        return bG || (bG = 0), new KG(GG[bG], GG[bG + 1], GG[bG + 2], GG[bG + 3])
       }
-      static FromArrayToRef(uu, Eu, ju) {
-        return ju._x = uu[Eu], ju._y = uu[Eu + 1], ju._z = uu[Eu + 2], ju._w = uu[Eu + 3], ju._isDirty = !0, ju
+      static FromArrayToRef(GG, bG, ZG) {
+        return ZG._x = GG[bG], ZG._y = GG[bG + 1], ZG._z = GG[bG + 2], ZG._w = GG[bG + 3], ZG._isDirty = !0, ZG
       }
-      static FromFloatsToRef(uu, Eu, ju, su, Uu) {
-        return Uu.T6(uu, Eu, ju, su), Uu
+      static FromFloatsToRef(GG, bG, ZG, wG, SG) {
+        return SG.fGG(GG, bG, ZG, wG), SG
       }
-      static FromEulerAngles(uu, Eu, ju) {
-        const su = new Ou;
-        return Ou.RotationYawPitchRollToRef(Eu, uu, ju, su), su
+      static FromEulerAngles(GG, bG, ZG) {
+        const wG = new KG;
+        return KG.RotationYawPitchRollToRef(bG, GG, ZG, wG), wG
       }
-      static FromEulerAnglesToRef(uu, Eu, ju, su) {
-        return Ou.RotationYawPitchRollToRef(Eu, uu, ju, su), su
+      static FromEulerAnglesToRef(GG, bG, ZG, wG) {
+        return KG.RotationYawPitchRollToRef(bG, GG, ZG, wG), wG
       }
-      static FromEulerVector(uu) {
-        const Eu = new Ou;
-        return Ou.RotationYawPitchRollToRef(uu._y, uu._x, uu._z, Eu), Eu
+      static FromEulerVector(GG) {
+        const bG = new KG;
+        return KG.RotationYawPitchRollToRef(GG._y, GG._x, GG._z, bG), bG
       }
-      static FromEulerVectorToRef(uu, Eu) {
-        return Ou.RotationYawPitchRollToRef(uu._y, uu._x, uu._z, Eu), Eu
+      static FromEulerVectorToRef(GG, bG) {
+        return KG.RotationYawPitchRollToRef(GG._y, GG._x, GG._z, bG), bG
       }
-      static FromUnitVectorsToRef(uu, Eu, ju) {
-        let Uu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : su.c;
-        const Zu = cu.Dot(uu, Eu) + 1;
-        return Zu < Uu ? Math.abs(uu.x) > Math.abs(uu.z) ? ju.set(-uu.y, uu.x, 0, 0) : ju.set(0, -uu.z, uu.y, 0) : (cu.CrossToRef(uu, Eu, Du.dO[0]), ju.set(Du.dO[0].x, Du.dO[0].y, Du.dO[0].z, Zu)), ju.normalize()
+      static FromUnitVectorsToRef(GG, bG, ZG) {
+        let SG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : wG.d;
+        const LG = fG.Dot(GG, bG) + 1;
+        return LG < SG ? Math.abs(GG.x) > Math.abs(GG.z) ? ZG.set(-GG.y, GG.x, 0, 0) : ZG.set(0, -GG.z, GG.y, 0) : (fG.CrossToRef(GG, bG, JG.mK[0]), ZG.set(JG.mK[0].x, JG.mK[0].y, JG.mK[0].z, LG)), ZG.normalize()
       }
-      static RotationYawPitchRoll(uu, Eu, ju) {
-        const su = new Ou;
-        return Ou.RotationYawPitchRollToRef(uu, Eu, ju, su), su
+      static RotationYawPitchRoll(GG, bG, ZG) {
+        const wG = new KG;
+        return KG.RotationYawPitchRollToRef(GG, bG, ZG, wG), wG
       }
-      static RotationYawPitchRollToRef(uu, Eu, ju, su) {
-        const Uu = .5 * ju,
-          Zu = .5 * Eu,
-          Xu = .5 * uu,
-          lu = Math.sin(Uu),
-          qu = Math.cos(Uu),
-          fu = Math.sin(Zu),
-          Cu = Math.cos(Zu),
-          bu = Math.sin(Xu),
-          cu = Math.cos(Xu);
-        return su._x = cu * fu * qu + bu * Cu * lu, su._y = bu * Cu * qu - cu * fu * lu, su._z = cu * Cu * lu - bu * fu * qu, su._w = cu * Cu * qu + bu * fu * lu, su._isDirty = !0, su
+      static RotationYawPitchRollToRef(GG, bG, ZG, wG) {
+        const SG = .5 * ZG,
+          LG = .5 * bG,
+          yG = .5 * GG,
+          kG = Math.sin(SG),
+          UG = Math.cos(SG),
+          YG = Math.sin(LG),
+          VG = Math.cos(LG),
+          pG = Math.sin(yG),
+          fG = Math.cos(yG);
+        return wG._x = fG * YG * UG + pG * VG * kG, wG._y = pG * VG * UG - fG * YG * kG, wG._z = fG * VG * kG - pG * YG * UG, wG._w = fG * VG * UG + pG * YG * kG, wG._isDirty = !0, wG
       }
-      static RotationAlphaBetaGamma(uu, Eu, ju) {
-        const su = new Ou;
-        return Ou.RotationAlphaBetaGammaToRef(uu, Eu, ju, su), su
+      static RotationAlphaBetaGamma(GG, bG, ZG) {
+        const wG = new KG;
+        return KG.RotationAlphaBetaGammaToRef(GG, bG, ZG, wG), wG
       }
-      static RotationAlphaBetaGammaToRef(uu, Eu, ju, su) {
-        const Uu = .5 * (ju + uu),
-          Zu = .5 * (ju - uu),
-          Xu = .5 * Eu;
-        return su._x = Math.cos(Zu) * Math.sin(Xu), su._y = Math.sin(Zu) * Math.sin(Xu), su._z = Math.sin(Uu) * Math.cos(Xu), su._w = Math.cos(Uu) * Math.cos(Xu), su._isDirty = !0, su
+      static RotationAlphaBetaGammaToRef(GG, bG, ZG, wG) {
+        const SG = .5 * (ZG + GG),
+          LG = .5 * (ZG - GG),
+          yG = .5 * bG;
+        return wG._x = Math.cos(LG) * Math.sin(yG), wG._y = Math.sin(LG) * Math.sin(yG), wG._z = Math.sin(SG) * Math.cos(yG), wG._w = Math.cos(SG) * Math.cos(yG), wG._isDirty = !0, wG
       }
-      static RotationQuaternionFromAxis(uu, Eu, ju) {
-        const su = new Ou(0, 0, 0, 0);
-        return Ou.RotationQuaternionFromAxisToRef(uu, Eu, ju, su), su
+      static RotationQuaternionFromAxis(GG, bG, ZG) {
+        const wG = new KG(0, 0, 0, 0);
+        return KG.RotationQuaternionFromAxisToRef(GG, bG, ZG, wG), wG
       }
-      static RotationQuaternionFromAxisToRef(uu, Eu, ju, su) {
-        const Uu = hu.Matrix[0];
-        return uu = uu.normalizeToRef(hu.dO[0]), Eu = Eu.normalizeToRef(hu.dO[1]), ju = ju.normalizeToRef(hu.dO[2]), Yu.FromXYZAxesToRef(uu, Eu, ju, Uu), Ou.FromRotationMatrixToRef(Uu, su), su
+      static RotationQuaternionFromAxisToRef(GG, bG, ZG, wG) {
+        const SG = dG.Matrix[0];
+        return GG = GG.normalizeToRef(dG.mK[0]), bG = bG.normalizeToRef(dG.mK[1]), ZG = ZG.normalizeToRef(dG.mK[2]), hG.FromXYZAxesToRef(GG, bG, ZG, SG), KG.FromRotationMatrixToRef(SG, wG), wG
       }
-      static FromLookDirectionLH(uu, Eu) {
-        const ju = new Ou;
-        return Ou.FromLookDirectionLHToRef(uu, Eu, ju), ju
+      static FromLookDirectionLH(GG, bG) {
+        const ZG = new KG;
+        return KG.FromLookDirectionLHToRef(GG, bG, ZG), ZG
       }
-      static FromLookDirectionLHToRef(uu, Eu, ju) {
-        const su = hu.Matrix[0];
-        return Yu.LookDirectionLHToRef(uu, Eu, su), Ou.FromRotationMatrixToRef(su, ju), ju
+      static FromLookDirectionLHToRef(GG, bG, ZG) {
+        const wG = dG.Matrix[0];
+        return hG.LookDirectionLHToRef(GG, bG, wG), KG.FromRotationMatrixToRef(wG, ZG), ZG
       }
-      static FromLookDirectionRH(uu, Eu) {
-        const ju = new Ou;
-        return Ou.FromLookDirectionRHToRef(uu, Eu, ju), ju
+      static FromLookDirectionRH(GG, bG) {
+        const ZG = new KG;
+        return KG.FromLookDirectionRHToRef(GG, bG, ZG), ZG
       }
-      static FromLookDirectionRHToRef(uu, Eu, ju) {
-        const su = hu.Matrix[0];
-        return Yu.LookDirectionRHToRef(uu, Eu, su), Ou.FromRotationMatrixToRef(su, ju)
+      static FromLookDirectionRHToRef(GG, bG, ZG) {
+        const wG = dG.Matrix[0];
+        return hG.LookDirectionRHToRef(GG, bG, wG), KG.FromRotationMatrixToRef(wG, ZG)
       }
-      static Slerp(uu, Eu, ju) {
-        const su = Ou.Identity();
-        return Ou.SlerpToRef(uu, Eu, ju, su), su
+      static Slerp(GG, bG, ZG) {
+        const wG = KG.Identity();
+        return KG.SlerpToRef(GG, bG, ZG, wG), wG
       }
-      static SlerpToRef(uu, Eu, ju, su) {
-        let Uu, Zu, Xu = uu._x * Eu._x + uu._y * Eu._y + uu._z * Eu._z + uu._w * Eu._w,
-          lu = !1;
-        if (Xu < 0 && (lu = !0, Xu = -Xu), Xu > .999999) Zu = 1 - ju, Uu = lu ? -ju : ju;
+      static SlerpToRef(GG, bG, ZG, wG) {
+        let SG, LG, yG = GG._x * bG._x + GG._y * bG._y + GG._z * bG._z + GG._w * bG._w,
+          kG = !1;
+        if (yG < 0 && (kG = !0, yG = -yG), yG > .999999) LG = 1 - ZG, SG = kG ? -ZG : ZG;
         else {
-          const uu = Math.acos(Xu),
-            Eu = 1 / Math.sin(uu);
-          Zu = Math.sin((1 - ju) * uu) * Eu, Uu = lu ? -Math.sin(ju * uu) * Eu : Math.sin(ju * uu) * Eu
+          const GG = Math.acos(yG),
+            bG = 1 / Math.sin(GG);
+          LG = Math.sin((1 - ZG) * GG) * bG, SG = kG ? -Math.sin(ZG * GG) * bG : Math.sin(ZG * GG) * bG
         }
-        return su._x = Zu * uu._x + Uu * Eu._x, su._y = Zu * uu._y + Uu * Eu._y, su._z = Zu * uu._z + Uu * Eu._z, su._w = Zu * uu._w + Uu * Eu._w, su._isDirty = !0, su
+        return wG._x = LG * GG._x + SG * bG._x, wG._y = LG * GG._y + SG * bG._y, wG._z = LG * GG._z + SG * bG._z, wG._w = LG * GG._w + SG * bG._w, wG._isDirty = !0, wG
       }
-      static Hermite(uu, Eu, ju, su, Uu) {
-        const Zu = Uu * Uu,
-          Xu = Uu * Zu,
-          lu = 2 * Xu - 3 * Zu + 1,
-          qu = -2 * Xu + 3 * Zu,
-          fu = Xu - 2 * Zu + Uu,
-          Cu = Xu - Zu,
-          bu = uu._x * lu + ju._x * qu + Eu._x * fu + su._x * Cu,
-          cu = uu._y * lu + ju._y * qu + Eu._y * fu + su._y * Cu,
-          Nu = uu._z * lu + ju._z * qu + Eu._z * fu + su._z * Cu,
-          Yu = uu._w * lu + ju._w * qu + Eu._w * fu + su._w * Cu;
-        return new Ou(bu, cu, Nu, Yu)
+      static Hermite(GG, bG, ZG, wG, SG) {
+        const LG = SG * SG,
+          yG = SG * LG,
+          kG = 2 * yG - 3 * LG + 1,
+          UG = -2 * yG + 3 * LG,
+          YG = yG - 2 * LG + SG,
+          VG = yG - LG,
+          pG = GG._x * kG + ZG._x * UG + bG._x * YG + wG._x * VG,
+          fG = GG._y * kG + ZG._y * UG + bG._y * YG + wG._y * VG,
+          QG = GG._z * kG + ZG._z * UG + bG._z * YG + wG._z * VG,
+          hG = GG._w * kG + ZG._w * UG + bG._w * YG + wG._w * VG;
+        return new KG(pG, fG, QG, hG)
       }
-      static Hermite1stDerivative(uu, Eu, ju, su, Uu) {
-        const Zu = new Ou;
-        return this.Hermite1stDerivativeToRef(uu, Eu, ju, su, Uu, Zu), Zu
+      static Hermite1stDerivative(GG, bG, ZG, wG, SG) {
+        const LG = new KG;
+        return this.Hermite1stDerivativeToRef(GG, bG, ZG, wG, SG, LG), LG
       }
-      static Hermite1stDerivativeToRef(uu, Eu, ju, su, Uu, Zu) {
-        const Xu = Uu * Uu;
-        return Zu._x = 6 * (Xu - Uu) * uu._x + (3 * Xu - 4 * Uu + 1) * Eu._x + 6 * (-Xu + Uu) * ju._x + (3 * Xu - 2 * Uu) * su._x, Zu._y = 6 * (Xu - Uu) * uu._y + (3 * Xu - 4 * Uu + 1) * Eu._y + 6 * (-Xu + Uu) * ju._y + (3 * Xu - 2 * Uu) * su._y, Zu._z = 6 * (Xu - Uu) * uu._z + (3 * Xu - 4 * Uu + 1) * Eu._z + 6 * (-Xu + Uu) * ju._z + (3 * Xu - 2 * Uu) * su._z, Zu._w = 6 * (Xu - Uu) * uu._w + (3 * Xu - 4 * Uu + 1) * Eu._w + 6 * (-Xu + Uu) * ju._w + (3 * Xu - 2 * Uu) * su._w, Zu._isDirty = !0, Zu
+      static Hermite1stDerivativeToRef(GG, bG, ZG, wG, SG, LG) {
+        const yG = SG * SG;
+        return LG._x = 6 * (yG - SG) * GG._x + (3 * yG - 4 * SG + 1) * bG._x + 6 * (-yG + SG) * ZG._x + (3 * yG - 2 * SG) * wG._x, LG._y = 6 * (yG - SG) * GG._y + (3 * yG - 4 * SG + 1) * bG._y + 6 * (-yG + SG) * ZG._y + (3 * yG - 2 * SG) * wG._y, LG._z = 6 * (yG - SG) * GG._z + (3 * yG - 4 * SG + 1) * bG._z + 6 * (-yG + SG) * ZG._z + (3 * yG - 2 * SG) * wG._z, LG._w = 6 * (yG - SG) * GG._w + (3 * yG - 4 * SG + 1) * bG._w + 6 * (-yG + SG) * ZG._w + (3 * yG - 2 * SG) * wG._w, LG._isDirty = !0, LG
       }
-      static Normalize(uu) {
-        const Eu = Ou.Zero();
-        return Ou.NormalizeToRef(uu, Eu), Eu
+      static Normalize(GG) {
+        const bG = KG.Zero();
+        return KG.NormalizeToRef(GG, bG), bG
       }
-      static NormalizeToRef(uu, Eu) {
-        return uu.normalizeToRef(Eu), Eu
+      static NormalizeToRef(GG, bG) {
+        return GG.normalizeToRef(bG), bG
       }
-      static Clamp(uu, Eu, ju) {
-        const su = new Ou;
-        return Ou.ClampToRef(uu, Eu, ju, su), su
+      static Clamp(GG, bG, ZG) {
+        const wG = new KG;
+        return KG.ClampToRef(GG, bG, ZG, wG), wG
       }
-      static ClampToRef(uu, Eu, ju, su) {
-        return su.T6((0, lu.Clamp)(uu.x, Eu.x, ju.x), (0, lu.Clamp)(uu.y, Eu.y, ju.y), (0, lu.Clamp)(uu.z, Eu.z, ju.z), (0, lu.Clamp)(uu.w, Eu.w, ju.w))
+      static ClampToRef(GG, bG, ZG, wG) {
+        return wG.fGG((0, kG.Clamp)(GG.x, bG.x, ZG.x), (0, kG.Clamp)(GG.y, bG.y, ZG.y), (0, kG.Clamp)(GG.z, bG.z, ZG.z), (0, kG.Clamp)(GG.w, bG.w, ZG.w))
       }
       static Random() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new Ou((0, lu.RandomRange)(uu, Eu), (0, lu.RandomRange)(uu, Eu), (0, lu.RandomRange)(uu, Eu), (0, lu.RandomRange)(uu, Eu))
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new KG((0, kG.RandomRange)(GG, bG), (0, kG.RandomRange)(GG, bG), (0, kG.RandomRange)(GG, bG), (0, kG.RandomRange)(GG, bG))
       }
       static RandomToRef() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return (arguments.length > 2 ? arguments[2] : void 0).T6((0, lu.RandomRange)(uu, Eu), (0, lu.RandomRange)(uu, Eu), (0, lu.RandomRange)(uu, Eu), (0, lu.RandomRange)(uu, Eu))
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return (arguments.length > 2 ? arguments[2] : void 0).fGG((0, kG.RandomRange)(GG, bG), (0, kG.RandomRange)(GG, bG), (0, kG.RandomRange)(GG, bG), (0, kG.RandomRange)(GG, bG))
       }
       static Minimize() {
         throw new ReferenceError("Quaternion.Minimize does not make sense")
@@ -1888,48 +1888,48 @@ export const modules = {
       static Maximize() {
         throw new ReferenceError("Quaternion.Maximize does not make sense")
       }
-      static Distance(uu, Eu) {
-        return Math.sqrt(Ou.DistanceSquared(uu, Eu))
+      static Distance(GG, bG) {
+        return Math.sqrt(KG.DistanceSquared(GG, bG))
       }
-      static DistanceSquared(uu, Eu) {
-        const ju = uu.x - Eu.x,
-          su = uu.y - Eu.y,
-          Uu = uu.z - Eu.z,
-          Zu = uu.w - Eu.w;
-        return ju * ju + su * su + Uu * Uu + Zu * Zu
+      static DistanceSquared(GG, bG) {
+        const ZG = GG.x - bG.x,
+          wG = GG.y - bG.y,
+          SG = GG.z - bG.z,
+          LG = GG.w - bG.w;
+        return ZG * ZG + wG * wG + SG * SG + LG * LG
       }
-      static Center(uu, Eu) {
-        return Ou.CenterToRef(uu, Eu, Ou.Zero())
+      static Center(GG, bG) {
+        return KG.CenterToRef(GG, bG, KG.Zero())
       }
-      static CenterToRef(uu, Eu, ju) {
-        return ju.T6((uu.x + Eu.x) / 2, (uu.y + Eu.y) / 2, (uu.z + Eu.z) / 2, (uu.w + Eu.w) / 2)
+      static CenterToRef(GG, bG, ZG) {
+        return ZG.fGG((GG.x + bG.x) / 2, (GG.y + bG.y) / 2, (GG.z + bG.z) / 2, (GG.w + bG.w) / 2)
       }
     }
-    Ou._V8PerformanceHack = new Ou(.5, .5, .5, .5);
-    class Yu {
+    KG._V8PerformanceHack = new KG(.5, .5, .5, .5);
+    class hG {
       static get Use64Bits() {
-        return Zu.c.MatrixUse64Bits
+        return LG.c.MatrixUse64Bits
       }
       get m() {
         return this._m
       }
       markAsUpdated() {
-        this.updateFlag = qu.k._UpdateFlagSeed++, this._isIdentity = !1, this._isIdentity3x2 = !1, this._isIdentityDirty = !0, this._isIdentity3x2Dirty = !0
+        this.updateFlag = UG.i._UpdateFlagSeed++, this._isIdentity = !1, this._isIdentity3x2 = !1, this._isIdentityDirty = !0, this._isIdentity3x2Dirty = !0
       }
-      _updateIdentityStatus(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ju = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          su = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        this._isIdentity = uu, this._isIdentity3x2 = uu || ju, this._isIdentityDirty = !this._isIdentity && Eu, this._isIdentity3x2Dirty = !this._isIdentity3x2 && su
+      _updateIdentityStatus(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ZG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          wG = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        this._isIdentity = GG, this._isIdentity3x2 = GG || ZG, this._isIdentityDirty = !this._isIdentity && bG, this._isIdentity3x2Dirty = !this._isIdentity3x2 && wG
       }
       constructor() {
-        this._isIdentity = !1, this._isIdentityDirty = !0, this._isIdentity3x2 = !0, this._isIdentity3x2Dirty = !0, this.updateFlag = -1, Zu.c.MatrixTrackPrecisionChange && Zu.c.MatrixTrackedMatrices.push(this), this._m = new Zu.c.MatrixCurrentType(16), this.markAsUpdated()
+        this._isIdentity = !1, this._isIdentityDirty = !0, this._isIdentity3x2 = !0, this._isIdentity3x2Dirty = !0, this.updateFlag = -1, LG.c.MatrixTrackPrecisionChange && LG.c.MatrixTrackedMatrices.push(this), this._m = new LG.c.MatrixCurrentType(16), this.markAsUpdated()
       }
       isIdentity() {
         if (this._isIdentityDirty) {
           this._isIdentityDirty = !1;
-          const uu = this._m;
-          this._isIdentity = 1 === uu[0] && 0 === uu[1] && 0 === uu[2] && 0 === uu[3] && 0 === uu[4] && 1 === uu[5] && 0 === uu[6] && 0 === uu[7] && 0 === uu[8] && 0 === uu[9] && 1 === uu[10] && 0 === uu[11] && 0 === uu[12] && 0 === uu[13] && 0 === uu[14] && 1 === uu[15]
+          const GG = this._m;
+          this._isIdentity = 1 === GG[0] && 0 === GG[1] && 0 === GG[2] && 0 === GG[3] && 0 === GG[4] && 1 === GG[5] && 0 === GG[6] && 0 === GG[7] && 0 === GG[8] && 0 === GG[9] && 1 === GG[10] && 0 === GG[11] && 0 === GG[12] && 0 === GG[13] && 0 === GG[14] && 1 === GG[15]
         }
         return this._isIdentity
       }
@@ -1938,966 +1938,966 @@ export const modules = {
       }
       determinant() {
         if (!0 === this._isIdentity) return 1;
-        const uu = this._m,
-          Eu = uu[0],
-          ju = uu[1],
-          su = uu[2],
-          Uu = uu[3],
-          Zu = uu[4],
-          Xu = uu[5],
-          lu = uu[6],
-          qu = uu[7],
-          fu = uu[8],
-          Cu = uu[9],
-          bu = uu[10],
-          cu = uu[11],
-          Nu = uu[12],
-          Ou = uu[13],
-          Yu = uu[14],
-          hu = uu[15],
-          Du = bu * hu - Yu * cu,
-          gu = Cu * hu - Ou * cu,
-          Mu = Cu * Yu - Ou * bu,
-          eu = fu * hu - Nu * cu,
-          Gu = fu * Yu - bu * Nu,
-          pu = fu * Ou - Nu * Cu;
-        return Eu * +(Xu * Du - lu * gu + qu * Mu) + ju * -(Zu * Du - lu * eu + qu * Gu) + su * +(Zu * gu - Xu * eu + qu * pu) + Uu * -(Zu * Mu - Xu * Gu + lu * pu)
+        const GG = this._m,
+          bG = GG[0],
+          ZG = GG[1],
+          wG = GG[2],
+          SG = GG[3],
+          LG = GG[4],
+          yG = GG[5],
+          kG = GG[6],
+          UG = GG[7],
+          YG = GG[8],
+          VG = GG[9],
+          pG = GG[10],
+          fG = GG[11],
+          QG = GG[12],
+          KG = GG[13],
+          hG = GG[14],
+          dG = GG[15],
+          JG = pG * dG - hG * fG,
+          rG = VG * dG - KG * fG,
+          zG = VG * hG - KG * pG,
+          EG = YG * dG - QG * fG,
+          oG = YG * hG - pG * QG,
+          XG = YG * KG - QG * VG;
+        return bG * +(yG * JG - kG * rG + UG * zG) + ZG * -(LG * JG - kG * EG + UG * oG) + wG * +(LG * rG - yG * EG + UG * XG) + SG * -(LG * zG - yG * oG + kG * XG)
       }
       toString() {
         return `{${this.m[0]}, ${this.m[1]}, ${this.m[2]}, ${this.m[3]}\n${this.m[4]}, ${this.m[5]}, ${this.m[6]}, ${this.m[7]}\n${this.m[8]}, ${this.m[9]}, ${this.m[10]}, ${this.m[11]}\n${this.m[12]}, ${this.m[13]}, ${this.m[14]}, ${this.m[15]}}`
       }
       toArray() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (!uu) return this._m;
-        const ju = this._m;
-        for (let su = 0; su < 16; su++) uu[Eu + su] = ju[su];
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (!GG) return this._m;
+        const ZG = this._m;
+        for (let wG = 0; wG < 16; wG++) GG[bG + wG] = ZG[wG];
         return this
       }
-      Osu() {
+      mwG() {
         return this._m
       }
-      sju(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Yu.FromArrayToRef(uu, Eu, this)
+      hZG(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return hG.FromArrayToRef(GG, bG, this)
       }
-      T6() {
-        for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
-        return Yu.FromArrayToRef(Eu, 0, this)
+      fGG() {
+        for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
+        return hG.FromArrayToRef(bG, 0, this)
       }
       set() {
-        const uu = this._m;
-        for (let Eu = 0; Eu < 16; Eu++) uu[Eu] = Eu < 0 || arguments.length <= Eu ? void 0 : arguments[Eu];
+        const GG = this._m;
+        for (let bG = 0; bG < 16; bG++) GG[bG] = bG < 0 || arguments.length <= bG ? void 0 : arguments[bG];
         return this.markAsUpdated(), this
       }
-      k_(uu) {
-        const Eu = this._m;
-        for (let ju = 0; ju < 16; ju++) Eu[ju] = uu;
+      N7(GG) {
+        const bG = this._m;
+        for (let ZG = 0; ZG < 16; ZG++) bG[ZG] = GG;
         return this.markAsUpdated(), this
       }
       invert() {
         return this.invertToRef(this), this
       }
       reset() {
-        return Yu.FromValuesToRef(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, this), this._updateIdentityStatus(!1), this
+        return hG.FromValuesToRef(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, this), this._updateIdentityStatus(!1), this
       }
-      add(uu) {
-        const Eu = new Yu;
-        return this.addToRef(uu, Eu), Eu
+      add(GG) {
+        const bG = new hG;
+        return this.addToRef(GG, bG), bG
       }
-      addToRef(uu, Eu) {
-        const ju = this._m,
-          su = Eu._m,
-          Uu = uu.m;
-        for (let Zu = 0; Zu < 16; Zu++) su[Zu] = ju[Zu] + Uu[Zu];
-        return Eu.markAsUpdated(), Eu
+      addToRef(GG, bG) {
+        const ZG = this._m,
+          wG = bG._m,
+          SG = GG.m;
+        for (let LG = 0; LG < 16; LG++) wG[LG] = ZG[LG] + SG[LG];
+        return bG.markAsUpdated(), bG
       }
-      addToSelf(uu) {
-        const Eu = this._m,
-          ju = uu.m;
-        return Eu[0] += ju[0], Eu[1] += ju[1], Eu[2] += ju[2], Eu[3] += ju[3], Eu[4] += ju[4], Eu[5] += ju[5], Eu[6] += ju[6], Eu[7] += ju[7], Eu[8] += ju[8], Eu[9] += ju[9], Eu[10] += ju[10], Eu[11] += ju[11], Eu[12] += ju[12], Eu[13] += ju[13], Eu[14] += ju[14], Eu[15] += ju[15], this.markAsUpdated(), this
+      addToSelf(GG) {
+        const bG = this._m,
+          ZG = GG.m;
+        return bG[0] += ZG[0], bG[1] += ZG[1], bG[2] += ZG[2], bG[3] += ZG[3], bG[4] += ZG[4], bG[5] += ZG[5], bG[6] += ZG[6], bG[7] += ZG[7], bG[8] += ZG[8], bG[9] += ZG[9], bG[10] += ZG[10], bG[11] += ZG[11], bG[12] += ZG[12], bG[13] += ZG[13], bG[14] += ZG[14], bG[15] += ZG[15], this.markAsUpdated(), this
       }
-      addInPlace(uu) {
-        const Eu = this._m,
-          ju = uu.m;
-        for (let su = 0; su < 16; su++) Eu[su] += ju[su];
+      addInPlace(GG) {
+        const bG = this._m,
+          ZG = GG.m;
+        for (let wG = 0; wG < 16; wG++) bG[wG] += ZG[wG];
         return this.markAsUpdated(), this
       }
       addInPlaceFromFloats() {
-        const uu = this._m;
-        for (let Eu = 0; Eu < 16; Eu++) uu[Eu] += Eu < 0 || arguments.length <= Eu ? void 0 : arguments[Eu];
+        const GG = this._m;
+        for (let bG = 0; bG < 16; bG++) GG[bG] += bG < 0 || arguments.length <= bG ? void 0 : arguments[bG];
         return this.markAsUpdated(), this
       }
-      subtract(uu) {
-        const Eu = this._m,
-          ju = uu.m;
-        for (let su = 0; su < 16; su++) Eu[su] -= ju[su];
+      subtract(GG) {
+        const bG = this._m,
+          ZG = GG.m;
+        for (let wG = 0; wG < 16; wG++) bG[wG] -= ZG[wG];
         return this.markAsUpdated(), this
       }
-      subtractToRef(uu, Eu) {
-        const ju = this._m,
-          su = uu.m,
-          Uu = Eu._m;
-        for (let Zu = 0; Zu < 16; Zu++) Uu[Zu] = ju[Zu] - su[Zu];
-        return Eu.markAsUpdated(), Eu
+      subtractToRef(GG, bG) {
+        const ZG = this._m,
+          wG = GG.m,
+          SG = bG._m;
+        for (let LG = 0; LG < 16; LG++) SG[LG] = ZG[LG] - wG[LG];
+        return bG.markAsUpdated(), bG
       }
-      Qsu(uu) {
-        const Eu = this._m,
-          ju = uu.m;
-        for (let su = 0; su < 16; su++) Eu[su] -= ju[su];
+      twG(GG) {
+        const bG = this._m,
+          ZG = GG.m;
+        for (let wG = 0; wG < 16; wG++) bG[wG] -= ZG[wG];
         return this.markAsUpdated(), this
       }
       subtractFromFloats() {
-        for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
-        return this.subtractFromFloatsToRef(...Eu, new Yu)
+        for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
+        return this.subtractFromFloatsToRef(...bG, new hG)
       }
       subtractFromFloatsToRef() {
-        for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
-        const su = Eu.pop(),
-          Uu = this._m,
-          Zu = su._m,
-          Xu = Eu;
-        for (let lu = 0; lu < 16; lu++) Zu[lu] = Uu[lu] - Xu[lu];
-        return su.markAsUpdated(), su
+        for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
+        const wG = bG.pop(),
+          SG = this._m,
+          LG = wG._m,
+          yG = bG;
+        for (let kG = 0; kG < 16; kG++) LG[kG] = SG[kG] - yG[kG];
+        return wG.markAsUpdated(), wG
       }
-      invertToRef(uu) {
-        return !0 === this._isIdentity ? (Yu.IdentityToRef(uu), uu) : ((0, qu.e)(this, uu.Osu()) ? uu.markAsUpdated() : uu.yJ(this), uu)
+      invertToRef(GG) {
+        return !0 === this._isIdentity ? (hG.IdentityToRef(GG), GG) : ((0, UG.c)(this, GG.mwG()) ? GG.markAsUpdated() : GG.oW(this), GG)
       }
-      addAtIndex(uu, Eu) {
-        return this._m[uu] += Eu, this.markAsUpdated(), this
+      addAtIndex(GG, bG) {
+        return this._m[GG] += bG, this.markAsUpdated(), this
       }
-      multiplyAtIndex(uu, Eu) {
-        return this._m[uu] *= Eu, this.markAsUpdated(), this
+      multiplyAtIndex(GG, bG) {
+        return this._m[GG] *= bG, this.markAsUpdated(), this
       }
-      setTranslationFromFloats(uu, Eu, ju) {
-        return this._m[12] = uu, this._m[13] = Eu, this._m[14] = ju, this.markAsUpdated(), this
+      setTranslationFromFloats(GG, bG, ZG) {
+        return this._m[12] = GG, this._m[13] = bG, this._m[14] = ZG, this.markAsUpdated(), this
       }
-      addTranslationFromFloats(uu, Eu, ju) {
-        return this._m[12] += uu, this._m[13] += Eu, this._m[14] += ju, this.markAsUpdated(), this
+      addTranslationFromFloats(GG, bG, ZG) {
+        return this._m[12] += GG, this._m[13] += bG, this._m[14] += ZG, this.markAsUpdated(), this
       }
-      setTranslation(uu) {
-        return this.setTranslationFromFloats(uu._x, uu._y, uu._z)
+      setTranslation(GG) {
+        return this.setTranslationFromFloats(GG._x, GG._y, GG._z)
       }
       getTranslation() {
-        return new cu(this._m[12], this._m[13], this._m[14])
+        return new fG(this._m[12], this._m[13], this._m[14])
       }
-      getTranslationToRef(uu) {
-        return uu.x = this._m[12], uu.y = this._m[13], uu.z = this._m[14], uu
+      getTranslationToRef(GG) {
+        return GG.x = this._m[12], GG.y = this._m[13], GG.z = this._m[14], GG
       }
       removeRotationAndScaling() {
-        const uu = this.m;
-        return Yu.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, uu[12], uu[13], uu[14], uu[15], this), this._updateIdentityStatus(0 === uu[12] && 0 === uu[13] && 0 === uu[14] && 1 === uu[15]), this
+        const GG = this.m;
+        return hG.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, GG[12], GG[13], GG[14], GG[15], this), this._updateIdentityStatus(0 === GG[12] && 0 === GG[13] && 0 === GG[14] && 1 === GG[15]), this
       }
-      yJ(uu) {
-        uu.copyToArray(this._m);
-        const Eu = uu;
-        return this.updateFlag = Eu.updateFlag, this._updateIdentityStatus(Eu._isIdentity, Eu._isIdentityDirty, Eu._isIdentity3x2, Eu._isIdentity3x2Dirty), this
+      oW(GG) {
+        GG.copyToArray(this._m);
+        const bG = GG;
+        return this.updateFlag = bG.updateFlag, this._updateIdentityStatus(bG._isIdentity, bG._isIdentityDirty, bG._isIdentity3x2, bG._isIdentity3x2Dirty), this
       }
-      copyToArray(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return (0, qu.b)(this, uu, Eu), this
+      copyToArray(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return (0, UG.b)(this, GG, bG), this
       }
-      multiply(uu) {
-        const Eu = new Yu;
-        return this.multiplyToRef(uu, Eu), Eu
+      multiply(GG) {
+        const bG = new hG;
+        return this.multiplyToRef(GG, bG), bG
       }
-      multiplyInPlace(uu) {
-        const Eu = this._m,
-          ju = uu.m;
-        for (let su = 0; su < 16; su++) Eu[su] *= ju[su];
+      multiplyInPlace(GG) {
+        const bG = this._m,
+          ZG = GG.m;
+        for (let wG = 0; wG < 16; wG++) bG[wG] *= ZG[wG];
         return this.markAsUpdated(), this
       }
       multiplyByFloats() {
-        const uu = this._m;
-        for (let Eu = 0; Eu < 16; Eu++) uu[Eu] *= Eu < 0 || arguments.length <= Eu ? void 0 : arguments[Eu];
+        const GG = this._m;
+        for (let bG = 0; bG < 16; bG++) GG[bG] *= bG < 0 || arguments.length <= bG ? void 0 : arguments[bG];
         return this.markAsUpdated(), this
       }
       multiplyByFloatsToRef() {
-        for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
-        const su = Eu.pop(),
-          Uu = this._m,
-          Zu = su._m,
-          Xu = Eu;
-        for (let lu = 0; lu < 16; lu++) Zu[lu] = Uu[lu] * Xu[lu];
-        return su.markAsUpdated(), su
+        for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
+        const wG = bG.pop(),
+          SG = this._m,
+          LG = wG._m,
+          yG = bG;
+        for (let kG = 0; kG < 16; kG++) LG[kG] = SG[kG] * yG[kG];
+        return wG.markAsUpdated(), wG
       }
-      multiplyToRef(uu, Eu) {
-        return this._isIdentity ? (Eu.yJ(uu), Eu) : uu._isIdentity ? (Eu.yJ(this), Eu) : (this.multiplyToArray(uu, Eu._m, 0), Eu.markAsUpdated(), Eu)
+      multiplyToRef(GG, bG) {
+        return this._isIdentity ? (bG.oW(GG), bG) : GG._isIdentity ? (bG.oW(this), bG) : (this.multiplyToArray(GG, bG._m, 0), bG.markAsUpdated(), bG)
       }
-      multiplyToArray(uu, Eu, ju) {
-        return (0, qu.o)(this, uu, Eu, ju), this
+      multiplyToArray(GG, bG, ZG) {
+        return (0, UG.l)(this, GG, bG, ZG), this
       }
-      divide(uu) {
-        return this.divideToRef(uu, new Yu)
+      divide(GG) {
+        return this.divideToRef(GG, new hG)
       }
-      divideToRef(uu, Eu) {
-        const ju = this._m,
-          su = uu.m,
-          Uu = Eu._m;
-        for (let Zu = 0; Zu < 16; Zu++) Uu[Zu] = ju[Zu] / su[Zu];
-        return Eu.markAsUpdated(), Eu
+      divideToRef(GG, bG) {
+        const ZG = this._m,
+          wG = GG.m,
+          SG = bG._m;
+        for (let LG = 0; LG < 16; LG++) SG[LG] = ZG[LG] / wG[LG];
+        return bG.markAsUpdated(), bG
       }
-      divideInPlace(uu) {
-        const Eu = this._m,
-          ju = uu.m;
-        for (let su = 0; su < 16; su++) Eu[su] /= ju[su];
+      divideInPlace(GG) {
+        const bG = this._m,
+          ZG = GG.m;
+        for (let wG = 0; wG < 16; wG++) bG[wG] /= ZG[wG];
         return this.markAsUpdated(), this
       }
-      minimizeInPlace(uu) {
-        const Eu = this._m,
-          ju = uu.m;
-        for (let su = 0; su < 16; su++) Eu[su] = Math.min(Eu[su], ju[su]);
+      minimizeInPlace(GG) {
+        const bG = this._m,
+          ZG = GG.m;
+        for (let wG = 0; wG < 16; wG++) bG[wG] = Math.min(bG[wG], ZG[wG]);
         return this.markAsUpdated(), this
       }
       minimizeInPlaceFromFloats() {
-        const uu = this._m;
-        for (let Eu = 0; Eu < 16; Eu++) uu[Eu] = Math.min(uu[Eu], Eu < 0 || arguments.length <= Eu ? void 0 : arguments[Eu]);
+        const GG = this._m;
+        for (let bG = 0; bG < 16; bG++) GG[bG] = Math.min(GG[bG], bG < 0 || arguments.length <= bG ? void 0 : arguments[bG]);
         return this.markAsUpdated(), this
       }
-      maximizeInPlace(uu) {
-        const Eu = this._m,
-          ju = uu.m;
-        for (let su = 0; su < 16; su++) Eu[su] = Math.max(Eu[su], ju[su]);
+      maximizeInPlace(GG) {
+        const bG = this._m,
+          ZG = GG.m;
+        for (let wG = 0; wG < 16; wG++) bG[wG] = Math.max(bG[wG], ZG[wG]);
         return this.markAsUpdated(), this
       }
       maximizeInPlaceFromFloats() {
-        const uu = this._m;
-        for (let Eu = 0; Eu < 16; Eu++) uu[Eu] = Math.max(uu[Eu], Eu < 0 || arguments.length <= Eu ? void 0 : arguments[Eu]);
+        const GG = this._m;
+        for (let bG = 0; bG < 16; bG++) GG[bG] = Math.max(GG[bG], bG < 0 || arguments.length <= bG ? void 0 : arguments[bG]);
         return this.markAsUpdated(), this
       }
-      nZ() {
-        return this.negateToRef(new Yu)
+      By() {
+        return this.negateToRef(new hG)
       }
       negateInPlace() {
-        const uu = this._m;
-        for (let Eu = 0; Eu < 16; Eu++) uu[Eu] = -uu[Eu];
+        const GG = this._m;
+        for (let bG = 0; bG < 16; bG++) GG[bG] = -GG[bG];
         return this.markAsUpdated(), this
       }
-      negateToRef(uu) {
-        const Eu = this._m,
-          ju = uu._m;
-        for (let su = 0; su < 16; su++) ju[su] = -Eu[su];
-        return uu.markAsUpdated(), uu
+      negateToRef(GG) {
+        const bG = this._m,
+          ZG = GG._m;
+        for (let wG = 0; wG < 16; wG++) ZG[wG] = -bG[wG];
+        return GG.markAsUpdated(), GG
       }
-      equals(uu) {
-        const Eu = uu;
-        if (!Eu) return !1;
-        if ((this._isIdentity || Eu._isIdentity) && !this._isIdentityDirty && !Eu._isIdentityDirty) return this._isIdentity && Eu._isIdentity;
-        const ju = this.m,
-          su = Eu.m;
-        return ju[0] === su[0] && ju[1] === su[1] && ju[2] === su[2] && ju[3] === su[3] && ju[4] === su[4] && ju[5] === su[5] && ju[6] === su[6] && ju[7] === su[7] && ju[8] === su[8] && ju[9] === su[9] && ju[10] === su[10] && ju[11] === su[11] && ju[12] === su[12] && ju[13] === su[13] && ju[14] === su[14] && ju[15] === su[15]
+      equals(GG) {
+        const bG = GG;
+        if (!bG) return !1;
+        if ((this._isIdentity || bG._isIdentity) && !this._isIdentityDirty && !bG._isIdentityDirty) return this._isIdentity && bG._isIdentity;
+        const ZG = this.m,
+          wG = bG.m;
+        return ZG[0] === wG[0] && ZG[1] === wG[1] && ZG[2] === wG[2] && ZG[3] === wG[3] && ZG[4] === wG[4] && ZG[5] === wG[5] && ZG[6] === wG[6] && ZG[7] === wG[7] && ZG[8] === wG[8] && ZG[9] === wG[9] && ZG[10] === wG[10] && ZG[11] === wG[11] && ZG[12] === wG[12] && ZG[13] === wG[13] && ZG[14] === wG[14] && ZG[15] === wG[15]
       }
-      equalsWithEpsilon(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const ju = this._m,
-          su = uu.m;
-        for (let Uu = 0; Uu < 16; Uu++)
-          if (!(0, lu.WithinEpsilon)(ju[Uu], su[Uu], Eu)) return !1;
+      equalsWithEpsilon(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const ZG = this._m,
+          wG = GG.m;
+        for (let SG = 0; SG < 16; SG++)
+          if (!(0, kG.WithinEpsilon)(ZG[SG], wG[SG], bG)) return !1;
         return !0
       }
-      BXu() {
-        const uu = this._m;
-        for (let Eu = 0; Eu < 16; Eu++)
-          if (uu[Eu] != (Eu < 0 || arguments.length <= Eu ? void 0 : arguments[Eu])) return !1;
+      ZkG() {
+        const GG = this._m;
+        for (let bG = 0; bG < 16; bG++)
+          if (GG[bG] != (bG < 0 || arguments.length <= bG ? void 0 : arguments[bG])) return !1;
         return !0
       }
       floor() {
-        return this.floorToRef(new Yu)
+        return this.floorToRef(new hG)
       }
-      floorToRef(uu) {
-        const Eu = this._m,
-          ju = uu._m;
-        for (let su = 0; su < 16; su++) ju[su] = Math.floor(Eu[su]);
-        return uu.markAsUpdated(), uu
+      floorToRef(GG) {
+        const bG = this._m,
+          ZG = GG._m;
+        for (let wG = 0; wG < 16; wG++) ZG[wG] = Math.floor(bG[wG]);
+        return GG.markAsUpdated(), GG
       }
       fract() {
-        return this.fractToRef(new Yu)
+        return this.fractToRef(new hG)
       }
-      fractToRef(uu) {
-        const Eu = this._m,
-          ju = uu._m;
-        for (let su = 0; su < 16; su++) ju[su] = Eu[su] - Math.floor(Eu[su]);
-        return uu.markAsUpdated(), uu
+      fractToRef(GG) {
+        const bG = this._m,
+          ZG = GG._m;
+        for (let wG = 0; wG < 16; wG++) ZG[wG] = bG[wG] - Math.floor(bG[wG]);
+        return GG.markAsUpdated(), GG
       }
       clone() {
-        const uu = new Yu;
-        return uu.yJ(this), uu
+        const GG = new hG;
+        return GG.oW(this), GG
       }
       getClassName() {
         return "Matrix"
       }
       getHashCode() {
-        let uu = Cu(this._m[0]);
-        for (let Eu = 1; Eu < 16; Eu++) uu = 397 * uu ^ Cu(this._m[Eu]);
-        return uu
+        let GG = VG(this._m[0]);
+        for (let bG = 1; bG < 16; bG++) GG = 397 * GG ^ VG(this._m[bG]);
+        return GG
       }
-      decomposeToTransformNode(uu) {
-        return uu.rotationQuaternion = uu.rotationQuaternion || new Ou, this.decompose(uu.Of, uu.rotationQuaternion, uu.position)
+      decomposeToTransformNode(GG) {
+        return GG.rotationQuaternion = GG.rotationQuaternion || new KG, this.decompose(GG.nY, GG.rotationQuaternion, GG.position)
       }
-      decompose(uu, Eu, ju, su) {
-        let Uu = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        if (this._isIdentity) return ju && ju.k_(0), uu && uu.k_(1), Eu && Eu.T6(0, 0, 0, 1), !0;
-        const Zu = this._m;
-        if (ju && ju.T6(Zu[12], Zu[13], Zu[14]), (uu = uu || hu.dO[0]).x = Math.sqrt(Zu[0] * Zu[0] + Zu[1] * Zu[1] + Zu[2] * Zu[2]), uu.y = Math.sqrt(Zu[4] * Zu[4] + Zu[5] * Zu[5] + Zu[6] * Zu[6]), uu.z = Math.sqrt(Zu[8] * Zu[8] + Zu[9] * Zu[9] + Zu[10] * Zu[10]), su) {
-          const Eu = (Uu ? su.absoluteScaling.x : su.Of.x) < 0 ? -1 : 1,
-            ju = (Uu ? su.absoluteScaling.y : su.Of.y) < 0 ? -1 : 1,
-            Zu = (Uu ? su.absoluteScaling.z : su.Of.z) < 0 ? -1 : 1;
-          uu.x *= Eu, uu.y *= ju, uu.z *= Zu
-        } else this.determinant() <= 0 && (uu.y *= -1);
-        if (0 === uu._x || 0 === uu._y || 0 === uu._z) return Eu && Eu.T6(0, 0, 0, 1), !1;
-        if (Eu) {
-          const ju = 1 / uu._x,
-            su = 1 / uu._y,
-            Uu = 1 / uu._z;
-          Yu.FromValuesToRef(Zu[0] * ju, Zu[1] * ju, Zu[2] * ju, 0, Zu[4] * su, Zu[5] * su, Zu[6] * su, 0, Zu[8] * Uu, Zu[9] * Uu, Zu[10] * Uu, 0, 0, 0, 0, 1, hu.Matrix[0]), Ou.FromRotationMatrixToRef(hu.Matrix[0], Eu)
+      decompose(GG, bG, ZG, wG) {
+        let SG = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        if (this._isIdentity) return ZG && ZG.N7(0), GG && GG.N7(1), bG && bG.fGG(0, 0, 0, 1), !0;
+        const LG = this._m;
+        if (ZG && ZG.fGG(LG[12], LG[13], LG[14]), (GG = GG || dG.mK[0]).x = Math.sqrt(LG[0] * LG[0] + LG[1] * LG[1] + LG[2] * LG[2]), GG.y = Math.sqrt(LG[4] * LG[4] + LG[5] * LG[5] + LG[6] * LG[6]), GG.z = Math.sqrt(LG[8] * LG[8] + LG[9] * LG[9] + LG[10] * LG[10]), wG) {
+          const bG = (SG ? wG.absoluteScaling.x : wG.nY.x) < 0 ? -1 : 1,
+            ZG = (SG ? wG.absoluteScaling.y : wG.nY.y) < 0 ? -1 : 1,
+            LG = (SG ? wG.absoluteScaling.z : wG.nY.z) < 0 ? -1 : 1;
+          GG.x *= bG, GG.y *= ZG, GG.z *= LG
+        } else this.determinant() <= 0 && (GG.y *= -1);
+        if (0 === GG._x || 0 === GG._y || 0 === GG._z) return bG && bG.fGG(0, 0, 0, 1), !1;
+        if (bG) {
+          const ZG = 1 / GG._x,
+            wG = 1 / GG._y,
+            SG = 1 / GG._z;
+          hG.FromValuesToRef(LG[0] * ZG, LG[1] * ZG, LG[2] * ZG, 0, LG[4] * wG, LG[5] * wG, LG[6] * wG, 0, LG[8] * SG, LG[9] * SG, LG[10] * SG, 0, 0, 0, 0, 1, dG.Matrix[0]), KG.FromRotationMatrixToRef(dG.Matrix[0], bG)
         }
         return !0
       }
-      getRow(uu) {
-        if (uu < 0 || uu > 3) return null;
-        const Eu = 4 * uu;
-        return new Nu(this._m[Eu + 0], this._m[Eu + 1], this._m[Eu + 2], this._m[Eu + 3])
+      getRow(GG) {
+        if (GG < 0 || GG > 3) return null;
+        const bG = 4 * GG;
+        return new QG(this._m[bG + 0], this._m[bG + 1], this._m[bG + 2], this._m[bG + 3])
       }
-      getRowToRef(uu, Eu) {
-        if (uu >= 0 && uu <= 3) {
-          const ju = 4 * uu;
-          Eu.x = this._m[ju + 0], Eu.y = this._m[ju + 1], Eu.z = this._m[ju + 2], Eu.w = this._m[ju + 3]
+      getRowToRef(GG, bG) {
+        if (GG >= 0 && GG <= 3) {
+          const ZG = 4 * GG;
+          bG.x = this._m[ZG + 0], bG.y = this._m[ZG + 1], bG.z = this._m[ZG + 2], bG.w = this._m[ZG + 3]
         }
-        return Eu
+        return bG
       }
-      setRow(uu, Eu) {
-        return this.setRowFromFloats(uu, Eu.x, Eu.y, Eu.z, Eu.w)
+      setRow(GG, bG) {
+        return this.setRowFromFloats(GG, bG.x, bG.y, bG.z, bG.w)
       }
       transpose() {
-        const uu = new Yu;
-        return Yu.TransposeToRef(this, uu), uu
+        const GG = new hG;
+        return hG.TransposeToRef(this, GG), GG
       }
-      transposeToRef(uu) {
-        return Yu.TransposeToRef(this, uu), uu
+      transposeToRef(GG) {
+        return hG.TransposeToRef(this, GG), GG
       }
-      setRowFromFloats(uu, Eu, ju, su, Uu) {
-        if (uu < 0 || uu > 3) return this;
-        const Zu = 4 * uu;
-        return this._m[Zu + 0] = Eu, this._m[Zu + 1] = ju, this._m[Zu + 2] = su, this._m[Zu + 3] = Uu, this.markAsUpdated(), this
+      setRowFromFloats(GG, bG, ZG, wG, SG) {
+        if (GG < 0 || GG > 3) return this;
+        const LG = 4 * GG;
+        return this._m[LG + 0] = bG, this._m[LG + 1] = ZG, this._m[LG + 2] = wG, this._m[LG + 3] = SG, this.markAsUpdated(), this
       }
-      scale(uu) {
-        const Eu = new Yu;
-        return this.scaleToRef(uu, Eu), Eu
+      scale(GG) {
+        const bG = new hG;
+        return this.scaleToRef(GG, bG), bG
       }
-      scaleToRef(uu, Eu) {
-        for (let ju = 0; ju < 16; ju++) Eu._m[ju] = this._m[ju] * uu;
-        return Eu.markAsUpdated(), Eu
+      scaleToRef(GG, bG) {
+        for (let ZG = 0; ZG < 16; ZG++) bG._m[ZG] = this._m[ZG] * GG;
+        return bG.markAsUpdated(), bG
       }
-      scaleAndAddToRef(uu, Eu) {
-        for (let ju = 0; ju < 16; ju++) Eu._m[ju] += this._m[ju] * uu;
-        return Eu.markAsUpdated(), Eu
+      scaleAndAddToRef(GG, bG) {
+        for (let ZG = 0; ZG < 16; ZG++) bG._m[ZG] += this._m[ZG] * GG;
+        return bG.markAsUpdated(), bG
       }
-      scaleInPlace(uu) {
-        const Eu = this._m;
-        for (let ju = 0; ju < 16; ju++) Eu[ju] *= uu;
+      scaleInPlace(GG) {
+        const bG = this._m;
+        for (let ZG = 0; ZG < 16; ZG++) bG[ZG] *= GG;
         return this.markAsUpdated(), this
       }
-      toNormalMatrix(uu) {
-        const Eu = hu.Matrix[0];
-        this.invertToRef(Eu), Eu.transposeToRef(uu);
-        const ju = uu._m;
-        return Yu.FromValuesToRef(ju[0], ju[1], ju[2], 0, ju[4], ju[5], ju[6], 0, ju[8], ju[9], ju[10], 0, 0, 0, 0, 1, uu), uu
+      toNormalMatrix(GG) {
+        const bG = dG.Matrix[0];
+        this.invertToRef(bG), bG.transposeToRef(GG);
+        const ZG = GG._m;
+        return hG.FromValuesToRef(ZG[0], ZG[1], ZG[2], 0, ZG[4], ZG[5], ZG[6], 0, ZG[8], ZG[9], ZG[10], 0, 0, 0, 0, 1, GG), GG
       }
       getRotationMatrix() {
-        const uu = new Yu;
-        return this.getRotationMatrixToRef(uu), uu
+        const GG = new hG;
+        return this.getRotationMatrixToRef(GG), GG
       }
-      getRotationMatrixToRef(uu) {
-        const Eu = hu.dO[0];
-        if (!this.decompose(Eu)) return Yu.IdentityToRef(uu), uu;
-        const ju = this._m,
-          su = 1 / Eu._x,
-          Uu = 1 / Eu._y,
-          Zu = 1 / Eu._z;
-        return Yu.FromValuesToRef(ju[0] * su, ju[1] * su, ju[2] * su, 0, ju[4] * Uu, ju[5] * Uu, ju[6] * Uu, 0, ju[8] * Zu, ju[9] * Zu, ju[10] * Zu, 0, 0, 0, 0, 1, uu), uu
+      getRotationMatrixToRef(GG) {
+        const bG = dG.mK[0];
+        if (!this.decompose(bG)) return hG.IdentityToRef(GG), GG;
+        const ZG = this._m,
+          wG = 1 / bG._x,
+          SG = 1 / bG._y,
+          LG = 1 / bG._z;
+        return hG.FromValuesToRef(ZG[0] * wG, ZG[1] * wG, ZG[2] * wG, 0, ZG[4] * SG, ZG[5] * SG, ZG[6] * SG, 0, ZG[8] * LG, ZG[9] * LG, ZG[10] * LG, 0, 0, 0, 0, 1, GG), GG
       }
       toggleModelMatrixHandInPlace() {
-        const uu = this._m;
-        return uu[2] *= -1, uu[6] *= -1, uu[8] *= -1, uu[9] *= -1, uu[14] *= -1, this.markAsUpdated(), this
+        const GG = this._m;
+        return GG[2] *= -1, GG[6] *= -1, GG[8] *= -1, GG[9] *= -1, GG[14] *= -1, this.markAsUpdated(), this
       }
       toggleProjectionMatrixHandInPlace() {
-        const uu = this._m;
-        return uu[8] *= -1, uu[9] *= -1, uu[10] *= -1, uu[11] *= -1, this.markAsUpdated(), this
+        const GG = this._m;
+        return GG[8] *= -1, GG[9] *= -1, GG[10] *= -1, GG[11] *= -1, this.markAsUpdated(), this
       }
       _convertProjectionToHalfZRangeInPlace() {
-        return this.multiplyToRef(gu, this), this
+        return this.multiplyToRef(rG, this), this
       }
-      static FromArray(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const ju = new Yu;
-        return Yu.FromArrayToRef(uu, Eu, ju), ju
+      static FromArray(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const ZG = new hG;
+        return hG.FromArrayToRef(GG, bG, ZG), ZG
       }
-      static FromArrayToRef(uu, Eu, ju) {
-        for (let su = 0; su < 16; su++) ju._m[su] = uu[su + Eu];
-        return ju.markAsUpdated(), ju
+      static FromArrayToRef(GG, bG, ZG) {
+        for (let wG = 0; wG < 16; wG++) ZG._m[wG] = GG[wG + bG];
+        return ZG.markAsUpdated(), ZG
       }
-      static FromFloat32ArrayToRefScaled(uu, Eu, ju, su) {
-        return su._m[0] = uu[0 + Eu] * ju, su._m[1] = uu[1 + Eu] * ju, su._m[2] = uu[2 + Eu] * ju, su._m[3] = uu[3 + Eu] * ju, su._m[4] = uu[4 + Eu] * ju, su._m[5] = uu[5 + Eu] * ju, su._m[6] = uu[6 + Eu] * ju, su._m[7] = uu[7 + Eu] * ju, su._m[8] = uu[8 + Eu] * ju, su._m[9] = uu[9 + Eu] * ju, su._m[10] = uu[10 + Eu] * ju, su._m[11] = uu[11 + Eu] * ju, su._m[12] = uu[12 + Eu] * ju, su._m[13] = uu[13 + Eu] * ju, su._m[14] = uu[14 + Eu] * ju, su._m[15] = uu[15 + Eu] * ju, su.markAsUpdated(), su
+      static FromFloat32ArrayToRefScaled(GG, bG, ZG, wG) {
+        return wG._m[0] = GG[0 + bG] * ZG, wG._m[1] = GG[1 + bG] * ZG, wG._m[2] = GG[2 + bG] * ZG, wG._m[3] = GG[3 + bG] * ZG, wG._m[4] = GG[4 + bG] * ZG, wG._m[5] = GG[5 + bG] * ZG, wG._m[6] = GG[6 + bG] * ZG, wG._m[7] = GG[7 + bG] * ZG, wG._m[8] = GG[8 + bG] * ZG, wG._m[9] = GG[9 + bG] * ZG, wG._m[10] = GG[10 + bG] * ZG, wG._m[11] = GG[11 + bG] * ZG, wG._m[12] = GG[12 + bG] * ZG, wG._m[13] = GG[13 + bG] * ZG, wG._m[14] = GG[14 + bG] * ZG, wG._m[15] = GG[15 + bG] * ZG, wG.markAsUpdated(), wG
       }
       static get IdentityReadOnly() {
-        return Yu._IdentityReadOnly
+        return hG._IdentityReadOnly
       }
-      static FromValuesToRef(uu, Eu, ju, su, Uu, Zu, Xu, lu, qu, fu, Cu, bu, cu, Nu, Ou, Yu, hu) {
-        const Du = hu._m;
-        Du[0] = uu, Du[1] = Eu, Du[2] = ju, Du[3] = su, Du[4] = Uu, Du[5] = Zu, Du[6] = Xu, Du[7] = lu, Du[8] = qu, Du[9] = fu, Du[10] = Cu, Du[11] = bu, Du[12] = cu, Du[13] = Nu, Du[14] = Ou, Du[15] = Yu, hu.markAsUpdated()
+      static FromValuesToRef(GG, bG, ZG, wG, SG, LG, yG, kG, UG, YG, VG, pG, fG, QG, KG, hG, dG) {
+        const JG = dG._m;
+        JG[0] = GG, JG[1] = bG, JG[2] = ZG, JG[3] = wG, JG[4] = SG, JG[5] = LG, JG[6] = yG, JG[7] = kG, JG[8] = UG, JG[9] = YG, JG[10] = VG, JG[11] = pG, JG[12] = fG, JG[13] = QG, JG[14] = KG, JG[15] = hG, dG.markAsUpdated()
       }
-      static FromValues(uu, Eu, ju, su, Uu, Zu, Xu, lu, qu, fu, Cu, bu, cu, Nu, Ou, hu) {
-        const Du = new Yu,
-          gu = Du._m;
-        return gu[0] = uu, gu[1] = Eu, gu[2] = ju, gu[3] = su, gu[4] = Uu, gu[5] = Zu, gu[6] = Xu, gu[7] = lu, gu[8] = qu, gu[9] = fu, gu[10] = Cu, gu[11] = bu, gu[12] = cu, gu[13] = Nu, gu[14] = Ou, gu[15] = hu, Du.markAsUpdated(), Du
+      static FromValues(GG, bG, ZG, wG, SG, LG, yG, kG, UG, YG, VG, pG, fG, QG, KG, dG) {
+        const JG = new hG,
+          rG = JG._m;
+        return rG[0] = GG, rG[1] = bG, rG[2] = ZG, rG[3] = wG, rG[4] = SG, rG[5] = LG, rG[6] = yG, rG[7] = kG, rG[8] = UG, rG[9] = YG, rG[10] = VG, rG[11] = pG, rG[12] = fG, rG[13] = QG, rG[14] = KG, rG[15] = dG, JG.markAsUpdated(), JG
       }
-      static Compose(uu, Eu, ju) {
-        const su = new Yu;
-        return Yu.ComposeToRef(uu, Eu, ju, su), su
+      static Compose(GG, bG, ZG) {
+        const wG = new hG;
+        return hG.ComposeToRef(GG, bG, ZG, wG), wG
       }
-      static ComposeToRef(uu, Eu, ju, su) {
-        const Uu = su._m,
-          Zu = Eu._x,
-          Xu = Eu._y,
-          lu = Eu._z,
-          qu = Eu._w,
-          fu = Zu + Zu,
-          Cu = Xu + Xu,
-          bu = lu + lu,
-          cu = Zu * fu,
-          Nu = Zu * Cu,
-          Ou = Zu * bu,
-          Yu = Xu * Cu,
-          hu = Xu * bu,
-          Du = lu * bu,
-          gu = qu * fu,
-          Mu = qu * Cu,
-          eu = qu * bu,
-          Gu = uu._x,
-          pu = uu._y,
-          wu = uu._z;
-        return Uu[0] = (1 - (Yu + Du)) * Gu, Uu[1] = (Nu + eu) * Gu, Uu[2] = (Ou - Mu) * Gu, Uu[3] = 0, Uu[4] = (Nu - eu) * pu, Uu[5] = (1 - (cu + Du)) * pu, Uu[6] = (hu + gu) * pu, Uu[7] = 0, Uu[8] = (Ou + Mu) * wu, Uu[9] = (hu - gu) * wu, Uu[10] = (1 - (cu + Yu)) * wu, Uu[11] = 0, Uu[12] = ju._x, Uu[13] = ju._y, Uu[14] = ju._z, Uu[15] = 1, su.markAsUpdated(), su
+      static ComposeToRef(GG, bG, ZG, wG) {
+        const SG = wG._m,
+          LG = bG._x,
+          yG = bG._y,
+          kG = bG._z,
+          UG = bG._w,
+          YG = LG + LG,
+          VG = yG + yG,
+          pG = kG + kG,
+          fG = LG * YG,
+          QG = LG * VG,
+          KG = LG * pG,
+          hG = yG * VG,
+          dG = yG * pG,
+          JG = kG * pG,
+          rG = UG * YG,
+          zG = UG * VG,
+          EG = UG * pG,
+          oG = GG._x,
+          XG = GG._y,
+          uG = GG._z;
+        return SG[0] = (1 - (hG + JG)) * oG, SG[1] = (QG + EG) * oG, SG[2] = (KG - zG) * oG, SG[3] = 0, SG[4] = (QG - EG) * XG, SG[5] = (1 - (fG + JG)) * XG, SG[6] = (dG + rG) * XG, SG[7] = 0, SG[8] = (KG + zG) * uG, SG[9] = (dG - rG) * uG, SG[10] = (1 - (fG + hG)) * uG, SG[11] = 0, SG[12] = ZG._x, SG[13] = ZG._y, SG[14] = ZG._z, SG[15] = 1, wG.markAsUpdated(), wG
       }
       static Identity() {
-        const uu = Yu.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-        return uu._updateIdentityStatus(!0), uu
+        const GG = hG.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        return GG._updateIdentityStatus(!0), GG
       }
-      static IdentityToRef(uu) {
-        return Yu.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, uu), uu._updateIdentityStatus(!0), uu
+      static IdentityToRef(GG) {
+        return hG.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, GG), GG._updateIdentityStatus(!0), GG
       }
       static Zero() {
-        const uu = Yu.FromValues(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-        return uu._updateIdentityStatus(!1), uu
+        const GG = hG.FromValues(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+        return GG._updateIdentityStatus(!1), GG
       }
-      static RotationX(uu) {
-        const Eu = new Yu;
-        return Yu.RotationXToRef(uu, Eu), Eu
+      static RotationX(GG) {
+        const bG = new hG;
+        return hG.RotationXToRef(GG, bG), bG
       }
-      static Invert(uu) {
-        const Eu = new Yu;
-        return uu.invertToRef(Eu), Eu
+      static Invert(GG) {
+        const bG = new hG;
+        return GG.invertToRef(bG), bG
       }
-      static RotationXToRef(uu, Eu) {
-        const ju = Math.sin(uu),
-          su = Math.cos(uu);
-        return Yu.FromValuesToRef(1, 0, 0, 0, 0, su, ju, 0, 0, -ju, su, 0, 0, 0, 0, 1, Eu), Eu._updateIdentityStatus(1 === su && 0 === ju), Eu
+      static RotationXToRef(GG, bG) {
+        const ZG = Math.sin(GG),
+          wG = Math.cos(GG);
+        return hG.FromValuesToRef(1, 0, 0, 0, 0, wG, ZG, 0, 0, -ZG, wG, 0, 0, 0, 0, 1, bG), bG._updateIdentityStatus(1 === wG && 0 === ZG), bG
       }
-      static RotationY(uu) {
-        const Eu = new Yu;
-        return Yu.RotationYToRef(uu, Eu), Eu
+      static RotationY(GG) {
+        const bG = new hG;
+        return hG.RotationYToRef(GG, bG), bG
       }
-      static RotationYToRef(uu, Eu) {
-        const ju = Math.sin(uu),
-          su = Math.cos(uu);
-        return Yu.FromValuesToRef(su, 0, -ju, 0, 0, 1, 0, 0, ju, 0, su, 0, 0, 0, 0, 1, Eu), Eu._updateIdentityStatus(1 === su && 0 === ju), Eu
+      static RotationYToRef(GG, bG) {
+        const ZG = Math.sin(GG),
+          wG = Math.cos(GG);
+        return hG.FromValuesToRef(wG, 0, -ZG, 0, 0, 1, 0, 0, ZG, 0, wG, 0, 0, 0, 0, 1, bG), bG._updateIdentityStatus(1 === wG && 0 === ZG), bG
       }
-      static RotationZ(uu) {
-        const Eu = new Yu;
-        return Yu.RotationZToRef(uu, Eu), Eu
+      static RotationZ(GG) {
+        const bG = new hG;
+        return hG.RotationZToRef(GG, bG), bG
       }
-      static RotationZToRef(uu, Eu) {
-        const ju = Math.sin(uu),
-          su = Math.cos(uu);
-        return Yu.FromValuesToRef(su, ju, 0, 0, -ju, su, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, Eu), Eu._updateIdentityStatus(1 === su && 0 === ju), Eu
+      static RotationZToRef(GG, bG) {
+        const ZG = Math.sin(GG),
+          wG = Math.cos(GG);
+        return hG.FromValuesToRef(wG, ZG, 0, 0, -ZG, wG, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, bG), bG._updateIdentityStatus(1 === wG && 0 === ZG), bG
       }
-      static RotationAxis(uu, Eu) {
-        const ju = new Yu;
-        return Yu.RotationAxisToRef(uu, Eu, ju), ju
+      static RotationAxis(GG, bG) {
+        const ZG = new hG;
+        return hG.RotationAxisToRef(GG, bG, ZG), ZG
       }
-      static RotationAxisToRef(uu, Eu, ju) {
-        const su = Math.sin(-Eu),
-          Uu = Math.cos(-Eu),
-          Zu = 1 - Uu;
-        uu = uu.normalizeToRef(hu.dO[0]);
-        const Xu = ju._m;
-        return Xu[0] = uu._x * uu._x * Zu + Uu, Xu[1] = uu._x * uu._y * Zu - uu._z * su, Xu[2] = uu._x * uu._z * Zu + uu._y * su, Xu[3] = 0, Xu[4] = uu._y * uu._x * Zu + uu._z * su, Xu[5] = uu._y * uu._y * Zu + Uu, Xu[6] = uu._y * uu._z * Zu - uu._x * su, Xu[7] = 0, Xu[8] = uu._z * uu._x * Zu - uu._y * su, Xu[9] = uu._z * uu._y * Zu + uu._x * su, Xu[10] = uu._z * uu._z * Zu + Uu, Xu[11] = 0, Xu[12] = 0, Xu[13] = 0, Xu[14] = 0, Xu[15] = 1, ju.markAsUpdated(), ju
+      static RotationAxisToRef(GG, bG, ZG) {
+        const wG = Math.sin(-bG),
+          SG = Math.cos(-bG),
+          LG = 1 - SG;
+        GG = GG.normalizeToRef(dG.mK[0]);
+        const yG = ZG._m;
+        return yG[0] = GG._x * GG._x * LG + SG, yG[1] = GG._x * GG._y * LG - GG._z * wG, yG[2] = GG._x * GG._z * LG + GG._y * wG, yG[3] = 0, yG[4] = GG._y * GG._x * LG + GG._z * wG, yG[5] = GG._y * GG._y * LG + SG, yG[6] = GG._y * GG._z * LG - GG._x * wG, yG[7] = 0, yG[8] = GG._z * GG._x * LG - GG._y * wG, yG[9] = GG._z * GG._y * LG + GG._x * wG, yG[10] = GG._z * GG._z * LG + SG, yG[11] = 0, yG[12] = 0, yG[13] = 0, yG[14] = 0, yG[15] = 1, ZG.markAsUpdated(), ZG
       }
-      static RotationAlignToRef(uu, Eu, ju) {
-        let Uu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const Zu = cu.Dot(Eu, uu),
-          Xu = ju._m;
-        if (Zu < -1 + su.c) Xu[0] = -1, Xu[1] = 0, Xu[2] = 0, Xu[3] = 0, Xu[4] = 0, Xu[5] = Uu ? 1 : -1, Xu[6] = 0, Xu[7] = 0, Xu[8] = 0, Xu[9] = 0, Xu[10] = Uu ? -1 : 1, Xu[11] = 0;
+      static RotationAlignToRef(GG, bG, ZG) {
+        let SG = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const LG = fG.Dot(bG, GG),
+          yG = ZG._m;
+        if (LG < -1 + wG.d) yG[0] = -1, yG[1] = 0, yG[2] = 0, yG[3] = 0, yG[4] = 0, yG[5] = SG ? 1 : -1, yG[6] = 0, yG[7] = 0, yG[8] = 0, yG[9] = 0, yG[10] = SG ? -1 : 1, yG[11] = 0;
         else {
-          const ju = cu.Cross(Eu, uu),
-            su = 1 / (1 + Zu);
-          Xu[0] = ju._x * ju._x * su + Zu, Xu[1] = ju._y * ju._x * su - ju._z, Xu[2] = ju._z * ju._x * su + ju._y, Xu[3] = 0, Xu[4] = ju._x * ju._y * su + ju._z, Xu[5] = ju._y * ju._y * su + Zu, Xu[6] = ju._z * ju._y * su - ju._x, Xu[7] = 0, Xu[8] = ju._x * ju._z * su - ju._y, Xu[9] = ju._y * ju._z * su + ju._x, Xu[10] = ju._z * ju._z * su + Zu, Xu[11] = 0
+          const ZG = fG.Cross(bG, GG),
+            wG = 1 / (1 + LG);
+          yG[0] = ZG._x * ZG._x * wG + LG, yG[1] = ZG._y * ZG._x * wG - ZG._z, yG[2] = ZG._z * ZG._x * wG + ZG._y, yG[3] = 0, yG[4] = ZG._x * ZG._y * wG + ZG._z, yG[5] = ZG._y * ZG._y * wG + LG, yG[6] = ZG._z * ZG._y * wG - ZG._x, yG[7] = 0, yG[8] = ZG._x * ZG._z * wG - ZG._y, yG[9] = ZG._y * ZG._z * wG + ZG._x, yG[10] = ZG._z * ZG._z * wG + LG, yG[11] = 0
         }
-        return Xu[12] = 0, Xu[13] = 0, Xu[14] = 0, Xu[15] = 1, ju.markAsUpdated(), ju
+        return yG[12] = 0, yG[13] = 0, yG[14] = 0, yG[15] = 1, ZG.markAsUpdated(), ZG
       }
-      static RotationYawPitchRoll(uu, Eu, ju) {
-        const su = new Yu;
-        return Yu.RotationYawPitchRollToRef(uu, Eu, ju, su), su
+      static RotationYawPitchRoll(GG, bG, ZG) {
+        const wG = new hG;
+        return hG.RotationYawPitchRollToRef(GG, bG, ZG, wG), wG
       }
-      static RotationYawPitchRollToRef(uu, Eu, ju, su) {
-        return Ou.RotationYawPitchRollToRef(uu, Eu, ju, hu.Quaternion[0]), hu.Quaternion[0].toRotationMatrix(su), su
+      static RotationYawPitchRollToRef(GG, bG, ZG, wG) {
+        return KG.RotationYawPitchRollToRef(GG, bG, ZG, dG.Quaternion[0]), dG.Quaternion[0].toRotationMatrix(wG), wG
       }
-      static Scaling(uu, Eu, ju) {
-        const su = new Yu;
-        return Yu.ScalingToRef(uu, Eu, ju, su), su
+      static Scaling(GG, bG, ZG) {
+        const wG = new hG;
+        return hG.ScalingToRef(GG, bG, ZG, wG), wG
       }
-      static ScalingToRef(uu, Eu, ju, su) {
-        return Yu.FromValuesToRef(uu, 0, 0, 0, 0, Eu, 0, 0, 0, 0, ju, 0, 0, 0, 0, 1, su), su._updateIdentityStatus(1 === uu && 1 === Eu && 1 === ju), su
+      static ScalingToRef(GG, bG, ZG, wG) {
+        return hG.FromValuesToRef(GG, 0, 0, 0, 0, bG, 0, 0, 0, 0, ZG, 0, 0, 0, 0, 1, wG), wG._updateIdentityStatus(1 === GG && 1 === bG && 1 === ZG), wG
       }
-      static Translation(uu, Eu, ju) {
-        const su = new Yu;
-        return Yu.TranslationToRef(uu, Eu, ju, su), su
+      static Translation(GG, bG, ZG) {
+        const wG = new hG;
+        return hG.TranslationToRef(GG, bG, ZG, wG), wG
       }
-      static TranslationToRef(uu, Eu, ju, su) {
-        return Yu.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, uu, Eu, ju, 1, su), su._updateIdentityStatus(0 === uu && 0 === Eu && 0 === ju), su
+      static TranslationToRef(GG, bG, ZG, wG) {
+        return hG.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, GG, bG, ZG, 1, wG), wG._updateIdentityStatus(0 === GG && 0 === bG && 0 === ZG), wG
       }
-      static Lerp(uu, Eu, ju) {
-        const su = new Yu;
-        return Yu.LerpToRef(uu, Eu, ju, su), su
+      static Lerp(GG, bG, ZG) {
+        const wG = new hG;
+        return hG.LerpToRef(GG, bG, ZG, wG), wG
       }
-      static LerpToRef(uu, Eu, ju, su) {
-        const Uu = su._m,
-          Zu = uu.m,
-          Xu = Eu.m;
-        for (let lu = 0; lu < 16; lu++) Uu[lu] = Zu[lu] * (1 - ju) + Xu[lu] * ju;
-        return su.markAsUpdated(), su
+      static LerpToRef(GG, bG, ZG, wG) {
+        const SG = wG._m,
+          LG = GG.m,
+          yG = bG.m;
+        for (let kG = 0; kG < 16; kG++) SG[kG] = LG[kG] * (1 - ZG) + yG[kG] * ZG;
+        return wG.markAsUpdated(), wG
       }
-      static DecomposeLerp(uu, Eu, ju) {
-        const su = new Yu;
-        return Yu.DecomposeLerpToRef(uu, Eu, ju, su), su
+      static DecomposeLerp(GG, bG, ZG) {
+        const wG = new hG;
+        return hG.DecomposeLerpToRef(GG, bG, ZG, wG), wG
       }
-      static DecomposeLerpToRef(uu, Eu, ju, su) {
-        const Uu = hu.dO[0],
-          Zu = hu.Quaternion[0],
-          Xu = hu.dO[1];
-        uu.decompose(Uu, Zu, Xu);
-        const lu = hu.dO[2],
-          qu = hu.Quaternion[1],
-          fu = hu.dO[3];
-        Eu.decompose(lu, qu, fu);
-        const Cu = hu.dO[4];
-        cu.LerpToRef(Uu, lu, ju, Cu);
-        const bu = hu.Quaternion[2];
-        Ou.SlerpToRef(Zu, qu, ju, bu);
-        const Nu = hu.dO[5];
-        return cu.LerpToRef(Xu, fu, ju, Nu), Yu.ComposeToRef(Cu, bu, Nu, su), su
+      static DecomposeLerpToRef(GG, bG, ZG, wG) {
+        const SG = dG.mK[0],
+          LG = dG.Quaternion[0],
+          yG = dG.mK[1];
+        GG.decompose(SG, LG, yG);
+        const kG = dG.mK[2],
+          UG = dG.Quaternion[1],
+          YG = dG.mK[3];
+        bG.decompose(kG, UG, YG);
+        const VG = dG.mK[4];
+        fG.LerpToRef(SG, kG, ZG, VG);
+        const pG = dG.Quaternion[2];
+        KG.SlerpToRef(LG, UG, ZG, pG);
+        const QG = dG.mK[5];
+        return fG.LerpToRef(yG, YG, ZG, QG), hG.ComposeToRef(VG, pG, QG, wG), wG
       }
-      static LookAtLH(uu, Eu, ju) {
-        const su = new Yu;
-        return Yu.LookAtLHToRef(uu, Eu, ju, su), su
+      static LookAtLH(GG, bG, ZG) {
+        const wG = new hG;
+        return hG.LookAtLHToRef(GG, bG, ZG, wG), wG
       }
-      static LookAtLHToRef(uu, Eu, ju, su) {
-        const Uu = hu.dO[0],
-          Zu = hu.dO[1],
-          Xu = hu.dO[2];
-        Eu.subtractToRef(uu, Xu), Xu.normalize(), cu.CrossToRef(ju, Xu, Uu);
-        const lu = Uu.lengthSquared();
-        0 === lu ? Uu.x = 1 : Uu.normalizeFromLength(Math.sqrt(lu)), cu.CrossToRef(Xu, Uu, Zu), Zu.normalize();
-        const qu = -cu.Dot(Uu, uu),
-          fu = -cu.Dot(Zu, uu),
-          Cu = -cu.Dot(Xu, uu);
-        return Yu.FromValuesToRef(Uu._x, Zu._x, Xu._x, 0, Uu._y, Zu._y, Xu._y, 0, Uu._z, Zu._z, Xu._z, 0, qu, fu, Cu, 1, su), su
+      static LookAtLHToRef(GG, bG, ZG, wG) {
+        const SG = dG.mK[0],
+          LG = dG.mK[1],
+          yG = dG.mK[2];
+        bG.subtractToRef(GG, yG), yG.normalize(), fG.CrossToRef(ZG, yG, SG);
+        const kG = SG.lengthSquared();
+        0 === kG ? SG.x = 1 : SG.normalizeFromLength(Math.sqrt(kG)), fG.CrossToRef(yG, SG, LG), LG.normalize();
+        const UG = -fG.Dot(SG, GG),
+          YG = -fG.Dot(LG, GG),
+          VG = -fG.Dot(yG, GG);
+        return hG.FromValuesToRef(SG._x, LG._x, yG._x, 0, SG._y, LG._y, yG._y, 0, SG._z, LG._z, yG._z, 0, UG, YG, VG, 1, wG), wG
       }
-      static LookAtRH(uu, Eu, ju) {
-        const su = new Yu;
-        return Yu.LookAtRHToRef(uu, Eu, ju, su), su
+      static LookAtRH(GG, bG, ZG) {
+        const wG = new hG;
+        return hG.LookAtRHToRef(GG, bG, ZG, wG), wG
       }
-      static LookAtRHToRef(uu, Eu, ju, su) {
-        const Uu = hu.dO[0],
-          Zu = hu.dO[1],
-          Xu = hu.dO[2];
-        uu.subtractToRef(Eu, Xu), Xu.normalize(), cu.CrossToRef(ju, Xu, Uu);
-        const lu = Uu.lengthSquared();
-        0 === lu ? Uu.x = 1 : Uu.normalizeFromLength(Math.sqrt(lu)), cu.CrossToRef(Xu, Uu, Zu), Zu.normalize();
-        const qu = -cu.Dot(Uu, uu),
-          fu = -cu.Dot(Zu, uu),
-          Cu = -cu.Dot(Xu, uu);
-        return Yu.FromValuesToRef(Uu._x, Zu._x, Xu._x, 0, Uu._y, Zu._y, Xu._y, 0, Uu._z, Zu._z, Xu._z, 0, qu, fu, Cu, 1, su), su
+      static LookAtRHToRef(GG, bG, ZG, wG) {
+        const SG = dG.mK[0],
+          LG = dG.mK[1],
+          yG = dG.mK[2];
+        GG.subtractToRef(bG, yG), yG.normalize(), fG.CrossToRef(ZG, yG, SG);
+        const kG = SG.lengthSquared();
+        0 === kG ? SG.x = 1 : SG.normalizeFromLength(Math.sqrt(kG)), fG.CrossToRef(yG, SG, LG), LG.normalize();
+        const UG = -fG.Dot(SG, GG),
+          YG = -fG.Dot(LG, GG),
+          VG = -fG.Dot(yG, GG);
+        return hG.FromValuesToRef(SG._x, LG._x, yG._x, 0, SG._y, LG._y, yG._y, 0, SG._z, LG._z, yG._z, 0, UG, YG, VG, 1, wG), wG
       }
-      static LookDirectionLH(uu, Eu) {
-        const ju = new Yu;
-        return Yu.LookDirectionLHToRef(uu, Eu, ju), ju
+      static LookDirectionLH(GG, bG) {
+        const ZG = new hG;
+        return hG.LookDirectionLHToRef(GG, bG, ZG), ZG
       }
-      static LookDirectionLHToRef(uu, Eu, ju) {
-        const su = hu.dO[0];
-        su.yJ(uu), su.scaleInPlace(-1);
-        const Uu = hu.dO[1];
-        return cu.CrossToRef(Eu, su, Uu), Yu.FromValuesToRef(Uu._x, Uu._y, Uu._z, 0, Eu._x, Eu._y, Eu._z, 0, su._x, su._y, su._z, 0, 0, 0, 0, 1, ju), ju
+      static LookDirectionLHToRef(GG, bG, ZG) {
+        const wG = dG.mK[0];
+        wG.oW(GG), wG.scaleInPlace(-1);
+        const SG = dG.mK[1];
+        return fG.CrossToRef(bG, wG, SG), hG.FromValuesToRef(SG._x, SG._y, SG._z, 0, bG._x, bG._y, bG._z, 0, wG._x, wG._y, wG._z, 0, 0, 0, 0, 1, ZG), ZG
       }
-      static LookDirectionRH(uu, Eu) {
-        const ju = new Yu;
-        return Yu.LookDirectionRHToRef(uu, Eu, ju), ju
+      static LookDirectionRH(GG, bG) {
+        const ZG = new hG;
+        return hG.LookDirectionRHToRef(GG, bG, ZG), ZG
       }
-      static LookDirectionRHToRef(uu, Eu, ju) {
-        const su = hu.dO[2];
-        return cu.CrossToRef(Eu, uu, su), Yu.FromValuesToRef(su._x, su._y, su._z, 0, Eu._x, Eu._y, Eu._z, 0, uu._x, uu._y, uu._z, 0, 0, 0, 0, 1, ju), ju
+      static LookDirectionRHToRef(GG, bG, ZG) {
+        const wG = dG.mK[2];
+        return fG.CrossToRef(bG, GG, wG), hG.FromValuesToRef(wG._x, wG._y, wG._z, 0, bG._x, bG._y, bG._z, 0, GG._x, GG._y, GG._z, 0, 0, 0, 0, 1, ZG), ZG
       }
-      static OrthoLH(uu, Eu, ju, su, Uu) {
-        const Zu = new Yu;
-        return Yu.OrthoLHToRef(uu, Eu, ju, su, Zu, Uu), Zu
+      static OrthoLH(GG, bG, ZG, wG, SG) {
+        const LG = new hG;
+        return hG.OrthoLHToRef(GG, bG, ZG, wG, LG, SG), LG
       }
-      static OrthoLHToRef(uu, Eu, ju, su, Uu, Zu) {
-        const Xu = 2 / uu,
-          lu = 2 / Eu,
-          qu = 2 / (su - ju),
-          fu = -(su + ju) / (su - ju);
-        return Yu.FromValuesToRef(Xu, 0, 0, 0, 0, lu, 0, 0, 0, 0, qu, 0, 0, 0, fu, 1, Uu), Zu && Uu.multiplyToRef(gu, Uu), Uu._updateIdentityStatus(1 === Xu && 1 === lu && 1 === qu && 0 === fu), Uu
+      static OrthoLHToRef(GG, bG, ZG, wG, SG, LG) {
+        const yG = 2 / GG,
+          kG = 2 / bG,
+          UG = 2 / (wG - ZG),
+          YG = -(wG + ZG) / (wG - ZG);
+        return hG.FromValuesToRef(yG, 0, 0, 0, 0, kG, 0, 0, 0, 0, UG, 0, 0, 0, YG, 1, SG), LG && SG.multiplyToRef(rG, SG), SG._updateIdentityStatus(1 === yG && 1 === kG && 1 === UG && 0 === YG), SG
       }
-      static OrthoOffCenterLH(uu, Eu, ju, su, Uu, Zu, Xu) {
-        const lu = new Yu;
-        return Yu.OrthoOffCenterLHToRef(uu, Eu, ju, su, Uu, Zu, lu, Xu), lu
+      static OrthoOffCenterLH(GG, bG, ZG, wG, SG, LG, yG) {
+        const kG = new hG;
+        return hG.OrthoOffCenterLHToRef(GG, bG, ZG, wG, SG, LG, kG, yG), kG
       }
-      static OrthoOffCenterLHToRef(uu, Eu, ju, su, Uu, Zu, Xu, lu) {
-        const qu = 2 / (Eu - uu),
-          fu = 2 / (su - ju),
-          Cu = 2 / (Zu - Uu),
-          bu = -(Zu + Uu) / (Zu - Uu),
-          cu = (uu + Eu) / (uu - Eu),
-          Nu = (su + ju) / (ju - su);
-        return Yu.FromValuesToRef(qu, 0, 0, 0, 0, fu, 0, 0, 0, 0, Cu, 0, cu, Nu, bu, 1, Xu), lu && Xu.multiplyToRef(gu, Xu), Xu.markAsUpdated(), Xu
+      static OrthoOffCenterLHToRef(GG, bG, ZG, wG, SG, LG, yG, kG) {
+        const UG = 2 / (bG - GG),
+          YG = 2 / (wG - ZG),
+          VG = 2 / (LG - SG),
+          pG = -(LG + SG) / (LG - SG),
+          fG = (GG + bG) / (GG - bG),
+          QG = (wG + ZG) / (ZG - wG);
+        return hG.FromValuesToRef(UG, 0, 0, 0, 0, YG, 0, 0, 0, 0, VG, 0, fG, QG, pG, 1, yG), kG && yG.multiplyToRef(rG, yG), yG.markAsUpdated(), yG
       }
-      static ObliqueOffCenterLHToRef(uu, Eu, ju, su, Uu, Zu, Xu, lu, qu, fu, Cu) {
-        const bu = -Xu * Math.cos(lu),
-          cu = -Xu * Math.sin(lu);
-        return Yu.TranslationToRef(0, 0, -qu, hu.Matrix[1]), Yu.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, bu, cu, 1, 0, 0, 0, 0, 1, hu.Matrix[0]), hu.Matrix[1].multiplyToRef(hu.Matrix[0], hu.Matrix[0]), Yu.TranslationToRef(0, 0, qu, hu.Matrix[1]), hu.Matrix[0].multiplyToRef(hu.Matrix[1], hu.Matrix[0]), Yu.OrthoOffCenterLHToRef(uu, Eu, ju, su, Uu, Zu, fu, Cu), hu.Matrix[0].multiplyToRef(fu, fu), fu
+      static ObliqueOffCenterLHToRef(GG, bG, ZG, wG, SG, LG, yG, kG, UG, YG, VG) {
+        const pG = -yG * Math.cos(kG),
+          fG = -yG * Math.sin(kG);
+        return hG.TranslationToRef(0, 0, -UG, dG.Matrix[1]), hG.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, pG, fG, 1, 0, 0, 0, 0, 1, dG.Matrix[0]), dG.Matrix[1].multiplyToRef(dG.Matrix[0], dG.Matrix[0]), hG.TranslationToRef(0, 0, UG, dG.Matrix[1]), dG.Matrix[0].multiplyToRef(dG.Matrix[1], dG.Matrix[0]), hG.OrthoOffCenterLHToRef(GG, bG, ZG, wG, SG, LG, YG, VG), dG.Matrix[0].multiplyToRef(YG, YG), YG
       }
-      static OrthoOffCenterRH(uu, Eu, ju, su, Uu, Zu, Xu) {
-        const lu = new Yu;
-        return Yu.OrthoOffCenterRHToRef(uu, Eu, ju, su, Uu, Zu, lu, Xu), lu
+      static OrthoOffCenterRH(GG, bG, ZG, wG, SG, LG, yG) {
+        const kG = new hG;
+        return hG.OrthoOffCenterRHToRef(GG, bG, ZG, wG, SG, LG, kG, yG), kG
       }
-      static OrthoOffCenterRHToRef(uu, Eu, ju, su, Uu, Zu, Xu, lu) {
-        return Yu.OrthoOffCenterLHToRef(uu, Eu, ju, su, Uu, Zu, Xu, lu), Xu._m[10] *= -1, Xu
+      static OrthoOffCenterRHToRef(GG, bG, ZG, wG, SG, LG, yG, kG) {
+        return hG.OrthoOffCenterLHToRef(GG, bG, ZG, wG, SG, LG, yG, kG), yG._m[10] *= -1, yG
       }
-      static ObliqueOffCenterRHToRef(uu, Eu, ju, su, Uu, Zu, Xu, lu, qu, fu, Cu) {
-        const bu = Xu * Math.cos(lu),
-          cu = Xu * Math.sin(lu);
-        return Yu.TranslationToRef(0, 0, qu, hu.Matrix[1]), Yu.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, bu, cu, 1, 0, 0, 0, 0, 1, hu.Matrix[0]), hu.Matrix[1].multiplyToRef(hu.Matrix[0], hu.Matrix[0]), Yu.TranslationToRef(0, 0, -qu, hu.Matrix[1]), hu.Matrix[0].multiplyToRef(hu.Matrix[1], hu.Matrix[0]), Yu.OrthoOffCenterRHToRef(uu, Eu, ju, su, Uu, Zu, fu, Cu), hu.Matrix[0].multiplyToRef(fu, fu), fu
+      static ObliqueOffCenterRHToRef(GG, bG, ZG, wG, SG, LG, yG, kG, UG, YG, VG) {
+        const pG = yG * Math.cos(kG),
+          fG = yG * Math.sin(kG);
+        return hG.TranslationToRef(0, 0, UG, dG.Matrix[1]), hG.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, pG, fG, 1, 0, 0, 0, 0, 1, dG.Matrix[0]), dG.Matrix[1].multiplyToRef(dG.Matrix[0], dG.Matrix[0]), hG.TranslationToRef(0, 0, -UG, dG.Matrix[1]), dG.Matrix[0].multiplyToRef(dG.Matrix[1], dG.Matrix[0]), hG.OrthoOffCenterRHToRef(GG, bG, ZG, wG, SG, LG, YG, VG), dG.Matrix[0].multiplyToRef(YG, YG), YG
       }
-      static PerspectiveLH(uu, Eu, ju, su, Uu) {
-        let Zu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        const Xu = new Yu,
-          lu = 2 * ju / uu,
-          qu = 2 * ju / Eu,
-          fu = (su + ju) / (su - ju),
-          Cu = -2 * su * ju / (su - ju),
-          bu = Math.tan(Zu);
-        return Yu.FromValuesToRef(lu, 0, 0, 0, 0, qu, 0, bu, 0, 0, fu, 1, 0, 0, Cu, 0, Xu), Uu && Xu.multiplyToRef(gu, Xu), Xu._updateIdentityStatus(!1), Xu
+      static PerspectiveLH(GG, bG, ZG, wG, SG) {
+        let LG = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const yG = new hG,
+          kG = 2 * ZG / GG,
+          UG = 2 * ZG / bG,
+          YG = (wG + ZG) / (wG - ZG),
+          VG = -2 * wG * ZG / (wG - ZG),
+          pG = Math.tan(LG);
+        return hG.FromValuesToRef(kG, 0, 0, 0, 0, UG, 0, pG, 0, 0, YG, 1, 0, 0, VG, 0, yG), SG && yG.multiplyToRef(rG, yG), yG._updateIdentityStatus(!1), yG
       }
-      static PerspectiveFovLH(uu, Eu, ju, su, Uu) {
-        let Zu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          Xu = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        const lu = new Yu;
-        return Yu.PerspectiveFovLHToRef(uu, Eu, ju, su, lu, !0, Uu, Zu, Xu), lu
+      static PerspectiveFovLH(GG, bG, ZG, wG, SG) {
+        let LG = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          yG = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        const kG = new hG;
+        return hG.PerspectiveFovLHToRef(GG, bG, ZG, wG, kG, !0, SG, LG, yG), kG
       }
-      static PerspectiveFovLHToRef(uu, Eu, ju, su, Uu) {
-        let Zu = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Xu = arguments.length > 6 ? arguments[6] : void 0,
-          lu = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
-          qu = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
-        const fu = ju,
-          Cu = su,
-          bu = 1 / Math.tan(.5 * uu),
-          cu = Zu ? bu / Eu : bu,
-          Nu = Zu ? bu : bu * Eu,
-          Ou = qu && 0 === fu ? -1 : 0 !== Cu ? (Cu + fu) / (Cu - fu) : 1,
-          hu = qu && 0 === fu ? 2 * Cu : 0 !== Cu ? -2 * Cu * fu / (Cu - fu) : -2 * fu,
-          Du = Math.tan(lu);
-        return Yu.FromValuesToRef(cu, 0, 0, 0, 0, Nu, 0, Du, 0, 0, Ou, 1, 0, 0, hu, 0, Uu), Xu && Uu.multiplyToRef(gu, Uu), Uu._updateIdentityStatus(!1), Uu
+      static PerspectiveFovLHToRef(GG, bG, ZG, wG, SG) {
+        let LG = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          yG = arguments.length > 6 ? arguments[6] : void 0,
+          kG = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
+          UG = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
+        const YG = ZG,
+          VG = wG,
+          pG = 1 / Math.tan(.5 * GG),
+          fG = LG ? pG / bG : pG,
+          QG = LG ? pG : pG * bG,
+          KG = UG && 0 === YG ? -1 : 0 !== VG ? (VG + YG) / (VG - YG) : 1,
+          dG = UG && 0 === YG ? 2 * VG : 0 !== VG ? -2 * VG * YG / (VG - YG) : -2 * YG,
+          JG = Math.tan(kG);
+        return hG.FromValuesToRef(fG, 0, 0, 0, 0, QG, 0, JG, 0, 0, KG, 1, 0, 0, dG, 0, SG), yG && SG.multiplyToRef(rG, SG), SG._updateIdentityStatus(!1), SG
       }
-      static PerspectiveFovReverseLHToRef(uu, Eu, ju, su, Uu) {
-        let Zu = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Xu = arguments.length > 6 ? arguments[6] : void 0,
-          lu = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
-        const qu = 1 / Math.tan(.5 * uu),
-          fu = Zu ? qu / Eu : qu,
-          Cu = Zu ? qu : qu * Eu,
-          bu = Math.tan(lu);
-        return Yu.FromValuesToRef(fu, 0, 0, 0, 0, Cu, 0, bu, 0, 0, -ju, 1, 0, 0, 1, 0, Uu), Xu && Uu.multiplyToRef(gu, Uu), Uu._updateIdentityStatus(!1), Uu
+      static PerspectiveFovReverseLHToRef(GG, bG, ZG, wG, SG) {
+        let LG = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          yG = arguments.length > 6 ? arguments[6] : void 0,
+          kG = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
+        const UG = 1 / Math.tan(.5 * GG),
+          YG = LG ? UG / bG : UG,
+          VG = LG ? UG : UG * bG,
+          pG = Math.tan(kG);
+        return hG.FromValuesToRef(YG, 0, 0, 0, 0, VG, 0, pG, 0, 0, -ZG, 1, 0, 0, 1, 0, SG), yG && SG.multiplyToRef(rG, SG), SG._updateIdentityStatus(!1), SG
       }
-      static PerspectiveFovRH(uu, Eu, ju, su, Uu) {
-        let Zu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          Xu = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        const lu = new Yu;
-        return Yu.PerspectiveFovRHToRef(uu, Eu, ju, su, lu, !0, Uu, Zu, Xu), lu
+      static PerspectiveFovRH(GG, bG, ZG, wG, SG) {
+        let LG = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          yG = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        const kG = new hG;
+        return hG.PerspectiveFovRHToRef(GG, bG, ZG, wG, kG, !0, SG, LG, yG), kG
       }
-      static PerspectiveFovRHToRef(uu, Eu, ju, su, Uu) {
-        let Zu = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Xu = arguments.length > 6 ? arguments[6] : void 0,
-          lu = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
-          qu = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
-        const fu = ju,
-          Cu = su,
-          bu = 1 / Math.tan(.5 * uu),
-          cu = Zu ? bu / Eu : bu,
-          Nu = Zu ? bu : bu * Eu,
-          Ou = qu && 0 === fu ? 1 : 0 !== Cu ? -(Cu + fu) / (Cu - fu) : -1,
-          hu = qu && 0 === fu ? 2 * Cu : 0 !== Cu ? -2 * Cu * fu / (Cu - fu) : -2 * fu,
-          Du = Math.tan(lu);
-        return Yu.FromValuesToRef(cu, 0, 0, 0, 0, Nu, 0, Du, 0, 0, Ou, -1, 0, 0, hu, 0, Uu), Xu && Uu.multiplyToRef(gu, Uu), Uu._updateIdentityStatus(!1), Uu
+      static PerspectiveFovRHToRef(GG, bG, ZG, wG, SG) {
+        let LG = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          yG = arguments.length > 6 ? arguments[6] : void 0,
+          kG = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
+          UG = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
+        const YG = ZG,
+          VG = wG,
+          pG = 1 / Math.tan(.5 * GG),
+          fG = LG ? pG / bG : pG,
+          QG = LG ? pG : pG * bG,
+          KG = UG && 0 === YG ? 1 : 0 !== VG ? -(VG + YG) / (VG - YG) : -1,
+          dG = UG && 0 === YG ? 2 * VG : 0 !== VG ? -2 * VG * YG / (VG - YG) : -2 * YG,
+          JG = Math.tan(kG);
+        return hG.FromValuesToRef(fG, 0, 0, 0, 0, QG, 0, JG, 0, 0, KG, -1, 0, 0, dG, 0, SG), yG && SG.multiplyToRef(rG, SG), SG._updateIdentityStatus(!1), SG
       }
-      static PerspectiveFovReverseRHToRef(uu, Eu, ju, su, Uu) {
-        let Zu = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Xu = arguments.length > 6 ? arguments[6] : void 0,
-          lu = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
-        const qu = 1 / Math.tan(.5 * uu),
-          fu = Zu ? qu / Eu : qu,
-          Cu = Zu ? qu : qu * Eu,
-          bu = Math.tan(lu);
-        return Yu.FromValuesToRef(fu, 0, 0, 0, 0, Cu, 0, bu, 0, 0, -ju, -1, 0, 0, -1, 0, Uu), Xu && Uu.multiplyToRef(gu, Uu), Uu._updateIdentityStatus(!1), Uu
+      static PerspectiveFovReverseRHToRef(GG, bG, ZG, wG, SG) {
+        let LG = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          yG = arguments.length > 6 ? arguments[6] : void 0,
+          kG = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
+        const UG = 1 / Math.tan(.5 * GG),
+          YG = LG ? UG / bG : UG,
+          VG = LG ? UG : UG * bG,
+          pG = Math.tan(kG);
+        return hG.FromValuesToRef(YG, 0, 0, 0, 0, VG, 0, pG, 0, 0, -ZG, -1, 0, 0, -1, 0, SG), yG && SG.multiplyToRef(rG, SG), SG._updateIdentityStatus(!1), SG
       }
-      static GetFinalMatrix(uu, Eu, ju, su, Uu, Zu) {
-        const Xu = uu.width,
-          lu = uu.height,
-          qu = uu.x,
-          fu = uu.y,
-          Cu = Yu.FromValues(Xu / 2, 0, 0, 0, 0, -lu / 2, 0, 0, 0, 0, Zu - Uu, 0, qu + Xu / 2, lu / 2 + fu, Uu, 1),
-          bu = new Yu;
-        return Eu.multiplyToRef(ju, bu), bu.multiplyToRef(su, bu), bu.multiplyToRef(Cu, bu)
+      static GetFinalMatrix(GG, bG, ZG, wG, SG, LG) {
+        const yG = GG.width,
+          kG = GG.height,
+          UG = GG.x,
+          YG = GG.y,
+          VG = hG.FromValues(yG / 2, 0, 0, 0, 0, -kG / 2, 0, 0, 0, 0, LG - SG, 0, UG + yG / 2, kG / 2 + YG, SG, 1),
+          pG = new hG;
+        return bG.multiplyToRef(ZG, pG), pG.multiplyToRef(wG, pG), pG.multiplyToRef(VG, pG)
       }
-      static GetAsMatrix2x2(uu) {
-        const Eu = uu.m,
-          ju = [Eu[0], Eu[1], Eu[4], Eu[5]];
-        return Zu.c.MatrixUse64Bits ? ju : new Float32Array(ju)
+      static GetAsMatrix2x2(GG) {
+        const bG = GG.m,
+          ZG = [bG[0], bG[1], bG[4], bG[5]];
+        return LG.c.MatrixUse64Bits ? ZG : new Float32Array(ZG)
       }
-      static GetAsMatrix3x3(uu) {
-        const Eu = uu.m,
-          ju = [Eu[0], Eu[1], Eu[2], Eu[4], Eu[5], Eu[6], Eu[8], Eu[9], Eu[10]];
-        return Zu.c.MatrixUse64Bits ? ju : new Float32Array(ju)
+      static GetAsMatrix3x3(GG) {
+        const bG = GG.m,
+          ZG = [bG[0], bG[1], bG[2], bG[4], bG[5], bG[6], bG[8], bG[9], bG[10]];
+        return LG.c.MatrixUse64Bits ? ZG : new Float32Array(ZG)
       }
-      static Transpose(uu) {
-        const Eu = new Yu;
-        return Yu.TransposeToRef(uu, Eu), Eu
+      static Transpose(GG) {
+        const bG = new hG;
+        return hG.TransposeToRef(GG, bG), bG
       }
-      static TransposeToRef(uu, Eu) {
-        const ju = uu.m,
-          su = ju[0],
-          Uu = ju[4],
-          Zu = ju[8],
-          Xu = ju[12],
-          lu = ju[1],
-          qu = ju[5],
-          fu = ju[9],
-          Cu = ju[13],
-          bu = ju[2],
-          cu = ju[6],
-          Nu = ju[10],
-          Ou = ju[14],
-          Yu = ju[3],
-          hu = ju[7],
-          Du = ju[11],
-          gu = ju[15],
-          Mu = Eu._m;
-        return Mu[0] = su, Mu[1] = Uu, Mu[2] = Zu, Mu[3] = Xu, Mu[4] = lu, Mu[5] = qu, Mu[6] = fu, Mu[7] = Cu, Mu[8] = bu, Mu[9] = cu, Mu[10] = Nu, Mu[11] = Ou, Mu[12] = Yu, Mu[13] = hu, Mu[14] = Du, Mu[15] = gu, Eu.markAsUpdated(), Eu._updateIdentityStatus(uu._isIdentity, uu._isIdentityDirty), Eu
+      static TransposeToRef(GG, bG) {
+        const ZG = GG.m,
+          wG = ZG[0],
+          SG = ZG[4],
+          LG = ZG[8],
+          yG = ZG[12],
+          kG = ZG[1],
+          UG = ZG[5],
+          YG = ZG[9],
+          VG = ZG[13],
+          pG = ZG[2],
+          fG = ZG[6],
+          QG = ZG[10],
+          KG = ZG[14],
+          hG = ZG[3],
+          dG = ZG[7],
+          JG = ZG[11],
+          rG = ZG[15],
+          zG = bG._m;
+        return zG[0] = wG, zG[1] = SG, zG[2] = LG, zG[3] = yG, zG[4] = kG, zG[5] = UG, zG[6] = YG, zG[7] = VG, zG[8] = pG, zG[9] = fG, zG[10] = QG, zG[11] = KG, zG[12] = hG, zG[13] = dG, zG[14] = JG, zG[15] = rG, bG.markAsUpdated(), bG._updateIdentityStatus(GG._isIdentity, GG._isIdentityDirty), bG
       }
-      static Reflection(uu) {
-        const Eu = new Yu;
-        return Yu.ReflectionToRef(uu, Eu), Eu
+      static Reflection(GG) {
+        const bG = new hG;
+        return hG.ReflectionToRef(GG, bG), bG
       }
-      static ReflectionToRef(uu, Eu) {
-        uu.normalize();
-        const ju = uu.normal.x,
-          su = uu.normal.y,
-          Uu = uu.normal.z,
-          Zu = -2 * ju,
-          Xu = -2 * su,
-          lu = -2 * Uu;
-        return Yu.FromValuesToRef(Zu * ju + 1, Xu * ju, lu * ju, 0, Zu * su, Xu * su + 1, lu * su, 0, Zu * Uu, Xu * Uu, lu * Uu + 1, 0, Zu * uu.d, Xu * uu.d, lu * uu.d, 1, Eu), Eu
+      static ReflectionToRef(GG, bG) {
+        GG.normalize();
+        const ZG = GG.normal.x,
+          wG = GG.normal.y,
+          SG = GG.normal.z,
+          LG = -2 * ZG,
+          yG = -2 * wG,
+          kG = -2 * SG;
+        return hG.FromValuesToRef(LG * ZG + 1, yG * ZG, kG * ZG, 0, LG * wG, yG * wG + 1, kG * wG, 0, LG * SG, yG * SG, kG * SG + 1, 0, LG * GG.d, yG * GG.d, kG * GG.d, 1, bG), bG
       }
-      static FromXYZAxesToRef(uu, Eu, ju, su) {
-        return Yu.FromValuesToRef(uu._x, uu._y, uu._z, 0, Eu._x, Eu._y, Eu._z, 0, ju._x, ju._y, ju._z, 0, 0, 0, 0, 1, su), su
+      static FromXYZAxesToRef(GG, bG, ZG, wG) {
+        return hG.FromValuesToRef(GG._x, GG._y, GG._z, 0, bG._x, bG._y, bG._z, 0, ZG._x, ZG._y, ZG._z, 0, 0, 0, 0, 1, wG), wG
       }
-      static FromQuaternionToRef(uu, Eu) {
-        const ju = uu._x * uu._x,
-          su = uu._y * uu._y,
-          Uu = uu._z * uu._z,
-          Zu = uu._x * uu._y,
-          Xu = uu._z * uu._w,
-          lu = uu._z * uu._x,
-          qu = uu._y * uu._w,
-          fu = uu._y * uu._z,
-          Cu = uu._x * uu._w;
-        return Eu._m[0] = 1 - 2 * (su + Uu), Eu._m[1] = 2 * (Zu + Xu), Eu._m[2] = 2 * (lu - qu), Eu._m[3] = 0, Eu._m[4] = 2 * (Zu - Xu), Eu._m[5] = 1 - 2 * (Uu + ju), Eu._m[6] = 2 * (fu + Cu), Eu._m[7] = 0, Eu._m[8] = 2 * (lu + qu), Eu._m[9] = 2 * (fu - Cu), Eu._m[10] = 1 - 2 * (su + ju), Eu._m[11] = 0, Eu._m[12] = 0, Eu._m[13] = 0, Eu._m[14] = 0, Eu._m[15] = 1, Eu.markAsUpdated(), Eu
+      static FromQuaternionToRef(GG, bG) {
+        const ZG = GG._x * GG._x,
+          wG = GG._y * GG._y,
+          SG = GG._z * GG._z,
+          LG = GG._x * GG._y,
+          yG = GG._z * GG._w,
+          kG = GG._z * GG._x,
+          UG = GG._y * GG._w,
+          YG = GG._y * GG._z,
+          VG = GG._x * GG._w;
+        return bG._m[0] = 1 - 2 * (wG + SG), bG._m[1] = 2 * (LG + yG), bG._m[2] = 2 * (kG - UG), bG._m[3] = 0, bG._m[4] = 2 * (LG - yG), bG._m[5] = 1 - 2 * (SG + ZG), bG._m[6] = 2 * (YG + VG), bG._m[7] = 0, bG._m[8] = 2 * (kG + UG), bG._m[9] = 2 * (YG - VG), bG._m[10] = 1 - 2 * (wG + ZG), bG._m[11] = 0, bG._m[12] = 0, bG._m[13] = 0, bG._m[14] = 0, bG._m[15] = 1, bG.markAsUpdated(), bG
       }
     }
-    Yu._IdentityReadOnly = Yu.Identity();
-    class hu {}
-    hu.dO = (0, Uu.h)(11, cu.Zero), hu.Matrix = (0, Uu.h)(2, Yu.Identity), hu.Quaternion = (0, Uu.h)(3, Ou.Zero);
-    class Du {}
-    Du.Vector2 = (0, Uu.h)(3, bu.Zero), Du.dO = (0, Uu.h)(13, cu.Zero), Du.Vector4 = (0, Uu.h)(3, Nu.Zero), Du.Quaternion = (0, Uu.h)(3, Ou.Zero), Du.Matrix = (0, Uu.h)(8, Yu.Identity);
-    const gu = Yu.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, .5, 0, 0, 0, .5, 1);
-    let Mu = !1;
+    hG._IdentityReadOnly = hG.Identity();
+    class dG {}
+    dG.mK = (0, SG.f)(11, fG.Zero), dG.Matrix = (0, SG.f)(2, hG.Identity), dG.Quaternion = (0, SG.f)(3, KG.Zero);
+    class JG {}
+    JG.Vector2 = (0, SG.f)(3, pG.Zero), JG.mK = (0, SG.f)(13, fG.Zero), JG.Vector4 = (0, SG.f)(3, QG.Zero), JG.Quaternion = (0, SG.f)(3, KG.Zero), JG.Matrix = (0, SG.f)(8, hG.Identity);
+    const rG = hG.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, .5, 0, 0, 0, .5, 1);
+    let zG = !1;
 
-    function eu() {
-      Mu || (Mu = !0, Object.defineProperties(bu.prototype, {
+    function EG() {
+      zG || (zG = !0, Object.defineProperties(pG.prototype, {
         dimension: {
           value: [2]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(cu.prototype, {
+      }), Object.defineProperties(fG.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(Nu.prototype, {
+      }), Object.defineProperties(QG.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(Ou.prototype, {
+      }), Object.defineProperties(KG.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(Yu.prototype, {
+      }), Object.defineProperties(hG.prototype, {
         dimension: {
           value: [4, 4]
         },
         rank: {
           value: 2
         }
-      }), (0, fu.f)("BABYLON.Vector2", bu), (0, fu.f)("BABYLON.Vector3", cu), (0, fu.f)("BABYLON.Vector4", Nu), (0, fu.f)("BABYLON.Matrix", Yu))
+      }), (0, YG.i)("BABYLON.Vector2", pG), (0, YG.i)("BABYLON.Vector3", fG), (0, YG.i)("BABYLON.Vector4", QG), (0, YG.i)("BABYLON.Matrix", hG))
     }
   },
-  37514: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Xu
+  37465: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => yG
     });
-    const su = "undefined" !== typeof WeakRef;
-    class Uu {
-      constructor(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ju = arguments.length > 2 ? arguments[2] : void 0,
-          su = arguments.length > 3 ? arguments[3] : void 0;
-        this.initialize(uu, Eu, ju, su)
+    const wG = "undefined" !== typeof WeakRef;
+    class SG {
+      constructor(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ZG = arguments.length > 2 ? arguments[2] : void 0,
+          wG = arguments.length > 3 ? arguments[3] : void 0;
+        this.initialize(GG, bG, ZG, wG)
       }
-      initialize(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ju = arguments.length > 2 ? arguments[2] : void 0,
-          su = arguments.length > 3 ? arguments[3] : void 0;
-        return this.mask = uu, this.skipNextObservers = Eu, this.target = ju, this.currentTarget = su, this
+      initialize(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ZG = arguments.length > 2 ? arguments[2] : void 0,
+          wG = arguments.length > 3 ? arguments[3] : void 0;
+        return this.mask = GG, this.skipNextObservers = bG, this.target = ZG, this.currentTarget = wG, this
       }
     }
-    class Zu {
-      constructor(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.callback = uu, this.mask = Eu, this.scope = ju, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
+    class LG {
+      constructor(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.callback = GG, this.mask = bG, this.scope = ZG, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
       }
       remove() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this._remove && this._remove(uu)
+        let GG = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._remove && this._remove(GG)
       }
     }
-    class Xu {
-      static FromPromise(uu, Eu) {
-        const ju = new Xu;
-        return uu.then((uu => {
-          ju.notifyObservers(uu)
-        })).catch((uu => {
-          if (!Eu) throw uu;
-          Eu.notifyObservers(uu)
-        })), ju
+    class yG {
+      static FromPromise(GG, bG) {
+        const ZG = new yG;
+        return GG.then((GG => {
+          ZG.notifyObservers(GG)
+        })).catch((GG => {
+          if (!bG) throw GG;
+          bG.notifyObservers(GG)
+        })), ZG
       }
       get observers() {
         return this._observers
       }
-      constructor(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this.notifyIfTriggered = Eu, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new Uu(0), uu && (this._onObserverAdded = uu)
+      constructor(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.notifyIfTriggered = bG, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new SG(0), GG && (this._onObserverAdded = GG)
       }
-      add(uu) {
-        let Eu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          ju = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (!uu) return null;
-        const Uu = new Zu(uu, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
-        Uu.unregisterOnNextCall = ju, Eu ? this._observers.unshift(Uu) : this._observers.push(Uu), this._onObserverAdded && this._onObserverAdded(Uu), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(Uu, this._lastNotifiedValue);
-        const Xu = su ? new WeakRef(this) : {
+      add(GG) {
+        let bG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          ZG = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (!GG) return null;
+        const SG = new LG(GG, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
+        SG.unregisterOnNextCall = ZG, bG ? this._observers.unshift(SG) : this._observers.push(SG), this._onObserverAdded && this._onObserverAdded(SG), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(SG, this._lastNotifiedValue);
+        const yG = wG ? new WeakRef(this) : {
           deref: () => this
         };
-        return Uu._remove = function() {
-          let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          const Eu = Xu.deref();
-          Eu && (uu ? Eu.remove(Uu) : Eu._remove(Uu))
-        }, Uu
+        return SG._remove = function() {
+          let GG = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const bG = yG.deref();
+          bG && (GG ? bG.remove(SG) : bG._remove(SG))
+        }, SG
       }
-      addOnce(uu) {
-        return this.add(uu, void 0, void 0, void 0, !0)
+      addOnce(GG) {
+        return this.add(GG, void 0, void 0, void 0, !0)
       }
-      remove(uu) {
-        if (!uu) return !1;
-        uu._remove = null;
-        return -1 !== this._observers.indexOf(uu) && (this._deferUnregister(uu), !0)
+      remove(GG) {
+        if (!GG) return !1;
+        GG._remove = null;
+        return -1 !== this._observers.indexOf(GG) && (this._deferUnregister(GG), !0)
       }
-      removeCallback(uu, Eu) {
-        for (let ju = 0; ju < this._observers.length; ju++) {
-          const su = this._observers[ju];
-          if (!su._willBeUnregistered && (su.callback === uu && (!Eu || Eu === su.scope))) return this._deferUnregister(su), !0
+      removeCallback(GG, bG) {
+        for (let ZG = 0; ZG < this._observers.length; ZG++) {
+          const wG = this._observers[ZG];
+          if (!wG._willBeUnregistered && (wG.callback === GG && (!bG || bG === wG.scope))) return this._deferUnregister(wG), !0
         }
         return !1
       }
-      _deferUnregister(uu) {
-        uu._willBeUnregistered || (this._numObserversMarkedAsDeleted++, uu.unregisterOnNextCall = !1, uu._willBeUnregistered = !0, setTimeout((() => {
-          this._remove(uu)
+      _deferUnregister(GG) {
+        GG._willBeUnregistered || (this._numObserversMarkedAsDeleted++, GG.unregisterOnNextCall = !1, GG._willBeUnregistered = !0, setTimeout((() => {
+          this._remove(GG)
         }), 0))
       }
-      _remove(uu) {
-        let Eu = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!uu) return !1;
-        const ju = this._observers.indexOf(uu);
-        return -1 !== ju && (Eu && this._numObserversMarkedAsDeleted--, this._observers.splice(ju, 1), !0)
+      _remove(GG) {
+        let bG = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!GG) return !1;
+        const ZG = this._observers.indexOf(GG);
+        return -1 !== ZG && (bG && this._numObserversMarkedAsDeleted--, this._observers.splice(ZG, 1), !0)
       }
-      makeObserverTopPriority(uu) {
-        this._remove(uu, !1), this._observers.unshift(uu)
+      makeObserverTopPriority(GG) {
+        this._remove(GG, !1), this._observers.unshift(GG)
       }
-      makeObserverBottomPriority(uu) {
-        this._remove(uu, !1), this._observers.push(uu)
+      makeObserverBottomPriority(GG) {
+        this._remove(GG, !1), this._observers.push(GG)
       }
-      notifyObservers(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          ju = arguments.length > 2 ? arguments[2] : void 0,
-          su = arguments.length > 3 ? arguments[3] : void 0,
-          Uu = arguments.length > 4 ? arguments[4] : void 0;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = uu), !this._observers.length) return !0;
-        const Zu = this._eventState;
-        Zu.mask = Eu, Zu.target = ju, Zu.currentTarget = su, Zu.skipNextObservers = !1, Zu.lastReturnValue = uu, Zu.userInfo = Uu;
-        for (const Xu of this._observers)
-          if (!Xu._willBeUnregistered && (Xu.mask & Eu && (Xu.unregisterOnNextCall && this._deferUnregister(Xu), Xu.scope ? Zu.lastReturnValue = Xu.callback.apply(Xu.scope, [uu, Zu]) : Zu.lastReturnValue = Xu.callback(uu, Zu)), Zu.skipNextObservers)) return !1;
+      notifyObservers(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          ZG = arguments.length > 2 ? arguments[2] : void 0,
+          wG = arguments.length > 3 ? arguments[3] : void 0,
+          SG = arguments.length > 4 ? arguments[4] : void 0;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = GG), !this._observers.length) return !0;
+        const LG = this._eventState;
+        LG.mask = bG, LG.target = ZG, LG.currentTarget = wG, LG.skipNextObservers = !1, LG.lastReturnValue = GG, LG.userInfo = SG;
+        for (const yG of this._observers)
+          if (!yG._willBeUnregistered && (yG.mask & bG && (yG.unregisterOnNextCall && this._deferUnregister(yG), yG.scope ? LG.lastReturnValue = yG.callback.apply(yG.scope, [GG, LG]) : LG.lastReturnValue = yG.callback(GG, LG)), LG.skipNextObservers)) return !1;
         return !0
       }
-      notifyObserver(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = Eu), uu._willBeUnregistered) return;
-        const su = this._eventState;
-        su.mask = ju, su.skipNextObservers = !1, uu.unregisterOnNextCall && this._deferUnregister(uu), uu.callback(Eu, su)
+      notifyObserver(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = bG), GG._willBeUnregistered) return;
+        const wG = this._eventState;
+        wG.mask = ZG, wG.skipNextObservers = !1, GG.unregisterOnNextCall && this._deferUnregister(GG), GG.callback(bG, wG)
       }
       hasObservers() {
         return this._observers.length - this._numObserversMarkedAsDeleted > 0
       }
       clear() {
         for (; this._observers.length;) {
-          const uu = this._observers.pop();
-          uu && (uu._remove = null)
+          const GG = this._observers.pop();
+          GG && (GG._remove = null)
         }
         this._onObserverAdded = null, this._numObserversMarkedAsDeleted = 0, this.cleanLastNotifiedState()
       }
@@ -2905,17 +2905,17 @@ export const modules = {
         this._hasNotified = !1, this._lastNotifiedValue = void 0
       }
       clone() {
-        const uu = new Xu;
-        return uu._observers = this._observers.slice(0), uu
+        const GG = new yG;
+        return GG._observers = this._observers.slice(0), GG
       }
       hasSpecificMask() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
-        for (const Eu of this._observers)
-          if (Eu.mask & uu || Eu.mask === uu) return !0;
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
+        for (const bG of this._observers)
+          if (bG.mask & GG || bG.mask === GG) return !0;
         return !1
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

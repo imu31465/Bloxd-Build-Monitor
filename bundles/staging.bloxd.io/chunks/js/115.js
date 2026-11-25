@@ -1,186 +1,186 @@
 export const id = 115;
 export const ids = [115, 118, 138, 139];
 export const modules = {
-  5206: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => su.h,
-      h: () => Uu,
-      k: () => su.o
+  5055: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => wG.i,
+      f: () => SG,
+      g: () => wG.o
     });
-    var su = ju(5209);
-    const Uu = [!1, !0].flatMap((uu => ["terrain", "liquid", "model"].map((Eu => ({
-      strict: uu,
-      program: Eu
+    var wG = ZG(5062);
+    const SG = [!1, !0].flatMap((GG => ["terrain", "liquid", "model"].map((bG => ({
+      strict: GG,
+      program: bG
     })))))
   },
-  40753: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => bu,
-      installListedShaderPack: () => Cu
+  40874: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => pG,
+      installListedShaderPack: () => VG
     });
-    var su = ju(6764),
-      Uu = ju(5209),
-      Zu = ju(1255),
-      Xu = ju(6810),
-      lu = ju(5206),
-      qu = ju(6851),
-      fu = ju(6849);
-    async function Cu(uu) {
-      const Eu = await (0, Xu.loadPageShaderPackCompiler)();
-      if (null === Eu) return {
+    var wG = ZG(6561),
+      SG = ZG(5062),
+      LG = ZG(1163),
+      yG = ZG(6608),
+      kG = ZG(5055),
+      UG = ZG(6653),
+      YG = ZG(6645);
+    async function VG(GG) {
+      const bG = await (0, yG.loadPageShaderPackCompiler)();
+      if (null === bG) return {
         kind: "failed",
         reason: "compiler"
       };
-      const ju = await bu(uu, Eu);
-      return "failed" === ju.kind ? ju : await (0, qu.saveShaderPack)(ju.stored, Eu) ? ((0, qu.markShaderPackChangePending)(), ju) : {
+      const ZG = await pG(GG, bG);
+      return "failed" === ZG.kind ? ZG : await (0, UG.saveShaderPack)(ZG.stored, bG) ? ((0, UG.markShaderPackChangePending)(), ZG) : {
         kind: "failed",
         reason: "save"
       }
     }
-    async function bu(uu, Eu) {
-      const ju = await async function(uu) {
+    async function pG(GG, bG) {
+      const ZG = await async function(GG) {
         let {
-          packId: Eu,
-          sourceHash: ju
-        } = uu;
+          packId: bG,
+          sourceHash: ZG
+        } = GG;
         try {
-          const uu = await fetch(`${Zu.clientSideServerUrls.s3Url}/${(0,su.U)(Eu,ju)}`, {
+          const GG = await fetch(`${LG.clientSideServerUrls.s3Url}/${(0,wG.O)(bG,ZG)}`, {
             headers: {
               Accept: "application/json"
             }
           });
-          if (!uu.ok) return console.error(`Failed to download shader pack ${Eu} (${uu.status})`), null;
-          const Uu = await uu.json();
-          return "object" !== typeof Uu || null === Uu ? (console.error(`Shader pack ${Eu}'s source isn't an object`), null) : Uu
-        } catch (Uu) {
-          return console.error(`Failed to download shader pack ${Eu}`, Uu), null
+          if (!GG.ok) return console.error(`Failed to download shader pack ${bG} (${GG.status})`), null;
+          const SG = await GG.json();
+          return "object" !== typeof SG || null === SG ? (console.error(`Shader pack ${bG}'s source isn't an object`), null) : SG
+        } catch (SG) {
+          return console.error(`Failed to download shader pack ${bG}`, SG), null
         }
-      }(uu);
-      if (null === ju) return {
+      }(GG);
+      if (null === ZG) return {
         kind: "failed",
         reason: "download"
       };
-      if (!(0, lu.k)(ju.apiVersion)) return {
+      if (!(0, kG.g)(ZG.apiVersion)) return {
         kind: "failed",
         reason: "apiVersion"
       };
-      const Xu = (0, Uu.s)(ju.files);
-      if ("string" === typeof Xu) return console.error(`A listed shader pack breaks the pack rules: ${Xu}`), {
+      const yG = (0, SG.u)(ZG.files);
+      if ("string" === typeof yG) return console.error(`A listed shader pack breaks the pack rules: ${yG}`), {
         kind: "failed",
         reason: "invalid"
       };
-      const Cu = await (0, fu.e)(Eu, Xu);
-      if (!1 === (null === Cu || void 0 === Cu ? void 0 : Cu.ok)) return {
+      const VG = await (0, YG.g)(bG, yG);
+      if (!1 === (null === VG || void 0 === VG ? void 0 : VG.ok)) return {
         kind: "failed",
         reason: "errors"
       };
-      const bu = {
+      const pG = {
         manifest: {
-          apiVersion: ju.apiVersion,
-          name: uu.name,
-          author: uu.ownerName,
-          description: uu.description || null,
-          keepCircleShadows: !0 === ju.keepCircleShadows
+          apiVersion: ZG.apiVersion,
+          name: GG.name,
+          author: GG.ownerName,
+          description: GG.description || null,
+          keepCircleShadows: !0 === ZG.keepCircleShadows
         },
-        files: Xu
+        files: yG
       };
       return {
         kind: "loaded",
-        stored: (0, qu.toStoredShaderPack)(bu, Cu, {
-          packId: uu.packId,
-          sourceHash: uu.sourceHash
+        stored: (0, UG.toStoredShaderPack)(pG, VG, {
+          packId: GG.packId,
+          sourceHash: GG.sourceHash
         })
       }
     }
   },
-  6851: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      forgetShaderPackActiveHint: () => ou,
-      isOtherApiVersion: () => Ju,
-      isShaderPackActive: () => eu,
-      isShaderPackChangePending: () => wu,
-      markShaderPackChangePending: () => pu,
-      pageShaderPackValidationVersion: () => du,
-      reconcileStoredShaderPackHint: () => Pu,
-      removeShaderPack: () => Mu,
-      replaceShaderPack: () => hu,
-      saveShaderPack: () => Yu,
-      shaderPackNeedsCheck: () => au,
-      storedPackOutcome: () => Gu,
-      storedShaderPackFiles: () => cu,
-      toStoredShaderPack: () => bu
+  6653: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      forgetShaderPackActiveHint: () => IG,
+      isOtherApiVersion: () => iG,
+      isShaderPackActive: () => EG,
+      isShaderPackChangePending: () => uG,
+      markShaderPackChangePending: () => XG,
+      pageShaderPackValidationVersion: () => CG,
+      reconcileStoredShaderPackHint: () => mG,
+      removeShaderPack: () => zG,
+      replaceShaderPack: () => dG,
+      saveShaderPack: () => hG,
+      shaderPackNeedsCheck: () => WG,
+      storedPackOutcome: () => oG,
+      storedShaderPackFiles: () => fG,
+      toStoredShaderPack: () => pG
     });
-    var su = ju(5209),
-      Uu = ju(5206),
-      Zu = ju(31),
-      Xu = ju(3651),
-      lu = ju(6854),
-      qu = ju(6827);
-    const fu = "shaderPackChangePending";
-    let Cu = null;
+    var wG = ZG(5062),
+      SG = ZG(5055),
+      LG = ZG(29),
+      yG = ZG(3441),
+      kG = ZG(6661),
+      UG = ZG(6627);
+    const YG = "shaderPackChangePending";
+    let VG = null;
 
-    function bu(uu, Eu, ju) {
+    function pG(GG, bG, ZG) {
       return {
-        manifest: uu.manifest,
-        files: (0, su.w)(uu.files),
-        validation: Eu,
-        ...ju && {
-          listing: ju
+        manifest: GG.manifest,
+        files: (0, wG.y)(GG.files),
+        validation: bG,
+        ...ZG && {
+          listing: ZG
         }
       }
     }
 
-    function cu(uu) {
-      return Object.keys(uu.files).map((Eu => ({
-        path: Eu,
-        source: uu.files[Eu]
+    function fG(GG) {
+      return Object.keys(GG.files).map((bG => ({
+        path: bG,
+        source: GG.files[bG]
       })))
     }
-    let Nu = Promise.resolve();
+    let QG = Promise.resolve();
 
-    function Ou(uu) {
-      const Eu = Nu.then(uu);
-      return Nu = Eu.catch((() => {})), Eu
-    }
-
-    function Yu(uu, Eu) {
-      return Ou((() => Du(uu, Eu)))
+    function KG(GG) {
+      const bG = QG.then(GG);
+      return QG = bG.catch((() => {})), bG
     }
 
-    function hu(uu, Eu, ju) {
-      return Ou((async () => JSON.stringify(await (0, lu.e)()) === JSON.stringify(uu) && (null === Eu ? (await gu(), !0) : Du(Eu, ju))))
-    }
-    async function Du(uu, Eu) {
-      const ju = await Zu.h.setItem(lu.b, uu);
-      return ju && ku(uu, Eu), ju
-    }
-    async function gu() {
-      await Zu.h.removeItem(lu.b), Zu.k.removeItem(Xu.c)
+    function hG(GG, bG) {
+      return KG((() => JG(GG, bG)))
     }
 
-    function Mu() {
-      return Ou(gu)
+    function dG(GG, bG, ZG) {
+      return KG((async () => JSON.stringify(await (0, kG.e)()) === JSON.stringify(GG) && (null === bG ? (await rG(), !0) : JG(bG, ZG))))
+    }
+    async function JG(GG, bG) {
+      const ZG = await LG.e.setItem(kG.b, GG);
+      return ZG && FG(GG, bG), ZG
+    }
+    async function rG() {
+      await LG.e.removeItem(kG.b), LG.h.removeItem(yG.d)
     }
 
-    function eu(uu, Eu) {
-      return "active" === Gu(uu, Eu).kind
+    function zG() {
+      return KG(rG)
     }
 
-    function Gu(uu, Eu) {
-      var ju;
-      return null === uu ? {
+    function EG(GG, bG) {
+      return "active" === oG(GG, bG).kind
+    }
+
+    function oG(GG, bG) {
+      var ZG;
+      return null === GG ? {
         kind: "none",
         reason: "nothingStored"
-      } : Ju(uu) ? {
+      } : iG(GG) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (ju = uu.validation) || void 0 === ju ? void 0 : ju.ok) || uu.validation.fromRecheck ? null === Eu ? {
+      } : !1 !== (null === (ZG = GG.validation) || void 0 === ZG ? void 0 : ZG.ok) || GG.validation.fromRecheck ? null === bG ? {
         kind: "none",
         reason: "noCompiler"
-      } : au(uu, Eu) ? {
+      } : WG(GG, bG) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : uu.validation.ok ? {
+      } : GG.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -191,331 +191,331 @@ export const modules = {
       }
     }
 
-    function pu() {
-      Zu.l.setItem(fu, performance.timeOrigin)
+    function XG() {
+      LG.l.setItem(YG, performance.timeOrigin)
     }
 
-    function wu() {
-      return Zu.l.getItem(fu) === performance.timeOrigin
+    function uG() {
+      return LG.l.getItem(YG) === performance.timeOrigin
     }
 
-    function Ju(uu) {
-      return !(0, Uu.k)(uu.manifest.apiVersion)
+    function iG(GG) {
+      return !(0, SG.g)(GG.manifest.apiVersion)
     }
 
-    function du(uu) {
-      return Cu ??= uu.fV((0, qu.shaderPackTextures)()), Cu
+    function CG(GG) {
+      return VG ??= GG.sF((0, UG.shaderPackTextures)()), VG
     }
 
-    function au(uu, Eu) {
-      var ju;
-      return (null === (ju = uu.validation) || void 0 === ju ? void 0 : ju.headerVersion) !== du(Eu)
+    function WG(GG, bG) {
+      var ZG;
+      return (null === (ZG = GG.validation) || void 0 === ZG ? void 0 : ZG.headerVersion) !== CG(bG)
     }
 
-    function Pu(uu) {
-      return Ou((async () => {
-        ku(await (0, lu.e)(!0), uu)
+    function mG(GG) {
+      return KG((async () => {
+        FG(await (0, kG.e)(!0), GG)
       }))
     }
 
-    function ou() {
-      return Ou((async () => {
-        Zu.k.removeItem(Xu.c)
+    function IG() {
+      return KG((async () => {
+        LG.h.removeItem(yG.d)
       }))
     }
 
-    function ku(uu, Eu) {
-      eu(uu, Eu) ? Zu.k.setItem(Xu.c, !0) : Zu.k.removeItem(Xu.c)
+    function FG(GG, bG) {
+      EG(GG, bG) ? LG.h.setItem(yG.d, !0) : LG.h.removeItem(yG.d)
     }
   },
-  6827: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      loadShaderPackTextures: () => Xu,
-      shaderPackTextures: () => lu
+  6627: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      loadShaderPackTextures: () => yG,
+      shaderPackTextures: () => kG
     });
-    var su = ju(5209);
-    let Uu = null,
-      Zu = null;
+    var wG = ZG(5062);
+    let SG = null,
+      LG = null;
 
-    function Xu() {
-      return Zu ??= Promise.all([ju.e(73), ju.e(190)]).then((() => ju(40746))).then((uu => {
+    function yG() {
+      return LG ??= Promise.all([ZG.e(73), ZG.e(190)]).then((() => ZG(40868))).then((GG => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: Eu,
-          textureNameToIndex: ju,
-          textureAnimationData: Zu
-        } = uu;
-        return Uu ??= (0, su.j)(ju, Zu, Eu), Uu
-      })), Zu
+          FORMER_BLOCK_IMAGE_NAMES: bG,
+          textureNameToIndex: ZG,
+          textureAnimationData: LG
+        } = GG;
+        return SG ??= (0, wG.j)(ZG, LG, bG), SG
+      })), LG
     }
 
-    function lu() {
-      if (null === Uu) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return Uu
+    function kG() {
+      if (null === SG) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return SG
     }
   },
-  6849: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => qu,
-      e: () => lu
+  6645: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => UG,
+      g: () => kG
     });
-    var su = ju(6851),
-      Uu = ju(6827),
-      Zu = ju(115);
-    const Xu = 100;
-    async function lu(uu, Eu) {
-      var ju;
-      let su = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (ju = navigator.gpu) && void 0 !== ju ? ju : null;
-      const Xu = uu.luu(Eu, (0, Uu.shaderPackTextures)());
-      if (Xu.errors.length > 0) return fu(uu, Xu.errors, Xu.offInStrict);
-      const lu = await async function(uu) {
-        if (!uu) return null;
+    var wG = ZG(6653),
+      SG = ZG(6627),
+      LG = ZG(101);
+    const yG = 100;
+    async function kG(GG, bG) {
+      var ZG;
+      let wG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (ZG = navigator.gpu) && void 0 !== ZG ? ZG : null;
+      const yG = GG.EGG(bG, (0, SG.shaderPackTextures)());
+      if (yG.errors.length > 0) return YG(GG, yG.errors, yG.offInStrict);
+      const kG = await async function(GG) {
+        if (!GG) return null;
         try {
-          const Eu = await (0, Zu.v)(uu);
-          return Eu ? await Eu.requestDevice() : null
-        } catch (Eu) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", Eu), null
+          const bG = await (0, LG.r)(GG);
+          return bG ? await bG.requestDevice() : null
+        } catch (bG) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", bG), null
         }
-      }(su);
-      if (!lu) return null;
-      let qu = !1;
-      lu.lost.then((() => {
-        qu = !0
+      }(wG);
+      if (!kG) return null;
+      let UG = !1;
+      kG.lost.then((() => {
+        UG = !0
       }));
       try {
-        const Eu = await Promise.all(Xu.validationModules.map((Eu => async function(uu, Eu, ju) {
-          Eu.pushErrorScope("validation");
-          const su = Eu.createShaderModule({
-              code: ju.code
+        const bG = await Promise.all(yG.validationModules.map((bG => async function(GG, bG, ZG) {
+          bG.pushErrorScope("validation");
+          const wG = bG.createShaderModule({
+              code: ZG.code
             }),
-            Uu = Eu.popErrorScope(),
+            SG = bG.popErrorScope(),
             {
-              messages: Zu
-            } = await su.getCompilationInfo(),
-            Xu = Zu.filter((uu => "error" === uu.type)).map((Eu => uu.mapValidationMessage(ju, Eu))),
-            lu = await Uu;
-          lu && 0 === Xu.length && Xu.push({
+              messages: LG
+            } = await wG.getCompilationInfo(),
+            yG = LG.filter((GG => "error" === GG.type)).map((bG => GG.mapValidationMessage(ZG, bG))),
+            kG = await SG;
+          kG && 0 === yG.length && yG.push({
             file: null,
             line: 0,
-            message: lu.message,
-            variants: [ju.key]
+            message: kG.message,
+            variants: [ZG.key]
           });
-          return Xu
-        }(uu, lu, Eu))));
-        return qu ? null : fu(uu, uu.Rju(Eu.flat()), Xu.offInStrict)
-      } catch (Cu) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", Cu), null
+          return yG
+        }(GG, kG, bG))));
+        return UG ? null : YG(GG, GG.QwG(bG.flat()), yG.offInStrict)
+      } catch (VG) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", VG), null
       } finally {
-        lu.destroy()
+        kG.destroy()
       }
     }
-    async function qu(uu, Eu) {
-      var ju;
-      if (!(0, su.shaderPackNeedsCheck)(uu, Eu) || (0, su.isOtherApiVersion)(uu)) return uu;
-      const Uu = await lu(Eu, (0, su.storedShaderPackFiles)(uu));
-      if (!Uu) return uu;
-      const Zu = !1 === (null === (ju = uu.validation) || void 0 === ju ? void 0 : ju.ok) && !uu.validation.fromRecheck,
-        Xu = {
-          ...uu,
-          validation: Zu ? Uu : {
-            ...Uu,
+    async function UG(GG, bG) {
+      var ZG;
+      if (!(0, wG.shaderPackNeedsCheck)(GG, bG) || (0, wG.isOtherApiVersion)(GG)) return GG;
+      const SG = await kG(bG, (0, wG.storedShaderPackFiles)(GG));
+      if (!SG) return GG;
+      const LG = !1 === (null === (ZG = GG.validation) || void 0 === ZG ? void 0 : ZG.ok) && !GG.validation.fromRecheck,
+        yG = {
+          ...GG,
+          validation: LG ? SG : {
+            ...SG,
             fromRecheck: !0
           }
         };
-      return await (0, su.replaceShaderPack)(uu, Xu, Eu) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), Xu
+      return await (0, wG.replaceShaderPack)(GG, yG, bG) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), yG
     }
 
-    function fu(uu, Eu, ju) {
+    function YG(GG, bG, ZG) {
       return {
-        headerVersion: (0, su.pageShaderPackValidationVersion)(uu),
-        ok: 0 === Eu.length,
-        errors: Eu.slice(0, Xu),
-        moreErrors: Math.max(0, Eu.length - Xu),
-        offInStrict: ju
+        headerVersion: (0, wG.pageShaderPackValidationVersion)(GG),
+        ok: 0 === bG.length,
+        errors: bG.slice(0, yG),
+        moreErrors: Math.max(0, bG.length - yG),
+        offInStrict: ZG
       }
     }
   },
-  5209: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      A: () => cu,
-      c: () => lu,
-      e: () => Xu,
-      h: () => su,
-      j: () => Yu,
-      k: () => bu,
-      o: () => Uu,
-      p: () => Zu,
-      s: () => fu,
-      w: () => Cu
+  5062: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      A: () => fG,
+      d: () => kG,
+      h: () => yG,
+      i: () => wG,
+      j: () => hG,
+      k: () => pG,
+      o: () => SG,
+      s: () => LG,
+      u: () => YG,
+      y: () => VG
     });
-    const su = 5;
+    const wG = 5;
 
-    function Uu(uu) {
-      return uu === su
+    function SG(GG) {
+      return GG === wG
     }
 
-    function Zu(uu) {
-      return [...uu.features]
+    function LG(GG) {
+      return [...GG.features]
     }
-    const Xu = 262144,
-      lu = 256,
-      qu = 256;
+    const yG = 262144,
+      kG = 256,
+      UG = 256;
 
-    function fu(uu) {
-      if ("object" !== typeof uu || null === uu || Array.isArray(uu)) return "The pack has no files.";
-      const Eu = [];
-      for (const [ju, su] of Object.entries(uu)) {
-        if ("string" !== typeof su) return `${ju} isn't text.`;
-        Eu.push({
-          path: ju,
-          source: su
+    function YG(GG) {
+      if ("object" !== typeof GG || null === GG || Array.isArray(GG)) return "The pack has no files.";
+      const bG = [];
+      for (const [ZG, wG] of Object.entries(GG)) {
+        if ("string" !== typeof wG) return `${ZG} isn't text.`;
+        bG.push({
+          path: ZG,
+          source: wG
         })
       }
-      return Eu.sort(((uu, Eu) => bu(uu.path, Eu.path))),
-        function(uu) {
-          if (0 === uu.length) return "The pack has no .wgsl files.";
-          if (uu.length > lu) return `The pack has more than ${lu} .wgsl files.`;
-          const Eu = new Set;
+      return bG.sort(((GG, bG) => pG(GG.path, bG.path))),
+        function(GG) {
+          if (0 === GG.length) return "The pack has no .wgsl files.";
+          if (GG.length > kG) return `The pack has more than ${kG} .wgsl files.`;
+          const bG = new Set;
           for (const {
-              path: ju
+              path: ZG
             }
-            of uu) {
-            const uu = Nu(ju);
-            if (null !== uu) return uu;
-            if (Eu.has(ju)) return `The pack has two files at ${ju}.`;
-            Eu.add(ju)
+            of GG) {
+            const GG = QG(ZG);
+            if (null !== GG) return GG;
+            if (bG.has(ZG)) return `The pack has two files at ${ZG}.`;
+            bG.add(ZG)
           }
-          return cu(uu) > Xu ? `The pack's .wgsl files are over ${Xu/1024} KB in total.` : null
-        }(Eu) ?? Eu
+          return fG(GG) > yG ? `The pack's .wgsl files are over ${yG/1024} KB in total.` : null
+        }(bG) ?? bG
     }
 
-    function Cu(uu) {
-      const Eu = {};
-      for (const ju of uu) Eu[ju.path] = ju.source;
-      return Eu
+    function VG(GG) {
+      const bG = {};
+      for (const ZG of GG) bG[ZG.path] = ZG.source;
+      return bG
     }
 
-    function bu(uu, Eu) {
-      return uu < Eu ? -1 : uu > Eu ? 1 : 0
+    function pG(GG, bG) {
+      return GG < bG ? -1 : GG > bG ? 1 : 0
     }
 
-    function cu(uu) {
-      const Eu = new TextEncoder;
-      let ju = 0;
+    function fG(GG) {
+      const bG = new TextEncoder;
+      let ZG = 0;
       for (const {
-          source: su
+          source: wG
         }
-        of uu) ju += Eu.encode(su).byteLength;
-      return ju
+        of GG) ZG += bG.encode(wG).byteLength;
+      return ZG
     }
 
-    function Nu(uu) {
-      if (!uu.toLowerCase().endsWith(".wgsl")) return `${uu} isn't a .wgsl file.`;
-      if (uu.length > qu) return `A file path is over ${qu} characters.`;
-      if (uu.includes("\\") || /[\u0000-\u001f]/.test(uu)) return `${uu} isn't a valid file path.`;
-      return uu.split("/").some((uu => "" === uu || "." === uu || ".." === uu)) ? `${uu} isn't a valid file path.` : null
+    function QG(GG) {
+      if (!GG.toLowerCase().endsWith(".wgsl")) return `${GG} isn't a .wgsl file.`;
+      if (GG.length > UG) return `A file path is over ${UG} characters.`;
+      if (GG.includes("\\") || /[\u0000-\u001f]/.test(GG)) return `${GG} isn't a valid file path.`;
+      return GG.split("/").some((GG => "" === GG || "." === GG || ".." === GG)) ? `${GG} isn't a valid file path.` : null
     }
-    const Ou = /^(.*)\[rot\[([1-4])$/;
+    const KG = /^(.*)\[rot\[([1-4])$/;
 
-    function Yu(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const su = new Map;
-      Eu.forEach(((uu, Eu) => {
+    function hG(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const wG = new Map;
+      bG.forEach(((GG, bG) => {
         let {
-          numAnimStates: ju,
-          animStartIdx: Uu
-        } = uu;
-        for (let Zu = 1; Zu < ju; Zu++) su.set(Uu + Zu - 1, Eu)
+          numAnimStates: ZG,
+          animStartIdx: SG
+        } = GG;
+        for (let LG = 1; LG < ZG; LG++) wG.set(SG + LG - 1, bG)
       }));
-      const Uu = Object.entries(uu),
-        Zu = new Map;
-      for (const [Yu, hu] of Uu) {
-        const uu = Ou.exec(Yu);
-        "1" === uu?.[2] && Zu.set(uu[1], hu + 1)
+      const SG = Object.entries(GG),
+        LG = new Map;
+      for (const [hG, dG] of SG) {
+        const GG = KG.exec(hG);
+        "1" === GG?.[2] && LG.set(GG[1], dG + 1)
       }
-      const Xu = uu => {
-          const Eu = Ou.exec(uu);
-          return Eu && Zu.has(Eu[1]) ? {
-            root: Eu[1],
-            rotation: Number(Eu[2]) - 1
+      const yG = GG => {
+          const bG = KG.exec(GG);
+          return bG && LG.has(bG[1]) ? {
+            root: bG[1],
+            rotation: Number(bG[2]) - 1
           } : null
         },
-        lu = new Set(Uu.map((uu => {
-          let [Eu] = uu;
-          return Xu(Eu)?.root ?? Eu
+        kG = new Set(SG.map((GG => {
+          let [bG] = GG;
+          return yG(bG)?.root ?? bG
         }))),
-        qu = (uu, ju) => {
-          const su = uu.replace(/_?0$/, "");
-          return (Eu[ju]?.numAnimStates ?? 0) > 1 && !lu.has(su) ? su : uu
+        UG = (GG, ZG) => {
+          const wG = GG.replace(/_?0$/, "");
+          return (bG[ZG]?.numAnimStates ?? 0) > 1 && !kG.has(wG) ? wG : GG
         },
-        fu = new Map;
-      for (const [Ou, Yu] of Uu) fu.set(Yu, qu(Xu(Ou)?.root ?? Ou, Yu));
-      const Cu = Uu.reduce(((uu, Eu) => {
-          let [, ju] = Eu;
-          return Math.max(uu, ju + 1)
+        YG = new Map;
+      for (const [KG, hG] of SG) YG.set(hG, UG(yG(KG)?.root ?? KG, hG));
+      const VG = SG.reduce(((GG, bG) => {
+          let [, ZG] = bG;
+          return Math.max(GG, ZG + 1)
         }), 0),
-        bu = Array.from({
-          length: Cu
-        }, ((uu, Eu) => ({
-          id: Eu + 1,
+        pG = Array.from({
+          length: VG
+        }, ((GG, bG) => ({
+          id: bG + 1,
           rotation: 0
         }))),
-        cu = new Map,
-        Nu = new Map;
-      for (const [Ou, Yu] of Uu) {
-        const uu = Xu(Ou),
-          Eu = su.get(Yu);
-        if (void 0 !== Eu) {
-          const ju = fu.get(Eu);
-          Nu.set(Ou, {
-            name: Ou,
-            texture: ju,
+        fG = new Map,
+        QG = new Map;
+      for (const [KG, hG] of SG) {
+        const GG = yG(KG),
+          bG = wG.get(hG);
+        if (void 0 !== bG) {
+          const ZG = YG.get(bG);
+          QG.set(KG, {
+            name: KG,
+            texture: ZG,
             kind: "frame"
-          }), uu && !Nu.has(uu.root) && Nu.set(uu.root, {
-            name: uu.root,
-            texture: ju,
+          }), GG && !QG.has(GG.root) && QG.set(GG.root, {
+            name: GG.root,
+            texture: ZG,
             kind: "frame"
           });
           continue
         }
-        const ju = fu.get(Yu),
-          Uu = uu?.root ?? Ou;
-        if (ju !== Uu && Nu.set(Uu, {
-            name: Uu,
-            texture: ju,
+        const ZG = YG.get(hG),
+          SG = GG?.root ?? KG;
+        if (ZG !== SG && QG.set(SG, {
+            name: SG,
+            texture: ZG,
             kind: "frame"
-          }), uu) {
-          const Eu = Zu.get(uu.root);
-          bu[Yu] = {
-            id: Eu,
-            rotation: uu.rotation
-          }, cu.set(ju, Eu), Nu.set(Ou, {
-            name: Ou,
-            texture: ju,
+          }), GG) {
+          const bG = LG.get(GG.root);
+          pG[hG] = {
+            id: bG,
+            rotation: GG.rotation
+          }, fG.set(ZG, bG), QG.set(KG, {
+            name: KG,
+            texture: ZG,
             kind: "rotation"
           })
-        } else cu.set(ju, Yu + 1)
+        } else fG.set(ZG, hG + 1)
       }
-      for (const Ou of cu.keys()) Nu.delete(Ou);
-      for (const [Ou, Yu] of ju) {
-        const uu = cu.get(Yu);
-        void 0 === uu || cu.has(Ou) || (cu.set(Ou, uu), Nu.delete(Ou))
+      for (const KG of fG.keys()) QG.delete(KG);
+      for (const [KG, hG] of ZG) {
+        const GG = fG.get(hG);
+        void 0 === GG || fG.has(KG) || (fG.set(KG, GG), QG.delete(KG))
       }
       return {
-        named: [...cu].sort(((uu, Eu) => {
-          let [ju] = uu, [su] = Eu;
-          return ju < su ? -1 : ju > su ? 1 : 0
-        })).map((uu => {
-          let [Eu, ju] = uu;
+        named: [...fG].sort(((GG, bG) => {
+          let [ZG] = GG, [wG] = bG;
+          return ZG < wG ? -1 : ZG > wG ? 1 : 0
+        })).map((GG => {
+          let [bG, ZG] = GG;
           return {
-            name: Eu,
-            id: ju
+            name: bG,
+            id: ZG
           }
         })),
-        aliases: [...Nu.values()],
-        layers: bu
+        aliases: [...QG.values()],
+        layers: pG
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

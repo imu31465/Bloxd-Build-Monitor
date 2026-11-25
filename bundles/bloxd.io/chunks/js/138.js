@@ -1,31 +1,31 @@
 export const id = 138;
 export const ids = [138];
 export const modules = {
-  6827: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      loadShaderPackTextures: () => Xu,
-      shaderPackTextures: () => lu
+  6627: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      loadShaderPackTextures: () => yG,
+      shaderPackTextures: () => kG
     });
-    var su = ju(5209);
-    let Uu = null,
-      Zu = null;
+    var wG = ZG(5062);
+    let SG = null,
+      LG = null;
 
-    function Xu() {
-      return Zu ??= Promise.all([ju.e(73), ju.e(190)]).then((() => ju(40746))).then((uu => {
+    function yG() {
+      return LG ??= Promise.all([ZG.e(73), ZG.e(190)]).then((() => ZG(40868))).then((GG => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: Eu,
-          textureNameToIndex: ju,
-          textureAnimationData: Zu
-        } = uu;
-        return Uu ??= (0, su.j)(ju, Zu, Eu), Uu
-      })), Zu
+          FORMER_BLOCK_IMAGE_NAMES: bG,
+          textureNameToIndex: ZG,
+          textureAnimationData: LG
+        } = GG;
+        return SG ??= (0, wG.j)(ZG, LG, bG), SG
+      })), LG
     }
 
-    function lu() {
-      if (null === Uu) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return Uu
+    function kG() {
+      if (null === SG) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return SG
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

@@ -1,79 +1,79 @@
 export const id = 104;
 export const ids = [104];
 export const modules = {
-  5077: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => cu
+  4933: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => fG
     });
-    var su = ju(1105),
-      Uu = ju.n(su),
-      Zu = ju(1116),
-      Xu = ju(1393),
-      lu = ju(3691),
-      qu = ju(131),
-      fu = ju(3738),
-      Cu = ju(3729),
-      bu = ju(1154);
+    var wG = ZG(1006),
+      SG = ZG.n(wG),
+      LG = ZG(1016),
+      yG = ZG(1302),
+      kG = ZG(3481),
+      UG = ZG(116),
+      YG = ZG(3513),
+      VG = ZG(3505),
+      pG = ZG(1067);
 
-    function cu(uu) {
+    function fG(GG) {
       let {
-        game: Eu
-      } = uu;
-      const ju = (0, qu.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        su = (0, fu.e)(Eu, ju),
-        cu = (0, lu.h)(su),
-        Nu = void 0 !== cu.blurhash;
-      return (0, bu.jsxs)("div", {
+        game: bG
+      } = GG;
+      const ZG = (0, UG.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        wG = (0, YG.c)(bG, ZG),
+        fG = (0, kG.f)(wG),
+        QG = void 0 !== fG.blurhash;
+      return (0, pG.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [cu.isLoading && !Nu && (0, bu.jsx)(Xu.b, {
+        children: [fG.isLoading && !QG && (0, pG.jsx)(yG.b, {
           loaderType: "Secondary"
-        }), !cu.failed && (null !== cu.src || Nu) && (0, bu.jsx)("div", {
-          className: Uu()("SchematicImage", Cu.d, {
-            SchematicImageFadeIn: cu.fadeIn && !Nu
+        }), !fG.failed && (null !== fG.src || QG) && (0, pG.jsx)("div", {
+          className: SG()("SchematicImage", VG.h, {
+            SchematicImageFadeIn: fG.fadeIn && !QG
           }),
-          style: (0, Cu.c)(cu),
-          children: (0, bu.jsx)(Cu.b, {
-            image: cu
+          style: (0, VG.e)(fG),
+          children: (0, pG.jsx)(VG.c, {
+            image: fG
           })
-        }), cu.failed && (0, bu.jsx)("div", {
+        }), fG.failed && (0, pG.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, bu.jsx)(Zu.e, {
+          children: (0, pG.jsx)(LG.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  6719: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      default: () => Wu
+  6514: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      default: () => AG
     });
-    ju(5073);
-    var su = ju(58),
-      Uu = ju(1105),
-      Zu = ju.n(Uu),
-      Xu = ju(337),
-      lu = ju(1079),
-      qu = ju(1278),
-      fu = ju(1065),
-      Cu = ju(1244),
-      bu = ju(1559),
-      cu = ju(3754),
-      Nu = ju(1178),
-      Ou = ju(5077),
-      Yu = ju(2716),
-      hu = ju(1506),
-      Du = ju(4749),
-      gu = ju(5084),
-      Mu = ju(1393),
-      eu = ju(1570),
-      Gu = ju(4740),
-      pu = ju(2655),
-      wu = ju(5089),
-      Ju = ju(6618),
-      du = ju(1595),
-      au = ju(1154);
-    const Pu = [{
+    ZG(4924);
+    var wG = ZG(51),
+      SG = ZG(1006),
+      LG = ZG.n(SG),
+      yG = ZG(333),
+      kG = ZG(988),
+      UG = ZG(1177),
+      YG = ZG(973),
+      VG = ZG(1151),
+      pG = ZG(1431),
+      fG = ZG(3526),
+      QG = ZG(1092),
+      KG = ZG(4933),
+      hG = ZG(2575),
+      dG = ZG(1393),
+      JG = ZG(4581),
+      rG = ZG(4939),
+      zG = ZG(1302),
+      EG = ZG(1444),
+      oG = ZG(4575),
+      XG = ZG(2489),
+      uG = ZG(4945),
+      iG = ZG(6421),
+      CG = ZG(1481),
+      WG = ZG(1067);
+    const mG = [{
         scope: "customGames",
         title: "studio:leaderboardCustomGames"
       }, {
@@ -83,407 +83,407 @@ export const modules = {
         scope: "dormantGames",
         title: "studio:leaderboardDormantGames"
       }],
-      ou = 25,
-      ku = "scope",
-      mu = "category",
-      vu = "customGames";
-    const Ku = 7,
-      Vu = {
+      IG = 25,
+      FG = "scope",
+      vG = "category",
+      aG = "customGames";
+    const cG = 7,
+      lG = {
         playsPerDay: null,
         avgPlaytimeMinutes: null,
         retention: null
       };
 
-    function ru(uu) {
+    function jG(GG) {
       let {
-        position: Eu
-      } = uu;
-      const ju = Ju.c[Eu];
-      return (0, au.jsxs)("td", {
-        className: Zu()("StudioLeaderboardPosition", {
-          StudioLeaderboardTopPosition: void 0 !== ju,
-          [`StudioLeaderboardTopPosition${Eu}`]: void 0 !== ju
+        position: bG
+      } = GG;
+      const ZG = iG.c[bG];
+      return (0, WG.jsxs)("td", {
+        className: LG()("StudioLeaderboardPosition", {
+          StudioLeaderboardTopPosition: void 0 !== ZG,
+          [`StudioLeaderboardTopPosition${bG}`]: void 0 !== ZG
         }),
-        children: [void 0 !== ju && (0, au.jsx)("img", {
+        children: [void 0 !== ZG && (0, WG.jsx)("img", {
           className: "StudioLeaderboardPositionItem",
-          src: ju,
+          src: ZG,
           alt: ""
-        }), Eu]
+        }), bG]
       })
     }
 
-    function Qu(uu) {
+    function PG(GG) {
       let {
-        discoverability: Eu
-      } = uu;
+        discoverability: bG
+      } = GG;
       const {
-        playsPerDay: ju,
-        avgPlaytimeMinutes: Uu,
-        retention: Zu
-      } = null === Eu ? Vu : (0, cu.h)(Eu);
-      return (0, au.jsxs)(su.Fragment, {
-        children: [(0, au.jsx)("td", {
-          children: null !== ju ? (0, cu.c)(ju) : "-"
-        }), (0, au.jsx)("td", {
-          children: null !== Uu ? (0, cu.e)(Uu) : "-"
-        }), (0, au.jsx)("td", {
-          children: null !== Zu ? (0, cu.f)(Zu) : "-"
+        playsPerDay: ZG,
+        avgPlaytimeMinutes: SG,
+        retention: LG
+      } = null === bG ? lG : (0, fG.j)(bG);
+      return (0, WG.jsxs)(wG.Fragment, {
+        children: [(0, WG.jsx)("td", {
+          children: null !== ZG ? (0, fG.e)(ZG) : "-"
+        }), (0, WG.jsx)("td", {
+          children: null !== SG ? (0, fG.f)(SG) : "-"
+        }), (0, WG.jsx)("td", {
+          children: null !== LG ? (0, fG.g)(LG) : "-"
         })]
       })
     }
 
-    function iu(uu) {
+    function MG(GG) {
       let {
-        discoverability: Eu
-      } = uu;
-      return (0, au.jsx)("td", {
+        discoverability: bG
+      } = GG;
+      return (0, WG.jsx)("td", {
         className: "StudioLeaderboardEngagementScore",
-        children: void 0 !== (null === Eu || void 0 === Eu ? void 0 : Eu.engagementScore) ? (0, qu.S)(Math.round(Eu.engagementScore)) : "-"
+        children: void 0 !== (null === bG || void 0 === bG ? void 0 : bG.engagementScore) ? (0, UG.O)(Math.round(bG.engagementScore)) : "-"
       })
     }
 
-    function Wu() {
-      var uu, Eu;
+    function AG() {
+      var GG, bG;
       const {
-        t: ju
-      } = (0, Cu.A)(), Uu = (0, eu.useNavigatePreserveSearch)(), {
-        userContext: Zu,
-        isUserContextUpdating: Ju
-      } = (0, Nu.c)(), Vu = (0, pu.l)(), [Wu, Su] = (0, Gu.k)(), Iu = (Fu = Wu.get(ku), Pu.some((uu => uu.scope === Fu)) ? Fu : vu);
-      var Fu;
-      const Bu = function(uu) {
-          return Xu.Y.includes(uu) ? uu : null
-        }(Wu.get(mu)),
-        Lu = (0, Gu.c)(Wu.get(Gu.b)),
-        [tu, xu] = (0, su.useState)(null),
-        [Tu, Hu] = (0, su.useState)(!1);
+        t: ZG
+      } = (0, VG.w)(), SG = (0, EG.useNavigatePreserveSearch)(), {
+        userContext: LG,
+        isUserContextUpdating: iG
+      } = (0, QG.e)(), lG = (0, XG.i)(), [AG, sG] = (0, oG.o)(), qG = (nG = AG.get(FG), mG.some((GG => GG.scope === nG)) ? nG : aG);
+      var nG;
+      const gG = function(GG) {
+          return yG.ib.includes(GG) ? GG : null
+        }(AG.get(vG)),
+        eG = (0, oG.d)(AG.get(oG.c)),
+        [RG, TG] = (0, wG.useState)(null),
+        [HG, tG] = (0, wG.useState)(!1);
 
-      function Au(uu) {
-        Su((Eu => {
-          (0, Gu.f)(Eu, ku, uu.scope === vu ? null : uu.scope), (0, Gu.f)(Eu, mu, uu.category), (0, Gu.i)(Eu, uu.page)
+      function DG(GG) {
+        sG((bG => {
+          (0, oG.g)(bG, FG, GG.scope === aG ? null : GG.scope), (0, oG.g)(bG, vG, GG.category), (0, oG.k)(bG, GG.page)
         }))
       }
-      const nu = !Ju && Zu.playerHasRank("developer"),
-        yu = nu && "allGames" === Iu,
-        zu = nu && "dormantGames" === Iu;
-      (0, su.useEffect)((() => {
-        if (Ju) return;
-        let uu = !1;
-        return xu(null), Hu(!1), bu.b.getPublishedGamePreviews(Zu, {
+      const NG = !iG && LG.playerHasRank("developer"),
+        OG = NG && "allGames" === qG,
+        xG = NG && "dormantGames" === qG;
+      (0, wG.useEffect)((() => {
+        if (iG) return;
+        let GG = !1;
+        return TG(null), tG(!1), pG.d.getPublishedGamePreviews(LG, {
           searchQuery: null,
-          pageNumber: Lu,
-          pageSize: ou,
+          pageNumber: eG,
+          pageSize: IG,
           onlyFavouriteGames: !1,
           onlyOwnedGames: !1,
           onlyApprovedGames: !1,
           schematicIdsToExclude: [],
-          gameCategories: null !== Bu ? [Bu] : [],
+          gameCategories: null !== gG ? [gG] : [],
           upAndComing: !1,
-          dormantGames: zu,
+          dormantGames: xG,
           sortByEngagementScore: !0,
-          firstPartyGameNames: yu ? fu.d : void 0,
+          firstPartyGameNames: OG ? YG.d : void 0,
           includeOwners: !0
-        }).then((Eu => {
-          uu || xu(Eu)
-        })).catch((Eu => {
-          console.error("Failed to load the studio leaderboard", Eu), uu || Hu(!0)
+        }).then((bG => {
+          GG || TG(bG)
+        })).catch((bG => {
+          console.error("Failed to load the studio leaderboard", bG), GG || tG(!0)
         })), () => {
-          uu = !0
+          GG = !0
         }
-      }), [Ju, yu, zu, Bu, Lu, Zu]);
-      const Ru = null !== (uu = null === tu || void 0 === tu ? void 0 : tu.results) && void 0 !== uu ? uu : null,
-        uE = function(uu, Eu, ju) {
-          const [Uu, Zu] = (0, su.useState)({}), Xu = ju ? (null !== uu && void 0 !== uu ? uu : []).flatMap((uu => "firstPartyGame" === uu.type ? [(0, lu.i)(uu.gameNameWithVariation, !0)] : [])).join(",") : "", qu = (0, su.useMemo)((() => "" === Xu ? [] : Xu.split(",")), [Xu]);
-          return (0, su.useEffect)((() => {
-            if (0 === qu.length) return void Zu({});
-            let uu = !1;
-            return bu.b.getGamesByAnalyticsIds(Eu, qu).then((Eu => {
-              uu || Zu(Eu)
-            })).catch((uu => {
-              console.error("Failed to load first party discoverability for the studio leaderboard", uu)
+      }), [iG, OG, xG, gG, eG, LG]);
+      const BG = null !== (GG = null === RG || void 0 === RG ? void 0 : RG.results) && void 0 !== GG ? GG : null,
+        Gb = function(GG, bG, ZG) {
+          const [SG, LG] = (0, wG.useState)({}), yG = ZG ? (null !== GG && void 0 !== GG ? GG : []).flatMap((GG => "firstPartyGame" === GG.type ? [(0, kG.d)(GG.gameNameWithVariation, !0)] : [])).join(",") : "", UG = (0, wG.useMemo)((() => "" === yG ? [] : yG.split(",")), [yG]);
+          return (0, wG.useEffect)((() => {
+            if (0 === UG.length) return void LG({});
+            let GG = !1;
+            return pG.d.getGamesByAnalyticsIds(bG, UG).then((bG => {
+              GG || LG(bG)
+            })).catch((GG => {
+              console.error("Failed to load first party discoverability for the studio leaderboard", GG)
             })), () => {
-              uu = !0
+              GG = !0
             }
-          }), [qu, Eu]), Uu
-        }(Ru, Zu, nu),
-        EE = null !== Ru ? function(uu, Eu, ju, su, Uu) {
-          return uu.map(((uu, Zu) => {
-            var Xu;
-            const qu = su + Zu + 1;
-            if ("customGame" === uu.type) {
-              const Eu = uu.preview;
+          }), [UG, bG]), SG
+        }(BG, LG, NG),
+        bb = null !== BG ? function(GG, bG, ZG, wG, SG) {
+          return GG.map(((GG, LG) => {
+            var yG;
+            const UG = wG + LG + 1;
+            if ("customGame" === GG.type) {
+              const bG = GG.preview;
               return {
-                key: Eu.schematicId,
-                position: qu,
-                thumbnail: (0, au.jsx)(Ou.b, {
-                  game: Eu
+                key: bG.schematicId,
+                position: UG,
+                thumbnail: (0, WG.jsx)(KG.e, {
+                  game: bG
                 }),
-                name: Eu.name,
-                owner: uu.owner,
-                category: Eu.gameCategory,
-                ccu: Eu.ccu,
-                favourites: Eu.favourites,
-                discoverability: (0, cu.l)(Eu) ? Eu : null,
-                url: (0, du.i)((0, lu.e)(Eu.schematicId))
+                name: bG.name,
+                owner: GG.owner,
+                category: bG.gameCategory,
+                ccu: bG.ccu,
+                favourites: bG.favourites,
+                discoverability: (0, fG.l)(bG) ? bG : null,
+                url: (0, CG.p)((0, kG.b)(bG.schematicId))
               }
             }
-            const fu = uu.gameNameWithVariation,
-              Cu = (0, lu.i)(fu, !0);
+            const YG = GG.gameNameWithVariation,
+              VG = (0, kG.d)(YG, !0);
             return {
-              key: fu,
-              position: qu,
-              thumbnail: (0, au.jsx)(wu.c, {
-                game: fu
+              key: YG,
+              position: UG,
+              thumbnail: (0, WG.jsx)(uG.d, {
+                game: YG
               }),
-              name: (0, du.h)(fu, Uu),
+              name: (0, CG.l)(YG, SG),
               owner: null,
-              category: (0, du.c)(fu),
-              ccu: (0, pu.c)(fu, Eu),
+              category: (0, CG.c)(YG),
+              ccu: (0, XG.b)(YG, bG),
               favourites: null,
-              discoverability: null !== (Xu = ju[Cu]) && void 0 !== Xu ? Xu : null,
-              url: (0, du.i)(Cu)
+              discoverability: null !== (yG = ZG[VG]) && void 0 !== yG ? yG : null,
+              url: (0, CG.p)(VG)
             }
           }))
-        }(Ru, Vu, uE, (Lu - 1) * ou, ju) : [],
-        jE = !Tu && null === tu,
-        sE = !jE && !Tu && 0 === EE.length,
-        UE = null !== (Eu = null === tu || void 0 === tu ? void 0 : tu.totalPages) && void 0 !== Eu ? Eu : 1;
-      return (0, au.jsxs)("div", {
+        }(BG, lG, Gb, (eG - 1) * IG, ZG) : [],
+        Zb = !HG && null === RG,
+        wb = !Zb && !HG && 0 === bb.length,
+        Sb = null !== (bG = null === RG || void 0 === RG ? void 0 : RG.totalPages) && void 0 !== bG ? bG : 1;
+      return (0, WG.jsxs)("div", {
         className: "StudioPage StudioLeaderboard",
-        children: [(0, au.jsx)("div", {
+        children: [(0, WG.jsx)("div", {
           className: "StudioPageHeader",
-          children: (0, au.jsx)("h1", {
+          children: (0, WG.jsx)("h1", {
             className: "StudioPageTitle",
-            children: ju("studio:leaderboard")
+            children: ZG("studio:leaderboard")
           })
-        }), (0, au.jsxs)("div", {
+        }), (0, WG.jsxs)("div", {
           className: "StudioLeaderboardBanner",
-          children: [!zu && (0, au.jsx)("div", {
-            children: ju("studio:leaderboardBanner")
-          }), zu && (0, au.jsx)("div", {
-            children: ju("studio:leaderboardDormantBanner")
-          }), (0, au.jsx)("div", {
-            children: ju("studio:leaderboardMetricsBanner", {
-              days: Ku
+          children: [!xG && (0, WG.jsx)("div", {
+            children: ZG("studio:leaderboardBanner")
+          }), xG && (0, WG.jsx)("div", {
+            children: ZG("studio:leaderboardDormantBanner")
+          }), (0, WG.jsx)("div", {
+            children: ZG("studio:leaderboardMetricsBanner", {
+              days: cG
             })
           })]
-        }), nu && (0, au.jsx)("div", {
+        }), NG && (0, WG.jsx)("div", {
           className: "StudioLeaderboardScopes",
-          children: Pu.map((uu => (0, au.jsx)(hu.$, {
-            active: Iu === uu.scope,
+          children: mG.map((GG => (0, WG.jsx)(dG.K, {
+            active: qG === GG.scope,
             onClick: () => {
-              Au({
-                scope: uu.scope,
-                category: Bu,
+              DG({
+                scope: GG.scope,
+                category: gG,
                 page: 1
               })
             },
-            children: ju(uu.title)
-          }, uu.scope)))
-        }), (0, au.jsxs)("div", {
+            children: ZG(GG.title)
+          }, GG.scope)))
+        }), (0, WG.jsxs)("div", {
           className: "StudioLeaderboardCategories",
-          children: [(0, au.jsx)(hu.$, {
-            active: null === Bu,
+          children: [(0, WG.jsx)(dG.K, {
+            active: null === gG,
             onClick: () => {
-              Au({
-                scope: Iu,
+              DG({
+                scope: qG,
                 category: null,
                 page: 1
               })
             },
-            children: ju("studio:leaderboardAllCategories")
-          }), Xu.Y.map((uu => (0, au.jsx)(hu.$, {
-            active: Bu === uu,
+            children: ZG("studio:leaderboardAllCategories")
+          }), yG.ib.map((GG => (0, WG.jsx)(dG.K, {
+            active: gG === GG,
             onClick: () => {
-              Au({
-                scope: Iu,
-                category: uu,
+              DG({
+                scope: qG,
+                category: GG,
                 page: 1
               })
             },
-            children: (0, Xu.ib)(uu)
-          }, uu)))]
-        }), jE && (0, au.jsx)("div", {
+            children: (0, yG.yb)(GG)
+          }, GG)))]
+        }), Zb && (0, WG.jsx)("div", {
           className: "StudioPageLoader AnimFadeIn",
-          children: (0, au.jsx)(Mu.b, {})
-        }), Tu && (0, au.jsx)("div", {
+          children: (0, WG.jsx)(zG.b, {})
+        }), HG && (0, WG.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: ju("studio:failedToLoadLeaderboard")
-        }), sE && (0, au.jsx)("div", {
+          children: ZG("studio:failedToLoadLeaderboard")
+        }), wb && (0, WG.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: ju("studio:leaderboardEmpty")
-        }), !jE && !Tu && !sE && (0, au.jsx)("div", {
+          children: ZG("studio:leaderboardEmpty")
+        }), !Zb && !HG && !wb && (0, WG.jsx)("div", {
           className: "StudioLeaderboardTableScroll AnimFadeIn",
-          children: (0, au.jsx)(gu.d, {
+          children: (0, WG.jsx)(rG.e, {
             className: "StudioTable",
             columns: [{
               key: "position",
               header: "#"
             }, {
               key: "game",
-              header: ju("general:game")
+              header: ZG("general:game")
             }, {
               key: "owner",
-              header: ju("general:owner")
-            }, ...null === Bu ? [{
+              header: ZG("general:owner")
+            }, ...null === gG ? [{
               key: "category",
-              header: ju("general:category")
-            }] : [], ...nu ? [{
+              header: ZG("general:category")
+            }] : [], ...NG ? [{
               key: "engagementScore",
               header: "engagementScore"
             }] : [], {
               key: "playsPerDay",
-              header: ju("studio:leaderboardPlaysPerDay")
+              header: ZG("studio:leaderboardPlaysPerDay")
             }, {
               key: "sessionLength",
-              header: ju("studio:leaderboardSessionLength")
+              header: ZG("studio:leaderboardSessionLength")
             }, {
               key: "retention",
-              header: ju("studio:leaderboardSessionsPerPlayer")
-            }, ...zu ? [] : [{
+              header: ZG("studio:leaderboardSessionsPerPlayer")
+            }, ...xG ? [] : [{
               key: "ccu",
-              header: ju("studio:metricCcu")
+              header: ZG("studio:metricCcu")
             }], {
               key: "favourites",
-              header: ju("general:favourites")
+              header: ZG("general:favourites")
             }],
-            rows: EE,
-            getRowKey: uu => uu.key,
-            renderRow: uu => (0, au.jsxs)("tr", {
+            rows: bb,
+            getRowKey: GG => GG.key,
+            renderRow: GG => (0, WG.jsxs)("tr", {
               onClick: () => {
-                Uu(uu.url)
+                SG(GG.url)
               },
-              children: [(0, au.jsx)(ru, {
-                position: uu.position
-              }), (0, au.jsx)("td", {
-                children: (0, au.jsx)(wu.f, {
-                  thumbnail: uu.thumbnail,
-                  name: uu.name
+              children: [(0, WG.jsx)(jG, {
+                position: GG.position
+              }), (0, WG.jsx)("td", {
+                children: (0, WG.jsx)(uG.h, {
+                  thumbnail: GG.thumbnail,
+                  name: GG.name
                 })
-              }), (0, au.jsxs)("td", {
+              }), (0, WG.jsxs)("td", {
                 className: "StudioLeaderboardOwner",
-                children: [null === uu.owner && "-", null !== uu.owner && (0, au.jsx)(Yu.f, {
-                  playerSocialPreview: uu.owner,
+                children: [null === GG.owner && "-", null !== GG.owner && (0, WG.jsx)(hG.h, {
+                  playerSocialPreview: GG.owner,
                   showLocation: !1,
                   opensProfileCard: !1
                 })]
-              }), null === Bu && (0, au.jsx)("td", {
-                children: (0, Xu.ib)(uu.category)
-              }), nu && (0, au.jsx)(iu, {
-                discoverability: uu.discoverability
-              }), (0, au.jsx)(Qu, {
-                discoverability: uu.discoverability
-              }), !zu && (0, au.jsx)("td", {
-                children: null !== uu.ccu ? (0, qu.S)(uu.ccu) : "-"
-              }), (0, au.jsx)("td", {
-                children: null !== uu.favourites ? (0, qu.S)(uu.favourites) : "-"
+              }), null === gG && (0, WG.jsx)("td", {
+                children: (0, yG.yb)(GG.category)
+              }), NG && (0, WG.jsx)(MG, {
+                discoverability: GG.discoverability
+              }), (0, WG.jsx)(PG, {
+                discoverability: GG.discoverability
+              }), !xG && (0, WG.jsx)("td", {
+                children: null !== GG.ccu ? (0, UG.O)(GG.ccu) : "-"
+              }), (0, WG.jsx)("td", {
+                children: null !== GG.favourites ? (0, UG.O)(GG.favourites) : "-"
               })]
             })
           })
-        }), !Tu && (0, au.jsx)(Du.d, {
+        }), !HG && (0, WG.jsx)(JG.e, {
           className: "AnimFadeIn",
-          page: Lu,
-          totalPages: UE,
-          onSetPage: uu => {
-            Au({
-              scope: Iu,
-              category: Bu,
-              page: uu
+          page: eG,
+          totalPages: Sb,
+          onSetPage: GG => {
+            DG({
+              scope: qG,
+              category: gG,
+              page: GG
             })
           }
         })]
       })
     }
   },
-  5089: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Xu,
-      f: () => Zu
+  4945: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => yG,
+      h: () => LG
     });
-    var su = ju(1595),
-      Uu = ju(1154);
+    var wG = ZG(1481),
+      SG = ZG(1067);
 
-    function Zu(uu) {
+    function LG(GG) {
       let {
-        thumbnail: Eu,
-        name: ju
-      } = uu;
-      return (0, Uu.jsxs)("div", {
+        thumbnail: bG,
+        name: ZG
+      } = GG;
+      return (0, SG.jsxs)("div", {
         className: "StudioTableGameCell",
-        children: [(0, Uu.jsx)("div", {
+        children: [(0, SG.jsx)("div", {
           className: "StudioTableThumbnail",
-          children: Eu
-        }), (0, Uu.jsx)("span", {
+          children: bG
+        }), (0, SG.jsx)("span", {
           className: "StudioTableGameName",
-          children: ju
+          children: ZG
         })]
       })
     }
 
-    function Xu(uu) {
+    function yG(GG) {
       let {
-        game: Eu
-      } = uu;
-      return (0, Uu.jsx)("img", {
+        game: bG
+      } = GG;
+      return (0, SG.jsx)("img", {
         className: "StudioTableThumbnailImage",
-        src: (0, su.e)(Eu),
+        src: (0, wG.h)(bG),
         alt: ""
       })
     }
   },
-  6618: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => su
+  6421: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => wG
     });
-    const su = {
-      1: ju(6624),
-      2: ju(6631),
-      3: ju(6635)
+    const wG = {
+      1: ZG(6429),
+      2: ZG(6432),
+      3: ZG(6437)
     }
   },
-  5084: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => lu
+  4939: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => kG
     });
-    var su = ju(58),
-      Uu = ju(1105),
-      Zu = ju.n(Uu),
-      Xu = ju(1154);
+    var wG = ZG(51),
+      SG = ZG(1006),
+      LG = ZG.n(SG),
+      yG = ZG(1067);
 
-    function lu(uu) {
+    function kG(GG) {
       let {
-        columns: Eu,
-        rows: ju,
-        getRowKey: Uu,
-        renderRow: lu,
-        className: qu
-      } = uu;
-      return (0, Xu.jsxs)("table", {
-        className: Zu()("Table", qu),
-        children: [(0, Xu.jsx)("thead", {
-          children: (0, Xu.jsx)("tr", {
-            children: Eu.map((uu => (0, Xu.jsx)("th", {
-              children: uu.header
-            }, uu.key)))
+        columns: bG,
+        rows: ZG,
+        getRowKey: SG,
+        renderRow: kG,
+        className: UG
+      } = GG;
+      return (0, yG.jsxs)("table", {
+        className: LG()("Table", UG),
+        children: [(0, yG.jsx)("thead", {
+          children: (0, yG.jsx)("tr", {
+            children: bG.map((GG => (0, yG.jsx)("th", {
+              children: GG.header
+            }, GG.key)))
           })
-        }), (0, Xu.jsx)("tbody", {
-          children: ju.map((uu => (0, Xu.jsx)(su.Fragment, {
-            children: lu(uu)
-          }, Uu(uu))))
+        }), (0, yG.jsx)("tbody", {
+          children: ZG.map((GG => (0, yG.jsx)(wG.Fragment, {
+            children: kG(GG)
+          }, SG(GG))))
         })]
       })
     }
   },
-  5073: () => {},
-  6624: uu => {
-    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
+  4924: () => {},
+  6429: GG => {
+    GG.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
   },
-  6631: uu => {
-    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
+  6432: GG => {
+    GG.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
   },
-  6635: uu => {
-    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
+  6437: GG => {
+    GG.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

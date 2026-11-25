@@ -1,38 +1,38 @@
 export const id = 60;
 export const ids = [60];
 export const modules = {
-  38982: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Uu,
-      f: () => Zu
+  39061: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => SG,
+      d: () => LG
     });
-    const su = new WeakMap;
+    const wG = new WeakMap;
 
-    function Uu(uu, Eu) {
-      return su.set(uu, Eu), uu
+    function SG(GG, bG) {
+      return wG.set(GG, bG), GG
     }
 
-    function Zu(uu) {
-      var Eu;
-      return null !== (Eu = su.get(uu)) && void 0 !== Eu ? Eu : null
+    function LG(GG) {
+      var bG;
+      return null !== (bG = wG.get(GG)) && void 0 !== bG ? bG : null
     }
   },
-  39009: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => lu
+  39075: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => kG
     });
-    var su = ju(1278);
+    var wG = ZG(1177);
 
-    function Uu(uu) {
-      const Eu = /(\d*\.?\d+)px/.exec(uu);
-      return Eu ? Number(Eu[1]) : null
+    function SG(GG) {
+      const bG = /(\d*\.?\d+)px/.exec(GG);
+      return bG ? Number(bG[1]) : null
     }
 
-    function Zu(uu) {
-      return uu.split(/[\s,]+/).pop()
+    function LG(GG) {
+      return GG.split(/[\s,]+/).pop()
     }
-    let Xu = !1;
-    const lu = {
+    let yG = !1;
+    const kG = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -43,605 +43,605 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(uu, Eu, su, lu, qu, fu) {
-        if (qu <= 0 || fu <= 0 || this.fontSize <= 0) return {
+      drawText: function(GG, bG, wG, kG, UG, YG) {
+        if (UG <= 0 || YG <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: Cu,
-          fontVariant: bu,
-          fontWeight: cu,
-          fontSize: Nu,
-          font: Ou
-        } = this, Yu = [Cu, bu, cu, `${Nu}px`, Ou].filter(Boolean).join(" "), hu = [
-          [cu, `${Nu}px`, Zu(Ou)].filter(Boolean).join(" "), `${Nu}px sans-serif`
-        ], Du = uu.font, gu = function(uu, Eu, ju) {
-          for (const su of Eu) {
-            uu.font = su;
-            const Eu = Uu(uu.font),
-              Xu = Zu(su);
-            if (null !== Eu && Math.abs(Eu - ju) <= .5 && uu.font.toLowerCase().includes(Xu.toLowerCase())) return su
+          fontStyle: VG,
+          fontVariant: pG,
+          fontWeight: fG,
+          fontSize: QG,
+          font: KG
+        } = this, hG = [VG, pG, fG, `${QG}px`, KG].filter(Boolean).join(" "), dG = [
+          [fG, `${QG}px`, LG(KG)].filter(Boolean).join(" "), `${QG}px sans-serif`
+        ], JG = GG.font, rG = function(GG, bG, ZG) {
+          for (const wG of bG) {
+            GG.font = wG;
+            const bG = SG(GG.font),
+              yG = LG(wG);
+            if (null !== bG && Math.abs(bG - ZG) <= .5 && GG.font.toLowerCase().includes(yG.toLowerCase())) return wG
           }
           return null
-        }(uu, [Yu, ...hu], Nu);
-        gu !== Yu && function(uu, Eu, su) {
-          Xu || (Xu = !0, Promise.resolve().then((() => ju(1128))).then((ju => {
+        }(GG, [hG, ...dG], QG);
+        rG !== hG && function(GG, bG, wG) {
+          yG || (yG = !0, Promise.resolve().then((() => ZG(1032))).then((ZG => {
             let {
-              YY: Uu
-            } = ju;
-            Uu(new Error("A canvas didn't take canvasTxt's font"), {
-              font: uu,
-              oN: Eu,
-              drawnWith: null !== su && void 0 !== su ? su : "the kept font, scaled"
+              rh: SG
+            } = ZG;
+            SG(new Error("A canvas didn't take canvasTxt's font"), {
+              font: GG,
+              vQ: bG,
+              drawnWith: null !== wG && void 0 !== wG ? wG : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(Yu, Du, gu);
-        const Mu = Uu(uu.font);
-        if (null === gu && null !== Mu && Mu > 0) {
-          const ju = Nu / Mu;
-          uu.save();
+        }(hG, JG, rG);
+        const zG = SG(GG.font);
+        if (null === rG && null !== zG && zG > 0) {
+          const ZG = QG / zG;
+          GG.save();
           try {
-            return uu.scale(ju, ju), {
-              height: this.drawLines(uu, Eu, su / ju, lu / ju, qu / ju, fu / ju, Mu).height * ju
+            return GG.scale(ZG, ZG), {
+              height: this.drawLines(GG, bG, wG / ZG, kG / ZG, UG / ZG, YG / ZG, zG).height * ZG
             }
           } finally {
-            uu.restore()
+            GG.restore()
           }
         }
-        return this.drawLines(uu, Eu, su, lu, qu, fu, Nu)
+        return this.drawLines(GG, bG, wG, kG, UG, YG, QG)
       },
-      drawLines: function(uu, Eu, ju, Uu, Zu, Xu, lu) {
-        const qu = ju + Zu,
-          fu = Uu + Xu;
-        let Cu, bu = Uu + Xu / 2 + lu / 2;
-        "right" === this.align ? (Cu = qu, uu.textAlign = "right") : "left" === this.align ? (Cu = ju, uu.textAlign = "left") : (Cu = ju + Zu / 2, uu.textAlign = "center");
-        for (const su of Eu) {
-          uu.measureText(su).width >= Zu && (Eu = Eu.replace(su, ""))
+      drawLines: function(GG, bG, ZG, SG, LG, yG, kG) {
+        const UG = ZG + LG,
+          YG = SG + yG;
+        let VG, pG = SG + yG / 2 + kG / 2;
+        "right" === this.align ? (VG = UG, GG.textAlign = "right") : "left" === this.align ? (VG = ZG, GG.textAlign = "left") : (VG = ZG + LG / 2, GG.textAlign = "center");
+        for (const wG of bG) {
+          GG.measureText(wG).width >= LG && (bG = bG.replace(wG, ""))
         }
-        Eu = (0, su.T)(Eu);
-        const cu = [],
-          Nu = Eu.split("\n"),
-          Ou = this.justify ? uu.measureText("\u200a").width : 0;
-        Nu.forEach((Eu => {
-          let ju = uu.measureText(Eu).width;
-          if (ju <= Zu) cu.push(Eu);
+        bG = (0, wG.R)(bG);
+        const fG = [],
+          QG = bG.split("\n"),
+          KG = this.justify ? GG.measureText("\u200a").width : 0;
+        QG.forEach((bG => {
+          let ZG = GG.measureText(bG).width;
+          if (ZG <= LG) fG.push(bG);
           else {
-            let su = Eu;
-            const Uu = Zu;
-            let Xu, lu, qu;
-            for (ju = uu.measureText(su).width; ju > Uu;) {
-              for (Xu = 0, lu = 0, qu = ""; lu < Uu;) Xu++, qu = su.substr(0, Xu), lu = uu.measureText(qu).width;
-              Xu--, qu = qu.substr(0, Xu);
-              const Eu = Xu;
-              if (" " !== su.substr(Xu, 1)) {
+            let wG = bG;
+            const SG = LG;
+            let yG, kG, UG;
+            for (ZG = GG.measureText(wG).width; ZG > SG;) {
+              for (yG = 0, kG = 0, UG = ""; kG < SG;) yG++, UG = wG.substr(0, yG), kG = GG.measureText(UG).width;
+              yG--, UG = UG.substr(0, yG);
+              const bG = yG;
+              if (" " !== wG.substr(yG, 1)) {
                 for (;
-                  " " !== su.substr(Xu, 1) && 0 !== Xu;) Xu--;
-                0 === Xu && (Xu = Eu), qu = su.substr(0, Xu)
+                  " " !== wG.substr(yG, 1) && 0 !== yG;) yG--;
+                0 === yG && (yG = bG), UG = wG.substr(0, yG)
               }
-              qu = this.justify ? this.justifyLine(uu, qu, Ou, "\u200a", Zu) : qu, su = su.substr(Xu), ju = uu.measureText(su).width, cu.push(qu)
+              UG = this.justify ? this.justifyLine(GG, UG, KG, "\u200a", LG) : UG, wG = wG.substr(yG), ZG = GG.measureText(wG).width, fG.push(UG)
             }
-            ju > 0 && cu.push(su)
+            ZG > 0 && fG.push(wG)
           }
         }));
-        const Yu = this.lineHeight ? this.lineHeight : this.getTextHeight(uu, Eu),
-          hu = Yu * (cu.length - 1),
-          Du = hu / 2;
-        let gu = Uu;
-        "top" === this.vAlign ? bu = Uu + lu : "bottom" === this.vAlign ? (bu = fu - hu, gu = fu) : (gu = Uu + Xu / 2, bu -= Du), cu.forEach((Eu => {
-          Eu = Eu.trim(), uu.fillText(Eu, Cu, bu), bu += Yu
-        })), this.debug && (uu.lineWidth = 3, uu.strokeStyle = "#00909e", uu.strokeRect(ju, Uu, Zu, Xu), uu.lineWidth = 2, uu.strokeStyle = "#f6d743", uu.beginPath(), uu.moveTo(Cu, Uu), uu.lineTo(Cu, fu), uu.stroke(), uu.strokeStyle = "#ff6363", uu.beginPath(), uu.moveTo(ju, gu), uu.lineTo(qu, gu), uu.stroke());
+        const hG = this.lineHeight ? this.lineHeight : this.getTextHeight(GG, bG),
+          dG = hG * (fG.length - 1),
+          JG = dG / 2;
+        let rG = SG;
+        "top" === this.vAlign ? pG = SG + kG : "bottom" === this.vAlign ? (pG = YG - dG, rG = YG) : (rG = SG + yG / 2, pG -= JG), fG.forEach((bG => {
+          bG = bG.trim(), GG.fillText(bG, VG, pG), pG += hG
+        })), this.debug && (GG.lineWidth = 3, GG.strokeStyle = "#00909e", GG.strokeRect(ZG, SG, LG, yG), GG.lineWidth = 2, GG.strokeStyle = "#f6d743", GG.beginPath(), GG.moveTo(VG, SG), GG.lineTo(VG, YG), GG.stroke(), GG.strokeStyle = "#ff6363", GG.beginPath(), GG.moveTo(ZG, rG), GG.lineTo(UG, rG), GG.stroke());
         return {
-          height: hu + Yu
+          height: dG + hG
         }
       },
-      getTextHeight: function(uu, Eu) {
-        const ju = uu.textBaseline;
-        uu.textBaseline = "bottom";
+      getTextHeight: function(GG, bG) {
+        const ZG = GG.textBaseline;
+        GG.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: su
-        } = uu.measureText(Eu);
-        return uu.textBaseline = ju, su
+          actualBoundingBoxAscent: wG
+        } = GG.measureText(bG);
+        return GG.textBaseline = ZG, wG
       },
-      justifyLine: function(uu, Eu, ju, su, Uu) {
-        const Zu = Eu.trim(),
-          Xu = uu.measureText(Zu).width,
-          lu = Zu.split(/\s+/).length - 1,
-          qu = Math.floor((Uu - Xu) / ju);
-        if (lu <= 0 || qu <= 0) return Zu;
-        const fu = Math.floor(qu / lu);
-        let Cu = qu - lu * fu,
-          bu = [];
-        for (let cu = 0; cu < fu; cu++) bu.push(su);
-        bu = bu.join("");
-        return Zu.replace(/\s+/g, (uu => {
-          const Eu = Cu > 0 ? bu + su : bu;
-          return Cu--, uu + Eu
+      justifyLine: function(GG, bG, ZG, wG, SG) {
+        const LG = bG.trim(),
+          yG = GG.measureText(LG).width,
+          kG = LG.split(/\s+/).length - 1,
+          UG = Math.floor((SG - yG) / ZG);
+        if (kG <= 0 || UG <= 0) return LG;
+        const YG = Math.floor(UG / kG);
+        let VG = UG - kG * YG,
+          pG = [];
+        for (let fG = 0; fG < YG; fG++) pG.push(wG);
+        pG = pG.join("");
+        return LG.replace(/\s+/g, (GG => {
+          const bG = VG > 0 ? pG + wG : pG;
+          return VG--, GG + bG
         }))
       }
     }
   },
-  39013: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Yu,
-      d: () => Ou,
-      f: () => cu,
-      i: () => Cu,
-      m: () => bu
+  39080: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => hG,
+      f: () => KG,
+      g: () => fG,
+      h: () => VG,
+      i: () => pG
     });
-    var su = ju(4427),
-      Uu = ju(349);
-    const Zu = 1024,
-      Xu = 1536,
-      lu = 2 * su.j + 1,
-      qu = new Intl.NumberFormat("en", {
+    var wG = ZG(4255),
+      SG = ZG(352);
+    const LG = 1024,
+      yG = 1536,
+      kG = 2 * wG.h + 1,
+      UG = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      fu = 1.5;
+      YG = 1.5;
 
-    function Cu(uu, Eu, ju) {
-      if ("string" !== typeof uu) return Eu;
+    function VG(GG, bG, ZG) {
+      if ("string" !== typeof GG) return bG;
       try {
-        const ju = JSON.parse(uu);
-        return ju && "object" === typeof ju ? ju : Eu
-      } catch (su) {
-        return void 0 !== ju && console.error(`Couldn't parse ${ju}`, su), Eu
+        const ZG = JSON.parse(GG);
+        return ZG && "object" === typeof ZG ? ZG : bG
+      } catch (wG) {
+        return void 0 !== ZG && console.error(`Couldn't parse ${ZG}`, wG), bG
       }
     }
 
-    function bu(uu) {
-      return Cu(uu, null, "a leaderboard's rows")
+    function pG(GG) {
+      return VG(GG, null, "a leaderboard's rows")
     }
 
-    function cu(uu, Eu) {
-      var ju, su;
-      return null !== Eu && void 0 !== Eu ? Eu : {
-        status: null !== (ju = uu.status) && void 0 !== ju ? ju : "loading",
-        entries: null !== (su = uu.entries) && void 0 !== su ? su : []
+    function fG(GG, bG) {
+      var ZG, wG;
+      return null !== bG && void 0 !== bG ? bG : {
+        status: null !== (ZG = GG.status) && void 0 !== ZG ? ZG : "loading",
+        entries: null !== (wG = GG.entries) && void 0 !== wG ? wG : []
       }
     }
 
-    function Nu(uu, Eu) {
-      return "number" === typeof uu && Number.isFinite(uu) && uu > 0 ? uu : Eu
+    function QG(GG, bG) {
+      return "number" === typeof GG && Number.isFinite(GG) && GG > 0 ? GG : bG
     }
 
-    function Ou(uu, Eu) {
-      const ju = Nu(uu.size, 1);
-      let su = Nu(uu.width, Nu(2.5 * ju, 2.5)),
-        Uu = Nu(uu.height, Nu(3.75 * ju, 3.75));
-      Number.isFinite(Zu * Uu / su) && Number.isFinite(Xu * su / Uu) || (su = 2.5, Uu = 3.75);
-      const lu = Uu / su,
-        qu = Math.max(1, Math.min(Zu, Eu / lu));
+    function KG(GG, bG) {
+      const ZG = QG(GG.size, 1);
+      let wG = QG(GG.width, QG(2.5 * ZG, 2.5)),
+        SG = QG(GG.height, QG(3.75 * ZG, 3.75));
+      Number.isFinite(LG * SG / wG) && Number.isFinite(yG * wG / SG) || (wG = 2.5, SG = 3.75);
+      const kG = SG / wG,
+        UG = Math.max(1, Math.min(LG, bG / kG));
       return {
-        width: su,
-        height: Uu,
-        layoutWidth: Math.max(Zu, Xu / lu),
-        layoutHeight: Math.max(Xu, Zu * lu),
-        pixelWidth: Math.round(qu),
-        pixelHeight: Math.round(Math.max(1, Math.min(Eu, qu * lu)))
+        width: wG,
+        height: SG,
+        layoutWidth: Math.max(LG, yG / kG),
+        layoutHeight: Math.max(yG, LG * kG),
+        pixelWidth: Math.round(UG),
+        pixelHeight: Math.round(Math.max(1, Math.min(bG, UG * kG)))
       }
     }
 
-    function Yu(uu, Eu, ju, Xu, Cu, bu) {
-      uu.setTransform(1, 0, 0, 1, 0, 0), uu.fillStyle = Uu.G.defaultNameTagBackground, uu.fillRect(0, 0, Eu, ju), uu.scale(Eu / Xu.layoutWidth, ju / Xu.layoutHeight), uu.translate((Xu.layoutWidth - Zu) / 2, 0),
-        function(uu, Eu, ju, Zu) {
-          var Xu, Cu, bu, cu;
+    function hG(GG, bG, ZG, yG, VG, pG) {
+      GG.setTransform(1, 0, 0, 1, 0, 0), GG.fillStyle = SG.O.defaultNameTagBackground, GG.fillRect(0, 0, bG, ZG), GG.scale(bG / yG.layoutWidth, ZG / yG.layoutHeight), GG.translate((yG.layoutWidth - LG) / 2, 0),
+        function(GG, bG, ZG, LG) {
+          var yG, VG, pG, fG;
           const {
-            top: Nu,
-            around: Ou,
-            showPlayerText: Yu,
-            localPlayerDbId: gu
-          } = ju, {
-            whiteUiText: Mu,
-            grayUiText: eu,
-            yellowUiText: Gu
-          } = Uu.G;
-          uu.textBaseline = "middle";
-          const pu = function(Eu, ju, su, Uu, Zu, Xu) {
-              let lu = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              uu.font = `bold ${Uu}px 'Jetbrains Mono', monospace`, uu.fillStyle = Zu, uu.textAlign = lu;
-              let qu = Eu.replace(/[\r\n\t]/g, " ");
-              if (uu.measureText(qu).width > Xu) {
-                for (; qu.length > 0 && uu.measureText(`${qu}\u2026`).width > Xu;) qu = qu.slice(0, -1);
-                qu += "\u2026"
+            top: QG,
+            around: KG,
+            showPlayerText: hG,
+            localPlayerDbId: rG
+          } = ZG, {
+            whiteUiText: zG,
+            grayUiText: EG,
+            yellowUiText: oG
+          } = SG.O;
+          GG.textBaseline = "middle";
+          const XG = function(bG, ZG, wG, SG, LG, yG) {
+              let kG = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              GG.font = `bold ${SG}px 'Jetbrains Mono', monospace`, GG.fillStyle = LG, GG.textAlign = kG;
+              let UG = bG.replace(/[\r\n\t]/g, " ");
+              if (GG.measureText(UG).width > yG) {
+                for (; UG.length > 0 && GG.measureText(`${UG}\u2026`).width > yG;) UG = UG.slice(0, -1);
+                UG += "\u2026"
               }
-              uu.fillText(qu, ju, su)
+              GG.fillText(UG, ZG, wG)
             },
-            wu = Eu => {
-              uu.fillStyle = Mu, uu.globalAlpha = .15, uu.fillRect(24, Eu, 976, 2), uu.globalAlpha = 1
+            uG = bG => {
+              GG.fillStyle = zG, GG.globalAlpha = .15, GG.fillRect(24, bG, 976, 2), GG.globalAlpha = 1
             },
-            Ju = null === gu ? null : (0, Uu.qc)(gu),
-            du = uu => null !== Ju && uu.playerHash === Ju,
-            au = hu(Nu.entries, su.l),
-            Pu = "ready" === Nu.status && au.length > 0,
-            ou = null === Ou ? [] : hu(Ou.entries, lu),
-            ku = au.some(du),
-            mu = null === Ou ? null : function(uu) {
-              const Eu = uu;
-              if (!Eu || !Number.isFinite(Eu.rank) || !Number.isFinite(Eu.tied) || !Number.isFinite(Eu.total)) return null;
-              return Eu
-            }(Ou.standing),
-            vu = ou.find(du),
-            Ku = au.find(du),
-            Vu = null === mu || void 0 === vu ? null : {
-              value: vu.value,
-              rank: mu.rank
+            iG = null === rG ? null : (0, SG.uc)(rG),
+            CG = GG => null !== iG && GG.playerHash === iG,
+            WG = dG(QG.entries, wG.l),
+            mG = "ready" === QG.status && WG.length > 0,
+            IG = null === KG ? [] : dG(KG.entries, kG),
+            FG = WG.some(CG),
+            vG = null === KG ? null : function(GG) {
+              const bG = GG;
+              if (!bG || !Number.isFinite(bG.rank) || !Number.isFinite(bG.tied) || !Number.isFinite(bG.total)) return null;
+              return bG
+            }(KG.standing),
+            aG = IG.find(CG),
+            cG = WG.find(CG),
+            lG = null === vG || void 0 === aG ? null : {
+              value: aG.value,
+              rank: vG.rank
             },
-            ru = Du(au, void 0 === Ku || Ku.value === (null === Vu || void 0 === Vu ? void 0 : Vu.value) ? Vu : null),
-            Qu = Du(ou, Vu),
-            iu = (uu, Eu) => {
-              const ju = uu.findIndex(du);
-              return ju >= 0 ? Eu[ju] : null
+            jG = JG(WG, void 0 === cG || cG.value === (null === lG || void 0 === lG ? void 0 : lG.value) ? lG : null),
+            PG = JG(IG, lG),
+            MG = (GG, bG) => {
+              const ZG = GG.findIndex(CG);
+              return ZG >= 0 ? bG[ZG] : null
             },
-            Wu = null !== (Xu = null !== (Cu = null === mu || void 0 === mu ? void 0 : mu.rank) && void 0 !== Cu ? Cu : iu(ou, Qu)) && void 0 !== Xu ? Xu : iu(au, ru);
-          uu.font = "bold 34px 'Jetbrains Mono', monospace";
-          const Su = [...Pu ? ru : [], ...ku ? [] : Qu],
-            Iu = Math.min(280, Math.max(0, ...Su.map((Eu => uu.measureText(qu.format(Eu)).width)))),
-            Fu = Iu <= 80,
-            Bu = Fu ? 80 : 32 + Iu,
-            Lu = Fu ? 148 : Bu + 28,
-            tu = 660 - Lu;
-          pu(`TOP ${su.l}  /  ALL TIME`, 24, 52, 28, eu, 976), pu(Yu ? String(null !== (bu = Eu.title) && void 0 !== bu ? bu : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Mu, 976), pu("RANK", 32, 174, 28, eu, Lu - 40), pu("PLAYER", Lu, 174, 28, eu, tu), pu(Yu ? String(null !== (cu = Eu.scoreLabel) && void 0 !== cu ? cu : "Score").slice(0, 24) : "Score", 992, 174, 28, eu, 304, "right"), wu(202);
-          const xu = (Zu - 232) / (su.l + fu + lu),
-            Tu = 208 + su.l * xu,
-            Hu = Tu + fu * xu,
-            Au = (Eu, ju, su, Uu) => {
-              const Zu = du(Eu);
-              uu.fillStyle = Zu ? Gu : Mu, uu.globalAlpha = Zu ? .15 : Uu ? .035 : 0, uu.fillRect(24, su - xu / 2 + 1, 976, xu - 2), uu.globalAlpha = 1;
-              const Xu = Zu ? Gu : Mu;
-              pu(qu.format(ju), Bu, su, 34, Xu, Fu ? 80 : Iu, Fu ? "center" : "right"), pu(Yu ? String(Eu.name).slice(0, 64) : "Player", Lu, su, 34, Xu, tu);
-              const lu = qu.format(Eu.value);
-              pu(uu.measureText(lu).width > 304 ? Eu.value.toExponential(6) : lu, 992, su, 34, Xu, 304, "right")
+            AG = null !== (yG = null !== (VG = null === vG || void 0 === vG ? void 0 : vG.rank) && void 0 !== VG ? VG : MG(IG, PG)) && void 0 !== yG ? yG : MG(WG, jG);
+          GG.font = "bold 34px 'Jetbrains Mono', monospace";
+          const sG = [...mG ? jG : [], ...FG ? [] : PG],
+            qG = Math.min(280, Math.max(0, ...sG.map((bG => GG.measureText(UG.format(bG)).width)))),
+            nG = qG <= 80,
+            gG = nG ? 80 : 32 + qG,
+            eG = nG ? 148 : gG + 28,
+            RG = 660 - eG;
+          XG(`TOP ${wG.l}  /  ALL TIME`, 24, 52, 28, EG, 976), XG(hG ? String(null !== (pG = bG.title) && void 0 !== pG ? pG : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, zG, 976), XG("RANK", 32, 174, 28, EG, eG - 40), XG("PLAYER", eG, 174, 28, EG, RG), XG(hG ? String(null !== (fG = bG.scoreLabel) && void 0 !== fG ? fG : "Score").slice(0, 24) : "Score", 992, 174, 28, EG, 304, "right"), uG(202);
+          const TG = (LG - 232) / (wG.l + YG + kG),
+            HG = 208 + wG.l * TG,
+            tG = HG + YG * TG,
+            DG = (bG, ZG, wG, SG) => {
+              const LG = CG(bG);
+              GG.fillStyle = LG ? oG : zG, GG.globalAlpha = LG ? .15 : SG ? .035 : 0, GG.fillRect(24, wG - TG / 2 + 1, 976, TG - 2), GG.globalAlpha = 1;
+              const yG = LG ? oG : zG;
+              XG(UG.format(ZG), gG, wG, 34, yG, nG ? 80 : qG, nG ? "center" : "right"), XG(hG ? String(bG.name).slice(0, 64) : "Player", eG, wG, 34, yG, RG);
+              const kG = UG.format(bG.value);
+              XG(GG.measureText(kG).width > 304 ? bG.value.toExponential(6) : kG, 992, wG, 34, yG, 304, "right")
             };
-          if (Pu)
-            for (const [su, Uu] of au.entries()) Au(Uu, ru[su], 208 + (su + .5) * xu, su % 2 === 0);
+          if (mG)
+            for (const [wG, SG] of WG.entries()) DG(SG, jG[wG], 208 + (wG + .5) * TG, wG % 2 === 0);
           else {
-            const uu = "error" === Nu.status,
-              Eu = uu ? "Couldn't load leaderboard" : "ready" === Nu.status ? "No scores yet" : "Loading leaderboard\u2026",
-              ju = uu ? "Trying again shortly" : "ready" === Nu.status ? "Be the first on the board!" : "Fetching the top players",
-              su = (208 + Tu) / 2;
-            pu(Eu, 512, su - 28, 40, uu ? Uu.G.redUiText : Mu, 960, "center"), pu(ju, 512, su + 27, 30, eu, 960, "center")
+            const GG = "error" === QG.status,
+              bG = GG ? "Couldn't load leaderboard" : "ready" === QG.status ? "No scores yet" : "Loading leaderboard\u2026",
+              ZG = GG ? "Trying again shortly" : "ready" === QG.status ? "Be the first on the board!" : "Fetching the top players",
+              wG = (208 + HG) / 2;
+            XG(bG, 512, wG - 28, 40, GG ? SG.O.redUiText : zG, 960, "center"), XG(ZG, 512, wG + 27, 30, EG, 960, "center")
           }
-          const nu = Tu + fu * xu / 2;
-          if (null === Wu) wu(nu);
+          const NG = HG + YG * TG / 2;
+          if (null === AG) uG(NG);
           else {
-            const Eu = null === mu ? 0 : mu.tied - 1,
-              ju = `YOUR RANK #${qu.format(Wu)}${null===mu?"":` of ${qu.format(mu.total)}`}`;
-            uu.font = "bold 36px 'Jetbrains Mono', monospace";
-            const su = Math.max(20, Math.min(36, Math.floor(34560 / uu.measureText(ju).width)));
-            pu(ju, 512, nu - (Eu > 0 ? 15 : 0), su, Gu, 960, "center"), Eu > 0 && pu(`Tied with ${qu.format(Eu)} other${1===Eu?"":"s"}`, 512, nu + 24, 24, eu, 960, "center")
+            const bG = null === vG ? 0 : vG.tied - 1,
+              ZG = `YOUR RANK #${UG.format(AG)}${null===vG?"":` of ${UG.format(vG.total)}`}`;
+            GG.font = "bold 36px 'Jetbrains Mono', monospace";
+            const wG = Math.max(20, Math.min(36, Math.floor(34560 / GG.measureText(ZG).width)));
+            XG(ZG, 512, NG - (bG > 0 ? 15 : 0), wG, oG, 960, "center"), bG > 0 && XG(`Tied with ${UG.format(bG)} other${1===bG?"":"s"}`, 512, NG + 24, 24, EG, 960, "center")
           }
-          if (null === Ou) return;
-          const yu = Hu + lu * xu / 2;
-          if (ku) pu(`You're in the top ${su.l}!`, 512, yu, 40, Gu, 960, "center");
-          else if (0 === ou.length) pu("You're not on this board yet", 512, yu, 34, eu, 960, "center");
+          if (null === KG) return;
+          const OG = tG + kG * TG / 2;
+          if (FG) XG(`You're in the top ${wG.l}!`, 512, OG, 40, oG, 960, "center");
+          else if (0 === IG.length) XG("You're not on this board yet", 512, OG, 34, EG, 960, "center");
           else
-            for (const [su, Uu] of ou.entries()) Au(Uu, Qu[su], Hu + (su + .5) * xu, su % 2 === 0)
-        }(uu, Cu, bu, Xu.layoutHeight)
+            for (const [wG, SG] of IG.entries()) DG(SG, PG[wG], tG + (wG + .5) * TG, wG % 2 === 0)
+        }(GG, VG, pG, yG.layoutHeight)
     }
 
-    function hu(uu, Eu) {
-      return Array.isArray(uu) ? uu.slice(0, Eu).filter((uu => uu && Number.isFinite(uu.rank) && Number.isFinite(uu.value))) : []
+    function dG(GG, bG) {
+      return Array.isArray(GG) ? GG.slice(0, bG).filter((GG => GG && Number.isFinite(GG.rank) && Number.isFinite(GG.value))) : []
     }
 
-    function Du(uu, Eu) {
-      const ju = [];
-      let su = !1;
-      return uu.forEach(((Uu, Zu) => {
-        if (null !== Eu && Uu.value === Eu.value) return void ju.push(Eu.rank);
-        const Xu = Zu > 0 && Uu.value === uu[Zu - 1].value;
-        Xu || (su = 0 === Zu && 1 !== Uu.rank), ju.push(Xu && !su ? ju[Zu - 1] : Uu.rank)
-      })), ju
+    function JG(GG, bG) {
+      const ZG = [];
+      let wG = !1;
+      return GG.forEach(((SG, LG) => {
+        if (null !== bG && SG.value === bG.value) return void ZG.push(bG.rank);
+        const yG = LG > 0 && SG.value === GG[LG - 1].value;
+        yG || (wG = 0 === LG && 1 !== SG.rank), ZG.push(yG && !wG ? ZG[LG - 1] : SG.rank)
+      })), ZG
     }
   },
-  39203: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Uu,
-      f: () => Zu
+  39262: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => SG,
+      c: () => LG
     });
-    const su = 32;
+    const wG = 32;
 
-    function Uu(uu) {
-      return Array.from(uu).length
+    function SG(GG) {
+      return Array.from(GG).length
     }
 
-    function Zu(uu) {
-      const Eu = [""];
-      let ju = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        Uu = "";
-      const Zu = () => {
-        Eu.push(""), ju = 0, Uu = ""
+    function LG(GG) {
+      const bG = [""];
+      let ZG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        SG = "";
+      const LG = () => {
+        bG.push(""), ZG = 0, SG = ""
       };
-      for (const Xu of uu.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(Xu)) Zu();
-        else if (/^\s+$/.test(Xu)) Uu += Xu;
-      else if (Xu.length > 0) {
-        const uu = Array.from(Xu);
-        ju > 0 && ju + Uu.length + uu.length > su && Zu(), Eu[Eu.length - 1] += Uu, ju += Uu.length, Uu = "";
-        for (const Uu of uu) ju >= su && Zu(), Eu[Eu.length - 1] += Uu, ju++
+      for (const yG of GG.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(yG)) LG();
+        else if (/^\s+$/.test(yG)) SG += yG;
+      else if (yG.length > 0) {
+        const GG = Array.from(yG);
+        ZG > 0 && ZG + SG.length + GG.length > wG && LG(), bG[bG.length - 1] += SG, ZG += SG.length, SG = "";
+        for (const SG of GG) ZG >= wG && LG(), bG[bG.length - 1] += SG, ZG++
       }
-      return Eu[Eu.length - 1] += Uu, Eu
+      return bG[bG.length - 1] += SG, bG
     }
   },
-  51234: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      WasmPreviewHost: () => PE,
-      pageBuiltInAnimationPack: () => cu,
-      pagePreviews: () => XE,
-      previewModule: () => yu
+  51399: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      WasmPreviewHost: () => mb,
+      pageBuiltInAnimationPack: () => fG,
+      pagePreviews: () => yb,
+      previewModule: () => OG
     });
-    var su = ju(3020),
-      Uu = ju(656);
-    const Zu = "[bloxd-wasm-client]";
+    var wG = ZG(2872),
+      SG = ZG(612);
+    const LG = "[bloxd-wasm-client]";
 
-    function Xu(uu) {
-      const Eu = {
+    function yG(GG) {
+      const bG = {
         wasm: "unknown",
-        client: String(Uu.b)
+        client: String(SG.e)
       };
       try {
-        var ju;
-        Eu.wasm = null !== (ju = null === uu || void 0 === uu ? void 0 : uu.hb()) && void 0 !== ju ? ju : Eu.wasm
+        var ZG;
+        bG.wasm = null !== (ZG = null === GG || void 0 === GG ? void 0 : GG.hp()) && void 0 !== ZG ? ZG : bG.wasm
       } catch {}
-      return Eu
+      return bG
     }
-    async function lu(uu) {
-      if (uu.length < 2 || 31 !== uu[0] || 139 !== uu[1]) return uu;
+    async function kG(GG) {
+      if (GG.length < 2 || 31 !== GG[0] || 139 !== GG[1]) return GG;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: Eu
-        } = await Promise.resolve().then((() => ju(2955)));
-        return Eu(uu)
+          ungzip: bG
+        } = await Promise.resolve().then((() => ZG(2815)));
+        return bG(GG)
       }
-      const Eu = new Blob([uu]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(Eu).arrayBuffer())
+      const bG = new Blob([GG]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(bG).arrayBuffer())
     }
 
-    function qu(uu, Eu, su, Uu) {
-      Promise.resolve().then((() => ju(40988))).then((ju => {
+    function UG(GG, bG, wG, SG) {
+      Promise.resolve().then((() => ZG(41122))).then((ZG => {
         let {
-          reportDataLoadFailure: Zu
-        } = ju;
-        Zu(uu, Eu, su, Uu)
-      }), (Eu => {
-        console.warn(`${Zu} ${uu} didn't load, and the report couldn't be sent`, su.error, Eu)
+          reportDataLoadFailure: LG
+        } = ZG;
+        LG(GG, bG, wG, SG)
+      }), (bG => {
+        console.warn(`${LG} ${GG} didn't load, and the report couldn't be sent`, wG.error, bG)
       }))
     }
-    const fu = [3e4, 12e4, 3e5];
-    class Cu {
-      constructor(uu) {
-        this.deps = uu, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((uu => {
-          this.resolveSet = uu
+    const YG = [3e4, 12e4, 3e5];
+    class VG {
+      constructor(GG) {
+        this.deps = GG, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((GG => {
+          this.resolveSet = GG
         }))
       }
-      provide(uu) {
-        return this.loading ??= this.load(uu), this.loading
+      provide(GG) {
+        return this.loading ??= this.load(GG), this.loading
       }
       whenSet() {
         return this.set
       }
-      async load(uu) {
-        const Eu = Xu(uu),
-          ju = await async function(uu, Eu) {
-            let ju;
+      async load(GG) {
+        const bG = yG(GG),
+          ZG = await async function(GG, bG) {
+            let ZG;
             try {
-              ju = await uu()
-            } catch (su) {
+              ZG = await GG()
+            } catch (wG) {
               return {
                 stage: "fetch",
-                error: su
+                error: wG
               }
             }
             try {
-              return Eu(ju) ? null : {
+              return bG(ZG) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (su) {
+            } catch (wG) {
               return {
                 stage: "decode",
-                error: su
+                error: wG
               }
             }
-          }((() => this.deps.fetch()), (Eu => {
-            const ju = uu.GZu(Eu);
-            return ju && this.resolveSet(Eu), ju
+          }((() => this.deps.fetch()), (bG => {
+            const ZG = GG.cLG(bG);
+            return ZG && this.resolveSet(bG), ZG
           }));
-        if (null !== ju) {
-          if ("fetch" === ju.stage) {
+        if (null !== ZG) {
+          if ("fetch" === ZG.stage) {
             this.loading = null;
-            const Eu = fu[this.retries++];
-            void 0 !== Eu && this.deps.later((() => {
-              this.provide(uu)
-            }), Eu)
+            const bG = YG[this.retries++];
+            void 0 !== bG && this.deps.later((() => {
+              this.provide(GG)
+            }), bG)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(ju, Eu))
+          this.reported || (this.reported = !0, this.deps.onFailed(ZG, bG))
         }
       }
     }
-    let bu = null;
+    let pG = null;
 
-    function cu() {
-      return bu ??= new Cu({
-        fetch: async () => lu(await (0, su.K)(Nu(), {
+    function fG() {
+      return pG ??= new VG({
+        fetch: async () => kG(await (0, wG.K)(QG(), {
           priority: "low"
         })),
-        onFailed: (uu, Eu) => {
-          qu("builtInAnimations", Nu(), uu, Eu)
+        onFailed: (GG, bG) => {
+          UG("builtInAnimations", QG(), GG, bG)
         },
-        later: (uu, Eu) => {
-          setTimeout(uu, Eu)
+        later: (GG, bG) => {
+          setTimeout(GG, bG)
         }
-      }), bu
+      }), pG
     }
 
-    function Nu() {
-      return ju(51236)
+    function QG() {
+      return ZG(51407)
     }
-    var Ou = ju(3017),
-      Yu = ju(1255),
-      hu = ju(330),
-      Du = ju(326),
-      gu = ju(680),
-      Mu = ju(4970),
-      eu = ju(40963),
-      Gu = ju(40980),
-      pu = ju(41156),
-      wu = (ju(41017), ju(41033)),
-      Ju = ju(41040),
-      du = ju(41046),
-      au = ju(40971),
-      Pu = ju(41176),
-      ou = ju(41180),
-      ku = ju(40960),
-      mu = ju(41199),
-      vu = ju(41079),
-      Ku = ju(41072),
-      Vu = ju(41117),
-      ru = ju(41161),
-      Qu = ju(42866),
-      iu = ju(36684),
-      Wu = ju(3900);
-    const Su = "[bloxd-previews]",
-      Iu = 4e5,
-      Fu = 0,
-      Bu = 1,
-      Lu = 2,
-      tu = 1,
-      xu = 2,
-      Tu = 3,
-      Hu = 0,
-      Au = 1,
-      nu = 2;
+    var KG = ZG(2868),
+      hG = ZG(1163),
+      dG = ZG(326),
+      JG = ZG(318),
+      rG = ZG(631),
+      zG = ZG(4810),
+      EG = ZG(41100),
+      oG = ZG(41115),
+      XG = ZG(41333),
+      uG = (ZG(41150), ZG(41170)),
+      iG = ZG(41175),
+      CG = ZG(41182),
+      WG = ZG(41112),
+      mG = ZG(41352),
+      IG = ZG(41359),
+      FG = ZG(41092),
+      vG = ZG(41374),
+      aG = ZG(41226),
+      cG = ZG(41214),
+      lG = ZG(41271),
+      jG = ZG(41340),
+      PG = ZG(43031),
+      MG = ZG(36606),
+      AG = ZG(3711);
+    const sG = "[bloxd-previews]",
+      qG = 4e5,
+      nG = 0,
+      gG = 1,
+      eG = 2,
+      RG = 1,
+      TG = 2,
+      HG = 3,
+      tG = 0,
+      DG = 1,
+      NG = 2;
 
-    function yu(uu) {
-      const Eu = uu,
-        ju = (0, eu.Z)(uu),
-        su = (0, eu.q)(uu);
-      return null !== ju && null !== su && "function" === typeof Eu.gZu && "function" === typeof Eu.MZu && "function" === typeof Eu.eZu ? Eu : null
-    }
-
-    function zu(uu, Eu, ju) {
-      let [su, Uu] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [uu, Eu], Zu = Math.min(Number.isFinite(ju) && ju > 0 ? ju : 1, 2);
-      const Xu = Math.max(0, su, uu) * Math.max(0, Uu, Eu) * Zu * Zu;
-      return Xu > Iu && (Zu *= Math.sqrt(Iu / Xu)), [Math.max(1, Math.floor(Math.max(0, uu) * Zu)), Math.max(1, Math.floor(Math.max(0, Eu) * Zu))]
+    function OG(GG) {
+      const bG = GG,
+        ZG = (0, EG.P)(GG),
+        wG = (0, EG.m)(GG);
+      return null !== ZG && null !== wG && "function" === typeof bG.FLG && "function" === typeof bG.vLG && "function" === typeof bG.aLG ? bG : null
     }
 
-    function Ru() {
-      return ju(51244)
+    function xG(GG, bG, ZG) {
+      let [wG, SG] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [GG, bG], LG = Math.min(Number.isFinite(ZG) && ZG > 0 ? ZG : 1, 2);
+      const yG = Math.max(0, wG, GG) * Math.max(0, SG, bG) * LG * LG;
+      return yG > qG && (LG *= Math.sqrt(qG / yG)), [Math.max(1, Math.floor(Math.max(0, GG) * LG)), Math.max(1, Math.floor(Math.max(0, bG) * LG))]
     }
-    async function uE(uu, Eu, su) {
-      var Uu;
-      let Zu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      "lost" === uu && (0, ku.x)();
-      const lu = await (0, ku.O)();
-      if (null === lu || (0, eu.t)(lu) || (0, ku.e)()) return;
-      const qu = "webgpu" === lu.backend;
-      if (!qu && "lost" !== uu) return;
-      const fu = qu && (0, Du.k)(lu.adapter, null !== su && void 0 !== su ? su : null, "lost" === uu, Zu),
-        Cu = null !== (Uu = "lost" === uu ? (0, Gu.h)((0, Ou.S)() ? (0, eu.Z)((0, Ou.F)()) : null) : void 0) && void 0 !== Uu ? Uu : Eu,
-        bu = qu ? (0, eu.gb)(uu, void 0, (0, Gu.b)(Cu)) : null;
-      if (null === bu) {
-        qu || (0, gu.s)(), (0, ku.r)();
+
+    function BG() {
+      return ZG(51413)
+    }
+    async function Gb(GG, bG, wG) {
+      var SG;
+      let LG = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      "lost" === GG && (0, FG.u)();
+      const kG = await (0, FG.N)();
+      if (null === kG || (0, EG.q)(kG) || (0, FG.c)()) return;
+      const UG = "webgpu" === kG.backend;
+      if (!UG && "lost" !== GG) return;
+      const YG = UG && (0, JG.r)(kG.adapter, null !== wG && void 0 !== wG ? wG : null, "lost" === GG, LG),
+        VG = null !== (SG = "lost" === GG ? (0, oG.j)((0, KG.S)() ? (0, EG.P)((0, KG.G)()) : null) : void 0) && void 0 !== SG ? SG : bG,
+        pG = UG ? (0, EG._)(GG, void 0, (0, oG.e)(VG)) : null;
+      if (null === pG) {
+        UG || (0, rG.u)(), (0, FG.m)();
         try {
-          await async function(uu, Eu, su, Uu, Zu) {
+          await async function(GG, bG, wG, SG, LG) {
             let {
-              restoreLost: lu,
-              adapterRemembered: qu
-            } = Zu;
-            const fu = (0, Ou.S)(),
+              restoreLost: kG,
+              adapterRemembered: UG
+            } = LG;
+            const YG = (0, KG.S)(),
               {
-                flushCrashReports: Cu,
-                reportRenderReload: bu
-              } = await Promise.resolve().then((() => ju(40988)));
-            bu(uu.backend, Uu, Xu(fu ? (0, Ou.F)() : null), {
+                flushCrashReports: VG,
+                reportRenderReload: pG
+              } = await Promise.resolve().then((() => ZG(41122)));
+            pG(GG.backend, SG, yG(YG ? (0, KG.G)() : null), {
               from: "home",
-              cause: Eu,
-              restoreLost: lu,
-              adapterRemembered: qu,
-              ...EE(uu, Eu, su)
-            }), await Cu(vu.b)
-          }(lu, uu, Cu, null !== su && void 0 !== su ? su : "start_failed" === uu ? 0 : 1, {
-            restoreLost: Zu,
-            adapterRemembered: fu
+              cause: bG,
+              restoreLost: kG,
+              adapterRemembered: UG,
+              ...bb(GG, bG, wG)
+            }), await VG(aG.e)
+          }(kG, GG, VG, null !== wG && void 0 !== wG ? wG : "start_failed" === GG ? 0 : 1, {
+            restoreLost: LG,
+            adapterRemembered: YG
           })
-        } catch (Nu) {
-          console.warn(`${Su} ${lu.backend} failed at home (${uu}), and its report couldn't be sent`, Nu)
-        }(0, vu.m)()
+        } catch (QG) {
+          console.warn(`${sG} ${kG.backend} failed at home (${GG}), and its report couldn't be sent`, QG)
+        }(0, aG.i)()
       } else {
-        var cu;
-        const Eu = EE(lu, uu, Cu),
-          su = `WebGPU failed at home (${uu}${void 0===Eu.error?"":`: ${Eu.error instanceof Error?Eu.error.message:(0,iu.j)(Eu.error)}`}) and ${bu}`;
-        console.warn(`${Su} ${su}: the previews stop`, null !== (cu = Eu.error) && void 0 !== cu ? cu : ""), (0, ku.t)(su);
+        var fG;
+        const bG = bb(kG, GG, VG),
+          wG = `WebGPU failed at home (${GG}${void 0===bG.error?"":`: ${bG.error instanceof Error?bG.error.message:(0,MG.h)(bG.error)}`}) and ${pG}`;
+        console.warn(`${sG} ${wG}: the previews stop`, null !== (fG = bG.error) && void 0 !== fG ? fG : ""), (0, FG.n)(wG);
         try {
           const {
-            countRenderLost: su
-          } = await Promise.resolve().then((() => ju(40988)));
-          su(uu, Eu.error, Eu.context)
-        } catch (Yu) {
-          console.warn(`${Su} WebGPU failed at home (${uu}), and its count couldn't be sent`, Yu)
+            countRenderLost: wG
+          } = await Promise.resolve().then((() => ZG(41122)));
+          wG(GG, bG.error, bG.context)
+        } catch (hG) {
+          console.warn(`${sG} WebGPU failed at home (${GG}), and its count couldn't be sent`, hG)
         }
       }
     }
 
-    function EE(uu, Eu, ju) {
+    function bb(GG, bG, ZG) {
       let {
-        adapter: su
-      } = uu;
+        adapter: wG
+      } = GG;
       return {
-        error: ju,
+        error: ZG,
         context: {
-          adapter: su,
-          boundAtMs: "start_failed" === Eu ? null : (0, ku.K)(),
-          indirectHangs: (0, ku.z)(),
-          restoresSkipped: (0, ku.N)()
+          adapter: wG,
+          boundAtMs: "start_failed" === bG ? null : (0, FG.K)(),
+          indirectHangs: (0, FG.y)(),
+          restoresSkipped: (0, FG.L)()
         }
       }
     }
-    async function jE() {
-      if (!(0, Ou.S)()) {
-        const uu = await (0, ku.O)();
-        if (null === uu || (0, eu.t)(uu)) return null;
-        if (await (0, mu.b)(await uu.load()), !(0, Ou.S)()) return null
+    async function Zb() {
+      if (!(0, KG.S)()) {
+        const GG = await (0, FG.N)();
+        if (null === GG || (0, EG.q)(GG)) return null;
+        if (await (0, vG.d)(await GG.load()), !(0, KG.S)()) return null
       }
-      return yu((0, Ou.F)())
+      return OG((0, KG.G)())
     }
-    class sE {
-      constructor(uu, Eu, ju, su, Uu, Zu) {
-        this.page = uu, this.host = Eu, this.id = ju, this.canvas = su, this.size = Uu, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const Xu = {
-            ...Zu.images,
-            glbUrl: uu => {
-              var Eu;
-              return null !== (Eu = this.models.drawnUrl(uu)) && void 0 !== Eu ? Eu : Zu.images.glbUrl(uu)
+    class wb {
+      constructor(GG, bG, ZG, wG, SG, LG) {
+        this.page = GG, this.host = bG, this.id = ZG, this.canvas = wG, this.size = SG, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const yG = {
+            ...LG.images,
+            glbUrl: GG => {
+              var bG;
+              return null !== (bG = this.models.drawnUrl(GG)) && void 0 !== bG ? bG : LG.images.glbUrl(GG)
             }
           },
-          lu = Eu => uu.modelFile(Eu);
-        this.images = new pu.g(Xu, (uu => {
-          console.warn(`${Su} image ${uu.key.kind}:${uu.key.index}:${uu.key.word} failed`, uu.error)
+          kG = bG => GG.modelFile(bG);
+        this.images = new XG.e(yG, (GG => {
+          console.warn(`${sG} image ${GG.key.kind}:${GG.key.index}:${GG.key.word} failed`, GG.error)
         }), {
-          fetchFile: lu,
-          fetchImage: Eu => uu.imageFile(Eu)
-        }), uu.startModels(), this.models = new wu.g(Zu.files, ((Eu, ju) => uu.buildModel(Eu, ju)), (uu => {
-          console.warn(`${Su} model file ${uu.file} (${uu.url}) failed`, uu.error)
+          fetchFile: kG,
+          fetchImage: bG => GG.imageFile(bG)
+        }), GG.startModels(), this.models = new uG.g(LG.files, ((bG, ZG) => GG.buildModel(bG, ZG)), (GG => {
+          console.warn(`${sG} model file ${GG.file} (${GG.url}) failed`, GG.error)
         }), {
-          fetchFile: lu,
-          onWritten: (uu, Eu) => {
-            this.images.glbWritten(uu, Eu)
+          fetchFile: kG,
+          onWritten: (GG, bG) => {
+            this.images.glbWritten(GG, bG)
           },
-          onTaken: (uu, Eu) => {
-            this.images.glbTaken(uu, Eu)
+          onTaken: (GG, bG) => {
+            this.images.glbTaken(GG, bG)
           }
-        }), this.write = (uu, Eu, ju) => {
+        }), this.write = (GG, bG, ZG) => {
           if (this.closed) return !0;
-          if (uu === wu.e) {
-            const uu = new DataView(ju.buffer, ju.byteOffset, du.d),
-              su = uu.getUint32(0, !0),
-              Uu = uu.getUint32(du.g, !0),
-              Zu = this.page.hostCall(nu, (() => this.host.dXu(this.id, su, Eu, ju.subarray(du.d))));
-            return this.outcomes.push([Uu, Zu]), !0
+          if (GG === uG.b) {
+            const GG = new DataView(ZG.buffer, ZG.byteOffset, CG.b),
+              wG = GG.getUint32(0, !0),
+              SG = GG.getUint32(CG.f, !0),
+              LG = this.page.hostCall(NG, (() => this.host.MyG(this.id, wG, bG, ZG.subarray(CG.b))));
+            return this.outcomes.push([SG, LG]), !0
           }
-          return uu === pu.d && (this.page.hostCall(void 0, (() => {
-            this.host.PXu(this.id, ju)
+          return GG === XG.d && (this.page.hostCall(void 0, (() => {
+            this.host.syG(this.id, ZG)
           })), !0)
         }
       }
@@ -651,74 +651,74 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(uu, Eu, ju) {
+      resize(GG, bG, ZG) {
         if (this.closed) return;
-        const [su, Uu] = zu(uu, Eu, this.page.dpr(), ju);
-        su === this.size[0] && Uu === this.size[1] || (this.size = [su, Uu], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, su, Uu)
+        const [wG, SG] = xG(GG, bG, this.page.dpr(), ZG);
+        wG === this.size[0] && SG === this.size[1] || (this.size = [wG, SG], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, wG, SG)
         })))
       }
-      setMob(uu, Eu, ju, su) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.KXu(this.id, uu, Eu, ju, su))))
+      setMob(GG, bG, ZG, wG) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.RyG(this.id, GG, bG, ZG, wG))))
       }
-      setPet(uu, Eu, ju, su) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.rXu(this.id, uu, Eu, ju, su))))
+      setPet(GG, bG, ZG, wG) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.tyG(this.id, GG, bG, ZG, wG))))
       }
-      setPlayer(uu, Eu, ju) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.kXu(this.id, uu, Eu, ju))))
+      setPlayer(GG, bG, ZG) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.nyG(this.id, GG, bG, ZG))))
       }
-      setFigure(uu, Eu, ju, su) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.mXu(this.id, uu, Eu, ju, su))))
+      setFigure(GG, bG, ZG, wG) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.gyG(this.id, GG, bG, ZG, wG))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
       }
       get orbit() {
         if (this.closed) return null;
-        const uu = this.page.hostCall(null, (() => this.host.orbit(this.id)));
-        return null === uu || uu.length < 3 ? null : {
-          alpha: uu[0],
-          beta: uu[1],
-          radius: uu[2]
+        const GG = this.page.hostCall(null, (() => this.host.orbit(this.id)));
+        return null === GG || GG.length < 3 ? null : {
+          alpha: GG[0],
+          beta: GG[1],
+          radius: GG[2]
         }
       }
-      setOrbit(uu) {
+      setOrbit(GG) {
         let {
-          alpha: Eu,
-          beta: ju,
-          radius: su
-        } = uu;
+          alpha: bG,
+          beta: ZG,
+          radius: wG
+        } = GG;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.VXu(this.id, Eu, ju, su)
+          this.host.TyG(this.id, bG, ZG, wG)
         }))
       }
       untilSettled() {
-        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((uu => {
-          this.settled.push(uu)
+        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((GG => {
+          this.settled.push(GG)
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, Pu.j)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, mG.i)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [uu, Eu] of this.outcomes) {
-          const ju = Eu === Hu ? [] : [Eu === Au ? uu : (uu | wu.f) >>> 0];
-          this.models.taken(uu, ju)
+        for (const [GG, bG] of this.outcomes) {
+          const ZG = bG === tG ? [] : [bG === DG ? GG : (GG | uG.f) >>> 0];
+          this.models.taken(GG, ZG)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
-      collect(uu) {
-        let Eu = !1;
-        if (uu) {
-          const uu = this.host.WXu(this.id);
-          for (const Eu of uu) this.models.request(Eu);
-          const ju = this.host.iXu(this.id);
-          ju.length > 0 && this.images.onEvent(ju), Eu = uu.length > 0 || ju.length > 0
+      collect(GG) {
+        let bG = !1;
+        if (GG) {
+          const GG = this.host.OyG(this.id);
+          for (const bG of GG) this.models.request(bG);
+          const ZG = this.host.NyG(this.id);
+          ZG.length > 0 && this.images.onEvent(ZG), bG = GG.length > 0 || ZG.length > 0
         }
-        const ju = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          su = Eu || ju > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = su ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const ZG = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          wG = bG || ZG > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = wG ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -726,314 +726,314 @@ export const modules = {
       abandon() {
         this.resolveSettled()
       }
-      dispose(uu) {
+      dispose(GG) {
         this.page.hostCall(void 0, (() => {
-          const Eu = this.host.close(this.id);
-          Eu.length > 0 && this.images.onEvent(Eu), this.page.isTrapped || uu.eZu(this.id)
+          const bG = this.host.close(this.id);
+          bG.length > 0 && this.images.onEvent(bG), this.page.isTrapped || GG.aLG(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
-        const uu = this.settled;
+        const GG = this.settled;
         this.settled = [];
-        for (const Eu of uu) Eu()
+        for (const bG of GG) bG()
       }
     }
-    class UE {
-      constructor(uu) {
-        this.deps = uu, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
-          onUnavailable: uu => {
-            this.modelsFailed(uu)
+    class Sb {
+      constructor(GG) {
+        this.deps = GG, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
+          onUnavailable: GG => {
+            this.modelsFailed(GG)
           },
-          onDecoderFailed: uu => {
-            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${Su} the Draco decoder didn't load: models waiting on it won't draw`, uu))
+          onDecoderFailed: GG => {
+            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${sG} the Draco decoder didn't load: models waiting on it won't draw`, GG))
           },
-          onWorkerLost: uu => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${Su} a model worker was lost: ${uu}`))
+          onWorkerLost: GG => {
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${sG} a model worker was lost: ${GG}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.AN = {
-          setShaderPack: (uu, Eu, ju, su, Uu) => (this.shaderPackArgs = [uu, Eu, ju, su, Uu], this.handOverShaderPack(), !0)
-        }, this.frame = uu => {
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.OQ = {
+          setShaderPack: (GG, bG, ZG, wG, SG) => (this.shaderPackArgs = [GG, bG, ZG, wG, SG], this.handOverShaderPack(), !0)
+        }, this.frame = GG => {
           this.frameId = null;
-          const Eu = this.host;
-          if (null !== Eu && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
-            this.drawFrame(Eu, uu)
-          } catch (ju) {
-            if (!this.stopIfTrapped(ju) && (this.stop(), (0, eu.x)(ju))) return void this.deps.onRenderFailed("frames_refused", ju);
-            console.warn(`${Su} the previews stopped: their frame threw`, ju)
+          const bG = this.host;
+          if (null !== bG && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
+            this.drawFrame(bG, GG)
+          } catch (ZG) {
+            if (!this.stopIfTrapped(ZG) && (this.stop(), (0, EG.r)(ZG))) return void this.deps.onRenderFailed("frames_refused", ZG);
+            console.warn(`${sG} the previews stopped: their frame threw`, ZG)
           }
-        }, uu.pack.onChange((() => {
+        }, GG.pack.onChange((() => {
           this.packChanged()
-        })), uu.game.onGameChange((() => {
+        })), GG.game.onGameChange((() => {
           this.tellInGame()
         }))
       }
       packChanged() {
         if (!this.stopped)
-          for (const uu of this.previews.values()) uu.packChanged()
+          for (const GG of this.previews.values()) GG.packChanged()
       }
       dpr() {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var uu, Eu;
-        return null !== (uu = null === (Eu = this.host) || void 0 === Eu ? void 0 : Eu.attached()) && void 0 !== uu && uu
+        var GG, bG;
+        return null !== (GG = null === (bG = this.host) || void 0 === bG ? void 0 : bG.attached()) && void 0 !== GG && GG
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((uu, Eu) => uu + Eu), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((GG, bG) => GG + bG), 0) / this.costs.length
       }
-      async bindSession(uu, Eu, ju) {
-        const su = this.binding,
-          Uu = this.sessionEnds;
+      async bindSession(GG, bG, ZG) {
+        const wG = this.binding,
+          SG = this.sessionEnds;
         try {
-          const Zu = this.hostOf(uu);
-          if (!Zu.aXu()) {
-            const Eu = (0, Vu.g)().sampleCount,
-              Xu = await ju(Eu);
-            if (this.sessionEnds !== Uu) return this.keepRendererOfEndedSession(uu, Zu, Xu, Eu, su), Eu;
-            if (!Zu.CXu(Xu)) throw new Error("the page has a renderer already");
-            (0, ku.w)(performance.now()), this.samples = Eu, (0, ru.h)((0, eu.q)(uu))
+          const LG = this.hostOf(GG);
+          if (!LG.AyG()) {
+            const bG = (0, lG.d)().sampleCount,
+              yG = await ZG(bG);
+            if (this.sessionEnds !== SG) return this.keepRendererOfEndedSession(GG, LG, yG, bG, wG), bG;
+            if (!LG.oyG(yG)) throw new Error("the page has a renderer already");
+            (0, FG.q)(performance.now()), this.samples = bG, (0, jG.f)((0, EG.m)(GG))
           }
-          if (!Zu.attach(Eu)) throw new Error("the page's renderer is lent to another session");
+          if (!LG.attach(bG)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === su && this.endBinding()
+          this.binding === wG && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(uu, Eu, ju, su, Uu) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== Uu) try {
-          ju.free()
-        } catch (Zu) {
-          console.warn(`${Su} an ended session's renderer didn't free`, Zu)
-        } else Eu.CXu(ju) && ((0, ku.w)(performance.now()), this.samples = su, (0, ru.h)(this.registryOf(uu)))
+      keepRendererOfEndedSession(GG, bG, ZG, wG, SG) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== SG) try {
+          ZG.free()
+        } catch (LG) {
+          console.warn(`${sG} an ended session's renderer didn't free`, LG)
+        } else bG.oyG(ZG) && ((0, FG.q)(performance.now()), this.samples = wG, (0, jG.f)(this.registryOf(GG)))
       }
       async beginSession() {
-        var uu;
-        let Eu = () => {};
-        const ju = new Promise((uu => {
-          Eu = uu
+        var GG;
+        let bG = () => {};
+        const ZG = new Promise((GG => {
+          bG = GG
         }));
         this.binding = {
-          done: ju,
-          release: Eu
-        }, await (null === (uu = this.opening) || void 0 === uu ? void 0 : uu.catch((() => null)));
-        const su = this.pageCanvas;
-        return this.pageCanvas = null, su
+          done: ZG,
+          release: bG
+        }, await (null === (GG = this.opening) || void 0 === GG ? void 0 : GG.catch((() => null)));
+        const wG = this.pageCanvas;
+        return this.pageCanvas = null, wG
       }
-      endSession(uu) {
-        var Eu, ju;
-        if (this.sessionEnds++, this.lastEndReturned = uu, this.endBinding(), uu) {
+      endSession(GG) {
+        var bG, ZG;
+        if (this.sessionEnds++, this.lastEndReturned = GG, this.endBinding(), GG) {
           try {
-            var su;
-            null === (su = this.host) || void 0 === su || su.detach()
-          } catch (Uu) {
-            return void console.warn(`${Su} the session's core kept the page's renderer`, Uu)
-          }!0 === (null === (Eu = this.host) || void 0 === Eu ? void 0 : Eu.attached()) && console.warn(`${Su} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (ju = this.host) || void 0 === ju ? void 0 : ju.aXu()) && (0, ru.h)(this.registryOf(this.module))
+            var wG;
+            null === (wG = this.host) || void 0 === wG || wG.detach()
+          } catch (SG) {
+            return void console.warn(`${sG} the session's core kept the page's renderer`, SG)
+          }!0 === (null === (bG = this.host) || void 0 === bG ? void 0 : bG.attached()) && console.warn(`${sG} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (ZG = this.host) || void 0 === ZG ? void 0 : ZG.AyG()) && (0, jG.f)(this.registryOf(this.module))
         }
       }
       endBinding() {
-        var uu;
-        null === (uu = this.binding) || void 0 === uu || uu.release(), this.binding = null
+        var GG;
+        null === (GG = this.binding) || void 0 === GG || GG.release(), this.binding = null
       }
-      async openPreview(uu, Eu, ju, su) {
-        const Uu = await this.renderingHost(),
-          Zu = this.module;
-        if (null === Uu || null === Zu) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(Uu), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(GG, bG, ZG, wG) {
+        const SG = await this.renderingHost(),
+          LG = this.module;
+        if (null === SG || null === LG) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(SG), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(Zu)
+          this.deps.provideBuiltInAnimationPack(LG)
         }));
-        const Xu = this.nextId++,
-          lu = this.deps.createCanvas(),
-          [qu, fu] = zu(Eu, ju, this.deps.dpr(), su);
-        lu.width = qu, lu.height = fu;
-        if (!this.guarded((() => (Zu.MZu(Xu, lu), Uu.open(Xu, qu, fu, uu))))) throw this.hostCall(void 0, (() => {
-          Zu.eZu(Xu)
+        const yG = this.nextId++,
+          kG = this.deps.createCanvas(),
+          [UG, YG] = xG(bG, ZG, this.deps.dpr(), wG);
+        kG.width = UG, kG.height = YG;
+        if (!this.guarded((() => (LG.vLG(yG, kG), SG.open(yG, UG, YG, GG))))) throw this.hostCall(void 0, (() => {
+          LG.aLG(yG)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const Cu = new sE(this, Uu, Xu, lu, [qu, fu], this.deps);
-        return this.previews.set(Xu, Cu), this.startFrames(), Cu
+        const VG = new wb(this, SG, yG, kG, [UG, YG], this.deps);
+        return this.previews.set(yG, VG), this.startFrames(), VG
       }
       prefetch() {
-        if (this.prefetched || this.isStopped || (0, ku.e)() || null !== (0, ku.H)()) return;
+        if (this.prefetched || this.isStopped || (0, FG.c)() || null !== (0, FG.I)()) return;
         this.prefetched = !0;
-        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((uu => {
-          null === uu || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
+        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((GG => {
+          null === GG || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
         }), (() => {}))
       }
-      modelFile(uu) {
-        return this.prefetchedOr(uu, this.deps.fetchModel)
+      modelFile(GG) {
+        return this.prefetchedOr(GG, this.deps.fetchModel)
       }
-      imageFile(uu) {
-        return this.prefetchedOr(uu, su.K)
+      imageFile(GG) {
+        return this.prefetchedOr(GG, wG.K)
       }
-      prefetchedOr(uu, Eu) {
-        const ju = this.prefetchedFiles.get(uu);
-        return void 0 === ju ? Eu(uu) : ju.catch((() => Eu(uu)))
+      prefetchedOr(GG, bG) {
+        const ZG = this.prefetchedFiles.get(GG);
+        return void 0 === ZG ? bG(GG) : ZG.catch((() => bG(GG)))
       }
       async prefetchPlayerFiles() {
-        const uu = this.deps.playerFile().then((uu => this.deps.files.url(uu))),
-          Eu = await Promise.all([uu, this.deps.images.lifeformAtlasUrl(Pu.d)]).catch((() => null));
-        if (null === Eu) return;
-        const [ju, su] = Eu, Uu = (uu, Eu) => {
-          if (null === uu) return;
-          const ju = Eu(uu);
-          this.prefetchedFiles.set(uu, ju), ju.catch((() => {
-            this.prefetchedFiles.delete(uu)
+        const GG = this.deps.playerFile().then((GG => this.deps.files.url(GG))),
+          bG = await Promise.all([GG, this.deps.images.lifeformAtlasUrl(mG.b)]).catch((() => null));
+        if (null === bG) return;
+        const [ZG, wG] = bG, SG = (GG, bG) => {
+          if (null === GG) return;
+          const ZG = bG(GG);
+          this.prefetchedFiles.set(GG, ZG), ZG.catch((() => {
+            this.prefetchedFiles.delete(GG)
           }))
         };
-        Uu(ju, (uu => this.modelFile(uu))), Uu(su, (uu => this.imageFile(uu)))
+        SG(ZG, (GG => this.modelFile(GG))), SG(wG, (GG => this.imageFile(GG)))
       }
       loadModule() {
-        return this.moduleLoad ??= this.deps.loadModule().then((uu => (null === uu && (this.moduleLoad = null), uu)), (uu => {
-          throw this.moduleLoad = null, uu
+        return this.moduleLoad ??= this.deps.loadModule().then((GG => (null === GG && (this.moduleLoad = null), GG)), (GG => {
+          throw this.moduleLoad = null, GG
         })), this.moduleLoad
       }
       fetchAnimationTable() {
-        return this.animationTable ??= this.deps.fetchAnimations().catch((uu => {
-          throw this.animationTable = null, uu
+        return this.animationTable ??= this.deps.fetchAnimations().catch((GG => {
+          throw this.animationTable = null, GG
         })), this.animationTable
       }
       get modelsUnavailable() {
         return this.unavailable
       }
       startModels() {
-        this.models ??= this.deps.startModels(this.modelsListener).catch((uu => (this.modelsFailed(uu), () => new Promise((() => {})))))
+        this.models ??= this.deps.startModels(this.modelsListener).catch((GG => (this.modelsFailed(GG), () => new Promise((() => {})))))
       }
-      buildModel(uu, Eu) {
-        return this.startModels(), this.models.then((ju => ju(uu, Eu))).then((uu => this.unavailable ? new Promise((() => {})) : uu))
+      buildModel(GG, bG) {
+        return this.startModels(), this.models.then((ZG => ZG(GG, bG))).then((GG => this.unavailable ? new Promise((() => {})) : GG))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
-      modelsFailed(uu) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${Su} the model workers didn't start: models won't draw in the previews`, uu))
+      modelsFailed(GG) {
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${sG} the model workers didn't start: models won't draw in the previews`, GG))
       }
-      called(uu) {
-        return 0 !== uu && this.logError(uu, 0), uu
+      called(GG) {
+        return 0 !== GG && this.logError(GG, 0), GG
       }
-      closePreview(uu) {
-        this.previews.delete(uu.id), null !== this.module && uu.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
+      closePreview(GG) {
+        this.previews.delete(GG.id), null !== this.module && GG.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
       }
-      hostOf(uu) {
-        if (null !== this.module && this.module !== uu) throw new Error("a second renderer module on one page");
-        return this.module = uu, null === this.host && (this.host = this.guarded((() => new uu.gZu)), this.tellInGame(), this.handOverShaderPack()), this.host
+      hostOf(GG) {
+        if (null !== this.module && this.module !== GG) throw new Error("a second renderer module on one page");
+        return this.module = GG, null === this.host && (this.host = this.guarded((() => new GG.FLG)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
-          host: uu
+          host: GG
         } = this;
-        null !== uu && this.outsideCall("the game's start or end", (() => {
-          uu.vXu(this.deps.game.inGame())
+        null !== GG && this.outsideCall("the game's start or end", (() => {
+          GG.eyG(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
-          host: uu,
-          shaderPackArgs: Eu
+          host: GG,
+          shaderPackArgs: bG
         } = this;
-        null !== uu && null !== Eu && this.outsideCall("the shader pack's hand-over", (() => {
-          uu.gsu(...Eu) || console.warn(`${Su} the host refused the shader pack: previews draw without it at home`)
+        null !== GG && null !== bG && this.outsideCall("the shader pack's hand-over", (() => {
+          GG.vwG(...bG) || console.warn(`${sG} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(uu, Eu) {
+      outsideCall(GG, bG) {
         try {
-          this.hostCall(void 0, Eu)
-        } catch (ju) {
-          this.stop(), console.warn(`${Su} the previews stopped: ${uu} threw`, ju)
+          this.hostCall(void 0, bG)
+        } catch (ZG) {
+          this.stop(), console.warn(`${sG} the previews stopped: ${GG} threw`, ZG)
         }
       }
-      async loadAnimations(uu) {
-        const Eu = Xu(null),
-          ju = this.module;
+      async loadAnimations(GG) {
+        const bG = yG(null),
+          ZG = this.module;
         try {
-          Eu.wasm = null === ju ? Eu.wasm : this.hostCall(Eu.wasm, (() => ju.hb()))
+          bG.wasm = null === ZG ? bG.wasm : this.hostCall(bG.wasm, (() => ZG.hp()))
         } catch {}
-        let su, Uu;
+        let wG, SG;
         try {
-          su = await this.fetchAnimationTable()
-        } catch (Zu) {
+          wG = await this.fetchAnimationTable()
+        } catch (LG) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: Zu
-          }, Eu)
+            error: LG
+          }, bG)
         }
         if (!this.settleIfTrapped()) {
           try {
-            Uu = uu.oXu(su)
-          } catch (Zu) {
-            if (this.stopIfTrapped(Zu)) return;
+            SG = GG.qyG(wG)
+          } catch (LG) {
+            if (this.stopIfTrapped(LG)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: Zu
-            }, Eu)
+              error: LG
+            }, bG)
           }
-          Uu || this.deps.onAnimationsFailed({
+          SG || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, Eu)
+          }, bG)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
-        const uu = this.host;
-        return null !== uu && this.guarded((() => uu.aXu())) ? uu : (this.opening ??= this.openAtHome().finally((() => {
+        const GG = this.host;
+        return null !== GG && this.guarded((() => GG.AyG())) ? GG : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
-        var uu;
-        const Eu = null !== (uu = this.module) && void 0 !== uu ? uu : await this.loadModule();
-        if (null === Eu) return null;
-        const ju = this.hostOf(Eu),
-          su = () => this.guarded((() => ju.aXu()));
-        if (su()) return ju;
-        if (null !== (0, ku.H)() || (0, ku.e)()) return null;
-        const Uu = this.deps.createCanvas();
-        Uu.width = 1, Uu.height = 1;
-        const Zu = await this.deps.openExtras();
+        var GG;
+        const bG = null !== (GG = this.module) && void 0 !== GG ? GG : await this.loadModule();
+        if (null === bG) return null;
+        const ZG = this.hostOf(bG),
+          wG = () => this.guarded((() => ZG.AyG()));
+        if (wG()) return ZG;
+        if (null !== (0, FG.I)() || (0, FG.c)()) return null;
+        const SG = this.deps.createCanvas();
+        SG.width = 1, SG.height = 1;
+        const LG = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const Xu = (0, Vu.g)().sampleCount;
-        let lu;
+        const yG = (0, lG.d)().sampleCount;
+        let kG;
         try {
-          lu = await (0, eu.B)(Eu, "previewRenderer", Uu, Xu, Qu.c, Zu)
-        } catch (qu) {
-          throw qu instanceof au.d ? this.stopForTrap(qu) : (0, eu.A)(qu) && await this.deps.onRenderFailed("start_failed", qu), qu
+          kG = await (0, EG.w)(bG, "previewRenderer", SG, yG, PG.b, LG)
+        } catch (UG) {
+          throw UG instanceof WG.e ? this.stopForTrap(UG) : (0, EG.v)(UG) && await this.deps.onRenderFailed("start_failed", UG), UG
         }
-        return this.guarded((() => ju.CXu(lu))) ? ((0, ku.w)(performance.now()), this.samples = Xu, this.pageCanvas = Uu, (0, ru.h)(this.registryOf(Eu)), ju) : su() ? ju : null
+        return this.guarded((() => ZG.oyG(kG))) ? ((0, FG.q)(performance.now()), this.samples = yG, this.pageCanvas = SG, (0, jG.f)(this.registryOf(bG)), ZG) : wG() ? ZG : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(uu, Eu) {
-        for (const Xu of this.previews.values()) Xu.feed();
+      drawFrame(GG, bG) {
+        for (const yG of this.previews.values()) yG.feed();
         if (this.stopped) return;
-        const ju = this.deps.now(),
-          su = uu.frame(Eu);
-        this.costs.push(this.deps.now() - ju), this.costs.length > 120 && this.costs.shift();
-        const Uu = 0 !== (256 & su),
-          Zu = 255 & su;
-        for (const Xu of this.previews.values()) {
+        const ZG = this.deps.now(),
+          wG = GG.frame(bG);
+        this.costs.push(this.deps.now() - ZG), this.costs.length > 120 && this.costs.shift();
+        const SG = 0 !== (256 & wG),
+          LG = 255 & wG;
+        for (const yG of this.previews.values()) {
           if (this.stopped) return;
-          Xu.collect(Uu)
+          yG.collect(SG)
         }
         if (!this.stopped) {
-          if (0 !== (512 & su) && this.deps.onDrew(), Uu) {
-            const Eu = uu.QXu();
-            for (let uu = 0; uu + 1 < Eu.length; uu += 2) Eu[uu] === Mu.D.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(Eu[uu], Eu[uu + 1])
+          if (0 !== (512 & wG) && this.deps.onDrew(), SG) {
+            const bG = GG.DyG();
+            for (let GG = 0; GG + 1 < bG.length; GG += 2) bG[GG] === zG.R.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(bG[GG], bG[GG + 1])
           }
-          if (Zu !== tu) {
-            if (Zu === xu) return this.stop(), void this.deps.onFatal(uu.pXu(), uu.wXu());
-            if (Zu === Tu) return this.stop(), void console.warn(`${Su} the previews stopped: the page's renderer went with its session`);
-            (0, hu.c)(Eu), this.startFrames()
+          if (LG !== RG) {
+            if (LG === TG) return this.stop(), void this.deps.onFatal(GG.lyG(), GG.jyG());
+            if (LG === HG) return this.stop(), void console.warn(`${sG} the previews stopped: the page's renderer went with its session`);
+            (0, dG.c)(bG), this.startFrames()
           } else {
-            const Eu = uu.JXu();
+            const bG = GG.PyG();
             this.stop();
-            const ju = Eu[2] === Mu.Zc.PIPELINE_FAILED ? "pipeline_failed" : "lost";
-            this.deps.onRenderFailed(ju, void 0, Eu[1], Eu[2] === Mu.Zc.RESTORE_LOST)
+            const ZG = bG[2] === zG.ed.PIPELINE_FAILED ? "pipeline_failed" : "lost";
+            this.deps.onRenderFailed(ZG, void 0, bG[1], bG[2] === zG.ed.RESTORE_LOST)
           }
         }
       }
@@ -1041,115 +1041,115 @@ export const modules = {
         return this.stopped || this.isTrapped
       }
       get isTrapped() {
-        return null !== this.module && ((0, au.k)(this.module) || "failed" === (0, Ou.C)())
+        return null !== this.module && ((0, WG.k)(this.module) || "failed" === (0, KG.C)())
       }
-      hostCall(uu, Eu) {
-        if (this.settleIfTrapped()) return uu;
+      hostCall(GG, bG) {
+        if (this.settleIfTrapped()) return GG;
         try {
-          return Eu()
-        } catch (ju) {
-          if (this.stopIfTrapped(ju)) return uu;
-          throw ju
+          return bG()
+        } catch (ZG) {
+          if (this.stopIfTrapped(ZG)) return GG;
+          throw ZG
         }
       }
-      guarded(uu) {
+      guarded(GG) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
-          return uu()
-        } catch (Eu) {
-          throw this.stopIfTrapped(Eu), Eu
+          return GG()
+        } catch (bG) {
+          throw this.stopIfTrapped(bG), bG
         }
       }
-      registryOf(uu) {
+      registryOf(GG) {
         return {
-          ssu: (Eu, ju) => {
+          dwG: (bG, ZG) => {
             this.hostCall(void 0, (() => {
-              uu.ssu(Eu, ju)
+              GG.dwG(bG, ZG)
             }))
           },
-          Usu: Eu => {
+          JwG: bG => {
             this.hostCall(void 0, (() => {
-              uu.Usu(Eu)
+              GG.JwG(bG)
             }))
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, ru.h)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, jG.f)(null)), !0)
       }
-      stopIfTrapped(uu) {
-        return !(null === this.module || !(0, au.l)(this.module, uu)) && (this.stopForTrap(uu), !0)
+      stopIfTrapped(GG) {
+        return !(null === this.module || !(0, WG.m)(this.module, GG)) && (this.stopForTrap(GG), !0)
       }
-      stopForTrap(uu) {
-        this.stop(), (0, ru.h)(null), (0, Wu.f)("previews", uu)
+      stopForTrap(GG) {
+        this.stop(), (0, jG.f)(null), (0, AG.g)("previews", GG)
       }
       stop() {
         this.stopped = !0;
-        for (const uu of this.previews.values()) uu.abandon()
+        for (const GG of this.previews.values()) GG.abandon()
       }
-      logError(uu, Eu) {
-        const ju = `${uu}:${Eu}`;
-        this.loggedErrors.has(ju) || (this.loggedErrors.add(ju), console.warn(`${Su} error ${uu} (detail ${Eu})`))
+      logError(GG, bG) {
+        const ZG = `${GG}:${bG}`;
+        this.loggedErrors.has(ZG) || (this.loggedErrors.add(ZG), console.warn(`${sG} error ${GG} (detail ${bG})`))
       }
     }
-    let ZE = null;
+    let Lb = null;
 
-    function XE() {
-      return ZE ??= new UE(function() {
-        const uu = (0, Ju.i)(Yu.clientSideServerUrls.staticUrl, {
-          packUrl: uu => {
-            var Eu, ju;
-            return null !== (Eu = null === (ju = Pu.g.current) || void 0 === ju ? void 0 : ju.modelUrl(uu)) && void 0 !== Eu ? Eu : null
+    function yb() {
+      return Lb ??= new Sb(function() {
+        const GG = (0, iG.r)(hG.clientSideServerUrls.staticUrl, {
+          packUrl: GG => {
+            var bG, ZG;
+            return null !== (bG = null === (ZG = mG.e.current) || void 0 === ZG ? void 0 : ZG.modelUrl(GG)) && void 0 !== bG ? bG : null
           }
         });
         return {
-          loadModule: jE,
-          startModels: async uu => {
+          loadModule: Zb,
+          startModels: async GG => {
             const {
-              pageModelPool: Eu
-            } = await ju.e(43).then((() => ju(51314))), {
-              pool: su
-            } = Eu(uu);
-            return (uu, Eu) => su.build(uu, Eu)
+              pageModelPool: bG
+            } = await ZG.e(43).then((() => ZG(51469))), {
+              pool: wG
+            } = bG(GG);
+            return (GG, bG) => wG.build(GG, bG)
           },
-          fetchAnimations: async () => lu(await (0, su.K)(Ru())),
-          playerFile: async () => (await (0, Ju.g)()).PLAYER_FILE,
-          onAnimationsFailed: (uu, Eu) => {
-            qu("previewAnimations", Ru(), uu, Eu)
+          fetchAnimations: async () => kG(await (0, wG.K)(BG())),
+          playerFile: async () => (await (0, iG.o)()).PLAYER_FILE,
+          onAnimationsFailed: (GG, bG) => {
+            UG("previewAnimations", BG(), GG, bG)
           },
-          provideBuiltInAnimationPack: uu => {
-            cu().provide(uu)
+          provideBuiltInAnimationPack: GG => {
+            fG().provide(GG)
           },
-          openExtras: ku.B,
-          files: uu,
-          images: (0, Pu.m)((0, pu.m)(uu.url), (() => Pu.g.current)),
-          pack: Pu.g,
-          game: ou.e,
-          fetchModel: uu => (0, Ju.e)(uu),
+          openExtras: FG.C,
+          files: GG,
+          images: (0, mG.l)((0, XG.k)(GG.url), (() => mG.e.current)),
+          pack: mG.e,
+          game: IG.e,
+          fetchModel: GG => (0, iG.g)(GG),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
-          requestFrame: uu => requestAnimationFrame(uu),
-          cancelFrame: uu => {
-            cancelAnimationFrame(uu)
+          requestFrame: GG => requestAnimationFrame(GG),
+          cancelFrame: GG => {
+            cancelAnimationFrame(GG)
           },
-          onRenderFailed: uE,
-          onFatal: (uu, Eu) => {
-            console.error(`${Su} the previews stopped: renderer error ${uu} (detail ${Eu})`)
+          onRenderFailed: Gb,
+          onFatal: (GG, bG) => {
+            console.error(`${sG} the previews stopped: renderer error ${GG} (detail ${bG})`)
           },
           onDeviceLost: () => {
-            (0, ku.D)() === Ku.b.webgpu && ((0, Gu.d)((0, Ou.S)() ? (0, eu.Z)((0, Ou.F)()) : null), Du.B.lost())
+            (0, FG.E)() === cG.c.webgpu && ((0, oG.f)((0, KG.S)() ? (0, EG.P)((0, KG.G)()) : null), JG.P.lost())
           },
           onDrew: () => {
-            Du.B.drew()
+            JG.P.drew()
           }
         }
-      }()), ZE
+      }()), Lb
     }
-    var lE = ju(636),
-      qE = ju(38982),
-      fE = ju(3475);
-    const CE = {
+    var kb = ZG(589),
+      Ub = ZG(39061),
+      Yb = ZG(3267);
+    const Vb = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1167,320 +1167,320 @@ export const modules = {
       gunReady: 14,
       gunAimed: 15
     };
-    const bE = "[bloxd-previews]",
-      cE = new Uint32Array(5);
+    const pb = "[bloxd-previews]",
+      fb = new Uint32Array(5);
 
-    function NE(uu) {
-      return lE.n.indexOf(uu)
+    function Qb(GG) {
+      return kb.m.indexOf(GG)
     }
-    const OE = new WeakSet;
+    const Kb = new WeakSet;
 
-    function YE(uu) {
-      const Eu = (0, qE.f)(uu),
-        ju = null === Eu ? -1 : hE(Eu);
-      return -1 !== ju ? ju : (OE.has(uu) || (OE.add(uu), console.warn(`${bE} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function hE(uu) {
-      var Eu;
-      return null !== (Eu = CE[uu]) && void 0 !== Eu ? Eu : -1
+    function hb(GG) {
+      const bG = (0, Ub.d)(GG),
+        ZG = null === bG ? -1 : db(bG);
+      return -1 !== ZG ? ZG : (Kb.has(GG) || (Kb.add(GG), console.warn(`${pb} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function DE(uu, Eu) {
+    function db(GG) {
+      var bG;
+      return null !== (bG = Vb[GG]) && void 0 !== bG ? bG : -1
+    }
+
+    function Jb(GG, bG) {
       const {
-        canvas: ju
-      } = Eu;
-      ju.style.width = "100%", ju.style.height = "100%", ju.style.display = "block", uu.appendChild(ju)
+        canvas: ZG
+      } = bG;
+      ZG.style.width = "100%", ZG.style.height = "100%", ZG.style.display = "block", GG.appendChild(ZG)
     }
 
-    function gE(uu) {
-      const Eu = uu.getBoundingClientRect();
-      return [Eu.width, Eu.height]
+    function rb(GG) {
+      const bG = GG.getBoundingClientRect();
+      return [bG.width, bG.height]
     }
-    class ME {
-      constructor(uu, Eu) {
-        this.preview = uu, this.showView = Eu
+    class zb {
+      constructor(GG, bG) {
+        this.preview = GG, this.showView = bG
       }
-      show(uu) {
-        this.showView(this.preview, uu)
+      show(GG) {
+        this.showView(this.preview, GG)
       }
-      resize(uu, Eu) {
-        this.preview.resize(uu, Eu)
+      resize(GG, bG) {
+        this.preview.resize(GG, bG)
       }
       close() {
         this.preview.close()
       }
     }
-    class eE {
-      constructor(uu) {
-        this.preview = uu, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(uu) {
+    class Eb {
+      constructor(GG) {
+        this.preview = GG, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(GG) {
           const {
-            canvas: Eu
-          } = uu;
-          let ju = null;
-          const su = uu => {
-              var su;
-              ju = {
-                pointer: uu.pointerId,
-                x: uu.clientX,
-                y: uu.clientY
-              }, null === (su = Eu.setPointerCapture) || void 0 === su || su.call(Eu, uu.pointerId)
+            canvas: bG
+          } = GG;
+          let ZG = null;
+          const wG = GG => {
+              var wG;
+              ZG = {
+                pointer: GG.pointerId,
+                x: GG.clientX,
+                y: GG.clientY
+              }, null === (wG = bG.setPointerCapture) || void 0 === wG || wG.call(bG, GG.pointerId)
             },
-            Uu = Eu => {
-              var su;
-              const Uu = uu.orbit;
-              if ((null === (su = ju) || void 0 === su ? void 0 : su.pointer) !== Eu.pointerId || null === Uu) return;
-              const Zu = Eu.clientX - ju.x,
-                Xu = Eu.clientY - ju.y;
-              ju = {
-                ...ju,
-                x: Eu.clientX,
-                y: Eu.clientY
-              }, uu.setOrbit({
-                alpha: Uu.alpha - .01 * Zu,
-                beta: Math.min(Math.PI - .01, Math.max(.01, Uu.beta - .01 * Xu)),
-                radius: Uu.radius
+            SG = bG => {
+              var wG;
+              const SG = GG.orbit;
+              if ((null === (wG = ZG) || void 0 === wG ? void 0 : wG.pointer) !== bG.pointerId || null === SG) return;
+              const LG = bG.clientX - ZG.x,
+                yG = bG.clientY - ZG.y;
+              ZG = {
+                ...ZG,
+                x: bG.clientX,
+                y: bG.clientY
+              }, GG.setOrbit({
+                alpha: SG.alpha - .01 * LG,
+                beta: Math.min(Math.PI - .01, Math.max(.01, SG.beta - .01 * yG)),
+                radius: SG.radius
               })
             },
-            Zu = uu => {
-              var Eu;
-              (null === (Eu = ju) || void 0 === Eu ? void 0 : Eu.pointer) === uu.pointerId && (ju = null)
+            LG = GG => {
+              var bG;
+              (null === (bG = ZG) || void 0 === bG ? void 0 : bG.pointer) === GG.pointerId && (ZG = null)
             },
-            Xu = Eu => {
-              const ju = uu.orbit;
-              if (null === ju) return;
-              Eu.preventDefault();
-              const su = Eu.deltaY * (Eu.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : Eu.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
-                Uu = Math.min(100, Math.max(5, ju.radius + .08 * su));
-              uu.setOrbit({
-                ...ju,
-                radius: Uu
+            yG = bG => {
+              const ZG = GG.orbit;
+              if (null === ZG) return;
+              bG.preventDefault();
+              const wG = bG.deltaY * (bG.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : bG.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
+                SG = Math.min(100, Math.max(5, ZG.radius + .08 * wG));
+              GG.setOrbit({
+                ...ZG,
+                radius: SG
               })
             };
-          return Eu.style.touchAction = "none", Eu.addEventListener("pointerdown", su), Eu.addEventListener("pointermove", Uu), Eu.addEventListener("pointerup", Zu), Eu.addEventListener("pointercancel", Zu), Eu.addEventListener("wheel", Xu, {
+          return bG.style.touchAction = "none", bG.addEventListener("pointerdown", wG), bG.addEventListener("pointermove", SG), bG.addEventListener("pointerup", LG), bG.addEventListener("pointercancel", LG), bG.addEventListener("wheel", yG, {
             passive: !1
           }), () => {
-            Eu.removeEventListener("pointerdown", su), Eu.removeEventListener("pointermove", Uu), Eu.removeEventListener("pointerup", Zu), Eu.removeEventListener("pointercancel", Zu), Eu.removeEventListener("wheel", Xu)
+            bG.removeEventListener("pointerdown", wG), bG.removeEventListener("pointermove", SG), bG.removeEventListener("pointerup", LG), bG.removeEventListener("pointercancel", LG), bG.removeEventListener("wheel", yG)
           }
-        }(uu), this.dev = {
-          canvas: () => uu.canvas,
+        }(GG), this.dev = {
+          canvas: () => GG.canvas,
           isolateHead: () => {
-            console.warn(`${bE} isolateHead: noa's character preview only`)
+            console.warn(`${pb} isolateHead: noa's character preview only`)
           }
-        }, this.apply(), this.ready = uu.untilSettled().then((() => {
-          if (uu.isStopped) throw new Error(`${bE} the previews stopped before the character drew`);
+        }, this.apply(), this.ready = GG.untilSettled().then((() => {
+          if (GG.isStopped) throw new Error(`${pb} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(uu, Eu) {
-        this.cosmetics[uu] = Eu, this.apply()
+      setCosmetic(GG, bG) {
+        this.cosmetics[GG] = bG, this.apply()
       }
-      playEmote(uu) {
-        null === uu || uu !== this.emote ? (this.emote = uu, this.apply()) : this.preview.replay()
+      playEmote(GG) {
+        null === GG || GG !== this.emote ? (this.emote = GG, this.apply()) : this.preview.replay()
       }
-      untilDrawn(uu) {
+      untilDrawn(GG) {
         return this.preview.untilSettled()
       }
-      setOrbit(uu) {
+      setOrbit(GG) {
         let {
-          yaw: Eu,
-          pitch: ju,
-          radius: su
-        } = uu;
-        const Uu = this.preview.orbit;
-        null !== Uu && this.preview.setOrbit({
-          alpha: Eu,
-          beta: ju,
-          radius: null !== su && void 0 !== su ? su : Uu.radius
+          yaw: bG,
+          pitch: ZG,
+          radius: wG
+        } = GG;
+        const SG = this.preview.orbit;
+        null !== SG && this.preview.setOrbit({
+          alpha: bG,
+          beta: ZG,
+          radius: null !== wG && void 0 !== wG ? wG : SG.radius
         })
       }
       resetCamera() {}
-      resize(uu, Eu) {
-        this.preview.resize(uu, Eu)
+      resize(GG, bG) {
+        this.preview.resize(GG, bG)
       }
       close() {
         this.detachControls(), this.preview.close()
       }
       apply() {
-        var uu;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), cE, null === (uu = this.emote) ? -1 : hE(uu))
+        var GG;
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), fb, null === (GG = this.emote) ? -1 : db(GG))
       }
     }
 
-    function GE(uu, Eu) {
+    function ob(GG, bG) {
       let {
-        mobType: ju,
-        variation: su,
-        animation: Uu
-      } = Eu;
-      uu.setMob(NE(ju), null !== su && void 0 !== su ? su : "", 1, YE(Uu))
+        mobType: ZG,
+        variation: wG,
+        animation: SG
+      } = bG;
+      GG.setMob(Qb(ZG), null !== wG && void 0 !== wG ? wG : "", 1, hb(SG))
     }
 
-    function pE(uu, Eu) {
+    function Xb(GG, bG) {
       let {
-        mobType: ju,
-        variation: su,
-        metaInfo: Uu,
-        tamed: Zu
-      } = Eu;
-      uu.setPet(NE(ju), su, Uu, Zu)
+        mobType: ZG,
+        variation: wG,
+        metaInfo: SG,
+        tamed: LG
+      } = bG;
+      GG.setPet(Qb(ZG), wG, SG, LG)
     }
-    const wE = {
+    const ub = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class JE {
-      constructor(uu, Eu, ju, su) {
+    class ib {
+      constructor(GG, bG, ZG, wG) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, uu(ju.width, su[1], su).then((uu => {
-          if (this.closed) return void uu.close();
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, GG(ZG.width, wG[1], wG).then((GG => {
+          if (this.closed) return void GG.close();
           const {
-            style: ju
-          } = uu.canvas;
-          ju.position = "absolute", ju.top = "0", ju.visibility = "hidden", DE(Eu, uu), this.preview = uu, this.apply()
-        })).catch((uu => {
-          console.error(`${bE} couldn't open a lineup figure`, uu)
+            style: ZG
+          } = GG.canvas;
+          ZG.position = "absolute", ZG.top = "0", ZG.visibility = "hidden", Jb(bG, GG), this.preview = GG, this.apply()
+        })).catch((GG => {
+          console.error(`${pb} couldn't open a lineup figure`, GG)
         }))
       }
-      update(uu, Eu, ju, su, Uu) {
-        this.figure = uu, this.shown = Eu, this.order = ju, this.span = su, this.lineup = Uu, this.apply()
+      update(GG, bG, ZG, wG, SG) {
+        this.figure = GG, this.shown = bG, this.order = ZG, this.span = wG, this.lineup = SG, this.apply()
       }
       close() {
-        var uu;
-        this.closed = !0, null === (uu = this.preview) || void 0 === uu || uu.close(), this.preview = null
+        var GG;
+        this.closed = !0, null === (GG = this.preview) || void 0 === GG || GG.close(), this.preview = null
       }
       apply() {
         const {
-          preview: uu,
-          figure: Eu,
-          lineup: ju
+          preview: GG,
+          figure: bG,
+          lineup: ZG
         } = this;
-        if (null === uu || null === Eu) return;
-        if (this.given !== Eu) {
-          var su;
-          this.given = Eu, this.loaded = !1;
-          const ju = null === Eu.nG ? 0 : null !== (su = (0, fE.b)(Eu.nG)) && void 0 !== su ? su : 0;
-          uu.setFigure(function(uu) {
-            return JSON.stringify(Object.fromEntries(uu.cosmetics))
-          }(Eu), ju, YE(Eu.animation), Eu.size), uu.untilSettled().then((() => {
-            this.given === Eu && (this.loaded = !0, this.apply())
+        if (null === GG || null === bG) return;
+        if (this.given !== bG) {
+          var wG;
+          this.given = bG, this.loaded = !1;
+          const ZG = null === bG.qE ? 0 : null !== (wG = (0, Yb.c)(bG.qE)) && void 0 !== wG ? wG : 0;
+          GG.setFigure(function(GG) {
+            return JSON.stringify(Object.fromEntries(GG.cosmetics))
+          }(bG), ZG, hb(bG.animation), bG.size), GG.untilSettled().then((() => {
+            this.given === bG && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: Uu,
-          width: Zu
+          left: SG,
+          width: LG
         } = this.span;
-        uu.resize(Zu, ju[1], ju);
+        GG.resize(LG, ZG[1], ZG);
         const {
-          style: Xu
-        } = uu.canvas;
-        Xu.left = `${Uu}px`, Xu.width = `${Zu}px`, Xu.zIndex = this.order, Xu.visibility = this.shown && this.loaded ? "visible" : "hidden"
+          style: yG
+        } = GG.canvas;
+        yG.left = `${SG}px`, yG.width = `${LG}px`, yG.zIndex = this.order, yG.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class dE {
-      constructor(uu, Eu) {
-        this.open = Eu, this.layer = void 0, this.figures = [], this.view = {
+    class Cb {
+      constructor(GG, bG) {
+        this.open = bG, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = gE(uu), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = rb(GG), this.layer = document.createElement("div");
         const {
-          style: ju
+          style: ZG
         } = this.layer;
-        ju.position = "relative", ju.isolation = "isolate", ju.overflow = "hidden", ju.width = "100%", ju.height = "100%", ju.pointerEvents = "none", uu.appendChild(this.layer)
+        ZG.position = "relative", ZG.isolation = "isolate", ZG.overflow = "hidden", ZG.width = "100%", ZG.height = "100%", ZG.pointerEvents = "none", GG.appendChild(this.layer)
       }
-      show(uu) {
-        this.view = uu, this.place()
+      show(GG) {
+        this.view = GG, this.place()
       }
-      resize(uu, Eu) {
-        this.size = [uu, Eu], this.place()
+      resize(GG, bG) {
+        this.size = [GG, bG], this.place()
       }
       close() {
-        for (const uu of this.figures) uu.close();
+        for (const GG of this.figures) GG.close();
         this.figures = [], this.layer.remove()
       }
       place() {
         const {
-          figures: uu,
-          shown: Eu
+          figures: GG,
+          shown: bG
         } = this.view;
-        for (const su of this.figures.splice(uu.length)) su.close();
+        for (const wG of this.figures.splice(GG.length)) wG.close();
         const {
-          size: ju
+          size: ZG
         } = this;
-        uu.forEach(((su, Uu) => {
-          var Zu;
-          const Xu = function(uu, Eu, ju, su) {
-            let [Uu, Zu] = su;
-            const Xu = (uu + .5) * Uu / Eu,
-              lu = Math.min(Math.max(Uu / Eu, 2 * ju * Zu), 2 * Math.max(Xu, Uu - Xu));
+        GG.forEach(((wG, SG) => {
+          var LG;
+          const yG = function(GG, bG, ZG, wG) {
+            let [SG, LG] = wG;
+            const yG = (GG + .5) * SG / bG,
+              kG = Math.min(Math.max(SG / bG, 2 * ZG * LG), 2 * Math.max(yG, SG - yG));
             return {
-              left: Xu - lu / 2,
-              width: lu
+              left: yG - kG / 2,
+              width: kG
             }
-          }(Uu, uu.length, function(uu) {
+          }(SG, GG.length, function(GG) {
             let {
-              animation: Eu,
-              size: ju
-            } = uu;
+              animation: bG,
+              size: ZG
+            } = GG;
             const {
-              aimed: su,
-              ready: Uu
-            } = wE;
-            return (YE(Eu) === CE.gunAimed ? su : Uu) * ju
-          }(su), ju);
-          this.figures[Uu] ??= new JE(this.open, this.layer, Xu, ju), this.figures[Uu].update(su, null !== (Zu = Eu[Uu]) && void 0 !== Zu && Zu, function(uu, Eu) {
-            return String(Math.round(1e3 * uu) + Eu)
-          }(su.size, Uu), Xu, ju)
+              aimed: wG,
+              ready: SG
+            } = ub;
+            return (hb(bG) === Vb.gunAimed ? wG : SG) * ZG
+          }(wG), ZG);
+          this.figures[SG] ??= new ib(this.open, this.layer, yG, ZG), this.figures[SG].update(wG, null !== (LG = bG[SG]) && void 0 !== LG && LG, function(GG, bG) {
+            return String(Math.round(1e3 * GG) + bG)
+          }(wG.size, SG), yG, ZG)
         }))
       }
     }
-    const aE = {
-      player: Bu,
-      store: Lu
+    const Wb = {
+      player: gG,
+      store: eG
     };
-    class PE {
-      constructor(uu) {
-        this.page = uu
+    class mb {
+      constructor(GG) {
+        this.page = GG
       }
-      async openMob(uu) {
-        return new ME(await this.open(uu, Fu), GE)
+      async openMob(GG) {
+        return new zb(await this.open(GG, nG), ob)
       }
-      async openPet(uu) {
-        return new ME(await this.open(uu, Fu), pE)
+      async openPet(GG) {
+        return new zb(await this.open(GG, nG), Xb)
       }
-      openMobLineup(uu) {
-        return new dE(uu, ((uu, Eu, ju) => this.page.openPreview(Fu, uu, Eu, ju)))
+      openMobLineup(GG) {
+        return new Cb(GG, ((GG, bG, ZG) => this.page.openPreview(nG, GG, bG, ZG)))
       }
-      async openCharacter(uu, Eu) {
-        return new eE(await this.open(uu, aE[Eu]))
+      async openCharacter(GG, bG) {
+        return new Eb(await this.open(GG, Wb[bG]))
       }
-      async open(uu, Eu) {
-        const [ju, su] = gE(uu), Uu = await this.page.openPreview(Eu, ju, su);
-        return DE(uu, Uu), Uu
+      async open(GG, bG) {
+        const [ZG, wG] = rb(GG), SG = await this.page.openPreview(bG, ZG, wG);
+        return Jb(GG, SG), SG
       }
     }
   },
-  37139: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => su,
-      f: () => Uu,
-      g: () => cu,
-      j: () => hu,
-      k: () => Cu,
-      l: () => gu,
-      m: () => qu,
-      n: () => fu,
-      p: () => Nu,
-      r: () => Ou,
-      t: () => Yu,
-      u: () => Du
+  37097: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      B: () => QG,
+      E: () => KG,
+      H: () => hG,
+      J: () => JG,
+      c: () => wG,
+      e: () => SG,
+      i: () => fG,
+      m: () => dG,
+      q: () => VG,
+      u: () => rG,
+      v: () => UG,
+      y: () => YG
     });
-    const su = [{
+    const wG = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -1497,64 +1497,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function Uu(uu, Eu) {
+    function SG(GG, bG) {
       const {
-        numLines: ju,
-        charsPerLine: Uu
-      } = su[Eu];
-      return Mu(uu, ju, Uu, !1)
+        numLines: ZG,
+        charsPerLine: SG
+      } = wG[bG];
+      return zG(GG, ZG, SG, !1)
     }
-    const Zu = 7 / 8,
-      Xu = .25,
-      lu = 8;
+    const LG = 7 / 8,
+      yG = .25,
+      kG = 8;
 
-    function qu(uu, Eu) {
+    function UG(GG, bG) {
       return {
-        width: Math.min(uu, lu) - 2 * Xu,
-        height: Math.min(Eu, lu) - 2 * Xu
+        width: Math.min(GG, kG) - 2 * yG,
+        height: Math.min(bG, kG) - 2 * yG
       }
     }
 
-    function fu(uu, Eu, ju) {
-      const Uu = qu(uu, Eu),
+    function YG(GG, bG, ZG) {
+      const SG = UG(GG, bG),
         {
-          numLines: Xu,
-          charsPerLine: lu
-        } = su[ju];
+          numLines: yG,
+          charsPerLine: kG
+        } = wG[ZG];
       return {
-        numLines: Math.max(1, Math.floor(Xu / Zu * Uu.height)),
-        charsPerLine: Math.max(1, Math.floor(lu * Uu.width))
+        numLines: Math.max(1, Math.floor(yG / LG * SG.height)),
+        charsPerLine: Math.max(1, Math.floor(kG * SG.width))
       }
     }
 
-    function Cu(uu, Eu, ju, su) {
+    function VG(GG, bG, ZG, wG) {
       const {
-        numLines: Uu,
-        charsPerLine: Zu
-      } = fu(ju, su, Eu);
-      return Mu(uu, Uu, Zu, !1)
+        numLines: SG,
+        charsPerLine: LG
+      } = YG(ZG, wG, bG);
+      return zG(GG, SG, LG, !1)
     }
-    const bu = 32e3;
+    const pG = 32e3;
 
-    function cu(uu) {
-      return uu.slice(0, bu)
+    function fG(GG) {
+      return GG.slice(0, pG)
     }
-    const Nu = 512e3,
-      Ou = 64,
-      Yu = Nu;
+    const QG = 512e3,
+      KG = 64,
+      hG = QG;
 
-    function hu(uu, Eu) {
-      const ju = Math.max(0, Yu - Eu),
-        su = Math.min(Nu, ju);
-      return uu.slice(0, su)
+    function dG(GG, bG) {
+      const ZG = Math.max(0, hG - bG),
+        wG = Math.min(QG, ZG);
+      return GG.slice(0, wG)
     }
-    const Du = {
+    const JG = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      yX: {
+      Ny: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -1566,31 +1566,31 @@ export const modules = {
       }
     };
 
-    function gu(uu, Eu) {
+    function rG(GG, bG) {
       const {
-        numLines: ju,
-        charsPerLine: su
-      } = Du[Eu];
-      return Mu(uu, ju, su, !1)
+        numLines: ZG,
+        charsPerLine: wG
+      } = JG[bG];
+      return zG(GG, ZG, wG, !1)
     }
 
-    function Mu(uu, Eu, ju, su, Uu) {
-      (Uu || su) && (uu = uu.slice(0, null !== Uu && void 0 !== Uu ? Uu : Eu * ju));
-      const Zu = uu.split("\n");
-      if (Zu.length > Eu && Zu.splice(Eu, Zu.length - Eu), !su)
-        for (let Xu = 0; Xu < Zu.length; Xu++) {
-          const uu = Zu[Xu];
-          uu.length > ju && (Zu[Xu] = uu.substring(0, ju), Zu.length < Eu && Zu.splice(Xu + 1, 0, uu.substring(ju)))
+    function zG(GG, bG, ZG, wG, SG) {
+      (SG || wG) && (GG = GG.slice(0, null !== SG && void 0 !== SG ? SG : bG * ZG));
+      const LG = GG.split("\n");
+      if (LG.length > bG && LG.splice(bG, LG.length - bG), !wG)
+        for (let yG = 0; yG < LG.length; yG++) {
+          const GG = LG[yG];
+          GG.length > ZG && (LG[yG] = GG.substring(0, ZG), LG.length < bG && LG.splice(yG + 1, 0, GG.substring(ZG)))
         }
-      return Zu.join("\n")
+      return LG.join("\n")
     }
   },
-  51236: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
+  51407: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
   },
-  51244: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
+  51413: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

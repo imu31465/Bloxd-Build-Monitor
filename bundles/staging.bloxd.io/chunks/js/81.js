@@ -1,377 +1,377 @@
 export const id = 81;
 export const ids = [81];
 export const modules = {
-  4928: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      B: () => cu,
-      d: () => su,
-      h: () => Xu,
-      j: () => hu,
-      l: () => Yu,
-      n: () => lu,
-      r: () => Uu,
-      u: () => Zu,
-      y: () => Ou,
-      z: () => Nu
+  4758: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => wG,
+      f: () => yG,
+      g: () => dG,
+      k: () => hG,
+      m: () => kG,
+      p: () => SG,
+      r: () => LG,
+      t: () => KG,
+      w: () => QG,
+      z: () => fG
     });
-    const su = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+    const wG = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function Uu(uu) {
+    function SG(GG) {
       try {
-        return decodeURIComponent(uu.slice(1))
+        return decodeURIComponent(GG.slice(1))
       } catch {
-        return uu.slice(1)
+        return GG.slice(1)
       }
     }
 
-    function Zu(uu) {
-      return uu.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    function LG(GG) {
+      return GG.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
     }
-    const Xu = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${su.source}`, "g");
+    const yG = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${wG.source}`, "g");
 
-    function lu(uu, Eu) {
-      return 2 === uu.length ? Eu.replace(/^ (.*) $/, "$1") : Eu
-    }
-
-    function qu(uu) {
-      return "" === uu.trim()
+    function kG(GG, bG) {
+      return 2 === GG.length ? bG.replace(/^ (.*) $/, "$1") : bG
     }
 
-    function fu(uu) {
-      const Eu = [];
-      for (const ju of uu.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Eu.length > 0 && Eu[Eu.length - 1].endsWith("\\") ? Eu[Eu.length - 1] += `|${ju}` : Eu.push(ju);
-      return Eu.map((uu => uu.trim().replaceAll("\\|", "|")))
+    function UG(GG) {
+      return "" === GG.trim()
     }
-    const Cu = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-    function bu(uu) {
-      const Eu = [],
-        ju = [{
+    function YG(GG) {
+      const bG = [];
+      for (const ZG of GG.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) bG.length > 0 && bG[bG.length - 1].endsWith("\\") ? bG[bG.length - 1] += `|${ZG}` : bG.push(ZG);
+      return bG.map((GG => GG.trim().replaceAll("\\|", "|")))
+    }
+    const VG = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function pG(GG) {
+      const bG = [],
+        ZG = [{
           indent: -1,
-          items: Eu
+          items: bG
         }];
-      let su = null;
-      for (const Uu of uu) {
-        const uu = Uu.match(Cu);
-        if (!uu) {
-          su && (su.text += ` ${Uu.trim()}`);
+      let wG = null;
+      for (const SG of GG) {
+        const GG = SG.match(VG);
+        if (!GG) {
+          wG && (wG.text += ` ${SG.trim()}`);
           continue
         }
-        const Eu = uu[1].replace(/\t/g, "  ").length;
-        for (; Eu <= ju[ju.length - 1].indent;) ju.pop();
-        su = {
-          text: uu[3].trim(),
+        const bG = GG[1].replace(/\t/g, "  ").length;
+        for (; bG <= ZG[ZG.length - 1].indent;) ZG.pop();
+        wG = {
+          text: GG[3].trim(),
           children: []
-        }, ju[ju.length - 1].items.push(su), ju.push({
-          indent: Eu,
-          items: su.children
+        }, ZG[ZG.length - 1].items.push(wG), ZG.push({
+          indent: bG,
+          items: wG.children
         })
       }
-      return Eu
+      return bG
     }
 
-    function cu(uu) {
-      const Eu = uu.replace(/\r\n/g, "\n").split("\n"),
-        ju = [];
-      let su = 0;
-      for (; su < Eu.length;) {
-        const uu = Eu[su];
-        if (qu(uu)) {
-          su++;
+    function fG(GG) {
+      const bG = GG.replace(/\r\n/g, "\n").split("\n"),
+        ZG = [];
+      let wG = 0;
+      for (; wG < bG.length;) {
+        const GG = bG[wG];
+        if (UG(GG)) {
+          wG++;
           continue
         }
-        const Uu = uu.match(/^\s*```\s*(\w*)\s*$/);
-        if (Uu) {
-          const uu = [];
-          for (su++; su < Eu.length && !/^\s*```\s*$/.test(Eu[su]);) uu.push(Eu[su]), su++;
-          su++, ju.push({
+        const SG = GG.match(/^\s*```\s*(\w*)\s*$/);
+        if (SG) {
+          const GG = [];
+          for (wG++; wG < bG.length && !/^\s*```\s*$/.test(bG[wG]);) GG.push(bG[wG]), wG++;
+          wG++, ZG.push({
             kind: "code",
-            lang: Uu[1] || "text",
-            code: uu.join("\n").replace(/\s+$/, "")
+            lang: SG[1] || "text",
+            code: GG.join("\n").replace(/\s+$/, "")
           });
           continue
         }
-        const Xu = uu.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (Xu) {
-          const uu = Xu[2].trim();
-          ju.push({
+        const yG = GG.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (yG) {
+          const GG = yG[2].trim();
+          ZG.push({
             kind: "heading",
-            level: Xu[1].length,
-            text: uu,
-            anchor: Zu(uu)
-          }), su++;
+            level: yG[1].length,
+            text: GG,
+            anchor: LG(GG)
+          }), wG++;
           continue
         }
-        if (/^\s*(-{3,}|\*{3,})\s*$/.test(uu)) {
-          ju.push({
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(GG)) {
+          ZG.push({
             kind: "rule"
-          }), su++;
+          }), wG++;
           continue
         }
-        if (uu.trim().startsWith("|") && su + 1 < Eu.length && /^\s*\|[\s:|-]+\|\s*$/.test(Eu[su + 1])) {
-          const Uu = fu(uu),
-            Zu = [];
-          for (su += 2; su < Eu.length && Eu[su].trim().startsWith("|");) Zu.push(fu(Eu[su])), su++;
-          ju.push({
+        if (GG.trim().startsWith("|") && wG + 1 < bG.length && /^\s*\|[\s:|-]+\|\s*$/.test(bG[wG + 1])) {
+          const SG = YG(GG),
+            LG = [];
+          for (wG += 2; wG < bG.length && bG[wG].trim().startsWith("|");) LG.push(YG(bG[wG])), wG++;
+          ZG.push({
             kind: "table",
-            header: Uu,
-            rows: Zu
+            header: SG,
+            rows: LG
           });
           continue
         }
-        if (uu.startsWith(">")) {
-          const uu = [];
-          for (; su < Eu.length && Eu[su].startsWith(">");) uu.push(Eu[su].replace(/^>\s?/, "")), su++;
-          ju.push({
+        if (GG.startsWith(">")) {
+          const GG = [];
+          for (; wG < bG.length && bG[wG].startsWith(">");) GG.push(bG[wG].replace(/^>\s?/, "")), wG++;
+          ZG.push({
             kind: "quote",
-            blocks: cu(uu.join("\n"))
+            blocks: fG(GG.join("\n"))
           });
           continue
         }
-        if (Cu.test(uu)) {
-          const Uu = [],
-            Zu = /^\s*\d+\./.test(uu);
-          for (; su < Eu.length && !qu(Eu[su]) && (Cu.test(Eu[su]) || /^\s+\S/.test(Eu[su]));) Uu.push(Eu[su]), su++;
-          ju.push({
+        if (VG.test(GG)) {
+          const SG = [],
+            LG = /^\s*\d+\./.test(GG);
+          for (; wG < bG.length && !UG(bG[wG]) && (VG.test(bG[wG]) || /^\s+\S/.test(bG[wG]));) SG.push(bG[wG]), wG++;
+          ZG.push({
             kind: "list",
-            ordered: Zu,
-            items: bu(Uu)
+            ordered: LG,
+            items: pG(SG)
           });
           continue
         }
-        const lu = [];
-        for (; su < Eu.length && !qu(Eu[su]) && !/^\s*```/.test(Eu[su]) && !/^#{1,6}\s/.test(Eu[su]) && !Eu[su].startsWith(">") && !Cu.test(Eu[su]) && (!Eu[su].trim().startsWith("|") || 0 !== lu.length);) lu.push(Eu[su].trim()), su++;
-        0 === lu.length && (lu.push(Eu[su].trim()), su++), ju.push({
+        const kG = [];
+        for (; wG < bG.length && !UG(bG[wG]) && !/^\s*```/.test(bG[wG]) && !/^#{1,6}\s/.test(bG[wG]) && !bG[wG].startsWith(">") && !VG.test(bG[wG]) && (!bG[wG].trim().startsWith("|") || 0 !== kG.length);) kG.push(bG[wG].trim()), wG++;
+        0 === kG.length && (kG.push(bG[wG].trim()), wG++), ZG.push({
           kind: "paragraph",
-          text: lu.join(" ")
+          text: kG.join(" ")
         })
       }
-      return ju
+      return ZG
     }
 
-    function Nu(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const ju = cu(uu);
-      let su = "";
-      const Uu = [],
-        Zu = [],
-        Xu = new Map;
-      for (const fu of ju) {
-        if ("heading" === fu.kind) {
-          var lu;
-          const uu = (null !== (lu = Xu.get(fu.anchor)) && void 0 !== lu ? lu : 0) + 1;
-          Xu.set(fu.anchor, uu), uu > 1 && (fu.anchor = `${fu.anchor}-${uu}`)
+    function QG(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const ZG = fG(GG);
+      let wG = "";
+      const SG = [],
+        LG = [],
+        yG = new Map;
+      for (const YG of ZG) {
+        if ("heading" === YG.kind) {
+          var kG;
+          const GG = (null !== (kG = yG.get(YG.anchor)) && void 0 !== kG ? kG : 0) + 1;
+          yG.set(YG.anchor, GG), GG > 1 && (YG.anchor = `${YG.anchor}-${GG}`)
         }
-        if ("heading" === fu.kind && 1 === fu.level && !su) {
-          su = fu.text;
+        if ("heading" === YG.kind && 1 === YG.level && !wG) {
+          wG = YG.text;
           continue
         }
-        if ("heading" === fu.kind && fu.level <= Eu) {
-          Zu.push({
-            heading: fu,
+        if ("heading" === YG.kind && YG.level <= bG) {
+          LG.push({
+            heading: YG,
             blocks: []
           });
           continue
         }
-        const uu = Zu.at(-1);
-        uu ? uu.blocks.push(fu) : Uu.push(fu)
+        const GG = LG.at(-1);
+        GG ? GG.blocks.push(YG) : SG.push(YG)
       }
-      const qu = uu => {
+      const UG = GG => {
         for (;
-          "rule" === (null === (Eu = uu.at(-1)) || void 0 === Eu ? void 0 : Eu.kind);) {
-          var Eu;
-          uu.pop()
+          "rule" === (null === (bG = GG.at(-1)) || void 0 === bG ? void 0 : bG.kind);) {
+          var bG;
+          GG.pop()
         }
       };
-      qu(Uu);
-      for (const fu of Zu) qu(fu.blocks);
+      UG(SG);
+      for (const YG of LG) UG(YG.blocks);
       return {
-        title: su,
-        intro: Uu,
-        sections: Zu
+        title: wG,
+        intro: SG,
+        sections: LG
       }
     }
 
-    function Ou(uu) {
+    function KG(GG) {
       return [{
         heading: null,
-        blocks: uu.intro
-      }, ...uu.sections.map((uu => ({
-        heading: uu.heading,
-        blocks: uu.blocks
+        blocks: GG.intro
+      }, ...GG.sections.map((GG => ({
+        heading: GG.heading,
+        blocks: GG.blocks
       })))]
     }
 
-    function Yu(uu) {
-      return uu.flatMap((uu => "code" === uu.kind ? [uu] : "quote" === uu.kind ? Yu(uu.blocks) : []))
+    function hG(GG) {
+      return GG.flatMap((GG => "code" === GG.kind ? [GG] : "quote" === GG.kind ? hG(GG.blocks) : []))
     }
 
-    function hu(uu) {
-      switch (uu.kind) {
+    function dG(GG) {
+      switch (GG.kind) {
         case "heading":
         case "paragraph":
-          return uu.text;
+          return GG.text;
         case "code":
-          return uu.code;
+          return GG.code;
         case "table":
-          return [uu.header, ...uu.rows].map((uu => uu.join(" "))).join(" ");
+          return [GG.header, ...GG.rows].map((GG => GG.join(" "))).join(" ");
         case "list": {
-          const Eu = uu => uu.map((uu => `${uu.text} ${Eu(uu.children)}`)).join(" ");
-          return Eu(uu.items)
+          const bG = GG => GG.map((GG => `${GG.text} ${bG(GG.children)}`)).join(" ");
+          return bG(GG.items)
         }
         case "quote":
-          return uu.blocks.map(hu).join(" ");
+          return GG.blocks.map(dG).join(" ");
         case "rule":
           return ""
       }
     }
   },
-  6705: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => bu,
-      d: () => Xu,
-      f: () => lu
+  6502: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => pG,
+      g: () => yG,
+      k: () => kG
     });
-    ju(6700);
-    var su = ju(58),
-      Uu = ju(4928),
-      Zu = ju(1154);
-    const Xu = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    ZG(6497);
+    var wG = ZG(51),
+      SG = ZG(4758),
+      LG = ZG(1067);
+    const yG = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function lu(uu, Eu) {
-      return uu === Eu ? uu : `${uu} (${Eu})`
+    function kG(GG, bG) {
+      return GG === bG ? GG : `${GG} (${bG})`
     }
 
-    function qu(uu) {
-      const Eu = [];
-      let ju = 0;
-      for (const su of uu.matchAll(Xu)) {
-        su.index > ju && Eu.push(uu.slice(ju, su.index));
-        const [, Uu, Xu, qu, fu, Cu, bu] = su;
-        void 0 !== Uu ? Eu.push(lu(Uu, Xu)) : void 0 !== qu || void 0 !== fu ? Eu.push((0, Zu.jsx)("strong", {
-          children: null !== qu && void 0 !== qu ? qu : fu
-        }, su.index)) : void 0 !== Cu ? Eu.push((0, Zu.jsx)("em", {
-          children: Cu
-        }, su.index)) : Eu.push((0, Zu.jsx)("code", {
-          children: bu
-        }, su.index)), ju = su.index + su[0].length
+    function UG(GG) {
+      const bG = [];
+      let ZG = 0;
+      for (const wG of GG.matchAll(yG)) {
+        wG.index > ZG && bG.push(GG.slice(ZG, wG.index));
+        const [, SG, yG, UG, YG, VG, pG] = wG;
+        void 0 !== SG ? bG.push(kG(SG, yG)) : void 0 !== UG || void 0 !== YG ? bG.push((0, LG.jsx)("strong", {
+          children: null !== UG && void 0 !== UG ? UG : YG
+        }, wG.index)) : void 0 !== VG ? bG.push((0, LG.jsx)("em", {
+          children: VG
+        }, wG.index)) : bG.push((0, LG.jsx)("code", {
+          children: pG
+        }, wG.index)), ZG = wG.index + wG[0].length
       }
-      return ju < uu.length && Eu.push(uu.slice(ju)), Eu
+      return ZG < GG.length && bG.push(GG.slice(ZG)), bG
     }
 
-    function fu(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const su = uu.map(((uu, Eu) => (0, Zu.jsxs)("li", {
-        children: [qu(uu.text), uu.children.length > 0 && fu(uu.children, !1)]
-      }, Eu)));
-      return Eu ? (0, Zu.jsx)("ol", {
-        start: ju,
-        children: su
-      }) : (0, Zu.jsx)("ul", {
-        children: su
+    function YG(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const wG = GG.map(((GG, bG) => (0, LG.jsxs)("li", {
+        children: [UG(GG.text), GG.children.length > 0 && YG(GG.children, !1)]
+      }, bG)));
+      return bG ? (0, LG.jsx)("ol", {
+        start: ZG,
+        children: wG
+      }) : (0, LG.jsx)("ul", {
+        children: wG
       })
     }
 
-    function Cu(uu, Eu) {
-      switch (uu.kind) {
+    function VG(GG, bG) {
+      switch (GG.kind) {
         case "heading":
-          return uu.level <= 2 ? (0, Zu.jsx)("h3", {
-            children: qu(uu.text)
-          }, Eu) : (0, Zu.jsx)("h4", {
-            children: qu(uu.text)
-          }, Eu);
+          return GG.level <= 2 ? (0, LG.jsx)("h3", {
+            children: UG(GG.text)
+          }, bG) : (0, LG.jsx)("h4", {
+            children: UG(GG.text)
+          }, bG);
         case "paragraph":
-          return (0, Zu.jsx)("p", {
-            children: qu(uu.text)
-          }, Eu);
+          return (0, LG.jsx)("p", {
+            children: UG(GG.text)
+          }, bG);
         case "list":
-          return (0, Zu.jsx)(su.Fragment, {
-            children: fu(uu.items, uu.ordered)
-          }, Eu);
+          return (0, LG.jsx)(wG.Fragment, {
+            children: YG(GG.items, GG.ordered)
+          }, bG);
         case "quote":
-          return (0, Zu.jsx)("blockquote", {
-            children: uu.blocks.map(((uu, Eu) => Cu(uu, Eu)))
-          }, Eu);
+          return (0, LG.jsx)("blockquote", {
+            children: GG.blocks.map(((GG, bG) => VG(GG, bG)))
+          }, bG);
         case "code":
-          return (0, Zu.jsx)("pre", {
-            children: (0, Zu.jsx)("code", {
-              children: uu.code
+          return (0, LG.jsx)("pre", {
+            children: (0, LG.jsx)("code", {
+              children: GG.code
             })
-          }, Eu);
+          }, bG);
         case "table":
-          return (0, Zu.jsxs)("table", {
-            children: [(0, Zu.jsx)("thead", {
-              children: (0, Zu.jsx)("tr", {
-                children: uu.header.map(((uu, Eu) => (0, Zu.jsx)("th", {
-                  children: qu(uu)
-                }, Eu)))
+          return (0, LG.jsxs)("table", {
+            children: [(0, LG.jsx)("thead", {
+              children: (0, LG.jsx)("tr", {
+                children: GG.header.map(((GG, bG) => (0, LG.jsx)("th", {
+                  children: UG(GG)
+                }, bG)))
               })
-            }), (0, Zu.jsx)("tbody", {
-              children: uu.rows.map(((uu, Eu) => (0, Zu.jsx)("tr", {
-                children: uu.map(((uu, Eu) => (0, Zu.jsx)("td", {
-                  children: qu(uu)
-                }, Eu)))
-              }, Eu)))
+            }), (0, LG.jsx)("tbody", {
+              children: GG.rows.map(((GG, bG) => (0, LG.jsx)("tr", {
+                children: GG.map(((GG, bG) => (0, LG.jsx)("td", {
+                  children: UG(GG)
+                }, bG)))
+              }, bG)))
             })]
-          }, Eu);
+          }, bG);
         case "rule":
-          return (0, Zu.jsx)("hr", {}, Eu)
+          return (0, LG.jsx)("hr", {}, bG)
       }
     }
 
-    function bu(uu) {
+    function pG(GG) {
       let {
-        markdown: Eu
-      } = uu, ju = 0;
-      return (0, Zu.jsx)("div", {
+        markdown: bG
+      } = GG, ZG = 0;
+      return (0, LG.jsx)("div", {
         className: "StudioAiAnswerText",
-        children: (0, Uu.B)(Eu).map(((uu, Eu) => {
-          if ("list" !== uu.kind || !uu.ordered) return ju = 0, Cu(uu, Eu);
-          const Uu = ju + 1;
-          return ju += uu.items.length, (0, Zu.jsx)(su.Fragment, {
-            children: fu(uu.items, !0, Uu)
-          }, Eu)
+        children: (0, SG.z)(bG).map(((GG, bG) => {
+          if ("list" !== GG.kind || !GG.ordered) return ZG = 0, VG(GG, bG);
+          const SG = ZG + 1;
+          return ZG += GG.items.length, (0, LG.jsx)(wG.Fragment, {
+            children: YG(GG.items, !0, SG)
+          }, bG)
         }))
       })
     }
   },
-  6691: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => gu,
-      j: () => Mu,
-      f: () => Gu,
-      n: () => Ou
+  6493: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => rG,
+      j: () => zG,
+      f: () => oG,
+      n: () => KG
     });
-    var su = ju(1259),
-      Uu = ju(6648),
-      Zu = ju(5041);
-    const Xu = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+    var wG = ZG(1169),
+      SG = ZG(6456),
+      LG = ZG(4894);
+    const yG = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
 
-    function lu(uu) {
-      return (0, Zu.e)(uu, Xu, (Eu => !/^my/i.test(Eu[0]) || !/follow $/i.test(uu.slice(0, Eu.index)))).length > 0
+    function kG(GG) {
+      return (0, LG.g)(GG, yG, (bG => !/^my/i.test(bG[0]) || !/follow $/i.test(GG.slice(0, bG.index)))).length > 0
     }
-    const qu = /\byou(?:r|'re|'ll)?\b/i,
-      fu = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      Cu = 2;
+    const UG = /\byou(?:r|'re|'ll)?\b/i,
+      YG = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      VG = 2;
 
-    function bu(uu) {
-      return function(uu) {
-        const Eu = [];
-        let ju = !1;
-        for (const su of uu.split("\n")) {
-          if (/^\s*(```|~~~)/.test(su)) {
-            ju = !ju;
+    function pG(GG) {
+      return function(GG) {
+        const bG = [];
+        let ZG = !1;
+        for (const wG of GG.split("\n")) {
+          if (/^\s*(```|~~~)/.test(wG)) {
+            ZG = !ZG;
             continue
           }
-          if (ju || /^\s*>/.test(su)) continue;
-          const uu = su.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          Eu.push(...(0, Uu.n)(uu))
+          if (ZG || /^\s*>/.test(wG)) continue;
+          const GG = wG.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          bG.push(...(0, SG.q)(GG))
         }
-        return Eu
-      }(uu).filter((uu => lu(uu) || fu.test(uu) && !qu.test(uu)))
+        return bG
+      }(GG).filter((GG => kG(GG) || YG.test(GG) && !UG.test(GG)))
     }
-    const cu = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      Nu = [{
+    const fG = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      QG = [{
         name: "Qwen3.6-27B",
         temperature: .7,
         reasoningEffort: "none"
@@ -384,317 +384,317 @@ export const modules = {
         temperature: .15
       }];
 
-    function Ou(uu) {
-      const Eu = Nu.findIndex((Eu => Eu.name === uu));
-      return -1 === Eu ? Nu.length : Eu
+    function KG(GG) {
+      const bG = QG.findIndex((bG => bG.name === GG));
+      return -1 === bG ? QG.length : bG
     }
-    const Yu = 2500,
-      hu = 12e4;
-    class Du extends Error {
-      constructor(uu) {
-        super(`Studio AI chat ${uu}`), this.reason = uu
+    const hG = 2500,
+      dG = 12e4;
+    class JG extends Error {
+      constructor(GG) {
+        super(`Studio AI chat ${GG}`), this.reason = GG
       }
     }
 
-    function gu(uu, Eu) {
-      const ju = new AbortController,
-        su = () => {
-          ju.abort()
+    function rG(GG, bG) {
+      const ZG = new AbortController,
+        wG = () => {
+          ZG.abort()
         },
-        Uu = setTimeout(su, uu);
-      return null !== Eu && void 0 !== Eu && Eu.aborted && su(), null === Eu || void 0 === Eu || Eu.addEventListener("abort", su, {
+        SG = setTimeout(wG, GG);
+      return null !== bG && void 0 !== bG && bG.aborted && wG(), null === bG || void 0 === bG || bG.addEventListener("abort", wG, {
         once: !0
       }), {
-        signal: ju.signal,
+        signal: ZG.signal,
         clear: () => {
-          clearTimeout(Uu), null === Eu || void 0 === Eu || Eu.removeEventListener("abort", su)
+          clearTimeout(SG), null === bG || void 0 === bG || bG.removeEventListener("abort", wG)
         }
       }
     }
 
-    function Mu(uu, Eu, ju) {
-      return new Promise(((Uu, Zu) => {
-        const Xu = new AbortController,
-          lu = () => {
-            Xu.abort(), Zu((0, su.f)(ju))
+    function zG(GG, bG, ZG) {
+      return new Promise(((SG, LG) => {
+        const yG = new AbortController,
+          kG = () => {
+            yG.abort(), LG((0, wG.h)(ZG))
           };
-        if (null !== ju && void 0 !== ju && ju.aborted) return void lu();
-        null === ju || void 0 === ju || ju.addEventListener("abort", lu, {
+        if (null !== ZG && void 0 !== ZG && ZG.aborted) return void kG();
+        null === ZG || void 0 === ZG || ZG.addEventListener("abort", kG, {
           once: !0
         });
-        const qu = Nu.map((() => !1));
-        let fu = null;
-        const Cu = Nu.map((() => !1)),
-          bu = Nu.map((() => !1));
-        Nu.forEach(((su, cu) => {
-          const Ou = gu(hu, Xu.signal);
-          pu(su, [{
+        const UG = QG.map((() => !1));
+        let YG = null;
+        const VG = QG.map((() => !1)),
+          pG = QG.map((() => !1));
+        QG.forEach(((wG, fG) => {
+          const KG = rG(dG, yG.signal);
+          XG(wG, [{
             role: "user",
-            content: uu
-          }], Ou.signal).then((uu => {
-            Xu.signal.aborted || ("busy" === uu || "failed" === uu ? (Cu[cu] = "busy" === uu, bu[cu] = !0) : null !== uu && (null === fu || cu < fu.rank) && (fu = {
-              rank: cu,
+            content: GG
+          }], KG.signal).then((GG => {
+            yG.signal.aborted || ("busy" === GG || "failed" === GG ? (VG[fG] = "busy" === GG, pG[fG] = !0) : null !== GG && (null === YG || fG < YG.rank) && (YG = {
+              rank: fG,
               answer: {
-                text: uu.text,
-                model: su.name
+                text: GG.text,
+                model: wG.name
               }
-            }, Eu(fu.answer)))
-          }), (uu => {
-            Xu.signal.aborted || (bu[cu] = !0, console.warn(`Studio AI: ${su.name} couldn't be reached`, uu))
+            }, bG(YG.answer)))
+          }), (GG => {
+            yG.signal.aborted || (pG[fG] = !0, console.warn(`Studio AI: ${wG.name} couldn't be reached`, GG))
           })).finally((() => {
-            Ou.clear(), qu[cu] = !0, Xu.signal.aborted || (() => {
-              var uu, Eu;
-              const su = null !== (uu = null === (Eu = fu) || void 0 === Eu ? void 0 : Eu.rank) && void 0 !== uu ? uu : Nu.length;
-              qu.slice(0, su).includes(!1) || (null === ju || void 0 === ju || ju.removeEventListener("abort", lu), Xu.abort(), null !== fu ? Uu({
-                ...fu.answer,
-                isFinal: !bu.slice(0, fu.rank).includes(!0)
-              }) : Zu(new Du(Cu.includes(!0) ? "busy" : "failed")))
+            KG.clear(), UG[fG] = !0, yG.signal.aborted || (() => {
+              var GG, bG;
+              const wG = null !== (GG = null === (bG = YG) || void 0 === bG ? void 0 : bG.rank) && void 0 !== GG ? GG : QG.length;
+              UG.slice(0, wG).includes(!1) || (null === ZG || void 0 === ZG || ZG.removeEventListener("abort", kG), yG.abort(), null !== YG ? SG({
+                ...YG.answer,
+                isFinal: !pG.slice(0, YG.rank).includes(!0)
+              }) : LG(new JG(VG.includes(!0) ? "busy" : "failed")))
             })()
-          })).catch((uu => {
-            console.error("Studio AI: showing an answer failed", uu)
+          })).catch((GG => {
+            console.error("Studio AI: showing an answer failed", GG)
           }))
         }))
       }))
     }
 
-    function eu(uu) {
-      var Eu, ju;
-      return "length" === (null === uu || void 0 === uu || null === (Eu = uu.choices) || void 0 === Eu || null === (ju = Eu[0]) || void 0 === ju ? void 0 : ju.finish_reason)
+    function EG(GG) {
+      var bG, ZG;
+      return "length" === (null === GG || void 0 === GG || null === (bG = GG.choices) || void 0 === bG || null === (ZG = bG[0]) || void 0 === ZG ? void 0 : ZG.finish_reason)
     }
-    async function Gu(uu, Eu, ju) {
-      const su = Nu.find((Eu => Eu.name === uu));
-      if (void 0 === su) return "failed";
-      const Uu = gu(hu, ju);
+    async function oG(GG, bG, ZG) {
+      const wG = QG.find((bG => bG.name === GG));
+      if (void 0 === wG) return "failed";
+      const SG = rG(dG, ZG);
       try {
-        const uu = await pu(su, Eu, Uu.signal);
-        return null !== uu && "object" === typeof uu ? uu.isCutOff ? (console.warn(`Studio AI: ${su.name}'s answer was cut off at the token limit`), null) : {
-          text: uu.text
-        } : uu
+        const GG = await XG(wG, bG, SG.signal);
+        return null !== GG && "object" === typeof GG ? GG.isCutOff ? (console.warn(`Studio AI: ${wG.name}'s answer was cut off at the token limit`), null) : {
+          text: GG.text
+        } : GG
       } finally {
-        Uu.clear()
+        SG.clear()
       }
     }
-    async function pu(uu, Eu, ju) {
-      const su = await fetch(cu, {
+    async function XG(GG, bG, ZG) {
+      const wG = await fetch(fG, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: uu.name,
-          messages: Eu,
-          max_tokens: Yu,
-          temperature: uu.temperature,
-          reasoning_effort: uu.reasoningEffort
+          model: GG.name,
+          messages: bG,
+          max_tokens: hG,
+          temperature: GG.temperature,
+          reasoning_effort: GG.reasoningEffort
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: ju
+        signal: ZG
       });
-      if (429 === su.status) return "busy";
-      if (!su.ok) return console.warn(`Studio AI: ${uu.name} answered ${su.status}`), "failed";
-      const Uu = await su.json().catch((() => null)),
-        Zu = function(uu) {
-          var Eu, ju, su;
-          const Uu = null === uu || void 0 === uu || null === (Eu = uu.choices) || void 0 === Eu || null === (ju = Eu[0]) || void 0 === ju || null === (su = ju.message) || void 0 === su ? void 0 : su.content;
-          if ("string" !== typeof Uu) return null;
-          const Zu = Uu.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === Zu ? null : Zu
-        }(Uu);
-      return null !== Zu && function(uu) {
-        const Eu = bu(uu);
-        return Eu.length >= Cu || Eu.some((uu => lu(uu)))
-      }(Zu) ? (console.warn(`Studio AI: ${uu.name} thought out loud instead of answering`), "failed") : null === Zu ? null : {
-        text: Zu,
-        isCutOff: eu(Uu)
+      if (429 === wG.status) return "busy";
+      if (!wG.ok) return console.warn(`Studio AI: ${GG.name} answered ${wG.status}`), "failed";
+      const SG = await wG.json().catch((() => null)),
+        LG = function(GG) {
+          var bG, ZG, wG;
+          const SG = null === GG || void 0 === GG || null === (bG = GG.choices) || void 0 === bG || null === (ZG = bG[0]) || void 0 === ZG || null === (wG = ZG.message) || void 0 === wG ? void 0 : wG.content;
+          if ("string" !== typeof SG) return null;
+          const LG = SG.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === LG ? null : LG
+        }(SG);
+      return null !== LG && function(GG) {
+        const bG = pG(GG);
+        return bG.length >= VG || bG.some((GG => kG(GG)))
+      }(LG) ? (console.warn(`Studio AI: ${GG.name} thought out loud instead of answering`), "failed") : null === LG ? null : {
+        text: LG,
+        isCutOff: EG(SG)
       }
     }
   },
-  6648: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      B: () => pu,
-      D: () => hu,
-      E: () => Mu,
-      F: () => Gu,
-      J: () => gu,
-      L: () => bu,
-      M: () => fu,
-      N: () => Nu,
-      b: () => Ou,
-      d: () => lu,
-      g: () => Xu,
-      k: () => Yu,
-      m: () => cu,
-      n: () => Cu,
-      q: () => Zu,
-      u: () => Uu,
-      x: () => eu
+  6456: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      A: () => XG,
+      D: () => dG,
+      E: () => zG,
+      G: () => oG,
+      H: () => rG,
+      L: () => pG,
+      O: () => YG,
+      Q: () => QG,
+      d: () => KG,
+      g: () => kG,
+      k: () => yG,
+      n: () => hG,
+      p: () => fG,
+      q: () => VG,
+      t: () => LG,
+      w: () => SG,
+      z: () => EG
     });
-    var su = ju(5041);
-    const Uu = 2e3,
-      Zu = 2e4;
+    var wG = ZG(4894);
+    const SG = 2e3,
+      LG = 2e4;
 
-    function Xu(uu) {
-      return uu.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    function yG(GG) {
+      return GG.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     }
 
-    function lu(uu) {
-      return uu.replace(/\$/g, "\\$")
+    function kG(GG) {
+      return GG.replace(/\$/g, "\\$")
     }
-    const qu = /[.!?](?=\s|\*|_|$)|\n|$/g;
+    const UG = /[.!?](?=\s|\*|_|$)|\n|$/g;
 
-    function fu(uu, Eu) {
-      qu.lastIndex = Eu;
-      const ju = qu.exec(uu);
-      return ju.index + ju[0].length
-    }
-
-    function Cu(uu) {
-      return (0, su.x)(uu, /\s+/g, (0, su.q)(".!?")).flatMap((uu => uu.split("\n")))
+    function YG(GG, bG) {
+      UG.lastIndex = bG;
+      const ZG = UG.exec(GG);
+      return ZG.index + ZG[0].length
     }
 
-    function bu(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Eu;
-      const su = [...uu.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((uu => uu.index)),
-        Uu = su.filter((uu => uu < Eu)),
-        Zu = su.find((uu => uu >= ju));
-      return [0 === Uu.length ? 0 : Uu.at(-1) + 1, void 0 === Zu ? uu.length : Zu + 1]
+    function VG(GG) {
+      return (0, wG.z)(GG, /\s+/g, (0, wG.x)(".!?")).flatMap((GG => GG.split("\n")))
     }
 
-    function cu(uu, Eu) {
-      const ju = uu.charCodeAt(Eu - 1);
-      return uu.slice(0, Eu > 0 && Eu < uu.length && ju >= 55296 && ju <= 56319 ? Eu - 1 : Eu)
+    function pG(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bG;
+      const wG = [...GG.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((GG => GG.index)),
+        SG = wG.filter((GG => GG < bG)),
+        LG = wG.find((GG => GG >= ZG));
+      return [0 === SG.length ? 0 : SG.at(-1) + 1, void 0 === LG ? GG.length : LG + 1]
     }
 
-    function Nu(uu, Eu) {
-      return `${Eu}${uu.replace(/\\/g,"\\\\").split(Eu).join(`\\${Eu}`)}${Eu}`
+    function fG(GG, bG) {
+      const ZG = GG.charCodeAt(bG - 1);
+      return GG.slice(0, bG > 0 && bG < GG.length && ZG >= 55296 && ZG <= 56319 ? bG - 1 : bG)
     }
 
-    function Ou(uu) {
-      return uu.charAt(0).toUpperCase() + uu.slice(1)
+    function QG(GG, bG) {
+      return `${bG}${GG.replace(/\\/g,"\\\\").split(bG).join(`\\${bG}`)}${bG}`
     }
 
-    function Yu(uu) {
-      return Math.round(uu).toLocaleString("en-US")
+    function KG(GG) {
+      return GG.charAt(0).toUpperCase() + GG.slice(1)
     }
 
-    function hu(uu) {
-      return uu.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((uu => "" !== uu))
-    }
-    const Du = 3;
-
-    function gu(uu, Eu) {
-      return hu(uu).filter((uu => uu.length >= Du && !/\d/.test(uu))).map((uu => `${uu} ${Eu}`))
+    function hG(GG) {
+      return Math.round(GG).toLocaleString("en-US")
     }
 
-    function Mu(uu) {
-      return uu.split(/[\s:_]+/).filter((uu => "" !== uu)).map(Xu).join("[`:_\\s]+")
+    function dG(GG) {
+      return GG.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((GG => "" !== GG))
+    }
+    const JG = 3;
+
+    function rG(GG, bG) {
+      return dG(GG).filter((GG => GG.length >= JG && !/\d/.test(GG))).map((GG => `${GG} ${bG}`))
     }
 
-    function eu(uu) {
-      return hu(uu.split(".").pop())
+    function zG(GG) {
+      return GG.split(/[\s:_]+/).filter((GG => "" !== GG)).map(yG).join("[`:_\\s]+")
     }
 
-    function Gu(uu) {
-      return uu.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    function EG(GG) {
+      return dG(GG.split(".").pop())
     }
 
-    function pu(uu) {
-      let Eu = null;
+    function oG(GG) {
+      return GG.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function XG(GG) {
+      let bG = null;
       return () => {
-        const ju = Eu ??= uu();
-        return ju.catch((() => {
-          Eu === ju && (Eu = null)
-        })), ju
+        const ZG = bG ??= GG();
+        return ZG.catch((() => {
+          bG === ZG && (bG = null)
+        })), ZG
       }
     }
   },
-  5041: (uu, Eu, ju) => {
-    function su(uu) {
+  4894: (GG, bG, ZG) => {
+    function wG(GG) {
       return {
-        notAfter: uu
+        notAfter: GG
       }
     }
-    ju.d(Eu, {
-      d: () => qu,
-      e: () => fu,
-      h: () => lu,
-      i: () => su,
-      j: () => Uu,
-      n: () => Zu,
-      q: () => Xu,
-      u: () => Cu,
-      x: () => bu
+    ZG.d(bG, {
+      e: () => UG,
+      g: () => YG,
+      j: () => kG,
+      n: () => wG,
+      r: () => SG,
+      u: () => LG,
+      x: () => yG,
+      y: () => VG,
+      z: () => pG
     });
-    const Uu = su("\\w$."),
-      Zu = su("\\w.,");
+    const SG = wG("\\w$."),
+      LG = wG("\\w.,");
 
-    function Xu(uu) {
-      return Eu => qu(Eu, uu)
+    function yG(GG) {
+      return bG => UG(bG, GG)
     }
 
-    function lu(uu) {
-      return Eu => !uu.test(Eu.input.slice(0, Eu.index))
+    function kG(GG) {
+      return bG => !GG.test(bG.input.slice(0, bG.index))
     }
 
-    function qu(uu, Eu) {
-      return uu.index > 0 && new RegExp(`[${Eu}]`).test(uu.input[uu.index - 1])
+    function UG(GG, bG) {
+      return GG.index > 0 && new RegExp(`[${bG}]`).test(GG.input[GG.index - 1])
     }
 
-    function fu(uu, Eu, ju) {
-      return function(uu) {
-        return void 0 !== uu && "function" !== typeof uu
-      }(ju) ? function(uu, Eu, ju) {
-        const su = Eu.flags.replace(/[gy]/g, ""),
-          Uu = new RegExp(`[^${ju}](?:${Eu.source})`, `${su}g`),
-          Zu = [],
-          Xu = ju => {
-            const su = ju.index + ju[0].length;
-            return ("" === ju[0] ? cu(uu, Eu, su) : su) - 1
+    function YG(GG, bG, ZG) {
+      return function(GG) {
+        return void 0 !== GG && "function" !== typeof GG
+      }(ZG) ? function(GG, bG, ZG) {
+        const wG = bG.flags.replace(/[gy]/g, ""),
+          SG = new RegExp(`[^${ZG}](?:${bG.source})`, `${wG}g`),
+          LG = [],
+          yG = ZG => {
+            const wG = ZG.index + ZG[0].length;
+            return ("" === ZG[0] ? fG(GG, bG, wG) : wG) - 1
           },
-          lu = new RegExp(`(?:${Eu.source})`, `${su}y`).exec(uu);
-        if (lu) {
-          if (Zu.push(lu), !Eu.global) return Zu;
-          Uu.lastIndex = Xu(lu)
+          kG = new RegExp(`(?:${bG.source})`, `${wG}y`).exec(GG);
+        if (kG) {
+          if (LG.push(kG), !bG.global) return LG;
+          SG.lastIndex = yG(kG)
         }
-        for (let qu = Uu.exec(uu); qu; qu = Uu.exec(uu)) {
-          const ju = cu(uu, Eu, qu.index) - qu.index;
-          if (qu[0] = qu[0].slice(ju), qu.index += ju, Zu.push(qu), !Eu.global) break;
-          Uu.lastIndex = Xu(qu)
+        for (let UG = SG.exec(GG); UG; UG = SG.exec(GG)) {
+          const ZG = fG(GG, bG, UG.index) - UG.index;
+          if (UG[0] = UG[0].slice(ZG), UG.index += ZG, LG.push(UG), !bG.global) break;
+          SG.lastIndex = yG(UG)
         }
-        return Zu
-      }(uu, Eu, ju.notAfter) : function(uu, Eu, ju) {
-        const su = new RegExp(Eu.source, `${Eu.flags.replace(/[gy]/g,"")}g`),
-          Uu = [];
-        for (let Zu = su.exec(uu); Zu; Zu = su.exec(uu))
-          if (!ju || ju(Zu)) {
-            if (Uu.push(Zu), !Eu.global) break;
-            "" === Zu[0] && (su.lastIndex = cu(uu, Eu, su.lastIndex))
-          } else su.lastIndex = cu(uu, Eu, Zu.index);
-        return Uu
-      }(uu, Eu, ju)
+        return LG
+      }(GG, bG, ZG.notAfter) : function(GG, bG, ZG) {
+        const wG = new RegExp(bG.source, `${bG.flags.replace(/[gy]/g,"")}g`),
+          SG = [];
+        for (let LG = wG.exec(GG); LG; LG = wG.exec(GG))
+          if (!ZG || ZG(LG)) {
+            if (SG.push(LG), !bG.global) break;
+            "" === LG[0] && (wG.lastIndex = fG(GG, bG, wG.lastIndex))
+          } else wG.lastIndex = fG(GG, bG, LG.index);
+        return SG
+      }(GG, bG, ZG)
     }
 
-    function Cu(uu, Eu, ju, su) {
-      let Uu = "",
-        Zu = 0;
-      for (const Xu of fu(uu, Eu, ju)) Uu += uu.slice(Zu, Xu.index) + su(Xu), Zu = Xu.index + Xu[0].length;
-      return Uu + uu.slice(Zu)
+    function VG(GG, bG, ZG, wG) {
+      let SG = "",
+        LG = 0;
+      for (const yG of YG(GG, bG, ZG)) SG += GG.slice(LG, yG.index) + wG(yG), LG = yG.index + yG[0].length;
+      return SG + GG.slice(LG)
     }
 
-    function bu(uu, Eu, ju) {
-      const su = [];
-      let Uu = 0;
-      for (const Zu of fu(uu, Eu, ju)) su.push(uu.slice(Uu, Zu.index)), Uu = Zu.index + Zu[0].length;
-      return [...su, uu.slice(Uu)]
+    function pG(GG, bG, ZG) {
+      const wG = [];
+      let SG = 0;
+      for (const LG of YG(GG, bG, ZG)) wG.push(GG.slice(SG, LG.index)), SG = LG.index + LG[0].length;
+      return [...wG, GG.slice(SG)]
     }
 
-    function cu(uu, Eu, ju) {
-      var su;
-      return ju + (Eu.unicode && (null !== (su = uu.codePointAt(ju)) && void 0 !== su ? su : 0) > 65535 ? 2 : 1)
+    function fG(GG, bG, ZG) {
+      var wG;
+      return ZG + (bG.unicode && (null !== (wG = GG.codePointAt(ZG)) && void 0 !== wG ? wG : 0) > 65535 ? 2 : 1)
     }
   },
-  6700: () => {}
+  6497: () => {}
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

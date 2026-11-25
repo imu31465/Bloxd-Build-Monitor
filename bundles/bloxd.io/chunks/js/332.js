@@ -1,49 +1,49 @@
 export const id = 332;
 export const ids = [332];
 export const modules = {
-  42212: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Xu
+  42371: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => yG
     });
-    var su = ju(40127);
-    const Uu = "instancesDeclaration",
-      Zu = "#ifdef INSTANCES\nattribute vec4 world0;attribute vec4 world1;attribute vec4 world2;attribute vec4 world3;\n#ifdef INSTANCESCOLOR\nattribute vec4 instanceColor;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute vec4 previousWorld0;attribute vec4 previousWorld1;attribute vec4 previousWorld2;attribute vec4 previousWorld3;\n#ifdef THIN_INSTANCES\nuniform mat4 previousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform mat4 previousWorld;\n#endif\n#endif\n";
-    su.b.IncludesShadersStore[Uu] || (su.b.IncludesShadersStore[Uu] = Zu);
-    const Xu = {
-      name: Uu,
-      shader: Zu
+    var wG = ZG(40237);
+    const SG = "instancesDeclaration",
+      LG = "#ifdef INSTANCES\nattribute vec4 world0;attribute vec4 world1;attribute vec4 world2;attribute vec4 world3;\n#ifdef INSTANCESCOLOR\nattribute vec4 instanceColor;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute vec4 previousWorld0;attribute vec4 previousWorld1;attribute vec4 previousWorld2;attribute vec4 previousWorld3;\n#ifdef THIN_INSTANCES\nuniform mat4 previousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform mat4 previousWorld;\n#endif\n#endif\n";
+    wG.e.IncludesShadersStore[SG] || (wG.e.IncludesShadersStore[SG] = LG);
+    const yG = {
+      name: SG,
+      shader: LG
     }
   },
-  42286: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Xu
+  42460: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => yG
     });
-    var su = ju(40127);
-    const Uu = "instancesVertex",
-      Zu = "#ifdef INSTANCES\nmat4 finalWorld=mat4(world0,world1,world2,world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=mat4(previousWorld0,previousWorld1,\npreviousWorld2,previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\nfinalWorld=world*finalWorld;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\nmat4 finalWorld=world;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=previousWorld;\n#endif\n#endif\n";
-    su.b.IncludesShadersStore[Uu] || (su.b.IncludesShadersStore[Uu] = Zu);
-    const Xu = {
-      name: Uu,
-      shader: Zu
+    var wG = ZG(40237);
+    const SG = "instancesVertex",
+      LG = "#ifdef INSTANCES\nmat4 finalWorld=mat4(world0,world1,world2,world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=mat4(previousWorld0,previousWorld1,\npreviousWorld2,previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\nfinalWorld=world*finalWorld;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\nmat4 finalWorld=world;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=previousWorld;\n#endif\n#endif\n";
+    wG.e.IncludesShadersStore[SG] || (wG.e.IncludesShadersStore[SG] = LG);
+    const yG = {
+      name: SG,
+      shader: LG
     }
   },
-  62114: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      greasedLineVertexShader: () => fu
+  62447: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      greasedLineVertexShader: () => YG
     });
-    var su = ju(40127),
-      Uu = ju(42212),
-      Zu = ju(42286);
-    const Xu = "greasedLineVertexShader",
-      lu = "precision highp float;\n#include<instancesDeclaration>\nattribute float grl_widths;\n#ifdef GREASED_LINE_USE_OFFSETS\nattribute vec3 grl_offsets;\n#endif\nattribute float grl_colorPointers;attribute vec3 position;uniform mat4 viewProjection;uniform mat4 projection;varying float grlCounters;varying float grlColorPointer;\n#ifdef GREASED_LINE_CAMERA_FACING\nattribute vec4 grl_nextAndCounters;attribute vec4 grl_previousAndSide;uniform vec2 grlResolution;uniform float grlAspect;uniform float grlWidth;uniform float grlSizeAttenuation;vec2 grlFix( vec4 i,float aspect ) {vec2 res=i.xy/i.w;res.x*=aspect;return res;}\n#else\nattribute vec3 grl_slopes;attribute float grl_counters;\n#endif\nvoid main() {\n#include<instancesVertex>\ngrlColorPointer=grl_colorPointers;mat4 grlMatrix=viewProjection*finalWorld ;\n#ifdef GREASED_LINE_CAMERA_FACING\nfloat grlBaseWidth=grlWidth;vec3 grlPrevious=grl_previousAndSide.xyz;float grlSide=grl_previousAndSide.w;vec3 grlNext=grl_nextAndCounters.xyz;grlCounters=grl_nextAndCounters.w;float grlWidth=grlBaseWidth*grl_widths;\n#ifdef GREASED_LINE_USE_OFFSETS\nvec3 grlPositionOffset=grl_offsets;\n#else\nvec3 grlPositionOffset=vec3(0.);\n#endif\nvec3 positionUpdated=position+grlPositionOffset;vec3 worldDir=normalize(grlNext-grlPrevious);vec3 nearPosition=positionUpdated+(worldDir*0.01);vec4 grlFinalPosition=grlMatrix*vec4( positionUpdated ,1.0);vec4 screenNearPos=grlMatrix*vec4(nearPosition,1.0);vec2 grlLinePosition=grlFix(grlFinalPosition,grlAspect);vec2 grlLineNearPosition=grlFix(screenNearPos,grlAspect);vec2 grlDir=normalize(grlLineNearPosition-grlLinePosition);vec4 grlNormal=vec4( -grlDir.y,grlDir.x,0.,1. );\n#ifdef GREASED_LINE_RIGHT_HANDED_COORDINATE_SYSTEM\ngrlNormal.xy*=-.5*grlWidth;\n#else\ngrlNormal.xy*=.5*grlWidth;\n#endif\ngrlNormal*=projection;if (grlSizeAttenuation==1.) {grlNormal.xy*=grlFinalPosition.w;grlNormal.xy/=( vec4( grlResolution,0.,1. )*projection ).xy;}\ngrlFinalPosition.xy+=grlNormal.xy*grlSide;gl_Position=grlFinalPosition;\n#else\ngrlCounters=grl_counters;\n#ifdef GREASED_LINE_USE_OFFSETS\nvec3 grlPositionOffset=grl_offsets;\n#else\nvec3 grlPositionOffset=vec3(0.);\n#endif\nvec4 grlFinalPosition=grlMatrix*vec4( (position+grlPositionOffset)+grl_slopes*grl_widths ,1.0 ) ;gl_Position=grlFinalPosition;\n#endif\n}\n";
-    su.b.ShadersStore[Xu] || (su.b.ShadersStore[Xu] = lu);
-    const qu = [Uu.d, Zu.e];
-    for (const Cu of qu) su.b.IncludesShadersStore[Cu.name] || (su.b.IncludesShadersStore[Cu.name] = Cu.shader);
-    const fu = {
-      name: Xu,
-      shader: lu
+    var wG = ZG(40237),
+      SG = ZG(42371),
+      LG = ZG(42460);
+    const yG = "greasedLineVertexShader",
+      kG = "precision highp float;\n#include<instancesDeclaration>\nattribute float grl_widths;\n#ifdef GREASED_LINE_USE_OFFSETS\nattribute vec3 grl_offsets;\n#endif\nattribute float grl_colorPointers;attribute vec3 position;uniform mat4 viewProjection;uniform mat4 projection;varying float grlCounters;varying float grlColorPointer;\n#ifdef GREASED_LINE_CAMERA_FACING\nattribute vec4 grl_nextAndCounters;attribute vec4 grl_previousAndSide;uniform vec2 grlResolution;uniform float grlAspect;uniform float grlWidth;uniform float grlSizeAttenuation;vec2 grlFix( vec4 i,float aspect ) {vec2 res=i.xy/i.w;res.x*=aspect;return res;}\n#else\nattribute vec3 grl_slopes;attribute float grl_counters;\n#endif\nvoid main() {\n#include<instancesVertex>\ngrlColorPointer=grl_colorPointers;mat4 grlMatrix=viewProjection*finalWorld ;\n#ifdef GREASED_LINE_CAMERA_FACING\nfloat grlBaseWidth=grlWidth;vec3 grlPrevious=grl_previousAndSide.xyz;float grlSide=grl_previousAndSide.w;vec3 grlNext=grl_nextAndCounters.xyz;grlCounters=grl_nextAndCounters.w;float grlWidth=grlBaseWidth*grl_widths;\n#ifdef GREASED_LINE_USE_OFFSETS\nvec3 grlPositionOffset=grl_offsets;\n#else\nvec3 grlPositionOffset=vec3(0.);\n#endif\nvec3 positionUpdated=position+grlPositionOffset;vec3 worldDir=normalize(grlNext-grlPrevious);vec3 nearPosition=positionUpdated+(worldDir*0.01);vec4 grlFinalPosition=grlMatrix*vec4( positionUpdated ,1.0);vec4 screenNearPos=grlMatrix*vec4(nearPosition,1.0);vec2 grlLinePosition=grlFix(grlFinalPosition,grlAspect);vec2 grlLineNearPosition=grlFix(screenNearPos,grlAspect);vec2 grlDir=normalize(grlLineNearPosition-grlLinePosition);vec4 grlNormal=vec4( -grlDir.y,grlDir.x,0.,1. );\n#ifdef GREASED_LINE_RIGHT_HANDED_COORDINATE_SYSTEM\ngrlNormal.xy*=-.5*grlWidth;\n#else\ngrlNormal.xy*=.5*grlWidth;\n#endif\ngrlNormal*=projection;if (grlSizeAttenuation==1.) {grlNormal.xy*=grlFinalPosition.w;grlNormal.xy/=( vec4( grlResolution,0.,1. )*projection ).xy;}\ngrlFinalPosition.xy+=grlNormal.xy*grlSide;gl_Position=grlFinalPosition;\n#else\ngrlCounters=grl_counters;\n#ifdef GREASED_LINE_USE_OFFSETS\nvec3 grlPositionOffset=grl_offsets;\n#else\nvec3 grlPositionOffset=vec3(0.);\n#endif\nvec4 grlFinalPosition=grlMatrix*vec4( (position+grlPositionOffset)+grl_slopes*grl_widths ,1.0 ) ;gl_Position=grlFinalPosition;\n#endif\n}\n";
+    wG.e.ShadersStore[yG] || (wG.e.ShadersStore[yG] = kG);
+    const UG = [SG.e, LG.b];
+    for (const VG of UG) wG.e.IncludesShadersStore[VG.name] || (wG.e.IncludesShadersStore[VG.name] = VG.shader);
+    const YG = {
+      name: yG,
+      shader: kG
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

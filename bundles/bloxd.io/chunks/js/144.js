@@ -1,401 +1,401 @@
 export const id = 144;
 export const ids = [144];
 export const modules = {
-  8287: (uu, Eu) => {
-    var ju = "youtube",
-      su = [61802],
-      Uu = "f167",
-      Zu = "M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z";
-    Eu.c = {
+  8116: (GG, bG) => {
+    var ZG = "youtube",
+      wG = [61802],
+      SG = "f167",
+      LG = "M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z";
+    bG.c = {
       prefix: "fab",
-      iconName: ju,
-      icon: [576, 512, su, Uu, Zu]
-    }, Eu.e = Eu.c
+      iconName: ZG,
+      icon: [576, 512, wG, SG, LG]
+    }, bG.f = bG.c
   },
-  7054: (uu, Eu) => {
-    Object.defineProperty(Eu, "__esModule", {
+  6853: (GG, bG) => {
+    Object.defineProperty(bG, "__esModule", {
       value: !0
     });
-    var ju = "bolt",
-      su = [9889, "zap"],
-      Uu = "f0e7",
-      Zu = "M338.8-9.9c11.9 8.6 16.3 24.2 10.9 37.8L271.3 224 416 224c13.5 0 25.5 8.4 30.1 21.1s.7 26.9-9.6 35.5l-288 240c-11.3 9.4-27.4 9.9-39.3 1.3s-16.3-24.2-10.9-37.8L176.7 288 32 288c-13.5 0-25.5-8.4-30.1-21.1s-.7-26.9 9.6-35.5l288-240c11.3-9.4 27.4-9.9 39.3-1.3z";
-    Eu.definition = {
+    var ZG = "bolt",
+      wG = [9889, "zap"],
+      SG = "f0e7",
+      LG = "M338.8-9.9c11.9 8.6 16.3 24.2 10.9 37.8L271.3 224 416 224c13.5 0 25.5 8.4 30.1 21.1s.7 26.9-9.6 35.5l-288 240c-11.3 9.4-27.4 9.9-39.3 1.3s-16.3-24.2-10.9-37.8L176.7 288 32 288c-13.5 0-25.5-8.4-30.1-21.1s-.7-26.9 9.6-35.5l288-240c11.3-9.4 27.4-9.9 39.3-1.3z";
+    bG.definition = {
       prefix: "fas",
-      iconName: ju,
-      icon: [448, 512, su, Uu, Zu]
-    }, Eu.faBolt = Eu.definition, Eu.prefix = "fas", Eu.iconName = ju, Eu.width = 448, Eu.height = 512, Eu.ligatures = su, Eu.unicode = Uu, Eu.svgPathData = Zu, Eu.aliases = su
+      iconName: ZG,
+      icon: [448, 512, wG, SG, LG]
+    }, bG.faBolt = bG.definition, bG.prefix = "fas", bG.iconName = ZG, bG.width = 448, bG.height = 512, bG.ligatures = wG, bG.unicode = SG, bG.svgPathData = LG, bG.aliases = wG
   },
-  7776: (uu, Eu) => {
-    var ju = "person-military-pointing",
-      su = [],
-      Uu = "e54a",
-      Zu = "M214.9 14.1C202 15.2 192 26 192 39 192 52.8 203.2 64 217 64l151 0c8.8 0 16-7.2 16-16l0-30.6C384 8 376 .7 366.7 1.4L214.9 14.1zM208 112c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16L209.6 96c-1 5.2-1.6 10.5-1.6 16zM40 224c-22.1 0-40 17.9-40 40s17.9 40 40 40l152 0 0 89.4 162.8-162.8c-13.3-4.3-27.3-6.5-41.6-6.5L40 224zm345.7 20.9l-171.1 171.1 169.4 0 0-46.3 53.6 90.6c11.2 19 35.8 25.3 54.8 14.1s25.3-35.8 14.1-54.8L430.3 290.8c-11.2-19-26.6-34.5-44.6-45.9zM192 448l0 32c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-32-192 0z";
-    Eu.c = {
+  7572: (GG, bG) => {
+    var ZG = "person-military-pointing",
+      wG = [],
+      SG = "e54a",
+      LG = "M214.9 14.1C202 15.2 192 26 192 39 192 52.8 203.2 64 217 64l151 0c8.8 0 16-7.2 16-16l0-30.6C384 8 376 .7 366.7 1.4L214.9 14.1zM208 112c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16L209.6 96c-1 5.2-1.6 10.5-1.6 16zM40 224c-22.1 0-40 17.9-40 40s17.9 40 40 40l152 0 0 89.4 162.8-162.8c-13.3-4.3-27.3-6.5-41.6-6.5L40 224zm345.7 20.9l-171.1 171.1 169.4 0 0-46.3 53.6 90.6c11.2 19 35.8 25.3 54.8 14.1s25.3-35.8 14.1-54.8L430.3 290.8c-11.2-19-26.6-34.5-44.6-45.9zM192 448l0 32c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-32-192 0z";
+    bG.b = {
       prefix: "fas",
-      iconName: ju,
-      icon: [512, 512, su, Uu, Zu]
-    }, Eu.f = Eu.c
+      iconName: ZG,
+      icon: [512, 512, wG, SG, LG]
+    }, bG.d = bG.b
   },
-  7942: (uu, Eu) => {
-    var ju = "sparkle",
-      su = [],
-      Uu = "e5d6",
-      Zu = "M278.5 15.6C275 6.2 266 0 256 0s-19 6.2-22.5 15.6L174.2 174.2 15.6 233.5C6.2 237 0 246 0 256s6.2 19 15.6 22.5l158.6 59.4 59.4 158.6C237 505.8 246 512 256 512s19-6.2 22.5-15.6l59.4-158.6 158.6-59.4C505.8 275 512 266 512 256s-6.2-19-15.6-22.5L337.8 174.2 278.5 15.6z";
-    Eu.e = {
+  7712: (GG, bG) => {
+    var ZG = "sparkle",
+      wG = [],
+      SG = "e5d6",
+      LG = "M278.5 15.6C275 6.2 266 0 256 0s-19 6.2-22.5 15.6L174.2 174.2 15.6 233.5C6.2 237 0 246 0 256s6.2 19 15.6 22.5l158.6 59.4 59.4 158.6C237 505.8 246 512 256 512s19-6.2 22.5-15.6l59.4-158.6 158.6-59.4C505.8 275 512 266 512 256s-6.2-19-15.6-22.5L337.8 174.2 278.5 15.6z";
+    bG.d = {
       prefix: "fas",
-      iconName: ju,
-      icon: [512, 512, su, Uu, Zu]
-    }, Eu.f = Eu.e
+      iconName: ZG,
+      icon: [512, 512, wG, SG, LG]
+    }, bG.f = bG.d
   },
-  8027: (uu, Eu) => {
-    var ju = "user",
-      su = [128100, 62144, 62470, "user-alt", "user-large"],
-      Uu = "f007",
-      Zu = "M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240zm-29.7 56C95.8 304 16 383.8 16 482.3 16 498.7 29.3 512 45.7 512l356.6 0c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3l-59.4 0z";
-    Eu.d = {
+  7806: (GG, bG) => {
+    var ZG = "user",
+      wG = [128100, 62144, 62470, "user-alt", "user-large"],
+      SG = "f007",
+      LG = "M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240zm-29.7 56C95.8 304 16 383.8 16 482.3 16 498.7 29.3 512 45.7 512l356.6 0c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3l-59.4 0z";
+    bG.e = {
       prefix: "fas",
-      iconName: ju,
-      icon: [448, 512, su, Uu, Zu]
-    }, Eu.e = Eu.d
+      iconName: ZG,
+      icon: [448, 512, wG, SG, LG]
+    }, bG.i = bG.e
   },
-  8155: (uu, Eu) => {
-    var ju = "wrench",
-      su = [128295],
-      Uu = "f0ad",
-      Zu = "M509.4 98.6c7.6-7.6 20.3-5.7 24.1 4.3 6.8 17.7 10.5 37 10.5 57.1 0 88.4-71.6 160-160 160-17.5 0-34.4-2.8-50.2-8L146.9 498.9c-28.1 28.1-73.7 28.1-101.8 0s-28.1-73.7 0-101.8L232 210.2c-5.2-15.8-8-32.6-8-50.2 0-88.4 71.6-160 160-160 20.1 0 39.4 3.7 57.1 10.5 10 3.8 11.8 16.5 4.3 24.1l-88.7 88.7c-3 3-4.7 7.1-4.7 11.3l0 41.4c0 8.8 7.2 16 16 16l41.4 0c4.2 0 8.3-1.7 11.3-4.7l88.7-88.7z";
-    Eu.c = {
+  7954: (GG, bG) => {
+    var ZG = "wrench",
+      wG = [128295],
+      SG = "f0ad",
+      LG = "M509.4 98.6c7.6-7.6 20.3-5.7 24.1 4.3 6.8 17.7 10.5 37 10.5 57.1 0 88.4-71.6 160-160 160-17.5 0-34.4-2.8-50.2-8L146.9 498.9c-28.1 28.1-73.7 28.1-101.8 0s-28.1-73.7 0-101.8L232 210.2c-5.2-15.8-8-32.6-8-50.2 0-88.4 71.6-160 160-160 20.1 0 39.4 3.7 57.1 10.5 10 3.8 11.8 16.5 4.3 24.1l-88.7 88.7c-3 3-4.7 7.1-4.7 11.3l0 41.4c0 8.8 7.2 16 16 16l41.4 0c4.2 0 8.3-1.7 11.3-4.7l88.7-88.7z";
+    bG.c = {
       prefix: "fas",
-      iconName: ju,
-      icon: [576, 512, su, Uu, Zu]
-    }, Eu.f = Eu.c
+      iconName: ZG,
+      icon: [576, 512, wG, SG, LG]
+    }, bG.g = bG.c
   },
-  8170: (uu, Eu, ju) => {
-    var su = ju(7054);
-    Eu.e = {
-      prefix: su.prefix,
-      iconName: su.iconName,
-      icon: [su.width, su.height, su.aliases, su.unicode, su.svgPathData]
-    }, Eu.h = Eu.e, su.prefix, su.iconName, su.width, su.height, su.aliases, su.unicode, su.svgPathData, su.aliases
+  7968: (GG, bG, ZG) => {
+    var wG = ZG(6853);
+    bG.e = {
+      prefix: wG.prefix,
+      iconName: wG.iconName,
+      icon: [wG.width, wG.height, wG.aliases, wG.unicode, wG.svgPathData]
+    }, bG.h = bG.e, wG.prefix, wG.iconName, wG.width, wG.height, wG.aliases, wG.unicode, wG.svgPathData, wG.aliases
   },
-  41264: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => lu,
-      f: () => Xu
+  41435: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => kG,
+      f: () => yG
     });
-    var su = ju(3482);
-    let Uu = null,
-      Zu = null;
+    var wG = ZG(3271);
+    let SG = null,
+      LG = null;
 
-    function Xu() {
-      return Zu ??= ju.e(216).then((() => ju(36722))).then((uu => {
+    function yG() {
+      return LG ??= ZG.e(216).then((() => ZG(36657))).then((GG => {
         let {
-          ITEM_SPRITES: Eu,
-          ITEM_SPRITES_WITHOUT_FILE: ju,
-          ITEM_FILES_WITHOUT_SPRITE: Zu
-        } = uu;
-        Uu = function(uu, Eu, ju) {
-          const Uu = new Set,
-            Zu = (0, su.x)(Eu);
-          let Xu = 0;
-          for (const [su, lu] of uu.entries()) su === Zu[Xu] ? Xu++ : Uu.add(lu);
-          if ("" !== ju)
-            for (const lu of ju.split(su.q)) Uu.add(lu);
-          return Uu
-        }(Eu.split(su.q), ju, Zu)
-      }), (uu => {
-        throw Zu = null, uu
-      })), Zu
+          ITEM_SPRITES: bG,
+          ITEM_SPRITES_WITHOUT_FILE: ZG,
+          ITEM_FILES_WITHOUT_SPRITE: LG
+        } = GG;
+        SG = function(GG, bG, ZG) {
+          const SG = new Set,
+            LG = (0, wG.s)(bG);
+          let yG = 0;
+          for (const [wG, kG] of GG.entries()) wG === LG[yG] ? yG++ : SG.add(kG);
+          if ("" !== ZG)
+            for (const kG of ZG.split(wG.o)) SG.add(kG);
+          return SG
+        }(bG.split(wG.o), ZG, LG)
+      }), (GG => {
+        throw LG = null, GG
+      })), LG
     }
 
-    function lu(uu) {
-      var Eu, ju;
-      return null !== (Eu = null === (ju = Uu) || void 0 === ju ? void 0 : ju.has(uu)) && void 0 !== Eu && Eu
+    function kG(GG) {
+      var bG, ZG;
+      return null !== (bG = null === (ZG = SG) || void 0 === ZG ? void 0 : ZG.has(GG)) && void 0 !== bG && bG
     }
   },
-  41255: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Xu,
-      d: () => lu
+  41432: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => yG,
+      g: () => kG
     });
-    var su = ju(41264);
-    let Uu = null,
-      Zu = null;
+    var wG = ZG(41435);
+    let SG = null,
+      LG = null;
 
-    function Xu() {
-      return Uu ??= ju.e(62).then((() => ju(60874))).catch((uu => {
-        throw Uu = null, uu
-      })), Uu
+    function yG() {
+      return SG ??= ZG.e(62).then((() => ZG(61162))).catch((GG => {
+        throw SG = null, GG
+      })), SG
     }
 
-    function lu() {
-      return Zu ??= Promise.all([Xu(), (0, su.f)()]).then((uu => {
-        let [Eu] = uu;
-        return Eu
-      }), (uu => {
-        throw Zu = null, uu
-      })), Zu
+    function kG() {
+      return LG ??= Promise.all([yG(), (0, wG.f)()]).then((GG => {
+        let [bG] = GG;
+        return bG
+      }), (GG => {
+        throw LG = null, GG
+      })), LG
     }
   },
-  42868: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => xu,
-      e: () => zu,
-      h: () => Bu,
-      i: () => Lu,
-      k: () => tu,
-      l: () => EE,
-      m: () => Fu,
-      o: () => Iu
+  43037: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => TG,
+      g: () => xG,
+      i: () => gG,
+      j: () => eG,
+      k: () => RG,
+      l: () => bb,
+      m: () => nG,
+      p: () => qG
     });
-    var su = ju(4653),
-      Uu = ju(4679),
-      Zu = ju(34565),
-      Xu = ju(3475),
-      lu = ju(3467),
-      qu = ju(1149),
-      fu = ju(41062),
-      Cu = ju(91),
-      bu = ju(1314),
-      cu = ju(41170),
-      Nu = ju(41255),
-      Ou = ju(8287),
-      Yu = ju(7776),
-      hu = ju(7942),
-      Du = ju(8027),
-      gu = ju(8155),
-      Mu = ju(8170);
-    const eu = {
-      youtube: Ou.e,
-      "person-military-pointing": Yu.f,
-      sparkle: hu.f,
-      user: Du.e,
-      wrench: gu.f,
-      zap: Mu.h
+    var wG = ZG(4487),
+      SG = ZG(4508),
+      LG = ZG(34492),
+      yG = ZG(3267),
+      kG = ZG(3265),
+      UG = ZG(1060),
+      YG = ZG(41199),
+      VG = ZG(80),
+      pG = ZG(1222),
+      fG = ZG(41344),
+      QG = ZG(41432),
+      KG = ZG(8116),
+      hG = ZG(7572),
+      dG = ZG(7712),
+      JG = ZG(7806),
+      rG = ZG(7954),
+      zG = ZG(7968);
+    const EG = {
+      youtube: KG.f,
+      "person-military-pointing": hG.d,
+      sparkle: dG.f,
+      user: JG.i,
+      wrench: rG.g,
+      zap: zG.h
     };
 
-    function Gu(uu) {
-      const [Eu, ju, , , su] = uu.icon;
+    function oG(GG) {
+      const [bG, ZG, , , wG] = GG.icon;
       return {
-        width: Eu,
-        height: ju,
-        path: "string" === typeof su ? su : su.join(" ")
+        width: bG,
+        height: ZG,
+        path: "string" === typeof wG ? wG : wG.join(" ")
       }
     }
-    const pu = new Map(Object.entries(eu).map((uu => {
-      let [Eu, ju] = uu;
-      return [Eu, Gu(ju)]
+    const XG = new Map(Object.entries(EG).map((GG => {
+      let [bG, ZG] = GG;
+      return [bG, oG(ZG)]
     })));
-    let wu = !1;
-    const Ju = new Set;
-    var du = ju(41083);
-    const au = "Jetbrains Mono",
-      Pu = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+2248,U+26A1,U+2713,U+FEFF,U+FFFD",
-      ou = "U+0100-0130,U+0132-0151,U+0154-017F,U+018F-0190,U+0192,U+019B,U+01A0-01A1,U+01AF-01B0,U+01CD-01CE,U+01D0,U+01D2,U+01D4,U+01D6,U+01D8,U+01DA,U+01DC,U+01E6-01E7,U+01EA-01EB,U+01F4-01F5,U+01FC-01FF,U+0218-021B,U+0232-0233,U+0237,U+0259,U+02B9-02BA,U+02C7,U+02C9,U+02D8-02D9,U+02DB,U+02DD,U+02F3,U+02F7,U+0300-0303,U+0306-0307,U+0309-030C,U+030F,U+0312,U+031B,U+0323,U+0325-0328,U+0336-0338,U+0374-0375,U+037E,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03CF,U+03D5-03D7,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0493,U+049A-049B,U+04A2-04A3,U+04AE-04B1,U+04B6-04B7,U+04BA-04BB,U+04D8-04D9,U+04DC-04DF,U+04E4-04E9,U+04F4-04F5,U+0AEA,U+1E80-1E85,U+1E9E,U+1EA0-1EF9,U+2070,U+2074-207A,U+207C,U+2080-2089,U+20AB,U+20AE,U+20B4,U+20BD,U+20BF,U+2102,U+210D,U+2113,U+2115-2116,U+2119-211A,U+211D,U+2124,U+212E,U+2140,U+218A-218B,U+2194-2199,U+219D-219E,U+21A0,U+21A2-21A3,U+21A5-21A7,U+21A9-21AA,U+21AD,U+21BE,U+21C9,U+21D0-21D4,U+21DB,U+21DE-21DF,U+21E5,U+21E7-21E8,U+21EA,U+2200-220C,U+220E-2211,U+2213,U+2218-221A,U+221E,U+2223-2225,U+2227-222B,U+2234-2239,U+223C,U+223E,U+2243,U+2245,U+2247,U+2249,U+224B,U+224D,U+2254,U+2257,U+225F-2265,U+226A-2273,U+227A-227C,U+2282-2289,U+228E-2299,U+229B-22A5,U+22B4,U+22B8,U+22BB-22BD,U+22C2-22C4,U+22C6,U+22C8-22CA,U+22CE,U+22D0,U+22E2,U+22EE-22F1,U+2302-2305,U+2308-230B,U+2318,U+231C-231F,U+2324-2326,U+2328,U+232B,U+2336-237A,U+2389-238B,U+2395,U+239B-23AD,U+23CE,U+23FB-23FE,U+2400-2421,U+2423-2424,U+2500-25A1,U+25AA-25AB,U+25B2-25CC,U+25CE-25CF,U+25D4-25D5,U+25E6-25EB,U+25EF,U+25F6,U+266D,U+266F,U+2687,U+26A0,U+2715,U+2717,U+2736,U+276E-2771,U+2794,U+279C-279E,U+27C5-27C6,U+27DC,U+27E6-27EB,U+27F5-27F7,U+2916,U+294A,U+2987-2988,U+2A00,U+2A05-2A06,U+2B58,U+E0A0-E0A2,U+E0B0-E0B3,U+FE62,U+FF5B,U+FF5D,U+16910,U+1D538-1D539,U+1D53B-1D53E,U+1D540-1D544,U+1D546,U+1D54A-1D550,U+1D552-1D56B";
+    let uG = !1;
+    const iG = new Set;
+    var CG = ZG(41235);
+    const WG = "Jetbrains Mono",
+      mG = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+2248,U+26A1,U+2713,U+FEFF,U+FFFD",
+      IG = "U+0100-0130,U+0132-0151,U+0154-017F,U+018F-0190,U+0192,U+019B,U+01A0-01A1,U+01AF-01B0,U+01CD-01CE,U+01D0,U+01D2,U+01D4,U+01D6,U+01D8,U+01DA,U+01DC,U+01E6-01E7,U+01EA-01EB,U+01F4-01F5,U+01FC-01FF,U+0218-021B,U+0232-0233,U+0237,U+0259,U+02B9-02BA,U+02C7,U+02C9,U+02D8-02D9,U+02DB,U+02DD,U+02F3,U+02F7,U+0300-0303,U+0306-0307,U+0309-030C,U+030F,U+0312,U+031B,U+0323,U+0325-0328,U+0336-0338,U+0374-0375,U+037E,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03CF,U+03D5-03D7,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0493,U+049A-049B,U+04A2-04A3,U+04AE-04B1,U+04B6-04B7,U+04BA-04BB,U+04D8-04D9,U+04DC-04DF,U+04E4-04E9,U+04F4-04F5,U+0AEA,U+1E80-1E85,U+1E9E,U+1EA0-1EF9,U+2070,U+2074-207A,U+207C,U+2080-2089,U+20AB,U+20AE,U+20B4,U+20BD,U+20BF,U+2102,U+210D,U+2113,U+2115-2116,U+2119-211A,U+211D,U+2124,U+212E,U+2140,U+218A-218B,U+2194-2199,U+219D-219E,U+21A0,U+21A2-21A3,U+21A5-21A7,U+21A9-21AA,U+21AD,U+21BE,U+21C9,U+21D0-21D4,U+21DB,U+21DE-21DF,U+21E5,U+21E7-21E8,U+21EA,U+2200-220C,U+220E-2211,U+2213,U+2218-221A,U+221E,U+2223-2225,U+2227-222B,U+2234-2239,U+223C,U+223E,U+2243,U+2245,U+2247,U+2249,U+224B,U+224D,U+2254,U+2257,U+225F-2265,U+226A-2273,U+227A-227C,U+2282-2289,U+228E-2299,U+229B-22A5,U+22B4,U+22B8,U+22BB-22BD,U+22C2-22C4,U+22C6,U+22C8-22CA,U+22CE,U+22D0,U+22E2,U+22EE-22F1,U+2302-2305,U+2308-230B,U+2318,U+231C-231F,U+2324-2326,U+2328,U+232B,U+2336-237A,U+2389-238B,U+2395,U+239B-23AD,U+23CE,U+23FB-23FE,U+2400-2421,U+2423-2424,U+2500-25A1,U+25AA-25AB,U+25B2-25CC,U+25CE-25CF,U+25D4-25D5,U+25E6-25EB,U+25EF,U+25F6,U+266D,U+266F,U+2687,U+26A0,U+2715,U+2717,U+2736,U+276E-2771,U+2794,U+279C-279E,U+27C5-27C6,U+27DC,U+27E6-27EB,U+27F5-27F7,U+2916,U+294A,U+2987-2988,U+2A00,U+2A05-2A06,U+2B58,U+E0A0-E0A2,U+E0B0-E0B3,U+FE62,U+FF5B,U+FF5D,U+16910,U+1D538-1D539,U+1D53B-1D53E,U+1D540-1D544,U+1D546,U+1D54A-1D550,U+1D552-1D56B";
 
-    function ku(uu) {
-      return uu.split(",").map((uu => {
-        const [Eu, ju = Eu] = uu.slice(2).split("-");
-        return [parseInt(Eu, 16), parseInt(ju, 16)]
+    function FG(GG) {
+      return GG.split(",").map((GG => {
+        const [bG, ZG = bG] = GG.slice(2).split("-");
+        return [parseInt(bG, 16), parseInt(ZG, 16)]
       }))
     }
-    const mu = {
-        latin: ku(Pu),
-        rest: ku(ou)
+    const vG = {
+        latin: FG(mG),
+        rest: FG(IG)
       },
-      vu = new RegExp(`[${mu.rest.map((uu=>{let[Eu,ju]=uu;return`\\u{${Eu.toString(16)}}-\\u{${ju.toString(16)}}`})).join("")}]`, "u");
+      aG = new RegExp(`[${vG.rest.map((GG=>{let[bG,ZG]=GG;return`\\u{${bG.toString(16)}}-\\u{${ZG.toString(16)}}`})).join("")}]`, "u");
 
-    function Ku(uu) {
-      return Eu => {
-        console.warn(`[bloxd-wasm-client] the text font's ${uu} file did not load`, Eu)
+    function cG(GG) {
+      return bG => {
+        console.warn(`[bloxd-wasm-client] the text font's ${GG} file did not load`, bG)
       }
     }
-    const Vu = 397,
-      ru = 1,
-      Qu = {
-        translate: uu => [uu],
-        keyBindingText: uu => uu,
+    const lG = 397,
+      jG = 1,
+      PG = {
+        translate: GG => [GG],
+        keyBindingText: GG => GG,
         isFriend: () => !1,
         hiddenNames: {},
         loadsFontRest: !1
       };
-    let iu = null,
-      Wu = 0,
-      Su = "none";
+    let MG = null,
+      AG = 0,
+      sG = "none";
 
-    function Iu() {
-      return Wu
+    function qG() {
+      return AG
     }
 
-    function Fu() {
-      Wu++, !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0] ? Su = "all" : "none" === Su && (Su = "notBoards")
-    }(0, qu.u)((() => {
+    function nG() {
+      AG++, !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0] ? sG = "all" : "none" === sG && (sG = "notBoards")
+    }(0, UG.w)((() => {
       (function() {
-        const uu = wu;
-        return wu = !1, uu
-      })() && Fu(!1)
+        const GG = uG;
+        return uG = !1, GG
+      })() && nG(!1)
     }));
-    const Bu = new class {
-      constructor(uu) {
-        this.loaded = uu, this.latin = null, this.rest = null, this.restWanted = !1
+    const gG = new class {
+      constructor(GG) {
+        this.loaded = GG, this.latin = null, this.rest = null, this.restWanted = !1
       }
       load() {
         if (null === this.latin) {
-          this.latin = new FontFace(au, `url(${(0,du.f)()}) format("woff2")`, {
-            unicodeRange: Pu
-          }).load().then((uu => {
-            document.fonts.add(uu), this.loaded()
-          }), Ku("Latin"));
-          const uu = new FontFace(au, `url(${(0,du.j)()}) format("woff2")`, {
-            unicodeRange: ou,
+          this.latin = new FontFace(WG, `url(${(0,CG.g)()}) format("woff2")`, {
+            unicodeRange: mG
+          }).load().then((GG => {
+            document.fonts.add(GG), this.loaded()
+          }), cG("Latin"));
+          const GG = new FontFace(WG, `url(${(0,CG.j)()}) format("woff2")`, {
+            unicodeRange: IG,
             display: "swap"
           });
-          document.fonts.add(uu), uu.loaded.then((() => {
+          document.fonts.add(GG), GG.loaded.then((() => {
             this.loaded()
-          }), Ku("rest")), this.rest = uu, this.restWanted && uu.load()
+          }), cG("rest")), this.rest = GG, this.restWanted && GG.load()
         }
         return this.latin
       }
       loadRest() {
-        var uu;
-        this.restWanted || (this.restWanted = !0, null === (uu = this.rest) || void 0 === uu || uu.load())
+        var GG;
+        this.restWanted || (this.restWanted = !0, null === (GG = this.rest) || void 0 === GG || GG.load())
       }
-      loadFor(uu) {
-        !this.restWanted && vu.test(uu) && this.loadRest()
+      loadFor(GG) {
+        !this.restWanted && aG.test(GG) && this.loadRest()
       }
-    }(Fu);
+    }(nG);
 
-    function Lu(uu) {
-      Object.assign(Qu, uu), Qu.loadsFontRest && Bu.loadRest(), Fu(!1)
+    function eG(GG) {
+      Object.assign(PG, GG), PG.loadsFontRest && gG.loadRest(), nG(!1)
     }
 
-    function tu(uu) {
-      uu !== iu && (iu = uu, Fu())
+    function RG(GG) {
+      GG !== MG && (MG = GG, nG())
     }
 
-    function xu(uu) {
-      if ("none" === Su || null === uu) return;
-      uu(Vu, "all" === Su ? 0 : ru, new Uint8Array(0)) && (Su = "none")
+    function TG(GG) {
+      if ("none" === sG || null === GG) return;
+      GG(lG, "all" === sG ? 0 : jG, new Uint8Array(0)) && (sG = "none")
     }
-    const Tu = new Map,
-      Hu = new Map;
+    const HG = new Map,
+      tG = new Map;
 
-    function Au(uu, Eu, ju) {
-      var su;
-      const Uu = ju ? `${uu}#${ju.join(",")}` : uu,
-        Zu = Tu.get(Uu);
-      if (Zu) return Zu.image;
-      const Xu = {
-        image: null !== (su = Hu.get(Uu)) && void 0 !== su ? su : null
+    function DG(GG, bG, ZG) {
+      var wG;
+      const SG = ZG ? `${GG}#${ZG.join(",")}` : GG,
+        LG = HG.get(SG);
+      if (LG) return LG.image;
+      const yG = {
+        image: null !== (wG = tG.get(SG)) && void 0 !== wG ? wG : null
       };
-      return Tu.set(Uu, Xu), Eu().then((async uu => {
-        if (null === uu) return null;
-        const Eu = new Image;
-        Eu.crossOrigin = "anonymous", Eu.src = uu, await Eu.decode();
-        const su = await createImageBitmap(Eu);
-        if (!ju) return su;
+      return HG.set(SG, yG), bG().then((async GG => {
+        if (null === GG) return null;
+        const bG = new Image;
+        bG.crossOrigin = "anonymous", bG.src = GG, await bG.decode();
+        const wG = await createImageBitmap(bG);
+        if (!ZG) return wG;
         try {
-          return function(uu, Eu) {
-            let [ju, su, Uu] = Eu;
-            const Zu = (0, fu.i)(uu.width, uu.height),
+          return function(GG, bG) {
+            let [ZG, wG, SG] = bG;
+            const LG = (0, YG.f)(GG.width, GG.height),
               {
-                canvas: Xu
-              } = Zu;
-            return Zu.drawImage(uu, 0, 0), Zu.globalCompositeOperation = "multiply", Zu.fillStyle = `rgb(${ju}, ${su}, ${Uu})`, Zu.fillRect(0, 0, Xu.width, Xu.height), Zu.globalCompositeOperation = "destination-in", Zu.drawImage(uu, 0, 0), Xu
-          }(su, ju)
+                canvas: yG
+              } = LG;
+            return LG.drawImage(GG, 0, 0), LG.globalCompositeOperation = "multiply", LG.fillStyle = `rgb(${ZG}, ${wG}, ${SG})`, LG.fillRect(0, 0, yG.width, yG.height), LG.globalCompositeOperation = "destination-in", LG.drawImage(GG, 0, 0), yG
+          }(wG, ZG)
         } finally {
-          su.close()
+          wG.close()
         }
-      })).then((uu => {
-        Tu.get(Uu) === Xu && Hu.delete(Uu), uu !== Xu.image && (Xu.image = uu, Fu(!1))
-      }), (Eu => {
-        console.warn(`[bloxd-wasm-client] text icon ${uu} did not load`, Eu), Tu.get(Uu) === Xu && (Tu.delete(Uu), Hu.delete(Uu), null !== Xu.image && Fu(!1))
-      })), Xu.image
-    }(0, cu.e)((() => {
-      Hu.clear();
-      for (const [uu, {
-          image: Eu
-        }] of Tu) null !== Eu && Hu.set(uu, Eu);
-      Tu.clear(), Fu(!1)
+      })).then((GG => {
+        HG.get(SG) === yG && tG.delete(SG), GG !== yG.image && (yG.image = GG, nG(!1))
+      }), (bG => {
+        console.warn(`[bloxd-wasm-client] text icon ${GG} did not load`, bG), HG.get(SG) === yG && (HG.delete(SG), tG.delete(SG), null !== yG.image && nG(!1))
+      })), yG.image
+    }(0, fG.d)((() => {
+      tG.clear();
+      for (const [GG, {
+          image: bG
+        }] of HG) null !== bG && tG.set(GG, bG);
+      HG.clear(), nG(!1)
     }));
-    const nu = new Set(su.c),
-      yu = new Set(["CubeBlock", "SlabBlock", "StairsBlock"]);
+    const NG = new Set(wG.b),
+      OG = new Set(["CubeBlock", "SlabBlock", "StairsBlock"]);
 
-    function zu() {
-      (0, Nu.d)().catch((() => {}))
+    function xG() {
+      (0, QG.g)().catch((() => {}))
     }
 
-    function Ru(uu) {
-      return nu.has(uu) ? Au(`icon:${uu}`, (async () => {
-        var Eu, ju;
-        return null !== (Eu = null === (ju = (0, cu.h)()) || void 0 === ju ? void 0 : ju.textureUrl(uu)) && void 0 !== Eu ? Eu : (await (0, Nu.b)()).ingameIconUrl(uu)
+    function BG(GG) {
+      return NG.has(GG) ? DG(`icon:${GG}`, (async () => {
+        var bG, ZG;
+        return null !== (bG = null === (ZG = (0, fG.k)()) || void 0 === ZG ? void 0 : ZG.textureUrl(GG)) && void 0 !== bG ? bG : (await (0, QG.d)()).ingameIconUrl(GG)
       })) : null
     }
-    let uE = "unasked";
-    const EE = {
+    let Gb = "unasked";
+    const bb = {
       get canSeeRealPlayerNames() {
-        return Cu.featureFlags.canSeeRealPlayerNames
+        return VG.featureFlags.canSeeRealPlayerNames
       },
       get canSeePlayerWrittenText() {
-        return Cu.featureFlags.canSeePlayerWrittenText
+        return VG.featureFlags.canSeePlayerWrittenText
       },
       get localPlayerDbId() {
-        return iu
+        return MG
       },
-      shownPlayerName: uu => (0, bu.e)(uu, Qu.hiddenNames),
-      translate: (uu, Eu) => {
-        const ju = "object" === typeof Eu && null !== Eu ? Eu : void 0;
-        return Qu.translate(uu, (0, bu.g)(ju, Qu.hiddenNames))
+      shownPlayerName: GG => (0, pG.g)(GG, PG.hiddenNames),
+      translate: (GG, bG) => {
+        const ZG = "object" === typeof bG && null !== bG ? bG : void 0;
+        return PG.translate(GG, (0, pG.i)(ZG, PG.hiddenNames))
       },
-      keyBindingText: uu => Qu.keyBindingText(uu),
-      isFriend: uu => Qu.isFriend(uu, Qu.hiddenNames),
-      iconImage: function(uu) {
-        if (nu.has(uu)) return Ru(uu);
-        if ("unasked" === uE && (uE = "loading", (0, lu.g)().then((() => {
-            uE = "in", Fu(!1)
-          }), (uu => {
-            uE = "failed", console.warn("[bloxd-wasm-client] the item sprite table did not load, so text item icons stay blank", uu)
-          }))), "in" !== uE) return null;
-        const Eu = (0, Xu.b)(uu),
-          ju = void 0 === Eu ? void 0 : (0, Zu.itemTypeNameOf)(Eu);
-        if ("Gun" === ju) return null;
-        const su = (0, lu.d)(uu),
-          qu = void 0 !== ju && yu.has(ju);
-        if (qu && void 0 === su) return null;
-        const fu = void 0 !== Eu && "GrayscaleArmour" === (0, Zu.itemTypeOf)(Eu) || Object.hasOwn(Uu.e, uu),
-          Cu = null !== su && void 0 !== su ? su : uu;
-        return Au(qu ? `block:${Cu}` : `item:${Cu}`, (async () => {
-          var uu, Eu;
-          const ju = (0, cu.h)(),
-            su = await (0, Nu.d)();
-          return null !== (uu = null !== (Eu = null === ju || void 0 === ju ? void 0 : ju.textureUrl(Cu)) && void 0 !== Eu ? Eu : su.itemSpriteUrl(Cu)) && void 0 !== uu ? uu : qu ? null : su.notFoundUrl()
-        }), fu ? (0, Uu.g)(uu) : void 0)
+      keyBindingText: GG => PG.keyBindingText(GG),
+      isFriend: GG => PG.isFriend(GG, PG.hiddenNames),
+      iconImage: function(GG) {
+        if (NG.has(GG)) return BG(GG);
+        if ("unasked" === Gb && (Gb = "loading", (0, kG.e)().then((() => {
+            Gb = "in", nG(!1)
+          }), (GG => {
+            Gb = "failed", console.warn("[bloxd-wasm-client] the item sprite table did not load, so text item icons stay blank", GG)
+          }))), "in" !== Gb) return null;
+        const bG = (0, yG.c)(GG),
+          ZG = void 0 === bG ? void 0 : (0, LG.itemTypeNameOf)(bG);
+        if ("Gun" === ZG) return null;
+        const wG = (0, kG.b)(GG),
+          UG = void 0 !== ZG && OG.has(ZG);
+        if (UG && void 0 === wG) return null;
+        const YG = void 0 !== bG && "GrayscaleArmour" === (0, LG.itemTypeOf)(bG) || Object.hasOwn(SG.c, GG),
+          VG = null !== wG && void 0 !== wG ? wG : GG;
+        return DG(UG ? `block:${VG}` : `item:${VG}`, (async () => {
+          var GG, bG;
+          const ZG = (0, fG.k)(),
+            wG = await (0, QG.g)();
+          return null !== (GG = null !== (bG = null === ZG || void 0 === ZG ? void 0 : ZG.textureUrl(VG)) && void 0 !== bG ? bG : wG.itemSpriteUrl(VG)) && void 0 !== GG ? GG : UG ? null : wG.notFoundUrl()
+        }), YG ? (0, SG.d)(GG) : void 0)
       },
-      effectImage: Ru,
-      rankIcon: function(uu) {
-        const Eu = pu.get(uu);
-        if (Eu) return Eu;
-        const ju = (0, qu.i)(uu, (0, qu.m)(uu));
-        if (!ju) return (0, qu.k)("brands") && (0, qu.k)("solid") ? Ju.has(uu) || (Ju.add(uu), console.warn(`[bloxd-wasm-client] unknown rank icon "${uu}": not in the bundled Font Awesome subset, so its tag draws no icon`)) : wu = !0, null;
-        const su = Gu(ju);
-        return pu.set(uu, su), su
+      effectImage: BG,
+      rankIcon: function(GG) {
+        const bG = XG.get(GG);
+        if (bG) return bG;
+        const ZG = (0, UG.f)(GG, (0, UG.l)(GG));
+        if (!ZG) return (0, UG.i)("brands") && (0, UG.i)("solid") ? iG.has(GG) || (iG.add(GG), console.warn(`[bloxd-wasm-client] unknown rank icon "${GG}": not in the bundled Font Awesome subset, so its tag draws no icon`)) : uG = !0, null;
+        const wG = oG(ZG);
+        return XG.set(GG, wG), wG
       },
-      glyphsShown: uu => {
-        Bu.loadFor(uu)
+      glyphsShown: GG => {
+        gG.loadFor(GG)
       }
     }
   },
-  42866: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => pE,
-      d: () => YE
+  43031: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => Xb,
+      c: () => hb
     });
-    var su = ju(37139),
-      Uu = ju(41062),
-      Zu = ju(39203),
-      Xu = ju(628),
-      lu = ju(337);
-    const qu = {
+    var wG = ZG(37097),
+      SG = ZG(41199),
+      LG = ZG(39262),
+      yG = ZG(580),
+      kG = ZG(333);
+    const UG = {
         DEFAULT_FONT_SIZE: 47,
         DEFAULT_SUBTITLE_FONT_SIZE: 30,
         HORIZONTAL_PADDING: 30,
@@ -404,220 +404,220 @@ export const modules = {
         LINE_SPACING: 8,
         EFFECT_ICON_SIZE: 70
       },
-      fu = 41;
+      YG = 41;
 
-    function Cu(uu) {
-      return `bolder ${uu}px 'Jetbrains Mono'`
+    function VG(GG) {
+      return `bolder ${GG}px 'Jetbrains Mono'`
     }
 
-    function bu(uu) {
-      return "object" === typeof uu && null !== uu
+    function pG(GG) {
+      return "object" === typeof GG && null !== GG
     }
 
-    function cu(uu, Eu) {
-      const ju = "number" === typeof uu ? uu : "string" === typeof uu ? Number(uu.replace("px", "")) : NaN;
-      return Number.isFinite(ju) && ju > 0 ? ju : Eu
+    function fG(GG, bG) {
+      const ZG = "number" === typeof GG ? GG : "string" === typeof GG ? Number(GG.replace("px", "")) : NaN;
+      return Number.isFinite(ZG) && ZG > 0 ? ZG : bG
     }
 
-    function Nu(uu) {
-      return bu(uu) ? uu : void 0
+    function QG(GG) {
+      return pG(GG) ? GG : void 0
     }
 
-    function Ou(uu) {
-      const Eu = "number" === typeof uu ? Xu.w[uu] : uu;
-      return "string" === typeof Eu && Object.hasOwn(Xu.n, Eu) ? Xu.n[Eu] : void 0
+    function KG(GG) {
+      const bG = "number" === typeof GG ? yG.q[GG] : GG;
+      return "string" === typeof bG && Object.hasOwn(yG.i, bG) ? yG.i[bG] : void 0
     }
 
-    function Yu(uu, Eu) {
-      return "string" === typeof uu ? uu : bu(uu) ? "string" === typeof uu.translationKey ? Eu.translate(uu.translationKey, uu.params).map((uu => "string" === typeof uu ? uu : uu.icon)).join("") : "string" === typeof uu.entityName ? Eu.shownPlayerName(uu.entityName) : "" : void 0 === uu || null === uu ? "" : String(uu)
+    function hG(GG, bG) {
+      return "string" === typeof GG ? GG : pG(GG) ? "string" === typeof GG.translationKey ? bG.translate(GG.translationKey, GG.params).map((GG => "string" === typeof GG ? GG : GG.icon)).join("") : "string" === typeof GG.entityName ? bG.shownPlayerName(GG.entityName) : "" : void 0 === GG || null === GG ? "" : String(GG)
     }
 
-    function hu(uu, Eu, ju, su) {
-      if (!Array.isArray(uu)) return [];
-      const Uu = [];
-      for (const Cu of uu) {
-        var Zu, Xu;
-        if (bu(Cu) && "chatTag" in Cu) {
-          Uu.push({
+    function dG(GG, bG, ZG, wG) {
+      if (!Array.isArray(GG)) return [];
+      const SG = [];
+      for (const VG of GG) {
+        var LG, yG;
+        if (pG(VG) && "chatTag" in VG) {
+          SG.push({
             kind: "rank",
-            rank: Cu
+            rank: VG
           });
           continue
         }
-        if (bu(Cu) && "icon" in Cu && !("mainRGB" in Cu)) {
-          var fu;
-          Uu.push({
+        if (pG(VG) && "icon" in VG && !("mainRGB" in VG)) {
+          var YG;
+          SG.push({
             kind: "icon",
-            icon: String(Cu.icon),
-            size: cu(null === (fu = Nu(Cu.style)) || void 0 === fu ? void 0 : fu.fontSize, qu.DEFAULT_FONT_SIZE)
+            icon: String(VG.icon),
+            size: fG(null === (YG = QG(VG.style)) || void 0 === YG ? void 0 : YG.fontSize, UG.DEFAULT_FONT_SIZE)
           });
           continue
         }
-        if (bu(Cu) && (0, lu.ub)(Cu)) {
-          Uu.push({
+        if (pG(VG) && (0, kG.Tb)(VG)) {
+          SG.push({
             kind: "text",
             text: "",
-            size: Eu,
-            colour: su
+            size: bG,
+            colour: wG
           });
           continue
         }
-        let uu, Ou;
-        bu(Cu) && (0, lu.tb)(Cu) ? (uu = ju.keyBindingText(String(Cu.action)), Ou = Nu(Cu.style)) : bu(Cu) && "str" in Cu ? (uu = Cu.str, Ou = Nu(Cu.style)) : uu = Cu;
-        const hu = cu(null === (Zu = Ou) || void 0 === Zu ? void 0 : Zu.fontSize, Eu),
-          Du = null !== (Xu = (0, lu.Yb)(Ou)) && void 0 !== Xu ? Xu : su;
-        if (bu(uu) && "string" === typeof uu.translationKey) {
-          const Eu = ju.translate(uu.translationKey, uu.params);
-          if (Eu.some((uu => "string" !== typeof uu))) {
-            for (const uu of Eu) Uu.push("string" === typeof uu ? {
+        let GG, KG;
+        pG(VG) && (0, kG.Qb)(VG) ? (GG = ZG.keyBindingText(String(VG.action)), KG = QG(VG.style)) : pG(VG) && "str" in VG ? (GG = VG.str, KG = QG(VG.style)) : GG = VG;
+        const dG = fG(null === (LG = KG) || void 0 === LG ? void 0 : LG.fontSize, bG),
+          JG = null !== (yG = (0, kG.qc)(KG)) && void 0 !== yG ? yG : wG;
+        if (pG(GG) && "string" === typeof GG.translationKey) {
+          const bG = ZG.translate(GG.translationKey, GG.params);
+          if (bG.some((GG => "string" !== typeof GG))) {
+            for (const GG of bG) SG.push("string" === typeof GG ? {
               kind: "text",
-              text: uu,
-              size: hu,
-              colour: Du
+              text: GG,
+              size: dG,
+              colour: JG
             } : {
               kind: "icon",
-              icon: uu.icon,
-              size: hu
+              icon: GG.icon,
+              size: dG
             });
             continue
           }
         }
-        Uu.push({
+        SG.push({
           kind: "text",
-          text: Yu(uu, ju),
-          size: hu,
-          colour: Du
+          text: hG(GG, ZG),
+          size: dG,
+          colour: JG
         })
       }
-      return Uu
+      return SG
     }
 
-    function Du(uu) {
-      return void 0 !== uu && "rank" !== uu.kind
+    function JG(GG) {
+      return void 0 !== GG && "rank" !== GG.kind
     }
 
-    function gu(uu, Eu) {
-      const ju = Du(uu),
-        su = Du(Eu);
-      return void 0 === uu && !su || !ju && void 0 === Eu ? 0 : ju !== su ? .5 * qu.HORIZONTAL_PADDING : 0
+    function rG(GG, bG) {
+      const ZG = JG(GG),
+        wG = JG(bG);
+      return void 0 === GG && !wG || !ZG && void 0 === bG ? 0 : ZG !== wG ? .5 * UG.HORIZONTAL_PADDING : 0
     }
 
-    function Mu(uu) {
-      return "rank" === uu.kind ? qu.DEFAULT_FONT_SIZE : uu.size
+    function zG(GG) {
+      return "rank" === GG.kind ? UG.DEFAULT_FONT_SIZE : GG.size
     }
 
-    function eu(uu, Eu, ju) {
-      return "icon" === uu.kind ? uu.size : "rank" === uu.kind ? function(uu, Eu) {
-        const ju = Eu.rankIcon(uu.rank.icon);
-        return ju ? fu * (ju.width / ju.height) : fu
-      }(uu, ju) + qu.HORIZONTAL_PADDING : (ju.glyphsShown(uu.text), Eu.font = Cu(uu.size), Eu.measureText(uu.text).width)
+    function EG(GG, bG, ZG) {
+      return "icon" === GG.kind ? GG.size : "rank" === GG.kind ? function(GG, bG) {
+        const ZG = bG.rankIcon(GG.rank.icon);
+        return ZG ? YG * (ZG.width / ZG.height) : YG
+      }(GG, ZG) + UG.HORIZONTAL_PADDING : (ZG.glyphsShown(GG.text), bG.font = VG(GG.size), bG.measureText(GG.text).width)
     }
 
-    function Gu(uu, Eu, ju) {
-      if (0 === uu.length) return {
+    function oG(GG, bG, ZG) {
+      if (0 === GG.length) return {
         width: 0,
         height: 0,
         sizes: []
       };
-      let su = 0;
-      for (const Xu of uu) su = Math.max(su, Mu(Xu));
-      const Uu = [];
-      let Zu = gu(void 0, uu[0]);
-      for (let Xu = 0; Xu < uu.length; Xu++) {
-        const su = Zu;
-        Zu += eu(uu[Xu], Eu, ju), Zu += gu(uu[Xu], uu[Xu + 1]), Uu.push({
-          x: su,
-          width: Zu - su
+      let wG = 0;
+      for (const yG of GG) wG = Math.max(wG, zG(yG));
+      const SG = [];
+      let LG = rG(void 0, GG[0]);
+      for (let yG = 0; yG < GG.length; yG++) {
+        const wG = LG;
+        LG += EG(GG[yG], bG, ZG), LG += rG(GG[yG], GG[yG + 1]), SG.push({
+          x: wG,
+          width: LG - wG
         })
       }
       return {
-        width: Zu,
-        height: su + qu.VERTICAL_PADDING,
-        sizes: Uu
+        width: LG,
+        height: wG + UG.VERTICAL_PADDING,
+        sizes: SG
       }
     }
 
-    function pu(uu, Eu, ju, su, Uu, Zu, Xu) {
-      Eu += gu(void 0, uu[0]);
-      for (let lu = 0; lu < uu.length; lu++) {
-        const qu = wu(uu[lu], Eu, ju, su, Uu, Zu, Xu);
-        Eu += 0 === qu ? 0 : qu + gu(uu[lu], uu[lu + 1])
+    function XG(GG, bG, ZG, wG, SG, LG, yG) {
+      bG += rG(void 0, GG[0]);
+      for (let kG = 0; kG < GG.length; kG++) {
+        const UG = uG(GG[kG], bG, ZG, wG, SG, LG, yG);
+        bG += 0 === UG ? 0 : UG + rG(GG[kG], GG[kG + 1])
       }
     }
 
-    function wu(uu, Eu, ju, su, Uu, Zu, Xu, lu) {
-      var bu;
-      if ("icon" === uu.kind) {
-        const su = Zu.iconImage(uu.icon);
-        return su && Xu.push({
-          image: su,
-          x: Eu,
-          y: ju + qu.VERTICAL_PADDING / 2,
-          size: uu.size
-        }), uu.size
+    function uG(GG, bG, ZG, wG, SG, LG, yG, kG) {
+      var pG;
+      if ("icon" === GG.kind) {
+        const wG = LG.iconImage(GG.icon);
+        return wG && yG.push({
+          image: wG,
+          x: bG,
+          y: ZG + UG.VERTICAL_PADDING / 2,
+          size: GG.size
+        }), GG.size
       }
-      if ("rank" === uu.kind) {
-        const Xu = null !== lu && void 0 !== lu ? lu : eu(uu, Uu, Zu);
-        return function(uu, Eu, ju, su, Uu, Zu, Xu) {
-          var lu, Cu;
+      if ("rank" === GG.kind) {
+        const yG = null !== kG && void 0 !== kG ? kG : EG(GG, SG, LG);
+        return function(GG, bG, ZG, wG, SG, LG, yG) {
+          var kG, VG;
           const {
-            rank: bu
-          } = uu;
-          Zu.fillStyle = bu.mainRGB, Zu.fillRect(Eu, ju, su, Uu);
-          const cu = Xu.rankIcon(bu.icon);
-          if (!cu) return;
-          const Nu = fu / cu.height,
-            Ou = Eu + (su - cu.width * Nu) / 2,
-            Yu = ju + (Uu - fu) / 2,
-            hu = new Path2D(cu.path),
-            Du = qu.TEXT_SHADOW_WIDTH,
-            gu = (null === (lu = bu.nameTag) || void 0 === lu ? void 0 : lu.iconShadowRGB) || "black";
-          for (const qu of [-1, 1])
-            for (const uu of [-1, 1]) du(Zu, hu, Ou + Du * qu, Yu + Du * uu, Nu, gu);
-          du(Zu, hu, Ou, Yu, Nu, (null === (Cu = bu.nameTag) || void 0 === Cu ? void 0 : Cu.iconRGB) || "white")
-        }(uu, Eu, ju, Xu, su, Uu, Zu), Xu
+            rank: pG
+          } = GG;
+          LG.fillStyle = pG.mainRGB, LG.fillRect(bG, ZG, wG, SG);
+          const fG = yG.rankIcon(pG.icon);
+          if (!fG) return;
+          const QG = YG / fG.height,
+            KG = bG + (wG - fG.width * QG) / 2,
+            hG = ZG + (SG - YG) / 2,
+            dG = new Path2D(fG.path),
+            JG = UG.TEXT_SHADOW_WIDTH,
+            rG = (null === (kG = pG.nameTag) || void 0 === kG ? void 0 : kG.iconShadowRGB) || "black";
+          for (const UG of [-1, 1])
+            for (const GG of [-1, 1]) CG(LG, dG, KG + JG * UG, hG + JG * GG, QG, rG);
+          CG(LG, dG, KG, hG, QG, (null === (VG = pG.nameTag) || void 0 === VG ? void 0 : VG.iconRGB) || "white")
+        }(GG, bG, ZG, yG, wG, SG, LG), yG
       }
-      if (0 === uu.text.length) return 0;
-      const cu = Cu(uu.size);
-      Uu.font = cu;
-      const Nu = null !== lu && void 0 !== lu ? lu : Uu.measureText(uu.text).width;
-      return function(uu, Eu, ju, su, Uu, Zu) {
-        const Xu = qu.TEXT_SHADOW_WIDTH;
-        Zu.font = su, Zu.fillStyle = "black";
-        for (const lu of [-1, 1])
-          for (const su of [-1, 1]) Zu.fillText(uu, Eu + Xu * lu, ju + Xu * su);
-        Zu.fillStyle = Uu, Zu.fillText(uu, Eu, ju)
-      }(uu.text, Eu, ju + su - qu.VERTICAL_PADDING + 5, cu, null !== (bu = uu.colour) && void 0 !== bu ? bu : "white", Uu), Nu
+      if (0 === GG.text.length) return 0;
+      const fG = VG(GG.size);
+      SG.font = fG;
+      const QG = null !== kG && void 0 !== kG ? kG : SG.measureText(GG.text).width;
+      return function(GG, bG, ZG, wG, SG, LG) {
+        const yG = UG.TEXT_SHADOW_WIDTH;
+        LG.font = wG, LG.fillStyle = "black";
+        for (const kG of [-1, 1])
+          for (const wG of [-1, 1]) LG.fillText(GG, bG + yG * kG, ZG + yG * wG);
+        LG.fillStyle = SG, LG.fillText(GG, bG, ZG)
+      }(GG.text, bG, ZG + wG - UG.VERTICAL_PADDING + 5, fG, null !== (pG = GG.colour) && void 0 !== pG ? pG : "white", SG), QG
     }
 
-    function Ju(uu, Eu) {
+    function iG(GG, bG) {
       for (const {
-          image: ju,
-          x: su,
-          y: Uu,
-          size: Zu
+          image: ZG,
+          x: wG,
+          y: SG,
+          size: LG
         }
-        of uu) Eu.imageSmoothingEnabled = !1, Eu.drawImage(ju, su, Uu, Zu, Zu)
+        of GG) bG.imageSmoothingEnabled = !1, bG.drawImage(ZG, wG, SG, LG, LG)
     }
 
-    function du(uu, Eu, ju, su, Uu, Zu) {
-      uu.save(), uu.translate(ju, su), uu.scale(Uu, Uu), uu.fillStyle = Zu, uu.fill(Eu), uu.restore()
+    function CG(GG, bG, ZG, wG, SG, LG) {
+      GG.save(), GG.translate(ZG, wG), GG.scale(SG, SG), GG.fillStyle = LG, GG.fill(bG), GG.restore()
     }
 
-    function au(uu, Eu, ju) {
-      const su = "object" === typeof uu && null !== uu ? uu : {},
-        Uu = function(uu, Eu, ju) {
-          if (!Array.isArray(uu) || 0 === uu.length) return [];
-          const su = [{
+    function WG(GG, bG, ZG) {
+      const wG = "object" === typeof GG && null !== GG ? GG : {},
+        SG = function(GG, bG, ZG) {
+          if (!Array.isArray(GG) || 0 === GG.length) return [];
+          const wG = [{
             width: 0,
             height: 0,
             y: 0,
             items: []
           }];
-          for (const Xu of hu(uu, qu.DEFAULT_FONT_SIZE, ju)) {
-            if ("text" !== Xu.kind) {
-              su[su.length - 1].items.push({
-                content: Xu,
+          for (const yG of dG(GG, UG.DEFAULT_FONT_SIZE, ZG)) {
+            if ("text" !== yG.kind) {
+              wG[wG.length - 1].items.push({
+                content: yG,
                 chars: 1,
                 size: {
                   x: 0,
@@ -626,20 +626,20 @@ export const modules = {
               });
               continue
             }
-            if (0 === Xu.text.length) continue;
-            const uu = su[su.length - 1].items.reduce(((uu, Eu) => uu + ("text" === Eu.content.kind ? (0, Zu.e)(Eu.content.text) : Eu.chars)), 0);
-            (0, Zu.f)(Xu.text, uu).forEach(((uu, Eu) => {
-              Eu > 0 && su.push({
+            if (0 === yG.text.length) continue;
+            const GG = wG[wG.length - 1].items.reduce(((GG, bG) => GG + ("text" === bG.content.kind ? (0, LG.b)(bG.content.text) : bG.chars)), 0);
+            (0, LG.c)(yG.text, GG).forEach(((GG, bG) => {
+              bG > 0 && wG.push({
                 width: 0,
                 height: 0,
                 y: 0,
                 items: []
-              }), uu.length > 0 && su[su.length - 1].items.push({
+              }), GG.length > 0 && wG[wG.length - 1].items.push({
                 content: {
-                  ...Xu,
-                  text: uu
+                  ...yG,
+                  text: GG
                 },
-                chars: uu.length,
+                chars: GG.length,
                 size: {
                   x: 0,
                   width: 0
@@ -647,58 +647,58 @@ export const modules = {
               })
             }))
           }
-          let Uu = qu.VERTICAL_PADDING / 2;
-          for (const Zu of su) {
-            if (0 === Zu.items.length) continue;
+          let SG = UG.VERTICAL_PADDING / 2;
+          for (const LG of wG) {
+            if (0 === LG.items.length) continue;
             const {
-              width: uu,
-              height: su,
-              sizes: Xu
-            } = Gu(Zu.items.map((uu => uu.content)), Eu, ju);
-            Zu.items.forEach(((uu, Eu) => {
-              uu.size = Xu[Eu]
-            })), Zu.width = uu, Zu.height = su, Zu.y = Uu, Uu += su + qu.LINE_SPACING
+              width: GG,
+              height: wG,
+              sizes: yG
+            } = oG(LG.items.map((GG => GG.content)), bG, ZG);
+            LG.items.forEach(((GG, bG) => {
+              GG.size = yG[bG]
+            })), LG.width = GG, LG.height = wG, LG.y = SG, SG += wG + UG.LINE_SPACING
           }
-          return su
-        }(su.content, Eu, ju);
-      let Xu = 0,
-        lu = qu.VERTICAL_PADDING,
-        fu = 0;
-      for (const Zu of Uu) {
-        Xu = Math.max(Xu, Zu.width + 2 * qu.HORIZONTAL_PADDING), lu += Zu.height + qu.LINE_SPACING;
-        for (const uu of Zu.items) fu += uu.chars
+          return wG
+        }(wG.content, bG, ZG);
+      let yG = 0,
+        kG = UG.VERTICAL_PADDING,
+        YG = 0;
+      for (const LG of SG) {
+        yG = Math.max(yG, LG.width + 2 * UG.HORIZONTAL_PADDING), kG += LG.height + UG.LINE_SPACING;
+        for (const GG of LG.items) YG += GG.chars
       }
-      const Cu = "string" === typeof su.backgroundColor ? su.backgroundColor : "#22283b";
+      const VG = "string" === typeof wG.backgroundColor ? wG.backgroundColor : "#22283b";
       return {
-        width: Xu,
-        height: lu,
-        chars: fu,
-        draw: (uu, Eu) => {
-          const su = [];
-          if (uu.fillStyle = Cu, uu.fillRect(0, 0, Xu, lu), null === Eu)
-            for (const Zu of Uu) Zu.items.length > 0 && pu(Zu.items.map((uu => uu.content)), 0, Zu.y, Zu.height, uu, ju, su);
+        width: yG,
+        height: kG,
+        chars: YG,
+        draw: (GG, bG) => {
+          const wG = [];
+          if (GG.fillStyle = VG, GG.fillRect(0, 0, yG, kG), null === bG)
+            for (const LG of SG) LG.items.length > 0 && XG(LG.items.map((GG => GG.content)), 0, LG.y, LG.height, GG, ZG, wG);
           else {
-            let Zu = 0;
-            for (const Xu of Uu)
-              for (const Uu of Xu.items) {
-                if (Zu >= Eu) break;
-                wu("text" === Uu.content.kind ? {
-                  ...Uu.content,
-                  text: Uu.content.text.substring(0, Eu - Zu)
-                } : Uu.content, Uu.size.x, Xu.y, Xu.height, uu, ju, su, Uu.size.width), Zu += Uu.chars
+            let LG = 0;
+            for (const yG of SG)
+              for (const SG of yG.items) {
+                if (LG >= bG) break;
+                uG("text" === SG.content.kind ? {
+                  ...SG.content,
+                  text: SG.content.text.substring(0, bG - LG)
+                } : SG.content, SG.size.x, yG.y, yG.height, GG, ZG, wG, SG.size.width), LG += SG.chars
               }
           }
-          Ju(su, uu)
+          iG(wG, GG)
         }
       }
     }
-    var Pu = ju(4653),
-      ou = ju(1320),
-      ku = ju(2091);
-    const mu = 10,
-      vu = 3,
-      Ku = 3,
-      Vu = [{
+    var mG = ZG(4487),
+      IG = ZG(1230),
+      FG = ZG(2013);
+    const vG = 10,
+      aG = 3,
+      cG = 3,
+      lG = [{
         healthFraction: .25,
         colour: "#ff0000"
       }, {
@@ -708,10 +708,10 @@ export const modules = {
         healthFraction: 1,
         colour: "#00ff00"
       }],
-      ru = 64,
-      Qu = 69,
-      iu = {
-        icon: ku.c,
+      jG = 64,
+      PG = 69,
+      MG = {
+        icon: FG.c,
         mainRGB: "transparent",
         chatTag: [],
         nameTag: {
@@ -721,386 +721,386 @@ export const modules = {
         visible: !0
       };
 
-    function Wu(uu) {
-      return "object" !== typeof uu || null === uu || Array.isArray(uu) ? void 0 : uu
+    function AG(GG) {
+      return "object" !== typeof GG || null === GG || Array.isArray(GG) ? void 0 : GG
     }
-    const Su = new Set(Pu.c);
+    const sG = new Set(mG.b);
 
-    function Iu(uu, Eu) {
-      return "string" === typeof uu ? cu(uu, Eu) : Eu
-    }
-
-    function Fu(uu) {
-      return Iu(uu.width, vu)
+    function qG(GG, bG) {
+      return "string" === typeof GG ? fG(GG, bG) : bG
     }
 
-    function Bu(uu, Eu) {
-      var ju;
-      const su = null !== (ju = uu.applyTo) && void 0 !== ju ? ju : "both";
-      return "both" === su || su === Eu
+    function nG(GG) {
+      return qG(GG.width, aG)
     }
 
-    function Lu(uu) {
-      const Eu = Fu(uu);
-      return "glow" === uu.style ? Eu * Ku : Math.ceil(Eu / 2) + 1
+    function gG(GG, bG) {
+      var ZG;
+      const wG = null !== (ZG = GG.applyTo) && void 0 !== ZG ? ZG : "both";
+      return "both" === wG || wG === bG
     }
 
-    function tu(uu, Eu, ju) {
-      var su, Uu;
-      const Zu = null !== (su = Wu(uu.info)) && void 0 !== su ? su : {},
-        lu = "string" === typeof uu.name ? uu.name : "",
-        fu = Zu.subtitle;
-      if (Array.isArray(Zu.content) && 0 === Zu.content.length && !(Array.isArray(fu) && fu.length > 0)) return null;
-      const Cu = "number" === typeof uu.hideNameSeed ? uu.hideNameSeed : null,
-        bu = "" === lu || !0 === uu.mesh ? lu : (0, ou.e)(lu, !ju.canSeeRealPlayerNames, Cu);
-      if (!bu && !Zu.content) return null;
-      const cu = "string" === typeof uu.colour ? uu.colour : "default",
-        Nu = Object.hasOwn(Xu.s, cu) ? Xu.s[cu] : void 0,
-        Yu = Zu.content ? hu(Zu.content, qu.DEFAULT_FONT_SIZE, ju, Nu) : [{
+    function eG(GG) {
+      const bG = nG(GG);
+      return "glow" === GG.style ? bG * cG : Math.ceil(bG / 2) + 1
+    }
+
+    function RG(GG, bG, ZG) {
+      var wG, SG;
+      const LG = null !== (wG = AG(GG.info)) && void 0 !== wG ? wG : {},
+        kG = "string" === typeof GG.name ? GG.name : "",
+        YG = LG.subtitle;
+      if (Array.isArray(LG.content) && 0 === LG.content.length && !(Array.isArray(YG) && YG.length > 0)) return null;
+      const VG = "number" === typeof GG.hideNameSeed ? GG.hideNameSeed : null,
+        pG = "" === kG || !0 === GG.mesh ? kG : (0, IG.b)(kG, !ZG.canSeeRealPlayerNames, VG);
+      if (!pG && !LG.content) return null;
+      const fG = "string" === typeof GG.colour ? GG.colour : "default",
+        QG = Object.hasOwn(yG.o, fG) ? yG.o[fG] : void 0,
+        hG = LG.content ? dG(LG.content, UG.DEFAULT_FONT_SIZE, ZG, QG) : [{
           kind: "text",
-          text: bu,
-          size: qu.DEFAULT_FONT_SIZE,
-          colour: Nu
+          text: pG,
+          size: UG.DEFAULT_FONT_SIZE,
+          colour: QG
         }],
-        Du = [];
-      for (const Xu of Array.isArray(uu.ranks) ? uu.ranks : []) {
-        const uu = Ou(Xu);
-        null !== uu && void 0 !== uu && uu.nameTag && uu.visible && Du.push({
+        JG = [];
+      for (const yG of Array.isArray(GG.ranks) ? GG.ranks : []) {
+        const GG = KG(yG);
+        null !== GG && void 0 !== GG && GG.nameTag && GG.visible && JG.push({
           kind: "rank",
-          rank: uu
+          rank: GG
         })
       }
-      Du.push(...Yu);
-      ("boolean" === typeof uu.player ? uu.player : Array.isArray(uu.ranks)) && "" !== lu && ju.isFriend(lu) && Du.push({
+      JG.push(...hG);
+      ("boolean" === typeof GG.player ? GG.player : Array.isArray(GG.ranks)) && "" !== kG && ZG.isFriend(kG) && JG.push({
         kind: "rank",
-        rank: iu
-      }), "number" === typeof uu.LX && Du.push({
+        rank: MG
+      }), "number" === typeof GG.ey && JG.push({
         kind: "text",
-        text: ` ${uu.LX}m`,
-        size: qu.DEFAULT_FONT_SIZE,
+        text: ` ${GG.ey}m`,
+        size: UG.DEFAULT_FONT_SIZE,
         colour: "#cef3ff"
       });
-      const gu = fu ? hu(fu, qu.DEFAULT_SUBTITLE_FONT_SIZE, ju) : null,
-        Mu = "string" === typeof Zu.backgroundColor ? Zu.backgroundColor : "#22283b",
-        eu = "string" === typeof Zu.subtitleBackgroundColor ? Zu.subtitleBackgroundColor : "#1a1e2d",
-        wu = Wu(Zu.healthbar),
-        du = Wu(Zu.border),
-        au = Array.isArray(uu.effects) ? uu.effects.filter((uu => "string" === typeof uu && Su.has(uu))) : [],
-        Pu = "number" === typeof uu.health ? Math.max(0, Math.min(1, uu.health)) : null,
-        ku = Gu(Du, Eu, ju),
-        vu = Gu(null !== gu && void 0 !== gu ? gu : [], Eu, ju),
-        tu = {
-          width: qu.EFFECT_ICON_SIZE * au.length,
-          height: au.length > 0 ? qu.EFFECT_ICON_SIZE : 0
+      const rG = YG ? dG(YG, UG.DEFAULT_SUBTITLE_FONT_SIZE, ZG) : null,
+        zG = "string" === typeof LG.backgroundColor ? LG.backgroundColor : "#22283b",
+        EG = "string" === typeof LG.subtitleBackgroundColor ? LG.subtitleBackgroundColor : "#1a1e2d",
+        uG = AG(LG.healthbar),
+        CG = AG(LG.border),
+        WG = Array.isArray(GG.effects) ? GG.effects.filter((GG => "string" === typeof GG && sG.has(GG))) : [],
+        mG = "number" === typeof GG.health ? Math.max(0, Math.min(1, GG.health)) : null,
+        FG = oG(JG, bG, ZG),
+        aG = oG(null !== rG && void 0 !== rG ? rG : [], bG, ZG),
+        RG = {
+          width: UG.EFFECT_ICON_SIZE * WG.length,
+          height: WG.length > 0 ? UG.EFFECT_ICON_SIZE : 0
         },
-        xu = du && Bu(du, "nametag") ? Lu(du) : 0,
-        Tu = Iu(null === wu || void 0 === wu ? void 0 : wu.height, mu),
-        Hu = du && Bu(du, "healthbar") ? Lu(du) : 0,
-        Au = "never" === (null !== (Uu = null === wu || void 0 === wu ? void 0 : wu.display) && void 0 !== Uu ? Uu : "onDamage") ? 0 : Tu + Hu,
-        nu = Math.max(tu.height, xu),
-        yu = Math.max(qu.VERTICAL_PADDING, Au, xu);
-      let zu = Math.max(ku.width, vu.width, tu.width);
-      if (du) {
-        const uu = Lu(du) + qu.HORIZONTAL_PADDING / 2;
-        zu = Math.max(zu, Math.max(ku.width, vu.width) + qu.HORIZONTAL_PADDING + 2 * uu)
+        TG = CG && gG(CG, "nametag") ? eG(CG) : 0,
+        HG = qG(null === uG || void 0 === uG ? void 0 : uG.height, vG),
+        tG = CG && gG(CG, "healthbar") ? eG(CG) : 0,
+        DG = "never" === (null !== (SG = null === uG || void 0 === uG ? void 0 : uG.display) && void 0 !== SG ? SG : "onDamage") ? 0 : HG + tG,
+        NG = Math.max(RG.height, TG),
+        OG = Math.max(UG.VERTICAL_PADDING, DG, TG);
+      let xG = Math.max(FG.width, aG.width, RG.width);
+      if (CG) {
+        const GG = eG(CG) + UG.HORIZONTAL_PADDING / 2;
+        xG = Math.max(xG, Math.max(FG.width, aG.width) + UG.HORIZONTAL_PADDING + 2 * GG)
       }
-      const Ru = ku.height + vu.height + nu + yu,
-        uE = ku.width + qu.HORIZONTAL_PADDING,
-        EE = vu.width + qu.HORIZONTAL_PADDING,
-        jE = Math.max(uE, EE),
-        sE = (zu - jE) / 2,
-        UE = Math.max(tu.height, xu);
+      const BG = FG.height + aG.height + NG + OG,
+        Gb = FG.width + UG.HORIZONTAL_PADDING,
+        bb = aG.width + UG.HORIZONTAL_PADDING,
+        Zb = Math.max(Gb, bb),
+        wb = (xG - Zb) / 2,
+        Sb = Math.max(RG.height, TG);
       return {
-        width: zu,
-        height: Ru,
-        draw: uu => {
-          const Eu = [];
-          if (uu.fillStyle = Mu, uu.fillRect(sE, UE, jE, ku.height), pu(Du, (zu - uE) / 2 + qu.HORIZONTAL_PADDING / 2, UE, ku.height, uu, ju, Eu), gu) {
-            const su = UE + ku.height;
-            uu.fillStyle = eu, uu.fillRect(sE, su, jE, vu.height), pu(gu, (zu - EE) / 2 + qu.HORIZONTAL_PADDING / 2, su, vu.height, uu, ju, Eu)
+        width: xG,
+        height: BG,
+        draw: GG => {
+          const bG = [];
+          if (GG.fillStyle = zG, GG.fillRect(wb, Sb, Zb, FG.height), XG(JG, (xG - Gb) / 2 + UG.HORIZONTAL_PADDING / 2, Sb, FG.height, GG, ZG, bG), rG) {
+            const wG = Sb + FG.height;
+            GG.fillStyle = EG, GG.fillRect(wb, wG, Zb, aG.height), XG(rG, (xG - bb) / 2 + UG.HORIZONTAL_PADDING / 2, wG, aG.height, GG, ZG, bG)
           }
-          let su = null;
-          if (null !== Pu) {
-            const Eu = Ru - Tu - Hu;
-            null !== wu && void 0 !== wu && wu.backgroundColour && (uu.fillStyle = wu.backgroundColour, uu.fillRect(sE, Eu, jE, Tu)), uu.fillStyle = function(uu, Eu) {
-              const ju = null === uu || void 0 === uu ? void 0 : uu.foregroundColour;
-              if ("string" === typeof ju) return ju;
-              const su = [...Array.isArray(ju) && ju.length > 0 ? ju : Vu].sort(((uu, Eu) => uu.healthFraction - Eu.healthFraction)),
-                Uu = su.find((uu => Eu <= uu.healthFraction));
-              return (null !== Uu && void 0 !== Uu ? Uu : su[su.length - 1]).colour
-            }(wu, Pu), uu.fillRect(sE, Eu, Math.round(jE * Pu), Tu), su = {
-              x: sE,
-              y: Eu,
-              width: jE,
-              height: Tu
+          let wG = null;
+          if (null !== mG) {
+            const bG = BG - HG - tG;
+            null !== uG && void 0 !== uG && uG.backgroundColour && (GG.fillStyle = uG.backgroundColour, GG.fillRect(wb, bG, Zb, HG)), GG.fillStyle = function(GG, bG) {
+              const ZG = null === GG || void 0 === GG ? void 0 : GG.foregroundColour;
+              if ("string" === typeof ZG) return ZG;
+              const wG = [...Array.isArray(ZG) && ZG.length > 0 ? ZG : lG].sort(((GG, bG) => GG.healthFraction - bG.healthFraction)),
+                SG = wG.find((GG => bG <= GG.healthFraction));
+              return (null !== SG && void 0 !== SG ? SG : wG[wG.length - 1]).colour
+            }(uG, mG), GG.fillRect(wb, bG, Math.round(Zb * mG), HG), wG = {
+              x: wb,
+              y: bG,
+              width: Zb,
+              height: HG
             }
           }
-          if (du) {
-            const Eu = [];
-            Bu(du, "nametag") && Eu.push({
-              x: sE,
-              y: UE,
-              width: jE,
-              height: ku.height + (gu ? vu.height : 0)
-            }), su && Bu(du, "healthbar") && Eu.push(su), Eu.length > 0 && function(uu, Eu, ju) {
-              const su = Fu(Eu),
-                Uu = su / 2,
-                Zu = uu => uu.width > 0 && uu.height > 0,
-                Xu = ju.map((uu => ({
-                  x: uu.x + Uu,
-                  y: uu.y + Uu,
-                  width: uu.width - su,
-                  height: uu.height - su
-                }))).filter(Zu);
-              if (0 === Xu.length) return;
-              const lu = Eu => {
-                const ju = Eu.filter(Zu);
-                if (0 !== ju.length) {
-                  uu.beginPath();
-                  for (const Eu of ju) uu.rect(Eu.x, Eu.y, Eu.width, Eu.height);
-                  uu.stroke()
+          if (CG) {
+            const bG = [];
+            gG(CG, "nametag") && bG.push({
+              x: wb,
+              y: Sb,
+              width: Zb,
+              height: FG.height + (rG ? aG.height : 0)
+            }), wG && gG(CG, "healthbar") && bG.push(wG), bG.length > 0 && function(GG, bG, ZG) {
+              const wG = nG(bG),
+                SG = wG / 2,
+                LG = GG => GG.width > 0 && GG.height > 0,
+                yG = ZG.map((GG => ({
+                  x: GG.x + SG,
+                  y: GG.y + SG,
+                  width: GG.width - wG,
+                  height: GG.height - wG
+                }))).filter(LG);
+              if (0 === yG.length) return;
+              const kG = bG => {
+                const ZG = bG.filter(LG);
+                if (0 !== ZG.length) {
+                  GG.beginPath();
+                  for (const bG of ZG) GG.rect(bG.x, bG.y, bG.width, bG.height);
+                  GG.stroke()
                 }
               };
-              if (uu.save(), uu.strokeStyle = Eu.colour, uu.lineWidth = su, uu.lineJoin = "round", "glow" === Eu.style) uu.shadowColor = Eu.colour, uu.shadowBlur = su * Ku, lu(Xu), lu(Xu);
-              else if ("double" === Eu.style) {
-                lu(Xu);
-                const uu = su + 2;
-                lu(Xu.map((Eu => ({
-                  x: Eu.x + uu,
-                  y: Eu.y + uu,
-                  width: Eu.width - 2 * uu,
-                  height: Eu.height - 2 * uu
+              if (GG.save(), GG.strokeStyle = bG.colour, GG.lineWidth = wG, GG.lineJoin = "round", "glow" === bG.style) GG.shadowColor = bG.colour, GG.shadowBlur = wG * cG, kG(yG), kG(yG);
+              else if ("double" === bG.style) {
+                kG(yG);
+                const GG = wG + 2;
+                kG(yG.map((bG => ({
+                  x: bG.x + GG,
+                  y: bG.y + GG,
+                  width: bG.width - 2 * GG,
+                  height: bG.height - 2 * GG
                 }))))
-              } else lu(Xu);
-              uu.restore()
-            }(uu, du, Eu)
+              } else kG(yG);
+              GG.restore()
+            }(GG, CG, bG)
           }
-          Ju(Eu, uu);
-          for (let Uu = 0; Uu < au.length; Uu++) {
-            const Eu = ju.effectImage(au[Uu]);
-            Eu && (uu.imageSmoothingEnabled = !1, uu.drawImage(Eu, 5 + Qu * Uu, 5, ru, ru))
+          iG(bG, GG);
+          for (let SG = 0; SG < WG.length; SG++) {
+            const bG = ZG.effectImage(WG[SG]);
+            bG && (GG.imageSmoothingEnabled = !1, GG.drawImage(bG, 5 + PG * SG, 5, jG, jG))
           }
         }
       }
     }
-    var xu = ju(39009);
-    const Tu = 256,
-      Hu = 1024,
-      Au = {
+    var TG = ZG(39075);
+    const HG = 256,
+      tG = 1024,
+      DG = {
         width: 1,
         height: 7 / 8
       };
-    var nu = ju(39013);
-    const yu = {
+    var NG = ZG(39080);
+    const OG = {
       leaderboard: ""
     };
-    var zu = ju(42868);
-    const Ru = {
+    var xG = ZG(43037);
+    const BG = {
         Nametag: 1,
         MultilineText: 2,
         Board: 3,
         Leaderboard: 4
       },
-      uE = 2048,
-      EE = 256,
-      jE = 10,
-      sE = 4,
-      UE = 65536,
-      ZE = new TextDecoder;
-    let XE = zu.l,
-      lE = -1;
-    const qE = new Map,
-      fE = new Map;
-    let CE = 0;
-    const bE = new TextEncoder;
+      Gb = 2048,
+      bb = 256,
+      Zb = 10,
+      wb = 4,
+      Sb = 65536,
+      Lb = new TextDecoder;
+    let yb = xG.l,
+      kb = -1;
+    const Ub = new Map,
+      Yb = new Map;
+    let Vb = 0;
+    const pb = new TextEncoder;
 
-    function cE(uu, Eu) {
-      const ju = bE.encode(JSON.stringify(Eu)),
-        su = new Uint8Array(ju.length + 1);
-      return su[0] = uu, su.set(ju, 1), su
+    function fb(GG, bG) {
+      const ZG = pb.encode(JSON.stringify(bG)),
+        wG = new Uint8Array(ZG.length + 1);
+      return wG[0] = GG, wG.set(ZG, 1), wG
     }
-    const NE = {
+    const Qb = {
         name: "Ag",
         info: null,
         colour: "default",
         ranks: [],
         effects: [],
         health: .5,
-        LX: null,
+        ey: null,
         hideNameSeed: null
       },
-      OE = [cE(Ru.Nametag, NE), cE(Ru.Nametag, {
-        ...NE,
+      Kb = [fb(BG.Nametag, Qb), fb(BG.Nametag, {
+        ...Qb,
         info: {
           content: [{
             str: "Ag"
           }],
           subtitle: ["Ag"]
         }
-      }), cE(Ru.MultilineText, {
+      }), fb(BG.MultilineText, {
         box: {
           content: ["Ag"]
         },
         shown: null
-      }), ...su.d.map(((uu, Eu) => cE(Ru.Board, {
+      }), ...wG.c.map(((GG, bG) => fb(BG.Board, {
         shared: {
           text: "Ag",
-          textSize: Eu
+          textSize: bG
         },
         w: 0,
         h: 0
       })))];
 
-    function YE(uu) {
-      zu.h.load().then((() => {
-        if (uu()) return;
-        const Eu = (0, Uu.i)(1, 1, {
+    function hb(GG) {
+      xG.i.load().then((() => {
+        if (GG()) return;
+        const bG = (0, SG.f)(1, 1, {
           willReadFrequently: !0
         });
-        var ju;
-        Eu && (ju = Eu.canvas, OE.map((uu => pE(uu, ju))))
+        var ZG;
+        bG && (ZG = bG.canvas, Kb.map((GG => Xb(GG, ZG))))
       }))
     }
-    let hE = zu.o;
+    let db = xG.p;
 
-    function DE() {
-      qE.clear(), fE.clear()
+    function Jb() {
+      Ub.clear(), Yb.clear()
     }
 
-    function gE(uu, Eu) {
-      const ju = uu.get(Eu);
-      return void 0 !== ju && (uu.delete(Eu), uu.set(Eu, ju)), ju
+    function rb(GG, bG) {
+      const ZG = GG.get(bG);
+      return void 0 !== ZG && (GG.delete(bG), GG.set(bG, ZG)), ZG
     }
 
-    function ME(uu, Eu, ju) {
-      uu.set(Eu, ju), uu.size > EE && uu.delete(uu.keys().next().value)
+    function zb(GG, bG, ZG) {
+      GG.set(bG, ZG), GG.size > bb && GG.delete(GG.keys().next().value)
     }
 
-    function eE(uu, Eu, ju) {
-      if (uu === Ru.Nametag) {
-        let uu = gE(qE, Eu);
-        return void 0 === uu && (uu = tu(JSON.parse(Eu), ju, XE), ME(qE, Eu, uu)), uu
+    function Eb(GG, bG, ZG) {
+      if (GG === BG.Nametag) {
+        let GG = rb(Ub, bG);
+        return void 0 === GG && (GG = RG(JSON.parse(bG), ZG, yb), zb(Ub, bG, GG)), GG
       }
-      if (uu === Ru.MultilineText) {
-        var Uu;
-        const uu = JSON.parse(Eu),
-          su = JSON.stringify(null !== (Uu = uu.box) && void 0 !== Uu ? Uu : null),
-          Zu = "number" === typeof uu.shown ? uu.shown : null;
-        let Xu = gE(fE, su);
-        void 0 === Xu && (Xu = au(uu.box, ju, XE), ME(fE, su, Xu));
-        const lu = null === Zu ? null : Math.min(Math.max(0, Math.floor(Zu)), Xu.chars),
-          qu = Xu;
+      if (GG === BG.MultilineText) {
+        var SG;
+        const GG = JSON.parse(bG),
+          wG = JSON.stringify(null !== (SG = GG.box) && void 0 !== SG ? SG : null),
+          LG = "number" === typeof GG.shown ? GG.shown : null;
+        let yG = rb(Yb, wG);
+        void 0 === yG && (yG = WG(GG.box, ZG, yb), zb(Yb, wG, yG));
+        const kG = null === LG ? null : Math.min(Math.max(0, Math.floor(LG)), yG.chars),
+          UG = yG;
         return {
-          width: qu.width,
-          height: qu.height,
-          draw: uu => {
-            qu.draw(uu, lu)
+          width: UG.width,
+          height: UG.height,
+          draw: GG => {
+            UG.draw(GG, kG)
           }
         }
       }
-      if (uu === Ru.Board) return function(uu, Eu) {
-        var ju;
-        if (!Eu.canSeePlayerWrittenText) return null;
+      if (GG === BG.Board) return function(GG, bG) {
+        var ZG;
+        if (!bG.canSeePlayerWrittenText) return null;
         const {
-          shared: Uu,
-          w: Zu = 0,
-          h: Xu = 0
-        } = uu, lu = !Zu;
-        let qu;
-        if (lu) {
-          var fu, Cu;
-          qu = null !== (fu = null === Uu || void 0 === Uu || null === (Cu = Uu.text) || void 0 === Cu ? void 0 : Cu.toString()) && void 0 !== fu ? fu : ""
+          shared: SG,
+          w: LG = 0,
+          h: yG = 0
+        } = GG, kG = !LG;
+        let UG;
+        if (kG) {
+          var YG, VG;
+          UG = null !== (YG = null === SG || void 0 === SG || null === (VG = SG.text) || void 0 === VG ? void 0 : VG.toString()) && void 0 !== YG ? YG : ""
         } else {
-          if ("string" !== typeof(null === Uu || void 0 === Uu ? void 0 : Uu.text)) return null;
-          qu = Uu.text
+          if ("string" !== typeof(null === SG || void 0 === SG ? void 0 : SG.text)) return null;
+          UG = SG.text
         }
-        if ("" === qu.trim()) return null;
-        const bu = null !== (ju = null === Uu || void 0 === Uu ? void 0 : Uu.textSize) && void 0 !== ju ? ju : 0,
-          cu = su.d[bu].ingameFontSize;
-        let Nu = Au,
-          Ou = Tu;
-        lu || (qu = (0, su.k)(qu, bu, Zu, Xu), Nu = (0, su.m)(Zu, Xu), Ou = Math.min(Tu, Hu / Math.max(Nu.width, Nu.height)));
-        const Yu = Math.round(Ou * Nu.width),
-          hu = Math.round(Ou * Nu.height),
-          Du = Ou / Tu;
+        if ("" === UG.trim()) return null;
+        const pG = null !== (ZG = null === SG || void 0 === SG ? void 0 : SG.textSize) && void 0 !== ZG ? ZG : 0,
+          fG = wG.c[pG].ingameFontSize;
+        let QG = DG,
+          KG = HG;
+        kG || (UG = (0, wG.q)(UG, pG, LG, yG), QG = (0, wG.v)(LG, yG), KG = Math.min(HG, tG / Math.max(QG.width, QG.height)));
+        const hG = Math.round(KG * QG.width),
+          dG = Math.round(KG * QG.height),
+          JG = KG / HG;
         return {
-          width: Yu,
-          height: hu,
-          draw: uu => {
-            xu.b.fontSize = cu * Du, xu.b.fontWeight = "bold", xu.b.font = "'Jetbrains Mono', monospace", xu.b.drawText(uu, qu, 0, (-10 - 7 * bu) * Du, Yu, hu)
+          width: hG,
+          height: dG,
+          draw: GG => {
+            TG.e.fontSize = fG * JG, TG.e.fontWeight = "bold", TG.e.font = "'Jetbrains Mono', monospace", TG.e.drawText(GG, UG, 0, (-10 - 7 * pG) * JG, hG, dG)
           }
         }
-      }(JSON.parse(Eu), XE);
-      if (uu === Ru.Leaderboard) return function(uu, Eu, ju) {
-        var su;
-        const Uu = (0, nu.i)(uu.opts, yu),
-          Zu = (0, nu.d)(Uu, ju),
-          Xu = {
-            top: (0, nu.f)(Uu, (0, nu.m)(uu.top)),
-            around: null !== (su = uu.around) && void 0 !== su ? su : null,
-            showPlayerText: Eu.canSeePlayerWrittenText,
-            localPlayerDbId: Eu.localPlayerDbId
+      }(JSON.parse(bG), yb);
+      if (GG === BG.Leaderboard) return function(GG, bG, ZG) {
+        var wG;
+        const SG = (0, NG.h)(GG.opts, OG),
+          LG = (0, NG.f)(SG, ZG),
+          yG = {
+            top: (0, NG.g)(SG, (0, NG.i)(GG.top)),
+            around: null !== (wG = GG.around) && void 0 !== wG ? wG : null,
+            showPlayerText: bG.canSeePlayerWrittenText,
+            localPlayerDbId: bG.localPlayerDbId
           };
         return {
-          width: Zu.pixelWidth,
-          height: Zu.pixelHeight,
-          draw: uu => {
+          width: LG.pixelWidth,
+          height: LG.pixelHeight,
+          draw: GG => {
             const {
-              a: Eu,
-              d: ju
-            } = uu.getTransform();
-            (0, nu.c)(uu, Math.round(Zu.pixelWidth * Eu), Math.round(Zu.pixelHeight * ju), Zu, Uu, Xu)
+              a: bG,
+              d: ZG
+            } = GG.getTransform();
+            (0, NG.e)(GG, Math.round(LG.pixelWidth * bG), Math.round(LG.pixelHeight * ZG), LG, SG, yG)
           }
         }
-      }(JSON.parse(Eu), XE, uE);
-      throw new Error(`unknown text plane kind ${uu}`)
+      }(JSON.parse(bG), yb, Gb);
+      throw new Error(`unknown text plane kind ${GG}`)
     }
-    const GE = 2 ** Math.floor(Math.log2(uE));
+    const ob = 2 ** Math.floor(Math.log2(Gb));
 
-    function pE(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        su = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    function Xb(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        wG = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
       try {
-        if (uu.length < 2) return [0, 0];
-        const Zu = (0, Uu.e)(Eu);
-        if (!Zu) return [0, 0];
-        const Xu = hE();
-        Xu !== lE && (lE = Xu, DE());
-        const [lu] = uu, qu = ZE.decode(uu.subarray(1));
-        let fu;
-        lu !== Ru.Board && lu !== Ru.Leaderboard || !XE.canSeePlayerWrittenText || XE.glyphsShown(qu), Zu.save();
+        if (GG.length < 2) return [0, 0];
+        const LG = (0, SG.d)(bG);
+        if (!LG) return [0, 0];
+        const yG = db();
+        yG !== kb && (kb = yG, Jb());
+        const [kG] = GG, UG = Lb.decode(GG.subarray(1));
+        let YG;
+        kG !== BG.Board && kG !== BG.Leaderboard || !yb.canSeePlayerWrittenText || yb.glyphsShown(UG), LG.save();
         try {
-          fu = eE(lu, qu, Zu)
+          YG = Eb(kG, UG, LG)
         } finally {
-          Zu.restore()
+          LG.restore()
         }
-        if (null === fu || !(fu.width > 0 && fu.height > 0)) return [0, 0];
-        const Cu = Math.min(1, uE / fu.width, uE / fu.height),
-          bu = uu => su ? function(uu) {
-            const Eu = 2 ** Math.ceil(Math.log2(uu));
-            return Math.min(GE, Eu - uu > uu - Eu / 2 ? Eu / 2 : Eu)
-          }(uu) : Math.min(uE, Math.ceil(uu * Cu)),
-          [cu, Nu] = [bu(fu.width), bu(fu.height)];
-        ! function(uu, Eu, ju, su, Uu) {
-          const Zu = Math.max(uu.width, ju),
-            Xu = Math.max(uu.height, su),
-            lu = Uu || Zu * Xu > Math.max(sE * ju * su, UE),
-            [qu, fu] = lu ? [ju, su] : [Zu, Xu];
-          qu === uu.width && fu === uu.height ? Eu.clearRect(0, 0, qu, fu) : (uu.width = qu, uu.height = fu)
-        }(Eu, Zu, cu, Nu, ju), Zu.save();
+        if (null === YG || !(YG.width > 0 && YG.height > 0)) return [0, 0];
+        const VG = Math.min(1, Gb / YG.width, Gb / YG.height),
+          pG = GG => wG ? function(GG) {
+            const bG = 2 ** Math.ceil(Math.log2(GG));
+            return Math.min(ob, bG - GG > GG - bG / 2 ? bG / 2 : bG)
+          }(GG) : Math.min(Gb, Math.ceil(GG * VG)),
+          [fG, QG] = [pG(YG.width), pG(YG.height)];
+        ! function(GG, bG, ZG, wG, SG) {
+          const LG = Math.max(GG.width, ZG),
+            yG = Math.max(GG.height, wG),
+            kG = SG || LG * yG > Math.max(wb * ZG * wG, Sb),
+            [UG, YG] = kG ? [ZG, wG] : [LG, yG];
+          UG === GG.width && YG === GG.height ? bG.clearRect(0, 0, UG, YG) : (GG.width = UG, GG.height = YG)
+        }(bG, LG, fG, QG, ZG), LG.save();
         try {
-          const [uu, Eu] = su ? [cu / fu.width, Nu / fu.height] : [Cu, Cu];
-          1 === uu && 1 === Eu || Zu.scale(uu, Eu), fu.draw(Zu)
+          const [GG, bG] = wG ? [fG / YG.width, QG / YG.height] : [VG, VG];
+          1 === GG && 1 === bG || LG.scale(GG, bG), YG.draw(LG)
         } finally {
-          Zu.restore()
+          LG.restore()
         }
-        return [cu, Nu]
-      } catch (Zu) {
-        ! function(uu, Eu) {
-          CE < jE && (CE++, console.warn(`[bloxd-wasm-client] ${uu}`, Eu))
-        }("could not raster a text plane", Zu);
+        return [fG, QG]
+      } catch (LG) {
+        ! function(GG, bG) {
+          Vb < Zb && (Vb++, console.warn(`[bloxd-wasm-client] ${GG}`, bG))
+        }("could not raster a text plane", LG);
         try {
-          Eu.width = 1
+          bG.width = 1
         } catch {}
         return [0, 0]
       }
@@ -1108,4 +1108,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

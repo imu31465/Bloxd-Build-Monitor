@@ -1,97 +1,97 @@
 export const id = 277;
 export const ids = [276, 277];
 export const modules = {
-  41276: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      gamePackSource: () => Zu
+  41447: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      gamePackSource: () => LG
     });
-    var su = ju(5146),
-      Uu = ju(1559);
+    var wG = ZG(5008),
+      SG = ZG(1431);
 
-    function Zu(uu) {
+    function LG(GG) {
       return {
-        packKey: async Eu => (await Uu.b.getGame(uu, Eu, !0)).customTexturePackKey,
-        fetchPack: su.c
+        packKey: async bG => (await SG.d.getGame(GG, bG, !0)).customTexturePackKey,
+        fetchPack: wG.e
       }
     }
   },
-  51254: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      fetchGuestContext: () => cu,
-      guestJoinTarget: () => Mu,
-      guestJoinWithPack: () => Ou,
-      guestPackForGame: () => Nu,
-      invalidateGuestTrafficCode: () => gu
+  51425: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      fetchGuestContext: () => fG,
+      guestJoinTarget: () => zG,
+      guestJoinWithPack: () => KG,
+      guestPackForGame: () => QG,
+      invalidateGuestTrafficCode: () => rG
     });
-    var su = ju(1255),
-      Uu = ju(1559),
-      Zu = ju(91),
-      Xu = ju(36850),
-      lu = ju(1183),
-      qu = ju(40988),
-      fu = ju(41276),
-      Cu = ju(40955);
+    var wG = ZG(1163),
+      SG = ZG(1431),
+      LG = ZG(80),
+      yG = ZG(36801),
+      kG = ZG(1096),
+      UG = ZG(41122),
+      YG = ZG(41447),
+      VG = ZG(41088);
 
-    function bu() {
-      if (Zu.featureFlags.useTurnstile) throw new qu.TurnstilePageError
+    function pG() {
+      if (LG.featureFlags.useTurnstile) throw new UG.TurnstilePageError
     }
 
-    function cu() {
-      return (0, lu.fetchAnonymousUserContext)().catch((uu => (console.warn("the guest context didn't load", uu), null)))
+    function fG() {
+      return (0, kG.fetchAnonymousUserContext)().catch((GG => (console.warn("the guest context didn't load", GG), null)))
     }
-    async function Nu(uu, Eu, ju, su) {
+    async function QG(GG, bG, ZG, wG) {
       try {
-        const Uu = await ju;
-        if (null === Uu) return void console.warn(`the texture pack step for ${uu} has no guest context: the pack in play stays`);
-        await Eu.packForGame(uu, (0, fu.gamePackSource)(Uu), su)
-      } catch (Uu) {
-        console.warn(`the texture pack step for ${uu} failed: the pack in play stays`, Uu)
+        const SG = await ZG;
+        if (null === SG) return void console.warn(`the texture pack step for ${GG} has no guest context: the pack in play stays`);
+        await bG.packForGame(GG, (0, YG.gamePackSource)(SG), wG)
+      } catch (SG) {
+        console.warn(`the texture pack step for ${GG} failed: the pack in play stays`, SG)
       }
     }
-    async function Ou(uu, Eu, ju, su) {
-      bu();
-      const Uu = cu();
-      return await ju(((Eu, ju) => Nu(uu, Eu, Uu, ju))), Mu(uu, Eu, su(), await Uu)
+    async function KG(GG, bG, ZG, wG) {
+      pG();
+      const SG = fG();
+      return await ZG(((bG, ZG) => QG(GG, bG, SG, ZG))), zG(GG, bG, wG(), await SG)
     }
-    let Yu = null,
-      hu = null;
-    async function Du() {
-      if ((null === Yu || Yu.hasExpired()) && (hu ??= (0, lu.fetchAnonymousUserContext)().then((uu => {
-          Yu = uu
+    let hG = null,
+      dG = null;
+    async function JG() {
+      if ((null === hG || hG.hasExpired()) && (dG ??= (0, kG.fetchAnonymousUserContext)().then((GG => {
+          hG = GG
         })).finally((() => {
-          hu = null
-        })), await hu), null === Yu) throw new Error("no guest context to post as");
-      return Yu.getMetricsCookies()
+          dG = null
+        })), await dG), null === hG) throw new Error("no guest context to post as");
+      return hG.getMetricsCookies()
     }
-    async function gu() {
-      var uu;
-      await (null === (uu = Yu) || void 0 === uu ? void 0 : uu.invalidateTrafficCode())
+    async function rG() {
+      var GG;
+      await (null === (GG = hG) || void 0 === GG ? void 0 : GG.invalidateTrafficCode())
     }
-    async function Mu(uu, Eu, ju) {
-      let Zu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      bu();
-      const qu = null !== Zu && void 0 !== Zu ? Zu : await (0, lu.fetchAnonymousUserContext)();
-      if (Yu = qu, qu.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
-      const fu = await Uu.b.matchmakePlayer(qu, Eu, uu, (0, Xu.c)()),
-        cu = performance.now();
-      if (!("gameServerHost" in fu)) throw new Error(`matchmaking refused: ${fu.failReason}`);
-      const Nu = su.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(fu.gameServerHost);
-      if (Nu.isError()) throw new Error(`no socket URL for ${fu.gameServerHost}: ${Nu.asError().message}`);
-      const Ou = {
-        endpoint: Nu.getValue(),
-        gameNameWithVariation: fu.gameNameWithVariation,
-        lobbyName: fu.lobbyName
+    async function zG(GG, bG, ZG) {
+      let LG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      pG();
+      const UG = null !== LG && void 0 !== LG ? LG : await (0, kG.fetchAnonymousUserContext)();
+      if (hG = UG, UG.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
+      const YG = await SG.d.matchmakePlayer(UG, bG, GG, (0, yG.e)()),
+        fG = performance.now();
+      if (!("gameServerHost" in YG)) throw new Error(`matchmaking refused: ${YG.failReason}`);
+      const QG = wG.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(YG.gameServerHost);
+      if (QG.isError()) throw new Error(`no socket URL for ${YG.gameServerHost}: ${QG.asError().message}`);
+      const KG = {
+        endpoint: QG.getValue(),
+        gameNameWithVariation: YG.gameNameWithVariation,
+        lobbyName: YG.lobbyName
       };
       return {
         target: {
-          ...await (0, Cu.h)(qu, Ou, ju, !1),
-          postCookies: Du
+          ...await (0, VG.e)(UG, KG, ZG, !1),
+          postCookies: JG
         },
-        matchedAt: cu,
-        freshMs: Cu.d
+        matchedAt: fG,
+        freshMs: VG.c
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

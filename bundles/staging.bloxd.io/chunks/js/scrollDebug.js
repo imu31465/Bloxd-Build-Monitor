@@ -1,25 +1,25 @@
 export const id = 53;
 export const ids = [53];
 export const modules = {
-  4883: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      MAX_LINES: () => lu,
-      MAX_SETTLE_MS: () => Xu,
-      SETTLE_MS: () => Zu,
-      ScrollDebugLog: () => eu,
-      changeText: () => hu,
-      elementText: () => gu,
-      fullStateText: () => Yu,
-      startScrollDebug: () => Gu,
-      touchedText: () => Mu
+  4717: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      MAX_LINES: () => kG,
+      MAX_SETTLE_MS: () => yG,
+      SETTLE_MS: () => LG,
+      ScrollDebugLog: () => EG,
+      changeText: () => dG,
+      elementText: () => rG,
+      fullStateText: () => hG,
+      startScrollDebug: () => oG,
+      touchedText: () => zG
     });
-    var su = ju(22),
-      Uu = ju(2943);
-    const Zu = 300,
-      Xu = 2e3,
-      lu = 40,
-      qu = 2,
-      fu = {
+    var wG = ZG(17),
+      SG = ZG(2801);
+    const LG = 300,
+      yG = 2e3,
+      kG = 40,
+      UG = 2,
+      YG = {
         vvOffsetTop: "vv offsetTop",
         vvOffsetLeft: "vv offsetLeft",
         vvPageTop: "vv pageTop",
@@ -31,142 +31,142 @@ export const modules = {
         scrollHeight: "scrollHeight",
         innerHeight: "innerHeight"
       },
-      Cu = Object.keys(fu),
-      bu = new Set(["scrollHeight", "innerHeight"]);
+      VG = Object.keys(YG),
+      pG = new Set(["scrollHeight", "innerHeight"]);
 
-    function cu(uu, Eu) {
-      const ju = 10 ** Eu;
-      return Math.round(uu * ju) / ju
+    function fG(GG, bG) {
+      const ZG = 10 ** bG;
+      return Math.round(GG * ZG) / ZG
     }
 
-    function Nu() {
-      const uu = window.visualViewport;
+    function QG() {
+      const GG = window.visualViewport;
       return {
-        vvOffsetTop: cu(uu.offsetTop, 1),
-        vvOffsetLeft: cu(uu.offsetLeft, 1),
-        vvPageTop: cu(uu.pageTop, 1),
-        vvPageLeft: cu(uu.pageLeft, 1),
-        vvHeight: cu(uu.height, 1),
-        vvScale: cu(uu.scale, 3),
-        scrollX: cu(window.scrollX, 1),
-        scrollY: cu(window.scrollY, 1),
+        vvOffsetTop: fG(GG.offsetTop, 1),
+        vvOffsetLeft: fG(GG.offsetLeft, 1),
+        vvPageTop: fG(GG.pageTop, 1),
+        vvPageLeft: fG(GG.pageLeft, 1),
+        vvHeight: fG(GG.height, 1),
+        vvScale: fG(GG.scale, 3),
+        scrollX: fG(window.scrollX, 1),
+        scrollY: fG(window.scrollY, 1),
         scrollHeight: document.documentElement.scrollHeight,
         innerHeight: window.innerHeight
       }
     }
 
-    function Ou(uu, Eu) {
-      return `${fu[uu]} ${Eu}`
+    function KG(GG, bG) {
+      return `${YG[GG]} ${bG}`
     }
 
-    function Yu(uu) {
-      return Cu.map((Eu => Ou(Eu, String(uu[Eu])))).join(", ")
+    function hG(GG) {
+      return VG.map((bG => KG(bG, String(GG[bG])))).join(", ")
     }
 
-    function hu(uu, Eu, ju, su) {
-      return Cu.flatMap((Uu => {
-        const Zu = uu[Uu] !== Eu[Uu],
-          Xu = ju[Uu] < Math.min(uu[Uu], Eu[Uu]) || su[Uu] > Math.max(uu[Uu], Eu[Uu]);
-        if (!Zu && !Xu && !bu.has(Uu)) return [];
-        return [Ou(Uu, `${Zu?`${uu[Uu]} -> ${Eu[Uu]}`:String(Eu[Uu])}${Xu?` (via ${ju[Uu]}..${su[Uu]})`:""}`)]
+    function dG(GG, bG, ZG, wG) {
+      return VG.flatMap((SG => {
+        const LG = GG[SG] !== bG[SG],
+          yG = ZG[SG] < Math.min(GG[SG], bG[SG]) || wG[SG] > Math.max(GG[SG], bG[SG]);
+        if (!LG && !yG && !pG.has(SG)) return [];
+        return [KG(SG, `${LG?`${GG[SG]} -> ${bG[SG]}`:String(bG[SG])}${yG?` (via ${ZG[SG]}..${wG[SG]})`:""}`)]
       })).join(", ")
     }
 
-    function Du(uu, Eu, ju) {
-      return Object.fromEntries(Cu.map((su => [su, ju(uu[su], Eu[su])])))
+    function JG(GG, bG, ZG) {
+      return Object.fromEntries(VG.map((wG => [wG, ZG(GG[wG], bG[wG])])))
     }
 
-    function gu(uu) {
-      var Eu;
-      const ju = (null !== (Eu = uu.getAttribute("class")) && void 0 !== Eu ? Eu : "").trim().replace(/\s+/g, ".").slice(0, 40);
-      return `${uu.tagName.toLowerCase()}${ju?`.${ju}`:""}`
+    function rG(GG) {
+      var bG;
+      const ZG = (null !== (bG = GG.getAttribute("class")) && void 0 !== bG ? bG : "").trim().replace(/\s+/g, ".").slice(0, 40);
+      return `${GG.tagName.toLowerCase()}${ZG?`.${ZG}`:""}`
     }
 
-    function Mu(uu, Eu) {
-      const ju = [];
-      for (let su = uu.parentElement; null !== su && ju.length < qu; su = su.parentElement) {
-        const uu = Eu(su);
-        "auto" !== uu && ju.push(`${uu} on ${gu(su)}`)
+    function zG(GG, bG) {
+      const ZG = [];
+      for (let wG = GG.parentElement; null !== wG && ZG.length < UG; wG = wG.parentElement) {
+        const GG = bG(wG);
+        "auto" !== GG && ZG.push(`${GG} on ${rG(wG)}`)
       }
-      return `${gu(uu)} touch-action ${Eu(uu)}${ju.length>0?` (${ju.join(", ")})`:""}`
+      return `${rG(GG)} touch-action ${bG(GG)}${ZG.length>0?` (${ZG.join(", ")})`:""}`
     }
-    class eu {
-      constructor(uu) {
-        this.deps = uu, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
-          const uu = this.deps.now(),
-            Eu = uu - this.lastEventMs;
-          if (Eu < Zu && uu - this.burstStartMs < Xu) return void(this.timer = setTimeout(this.settle, Zu - Eu));
+    class EG {
+      constructor(GG) {
+        this.deps = GG, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
+          const GG = this.deps.now(),
+            bG = GG - this.lastEventMs;
+          if (bG < LG && GG - this.burstStartMs < yG) return void(this.timer = setTimeout(this.settle, LG - bG));
           this.timer = null;
-          const ju = this.deps.read(),
+          const ZG = this.deps.read(),
             {
-              last: su,
-              innerScrolled: Uu,
-              burstTouch: qu
+              last: wG,
+              innerScrolled: SG,
+              burstTouch: UG
             } = this,
-            fu = Du(this.low, ju, Math.min),
-            bu = Du(this.high, ju, Math.max);
-          if (this.last = ju, this.low = ju, this.high = ju, this.innerScrolled = null, Nu = fu, Ou = bu, Cu.every((uu => Nu[uu] === Ou[uu])) || !this.burstInGame || !this.deps.inGame()) return;
-          var Nu, Ou;
-          if (this.lines === lu) return this.capped = !0, void this.deps.log(`further changes unlogged: ${lu} lines logged`);
+            YG = JG(this.low, ZG, Math.min),
+            pG = JG(this.high, ZG, Math.max);
+          if (this.last = ZG, this.low = ZG, this.high = ZG, this.innerScrolled = null, QG = YG, KG = pG, VG.every((GG => QG[GG] === KG[GG])) || !this.burstInGame || !this.deps.inGame()) return;
+          var QG, KG;
+          if (this.lines === kG) return this.capped = !0, void this.deps.log(`further changes unlogged: ${kG} lines logged`);
           this.lines++;
-          const Yu = null === qu ? "no touch yet" : `touch on ${qu.text}, ${Math.round(this.burstStartMs-qu.atMs)} ms before`,
-            Mu = null === Uu ? "" : `; inner scroll ${gu(Uu)} scrollTop ${cu(Uu.scrollTop,1)}`;
-          this.deps.log(`moved over ${Math.round(uu-this.burstStartMs)} ms; ${Yu}${Mu}: ${hu(su,ju,fu,bu)}`)
-        }, this.last = uu.read(), this.low = this.last, this.high = this.last, uu.log(`start: ${Yu(this.last)}`)
+          const hG = null === UG ? "no touch yet" : `touch on ${UG.text}, ${Math.round(this.burstStartMs-UG.atMs)} ms before`,
+            zG = null === SG ? "" : `; inner scroll ${rG(SG)} scrollTop ${fG(SG.scrollTop,1)}`;
+          this.deps.log(`moved over ${Math.round(GG-this.burstStartMs)} ms; ${hG}${zG}: ${dG(wG,ZG,YG,pG)}`)
+        }, this.last = GG.read(), this.low = this.last, this.high = this.last, GG.log(`start: ${hG(this.last)}`)
       }
       moved() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         if (this.capped) return;
-        const Eu = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
-        if (null !== uu && (null === Eu || !uu.contains(Eu.target))) return;
-        const ju = this.deps.now();
-        this.lastEventMs = ju, null === this.timer && (this.burstStartMs = ju, this.burstInGame = this.deps.inGame(), this.burstTouch = Eu, this.timer = setTimeout(this.settle, Zu));
-        const su = this.deps.read();
-        this.low = Du(this.low, su, Math.min), this.high = Du(this.high, su, Math.max), this.innerScrolled = null !== uu && void 0 !== uu ? uu : this.innerScrolled
+        const bG = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
+        if (null !== GG && (null === bG || !GG.contains(bG.target))) return;
+        const ZG = this.deps.now();
+        this.lastEventMs = ZG, null === this.timer && (this.burstStartMs = ZG, this.burstInGame = this.deps.inGame(), this.burstTouch = bG, this.timer = setTimeout(this.settle, LG));
+        const wG = this.deps.read();
+        this.low = JG(this.low, wG, Math.min), this.high = JG(this.high, wG, Math.max), this.innerScrolled = null !== GG && void 0 !== GG ? GG : this.innerScrolled
       }
     }
 
-    function Gu() {
-      let uu = null;
-      const Eu = new eu({
-        read: Nu,
-        inGame: () => "inGame" === su.d.get("gameState"),
-        lastTouch: () => uu,
-        log: uu => {
-          (0, Uu.k)("scroll", uu)
+    function oG() {
+      let GG = null;
+      const bG = new EG({
+        read: QG,
+        inGame: () => "inGame" === wG.e.get("gameState"),
+        lastTouch: () => GG,
+        log: GG => {
+          (0, SG.j)("scroll", GG)
         },
         now: () => performance.now()
       });
-      document.addEventListener("touchstart", (Eu => {
-        if (Eu.target instanceof Element) {
-          const ju = Mu(Eu.target, (uu => getComputedStyle(uu).touchAction));
-          uu = {
-            target: Eu.target,
-            text: ju,
+      document.addEventListener("touchstart", (bG => {
+        if (bG.target instanceof Element) {
+          const ZG = zG(bG.target, (GG => getComputedStyle(GG).touchAction));
+          GG = {
+            target: bG.target,
+            text: ZG,
             atMs: performance.now()
           }
         }
       }), {
         capture: !0,
         passive: !0
-      }), document.addEventListener("scroll", (uu => {
-        Eu.moved(uu.target instanceof Element ? uu.target : null)
+      }), document.addEventListener("scroll", (GG => {
+        bG.moved(GG.target instanceof Element ? GG.target : null)
       }), {
         capture: !0,
         passive: !0
       });
-      const ju = () => {
-        Eu.moved()
+      const ZG = () => {
+        bG.moved()
       };
-      window.addEventListener("resize", ju, {
+      window.addEventListener("resize", ZG, {
         passive: !0
-      }), window.visualViewport.addEventListener("scroll", ju, {
+      }), window.visualViewport.addEventListener("scroll", ZG, {
         passive: !0
-      }), window.visualViewport.addEventListener("resize", ju, {
+      }), window.visualViewport.addEventListener("resize", ZG, {
         passive: !0
       })
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

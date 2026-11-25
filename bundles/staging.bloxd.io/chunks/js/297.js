@@ -1,66 +1,66 @@
 export const id = 297;
 export const ids = [297];
 export const modules = {
-  41533: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      default: () => xE
+  41715: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      default: () => Tb
     });
-    var su = ju(41541),
-      Uu = ju(41592),
-      Zu = ju(41596),
-      Xu = ju(58),
-      lu = ju(65),
-      qu = ju(41609),
-      fu = ju(41617),
-      Cu = ju(4942),
-      bu = ju(41619),
-      cu = ju(1964),
-      Nu = ju(41627),
-      Ou = ju(41649),
-      Yu = ju.n(Ou),
-      hu = ju(41598),
-      Du = ju(41606),
-      gu = ju(1393),
-      Mu = ju(37248),
-      eu = ju(1298),
-      Gu = ju(2541),
-      pu = ju(37139),
-      wu = ju(1499),
-      Ju = ju(649),
-      du = ju(1301),
-      au = ju(41720),
-      Pu = ju(41550),
-      ou = ju(41553),
-      ku = ju(1986),
-      mu = ju(3946),
-      vu = ju(24),
-      Ku = ju(1183);
-    const Vu = 1e4,
-      ru = 250,
-      Qu = 250;
-    var iu = ju(41571);
-    const Wu = 50,
-      Su = 100;
-    const Iu = 2e3,
-      Fu = Pu.L.define(),
-      Bu = Pu.L.define(),
-      Lu = Pu.L.define();
-    class tu extends ou.r {
-      constructor(uu, Eu, ju) {
-        super(), this.colour = uu, this.playerName = Eu, this.showName = ju
+    var wG = ZG(41721),
+      SG = ZG(41775),
+      LG = ZG(41777),
+      yG = ZG(51),
+      kG = ZG(59),
+      UG = ZG(41793),
+      YG = ZG(41795),
+      VG = ZG(4779),
+      pG = ZG(41801),
+      fG = ZG(1876),
+      QG = ZG(41805),
+      KG = ZG(41820),
+      hG = ZG.n(KG),
+      dG = ZG(41784),
+      JG = ZG(41787),
+      rG = ZG(1302),
+      zG = ZG(37197),
+      EG = ZG(1198),
+      oG = ZG(2404),
+      XG = ZG(37097),
+      uG = ZG(1389),
+      iG = ZG(604),
+      CG = ZG(1202),
+      WG = ZG(41869),
+      mG = ZG(41727),
+      IG = ZG(41735),
+      FG = ZG(1895),
+      vG = ZG(3766),
+      aG = ZG(19),
+      cG = ZG(1096);
+    const lG = 1e4,
+      jG = 250,
+      PG = 250;
+    var MG = ZG(41754);
+    const AG = 50,
+      sG = 100;
+    const qG = 2e3,
+      nG = mG.C.define(),
+      gG = mG.C.define(),
+      eG = mG.C.define();
+    class RG extends IG.n {
+      constructor(GG, bG, ZG) {
+        super(), this.colour = GG, this.playerName = bG, this.showName = ZG
       }
       toDOM() {
-        const uu = document.createElement("span");
-        uu.className = "cm-remote-cursor-wrapper", uu.style.borderLeftColor = this.colour;
-        const Eu = document.createElement("span");
-        if (Eu.className = "cm-remote-cursor", Eu.style.borderLeftColor = this.colour, uu.appendChild(Eu), this.showName) {
-          const Eu = document.createElement("span");
-          Eu.className = "cm-remote-cursor-name", Eu.style.backgroundColor = this.colour, Eu.textContent = this.playerName, uu.appendChild(Eu)
+        const GG = document.createElement("span");
+        GG.className = "cm-remote-cursor-wrapper", GG.style.borderLeftColor = this.colour;
+        const bG = document.createElement("span");
+        if (bG.className = "cm-remote-cursor", bG.style.borderLeftColor = this.colour, GG.appendChild(bG), this.showName) {
+          const bG = document.createElement("span");
+          bG.className = "cm-remote-cursor-name", bG.style.backgroundColor = this.colour, bG.textContent = this.playerName, GG.appendChild(bG)
         }
-        return uu
+        return GG
       }
-      eq(uu) {
-        return this.colour === uu.colour && this.playerName === uu.playerName && this.showName === uu.showName
+      eq(GG) {
+        return this.colour === GG.colour && this.playerName === GG.playerName && this.showName === GG.showName
       }
       get estimatedHeight() {
         return -1
@@ -70,270 +70,270 @@ export const modules = {
       }
     }
 
-    function xu(uu, Eu) {
-      const ju = [],
-        su = [];
-      for (const [, Xu] of uu) {
-        const uu = Eu - Xu.lastMoved < Iu;
-        if (ju.push({
-            pos: Xu.head,
-            decoration: ou.e.widget({
-              widget: new tu(Xu.colour, Xu.playerName, uu),
+    function TG(GG, bG) {
+      const ZG = [],
+        wG = [];
+      for (const [, yG] of GG) {
+        const GG = bG - yG.lastMoved < qG;
+        if (ZG.push({
+            pos: yG.head,
+            decoration: IG.c.widget({
+              widget: new RG(yG.colour, yG.playerName, GG),
               side: 1
             })
-          }), Xu.anchor !== Xu.head) {
-          const uu = Math.min(Xu.anchor, Xu.head),
-            Eu = Math.max(Xu.anchor, Xu.head);
-          su.push({
-            from: uu,
-            to: Eu,
-            decoration: ou.e.mark({
+          }), yG.anchor !== yG.head) {
+          const GG = Math.min(yG.anchor, yG.head),
+            bG = Math.max(yG.anchor, yG.head);
+          wG.push({
+            from: GG,
+            to: bG,
+            decoration: IG.c.mark({
               class: "cm-remote-selection",
               attributes: {
-                style: `background-color: ${Xu.colour}33`
+                style: `background-color: ${yG.colour}33`
               }
             })
           })
         }
       }
-      const Uu = new Pu.C,
-        Zu = [];
-      for (const Xu of ju) Zu.push({
+      const SG = new mG.v,
+        LG = [];
+      for (const yG of ZG) LG.push({
         bias: 1,
-        deco: Xu.decoration,
-        from: Xu.pos,
-        to: Xu.pos
+        deco: yG.decoration,
+        from: yG.pos,
+        to: yG.pos
       });
-      for (const Xu of su) Zu.push({
+      for (const yG of wG) LG.push({
         bias: 0,
-        deco: Xu.decoration,
-        from: Xu.from,
-        to: Xu.to
+        deco: yG.decoration,
+        from: yG.from,
+        to: yG.to
       });
-      Zu.sort(((uu, Eu) => uu.from - Eu.from || uu.deco.startSide - Eu.deco.startSide || uu.bias - Eu.bias));
-      for (const Xu of Zu) Uu.add(Xu.from, Xu.to, Xu.deco);
-      return Uu.finish()
+      LG.sort(((GG, bG) => GG.from - bG.from || GG.deco.startSide - bG.deco.startSide || GG.bias - bG.bias));
+      for (const yG of LG) SG.add(yG.from, yG.to, yG.deco);
+      return SG.finish()
     }
-    const Tu = Pu.N.define({
+    const HG = mG.G.define({
       create: () => ({
         cursors: new Map,
-        Cs: ou.e.none
+        Yw: IG.c.none
       }),
-      update(uu, Eu) {
-        let ju = uu.cursors,
-          su = !1;
-        if (Eu.docChanged) {
-          const uu = new Map;
-          for (const [su, Uu] of ju) uu.set(su, {
-            ...Uu,
-            anchor: Eu.changes.mapPos(Uu.anchor, 1),
-            head: Eu.changes.mapPos(Uu.head, 1)
+      update(GG, bG) {
+        let ZG = GG.cursors,
+          wG = !1;
+        if (bG.docChanged) {
+          const GG = new Map;
+          for (const [wG, SG] of ZG) GG.set(wG, {
+            ...SG,
+            anchor: bG.changes.mapPos(SG.anchor, 1),
+            head: bG.changes.mapPos(SG.head, 1)
           });
-          ju = uu, su = !0
+          ZG = GG, wG = !0
         }
-        for (const Uu of Eu.effects)
-          if (Uu.is(Fu)) {
-            if (!Number.isInteger(Uu.value.anchor) || !Number.isInteger(Uu.value.head)) {
-              console.warn(`Code Editor: ignored player ${Uu.value.playerId}'s cursor at ${Uu.value.anchor}-${Uu.value.head}`);
+        for (const SG of bG.effects)
+          if (SG.is(nG)) {
+            if (!Number.isInteger(SG.value.anchor) || !Number.isInteger(SG.value.head)) {
+              console.warn(`Code Editor: ignored player ${SG.value.playerId}'s cursor at ${SG.value.anchor}-${SG.value.head}`);
               continue
             }
-            const Zu = Eu.state.doc.length,
-              Xu = {
-                ...Uu.value,
-                anchor: Math.min(Uu.value.anchor, Zu),
-                head: Math.min(Uu.value.head, Zu)
+            const LG = bG.state.doc.length,
+              yG = {
+                ...SG.value,
+                anchor: Math.min(SG.value.anchor, LG),
+                head: Math.min(SG.value.head, LG)
               };
-            ju === uu.cursors && (ju = new Map(ju)), ju.set(Xu.playerId, Xu), su = !0
-          } else Uu.is(Bu) ? ju.has(Uu.value) && (ju === uu.cursors && (ju = new Map(ju)), ju.delete(Uu.value), su = !0) : Uu.is(Lu) && (su = !0);
-        return su ? {
-          cursors: ju,
-          Cs: xu(ju, Date.now())
-        } : uu
+            ZG === GG.cursors && (ZG = new Map(ZG)), ZG.set(yG.playerId, yG), wG = !0
+          } else SG.is(gG) ? ZG.has(SG.value) && (ZG === GG.cursors && (ZG = new Map(ZG)), ZG.delete(SG.value), wG = !0) : SG.is(eG) && (wG = !0);
+        return wG ? {
+          cursors: ZG,
+          Yw: TG(ZG, Date.now())
+        } : GG
       },
-      provide: uu => ou.l.Cs.from(uu, (uu => uu.Cs))
+      provide: GG => IG.h.Yw.from(GG, (GG => GG.Yw))
     });
-    const Hu = Pu.L.define(),
-      Au = ou.e.mark({
+    const tG = mG.C.define(),
+      DG = IG.c.mark({
         class: "CodeInsertFlash"
       }),
-      nu = Pu.N.define({
-        create: () => ou.e.none,
-        update(uu, Eu) {
-          let ju = uu.map(Eu.changes);
-          for (const su of Eu.effects) su.is(Hu) && (ju = su.value ? ou.e.set(Au.range(su.value.from, su.value.to)) : ou.e.none);
-          return ju
+      NG = mG.G.define({
+        create: () => IG.c.none,
+        update(GG, bG) {
+          let ZG = GG.map(bG.changes);
+          for (const wG of bG.effects) wG.is(tG) && (ZG = wG.value ? IG.c.set(DG.range(wG.value.from, wG.value.to)) : IG.c.none);
+          return ZG
         },
-        provide: uu => ou.l.Cs.from(uu)
+        provide: GG => IG.h.Yw.from(GG)
       }),
-      yu = Pu.N.define({
+      OG = mG.G.define({
         create: () => !1,
-        update: (uu, Eu) => uu || void 0 !== Eu.annotation(Pu.Q.userEvent) && !Eu.annotation(Pu.Q.remote)
+        update: (GG, bG) => GG || void 0 !== bG.annotation(mG.M.userEvent) && !bG.annotation(mG.M.remote)
       }),
-      zu = [nu, yu];
+      xG = [NG, OG];
 
-    function Ru(uu) {
-      return uu.field(yu)
+    function BG(GG) {
+      return GG.field(OG)
     }
-    const uE = 3e4;
+    const Gb = 3e4;
 
-    function EE(uu, Eu) {
-      const ju = (0, Xu.useRef)(null);
-      (0, Xu.useEffect)((() => {
-        var uu;
-        (null === (uu = ju.current) || void 0 === uu ? void 0 : uu.path) !== Eu && (ju.current = null)
-      }), [Eu]);
-      const su = uu => {
-        var su;
-        const Uu = ju.current;
-        if (null === uu || void 0 === uu || !uu.dom.isConnected || !Uu || Uu.path !== Eu) return;
-        ju.current = null;
+    function bb(GG, bG) {
+      const ZG = (0, yG.useRef)(null);
+      (0, yG.useEffect)((() => {
+        var GG;
+        (null === (GG = ZG.current) || void 0 === GG ? void 0 : GG.path) !== bG && (ZG.current = null)
+      }), [bG]);
+      const wG = GG => {
+        var wG;
+        const SG = ZG.current;
+        if (null === GG || void 0 === GG || !GG.dom.isConnected || !SG || SG.path !== bG) return;
+        ZG.current = null;
         const {
-          oN: Xu
-        } = Uu;
-        if (Xu && null !== Xu.text && performance.now() - Xu.at < uE) {
-          const Eu = function(uu, Eu) {
-            if (uu === Eu) return null;
-            const ju = Math.min(uu.length, Eu.length);
-            let su = 0;
-            for (; su < ju && uu[su] === Eu[su];) su++;
-            let Uu = 0;
-            for (; Uu < ju - su && uu[uu.length - 1 - Uu] === Eu[Eu.length - 1 - Uu];) Uu++;
+          vQ: yG
+        } = SG;
+        if (yG && null !== yG.text && performance.now() - yG.at < Gb) {
+          const bG = function(GG, bG) {
+            if (GG === bG) return null;
+            const ZG = Math.min(GG.length, bG.length);
+            let wG = 0;
+            for (; wG < ZG && GG[wG] === bG[wG];) wG++;
+            let SG = 0;
+            for (; SG < ZG - wG && GG[GG.length - 1 - SG] === bG[bG.length - 1 - SG];) SG++;
             return {
-              from: su,
-              to: uu.length - Uu,
-              insert: Eu.slice(su, Eu.length - Uu)
+              from: wG,
+              to: GG.length - SG,
+              insert: bG.slice(wG, bG.length - SG)
             }
-          }(uu.state.doc.toString(), Xu.text);
-          null !== Eu && uu.dispatch({
-            changes: Eu,
-            userEvent: Xu.placed ? "input" : void 0
+          }(GG.state.doc.toString(), yG.text);
+          null !== bG && GG.dispatch({
+            changes: bG,
+            userEvent: yG.placed ? "input" : void 0
           })
         }
         const {
-          doc: lu
-        } = uu.state, qu = lu.line(Math.min(Math.max(Uu.line, 1), lu.lines)), fu = qu.from + Math.min(null !== (su = Uu.column) && void 0 !== su ? su : 0, qu.length);
-        uu.dispatch({
+          doc: kG
+        } = GG.state, UG = kG.line(Math.min(Math.max(SG.line, 1), kG.lines)), YG = UG.from + Math.min(null !== (wG = SG.column) && void 0 !== wG ? wG : 0, UG.length);
+        GG.dispatch({
           selection: {
-            anchor: fu
+            anchor: YG
           },
-          effects: Zu.c.scrollIntoView(fu, {
+          effects: LG.b.scrollIntoView(YG, {
             y: "center"
           }),
-          userEvent: null !== Xu && void 0 !== Xu && Xu.placed ? "select" : void 0
-        }), !1 !== (null === Xu || void 0 === Xu ? void 0 : Xu.focused) && uu.focus()
+          userEvent: null !== yG && void 0 !== yG && yG.placed ? "select" : void 0
+        }), !1 !== (null === yG || void 0 === yG ? void 0 : yG.focused) && GG.focus()
       };
-      return (0, wu.f)("CodeEditorGoToLine", (Eu => {
-        ju.current = Eu, su(uu.current)
-      })), (0, wu.f)("CodeEditorKeepEdits", (() => {
-        const su = uu.current;
-        if (null === su || !su.dom.isConnected || null === Eu) return;
+      return (0, uG.g)("CodeEditorGoToLine", (bG => {
+        ZG.current = bG, wG(GG.current)
+      })), (0, uG.g)("CodeEditorKeepEdits", (() => {
+        const wG = GG.current;
+        if (null === wG || !wG.dom.isConnected || null === bG) return;
         const {
-          doc: Uu,
-          selection: Zu
-        } = su.state, {
-          head: Xu
-        } = Zu.main, lu = Uu.lineAt(Xu), qu = {
-          text: (0, au.m)(su.state).length > 0 ? Uu.toString() : null,
+          doc: SG,
+          selection: LG
+        } = wG.state, {
+          head: yG
+        } = LG.main, kG = SG.lineAt(yG), UG = {
+          text: (0, WG.k)(wG.state).length > 0 ? SG.toString() : null,
           at: performance.now(),
-          focused: su.hasFocus,
-          placed: Ru(su.state)
+          focused: wG.hasFocus,
+          placed: BG(wG.state)
         };
-        ju.current = {
-          path: Eu,
-          line: lu.number,
-          column: Xu - lu.from,
-          oN: qu
+        ZG.current = {
+          path: bG,
+          line: kG.number,
+          column: yG - kG.from,
+          vQ: UG
         }
-      })), uu => {
-        var Uu;
-        const Zu = ju.current;
-        !1 === (null === Zu || void 0 === Zu || null === (Uu = Zu.oN) || void 0 === Uu ? void 0 : Uu.focused) && Zu.path === Eu || uu.focus(), su(uu)
+      })), GG => {
+        var SG;
+        const LG = ZG.current;
+        !1 === (null === LG || void 0 === LG || null === (SG = LG.vQ) || void 0 === SG ? void 0 : SG.focused) && LG.path === bG || GG.focus(), wG(GG)
       }
     }
-    var jE = ju(4526),
-      sE = ju(1244);
+    var Zb = ZG(4387),
+      wb = ZG(1151);
 
-    function UE(uu, Eu) {
+    function Sb(GG, bG) {
       const {
-        t: ju
-      } = (0, sE.A)();
-      (0, wu.f)("CodeEditorInsertText", (su => {
+        t: ZG
+      } = (0, wb.w)();
+      (0, uG.g)("CodeEditorInsertText", (wG => {
         let {
-          text: Uu,
-          focus: Zu
-        } = su;
-        const Xu = uu.current,
-          lu = null !== Xu && void 0 !== Xu && Xu.dom.isConnected ? function(uu, Eu) {
-            if (!Ru(uu)) return null;
+          text: SG,
+          focus: LG
+        } = wG;
+        const yG = GG.current,
+          kG = null !== yG && void 0 !== yG && yG.dom.isConnected ? function(GG, bG) {
+            if (!BG(GG)) return null;
             const {
-              from: ju,
-              to: su
-            } = uu.selection.main, Uu = ju + Eu.length;
+              from: ZG,
+              to: wG
+            } = GG.selection.main, SG = ZG + bG.length;
             return {
               changes: {
-                from: ju,
-                to: su,
-                insert: Eu
+                from: ZG,
+                to: wG,
+                insert: bG
               },
               selection: {
-                anchor: Uu
+                anchor: SG
               },
-              effects: [ou.l.scrollIntoView(Uu, {
+              effects: [IG.h.scrollIntoView(SG, {
                 y: "center"
-              }), Hu.of({
-                from: ju,
-                to: Uu
+              }), tG.of({
+                from: ZG,
+                to: SG
               })],
               userEvent: "input"
             }
-          }(Xu.state, Uu) : null;
-        null !== Xu && null !== lu ? (Xu.dispatch(lu), Zu && Xu.focus(), setTimeout((() => {
-          Xu.dom.isConnected && Xu.dispatch({
-            effects: Hu.of(null)
+          }(yG.state, SG) : null;
+        null !== yG && null !== kG ? (yG.dispatch(kG), LG && yG.focus(), setTimeout((() => {
+          yG.dom.isConnected && yG.dispatch({
+            effects: tG.of(null)
           })
-        }), 1500)) : (0, jE.b)(Uu).then((() => {
-          Eu({
-            message: ju("codeEditorWorld:pickCopied", {
-              coords: Uu
+        }), 1500)) : (0, Zb.b)(SG).then((() => {
+          bG({
+            message: ZG("codeEditorWorld:pickCopied", {
+              coords: SG
             }),
             type: "success"
           })
-        }), (uu => {
-          console.error("Pick could not copy the coordinates", uu), Eu({
-            message: ju("codeEditorWorld:pickPlaceCursor", {
-              coords: Uu
+        }), (GG => {
+          console.error("Pick could not copy the coordinates", GG), bG({
+            message: ZG("codeEditorWorld:pickPlaceCursor", {
+              coords: SG
             }),
             type: "warning"
           })
         }))
       }))
     }
-    var ZE = ju(41586);
-    const XE = "#e45649",
-      lE = "#383a42",
-      qE = "#696c77",
-      fE = "#986801",
-      CE = "#e5e5e6",
-      bE = "#fafafa",
-      cE = "#eaeaeb",
-      NE = "#526fff",
-      OE = ou.l.theme({
+    var Lb = ZG(41771);
+    const yb = "#e45649",
+      kb = "#383a42",
+      Ub = "#696c77",
+      Yb = "#986801",
+      Vb = "#e5e5e6",
+      pb = "#fafafa",
+      fb = "#eaeaeb",
+      Qb = "#526fff",
+      Kb = IG.h.theme({
         "&": {
-          color: lE,
-          backgroundColor: bE
+          color: kb,
+          backgroundColor: pb
         },
         ".cm-content": {
-          caretColor: NE
+          caretColor: Qb
         },
         ".cm-cursor, .cm-dropCursor": {
-          borderLeftColor: NE
+          borderLeftColor: Qb
         },
         "&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection": {
           backgroundColor: "#d7d8de"
         },
         ".cm-panels": {
           backgroundColor: "#f0f0f1",
-          color: lE
+          color: kb
         },
         ".cm-panels.cm-panels-top": {
           borderBottom: "2px solid #d4d4d6"
@@ -358,12 +358,12 @@ export const modules = {
           backgroundColor: "#4078f233"
         },
         ".cm-gutters": {
-          backgroundColor: bE,
-          color: qE,
+          backgroundColor: pb,
+          color: Ub,
           border: "none"
         },
         ".cm-activeLineGutter": {
-          backgroundColor: CE
+          backgroundColor: Vb
         },
         ".cm-foldPlaceholder": {
           backgroundColor: "transparent",
@@ -372,88 +372,88 @@ export const modules = {
         },
         ".cm-tooltip": {
           border: "none",
-          backgroundColor: cE
+          backgroundColor: fb
         },
         ".cm-tooltip .cm-tooltip-arrow:before": {
           borderTopColor: "transparent",
           borderBottomColor: "transparent"
         },
         ".cm-tooltip .cm-tooltip-arrow:after": {
-          borderTopColor: cE,
-          borderBottomColor: cE
+          borderTopColor: fb,
+          borderBottomColor: fb
         },
         ".cm-tooltip-autocomplete": {
           "& > ul > li[aria-selected]": {
-            backgroundColor: CE,
-            color: lE
+            backgroundColor: Vb,
+            color: kb
           }
         }
       }, {
         dark: !1
       }),
-      YE = iu.d.define([{
-        tag: ZE.l.keyword,
+      hb = MG.b.define([{
+        tag: Lb.k.keyword,
         color: "#a626a4"
       }, {
-        tag: [ZE.l.name, ZE.l.deleted, ZE.l.character, ZE.l.propertyName, ZE.l.macroName],
-        color: XE
+        tag: [Lb.k.name, Lb.k.deleted, Lb.k.character, Lb.k.propertyName, Lb.k.macroName],
+        color: yb
       }, {
-        tag: [ZE.l.function(ZE.l.variableName), ZE.l.labelName],
+        tag: [Lb.k.function(Lb.k.variableName), Lb.k.labelName],
         color: "#4078f2"
       }, {
-        tag: [ZE.l.color, ZE.l.constant(ZE.l.name), ZE.l.standard(ZE.l.name)],
-        color: fE
+        tag: [Lb.k.color, Lb.k.constant(Lb.k.name), Lb.k.standard(Lb.k.name)],
+        color: Yb
       }, {
-        tag: [ZE.l.definition(ZE.l.name), ZE.l.separator],
-        color: lE
+        tag: [Lb.k.definition(Lb.k.name), Lb.k.separator],
+        color: kb
       }, {
-        tag: [ZE.l.typeName, ZE.l.className, ZE.l.number, ZE.l.changed, ZE.l.annotation, ZE.l.modifier, ZE.l.self, ZE.l.namespace],
+        tag: [Lb.k.typeName, Lb.k.className, Lb.k.number, Lb.k.changed, Lb.k.annotation, Lb.k.modifier, Lb.k.self, Lb.k.namespace],
         color: "#c18401"
       }, {
-        tag: [ZE.l.operator, ZE.l.operatorKeyword, ZE.l.url, ZE.l.escape, ZE.l.regexp, ZE.l.link, ZE.l.special(ZE.l.string)],
+        tag: [Lb.k.operator, Lb.k.operatorKeyword, Lb.k.url, Lb.k.escape, Lb.k.regexp, Lb.k.link, Lb.k.special(Lb.k.string)],
         color: "#0184bc"
       }, {
-        tag: [ZE.l.meta, ZE.l.comment],
-        color: qE
+        tag: [Lb.k.meta, Lb.k.comment],
+        color: Ub
       }, {
-        tag: ZE.l.strong,
+        tag: Lb.k.strong,
         fontWeight: "bold"
       }, {
-        tag: ZE.l.emphasis,
+        tag: Lb.k.emphasis,
         fontStyle: "italic"
       }, {
-        tag: ZE.l.strikethrough,
+        tag: Lb.k.strikethrough,
         textDecoration: "line-through"
       }, {
-        tag: ZE.l.link,
-        color: qE,
+        tag: Lb.k.link,
+        color: Ub,
         textDecoration: "underline"
       }, {
-        tag: ZE.l.heading,
+        tag: Lb.k.heading,
         fontWeight: "bold",
-        color: XE
+        color: yb
       }, {
-        tag: [ZE.l.atom, ZE.l.bool, ZE.l.special(ZE.l.variableName)],
-        color: fE
+        tag: [Lb.k.atom, Lb.k.bool, Lb.k.special(Lb.k.variableName)],
+        color: Yb
       }, {
-        tag: [ZE.l.processingInstruction, ZE.l.string, ZE.l.inserted],
+        tag: [Lb.k.processingInstruction, Lb.k.string, Lb.k.inserted],
         color: "#50a14f"
       }, {
-        tag: ZE.l.invalid,
+        tag: Lb.k.invalid,
         color: "#000000"
       }]),
-      hE = [OE, (0, iu.kb)(YE)];
-    var DE = ju(37304),
-      gE = ju(41728);
-    const ME = Zu.g.define(),
-      eE = Zu.i.define({
+      db = [Kb, (0, MG.ab)(hb)];
+    var Jb = ZG(37255),
+      rb = ZG(41876);
+    const zb = LG.f.define(),
+      Eb = LG.j.define({
         create: () => !1,
-        update(uu, Eu) {
-          for (const ju of Eu.effects) ju.is(ME) && (uu = ju.value);
-          return uu
+        update(GG, bG) {
+          for (const ZG of bG.effects) ZG.is(zb) && (GG = ZG.value);
+          return GG
         }
       }),
-      GE = [{
+      ob = [{
         action: "explain",
         label: "Explain this"
       }, {
@@ -464,68 +464,68 @@ export const modules = {
         label: "Change this\u2026"
       }];
 
-    function pE(uu, Eu) {
-      return [eE, Zu.l.fromClass(class {
-        constructor(uu) {
-          this.view = uu, this.onDown = uu => {
-            const Eu = uu.target instanceof Element && null !== uu.target.closest(".cm-tooltip");
-            0 !== uu.button || Eu || this.view.state.field(eE) || this.view.dispatch({
-              effects: ME.of(!0)
+    function Xb(GG, bG) {
+      return [Eb, LG.n.fromClass(class {
+        constructor(GG) {
+          this.view = GG, this.onDown = GG => {
+            const bG = GG.target instanceof Element && null !== GG.target.closest(".cm-tooltip");
+            0 !== GG.button || bG || this.view.state.field(Eb) || this.view.dispatch({
+              effects: zb.of(!0)
             })
           }, this.onUp = () => {
-            this.view.state.field(eE) && this.view.dispatch({
-              effects: ME.of(!1)
+            this.view.state.field(Eb) && this.view.dispatch({
+              effects: zb.of(!1)
             })
-          }, uu.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
+          }, GG.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
         }
         destroy() {
           this.view.dom.removeEventListener("mousedown", this.onDown), document.removeEventListener("mouseup", this.onUp), window.removeEventListener("blur", this.onUp)
         }
-      }), Zu.u.compute(["selection", eE], (ju => function(uu, Eu, ju) {
-        const su = uu.selection.main;
-        return su.empty || uu.field(eE) || uu.sliceDoc(su.from, su.to).trim().length < 2 ? null : {
-          pos: su.from,
+      }), LG.y.compute(["selection", Eb], (ZG => function(GG, bG, ZG) {
+        const wG = GG.selection.main;
+        return wG.empty || GG.field(Eb) || GG.sliceDoc(wG.from, wG.to).trim().length < 2 ? null : {
+          pos: wG.from,
           above: !0,
-          create: uu => {
-            const su = document.createElement("div");
-            su.className = "CodeSelectionActions", su.setAttribute("role", "toolbar"), su.setAttribute("aria-label", "AI Helper: picked code");
+          create: GG => {
+            const wG = document.createElement("div");
+            wG.className = "CodeSelectionActions", wG.setAttribute("role", "toolbar"), wG.setAttribute("aria-label", "AI Helper: picked code");
             for (const {
-                action: Uu,
-                label: Zu
+                action: SG,
+                label: LG
               }
-              of GE) {
-              if (!ju && "explain" !== Uu) continue;
-              const Xu = document.createElement("button");
-              Xu.type = "button", Xu.textContent = Zu, "change" !== Uu && (Xu.title = gE.e, Xu.dataset.asksAi = "true"), Xu.addEventListener("mousedown", (uu => {
-                uu.preventDefault()
-              })), Xu.addEventListener("click", (() => {
-                const ju = uu.state.selection.main;
-                if (ju.empty) return;
-                const su = {
-                  action: Uu,
-                  path: Eu,
-                  fromLine: uu.state.doc.lineAt(ju.from).number,
-                  toLine: uu.state.doc.lineAt(ju.to > ju.from && uu.state.doc.lineAt(ju.to).from === ju.to ? ju.to - 1 : ju.to).number,
-                  text: uu.state.sliceDoc(ju.from, ju.to)
+              of ob) {
+              if (!ZG && "explain" !== SG) continue;
+              const yG = document.createElement("button");
+              yG.type = "button", yG.textContent = LG, "change" !== SG && (yG.title = rb.d, yG.dataset.asksAi = "true"), yG.addEventListener("mousedown", (GG => {
+                GG.preventDefault()
+              })), yG.addEventListener("click", (() => {
+                const ZG = GG.state.selection.main;
+                if (ZG.empty) return;
+                const wG = {
+                  action: SG,
+                  path: bG,
+                  fromLine: GG.state.doc.lineAt(ZG.from).number,
+                  toLine: GG.state.doc.lineAt(ZG.to > ZG.from && GG.state.doc.lineAt(ZG.to).from === ZG.to ? ZG.to - 1 : ZG.to).number,
+                  text: GG.state.sliceDoc(ZG.from, ZG.to)
                 };
-                vu.h.TY("WorldCodeAiSelection", su), uu.dispatch({
+                aG.l.xh("WorldCodeAiSelection", wG), GG.dispatch({
                   selection: {
-                    anchor: ju.to
+                    anchor: ZG.to
                   }
                 })
-              })), su.appendChild(Xu)
+              })), wG.appendChild(yG)
             }
             return {
-              dom: su
+              dom: wG
             }
           }
         }
-      }(ju, uu, Eu)))]
+      }(ZG, GG, bG)))]
     }
-    var wE = ju(1154);
-    const JE = new Set(["(", "{", "[", "<"]),
-      dE = new Set([")", "}", "]", ">"]),
-      aE = {
+    var ub = ZG(1067);
+    const ib = new Set(["(", "{", "[", "<"]),
+      Cb = new Set([")", "}", "]", ">"]),
+      Wb = {
         text: "var(--codeTooltipText, white)",
         parameterName: "var(--codeTooltipParameterName, orange)",
         parameter: "var(--codeTooltipParameter, cyan)",
@@ -533,100 +533,100 @@ export const modules = {
         docs: "var(--codeTooltipDocs, gray)"
       };
 
-    function PE(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+    function mb(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
 
-      function ju(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const su = [];
-        for (const Uu of uu) {
-          let uu;
-          uu = "punctuation" === Uu.kind ? aE.text : "parameterName" === Uu.kind ? aE.parameterName : Eu, su.push({
-            str: Uu.text,
+      function ZG(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const wG = [];
+        for (const SG of GG) {
+          let GG;
+          GG = "punctuation" === SG.kind ? Wb.text : "parameterName" === SG.kind ? Wb.parameterName : bG, wG.push({
+            str: SG.text,
             style: {
-              color: uu,
-              opacity: ju ? .5 : void 0
+              color: GG,
+              opacity: ZG ? .5 : void 0
             }
           })
         }
-        return su
+        return wG
       }
-      const su = [];
-      if (su.push(...ju(uu.prefixDisplayParts, aE.text)), uu.parameters.length > 0) {
-        su.push("\n");
-        for (let Uu = 0; Uu < uu.parameters.length; Uu++) {
-          const Zu = uu.parameters[Uu];
-          su.push("\t"), su.push(...ju(Zu.displayParts, aE.parameter, null !== Eu && Uu !== Eu)), su.push("\n")
+      const wG = [];
+      if (wG.push(...ZG(GG.prefixDisplayParts, Wb.text)), GG.parameters.length > 0) {
+        wG.push("\n");
+        for (let SG = 0; SG < GG.parameters.length; SG++) {
+          const LG = GG.parameters[SG];
+          wG.push("\t"), wG.push(...ZG(LG.displayParts, Wb.parameter, null !== bG && SG !== bG)), wG.push("\n")
         }
       }
-      return su.push(...ju(uu.suffixDisplayParts, aE.suffix)), uu.documentation && (su.push("\n\n"), su.push(...ju(uu.documentation, aE.docs))), su
+      return wG.push(...ZG(GG.suffixDisplayParts, Wb.suffix)), GG.documentation && (wG.push("\n\n"), wG.push(...ZG(GG.documentation, Wb.docs))), wG
     }
-    var oE = function(uu) {
-      return uu[uu.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", uu[uu.DuplicateIdentifier = 2300] = "DuplicateIdentifier", uu
-    }(oE || {});
-    const kE = new Set([oE.DuplicateIdentifier]),
-      mE = new Set([oE.VariableDefinedElsewhere]),
-      vE = new Set([]),
-      KE = "/index.js";
+    var Ib = function(GG) {
+      return GG[GG.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", GG[GG.DuplicateIdentifier = 2300] = "DuplicateIdentifier", GG
+    }(Ib || {});
+    const Fb = new Set([Ib.DuplicateIdentifier]),
+      vb = new Set([Ib.VariableDefinedElsewhere]),
+      ab = new Set([]),
+      cb = "/index.js";
 
-    function VE(uu) {
-      return "/" + uu
-    }
-
-    function rE(uu, Eu, ju) {
-      uu.getSourceFile(Eu) && uu.deleteFile(Eu), uu.createFile(Eu, ju)
+    function lb(GG) {
+      return "/" + GG
     }
 
-    function QE(uu) {
-      return !!uu && ((0, Gu.k)(uu) || (0, Gu.i)(uu))
+    function jb(GG, bG, ZG) {
+      GG.getSourceFile(bG) && GG.deleteFile(bG), GG.createFile(bG, ZG)
     }
 
-    function iE(uu, Eu, ju) {
+    function Pb(GG) {
+      return !!GG && ((0, oG.m)(GG) || (0, oG.l)(GG))
+    }
+
+    function Mb(GG, bG, ZG) {
       return () => {
-        let su = [...Eu.languageService.getSemanticDiagnostics(ju), ...Eu.languageService.getSyntacticDiagnostics(ju)];
-        return su = su.filter((uu => !(0, Ju.H)(uu.start) && !(0, Ju.H)(uu.length) && !kE.has(uu.code))), uu || (su = su.filter((uu => !mE.has(uu.code)))), su.map((uu => ({
-          from: uu.start,
-          to: uu.start + uu.length,
-          message: "string" === typeof uu.messageText ? uu.messageText : uu.messageText.messageText,
-          severity: vE.has(uu.code) ? "warning" : "error"
+        let wG = [...bG.languageService.getSemanticDiagnostics(ZG), ...bG.languageService.getSyntacticDiagnostics(ZG)];
+        return wG = wG.filter((GG => !(0, iG.L)(GG.start) && !(0, iG.L)(GG.length) && !Fb.has(GG.code))), GG || (wG = wG.filter((GG => !vb.has(GG.code)))), wG.map((GG => ({
+          from: GG.start,
+          to: GG.start + GG.length,
+          message: "string" === typeof GG.messageText ? GG.messageText : GG.messageText.messageText,
+          severity: ab.has(GG.code) ? "warning" : "error"
         })))
       }
     }
 
-    function WE(uu, Eu) {
-      return ju => {
-        var su, Uu;
-        const Zu = uu.languageService.getCompletionsAtPosition(Eu, ju.pos, {});
-        if (!Zu) return {
-          from: ju.pos,
+    function Ab(GG, bG) {
+      return ZG => {
+        var wG, SG;
+        const LG = GG.languageService.getCompletionsAtPosition(bG, ZG.pos, {});
+        if (!LG) return {
+          from: ZG.pos,
           options: []
         };
-        let Xu = null !== (su = null === (Uu = Zu.optionalReplacementSpan) || void 0 === Uu ? void 0 : Uu.start) && void 0 !== su ? su : ju.pos;
-        if (!Zu.optionalReplacementSpan) {
-          const uu = ju.state.doc.sliceString(0, ju.pos);
-          for (; Xu > 0 && /[\w$]/.test(uu[Xu - 1]);) Xu--
+        let yG = null !== (wG = null === (SG = LG.optionalReplacementSpan) || void 0 === SG ? void 0 : SG.start) && void 0 !== wG ? wG : ZG.pos;
+        if (!LG.optionalReplacementSpan) {
+          const GG = ZG.state.doc.sliceString(0, ZG.pos);
+          for (; yG > 0 && /[\w$]/.test(GG[yG - 1]);) yG--
         }
-        return Zu.entries = Zu.entries.filter((uu => uu.kind !== Yu().ScriptElementKind.warning)), {
-          from: Xu,
-          options: Zu.entries.map((su => {
-            var Uu, Zu, lu, qu;
-            const fu = uu.languageService.getCompletionEntryDetails(Eu, ju.pos, su.name, {}, su.source, {}, su.data),
-              Cu = null !== (Uu = null === (Zu = su.replacementSpan) || void 0 === Zu ? void 0 : Zu.start) && void 0 !== Uu ? Uu : Xu,
-              bu = su.replacementSpan ? su.replacementSpan.start + su.replacementSpan.length : ju.pos,
-              cu = null !== (lu = su.insertText) && void 0 !== lu ? lu : su.name;
+        return LG.entries = LG.entries.filter((GG => GG.kind !== hG().ScriptElementKind.warning)), {
+          from: yG,
+          options: LG.entries.map((wG => {
+            var SG, LG, kG, UG;
+            const YG = GG.languageService.getCompletionEntryDetails(bG, ZG.pos, wG.name, {}, wG.source, {}, wG.data),
+              VG = null !== (SG = null === (LG = wG.replacementSpan) || void 0 === LG ? void 0 : LG.start) && void 0 !== SG ? SG : yG,
+              pG = wG.replacementSpan ? wG.replacementSpan.start + wG.replacementSpan.length : ZG.pos,
+              fG = null !== (kG = wG.insertText) && void 0 !== kG ? kG : wG.name;
             return {
-              label: su.name,
-              detail: null === fu || void 0 === fu ? void 0 : fu.displayParts.map((uu => uu.text)).join(""),
-              info: null === fu || void 0 === fu || null === (qu = fu.documentation) || void 0 === qu ? void 0 : qu.map((uu => uu.text)).join(""),
-              apply: uu => {
-                uu.dispatch({
+              label: wG.name,
+              detail: null === YG || void 0 === YG ? void 0 : YG.displayParts.map((GG => GG.text)).join(""),
+              info: null === YG || void 0 === YG || null === (UG = YG.documentation) || void 0 === UG ? void 0 : UG.map((GG => GG.text)).join(""),
+              apply: GG => {
+                GG.dispatch({
                   changes: {
-                    from: Cu,
-                    to: bu,
-                    insert: cu
+                    from: VG,
+                    to: pG,
+                    insert: fG
                   },
                   selection: {
-                    anchor: Cu + cu.length
+                    anchor: VG + fG.length
                   }
                 })
               }
@@ -636,114 +636,114 @@ export const modules = {
       }
     }
 
-    function SE(uu) {
-      return Eu => {
-        const ju = document.createElement("div");
-        ju.className = "CodeEditorTooltip";
-        let su = !1;
+    function sb(GG) {
+      return bG => {
+        const ZG = document.createElement("div");
+        ZG.className = "CodeEditorTooltip";
+        let wG = !1;
         return queueMicrotask((() => {
-          su || (lu.render((0, wE.jsx)(cu.d, {
-            text: uu
-          }), ju), Eu.requestMeasure())
+          wG || (kG.render((0, ub.jsx)(fG.c, {
+            text: GG
+          }), ZG), bG.requestMeasure())
         })), {
-          dom: ju,
+          dom: ZG,
           destroy() {
-            su = !0, queueMicrotask((() => {
-              lu.unmountComponentAtNode(ju)
+            wG = !0, queueMicrotask((() => {
+              kG.unmountComponentAtNode(ZG)
             }))
           }
         }
       }
     }
 
-    function IE(uu, Eu, ju) {
-      return su => {
-        var Uu;
-        if (!Eu) return [];
-        const Zu = null === (Uu = su.selection.HY[0]) || void 0 === Uu ? void 0 : Uu.head;
-        if (void 0 === Zu) return [];
-        const Xu = uu.languageService.getSignatureHelpItems(ju, Zu, {});
-        if (!Xu || !Xu.items.length) return [];
-        const lu = Xu.applicableSpan.start - Xu.items[0].prefixDisplayParts.map((uu => uu.text)).join("").length,
-          qu = Xu.applicableSpan.start,
-          fu = su.doc.lineAt(Zu),
-          Cu = fu.from,
-          bu = Math.min(fu.to, Zu);
-        let cu, Nu;
-        return lu < Cu ? (cu = Cu, Nu = bu) : (cu = lu, Nu = qu), [{
-          pos: cu,
-          end: Nu,
+    function qb(GG, bG, ZG) {
+      return wG => {
+        var SG;
+        if (!bG) return [];
+        const LG = null === (SG = wG.selection.Bh[0]) || void 0 === SG ? void 0 : SG.head;
+        if (void 0 === LG) return [];
+        const yG = GG.languageService.getSignatureHelpItems(ZG, LG, {});
+        if (!yG || !yG.items.length) return [];
+        const kG = yG.applicableSpan.start - yG.items[0].prefixDisplayParts.map((GG => GG.text)).join("").length,
+          UG = yG.applicableSpan.start,
+          YG = wG.doc.lineAt(LG),
+          VG = YG.from,
+          pG = Math.min(YG.to, LG);
+        let fG, QG;
+        return kG < VG ? (fG = VG, QG = pG) : (fG = kG, QG = UG), [{
+          pos: fG,
+          end: QG,
           above: !1,
-          create: SE(PE(Xu.items[0], Xu.argumentIndex))
+          create: sb(mb(yG.items[0], yG.argumentIndex))
         }]
       }
     }
 
-    function FE(uu, Eu) {
-      return (ju, su, Uu) => {
-        const Zu = uu.languageService.getQuickInfoAtPosition(Eu, su);
-        if (!Zu) return [];
-        const Xu = Zu.textSpan.start,
-          lu = Zu.textSpan.start + Zu.textSpan.length;
-        if (su < Xu || su >= lu) return [];
-        if (Zu.kind === Yu().ScriptElementKind.memberFunctionElement || Zu.kind === Yu().ScriptElementKind.variableElement && "declare" === Zu.kindModifiers) {
-          const uu = Zu.displayParts.findIndex((uu => "space" === uu.kind)); - 1 !== uu && (Zu.displayParts = Zu.displayParts.slice(uu));
-          const Eu = {
+    function nb(GG, bG) {
+      return (ZG, wG, SG) => {
+        const LG = GG.languageService.getQuickInfoAtPosition(bG, wG);
+        if (!LG) return [];
+        const yG = LG.textSpan.start,
+          kG = LG.textSpan.start + LG.textSpan.length;
+        if (wG < yG || wG >= kG) return [];
+        if (LG.kind === hG().ScriptElementKind.memberFunctionElement || LG.kind === hG().ScriptElementKind.variableElement && "declare" === LG.kindModifiers) {
+          const GG = LG.displayParts.findIndex((GG => "space" === GG.kind)); - 1 !== GG && (LG.displayParts = LG.displayParts.slice(GG));
+          const bG = {
               prefixDisplayParts: [],
               parameters: [],
               suffixDisplayParts: [],
               documentation: []
             },
-            ju = Zu.displayParts.findIndex((uu => "punctuation" === uu.kind && "(" === uu.text)); - 1 !== ju && (Eu.prefixDisplayParts = Zu.displayParts.slice(0, ju + 1), Zu.displayParts = Zu.displayParts.slice(ju + 1));
-          const su = Zu.displayParts.findLastIndex((uu => "punctuation" === uu.kind && ")" === uu.text)); - 1 !== su && (Eu.suffixDisplayParts = Zu.displayParts.slice(su), Zu.displayParts = Zu.displayParts.slice(0, su));
-          let Uu = 0,
-            qu = [];
-          for (const Xu of Zu.displayParts)
-            if (JE.has(Xu.text) ? Uu++ : dE.has(Xu.text) && Uu--, "lineBreak" !== Xu.kind) {
-              if ("space" === Xu.kind) {
-                if (0 === qu.length) continue;
-                qu.push({
+            ZG = LG.displayParts.findIndex((GG => "punctuation" === GG.kind && "(" === GG.text)); - 1 !== ZG && (bG.prefixDisplayParts = LG.displayParts.slice(0, ZG + 1), LG.displayParts = LG.displayParts.slice(ZG + 1));
+          const wG = LG.displayParts.findLastIndex((GG => "punctuation" === GG.kind && ")" === GG.text)); - 1 !== wG && (bG.suffixDisplayParts = LG.displayParts.slice(wG), LG.displayParts = LG.displayParts.slice(0, wG));
+          let SG = 0,
+            UG = [];
+          for (const yG of LG.displayParts)
+            if (ib.has(yG.text) ? SG++ : Cb.has(yG.text) && SG--, "lineBreak" !== yG.kind) {
+              if ("space" === yG.kind) {
+                if (0 === UG.length) continue;
+                UG.push({
                   kind: "space",
                   text: " "
                 })
-              } else qu.push(Xu);
-              0 === Uu && "," === Xu.text && (Eu.parameters.push({
-                displayParts: qu
-              }), qu = [])
-            } return qu.length > 0 && Eu.parameters.push({
-            displayParts: qu
-          }), Eu.documentation = Zu.documentation, [{
-            pos: Xu,
-            end: lu,
+              } else UG.push(yG);
+              0 === SG && "," === yG.text && (bG.parameters.push({
+                displayParts: UG
+              }), UG = [])
+            } return UG.length > 0 && bG.parameters.push({
+            displayParts: UG
+          }), bG.documentation = LG.documentation, [{
+            pos: yG,
+            end: kG,
             above: !0,
-            create: SE(PE(Eu))
+            create: sb(mb(bG))
           }]
         }
-        const qu = [];
-        for (const uu of Zu.displayParts) qu.push({
-          str: uu.text,
+        const UG = [];
+        for (const GG of LG.displayParts) UG.push({
+          str: GG.text,
           style: {
-            color: aE.text
+            color: Wb.text
           }
         });
-        if (Zu.documentation) {
-          qu.push("\n\n");
-          for (const uu of Zu.documentation) qu.push({
-            str: uu.text,
+        if (LG.documentation) {
+          UG.push("\n\n");
+          for (const GG of LG.documentation) UG.push({
+            str: GG.text,
             style: {
-              color: aE.docs
+              color: Wb.docs
             }
           })
         }
         return [{
-          pos: Xu,
-          end: lu,
+          pos: yG,
+          end: kG,
           above: !0,
-          create: SE(qu)
+          create: sb(UG)
         }]
       }
     }
-    const BE = {
+    const gb = {
       indentSize: 4,
       tabSize: 4,
       newLineCharacter: "\n",
@@ -762,209 +762,209 @@ export const modules = {
       insertSpaceAfterTypeAssertion: !1,
       placeOpenBraceOnNewLineForFunctions: !1,
       placeOpenBraceOnNewLineForControlBlocks: !1,
-      semicolons: Yu().SemicolonPreference.Insert
+      semicolons: hG().SemicolonPreference.Insert
     };
-    const LE = Zu.g.define(),
-      tE = {
+    const eb = LG.f.define(),
+      Rb = {
         lineNumbers: !0,
         tabSize: 4
       };
 
-    function xE(uu) {
+    function Tb(GG) {
       let {
-        isLobbyCode: Eu,
-        code: ju,
-        onChange: lu,
-        canEditCode: cu,
-        setTemporaryMessage: Ou,
-        close: Ju,
-        showTooltips: tu,
-        lightMode: xu,
-        collabState: Hu,
-        onRemoteDocChange: Au,
-        files: nu,
-        activePath: yu,
-        pluginName: Ru,
-        pluginFile: uE,
-        pluginSource: jE,
-        setActiveDocReplacer: sE,
-        showAiHints: ZE,
-        canAiChangeCode: XE = cu
-      } = uu;
-      const [lE, qE] = (0, Xu.useState)(null), fE = null === Hu || void 0 === Hu ? void 0 : Hu.version, CE = null === Hu || void 0 === Hu ? void 0 : Hu.clientID, bE = (0, Xu.useRef)({
-        isLobbyCode: Eu,
-        files: nu,
-        code: ju,
-        activePath: yu
-      }), cE = (0, Xu.useRef)(Au);
-      cE.current = Au;
-      const NE = (0, Xu.useRef)(null),
-        OE = (0, Xu.useRef)(Hu);
-      OE.current = Hu;
-      const YE = (0, Xu.useRef)(null),
-        gE = (0, Xu.useRef)(null),
-        ME = (0, Xu.useRef)(null),
-        eE = (0, Xu.useRef)(Ju);
-      eE.current = Ju;
-      const GE = (0, Xu.useRef)(ju);
-      GE.current = ju;
-      const JE = (0, Xu.useRef)(jE);
-      JE.current = jE;
-      const dE = function(uu, Eu, ju, su) {
-        return ju ? `/plugin-preview/${ju}/${null!==su&&void 0!==su?su:"index.ts"}` : uu ? VE(null !== Eu && void 0 !== Eu ? Eu : eu.h) : KE
-      }(Eu, yu, Ru, uE);
-      (0, Xu.useEffect)((() => {
+        isLobbyCode: bG,
+        code: ZG,
+        onChange: kG,
+        canEditCode: fG,
+        setTemporaryMessage: KG,
+        close: iG,
+        showTooltips: RG,
+        lightMode: TG,
+        collabState: tG,
+        onRemoteDocChange: DG,
+        files: NG,
+        activePath: OG,
+        pluginName: BG,
+        pluginFile: Gb,
+        pluginSource: Zb,
+        setActiveDocReplacer: wb,
+        showAiHints: Lb,
+        canAiChangeCode: yb = fG
+      } = GG;
+      const [kb, Ub] = (0, yG.useState)(null), Yb = null === tG || void 0 === tG ? void 0 : tG.version, Vb = null === tG || void 0 === tG ? void 0 : tG.clientID, pb = (0, yG.useRef)({
+        isLobbyCode: bG,
+        files: NG,
+        code: ZG,
+        activePath: OG
+      }), fb = (0, yG.useRef)(DG);
+      fb.current = DG;
+      const Qb = (0, yG.useRef)(null),
+        Kb = (0, yG.useRef)(tG);
+      Kb.current = tG;
+      const hb = (0, yG.useRef)(null),
+        rb = (0, yG.useRef)(null),
+        zb = (0, yG.useRef)(null),
+        Eb = (0, yG.useRef)(iG);
+      Eb.current = iG;
+      const ob = (0, yG.useRef)(ZG);
+      ob.current = ZG;
+      const ib = (0, yG.useRef)(Zb);
+      ib.current = Zb;
+      const Cb = function(GG, bG, ZG, wG) {
+        return ZG ? `/plugin-preview/${ZG}/${null!==wG&&void 0!==wG?wG:"index.ts"}` : GG ? lb(null !== bG && void 0 !== bG ? bG : EG.k) : cb
+      }(bG, OG, BG, Gb);
+      (0, yG.useEffect)((() => {
         !async function() {
           const {
-            isLobbyCode: uu,
-            files: Eu,
-            code: ju,
-            activePath: su
-          } = bE.current, Uu = {
+            isLobbyCode: GG,
+            files: bG,
+            code: ZG,
+            activePath: wG
+          } = pb.current, SG = {
             allowJs: !0,
             checkJs: !1,
             noLib: !0,
             strict: !1,
-            module: Yu().ModuleKind.ESNext,
-            moduleResolution: Yu().ModuleResolutionKind.Bundler,
-            target: Yu().ScriptTarget.ES2015,
+            module: hG().ModuleKind.ESNext,
+            moduleResolution: hG().ModuleResolutionKind.Bundler,
+            target: hG().ScriptTarget.ES2015,
             paths: {
               "@bloxd": ["/node_modules/@bloxd/index.d.ts"],
-              ...Object.fromEntries(Object.values(Mu.h).map((uu => [uu.specifier, [uu.typesVfsPath]])))
+              ...Object.fromEntries(Object.values(zG.h).map((GG => [GG.specifier, [GG.typesVfsPath]])))
             }
-          }, Zu = new Map, Xu = [];
-          if (uu) {
-            const uu = null !== Eu && void 0 !== Eu ? Eu : {
-              [eu.h]: ju || "\n"
+          }, LG = new Map, yG = [];
+          if (GG) {
+            const GG = null !== bG && void 0 !== bG ? bG : {
+              [EG.k]: ZG || "\n"
             };
-            for (const [Eu, ju] of Object.entries(uu)) {
-              const uu = VE(Eu);
-              Zu.set(uu, ju || "\n"), Xu.push(uu)
+            for (const [bG, ZG] of Object.entries(GG)) {
+              const GG = lb(bG);
+              LG.set(GG, ZG || "\n"), yG.push(GG)
             }
-            const Uu = VE(null !== su && void 0 !== su ? su : eu.h);
-            Zu.has(Uu) ? Zu.set(Uu, ju || "\n") : (Zu.set(Uu, ju || "\n"), Xu.push(Uu)), Zu.set("/node_modules/@bloxd/index.d.ts", Cu.default), Xu.push("/node_modules/@bloxd/index.d.ts");
-            for (const Eu of Object.values(Mu.h)) {
-              Zu.set(Eu.typesVfsPath, Eu.types), Xu.push(Eu.typesVfsPath);
-              for (const [uu, ju] of Object.entries(Eu.files)) {
-                const su = `/plugin-preview/${Eu.name}/${uu}`;
-                Zu.set(su, ju || "\n"), Xu.push(su)
+            const SG = lb(null !== wG && void 0 !== wG ? wG : EG.k);
+            LG.has(SG) ? LG.set(SG, ZG || "\n") : (LG.set(SG, ZG || "\n"), yG.push(SG)), LG.set("/node_modules/@bloxd/index.d.ts", VG.default), yG.push("/node_modules/@bloxd/index.d.ts");
+            for (const bG of Object.values(zG.h)) {
+              LG.set(bG.typesVfsPath, bG.types), yG.push(bG.typesVfsPath);
+              for (const [GG, ZG] of Object.entries(bG.files)) {
+                const wG = `/plugin-preview/${bG.name}/${GG}`;
+                LG.set(wG, ZG || "\n"), yG.push(wG)
               }
             }
-          } else Zu.set(KE, ju || "\n"), Xu.push(KE);
-          Zu.set("/globals.d.ts", uu ? fu.d : qu.e), Zu.set("/lib.d.ts", bu.c), Xu.push("/globals.d.ts", "/lib.d.ts");
-          const lu = Nu.c(Zu),
-            cu = Nu.g(lu, Xu, Yu(), Uu);
-          qE({
-            AY: cu,
-            fsMap: Zu
+          } else LG.set(cb, ZG || "\n"), yG.push(cb);
+          LG.set("/globals.d.ts", GG ? YG.d : UG.e), LG.set("/lib.d.ts", pG.e), yG.push("/globals.d.ts", "/lib.d.ts");
+          const kG = QG.c(LG),
+            fG = QG.d(kG, yG, hG(), SG);
+          Ub({
+            Gd: fG,
+            fsMap: LG
           })
         }()
-      }), []), (0, Xu.useEffect)((() => {
-        var uu, su;
-        if (!lE || !Eu) return;
+      }), []), (0, yG.useEffect)((() => {
+        var GG, wG;
+        if (!kb || !bG) return;
         const {
-          AY: Uu,
-          fsMap: Zu
-        } = lE;
-        if (function(uu, Eu, ju) {
-            const su = new Set;
-            for (const [Uu, Zu] of Object.entries(ju)) {
-              const ju = VE(Uu);
-              su.add(ju);
-              const Xu = Zu || "\n";
-              Eu.get(ju) !== Xu && (Eu.set(ju, Xu), rE(uu, ju, Xu))
+          Gd: SG,
+          fsMap: LG
+        } = kb;
+        if (function(GG, bG, ZG) {
+            const wG = new Set;
+            for (const [SG, LG] of Object.entries(ZG)) {
+              const ZG = lb(SG);
+              wG.add(ZG);
+              const yG = LG || "\n";
+              bG.get(ZG) !== yG && (bG.set(ZG, yG), jb(GG, ZG, yG))
             }
-            for (const Uu of [...Eu.keys()]) "/globals.d.ts" === Uu || "/lib.d.ts" === Uu || Uu.startsWith("/node_modules/") || Uu.startsWith("/plugin-preview/") || su.has(Uu) || (Eu.delete(Uu), uu.getSourceFile(Uu) && uu.deleteFile(Uu))
-          }(Uu, Zu, null !== nu && void 0 !== nu ? nu : {
-            [eu.h]: ju || "\n"
-          }), Ru) return void rE(Uu, dE, jE || "\n");
-        const Xu = null !== (uu = null === (su = NE.current) || void 0 === su ? void 0 : su.state.doc.toString()) && void 0 !== uu ? uu : ju;
-        rE(Uu, dE, Xu || "\n")
-      }), [nu, yu, lE, Ru, jE, dE, ju, Eu]), (0, Xu.useEffect)((() => {
-        if (!lE) return;
+            for (const SG of [...bG.keys()]) "/globals.d.ts" === SG || "/lib.d.ts" === SG || SG.startsWith("/node_modules/") || SG.startsWith("/plugin-preview/") || wG.has(SG) || (bG.delete(SG), GG.getSourceFile(SG) && GG.deleteFile(SG))
+          }(SG, LG, null !== NG && void 0 !== NG ? NG : {
+            [EG.k]: ZG || "\n"
+          }), BG) return void jb(SG, Cb, Zb || "\n");
+        const yG = null !== (GG = null === (wG = Qb.current) || void 0 === wG ? void 0 : wG.state.doc.toString()) && void 0 !== GG ? GG : ZG;
+        jb(SG, Cb, yG || "\n")
+      }), [NG, OG, kb, BG, Zb, Cb, ZG, bG]), (0, yG.useEffect)((() => {
+        if (!kb) return;
         const {
-          AY: uu
-        } = lE;
-        rE(uu, dE, (Ru ? jE : ju) || "\n")
-      }), [ju, Ru, jE, dE, lE]), (0, Xu.useEffect)((() => () => {
-        gE.current && (gE.current(), gE.current = null)
-      }), []), (0, Xu.useEffect)((() => (sE(((uu, Eu) => {
-        if (Ru) return !1;
-        const ju = NE.current,
-          su = OE.current,
-          Uu = su ? (0, Gu.r)(su.docKey) : null;
-        if (!ju || !su || YE.current !== su.clientID || uu !== Uu) return !1;
-        const Zu = ju.state.doc.toString();
-        return Zu !== Eu && ju.dispatch({
+          Gd: GG
+        } = kb;
+        jb(GG, Cb, (BG ? Zb : ZG) || "\n")
+      }), [ZG, BG, Zb, Cb, kb]), (0, yG.useEffect)((() => () => {
+        rb.current && (rb.current(), rb.current = null)
+      }), []), (0, yG.useEffect)((() => (wb(((GG, bG) => {
+        if (BG) return !1;
+        const ZG = Qb.current,
+          wG = Kb.current,
+          SG = wG ? (0, oG.r)(wG.docKey) : null;
+        if (!ZG || !wG || hb.current !== wG.clientID || GG !== SG) return !1;
+        const LG = ZG.state.doc.toString();
+        return LG !== bG && ZG.dispatch({
           changes: {
             from: 0,
-            to: Zu.length,
-            insert: Eu
+            to: LG.length,
+            insert: bG
           }
         }), !0
       })), () => {
-        NE.current = null, YE.current = null, sE(null)
-      })), [sE, Ru]);
-      const aE = Eu ? Ru ? null : null !== yu && void 0 !== yu ? yu : eu.h : DE.b,
-        PE = EE(NE, aE);
-      UE(NE, Ou), (0, wu.f)("FormatCode", (() => {
-        if (!lE || !NE.current || Ru) return;
+        Qb.current = null, hb.current = null, wb(null)
+      })), [wb, BG]);
+      const Wb = bG ? BG ? null : null !== OG && void 0 !== OG ? OG : EG.k : Jb.c,
+        mb = bb(Qb, Wb);
+      Sb(Qb, KG), (0, uG.g)("FormatCode", (() => {
+        if (!kb || !Qb.current || BG) return;
         const {
-          AY: uu,
-          fsMap: ju
-        } = lE, su = uu.getSourceFile(dE).getFullText();
-        let Uu = 0;
-        if (Eu && nu)
-          for (const [Eu, lu] of Object.entries(nu)) Eu !== (null !== yu && void 0 !== yu ? yu : eu.h) && (Uu += lu.length);
-        const Zu = function(uu, Eu, ju, su, Uu) {
-          const Zu = uu.languageService.getFormattingEditsForDocument(su, BE);
-          if (!Zu.length) return du.c.error("Code is already formatted.");
-          Zu.sort(((uu, Eu) => Eu.span.start - uu.span.start));
-          let Xu = uu.getSourceFile(su).getFullText();
-          for (const lu of Zu) Xu = Xu.slice(0, lu.span.start) + lu.Gq + Xu.slice(lu.span.start + lu.span.length);
-          return Xu !== (ju ? (0, pu.j)(Xu, Uu) : (0, pu.g)(Xu)) ? du.c.error("Formatting the code will go beyond the character limit.") : du.c.value(Xu)
-        }(uu, 0, Eu, dE, Uu);
-        if (Zu.isError()) return void Ou({
-          message: Zu.asError().message,
+          Gd: GG,
+          fsMap: ZG
+        } = kb, wG = GG.getSourceFile(Cb).getFullText();
+        let SG = 0;
+        if (bG && NG)
+          for (const [bG, kG] of Object.entries(NG)) bG !== (null !== OG && void 0 !== OG ? OG : EG.k) && (SG += kG.length);
+        const LG = function(GG, bG, ZG, wG, SG) {
+          const LG = GG.languageService.getFormattingEditsForDocument(wG, gb);
+          if (!LG.length) return CG.d.error("Code is already formatted.");
+          LG.sort(((GG, bG) => bG.span.start - GG.span.start));
+          let yG = GG.getSourceFile(wG).getFullText();
+          for (const kG of LG) yG = yG.slice(0, kG.span.start) + kG.iU + yG.slice(kG.span.start + kG.span.length);
+          return yG !== (ZG ? (0, XG.m)(yG, SG) : (0, XG.i)(yG)) ? CG.d.error("Formatting the code will go beyond the character limit.") : CG.d.value(yG)
+        }(GG, 0, bG, Cb, SG);
+        if (LG.isError()) return void KG({
+          message: LG.asError().message,
           type: "warning"
         });
-        const Xu = Zu.getValue();
-        Xu && (NE.current.dispatch({
+        const yG = LG.getValue();
+        yG && (Qb.current.dispatch({
           changes: {
             from: 0,
-            to: su.length,
-            insert: Xu
+            to: wG.length,
+            insert: yG
           },
           selection: {
-            anchor: Xu.length
+            anchor: yG.length
           }
-        }), rE(uu, dE, Xu), lu(Xu))
+        }), jb(GG, Cb, yG), kG(yG))
       }));
-      const oE = (0, Xu.useMemo)((() => {
-        if (!lE) return [];
+      const Ib = (0, yG.useMemo)((() => {
+        if (!kb) return [];
         const {
-          AY: uu,
-          fsMap: ju
-        } = lE;
-        ! function(uu, Eu, ju, su) {
-          if (uu.getSourceFile(ju)) return;
-          const Uu = su || "\n";
-          Eu.set(ju, Uu), uu.createFile(ju, Uu)
-        }(uu, ju, dE, (Ru ? JE.current : GE.current) || "\n");
-        const Xu = Eu && QE(Ru ? null !== uE && void 0 !== uE ? uE : "index.ts" : yu),
-          lu = [(0, Uu.c)({
+          Gd: GG,
+          fsMap: ZG
+        } = kb;
+        ! function(GG, bG, ZG, wG) {
+          if (GG.getSourceFile(ZG)) return;
+          const SG = wG || "\n";
+          bG.set(ZG, SG), GG.createFile(ZG, SG)
+        }(GG, ZG, Cb, (BG ? ib.current : ob.current) || "\n");
+        const yG = bG && Pb(BG ? null !== Gb && void 0 !== Gb ? Gb : "index.ts" : OG),
+          kG = [(0, SG.e)({
             jsx: !1,
-            typescript: Xu
-          }), Zu.d.highest(Zu.c.domEventHandlers({
-            keydown: uu => "Escape" === uu.key ? (eE.current(), uu.stopPropagation(), !0) : (uu.stopPropagation(), !1)
-          })), (0, su.b)({
-            override: [WE(uu, dE)]
-          }), ou.o.fromClass(class {
-            constructor(uu) {
-              this.view = uu, this.timeout = null, this.scheduleParse()
+            typescript: yG
+          }), LG.c.highest(LG.b.domEventHandlers({
+            keydown: GG => "Escape" === GG.key ? (Eb.current(), GG.stopPropagation(), !0) : (GG.stopPropagation(), !1)
+          })), (0, wG.e)({
+            override: [Ab(GG, Cb)]
+          }), IG.j.fromClass(class {
+            constructor(GG) {
+              this.view = GG, this.timeout = null, this.scheduleParse()
             }
-            update(uu) {
-              (uu.docChanged || uu.viewportChanged) && this.scheduleParse()
+            update(GG) {
+              (GG.docChanged || GG.viewportChanged) && this.scheduleParse()
             }
             destroy() {
               null !== this.timeout && (clearTimeout(this.timeout), this.timeout = null)
@@ -972,215 +972,215 @@ export const modules = {
             scheduleParse() {
               null === this.timeout && (this.timeout = setTimeout((() => {
                 this.timeout = null;
-                const uu = this.view.viewport.to;
-                (0, iu.ob)(this.view.state, uu) || (0, iu.Q)(this.view, uu, Wu) || this.scheduleParse()
-              }), Su))
+                const GG = this.view.viewport.to;
+                (0, MG.cb)(this.view.state, GG) || (0, MG.J)(this.view, GG, AG) || this.scheduleParse()
+              }), sG))
             }
-          }), ...zu, Zu.c.lineWrapping, Zu.i.define({
-            create: IE(uu, tu, dE),
-            update(Eu, ju) {
-              const su = ju.effects.some((uu => uu.is(LE)));
-              return ju.docChanged || ju.selection || su ? (rE(uu, dE, ju.state.doc.toString() || " "), IE(uu, tu, dE)(ju.state)) : Eu
+          }), ...xG, LG.b.lineWrapping, LG.j.define({
+            create: qb(GG, RG, Cb),
+            update(bG, ZG) {
+              const wG = ZG.effects.some((GG => GG.is(eb)));
+              return ZG.docChanged || ZG.selection || wG ? (jb(GG, Cb, ZG.state.doc.toString() || " "), qb(GG, RG, Cb)(ZG.state)) : bG
             },
-            provide: uu => Zu.u.computeN([uu], (Eu => Eu.field(uu)))
-          }), (0, Zu.s)(FE(uu, dE)), (0, Du.h)(iE(Eu, uu, dE)), Zu.l.fromClass(class {
-            constructor(uu) {
-              this.view = uu, this.searchPanel = null
+            provide: GG => LG.y.computeN([GG], (bG => bG.field(GG)))
+          }), (0, LG.v)(nb(GG, Cb)), (0, JG.f)(Mb(bG, GG, Cb)), LG.n.fromClass(class {
+            constructor(GG) {
+              this.view = GG, this.searchPanel = null
             }
-            update(uu) {
-              const Eu = uu.view.dom.querySelector(".cm-search");
-              if (Eu !== this.searchPanel) {
-                if (this.searchPanel = Eu, !this.searchPanel) return;
-                this.searchPanel.addEventListener("keydown", (uu => {
-                  "Escape" === uu.key && (0, hu.c)(this.view), uu.stopPropagation()
+            update(GG) {
+              const bG = GG.view.dom.querySelector(".cm-search");
+              if (bG !== this.searchPanel) {
+                if (this.searchPanel = bG, !this.searchPanel) return;
+                this.searchPanel.addEventListener("keydown", (GG => {
+                  "Escape" === GG.key && (0, dG.d)(this.view), GG.stopPropagation()
                 }))
               }
             }
           })];
-        ZE && !Ru && lu.push(pE(Eu ? null !== yu && void 0 !== yu ? yu : eu.h : DE.b, XE));
-        const qu = OE.current;
-        if (qu && !Ru) {
-          lu.push(... function(uu, Eu, ju, su, Uu) {
-            let Zu = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-            const Xu = (0, Gu.r)(ju),
-              lu = ou.o.fromClass(class {
-                constructor(uu) {
-                  this.view = uu, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = vu.h.subscribe("codeCollab", (uu => {
-                    uu.docKey === Xu && uu.type === Gu.f.Updates && (uu.updates ? this.applyUpdates(uu.updates) : this.pull())
+        Lb && !BG && kG.push(Xb(bG ? null !== OG && void 0 !== OG ? OG : EG.k : Jb.c, yb));
+        const UG = Kb.current;
+        if (UG && !BG) {
+          kG.push(... function(GG, bG, ZG, wG, SG) {
+            let LG = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+            const yG = (0, oG.r)(ZG),
+              kG = IG.j.fromClass(class {
+                constructor(GG) {
+                  this.view = GG, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = aG.l.subscribe("codeCollab", (GG => {
+                    GG.docKey === yG && GG.type === oG.f.Updates && (GG.updates ? this.applyUpdates(GG.updates) : this.pull())
                   })), this.pull()
                 }
-                applyUpdates(uu) {
-                  const Eu = JSON.parse(uu).map((uu => ({
-                    clientID: uu.clientID,
-                    changes: Pu.ChangeSet.fromJSON(uu.changes)
+                applyUpdates(GG) {
+                  const bG = JSON.parse(GG).map((GG => ({
+                    clientID: GG.clientID,
+                    changes: mG.ChangeSet.fromJSON(GG.changes)
                   })));
-                  Eu.length > 0 && (this.view.dispatch((0, au.j)(this.view.state, Eu)), Uu && Uu(this.view.state.doc.toString())), this.clearPushState(), this.push()
+                  bG.length > 0 && (this.view.dispatch((0, WG.g)(this.view.state, bG)), SG && SG(this.view.state.doc.toString())), this.clearPushState(), this.push()
                 }
                 clearPushState() {
                   this.pushing = !1, this.pushTimeout && (clearTimeout(this.pushTimeout), this.pushTimeout = null), this.pushDelayTimeout && (clearTimeout(this.pushDelayTimeout), this.pushDelayTimeout = null)
                 }
-                update(uu) {
-                  Zu && (uu.docChanged && this.push(), this.sendCursor())
+                update(GG) {
+                  LG && (GG.docChanged && this.push(), this.sendCursor())
                 }
                 push() {
-                  const uu = (0, au.m)(this.view.state);
-                  if (this.pushing || !uu.length) return;
-                  const Eu = Date.now() - this.lastPushTime;
-                  if (Eu < Qu) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
+                  const GG = (0, WG.k)(this.view.state);
+                  if (this.pushing || !GG.length) return;
+                  const bG = Date.now() - this.lastPushTime;
+                  if (bG < PG) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
                     this.pushDelayTimeout = null, this.push()
-                  }), Qu - Eu)));
+                  }), PG - bG)));
                   this.pushing = !0, this.lastPushTime = Date.now(), this.pushTimeout = setTimeout((() => {
                     this.clearPushState(), this.push()
-                  }), Vu);
-                  const ju = (0, au.g)(this.view.state),
-                    Uu = uu.map((uu => ({
-                      clientID: uu.clientID,
-                      changes: uu.changes.toJSON()
+                  }), lG);
+                  const ZG = (0, WG.f)(this.view.state),
+                    SG = GG.map((GG => ({
+                      clientID: GG.clientID,
+                      changes: GG.changes.toJSON()
                     }))),
-                    Zu = JSON.stringify(Uu);
-                  Zu.length <= Gu.g ? ku.gameBridge.send("sendCodeCollab", {
-                    lZ: Gu.d.Push,
-                    qZ: Xu,
-                    fZ: ju,
-                    cZ: Zu
-                  }) : (0, Ku.postJsonWithMetricsCookiesAndJsonResponse)(`${su.gsUrl}/code/collab-push`, mu.p["collab-push"].toBuffer({
-                    gameNameWithVariation: su.gameNameWithVariation,
-                    lobbyName: su.lobbyName,
-                    docKey: Xu,
-                    version: ju,
-                    updates: Zu
+                    LG = JSON.stringify(SG);
+                  LG.length <= oG.h ? FG.gameBridge.send("sendCodeCollab", {
+                    BS: oG.c.Push,
+                    bL: yG,
+                    ZL: ZG,
+                    LL: LG
+                  }) : (0, cG.postJsonWithMetricsCookiesAndJsonResponse)(`${wG.gsUrl}/code/collab-push`, vG.m["collab-push"].toBuffer({
+                    gameNameWithVariation: wG.gameNameWithVariation,
+                    lobbyName: wG.lobbyName,
+                    docKey: yG,
+                    version: ZG,
+                    updates: LG
                   }), {
                     retries: 0
-                  }).catch((uu => {
-                    console.error("[CodeCollab] HTTP push failed", uu)
+                  }).catch((GG => {
+                    console.error("[CodeCollab] HTTP push failed", GG)
                   }))
                 }
                 pull() {
                   if (this.destroyed) return;
                   if (this.pulling) return void(this.pullPending = !0);
                   this.pulling = !0, this.pullPending = !1;
-                  const uu = (0, au.g)(this.view.state);
-                  (0, Ku.postJsonWithMetricsCookiesAndJsonResponse)(`${su.gsUrl}/code/collab-pull`, mu.p["collab-pull"].toBuffer({
-                    gameNameWithVariation: su.gameNameWithVariation,
-                    lobbyName: su.lobbyName,
-                    docKey: Xu,
-                    fromVersion: uu
+                  const GG = (0, WG.f)(this.view.state);
+                  (0, cG.postJsonWithMetricsCookiesAndJsonResponse)(`${wG.gsUrl}/code/collab-pull`, vG.m["collab-pull"].toBuffer({
+                    gameNameWithVariation: wG.gameNameWithVariation,
+                    lobbyName: wG.lobbyName,
+                    docKey: yG,
+                    fromVersion: GG
                   }), {
                     retries: 1
-                  }).then((uu => {
-                    this.destroyed || (uu.fullDoc ? vu.h.TY("codeCollabRejoin", {
-                      docKey: Xu,
-                      doc: uu.fullDoc,
-                      version: uu.version
-                    }) : this.applyUpdates(uu.updates))
-                  })).catch((uu => {
-                    console.error("[CodeCollab] Pull failed", uu)
+                  }).then((GG => {
+                    this.destroyed || (GG.fullDoc ? aG.l.xh("codeCollabRejoin", {
+                      docKey: yG,
+                      doc: GG.fullDoc,
+                      version: GG.version
+                    }) : this.applyUpdates(GG.updates))
+                  })).catch((GG => {
+                    console.error("[CodeCollab] Pull failed", GG)
                   })).finally((() => {
                     this.pulling = !1, this.pullPending && this.pull()
                   }))
                 }
                 sendCursor() {
-                  const uu = Date.now();
-                  if (uu - this.lastCursorSent < ru) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
+                  const GG = Date.now();
+                  if (GG - this.lastCursorSent < jG) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
                     this.cursorTimeout = null, this.sendCursor()
-                  }), ru)));
-                  this.lastCursorSent = uu;
-                  const Eu = this.view.state.selection.main;
-                  ku.gameBridge.send("sendCodeCollab", {
-                    lZ: Gu.d.Cursor,
-                    qZ: Xu,
-                    hZ: Eu.anchor,
-                    DZ: Eu.head
+                  }), jG)));
+                  this.lastCursorSent = GG;
+                  const bG = this.view.state.selection.main;
+                  FG.gameBridge.send("sendCodeCollab", {
+                    BS: oG.c.Cursor,
+                    bL: yG,
+                    YL: bG.anchor,
+                    VL: bG.head
                   })
                 }
                 destroy() {
-                  this.destroyed = !0, vu.h.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
+                  this.destroyed = !0, aG.l.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
                 }
               });
-            return [(0, au.d)({
-              startVersion: uu,
-              clientID: Eu
-            }), lu]
-          }(fE, CE, qu.docKey, qu.httpConfig, (uu => {
-            var Eu;
-            null === (Eu = cE.current) || void 0 === Eu || Eu.call(cE, uu)
-          }), cu));
-          const uu = function(uu, Eu) {
-            const ju = (0, Gu.r)(uu);
+            return [(0, WG.e)({
+              startVersion: GG,
+              clientID: bG
+            }), kG]
+          }(Yb, Vb, UG.docKey, UG.httpConfig, (GG => {
+            var bG;
+            null === (bG = fb.current) || void 0 === bG || bG.call(fb, GG)
+          }), fG));
+          const GG = function(GG, bG) {
+            const ZG = (0, oG.r)(GG);
             return {
-              extensions: [Tu],
-              connect(uu) {
-                if (Eu) {
-                  const ju = Eu.map((uu => Fu.of({
-                    playerId: uu.playerId,
-                    playerName: uu.playerName,
-                    colour: uu.colour,
-                    anchor: uu.anchor,
-                    head: uu.head,
+              extensions: [HG],
+              connect(GG) {
+                if (bG) {
+                  const ZG = bG.map((GG => nG.of({
+                    playerId: GG.playerId,
+                    playerName: GG.playerName,
+                    colour: GG.colour,
+                    anchor: GG.anchor,
+                    head: GG.head,
                     lastMoved: Date.now()
                   })));
-                  ju.length > 0 && uu.dispatch({
-                    effects: ju
+                  ZG.length > 0 && GG.dispatch({
+                    effects: ZG
                   })
                 }
-                const su = vu.h.subscribe("codeCollab", (Eu => {
-                    if (Eu.docKey === ju)
-                      if (Eu.type === Gu.f.RemoteCursor) uu.dispatch({
-                        effects: Fu.of({
-                          playerId: Eu.playerId,
-                          playerName: Eu.playerName,
-                          colour: Eu.colour,
-                          anchor: Eu.anchor,
-                          head: Eu.head,
+                const wG = aG.l.subscribe("codeCollab", (bG => {
+                    if (bG.docKey === ZG)
+                      if (bG.type === oG.f.RemoteCursor) GG.dispatch({
+                        effects: nG.of({
+                          playerId: bG.playerId,
+                          playerName: bG.playerName,
+                          colour: bG.colour,
+                          anchor: bG.anchor,
+                          head: bG.head,
                           lastMoved: Date.now()
                         })
                       });
-                      else if (Eu.type === Gu.f.Presence) {
-                      const ju = JSON.parse(Eu.peers),
-                        su = new Set(ju.map((uu => uu.playerId))),
-                        Uu = uu.state.field(Tu),
-                        Zu = [];
-                      for (const [uu] of Uu.cursors) su.has(uu) || Zu.push(Bu.of(uu));
-                      Zu.length > 0 && uu.dispatch({
-                        effects: Zu
+                      else if (bG.type === oG.f.Presence) {
+                      const ZG = JSON.parse(bG.peers),
+                        wG = new Set(ZG.map((GG => GG.playerId))),
+                        SG = GG.state.field(HG),
+                        LG = [];
+                      for (const [GG] of SG.cursors) wG.has(GG) || LG.push(gG.of(GG));
+                      LG.length > 0 && GG.dispatch({
+                        effects: LG
                       })
                     }
                   })),
-                  Uu = setInterval((() => {
-                    uu.dom.isConnected ? uu.dispatch({
-                      effects: Lu.of(Date.now())
-                    }) : clearInterval(Uu)
-                  }), Iu);
+                  SG = setInterval((() => {
+                    GG.dom.isConnected ? GG.dispatch({
+                      effects: eG.of(Date.now())
+                    }) : clearInterval(SG)
+                  }), qG);
                 return () => {
-                  vu.h.unsubscribe(su), clearInterval(Uu)
+                  aG.l.unsubscribe(wG), clearInterval(SG)
                 }
               }
             }
-          }(qu.docKey, qu.existingCursors);
-          lu.push(...uu.extensions), ME.current = uu.connect
-        } else ME.current = null;
-        return lu
-      }), [Eu, lE, tu, fE, CE, dE, yu, Ru, uE, cu, ZE, XE]);
-      if (!lE || !Hu && !Ru) return (0, wE.jsx)("div", {
+          }(UG.docKey, UG.existingCursors);
+          kG.push(...GG.extensions), zb.current = GG.connect
+        } else zb.current = null;
+        return kG
+      }), [bG, kb, RG, Yb, Vb, Cb, OG, BG, Gb, fG, Lb, yb]);
+      if (!kb || !tG && !BG) return (0, ub.jsx)("div", {
         className: "CodeEditorContent",
-        children: (0, wE.jsx)(gu.b, {})
+        children: (0, ub.jsx)(rG.b, {})
       });
-      const kE = Ru ? `plugin-${Ru}-${null!==uE&&void 0!==uE?uE:"index.ts"}` : Hu ? `collab-${Hu.clientID}` : `local-${Eu}`;
-      return (0, wE.jsx)(Zu.p, {
-        value: Ru ? null !== jE && void 0 !== jE ? jE : "" : ju,
-        onChange: lu,
-        extensions: oE,
+      const Fb = BG ? `plugin-${BG}-${null!==Gb&&void 0!==Gb?Gb:"index.ts"}` : tG ? `collab-${tG.clientID}` : `local-${bG}`;
+      return (0, ub.jsx)(LG.r, {
+        value: BG ? null !== Zb && void 0 !== Zb ? Zb : "" : ZG,
+        onChange: kG,
+        extensions: Ib,
         className: "CodeEditorContent",
-        theme: xu ? hE : "dark",
-        editable: cu && !Ru,
-        basicSetup: tE,
-        onCreateEditor: uu => {
-          var Eu;
-          NE.current = uu, YE.current = null !== (Eu = null === Hu || void 0 === Hu ? void 0 : Hu.clientID) && void 0 !== Eu ? Eu : null, PE(uu), gE.current && gE.current(), ME.current && (gE.current = ME.current(uu))
+        theme: TG ? db : "dark",
+        editable: fG && !BG,
+        basicSetup: Rb,
+        onCreateEditor: GG => {
+          var bG;
+          Qb.current = GG, hb.current = null !== (bG = null === tG || void 0 === tG ? void 0 : tG.clientID) && void 0 !== bG ? bG : null, mb(GG), rb.current && rb.current(), zb.current && (rb.current = zb.current(GG))
         }
-      }, kE)
+      }, Fb)
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

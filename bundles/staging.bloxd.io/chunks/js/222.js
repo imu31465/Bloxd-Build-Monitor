@@ -1,240 +1,240 @@
-/*! For license information please see dz8ef.222.bb57cdbf.chunk.js.LICENSE.txt */
+/*! For license information please see wp3j0a.222.6279b7ed.chunk.js.LICENSE.txt */
 export const id = 222;
 export const ids = [222];
 export const modules = {
-  39867: (uu, Eu, ju) => {
-    uu.exports = Uu;
-    var su = ju(366);
+  39959: (GG, bG, ZG) => {
+    GG.exports = SG;
+    var wG = ZG(364);
 
-    function Uu(uu, Eu) {
-      if (!(this instanceof Uu)) return new Uu(uu, Eu);
-      var ju = su.create();
-      su.add(ju, uu, Eu), this.base = su.min(su.create(), uu, ju), this.vec = su.clone(Eu), this.max = su.max(su.create(), uu, ju), this.mag = su.length(this.vec)
+    function SG(GG, bG) {
+      if (!(this instanceof SG)) return new SG(GG, bG);
+      var ZG = wG.create();
+      wG.add(ZG, GG, bG), this.base = wG.min(wG.create(), GG, ZG), this.vec = wG.clone(bG), this.max = wG.max(wG.create(), GG, ZG), this.mag = wG.length(this.vec)
     }
-    var Zu = Uu.prototype;
-    Zu.width = function() {
+    var LG = SG.prototype;
+    LG.width = function() {
       return this.vec[0]
-    }, Zu.height = function() {
+    }, LG.height = function() {
       return this.vec[1]
-    }, Zu.depth = function() {
+    }, LG.depth = function() {
       return this.vec[2]
-    }, Zu.x0 = function() {
+    }, LG.x0 = function() {
       return this.base[0]
-    }, Zu.y0 = function() {
+    }, LG.y0 = function() {
       return this.base[1]
-    }, Zu.z0 = function() {
+    }, LG.z0 = function() {
       return this.base[2]
-    }, Zu.x1 = function() {
+    }, LG.x1 = function() {
       return this.max[0]
-    }, Zu.y1 = function() {
+    }, LG.y1 = function() {
       return this.max[1]
-    }, Zu.z1 = function() {
+    }, LG.z1 = function() {
       return this.max[2]
-    }, Zu.translate = function(uu) {
-      return su.add(this.max, this.max, uu), su.add(this.base, this.base, uu), this
-    }, Zu.setPosition = function(uu) {
-      return su.add(this.max, uu, this.vec), su.copy(this.base, uu), this
-    }, Zu.expand = function(uu) {
-      var Eu = su.create(),
-        ju = su.create();
-      return su.max(Eu, uu.max, this.max), su.min(ju, uu.base, this.base), su.subtract(Eu, Eu, ju), new Uu(ju, Eu)
-    }, Zu.intersects = function(uu) {
-      return !(uu.base[0] > this.max[0]) && (!(uu.base[1] > this.max[1]) && (!(uu.base[2] > this.max[2]) && (!(uu.max[0] < this.base[0]) && (!(uu.max[1] < this.base[1]) && !(uu.max[2] < this.base[2])))))
-    }, Zu.touches = function(uu) {
-      var Eu = this.union(uu);
-      return null !== Eu && (0 == Eu.width() || 0 == Eu.height() || 0 == Eu.depth())
-    }, Zu.union = function(uu) {
-      if (!this.intersects(uu)) return null;
-      var Eu = Math.max(uu.base[0], this.base[0]),
-        ju = Math.max(uu.base[1], this.base[1]),
-        su = Math.max(uu.base[2], this.base[2]);
-      return new Uu([Eu, ju, su], [Math.min(uu.max[0], this.max[0]) - Eu, Math.min(uu.max[1], this.max[1]) - ju, Math.min(uu.max[2], this.max[2]) - su])
+    }, LG.translate = function(GG) {
+      return wG.add(this.max, this.max, GG), wG.add(this.base, this.base, GG), this
+    }, LG.setPosition = function(GG) {
+      return wG.add(this.max, GG, this.vec), wG.copy(this.base, GG), this
+    }, LG.expand = function(GG) {
+      var bG = wG.create(),
+        ZG = wG.create();
+      return wG.max(bG, GG.max, this.max), wG.min(ZG, GG.base, this.base), wG.subtract(bG, bG, ZG), new SG(ZG, bG)
+    }, LG.intersects = function(GG) {
+      return !(GG.base[0] > this.max[0]) && (!(GG.base[1] > this.max[1]) && (!(GG.base[2] > this.max[2]) && (!(GG.max[0] < this.base[0]) && (!(GG.max[1] < this.base[1]) && !(GG.max[2] < this.base[2])))))
+    }, LG.touches = function(GG) {
+      var bG = this.union(GG);
+      return null !== bG && (0 == bG.width() || 0 == bG.height() || 0 == bG.depth())
+    }, LG.union = function(GG) {
+      if (!this.intersects(GG)) return null;
+      var bG = Math.max(GG.base[0], this.base[0]),
+        ZG = Math.max(GG.base[1], this.base[1]),
+        wG = Math.max(GG.base[2], this.base[2]);
+      return new SG([bG, ZG, wG], [Math.min(GG.max[0], this.max[0]) - bG, Math.min(GG.max[1], this.max[1]) - ZG, Math.min(GG.max[2], this.max[2]) - wG])
     }
   },
-  39858: uu => {
-    uu.exports = function(uu, Eu, ju, su, Uu, Zu) {
-      var Xu = +Eu[0],
-        lu = +Eu[1],
-        qu = +Eu[2],
-        fu = +ju[0],
-        Cu = +ju[1],
-        bu = +ju[2],
-        cu = Math.sqrt(fu * fu + Cu * Cu + bu * bu);
-      if (0 === cu) throw new Error("Can't raycast along a zero vector");
-      return function(uu, Eu, ju, su, Uu, Zu, Xu, lu, qu, fu) {
-        for (var Cu = 0, bu = Math.floor, cu = 0 | bu(Eu), Nu = 0 | bu(ju), Ou = 0 | bu(su), Yu = Uu > 0 ? 1 : -1, hu = Zu > 0 ? 1 : -1, Du = Xu > 0 ? 1 : -1, gu = Math.abs(1 / Uu), Mu = Math.abs(1 / Zu), eu = Math.abs(1 / Xu), Gu = gu < 1 / 0 ? gu * (Yu > 0 ? cu + 1 - Eu : Eu - cu) : 1 / 0, pu = Mu < 1 / 0 ? Mu * (hu > 0 ? Nu + 1 - ju : ju - Nu) : 1 / 0, wu = eu < 1 / 0 ? eu * (Du > 0 ? Ou + 1 - su : su - Ou) : 1 / 0, Ju = -1; Cu <= lu;) {
-          var du = uu(cu, Nu, Ou);
-          if (du) return qu && (qu[0] = Eu + Cu * Uu, qu[1] = ju + Cu * Zu, qu[2] = su + Cu * Xu), fu && (fu[0] = fu[1] = fu[2] = 0, 0 === Ju && (fu[0] = -Yu), 1 === Ju && (fu[1] = -hu), 2 === Ju && (fu[2] = -Du)), du;
-          Gu < pu ? Gu < wu ? (cu += Yu, Cu = Gu, Gu += gu, Ju = 0) : (Ou += Du, Cu = wu, wu += eu, Ju = 2) : pu < wu ? (Nu += hu, Cu = pu, pu += Mu, Ju = 1) : (Ou += Du, Cu = wu, wu += eu, Ju = 2)
+  39952: GG => {
+    GG.exports = function(GG, bG, ZG, wG, SG, LG) {
+      var yG = +bG[0],
+        kG = +bG[1],
+        UG = +bG[2],
+        YG = +ZG[0],
+        VG = +ZG[1],
+        pG = +ZG[2],
+        fG = Math.sqrt(YG * YG + VG * VG + pG * pG);
+      if (0 === fG) throw new Error("Can't raycast along a zero vector");
+      return function(GG, bG, ZG, wG, SG, LG, yG, kG, UG, YG) {
+        for (var VG = 0, pG = Math.floor, fG = 0 | pG(bG), QG = 0 | pG(ZG), KG = 0 | pG(wG), hG = SG > 0 ? 1 : -1, dG = LG > 0 ? 1 : -1, JG = yG > 0 ? 1 : -1, rG = Math.abs(1 / SG), zG = Math.abs(1 / LG), EG = Math.abs(1 / yG), oG = rG < 1 / 0 ? rG * (hG > 0 ? fG + 1 - bG : bG - fG) : 1 / 0, XG = zG < 1 / 0 ? zG * (dG > 0 ? QG + 1 - ZG : ZG - QG) : 1 / 0, uG = EG < 1 / 0 ? EG * (JG > 0 ? KG + 1 - wG : wG - KG) : 1 / 0, iG = -1; VG <= kG;) {
+          var CG = GG(fG, QG, KG);
+          if (CG) return UG && (UG[0] = bG + VG * SG, UG[1] = ZG + VG * LG, UG[2] = wG + VG * yG), YG && (YG[0] = YG[1] = YG[2] = 0, 0 === iG && (YG[0] = -hG), 1 === iG && (YG[1] = -dG), 2 === iG && (YG[2] = -JG)), CG;
+          oG < XG ? oG < uG ? (fG += hG, VG = oG, oG += rG, iG = 0) : (KG += JG, VG = uG, uG += EG, iG = 2) : XG < uG ? (QG += dG, VG = XG, XG += zG, iG = 1) : (KG += JG, VG = uG, uG += EG, iG = 2)
         }
-        return qu && (qu[0] = Eu + Cu * Uu, qu[1] = ju + Cu * Zu, qu[2] = su + Cu * Xu), fu && (fu[0] = fu[1] = fu[2] = 0), 0
-      }(uu, Xu, lu, qu, fu /= cu, Cu /= cu, bu /= cu, su = "undefined" === typeof su ? 64 : +su, Uu, Zu)
+        return UG && (UG[0] = bG + VG * SG, UG[1] = ZG + VG * LG, UG[2] = wG + VG * yG), YG && (YG[0] = YG[1] = YG[2] = 0), 0
+      }(GG, yG, kG, UG, YG /= fG, VG /= fG, pG /= fG, wG = "undefined" === typeof wG ? 64 : +wG, SG, LG)
     }
   },
-  39419: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => lu,
-      f: () => Zu
+  39522: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => kG,
+      d: () => LG
     });
-    var su = ju(4266);
-    let Uu = null;
+    var wG = ZG(4105);
+    let SG = null;
 
-    function Zu(uu) {
-      return null !== Uu && uu === Uu
+    function LG(GG) {
+      return null !== SG && GG === SG
     }
 
-    function Xu() {
-      this.YL = !1, this.stopPropagation = !1, this.gL = !1, this.disabled = !1
+    function yG() {
+      this.bD = !1, this.stopPropagation = !1, this.ZD = !1, this.disabled = !1
     }
-    class lu {
-      constructor(uu, Eu) {
+    class kG {
+      constructor(GG, bG) {
         this.version = "0.7.0";
-        var ju = Object.assign({}, new Xu, Eu || {});
-        this.element = uu || document, this.YL = !!ju.YL, this.stopPropagation = !!ju.stopPropagation, this.gL = !!ju.gL, this.disabled = !!ju.disabled, this.filterEvents = (uu, Eu) => !0, this.ignoreEvent = uu => !1, this.down = new su.EventEmitter, this.up = new su.EventEmitter, this.state = {}, this.wL = {
+        var ZG = Object.assign({}, new yG, bG || {});
+        this.element = GG || document, this.bD = !!ZG.bD, this.stopPropagation = !!ZG.stopPropagation, this.ZD = !!ZG.ZD, this.disabled = !!ZG.disabled, this.filterEvents = (GG, bG) => !0, this.ignoreEvent = GG => !1, this.down = new wG.EventEmitter, this.up = new wG.EventEmitter, this.state = {}, this.pD = {
           dx: 0,
           dy: 0,
-          cEu: 0,
-          NEu: 0,
-          OEu: 0
+          ibG: 0,
+          CbG: 0,
+          WbG: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? fu(this) : document.addEventListener("DOMContentLoaded", (uu => {
-          fu(this)
+        }, "loading" !== document.readyState ? YG(this) : document.addEventListener("DOMContentLoaded", (GG => {
+          YG(this)
         }), {
           once: !0
         })
       }
-      bind(uu) {
-        for (var Eu = arguments.length, ju = new Array(Eu > 1 ? Eu - 1 : 0), su = 1; su < Eu; su++) ju[su - 1] = arguments[su];
-        ju.forEach((Eu => {
-          var ju = this._keyBindmap[Eu] || [];
-          ju.includes(uu) || (ju.push(uu), this._keyBindmap[Eu] = ju)
-        })), this.state[uu] = !!this.state[uu], this.pressCount[uu] = this.pressCount[uu] || 0, this.releaseCount[uu] = this.releaseCount[uu] || 0
+      bind(GG) {
+        for (var bG = arguments.length, ZG = new Array(bG > 1 ? bG - 1 : 0), wG = 1; wG < bG; wG++) ZG[wG - 1] = arguments[wG];
+        ZG.forEach((bG => {
+          var ZG = this._keyBindmap[bG] || [];
+          ZG.includes(GG) || (ZG.push(GG), this._keyBindmap[bG] = ZG)
+        })), this.state[GG] = !!this.state[GG], this.pressCount[GG] = this.pressCount[GG] || 0, this.releaseCount[GG] = this.releaseCount[GG] || 0
       }
-      unbind(uu) {
-        for (var Eu in this._keyBindmap) {
-          var ju = this._keyBindmap[Eu],
-            su = ju.indexOf(uu);
-          su > -1 && ju.splice(su, 1)
+      unbind(GG) {
+        for (var bG in this._keyBindmap) {
+          var ZG = this._keyBindmap[bG],
+            wG = ZG.indexOf(GG);
+          wG > -1 && ZG.splice(wG, 1)
         }
       }
       getBindings() {
-        var uu = {};
-        for (var Eu in this._keyBindmap) {
-          this._keyBindmap[Eu].forEach((ju => {
-            uu[ju] = uu[ju] || [], uu[ju].push(Eu)
+        var GG = {};
+        for (var bG in this._keyBindmap) {
+          this._keyBindmap[bG].forEach((ZG => {
+            GG[ZG] = GG[ZG] || [], GG[ZG].push(bG)
           }))
         }
-        return uu
+        return GG
       }
-      Tb() {
-        qu(this.wL), qu(this.pressCount), qu(this.releaseCount)
+      Tp() {
+        UG(this.pD), UG(this.pressCount), UG(this.releaseCount)
       }
     }
 
-    function qu(uu) {
-      for (var Eu in uu) uu[Eu] = 0
+    function UG(GG) {
+      for (var bG in GG) GG[bG] = 0
     }
 
-    function fu(uu) {
-      window.addEventListener("keydown", hu.bind(null, uu, !0), !1), window.addEventListener("keyup", hu.bind(null, uu, !1), !1);
-      var Eu = {
+    function YG(GG) {
+      window.addEventListener("keydown", dG.bind(null, GG, !0), !1), window.addEventListener("keyup", dG.bind(null, GG, !1), !1);
+      var bG = {
         passive: !0
       };
-      uu.element.addEventListener("touchstart", Nu.bind(void 0, uu), {
+      GG.element.addEventListener("touchstart", QG.bind(void 0, GG), {
         passive: !1
-      }), uu.element.addEventListener("touchend", Yu.bind(void 0, uu), Eu), uu.element.addEventListener("mousedown", Du.bind(null, uu, !0), Eu), window.document.addEventListener("mouseup", Du.bind(null, uu, !1), Eu), uu.element.addEventListener("touchmove", gu.bind(null, uu), Eu), uu.element.addEventListener("mousemove", gu.bind(null, uu), Eu), window.PointerEvent, uu.element.addEventListener("wheel", Mu.bind(null, uu), Eu), uu.element.addEventListener("contextmenu", eu.bind(null, uu), !1), window.addEventListener("blur", wu.bind(null, uu), !1)
+      }), GG.element.addEventListener("touchend", hG.bind(void 0, GG), bG), GG.element.addEventListener("mousedown", JG.bind(null, GG, !0), bG), window.document.addEventListener("mouseup", JG.bind(null, GG, !1), bG), GG.element.addEventListener("touchmove", rG.bind(null, GG), bG), GG.element.addEventListener("mousemove", rG.bind(null, GG), bG), window.PointerEvent, GG.element.addEventListener("wheel", zG.bind(null, GG), bG), GG.element.addEventListener("contextmenu", EG.bind(null, GG), !1), window.addEventListener("blur", uG.bind(null, GG), !1)
     }
-    var Cu = 0,
-      bu = 0,
-      cu = null;
+    var VG = 0,
+      pG = 0,
+      fG = null;
 
-    function Nu(uu, Eu) {
-      Eu.preventDefault(), Ou(Eu)
+    function QG(GG, bG) {
+      bG.preventDefault(), KG(bG)
     }
 
-    function Ou(uu) {
-      let Eu = !1;
-      for (let ju = 0; ju < uu.touches.length; ++ju)
-        if (uu.touches[ju].identifier === cu) {
-          Eu = !0;
+    function KG(GG) {
+      let bG = !1;
+      for (let ZG = 0; ZG < GG.touches.length; ++ZG)
+        if (GG.touches[ZG].identifier === fG) {
+          bG = !0;
           break
-        } if (!Eu) {
-        const Eu = uu.changedTouches[0];
-        Cu = Eu.clientX, bu = Eu.clientY, cu = Eu.identifier
+        } if (!bG) {
+        const bG = GG.changedTouches[0];
+        VG = bG.clientX, pG = bG.clientY, fG = bG.identifier
       }
     }
 
-    function Yu(uu, Eu) {
-      for (var ju = Eu.changedTouches, su = 0; su < ju.length; ++su) ju[su].identifier === cu && (cu = null)
+    function hG(GG, bG) {
+      for (var ZG = bG.changedTouches, wG = 0; wG < ZG.length; ++wG) ZG[wG].identifier === fG && (fG = null)
     }
 
-    function hu(uu, Eu, ju) {
-      if (!uu.ignoreEvent(ju)) try {
-        Ju(uu, ju), Eu && ju.isTrusted && !ju.repeat && uu._keyStates[ju.code] && du(uu, ju.code)
+    function dG(GG, bG, ZG) {
+      if (!GG.ignoreEvent(ZG)) try {
+        iG(GG, ZG), bG && ZG.isTrusted && !ZG.repeat && GG._keyStates[ZG.code] && CG(GG, ZG.code)
       } finally {
-        au(ju.code, Eu, uu, ju)
+        WG(ZG.code, bG, GG, ZG)
       }
     }
 
-    function Du(uu, Eu, ju) {
-      if (!uu.ignoreEvent(ju)) try {
-        Ju(uu, ju)
+    function JG(GG, bG, ZG) {
+      if (!GG.ignoreEvent(ZG)) try {
+        iG(GG, ZG)
       } finally {
-        ! function(uu, Eu, ju) {
-          if ("pointerId" in ju)
-            if (Eu) {
-              if (null !== uu._touches.currID) return;
-              uu._touches.currID = ju.pointerId
+        ! function(GG, bG, ZG) {
+          if ("pointerId" in ZG)
+            if (bG) {
+              if (null !== GG._touches.currID) return;
+              GG._touches.currID = ZG.pointerId
             } else {
-              if (uu._touches.currID !== ju.pointerId) return;
-              uu._touches.currID = null
-            } var su = "button" in ju ? ju.button + 1 : 1;
-          au("Mouse" + su, Eu, uu, ju)
-        }(uu, Eu, ju)
+              if (GG._touches.currID !== ZG.pointerId) return;
+              GG._touches.currID = null
+            } var wG = "button" in ZG ? ZG.button + 1 : 1;
+          WG("Mouse" + wG, bG, GG, ZG)
+        }(GG, bG, ZG)
       }
     }
 
-    function gu(uu, Eu) {
-      var ju = Eu.movementX || Eu.mozMovementX || 0,
-        su = Eu.movementY || Eu.mozMovementY || 0;
-      if (Eu.touches && 0 === (ju | su)) {
-        var Uu = function(uu) {
-          Ou(uu);
-          for (let Eu = 0; Eu < uu.changedTouches.length; ++Eu)
-            if (uu.changedTouches[Eu].identifier == cu) {
-              const ju = uu.changedTouches[Eu],
-                su = [ju.clientX - Cu, ju.clientY - bu];
-              return Cu = ju.clientX, bu = ju.clientY, su
-            } return console.error(`Did not find touch id ${cu}`), [0, 0]
-        }(Eu);
-        ju = Uu[0], su = Uu[1]
+    function rG(GG, bG) {
+      var ZG = bG.movementX || bG.mozMovementX || 0,
+        wG = bG.movementY || bG.mozMovementY || 0;
+      if (bG.touches && 0 === (ZG | wG)) {
+        var SG = function(GG) {
+          KG(GG);
+          for (let bG = 0; bG < GG.changedTouches.length; ++bG)
+            if (GG.changedTouches[bG].identifier == fG) {
+              const ZG = GG.changedTouches[bG],
+                wG = [ZG.clientX - VG, ZG.clientY - pG];
+              return VG = ZG.clientX, pG = ZG.clientY, wG
+            } return console.error(`Did not find touch id ${fG}`), [0, 0]
+        }(bG);
+        ZG = SG[0], wG = SG[1]
       }
-      uu.wL.dx += ju, uu.wL.dy += su
+      GG.pD.dx += ZG, GG.pD.dy += wG
     }
 
-    function Mu(uu, Eu) {
-      Ju(uu, Eu);
-      var ju = 1;
-      switch (Eu.deltaMode) {
+    function zG(GG, bG) {
+      iG(GG, bG);
+      var ZG = 1;
+      switch (bG.deltaMode) {
         case 0:
-          ju = 1;
+          ZG = 1;
           break;
         case 1:
-          ju = 12;
+          ZG = 12;
           break;
         case 2:
-          ju = uu.element.clientHeight || window.innerHeight
+          ZG = GG.element.clientHeight || window.innerHeight
       }
-      uu.wL.cEu += (Eu.deltaX || 0) * ju, uu.wL.NEu += (Eu.deltaY || 0) * ju, uu.wL.OEu += (Eu.deltaZ || 0) * ju
+      GG.pD.ibG += (bG.deltaX || 0) * ZG, GG.pD.CbG += (bG.deltaY || 0) * ZG, GG.pD.WbG += (bG.deltaZ || 0) * ZG
     }
 
-    function eu(uu, Eu) {
-      if (!uu.gL) return Eu.preventDefault(), !1
+    function EG(GG, bG) {
+      if (!GG.ZD) return bG.preventDefault(), !1
     }
-    var Gu = {
+    var oG = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -245,91 +245,91 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function pu(uu, Eu) {
-      return !!uu[Gu[Eu]] || ("AltRight" === Eu || "ControlLeft" === Eu) && "function" === typeof uu.getModifierState && !0 === uu.getModifierState("AltGraph")
+    function XG(GG, bG) {
+      return !!GG[oG[bG]] || ("AltRight" === bG || "ControlLeft" === bG) && "function" === typeof GG.getModifierState && !0 === GG.getModifierState("AltGraph")
     }
 
-    function wu(uu, Eu) {
-      for (var ju in uu._modifiersHeldThroughBlur = {}, Gu) uu._keyStates[ju] && (uu._modifiersHeldThroughBlur[ju] = !0);
-      Eu && Eu.isTrusted && function() {
+    function uG(GG, bG) {
+      for (var ZG in GG._modifiersHeldThroughBlur = {}, oG) GG._keyStates[ZG] && (GG._modifiersHeldThroughBlur[ZG] = !0);
+      bG && bG.isTrusted && function() {
         try {
           return window.self !== window.top
-        } catch (uu) {
+        } catch (GG) {
           return !0
         }
-      }() && (clearTimeout(uu._blurRelease), uu._blurRelease = setTimeout((function() {
+      }() && (clearTimeout(GG._blurRelease), GG._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var Eu in uu._modifiersHeldThroughBlur = {}, uu._keyStates) uu._keyStates[Eu] && !/^Mouse\d/.test(Eu) && du(uu, Eu)
+          for (var bG in GG._modifiersHeldThroughBlur = {}, GG._keyStates) GG._keyStates[bG] && !/^Mouse\d/.test(bG) && CG(GG, bG)
       }), 0))
     }
 
-    function Ju(uu, Eu) {
-      var ju = uu._modifiersHeldThroughBlur;
-      if (ju && Eu.isTrusted && document.hasFocus())
-        for (var su in ju) delete ju[su], uu._keyStates[su] && su !== Eu.code && (pu(Eu, su) || du(uu, su))
+    function iG(GG, bG) {
+      var ZG = GG._modifiersHeldThroughBlur;
+      if (ZG && bG.isTrusted && document.hasFocus())
+        for (var wG in ZG) delete ZG[wG], GG._keyStates[wG] && wG !== bG.code && (XG(bG, wG) || CG(GG, wG))
     }
 
-    function du(uu, Eu) {
-      const ju = {
-          code: Eu,
+    function CG(GG, bG) {
+      const ZG = {
+          code: bG,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        su = Uu;
-      Uu = ju;
+        wG = SG;
+      SG = ZG;
       try {
-        au(Eu, !1, uu, ju)
+        WG(bG, !1, GG, ZG)
       } finally {
-        Uu = su
+        SG = wG
       }
     }
 
-    function au(uu, Eu, ju, su) {
-      var Uu = ju._keyBindmap[uu];
-      Uu && (Pu(ju._keyStates[uu], Eu) && (ju._keyStates[uu] = Eu, Uu.forEach((uu => {
-        (!ju.filterEvents || ju.filterEvents(su, uu)) && function(uu, Eu, ju, su) {
-          var Uu = Eu ? ju.pressCount : ju.releaseCount;
-          Uu[uu] = (Uu[uu] || 0) + 1;
-          var Zu = ju._bindPressCount[uu] || 0;
-          (Zu += Eu ? 1 : -1) < 0 && (Zu = 0);
-          ju._bindPressCount[uu] = Zu;
-          var Xu = ju.state[uu];
-          if (Pu(Xu, Zu)) {
-            ju.state[uu] = Zu > 0;
-            var lu = Eu ? ju.down : ju.up;
-            ju.disabled || lu.emit(uu, su)
+    function WG(GG, bG, ZG, wG) {
+      var SG = ZG._keyBindmap[GG];
+      SG && (mG(ZG._keyStates[GG], bG) && (ZG._keyStates[GG] = bG, SG.forEach((GG => {
+        (!ZG.filterEvents || ZG.filterEvents(wG, GG)) && function(GG, bG, ZG, wG) {
+          var SG = bG ? ZG.pressCount : ZG.releaseCount;
+          SG[GG] = (SG[GG] || 0) + 1;
+          var LG = ZG._bindPressCount[GG] || 0;
+          (LG += bG ? 1 : -1) < 0 && (LG = 0);
+          ZG._bindPressCount[GG] = LG;
+          var yG = ZG.state[GG];
+          if (mG(yG, LG)) {
+            ZG.state[GG] = LG > 0;
+            var kG = bG ? ZG.down : ZG.up;
+            ZG.disabled || kG.emit(GG, wG)
           }
-        }(uu, Eu, ju, su)
-      }))), "button" in su || (ju.YL && !su.defaultPrevented && su.preventDefault(), ju.stopPropagation && su.stopPropagation()))
+        }(GG, bG, ZG, wG)
+      }))), "button" in wG || (ZG.bD && !wG.defaultPrevented && wG.preventDefault(), ZG.stopPropagation && wG.stopPropagation()))
     }
 
-    function Pu(uu, Eu) {
-      return uu ? !Eu : Eu
+    function mG(GG, bG) {
+      return GG ? !bG : bG
     }
   },
-  36925: (uu, Eu) => {
-    function ju(uu) {
-      if (uu && "object" === typeof uu) {
-        var Eu = uu.which || uu.keyCode || uu.charCode;
-        Eu && (uu = Eu)
+  36874: (GG, bG) => {
+    function ZG(GG) {
+      if (GG && "object" === typeof GG) {
+        var bG = GG.which || GG.keyCode || GG.charCode;
+        bG && (GG = bG)
       }
-      if ("number" === typeof uu) return Xu[uu];
-      var ju, Zu = String(uu);
-      return (ju = su[Zu.toLowerCase()]) ? ju : (ju = Uu[Zu.toLowerCase()]) || (1 === Zu.length ? Zu.charCodeAt(0) : void 0)
+      if ("number" === typeof GG) return yG[GG];
+      var ZG, LG = String(GG);
+      return (ZG = wG[LG.toLowerCase()]) ? ZG : (ZG = SG[LG.toLowerCase()]) || (1 === LG.length ? LG.charCodeAt(0) : void 0)
     }
-    ju.isEventKey = function(uu, Eu) {
-      if (uu && "object" === typeof uu) {
-        var ju = uu.which || uu.keyCode || uu.charCode;
-        if (null === ju || void 0 === ju) return !1;
-        if ("string" === typeof Eu) {
-          var Zu;
-          if (Zu = su[Eu.toLowerCase()]) return Zu === ju;
-          if (Zu = Uu[Eu.toLowerCase()]) return Zu === ju
-        } else if ("number" === typeof Eu) return Eu === ju;
+    ZG.isEventKey = function(GG, bG) {
+      if (GG && "object" === typeof GG) {
+        var ZG = GG.which || GG.keyCode || GG.charCode;
+        if (null === ZG || void 0 === ZG) return !1;
+        if ("string" === typeof bG) {
+          var LG;
+          if (LG = wG[bG.toLowerCase()]) return LG === ZG;
+          if (LG = SG[bG.toLowerCase()]) return LG === ZG
+        } else if ("number" === typeof bG) return bG === ZG;
         return !1
       }
     };
-    var su = (Eu = uu.exports = ju).code = Eu.codes = {
+    var wG = (bG = GG.exports = ZG).code = bG.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -374,7 +374,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      Uu = Eu.aliases = {
+      SG = bG.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -396,139 +396,139 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (Zu = 97; Zu < 123; Zu++) su[String.fromCharCode(Zu)] = Zu - 32;
-    for (var Zu = 48; Zu < 58; Zu++) su[Zu - 48] = Zu;
-    for (Zu = 1; Zu < 13; Zu++) su["f" + Zu] = Zu + 111;
-    for (Zu = 0; Zu < 10; Zu++) su["numpad " + Zu] = Zu + 96;
-    var Xu = Eu.names = Eu.title = {};
-    for (Zu in su) Xu[su[Zu]] = Zu;
-    for (var lu in Uu) su[lu] = Uu[lu]
+    for (LG = 97; LG < 123; LG++) wG[String.fromCharCode(LG)] = LG - 32;
+    for (var LG = 48; LG < 58; LG++) wG[LG - 48] = LG;
+    for (LG = 1; LG < 13; LG++) wG["f" + LG] = LG + 111;
+    for (LG = 0; LG < 10; LG++) wG["numpad " + LG] = LG + 96;
+    var yG = bG.names = bG.title = {};
+    for (LG in wG) yG[wG[LG]] = LG;
+    for (var kG in SG) wG[kG] = SG[kG]
   },
-  39848: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => su
+  39942: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => wG
     });
-    class su {
+    class wG {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-        this.iW = !1, this.FW = !1, this.cV = 30, this.dW = 0, this.zW = 100, this.rh = !1, this.fullscreen = !1, this.RD = function(uu) {}, this.qS = function(uu, Eu, ju) {}, this.nS = function() {}, this.rD = function() {}, this.bS = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(uu) {}, this._data = new Uu(Eu),
-          function(uu) {
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+        this.Jq = !1, this.zq = !1, this.Fv = 30, this.wq = 0, this.oq = 100, this.gd = !1, this.fullscreen = !1, this.gJ = function(GG) {}, this.uq = function(GG, bG, ZG) {}, this.Fq = function() {}, this.PJ = function() {}, this.mq = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(GG) {}, this._data = new SG(bG),
+          function(GG) {
             if ("loading" === document.readyState) {
-              var Eu = () => {
-                document.removeEventListener("readystatechange", Eu), uu()
+              var bG = () => {
+                document.removeEventListener("readystatechange", bG), GG()
               };
-              document.addEventListener("readystatechange", Eu)
-            } else setTimeout(uu, 0)
+              document.addEventListener("readystatechange", bG)
+            } else setTimeout(GG, 0)
           }((() => {
-            ! function(uu) {
-              var Eu = uu._data,
-                ju = Eu.nowObject.now();
-              Eu.lastTickStarted = ju, Eu.lastFrameStarted = ju, Eu.lastRenderStarted = ju, Eu.frameCB = () => function(uu) {
-                var Eu = uu._data;
-                requestAnimationFrame(Eu.frameCB), lu(uu);
-                var ju = Eu.nowObject.now(),
-                  su = ju - Eu.lastFrameStarted;
-                if (Eu.lastFrameStarted = ju, uu.dW > 0) {
-                  Eu.renderAccum += su;
-                  var Uu = 1e3 / uu.dW;
-                  if (Eu.renderAccum < Uu) return;
-                  Eu.renderAccum -= Uu, Eu.renderAccum > Uu && (Eu.renderAccum = Uu)
+            ! function(GG) {
+              var bG = GG._data,
+                ZG = bG.nowObject.now();
+              bG.lastTickStarted = ZG, bG.lastFrameStarted = ZG, bG.lastRenderStarted = ZG, bG.frameCB = () => function(GG) {
+                var bG = GG._data;
+                requestAnimationFrame(bG.frameCB), kG(GG);
+                var ZG = bG.nowObject.now(),
+                  wG = ZG - bG.lastFrameStarted;
+                if (bG.lastFrameStarted = ZG, GG.wq > 0) {
+                  bG.renderAccum += wG;
+                  var SG = 1e3 / GG.wq;
+                  if (bG.renderAccum < SG) return;
+                  bG.renderAccum -= SG, bG.renderAccum > SG && (bG.renderAccum = SG)
                 }
-                var Zu = ju - Eu.lastRenderStarted;
-                Eu.lastRenderStarted = ju;
-                var Xu = 1e3 / uu.cV,
-                  qu = (ju - Eu.lastTickStarted) / Xu;
-                qu < 0 && (qu = 0);
-                uu.qS(Zu, qu, Xu), setTimeout(lu, 0, uu, !0)
-              }(uu), Eu.intervalCB = () => lu(uu), requestAnimationFrame(Eu.frameCB), Eu.pollTime > 0 && (Eu.intervalID = setInterval(Eu.intervalCB, Math.max(Eu.pollTime, 1e3 / uu.cV / 2)))
+                var LG = ZG - bG.lastRenderStarted;
+                bG.lastRenderStarted = ZG;
+                var yG = 1e3 / GG.Fv,
+                  UG = (ZG - bG.lastTickStarted) / yG;
+                UG < 0 && (UG = 0);
+                GG.uq(LG, UG, yG), setTimeout(kG, 0, GG, !0)
+              }(GG), bG.intervalCB = () => kG(GG), requestAnimationFrame(bG.frameCB), bG.pollTime > 0 && (bG.intervalID = setInterval(bG.intervalCB, Math.max(bG.pollTime, 1e3 / GG.Fv / 2)))
             }(this),
-            function(uu, Eu) {
-              if (!Eu) return;
-              var ju = !1,
-                su = !1,
-                Uu = uu => {
-                  if (!!uu !== (ju = Eu === document.pointerLockElement))
-                    if (uu) {
-                      var su = Eu.requestPointerLock();
-                      su && su.catch && su.catch((uu => {}))
+            function(GG, bG) {
+              if (!bG) return;
+              var ZG = !1,
+                wG = !1,
+                SG = GG => {
+                  if (!!GG !== (ZG = bG === document.pointerLockElement))
+                    if (GG) {
+                      var wG = bG.requestPointerLock();
+                      wG && wG.catch && wG.catch((GG => {}))
                     } else document.exitPointerLock()
                 },
-                Zu = uu => {
-                  !!uu !== (su = Eu === document.fullscreenElement) && (uu ? Eu.requestFullscreen ? Eu.requestFullscreen() : Eu.webkitRequestFullscreen && Eu.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
+                LG = GG => {
+                  !!GG !== (wG = bG === document.fullscreenElement) && (GG ? bG.requestFullscreen ? bG.requestFullscreen() : bG.webkitRequestFullscreen && bG.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
                 };
-              document.addEventListener("pointerlockchange", (su => {
-                ju = Eu === document.pointerLockElement, uu.bS(ju)
-              })), document.addEventListener("fullscreenchange", (ju => {
-                su = Eu === document.fullscreenElement, uu.onFullscreenChanged(su)
-              })), document.addEventListener("pointerlockerror", (su => {
-                ju = Eu === document.pointerLockElement, uu.onPointerLockError(su)
-              })), Object.defineProperty(uu, "rh", {
-                get: () => ju,
-                set: Uu
-              }), Object.defineProperty(uu, "fullscreen", {
-                get: () => su,
-                set: Zu
-              }), Eu.addEventListener("click", (Eu => {
-                uu.iW && Uu(!0), uu.FW && Zu(!0)
+              document.addEventListener("pointerlockchange", (wG => {
+                ZG = bG === document.pointerLockElement, GG.mq(ZG)
+              })), document.addEventListener("fullscreenchange", (ZG => {
+                wG = bG === document.fullscreenElement, GG.onFullscreenChanged(wG)
+              })), document.addEventListener("pointerlockerror", (wG => {
+                ZG = bG === document.pointerLockElement, GG.onPointerLockError(wG)
+              })), Object.defineProperty(GG, "gd", {
+                get: () => ZG,
+                set: SG
+              }), Object.defineProperty(GG, "fullscreen", {
+                get: () => wG,
+                set: LG
+              }), bG.addEventListener("click", (bG => {
+                GG.Jq && SG(!0), GG.zq && LG(!0)
               }));
-              var Xu = () => uu.rD();
+              var yG = () => GG.PJ();
               if (window.ResizeObserver) {
-                new ResizeObserver(Xu).observe(Eu)
-              } else window.addEventListener("resize", Xu)
-            }(this, uu), this.nS()
+                new ResizeObserver(yG).observe(bG)
+              } else window.addEventListener("resize", yG)
+            }(this, GG), this.Fq()
           }))
       }
     }
 
-    function Uu() {
-      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      this.nowObject = performance || Date, this.pollTime = uu, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
+    function SG() {
+      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      this.nowObject = performance || Date, this.pollTime = GG, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
     }
-    var Zu = 3,
-      Xu = 20;
+    var LG = 3,
+      yG = 20;
 
-    function lu(uu) {
-      for (var Eu = uu._data, ju = 1e3 / uu.cV, su = Eu.nowObject.now() + Xu, Uu = 0; Eu.nowObject.now() >= Eu.lastTickStarted + ju && Eu.nowObject.now() < su && ++Uu <= Zu;) uu.RD(ju), Eu.lastTickStarted += ju;
-      var lu = 5 * (ju + 5),
-        qu = Eu.nowObject.now();
-      if (qu - Eu.lastTickStarted > lu)
-        for (; qu >= Eu.lastTickStarted + ju;) Eu.lastTickStarted += ju
+    function kG(GG) {
+      for (var bG = GG._data, ZG = 1e3 / GG.Fv, wG = bG.nowObject.now() + yG, SG = 0; bG.nowObject.now() >= bG.lastTickStarted + ZG && bG.nowObject.now() < wG && ++SG <= LG;) GG.gJ(ZG), bG.lastTickStarted += ZG;
+      var kG = 5 * (ZG + 5),
+        UG = bG.nowObject.now();
+      if (UG - bG.lastTickStarted > kG)
+        for (; UG >= bG.lastTickStarted + ZG;) bG.lastTickStarted += ZG
     }
   },
-  37080: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Xu
+  37052: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => yG
     });
-    var su = ju(58);
-    const Uu = su.useLayoutEffect;
-    const Zu = function(uu) {
-      var Eu = (0, su.useRef)(uu);
-      return Uu((function() {
-        Eu.current = uu
-      })), Eu
+    var wG = ZG(51);
+    const SG = wG.useLayoutEffect;
+    const LG = function(GG) {
+      var bG = (0, wG.useRef)(GG);
+      return SG((function() {
+        bG.current = GG
+      })), bG
     };
-    var Xu = function(uu) {
-      var Eu = Zu(uu);
-      (0, su.useEffect)((function() {
-        var uu = function(uu) {
-          var ju;
-          if (null != Eu.current && (ju = Eu.current(uu)), uu.defaultPrevented && (uu.returnValue = ""), "string" === typeof ju) return uu.returnValue = ju, ju
+    var yG = function(GG) {
+      var bG = LG(GG);
+      (0, wG.useEffect)((function() {
+        var GG = function(GG) {
+          var ZG;
+          if (null != bG.current && (ZG = bG.current(GG)), GG.defaultPrevented && (GG.returnValue = ""), "string" === typeof ZG) return GG.returnValue = ZG, ZG
         };
-        return window.addEventListener("beforeunload", uu),
+        return window.addEventListener("beforeunload", GG),
           function() {
-            window.removeEventListener("beforeunload", uu)
+            window.removeEventListener("beforeunload", GG)
           }
       }), [])
     }
   },
-  36973: uu => {
-    var Eu, ju = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      su = /OS X/.test(ju),
-      Uu = /Opera/.test(ju),
-      Zu = !/like Gecko/.test(ju) && !Uu,
-      Xu = uu.exports = {
-        0: su ? "<menu>" : "<UNK>",
+  36932: GG => {
+    var bG, ZG = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      wG = /OS X/.test(ZG),
+      SG = /Opera/.test(ZG),
+      LG = !/like Gecko/.test(ZG) && !SG,
+      yG = GG.exports = {
+        0: wG ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -571,7 +571,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: su ? "<meta>" : "<menu>",
+        93: wG ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -594,7 +594,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: su && Zu ? "-" : "<volume-mute>",
+        173: wG && LG ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -620,7 +620,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: Uu ? "`" : "<unicode>",
+        231: SG ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -631,183 +631,183 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (Eu = 58; Eu < 65; ++Eu) Xu[Eu] = String.fromCharCode(Eu);
-    for (Eu = 48; Eu < 58; ++Eu) Xu[Eu] = Eu - 48 + "";
-    for (Eu = 65; Eu < 91; ++Eu) Xu[Eu] = String.fromCharCode(Eu);
-    for (Eu = 96; Eu < 106; ++Eu) Xu[Eu] = "<num-" + (Eu - 96) + ">";
-    for (Eu = 112; Eu < 136; ++Eu) Xu[Eu] = "F" + (Eu - 111)
+    for (bG = 58; bG < 65; ++bG) yG[bG] = String.fromCharCode(bG);
+    for (bG = 48; bG < 58; ++bG) yG[bG] = bG - 48 + "";
+    for (bG = 65; bG < 91; ++bG) yG[bG] = String.fromCharCode(bG);
+    for (bG = 96; bG < 106; ++bG) yG[bG] = "<num-" + (bG - 96) + ">";
+    for (bG = 112; bG < 136; ++bG) yG[bG] = "F" + (bG - 111)
   },
-  39303: (uu, Eu, ju) => {
-    function su(uu, Eu, ju, su, Uu) {
-      var Zu = {};
-      return Object.keys(su).forEach((function(uu) {
-        Zu[uu] = su[uu]
-      })), Zu.enumerable = !!Zu.enumerable, Zu.configurable = !!Zu.configurable, ("value" in Zu || Zu.initializer) && (Zu.writable = !0), Zu = ju.slice().reverse().reduce((function(ju, su) {
-        return su(uu, Eu, ju) || ju
-      }), Zu), Uu && void 0 !== Zu.initializer && (Zu.value = Zu.initializer ? Zu.initializer.call(Uu) : void 0, Zu.initializer = void 0), void 0 === Zu.initializer && (Object.defineProperty(uu, Eu, Zu), Zu = null), Zu
+  39376: (GG, bG, ZG) => {
+    function wG(GG, bG, ZG, wG, SG) {
+      var LG = {};
+      return Object.keys(wG).forEach((function(GG) {
+        LG[GG] = wG[GG]
+      })), LG.enumerable = !!LG.enumerable, LG.configurable = !!LG.configurable, ("value" in LG || LG.initializer) && (LG.writable = !0), LG = ZG.slice().reverse().reduce((function(ZG, wG) {
+        return wG(GG, bG, ZG) || ZG
+      }), LG), SG && void 0 !== LG.initializer && (LG.value = LG.initializer ? LG.initializer.call(SG) : void 0, LG.initializer = void 0), void 0 === LG.initializer && (Object.defineProperty(GG, bG, LG), LG = null), LG
     }
-    ju.d(Eu, {
-      e: () => su
+    ZG.d(bG, {
+      b: () => wG
     })
   },
-  39296: (uu, Eu, ju) => {
-    function su(uu, Eu, ju, su) {
-      ju && Object.defineProperty(uu, Eu, {
-        enumerable: ju.enumerable,
-        configurable: ju.configurable,
-        writable: ju.writable,
-        value: ju.initializer ? ju.initializer.call(su) : void 0
+  39368: (GG, bG, ZG) => {
+    function wG(GG, bG, ZG, wG) {
+      ZG && Object.defineProperty(GG, bG, {
+        enumerable: ZG.enumerable,
+        configurable: ZG.configurable,
+        writable: ZG.writable,
+        value: ZG.initializer ? ZG.initializer.call(wG) : void 0
       })
     }
-    ju.d(Eu, {
-      b: () => su
+    ZG.d(bG, {
+      b: () => wG
     })
   },
-  39030: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Zu
+  39086: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => LG
     });
-    var su = ju(39032);
-    const Uu = (uu, Eu, ju) => uu ? uu.getClassName && "Mesh" === uu.getClassName() ? null : !uu.getClassName || "SubMesh" !== uu.getClassName() && "PhysicsBody" !== uu.getClassName() ? uu.clone ? uu.clone() : Array.isArray(uu) ? uu.slice() : ju && "object" === typeof uu ? {
-      ...uu
-    } : null : uu.clone(Eu) : null;
-    class Zu {
-      static DeepCopy(uu, Eu, ju, Zu) {
-        let Xu = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const lu = function(uu) {
-          const Eu = [];
+    var wG = ZG(39093);
+    const SG = (GG, bG, ZG) => GG ? GG.getClassName && "Mesh" === GG.getClassName() ? null : !GG.getClassName || "SubMesh" !== GG.getClassName() && "PhysicsBody" !== GG.getClassName() ? GG.clone ? GG.clone() : Array.isArray(GG) ? GG.slice() : ZG && "object" === typeof GG ? {
+      ...GG
+    } : null : GG.clone(bG) : null;
+    class LG {
+      static DeepCopy(GG, bG, ZG, LG) {
+        let yG = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const kG = function(GG) {
+          const bG = [];
           do {
-            const ju = Object.getOwnPropertyNames(uu);
-            for (const uu of ju) - 1 === Eu.indexOf(uu) && Eu.push(uu)
-          } while (uu = Object.getPrototypeOf(uu));
-          return Eu
-        }(uu);
-        for (const fu of lu) {
-          if ("_" === fu[0] && (!Zu || -1 === Zu.indexOf(fu))) continue;
-          if (fu.endsWith("Observable")) continue;
-          if (ju && -1 !== ju.indexOf(fu)) continue;
-          const lu = uu[fu],
-            Cu = typeof lu;
-          if ("function" !== Cu) try {
-            if ("object" === Cu)
-              if (lu instanceof Uint8Array) Eu[fu] = Uint8Array.from(lu);
-              else if (lu instanceof Array) {
-              if (Eu[fu] = [], lu.length > 0)
-                if ("object" == typeof lu[0])
-                  for (let uu = 0; uu < lu.length; uu++) {
-                    const ju = Uu(lu[uu], Eu, Xu); - 1 === Eu[fu].indexOf(ju) && Eu[fu].push(ju)
-                  } else Eu[fu] = lu.slice(0)
-            } else Eu[fu] = Uu(lu, Eu, Xu);
-            else Eu[fu] = lu
-          } catch (qu) {
-            su.b.Warn(qu.message)
+            const ZG = Object.getOwnPropertyNames(GG);
+            for (const GG of ZG) - 1 === bG.indexOf(GG) && bG.push(GG)
+          } while (GG = Object.getPrototypeOf(GG));
+          return bG
+        }(GG);
+        for (const YG of kG) {
+          if ("_" === YG[0] && (!LG || -1 === LG.indexOf(YG))) continue;
+          if (YG.endsWith("Observable")) continue;
+          if (ZG && -1 !== ZG.indexOf(YG)) continue;
+          const kG = GG[YG],
+            VG = typeof kG;
+          if ("function" !== VG) try {
+            if ("object" === VG)
+              if (kG instanceof Uint8Array) bG[YG] = Uint8Array.from(kG);
+              else if (kG instanceof Array) {
+              if (bG[YG] = [], kG.length > 0)
+                if ("object" == typeof kG[0])
+                  for (let GG = 0; GG < kG.length; GG++) {
+                    const ZG = SG(kG[GG], bG, yG); - 1 === bG[YG].indexOf(ZG) && bG[YG].push(ZG)
+                  } else bG[YG] = kG.slice(0)
+            } else bG[YG] = SG(kG, bG, yG);
+            else bG[YG] = kG
+          } catch (UG) {
+            wG.c.Warn(UG.message)
           }
         }
       }
     }
   },
-  39056: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Uu,
-      h: () => Zu,
-      i: () => Xu,
-      m: () => lu
+  39116: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => SG,
+      h: () => LG,
+      i: () => yG,
+      m: () => kG
     });
-    var su = ju(37680);
-    class Uu {
-      constructor(uu, Eu, ju) {
-        this.gradient = uu, this.color1 = Eu, this.color2 = ju
+    var wG = ZG(37621);
+    class SG {
+      constructor(GG, bG, ZG) {
+        this.gradient = GG, this.color1 = bG, this.color2 = ZG
       }
-      getColorToRef(uu) {
-        this.color2 ? su.g.LerpToRef(this.color1, this.color2, Math.random(), uu) : uu.yJ(this.color1)
-      }
-    }
-    class Zu {
-      constructor(uu, Eu) {
-        this.gradient = uu, this.color = Eu
+      getColorToRef(GG) {
+        this.color2 ? wG.d.LerpToRef(this.color1, this.color2, Math.random(), GG) : GG.oW(this.color1)
       }
     }
-    class Xu {
-      constructor(uu, Eu, ju) {
-        this.gradient = uu, this.factor1 = Eu, this.factor2 = ju
+    class LG {
+      constructor(GG, bG) {
+        this.gradient = GG, this.color = bG
+      }
+    }
+    class yG {
+      constructor(GG, bG, ZG) {
+        this.gradient = GG, this.factor1 = bG, this.factor2 = ZG
       }
       getFactor() {
         return void 0 === this.factor2 || this.factor2 === this.factor1 ? this.factor1 : this.factor1 + (this.factor2 - this.factor1) * Math.random()
       }
     }
-    class lu {
-      static GetCurrentGradient(uu, Eu, ju) {
-        if (Eu[0].gradient > uu) return void ju(Eu[0], Eu[0], 1);
-        for (let Uu = 0; Uu < Eu.length - 1; Uu++) {
-          const su = Eu[Uu],
-            Zu = Eu[Uu + 1];
-          if (uu >= su.gradient && uu <= Zu.gradient) {
-            return void ju(su, Zu, (uu - su.gradient) / (Zu.gradient - su.gradient))
+    class kG {
+      static GetCurrentGradient(GG, bG, ZG) {
+        if (bG[0].gradient > GG) return void ZG(bG[0], bG[0], 1);
+        for (let SG = 0; SG < bG.length - 1; SG++) {
+          const wG = bG[SG],
+            LG = bG[SG + 1];
+          if (GG >= wG.gradient && GG <= LG.gradient) {
+            return void ZG(wG, LG, (GG - wG.gradient) / (LG.gradient - wG.gradient))
           }
         }
-        const su = Eu.length - 1;
-        ju(Eu[su], Eu[su], 1)
+        const wG = bG.length - 1;
+        ZG(bG[wG], bG[wG], 1)
       }
     }
   },
-  39032: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => su
+  39093: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => wG
     });
-    class su {
-      static _CheckLimit(uu, Eu) {
-        let ju = su._LogLimitOutputs[uu];
-        return ju ? ju.current++ : (ju = {
-          limit: Eu,
+    class wG {
+      static _CheckLimit(GG, bG) {
+        let ZG = wG._LogLimitOutputs[GG];
+        return ZG ? ZG.current++ : (ZG = {
+          limit: bG,
           current: 1
-        }, su._LogLimitOutputs[uu] = ju), ju.current <= ju.limit
+        }, wG._LogLimitOutputs[GG] = ZG), ZG.current <= ZG.limit
       }
-      static _GenerateLimitMessage(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const ju = su._LogLimitOutputs[uu];
-        if (!ju || !su.MessageLimitReached) return;
-        const Uu = this._Levels[Eu];
-        ju.current === ju.limit && su[Uu.name](su.MessageLimitReached.replace(/%LIMIT%/g, "" + ju.limit).replace(/%TYPE%/g, Uu.name ?? ""))
+      static _GenerateLimitMessage(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const ZG = wG._LogLimitOutputs[GG];
+        if (!ZG || !wG.MessageLimitReached) return;
+        const SG = this._Levels[bG];
+        ZG.current === ZG.limit && wG[SG.name](wG.MessageLimitReached.replace(/%LIMIT%/g, "" + ZG.limit).replace(/%TYPE%/g, SG.name ?? ""))
       }
-      static _AddLogEntry(uu) {
-        su._LogCache = uu + su._LogCache, su.OnNewCacheEntry && su.OnNewCacheEntry(uu)
+      static _AddLogEntry(GG) {
+        wG._LogCache = GG + wG._LogCache, wG.OnNewCacheEntry && wG.OnNewCacheEntry(GG)
       }
-      static _FormatMessage(uu) {
-        const Eu = uu => uu < 10 ? "0" + uu : "" + uu,
-          ju = new Date;
-        return "[" + Eu(ju.getHours()) + ":" + Eu(ju.getMinutes()) + ":" + Eu(ju.getSeconds()) + "]: " + uu
+      static _FormatMessage(GG) {
+        const bG = GG => GG < 10 ? "0" + GG : "" + GG,
+          ZG = new Date;
+        return "[" + bG(ZG.getHours()) + ":" + bG(ZG.getMinutes()) + ":" + bG(ZG.getSeconds()) + "]: " + GG
       }
-      static _LogDisabled(uu, Eu) {}
+      static _LogDisabled(GG, bG) {}
       static _LogEnabled() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Eu = arguments.length > 1 ? arguments[1] : void 0,
-          ju = arguments.length > 2 ? arguments[2] : void 0;
-        const Uu = Array.isArray(Eu) ? Eu[0] : Eu;
-        if (void 0 !== ju && !su._CheckLimit(Uu, ju)) return;
-        const Zu = su._FormatMessage(Uu),
-          Xu = this._Levels[uu],
-          lu = Array.isArray(Eu) ? Eu.slice(1) : [];
-        Xu.logFunc && Xu.logFunc("BJS - " + Zu, ...lu);
-        const qu = `<div style='color:${Xu.color}'>${Zu}</div><br>`;
-        su._AddLogEntry(qu), su._GenerateLimitMessage(Uu, uu)
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          bG = arguments.length > 1 ? arguments[1] : void 0,
+          ZG = arguments.length > 2 ? arguments[2] : void 0;
+        const SG = Array.isArray(bG) ? bG[0] : bG;
+        if (void 0 !== ZG && !wG._CheckLimit(SG, ZG)) return;
+        const LG = wG._FormatMessage(SG),
+          yG = this._Levels[GG],
+          kG = Array.isArray(bG) ? bG.slice(1) : [];
+        yG.logFunc && yG.logFunc("BJS - " + LG, ...kG);
+        const UG = `<div style='color:${yG.color}'>${LG}</div><br>`;
+        wG._AddLogEntry(UG), wG._GenerateLimitMessage(SG, GG)
       }
       static get LogCache() {
-        return su._LogCache
+        return wG._LogCache
       }
       static ClearLogCache() {
-        su._LogCache = "", su._LogLimitOutputs = {}, su.errorsCount = 0
+        wG._LogCache = "", wG._LogLimitOutputs = {}, wG.errorsCount = 0
       }
-      static set LogLevels(uu) {
-        su.Log = su._LogDisabled, su.Warn = su._LogDisabled, su.Error = su._LogDisabled;
-        const Eu = [su.MessageLogLevel, su.WarningLogLevel, su.ErrorLogLevel];
-        for (const ju of Eu)
-          if ((uu & ju) === ju) {
-            const uu = this._Levels[ju];
-            su[uu.name] = su._LogEnabled.bind(su, ju)
+      static set LogLevels(GG) {
+        wG.Log = wG._LogDisabled, wG.Warn = wG._LogDisabled, wG.Error = wG._LogDisabled;
+        const bG = [wG.MessageLogLevel, wG.WarningLogLevel, wG.ErrorLogLevel];
+        for (const ZG of bG)
+          if ((GG & ZG) === ZG) {
+            const GG = this._Levels[ZG];
+            wG[GG.name] = wG._LogEnabled.bind(wG, ZG)
           }
       }
     }
-    su.NoneLogLevel = 0, su.MessageLogLevel = 1, su.WarningLogLevel = 2, su.ErrorLogLevel = 4, su.AllLogLevel = 7, su.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", su._LogCache = "", su._LogLimitOutputs = {}, su._Levels = [{}, {
+    wG.NoneLogLevel = 0, wG.MessageLogLevel = 1, wG.WarningLogLevel = 2, wG.ErrorLogLevel = 4, wG.AllLogLevel = 7, wG.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", wG._LogCache = "", wG._LogLimitOutputs = {}, wG._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -819,42 +819,42 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], su.errorsCount = 0, su.Log = su._LogEnabled.bind(su, su.MessageLogLevel), su.Warn = su._LogEnabled.bind(su, su.WarningLogLevel), su.Error = su._LogEnabled.bind(su, su.ErrorLogLevel)
+    }], wG.errorsCount = 0, wG.Log = wG._LogEnabled.bind(wG, wG.MessageLogLevel), wG.Warn = wG._LogEnabled.bind(wG, wG.WarningLogLevel), wG.Error = wG._LogEnabled.bind(wG, wG.ErrorLogLevel)
   },
-  39061: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Xu
+  39119: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => yG
     });
-    var su = ju(37494),
-      Uu = ju(37519),
-      Zu = ju(39030);
-    class Xu {
+    var wG = ZG(37439),
+      SG = ZG(37471),
+      LG = ZG(39086);
+    class yG {
       constructor() {
-        this.direction1 = new su.t(0, 1, 0), this.direction2 = new su.t(0, 1, 0), this.minEmitBox = new su.t(-.5, -.5, -.5), this.maxEmitBox = new su.t(.5, .5, .5)
+        this.direction1 = new wG.p(0, 1, 0), this.direction2 = new wG.p(0, 1, 0), this.minEmitBox = new wG.p(-.5, -.5, -.5), this.maxEmitBox = new wG.p(.5, .5, .5)
       }
-      startDirectionFunction(uu, Eu, ju, Zu) {
-        const Xu = (0, Uu.RandomRange)(this.direction1.x, this.direction2.x),
-          lu = (0, Uu.RandomRange)(this.direction1.y, this.direction2.y),
-          qu = (0, Uu.RandomRange)(this.direction1.z, this.direction2.z);
-        if (Zu) return Eu.x = Xu, Eu.y = lu, void(Eu.z = qu);
-        su.t.TransformNormalFromFloatsToRef(Xu, lu, qu, uu, Eu)
+      startDirectionFunction(GG, bG, ZG, LG) {
+        const yG = (0, SG.RandomRange)(this.direction1.x, this.direction2.x),
+          kG = (0, SG.RandomRange)(this.direction1.y, this.direction2.y),
+          UG = (0, SG.RandomRange)(this.direction1.z, this.direction2.z);
+        if (LG) return bG.x = yG, bG.y = kG, void(bG.z = UG);
+        wG.p.TransformNormalFromFloatsToRef(yG, kG, UG, GG, bG)
       }
-      startPositionFunction(uu, Eu, ju, Zu) {
-        const Xu = (0, Uu.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
-          lu = (0, Uu.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
-          qu = (0, Uu.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
-        if (Zu) return Eu.x = Xu, Eu.y = lu, void(Eu.z = qu);
-        su.t.TransformCoordinatesFromFloatsToRef(Xu, lu, qu, uu, Eu)
+      startPositionFunction(GG, bG, ZG, LG) {
+        const yG = (0, SG.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
+          kG = (0, SG.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
+          UG = (0, SG.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
+        if (LG) return bG.x = yG, bG.y = kG, void(bG.z = UG);
+        wG.p.TransformCoordinatesFromFloatsToRef(yG, kG, UG, GG, bG)
       }
       clone() {
-        const uu = new Xu;
-        return Zu.d.DeepCopy(this, uu), uu
+        const GG = new yG;
+        return LG.e.DeepCopy(this, GG), GG
       }
-      applyToShader(uu) {
-        uu.setVector3("direction1", this.direction1), uu.setVector3("direction2", this.direction2), uu.setVector3("minEmitBox", this.minEmitBox), uu.setVector3("maxEmitBox", this.maxEmitBox)
+      applyToShader(GG) {
+        GG.setVector3("direction1", this.direction1), GG.setVector3("direction2", this.direction2), GG.setVector3("minEmitBox", this.minEmitBox), GG.setVector3("maxEmitBox", this.maxEmitBox)
       }
-      buildUniformLayout(uu) {
-        uu.addUniform("direction1", 3), uu.addUniform("direction2", 3), uu.addUniform("minEmitBox", 3), uu.addUniform("maxEmitBox", 3)
+      buildUniformLayout(GG) {
+        GG.addUniform("direction1", 3), GG.addUniform("direction2", 3), GG.addUniform("minEmitBox", 3), GG.addUniform("maxEmitBox", 3)
       }
       getEffectDefines() {
         return "#define BOXEMITTER"
@@ -863,54 +863,54 @@ export const modules = {
         return "BoxParticleEmitter"
       }
       serialize() {
-        const uu = {};
-        return uu.type = this.getClassName(), uu.direction1 = this.direction1.Osu(), uu.direction2 = this.direction2.Osu(), uu.minEmitBox = this.minEmitBox.Osu(), uu.maxEmitBox = this.maxEmitBox.Osu(), uu
+        const GG = {};
+        return GG.type = this.getClassName(), GG.direction1 = this.direction1.mwG(), GG.direction2 = this.direction2.mwG(), GG.minEmitBox = this.minEmitBox.mwG(), GG.maxEmitBox = this.maxEmitBox.mwG(), GG
       }
-      parse(uu) {
-        su.t.FromArrayToRef(uu.direction1, 0, this.direction1), su.t.FromArrayToRef(uu.direction2, 0, this.direction2), su.t.FromArrayToRef(uu.minEmitBox, 0, this.minEmitBox), su.t.FromArrayToRef(uu.maxEmitBox, 0, this.maxEmitBox)
+      parse(GG) {
+        wG.p.FromArrayToRef(GG.direction1, 0, this.direction1), wG.p.FromArrayToRef(GG.direction2, 0, this.direction2), wG.p.FromArrayToRef(GG.minEmitBox, 0, this.minEmitBox), wG.p.FromArrayToRef(GG.maxEmitBox, 0, this.maxEmitBox)
       }
     }
   },
-  39022: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => lu,
-      e: () => Xu
+  39083: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => kG,
+      f: () => yG
     });
-    var su = ju(37494),
-      Uu = ju(37519),
-      Zu = ju(39030);
-    class Xu {
+    var wG = ZG(37439),
+      SG = ZG(37471),
+      LG = ZG(39086);
+    class yG {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          Uu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.radius = uu, this.height = Eu, this.radiusRange = ju, this.directionRandomizer = Uu, this._tempVector = su.t.Zero()
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          SG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.radius = GG, this.height = bG, this.radiusRange = ZG, this.directionRandomizer = SG, this._tempVector = wG.p.Zero()
       }
-      startDirectionFunction(uu, Eu, ju, Zu, Xu) {
-        ju.position.subtractToRef(uu.getTranslation(), this._tempVector), this._tempVector.normalize(), su.t.TransformNormalToRef(this._tempVector, Xu, this._tempVector);
-        const lu = (0, Uu.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
-        let qu = Math.atan2(this._tempVector.x, this._tempVector.z);
-        qu += (0, Uu.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = lu, this._tempVector.x = Math.sin(qu), this._tempVector.z = Math.cos(qu), this._tempVector.normalize(), Zu ? Eu.yJ(this._tempVector) : su.t.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, uu, Eu)
+      startDirectionFunction(GG, bG, ZG, LG, yG) {
+        ZG.position.subtractToRef(GG.getTranslation(), this._tempVector), this._tempVector.normalize(), wG.p.TransformNormalToRef(this._tempVector, yG, this._tempVector);
+        const kG = (0, SG.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
+        let UG = Math.atan2(this._tempVector.x, this._tempVector.z);
+        UG += (0, SG.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = kG, this._tempVector.x = Math.sin(UG), this._tempVector.z = Math.cos(UG), this._tempVector.normalize(), LG ? bG.oW(this._tempVector) : wG.p.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, GG, bG)
       }
-      startPositionFunction(uu, Eu, ju, Zu) {
-        const Xu = (0, Uu.RandomRange)(-this.height / 2, this.height / 2),
-          lu = (0, Uu.RandomRange)(0, 2 * Math.PI),
-          qu = (0, Uu.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
-          fu = Math.sqrt(qu) * this.radius,
-          Cu = fu * Math.cos(lu),
-          bu = fu * Math.sin(lu);
-        Zu ? Eu.T6(Cu, Xu, bu) : su.t.TransformCoordinatesFromFloatsToRef(Cu, Xu, bu, uu, Eu)
+      startPositionFunction(GG, bG, ZG, LG) {
+        const yG = (0, SG.RandomRange)(-this.height / 2, this.height / 2),
+          kG = (0, SG.RandomRange)(0, 2 * Math.PI),
+          UG = (0, SG.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
+          YG = Math.sqrt(UG) * this.radius,
+          VG = YG * Math.cos(kG),
+          pG = YG * Math.sin(kG);
+        LG ? bG.fGG(VG, yG, pG) : wG.p.TransformCoordinatesFromFloatsToRef(VG, yG, pG, GG, bG)
       }
       clone() {
-        const uu = new Xu(this.radius, this.directionRandomizer);
-        return Zu.d.DeepCopy(this, uu), uu
+        const GG = new yG(this.radius, this.directionRandomizer);
+        return LG.e.DeepCopy(this, GG), GG
       }
-      applyToShader(uu) {
-        uu.setFloat("radius", this.radius), uu.setFloat("height", this.height), uu.setFloat("radiusRange", this.radiusRange), uu.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(GG) {
+        GG.setFloat("radius", this.radius), GG.setFloat("height", this.height), GG.setFloat("radiusRange", this.radiusRange), GG.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(uu) {
-        uu.addUniform("radius", 1), uu.addUniform("height", 1), uu.addUniform("radiusRange", 1), uu.addUniform("directionRandomizer", 1)
+      buildUniformLayout(GG) {
+        GG.addUniform("radius", 1), GG.addUniform("height", 1), GG.addUniform("radiusRange", 1), GG.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER"
@@ -919,37 +919,37 @@ export const modules = {
         return "CylinderParticleEmitter"
       }
       serialize() {
-        const uu = {};
-        return uu.type = this.getClassName(), uu.radius = this.radius, uu.height = this.height, uu.radiusRange = this.radiusRange, uu.directionRandomizer = this.directionRandomizer, uu
+        const GG = {};
+        return GG.type = this.getClassName(), GG.radius = this.radius, GG.height = this.height, GG.radiusRange = this.radiusRange, GG.directionRandomizer = this.directionRandomizer, GG
       }
-      parse(uu) {
-        this.radius = uu.radius, this.height = uu.height, this.radiusRange = uu.radiusRange, this.directionRandomizer = uu.directionRandomizer
+      parse(GG) {
+        this.radius = GG.radius, this.height = GG.height, this.radiusRange = GG.radiusRange, this.directionRandomizer = GG.directionRandomizer
       }
     }
-    class lu extends Xu {
+    class kG extends yG {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          Uu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new su.t(0, 1, 0),
-          Zu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new su.t(0, 1, 0);
-        super(uu, Eu, ju), this.direction1 = Uu, this.direction2 = Zu
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          SG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new wG.p(0, 1, 0),
+          LG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new wG.p(0, 1, 0);
+        super(GG, bG, ZG), this.direction1 = SG, this.direction2 = LG
       }
-      startDirectionFunction(uu, Eu, ju, Zu) {
-        const Xu = (0, Uu.RandomRange)(this.direction1.x, this.direction2.x),
-          lu = (0, Uu.RandomRange)(this.direction1.y, this.direction2.y),
-          qu = (0, Uu.RandomRange)(this.direction1.z, this.direction2.z);
-        Zu ? Eu.T6(Xu, lu, qu) : su.t.TransformNormalFromFloatsToRef(Xu, lu, qu, uu, Eu)
+      startDirectionFunction(GG, bG, ZG, LG) {
+        const yG = (0, SG.RandomRange)(this.direction1.x, this.direction2.x),
+          kG = (0, SG.RandomRange)(this.direction1.y, this.direction2.y),
+          UG = (0, SG.RandomRange)(this.direction1.z, this.direction2.z);
+        LG ? bG.fGG(yG, kG, UG) : wG.p.TransformNormalFromFloatsToRef(yG, kG, UG, GG, bG)
       }
       clone() {
-        const uu = new lu(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
-        return Zu.d.DeepCopy(this, uu), uu
+        const GG = new kG(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
+        return LG.e.DeepCopy(this, GG), GG
       }
-      applyToShader(uu) {
-        uu.setFloat("radius", this.radius), uu.setFloat("height", this.height), uu.setFloat("radiusRange", this.radiusRange), uu.setVector3("direction1", this.direction1), uu.setVector3("direction2", this.direction2)
+      applyToShader(GG) {
+        GG.setFloat("radius", this.radius), GG.setFloat("height", this.height), GG.setFloat("radiusRange", this.radiusRange), GG.setVector3("direction1", this.direction1), GG.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(uu) {
-        uu.addUniform("radius", 1), uu.addUniform("height", 1), uu.addUniform("radiusRange", 1), uu.addUniform("direction1", 3), uu.addUniform("direction2", 3)
+      buildUniformLayout(GG) {
+        GG.addUniform("radius", 1), GG.addUniform("height", 1), GG.addUniform("radiusRange", 1), GG.addUniform("direction1", 3), GG.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER\n#define DIRECTEDCYLINDEREMITTER"
@@ -958,239 +958,239 @@ export const modules = {
         return "CylinderDirectedParticleEmitter"
       }
       serialize() {
-        const uu = super.serialize();
-        return uu.direction1 = this.direction1.Osu(), uu.direction2 = this.direction2.Osu(), uu
+        const GG = super.serialize();
+        return GG.direction1 = this.direction1.mwG(), GG.direction2 = this.direction2.mwG(), GG
       }
-      parse(uu) {
-        super.parse(uu), su.t.FromArrayToRef(uu.direction1, 0, this.direction1), su.t.FromArrayToRef(uu.direction2, 0, this.direction2)
+      parse(GG) {
+        super.parse(GG), wG.p.FromArrayToRef(GG.direction1, 0, this.direction1), wG.p.FromArrayToRef(GG.direction2, 0, this.direction2)
       }
     }
   },
-  39133: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => bu
+  39190: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => pG
     });
-    const su = .5 * (Math.sqrt(3) - 1),
-      Uu = (3 - Math.sqrt(3)) / 6,
-      Zu = 1 / 3,
-      Xu = 1 / 6,
-      lu = (Math.sqrt(5) - 1) / 4,
-      qu = (5 - Math.sqrt(5)) / 20,
-      fu = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
-      Cu = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
-    const bu = class {
+    const wG = .5 * (Math.sqrt(3) - 1),
+      SG = (3 - Math.sqrt(3)) / 6,
+      LG = 1 / 3,
+      yG = 1 / 6,
+      kG = (Math.sqrt(5) - 1) / 4,
+      UG = (5 - Math.sqrt(5)) / 20,
+      YG = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
+      VG = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
+    const pG = class {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
-        const Eu = "function" == typeof uu ? uu : function(uu) {
-          let Eu = 0,
-            ju = 0,
-            su = 0,
-            Uu = 1;
-          const Zu = function() {
-            let uu = 4022871197;
-            return function(Eu) {
-              Eu = Eu.toString();
-              for (let ju = 0; ju < Eu.length; ju++) {
-                uu += Eu.charCodeAt(ju);
-                let su = .02519603282416938 * uu;
-                uu = su >>> 0, su -= uu, su *= uu, uu = su >>> 0, su -= uu, uu += 4294967296 * su
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
+        const bG = "function" == typeof GG ? GG : function(GG) {
+          let bG = 0,
+            ZG = 0,
+            wG = 0,
+            SG = 1;
+          const LG = function() {
+            let GG = 4022871197;
+            return function(bG) {
+              bG = bG.toString();
+              for (let ZG = 0; ZG < bG.length; ZG++) {
+                GG += bG.charCodeAt(ZG);
+                let wG = .02519603282416938 * GG;
+                GG = wG >>> 0, wG -= GG, wG *= GG, GG = wG >>> 0, wG -= GG, GG += 4294967296 * wG
               }
-              return 2.3283064365386963e-10 * (uu >>> 0)
+              return 2.3283064365386963e-10 * (GG >>> 0)
             }
           }();
-          Eu = Zu(" "), ju = Zu(" "), su = Zu(" "), Eu -= Zu(uu), Eu < 0 && (Eu += 1);
-          ju -= Zu(uu), ju < 0 && (ju += 1);
-          su -= Zu(uu), su < 0 && (su += 1);
+          bG = LG(" "), ZG = LG(" "), wG = LG(" "), bG -= LG(GG), bG < 0 && (bG += 1);
+          ZG -= LG(GG), ZG < 0 && (ZG += 1);
+          wG -= LG(GG), wG < 0 && (wG += 1);
           return function() {
-            const uu = 2091639 * Eu + 2.3283064365386963e-10 * Uu;
-            return Eu = ju, ju = su, su = uu - (Uu = 0 | uu)
+            const GG = 2091639 * bG + 2.3283064365386963e-10 * SG;
+            return bG = ZG, ZG = wG, wG = GG - (SG = 0 | GG)
           }
-        }(uu);
-        this.p = function(uu) {
-          const Eu = new Uint8Array(256);
-          for (let ju = 0; ju < 256; ju++) Eu[ju] = ju;
-          for (let ju = 0; ju < 255; ju++) {
-            const su = ju + ~~(uu() * (256 - ju)),
-              Uu = Eu[ju];
-            Eu[ju] = Eu[su], Eu[su] = Uu
+        }(GG);
+        this.p = function(GG) {
+          const bG = new Uint8Array(256);
+          for (let ZG = 0; ZG < 256; ZG++) bG[ZG] = ZG;
+          for (let ZG = 0; ZG < 255; ZG++) {
+            const wG = ZG + ~~(GG() * (256 - ZG)),
+              SG = bG[ZG];
+            bG[ZG] = bG[wG], bG[wG] = SG
           }
-          return Eu
-        }(Eu), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
-        for (let ju = 0; ju < 512; ju++) this.perm[ju] = this.p[255 & ju], this.permMod12[ju] = this.perm[ju] % 12
+          return bG
+        }(bG), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
+        for (let ZG = 0; ZG < 512; ZG++) this.perm[ZG] = this.p[255 & ZG], this.permMod12[ZG] = this.perm[ZG] % 12
       }
-      noise2D(uu, Eu) {
-        const ju = this.permMod12,
-          Zu = this.perm;
-        let Xu = 0,
-          lu = 0,
-          qu = 0;
-        const Cu = (uu + Eu) * su,
-          bu = Math.floor(uu + Cu),
-          cu = Math.floor(Eu + Cu),
-          Nu = (bu + cu) * Uu,
-          Ou = uu - (bu - Nu),
-          Yu = Eu - (cu - Nu);
-        let hu, Du;
-        Ou > Yu ? (hu = 1, Du = 0) : (hu = 0, Du = 1);
-        const gu = Ou - hu + Uu,
-          Mu = Yu - Du + Uu,
-          eu = Ou - 1 + 2 * Uu,
-          Gu = Yu - 1 + 2 * Uu,
-          pu = 255 & bu,
-          wu = 255 & cu;
-        let Ju = .5 - Ou * Ou - Yu * Yu;
-        if (Ju >= 0) {
-          const uu = 3 * ju[pu + Zu[wu]];
-          Ju *= Ju, Xu = Ju * Ju * (fu[uu] * Ou + fu[uu + 1] * Yu)
+      noise2D(GG, bG) {
+        const ZG = this.permMod12,
+          LG = this.perm;
+        let yG = 0,
+          kG = 0,
+          UG = 0;
+        const VG = (GG + bG) * wG,
+          pG = Math.floor(GG + VG),
+          fG = Math.floor(bG + VG),
+          QG = (pG + fG) * SG,
+          KG = GG - (pG - QG),
+          hG = bG - (fG - QG);
+        let dG, JG;
+        KG > hG ? (dG = 1, JG = 0) : (dG = 0, JG = 1);
+        const rG = KG - dG + SG,
+          zG = hG - JG + SG,
+          EG = KG - 1 + 2 * SG,
+          oG = hG - 1 + 2 * SG,
+          XG = 255 & pG,
+          uG = 255 & fG;
+        let iG = .5 - KG * KG - hG * hG;
+        if (iG >= 0) {
+          const GG = 3 * ZG[XG + LG[uG]];
+          iG *= iG, yG = iG * iG * (YG[GG] * KG + YG[GG + 1] * hG)
         }
-        let du = .5 - gu * gu - Mu * Mu;
-        if (du >= 0) {
-          const uu = 3 * ju[pu + hu + Zu[wu + Du]];
-          du *= du, lu = du * du * (fu[uu] * gu + fu[uu + 1] * Mu)
+        let CG = .5 - rG * rG - zG * zG;
+        if (CG >= 0) {
+          const GG = 3 * ZG[XG + dG + LG[uG + JG]];
+          CG *= CG, kG = CG * CG * (YG[GG] * rG + YG[GG + 1] * zG)
         }
-        let au = .5 - eu * eu - Gu * Gu;
-        if (au >= 0) {
-          const uu = 3 * ju[pu + 1 + Zu[wu + 1]];
-          au *= au, qu = au * au * (fu[uu] * eu + fu[uu + 1] * Gu)
+        let WG = .5 - EG * EG - oG * oG;
+        if (WG >= 0) {
+          const GG = 3 * ZG[XG + 1 + LG[uG + 1]];
+          WG *= WG, UG = WG * WG * (YG[GG] * EG + YG[GG + 1] * oG)
         }
-        return 70 * (Xu + lu + qu)
+        return 70 * (yG + kG + UG)
       }
-      noise3D(uu, Eu, ju) {
-        const su = this.permMod12,
-          Uu = this.perm;
-        let lu, qu, Cu, bu;
-        const cu = (uu + Eu + ju) * Zu,
-          Nu = Math.floor(uu + cu),
-          Ou = Math.floor(Eu + cu),
-          Yu = Math.floor(ju + cu),
-          hu = (Nu + Ou + Yu) * Xu,
-          Du = uu - (Nu - hu),
-          gu = Eu - (Ou - hu),
-          Mu = ju - (Yu - hu);
-        let eu, Gu, pu, wu, Ju, du;
-        Du >= gu ? gu >= Mu ? (eu = 1, Gu = 0, pu = 0, wu = 1, Ju = 1, du = 0) : Du >= Mu ? (eu = 1, Gu = 0, pu = 0, wu = 1, Ju = 0, du = 1) : (eu = 0, Gu = 0, pu = 1, wu = 1, Ju = 0, du = 1) : gu < Mu ? (eu = 0, Gu = 0, pu = 1, wu = 0, Ju = 1, du = 1) : Du < Mu ? (eu = 0, Gu = 1, pu = 0, wu = 0, Ju = 1, du = 1) : (eu = 0, Gu = 1, pu = 0, wu = 1, Ju = 1, du = 0);
-        const au = Du - eu + Xu,
-          Pu = gu - Gu + Xu,
-          ou = Mu - pu + Xu,
-          ku = Du - wu + 2 * Xu,
-          mu = gu - Ju + 2 * Xu,
-          vu = Mu - du + 2 * Xu,
-          Ku = Du - 1 + .5,
-          Vu = gu - 1 + .5,
-          ru = Mu - 1 + .5,
-          Qu = 255 & Nu,
-          iu = 255 & Ou,
-          Wu = 255 & Yu;
-        let Su = .6 - Du * Du - gu * gu - Mu * Mu;
-        if (Su < 0) lu = 0;
+      noise3D(GG, bG, ZG) {
+        const wG = this.permMod12,
+          SG = this.perm;
+        let kG, UG, VG, pG;
+        const fG = (GG + bG + ZG) * LG,
+          QG = Math.floor(GG + fG),
+          KG = Math.floor(bG + fG),
+          hG = Math.floor(ZG + fG),
+          dG = (QG + KG + hG) * yG,
+          JG = GG - (QG - dG),
+          rG = bG - (KG - dG),
+          zG = ZG - (hG - dG);
+        let EG, oG, XG, uG, iG, CG;
+        JG >= rG ? rG >= zG ? (EG = 1, oG = 0, XG = 0, uG = 1, iG = 1, CG = 0) : JG >= zG ? (EG = 1, oG = 0, XG = 0, uG = 1, iG = 0, CG = 1) : (EG = 0, oG = 0, XG = 1, uG = 1, iG = 0, CG = 1) : rG < zG ? (EG = 0, oG = 0, XG = 1, uG = 0, iG = 1, CG = 1) : JG < zG ? (EG = 0, oG = 1, XG = 0, uG = 0, iG = 1, CG = 1) : (EG = 0, oG = 1, XG = 0, uG = 1, iG = 1, CG = 0);
+        const WG = JG - EG + yG,
+          mG = rG - oG + yG,
+          IG = zG - XG + yG,
+          FG = JG - uG + 2 * yG,
+          vG = rG - iG + 2 * yG,
+          aG = zG - CG + 2 * yG,
+          cG = JG - 1 + .5,
+          lG = rG - 1 + .5,
+          jG = zG - 1 + .5,
+          PG = 255 & QG,
+          MG = 255 & KG,
+          AG = 255 & hG;
+        let sG = .6 - JG * JG - rG * rG - zG * zG;
+        if (sG < 0) kG = 0;
         else {
-          const uu = 3 * su[Qu + Uu[iu + Uu[Wu]]];
-          Su *= Su, lu = Su * Su * (fu[uu] * Du + fu[uu + 1] * gu + fu[uu + 2] * Mu)
+          const GG = 3 * wG[PG + SG[MG + SG[AG]]];
+          sG *= sG, kG = sG * sG * (YG[GG] * JG + YG[GG + 1] * rG + YG[GG + 2] * zG)
         }
-        let Iu = .6 - au * au - Pu * Pu - ou * ou;
-        if (Iu < 0) qu = 0;
+        let qG = .6 - WG * WG - mG * mG - IG * IG;
+        if (qG < 0) UG = 0;
         else {
-          const uu = 3 * su[Qu + eu + Uu[iu + Gu + Uu[Wu + pu]]];
-          Iu *= Iu, qu = Iu * Iu * (fu[uu] * au + fu[uu + 1] * Pu + fu[uu + 2] * ou)
+          const GG = 3 * wG[PG + EG + SG[MG + oG + SG[AG + XG]]];
+          qG *= qG, UG = qG * qG * (YG[GG] * WG + YG[GG + 1] * mG + YG[GG + 2] * IG)
         }
-        let Fu = .6 - ku * ku - mu * mu - vu * vu;
-        if (Fu < 0) Cu = 0;
+        let nG = .6 - FG * FG - vG * vG - aG * aG;
+        if (nG < 0) VG = 0;
         else {
-          const uu = 3 * su[Qu + wu + Uu[iu + Ju + Uu[Wu + du]]];
-          Fu *= Fu, Cu = Fu * Fu * (fu[uu] * ku + fu[uu + 1] * mu + fu[uu + 2] * vu)
+          const GG = 3 * wG[PG + uG + SG[MG + iG + SG[AG + CG]]];
+          nG *= nG, VG = nG * nG * (YG[GG] * FG + YG[GG + 1] * vG + YG[GG + 2] * aG)
         }
-        let Bu = .6 - Ku * Ku - Vu * Vu - ru * ru;
-        if (Bu < 0) bu = 0;
+        let gG = .6 - cG * cG - lG * lG - jG * jG;
+        if (gG < 0) pG = 0;
         else {
-          const uu = 3 * su[Qu + 1 + Uu[iu + 1 + Uu[Wu + 1]]];
-          Bu *= Bu, bu = Bu * Bu * (fu[uu] * Ku + fu[uu + 1] * Vu + fu[uu + 2] * ru)
+          const GG = 3 * wG[PG + 1 + SG[MG + 1 + SG[AG + 1]]];
+          gG *= gG, pG = gG * gG * (YG[GG] * cG + YG[GG + 1] * lG + YG[GG + 2] * jG)
         }
-        return 32 * (lu + qu + Cu + bu)
+        return 32 * (kG + UG + VG + pG)
       }
-      noise4D(uu, Eu, ju, su) {
-        const Uu = this.perm;
-        let Zu, Xu, fu, bu, cu;
-        const Nu = (uu + Eu + ju + su) * lu,
-          Ou = Math.floor(uu + Nu),
-          Yu = Math.floor(Eu + Nu),
-          hu = Math.floor(ju + Nu),
-          Du = Math.floor(su + Nu),
-          gu = (Ou + Yu + hu + Du) * qu,
-          Mu = uu - (Ou - gu),
-          eu = Eu - (Yu - gu),
-          Gu = ju - (hu - gu),
-          pu = su - (Du - gu);
-        let wu = 0,
-          Ju = 0,
-          du = 0,
-          au = 0;
-        Mu > eu ? wu++ : Ju++, Mu > Gu ? wu++ : du++, Mu > pu ? wu++ : au++, eu > Gu ? Ju++ : du++, eu > pu ? Ju++ : au++, Gu > pu ? du++ : au++;
-        const Pu = wu >= 3 ? 1 : 0,
-          ou = Ju >= 3 ? 1 : 0,
-          ku = du >= 3 ? 1 : 0,
-          mu = au >= 3 ? 1 : 0,
-          vu = wu >= 2 ? 1 : 0,
-          Ku = Ju >= 2 ? 1 : 0,
-          Vu = du >= 2 ? 1 : 0,
-          ru = au >= 2 ? 1 : 0,
-          Qu = wu >= 1 ? 1 : 0,
-          iu = Ju >= 1 ? 1 : 0,
-          Wu = du >= 1 ? 1 : 0,
-          Su = au >= 1 ? 1 : 0,
-          Iu = Mu - Pu + qu,
-          Fu = eu - ou + qu,
-          Bu = Gu - ku + qu,
-          Lu = pu - mu + qu,
-          tu = Mu - vu + 2 * qu,
-          xu = eu - Ku + 2 * qu,
-          Tu = Gu - Vu + 2 * qu,
-          Hu = pu - ru + 2 * qu,
-          Au = Mu - Qu + 3 * qu,
-          nu = eu - iu + 3 * qu,
-          yu = Gu - Wu + 3 * qu,
-          zu = pu - Su + 3 * qu,
-          Ru = Mu - 1 + 4 * qu,
-          uE = eu - 1 + 4 * qu,
-          EE = Gu - 1 + 4 * qu,
-          jE = pu - 1 + 4 * qu,
-          sE = 255 & Ou,
-          UE = 255 & Yu,
-          ZE = 255 & hu,
-          XE = 255 & Du;
-        let lE = .6 - Mu * Mu - eu * eu - Gu * Gu - pu * pu;
-        if (lE < 0) Zu = 0;
+      noise4D(GG, bG, ZG, wG) {
+        const SG = this.perm;
+        let LG, yG, YG, pG, fG;
+        const QG = (GG + bG + ZG + wG) * kG,
+          KG = Math.floor(GG + QG),
+          hG = Math.floor(bG + QG),
+          dG = Math.floor(ZG + QG),
+          JG = Math.floor(wG + QG),
+          rG = (KG + hG + dG + JG) * UG,
+          zG = GG - (KG - rG),
+          EG = bG - (hG - rG),
+          oG = ZG - (dG - rG),
+          XG = wG - (JG - rG);
+        let uG = 0,
+          iG = 0,
+          CG = 0,
+          WG = 0;
+        zG > EG ? uG++ : iG++, zG > oG ? uG++ : CG++, zG > XG ? uG++ : WG++, EG > oG ? iG++ : CG++, EG > XG ? iG++ : WG++, oG > XG ? CG++ : WG++;
+        const mG = uG >= 3 ? 1 : 0,
+          IG = iG >= 3 ? 1 : 0,
+          FG = CG >= 3 ? 1 : 0,
+          vG = WG >= 3 ? 1 : 0,
+          aG = uG >= 2 ? 1 : 0,
+          cG = iG >= 2 ? 1 : 0,
+          lG = CG >= 2 ? 1 : 0,
+          jG = WG >= 2 ? 1 : 0,
+          PG = uG >= 1 ? 1 : 0,
+          MG = iG >= 1 ? 1 : 0,
+          AG = CG >= 1 ? 1 : 0,
+          sG = WG >= 1 ? 1 : 0,
+          qG = zG - mG + UG,
+          nG = EG - IG + UG,
+          gG = oG - FG + UG,
+          eG = XG - vG + UG,
+          RG = zG - aG + 2 * UG,
+          TG = EG - cG + 2 * UG,
+          HG = oG - lG + 2 * UG,
+          tG = XG - jG + 2 * UG,
+          DG = zG - PG + 3 * UG,
+          NG = EG - MG + 3 * UG,
+          OG = oG - AG + 3 * UG,
+          xG = XG - sG + 3 * UG,
+          BG = zG - 1 + 4 * UG,
+          Gb = EG - 1 + 4 * UG,
+          bb = oG - 1 + 4 * UG,
+          Zb = XG - 1 + 4 * UG,
+          wb = 255 & KG,
+          Sb = 255 & hG,
+          Lb = 255 & dG,
+          yb = 255 & JG;
+        let kb = .6 - zG * zG - EG * EG - oG * oG - XG * XG;
+        if (kb < 0) LG = 0;
         else {
-          const uu = Uu[sE + Uu[UE + Uu[ZE + Uu[XE]]]] % 32 * 4;
-          lE *= lE, Zu = lE * lE * (Cu[uu] * Mu + Cu[uu + 1] * eu + Cu[uu + 2] * Gu + Cu[uu + 3] * pu)
+          const GG = SG[wb + SG[Sb + SG[Lb + SG[yb]]]] % 32 * 4;
+          kb *= kb, LG = kb * kb * (VG[GG] * zG + VG[GG + 1] * EG + VG[GG + 2] * oG + VG[GG + 3] * XG)
         }
-        let qE = .6 - Iu * Iu - Fu * Fu - Bu * Bu - Lu * Lu;
-        if (qE < 0) Xu = 0;
+        let Ub = .6 - qG * qG - nG * nG - gG * gG - eG * eG;
+        if (Ub < 0) yG = 0;
         else {
-          const uu = Uu[sE + Pu + Uu[UE + ou + Uu[ZE + ku + Uu[XE + mu]]]] % 32 * 4;
-          qE *= qE, Xu = qE * qE * (Cu[uu] * Iu + Cu[uu + 1] * Fu + Cu[uu + 2] * Bu + Cu[uu + 3] * Lu)
+          const GG = SG[wb + mG + SG[Sb + IG + SG[Lb + FG + SG[yb + vG]]]] % 32 * 4;
+          Ub *= Ub, yG = Ub * Ub * (VG[GG] * qG + VG[GG + 1] * nG + VG[GG + 2] * gG + VG[GG + 3] * eG)
         }
-        let fE = .6 - tu * tu - xu * xu - Tu * Tu - Hu * Hu;
-        if (fE < 0) fu = 0;
+        let Yb = .6 - RG * RG - TG * TG - HG * HG - tG * tG;
+        if (Yb < 0) YG = 0;
         else {
-          const uu = Uu[sE + vu + Uu[UE + Ku + Uu[ZE + Vu + Uu[XE + ru]]]] % 32 * 4;
-          fE *= fE, fu = fE * fE * (Cu[uu] * tu + Cu[uu + 1] * xu + Cu[uu + 2] * Tu + Cu[uu + 3] * Hu)
+          const GG = SG[wb + aG + SG[Sb + cG + SG[Lb + lG + SG[yb + jG]]]] % 32 * 4;
+          Yb *= Yb, YG = Yb * Yb * (VG[GG] * RG + VG[GG + 1] * TG + VG[GG + 2] * HG + VG[GG + 3] * tG)
         }
-        let CE = .6 - Au * Au - nu * nu - yu * yu - zu * zu;
-        if (CE < 0) bu = 0;
+        let Vb = .6 - DG * DG - NG * NG - OG * OG - xG * xG;
+        if (Vb < 0) pG = 0;
         else {
-          const uu = Uu[sE + Qu + Uu[UE + iu + Uu[ZE + Wu + Uu[XE + Su]]]] % 32 * 4;
-          CE *= CE, bu = CE * CE * (Cu[uu] * Au + Cu[uu + 1] * nu + Cu[uu + 2] * yu + Cu[uu + 3] * zu)
+          const GG = SG[wb + PG + SG[Sb + MG + SG[Lb + AG + SG[yb + sG]]]] % 32 * 4;
+          Vb *= Vb, pG = Vb * Vb * (VG[GG] * DG + VG[GG + 1] * NG + VG[GG + 2] * OG + VG[GG + 3] * xG)
         }
-        let bE = .6 - Ru * Ru - uE * uE - EE * EE - jE * jE;
-        if (bE < 0) cu = 0;
+        let pb = .6 - BG * BG - Gb * Gb - bb * bb - Zb * Zb;
+        if (pb < 0) fG = 0;
         else {
-          const uu = Uu[sE + 1 + Uu[UE + 1 + Uu[ZE + 1 + Uu[XE + 1]]]] % 32 * 4;
-          bE *= bE, cu = bE * bE * (Cu[uu] * Ru + Cu[uu + 1] * uE + Cu[uu + 2] * EE + Cu[uu + 3] * jE)
+          const GG = SG[wb + 1 + SG[Sb + 1 + SG[Lb + 1 + SG[yb + 1]]]] % 32 * 4;
+          pb *= pb, fG = pb * pb * (VG[GG] * BG + VG[GG + 1] * Gb + VG[GG + 2] * bb + VG[GG + 3] * Zb)
         }
-        return 27 * (Zu + Xu + fu + bu + cu)
+        return 27 * (LG + yG + YG + pG + fG)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

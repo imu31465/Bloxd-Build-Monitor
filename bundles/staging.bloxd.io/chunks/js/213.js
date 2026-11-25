@@ -1,33 +1,33 @@
 export const id = 213;
 export const ids = [213];
 export const modules = {
-  36668: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      CAPPED_COUNTS_VISIT_CAP: () => Zu,
-      reportCappedWasmFailure: () => qu,
-      reportUncappedWasmFailure: () => lu,
-      reportWasmCrash: () => Uu,
-      reportWasmFailure: () => Xu
+  36586: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      CAPPED_COUNTS_VISIT_CAP: () => LG,
+      reportCappedWasmFailure: () => UG,
+      reportUncappedWasmFailure: () => kG,
+      reportWasmCrash: () => SG,
+      reportWasmFailure: () => yG
     });
-    var su = ju(3099);
+    var wG = ZG(2920);
 
-    function Uu(uu) {
-      (0, su.reportClientError)("wasm_load", uu.message, uu.code)
+    function SG(GG) {
+      (0, wG.reportClientError)("wasm_load", GG.message, GG.code)
     }
-    const Zu = su.MAX_ERRORS_PER_VISIT - 4;
+    const LG = wG.MAX_ERRORS_PER_VISIT - 4;
 
-    function Xu(uu, Eu, ju) {
-      (0, su.reportClientError)(uu, Eu, ju, !1)
-    }
-
-    function lu(uu, Eu, ju) {
-      (0, su.reportClientError)(uu, Eu, ju, !1, 1 / 0)
+    function yG(GG, bG, ZG) {
+      (0, wG.reportClientError)(GG, bG, ZG, !1)
     }
 
-    function qu(uu, Eu, ju) {
-      (0, su.reportClientError)(uu, Eu, ju, !1, Zu)
+    function kG(GG, bG, ZG) {
+      (0, wG.reportClientError)(GG, bG, ZG, !1, 1 / 0)
+    }
+
+    function UG(GG, bG, ZG) {
+      (0, wG.reportClientError)(GG, bG, ZG, !1, LG)
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

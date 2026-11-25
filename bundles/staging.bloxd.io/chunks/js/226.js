@@ -1,8 +1,8 @@
 export const id = 226;
 export const ids = [226];
 export const modules = {
-  37025: uu => {
-    uu.exports = {
+  36992: GG => {
+    GG.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -153,363 +153,363 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  37022: (uu, Eu, ju) => {
-    var su = ju(37025),
-      Uu = ju(37027),
-      Zu = Object.hasOwnProperty,
-      Xu = Object.create(null);
-    for (var lu in su) Zu.call(su, lu) && (Xu[su[lu]] = lu);
-    var qu = uu.exports = {
+  36985: (GG, bG, ZG) => {
+    var wG = ZG(36992),
+      SG = ZG(36996),
+      LG = Object.hasOwnProperty,
+      yG = Object.create(null);
+    for (var kG in wG) LG.call(wG, kG) && (yG[wG[kG]] = kG);
+    var UG = GG.exports = {
       to: {},
       get: {}
     };
 
-    function fu(uu, Eu, ju) {
-      return Math.min(Math.max(Eu, uu), ju)
+    function YG(GG, bG, ZG) {
+      return Math.min(Math.max(bG, GG), ZG)
     }
 
-    function Cu(uu) {
-      var Eu = Math.round(uu).toString(16).toUpperCase();
-      return Eu.length < 2 ? "0" + Eu : Eu
+    function VG(GG) {
+      var bG = Math.round(GG).toString(16).toUpperCase();
+      return bG.length < 2 ? "0" + bG : bG
     }
-    qu.get = function(uu) {
-      var Eu, ju;
-      switch (uu.substring(0, 3).toLowerCase()) {
+    UG.get = function(GG) {
+      var bG, ZG;
+      switch (GG.substring(0, 3).toLowerCase()) {
         case "hsl":
-          Eu = qu.get.hsl(uu), ju = "hsl";
+          bG = UG.get.hsl(GG), ZG = "hsl";
           break;
         case "hwb":
-          Eu = qu.get.hwb(uu), ju = "hwb";
+          bG = UG.get.hwb(GG), ZG = "hwb";
           break;
         default:
-          Eu = qu.get.rgb(uu), ju = "rgb"
+          bG = UG.get.rgb(GG), ZG = "rgb"
       }
-      return Eu ? {
-        model: ju,
-        value: Eu
+      return bG ? {
+        model: ZG,
+        value: bG
       } : null
-    }, qu.get.rgb = function(uu) {
-      if (!uu) return null;
-      var Eu, ju, Uu, Xu = [0, 0, 0, 1];
-      if (Eu = uu.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
-        for (Uu = Eu[2], Eu = Eu[1], ju = 0; ju < 3; ju++) {
-          var lu = 2 * ju;
-          Xu[ju] = parseInt(Eu.slice(lu, lu + 2), 16)
+    }, UG.get.rgb = function(GG) {
+      if (!GG) return null;
+      var bG, ZG, SG, yG = [0, 0, 0, 1];
+      if (bG = GG.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
+        for (SG = bG[2], bG = bG[1], ZG = 0; ZG < 3; ZG++) {
+          var kG = 2 * ZG;
+          yG[ZG] = parseInt(bG.slice(kG, kG + 2), 16)
         }
-        Uu && (Xu[3] = parseInt(Uu, 16) / 255)
-      } else if (Eu = uu.match(/^#([a-f0-9]{3,4})$/i)) {
-        for (Uu = (Eu = Eu[1])[3], ju = 0; ju < 3; ju++) Xu[ju] = parseInt(Eu[ju] + Eu[ju], 16);
-        Uu && (Xu[3] = parseInt(Uu + Uu, 16) / 255)
-      } else if (Eu = uu.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
-        for (ju = 0; ju < 3; ju++) Xu[ju] = parseInt(Eu[ju + 1], 0);
-        Eu[4] && (Eu[5] ? Xu[3] = .01 * parseFloat(Eu[4]) : Xu[3] = parseFloat(Eu[4]))
+        SG && (yG[3] = parseInt(SG, 16) / 255)
+      } else if (bG = GG.match(/^#([a-f0-9]{3,4})$/i)) {
+        for (SG = (bG = bG[1])[3], ZG = 0; ZG < 3; ZG++) yG[ZG] = parseInt(bG[ZG] + bG[ZG], 16);
+        SG && (yG[3] = parseInt(SG + SG, 16) / 255)
+      } else if (bG = GG.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
+        for (ZG = 0; ZG < 3; ZG++) yG[ZG] = parseInt(bG[ZG + 1], 0);
+        bG[4] && (bG[5] ? yG[3] = .01 * parseFloat(bG[4]) : yG[3] = parseFloat(bG[4]))
       } else {
-        if (!(Eu = uu.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (Eu = uu.match(/^(\w+)$/)) ? "transparent" === Eu[1] ? [0, 0, 0, 0] : Zu.call(su, Eu[1]) ? ((Xu = su[Eu[1]])[3] = 1, Xu) : null : null;
-        for (ju = 0; ju < 3; ju++) Xu[ju] = Math.round(2.55 * parseFloat(Eu[ju + 1]));
-        Eu[4] && (Eu[5] ? Xu[3] = .01 * parseFloat(Eu[4]) : Xu[3] = parseFloat(Eu[4]))
+        if (!(bG = GG.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (bG = GG.match(/^(\w+)$/)) ? "transparent" === bG[1] ? [0, 0, 0, 0] : LG.call(wG, bG[1]) ? ((yG = wG[bG[1]])[3] = 1, yG) : null : null;
+        for (ZG = 0; ZG < 3; ZG++) yG[ZG] = Math.round(2.55 * parseFloat(bG[ZG + 1]));
+        bG[4] && (bG[5] ? yG[3] = .01 * parseFloat(bG[4]) : yG[3] = parseFloat(bG[4]))
       }
-      for (ju = 0; ju < 3; ju++) Xu[ju] = fu(Xu[ju], 0, 255);
-      return Xu[3] = fu(Xu[3], 0, 1), Xu
-    }, qu.get.hsl = function(uu) {
-      if (!uu) return null;
-      var Eu = uu.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (Eu) {
-        var ju = parseFloat(Eu[4]);
-        return [(parseFloat(Eu[1]) % 360 + 360) % 360, fu(parseFloat(Eu[2]), 0, 100), fu(parseFloat(Eu[3]), 0, 100), fu(isNaN(ju) ? 1 : ju, 0, 1)]
-      }
-      return null
-    }, qu.get.hwb = function(uu) {
-      if (!uu) return null;
-      var Eu = uu.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (Eu) {
-        var ju = parseFloat(Eu[4]);
-        return [(parseFloat(Eu[1]) % 360 + 360) % 360, fu(parseFloat(Eu[2]), 0, 100), fu(parseFloat(Eu[3]), 0, 100), fu(isNaN(ju) ? 1 : ju, 0, 1)]
+      for (ZG = 0; ZG < 3; ZG++) yG[ZG] = YG(yG[ZG], 0, 255);
+      return yG[3] = YG(yG[3], 0, 1), yG
+    }, UG.get.hsl = function(GG) {
+      if (!GG) return null;
+      var bG = GG.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (bG) {
+        var ZG = parseFloat(bG[4]);
+        return [(parseFloat(bG[1]) % 360 + 360) % 360, YG(parseFloat(bG[2]), 0, 100), YG(parseFloat(bG[3]), 0, 100), YG(isNaN(ZG) ? 1 : ZG, 0, 1)]
       }
       return null
-    }, qu.to.hex = function() {
-      var uu = Uu(arguments);
-      return "#" + Cu(uu[0]) + Cu(uu[1]) + Cu(uu[2]) + (uu[3] < 1 ? Cu(Math.round(255 * uu[3])) : "")
-    }, qu.to.rgb = function() {
-      var uu = Uu(arguments);
-      return uu.length < 4 || 1 === uu[3] ? "rgb(" + Math.round(uu[0]) + ", " + Math.round(uu[1]) + ", " + Math.round(uu[2]) + ")" : "rgba(" + Math.round(uu[0]) + ", " + Math.round(uu[1]) + ", " + Math.round(uu[2]) + ", " + uu[3] + ")"
-    }, qu.to.rgb.percent = function() {
-      var uu = Uu(arguments),
-        Eu = Math.round(uu[0] / 255 * 100),
-        ju = Math.round(uu[1] / 255 * 100),
-        su = Math.round(uu[2] / 255 * 100);
-      return uu.length < 4 || 1 === uu[3] ? "rgb(" + Eu + "%, " + ju + "%, " + su + "%)" : "rgba(" + Eu + "%, " + ju + "%, " + su + "%, " + uu[3] + ")"
-    }, qu.to.hsl = function() {
-      var uu = Uu(arguments);
-      return uu.length < 4 || 1 === uu[3] ? "hsl(" + uu[0] + ", " + uu[1] + "%, " + uu[2] + "%)" : "hsla(" + uu[0] + ", " + uu[1] + "%, " + uu[2] + "%, " + uu[3] + ")"
-    }, qu.to.hwb = function() {
-      var uu = Uu(arguments),
-        Eu = "";
-      return uu.length >= 4 && 1 !== uu[3] && (Eu = ", " + uu[3]), "hwb(" + uu[0] + ", " + uu[1] + "%, " + uu[2] + "%" + Eu + ")"
-    }, qu.to.keyword = function(uu) {
-      return Xu[uu.slice(0, 3)]
+    }, UG.get.hwb = function(GG) {
+      if (!GG) return null;
+      var bG = GG.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (bG) {
+        var ZG = parseFloat(bG[4]);
+        return [(parseFloat(bG[1]) % 360 + 360) % 360, YG(parseFloat(bG[2]), 0, 100), YG(parseFloat(bG[3]), 0, 100), YG(isNaN(ZG) ? 1 : ZG, 0, 1)]
+      }
+      return null
+    }, UG.to.hex = function() {
+      var GG = SG(arguments);
+      return "#" + VG(GG[0]) + VG(GG[1]) + VG(GG[2]) + (GG[3] < 1 ? VG(Math.round(255 * GG[3])) : "")
+    }, UG.to.rgb = function() {
+      var GG = SG(arguments);
+      return GG.length < 4 || 1 === GG[3] ? "rgb(" + Math.round(GG[0]) + ", " + Math.round(GG[1]) + ", " + Math.round(GG[2]) + ")" : "rgba(" + Math.round(GG[0]) + ", " + Math.round(GG[1]) + ", " + Math.round(GG[2]) + ", " + GG[3] + ")"
+    }, UG.to.rgb.percent = function() {
+      var GG = SG(arguments),
+        bG = Math.round(GG[0] / 255 * 100),
+        ZG = Math.round(GG[1] / 255 * 100),
+        wG = Math.round(GG[2] / 255 * 100);
+      return GG.length < 4 || 1 === GG[3] ? "rgb(" + bG + "%, " + ZG + "%, " + wG + "%)" : "rgba(" + bG + "%, " + ZG + "%, " + wG + "%, " + GG[3] + ")"
+    }, UG.to.hsl = function() {
+      var GG = SG(arguments);
+      return GG.length < 4 || 1 === GG[3] ? "hsl(" + GG[0] + ", " + GG[1] + "%, " + GG[2] + "%)" : "hsla(" + GG[0] + ", " + GG[1] + "%, " + GG[2] + "%, " + GG[3] + ")"
+    }, UG.to.hwb = function() {
+      var GG = SG(arguments),
+        bG = "";
+      return GG.length >= 4 && 1 !== GG[3] && (bG = ", " + GG[3]), "hwb(" + GG[0] + ", " + GG[1] + "%, " + GG[2] + "%" + bG + ")"
+    }, UG.to.keyword = function(GG) {
+      return yG[GG.slice(0, 3)]
     }
   },
-  37013: (uu, Eu, ju) => {
-    const su = ju(37022),
-      Uu = ju(37034),
-      Zu = ["keyword", "gray", "hex"],
-      Xu = {};
-    for (const Nu of Object.keys(Uu)) Xu[[...Uu[Nu].labels].sort().join("")] = Nu;
-    const lu = {};
+  36981: (GG, bG, ZG) => {
+    const wG = ZG(36985),
+      SG = ZG(37e3),
+      LG = ["keyword", "gray", "hex"],
+      yG = {};
+    for (const QG of Object.keys(SG)) yG[[...SG[QG].labels].sort().join("")] = QG;
+    const kG = {};
 
-    function qu(uu, Eu) {
-      if (!(this instanceof qu)) return new qu(uu, Eu);
-      if (Eu && Eu in Zu && (Eu = null), Eu && !(Eu in Uu)) throw new Error("Unknown model: " + Eu);
-      let ju, fu;
-      if (null == uu) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
-      else if (uu instanceof qu) this.model = uu.model, this.color = [...uu.color], this.valpha = uu.valpha;
-      else if ("string" === typeof uu) {
-        const Eu = su.get(uu);
-        if (null === Eu) throw new Error("Unable to parse color from string: " + uu);
-        this.model = Eu.model, fu = Uu[this.model].channels, this.color = Eu.value.slice(0, fu), this.valpha = "number" === typeof Eu.value[fu] ? Eu.value[fu] : 1
-      } else if (uu.length > 0) {
-        this.model = Eu || "rgb", fu = Uu[this.model].channels;
-        const ju = Array.prototype.slice.call(uu, 0, fu);
-        this.color = cu(ju, fu), this.valpha = "number" === typeof uu[fu] ? uu[fu] : 1
-      } else if ("number" === typeof uu) this.model = "rgb", this.color = [uu >> 16 & 255, uu >> 8 & 255, 255 & uu], this.valpha = 1;
+    function UG(GG, bG) {
+      if (!(this instanceof UG)) return new UG(GG, bG);
+      if (bG && bG in LG && (bG = null), bG && !(bG in SG)) throw new Error("Unknown model: " + bG);
+      let ZG, YG;
+      if (null == GG) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
+      else if (GG instanceof UG) this.model = GG.model, this.color = [...GG.color], this.valpha = GG.valpha;
+      else if ("string" === typeof GG) {
+        const bG = wG.get(GG);
+        if (null === bG) throw new Error("Unable to parse color from string: " + GG);
+        this.model = bG.model, YG = SG[this.model].channels, this.color = bG.value.slice(0, YG), this.valpha = "number" === typeof bG.value[YG] ? bG.value[YG] : 1
+      } else if (GG.length > 0) {
+        this.model = bG || "rgb", YG = SG[this.model].channels;
+        const ZG = Array.prototype.slice.call(GG, 0, YG);
+        this.color = fG(ZG, YG), this.valpha = "number" === typeof GG[YG] ? GG[YG] : 1
+      } else if ("number" === typeof GG) this.model = "rgb", this.color = [GG >> 16 & 255, GG >> 8 & 255, 255 & GG], this.valpha = 1;
       else {
         this.valpha = 1;
-        const Eu = Object.keys(uu);
-        "alpha" in uu && (Eu.splice(Eu.indexOf("alpha"), 1), this.valpha = "number" === typeof uu.alpha ? uu.alpha : 0);
-        const su = Eu.sort().join("");
-        if (!(su in Xu)) throw new Error("Unable to parse color from object: " + JSON.stringify(uu));
-        this.model = Xu[su];
+        const bG = Object.keys(GG);
+        "alpha" in GG && (bG.splice(bG.indexOf("alpha"), 1), this.valpha = "number" === typeof GG.alpha ? GG.alpha : 0);
+        const wG = bG.sort().join("");
+        if (!(wG in yG)) throw new Error("Unable to parse color from object: " + JSON.stringify(GG));
+        this.model = yG[wG];
         const {
-          labels: Zu
-        } = Uu[this.model], lu = [];
-        for (ju = 0; ju < Zu.length; ju++) lu.push(uu[Zu[ju]]);
-        this.color = cu(lu)
+          labels: LG
+        } = SG[this.model], kG = [];
+        for (ZG = 0; ZG < LG.length; ZG++) kG.push(GG[LG[ZG]]);
+        this.color = fG(kG)
       }
-      if (lu[this.model])
-        for (fu = Uu[this.model].channels, ju = 0; ju < fu; ju++) {
-          const uu = lu[this.model][ju];
-          uu && (this.color[ju] = uu(this.color[ju]))
+      if (kG[this.model])
+        for (YG = SG[this.model].channels, ZG = 0; ZG < YG; ZG++) {
+          const GG = kG[this.model][ZG];
+          GG && (this.color[ZG] = GG(this.color[ZG]))
         }
       this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this)
     }
-    qu.prototype = {
+    UG.prototype = {
       toString() {
         return this.string()
       },
       toJSON() {
         return this[this.model]()
       },
-      string(uu) {
-        let Eu = this.model in su.to ? this : this.rgb();
-        Eu = Eu.round("number" === typeof uu ? uu : 1);
-        const ju = 1 === Eu.valpha ? Eu.color : [...Eu.color, this.valpha];
-        return su.to[Eu.model](ju)
+      string(GG) {
+        let bG = this.model in wG.to ? this : this.rgb();
+        bG = bG.round("number" === typeof GG ? GG : 1);
+        const ZG = 1 === bG.valpha ? bG.color : [...bG.color, this.valpha];
+        return wG.to[bG.model](ZG)
       },
-      percentString(uu) {
-        const Eu = this.rgb().round("number" === typeof uu ? uu : 1),
-          ju = 1 === Eu.valpha ? Eu.color : [...Eu.color, this.valpha];
-        return su.to.rgb.percent(ju)
+      percentString(GG) {
+        const bG = this.rgb().round("number" === typeof GG ? GG : 1),
+          ZG = 1 === bG.valpha ? bG.color : [...bG.color, this.valpha];
+        return wG.to.rgb.percent(ZG)
       },
       array() {
         return 1 === this.valpha ? [...this.color] : [...this.color, this.valpha]
       },
       object() {
-        const uu = {},
+        const GG = {},
           {
-            channels: Eu
-          } = Uu[this.model],
+            channels: bG
+          } = SG[this.model],
           {
-            labels: ju
-          } = Uu[this.model];
-        for (let su = 0; su < Eu; su++) uu[ju[su]] = this.color[su];
-        return 1 !== this.valpha && (uu.alpha = this.valpha), uu
+            labels: ZG
+          } = SG[this.model];
+        for (let wG = 0; wG < bG; wG++) GG[ZG[wG]] = this.color[wG];
+        return 1 !== this.valpha && (GG.alpha = this.valpha), GG
       },
       unitArray() {
-        const uu = this.rgb().color;
-        return uu[0] /= 255, uu[1] /= 255, uu[2] /= 255, 1 !== this.valpha && uu.push(this.valpha), uu
+        const GG = this.rgb().color;
+        return GG[0] /= 255, GG[1] /= 255, GG[2] /= 255, 1 !== this.valpha && GG.push(this.valpha), GG
       },
       unitObject() {
-        const uu = this.rgb().object();
-        return uu.r /= 255, uu.g /= 255, uu.b /= 255, 1 !== this.valpha && (uu.alpha = this.valpha), uu
+        const GG = this.rgb().object();
+        return GG.r /= 255, GG.g /= 255, GG.b /= 255, 1 !== this.valpha && (GG.alpha = this.valpha), GG
       },
-      round(uu) {
-        return uu = Math.max(uu || 0, 0), new qu([...this.color.map(fu(uu)), this.valpha], this.model)
+      round(GG) {
+        return GG = Math.max(GG || 0, 0), new UG([...this.color.map(YG(GG)), this.valpha], this.model)
       },
-      alpha(uu) {
-        return void 0 !== uu ? new qu([...this.color, Math.max(0, Math.min(1, uu))], this.model) : this.valpha
+      alpha(GG) {
+        return void 0 !== GG ? new UG([...this.color, Math.max(0, Math.min(1, GG))], this.model) : this.valpha
       },
-      red: Cu("rgb", 0, bu(255)),
-      green: Cu("rgb", 1, bu(255)),
-      blue: Cu("rgb", 2, bu(255)),
-      hue: Cu(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (uu => (uu % 360 + 360) % 360)),
-      saturationl: Cu("hsl", 1, bu(100)),
-      lightness: Cu("hsl", 2, bu(100)),
-      saturationv: Cu("hsv", 1, bu(100)),
-      value: Cu("hsv", 2, bu(100)),
-      chroma: Cu("hcg", 1, bu(100)),
-      gray: Cu("hcg", 2, bu(100)),
-      white: Cu("hwb", 1, bu(100)),
-      wblack: Cu("hwb", 2, bu(100)),
-      cyan: Cu("cmyk", 0, bu(100)),
-      magenta: Cu("cmyk", 1, bu(100)),
-      yellow: Cu("cmyk", 2, bu(100)),
-      black: Cu("cmyk", 3, bu(100)),
-      x: Cu("xyz", 0, bu(95.047)),
-      y: Cu("xyz", 1, bu(100)),
-      z: Cu("xyz", 2, bu(108.833)),
-      l: Cu("lab", 0, bu(100)),
-      a: Cu("lab", 1),
-      b: Cu("lab", 2),
-      keyword(uu) {
-        return void 0 !== uu ? new qu(uu) : Uu[this.model].keyword(this.color)
+      red: VG("rgb", 0, pG(255)),
+      green: VG("rgb", 1, pG(255)),
+      blue: VG("rgb", 2, pG(255)),
+      hue: VG(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (GG => (GG % 360 + 360) % 360)),
+      saturationl: VG("hsl", 1, pG(100)),
+      lightness: VG("hsl", 2, pG(100)),
+      saturationv: VG("hsv", 1, pG(100)),
+      value: VG("hsv", 2, pG(100)),
+      chroma: VG("hcg", 1, pG(100)),
+      gray: VG("hcg", 2, pG(100)),
+      white: VG("hwb", 1, pG(100)),
+      wblack: VG("hwb", 2, pG(100)),
+      cyan: VG("cmyk", 0, pG(100)),
+      magenta: VG("cmyk", 1, pG(100)),
+      yellow: VG("cmyk", 2, pG(100)),
+      black: VG("cmyk", 3, pG(100)),
+      x: VG("xyz", 0, pG(95.047)),
+      y: VG("xyz", 1, pG(100)),
+      z: VG("xyz", 2, pG(108.833)),
+      l: VG("lab", 0, pG(100)),
+      a: VG("lab", 1),
+      b: VG("lab", 2),
+      keyword(GG) {
+        return void 0 !== GG ? new UG(GG) : SG[this.model].keyword(this.color)
       },
-      hex(uu) {
-        return void 0 !== uu ? new qu(uu) : su.to.hex(this.rgb().round().color)
+      hex(GG) {
+        return void 0 !== GG ? new UG(GG) : wG.to.hex(this.rgb().round().color)
       },
-      hexa(uu) {
-        if (void 0 !== uu) return new qu(uu);
-        const Eu = this.rgb().round().color;
-        let ju = Math.round(255 * this.valpha).toString(16).toUpperCase();
-        return 1 === ju.length && (ju = "0" + ju), su.to.hex(Eu) + ju
+      hexa(GG) {
+        if (void 0 !== GG) return new UG(GG);
+        const bG = this.rgb().round().color;
+        let ZG = Math.round(255 * this.valpha).toString(16).toUpperCase();
+        return 1 === ZG.length && (ZG = "0" + ZG), wG.to.hex(bG) + ZG
       },
       rgbNumber() {
-        const uu = this.rgb().color;
-        return (255 & uu[0]) << 16 | (255 & uu[1]) << 8 | 255 & uu[2]
+        const GG = this.rgb().color;
+        return (255 & GG[0]) << 16 | (255 & GG[1]) << 8 | 255 & GG[2]
       },
       luminosity() {
-        const uu = this.rgb().color,
-          Eu = [];
-        for (const [ju, su] of uu.entries()) {
-          const uu = su / 255;
-          Eu[ju] = uu <= .04045 ? uu / 12.92 : ((uu + .055) / 1.055) ** 2.4
+        const GG = this.rgb().color,
+          bG = [];
+        for (const [ZG, wG] of GG.entries()) {
+          const GG = wG / 255;
+          bG[ZG] = GG <= .04045 ? GG / 12.92 : ((GG + .055) / 1.055) ** 2.4
         }
-        return .2126 * Eu[0] + .7152 * Eu[1] + .0722 * Eu[2]
+        return .2126 * bG[0] + .7152 * bG[1] + .0722 * bG[2]
       },
-      contrast(uu) {
-        const Eu = this.luminosity(),
-          ju = uu.luminosity();
-        return Eu > ju ? (Eu + .05) / (ju + .05) : (ju + .05) / (Eu + .05)
+      contrast(GG) {
+        const bG = this.luminosity(),
+          ZG = GG.luminosity();
+        return bG > ZG ? (bG + .05) / (ZG + .05) : (ZG + .05) / (bG + .05)
       },
-      level(uu) {
-        const Eu = this.contrast(uu);
-        return Eu >= 7 ? "AAA" : Eu >= 4.5 ? "AA" : ""
+      level(GG) {
+        const bG = this.contrast(GG);
+        return bG >= 7 ? "AAA" : bG >= 4.5 ? "AA" : ""
       },
       isDark() {
-        const uu = this.rgb().color;
-        return (2126 * uu[0] + 7152 * uu[1] + 722 * uu[2]) / 1e4 < 128
+        const GG = this.rgb().color;
+        return (2126 * GG[0] + 7152 * GG[1] + 722 * GG[2]) / 1e4 < 128
       },
       isLight() {
         return !this.isDark()
       },
-      nZ() {
-        const uu = this.rgb();
-        for (let Eu = 0; Eu < 3; Eu++) uu.color[Eu] = 255 - uu.color[Eu];
-        return uu
+      By() {
+        const GG = this.rgb();
+        for (let bG = 0; bG < 3; bG++) GG.color[bG] = 255 - GG.color[bG];
+        return GG
       },
-      lighten(uu) {
-        const Eu = this.hsl();
-        return Eu.color[2] += Eu.color[2] * uu, Eu
+      lighten(GG) {
+        const bG = this.hsl();
+        return bG.color[2] += bG.color[2] * GG, bG
       },
-      darken(uu) {
-        const Eu = this.hsl();
-        return Eu.color[2] -= Eu.color[2] * uu, Eu
+      darken(GG) {
+        const bG = this.hsl();
+        return bG.color[2] -= bG.color[2] * GG, bG
       },
-      saturate(uu) {
-        const Eu = this.hsl();
-        return Eu.color[1] += Eu.color[1] * uu, Eu
+      saturate(GG) {
+        const bG = this.hsl();
+        return bG.color[1] += bG.color[1] * GG, bG
       },
-      desaturate(uu) {
-        const Eu = this.hsl();
-        return Eu.color[1] -= Eu.color[1] * uu, Eu
+      desaturate(GG) {
+        const bG = this.hsl();
+        return bG.color[1] -= bG.color[1] * GG, bG
       },
-      whiten(uu) {
-        const Eu = this.hwb();
-        return Eu.color[1] += Eu.color[1] * uu, Eu
+      whiten(GG) {
+        const bG = this.hwb();
+        return bG.color[1] += bG.color[1] * GG, bG
       },
-      blacken(uu) {
-        const Eu = this.hwb();
-        return Eu.color[2] += Eu.color[2] * uu, Eu
+      blacken(GG) {
+        const bG = this.hwb();
+        return bG.color[2] += bG.color[2] * GG, bG
       },
       grayscale() {
-        const uu = this.rgb().color,
-          Eu = .3 * uu[0] + .59 * uu[1] + .11 * uu[2];
-        return qu.rgb(Eu, Eu, Eu)
+        const GG = this.rgb().color,
+          bG = .3 * GG[0] + .59 * GG[1] + .11 * GG[2];
+        return UG.rgb(bG, bG, bG)
       },
-      fade(uu) {
-        return this.alpha(this.valpha - this.valpha * uu)
+      fade(GG) {
+        return this.alpha(this.valpha - this.valpha * GG)
       },
-      opaquer(uu) {
-        return this.alpha(this.valpha + this.valpha * uu)
+      opaquer(GG) {
+        return this.alpha(this.valpha + this.valpha * GG)
       },
-      rotate(uu) {
-        const Eu = this.hsl();
-        let ju = Eu.color[0];
-        return ju = (ju + uu) % 360, ju = ju < 0 ? 360 + ju : ju, Eu.color[0] = ju, Eu
+      rotate(GG) {
+        const bG = this.hsl();
+        let ZG = bG.color[0];
+        return ZG = (ZG + GG) % 360, ZG = ZG < 0 ? 360 + ZG : ZG, bG.color[0] = ZG, bG
       },
-      mix(uu, Eu) {
-        if (!uu || !uu.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof uu);
-        const ju = uu.rgb(),
-          su = this.rgb(),
-          Uu = void 0 === Eu ? .5 : Eu,
-          Zu = 2 * Uu - 1,
-          Xu = ju.alpha() - su.alpha(),
-          lu = ((Zu * Xu === -1 ? Zu : (Zu + Xu) / (1 + Zu * Xu)) + 1) / 2,
-          fu = 1 - lu;
-        return qu.rgb(lu * ju.red() + fu * su.red(), lu * ju.green() + fu * su.green(), lu * ju.blue() + fu * su.blue(), ju.alpha() * Uu + su.alpha() * (1 - Uu))
+      mix(GG, bG) {
+        if (!GG || !GG.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof GG);
+        const ZG = GG.rgb(),
+          wG = this.rgb(),
+          SG = void 0 === bG ? .5 : bG,
+          LG = 2 * SG - 1,
+          yG = ZG.alpha() - wG.alpha(),
+          kG = ((LG * yG === -1 ? LG : (LG + yG) / (1 + LG * yG)) + 1) / 2,
+          YG = 1 - kG;
+        return UG.rgb(kG * ZG.red() + YG * wG.red(), kG * ZG.green() + YG * wG.green(), kG * ZG.blue() + YG * wG.blue(), ZG.alpha() * SG + wG.alpha() * (1 - SG))
       }
     };
-    for (const Nu of Object.keys(Uu)) {
-      if (Zu.includes(Nu)) continue;
+    for (const QG of Object.keys(SG)) {
+      if (LG.includes(QG)) continue;
       const {
-        channels: uu
-      } = Uu[Nu];
-      qu.prototype[Nu] = function() {
-        if (this.model === Nu) return new qu(this);
-        for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
-        return Eu.length > 0 ? new qu(Eu, Nu) : new qu([...(su = Uu[this.model][Nu].raw(this.color), Array.isArray(su) ? su : [su]), this.valpha], Nu);
-        var su
-      }, qu[Nu] = function() {
-        for (var Eu = arguments.length, ju = new Array(Eu), su = 0; su < Eu; su++) ju[su] = arguments[su];
-        let Uu = ju[0];
-        return "number" === typeof Uu && (Uu = cu(ju, uu)), new qu(Uu, Nu)
+        channels: GG
+      } = SG[QG];
+      UG.prototype[QG] = function() {
+        if (this.model === QG) return new UG(this);
+        for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
+        return bG.length > 0 ? new UG(bG, QG) : new UG([...(wG = SG[this.model][QG].raw(this.color), Array.isArray(wG) ? wG : [wG]), this.valpha], QG);
+        var wG
+      }, UG[QG] = function() {
+        for (var bG = arguments.length, ZG = new Array(bG), wG = 0; wG < bG; wG++) ZG[wG] = arguments[wG];
+        let SG = ZG[0];
+        return "number" === typeof SG && (SG = fG(ZG, GG)), new UG(SG, QG)
       }
     }
 
-    function fu(uu) {
-      return function(Eu) {
-        return function(uu, Eu) {
-          return Number(uu.toFixed(Eu))
-        }(Eu, uu)
+    function YG(GG) {
+      return function(bG) {
+        return function(GG, bG) {
+          return Number(GG.toFixed(bG))
+        }(bG, GG)
       }
     }
 
-    function Cu(uu, Eu, ju) {
-      uu = Array.isArray(uu) ? uu : [uu];
-      for (const su of uu)(lu[su] || (lu[su] = []))[Eu] = ju;
-      return uu = uu[0],
-        function(su) {
-          let Uu;
-          return void 0 !== su ? (ju && (su = ju(su)), Uu = this[uu](), Uu.color[Eu] = su, Uu) : (Uu = this[uu]().color[Eu], ju && (Uu = ju(Uu)), Uu)
+    function VG(GG, bG, ZG) {
+      GG = Array.isArray(GG) ? GG : [GG];
+      for (const wG of GG)(kG[wG] || (kG[wG] = []))[bG] = ZG;
+      return GG = GG[0],
+        function(wG) {
+          let SG;
+          return void 0 !== wG ? (ZG && (wG = ZG(wG)), SG = this[GG](), SG.color[bG] = wG, SG) : (SG = this[GG]().color[bG], ZG && (SG = ZG(SG)), SG)
         }
     }
 
-    function bu(uu) {
-      return function(Eu) {
-        return Math.max(0, Math.min(uu, Eu))
+    function pG(GG) {
+      return function(bG) {
+        return Math.max(0, Math.min(GG, bG))
       }
     }
 
-    function cu(uu, Eu) {
-      for (let ju = 0; ju < Eu; ju++) "number" !== typeof uu[ju] && (uu[ju] = 0);
-      return uu
+    function fG(GG, bG) {
+      for (let ZG = 0; ZG < bG; ZG++) "number" !== typeof GG[ZG] && (GG[ZG] = 0);
+      return GG
     }
-    uu.exports = qu
+    GG.exports = UG
   },
-  37036: (uu, Eu, ju) => {
-    const su = ju(37044),
-      Uu = {};
-    for (const Xu of Object.keys(su)) Uu[su[Xu]] = Xu;
-    const Zu = {
+  37007: (GG, bG, ZG) => {
+    const wG = ZG(37016),
+      SG = {};
+    for (const yG of Object.keys(wG)) SG[wG[yG]] = yG;
+    const LG = {
       rgb: {
         channels: 3,
         labels: "rgb"
@@ -571,422 +571,422 @@ export const modules = {
         labels: ["gray"]
       }
     };
-    uu.exports = Zu;
-    for (const Xu of Object.keys(Zu)) {
-      if (!("channels" in Zu[Xu])) throw new Error("missing channels property: " + Xu);
-      if (!("labels" in Zu[Xu])) throw new Error("missing channel labels property: " + Xu);
-      if (Zu[Xu].labels.length !== Zu[Xu].channels) throw new Error("channel and label counts mismatch: " + Xu);
+    GG.exports = LG;
+    for (const yG of Object.keys(LG)) {
+      if (!("channels" in LG[yG])) throw new Error("missing channels property: " + yG);
+      if (!("labels" in LG[yG])) throw new Error("missing channel labels property: " + yG);
+      if (LG[yG].labels.length !== LG[yG].channels) throw new Error("channel and label counts mismatch: " + yG);
       const {
-        channels: uu,
-        labels: Eu
-      } = Zu[Xu];
-      delete Zu[Xu].channels, delete Zu[Xu].labels, Object.defineProperty(Zu[Xu], "channels", {
-        value: uu
-      }), Object.defineProperty(Zu[Xu], "labels", {
-        value: Eu
+        channels: GG,
+        labels: bG
+      } = LG[yG];
+      delete LG[yG].channels, delete LG[yG].labels, Object.defineProperty(LG[yG], "channels", {
+        value: GG
+      }), Object.defineProperty(LG[yG], "labels", {
+        value: bG
       })
     }
-    Zu.rgb.hsl = function(uu) {
-      const Eu = uu[0] / 255,
-        ju = uu[1] / 255,
-        su = uu[2] / 255,
-        Uu = Math.min(Eu, ju, su),
-        Zu = Math.max(Eu, ju, su),
-        Xu = Zu - Uu;
-      let lu, qu;
-      Zu === Uu ? lu = 0 : Eu === Zu ? lu = (ju - su) / Xu : ju === Zu ? lu = 2 + (su - Eu) / Xu : su === Zu && (lu = 4 + (Eu - ju) / Xu), lu = Math.min(60 * lu, 360), lu < 0 && (lu += 360);
-      const fu = (Uu + Zu) / 2;
-      return qu = Zu === Uu ? 0 : fu <= .5 ? Xu / (Zu + Uu) : Xu / (2 - Zu - Uu), [lu, 100 * qu, 100 * fu]
-    }, Zu.rgb.hsv = function(uu) {
-      let Eu, ju, su, Uu, Zu;
-      const Xu = uu[0] / 255,
-        lu = uu[1] / 255,
-        qu = uu[2] / 255,
-        fu = Math.max(Xu, lu, qu),
-        Cu = fu - Math.min(Xu, lu, qu),
-        bu = function(uu) {
-          return (fu - uu) / 6 / Cu + .5
+    LG.rgb.hsl = function(GG) {
+      const bG = GG[0] / 255,
+        ZG = GG[1] / 255,
+        wG = GG[2] / 255,
+        SG = Math.min(bG, ZG, wG),
+        LG = Math.max(bG, ZG, wG),
+        yG = LG - SG;
+      let kG, UG;
+      LG === SG ? kG = 0 : bG === LG ? kG = (ZG - wG) / yG : ZG === LG ? kG = 2 + (wG - bG) / yG : wG === LG && (kG = 4 + (bG - ZG) / yG), kG = Math.min(60 * kG, 360), kG < 0 && (kG += 360);
+      const YG = (SG + LG) / 2;
+      return UG = LG === SG ? 0 : YG <= .5 ? yG / (LG + SG) : yG / (2 - LG - SG), [kG, 100 * UG, 100 * YG]
+    }, LG.rgb.hsv = function(GG) {
+      let bG, ZG, wG, SG, LG;
+      const yG = GG[0] / 255,
+        kG = GG[1] / 255,
+        UG = GG[2] / 255,
+        YG = Math.max(yG, kG, UG),
+        VG = YG - Math.min(yG, kG, UG),
+        pG = function(GG) {
+          return (YG - GG) / 6 / VG + .5
         };
-      return 0 === Cu ? (Uu = 0, Zu = 0) : (Zu = Cu / fu, Eu = bu(Xu), ju = bu(lu), su = bu(qu), Xu === fu ? Uu = su - ju : lu === fu ? Uu = 1 / 3 + Eu - su : qu === fu && (Uu = 2 / 3 + ju - Eu), Uu < 0 ? Uu += 1 : Uu > 1 && (Uu -= 1)), [360 * Uu, 100 * Zu, 100 * fu]
-    }, Zu.rgb.hwb = function(uu) {
-      const Eu = uu[0],
-        ju = uu[1];
-      let su = uu[2];
-      const Uu = Zu.rgb.hsl(uu)[0],
-        Xu = 1 / 255 * Math.min(Eu, Math.min(ju, su));
-      return su = 1 - 1 / 255 * Math.max(Eu, Math.max(ju, su)), [Uu, 100 * Xu, 100 * su]
-    }, Zu.rgb.cmyk = function(uu) {
-      const Eu = uu[0] / 255,
-        ju = uu[1] / 255,
-        su = uu[2] / 255,
-        Uu = Math.min(1 - Eu, 1 - ju, 1 - su);
-      return [100 * ((1 - Eu - Uu) / (1 - Uu) || 0), 100 * ((1 - ju - Uu) / (1 - Uu) || 0), 100 * ((1 - su - Uu) / (1 - Uu) || 0), 100 * Uu]
-    }, Zu.rgb.keyword = function(uu) {
-      const Eu = Uu[uu];
-      if (Eu) return Eu;
-      let ju, Zu = 1 / 0;
-      for (const Uu of Object.keys(su)) {
-        const Eu = su[Uu],
-          qu = (lu = Eu, ((Xu = uu)[0] - lu[0]) ** 2 + (Xu[1] - lu[1]) ** 2 + (Xu[2] - lu[2]) ** 2);
-        qu < Zu && (Zu = qu, ju = Uu)
+      return 0 === VG ? (SG = 0, LG = 0) : (LG = VG / YG, bG = pG(yG), ZG = pG(kG), wG = pG(UG), yG === YG ? SG = wG - ZG : kG === YG ? SG = 1 / 3 + bG - wG : UG === YG && (SG = 2 / 3 + ZG - bG), SG < 0 ? SG += 1 : SG > 1 && (SG -= 1)), [360 * SG, 100 * LG, 100 * YG]
+    }, LG.rgb.hwb = function(GG) {
+      const bG = GG[0],
+        ZG = GG[1];
+      let wG = GG[2];
+      const SG = LG.rgb.hsl(GG)[0],
+        yG = 1 / 255 * Math.min(bG, Math.min(ZG, wG));
+      return wG = 1 - 1 / 255 * Math.max(bG, Math.max(ZG, wG)), [SG, 100 * yG, 100 * wG]
+    }, LG.rgb.cmyk = function(GG) {
+      const bG = GG[0] / 255,
+        ZG = GG[1] / 255,
+        wG = GG[2] / 255,
+        SG = Math.min(1 - bG, 1 - ZG, 1 - wG);
+      return [100 * ((1 - bG - SG) / (1 - SG) || 0), 100 * ((1 - ZG - SG) / (1 - SG) || 0), 100 * ((1 - wG - SG) / (1 - SG) || 0), 100 * SG]
+    }, LG.rgb.keyword = function(GG) {
+      const bG = SG[GG];
+      if (bG) return bG;
+      let ZG, LG = 1 / 0;
+      for (const SG of Object.keys(wG)) {
+        const bG = wG[SG],
+          UG = (kG = bG, ((yG = GG)[0] - kG[0]) ** 2 + (yG[1] - kG[1]) ** 2 + (yG[2] - kG[2]) ** 2);
+        UG < LG && (LG = UG, ZG = SG)
       }
-      var Xu, lu;
-      return ju
-    }, Zu.keyword.rgb = function(uu) {
-      return su[uu]
-    }, Zu.rgb.xyz = function(uu) {
-      let Eu = uu[0] / 255,
-        ju = uu[1] / 255,
-        su = uu[2] / 255;
-      Eu = Eu > .04045 ? ((Eu + .055) / 1.055) ** 2.4 : Eu / 12.92, ju = ju > .04045 ? ((ju + .055) / 1.055) ** 2.4 : ju / 12.92, su = su > .04045 ? ((su + .055) / 1.055) ** 2.4 : su / 12.92;
-      return [100 * (.4124 * Eu + .3576 * ju + .1805 * su), 100 * (.2126 * Eu + .7152 * ju + .0722 * su), 100 * (.0193 * Eu + .1192 * ju + .9505 * su)]
-    }, Zu.rgb.lab = function(uu) {
-      const Eu = Zu.rgb.xyz(uu);
-      let ju = Eu[0],
-        su = Eu[1],
-        Uu = Eu[2];
-      ju /= 95.047, su /= 100, Uu /= 108.883, ju = ju > .008856 ? ju ** (1 / 3) : 7.787 * ju + 16 / 116, su = su > .008856 ? su ** (1 / 3) : 7.787 * su + 16 / 116, Uu = Uu > .008856 ? Uu ** (1 / 3) : 7.787 * Uu + 16 / 116;
-      return [116 * su - 16, 500 * (ju - su), 200 * (su - Uu)]
-    }, Zu.hsl.rgb = function(uu) {
-      const Eu = uu[0] / 360,
-        ju = uu[1] / 100,
-        su = uu[2] / 100;
-      let Uu, Zu, Xu;
-      if (0 === ju) return Xu = 255 * su, [Xu, Xu, Xu];
-      Uu = su < .5 ? su * (1 + ju) : su + ju - su * ju;
-      const lu = 2 * su - Uu,
-        qu = [0, 0, 0];
-      for (let fu = 0; fu < 3; fu++) Zu = Eu + 1 / 3 * -(fu - 1), Zu < 0 && Zu++, Zu > 1 && Zu--, Xu = 6 * Zu < 1 ? lu + 6 * (Uu - lu) * Zu : 2 * Zu < 1 ? Uu : 3 * Zu < 2 ? lu + (Uu - lu) * (2 / 3 - Zu) * 6 : lu, qu[fu] = 255 * Xu;
-      return qu
-    }, Zu.hsl.hsv = function(uu) {
-      const Eu = uu[0];
-      let ju = uu[1] / 100,
-        su = uu[2] / 100,
-        Uu = ju;
-      const Zu = Math.max(su, .01);
-      su *= 2, ju *= su <= 1 ? su : 2 - su, Uu *= Zu <= 1 ? Zu : 2 - Zu;
-      return [Eu, 100 * (0 === su ? 2 * Uu / (Zu + Uu) : 2 * ju / (su + ju)), 100 * ((su + ju) / 2)]
-    }, Zu.hsv.rgb = function(uu) {
-      const Eu = uu[0] / 60,
-        ju = uu[1] / 100;
-      let su = uu[2] / 100;
-      const Uu = Math.floor(Eu) % 6,
-        Zu = Eu - Math.floor(Eu),
-        Xu = 255 * su * (1 - ju),
-        lu = 255 * su * (1 - ju * Zu),
-        qu = 255 * su * (1 - ju * (1 - Zu));
-      switch (su *= 255, Uu) {
+      var yG, kG;
+      return ZG
+    }, LG.keyword.rgb = function(GG) {
+      return wG[GG]
+    }, LG.rgb.xyz = function(GG) {
+      let bG = GG[0] / 255,
+        ZG = GG[1] / 255,
+        wG = GG[2] / 255;
+      bG = bG > .04045 ? ((bG + .055) / 1.055) ** 2.4 : bG / 12.92, ZG = ZG > .04045 ? ((ZG + .055) / 1.055) ** 2.4 : ZG / 12.92, wG = wG > .04045 ? ((wG + .055) / 1.055) ** 2.4 : wG / 12.92;
+      return [100 * (.4124 * bG + .3576 * ZG + .1805 * wG), 100 * (.2126 * bG + .7152 * ZG + .0722 * wG), 100 * (.0193 * bG + .1192 * ZG + .9505 * wG)]
+    }, LG.rgb.lab = function(GG) {
+      const bG = LG.rgb.xyz(GG);
+      let ZG = bG[0],
+        wG = bG[1],
+        SG = bG[2];
+      ZG /= 95.047, wG /= 100, SG /= 108.883, ZG = ZG > .008856 ? ZG ** (1 / 3) : 7.787 * ZG + 16 / 116, wG = wG > .008856 ? wG ** (1 / 3) : 7.787 * wG + 16 / 116, SG = SG > .008856 ? SG ** (1 / 3) : 7.787 * SG + 16 / 116;
+      return [116 * wG - 16, 500 * (ZG - wG), 200 * (wG - SG)]
+    }, LG.hsl.rgb = function(GG) {
+      const bG = GG[0] / 360,
+        ZG = GG[1] / 100,
+        wG = GG[2] / 100;
+      let SG, LG, yG;
+      if (0 === ZG) return yG = 255 * wG, [yG, yG, yG];
+      SG = wG < .5 ? wG * (1 + ZG) : wG + ZG - wG * ZG;
+      const kG = 2 * wG - SG,
+        UG = [0, 0, 0];
+      for (let YG = 0; YG < 3; YG++) LG = bG + 1 / 3 * -(YG - 1), LG < 0 && LG++, LG > 1 && LG--, yG = 6 * LG < 1 ? kG + 6 * (SG - kG) * LG : 2 * LG < 1 ? SG : 3 * LG < 2 ? kG + (SG - kG) * (2 / 3 - LG) * 6 : kG, UG[YG] = 255 * yG;
+      return UG
+    }, LG.hsl.hsv = function(GG) {
+      const bG = GG[0];
+      let ZG = GG[1] / 100,
+        wG = GG[2] / 100,
+        SG = ZG;
+      const LG = Math.max(wG, .01);
+      wG *= 2, ZG *= wG <= 1 ? wG : 2 - wG, SG *= LG <= 1 ? LG : 2 - LG;
+      return [bG, 100 * (0 === wG ? 2 * SG / (LG + SG) : 2 * ZG / (wG + ZG)), 100 * ((wG + ZG) / 2)]
+    }, LG.hsv.rgb = function(GG) {
+      const bG = GG[0] / 60,
+        ZG = GG[1] / 100;
+      let wG = GG[2] / 100;
+      const SG = Math.floor(bG) % 6,
+        LG = bG - Math.floor(bG),
+        yG = 255 * wG * (1 - ZG),
+        kG = 255 * wG * (1 - ZG * LG),
+        UG = 255 * wG * (1 - ZG * (1 - LG));
+      switch (wG *= 255, SG) {
         case 0:
-          return [su, qu, Xu];
+          return [wG, UG, yG];
         case 1:
-          return [lu, su, Xu];
+          return [kG, wG, yG];
         case 2:
-          return [Xu, su, qu];
+          return [yG, wG, UG];
         case 3:
-          return [Xu, lu, su];
+          return [yG, kG, wG];
         case 4:
-          return [qu, Xu, su];
+          return [UG, yG, wG];
         case 5:
-          return [su, Xu, lu]
+          return [wG, yG, kG]
       }
-    }, Zu.hsv.hsl = function(uu) {
-      const Eu = uu[0],
-        ju = uu[1] / 100,
-        su = uu[2] / 100,
-        Uu = Math.max(su, .01);
-      let Zu, Xu;
-      Xu = (2 - ju) * su;
-      const lu = (2 - ju) * Uu;
-      return Zu = ju * Uu, Zu /= lu <= 1 ? lu : 2 - lu, Zu = Zu || 0, Xu /= 2, [Eu, 100 * Zu, 100 * Xu]
-    }, Zu.hwb.rgb = function(uu) {
-      const Eu = uu[0] / 360;
-      let ju = uu[1] / 100,
-        su = uu[2] / 100;
-      const Uu = ju + su;
-      let Zu;
-      Uu > 1 && (ju /= Uu, su /= Uu);
-      const Xu = Math.floor(6 * Eu),
-        lu = 1 - su;
-      Zu = 6 * Eu - Xu, 0 !== (1 & Xu) && (Zu = 1 - Zu);
-      const qu = ju + Zu * (lu - ju);
-      let fu, Cu, bu;
-      switch (Xu) {
+    }, LG.hsv.hsl = function(GG) {
+      const bG = GG[0],
+        ZG = GG[1] / 100,
+        wG = GG[2] / 100,
+        SG = Math.max(wG, .01);
+      let LG, yG;
+      yG = (2 - ZG) * wG;
+      const kG = (2 - ZG) * SG;
+      return LG = ZG * SG, LG /= kG <= 1 ? kG : 2 - kG, LG = LG || 0, yG /= 2, [bG, 100 * LG, 100 * yG]
+    }, LG.hwb.rgb = function(GG) {
+      const bG = GG[0] / 360;
+      let ZG = GG[1] / 100,
+        wG = GG[2] / 100;
+      const SG = ZG + wG;
+      let LG;
+      SG > 1 && (ZG /= SG, wG /= SG);
+      const yG = Math.floor(6 * bG),
+        kG = 1 - wG;
+      LG = 6 * bG - yG, 0 !== (1 & yG) && (LG = 1 - LG);
+      const UG = ZG + LG * (kG - ZG);
+      let YG, VG, pG;
+      switch (yG) {
         default:
         case 6:
         case 0:
-          fu = lu, Cu = qu, bu = ju;
+          YG = kG, VG = UG, pG = ZG;
           break;
         case 1:
-          fu = qu, Cu = lu, bu = ju;
+          YG = UG, VG = kG, pG = ZG;
           break;
         case 2:
-          fu = ju, Cu = lu, bu = qu;
+          YG = ZG, VG = kG, pG = UG;
           break;
         case 3:
-          fu = ju, Cu = qu, bu = lu;
+          YG = ZG, VG = UG, pG = kG;
           break;
         case 4:
-          fu = qu, Cu = ju, bu = lu;
+          YG = UG, VG = ZG, pG = kG;
           break;
         case 5:
-          fu = lu, Cu = ju, bu = qu
+          YG = kG, VG = ZG, pG = UG
       }
-      return [255 * fu, 255 * Cu, 255 * bu]
-    }, Zu.cmyk.rgb = function(uu) {
-      const Eu = uu[0] / 100,
-        ju = uu[1] / 100,
-        su = uu[2] / 100,
-        Uu = uu[3] / 100;
-      return [255 * (1 - Math.min(1, Eu * (1 - Uu) + Uu)), 255 * (1 - Math.min(1, ju * (1 - Uu) + Uu)), 255 * (1 - Math.min(1, su * (1 - Uu) + Uu))]
-    }, Zu.xyz.rgb = function(uu) {
-      const Eu = uu[0] / 100,
-        ju = uu[1] / 100,
-        su = uu[2] / 100;
-      let Uu, Zu, Xu;
-      return Uu = 3.2406 * Eu + -1.5372 * ju + -.4986 * su, Zu = -.9689 * Eu + 1.8758 * ju + .0415 * su, Xu = .0557 * Eu + -.204 * ju + 1.057 * su, Uu = Uu > .0031308 ? 1.055 * Uu ** (1 / 2.4) - .055 : 12.92 * Uu, Zu = Zu > .0031308 ? 1.055 * Zu ** (1 / 2.4) - .055 : 12.92 * Zu, Xu = Xu > .0031308 ? 1.055 * Xu ** (1 / 2.4) - .055 : 12.92 * Xu, Uu = Math.min(Math.max(0, Uu), 1), Zu = Math.min(Math.max(0, Zu), 1), Xu = Math.min(Math.max(0, Xu), 1), [255 * Uu, 255 * Zu, 255 * Xu]
-    }, Zu.xyz.lab = function(uu) {
-      let Eu = uu[0],
-        ju = uu[1],
-        su = uu[2];
-      Eu /= 95.047, ju /= 100, su /= 108.883, Eu = Eu > .008856 ? Eu ** (1 / 3) : 7.787 * Eu + 16 / 116, ju = ju > .008856 ? ju ** (1 / 3) : 7.787 * ju + 16 / 116, su = su > .008856 ? su ** (1 / 3) : 7.787 * su + 16 / 116;
-      return [116 * ju - 16, 500 * (Eu - ju), 200 * (ju - su)]
-    }, Zu.lab.xyz = function(uu) {
-      let Eu, ju, su;
-      ju = (uu[0] + 16) / 116, Eu = uu[1] / 500 + ju, su = ju - uu[2] / 200;
-      const Uu = ju ** 3,
-        Zu = Eu ** 3,
-        Xu = su ** 3;
-      return ju = Uu > .008856 ? Uu : (ju - 16 / 116) / 7.787, Eu = Zu > .008856 ? Zu : (Eu - 16 / 116) / 7.787, su = Xu > .008856 ? Xu : (su - 16 / 116) / 7.787, Eu *= 95.047, ju *= 100, su *= 108.883, [Eu, ju, su]
-    }, Zu.lab.lch = function(uu) {
-      const Eu = uu[0],
-        ju = uu[1],
-        su = uu[2];
-      let Uu;
-      Uu = 360 * Math.atan2(su, ju) / 2 / Math.PI, Uu < 0 && (Uu += 360);
-      return [Eu, Math.sqrt(ju * ju + su * su), Uu]
-    }, Zu.lch.lab = function(uu) {
-      const Eu = uu[0],
-        ju = uu[1],
-        su = uu[2] / 360 * 2 * Math.PI;
-      return [Eu, ju * Math.cos(su), ju * Math.sin(su)]
-    }, Zu.rgb.ansi16 = function(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const [ju, su, Uu] = uu;
-      let Xu = null === Eu ? Zu.rgb.hsv(uu)[2] : Eu;
-      if (Xu = Math.round(Xu / 50), 0 === Xu) return 30;
-      let lu = 30 + (Math.round(Uu / 255) << 2 | Math.round(su / 255) << 1 | Math.round(ju / 255));
-      return 2 === Xu && (lu += 60), lu
-    }, Zu.hsv.ansi16 = function(uu) {
-      return Zu.rgb.ansi16(Zu.hsv.rgb(uu), uu[2])
-    }, Zu.rgb.ansi256 = function(uu) {
-      const Eu = uu[0],
-        ju = uu[1],
-        su = uu[2];
-      if (Eu === ju && ju === su) return Eu < 8 ? 16 : Eu > 248 ? 231 : Math.round((Eu - 8) / 247 * 24) + 232;
-      return 16 + 36 * Math.round(Eu / 255 * 5) + 6 * Math.round(ju / 255 * 5) + Math.round(su / 255 * 5)
-    }, Zu.ansi16.rgb = function(uu) {
-      let Eu = uu % 10;
-      if (0 === Eu || 7 === Eu) return uu > 50 && (Eu += 3.5), Eu = Eu / 10.5 * 255, [Eu, Eu, Eu];
-      const ju = .5 * (1 + ~~(uu > 50));
-      return [(1 & Eu) * ju * 255, (Eu >> 1 & 1) * ju * 255, (Eu >> 2 & 1) * ju * 255]
-    }, Zu.ansi256.rgb = function(uu) {
-      if (uu >= 232) {
-        const Eu = 10 * (uu - 232) + 8;
-        return [Eu, Eu, Eu]
+      return [255 * YG, 255 * VG, 255 * pG]
+    }, LG.cmyk.rgb = function(GG) {
+      const bG = GG[0] / 100,
+        ZG = GG[1] / 100,
+        wG = GG[2] / 100,
+        SG = GG[3] / 100;
+      return [255 * (1 - Math.min(1, bG * (1 - SG) + SG)), 255 * (1 - Math.min(1, ZG * (1 - SG) + SG)), 255 * (1 - Math.min(1, wG * (1 - SG) + SG))]
+    }, LG.xyz.rgb = function(GG) {
+      const bG = GG[0] / 100,
+        ZG = GG[1] / 100,
+        wG = GG[2] / 100;
+      let SG, LG, yG;
+      return SG = 3.2406 * bG + -1.5372 * ZG + -.4986 * wG, LG = -.9689 * bG + 1.8758 * ZG + .0415 * wG, yG = .0557 * bG + -.204 * ZG + 1.057 * wG, SG = SG > .0031308 ? 1.055 * SG ** (1 / 2.4) - .055 : 12.92 * SG, LG = LG > .0031308 ? 1.055 * LG ** (1 / 2.4) - .055 : 12.92 * LG, yG = yG > .0031308 ? 1.055 * yG ** (1 / 2.4) - .055 : 12.92 * yG, SG = Math.min(Math.max(0, SG), 1), LG = Math.min(Math.max(0, LG), 1), yG = Math.min(Math.max(0, yG), 1), [255 * SG, 255 * LG, 255 * yG]
+    }, LG.xyz.lab = function(GG) {
+      let bG = GG[0],
+        ZG = GG[1],
+        wG = GG[2];
+      bG /= 95.047, ZG /= 100, wG /= 108.883, bG = bG > .008856 ? bG ** (1 / 3) : 7.787 * bG + 16 / 116, ZG = ZG > .008856 ? ZG ** (1 / 3) : 7.787 * ZG + 16 / 116, wG = wG > .008856 ? wG ** (1 / 3) : 7.787 * wG + 16 / 116;
+      return [116 * ZG - 16, 500 * (bG - ZG), 200 * (ZG - wG)]
+    }, LG.lab.xyz = function(GG) {
+      let bG, ZG, wG;
+      ZG = (GG[0] + 16) / 116, bG = GG[1] / 500 + ZG, wG = ZG - GG[2] / 200;
+      const SG = ZG ** 3,
+        LG = bG ** 3,
+        yG = wG ** 3;
+      return ZG = SG > .008856 ? SG : (ZG - 16 / 116) / 7.787, bG = LG > .008856 ? LG : (bG - 16 / 116) / 7.787, wG = yG > .008856 ? yG : (wG - 16 / 116) / 7.787, bG *= 95.047, ZG *= 100, wG *= 108.883, [bG, ZG, wG]
+    }, LG.lab.lch = function(GG) {
+      const bG = GG[0],
+        ZG = GG[1],
+        wG = GG[2];
+      let SG;
+      SG = 360 * Math.atan2(wG, ZG) / 2 / Math.PI, SG < 0 && (SG += 360);
+      return [bG, Math.sqrt(ZG * ZG + wG * wG), SG]
+    }, LG.lch.lab = function(GG) {
+      const bG = GG[0],
+        ZG = GG[1],
+        wG = GG[2] / 360 * 2 * Math.PI;
+      return [bG, ZG * Math.cos(wG), ZG * Math.sin(wG)]
+    }, LG.rgb.ansi16 = function(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const [ZG, wG, SG] = GG;
+      let yG = null === bG ? LG.rgb.hsv(GG)[2] : bG;
+      if (yG = Math.round(yG / 50), 0 === yG) return 30;
+      let kG = 30 + (Math.round(SG / 255) << 2 | Math.round(wG / 255) << 1 | Math.round(ZG / 255));
+      return 2 === yG && (kG += 60), kG
+    }, LG.hsv.ansi16 = function(GG) {
+      return LG.rgb.ansi16(LG.hsv.rgb(GG), GG[2])
+    }, LG.rgb.ansi256 = function(GG) {
+      const bG = GG[0],
+        ZG = GG[1],
+        wG = GG[2];
+      if (bG === ZG && ZG === wG) return bG < 8 ? 16 : bG > 248 ? 231 : Math.round((bG - 8) / 247 * 24) + 232;
+      return 16 + 36 * Math.round(bG / 255 * 5) + 6 * Math.round(ZG / 255 * 5) + Math.round(wG / 255 * 5)
+    }, LG.ansi16.rgb = function(GG) {
+      let bG = GG % 10;
+      if (0 === bG || 7 === bG) return GG > 50 && (bG += 3.5), bG = bG / 10.5 * 255, [bG, bG, bG];
+      const ZG = .5 * (1 + ~~(GG > 50));
+      return [(1 & bG) * ZG * 255, (bG >> 1 & 1) * ZG * 255, (bG >> 2 & 1) * ZG * 255]
+    }, LG.ansi256.rgb = function(GG) {
+      if (GG >= 232) {
+        const bG = 10 * (GG - 232) + 8;
+        return [bG, bG, bG]
       }
-      let Eu;
-      uu -= 16;
-      return [Math.floor(uu / 36) / 5 * 255, Math.floor((Eu = uu % 36) / 6) / 5 * 255, Eu % 6 / 5 * 255]
-    }, Zu.rgb.hex = function(uu) {
-      const Eu = (((255 & Math.round(uu[0])) << 16) + ((255 & Math.round(uu[1])) << 8) + (255 & Math.round(uu[2]))).toString(16).toUpperCase();
-      return "000000".substring(Eu.length) + Eu
-    }, Zu.hex.rgb = function(uu) {
-      const Eu = uu.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
-      if (!Eu) return [0, 0, 0];
-      let ju = Eu[0];
-      3 === Eu[0].length && (ju = ju.split("").map((uu => uu + uu)).join(""));
-      const su = parseInt(ju, 16);
-      return [su >> 16 & 255, su >> 8 & 255, 255 & su]
-    }, Zu.rgb.hcg = function(uu) {
-      const Eu = uu[0] / 255,
-        ju = uu[1] / 255,
-        su = uu[2] / 255,
-        Uu = Math.max(Math.max(Eu, ju), su),
-        Zu = Math.min(Math.min(Eu, ju), su),
-        Xu = Uu - Zu;
-      let lu, qu;
-      return lu = Xu < 1 ? Zu / (1 - Xu) : 0, qu = Xu <= 0 ? 0 : Uu === Eu ? (ju - su) / Xu % 6 : Uu === ju ? 2 + (su - Eu) / Xu : 4 + (Eu - ju) / Xu, qu /= 6, qu %= 1, [360 * qu, 100 * Xu, 100 * lu]
-    }, Zu.hsl.hcg = function(uu) {
-      const Eu = uu[1] / 100,
-        ju = uu[2] / 100,
-        su = ju < .5 ? 2 * Eu * ju : 2 * Eu * (1 - ju);
-      let Uu = 0;
-      return su < 1 && (Uu = (ju - .5 * su) / (1 - su)), [uu[0], 100 * su, 100 * Uu]
-    }, Zu.hsv.hcg = function(uu) {
-      const Eu = uu[1] / 100,
-        ju = uu[2] / 100,
-        su = Eu * ju;
-      let Uu = 0;
-      return su < 1 && (Uu = (ju - su) / (1 - su)), [uu[0], 100 * su, 100 * Uu]
-    }, Zu.hcg.rgb = function(uu) {
-      const Eu = uu[0] / 360,
-        ju = uu[1] / 100,
-        su = uu[2] / 100;
-      if (0 === ju) return [255 * su, 255 * su, 255 * su];
-      const Uu = [0, 0, 0],
-        Zu = Eu % 1 * 6,
-        Xu = Zu % 1,
-        lu = 1 - Xu;
-      let qu = 0;
-      switch (Math.floor(Zu)) {
+      let bG;
+      GG -= 16;
+      return [Math.floor(GG / 36) / 5 * 255, Math.floor((bG = GG % 36) / 6) / 5 * 255, bG % 6 / 5 * 255]
+    }, LG.rgb.hex = function(GG) {
+      const bG = (((255 & Math.round(GG[0])) << 16) + ((255 & Math.round(GG[1])) << 8) + (255 & Math.round(GG[2]))).toString(16).toUpperCase();
+      return "000000".substring(bG.length) + bG
+    }, LG.hex.rgb = function(GG) {
+      const bG = GG.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+      if (!bG) return [0, 0, 0];
+      let ZG = bG[0];
+      3 === bG[0].length && (ZG = ZG.split("").map((GG => GG + GG)).join(""));
+      const wG = parseInt(ZG, 16);
+      return [wG >> 16 & 255, wG >> 8 & 255, 255 & wG]
+    }, LG.rgb.hcg = function(GG) {
+      const bG = GG[0] / 255,
+        ZG = GG[1] / 255,
+        wG = GG[2] / 255,
+        SG = Math.max(Math.max(bG, ZG), wG),
+        LG = Math.min(Math.min(bG, ZG), wG),
+        yG = SG - LG;
+      let kG, UG;
+      return kG = yG < 1 ? LG / (1 - yG) : 0, UG = yG <= 0 ? 0 : SG === bG ? (ZG - wG) / yG % 6 : SG === ZG ? 2 + (wG - bG) / yG : 4 + (bG - ZG) / yG, UG /= 6, UG %= 1, [360 * UG, 100 * yG, 100 * kG]
+    }, LG.hsl.hcg = function(GG) {
+      const bG = GG[1] / 100,
+        ZG = GG[2] / 100,
+        wG = ZG < .5 ? 2 * bG * ZG : 2 * bG * (1 - ZG);
+      let SG = 0;
+      return wG < 1 && (SG = (ZG - .5 * wG) / (1 - wG)), [GG[0], 100 * wG, 100 * SG]
+    }, LG.hsv.hcg = function(GG) {
+      const bG = GG[1] / 100,
+        ZG = GG[2] / 100,
+        wG = bG * ZG;
+      let SG = 0;
+      return wG < 1 && (SG = (ZG - wG) / (1 - wG)), [GG[0], 100 * wG, 100 * SG]
+    }, LG.hcg.rgb = function(GG) {
+      const bG = GG[0] / 360,
+        ZG = GG[1] / 100,
+        wG = GG[2] / 100;
+      if (0 === ZG) return [255 * wG, 255 * wG, 255 * wG];
+      const SG = [0, 0, 0],
+        LG = bG % 1 * 6,
+        yG = LG % 1,
+        kG = 1 - yG;
+      let UG = 0;
+      switch (Math.floor(LG)) {
         case 0:
-          Uu[0] = 1, Uu[1] = Xu, Uu[2] = 0;
+          SG[0] = 1, SG[1] = yG, SG[2] = 0;
           break;
         case 1:
-          Uu[0] = lu, Uu[1] = 1, Uu[2] = 0;
+          SG[0] = kG, SG[1] = 1, SG[2] = 0;
           break;
         case 2:
-          Uu[0] = 0, Uu[1] = 1, Uu[2] = Xu;
+          SG[0] = 0, SG[1] = 1, SG[2] = yG;
           break;
         case 3:
-          Uu[0] = 0, Uu[1] = lu, Uu[2] = 1;
+          SG[0] = 0, SG[1] = kG, SG[2] = 1;
           break;
         case 4:
-          Uu[0] = Xu, Uu[1] = 0, Uu[2] = 1;
+          SG[0] = yG, SG[1] = 0, SG[2] = 1;
           break;
         default:
-          Uu[0] = 1, Uu[1] = 0, Uu[2] = lu
+          SG[0] = 1, SG[1] = 0, SG[2] = kG
       }
-      return qu = (1 - ju) * su, [255 * (ju * Uu[0] + qu), 255 * (ju * Uu[1] + qu), 255 * (ju * Uu[2] + qu)]
-    }, Zu.hcg.hsv = function(uu) {
-      const Eu = uu[1] / 100,
-        ju = Eu + uu[2] / 100 * (1 - Eu);
-      let su = 0;
-      return ju > 0 && (su = Eu / ju), [uu[0], 100 * su, 100 * ju]
-    }, Zu.hcg.hsl = function(uu) {
-      const Eu = uu[1] / 100,
-        ju = uu[2] / 100 * (1 - Eu) + .5 * Eu;
-      let su = 0;
-      return ju > 0 && ju < .5 ? su = Eu / (2 * ju) : ju >= .5 && ju < 1 && (su = Eu / (2 * (1 - ju))), [uu[0], 100 * su, 100 * ju]
-    }, Zu.hcg.hwb = function(uu) {
-      const Eu = uu[1] / 100,
-        ju = Eu + uu[2] / 100 * (1 - Eu);
-      return [uu[0], 100 * (ju - Eu), 100 * (1 - ju)]
-    }, Zu.hwb.hcg = function(uu) {
-      const Eu = uu[1] / 100,
-        ju = 1 - uu[2] / 100,
-        su = ju - Eu;
-      let Uu = 0;
-      return su < 1 && (Uu = (ju - su) / (1 - su)), [uu[0], 100 * su, 100 * Uu]
-    }, Zu.apple.rgb = function(uu) {
-      return [uu[0] / 65535 * 255, uu[1] / 65535 * 255, uu[2] / 65535 * 255]
-    }, Zu.rgb.apple = function(uu) {
-      return [uu[0] / 255 * 65535, uu[1] / 255 * 65535, uu[2] / 255 * 65535]
-    }, Zu.gray.rgb = function(uu) {
-      return [uu[0] / 100 * 255, uu[0] / 100 * 255, uu[0] / 100 * 255]
-    }, Zu.gray.hsl = function(uu) {
-      return [0, 0, uu[0]]
-    }, Zu.gray.hsv = Zu.gray.hsl, Zu.gray.hwb = function(uu) {
-      return [0, 100, uu[0]]
-    }, Zu.gray.cmyk = function(uu) {
-      return [0, 0, 0, uu[0]]
-    }, Zu.gray.lab = function(uu) {
-      return [uu[0], 0, 0]
-    }, Zu.gray.hex = function(uu) {
-      const Eu = 255 & Math.round(uu[0] / 100 * 255),
-        ju = ((Eu << 16) + (Eu << 8) + Eu).toString(16).toUpperCase();
-      return "000000".substring(ju.length) + ju
-    }, Zu.rgb.gray = function(uu) {
-      return [(uu[0] + uu[1] + uu[2]) / 3 / 255 * 100]
+      return UG = (1 - ZG) * wG, [255 * (ZG * SG[0] + UG), 255 * (ZG * SG[1] + UG), 255 * (ZG * SG[2] + UG)]
+    }, LG.hcg.hsv = function(GG) {
+      const bG = GG[1] / 100,
+        ZG = bG + GG[2] / 100 * (1 - bG);
+      let wG = 0;
+      return ZG > 0 && (wG = bG / ZG), [GG[0], 100 * wG, 100 * ZG]
+    }, LG.hcg.hsl = function(GG) {
+      const bG = GG[1] / 100,
+        ZG = GG[2] / 100 * (1 - bG) + .5 * bG;
+      let wG = 0;
+      return ZG > 0 && ZG < .5 ? wG = bG / (2 * ZG) : ZG >= .5 && ZG < 1 && (wG = bG / (2 * (1 - ZG))), [GG[0], 100 * wG, 100 * ZG]
+    }, LG.hcg.hwb = function(GG) {
+      const bG = GG[1] / 100,
+        ZG = bG + GG[2] / 100 * (1 - bG);
+      return [GG[0], 100 * (ZG - bG), 100 * (1 - ZG)]
+    }, LG.hwb.hcg = function(GG) {
+      const bG = GG[1] / 100,
+        ZG = 1 - GG[2] / 100,
+        wG = ZG - bG;
+      let SG = 0;
+      return wG < 1 && (SG = (ZG - wG) / (1 - wG)), [GG[0], 100 * wG, 100 * SG]
+    }, LG.apple.rgb = function(GG) {
+      return [GG[0] / 65535 * 255, GG[1] / 65535 * 255, GG[2] / 65535 * 255]
+    }, LG.rgb.apple = function(GG) {
+      return [GG[0] / 255 * 65535, GG[1] / 255 * 65535, GG[2] / 255 * 65535]
+    }, LG.gray.rgb = function(GG) {
+      return [GG[0] / 100 * 255, GG[0] / 100 * 255, GG[0] / 100 * 255]
+    }, LG.gray.hsl = function(GG) {
+      return [0, 0, GG[0]]
+    }, LG.gray.hsv = LG.gray.hsl, LG.gray.hwb = function(GG) {
+      return [0, 100, GG[0]]
+    }, LG.gray.cmyk = function(GG) {
+      return [0, 0, 0, GG[0]]
+    }, LG.gray.lab = function(GG) {
+      return [GG[0], 0, 0]
+    }, LG.gray.hex = function(GG) {
+      const bG = 255 & Math.round(GG[0] / 100 * 255),
+        ZG = ((bG << 16) + (bG << 8) + bG).toString(16).toUpperCase();
+      return "000000".substring(ZG.length) + ZG
+    }, LG.rgb.gray = function(GG) {
+      return [(GG[0] + GG[1] + GG[2]) / 3 / 255 * 100]
     }
   },
-  37034: (uu, Eu, ju) => {
-    const su = ju(37036),
-      Uu = ju(37053),
-      Zu = {};
-    Object.keys(su).forEach((uu => {
-      Zu[uu] = {}, Object.defineProperty(Zu[uu], "channels", {
-        value: su[uu].channels
-      }), Object.defineProperty(Zu[uu], "labels", {
-        value: su[uu].labels
+  37e3: (GG, bG, ZG) => {
+    const wG = ZG(37007),
+      SG = ZG(37019),
+      LG = {};
+    Object.keys(wG).forEach((GG => {
+      LG[GG] = {}, Object.defineProperty(LG[GG], "channels", {
+        value: wG[GG].channels
+      }), Object.defineProperty(LG[GG], "labels", {
+        value: wG[GG].labels
       });
-      const Eu = Uu(uu);
-      Object.keys(Eu).forEach((ju => {
-        const su = Eu[ju];
-        Zu[uu][ju] = function(uu) {
-          const Eu = function() {
-            for (var Eu = arguments.length, ju = new Array(Eu), su = 0; su < Eu; su++) ju[su] = arguments[su];
-            const Uu = ju[0];
-            if (void 0 === Uu || null === Uu) return Uu;
-            Uu.length > 1 && (ju = Uu);
-            const Zu = uu(ju);
-            if ("object" === typeof Zu)
-              for (let uu = Zu.length, Xu = 0; Xu < uu; Xu++) Zu[Xu] = Math.round(Zu[Xu]);
-            return Zu
+      const bG = SG(GG);
+      Object.keys(bG).forEach((ZG => {
+        const wG = bG[ZG];
+        LG[GG][ZG] = function(GG) {
+          const bG = function() {
+            for (var bG = arguments.length, ZG = new Array(bG), wG = 0; wG < bG; wG++) ZG[wG] = arguments[wG];
+            const SG = ZG[0];
+            if (void 0 === SG || null === SG) return SG;
+            SG.length > 1 && (ZG = SG);
+            const LG = GG(ZG);
+            if ("object" === typeof LG)
+              for (let GG = LG.length, yG = 0; yG < GG; yG++) LG[yG] = Math.round(LG[yG]);
+            return LG
           };
-          return "conversion" in uu && (Eu.conversion = uu.conversion), Eu
-        }(su), Zu[uu][ju].raw = function(uu) {
-          const Eu = function() {
-            for (var Eu = arguments.length, ju = new Array(Eu), su = 0; su < Eu; su++) ju[su] = arguments[su];
-            const Uu = ju[0];
-            return void 0 === Uu || null === Uu ? Uu : (Uu.length > 1 && (ju = Uu), uu(ju))
+          return "conversion" in GG && (bG.conversion = GG.conversion), bG
+        }(wG), LG[GG][ZG].raw = function(GG) {
+          const bG = function() {
+            for (var bG = arguments.length, ZG = new Array(bG), wG = 0; wG < bG; wG++) ZG[wG] = arguments[wG];
+            const SG = ZG[0];
+            return void 0 === SG || null === SG ? SG : (SG.length > 1 && (ZG = SG), GG(ZG))
           };
-          return "conversion" in uu && (Eu.conversion = uu.conversion), Eu
-        }(su)
+          return "conversion" in GG && (bG.conversion = GG.conversion), bG
+        }(wG)
       }))
-    })), uu.exports = Zu
+    })), GG.exports = LG
   },
-  37053: (uu, Eu, ju) => {
-    const su = ju(37036);
+  37019: (GG, bG, ZG) => {
+    const wG = ZG(37007);
 
-    function Uu(uu) {
-      const Eu = function() {
-          const uu = {},
-            Eu = Object.keys(su);
-          for (let ju = Eu.length, su = 0; su < ju; su++) uu[Eu[su]] = {
+    function SG(GG) {
+      const bG = function() {
+          const GG = {},
+            bG = Object.keys(wG);
+          for (let ZG = bG.length, wG = 0; wG < ZG; wG++) GG[bG[wG]] = {
             distance: -1,
             parent: null
           };
-          return uu
+          return GG
         }(),
-        ju = [uu];
-      for (Eu[uu].distance = 0; ju.length;) {
-        const uu = ju.pop(),
-          Uu = Object.keys(su[uu]);
-        for (let su = Uu.length, Zu = 0; Zu < su; Zu++) {
-          const su = Uu[Zu],
-            Xu = Eu[su]; - 1 === Xu.distance && (Xu.distance = Eu[uu].distance + 1, Xu.parent = uu, ju.unshift(su))
+        ZG = [GG];
+      for (bG[GG].distance = 0; ZG.length;) {
+        const GG = ZG.pop(),
+          SG = Object.keys(wG[GG]);
+        for (let wG = SG.length, LG = 0; LG < wG; LG++) {
+          const wG = SG[LG],
+            yG = bG[wG]; - 1 === yG.distance && (yG.distance = bG[GG].distance + 1, yG.parent = GG, ZG.unshift(wG))
         }
       }
-      return Eu
+      return bG
     }
 
-    function Zu(uu, Eu) {
-      return function(ju) {
-        return Eu(uu(ju))
+    function LG(GG, bG) {
+      return function(ZG) {
+        return bG(GG(ZG))
       }
     }
 
-    function Xu(uu, Eu) {
-      const ju = [Eu[uu].parent, uu];
-      let Uu = su[Eu[uu].parent][uu],
-        Xu = Eu[uu].parent;
-      for (; Eu[Xu].parent;) ju.unshift(Eu[Xu].parent), Uu = Zu(su[Eu[Xu].parent][Xu], Uu), Xu = Eu[Xu].parent;
-      return Uu.conversion = ju, Uu
+    function yG(GG, bG) {
+      const ZG = [bG[GG].parent, GG];
+      let SG = wG[bG[GG].parent][GG],
+        yG = bG[GG].parent;
+      for (; bG[yG].parent;) ZG.unshift(bG[yG].parent), SG = LG(wG[bG[yG].parent][yG], SG), yG = bG[yG].parent;
+      return SG.conversion = ZG, SG
     }
-    uu.exports = function(uu) {
-      const Eu = Uu(uu),
-        ju = {},
-        su = Object.keys(Eu);
-      for (let Uu = su.length, Zu = 0; Zu < Uu; Zu++) {
-        const uu = su[Zu];
-        null !== Eu[uu].parent && (ju[uu] = Xu(uu, Eu))
+    GG.exports = function(GG) {
+      const bG = SG(GG),
+        ZG = {},
+        wG = Object.keys(bG);
+      for (let SG = wG.length, LG = 0; LG < SG; LG++) {
+        const GG = wG[LG];
+        null !== bG[GG].parent && (ZG[GG] = yG(GG, bG))
       }
-      return ju
+      return ZG
     }
   },
-  37044: uu => {
-    uu.exports = {
+  37016: GG => {
+    GG.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -1137,28 +1137,28 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  37027: (uu, Eu, ju) => {
-    var su = ju(37032),
-      Uu = Array.prototype.concat,
-      Zu = Array.prototype.slice,
-      Xu = uu.exports = function(uu) {
-        for (var Eu = [], ju = 0, Xu = uu.length; ju < Xu; ju++) {
-          var lu = uu[ju];
-          su(lu) ? Eu = Uu.call(Eu, Zu.call(lu)) : Eu.push(lu)
+  36996: (GG, bG, ZG) => {
+    var wG = ZG(36998),
+      SG = Array.prototype.concat,
+      LG = Array.prototype.slice,
+      yG = GG.exports = function(GG) {
+        for (var bG = [], ZG = 0, yG = GG.length; ZG < yG; ZG++) {
+          var kG = GG[ZG];
+          wG(kG) ? bG = SG.call(bG, LG.call(kG)) : bG.push(kG)
         }
-        return Eu
+        return bG
       };
-    Xu.wrap = function(uu) {
+    yG.wrap = function(GG) {
       return function() {
-        return uu(Xu(arguments))
+        return GG(yG(arguments))
       }
     }
   },
-  37032: uu => {
-    uu.exports = function(uu) {
-      return !(!uu || "string" === typeof uu) && (uu instanceof Array || Array.isArray(uu) || uu.length >= 0 && (uu.splice instanceof Function || Object.getOwnPropertyDescriptor(uu, uu.length - 1) && "String" !== uu.constructor.name))
+  36998: GG => {
+    GG.exports = function(GG) {
+      return !(!GG || "string" === typeof GG) && (GG instanceof Array || Array.isArray(GG) || GG.length >= 0 && (GG.splice instanceof Function || Object.getOwnPropertyDescriptor(GG, GG.length - 1) && "String" !== GG.constructor.name))
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

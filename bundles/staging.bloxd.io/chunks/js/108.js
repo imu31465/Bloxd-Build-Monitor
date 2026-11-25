@@ -1,255 +1,255 @@
 export const id = 108;
 export const ids = [108];
 export const modules = {
-  36751: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => qu
+  36686: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => UG
     });
-    var su = ju(1105),
-      Uu = ju.n(su),
-      Zu = ju(58),
-      Xu = ju(4756),
-      lu = ju(1154);
+    var wG = ZG(1006),
+      SG = ZG.n(wG),
+      LG = ZG(51),
+      yG = ZG(4596),
+      kG = ZG(1067);
 
-    function qu(uu) {
+    function UG(GG) {
       let {
-        locked: Eu,
-        children: ju
-      } = uu;
-      const su = (0, Zu.useRef)(null),
-        qu = (0, Xu.b)(su, "y");
-      return (0, lu.jsx)("div", {
-        ref: su,
-        className: Uu()("CreateCustomLobbyBody", {
-          CreateCustomLobbyBodyMoreAbove: qu.before,
-          CreateCustomLobbyBodyMoreBelow: qu.after
+        locked: bG,
+        children: ZG
+      } = GG;
+      const wG = (0, LG.useRef)(null),
+        UG = (0, yG.e)(wG, "y");
+      return (0, kG.jsx)("div", {
+        ref: wG,
+        className: SG()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: UG.before,
+          CreateCustomLobbyBodyMoreBelow: UG.after
         }),
-        "data-pad-ignore": Eu || void 0,
-        children: ju
+        "data-pad-ignore": bG || void 0,
+        children: ZG
       })
     }
   },
-  36815: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      showFirstWorldSetupPopup: () => Yu
+  36769: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      showFirstWorldSetupPopup: () => hG
     });
-    ju(5105), ju(36737);
-    var su = ju(4809),
-      Uu = ju(58),
-      Zu = ju(4769),
-      Xu = ju(1244),
-      lu = ju(1405),
-      qu = ju(36751),
-      fu = ju(5110),
-      Cu = ju(1506),
-      bu = ju(3678),
-      cu = ju(36748),
-      Nu = ju(4801),
-      Ou = ju(1154);
+    ZG(4967), ZG(36670);
+    var wG = ZG(4655),
+      SG = ZG(51),
+      LG = ZG(4611),
+      yG = ZG(1151),
+      kG = ZG(1311),
+      UG = ZG(36686),
+      YG = ZG(4973),
+      VG = ZG(1393),
+      pG = ZG(3465),
+      fG = ZG(36680),
+      QG = ZG(4651),
+      KG = ZG(1067);
 
-    function Yu(uu) {
-      const Eu = {
+    function hG(GG) {
+      const bG = {
         requested: !1,
         closed: !1
       };
-      lu.NotificationProvider.showCustomPopup({
-        body: ju => (0, Ou.jsx)(hu, {
-          flow: Eu,
-          close: ju,
-          ...uu
+      kG.NotificationProvider.showCustomPopup({
+        body: ZG => (0, KG.jsx)(dG, {
+          flow: bG,
+          close: ZG,
+          ...GG
         }),
         middleScreenPopupClassName: "CreateCustomLobbyPopup",
         onClose: () => {
-          Eu.closed = !0, Eu.requested || (0, Nu.c)()
+          bG.closed = !0, bG.requested || (0, QG.i)()
         }
       })
     }
 
-    function hu(uu) {
+    function dG(GG) {
       let {
-        flow: Eu,
-        close: ju,
-        onCreating: lu,
-        onCreated: Yu,
-        onFailedClosed: hu,
-        join: Du
-      } = uu;
+        flow: bG,
+        close: ZG,
+        onCreating: kG,
+        onCreated: hG,
+        onFailedClosed: dG,
+        join: JG
+      } = GG;
       const {
-        t: gu
-      } = (0, Xu.A)(), [Mu, eu] = (0, Uu.useState)(su.v), [Gu, pu] = (0, Uu.useState)(!1), [wu, Ju] = (0, Uu.useState)(""), du = (0, bu.c)();
-      (0, Uu.useEffect)((() => {
-        (0, Nu.k)()
+        t: rG
+      } = (0, yG.w)(), [zG, EG] = (0, SG.useState)(wG.t), [oG, XG] = (0, SG.useState)(!1), [uG, iG] = (0, SG.useState)(""), CG = (0, pG.c)();
+      (0, SG.useEffect)((() => {
+        (0, QG.o)()
       }), []);
-      const au = uu => ({
-        isEnabled: () => Mu.plugins[uu],
-        Wk: Eu => {
-          (0, Nu.e)({
-            plugin: uu,
-            enabled: Eu
-          }), eu({
-            ...Mu,
+      const WG = GG => ({
+        isEnabled: () => zG.plugins[GG],
+        DW: bG => {
+          (0, QG.l)({
+            plugin: GG,
+            enabled: bG
+          }), EG({
+            ...zG,
             plugins: {
-              ...Mu.plugins,
-              [uu]: Eu
+              ...zG.plugins,
+              [GG]: bG
             }
           })
         }
       });
-      return (0, Ou.jsxs)("div", {
+      return (0, KG.jsxs)("div", {
         className: "CreateCustomLobby",
-        children: [(0, Ou.jsx)("div", {
+        children: [(0, KG.jsx)("div", {
           className: "CreateCustomLobbyTitleContainer",
-          children: (0, Ou.jsx)("div", {
+          children: (0, KG.jsx)("div", {
             className: "CreateCustomLobbyTitle",
-            children: gu("homePage:myWorld")
+            children: rG("homePage:myWorld")
           })
-        }), (0, Ou.jsx)(qu.c, {
-          locked: Gu,
-          children: (0, Ou.jsxs)("div", {
+        }), (0, KG.jsx)(UG.d, {
+          locked: oG,
+          children: (0, KG.jsxs)("div", {
             className: "CreateCustomLobbyFields",
-            children: [(0, Ou.jsx)(cu.d, {
-              value: Mu.defaultGamemode,
-              onChange: uu => {
-                (0, su.z)(uu) && uu !== Mu.defaultGamemode && ((0, Nu.e)({
-                  defaultGamemode: uu
-                }), eu({
-                  ...Mu,
-                  defaultGamemode: uu
+            children: [(0, KG.jsx)(fG.d, {
+              value: zG.defaultGamemode,
+              onChange: GG => {
+                (0, wG.w)(GG) && GG !== zG.defaultGamemode && ((0, QG.l)({
+                  defaultGamemode: GG
+                }), EG({
+                  ...zG,
+                  defaultGamemode: GG
                 }))
               },
               showAll: !1,
-              disabled: Gu
-            }), (0, Ou.jsx)(cu.g, {
-              mapTypes: su.i,
-              value: Mu.mapType,
-              onChange: uu => {
-                (0, su.D)(uu) && uu !== Mu.mapType && ((0, Nu.e)({
-                  mapType: uu
-                }), eu({
-                  ...Mu,
-                  mapType: uu
+              disabled: oG
+            }), (0, KG.jsx)(fG.f, {
+              mapTypes: wG.h,
+              value: zG.mapType,
+              onChange: GG => {
+                (0, wG.A)(GG) && GG !== zG.mapType && ((0, QG.l)({
+                  mapType: GG
+                }), EG({
+                  ...zG,
+                  mapType: GG
                 }))
               },
               showAll: !1,
-              disabled: Gu
-            }), (0, Ou.jsx)(fu.d, {
+              disabled: oG
+            }), (0, KG.jsx)(YG.d, {
               callbacks: {
-                dayNight: au("dayNight"),
-                fallDamage: au("fallDamage"),
-                survivalGuns: au("survivalGuns")
+                dayNight: WG("dayNight"),
+                fallDamage: WG("fallDamage"),
+                survivalGuns: WG("survivalGuns")
               },
-              disabled: Gu,
+              disabled: oG,
               advancedMode: !1
             })]
           })
-        }), (0, Ou.jsxs)("div", {
+        }), (0, KG.jsxs)("div", {
           className: "CreateCustomLobbyFooter",
-          children: [(0, Ou.jsx)(Cu.p, {
+          children: [(0, KG.jsx)(VG.k, {
             className: "CreateCustomLobbyButton",
             padDefaultFocus: !0,
-            loading: Gu,
+            loading: oG,
             onClick: () => {
-              Eu.requested = !0, pu(!0), lu(!0), Ju(""), (0, Nu.g)(Mu), Zu.d.createPersonalWorld(Mu).then((uu => {
-                lu(!1);
-                const su = Yu(uu);
-                !Eu.closed && du.current ? (ju(), Du(uu)) : su || (0, Nu.c)()
-              }), (uu => {
-                if (console.error("Failed to create personal world:", uu), lu(!1), Eu.requested = !1, Eu.closed || !du.current) return (0, Nu.c)(), void hu(uu);
-                Ju(uu.message), pu(!1)
+              bG.requested = !0, XG(!0), kG(!0), iG(""), (0, QG.m)(zG), LG.d.createPersonalWorld(zG).then((GG => {
+                kG(!1);
+                const wG = hG(GG);
+                !bG.closed && CG.current ? (ZG(), JG(GG)) : wG || (0, QG.i)()
+              }), (GG => {
+                if (console.error("Failed to create personal world:", GG), kG(!1), bG.requested = !1, bG.closed || !CG.current) return (0, QG.i)(), void dG(GG);
+                iG(GG.message), XG(!1)
               }))
             },
-            children: gu("general:play")
-          }), wu && (0, Ou.jsx)("div", {
+            children: rG("general:play")
+          }), uG && (0, KG.jsx)("div", {
             className: "CreateCustomLobbyError AnimFadeInScaleUp",
-            children: wu
+            children: uG
           })]
         })]
       })
     }
   },
-  5110: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => fu
+  4973: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => YG
     });
-    var su = ju(1105),
-      Uu = ju.n(su),
-      Zu = ju(4809),
-      Xu = ju(1244),
-      lu = ju(1154);
-    const qu = [...Zu.l, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var wG = ZG(1006),
+      SG = ZG.n(wG),
+      LG = ZG(4655),
+      yG = ZG(1151),
+      kG = ZG(1067);
+    const UG = [...LG.i, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function fu(uu) {
+    function YG(GG) {
       const {
-        disabled: Eu,
-        hideWrapper: ju
-      } = uu, {
-        t: su
-      } = (0, Xu.A)(), fu = uu.advancedMode ? qu.map((Eu => [Eu, uu.callbacks[Eu]])) : Zu.l.map((Eu => [Eu, uu.callbacks[Eu]])), bu = (0, lu.jsx)("div", {
-        className: Uu()("PluginsGrid", {
-          SectionBody: !ju
+        disabled: bG,
+        hideWrapper: ZG
+      } = GG, {
+        t: wG
+      } = (0, yG.w)(), YG = GG.advancedMode ? UG.map((bG => [bG, GG.callbacks[bG]])) : LG.i.map((bG => [bG, GG.callbacks[bG]])), pG = (0, kG.jsx)("div", {
+        className: SG()("PluginsGrid", {
+          SectionBody: !ZG
         }),
-        children: fu.map((uu => {
-          let [ju, su] = uu;
-          return (0, lu.jsx)(Cu, {
-            plugin: ju,
-            callbacks: su,
-            disabled: Eu
-          }, ju)
+        children: YG.map((GG => {
+          let [ZG, wG] = GG;
+          return (0, kG.jsx)(VG, {
+            plugin: ZG,
+            callbacks: wG,
+            disabled: bG
+          }, ZG)
         }))
       });
-      return ju ? bu : (0, lu.jsxs)("div", {
+      return ZG ? pG : (0, kG.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, lu.jsx)("div", {
+        children: [(0, kG.jsx)("div", {
           className: "SectionTitle",
-          children: su("worldBuilder:pluginsSection")
-        }), bu]
+          children: wG("worldBuilder:pluginsSection")
+        }), pG]
       })
     }
 
-    function Cu(uu) {
+    function VG(GG) {
       let {
-        plugin: Eu,
+        plugin: bG,
         callbacks: {
-          isEnabled: ju,
-          Wk: su
+          isEnabled: ZG,
+          DW: wG
         },
-        disabled: Zu
-      } = uu;
+        disabled: LG
+      } = GG;
       const {
-        t: qu
-      } = (0, Xu.A)(), fu = ju();
-      return (0, lu.jsxs)("div", {
-        className: Uu()("PluginCard", {
-          PluginCardEnabled: fu,
-          PluginCardDisabledForm: Zu
+        t: UG
+      } = (0, yG.w)(), YG = ZG();
+      return (0, kG.jsxs)("div", {
+        className: SG()("PluginCard", {
+          PluginCardEnabled: YG,
+          PluginCardDisabledForm: LG
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": Zu || void 0,
+        "aria-disabled": LG || void 0,
         onClick: () => {
-          Zu || su(!fu)
+          LG || wG(!YG)
         },
-        children: [(0, lu.jsx)("div", {
+        children: [(0, kG.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, lu.jsx)("img", {
-            src: `/textures/games/classic/customGames/${Eu}.png`,
-            alt: Eu
+          children: (0, kG.jsx)("img", {
+            src: `/textures/games/classic/customGames/${bG}.png`,
+            alt: bG
           })
-        }), (0, lu.jsxs)("div", {
+        }), (0, kG.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, lu.jsx)("div", {
+          children: [(0, kG.jsx)("div", {
             className: "PluginCardTitle",
-            children: qu(bu[Eu])
-          }), (0, lu.jsx)("div", {
+            children: UG(pG[bG])
+          }), (0, kG.jsx)("div", {
             className: "PluginCardDescription",
-            children: qu(cu[Eu])
+            children: UG(fG[bG])
           })]
-        }), (0, lu.jsx)("span", {
+        }), (0, kG.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: qu(fu ? "general:on" : "general:off")
+          children: UG(YG ? "general:on" : "general:off")
         })]
       })
     }
-    const bu = {
+    const pG = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -258,7 +258,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      cu = {
+      fG = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -268,97 +268,97 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  36748: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => fu,
-      g: () => Cu
+  36680: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => YG,
+      f: () => VG
     });
-    ju(58);
-    var su = ju(1105),
-      Uu = ju.n(su),
-      Zu = ju(4809),
-      Xu = ju(337),
-      lu = ju(1244),
-      qu = ju(1154);
+    ZG(51);
+    var wG = ZG(1006),
+      SG = ZG.n(wG),
+      LG = ZG(4655),
+      yG = ZG(333),
+      kG = ZG(1151),
+      UG = ZG(1067);
 
-    function fu(uu) {
+    function YG(GG) {
       let {
-        value: Eu,
-        onChange: ju,
-        showAll: su,
-        disabled: fu = !1
-      } = uu;
+        value: bG,
+        onChange: ZG,
+        showAll: wG,
+        disabled: YG = !1
+      } = GG;
       const {
-        t: Cu
-      } = (0, lu.A)();
-      return (0, qu.jsxs)("div", {
-        className: Uu()("BloxdForm GamemodeForm", {
-          BasicOptions: !su
+        t: VG
+      } = (0, kG.w)();
+      return (0, UG.jsxs)("div", {
+        className: SG()("BloxdForm GamemodeForm", {
+          BasicOptions: !wG
         }),
-        children: [(0, qu.jsx)("div", {
+        children: [(0, UG.jsx)("div", {
           className: "SectionTitle",
-          children: Cu("classic:defaultGamemode")
-        }), (0, qu.jsx)("div", {
+          children: VG("classic:defaultGamemode")
+        }), (0, UG.jsx)("div", {
           className: "SectionBody",
-          children: Zu.G.map((uu => su || (0, Zu.z)(uu) ? (0, qu.jsx)("button", {
+          children: LG.F.map((GG => wG || (0, LG.w)(GG) ? (0, UG.jsx)("button", {
             type: "button",
-            className: Uu()("WorldGamemode", {
-              Selected: Eu === uu
+            className: SG()("WorldGamemode", {
+              Selected: bG === GG
             }),
-            disabled: fu,
+            disabled: YG,
             onClick: () => {
-              ju(uu)
+              ZG(GG)
             },
             style: {
-              "--background-image": `url(${Xu.v[uu]})`
+              "--background-image": `url(${yG.C[GG]})`
             },
-            children: Xu.r[uu]
-          }, uu) : null))
+            children: yG.y[GG]
+          }, GG) : null))
         })]
       })
     }
 
-    function Cu(uu) {
+    function VG(GG) {
       let {
-        mapTypes: Eu,
-        value: ju,
-        onChange: su,
-        showAll: fu,
-        disabled: Cu = !1,
-        children: bu
-      } = uu;
+        mapTypes: bG,
+        value: ZG,
+        onChange: wG,
+        showAll: YG,
+        disabled: VG = !1,
+        children: pG
+      } = GG;
       const {
-        t: cu
-      } = (0, lu.A)();
-      return (0, qu.jsxs)("div", {
-        className: Uu()("BloxdForm MapTypeForm", {
-          BasicOptions: !fu
+        t: fG
+      } = (0, kG.w)();
+      return (0, UG.jsxs)("div", {
+        className: SG()("BloxdForm MapTypeForm", {
+          BasicOptions: !YG
         }),
-        children: [(0, qu.jsx)("div", {
+        children: [(0, UG.jsx)("div", {
           className: "SectionTitle",
-          children: cu("customLobby:mapType")
-        }), (0, qu.jsx)("div", {
+          children: fG("customLobby:mapType")
+        }), (0, UG.jsx)("div", {
           className: "SectionBody",
-          children: Eu.map((uu => fu || (0, Zu.D)(uu) ? (0, qu.jsx)("button", {
+          children: bG.map((GG => YG || (0, LG.A)(GG) ? (0, UG.jsx)("button", {
             type: "button",
-            className: Uu()("MapType", {
-              Selected: ju === uu
+            className: SG()("MapType", {
+              Selected: ZG === GG
             }),
-            disabled: Cu,
+            disabled: VG,
             onClick: () => {
-              su(uu)
+              wG(GG)
             },
             style: {
-              "--background-image": `url(${Xu.k[uu]})`
+              "--background-image": `url(${yG.r[GG]})`
             },
-            children: Xu.j[uu]
-          }, uu) : null))
-        }), bu]
+            children: yG.n[GG]
+          }, GG) : null))
+        }), pG]
       })
     }
   },
-  5105: () => {},
-  36737: () => {}
+  4967: () => {},
+  36670: () => {}
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

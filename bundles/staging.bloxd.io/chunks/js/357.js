@@ -1,15 +1,15 @@
 export const id = 357;
 export const ids = [357];
 export const modules = {
-  61492: (uu, Eu, ju) => {
-    var su;
-    ju.r(Eu), ju.d(Eu, {
-        ShaderLanguage: () => su
+  61816: (GG, bG, ZG) => {
+    var wG;
+    ZG.r(bG), ZG.d(bG, {
+        ShaderLanguage: () => wG
       }),
-      function(uu) {
-        uu[uu.GLSL = 0] = "GLSL", uu[uu.WGSL = 1] = "WGSL"
-      }(su || (su = {}))
+      function(GG) {
+        GG[GG.GLSL = 0] = "GLSL", GG[GG.WGSL = 1] = "WGSL"
+      }(wG || (wG = {}))
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

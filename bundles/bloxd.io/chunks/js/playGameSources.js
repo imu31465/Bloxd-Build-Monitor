@@ -1,199 +1,199 @@
 export const id = 47;
 export const ids = [47];
 export const modules = {
-  39926: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => qu,
-      g: () => Zu,
-      h: () => Uu
+  40012: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => UG,
+      g: () => LG,
+      i: () => SG
     });
-    const su = 6e3;
+    const wG = 6e3;
 
-    function Uu(uu, Eu) {
-      return [Math.floor(uu[0] / Eu) * Eu, Math.floor(uu[1] / Eu) * Eu, Math.floor(uu[2] / Eu) * Eu]
+    function SG(GG, bG) {
+      return [Math.floor(GG[0] / bG) * bG, Math.floor(GG[1] / bG) * bG, Math.floor(GG[2] / bG) * bG]
     }
 
-    function Zu(uu) {
-      const Eu = (null !== uu && void 0 !== uu ? uu : "").match(/-?\d+(?:\.\d+)?/g);
-      return Eu && Eu.length >= 3 ? [Number(Eu[0]), Number(Eu[1]), Number(Eu[2])] : null
+    function LG(GG) {
+      const bG = (null !== GG && void 0 !== GG ? GG : "").match(/-?\d+(?:\.\d+)?/g);
+      return bG && bG.length >= 3 ? [Number(bG[0]), Number(bG[1]), Number(bG[2])] : null
     }
 
-    function Xu(uu, Eu) {
-      return uu === Eu ? String(uu) : `${uu}-${Eu}`
+    function yG(GG, bG) {
+      return GG === bG ? String(GG) : `${GG}-${bG}`
     }
 
-    function lu(uu, Eu, ju, su) {
-      const Uu = [];
-      let Zu = new Map;
-      for (let Xu = uu[2]; Xu < uu[2] + Eu; Xu++) {
-        const lu = new Map;
-        let qu = uu[0];
-        for (; qu < uu[0] + Eu;) {
-          const Uu = su(qu, ju, Xu);
-          let fu = qu;
-          for (; fu + 1 < uu[0] + Eu && su(fu + 1, ju, Xu) === Uu;) fu++;
-          if (null !== Uu) {
-            const uu = `${qu} ${fu} ${Uu}`,
-              Eu = Zu.get(uu);
-            Eu ? (Eu.z1 = Xu, Zu.delete(uu), lu.set(uu, Eu)) : lu.set(uu, {
-              x0: qu,
-              x1: fu,
-              z0: Xu,
-              z1: Xu,
-              name: Uu
+    function kG(GG, bG, ZG, wG) {
+      const SG = [];
+      let LG = new Map;
+      for (let yG = GG[2]; yG < GG[2] + bG; yG++) {
+        const kG = new Map;
+        let UG = GG[0];
+        for (; UG < GG[0] + bG;) {
+          const SG = wG(UG, ZG, yG);
+          let YG = UG;
+          for (; YG + 1 < GG[0] + bG && wG(YG + 1, ZG, yG) === SG;) YG++;
+          if (null !== SG) {
+            const GG = `${UG} ${YG} ${SG}`,
+              bG = LG.get(GG);
+            bG ? (bG.z1 = yG, LG.delete(GG), kG.set(GG, bG)) : kG.set(GG, {
+              x0: UG,
+              x1: YG,
+              z0: yG,
+              z1: yG,
+              name: SG
             })
           }
-          qu = fu + 1
+          UG = YG + 1
         }
-        Uu.push(...Zu.values()), Zu = lu
+        SG.push(...LG.values()), LG = kG
       }
-      return Uu.push(...Zu.values()), Uu.sort(((uu, Eu) => uu.z0 - Eu.z0 || uu.x0 - Eu.x0)).map((uu => `x${Xu(uu.x0,uu.x1)} z${Xu(uu.z0,uu.z1)} ${uu.name}`))
+      return SG.push(...LG.values()), SG.sort(((GG, bG) => GG.z0 - bG.z0 || GG.x0 - bG.x0)).map((GG => `x${yG(GG.x0,GG.x1)} z${yG(GG.z0,GG.z1)} ${GG.name}`))
     }
 
-    function qu(uu, Eu, ju, Uu) {
-      let Zu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : su;
-      const qu = [uu[0] + Eu - 1, uu[1] + Eu - 1, uu[2] + Eu - 1],
-        fu = null !== Uu && Uu.every(((Eu, ju) => Math.floor(Eu) >= uu[ju] && Math.floor(Eu) <= qu[ju])),
-        Cu = [`The chunk from ${uu.join(" ")} to ${qu.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-      null !== Uu && Cu.push(`The player's feet are at ${Uu.map(Math.floor).join(" ")}, ${fu?"in this chunk":"outside this chunk"}.`);
-      const bu = [];
-      for (let su = uu[1]; su <= qu[1]; su++) {
-        const Uu = lu(uu, Eu, su, ju).join("; "),
-          Zu = bu[bu.length - 1];
-        (null === Zu || void 0 === Zu ? void 0 : Zu.boxes) === Uu ? Zu.to = su : bu.push({
-          from: su,
-          to: su,
-          boxes: Uu
+    function UG(GG, bG, ZG, SG) {
+      let LG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : wG;
+      const UG = [GG[0] + bG - 1, GG[1] + bG - 1, GG[2] + bG - 1],
+        YG = null !== SG && SG.every(((bG, ZG) => Math.floor(bG) >= GG[ZG] && Math.floor(bG) <= UG[ZG])),
+        VG = [`The chunk from ${GG.join(" ")} to ${UG.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+      null !== SG && VG.push(`The player's feet are at ${SG.map(Math.floor).join(" ")}, ${YG?"in this chunk":"outside this chunk"}.`);
+      const pG = [];
+      for (let wG = GG[1]; wG <= UG[1]; wG++) {
+        const SG = kG(GG, bG, wG, ZG).join("; "),
+          LG = pG[pG.length - 1];
+        (null === LG || void 0 === LG ? void 0 : LG.boxes) === SG ? LG.to = wG : pG.push({
+          from: wG,
+          to: wG,
+          boxes: SG
         })
       }
-      const cu = bu.filter((uu => "" !== uu.boxes));
-      0 === cu.length && Cu.push("It is all air.");
-      let Nu = Cu.join("\n").length;
-      for (const su of cu) {
-        const uu = `y${Xu(su.from,su.to)}: ${su.boxes}`;
-        if (Nu += uu.length + 1, Nu > Zu) {
-          Cu.push(`Cut short: the layers from y${su.from} up aren't shown, as there are too many blocks.`);
+      const fG = pG.filter((GG => "" !== GG.boxes));
+      0 === fG.length && VG.push("It is all air.");
+      let QG = VG.join("\n").length;
+      for (const wG of fG) {
+        const GG = `y${yG(wG.from,wG.to)}: ${wG.boxes}`;
+        if (QG += GG.length + 1, QG > LG) {
+          VG.push(`Cut short: the layers from y${wG.from} up aren't shown, as there are too many blocks.`);
           break
         }
-        Cu.push(uu)
+        VG.push(GG)
       }
-      return Cu.join("\n")
+      return VG.join("\n")
     }
   },
-  9006: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Uu
+  8839: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => SG
     });
-    var su = ju(22);
+    var wG = ZG(17);
 
-    function Uu() {
-      return !su.d.get("isTouchScreen") && null !== document.pointerLockElement
+    function SG() {
+      return !wG.e.get("isTouchScreen") && null !== document.pointerLockElement
     }
   },
-  37349: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Xu,
-      h: () => Zu,
-      l: () => Uu
+  37309: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => yG,
+      h: () => LG,
+      j: () => SG
     });
-    const su = [.25, .5, 1, 2, 4, 8, 16];
+    const wG = [.25, .5, 1, 2, 4, 8, 16];
 
-    function Uu(uu, Eu) {
-      const ju = su;
-      let Uu = ju.indexOf(uu);
-      return -1 === Uu && (Uu = ju.findIndex((Eu => Eu >= uu)), -1 === Uu && (Uu = ju.length - 1)), "up" === Eu ? ju[Math.min(Uu + 1, ju.length - 1)] : ju[Math.max(Uu - 1, 0)]
+    function SG(GG, bG) {
+      const ZG = wG;
+      let SG = ZG.indexOf(GG);
+      return -1 === SG && (SG = ZG.findIndex((bG => bG >= GG)), -1 === SG && (SG = ZG.length - 1)), "up" === bG ? ZG[Math.min(SG + 1, ZG.length - 1)] : ZG[Math.max(SG - 1, 0)]
     }
 
-    function Zu(uu) {
-      return uu <= su[0]
+    function LG(GG) {
+      return GG <= wG[0]
     }
 
-    function Xu(uu) {
-      return uu >= su[su.length - 1]
+    function yG(GG) {
+      return GG >= wG[wG.length - 1]
     }
   },
-  39392: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Zu,
-      d: () => Xu
+  39487: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => LG,
+      g: () => yG
     });
-    var su = ju(24);
-    let Uu = !1;
+    var wG = ZG(19);
+    let SG = !1;
 
-    function Zu() {
-      return Uu
+    function LG() {
+      return SG
     }
 
-    function Xu(uu) {
-      Uu !== uu && (Uu = uu, su.h.TY("replayViewer|videoExportChanged"))
+    function yG(GG) {
+      SG !== GG && (SG = GG, wG.l.xh("replayViewer|videoExportChanged"))
     }
   },
-  36876: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Uu,
-      d: () => Zu
+  36836: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => SG,
+      d: () => LG
     });
-    let su = !1;
+    let wG = !1;
 
-    function Uu() {
-      return su
+    function SG() {
+      return wG
     }
 
-    function Zu(uu) {
-      return su !== uu && (su = uu, !0)
+    function LG(GG) {
+      return wG !== GG && (wG = GG, !0)
     }
   },
-  39336: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Zu
+  39423: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => LG
     });
-    var su = ju(24),
-      Uu = ju(2011);
+    var wG = ZG(19),
+      SG = ZG(1923);
 
-    function Zu(uu) {
+    function LG(GG) {
       let {
-        taskId: Eu,
-        progress: ju
-      } = uu;
-      const su = Uu.e.get("_tasks");
-      null !== su && void 0 !== su && su[Eu] && Uu.e.apply({
+        taskId: bG,
+        progress: ZG
+      } = GG;
+      const wG = SG.c.get("_tasks");
+      null !== wG && void 0 !== wG && wG[bG] && SG.c.apply({
         _tasks: {
-          ...su,
-          [Eu]: {
-            ...su[Eu],
-            progress: ju
+          ...wG,
+          [bG]: {
+            ...wG[bG],
+            progress: ZG
           }
         }
       })
     }
-    su.h.subscribe("clientTaskProgress", (uu => {
-      Zu(uu)
+    wG.l.subscribe("clientTaskProgress", (GG => {
+      LG(GG)
     }))
   },
-  39897: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => cu,
-      c: () => Ou,
-      d: () => fu,
-      h: () => bu,
-      j: () => qu,
-      m: () => Xu,
-      o: () => Cu,
-      p: () => Yu
+  39986: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => fG,
+      g: () => KG,
+      i: () => YG,
+      l: () => pG,
+      o: () => UG,
+      r: () => yG,
+      u: () => VG,
+      v: () => hG
     });
-    var su = ju(2011),
-      Uu = ju(24),
-      Zu = ju(2019);
-    const Xu = (0, Zu.l)((function() {
-        var uu, Eu, ju, Uu;
+    var wG = ZG(1923),
+      SG = ZG(19),
+      LG = ZG(1939);
+    const yG = (0, LG.l)((function() {
+        var GG, bG, ZG, SG;
         return {
-          health: null !== (uu = su.e.get("_health")) && void 0 !== uu ? uu : null,
-          maxHealth: null !== (Eu = su.e.get("_totalMaxHealth")) && void 0 !== Eu ? Eu : null,
-          shield: null !== (ju = su.e.get("_shield")) && void 0 !== ju ? ju : null,
-          maxShield: null !== (Uu = su.e.get("maxShield")) && void 0 !== Uu ? Uu : null
+          health: null !== (GG = wG.c.get("_health")) && void 0 !== GG ? GG : null,
+          maxHealth: null !== (bG = wG.c.get("_totalMaxHealth")) && void 0 !== bG ? bG : null,
+          shield: null !== (ZG = wG.c.get("_shield")) && void 0 !== ZG ? ZG : null,
+          maxShield: null !== (SG = wG.c.get("maxShield")) && void 0 !== SG ? SG : null
         }
-      }), [], (0, Zu.k)("_health", "_totalMaxHealth", "_shield", "maxShield")),
-      lu = [{
+      }), [], (0, LG.i)("_health", "_totalMaxHealth", "_shield", "maxShield")),
+      kG = [{
         canFly: !1,
         flying: !1
       }, {
@@ -207,820 +207,820 @@ export const modules = {
         flying: !0
       }];
 
-    function qu(uu, Eu) {
-      return lu[(uu ? 2 : 0) + (Eu ? 1 : 0)]
+    function UG(GG, bG) {
+      return kG[(GG ? 2 : 0) + (bG ? 1 : 0)]
     }
-    const fu = (0, Zu.l)((function() {
-      var uu;
-      return null !== (uu = su.e.get("_aura")) && void 0 !== uu ? uu : null
-    }), [], (0, Zu.k)("_aura"));
+    const YG = (0, LG.l)((function() {
+      var GG;
+      return null !== (GG = wG.c.get("_aura")) && void 0 !== GG ? GG : null
+    }), [], (0, LG.i)("_aura"));
 
-    function Cu(uu) {
+    function VG(GG) {
       return {
-        watch: Eu => (0, Uu.l)("shotPlayer", (ju => {
+        watch: bG => (0, SG.p)("shotPlayer", (ZG => {
           let {
-            playerId: su,
-            damage: Uu,
-            wasCrit: Zu,
-            distance: Xu
-          } = ju;
-          uu(su) && Eu({
-            damage: Uu,
-            wasCrit: Zu,
-            distance: Xu
+            playerId: wG,
+            damage: SG,
+            wasCrit: LG,
+            distance: yG
+          } = ZG;
+          GG(wG) && bG({
+            damage: SG,
+            wasCrit: LG,
+            distance: yG
           })
         }))
       }
     }
 
-    function bu(uu) {
-      return (0, Zu.e)("chat", (Eu => {
+    function pG(GG) {
+      return (0, LG.c)("chat", (bG => {
         let {
-          serverChatMsgId: ju,
-          content: su,
-          chatterEId: Uu
-        } = Eu;
+          serverChatMsgId: ZG,
+          content: wG,
+          chatterEId: SG
+        } = bG;
         return {
-          serverChatMsgId: null !== ju && void 0 !== ju ? ju : null,
-          content: su,
-          author: Uu ? uu(Uu) : null
+          serverChatMsgId: null !== ZG && void 0 !== ZG ? ZG : null,
+          content: wG,
+          author: SG ? GG(SG) : null
         }
       }))
     }
-    class cu {
+    class fG {
       constructor() {
         this.shown = null, this.needed = null, this.neededSince = 0
       }
-      update(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-        const ju = this.shown;
-        return uu !== this.needed && (this.needed = uu, this.neededSince = Eu, null === uu && (this.shown = null)), this.shown !== this.needed && Eu - this.neededSince > 200 && (this.shown = this.needed), this.shown !== ju
+      update(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+        const ZG = this.shown;
+        return GG !== this.needed && (this.needed = GG, this.neededSince = bG, null === GG && (this.shown = null)), this.shown !== this.needed && bG - this.neededSince > 200 && (this.shown = this.needed), this.shown !== ZG
       }
     }
 
-    function Nu(uu) {
+    function QG(GG) {
       return [{
-        translationKey: `touchKeys:${uu}`
+        translationKey: `touchKeys:${GG}`
       }]
     }
-    const Ou = {
-      open: Nu("open"),
-      close: Nu("close"),
-      milk: Nu("milk"),
-      shear: Nu("shear"),
-      tame: Nu("tame"),
-      feed: Nu("feed"),
-      ride: Nu("ride")
+    const KG = {
+      open: QG("open"),
+      close: QG("close"),
+      milk: QG("milk"),
+      shear: QG("shear"),
+      tame: QG("tame"),
+      feed: QG("feed"),
+      ride: QG("ride")
     };
 
-    function Yu(uu) {
+    function hG(GG) {
       return [{
         translationKey: "touchKeys:tameWith"
       }, " ", {
-        icon: uu
+        icon: GG
       }]
     }
   },
-  41264: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => lu,
-      f: () => Xu
+  41435: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => kG,
+      f: () => yG
     });
-    var su = ju(3482);
-    let Uu = null,
-      Zu = null;
+    var wG = ZG(3271);
+    let SG = null,
+      LG = null;
 
-    function Xu() {
-      return Zu ??= ju.e(216).then((() => ju(36722))).then((uu => {
+    function yG() {
+      return LG ??= ZG.e(216).then((() => ZG(36657))).then((GG => {
         let {
-          ITEM_SPRITES: Eu,
-          ITEM_SPRITES_WITHOUT_FILE: ju,
-          ITEM_FILES_WITHOUT_SPRITE: Zu
-        } = uu;
-        Uu = function(uu, Eu, ju) {
-          const Uu = new Set,
-            Zu = (0, su.x)(Eu);
-          let Xu = 0;
-          for (const [su, lu] of uu.entries()) su === Zu[Xu] ? Xu++ : Uu.add(lu);
-          if ("" !== ju)
-            for (const lu of ju.split(su.q)) Uu.add(lu);
-          return Uu
-        }(Eu.split(su.q), ju, Zu)
-      }), (uu => {
-        throw Zu = null, uu
-      })), Zu
+          ITEM_SPRITES: bG,
+          ITEM_SPRITES_WITHOUT_FILE: ZG,
+          ITEM_FILES_WITHOUT_SPRITE: LG
+        } = GG;
+        SG = function(GG, bG, ZG) {
+          const SG = new Set,
+            LG = (0, wG.s)(bG);
+          let yG = 0;
+          for (const [wG, kG] of GG.entries()) wG === LG[yG] ? yG++ : SG.add(kG);
+          if ("" !== ZG)
+            for (const kG of ZG.split(wG.o)) SG.add(kG);
+          return SG
+        }(bG.split(wG.o), ZG, LG)
+      }), (GG => {
+        throw LG = null, GG
+      })), LG
     }
 
-    function lu(uu) {
-      var Eu, ju;
-      return null !== (Eu = null === (ju = Uu) || void 0 === ju ? void 0 : ju.has(uu)) && void 0 !== Eu && Eu
+    function kG(GG) {
+      var bG, ZG;
+      return null !== (bG = null === (ZG = SG) || void 0 === ZG ? void 0 : ZG.has(GG)) && void 0 !== bG && bG
     }
   },
-  39910: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => su,
-      f: () => Zu,
-      j: () => Uu
+  40001: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => wG,
+      f: () => LG,
+      g: () => SG
     });
-    const su = 128;
+    const wG = 128;
 
-    function Uu(uu, Eu, ju, su) {
-      const Uu = 2 * Eu - 1,
-        Zu = 1 - 2 * ju,
-        Xu = uu(0) - Uu * uu(3),
-        lu = uu(4) - Uu * uu(7),
-        qu = uu(8) - Uu * uu(11),
-        fu = uu(1) - Zu * uu(3),
-        Cu = uu(5) - Zu * uu(7),
-        bu = uu(9) - Zu * uu(11);
-      su[0] = lu * bu - qu * Cu, su[1] = qu * fu - Xu * bu, su[2] = Xu * Cu - lu * fu;
-      const cu = su[0] * uu(3) + su[1] * uu(7) + su[2] * uu(11) < 0 ? -1 : 1,
-        Nu = Math.hypot(su[0], su[1], su[2]) * cu;
-      return su[0] /= Nu, su[1] /= Nu, su[2] /= Nu, su
+    function SG(GG, bG, ZG, wG) {
+      const SG = 2 * bG - 1,
+        LG = 1 - 2 * ZG,
+        yG = GG(0) - SG * GG(3),
+        kG = GG(4) - SG * GG(7),
+        UG = GG(8) - SG * GG(11),
+        YG = GG(1) - LG * GG(3),
+        VG = GG(5) - LG * GG(7),
+        pG = GG(9) - LG * GG(11);
+      wG[0] = kG * pG - UG * VG, wG[1] = UG * YG - yG * pG, wG[2] = yG * VG - kG * YG;
+      const fG = wG[0] * GG(3) + wG[1] * GG(7) + wG[2] * GG(11) < 0 ? -1 : 1,
+        QG = Math.hypot(wG[0], wG[1], wG[2]) * fG;
+      return wG[0] /= QG, wG[1] /= QG, wG[2] /= QG, wG
     }
 
-    function Zu(uu, Eu, ju, su, Uu, Zu) {
-      const Xu = [Math.floor(Eu[0]), Math.floor(Eu[1]), Math.floor(Eu[2])],
-        lu = [0, 0, 0],
-        qu = [1 / 0, 1 / 0, 1 / 0],
-        fu = [1 / 0, 1 / 0, 1 / 0];
-      for (let cu = 0; cu < 3; cu++) lu[cu] = Math.sign(ju[cu]), 0 !== lu[cu] && (fu[cu] = Math.abs(1 / ju[cu]), qu[cu] = (Xu[cu] + (lu[cu] > 0 ? 1 : 0) - Eu[cu]) / ju[cu]);
-      let Cu = 0,
-        bu = Math.abs(ju[0]) > Math.abs(ju[1]) ? 0 : 1;
-      for (Math.abs(ju[2]) > Math.abs(ju[bu]) && (bu = 2); Cu <= su;) {
-        if (uu(Xu[0], Xu[1], Xu[2])) return Uu[0] = Xu[0], Uu[1] = Xu[1], Uu[2] = Xu[2], Zu[0] = 0, Zu[1] = 0, Zu[2] = 0, Zu[bu] = -lu[bu], !0;
-        bu = qu[0] < qu[1] ? 0 : 1, qu[2] < qu[bu] && (bu = 2), Cu = qu[bu], Xu[bu] += lu[bu], qu[bu] += fu[bu]
+    function LG(GG, bG, ZG, wG, SG, LG) {
+      const yG = [Math.floor(bG[0]), Math.floor(bG[1]), Math.floor(bG[2])],
+        kG = [0, 0, 0],
+        UG = [1 / 0, 1 / 0, 1 / 0],
+        YG = [1 / 0, 1 / 0, 1 / 0];
+      for (let fG = 0; fG < 3; fG++) kG[fG] = Math.sign(ZG[fG]), 0 !== kG[fG] && (YG[fG] = Math.abs(1 / ZG[fG]), UG[fG] = (yG[fG] + (kG[fG] > 0 ? 1 : 0) - bG[fG]) / ZG[fG]);
+      let VG = 0,
+        pG = Math.abs(ZG[0]) > Math.abs(ZG[1]) ? 0 : 1;
+      for (Math.abs(ZG[2]) > Math.abs(ZG[pG]) && (pG = 2); VG <= wG;) {
+        if (GG(yG[0], yG[1], yG[2])) return SG[0] = yG[0], SG[1] = yG[1], SG[2] = yG[2], LG[0] = 0, LG[1] = 0, LG[2] = 0, LG[pG] = -kG[pG], !0;
+        pG = UG[0] < UG[1] ? 0 : 1, UG[2] < UG[pG] && (pG = 2), VG = UG[pG], yG[pG] += kG[pG], UG[pG] += YG[pG]
       }
       return !1
     }
   },
-  39891: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Uu
+  39982: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => SG
     });
-    var su = ju(1955);
+    var wG = ZG(1873);
 
-    function Uu(uu, Eu, ju) {
-      return (0, su.m)(uu, Eu) < ju
+    function SG(GG, bG, ZG) {
+      return (0, wG.n)(GG, bG) < ZG
     }
   },
-  8944: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Uu
+  8764: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => SG
     });
-    var su = ju(1309);
+    var wG = ZG(1213);
 
-    function Uu(uu, Eu) {
-      var ju, Uu;
+    function SG(GG, bG) {
+      var ZG, SG;
       try {
-        const ju = (0, su.e)();
-        if ("function" === typeof ju) {
-          const su = new ju(uu, Eu);
-          if (su.type === uu) return su
+        const ZG = (0, wG.e)();
+        if ("function" === typeof ZG) {
+          const wG = new ZG(GG, bG);
+          if (wG.type === GG) return wG
         }
       } catch {}
-      const Zu = document.createEvent("Event");
-      return Zu.initEvent(uu, null !== (ju = null === Eu || void 0 === Eu ? void 0 : Eu.bubbles) && void 0 !== ju && ju, null !== (Uu = null === Eu || void 0 === Eu ? void 0 : Eu.cancelable) && void 0 !== Uu && Uu), Zu
+      const LG = document.createEvent("Event");
+      return LG.initEvent(GG, null !== (ZG = null === bG || void 0 === bG ? void 0 : bG.bubbles) && void 0 !== ZG && ZG, null !== (SG = null === bG || void 0 === bG ? void 0 : bG.cancelable) && void 0 !== SG && SG), LG
     }
   },
-  36856: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => cu,
-      d: () => Cu,
-      f: () => Nu,
-      g: () => bu
+  36808: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => fG,
+      f: () => VG,
+      g: () => QG,
+      h: () => pG
     });
-    var su = ju(349),
-      Uu = ju(692),
-      Zu = ju(709),
-      Xu = ju(31);
-    const lu = {
+    var wG = ZG(352),
+      SG = ZG(641),
+      LG = ZG(655),
+      yG = ZG(29);
+    const kG = {
         idStorageKey: "playSessionId",
         lastActivityStorageKey: "playSessionLastActivityMs",
         expiryMs: 3e5
       },
-      qu = "playSessionGameNameWithVariation",
-      fu = "wasMatchmakePlayer";
+      UG = "playSessionGameNameWithVariation",
+      YG = "wasMatchmakePlayer";
 
-    function Cu() {
-      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Xu.l;
-      (0, Zu.j)(uu, lu)
+    function VG() {
+      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yG.l;
+      (0, LG.j)(GG, kG)
     }
 
-    function bu() {
-      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Xu.l).setItem(fu, !0)
+    function pG() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yG.l).setItem(YG, !0)
     }
 
-    function cu() {
-      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Xu.l;
-      return (0, Zu.c)(uu, lu)
+    function fG() {
+      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yG.l;
+      return (0, LG.e)(GG, kG)
     }
 
-    function Nu(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Xu.l;
-      const ju = (0, Zu.c)(Eu, lu),
-        Cu = function(uu) {
-          const Eu = uu.getItem(qu);
-          return "string" !== typeof Eu ? null : Eu
-        }(Eu),
-        bu = function() {
-          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Xu.l).getItem(fu)
-        }(Eu);
-      let cu;
-      return cu = null !== ju && null !== Cu && (0, Zu.g)(Eu, lu) && function(uu, Eu, ju) {
-          const Uu = (0, su.Vb)(uu),
-            Zu = (0, su.Vb)(Eu),
-            Xu = (0, su.Qb)(uu),
-            lu = (0, su.Qb)(Eu);
-          return !(Uu !== Zu || !ju) || Uu === Zu && Xu === lu
-        }(Cu, uu, bu) ? ju : (0, Uu.e)(), (0, Zu.m)(Eu, lu, cu), Eu.setItem(qu, uu),
+    function QG(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yG.l;
+      const ZG = (0, LG.e)(bG, kG),
+        VG = function(GG) {
+          const bG = GG.getItem(UG);
+          return "string" !== typeof bG ? null : bG
+        }(bG),
+        pG = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yG.l).getItem(YG)
+        }(bG);
+      let fG;
+      return fG = null !== ZG && null !== VG && (0, LG.f)(bG, kG) && function(GG, bG, ZG) {
+          const SG = (0, wG.Yb)(GG),
+            LG = (0, wG.Yb)(bG),
+            yG = (0, wG.Vb)(GG),
+            kG = (0, wG.Vb)(bG);
+          return !(SG !== LG || !ZG) || SG === LG && yG === kG
+        }(VG, GG, pG) ? ZG : (0, SG.d)(), (0, LG.n)(bG, kG, fG), bG.setItem(UG, GG),
         function() {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Xu.l).removeItem(fu)
-        }(Eu), cu
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yG.l).removeItem(YG)
+        }(bG), fG
     }
   },
-  39327: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Cu
+  39412: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => VG
     });
-    var su = ju(1278),
-      Uu = ju(1376),
-      Zu = ju(22),
-      Xu = ju(1362),
-      lu = ju(1369),
-      qu = ju(1570),
-      fu = ju(36856);
+    var wG = ZG(1177),
+      SG = ZG(1290),
+      LG = ZG(17),
+      yG = ZG(1275),
+      kG = ZG(1287),
+      UG = ZG(1444),
+      YG = ZG(36808);
 
-    function Cu(uu) {
+    function VG(GG) {
       let {
-        HU: Eu,
-        AU: ju
-      } = uu;
-      const Cu = null !== Eu && void 0 !== Eu ? Eu : (0, lu.b)().gameNameWithVariation;
-      (0, su.L)(Cu) && ((0, fu.g)(), (0, Xu.R)((() => {
-        console.log("Received matchmaking order from game server to game", Eu), (0, Zu.j)("inGameReplay"), (0, qu.navigatePreserveSearch)((0, Uu.c)(Cu, null !== ju && void 0 !== ju ? ju : void 0))
+        AS: bG,
+        sS: ZG
+      } = GG;
+      const VG = null !== bG && void 0 !== bG ? bG : (0, kG.d)().gameNameWithVariation;
+      (0, wG.J)(VG) && ((0, YG.h)(), (0, yG.cb)((() => {
+        console.log("Received matchmaking order from game server to game", bG), (0, LG.n)("inGameReplay"), (0, UG.navigatePreserveSearch)((0, SG.d)(VG, null !== ZG && void 0 !== ZG ? ZG : void 0))
       }), "video_start"))
     }
   },
-  39497: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Zu
+  39593: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => LG
     });
-    var su = ju(24),
-      Uu = ju(2040);
+    var wG = ZG(19),
+      SG = ZG(1956);
 
-    function Zu(uu) {
-      var Eu, ju;
-      const Zu = (0, Uu.q)(null !== (Eu = null === (ju = Uu.z.toggleFreeCam) || void 0 === ju ? void 0 : ju[0]) && void 0 !== Eu ? Eu : null);
-      su.h.TY("showBottomMessage", {
-        message: `Free Camera ${uu?"Enabled":"Disabled"}${Zu?` - Press ${Zu} to toggle`:""}`,
+    function LG(GG) {
+      var bG, ZG;
+      const LG = (0, SG.t)(null !== (bG = null === (ZG = SG.B.toggleFreeCam) || void 0 === ZG ? void 0 : ZG[0]) && void 0 !== bG ? bG : null);
+      wG.l.xh("showBottomMessage", {
+        message: `Free Camera ${GG?"Enabled":"Disabled"}${LG?` - Press ${LG} to toggle`:""}`,
         timeoutLength: 2e3,
         type: "Warning"
       })
     }
   },
-  39320: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => qu,
-      g: () => Xu,
-      i: () => lu,
-      k: () => fu
+  39404: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => UG,
+      f: () => yG,
+      i: () => kG,
+      l: () => YG
     });
-    var su = ju(24),
-      Uu = ju(1405);
-    const Zu = new Map;
+    var wG = ZG(19),
+      SG = ZG(1311);
+    const LG = new Map;
 
-    function Xu(uu, Eu) {
-      su.h.TY("newUiRequest", {
-        id: uu,
-        clientParameters: Eu
+    function yG(GG, bG) {
+      wG.l.xh("newUiRequest", {
+        id: GG,
+        clientParameters: bG
       }, !0)
     }
 
-    function lu(uu) {
-      su.h.TY("removeUiRequest", uu, !0);
-      const Eu = Zu.get(uu);
-      Eu && (Eu.tearDownNotification(), Zu.delete(uu))
+    function kG(GG) {
+      wG.l.xh("removeUiRequest", GG, !0);
+      const bG = LG.get(GG);
+      bG && (bG.tearDownNotification(), LG.delete(GG))
     }
 
-    function qu() {
-      su.h.TY("clearUiRequests");
-      for (const uu of Zu.values()) uu.tearDownNotification();
-      Zu.clear()
+    function UG() {
+      wG.l.xh("clearUiRequests");
+      for (const GG of LG.values()) GG.tearDownNotification();
+      LG.clear()
     }
 
-    function fu(uu, Eu, ju, su) {
-      const Xu = Uu.NotificationProvider.showPromptPopup({
-        title: Eu,
+    function YG(GG, bG, ZG, wG) {
+      const yG = SG.NotificationProvider.showPromptPopup({
+        title: bG,
         confirmText: "general:yes",
         cancelText: "general:no",
-        destructive: ju,
+        destructive: ZG,
         unlockPointerKey: "uiRequestPopup"
       });
-      Zu.set(uu, Xu), Xu.getResult().then((Eu => {
-        Zu.delete(uu), "notificationTornDown" !== Eu && su(Eu)
+      LG.set(GG, yG), yG.getResult().then((bG => {
+        LG.delete(GG), "notificationTornDown" !== bG && wG(bG)
       }))
     }
   },
-  39917: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => bu,
-      f: () => cu
+  40005: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => pG,
+      g: () => fG
     });
-    var su = ju(202),
-      Uu = ju(39926);
-    const Zu = 20;
+    var wG = ZG(188),
+      SG = ZG(40012);
+    const LG = 20;
 
-    function Xu(uu) {
-      return uu.map(Math.floor).join(" ")
+    function yG(GG) {
+      return GG.map(Math.floor).join(" ")
     }
 
-    function lu(uu) {
-      return null === uu.amount || 1 === uu.amount ? uu.name : `${uu.amount} ${uu.name}`
+    function kG(GG) {
+      return null === GG.amount || 1 === GG.amount ? GG.name : `${GG.amount} ${GG.name}`
     }
-    var qu = ju(39933),
-      fu = ju(2011),
-      Cu = ju(1369);
+    var UG = ZG(40021),
+      YG = ZG(1923),
+      VG = ZG(1287);
 
-    function bu(uu, Eu) {
-      if (!uu) return qu.e;
-      const ju = uu.playerFeet();
-      if (!ju) return "The player isn't in the world yet, so no blocks can be seen.";
-      const Zu = su.e.hO,
-        Xu = (0, Uu.h)(null !== Eu && void 0 !== Eu ? Eu : ju, Zu),
-        lu = uu.chunkBlocks(Xu);
-      return lu ? (0, Uu.d)(Xu, Zu, ((Eu, ju, su) => {
-        const Uu = lu(Eu, ju, su);
-        return 0 === Uu ? null : uu.blockName(Uu).split("|")[0]
-      }), ju) : `The chunk from ${Xu.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${ju.map(Math.floor).join(" ")}.`
+    function pG(GG, bG) {
+      if (!GG) return UG.e;
+      const ZG = GG.playerFeet();
+      if (!ZG) return "The player isn't in the world yet, so no blocks can be seen.";
+      const LG = wG.d.rK,
+        yG = (0, SG.i)(null !== bG && void 0 !== bG ? bG : ZG, LG),
+        kG = GG.chunkBlocks(yG);
+      return kG ? (0, SG.e)(yG, LG, ((bG, ZG, wG) => {
+        const SG = kG(bG, ZG, wG);
+        return 0 === SG ? null : GG.blockName(SG).split("|")[0]
+      }), ZG) : `The chunk from ${yG.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${ZG.map(Math.floor).join(" ")}.`
     }
 
-    function cu(uu) {
-      var Eu, ju, su;
-      if (!uu) return qu.f;
-      const Uu = uu.playerFeet();
-      if (!Uu) return "The player isn't in the world yet, so nothing in it can be seen.";
+    function fG(GG) {
+      var bG, ZG, wG;
+      if (!GG) return UG.i;
+      const SG = GG.playerFeet();
+      if (!SG) return "The player isn't in the world yet, so nothing in it can be seen.";
       const {
-        slots: bu,
-        heldSlot: cu
-      } = uu.inventory();
-      return function(uu) {
-        const Eu = [];
-        null !== uu.game && Eu.push(`Game: ${uu.game}.`);
-        const ju = null === uu.health ? "" : `, health ${Math.round(uu.health)}${null===uu.maxHealth?"":` of ${Math.round(uu.maxHealth)}`}`;
-        Eu.push(`The player (the creator) stands at ${Xu(uu.position)}${ju}, ${uu.creative?"in":"not in"} creative mode.`);
-        const su = uu.slots[uu.heldSlot];
-        Eu.push(su ? `Holding (slot ${uu.heldSlot}): ${lu(su)}.` : `Holding nothing (slot ${uu.heldSlot} is empty).`);
-        const Uu = uu.slots.flatMap(((uu, Eu) => uu ? [`slot ${Eu}: ${lu(uu)}`] : []));
-        Eu.push(Uu.length > 0 ? `Inventory: ${Uu.join(", ")}.` : "Inventory: empty.");
-        const qu = Eu => Math.hypot(Eu.position[0] - uu.position[0], Eu.position[1] - uu.position[1], Eu.position[2] - uu.position[2]),
-          fu = [...uu.nearby].sort(((uu, Eu) => qu(uu) - qu(Eu)));
-        if (0 === fu.length) Eu.push("No other players or mobs are near enough to see.");
+        slots: pG,
+        heldSlot: fG
+      } = GG.inventory();
+      return function(GG) {
+        const bG = [];
+        null !== GG.game && bG.push(`Game: ${GG.game}.`);
+        const ZG = null === GG.health ? "" : `, health ${Math.round(GG.health)}${null===GG.maxHealth?"":` of ${Math.round(GG.maxHealth)}`}`;
+        bG.push(`The player (the creator) stands at ${yG(GG.position)}${ZG}, ${GG.creative?"in":"not in"} creative mode.`);
+        const wG = GG.slots[GG.heldSlot];
+        bG.push(wG ? `Holding (slot ${GG.heldSlot}): ${kG(wG)}.` : `Holding nothing (slot ${GG.heldSlot} is empty).`);
+        const SG = GG.slots.flatMap(((GG, bG) => GG ? [`slot ${bG}: ${kG(GG)}`] : []));
+        bG.push(SG.length > 0 ? `Inventory: ${SG.join(", ")}.` : "Inventory: empty.");
+        const UG = bG => Math.hypot(bG.position[0] - GG.position[0], bG.position[1] - GG.position[1], bG.position[2] - GG.position[2]),
+          YG = [...GG.nearby].sort(((GG, bG) => UG(GG) - UG(bG)));
+        if (0 === YG.length) bG.push("No other players or mobs are near enough to see.");
         else {
-          Eu.push("Near them, nearest first:");
-          for (const uu of fu.slice(0, Zu)) {
-            const ju = "player" === uu.kind ? `player "${uu.name||"?"}"` : uu.name && uu.name !== uu.kind ? `${uu.kind} "${uu.name}"` : uu.kind,
-              su = Math.round(qu(uu));
-            Eu.push(`- ${ju} at ${Xu(uu.position)}, ${su} block${1===su?"":"s"} away`)
+          bG.push("Near them, nearest first:");
+          for (const GG of YG.slice(0, LG)) {
+            const ZG = "player" === GG.kind ? `player "${GG.name||"?"}"` : GG.name && GG.name !== GG.kind ? `${GG.kind} "${GG.name}"` : GG.kind,
+              wG = Math.round(UG(GG));
+            bG.push(`- ${ZG} at ${yG(GG.position)}, ${wG} block${1===wG?"":"s"} away`)
           }
-          fu.length > Zu && Eu.push(`- and ${fu.length-Zu} more further away`)
+          YG.length > LG && bG.push(`- and ${YG.length-LG} more further away`)
         }
-        return uu.droppedItems > 0 && Eu.push(`${uu.droppedItems} dropped item${1===uu.droppedItems?" is":"s are"} on the ground nearby.`), Eu.join("\n")
+        return GG.droppedItems > 0 && bG.push(`${GG.droppedItems} dropped item${1===GG.droppedItems?" is":"s are"} on the ground nearby.`), bG.join("\n")
       }({
-        game: null !== (Eu = (0, Cu.b)().gameNameWithVariation) && void 0 !== Eu ? Eu : null,
-        position: Uu,
-        health: null !== (ju = fu.e.get("_health")) && void 0 !== ju ? ju : null,
-        maxHealth: null !== (su = fu.e.get("_totalMaxHealth")) && void 0 !== su ? su : null,
-        creative: !0 === fu.e.get("creative"),
-        heldSlot: cu,
-        slots: bu,
-        nearby: uu.nearby(),
-        droppedItems: uu.droppedItems()
+        game: null !== (bG = (0, VG.d)().gameNameWithVariation) && void 0 !== bG ? bG : null,
+        position: SG,
+        health: null !== (ZG = YG.c.get("_health")) && void 0 !== ZG ? ZG : null,
+        maxHealth: null !== (wG = YG.c.get("_totalMaxHealth")) && void 0 !== wG ? wG : null,
+        creative: !0 === YG.c.get("creative"),
+        heldSlot: fG,
+        slots: pG,
+        nearby: GG.nearby(),
+        droppedItems: GG.droppedItems()
       })
     }
   },
-  41110: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      C: () => nu,
-      D: () => Qu,
-      F: () => ku,
-      J: () => ru,
-      M: () => ou,
-      P: () => tu,
-      S: () => Lu,
-      V: () => vu,
-      b: () => xu,
-      e: () => Wu,
-      i: () => au,
-      k: () => Tu,
-      o: () => Pu,
-      q: () => du,
-      r: () => iu,
-      t: () => mu,
-      u: () => Vu,
-      y: () => Ku
+  41263: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      A: () => lG,
+      C: () => cG,
+      F: () => NG,
+      G: () => PG,
+      K: () => FG,
+      O: () => jG,
+      R: () => IG,
+      U: () => RG,
+      W: () => eG,
+      _: () => aG,
+      e: () => TG,
+      i: () => AG,
+      k: () => WG,
+      o: () => HG,
+      q: () => mG,
+      s: () => CG,
+      v: () => MG,
+      y: () => vG
     });
-    var su = ju(1443),
-      Uu = ju(24),
-      Zu = ju(1343),
-      Xu = ju(2516),
-      lu = ju(4986),
-      qu = ju(4962);
-    let fu, Cu = !1,
-      bu = !1,
-      cu = !1,
-      Nu = !1;
-    const Ou = 1300,
-      Yu = 3e3;
-    let hu = 0,
-      Du = !1,
-      gu = !1,
-      Mu = 0;
-    const eu = 2;
-    let Gu = !1,
-      pu = !1;
-    const wu = new Set,
-      Ju = new Set;
+    var wG = ZG(1343),
+      SG = ZG(19),
+      LG = ZG(1251),
+      yG = ZG(2380),
+      kG = ZG(4842),
+      UG = ZG(4800);
+    let YG, VG = !1,
+      pG = !1,
+      fG = !1,
+      QG = !1;
+    const KG = 1300,
+      hG = 3e3;
+    let dG = 0,
+      JG = !1,
+      rG = !1,
+      zG = 0;
+    const EG = 2;
+    let oG = !1,
+      XG = !1;
+    const uG = new Set,
+      iG = new Set;
 
-    function du() {
-      return Cu
+    function CG() {
+      return VG
     }
 
-    function au() {
-      return gu
+    function WG() {
+      return rG
     }
 
-    function Pu() {
-      return pu
+    function mG() {
+      return XG
     }
 
-    function ou() {
-      return (0, Zu.w)() && !pu
+    function IG() {
+      return (0, LG.A)() && !XG
     }
 
-    function ku(uu) {
-      let Eu = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (uu !== pu) {
-        pu = uu;
-        for (const uu of [...Ju]) uu(pu);
-        Eu && Lu()
+    function FG(GG) {
+      let bG = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (GG !== XG) {
+        XG = GG;
+        for (const GG of [...iG]) GG(XG);
+        bG && eG()
       }
     }
 
-    function mu(uu) {
-      return Ju.add(uu), () => {
-        Ju.delete(uu)
+    function vG(GG) {
+      return iG.add(GG), () => {
+        iG.delete(GG)
       }
     }
 
-    function vu() {
-      (0, lu.g)(Xu.x.Menu, (0, Zu.w)() ? 0 : Xu.x.Menu)
+    function aG() {
+      (0, kG.j)(yG.t.Menu, (0, LG.A)() ? 0 : yG.t.Menu)
     }
 
-    function Ku() {
-      gu = !1, Mu = 0, vu(), Lu()
+    function cG() {
+      rG = !1, zG = 0, aG(), eG()
     }
 
-    function Vu(uu) {
-      return wu.add(uu), () => {
-        wu.delete(uu)
+    function lG(GG) {
+      return uG.add(GG), () => {
+        uG.delete(GG)
       }
     }
 
-    function ru(uu) {
-      bu = !1, uu !== Cu && (Cu = uu, Nu = !1, clearTimeout(fu), cu = !Cu && Gu, Cu ? (Du = !1, gu = !1, Mu = 0) : ou() && !Gu && (gu = !0), Gu = !1, Cu && !ou() && Au(), yu(), cu && Lu())
+    function jG(GG) {
+      pG = !1, GG !== VG && (VG = GG, QG = !1, clearTimeout(YG), fG = !VG && oG, VG ? (JG = !1, rG = !1, zG = 0) : IG() && !oG && (rG = !0), oG = !1, VG && !IG() && DG(), OG(), fG && eG())
     }
 
-    function Qu(uu) {
-      uu !== Du && (Du = uu, uu || Lu())
+    function PG(GG) {
+      GG !== JG && (JG = GG, GG || eG())
     }
 
-    function iu() {
-      bu = !1, Nu || !0 !== Fu() || (Nu = !0, clearTimeout(fu), fu = setTimeout(Su, Ou))
+    function MG() {
+      pG = !1, QG || !0 !== nG() || (QG = !0, clearTimeout(YG), YG = setTimeout(sG, KG))
     }
 
-    function Wu() {
-      return (!bu || performance.now() - hu > Yu) && (bu = (0, qu.H)().lockPointer(), hu = performance.now()), bu
+    function AG() {
+      return (!pG || performance.now() - dG > hG) && (pG = (0, UG.I)().lockPointer(), dG = performance.now()), pG
     }
 
-    function Su() {
-      Iu() && Bu() && Wu()
+    function sG() {
+      qG() && gG() && AG()
     }
 
-    function Iu() {
-      return ou() && !Cu && !Du && !(0, su.g)()
+    function qG() {
+      return IG() && !VG && !JG && !(0, wG.k)()
     }
 
-    function Fu() {
-      var uu;
-      return "undefined" === typeof navigator || null === (uu = navigator.userActivation) || void 0 === uu ? void 0 : uu.isActive
+    function nG() {
+      var GG;
+      return "undefined" === typeof navigator || null === (GG = navigator.userActivation) || void 0 === GG ? void 0 : GG.isActive
     }
 
-    function Bu() {
-      return cu && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== Fu()
+    function gG() {
+      return fG && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== nG()
     }
 
-    function Lu() {
-      ou() ? Iu() && !gu && Bu() && Wu() : Cu && !Gu && Au()
+    function eG() {
+      IG() ? qG() && !rG && gG() && AG() : VG && !oG && DG()
     }
 
-    function tu() {
-      gu ? navigator.vendor.startsWith("Apple") ? Hu() : Mu = eu : Lu()
+    function RG() {
+      rG ? navigator.vendor.startsWith("Apple") ? tG() : zG = EG : eG()
     }
 
-    function xu() {
-      Mu > 0 && 0 === --Mu && Hu()
+    function TG() {
+      zG > 0 && 0 === --zG && tG()
     }
 
-    function Tu() {
-      Mu = 0
+    function HG() {
+      zG = 0
     }
 
-    function Hu() {
-      Iu() && !0 === Fu() && Wu()
+    function tG() {
+      qG() && !0 === nG() && AG()
     }
 
-    function Au() {
-      Gu = !0, (0, qu.H)().unlockPointer()
+    function DG() {
+      oG = !0, (0, UG.I)().unlockPointer()
     }
 
-    function nu() {
-      bu = !1, cu = !1, Nu = !1, clearTimeout(fu), Du = !1, gu = !1, Mu = 0, Gu = !1;
-      const uu = Cu;
-      Cu = !1, uu && yu()
+    function NG() {
+      pG = !1, fG = !1, QG = !1, clearTimeout(YG), JG = !1, rG = !1, zG = 0, oG = !1;
+      const GG = VG;
+      VG = !1, GG && OG()
     }
 
-    function yu() {
-      for (const uu of [...wu]) uu(Cu);
-      Uu.h.TY("pointerLockUpdate", Cu)
+    function OG() {
+      for (const GG of [...uG]) GG(VG);
+      SG.l.xh("pointerLockUpdate", VG)
     }
   },
-  40932: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => cu,
-      e: () => lu,
-      h: () => bu,
-      j: () => fu,
-      n: () => Xu,
-      r: () => Cu,
-      t: () => qu
+  41056: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => fG,
+      g: () => kG,
+      k: () => pG,
+      l: () => YG,
+      m: () => yG,
+      n: () => VG,
+      q: () => UG
     });
-    let su = null,
-      Uu = null,
-      Zu = null;
+    let wG = null,
+      SG = null,
+      LG = null;
 
-    function Xu(uu) {
-      su = uu
+    function yG(GG) {
+      wG = GG
     }
 
-    function lu() {
-      return su
+    function kG() {
+      return wG
     }
 
-    function qu(uu) {
-      Uu = uu
+    function UG(GG) {
+      SG = GG
     }
 
-    function fu() {
-      return Uu
+    function YG() {
+      return SG
     }
 
-    function Cu(uu) {
-      Zu = uu
+    function VG(GG) {
+      LG = GG
     }
 
-    function bu() {
-      return Zu
+    function pG() {
+      return LG
     }
 
-    function cu() {
-      var uu, Eu;
-      return !0 === (null === (uu = Uu) || void 0 === uu || null === (Eu = uu.currentViewer) || void 0 === Eu ? void 0 : Eu.inPlayback)
+    function fG() {
+      var GG, bG;
+      return !0 === (null === (GG = SG) || void 0 === GG || null === (bG = GG.currentViewer) || void 0 === bG ? void 0 : bG.inPlayback)
     }
   },
-  41221: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      attachPlayGameSources: () => ds,
-      playGameSources: () => ws
+  41395: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      attachPlayGameSources: () => uw,
+      playGameSources: () => Xw
     });
-    var su = ju(1986),
-      Uu = ju(40932),
-      Zu = ju(4962),
-      Xu = ju(40847),
-      lu = ju(41206),
-      qu = ju(39897),
-      fu = ju(24),
-      Cu = ju(4976),
-      bu = ju(4970),
-      cu = ju(40877),
-      Nu = ju(40904),
-      Ou = ju(41223),
-      Yu = ju(40889);
-    (0, Yu.n)(Cu.mc.Chat, (uu => {
-      if (uu.payloadKind !== bu.ic.Msgpack) return;
-      const Eu = function(uu) {
-        if (null === uu || "object" !== typeof uu || !("content" in uu)) return null;
+    var wG = ZG(1895),
+      SG = ZG(41056),
+      LG = ZG(4800),
+      yG = ZG(40971),
+      kG = ZG(41383),
+      UG = ZG(39986),
+      YG = ZG(19),
+      VG = ZG(4818),
+      pG = ZG(4810),
+      fG = ZG(40999),
+      QG = ZG(41027),
+      KG = ZG(41404),
+      hG = ZG(41012);
+    (0, hG.l)(VG.jc.Chat, (GG => {
+      if (GG.payloadKind !== pG.jc.Msgpack) return;
+      const bG = function(GG) {
+        if (null === GG || "object" !== typeof GG || !("content" in GG)) return null;
         const {
-          chatMsgId: Eu,
-          content: ju,
-          chatterEId: su
-        } = uu;
+          chatMsgId: bG,
+          content: ZG,
+          chatterEId: wG
+        } = GG;
         return {
-          serverChatMsgId: null !== Eu && void 0 !== Eu ? Eu : void 0,
-          content: ju,
-          chatterEId: void 0 === su || null === su ? void 0 : String(su)
+          serverChatMsgId: null !== bG && void 0 !== bG ? bG : void 0,
+          content: ZG,
+          chatterEId: void 0 === wG || null === wG ? void 0 : String(wG)
         }
-      }((0, cu.d)(uu.payload));
-      null !== Eu && fu.h.TY("chat", Eu, !0)
+      }((0, fG.e)(GG.payload));
+      null !== bG && YG.l.xh("chat", bG, !0)
     }));
-    const hu = {
-        chatReceived: (0, qu.h)((function(uu) {
-          var Eu, ju, su;
+    const dG = {
+        chatReceived: (0, UG.l)((function(GG) {
+          var bG, ZG, wG;
           return {
-            id: uu,
-            name: null !== (Eu = Ou.f.getName(uu)) && void 0 !== Eu ? Eu : null,
-            local: (0, Nu.e)() === uu,
-            profileEffect: null !== (ju = null === (su = (0, Ou.h)(uu)) || void 0 === su ? void 0 : su.profileEffect) && void 0 !== ju ? ju : null
+            id: GG,
+            name: null !== (bG = KG.f.getName(GG)) && void 0 !== bG ? bG : null,
+            local: (0, QG.i)() === GG,
+            profileEffect: null !== (ZG = null === (wG = (0, KG.g)(GG)) || void 0 === wG ? void 0 : wG.profileEffect) && void 0 !== ZG ? ZG : null
           }
         }))
       },
-      Du = {
-        sendChatMessage(uu) {
-          var Eu;
+      JG = {
+        sendChatMessage(GG) {
+          var bG;
           let {
-            VC: ju,
-            channelName: su
-          } = uu;
-          null === (Eu = (0, Xu.l)()) || void 0 === Eu || Eu.clientApi.sendChat(ju, su)
+            vV: ZG,
+            channelName: wG
+          } = GG;
+          null === (bG = (0, yG.f)()) || void 0 === bG || bG.clientApi.sendChat(ZG, wG)
         }
       };
-    var gu = ju(202),
-      Mu = ju(2011),
-      eu = ju(40833),
-      Gu = ju(39891);
-    const pu = [0, 0, 0],
-      wu = {
-        codeBlockClickable(uu) {
-          var Eu;
-          const ju = (0, Xu.l)();
-          if (null === ju || void 0 === ju || !ju.isSessionLive) return !1;
-          const su = ju.api;
-          if (0 !== (eu.u.playerFlags(su.apiView, 0) & eu.td.Crouching)) return !1;
-          const Uu = su.queries.directorEntity(su.localId) >= eu.qb.BYTES ? su.memoryData(su.scratch(), eu.qb.BYTES, 8, "the local player's DirectorEntity") : null;
-          if (null === Uu) return !1;
-          for (let Zu = 0; Zu < 3; Zu++) pu[Zu] = eu.qb.feet(Uu, 0, Zu);
-          return pu[1] += eu.qb.eyeHeight(Uu, 0), (0, Gu.d)(pu, uu, null !== (Eu = Mu.e.get("blockReach")) && void 0 !== Eu ? Eu : gu.e.Bh)
+    var rG = ZG(188),
+      zG = ZG(1923),
+      EG = ZG(40954),
+      oG = ZG(39982);
+    const XG = [0, 0, 0],
+      uG = {
+        codeBlockClickable(GG) {
+          var bG;
+          const ZG = (0, yG.f)();
+          if (null === ZG || void 0 === ZG || !ZG.isSessionLive) return !1;
+          const wG = ZG.api;
+          if (0 !== (EG.v.playerFlags(wG.apiView, 0) & EG.Hd.Crouching)) return !1;
+          const SG = wG.queries.directorEntity(wG.localId) >= EG.rb.BYTES ? wG.memoryData(wG.scratch(), EG.rb.BYTES, 8, "the local player's DirectorEntity") : null;
+          if (null === SG) return !1;
+          for (let LG = 0; LG < 3; LG++) XG[LG] = EG.rb.feet(SG, 0, LG);
+          return XG[1] += EG.rb.eyeHeight(SG, 0), (0, oG.d)(XG, GG, null !== (bG = zG.c.get("blockReach")) && void 0 !== bG ? bG : rG.d.Nd)
         }
       },
-      Ju = {
-        clickCodeBlock(uu) {
-          var Eu;
-          null === (Eu = (0, Xu.l)()) || void 0 === Eu || Eu.clickCodeBlock(uu)
+      iG = {
+        clickCodeBlock(GG) {
+          var bG;
+          null === (bG = (0, yG.f)()) || void 0 === bG || bG.clickCodeBlock(GG)
         }
       };
-    var du = ju(40856),
-      au = ju(41230),
-      Pu = ju(1069),
-      ou = ju(39344),
-      ku = ju(4958),
-      mu = ju(40864),
-      vu = ju(40854),
-      Ku = ju(40873);
+    var CG = ZG(40984),
+      WG = ZG(41410),
+      mG = ZG(982),
+      IG = ZG(39435),
+      FG = ZG(4792),
+      vG = ZG(40989),
+      aG = ZG(40976),
+      cG = ZG(40993);
 
-    function Vu(uu) {
-      if (null === uu) return null;
-      const Eu = [];
-      for (const ju of uu) {
-        const uu = Object.keys(ju)[0];
-        if ("jE" === uu) {
+    function lG(GG) {
+      if (null === GG) return null;
+      const bG = [];
+      for (const ZG of GG) {
+        const GG = Object.keys(ZG)[0];
+        if ("Gb" === GG) {
           const {
-            str: uu,
-            style: su,
-            clickableUrl: Uu
-          } = ju.jE, Zu = Object.keys(uu)[0], Xu = uu[Zu];
-          "string" !== Zu && "styledEntityName" !== Zu && "styledTranslatedText" !== Zu || Eu.push({
-            str: Xu,
-            style: su,
-            clickableUrl: Uu
+            str: GG,
+            style: wG,
+            clickableUrl: SG
+          } = ZG.Gb, LG = Object.keys(GG)[0], yG = GG[LG];
+          "string" !== LG && "styledEntityName" !== LG && "styledTranslatedText" !== LG || bG.push({
+            str: yG,
+            style: wG,
+            clickableUrl: SG
           })
-        } else Eu.push(ju[uu])
+        } else bG.push(ZG[GG])
       }
-      return Eu
+      return bG
     }
-    const ru = {
-      screenPos(uu) {
-        var Eu, ju;
-        return null !== (Eu = null === (ju = (0, Xu.l)()) || void 0 === ju ? void 0 : ju.renderFrame.projectWorldPosToScreenPos(uu)) && void 0 !== Eu ? Eu : {
+    const jG = {
+      screenPos(GG) {
+        var bG, ZG;
+        return null !== (bG = null === (ZG = (0, yG.f)()) || void 0 === ZG ? void 0 : ZG.renderFrame.projectWorldPosToScreenPos(GG)) && void 0 !== bG ? bG : {
           x: 0,
           y: 0
         }
       }
     };
-    let Qu = !1;
+    let PG = !1;
 
-    function iu() {
-      Qu || (Qu = !0, (0, Yu.n)(Cu.mc.ProgressBarUpdate, (uu => {
-        const Eu = (0, Ku.i)(uu);
-        (0, Ku.e)(Eu) && fu.h.TY("progressBarUpdate", Eu, !0)
-      })), (0, Yu.n)(mu.w, (uu => {
-        const Eu = (0, Ku.g)(mu.w, uu);
-        Eu && fu.h.TY("middleScreenBarInitiate", {
-          duration: Eu.BU,
-          LU: Eu.LU,
-          horizBarRemOffset: Eu.tU
+    function MG() {
+      PG || (PG = !0, (0, hG.l)(VG.jc.ProgressBarUpdate, (GG => {
+        const bG = (0, cG.j)(GG);
+        (0, cG.d)(bG) && YG.l.xh("progressBarUpdate", bG, !0)
+      })), (0, hG.l)(vG.v, (GG => {
+        const bG = (0, cG.f)(vG.v, GG);
+        bG && YG.l.xh("middleScreenBarInitiate", {
+          duration: bG.cS,
+          lS: bG.lS,
+          horizBarRemOffset: bG.jS
         }, !0)
-      })), (0, Yu.n)(Cu.mc.RemoveMiddleScreenBar, (() => {
-        fu.h.TY("middleScreenBarRemove")
-      })), (0, Yu.n)(mu.hb, (uu => {
-        const Eu = (0, Ku.g)(mu.hb, uu);
-        if (Eu) {
-          var ju;
-          const uu = Eu.ku ? null === (ju = (0, Xu.l)()) || void 0 === ju ? void 0 : ju.renderFrame.projectDirectionToScreenPos(Eu.ku) : void 0;
-          fu.h.TY("sendHitmarker", {
-            FE: Eu.FE,
-            screenPos: uu
+      })), (0, hG.l)(VG.jc.RemoveMiddleScreenBar, (() => {
+        YG.l.xh("middleScreenBarRemove")
+      })), (0, hG.l)(vG.db, (GG => {
+        const bG = (0, cG.f)(vG.db, GG);
+        if (bG) {
+          var ZG;
+          const GG = bG.WG ? null === (ZG = (0, yG.f)()) || void 0 === ZG ? void 0 : ZG.renderFrame.projectDirectionToScreenPos(bG.WG) : void 0;
+          YG.l.xh("sendHitmarker", {
+            eb: bG.eb,
+            screenPos: GG
           }, !0)
         }
-      })), (0, Yu.n)(mu.ob, (uu => {
-        const Eu = (0, Ku.g)(mu.ob, uu);
-        if (Eu) {
+      })), (0, hG.l)(vG.ib, (GG => {
+        const bG = (0, cG.f)(vG.ib, GG);
+        if (bG) {
           const {
-            id: uu,
-            position: ju,
-            style: su,
-            KE: Uu,
-            rE: Zu
-          } = Eu;
-          fu.h.TY("setDirectionArrow", {
-            id: uu,
-            position: ju,
-            style: su,
-            text: Vu(Uu),
-            rE: Zu
+            id: GG,
+            position: ZG,
+            style: wG,
+            jb: SG,
+            Mb: LG
+          } = bG;
+          YG.l.xh("setDirectionArrow", {
+            id: GG,
+            position: ZG,
+            style: wG,
+            text: lG(SG),
+            Mb: LG
           }, !0)
         }
-      })), (0, Yu.n)(mu.d, (uu => {
-        const Eu = (0, Ku.g)(mu.d, uu);
-        Eu && fu.h.TY("clearDirectionArrow", {
-          id: Eu.id
+      })), (0, hG.l)(vG.d, (GG => {
+        const bG = (0, cG.f)(vG.d, GG);
+        bG && YG.l.xh("clearDirectionArrow", {
+          id: bG.id
         }, !0)
-      })), (0, Yu.n)(mu.o, (uu => {
-        const Eu = (0, Ku.g)(mu.o, uu);
-        Eu && fu.h.TY("flyingMiddleMessage", {
-          content: Vu(Eu.SZ),
-          IZ: Eu.IZ,
-          FZ: Eu.FZ
+      })), (0, hG.l)(vG.m, (GG => {
+        const bG = (0, cG.f)(vG.m, GG);
+        bG && YG.l.xh("flyingMiddleMessage", {
+          content: lG(bG.aL),
+          cL: bG.cL,
+          lL: bG.lL
         }, !0)
-      })), (0, Yu.n)(Cu.mc.WorldVariation, (uu => {
-        const Eu = (0, Ku.i)(uu);
-        if ("string" === typeof Eu) {
-          const uu = Eu === Pu.f ? null : {
-            message: `Currently loaded as variation: ${Eu}`,
+      })), (0, hG.l)(VG.jc.WorldVariation, (GG => {
+        const bG = (0, cG.j)(GG);
+        if ("string" === typeof bG) {
+          const GG = bG === mG.d ? null : {
+            message: `Currently loaded as variation: ${bG}`,
             type: "Warning"
           };
-          fu.h.TY("showPermanentBottomMessage", uu, !0)
+          YG.l.xh("showPermanentBottomMessage", GG, !0)
         }
-      })), (0, Yu.n)(mu.L, (uu => {
-        const Eu = (0, Ku.g)(mu.L, uu);
-        Eu && function(uu, Eu) {
+      })), (0, hG.l)(vG.L, (GG => {
+        const bG = (0, cG.f)(vG.L, GG);
+        bG && function(GG, bG) {
           const {
-            type: ju,
-            params: su
-          } = (0, ou.i)(Eu), Uu = {
-            ...su
+            type: ZG,
+            params: wG
+          } = (0, IG.e)(bG), SG = {
+            ...wG
           };
-          for (const Zu of ou.e) Uu[Zu] && (Uu[Zu] = Vu(Uu[Zu]));
-          ku.d.queueQTE(uu, ju, Uu).getResult().then((Eu => {
-            var ju;
-            "boolean" === typeof Eu && (null === (ju = (0, Xu.l)()) || void 0 === ju || ju.send(vu.c.QteResponse, {
-              qteId: uu,
-              qteResponse: Eu
+          for (const LG of IG.b) SG[LG] && (SG[LG] = lG(SG[LG]));
+          FG.e.queueQTE(GG, ZG, SG).getResult().then((bG => {
+            var ZG;
+            "boolean" === typeof bG && (null === (ZG = (0, yG.f)()) || void 0 === ZG || ZG.send(aG.b.QteResponse, {
+              qteId: GG,
+              qteResponse: bG
             }))
           }))
-        }(Eu.id, Eu.Hu)
-      })), (0, Yu.n)(mu._, (uu => {
-        const Eu = (0, Ku.g)(mu._, uu);
-        "number" === typeof Eu && ku.d.cancelQTE(Eu)
-      })), (0, Yu.i)((() => {
-        ku.d.reset()
-      })), (0, Yu.k)((() => {
-        ku.d.reset()
-      })), (0, Yu.n)(Cu.mc.EditItemCraftingRecipes, (uu => {
-        const Eu = (0, Ku.i)(uu);
-        (0, Ku.e)(Eu) && fu.h.TY("craftingRecipesEdited", {
-          itemName: Eu.craftingRecipeItemName,
-          recipesForItem: Eu.recipesForItem
+        }(bG.id, bG.TG)
+      })), (0, hG.l)(vG.Y, (GG => {
+        const bG = (0, cG.f)(vG.Y, GG);
+        "number" === typeof bG && FG.e.cancelQTE(bG)
+      })), (0, hG.f)((() => {
+        FG.e.reset()
+      })), (0, hG.j)((() => {
+        FG.e.reset()
+      })), (0, hG.l)(VG.jc.EditItemCraftingRecipes, (GG => {
+        const bG = (0, cG.j)(GG);
+        (0, cG.d)(bG) && YG.l.xh("craftingRecipesEdited", {
+          itemName: bG.craftingRecipeItemName,
+          recipesForItem: bG.recipesForItem
         })
-      })), (0, Yu.n)(mu.W, (uu => {
-        const Eu = (0, Ku.g)(mu.W, uu);
-        Eu && fu.h.TY("craftingRecipesEdited", {
-          itemName: Eu.FU,
+      })), (0, hG.l)(vG.V, (GG => {
+        const bG = (0, cG.f)(vG.V, GG);
+        bG && YG.l.xh("craftingRecipesEdited", {
+          itemName: bG.aS,
           recipesForItem: []
         })
       })))
     }
-    var Wu = ju(22);
-    const Su = [{
+    var AG = ZG(17);
+    const sG = [{
       allowed: !1,
       movesFly: !1
     }, {
@@ -1034,1531 +1034,1531 @@ export const modules = {
       movesFly: !0
     }];
 
-    function Iu(uu) {
-      return eu.u.playerFlags(uu.api.apiView, 0)
+    function qG(GG) {
+      return EG.v.playerFlags(GG.api.apiView, 0)
     }
-    const Fu = {
-        freeCamera: (0, Nu.c)((uu => () => {
-          const Eu = uu.isSessionLive && 0 !== (Iu(uu) & eu.td.FreeCamMoves),
-            ju = uu.freeCameraAllowed() && null === Wu.d.get("scriptedCameraFacing");
-          return Su[(ju ? 2 : 0) + (Eu ? 1 : 0)]
-        }), Su[0], (uu => (0, Zu.t)(uu)))
+    const nG = {
+        freeCamera: (0, QG.e)((GG => () => {
+          const bG = GG.isSessionLive && 0 !== (qG(GG) & EG.Hd.FreeCamMoves),
+            ZG = GG.freeCameraAllowed() && null === AG.e.get("scriptedCameraFacing");
+          return sG[(ZG ? 2 : 0) + (bG ? 1 : 0)]
+        }), sG[0], (GG => (0, LG.r)(GG)))
       },
-      Bu = {
-        setFreeCameraMovesFly: uu => {
-          var Eu;
-          null === (Eu = (0, Xu.l)()) || void 0 === Eu || Eu.setFreeCameraMovesFly(uu)
+      gG = {
+        setFreeCameraMovesFly: GG => {
+          var bG;
+          null === (bG = (0, yG.f)()) || void 0 === bG || bG.setFreeCameraMovesFly(GG)
         }
       },
-      Lu = {
+      eG = {
         freeCameraPos: () => {
-          const uu = (0, Xu.l)();
-          return null !== uu && void 0 !== uu && uu.isSessionLive && uu.renderFrame.hasView && 0 !== (Iu(uu) & eu.td.FreeCam) ? uu.renderFrame.cameraPosition : null
+          const GG = (0, yG.f)();
+          return null !== GG && void 0 !== GG && GG.isSessionLive && GG.renderFrame.hasView && 0 !== (qG(GG) & EG.Hd.FreeCam) ? GG.renderFrame.cameraPosition : null
         }
       };
-    var tu = ju(39497);
-    let xu = !1,
-      Tu = !1;
+    var RG = ZG(39593);
+    let TG = !1,
+      HG = !1;
 
-    function Hu() {
-      const uu = (0, Xu.l)();
-      if (null === uu || void 0 === uu || !uu.isSessionLive) return void(xu = !1);
-      const Eu = 0 !== (eu.u.playerFlags(uu.api.apiView, 0) & eu.td.FreeCam);
-      Eu !== xu && (xu = Eu, (0, tu.d)(Eu))
+    function tG() {
+      const GG = (0, yG.f)();
+      if (null === GG || void 0 === GG || !GG.isSessionLive) return void(TG = !1);
+      const bG = 0 !== (EG.v.playerFlags(GG.api.apiView, 0) & EG.Hd.FreeCam);
+      bG !== TG && (TG = bG, (0, RG.b)(bG))
     }
-    var Au = ju(349),
-      nu = ju(37428),
-      yu = ju(2019);
-    var zu = ju(41235),
-      Ru = ju(40901);
-    const uE = {
+    var DG = ZG(352),
+      NG = ZG(37396),
+      OG = ZG(1939);
+    var xG = ZG(41413),
+      BG = ZG(41020);
+    const Gb = {
       interactPrompt: null,
       blockText: null,
       neededTool: null
     };
-    let EE = "off";
+    let bb = "off";
 
-    function jE(uu) {
-      var Eu;
-      return null === uu ? null : {
-        label: null !== (Eu = (0, zu.c)(uu, "interactionPrompt")) && void 0 !== Eu ? Eu : null
+    function Zb(GG) {
+      var bG;
+      return null === GG ? null : {
+        label: null !== (bG = (0, xG.b)(GG, "interactionPrompt")) && void 0 !== bG ? bG : null
       }
     }
-    const sE = new Map([
-      [eu.mc.Open, {
-        label: qu.c.open
+    const wb = new Map([
+      [EG.mc.Open, {
+        label: UG.g.open
       }],
-      [eu.mc.Close, {
-        label: qu.c.close
+      [EG.mc.Close, {
+        label: UG.g.close
       }],
-      [eu.mc.Milk, {
-        label: qu.c.milk
+      [EG.mc.Milk, {
+        label: UG.g.milk
       }],
-      [eu.mc.Shear, {
-        label: qu.c.shear
+      [EG.mc.Shear, {
+        label: UG.g.shear
       }],
-      [eu.mc.Tame, {
-        label: qu.c.tame
+      [EG.mc.Tame, {
+        label: UG.g.tame
       }],
-      [eu.mc.Feed, {
-        label: qu.c.feed
+      [EG.mc.Feed, {
+        label: UG.g.feed
       }],
-      [eu.mc.Ride, {
-        label: qu.c.ride
+      [EG.mc.Ride, {
+        label: UG.g.ride
       }]
     ]);
-    class UE {
+    class Sb {
       constructor() {
-        this.target = uE, this.ul = eu.Tc, this.optionName = null, this.pickaxe = new qu.b
+        this.target = Gb, this.Gk = EG.Yc, this.optionName = null, this.pickaxe = new UG.d
       }
-      read(uu) {
-        var Eu;
-        const ju = eu.u.targetBlockId(uu.api.apiView, 0);
-        ju !== this.ul && (this.ul = ju, this.optionName = ju === eu.Tc ? null : `${uu.tables.getMetaInfo(ju).rootName}CrosshairText`);
-        const su = null === this.optionName ? null : null !== (Eu = uu.tables.getClientOption(this.optionName)) && void 0 !== Eu ? Eu : null;
-        this.pickaxe.update(function(uu, Eu) {
-          var ju, su, Uu;
-          if (0 === (eu.u.playerFlags(uu.api.apiView, 0) & eu.td.Breaking) || Eu === eu.Tc || 0 === Eu) return null;
+      read(GG) {
+        var bG;
+        const ZG = EG.v.targetBlockId(GG.api.apiView, 0);
+        ZG !== this.Gk && (this.Gk = ZG, this.optionName = ZG === EG.Yc ? null : `${GG.tables.getMetaInfo(ZG).rootName}CrosshairText`);
+        const wG = null === this.optionName ? null : null !== (bG = GG.tables.getClientOption(this.optionName)) && void 0 !== bG ? bG : null;
+        this.pickaxe.update(function(GG, bG) {
+          var ZG, wG, SG;
+          if (0 === (EG.v.playerFlags(GG.api.apiView, 0) & EG.Hd.Breaking) || bG === EG.Yc || 0 === bG) return null;
           const {
-            tables: Zu
-          } = uu;
-          if (!0 === Zu.getClientOption("creative")) return null;
-          const Xu = Zu.nameOfId(Eu),
-            lu = null === (ju = uu.items.dl()) || void 0 === ju ? void 0 : ju.name,
-            qu = null !== (su = Zu.getItemStat(Xu, "harvestLevel")) && void 0 !== su ? su : 0;
-          return (0, Au.Gc)({
-            blockHarvestType: Zu.getDefaultItemStat(Xu, "harvestType"),
-            blockHarvestLevel: Zu.getDefaultItemStat(Xu, "harvestLevel"),
-            harvestLevel: qu,
-            heldToolType: void 0 === lu ? void 0 : Zu.getDefaultItemStat(lu, "harvests"),
-            heldToolLevel: void 0 === lu ? void 0 : Zu.getDefaultItemStat(lu, "level")
-          }) && null !== (Uu = nu.n[qu]) && void 0 !== Uu ? Uu : null
-        }(uu, ju)), uu.watchPromptPick(EE);
-        const Uu = "touch" === EE ? function(uu) {
-          var Eu;
-          const ju = uu.interactLabel;
-          return ju === eu.mc.Entity ? jE(uu.promptEntity) : ju === eu.mc.TameWith ? {
-            label: (0, qu.p)(uu.tables.nameOfId(uu.interactIcon))
-          } : null !== (Eu = sE.get(ju)) && void 0 !== Eu ? Eu : null
-        }(uu) : jE(uu.promptEntity);
-        return this.target = (0, yu.o)(this.target, {
-          interactPrompt: Uu,
-          blockText: su,
+            tables: LG
+          } = GG;
+          if (!0 === LG.getClientOption("creative")) return null;
+          const yG = LG.nameOfId(bG),
+            kG = null === (ZG = GG.items.Ik()) || void 0 === ZG ? void 0 : ZG.name,
+            UG = null !== (wG = LG.getItemStat(yG, "harvestLevel")) && void 0 !== wG ? wG : 0;
+          return (0, DG.Kc)({
+            blockHarvestType: LG.getDefaultItemStat(yG, "harvestType"),
+            blockHarvestLevel: LG.getDefaultItemStat(yG, "harvestLevel"),
+            harvestLevel: UG,
+            heldToolType: void 0 === kG ? void 0 : LG.getDefaultItemStat(kG, "harvests"),
+            heldToolLevel: void 0 === kG ? void 0 : LG.getDefaultItemStat(kG, "level")
+          }) && null !== (SG = NG.n[UG]) && void 0 !== SG ? SG : null
+        }(GG, ZG)), GG.watchPromptPick(bb);
+        const SG = "touch" === bb ? function(GG) {
+          var bG;
+          const ZG = GG.interactLabel;
+          return ZG === EG.mc.Entity ? Zb(GG.promptEntity) : ZG === EG.mc.TameWith ? {
+            label: (0, UG.v)(GG.tables.nameOfId(GG.interactIcon))
+          } : null !== (bG = wb.get(ZG)) && void 0 !== bG ? bG : null
+        }(GG) : Zb(GG.promptEntity);
+        return this.target = (0, OG.n)(this.target, {
+          interactPrompt: SG,
+          blockText: wG,
           neededTool: this.pickaxe.shown
         }), this.target
       }
     }
-    let ZE = null;
-    const XE = {
+    let Lb = null;
+    const yb = {
       current: () => {
-        var uu, Eu;
-        return null !== (uu = null === (Eu = ZE) || void 0 === Eu ? void 0 : Eu.target) && void 0 !== uu ? uu : uE
+        var GG, bG;
+        return null !== (GG = null === (bG = Lb) || void 0 === bG ? void 0 : bG.target) && void 0 !== GG ? GG : Gb
       },
-      watch: uu => {
-        const Eu = new UE;
-        ZE = Eu;
-        const ju = (0, Nu.g)((ju => {
-          let su = Eu.read(ju);
-          uu(su);
-          const Uu = (0, Zu.u)((() => {
-            const Uu = Eu.read(ju);
-            Uu !== su && (su = Uu, uu(Uu))
+      watch: GG => {
+        const bG = new Sb;
+        Lb = bG;
+        const ZG = (0, QG.l)((ZG => {
+          let wG = bG.read(ZG);
+          GG(wG);
+          const SG = (0, LG.t)((() => {
+            const SG = bG.read(ZG);
+            SG !== wG && (wG = SG, GG(SG))
           }));
           return () => {
-            Uu(), ju.watchPromptPick("off")
+            SG(), ZG.watchPromptPick("off")
           }
         }));
         return () => {
-          ju(), ZE === Eu && (ZE = null)
+          ZG(), Lb === bG && (Lb = null)
         }
       }
     };
-    let lE = 0,
-      qE = 0;
-    const fE = {
-        health: qu.m,
-        aura: qu.d,
-        hotbar: Ru.c.states.hotbar,
-        heldItemAim: Ru.c.states.heldItemAim,
-        crouching: (0, Nu.c)((uu => function(uu) {
-          const Eu = () => 0 !== (eu.u.playerFlags(uu.apiView, 0) & eu.td.Crouching);
+    let kb = 0,
+      Ub = 0;
+    const Yb = {
+        health: UG.r,
+        aura: UG.i,
+        hotbar: BG.c.states.hotbar,
+        heldItemAim: BG.c.states.heldItemAim,
+        crouching: (0, QG.e)((GG => function(GG) {
+          const bG = () => 0 !== (EG.v.playerFlags(GG.apiView, 0) & EG.Hd.Crouching);
           return {
-            current: Eu,
-            watch(uu) {
-              let ju = Eu();
-              return (0, Zu.t)((() => {
-                const su = Eu();
-                su !== ju && (ju = su, uu(su))
+            current: bG,
+            watch(GG) {
+              let ZG = bG();
+              return (0, LG.r)((() => {
+                const wG = bG();
+                wG !== ZG && (ZG = wG, GG(wG))
               }))
             }
           }
-        }(uu.api).current), !1, (uu => (0, Zu.t)(uu))),
-        flight: (0, Nu.c)((uu => () => function(uu) {
-          const Eu = eu.u.playerFlags(uu.apiView, 0);
-          return (0, qu.j)(0 !== (Eu & eu.td.CanFly), 0 !== (Eu & eu.td.Flying))
-        }(uu.api)), (0, qu.j)(!1, !1), (uu => (0, Zu.t)(uu))),
-        gliderBoostFuel: (0, Nu.c)((uu => () => eu.u.gliderBoostFuel(uu.api.apiView, 0)), 0, (uu => (0, Zu.t)(uu))),
-        crosshairTarget: XE
+        }(GG.api).current), !1, (GG => (0, LG.r)(GG))),
+        flight: (0, QG.e)((GG => () => function(GG) {
+          const bG = EG.v.playerFlags(GG.apiView, 0);
+          return (0, UG.o)(0 !== (bG & EG.Hd.CanFly), 0 !== (bG & EG.Hd.Flying))
+        }(GG.api)), (0, UG.o)(!1, !1), (GG => (0, LG.r)(GG))),
+        gliderBoostFuel: (0, QG.e)((GG => () => EG.v.gliderBoostFuel(GG.api.apiView, 0)), 0, (GG => (0, LG.r)(GG))),
+        crosshairTarget: yb
       },
-      CE = {
-        hotbarSlotRequested: Ru.c.events.hotbarSlotRequested,
-        hotbarScrolled: Ru.c.events.hotbarScrolled,
-        numberKeyPressed: Ru.c.events.numberKeyPressed,
-        shotDamageToShow: (0, qu.o)((uu => !0 === (0, zu.c)(uu, "showDamageAmounts")))
+      Vb = {
+        hotbarSlotRequested: BG.c.events.hotbarSlotRequested,
+        hotbarScrolled: BG.c.events.hotbarScrolled,
+        numberKeyPressed: BG.c.events.numberKeyPressed,
+        shotDamageToShow: (0, UG.u)((GG => !0 === (0, xG.b)(GG, "showDamageAmounts")))
       },
-      bE = {
-        selectHotbarSlot: Ru.c.commands.selectHotbarSlot,
-        setCrosshairInteractPrompt: uu => {
-          EE = uu
+      pb = {
+        selectHotbarSlot: BG.c.commands.selectHotbarSlot,
+        setCrosshairInteractPrompt: GG => {
+          bb = GG
         }
       },
-      cE = {
+      fb = {
         momentumFrac: function() {
-          var uu, Eu, ju;
-          const su = (0, Xu.l)(),
-            Uu = performance.now(),
-            Zu = null === su || void 0 === su || null === (uu = su.items.dl()) || void 0 === uu || null === (Eu = uu.attributes) || void 0 === Eu || null === (ju = Eu.customAttributes) || void 0 === ju ? void 0 : ju.enchantments;
-          return lE = null !== su && null !== Zu && void 0 !== Zu && Zu.Momentum ? 0 !== (eu.u.playerFlags(su.api.apiView, 0) & eu.td.Breaking) ? Math.max(0, eu.u.momentumFrac(su.api.apiView, 0)) : Math.max(0, lE - (Uu - qE) / 1500) : 0, qE = Uu, lE
+          var GG, bG, ZG;
+          const wG = (0, yG.f)(),
+            SG = performance.now(),
+            LG = null === wG || void 0 === wG || null === (GG = wG.items.Ik()) || void 0 === GG || null === (bG = GG.attributes) || void 0 === bG || null === (ZG = bG.customAttributes) || void 0 === ZG ? void 0 : ZG.enchantments;
+          return kb = null !== wG && null !== LG && void 0 !== LG && LG.Momentum ? 0 !== (EG.v.playerFlags(wG.api.apiView, 0) & EG.Hd.Breaking) ? Math.max(0, EG.v.momentumFrac(wG.api.apiView, 0)) : Math.max(0, kb - (SG - Ub) / 1500) : 0, Ub = SG, kb
         }
       };
-    var NE = ju(40840);
-    const OE = {
-      lobbyManage(uu) {
-        var Eu;
-        null === (Eu = (0, Xu.l)()) || void 0 === Eu || Eu.send(vu.c.LobbyManage, uu)
+    var Qb = ZG(40963);
+    const Kb = {
+      lobbyManage(GG) {
+        var bG;
+        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.LobbyManage, GG)
       }
     };
-    var YE = ju(1298),
-      hE = ju(36876),
-      DE = ju(9006),
-      gE = ju(1687),
-      ME = ju(2516),
-      eE = ju(4979);
-    let GE = !1;
+    var hb = ZG(1198),
+      db = ZG(36836),
+      Jb = ZG(8839),
+      rb = ZG(1579),
+      zb = ZG(2380),
+      Eb = ZG(4827);
+    let ob = !1;
 
-    function pE(uu) {
-      GE = uu
+    function Xb(GG) {
+      ob = GG
     }
 
-    function wE() {
-      "inGame" !== Wu.d.get("gameState") || (0, gE.t)() || fu.h.TY("ctrlCrouchWithoutFullscreen")
+    function ub() {
+      "inGame" !== AG.e.get("gameState") || (0, rb.u)() || YG.l.xh("ctrlCrouchWithoutFullscreen")
     }
-    let JE = !1;
-    const dE = {
+    let ib = !1;
+    const Cb = {
         OpenEmoteWheel: () => {
-          pE(!0), JE = !0, queueMicrotask((() => {
-            JE && (JE = !1, fu.h.TY("requestEmoteWheelHoldOpen"))
+          Xb(!0), ib = !0, queueMicrotask((() => {
+            ib && (ib = !1, YG.l.xh("requestEmoteWheelHoldOpen"))
           }))
         },
         ToggleFullCoordinateOverlay: () => {
-          fu.h.TY("toggleFullCoordinateOverlay")
+          YG.l.xh("toggleFullCoordinateOverlay")
         },
         KeyYPressed: () => {
-          (0, hE.c)() || fu.h.TY("YKeyPressed")
+          (0, db.b)() || YG.l.xh("YKeyPressed")
         },
         KeyXPressed: () => {
-          (0, hE.c)() || fu.h.TY("XKeyPressed")
+          (0, db.b)() || YG.l.xh("XKeyPressed")
         },
-        CtrlCrouch: wE,
+        CtrlCrouch: ub,
         "primary-fire": () => {
-          fu.h.TY("mouseState", {
-            FC: YE.b.DownFirePrimary,
+          YG.l.xh("mouseState", {
+            AV: hb.d.DownFirePrimary,
             isDown: !0
           })
         },
         "alt-fire": () => {
-          fu.h.TY("mouseState", {
-            FC: YE.b.DownFireSecondary,
+          YG.l.xh("mouseState", {
+            AV: hb.d.DownFireSecondary,
             isDown: !0
           })
         },
         TouchHold: () => {
-          fu.h.TY("mouseState", {
-            FC: YE.b.TouchDownLong,
+          YG.l.xh("mouseState", {
+            AV: hb.d.TouchDownLong,
             isDown: !0
           })
         }
       },
-      aE = {
+      Wb = {
         OpenEmoteWheel: () => {
-          pE(!1), JE ? (JE = !1, (0, DE.c)() || fu.h.TY("requestEmoteWheelHoldOpen")) : fu.h.TY("requestEmoteWheelHoldRelease")
+          Xb(!1), ib ? (ib = !1, (0, Jb.c)() || YG.l.xh("requestEmoteWheelHoldOpen")) : YG.l.xh("requestEmoteWheelHoldRelease")
         },
-        CtrlCrouch: wE,
+        CtrlCrouch: ub,
         "primary-fire": () => {
-          fu.h.TY("mouseState", {
-            FC: YE.b.UpFirePrimary,
+          YG.l.xh("mouseState", {
+            AV: hb.d.UpFirePrimary,
             isDown: !1
           })
         },
         "alt-fire": () => {
-          fu.h.TY("mouseState", {
-            FC: YE.b.UpFireSecondary,
+          YG.l.xh("mouseState", {
+            AV: hb.d.UpFireSecondary,
             isDown: !1
           })
         },
         TouchDig: () => {
-          fu.h.TY("mouseState", {
-            FC: YE.b.UpFirePrimary,
+          YG.l.xh("mouseState", {
+            AV: hb.d.UpFirePrimary,
             isDown: !1
           })
         }
       };
-    let PE = !1;
+    let mb = !1;
 
-    function oE() {
-      PE || (PE = !0, (0, eE.f)((uu => {
-        if ((0, Uu.d)()) return;
-        const Eu = (0, eE.c)(uu) ? "primary-fire" : uu.action;
-        var ju;
-        if (uu.down) {
-          if (0 === (uu.flags & ME.b.Synthetic)) {
-            var su;
-            null === (su = dE[Eu]) || void 0 === su || su.call(dE)
+    function Ib() {
+      mb || (mb = !0, (0, Eb.j)((GG => {
+        if ((0, SG.d)()) return;
+        const bG = (0, Eb.g)(GG) ? "primary-fire" : GG.action;
+        var ZG;
+        if (GG.down) {
+          if (0 === (GG.flags & zb.b.Synthetic)) {
+            var wG;
+            null === (wG = Cb[bG]) || void 0 === wG || wG.call(Cb)
           }
-        } else null === (ju = aE[Eu]) || void 0 === ju || ju.call(aE)
+        } else null === (ZG = Wb[bG]) || void 0 === ZG || ZG.call(Wb)
       })))
     }
-    var kE = ju(337),
-      mE = ju(91),
-      vE = ju(31),
-      KE = ju(41110),
-      VE = ju(1369),
-      rE = ju(2533);
-    let QE = !1;
-    const iE = {
-      sendCodeCollab(uu) {
-        var Eu;
-        null === (Eu = (0, Xu.l)()) || void 0 === Eu || Eu.send(vu.c.CodeCollab, (0, vu.n)(uu), (0, rE.d)(uu))
+    var Fb = ZG(333),
+      vb = ZG(80),
+      ab = ZG(29),
+      cb = ZG(41263),
+      lb = ZG(1287),
+      jb = ZG(2400);
+    let Pb = !1;
+    const Mb = {
+      sendCodeCollab(GG) {
+        var bG;
+        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.CodeCollab, (0, aG.p)(GG), (0, jb.e)(GG))
       }
     };
-    var WE = ju(39416),
-      SE = ju(8944);
-    let IE = null,
-      FE = !1,
-      BE = null;
+    var Ab = ZG(39519),
+      sb = ZG(8764);
+    let qb = null,
+      nb = !1,
+      gb = null;
 
-    function LE() {
-      return "inGame" === Wu.d.get("gameState") && !(0, hE.c)()
+    function eb() {
+      return "inGame" === AG.e.get("gameState") && !(0, db.b)()
     }
-    const tE = {
-        OpenInventory: uu => {
-          (0, gE.z)(uu, "inventory", (0, NE.p)())
+    const Rb = {
+        OpenInventory: GG => {
+          (0, rb.z)(GG, "inventory", (0, Qb.n)())
         },
-        OpenShop: uu => {
-          IE && LE() && (0, gE.x)(uu, kE.o.SHOP, !IE.shopIsEmpty(Mu.e.get("shopInfo")))
+        OpenShop: GG => {
+          qb && eb() && (0, rb.x)(GG, Fb.u.SHOP, !qb.shopIsEmpty(zG.c.get("shopInfo")))
         },
-        OpenLobbyLeaderboard: uu => {
-          LE() && (0, gE.x)(uu, kE.o.LOBBY_LEADERBOARD, (0, WE.c)({
-            lobbyLeaderboardInfo: Mu.e.get("lobbyLeaderboardInfo"),
-            lobbyManage: Mu.e.get("lobbyManage")
+        OpenLobbyLeaderboard: GG => {
+          eb() && (0, rb.x)(GG, Fb.u.LOBBY_LEADERBOARD, (0, Ab.b)({
+            lobbyLeaderboardInfo: zG.c.get("lobbyLeaderboardInfo"),
+            lobbyManage: zG.c.get("lobbyManage")
           }))
         },
-        OpenTasksAndLeaderboard: uu => {
-          var Eu;
-          const ju = null === (Eu = IE) || void 0 === Eu ? void 0 : Eu.getClientGameMapKey();
-          ju ? (0, gE.D)(uu, !0, ju) : (0, gE.z)(uu, "retentionFeatures", !(!Mu.e.get("_tasks") && !Mu.e.get("_availableLeaderboards")))
+        OpenTasksAndLeaderboard: GG => {
+          var bG;
+          const ZG = null === (bG = qb) || void 0 === bG ? void 0 : bG.getClientGameMapKey();
+          ZG ? (0, rb.C)(GG, !0, ZG) : (0, rb.z)(GG, "retentionFeatures", !(!zG.c.get("_tasks") && !zG.c.get("_availableLeaderboards")))
         },
-        OpenInviteLink: uu => {
-          (0, gE.z)(uu, "inviteLink", mE.featureFlags.canUseInviteLinks)
+        OpenInviteLink: GG => {
+          (0, rb.z)(GG, "inviteLink", vb.featureFlags.canUseInviteLinks)
         },
-        OpenCodeEditor: uu => {
-          LE() && function(uu) {
-            const Eu = (0, Xu.l)(),
-              ju = null !== Eu && void 0 !== Eu && Eu.isSessionLive ? Eu.api : null,
-              su = ju ? ju.bM(ju.localId) : null;
-            (0, gE.D)(uu, null !== su && (0, rE.b)((0, VE.b)()), (() => {
-              (0, rE.h)(su)
+        OpenCodeEditor: GG => {
+          eb() && function(GG) {
+            const bG = (0, yG.f)(),
+              ZG = null !== bG && void 0 !== bG && bG.isSessionLive ? bG.api : null,
+              wG = ZG ? ZG.HJ(ZG.localId) : null;
+            (0, rb.C)(GG, null !== wG && (0, jb.c)((0, lb.d)()), (() => {
+              (0, jb.i)(wG)
             }))
-          }(uu)
+          }(GG)
         },
         HideUi: () => {
-          fu.h.TY("showUi", !1)
+          YG.l.xh("showUi", !1)
         }
       },
-      xE = {
+      Tb = {
         HideUi: () => {
-          fu.h.TY("showUi", !0)
+          YG.l.xh("showUi", !0)
         }
       };
 
-    function TE() {
-      FE || (FE = !0, ju.e(159).then((() => ju(60866))).then((uu => {
-        IE = uu
-      }), (uu => {
-        console.error("[bloxd-wasm-client] the menu keys' checks did not load", uu)
-      })), (0, KE.u)((uu => {
-        uu || !(0, KE.i)() || (0, mE.isMobile)() || !vE.k.getItem("disableFullscreen") || (0, gE.s)() || Wu.d.set({
-          openEverythingMenuName: kE.o.SETTINGS
+    function Hb() {
+      nb || (nb = !0, ZG.e(159).then((() => ZG(61136))).then((GG => {
+        qb = GG
+      }), (GG => {
+        console.error("[bloxd-wasm-client] the menu keys' checks did not load", GG)
+      })), (0, cb.A)((GG => {
+        GG || !(0, cb.k)() || (0, vb.isMobile)() || !ab.h.getItem("disableFullscreen") || (0, rb.t)() || AG.e.set({
+          openEverythingMenuName: Fb.u.SETTINGS
         })
-      })), (0, eE.f)((uu => {
+      })), (0, Eb.j)((GG => {
         let {
-          action: Eu,
-          down: ju,
-          press: su
-        } = uu;
-        var Zu, Xu;
-        (0, Uu.d)() || (ju ? null === (Zu = tE[Eu]) || void 0 === Zu || Zu.call(tE, function(uu) {
-          var Eu;
-          if (0 === uu || (null === (Eu = BE) || void 0 === Eu ? void 0 : Eu.press) !== uu) {
-            const Eu = {
-              press: uu,
-              event: (0, SE.b)("inputAction")
+          action: bG,
+          down: ZG,
+          press: wG
+        } = GG;
+        var LG, yG;
+        (0, SG.d)() || (ZG ? null === (LG = Rb[bG]) || void 0 === LG || LG.call(Rb, function(GG) {
+          var bG;
+          if (0 === GG || (null === (bG = gb) || void 0 === bG ? void 0 : bG.press) !== GG) {
+            const bG = {
+              press: GG,
+              event: (0, sb.c)("inputAction")
             };
-            BE = Eu, queueMicrotask((() => {
-              BE === Eu && (BE = null)
+            gb = bG, queueMicrotask((() => {
+              gb === bG && (gb = null)
             }))
           }
-          return BE.event
-        }(su)) : null === (Xu = xE[Eu]) || void 0 === Xu || Xu.call(xE))
+          return gb.event
+        }(wG)) : null === (yG = Tb[bG]) || void 0 === yG || yG.call(Tb))
       })))
     }
-    var HE = ju(39336),
-      AE = ju(39327),
-      nE = ju(39320);
-    const yE = {
-      completeTask(uu) {
-        var Eu;
-        null === (Eu = (0, Xu.l)()) || void 0 === Eu || Eu.send(vu.c.CompleteTask, (0, vu.r)(uu))
+    var tb = ZG(39423),
+      Db = ZG(39412),
+      Nb = ZG(39404);
+    const Ob = {
+      completeTask(GG) {
+        var bG;
+        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.CompleteTask, (0, aG.t)(GG))
       },
-      setServerCookie(uu) {
-        var Eu;
+      setServerCookie(GG) {
+        var bG;
         let {
-          key: ju,
-          value: su
-        } = uu;
-        null === (Eu = (0, Xu.l)()) || void 0 === Eu || Eu.send(vu.c.GeneralCookieSet, (0, vu.w)({
-          Xl: ju,
-          ll: su
+          key: ZG,
+          value: wG
+        } = GG;
+        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.GeneralCookieSet, (0, aG.x)({
+          yk: ZG,
+          kk: wG
         }))
       },
-      answerUiRequest(uu) {
-        var Eu;
+      answerUiRequest(GG) {
+        var bG;
         let {
-          id: ju,
-          eC: su
-        } = uu;
-        null === (Eu = (0, Xu.l)()) || void 0 === Eu || Eu.send(vu.c.UiRequestResp, (0, vu.U)({
-          qq: ju,
-          fq: su,
-          Cq: 5
+          id: ZG,
+          rV: wG
+        } = GG;
+        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.UiRequestResp, (0, aG.$)({
+          fU: ZG,
+          QU: wG,
+          KU: 5
         }))
       },
-      chooseRewardedAd(uu) {
-        var Eu;
+      chooseRewardedAd(GG) {
+        var bG;
         let {
-          id: ju,
-          eC: su
-        } = uu;
-        null === (Eu = (0, Xu.l)()) || void 0 === Eu || Eu.send(vu.c.UiRequestResponded, (0, vu.S)({
-          id: ju,
-          eC: su
+          id: ZG,
+          rV: wG
+        } = GG;
+        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.UiRequestResponded, (0, aG.Z)({
+          id: ZG,
+          rV: wG
         }))
       },
-      requestLeaderboard(uu) {
-        var Eu;
+      requestLeaderboard(GG) {
+        var bG;
         let {
-          category: ju,
-          timeframe: su,
-          seeTop: Uu
-        } = uu;
-        null === (Eu = (0, Xu.l)()) || void 0 === Eu || Eu.send(vu.c.LeaderboardRequest, {
-          category: ju,
-          timeframe: su,
-          seeTop: Uu
+          category: ZG,
+          timeframe: wG,
+          seeTop: SG
+        } = GG;
+        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.LeaderboardRequest, {
+          category: ZG,
+          timeframe: wG,
+          seeTop: SG
         })
       }
     };
-    let zE = !1;
-    const RE = gu.e.Sh / 2,
-      uj = [RE, -RE, -RE, -RE, RE, RE, -RE, RE],
-      Ej = [0, 0, 0];
+    let xb = !1;
+    const Bb = rG.d.Hd / 2,
+      GZ = [Bb, -Bb, -Bb, -Bb, Bb, Bb, -Bb, Bb],
+      bZ = [0, 0, 0];
 
-    function jj(uu, Eu, ju) {
-      for (let su = 0; su < uu.length; su += 2)
-        if (uu[su] === Eu && uu[su + 1] === ju) return !0;
+    function ZZ(GG, bG, ZG) {
+      for (let wG = 0; wG < GG.length; wG += 2)
+        if (GG[wG] === bG && GG[wG + 1] === ZG) return !0;
       return !1
     }
-    const sj = {
+    const wZ = {
       blocksStandingOn: function() {
-        const uu = (0, Xu.l)();
-        if (null === uu) return [];
+        const GG = (0, yG.f)();
+        if (null === GG) return [];
         const {
-          api: Eu,
-          chunks: ju,
-          tables: su
-        } = uu;
-        if (!Eu.readPosition(Eu.localId, Ej)) return [];
-        const [Uu, Zu, lu] = Ej, qu = Math.ceil(Zu) - 1, fu = [], Cu = [];
-        for (let Xu = 0; Xu < uj.length; Xu += 2) {
-          const uu = Uu + uj[Xu],
-            Eu = lu + uj[Xu + 1];
-          if (Number.isInteger(uu) || Number.isInteger(Eu)) continue;
-          const Zu = Math.floor(uu),
-            bu = Math.floor(Eu);
-          if (jj(Cu, Zu, bu)) continue;
-          const cu = ju.ul(Zu, qu, bu);
-          su.isSolidBlockId(cu) && (Cu.push(Zu, bu), fu.push(su.nameOfId(cu)))
+          api: bG,
+          chunks: ZG,
+          tables: wG
+        } = GG;
+        if (!bG.readPosition(bG.localId, bZ)) return [];
+        const [SG, LG, kG] = bZ, UG = Math.ceil(LG) - 1, YG = [], VG = [];
+        for (let yG = 0; yG < GZ.length; yG += 2) {
+          const GG = SG + GZ[yG],
+            bG = kG + GZ[yG + 1];
+          if (Number.isInteger(GG) || Number.isInteger(bG)) continue;
+          const LG = Math.floor(GG),
+            pG = Math.floor(bG);
+          if (ZZ(VG, LG, pG)) continue;
+          const fG = ZG.Gk(LG, UG, pG);
+          wG.isSolidBlockId(fG) && (VG.push(LG, pG), YG.push(wG.nameOfId(fG)))
         }
-        return fu
+        return YG
       },
       dropAhead: function() {
-        const uu = (0, Xu.l)();
-        return null !== uu && 0 !== (eu.u.playerFlags(uu.api.apiView, 0) & eu.td.DropAhead)
+        const GG = (0, yG.f)();
+        return null !== GG && 0 !== (EG.v.playerFlags(GG.api.apiView, 0) & EG.Hd.DropAhead)
       }
     };
-    var Uj = ju(37349),
-      Zj = ju(39392),
-      Xj = ju(1405),
-      lj = ju(40912);
-    const qj = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
-      fj = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
+    var SZ = ZG(37309),
+      LZ = ZG(39487),
+      yZ = ZG(1311),
+      kZ = ZG(41031);
+    const UZ = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
+      YZ = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
 
-    function Cj() {
-      const uu = new Set;
+    function VZ() {
+      const GG = new Set;
       return {
-        add: Eu => (uu.add(Eu), () => {
-          uu.delete(Eu)
+        add: bG => (GG.add(bG), () => {
+          GG.delete(bG)
         }),
         fire() {
-          for (const Eu of uu) Eu()
+          for (const bG of GG) bG()
         }
       }
     }
-    const bj = Object.freeze([]);
+    const pZ = Object.freeze([]);
 
-    function cj(uu, Eu) {
-      let ju, {
-        rereads: su,
-        followLocalId: Uu
-      } = Eu;
-      const Xu = () => (ju = (0, yu.o)(ju, uu()), ju);
+    function fZ(GG, bG) {
+      let ZG, {
+        rereads: wG,
+        followLocalId: SG
+      } = bG;
+      const yG = () => (ZG = (0, OG.n)(ZG, GG()), ZG);
       return {
-        current: Xu,
-        watch(uu) {
-          const Eu = (0, Ou.e)((Eu => {
-            su(Eu) && uu(Xu())
+        current: yG,
+        watch(GG) {
+          const bG = (0, KG.c)((bG => {
+            wG(bG) && GG(yG())
           }));
-          if (!Uu) return Eu;
-          let ju = (0, Nu.e)();
-          const lu = (0, Zu.u)((() => {
-            const Eu = (0, Nu.e)();
-            Eu !== ju && (ju = Eu, uu(Xu()))
+          if (!SG) return bG;
+          let ZG = (0, QG.i)();
+          const kG = (0, LG.t)((() => {
+            const bG = (0, QG.i)();
+            bG !== ZG && (ZG = bG, GG(yG()))
           }));
           return () => {
-            Eu(), lu()
+            bG(), kG()
           }
         }
       }
     }
-    const Nj = {
-        players: cj((function() {
-          const uu = Ou.f.ids(),
-            Eu = {};
-          for (const Zu of uu) {
-            var ju, su, Uu;
-            Eu[Zu] = {
-              name: null !== (ju = Ou.f.getName(Zu)) && void 0 !== ju ? ju : null,
-              ranks: null !== (su = Ou.f.getSetting(Zu, "ranks")) && void 0 !== su ? su : bj,
-              cosmetics: null !== (Uu = (0, Ou.h)(Zu)) && void 0 !== Uu ? Uu : null
+    const QZ = {
+        players: fZ((function() {
+          const GG = KG.f.ids(),
+            bG = {};
+          for (const LG of GG) {
+            var ZG, wG, SG;
+            bG[LG] = {
+              name: null !== (ZG = KG.f.getName(LG)) && void 0 !== ZG ? ZG : null,
+              ranks: null !== (wG = KG.f.getSetting(LG, "ranks")) && void 0 !== wG ? wG : pZ,
+              cosmetics: null !== (SG = (0, KG.g)(LG)) && void 0 !== SG ? SG : null
             }
           }
           return {
-            ids: uu,
-            byId: Eu,
-            localId: (0, Nu.e)()
+            ids: GG,
+            byId: bG,
+            localId: (0, QG.i)()
           }
         }), {
-          rereads: uu => "roster" !== uu.kind || uu.members || uu.settings.has("ranks"),
+          rereads: GG => "roster" !== GG.kind || GG.members || GG.settings.has("ranks"),
           followLocalId: !0
         }),
-        lobbyLeaderboardRows: cj((function() {
-          const uu = {};
-          for (const Uu of Ou.f.ids()) {
-            var Eu, ju, su;
-            uu[Uu] = {
-              colour: null !== (Eu = Ou.f.getSetting(Uu, "colorInLobbyLeaderboard")) && void 0 !== Eu ? Eu : null,
-              values: null !== (ju = Ou.f.getSetting(Uu, "lobbyLeaderboardValues")) && void 0 !== ju ? ju : null,
-              tags: null !== (su = Ou.f.getSetting(Uu, "lobbyLeaderboardTags")) && void 0 !== su ? su : null
+        lobbyLeaderboardRows: fZ((function() {
+          const GG = {};
+          for (const SG of KG.f.ids()) {
+            var bG, ZG, wG;
+            GG[SG] = {
+              colour: null !== (bG = KG.f.getSetting(SG, "colorInLobbyLeaderboard")) && void 0 !== bG ? bG : null,
+              values: null !== (ZG = KG.f.getSetting(SG, "lobbyLeaderboardValues")) && void 0 !== ZG ? ZG : null,
+              tags: null !== (wG = KG.f.getSetting(SG, "lobbyLeaderboardTags")) && void 0 !== wG ? wG : null
             }
           }
-          return uu
+          return GG
         }), {
-          rereads: function(uu) {
-            if ("roster" !== uu.kind) return "reset" === uu.kind;
+          rereads: function(GG) {
+            if ("roster" !== GG.kind) return "reset" === GG.kind;
             const {
-              members: Eu,
-              settings: ju
-            } = uu;
-            return Eu || ju.has("colorInLobbyLeaderboard") || ju.has("lobbyLeaderboardValues") || ju.has("lobbyLeaderboardTags")
+              members: bG,
+              settings: ZG
+            } = GG;
+            return bG || ZG.has("colorInLobbyLeaderboard") || ZG.has("lobbyLeaderboardValues") || ZG.has("lobbyLeaderboardTags")
           },
           followLocalId: !1
         })
       },
-      Oj = {
+      KZ = {
         cosmeticsUpdated: {
-          watch: uu => (0, Ou.e)((Eu => {
-            if ("cosmetics" !== Eu.kind) return;
-            const ju = (0, Nu.e)();
-            uu(Eu.updates.map((uu => {
+          watch: GG => (0, KG.c)((bG => {
+            if ("cosmetics" !== bG.kind) return;
+            const ZG = (0, QG.i)();
+            GG(bG.updates.map((GG => {
               let {
-                QZ: Eu,
-                iZ: su,
-                WZ: Uu
-              } = uu;
+                IL: bG,
+                FL: wG,
+                vL: SG
+              } = GG;
               return {
-                local: Eu === ju,
-                iZ: su,
-                WZ: Uu
+                local: bG === ZG,
+                FL: wG,
+                vL: SG
               }
             })))
           }))
         }
       };
-    var Yj = ju(3074),
-      hj = ju(1779),
-      Dj = ju(701),
-      gj = ju(41149);
-    let Mj = !1,
-      ej = null;
-    const Gj = {
-      setShopOpen(uu) {
-        var Eu;
-        null === (Eu = (0, Xu.l)()) || void 0 === Eu || Eu.send(vu.c.ShopMenuChanged, (0, vu.K)(uu))
+    var hZ = ZG(2897),
+      dZ = ZG(1702),
+      JZ = ZG(647),
+      rZ = ZG(41319);
+    let zZ = !1,
+      EZ = null;
+    const oZ = {
+      setShopOpen(GG) {
+        var bG;
+        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.ShopMenuChanged, (0, aG.T)(GG))
       },
-      buyShopItem(uu) {
-        var Eu;
+      buyShopItem(GG) {
+        var bG;
         let {
-          categoryKey: ju,
-          itemKey: su,
-          userInput: Uu
-        } = uu;
-        null === (Eu = (0, Xu.l)()) || void 0 === Eu || Eu.send(vu.c.ItemBought, {
-          categoryKey: ju,
-          itemKey: su,
-          shopVersion: Mu.e.get("_shopVersion"),
-          userInput: Uu
+          categoryKey: ZG,
+          itemKey: wG,
+          userInput: SG
+        } = GG;
+        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.ItemBought, {
+          categoryKey: ZG,
+          itemKey: wG,
+          shopVersion: zG.c.get("_shopVersion"),
+          userInput: SG
         })
       }
     };
-    let pj = !1;
-    var wj = ju(4986);
-    const Jj = ME.x.LookFrozen | ME.x.ClicksSuppressed;
+    let XZ = !1;
+    var uZ = ZG(4842);
+    const iZ = zb.t.LookFrozen | zb.t.ClicksSuppressed;
 
-    function dj(uu, Eu) {
-      var ju;
-      null !== (ju = (0, Xu.l)()) && void 0 !== ju && ju.send(uu, Eu) || console.warn(`[bloxd-wasm-client] message ${uu} not sent: no live game or the core's command ring is full`)
-    }(0, Yu.n)(mu.qb, (uu => {
-      const Eu = (0, Ku.g)(mu.qb, uu);
-      void 0 !== Eu && fu.h.TY("setDiscordReportKey", Eu)
+    function CZ(GG, bG) {
+      var ZG;
+      null !== (ZG = (0, yG.f)()) && void 0 !== ZG && ZG.send(GG, bG) || console.warn(`[bloxd-wasm-client] message ${GG} not sent: no live game or the core's command ring is full`)
+    }(0, hG.l)(vG.mb, (GG => {
+      const bG = (0, cG.f)(vG.mb, GG);
+      void 0 !== bG && YG.l.xh("setDiscordReportKey", bG)
     }));
-    const aj = {
-      ignorePlayer(uu) {
-        dj(vu.c.IgnoreUser, (0, vu.y)({
-          bq: uu
+    const WZ = {
+      ignorePlayer(GG) {
+        CZ(aG.b.IgnoreUser, (0, aG.y)({
+          hU: GG
         }))
       },
-      reportPlayer(uu) {
+      reportPlayer(GG) {
         let {
-          playerId: Eu,
-          chatMsgId: ju,
-          ql: su,
-          details: Uu
-        } = uu;
-        dj(vu.c.UserReport, (0, vu.gb)({
-          DC: Eu,
-          gC: ju,
-          ql: su,
-          fl: Uu
+          playerId: bG,
+          chatMsgId: ZG,
+          Uk: wG,
+          details: SG
+        } = GG;
+        CZ(aG.b.UserReport, (0, aG.jb)({
+          hV: bG,
+          dV: ZG,
+          Uk: wG,
+          Yk: SG
         }))
       },
-      reportWorldCodeChat(uu) {
+      reportWorldCodeChat(GG) {
         let {
-          chatMsgId: Eu,
-          ql: ju,
-          details: su
-        } = uu;
-        dj(vu.c.UserReport, (0, vu.gb)({
-          DC: "",
-          gC: Eu,
-          ql: ju,
-          fl: su
+          chatMsgId: bG,
+          Uk: ZG,
+          details: wG
+        } = GG;
+        CZ(aG.b.UserReport, (0, aG.jb)({
+          hV: "",
+          dV: bG,
+          Uk: ZG,
+          Yk: wG
         }))
       },
-      requestDiscordReportKey(uu) {
-        dj(vu.c.ReqDiscordReportKey, (0, vu.E)(uu))
+      requestDiscordReportKey(GG) {
+        CZ(aG.b.ReqDiscordReportKey, (0, aG.L)(GG))
       },
-      reportLobbyOrGame(uu) {
+      reportLobbyOrGame(GG) {
         let {
-          target: Eu,
-          ql: ju,
-          details: su
-        } = uu;
-        "customGame" === Eu ? dj(vu.c.CustomGameReport, (0, vu.s)({
-          ql: ju,
-          fl: su
-        })) : dj(vu.c.LobbyReport, (0, vu.A)({
-          ql: ju,
-          fl: su
+          target: bG,
+          Uk: ZG,
+          details: wG
+        } = GG;
+        "customGame" === bG ? CZ(aG.b.CustomGameReport, (0, aG.v)({
+          Uk: ZG,
+          Yk: wG
+        })) : CZ(aG.b.LobbyReport, (0, aG.A)({
+          Uk: ZG,
+          Yk: wG
         }))
       },
-      updateMyCosmetic(uu) {
-        dj(vu.c.UpdateMyCosmetic, (0, vu.cb)(uu))
+      updateMyCosmetic(GG) {
+        CZ(aG.b.UpdateMyCosmetic, (0, aG.gb)(GG))
       },
-      holdEmoteWheel(uu) {
-        !uu || GE ? (0, wj.g)(Jj, uu ? Jj : 0) : fu.h.TY("requestEmoteWheelHoldRelease")
+      holdEmoteWheel(GG) {
+        !GG || ob ? (0, uZ.j)(iZ, GG ? iZ : 0) : YG.l.xh("requestEmoteWheelHoldRelease")
       }
     };
-    var Pj = ju(41242),
-      oj = ju(9409),
-      kj = ju(39910);
-    const mj = [0, 0, 0],
-      vj = [0, 0, 0],
-      Kj = [0, 0, 0],
-      Vj = {
-        blockAtViewPoint(uu) {
+    var mZ = ZG(41421),
+      IZ = ZG(9249),
+      FZ = ZG(40001);
+    const vZ = [0, 0, 0],
+      aZ = [0, 0, 0],
+      cZ = [0, 0, 0],
+      lZ = {
+        blockAtViewPoint(GG) {
           let {
-            x: Eu,
-            y: ju
-          } = uu;
-          const su = (0, Xu.l)();
-          if (null === su || void 0 === su || !su.renderFrame.hasView) return null;
+            x: bG,
+            y: ZG
+          } = GG;
+          const wG = (0, yG.f)();
+          if (null === wG || void 0 === wG || !wG.renderFrame.hasView) return null;
           const {
-            renderFrame: Uu,
-            clientApi: Zu,
-            api: lu
-          } = su;
-          let qu = 0;
-          return (0, kj.f)(((uu, Eu, ju) => (qu = Zu.getBlockId(uu, Eu, ju), 0 !== qu)), Uu.cameraPosition, (0, kj.j)((uu => eu.u.viewProj(lu.apiView, 0, uu)), Eu, ju, mj), kj.e, vj, Kj) ? {
-            pos: [vj[0], vj[1], vj[2]],
-            normal: [Kj[0], Kj[1], Kj[2]],
-            name: (0, oj.e)(qu)
+            renderFrame: SG,
+            clientApi: LG,
+            api: kG
+          } = wG;
+          let UG = 0;
+          return (0, FZ.f)(((GG, bG, ZG) => (UG = LG.getBlockId(GG, bG, ZG), 0 !== UG)), SG.cameraPosition, (0, FZ.g)((GG => EG.v.viewProj(kG.apiView, 0, GG)), bG, ZG, vZ), FZ.c, aZ, cZ) ? {
+            pos: [aZ[0], aZ[1], aZ[2]],
+            normal: [cZ[0], cZ[1], cZ[2]],
+            name: (0, IZ.i)(UG)
           } : null
         }
       },
-      rj = {
-        setBlockHighlight(uu) {
-          var Eu;
-          null === (Eu = (0, Xu.l)()) || void 0 === Eu || Eu.setBlockHighlight(uu)
+      jZ = {
+        setBlockHighlight(GG) {
+          var bG;
+          null === (bG = (0, yG.f)()) || void 0 === bG || bG.setBlockHighlight(GG)
         }
       };
-    var Qj = ju(1999),
-      ij = ju(41138),
-      Wj = ju(41247),
-      Sj = ju(4679),
-      Ij = ju(4647),
-      Fj = ju(41252),
-      Bj = ju(3475),
-      Lj = ju(3482);
-    let tj = null,
-      xj = null;
+    var PZ = ZG(1910),
+      MZ = ZG(41305),
+      AZ = ZG(41423),
+      sZ = ZG(4508),
+      qZ = ZG(4485),
+      nZ = ZG(41427),
+      gZ = ZG(3267),
+      eZ = ZG(3271);
+    let RZ = null,
+      TZ = null;
 
-    function Tj(uu) {
-      const Eu = uu.startsWith(Lj.l),
-        [ju, su = ju, Uu = ju] = (Eu ? uu.slice(Lj.l.length) : uu).split(Lj.j);
+    function HZ(GG) {
+      const bG = GG.startsWith(eZ.j),
+        [ZG, wG = ZG, SG = ZG] = (bG ? GG.slice(eZ.j.length) : GG).split(eZ.h);
       return {
-        top: ju,
-        left: su,
-        right: Uu,
-        half: Eu
+        top: ZG,
+        left: wG,
+        right: SG,
+        half: bG
       }
     }
 
-    function Hj(uu) {
-      const Eu = null === tj ? void 0 : (0, Bj.b)(uu),
-        ju = void 0 === Eu ? 0 : tj.codes[Eu];
-      return 0 === ju ? void 0 : tj.pool[ju - 1]
+    function tZ(GG) {
+      const bG = null === RZ ? void 0 : (0, gZ.c)(GG),
+        ZG = void 0 === bG ? 0 : RZ.codes[bG];
+      return 0 === ZG ? void 0 : RZ.pool[ZG - 1]
     }
-    var Aj = ju(3467),
-      nj = ju(4635),
-      yj = ju(4675),
-      zj = ju(41170),
-      Rj = ju(41255);
-    const us = "item:";
-    let Es = null,
-      ss = null,
-      Us = null,
-      Zs = null,
-      Xs = !1,
-      ls = !1;
+    var DZ = ZG(3265),
+      NZ = ZG(4470),
+      OZ = ZG(4505),
+      xZ = ZG(41344),
+      BZ = ZG(41432);
+    const Gw = "item:";
+    let bw = null,
+      Zw = null,
+      ww = null,
+      Sw = null,
+      Lw = !1,
+      yw = !1;
 
-    function qs() {
-      return ls || (ls = !0, (0, yj.f)().then((uu => {
-        uu && (0, Qj.c)()
-      }))), Us ??= Promise.all([(0, Aj.g)(), (xj ??= ju.e(1).then((() => ju(60872))).then((uu => {
+    function kw() {
+      return yw || (yw = !0, (0, OZ.l)().then((GG => {
+        GG && (0, PZ.d)()
+      }))), ww ??= Promise.all([(0, DZ.e)(), (TZ ??= ZG.e(1).then((() => ZG(61154))).then((GG => {
         let {
-          BLOCK_FACE_RUNS: Eu,
-          BLOCK_FACES: ju,
-          MAX_FACE_ITEM_ID: su
-        } = uu;
-        tj = {
-          codes: (0, Lj.B)(Eu, su + 1),
-          pool: ju.split(Lj.q).map(Tj)
+          BLOCK_FACE_RUNS: bG,
+          BLOCK_FACES: ZG,
+          MAX_FACE_ITEM_ID: wG
+        } = GG;
+        RZ = {
+          codes: (0, eZ.t)(bG, wG + 1),
+          pool: ZG.split(eZ.o).map(HZ)
         }
-      }), (uu => {
-        throw xj = null, uu
-      })), xj), (0, Rj.d)(), ju.e(201).then((() => ju(34565)))]).then((uu => {
-        let [, , Eu, ju] = uu;
-        Eu.followBundledTextures(), Es = Eu, ss = ju, (0, Qj.c)()
-      }), (uu => {
-        Us = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", uu)
-      })), Us
+      }), (GG => {
+        throw TZ = null, GG
+      })), TZ), (0, BZ.g)(), ZG.e(201).then((() => ZG(34492)))]).then((GG => {
+        let [, , bG, ZG] = GG;
+        bG.followBundledTextures(), bw = bG, Zw = ZG, (0, PZ.d)()
+      }), (GG => {
+        ww = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", GG)
+      })), ww
     }
 
-    function fs(uu) {
-      var Eu, ju;
-      return null !== (Eu = null === (ju = (0, zj.h)()) || void 0 === ju ? void 0 : ju.textureUrl(uu)) && void 0 !== Eu ? Eu : Es.itemSpriteUrl(uu)
+    function Uw(GG) {
+      var bG, ZG;
+      return null !== (bG = null === (ZG = (0, xZ.k)()) || void 0 === ZG ? void 0 : ZG.textureUrl(GG)) && void 0 !== bG ? bG : bw.itemSpriteUrl(GG)
     }
 
-    function Cs(uu) {
-      var Eu, ju;
-      return null !== (Eu = null === (ju = (0, zj.h)()) || void 0 === ju ? void 0 : ju.textureUrl(uu)) && void 0 !== Eu ? Eu : Es.blockTextureUrl(uu)
+    function Yw(GG) {
+      var bG, ZG;
+      return null !== (bG = null === (ZG = (0, xZ.k)()) || void 0 === ZG ? void 0 : ZG.textureUrl(GG)) && void 0 !== bG ? bG : bw.blockTextureUrl(GG)
     }
 
-    function bs(uu) {
-      var Eu;
-      return null !== (Eu = (0, Aj.d)(uu)) && void 0 !== Eu ? Eu : uu
+    function Vw(GG) {
+      var bG;
+      return null !== (bG = (0, DZ.b)(GG)) && void 0 !== bG ? bG : GG
     }
 
-    function cs(uu, Eu) {
-      var ju, su, Uu;
-      return null !== (ju = null !== (su = null !== (Uu = Cs(uu)) && void 0 !== Uu ? Uu : null === Eu || void 0 === Eu ? void 0 : Eu.rotated[uu]) && void 0 !== su ? su : null === Eu || void 0 === Eu ? void 0 : Eu.animated[uu]) && void 0 !== ju ? ju : Es.notFoundUrl()
+    function pw(GG, bG) {
+      var ZG, wG, SG;
+      return null !== (ZG = null !== (wG = null !== (SG = Yw(GG)) && void 0 !== SG ? SG : null === bG || void 0 === bG ? void 0 : bG.rotated[GG]) && void 0 !== wG ? wG : null === bG || void 0 === bG ? void 0 : bG.animated[GG]) && void 0 !== ZG ? ZG : bw.notFoundUrl()
     }
 
-    function Ns(uu) {
-      return void 0 !== (0, Bj.b)(uu) ? uu : /^[1-9][0-9]*$/.test(uu) ? (0, Bj.c)(Number(uu)) : void 0
+    function fw(GG) {
+      return void 0 !== (0, gZ.c)(GG) ? GG : /^[1-9][0-9]*$/.test(GG) ? (0, gZ.f)(Number(GG)) : void 0
     }
 
-    function Os(uu) {
-      var Eu;
-      if (uu.startsWith(us)) {
-        var ju;
-        const Eu = (0, Aj.d)(uu.slice(5));
-        return null !== (ju = void 0 === Eu ? null : fs(Eu)) && void 0 !== ju ? ju : Es.notFoundUrl()
+    function Qw(GG) {
+      var bG;
+      if (GG.startsWith(Gw)) {
+        var ZG;
+        const bG = (0, DZ.b)(GG.slice(5));
+        return null !== (ZG = void 0 === bG ? null : Uw(bG)) && void 0 !== ZG ? ZG : bw.notFoundUrl()
       }
-      return null !== (Eu = Es.particleUrl(uu)) && void 0 !== Eu ? Eu : Es.notFoundUrl()
+      return null !== (bG = bw.particleUrl(GG)) && void 0 !== bG ? bG : bw.notFoundUrl()
     }
 
-    function Ys(uu, Eu) {
-      return "StairsBlock" === uu ? uu : Eu ? "SlabBlock" : "CubeBlock"
+    function Kw(GG, bG) {
+      return "StairsBlock" === GG ? GG : bG ? "SlabBlock" : "CubeBlock"
     }
-    const hs = {
-        async blockIcon(uu) {
-          var Eu;
+    const hw = {
+        async blockIcon(GG) {
+          var bG;
           let {
-            name: su,
-            size: Uu,
-            lineWidth: Zu
-          } = uu;
-          await qs();
-          const Xu = null !== (Eu = Ns(su)) && void 0 !== Eu ? Eu : su,
-            lu = (0, yj.c)(Xu, Uu, Zu);
-          if (null !== lu) return lu;
-          const qu = Hj(Xu),
-            fu = (0, Bj.b)(Xu),
-            Cu = void 0 === fu || null === ss ? void 0 : ss.itemTypeNameOf(fu);
-          if (null === Es || void 0 === qu) return "";
-          const bu = [qu.top, qu.left, qu.right].some((uu => null === Cs(uu))),
-            cu = bu ? await (Zs ??= ju.e(207).then((() => ju(34634))).then((uu => (Xs && (Xs = !1, (0, Qj.c)()), {
-              rotated: uu.rotatedBlockTextures,
-              animated: uu.animatedBlockTextures
-            })), (uu => (Zs = null, Xs = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", uu), null))), Zs) : null;
-          if (bu && null === cu) return "";
-          const Nu = {
-              top: cs(qu.top, cu),
-              left: cs(qu.left, cu),
-              right: cs(qu.right, cu),
-              itemType: Ys(Cu, qu.half)
+            name: wG,
+            size: SG,
+            lineWidth: LG
+          } = GG;
+          await kw();
+          const yG = null !== (bG = fw(wG)) && void 0 !== bG ? bG : wG,
+            kG = (0, OZ.d)(yG, SG, LG);
+          if (null !== kG) return kG;
+          const UG = tZ(yG),
+            YG = (0, gZ.c)(yG),
+            VG = void 0 === YG || null === Zw ? void 0 : Zw.itemTypeNameOf(YG);
+          if (null === bw || void 0 === UG) return "";
+          const pG = [UG.top, UG.left, UG.right].some((GG => null === Yw(GG))),
+            fG = pG ? await (Sw ??= ZG.e(207).then((() => ZG(34575))).then((GG => (Lw && (Lw = !1, (0, PZ.d)()), {
+              rotated: GG.rotatedBlockTextures,
+              animated: GG.animatedBlockTextures
+            })), (GG => (Sw = null, Lw = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", GG), null))), Sw) : null;
+          if (pG && null === fG) return "";
+          const QG = {
+              top: pw(UG.top, fG),
+              left: pw(UG.left, fG),
+              right: pw(UG.right, fG),
+              itemType: Kw(VG, UG.half)
             },
-            Ou = (0, zj.f)(),
-            Yu = 0 === Ou ? Xu : `${Xu}#${Ou}`;
-          return (await (0, nj.e)()).drawBlockIconUrl(Yu, Uu, Zu, (() => Nu))
+            KG = (0, xZ.g)(),
+            hG = 0 === KG ? yG : `${yG}#${KG}`;
+          return (await (0, NZ.d)()).drawBlockIconUrl(hG, SG, LG, (() => QG))
         }
       },
-      Ds = {
-        itemIcon: function(uu) {
-          var Eu, ju, Uu, Zu;
-          if (null === Es) return qs(), su.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(uu);
-          if ((0, Ij.h)(uu)) return {
+      dw = {
+        itemIcon: function(GG) {
+          var bG, ZG, SG, LG;
+          if (null === bw) return kw(), wG.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(GG);
+          if ((0, qZ.h)(GG)) return {
             kind: "icon",
-            url: null !== (ju = null !== (Uu = null === (Zu = (0, zj.h)()) || void 0 === Zu ? void 0 : Zu.textureUrl(uu)) && void 0 !== Uu ? Uu : Es.ingameIconUrl(uu)) && void 0 !== ju ? ju : Es.notFoundUrl()
+            url: null !== (ZG = null !== (SG = null === (LG = (0, xZ.k)()) || void 0 === LG ? void 0 : LG.textureUrl(GG)) && void 0 !== SG ? SG : bw.ingameIconUrl(GG)) && void 0 !== ZG ? ZG : bw.notFoundUrl()
           };
-          if (uu.startsWith(Ij.c)) return {
+          if (GG.startsWith(qZ.b)) return {
             kind: "icon",
-            url: Os(uu.slice(Ij.c.length))
+            url: Qw(GG.slice(qZ.b.length))
           };
-          if (0 === (0, Bj.g)()) return (0, Fj.c)(), su.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(uu);
-          const Xu = null !== (Eu = Ns(uu)) && void 0 !== Eu ? Eu : uu,
-            lu = (0, Bj.b)(Xu),
-            qu = void 0 === lu ? void 0 : ss.itemTypeNameOf(lu);
-          if (void 0 !== Hj(Xu)) return {
+          if (0 === (0, gZ.j)()) return (0, nZ.e)(), wG.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(GG);
+          const yG = null !== (bG = fw(GG)) && void 0 !== bG ? bG : GG,
+            kG = (0, gZ.c)(yG),
+            UG = void 0 === kG ? void 0 : Zw.itemTypeNameOf(kG);
+          if (void 0 !== tZ(yG)) return {
             kind: "drawnBlock"
           };
-          const fu = function(uu) {
-            var Eu;
-            return null !== (Eu = fs(bs(uu))) && void 0 !== Eu ? Eu : Es.notFoundUrl()
-          }(Xu);
-          if ((0, yj.d)(Xu) && ! function(uu) {
-              const Eu = (0, zj.h)();
-              return null !== Eu && (null !== Eu.textureUrl(bs(uu)) || null !== Eu.modelUrl(uu))
-            }(Xu)) return {
+          const YG = function(GG) {
+            var bG;
+            return null !== (bG = Uw(Vw(GG))) && void 0 !== bG ? bG : bw.notFoundUrl()
+          }(yG);
+          if ((0, OZ.h)(yG) && ! function(GG) {
+              const bG = (0, xZ.k)();
+              return null !== bG && (null !== bG.textureUrl(Vw(GG)) || null !== bG.modelUrl(GG))
+            }(yG)) return {
             kind: "model",
-            url: fu
+            url: YG
           };
-          if ("Gun" === qu) return {
+          if ("Gun" === UG) return {
             kind: "gun",
-            url: fu
+            url: YG
           };
-          if (void 0 !== lu && "GrayscaleArmour" === ss.itemTypeOf(lu) || Object.hasOwn(Sj.e, Xu)) {
-            var Cu;
-            const Eu = null !== (Cu = (0, Sj.g)(uu)) && void 0 !== Cu ? Cu : (0, Sj.g)(Xu);
-            if (Eu) return {
+          if (void 0 !== kG && "GrayscaleArmour" === Zw.itemTypeOf(kG) || Object.hasOwn(sZ.c, yG)) {
+            var VG;
+            const bG = null !== (VG = (0, sZ.d)(GG)) && void 0 !== VG ? VG : (0, sZ.d)(yG);
+            if (bG) return {
               kind: "item",
-              url: fu,
-              tint: Eu
+              url: YG,
+              tint: bG
             }
           }
           return {
             kind: "item",
-            url: fu
+            url: YG
           }
         },
-        hasIcon: function(uu) {
-          return void 0 !== Ns(uu) || (0, Ij.h)(uu) || uu.startsWith(Ij.c)
+        hasIcon: function(GG) {
+          return void 0 !== fw(GG) || (0, qZ.h)(GG) || GG.startsWith(qZ.b)
         },
-        isItemName: function(uu) {
-          return void 0 !== Ns(uu)
+        isItemName: function(GG) {
+          return void 0 !== fw(GG)
         }
       };
-    var gs = ju(636),
-      Ms = ju(39917);
+    var Jw = ZG(589),
+      rw = ZG(40005);
 
-    function es(uu) {
-      if (null === uu || void 0 === uu || !uu.isCoreRunning) return null;
+    function zw(GG) {
+      if (null === GG || void 0 === GG || !GG.isCoreRunning) return null;
       const {
-        api: Eu,
-        chunks: ju,
-        items: su,
-        tables: Uu
-      } = uu;
+        api: bG,
+        chunks: ZG,
+        items: wG,
+        tables: SG
+      } = GG;
       return {
         playerFeet() {
-          const uu = Eu.bM(Eu.localId);
-          return null !== uu && void 0 !== uu && uu.every(Number.isFinite) ? uu : null
+          const GG = bG.HJ(bG.localId);
+          return null !== GG && void 0 !== GG && GG.every(Number.isFinite) ? GG : null
         },
-        chunkBlocks: uu => ju.isLoaded(uu[0], uu[1], uu[2]) ? (uu, Eu, su) => ju.ul(uu, Eu, su) : null,
-        blockName: uu => Uu.nameOfId(uu),
+        chunkBlocks: GG => ZG.isLoaded(GG[0], GG[1], GG[2]) ? (GG, bG, wG) => ZG.Gk(GG, bG, wG) : null,
+        blockName: GG => SG.nameOfId(GG),
         inventory: () => ({
-          slots: su.playerItems().map((uu => uu ? {
-            name: uu.name,
-            amount: uu.amount
+          slots: wG.playerItems().map((GG => GG ? {
+            name: GG.name,
+            amount: GG.amount
           } : null)),
-          heldSlot: su.selectedSlot
+          heldSlot: wG.selectedSlot
         }),
         nearby() {
-          const ju = [];
-          for (let Uu = 0; Uu < Eu.idStr.length; Uu++) {
-            var su;
-            const Zu = Eu.idStr[Uu],
-              Xu = Eu.serverIds[Uu],
-              lu = Eu.kinds[Uu];
-            if (null === Zu || Eu.isLocal(Xu) || lu >>> eu.d !== eu.t.Lifeform) continue;
-            const qu = Eu.bM(Xu),
-              fu = gs.n[lu & eu.h];
-            qu && void 0 !== fu && ju.push({
-              kind: "Player" === fu ? "player" : fu,
-              name: null !== (su = uu.clientApi.getEntityName(Zu)) && void 0 !== su ? su : null,
-              position: qu
+          const ZG = [];
+          for (let SG = 0; SG < bG.idStr.length; SG++) {
+            var wG;
+            const LG = bG.idStr[SG],
+              yG = bG.serverIds[SG],
+              kG = bG.kinds[SG];
+            if (null === LG || bG.isLocal(yG) || kG >>> EG.b !== EG.r.Lifeform) continue;
+            const UG = bG.HJ(yG),
+              YG = Jw.m[kG & EG.c];
+            UG && void 0 !== YG && ZG.push({
+              kind: "Player" === YG ? "player" : YG,
+              name: null !== (wG = GG.clientApi.getEntityName(LG)) && void 0 !== wG ? wG : null,
+              position: UG
             })
           }
-          return ju
+          return ZG
         },
         droppedItems() {
-          let uu = 0;
-          for (let ju = 0; ju < Eu.idStr.length; ju++) null !== Eu.idStr[ju] && Eu.kinds[ju] >>> eu.d === eu.t.Item && uu++;
-          return uu
+          let GG = 0;
+          for (let ZG = 0; ZG < bG.idStr.length; ZG++) null !== bG.idStr[ZG] && bG.kinds[ZG] >>> EG.b === EG.r.Item && GG++;
+          return GG
         }
       }
     }
-    const Gs = {
-        worldCodeAiChunk: uu => Promise.resolve((0, Ms.b)(es((0, Xu.l)()), uu)),
-        worldCodeAiGameState: () => Promise.resolve((0, Ms.f)(es((0, Xu.l)())))
+    const Ew = {
+        worldCodeAiChunk: GG => Promise.resolve((0, rw.d)(zw((0, yG.f)()), GG)),
+        worldCodeAiGameState: () => Promise.resolve((0, rw.g)(zw((0, yG.f)())))
       },
-      ps = function(uu) {
-        const Eu = Cj(),
-          su = Cj(),
-          Uu = new Set,
-          Zu = new Set,
-          Xu = () => {
-            var Eu, ju;
-            return null !== (Eu = null === (ju = uu.runtime()) || void 0 === ju ? void 0 : ju.currentViewer) && void 0 !== Eu ? Eu : null
+      ow = function(GG) {
+        const bG = VZ(),
+          wG = VZ(),
+          SG = new Set,
+          LG = new Set,
+          yG = () => {
+            var bG, ZG;
+            return null !== (bG = null === (ZG = GG.runtime()) || void 0 === ZG ? void 0 : ZG.currentViewer) && void 0 !== bG ? bG : null
           };
-        let lu = null,
-          qu = null;
-        const Cu = (uu, Eu) => ({
-            current: uu,
-            watch(ju) {
-              let su = uu();
-              return Eu.add((() => {
-                const Eu = uu();
-                Eu !== su && (su = Eu, ju(Eu))
+        let kG = null,
+          UG = null;
+        const VG = (GG, bG) => ({
+            current: GG,
+            watch(ZG) {
+              let wG = GG();
+              return bG.add((() => {
+                const bG = GG();
+                bG !== wG && (wG = bG, ZG(bG))
               }))
             }
           }),
-          cu = uu => ({
-            watch: Eu => (uu.add(Eu), () => {
-              uu.delete(Eu)
+          fG = GG => ({
+            watch: bG => (GG.add(bG), () => {
+              GG.delete(bG)
             })
           }),
-          Nu = uu => {
-            const Eu = Xu(),
-              ju = null === Eu || void 0 === Eu ? void 0 : Eu.view;
-            Eu && ju && Eu.seek(Math.max(0, Math.min(ju.totalTicks - 1, ju.Tb + uu * bu.Ed)))
+          QG = GG => {
+            const bG = yG(),
+              ZG = null === bG || void 0 === bG ? void 0 : bG.view;
+            bG && ZG && bG.seek(Math.max(0, Math.min(ZG.totalTicks - 1, ZG.Tp + GG * pG.Hd)))
           },
-          Ou = {
-            replay: Cu((() => {
-              var uu;
-              const Eu = Xu(),
-                ju = null !== (uu = null === Eu || void 0 === Eu ? void 0 : Eu.view) && void 0 !== uu ? uu : null;
-              return null === Eu || null === ju || ju.state === bu.od.None ? (lu = null, null) : (lu = (0, yu.o)(lu, {
-                id: Eu.id,
-                Tb: ju.Tb,
-                totalTicks: ju.totalTicks,
-                cV: bu.Ed,
-                playing: ju.state === bu.od.Playing,
-                speed: ju.speed,
-                cameraMode: ju.cameraMode,
-                freecam: "freecam" === ju.cameraMode
-              }), lu)
-            }), Eu),
-            replayEdits: Cu((() => {
-              var uu;
-              const Eu = Xu(),
-                ju = null !== (uu = null === Eu || void 0 === Eu ? void 0 : Eu.view) && void 0 !== uu ? uu : null;
-              return null === Eu || null === ju || ju.state === bu.od.None ? (qu = null, null) : (qu = (0, yu.o)(qu, {
-                cameraKeyframes: [...Eu.keyframes],
-                playbackMark: ju.mark,
-                fileName: Eu.fileName,
-                unsavedChanges: Eu.unsavedChanges,
-                suggestSaveAs: Eu.suggestSaveAs
-              }), qu)
-            }), Eu),
-            replayRecorder: Cu((() => {
-              var Eu, ju;
-              return null !== (Eu = null === (ju = uu.runtime()) || void 0 === ju ? void 0 : ju.recorder.current) && void 0 !== Eu ? Eu : lj.d.states.replayRecorder.current()
-            }), su),
+          KG = {
+            replay: VG((() => {
+              var GG;
+              const bG = yG(),
+                ZG = null !== (GG = null === bG || void 0 === bG ? void 0 : bG.view) && void 0 !== GG ? GG : null;
+              return null === bG || null === ZG || ZG.state === pG.sd.None ? (kG = null, null) : (kG = (0, OG.n)(kG, {
+                id: bG.id,
+                Tp: ZG.Tp,
+                totalTicks: ZG.totalTicks,
+                Fv: pG.Hd,
+                playing: ZG.state === pG.sd.Playing,
+                speed: ZG.speed,
+                cameraMode: ZG.cameraMode,
+                freecam: "freecam" === ZG.cameraMode
+              }), kG)
+            }), bG),
+            replayEdits: VG((() => {
+              var GG;
+              const bG = yG(),
+                ZG = null !== (GG = null === bG || void 0 === bG ? void 0 : bG.view) && void 0 !== GG ? GG : null;
+              return null === bG || null === ZG || ZG.state === pG.sd.None ? (UG = null, null) : (UG = (0, OG.n)(UG, {
+                cameraKeyframes: [...bG.keyframes],
+                playbackMark: ZG.mark,
+                fileName: bG.fileName,
+                unsavedChanges: bG.unsavedChanges,
+                suggestSaveAs: bG.suggestSaveAs
+              }), UG)
+            }), bG),
+            replayRecorder: VG((() => {
+              var bG, ZG;
+              return null !== (bG = null === (ZG = GG.runtime()) || void 0 === ZG ? void 0 : ZG.recorder.current) && void 0 !== bG ? bG : kZ.d.states.replayRecorder.current()
+            }), wG),
             replayVideoExporting: {
-              current: Zj.c,
-              watch: uu => (0, fu.l)("replayViewer|videoExportChanged", (() => {
-                uu((0, Zj.c)())
+              current: LZ.c,
+              watch: GG => (0, YG.p)("replayViewer|videoExportChanged", (() => {
+                GG((0, LZ.c)())
               }))
             }
           },
-          Yu = {
-            replayUiActionRequested: cu(Zu),
-            replayViewerRequested: cu(Uu)
+          hG = {
+            replayUiActionRequested: fG(LG),
+            replayViewerRequested: fG(SG)
           },
-          hu = uu => {
-            for (const Eu of Uu) Eu(uu)
+          dG = GG => {
+            for (const bG of SG) bG(GG)
           },
-          Du = () => {
-            var su;
-            !0 === (null === (su = Xu()) || void 0 === su ? void 0 : su.isOpen) && Promise.all([ju.e(98), ju.e(67)]).then((() => ju(60868))).then((ju => {
+          JG = () => {
+            var wG;
+            !0 === (null === (wG = yG()) || void 0 === wG ? void 0 : wG.isOpen) && Promise.all([ZG.e(98), ZG.e(67)]).then((() => ZG(61141))).then((ZG => {
               let {
-                startWasmReplayVideoExport: su
-              } = ju;
-              return su({
-                viewer: Xu,
+                startWasmReplayVideoExport: wG
+              } = ZG;
+              return wG({
+                viewer: yG,
                 canvas: () => {
-                  var Eu, ju;
-                  return null !== (Eu = null === (ju = uu.canvas) || void 0 === ju ? void 0 : ju.call(uu)) && void 0 !== Eu ? Eu : null
+                  var bG, ZG;
+                  return null !== (bG = null === (ZG = GG.canvas) || void 0 === ZG ? void 0 : ZG.call(GG)) && void 0 !== bG ? bG : null
                 },
-                watchViewer: Eu.add,
-                requestViewer: hu
+                watchViewer: bG.add,
+                requestViewer: dG
               })
-            }), (uu => {
-              console.error("Couldn't load the video export", uu), Xj.NotificationProvider.showAlertPopup({
+            }), (GG => {
+              console.error("Couldn't load the video export", GG), yZ.NotificationProvider.showAlertPopup({
                 title: "Video export failed",
                 subtitle: "Check your connection, then try again."
               })
-            })).catch((uu => {
-              console.error("The video export failed", uu)
+            })).catch((GG => {
+              console.error("The video export failed", GG)
             }))
           },
-          gu = {
-            replayAction(uu) {
-              if ((0, Zj.c)()) return;
-              const Eu = Xu();
-              switch (uu) {
+          rG = {
+            replayAction(GG) {
+              if ((0, LZ.c)()) return;
+              const bG = yG();
+              switch (GG) {
                 case "replaySkipBack":
-                  Nu(-1);
+                  QG(-1);
                   break;
                 case "replaySkipForward":
-                  Nu(1);
+                  QG(1);
                   break;
                 case "replaySpeedUp":
                 case "replaySpeedDown":
-                  null !== Eu && void 0 !== Eu && Eu.view && Eu.setSpeed((0, Uj.l)(Eu.view.speed, "replaySpeedUp" === uu ? "up" : "down"));
+                  null !== bG && void 0 !== bG && bG.view && bG.setSpeed((0, SZ.j)(bG.view.speed, "replaySpeedUp" === GG ? "up" : "down"));
                   break;
                 case "replayRecordKeyframe":
-                  null === Eu || void 0 === Eu || Eu.addKeyframe()
+                  null === bG || void 0 === bG || bG.addKeyframe()
               }
             },
-            setReplayPlaying(uu) {
-              var Eu, ju;
-              (0, Zj.c)() || (uu ? null === (Eu = Xu()) || void 0 === Eu || Eu.play() : null === (ju = Xu()) || void 0 === ju || ju.pause())
+            setReplayPlaying(GG) {
+              var bG, ZG;
+              (0, LZ.c)() || (GG ? null === (bG = yG()) || void 0 === bG || bG.play() : null === (ZG = yG()) || void 0 === ZG || ZG.pause())
             },
-            seekReplay(uu) {
-              var Eu;
+            seekReplay(GG) {
+              var bG;
               let {
-                Tb: ju,
-                ignorePlaybackMark: su
-              } = uu;
-              null === (Eu = Xu()) || void 0 === Eu || Eu.seek(ju, null !== su && void 0 !== su && su)
+                Tp: ZG,
+                ignorePlaybackMark: wG
+              } = GG;
+              null === (bG = yG()) || void 0 === bG || bG.seek(ZG, null !== wG && void 0 !== wG && wG)
             },
-            setReplayCameraMode(uu) {
-              var Eu;
-              null === (Eu = Xu()) || void 0 === Eu || Eu.setCameraMode(uu)
+            setReplayCameraMode(GG) {
+              var bG;
+              null === (bG = yG()) || void 0 === bG || bG.setCameraMode(GG)
             },
             syncReplayCameraMode() {},
-            setReplayCameraKeyframe(uu) {
-              var Eu;
-              null === (Eu = Xu()) || void 0 === Eu || Eu.setKeyframe(uu)
+            setReplayCameraKeyframe(GG) {
+              var bG;
+              null === (bG = yG()) || void 0 === bG || bG.setKeyframe(GG)
             },
-            moveReplayCameraKeyframe(uu) {
-              var Eu;
+            moveReplayCameraKeyframe(GG) {
+              var bG;
               let {
-                from: ju,
-                to: su
-              } = uu;
-              null === (Eu = Xu()) || void 0 === Eu || Eu.moveKeyframe(ju, su)
+                from: ZG,
+                to: wG
+              } = GG;
+              null === (bG = yG()) || void 0 === bG || bG.moveKeyframe(ZG, wG)
             },
-            deleteReplayCameraKeyframes(uu) {
-              var Eu;
+            deleteReplayCameraKeyframes(GG) {
+              var bG;
               let {
-                start: ju,
-                end: su
-              } = uu;
-              null === (Eu = Xu()) || void 0 === Eu || Eu.deleteKeyframes(ju, su)
+                start: ZG,
+                end: wG
+              } = GG;
+              null === (bG = yG()) || void 0 === bG || bG.deleteKeyframes(ZG, wG)
             },
-            setReplayPlaybackMark(uu) {
-              var Eu;
-              null === (Eu = Xu()) || void 0 === Eu || Eu.setMark(uu)
+            setReplayPlaybackMark(GG) {
+              var bG;
+              null === (bG = yG()) || void 0 === bG || bG.setMark(GG)
             },
-            cropReplay(uu) {
-              var Eu, ju;
+            cropReplay(GG) {
+              var bG, ZG;
               let {
-                start: su,
-                end: Uu
-              } = uu;
-              return !(0, Zj.c)() && (null !== (Eu = null === (ju = Xu()) || void 0 === ju ? void 0 : ju.crop(su, Uu)) && void 0 !== Eu && Eu)
+                start: wG,
+                end: SG
+              } = GG;
+              return !(0, LZ.c)() && (null !== (bG = null === (ZG = yG()) || void 0 === ZG ? void 0 : ZG.crop(wG, SG)) && void 0 !== bG && bG)
             },
-            holdReplayForShaderPackFailure(uu) {
-              const Eu = Xu();
-              Eu && (Eu.holdForShaderPackFailure(), function(uu) {
-                ju.e(117).then((() => ju(39525))).then((Eu => {
+            holdReplayForShaderPackFailure(GG) {
+              const bG = yG();
+              bG && (bG.holdForShaderPackFailure(), function(GG) {
+                ZG.e(117).then((() => ZG(39633))).then((bG => {
                   let {
-                    shaderPackPage: ju
-                  } = Eu;
-                  ju.block(uu)
-                })).catch((uu => {
-                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", uu)
+                    shaderPackPage: ZG
+                  } = bG;
+                  ZG.block(GG)
+                })).catch((GG => {
+                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", GG)
                 }))
-              }(uu))
+              }(GG))
             },
             exportReplayVideo() {
-              Du()
+              JG()
             },
             toggleRecording() {
-              var Eu;
-              null === (Eu = uu.runtime()) || void 0 === Eu || Eu.recorder.toggleRecording()
+              var bG;
+              null === (bG = GG.runtime()) || void 0 === bG || bG.recorder.toggleRecording()
             },
             saveClip() {
-              var Eu;
-              null === (Eu = uu.runtime()) || void 0 === Eu || Eu.recorder.saveClip()
+              var bG;
+              null === (bG = GG.runtime()) || void 0 === bG || bG.recorder.saveClip()
             },
-            setRecorderPrefs(Eu) {
-              var ju;
+            setRecorderPrefs(bG) {
+              var ZG;
               let {
-                clipping: su,
-                clipSeconds: Uu
-              } = Eu;
-              null === (ju = uu.runtime()) || void 0 === ju || ju.recorder.setPrefs(su, Uu)
+                clipping: wG,
+                clipSeconds: SG
+              } = bG;
+              null === (ZG = GG.runtime()) || void 0 === ZG || ZG.recorder.setPrefs(wG, SG)
             },
-            setReplayViewerOpen(Eu) {
-              var ju;
-              (0, hE.d)(Eu) && (null === (ju = uu.runtime()) || void 0 === ju || ju.recorder.viewerShown(Eu))
+            setReplayViewerOpen(bG) {
+              var ZG;
+              (0, db.d)(bG) && (null === (ZG = GG.runtime()) || void 0 === ZG || ZG.recorder.viewerShown(bG))
             },
-            recordFlyingMiddleText(Eu) {
-              var ju;
+            recordFlyingMiddleText(bG) {
+              var ZG;
               let {
-                content: su,
-                IZ: Uu,
-                angle: Zu,
-                FZ: Xu
-              } = Eu;
-              null === (ju = uu.runtime()) || void 0 === ju || ju.recorder.recordFlyingText(JSON.stringify(su), Uu, Zu, Xu)
+                content: wG,
+                cL: SG,
+                angle: LG,
+                lL: yG
+              } = bG;
+              null === (ZG = GG.runtime()) || void 0 === ZG || ZG.recorder.recordFlyingText(JSON.stringify(wG), SG, LG, yG)
             },
-            dragReplayCamera(Eu) {
-              var ju;
+            dragReplayCamera(bG) {
+              var ZG;
               let {
-                dx: su,
-                dy: Uu
-              } = Eu;
-              null === (ju = uu.freecam()) || void 0 === ju || ju.drag(su, Uu)
+                dx: wG,
+                dy: SG
+              } = bG;
+              null === (ZG = GG.freecam()) || void 0 === ZG || ZG.drag(wG, SG)
             },
-            moveReplayFreecam(Eu) {
-              var ju;
-              null === (ju = uu.freecam()) || void 0 === ju || ju.move(Eu)
+            moveReplayFreecam(bG) {
+              var ZG;
+              null === (ZG = GG.freecam()) || void 0 === ZG || ZG.move(bG)
             },
-            holdReplayFreecamVertical(Eu) {
-              var ju;
+            holdReplayFreecamVertical(bG) {
+              var ZG;
               let {
-                action: su,
-                dl: Uu
-              } = Eu;
-              null === (ju = uu.freecam()) || void 0 === ju || ju.holdVertical(su, Uu)
+                action: wG,
+                Ik: SG
+              } = bG;
+              null === (ZG = GG.freecam()) || void 0 === ZG || ZG.holdVertical(wG, SG)
             }
           },
-          Mu = uu => {
-            var Eu;
-            const ju = Xu(),
-              su = null !== (Eu = null === ju || void 0 === ju ? void 0 : ju.view) && void 0 !== Eu ? Eu : null;
-            qj.has(uu) ? (uu => {
-              for (const Eu of Zu) Eu(uu)
-            })(uu) : fj.has(uu) ? gu.replayAction(uu) : "replayPlayPause" === uu ? ju && su && su.state !== bu.od.None && gu.setReplayPlaying(su.state !== bu.od.Playing) : "replayChangeCameraMode" === uu ? null === ju || void 0 === ju || ju.cycleCameraMode() : "replayExit" === uu ? !0 === (null === ju || void 0 === ju ? void 0 : ju.inPlayback) && (0, VE.i)("/") : "replayExportVideo" === uu && Du()
+          zG = GG => {
+            var bG;
+            const ZG = yG(),
+              wG = null !== (bG = null === ZG || void 0 === ZG ? void 0 : ZG.view) && void 0 !== bG ? bG : null;
+            UZ.has(GG) ? (GG => {
+              for (const bG of LG) bG(GG)
+            })(GG) : YZ.has(GG) ? rG.replayAction(GG) : "replayPlayPause" === GG ? ZG && wG && wG.state !== pG.sd.None && rG.setReplayPlaying(wG.state !== pG.sd.Playing) : "replayChangeCameraMode" === GG ? null === ZG || void 0 === ZG || ZG.cycleCameraMode() : "replayExit" === GG ? !0 === (null === ZG || void 0 === ZG ? void 0 : ZG.inPlayback) && (0, lb.j)("/") : "replayExportVideo" === GG && JG()
           };
-        let eu = !1;
+        let EG = !1;
         return {
-          states: Ou,
-          events: Yu,
-          commands: gu,
+          states: KG,
+          events: hG,
+          commands: rG,
           lookups: {
             replayCamera() {
-              var Eu, ju, su;
-              return !0 !== (null === (Eu = Xu()) || void 0 === Eu ? void 0 : Eu.isOpen) ? null : null !== (ju = null === (su = uu.cameraView) || void 0 === su ? void 0 : su.call(uu)) && void 0 !== ju ? ju : null
+              var bG, ZG, wG;
+              return !0 !== (null === (bG = yG()) || void 0 === bG ? void 0 : bG.isOpen) ? null : null !== (ZG = null === (wG = GG.cameraView) || void 0 === wG ? void 0 : wG.call(GG)) && void 0 !== ZG ? ZG : null
             },
             leaveGameReloadsPage() {
-              var uu;
-              return !0 === (null === (uu = Xu()) || void 0 === uu ? void 0 : uu.inPlayback)
+              var GG;
+              return !0 === (null === (GG = yG()) || void 0 === GG ? void 0 : GG.inPlayback)
             }
           },
           feed: {
             viewerChanged: () => {
-              var uu;
-              const ju = !0 === (null === (uu = Xu()) || void 0 === uu ? void 0 : uu.inPlayback);
-              ju !== eu && (eu = ju, fu.h.TY("connectedGameChanged")), Eu.fire()
+              var GG;
+              const ZG = !0 === (null === (GG = yG()) || void 0 === GG ? void 0 : GG.inPlayback);
+              ZG !== EG && (EG = ZG, YG.l.xh("connectedGameChanged")), bG.fire()
             },
-            recorderChanged: su.fire,
-            keyDown: uu => {
-              var Eu;
-              switch (uu) {
+            recorderChanged: wG.fire,
+            keyDown: GG => {
+              var bG;
+              switch (GG) {
                 case "recordGame":
-                  return void gu.toggleRecording();
+                  return void rG.toggleRecording();
                 case "recordClip":
-                  return void((0, hE.c)() || gu.saveClip())
-              }(0, Zj.c)() || ("replayViewerOpen" !== uu ? uu.startsWith("replay") && ((0, hE.c)() || !0 === (null === (Eu = Xu()) || void 0 === Eu ? void 0 : Eu.inPlayback)) && Mu(uu) : hu("toggle"))
+                  return void((0, db.b)() || rG.saveClip())
+              }(0, LZ.c)() || ("replayViewerOpen" !== GG ? GG.startsWith("replay") && ((0, db.b)() || !0 === (null === (bG = yG()) || void 0 === bG ? void 0 : bG.inPlayback)) && zG(GG) : dG("toggle"))
             }
           }
         }
       }({
-        runtime: Uu.j,
+        runtime: SG.l,
         cameraView: () => {
-          var uu;
-          const Eu = null === (uu = (0, Xu.l)()) || void 0 === uu ? void 0 : uu.renderFrame;
-          if (!Eu) return null;
-          const [ju, su, Uu] = Eu.cameraPosition, [Zu, lu, qu] = Eu.cameraDirection;
+          var GG;
+          const bG = null === (GG = (0, yG.f)()) || void 0 === GG ? void 0 : GG.renderFrame;
+          if (!bG) return null;
+          const [ZG, wG, SG] = bG.cameraPosition, [LG, kG, UG] = bG.cameraDirection;
           return {
-            position: [ju, su, Uu],
-            direction: [Zu, lu, qu]
+            position: [ZG, wG, SG],
+            direction: [LG, kG, UG]
           }
         },
         canvas: () => {
-          var uu, Eu, ju;
-          return null !== (uu = null === (Eu = (ju = (0, Zu.H)()).canvas) || void 0 === Eu ? void 0 : Eu.call(ju)) && void 0 !== uu ? uu : null
+          var GG, bG, ZG;
+          return null !== (GG = null === (bG = (ZG = (0, LG.I)()).canvas) || void 0 === bG ? void 0 : bG.call(ZG)) && void 0 !== GG ? GG : null
         },
-        freecam: Uu.h
+        freecam: SG.k
       }),
-      ws = {
+      Xw = {
         states: {
-          ...fE,
-          ...NE.l,
-          ...ps.states,
-          ...Nj,
-          ...Fu
+          ...Yb,
+          ...Qb.l,
+          ...ow.states,
+          ...QZ,
+          ...nG
         },
         events: {
-          ...CE,
-          ...hu,
-          ...NE.i,
-          ...au.b,
-          ...Pj.j,
-          ...ps.events,
-          ...Oj,
-          ...du.k
+          ...Vb,
+          ...dG,
+          ...Qb.g,
+          ...WG.d,
+          ...mZ.g,
+          ...ow.events,
+          ...KZ,
+          ...CG.e
         },
         commands: {
-          ...Ju,
-          ...bE,
-          ...Du,
-          ...NE.e,
-          ...yE,
-          ...aj,
-          ...du.h,
-          ...iE,
-          ...ps.commands,
-          ...Gj,
-          ...Bu,
-          ...rj,
-          ...OE
+          ...iG,
+          ...pb,
+          ...JG,
+          ...Qb.d,
+          ...Ob,
+          ...WZ,
+          ...CG.d,
+          ...Mb,
+          ...ow.commands,
+          ...oZ,
+          ...gG,
+          ...jZ,
+          ...Kb
         },
         queries: {
-          ...NE.j,
-          ...Gs
+          ...Qb.i,
+          ...Ew
         },
         lookups: {
-          ...cE,
-          ...ru,
-          ...Pj.l,
-          ...ps.lookups,
-          ...wu,
-          ...sj,
-          ...Vj,
-          ...Lu
+          ...fb,
+          ...jG,
+          ...mZ.i,
+          ...ow.lookups,
+          ...uG,
+          ...wZ,
+          ...lZ,
+          ...eG
         }
       };
 
-    function ds() {
-      (0, lu.d)(Yu.q), (0, Uu.n)(ps.feed), (0, au.c)(), zE || (zE = !0, (0, Yu.n)(mu.i, (uu => {
-        const Eu = (0, Ku.g)(mu.i, uu);
-        "string" === typeof Eu && Promise.resolve().then((() => ju(3847))).then((uu => {
+    function uw() {
+      (0, kG.h)(hG.n), (0, SG.m)(ow.feed), (0, WG.f)(), xb || (xb = !0, (0, hG.l)(vG.i, (GG => {
+        const bG = (0, cG.f)(vG.i, GG);
+        "string" === typeof bG && Promise.resolve().then((() => ZG(3647))).then((GG => {
           let {
-            onCosmeticPackGranted: ju
-          } = uu;
-          ju(Eu)
+            onCosmeticPackGranted: ZG
+          } = GG;
+          ZG(bG)
         }))
-      })), (0, Yu.n)(mu.kb, (uu => {
-        const Eu = (0, Ku.g)(mu.kb, uu);
-        "number" === typeof Eu && fu.h.TY("serverUpdating", Date.now() + Eu, !0)
-      })), (0, Yu.n)(mu.J, (uu => {
-        const Eu = (0, Ku.g)(mu.J, uu);
-        if ((0, Ku.e)(Eu)) {
+      })), (0, hG.l)(vG.hb, (GG => {
+        const bG = (0, cG.f)(vG.hb, GG);
+        "number" === typeof bG && YG.l.xh("serverUpdating", Date.now() + bG, !0)
+      })), (0, hG.l)(vG.I, (GG => {
+        const bG = (0, cG.f)(vG.I, GG);
+        if ((0, cG.d)(bG)) {
           const {
-            HU: uu,
-            AU: ju
-          } = Eu;
-          (0, AE.b)({
-            HU: "string" === typeof uu ? uu : null,
-            AU: "string" === typeof ju ? ju : null
+            AS: GG,
+            sS: ZG
+          } = bG;
+          (0, Db.e)({
+            AS: "string" === typeof GG ? GG : null,
+            sS: "string" === typeof ZG ? ZG : null
           })
         }
-      })), (0, Yu.n)(Cu.mc.NewUiRequest, (uu => {
-        const Eu = (0, Ku.i)(uu);
-        (0, Ku.e)(Eu) && "number" === typeof Eu.id && (0, Ku.e)(Eu.clientParameters) && (0, nE.g)(Eu.id, Eu.clientParameters)
-      })), (0, Yu.n)(mu.ab, (uu => {
-        const Eu = (0, Ku.g)(mu.ab, uu);
-        "number" === typeof Eu && (0, nE.i)(Eu)
-      })), (0, Yu.k)(nE.e), (0, Yu.n)(Cu.mc.UiRequestPopup, (uu => {
-        const Eu = (0, Ku.i)(uu);
-        if ((0, Ku.e)(Eu) && "number" === typeof Eu.id && "string" === typeof Eu.text) {
-          const uu = Eu.id;
-          (0, nE.k)(uu, Eu.text, !0 === Eu.destructive, (Eu => {
-            yE.answerUiRequest({
-              id: uu,
-              eC: Eu
+      })), (0, hG.l)(VG.jc.NewUiRequest, (GG => {
+        const bG = (0, cG.j)(GG);
+        (0, cG.d)(bG) && "number" === typeof bG.id && (0, cG.d)(bG.clientParameters) && (0, Nb.f)(bG.id, bG.clientParameters)
+      })), (0, hG.l)(vG.Z, (GG => {
+        const bG = (0, cG.f)(vG.Z, GG);
+        "number" === typeof bG && (0, Nb.i)(bG)
+      })), (0, hG.j)(Nb.c), (0, hG.l)(VG.jc.UiRequestPopup, (GG => {
+        const bG = (0, cG.j)(GG);
+        if ((0, cG.d)(bG) && "number" === typeof bG.id && "string" === typeof bG.text) {
+          const GG = bG.id;
+          (0, Nb.l)(GG, bG.text, !0 === bG.destructive, (bG => {
+            Ob.answerUiRequest({
+              id: GG,
+              rV: bG
             })
           }))
         }
-      })), (0, Yu.n)(Cu.mc.TopRightHelper, (uu => {
-        const Eu = (0, Ku.i)(uu);
-        void 0 !== Eu && fu.h.TY("TopRightHelper", Eu, !0)
-      })), (0, Yu.n)(Cu.mc.TaskProgress, (uu => {
-        const Eu = (0, Ku.i)(uu);
-        (0, Ku.e)(Eu) && "string" === typeof Eu.taskId && "number" === typeof Eu.progress && (0, HE.c)({
-          taskId: Eu.taskId,
-          progress: Eu.progress
+      })), (0, hG.l)(VG.jc.TopRightHelper, (GG => {
+        const bG = (0, cG.j)(GG);
+        void 0 !== bG && YG.l.xh("TopRightHelper", bG, !0)
+      })), (0, hG.l)(VG.jc.TaskProgress, (GG => {
+        const bG = (0, cG.j)(GG);
+        (0, cG.d)(bG) && "string" === typeof bG.taskId && "number" === typeof bG.progress && (0, tb.b)({
+          taskId: bG.taskId,
+          progress: bG.progress
         })
-      }))), pj || (pj = !0, (0, Yu.n)(mu.s, (uu => {
-        const Eu = (0, Ku.g)(mu.s, uu);
-        (0, Ku.e)(Eu) && fu.h.TY("showShopFromServer", {
-          toggle: Eu.qu,
-          fu: Eu.fu
+      }))), XZ || (XZ = !0, (0, hG.l)(vG.q, (GG => {
+        const bG = (0, cG.f)(vG.q, GG);
+        (0, cG.d)(bG) && YG.l.xh("showShopFromServer", {
+          toggle: bG.kG,
+          UG: bG.UG
         }, !0)
-      })), (0, Yu.n)(Cu.mc.OverShopInfo, (uu => {
-        const Eu = (0, Ku.i)(uu);
-        (0, Ku.e)(Eu) && fu.h.TY("overShopInfo", Eu.info, !0)
-      })), (0, Yu.n)(Cu.mc.ShowShopTutorial, (() => {
-        fu.h.TY("showShopTutorial", null, !0)
-      }))), Mj || (Mj = !0, (0, Yu.i)((() => {
-        var uu;
-        (0, Yj.resetLeaveEvents)(), null === (uu = ej) || void 0 === uu || uu(), ej = (0, Yu.e)() ? (0, Dj.j)(Yu.e) : null, (0, Yu.e)() || fu.h.ND()
-      })), (0, Yu.n)(Cu.mc.SetCookie, (uu => {
-        const Eu = (0, Ku.i)(uu),
-          ju = (0, VE.b)().gameNameWithVariation;
-        (0, Ku.e)(Eu) && "string" === typeof Eu.key && null !== ju && (0, hj.setCookie)(ju, Eu.key, Eu.value)
-      })), (0, Yu.n)(Cu.mc.LeaveValues, (uu => {
-        const Eu = (0, Ku.i)(uu);
-        if ((0, Ku.e)(Eu) && "string" === typeof Eu.leaveEventType) {
+      })), (0, hG.l)(VG.jc.OverShopInfo, (GG => {
+        const bG = (0, cG.j)(GG);
+        (0, cG.d)(bG) && YG.l.xh("overShopInfo", bG.info, !0)
+      })), (0, hG.l)(VG.jc.ShowShopTutorial, (() => {
+        YG.l.xh("showShopTutorial", null, !0)
+      }))), zZ || (zZ = !0, (0, hG.f)((() => {
+        var GG;
+        (0, hZ.resetLeaveEvents)(), null === (GG = EZ) || void 0 === GG || GG(), EZ = (0, hG.d)() ? (0, JZ.g)(hG.d) : null, (0, hG.d)() || YG.l.QJ()
+      })), (0, hG.l)(VG.jc.SetCookie, (GG => {
+        const bG = (0, cG.j)(GG),
+          ZG = (0, lb.d)().gameNameWithVariation;
+        (0, cG.d)(bG) && "string" === typeof bG.key && null !== ZG && (0, dZ.setCookie)(ZG, bG.key, bG.value)
+      })), (0, hG.l)(VG.jc.LeaveValues, (GG => {
+        const bG = (0, cG.j)(GG);
+        if ((0, cG.d)(bG) && "string" === typeof bG.leaveEventType) {
           const {
-            leaveEventType: uu,
-            category: ju,
-            subCategory: su,
-            value: Uu
-          } = Eu;
-          (0, Yj.updateLeaveValue)({
-            leaveEventType: uu,
-            category: ju,
-            subCategory: su,
-            value: Uu
+            leaveEventType: GG,
+            category: ZG,
+            subCategory: wG,
+            value: SG
+          } = bG;
+          (0, hZ.updateLeaveValue)({
+            leaveEventType: GG,
+            category: ZG,
+            subCategory: wG,
+            value: SG
           })
         }
-      })), (0, Yu.n)(Cu.mc.CustomAnalyticsEvent, (uu => {
-        const Eu = (0, Ku.i)(uu);
-        if ((0, Ku.e)(Eu) && "string" === typeof Eu.cat1) {
+      })), (0, hG.l)(VG.jc.CustomAnalyticsEvent, (GG => {
+        const bG = (0, cG.j)(GG);
+        if ((0, cG.d)(bG) && "string" === typeof bG.cat1) {
           const {
-            cat1: uu,
-            cat2: ju,
-            cat3: su,
-            value: Uu
-          } = Eu;
-          (0, Yj.logCustomAnalyticsEvent)({
-            cat1: uu,
-            cat2: ju,
-            cat3: su,
-            value: Uu
+            cat1: GG,
+            cat2: ZG,
+            cat3: wG,
+            value: SG
+          } = bG;
+          (0, hZ.logCustomAnalyticsEvent)({
+            cat1: GG,
+            cat2: ZG,
+            cat3: wG,
+            value: SG
           })
         }
-      })), (0, Yu.n)(Cu.mc.ProgressionEvent, (uu => {
-        const Eu = (0, Ku.i)(uu);
-        if ((0, Ku.e)(Eu)) {
+      })), (0, hG.l)(VG.jc.ProgressionEvent, (GG => {
+        const bG = (0, cG.j)(GG);
+        if ((0, cG.d)(bG)) {
           const {
-            type: uu,
-            location1: ju,
-            location2: su,
-            location3: Uu,
-            score: Zu
-          } = Eu;
-          (0, Yj.logProgressionEvent)({
-            type: uu,
-            location1: ju,
-            location2: su,
-            location3: Uu,
-            score: Zu
+            type: GG,
+            location1: ZG,
+            location2: wG,
+            location3: SG,
+            score: LG
+          } = bG;
+          (0, hZ.logProgressionEvent)({
+            type: GG,
+            location1: ZG,
+            location2: wG,
+            location3: SG,
+            score: LG
           })
         }
-      })), (0, Yu.n)(Cu.mc.ResourceEvent, (uu => {
-        const Eu = (0, Ku.i)(uu);
-        if ((0, Ku.e)(Eu)) {
+      })), (0, hG.l)(VG.jc.ResourceEvent, (GG => {
+        const bG = (0, cG.j)(GG);
+        if ((0, cG.d)(bG)) {
           const {
-            type: uu,
-            resourceType: ju,
-            amount: su,
-            category: Uu,
-            itemName: Zu
-          } = Eu;
-          (0, Yj.logResourceEvent)({
-            type: uu,
-            resourceType: ju,
-            amount: su,
-            category: Uu,
-            itemName: Zu
+            type: GG,
+            resourceType: ZG,
+            amount: wG,
+            category: SG,
+            itemName: LG
+          } = bG;
+          (0, hZ.logResourceEvent)({
+            type: GG,
+            resourceType: ZG,
+            amount: wG,
+            category: SG,
+            itemName: LG
           })
         }
-      })), (0, Yu.n)(Cu.mc.LeaderboardResponse, (uu => {
-        const Eu = (0, Ku.i)(uu);
-        if ((0, Ku.e)(Eu)) {
+      })), (0, hG.l)(VG.jc.LeaderboardResponse, (GG => {
+        const bG = (0, cG.j)(GG);
+        if ((0, cG.d)(bG)) {
           const {
-            category: uu,
-            timeframe: ju,
-            data: su
-          } = Eu;
-          fu.h.TY("leaderboardResponse", {
-            category: uu,
-            timeframe: ju,
-            data: su
+            category: GG,
+            timeframe: ZG,
+            data: wG
+          } = bG;
+          YG.l.xh("leaderboardResponse", {
+            category: GG,
+            timeframe: ZG,
+            data: wG
           })
         }
-      })), (0, Yu.n)(mu.z, (uu => {
-        const Eu = (0, Ku.g)(mu.z, uu);
-        "string" === typeof Eu && (0, gj.c)(uu.conn, Eu)
-      })), (0, Yu.n)(mu.C, (uu => {
-        const Eu = (0, Ku.g)(mu.C, uu);
-        "string" === typeof Eu && console.error(`[logErrorToConsole]: ${Eu}`)
-      }))), iu(), (0, Pj.b)(), QE || (QE = !0, (0, Yu.n)(mu.h, (uu => {
-        const Eu = (0, Ku.g)(mu.h, uu);
-        void 0 !== Eu && (0, rE.l)(Eu)
-      }))), TE(), oE(), Tu || (Tu = !0, (0, Zu.t)(Hu)), su.gameBridge.attach(ws), (0, su.installPageSources)({
+      })), (0, hG.l)(vG.z, (GG => {
+        const bG = (0, cG.f)(vG.z, GG);
+        "string" === typeof bG && (0, rZ.c)(GG.conn, bG)
+      })), (0, hG.l)(vG.A, (GG => {
+        const bG = (0, cG.f)(vG.A, GG);
+        "string" === typeof bG && console.error(`[logErrorToConsole]: ${bG}`)
+      }))), MG(), (0, mZ.b)(), Pb || (Pb = !0, (0, hG.l)(vG.f, (GG => {
+        const bG = (0, cG.f)(vG.f, GG);
+        void 0 !== bG && (0, jb.l)(bG)
+      }))), Hb(), Ib(), HG || (HG = !0, (0, LG.r)(tG)), wG.gameBridge.attach(Xw), (0, wG.installPageSources)({
         commands: {
-          ...su.DEFAULT_CLIENT_PAGE_SOURCES.commands,
-          setChunkAddDistance: ij.h
+          ...wG.DEFAULT_CLIENT_PAGE_SOURCES.commands,
+          setChunkAddDistance: MZ.k
         },
-        queries: hs,
+        queries: hw,
         lookups: {
-          ...su.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
-          ...Ds,
-          rM: ij.c,
-          drawCallStats: Wj.h
+          ...wG.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
+          ...dw,
+          Vr: MZ.c,
+          drawCallStats: AZ.j
         }
-      }), (0, Qj.c)(), qs()
+      }), (0, PZ.d)(), kw()
     }
   },
-  41170: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Cu,
-      f: () => qu,
-      h: () => lu,
-      l: () => fu
+  41344: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => VG,
+      g: () => UG,
+      k: () => kG,
+      n: () => YG
     });
-    var su = ju(1999);
-    let Uu = null,
-      Zu = 0;
-    const Xu = new Set;
+    var wG = ZG(1910);
+    let SG = null,
+      LG = 0;
+    const yG = new Set;
 
-    function lu() {
-      return Uu
+    function kG() {
+      return SG
     }
 
-    function qu() {
-      return Zu
+    function UG() {
+      return LG
     }
 
-    function fu(uu) {
-      Uu = uu, Zu++, (0, su.c)();
-      for (const Eu of Xu) Eu()
+    function YG(GG) {
+      SG = GG, LG++, (0, wG.d)();
+      for (const bG of yG) bG()
     }
 
-    function Cu(uu) {
-      Xu.add(uu)
+    function VG(GG) {
+      yG.add(GG)
     }
   },
-  41255: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Xu,
-      d: () => lu
+  41432: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => yG,
+      g: () => kG
     });
-    var su = ju(41264);
-    let Uu = null,
-      Zu = null;
+    var wG = ZG(41435);
+    let SG = null,
+      LG = null;
 
-    function Xu() {
-      return Uu ??= ju.e(62).then((() => ju(60874))).catch((uu => {
-        throw Uu = null, uu
-      })), Uu
+    function yG() {
+      return SG ??= ZG.e(62).then((() => ZG(61162))).catch((GG => {
+        throw SG = null, GG
+      })), SG
     }
 
-    function lu() {
-      return Zu ??= Promise.all([Xu(), (0, su.f)()]).then((uu => {
-        let [Eu] = uu;
-        return Eu
-      }), (uu => {
-        throw Zu = null, uu
-      })), Zu
+    function kG() {
+      return LG ??= Promise.all([yG(), (0, wG.f)()]).then((GG => {
+        let [bG] = GG;
+        return bG
+      }), (GG => {
+        throw LG = null, GG
+      })), LG
     }
   },
-  37467: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => su
+  37420: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => wG
     });
-    const su = {
+    const wG = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -2718,21 +2718,21 @@ export const modules = {
       }
     }
   },
-  39344: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => su,
-      i: () => Uu
+  39435: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => wG,
+      e: () => SG
     });
-    const su = ["description", "label"];
+    const wG = ["description", "label"];
 
-    function Uu(uu) {
-      const Eu = uu.type;
+    function SG(GG) {
+      const bG = GG.type;
       return {
-        type: Eu,
-        params: uu[Eu]
+        type: bG,
+        params: GG[bG]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

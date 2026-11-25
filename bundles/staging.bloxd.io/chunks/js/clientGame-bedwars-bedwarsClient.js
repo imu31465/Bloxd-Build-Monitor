@@ -1,76 +1,76 @@
 export const id = 9;
 export const ids = [9];
 export const modules = {
-  39571: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      default: () => Uu
+  39692: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      default: () => SG
     });
-    var su = ju(38413);
-    const Uu = function(uu, Eu, ju) {
-      let Uu;
+    var wG = ZG(38445);
+    const SG = function(GG, bG, ZG) {
+      let SG;
       return {
         plugins: {
-          placeAgainstBeds: (0, su.b)()
+          placeAgainstBeds: (0, wG.c)()
         },
-        onCreate: uu => {
-          Uu = uu
+        onCreate: GG => {
+          SG = GG
         },
-        onPlayerAltAction: (uu, Eu, ju, su, Zu, Xu) => {
-          ((uu, Eu) => {
-            if (!Eu || "Mesh" !== Uu.getEntityType(Eu)) return;
-            const ju = Uu.getEntityName(Eu);
-            "Upgrades" === ju ? Uu.openShop(uu, !1, "Upgrades") : "Items" === ju && Uu.openShop(uu, !1, "Recommended")
-          })(uu, Xu)
+        onPlayerAltAction: (GG, bG, ZG, wG, LG, yG) => {
+          ((GG, bG) => {
+            if (!bG || "Mesh" !== SG.getEntityType(bG)) return;
+            const ZG = SG.getEntityName(bG);
+            "Upgrades" === ZG ? SG.openShop(GG, !1, "Upgrades") : "Items" === ZG && SG.openShop(GG, !1, "Recommended")
+          })(GG, yG)
         }
       }
     }
   },
-  38413: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => lu
+  38445: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => kG
     });
-    var su = ju(349),
-      Uu = ju(37332),
-      Zu = ju(4660);
-    const Xu = ["Leaf Bed", "_Leaf Bed Head", ...su.Lc.flatMap((uu => [`${uu} Bed`, `_${uu} Bed Head`, `${uu} Strongbed`, `_${uu} Strongbed Head`]))];
+    var wG = ZG(352),
+      SG = ZG(37287),
+      LG = ZG(4492);
+    const yG = ["Leaf Bed", "_Leaf Bed Head", ...wG.Sc.flatMap((GG => [`${GG} Bed`, `_${GG} Bed Head`, `${GG} Strongbed`, `_${GG} Strongbed Head`]))];
 
-    function lu() {
-      let uu;
+    function kG() {
+      let GG;
       return {
-        onCreate(Eu) {
-          uu = Eu
+        onCreate(bG) {
+          GG = bG
         },
-        altVetoBlocks: Xu,
-        onPlayerAttemptAltAction(Eu, ju, su, Xu, lu, qu) {
-          var fu;
-          if ((0, Uu.d)(uu.getMetaInfo(lu).rootName) && !uu.isEntityInteractable(qu) && (0, Zu.d)(null === (fu = uu.yEu(Eu)) || void 0 === fu ? void 0 : fu.typeObj.type)) return "preventAction"
+        altVetoBlocks: yG,
+        onPlayerAttemptAltAction(bG, ZG, wG, yG, kG, UG) {
+          var YG;
+          if ((0, SG.d)(GG.getMetaInfo(kG).rootName) && !GG.isEntityInteractable(UG) && (0, LG.d)(null === (YG = GG.YZG(bG)) || void 0 === YG ? void 0 : YG.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  37332: (uu, Eu, ju) => {
-    function su(uu) {
-      return uu.includes("Leaf Bed")
+  37287: (GG, bG, ZG) => {
+    function wG(GG) {
+      return GG.includes("Leaf Bed")
     }
 
-    function Uu(uu) {
-      return / Bed(?: Head)?(?:\||$)/.test(uu) && !su(uu)
+    function SG(GG) {
+      return / Bed(?: Head)?(?:\||$)/.test(GG) && !wG(GG)
     }
 
-    function Zu(uu) {
-      return uu.includes(" Strongbed")
+    function LG(GG) {
+      return GG.includes(" Strongbed")
     }
 
-    function Xu(uu) {
-      return su(uu) || Uu(uu) || Zu(uu)
+    function yG(GG) {
+      return wG(GG) || SG(GG) || LG(GG)
     }
-    ju.d(Eu, {
-      d: () => Xu,
-      f: () => su,
-      j: () => Zu,
-      n: () => Uu
+    ZG.d(bG, {
+      d: () => yG,
+      f: () => wG,
+      j: () => LG,
+      n: () => SG
     })
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

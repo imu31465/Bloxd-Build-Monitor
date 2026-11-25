@@ -1,58 +1,58 @@
 export const id = 262;
 export const ids = [262];
 export const modules = {
-  40456: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => au
+  40582: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => WG
     });
-    var su = ju(40255),
-      Uu = ju(40258),
-      Zu = ju(37494),
-      Xu = ju(40459),
-      lu = ju(40499),
-      qu = ju(40434),
-      fu = ju(40356);
-    let Cu = (() => {
-      var uu;
-      let Eu, ju, Xu, lu, Cu, bu, cu, Nu, Ou, Yu, hu, Du = [],
-        gu = [],
-        Mu = [],
-        eu = [],
-        Gu = [],
-        pu = [],
-        wu = [],
-        Ju = [],
-        du = [],
-        au = [],
-        Pu = [],
-        ou = [],
-        ku = [],
-        mu = [],
-        vu = [],
-        Ku = [],
-        Vu = [],
-        ru = [],
-        Qu = [],
-        iu = [],
-        Wu = [],
-        Su = [];
-      return uu = class {
+    var wG = ZG(40393),
+      SG = ZG(40398),
+      LG = ZG(37439),
+      yG = ZG(40585),
+      kG = ZG(40623),
+      UG = ZG(40554),
+      YG = ZG(40477);
+    let VG = (() => {
+      var GG;
+      let bG, ZG, yG, kG, VG, pG, fG, QG, KG, hG, dG, JG = [],
+        rG = [],
+        zG = [],
+        EG = [],
+        oG = [],
+        XG = [],
+        uG = [],
+        iG = [],
+        CG = [],
+        WG = [],
+        mG = [],
+        IG = [],
+        FG = [],
+        vG = [],
+        aG = [],
+        cG = [],
+        lG = [],
+        jG = [],
+        PG = [],
+        MG = [],
+        AG = [],
+        sG = [];
+      return GG = class {
         constructor() {
-          this.keysUp = (0, su.g)(this, Du, [38]), this.keysUpward = ((0, su.g)(this, gu), (0, su.g)(this, Mu, [33])), this.keysDown = ((0, su.g)(this, eu), (0, su.g)(this, Gu, [40])), this.keysDownward = ((0, su.g)(this, pu), (0, su.g)(this, wu, [34])), this.keysLeft = ((0, su.g)(this, Ju), (0, su.g)(this, du, [37])), this.keysRight = ((0, su.g)(this, au), (0, su.g)(this, Pu, [39])), this.rotationSpeed = ((0, su.g)(this, ou), (0, su.g)(this, ku, .5)), this.keysRotateLeft = ((0, su.g)(this, mu), (0, su.g)(this, vu, [])), this.keysRotateRight = ((0, su.g)(this, Ku), (0, su.g)(this, Vu, [])), this.keysRotateUp = ((0, su.g)(this, ru), (0, su.g)(this, Qu, [])), this.keysRotateDown = ((0, su.g)(this, iu), (0, su.g)(this, Wu, [])), this._keys = ((0, su.g)(this, Su), new Array)
+          this.keysUp = (0, wG.n)(this, JG, [38]), this.keysUpward = ((0, wG.n)(this, rG), (0, wG.n)(this, zG, [33])), this.keysDown = ((0, wG.n)(this, EG), (0, wG.n)(this, oG, [40])), this.keysDownward = ((0, wG.n)(this, XG), (0, wG.n)(this, uG, [34])), this.keysLeft = ((0, wG.n)(this, iG), (0, wG.n)(this, CG, [37])), this.keysRight = ((0, wG.n)(this, WG), (0, wG.n)(this, mG, [39])), this.rotationSpeed = ((0, wG.n)(this, IG), (0, wG.n)(this, FG, .5)), this.keysRotateLeft = ((0, wG.n)(this, vG), (0, wG.n)(this, aG, [])), this.keysRotateRight = ((0, wG.n)(this, cG), (0, wG.n)(this, lG, [])), this.keysRotateUp = ((0, wG.n)(this, jG), (0, wG.n)(this, PG, [])), this.keysRotateDown = ((0, wG.n)(this, MG), (0, wG.n)(this, AG, [])), this._keys = ((0, wG.n)(this, sG), new Array)
         }
-        attachControl(uu) {
-          uu = fu.h.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.hV(), this._engine = this._scene.wO(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
+        attachControl(GG) {
+          GG = YG.f.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.Dv(), this._engine = this._scene.CK(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
             this._keys.length = 0
-          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((Eu => {
-            const ju = Eu.event;
-            if (!ju.metaKey)
-              if (Eu.type === qu.b.KEYDOWN) {
-                if (-1 !== this.keysUp.indexOf(ju.keyCode) || -1 !== this.keysDown.indexOf(ju.keyCode) || -1 !== this.keysLeft.indexOf(ju.keyCode) || -1 !== this.keysRight.indexOf(ju.keyCode) || -1 !== this.keysUpward.indexOf(ju.keyCode) || -1 !== this.keysDownward.indexOf(ju.keyCode) || -1 !== this.keysRotateLeft.indexOf(ju.keyCode) || -1 !== this.keysRotateRight.indexOf(ju.keyCode) || -1 !== this.keysRotateUp.indexOf(ju.keyCode) || -1 !== this.keysRotateDown.indexOf(ju.keyCode)) {
-                  -1 === this._keys.indexOf(ju.keyCode) && this._keys.push(ju.keyCode), uu || ju.preventDefault()
+          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((bG => {
+            const ZG = bG.event;
+            if (!ZG.metaKey)
+              if (bG.type === UG.e.KEYDOWN) {
+                if (-1 !== this.keysUp.indexOf(ZG.keyCode) || -1 !== this.keysDown.indexOf(ZG.keyCode) || -1 !== this.keysLeft.indexOf(ZG.keyCode) || -1 !== this.keysRight.indexOf(ZG.keyCode) || -1 !== this.keysUpward.indexOf(ZG.keyCode) || -1 !== this.keysDownward.indexOf(ZG.keyCode) || -1 !== this.keysRotateLeft.indexOf(ZG.keyCode) || -1 !== this.keysRotateRight.indexOf(ZG.keyCode) || -1 !== this.keysRotateUp.indexOf(ZG.keyCode) || -1 !== this.keysRotateDown.indexOf(ZG.keyCode)) {
+                  -1 === this._keys.indexOf(ZG.keyCode) && this._keys.push(ZG.keyCode), GG || ZG.preventDefault()
                 }
-              } else if (-1 !== this.keysUp.indexOf(ju.keyCode) || -1 !== this.keysDown.indexOf(ju.keyCode) || -1 !== this.keysLeft.indexOf(ju.keyCode) || -1 !== this.keysRight.indexOf(ju.keyCode) || -1 !== this.keysUpward.indexOf(ju.keyCode) || -1 !== this.keysDownward.indexOf(ju.keyCode) || -1 !== this.keysRotateLeft.indexOf(ju.keyCode) || -1 !== this.keysRotateRight.indexOf(ju.keyCode) || -1 !== this.keysRotateUp.indexOf(ju.keyCode) || -1 !== this.keysRotateDown.indexOf(ju.keyCode)) {
-              const Eu = this._keys.indexOf(ju.keyCode);
-              Eu >= 0 && this._keys.splice(Eu, 1), uu || ju.preventDefault()
+              } else if (-1 !== this.keysUp.indexOf(ZG.keyCode) || -1 !== this.keysDown.indexOf(ZG.keyCode) || -1 !== this.keysLeft.indexOf(ZG.keyCode) || -1 !== this.keysRight.indexOf(ZG.keyCode) || -1 !== this.keysUpward.indexOf(ZG.keyCode) || -1 !== this.keysDownward.indexOf(ZG.keyCode) || -1 !== this.keysRotateLeft.indexOf(ZG.keyCode) || -1 !== this.keysRotateRight.indexOf(ZG.keyCode) || -1 !== this.keysRotateUp.indexOf(ZG.keyCode) || -1 !== this.keysRotateDown.indexOf(ZG.keyCode)) {
+              const bG = this._keys.indexOf(ZG.keyCode);
+              bG >= 0 && this._keys.splice(bG, 1), GG || ZG.preventDefault()
             }
           })))
         }
@@ -61,18 +61,18 @@ export const modules = {
         }
         checkInputs() {
           if (this._onKeyboardObserver) {
-            const uu = this.camera,
-              Eu = uu.movement.input,
-              ju = Eu.getEntry("keyboard", "translate"),
-              su = Eu.getEntry("keyboard", "rotate"),
-              Uu = su?.sensitivity ?? 1,
-              Xu = uu._localDirection.T6(0, 0, 0);
-            for (let Zu = 0; Zu < this._keys.length; Zu++) {
-              const Eu = this._keys[Zu]; - 1 !== this.keysLeft.indexOf(Eu) ? Xu.x -= 1 : -1 !== this.keysUp.indexOf(Eu) ? Xu.z += 1 : -1 !== this.keysRight.indexOf(Eu) ? Xu.x += 1 : -1 !== this.keysDown.indexOf(Eu) ? Xu.z -= 1 : -1 !== this.keysUpward.indexOf(Eu) ? Xu.y += 1 : -1 !== this.keysDownward.indexOf(Eu) ? Xu.y -= 1 : -1 !== this.keysRotateLeft.indexOf(Eu) ? su && (uu.cameraRotation.y -= this._getLocalRotation() * Uu) : -1 !== this.keysRotateRight.indexOf(Eu) ? su && (uu.cameraRotation.y += this._getLocalRotation() * Uu) : -1 !== this.keysRotateUp.indexOf(Eu) ? su && (uu.cameraRotation.x -= this._getLocalRotation() * Uu) : -1 !== this.keysRotateDown.indexOf(Eu) && su && (uu.cameraRotation.x += this._getLocalRotation() * Uu)
+            const GG = this.camera,
+              bG = GG.movement.input,
+              ZG = bG.getEntry("keyboard", "translate"),
+              wG = bG.getEntry("keyboard", "rotate"),
+              SG = wG?.sensitivity ?? 1,
+              yG = GG._localDirection.fGG(0, 0, 0);
+            for (let LG = 0; LG < this._keys.length; LG++) {
+              const bG = this._keys[LG]; - 1 !== this.keysLeft.indexOf(bG) ? yG.x -= 1 : -1 !== this.keysUp.indexOf(bG) ? yG.z += 1 : -1 !== this.keysRight.indexOf(bG) ? yG.x += 1 : -1 !== this.keysDown.indexOf(bG) ? yG.z -= 1 : -1 !== this.keysUpward.indexOf(bG) ? yG.y += 1 : -1 !== this.keysDownward.indexOf(bG) ? yG.y -= 1 : -1 !== this.keysRotateLeft.indexOf(bG) ? wG && (GG.cameraRotation.y -= this._getLocalRotation() * SG) : -1 !== this.keysRotateRight.indexOf(bG) ? wG && (GG.cameraRotation.y += this._getLocalRotation() * SG) : -1 !== this.keysRotateUp.indexOf(bG) ? wG && (GG.cameraRotation.x -= this._getLocalRotation() * SG) : -1 !== this.keysRotateDown.indexOf(bG) && wG && (GG.cameraRotation.x += this._getLocalRotation() * SG)
             }
-            if (ju && (0 !== Xu.x || 0 !== Xu.y || 0 !== Xu.z)) {
-              const Eu = uu._computeLocalCameraSpeed() * (ju.sensitivity ?? 1);
-              Xu.normalize().scaleInPlace(Eu), uu.hV().useRightHandedSystem && (Xu.z *= -1), uu.getViewMatrix().invertToRef(uu._cameraTransformMatrix), Zu.t.TransformNormalToRef(Xu, uu._cameraTransformMatrix, uu._transformedDirection), uu.cameraDirection.addInPlace(uu._transformedDirection)
+            if (ZG && (0 !== yG.x || 0 !== yG.y || 0 !== yG.z)) {
+              const bG = GG._computeLocalCameraSpeed() * (ZG.sensitivity ?? 1);
+              yG.normalize().scaleInPlace(bG), GG.Dv().useRightHandedSystem && (yG.z *= -1), GG.getViewMatrix().invertToRef(GG._cameraTransformMatrix), LG.p.TransformNormalToRef(yG, GG._cameraTransformMatrix, GG._transformedDirection), GG.cameraDirection.addInPlace(GG._transformedDirection)
             }
           }
         }
@@ -86,237 +86,237 @@ export const modules = {
           return "keyboard"
         }
         _getLocalRotation() {
-          const uu = this.camera._calculateHandednessMultiplier();
-          return this.rotationSpeed * this._engine.getDeltaTime() / 1e3 * uu
+          const GG = this.camera._calculateHandednessMultiplier();
+          return this.rotationSpeed * this._engine.getDeltaTime() / 1e3 * GG
         }
       }, (() => {
-        const Zu = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        Eu = [(0, Uu.E)()], ju = [(0, Uu.E)()], Xu = [(0, Uu.E)()], lu = [(0, Uu.E)()], Cu = [(0, Uu.E)()], bu = [(0, Uu.E)()], cu = [(0, Uu.E)()], Nu = [(0, Uu.E)()], Ou = [(0, Uu.E)()], Yu = [(0, Uu.E)()], hu = [(0, Uu.E)()], (0, su.e)(null, null, Eu, {
+        const LG = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        bG = [(0, SG.Q)()], ZG = [(0, SG.Q)()], yG = [(0, SG.Q)()], kG = [(0, SG.Q)()], VG = [(0, SG.Q)()], pG = [(0, SG.Q)()], fG = [(0, SG.Q)()], QG = [(0, SG.Q)()], KG = [(0, SG.Q)()], hG = [(0, SG.Q)()], dG = [(0, SG.Q)()], (0, wG.k)(null, null, bG, {
           kind: "field",
           name: "keysUp",
           static: !1,
           private: !1,
           access: {
-            has: uu => "keysUp" in uu,
-            get: uu => uu.keysUp,
-            set: (uu, Eu) => {
-              uu.keysUp = Eu
+            has: GG => "keysUp" in GG,
+            get: GG => GG.keysUp,
+            set: (GG, bG) => {
+              GG.keysUp = bG
             }
           },
-          metadata: Zu
-        }, Du, gu), (0, su.e)(null, null, ju, {
+          metadata: LG
+        }, JG, rG), (0, wG.k)(null, null, ZG, {
           kind: "field",
           name: "keysUpward",
           static: !1,
           private: !1,
           access: {
-            has: uu => "keysUpward" in uu,
-            get: uu => uu.keysUpward,
-            set: (uu, Eu) => {
-              uu.keysUpward = Eu
+            has: GG => "keysUpward" in GG,
+            get: GG => GG.keysUpward,
+            set: (GG, bG) => {
+              GG.keysUpward = bG
             }
           },
-          metadata: Zu
-        }, Mu, eu), (0, su.e)(null, null, Xu, {
+          metadata: LG
+        }, zG, EG), (0, wG.k)(null, null, yG, {
           kind: "field",
           name: "keysDown",
           static: !1,
           private: !1,
           access: {
-            has: uu => "keysDown" in uu,
-            get: uu => uu.keysDown,
-            set: (uu, Eu) => {
-              uu.keysDown = Eu
+            has: GG => "keysDown" in GG,
+            get: GG => GG.keysDown,
+            set: (GG, bG) => {
+              GG.keysDown = bG
             }
           },
-          metadata: Zu
-        }, Gu, pu), (0, su.e)(null, null, lu, {
+          metadata: LG
+        }, oG, XG), (0, wG.k)(null, null, kG, {
           kind: "field",
           name: "keysDownward",
           static: !1,
           private: !1,
           access: {
-            has: uu => "keysDownward" in uu,
-            get: uu => uu.keysDownward,
-            set: (uu, Eu) => {
-              uu.keysDownward = Eu
+            has: GG => "keysDownward" in GG,
+            get: GG => GG.keysDownward,
+            set: (GG, bG) => {
+              GG.keysDownward = bG
             }
           },
-          metadata: Zu
-        }, wu, Ju), (0, su.e)(null, null, Cu, {
+          metadata: LG
+        }, uG, iG), (0, wG.k)(null, null, VG, {
           kind: "field",
           name: "keysLeft",
           static: !1,
           private: !1,
           access: {
-            has: uu => "keysLeft" in uu,
-            get: uu => uu.keysLeft,
-            set: (uu, Eu) => {
-              uu.keysLeft = Eu
+            has: GG => "keysLeft" in GG,
+            get: GG => GG.keysLeft,
+            set: (GG, bG) => {
+              GG.keysLeft = bG
             }
           },
-          metadata: Zu
-        }, du, au), (0, su.e)(null, null, bu, {
+          metadata: LG
+        }, CG, WG), (0, wG.k)(null, null, pG, {
           kind: "field",
           name: "keysRight",
           static: !1,
           private: !1,
           access: {
-            has: uu => "keysRight" in uu,
-            get: uu => uu.keysRight,
-            set: (uu, Eu) => {
-              uu.keysRight = Eu
+            has: GG => "keysRight" in GG,
+            get: GG => GG.keysRight,
+            set: (GG, bG) => {
+              GG.keysRight = bG
             }
           },
-          metadata: Zu
-        }, Pu, ou), (0, su.e)(null, null, cu, {
+          metadata: LG
+        }, mG, IG), (0, wG.k)(null, null, fG, {
           kind: "field",
           name: "rotationSpeed",
           static: !1,
           private: !1,
           access: {
-            has: uu => "rotationSpeed" in uu,
-            get: uu => uu.rotationSpeed,
-            set: (uu, Eu) => {
-              uu.rotationSpeed = Eu
+            has: GG => "rotationSpeed" in GG,
+            get: GG => GG.rotationSpeed,
+            set: (GG, bG) => {
+              GG.rotationSpeed = bG
             }
           },
-          metadata: Zu
-        }, ku, mu), (0, su.e)(null, null, Nu, {
+          metadata: LG
+        }, FG, vG), (0, wG.k)(null, null, QG, {
           kind: "field",
           name: "keysRotateLeft",
           static: !1,
           private: !1,
           access: {
-            has: uu => "keysRotateLeft" in uu,
-            get: uu => uu.keysRotateLeft,
-            set: (uu, Eu) => {
-              uu.keysRotateLeft = Eu
+            has: GG => "keysRotateLeft" in GG,
+            get: GG => GG.keysRotateLeft,
+            set: (GG, bG) => {
+              GG.keysRotateLeft = bG
             }
           },
-          metadata: Zu
-        }, vu, Ku), (0, su.e)(null, null, Ou, {
+          metadata: LG
+        }, aG, cG), (0, wG.k)(null, null, KG, {
           kind: "field",
           name: "keysRotateRight",
           static: !1,
           private: !1,
           access: {
-            has: uu => "keysRotateRight" in uu,
-            get: uu => uu.keysRotateRight,
-            set: (uu, Eu) => {
-              uu.keysRotateRight = Eu
+            has: GG => "keysRotateRight" in GG,
+            get: GG => GG.keysRotateRight,
+            set: (GG, bG) => {
+              GG.keysRotateRight = bG
             }
           },
-          metadata: Zu
-        }, Vu, ru), (0, su.e)(null, null, Yu, {
+          metadata: LG
+        }, lG, jG), (0, wG.k)(null, null, hG, {
           kind: "field",
           name: "keysRotateUp",
           static: !1,
           private: !1,
           access: {
-            has: uu => "keysRotateUp" in uu,
-            get: uu => uu.keysRotateUp,
-            set: (uu, Eu) => {
-              uu.keysRotateUp = Eu
+            has: GG => "keysRotateUp" in GG,
+            get: GG => GG.keysRotateUp,
+            set: (GG, bG) => {
+              GG.keysRotateUp = bG
             }
           },
-          metadata: Zu
-        }, Qu, iu), (0, su.e)(null, null, hu, {
+          metadata: LG
+        }, PG, MG), (0, wG.k)(null, null, dG, {
           kind: "field",
           name: "keysRotateDown",
           static: !1,
           private: !1,
           access: {
-            has: uu => "keysRotateDown" in uu,
-            get: uu => uu.keysRotateDown,
-            set: (uu, Eu) => {
-              uu.keysRotateDown = Eu
+            has: GG => "keysRotateDown" in GG,
+            get: GG => GG.keysRotateDown,
+            set: (GG, bG) => {
+              GG.keysRotateDown = bG
             }
           },
-          metadata: Zu
-        }, Wu, Su), Zu && Object.defineProperty(uu, Symbol.metadata, {
+          metadata: LG
+        }, AG, sG), LG && Object.defineProperty(GG, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Zu
+          value: LG
         })
-      })(), uu
+      })(), GG
     })();
-    lu.d.FreeCameraKeyboardMoveInput = Cu;
-    var bu = ju(37514),
-      cu = ju(40430);
-    let Nu = (() => {
-      var uu;
-      let Eu, ju, Zu = [],
-        Xu = [],
-        lu = [],
-        qu = [];
-      return uu = class {
-        _applyPointerRotation(uu, Eu) {
+    kG.d.FreeCameraKeyboardMoveInput = VG;
+    var pG = ZG(37465),
+      fG = ZG(40550);
+    let QG = (() => {
+      var GG;
+      let bG, ZG, LG = [],
+        yG = [],
+        kG = [],
+        UG = [];
+      return GG = class {
+        _applyPointerRotation(GG, bG) {
           this._pointerConditions.button = this._currentActiveButton;
-          const ju = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions);
-          if (!ju || "rotate" !== ju.interaction) return;
-          const su = ju.XT ?? ju.sensitivity ?? 1 / this.angularSensibility,
-            Uu = ju.lT ?? ju.sensitivity ?? 1 / this.angularSensibility;
-          this.camera.cameraRotation.y += uu * su, this.camera.cameraRotation.x += Eu * Uu
+          const ZG = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions);
+          if (!ZG || "rotate" !== ZG.interaction) return;
+          const wG = ZG.nD ?? ZG.sensitivity ?? 1 / this.angularSensibility,
+            SG = ZG.eD ?? ZG.sensitivity ?? 1 / this.angularSensibility;
+          this.camera.cameraRotation.y += GG * wG, this.camera.cameraRotation.x += bG * SG
         }
         constructor() {
-          let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-          this.touchEnabled = uu, this.buttons = (0, su.g)(this, Zu, [0, 1, 2]), this.angularSensibility = ((0, su.g)(this, Xu), (0, su.g)(this, lu, 2e3)), this._pointerInput = (0, su.g)(this, qu), this._previousPosition = null, this.onPointerMovedObservable = new bu.d, this._allowCameraRotation = !0, this._currentActiveButton = -1, this._activePointerId = -1, this._pointerConditions = {}
+          let GG = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+          this.touchEnabled = GG, this.buttons = (0, wG.n)(this, LG, [0, 1, 2]), this.angularSensibility = ((0, wG.n)(this, yG), (0, wG.n)(this, kG, 2e3)), this._pointerInput = (0, wG.n)(this, UG), this._previousPosition = null, this.onPointerMovedObservable = new pG.c, this._allowCameraRotation = !0, this._currentActiveButton = -1, this._activePointerId = -1, this._pointerConditions = {}
         }
-        attachControl(uu) {
-          uu = fu.h.BackCompatCameraNoPreventDefault(arguments);
-          const Eu = this.camera.wO(),
-            ju = Eu.getInputElement();
-          this._pointerInput || (this._pointerInput = su => {
-            const Uu = su.event,
-              Zu = "touch" === Uu.pointerType;
-            if (!this.touchEnabled && Zu) return;
-            if (su.type !== cu.d.POINTERMOVE && -1 === this.buttons.indexOf(Uu.button)) return;
-            const Xu = Uu.target;
-            if (su.type === cu.d.POINTERDOWN) {
-              if (Zu && -1 !== this._activePointerId || !Zu && -1 !== this._currentActiveButton) return;
-              this._activePointerId = Uu.pointerId;
+        attachControl(GG) {
+          GG = YG.f.BackCompatCameraNoPreventDefault(arguments);
+          const bG = this.camera.CK(),
+            ZG = bG.getInputElement();
+          this._pointerInput || (this._pointerInput = wG => {
+            const SG = wG.event,
+              LG = "touch" === SG.pointerType;
+            if (!this.touchEnabled && LG) return;
+            if (wG.type !== fG.b.POINTERMOVE && -1 === this.buttons.indexOf(SG.button)) return;
+            const yG = SG.target;
+            if (wG.type === fG.b.POINTERDOWN) {
+              if (LG && -1 !== this._activePointerId || !LG && -1 !== this._currentActiveButton) return;
+              this._activePointerId = SG.pointerId;
               try {
-                Xu?.setPointerCapture(Uu.pointerId)
-              } catch (lu) {} - 1 === this._currentActiveButton && (this._currentActiveButton = Uu.button), this._previousPosition = {
-                x: Uu.clientX,
-                y: Uu.clientY
-              }, uu || (Uu.preventDefault(), ju && ju.focus()), Eu.isPointerLock && this._onMouseMove && this._onMouseMove(su.event)
-            } else if (su.type === cu.d.POINTERUP) {
-              if (Zu && this._activePointerId !== Uu.pointerId || !Zu && this._currentActiveButton !== Uu.button) return;
+                yG?.setPointerCapture(SG.pointerId)
+              } catch (kG) {} - 1 === this._currentActiveButton && (this._currentActiveButton = SG.button), this._previousPosition = {
+                x: SG.clientX,
+                y: SG.clientY
+              }, GG || (SG.preventDefault(), ZG && ZG.focus()), bG.isPointerLock && this._onMouseMove && this._onMouseMove(wG.event)
+            } else if (wG.type === fG.b.POINTERUP) {
+              if (LG && this._activePointerId !== SG.pointerId || !LG && this._currentActiveButton !== SG.button) return;
               try {
-                Xu?.releasePointerCapture(Uu.pointerId)
-              } catch (lu) {}
-              this._currentActiveButton = -1, this._previousPosition = null, uu || Uu.preventDefault(), this._activePointerId = -1
-            } else if (su.type === cu.d.POINTERMOVE && (this._activePointerId === Uu.pointerId || !Zu))
-              if (Eu.isPointerLock && this._onMouseMove) this._onMouseMove(su.event);
+                yG?.releasePointerCapture(SG.pointerId)
+              } catch (kG) {}
+              this._currentActiveButton = -1, this._previousPosition = null, GG || SG.preventDefault(), this._activePointerId = -1
+            } else if (wG.type === fG.b.POINTERMOVE && (this._activePointerId === SG.pointerId || !LG))
+              if (bG.isPointerLock && this._onMouseMove) this._onMouseMove(wG.event);
               else if (this._previousPosition) {
-              const Eu = this.camera._calculateHandednessMultiplier(),
-                ju = (Uu.clientX - this._previousPosition.x) * Eu,
-                su = (Uu.clientY - this._previousPosition.y) * Eu;
-              this._allowCameraRotation && this._applyPointerRotation(ju, su), this.onPointerMovedObservable.notifyObservers({
-                offsetX: ju,
-                offsetY: su
+              const bG = this.camera._calculateHandednessMultiplier(),
+                ZG = (SG.clientX - this._previousPosition.x) * bG,
+                wG = (SG.clientY - this._previousPosition.y) * bG;
+              this._allowCameraRotation && this._applyPointerRotation(ZG, wG), this.onPointerMovedObservable.notifyObservers({
+                offsetX: ZG,
+                offsetY: wG
               }), this._previousPosition = {
-                x: Uu.clientX,
-                y: Uu.clientY
-              }, uu || Uu.preventDefault()
+                x: SG.clientX,
+                y: SG.clientY
+              }, GG || SG.preventDefault()
             }
-          }), this._onMouseMove = ju => {
-            if (!Eu.isPointerLock) return;
-            const su = this.camera._calculateHandednessMultiplier();
-            this._applyPointerRotation(ju.movementX * su, ju.movementY * su), this._previousPosition = null, uu || ju.preventDefault()
-          }, this._observer = this.camera.hV()._inputManager._addCameraPointerObserver(this._pointerInput, cu.d.POINTERDOWN | cu.d.POINTERUP | cu.d.POINTERMOVE), ju && (this._contextMenuBind = uu => this.onContextMenu(uu), ju.addEventListener("contextmenu", this._contextMenuBind, !1))
+          }), this._onMouseMove = ZG => {
+            if (!bG.isPointerLock) return;
+            const wG = this.camera._calculateHandednessMultiplier();
+            this._applyPointerRotation(ZG.movementX * wG, ZG.movementY * wG), this._previousPosition = null, GG || ZG.preventDefault()
+          }, this._observer = this.camera.Dv()._inputManager._addCameraPointerObserver(this._pointerInput, fG.b.POINTERDOWN | fG.b.POINTERUP | fG.b.POINTERMOVE), ZG && (this._contextMenuBind = GG => this.onContextMenu(GG), ZG.addEventListener("contextmenu", this._contextMenuBind, !1))
         }
-        onContextMenu(uu) {
-          uu.preventDefault()
+        onContextMenu(GG) {
+          GG.preventDefault()
         }
         detachControl() {
           if (this._observer) {
-            if (this.camera.hV()._inputManager._removeCameraPointerObserver(this._observer), this._contextMenuBind) {
-              const uu = this.camera.wO().getInputElement();
-              uu && uu.removeEventListener("contextmenu", this._contextMenuBind)
+            if (this.camera.Dv()._inputManager._removeCameraPointerObserver(this._observer), this._contextMenuBind) {
+              const GG = this.camera.CK().getInputElement();
+              GG && GG.removeEventListener("contextmenu", this._contextMenuBind)
             }
             this.onPointerMovedObservable && this.onPointerMovedObservable.clear(), this._observer = null, this._onMouseMove = null, this._previousPosition = null
           }
@@ -329,65 +329,65 @@ export const modules = {
           return "mouse"
         }
       }, (() => {
-        const fu = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        Eu = [(0, Uu.E)()], ju = [(0, Uu.E)()], (0, su.e)(null, null, Eu, {
+        const YG = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        bG = [(0, SG.Q)()], ZG = [(0, SG.Q)()], (0, wG.k)(null, null, bG, {
           kind: "field",
           name: "buttons",
           static: !1,
           private: !1,
           access: {
-            has: uu => "buttons" in uu,
-            get: uu => uu.buttons,
-            set: (uu, Eu) => {
-              uu.buttons = Eu
+            has: GG => "buttons" in GG,
+            get: GG => GG.buttons,
+            set: (GG, bG) => {
+              GG.buttons = bG
             }
           },
-          metadata: fu
-        }, Zu, Xu), (0, su.e)(null, null, ju, {
+          metadata: YG
+        }, LG, yG), (0, wG.k)(null, null, ZG, {
           kind: "field",
           name: "angularSensibility",
           static: !1,
           private: !1,
           access: {
-            has: uu => "angularSensibility" in uu,
-            get: uu => uu.angularSensibility,
-            set: (uu, Eu) => {
-              uu.angularSensibility = Eu
+            has: GG => "angularSensibility" in GG,
+            get: GG => GG.angularSensibility,
+            set: (GG, bG) => {
+              GG.angularSensibility = bG
             }
           },
-          metadata: fu
-        }, lu, qu), fu && Object.defineProperty(uu, Symbol.metadata, {
+          metadata: YG
+        }, kG, UG), YG && Object.defineProperty(GG, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: fu
+          value: YG
         })
-      })(), uu
+      })(), GG
     })();
-    lu.d.FreeCameraMouseInput = Nu;
-    var Ou = ju(40442);
-    let Yu = (() => {
-      var uu;
-      let Eu, ju, Zu, Xu = [],
-        lu = [],
-        qu = [],
-        Cu = [],
-        Nu = [],
-        Yu = [];
-      return uu = class {
+    kG.d.FreeCameraMouseInput = QG;
+    var KG = ZG(40560);
+    let hG = (() => {
+      var GG;
+      let bG, ZG, LG, yG = [],
+        kG = [],
+        UG = [],
+        VG = [],
+        QG = [],
+        hG = [];
+      return GG = class {
         constructor() {
-          this.wheelPrecisionX = (0, su.g)(this, Xu, 3), this.wheelPrecisionY = ((0, su.g)(this, lu), (0, su.g)(this, qu, 3)), this.wheelPrecisionZ = ((0, su.g)(this, Cu), (0, su.g)(this, Nu, 3)), this.onChangedObservable = ((0, su.g)(this, Yu), new bu.d), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0, this._ffMultiplier = 12, this._normalize = 120
+          this.wheelPrecisionX = (0, wG.n)(this, yG, 3), this.wheelPrecisionY = ((0, wG.n)(this, kG), (0, wG.n)(this, UG, 3)), this.wheelPrecisionZ = ((0, wG.n)(this, VG), (0, wG.n)(this, QG, 3)), this.onChangedObservable = ((0, wG.n)(this, hG), new pG.c), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0, this._ffMultiplier = 12, this._normalize = 120
         }
-        attachControl(uu) {
-          uu = fu.h.BackCompatCameraNoPreventDefault(arguments), this._wheel = Eu => {
-            if (Eu.type !== cu.d.POINTERWHEEL) return;
-            const ju = Eu.event,
-              su = ju.deltaMode === Ou.d.DOM_DELTA_LINE ? this._ffMultiplier : 1;
-            this._wheelDeltaX += this.wheelPrecisionX * su * ju.deltaX / this._normalize, this._wheelDeltaY -= this.wheelPrecisionY * su * ju.deltaY / this._normalize, this._wheelDeltaZ += this.wheelPrecisionZ * su * ju.deltaZ / this._normalize, ju.preventDefault && (uu || ju.preventDefault())
-          }, this._observer = this.camera.hV()._inputManager._addCameraPointerObserver(this._wheel, cu.d.POINTERWHEEL)
+        attachControl(GG) {
+          GG = YG.f.BackCompatCameraNoPreventDefault(arguments), this._wheel = bG => {
+            if (bG.type !== fG.b.POINTERWHEEL) return;
+            const ZG = bG.event,
+              wG = ZG.deltaMode === KG.d.DOM_DELTA_LINE ? this._ffMultiplier : 1;
+            this._wheelDeltaX += this.wheelPrecisionX * wG * ZG.deltaX / this._normalize, this._wheelDeltaY -= this.wheelPrecisionY * wG * ZG.deltaY / this._normalize, this._wheelDeltaZ += this.wheelPrecisionZ * wG * ZG.deltaZ / this._normalize, ZG.preventDefault && (GG || ZG.preventDefault())
+          }, this._observer = this.camera.Dv()._inputManager._addCameraPointerObserver(this._wheel, fG.b.POINTERWHEEL)
         }
         detachControl() {
-          this._observer && (this.camera.hV()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null), this.onChangedObservable && this.onChangedObservable.clear()
+          this._observer && (this.camera.Dv()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null), this.onChangedObservable && this.onChangedObservable.clear()
         }
         checkInputs() {
           this.onChangedObservable.notifyObservers({
@@ -403,325 +403,325 @@ export const modules = {
           return "mousewheel"
         }
       }, (() => {
-        const fu = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        Eu = [(0, Uu.E)()], ju = [(0, Uu.E)()], Zu = [(0, Uu.E)()], (0, su.e)(null, null, Eu, {
+        const YG = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        bG = [(0, SG.Q)()], ZG = [(0, SG.Q)()], LG = [(0, SG.Q)()], (0, wG.k)(null, null, bG, {
           kind: "field",
           name: "wheelPrecisionX",
           static: !1,
           private: !1,
           access: {
-            has: uu => "wheelPrecisionX" in uu,
-            get: uu => uu.wheelPrecisionX,
-            set: (uu, Eu) => {
-              uu.wheelPrecisionX = Eu
+            has: GG => "wheelPrecisionX" in GG,
+            get: GG => GG.wheelPrecisionX,
+            set: (GG, bG) => {
+              GG.wheelPrecisionX = bG
             }
           },
-          metadata: fu
-        }, Xu, lu), (0, su.e)(null, null, ju, {
+          metadata: YG
+        }, yG, kG), (0, wG.k)(null, null, ZG, {
           kind: "field",
           name: "wheelPrecisionY",
           static: !1,
           private: !1,
           access: {
-            has: uu => "wheelPrecisionY" in uu,
-            get: uu => uu.wheelPrecisionY,
-            set: (uu, Eu) => {
-              uu.wheelPrecisionY = Eu
+            has: GG => "wheelPrecisionY" in GG,
+            get: GG => GG.wheelPrecisionY,
+            set: (GG, bG) => {
+              GG.wheelPrecisionY = bG
             }
           },
-          metadata: fu
-        }, qu, Cu), (0, su.e)(null, null, Zu, {
+          metadata: YG
+        }, UG, VG), (0, wG.k)(null, null, LG, {
           kind: "field",
           name: "wheelPrecisionZ",
           static: !1,
           private: !1,
           access: {
-            has: uu => "wheelPrecisionZ" in uu,
-            get: uu => uu.wheelPrecisionZ,
-            set: (uu, Eu) => {
-              uu.wheelPrecisionZ = Eu
+            has: GG => "wheelPrecisionZ" in GG,
+            get: GG => GG.wheelPrecisionZ,
+            set: (GG, bG) => {
+              GG.wheelPrecisionZ = bG
             }
           },
-          metadata: fu
-        }, Nu, Yu), fu && Object.defineProperty(uu, Symbol.metadata, {
+          metadata: YG
+        }, QG, hG), YG && Object.defineProperty(GG, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: fu
+          value: YG
         })
-      })(), uu
+      })(), GG
     })();
-    var hu;
-    ! function(uu) {
-      uu[uu.MoveRelative = 0] = "MoveRelative", uu[uu.RotateRelative = 1] = "RotateRelative", uu[uu.MoveScene = 2] = "MoveScene"
-    }(hu || (hu = {}));
-    let Du = (() => {
-      var uu;
-      let Eu, ju, Xu, lu, qu, fu, Cu, bu, cu, Nu = Yu,
-        Ou = [];
-      return uu = class extends Nu {
+    var dG;
+    ! function(GG) {
+      GG[GG.MoveRelative = 0] = "MoveRelative", GG[GG.RotateRelative = 1] = "RotateRelative", GG[GG.MoveScene = 2] = "MoveScene"
+    }(dG || (dG = {}));
+    let JG = (() => {
+      var GG;
+      let bG, ZG, yG, kG, UG, YG, VG, pG, fG, QG = hG,
+        KG = [];
+      return GG = class extends QG {
         constructor() {
-          super(...arguments), this.camera = (0, su.g)(this, Ou), this._moveRelative = Zu.t.Zero(), this._rotateRelative = Zu.t.Zero(), this._moveScene = Zu.t.Zero(), this._wheelXAction = hu.MoveRelative, this._wheelXActionCoordinate = 0, this._wheelYAction = hu.MoveRelative, this._wheelYActionCoordinate = 2, this._wheelZAction = null, this._wheelZActionCoordinate = null
+          super(...arguments), this.camera = (0, wG.n)(this, KG), this._moveRelative = LG.p.Zero(), this._rotateRelative = LG.p.Zero(), this._moveScene = LG.p.Zero(), this._wheelXAction = dG.MoveRelative, this._wheelXActionCoordinate = 0, this._wheelYAction = dG.MoveRelative, this._wheelYActionCoordinate = 2, this._wheelZAction = null, this._wheelZActionCoordinate = null
         }
         getClassName() {
           return "FreeCameraMouseWheelInput"
         }
-        set wheelXMoveRelative(uu) {
-          null === uu && this._wheelXAction !== hu.MoveRelative || (this._wheelXAction = hu.MoveRelative, this._wheelXActionCoordinate = uu)
+        set wheelXMoveRelative(GG) {
+          null === GG && this._wheelXAction !== dG.MoveRelative || (this._wheelXAction = dG.MoveRelative, this._wheelXActionCoordinate = GG)
         }
         get wheelXMoveRelative() {
-          return this._wheelXAction !== hu.MoveRelative ? null : this._wheelXActionCoordinate
+          return this._wheelXAction !== dG.MoveRelative ? null : this._wheelXActionCoordinate
         }
-        set wheelYMoveRelative(uu) {
-          null === uu && this._wheelYAction !== hu.MoveRelative || (this._wheelYAction = hu.MoveRelative, this._wheelYActionCoordinate = uu)
+        set wheelYMoveRelative(GG) {
+          null === GG && this._wheelYAction !== dG.MoveRelative || (this._wheelYAction = dG.MoveRelative, this._wheelYActionCoordinate = GG)
         }
         get wheelYMoveRelative() {
-          return this._wheelYAction !== hu.MoveRelative ? null : this._wheelYActionCoordinate
+          return this._wheelYAction !== dG.MoveRelative ? null : this._wheelYActionCoordinate
         }
-        set wheelZMoveRelative(uu) {
-          null === uu && this._wheelZAction !== hu.MoveRelative || (this._wheelZAction = hu.MoveRelative, this._wheelZActionCoordinate = uu)
+        set wheelZMoveRelative(GG) {
+          null === GG && this._wheelZAction !== dG.MoveRelative || (this._wheelZAction = dG.MoveRelative, this._wheelZActionCoordinate = GG)
         }
         get wheelZMoveRelative() {
-          return this._wheelZAction !== hu.MoveRelative ? null : this._wheelZActionCoordinate
+          return this._wheelZAction !== dG.MoveRelative ? null : this._wheelZActionCoordinate
         }
-        set wheelXRotateRelative(uu) {
-          null === uu && this._wheelXAction !== hu.RotateRelative || (this._wheelXAction = hu.RotateRelative, this._wheelXActionCoordinate = uu)
+        set wheelXRotateRelative(GG) {
+          null === GG && this._wheelXAction !== dG.RotateRelative || (this._wheelXAction = dG.RotateRelative, this._wheelXActionCoordinate = GG)
         }
         get wheelXRotateRelative() {
-          return this._wheelXAction !== hu.RotateRelative ? null : this._wheelXActionCoordinate
+          return this._wheelXAction !== dG.RotateRelative ? null : this._wheelXActionCoordinate
         }
-        set wheelYRotateRelative(uu) {
-          null === uu && this._wheelYAction !== hu.RotateRelative || (this._wheelYAction = hu.RotateRelative, this._wheelYActionCoordinate = uu)
+        set wheelYRotateRelative(GG) {
+          null === GG && this._wheelYAction !== dG.RotateRelative || (this._wheelYAction = dG.RotateRelative, this._wheelYActionCoordinate = GG)
         }
         get wheelYRotateRelative() {
-          return this._wheelYAction !== hu.RotateRelative ? null : this._wheelYActionCoordinate
+          return this._wheelYAction !== dG.RotateRelative ? null : this._wheelYActionCoordinate
         }
-        set wheelZRotateRelative(uu) {
-          null === uu && this._wheelZAction !== hu.RotateRelative || (this._wheelZAction = hu.RotateRelative, this._wheelZActionCoordinate = uu)
+        set wheelZRotateRelative(GG) {
+          null === GG && this._wheelZAction !== dG.RotateRelative || (this._wheelZAction = dG.RotateRelative, this._wheelZActionCoordinate = GG)
         }
         get wheelZRotateRelative() {
-          return this._wheelZAction !== hu.RotateRelative ? null : this._wheelZActionCoordinate
+          return this._wheelZAction !== dG.RotateRelative ? null : this._wheelZActionCoordinate
         }
-        set wheelXMoveScene(uu) {
-          null === uu && this._wheelXAction !== hu.MoveScene || (this._wheelXAction = hu.MoveScene, this._wheelXActionCoordinate = uu)
+        set wheelXMoveScene(GG) {
+          null === GG && this._wheelXAction !== dG.MoveScene || (this._wheelXAction = dG.MoveScene, this._wheelXActionCoordinate = GG)
         }
         get wheelXMoveScene() {
-          return this._wheelXAction !== hu.MoveScene ? null : this._wheelXActionCoordinate
+          return this._wheelXAction !== dG.MoveScene ? null : this._wheelXActionCoordinate
         }
-        set wheelYMoveScene(uu) {
-          null === uu && this._wheelYAction !== hu.MoveScene || (this._wheelYAction = hu.MoveScene, this._wheelYActionCoordinate = uu)
+        set wheelYMoveScene(GG) {
+          null === GG && this._wheelYAction !== dG.MoveScene || (this._wheelYAction = dG.MoveScene, this._wheelYActionCoordinate = GG)
         }
         get wheelYMoveScene() {
-          return this._wheelYAction !== hu.MoveScene ? null : this._wheelYActionCoordinate
+          return this._wheelYAction !== dG.MoveScene ? null : this._wheelYActionCoordinate
         }
-        set wheelZMoveScene(uu) {
-          null === uu && this._wheelZAction !== hu.MoveScene || (this._wheelZAction = hu.MoveScene, this._wheelZActionCoordinate = uu)
+        set wheelZMoveScene(GG) {
+          null === GG && this._wheelZAction !== dG.MoveScene || (this._wheelZAction = dG.MoveScene, this._wheelZActionCoordinate = GG)
         }
         get wheelZMoveScene() {
-          return this._wheelZAction !== hu.MoveScene ? null : this._wheelZActionCoordinate
+          return this._wheelZAction !== dG.MoveScene ? null : this._wheelZActionCoordinate
         }
         checkInputs() {
           if (0 === this._wheelDeltaX && 0 === this._wheelDeltaY && 0 == this._wheelDeltaZ) return;
-          this._moveRelative.k_(0), this._rotateRelative.k_(0), this._moveScene.k_(0), this._updateCamera(), this.camera.hV().useRightHandedSystem && (this._moveRelative.z *= -1);
-          const uu = Zu.e.Zero();
-          this.camera.getViewMatrix().invertToRef(uu);
-          const Eu = Zu.t.Zero();
-          Zu.t.TransformNormalToRef(this._moveRelative, uu, Eu), this.camera.cameraRotation.x += this._rotateRelative.x / 200, this.camera.cameraRotation.y += this._rotateRelative.y / 200, this.camera.cameraDirection.addInPlace(Eu), this.camera.cameraDirection.addInPlace(this._moveScene), super.checkInputs()
+          this._moveRelative.N7(0), this._rotateRelative.N7(0), this._moveScene.N7(0), this._updateCamera(), this.camera.Dv().useRightHandedSystem && (this._moveRelative.z *= -1);
+          const GG = LG.e.Zero();
+          this.camera.getViewMatrix().invertToRef(GG);
+          const bG = LG.p.Zero();
+          LG.p.TransformNormalToRef(this._moveRelative, GG, bG), this.camera.cameraRotation.x += this._rotateRelative.x / 200, this.camera.cameraRotation.y += this._rotateRelative.y / 200, this.camera.cameraDirection.addInPlace(bG), this.camera.cameraDirection.addInPlace(this._moveScene), super.checkInputs()
         }
         _updateCamera() {
           this._updateCameraProperty(this._wheelDeltaX, this._wheelXAction, this._wheelXActionCoordinate), this._updateCameraProperty(this._wheelDeltaY, this._wheelYAction, this._wheelYActionCoordinate), this._updateCameraProperty(this._wheelDeltaZ, this._wheelZAction, this._wheelZActionCoordinate)
         }
-        _updateCameraProperty(uu, Eu, ju) {
-          if (0 === uu) return;
-          if (null === Eu || null === ju) return;
-          let su = null;
-          switch (Eu) {
-            case hu.MoveRelative:
-              su = this._moveRelative;
+        _updateCameraProperty(GG, bG, ZG) {
+          if (0 === GG) return;
+          if (null === bG || null === ZG) return;
+          let wG = null;
+          switch (bG) {
+            case dG.MoveRelative:
+              wG = this._moveRelative;
               break;
-            case hu.RotateRelative:
-              su = this._rotateRelative;
+            case dG.RotateRelative:
+              wG = this._rotateRelative;
               break;
-            case hu.MoveScene:
-              su = this._moveScene
+            case dG.MoveScene:
+              wG = this._moveScene
           }
-          switch (ju) {
+          switch (ZG) {
             case 0:
-              su.set(uu, 0, 0);
+              wG.set(GG, 0, 0);
               break;
             case 1:
-              su.set(0, uu, 0);
+              wG.set(0, GG, 0);
               break;
             case 2:
-              su.set(0, 0, uu)
+              wG.set(0, 0, GG)
           }
         }
       }, (() => {
-        const Zu = "function" === typeof Symbol && Symbol.metadata ? Object.create(Nu[Symbol.metadata] ?? null) : void 0;
-        Eu = [(0, Uu.E)()], ju = [(0, Uu.E)()], Xu = [(0, Uu.E)()], lu = [(0, Uu.E)()], qu = [(0, Uu.E)()], fu = [(0, Uu.E)()], Cu = [(0, Uu.E)()], bu = [(0, Uu.E)()], cu = [(0, Uu.E)()], (0, su.e)(uu, null, Eu, {
+        const LG = "function" === typeof Symbol && Symbol.metadata ? Object.create(QG[Symbol.metadata] ?? null) : void 0;
+        bG = [(0, SG.Q)()], ZG = [(0, SG.Q)()], yG = [(0, SG.Q)()], kG = [(0, SG.Q)()], UG = [(0, SG.Q)()], YG = [(0, SG.Q)()], VG = [(0, SG.Q)()], pG = [(0, SG.Q)()], fG = [(0, SG.Q)()], (0, wG.k)(GG, null, bG, {
           kind: "setter",
           name: "wheelXMoveRelative",
           static: !1,
           private: !1,
           access: {
-            has: uu => "wheelXMoveRelative" in uu,
-            set: (uu, Eu) => {
-              uu.wheelXMoveRelative = Eu
+            has: GG => "wheelXMoveRelative" in GG,
+            set: (GG, bG) => {
+              GG.wheelXMoveRelative = bG
             }
           },
-          metadata: Zu
-        }, null, Ou), (0, su.e)(uu, null, ju, {
+          metadata: LG
+        }, null, KG), (0, wG.k)(GG, null, ZG, {
           kind: "setter",
           name: "wheelYMoveRelative",
           static: !1,
           private: !1,
           access: {
-            has: uu => "wheelYMoveRelative" in uu,
-            set: (uu, Eu) => {
-              uu.wheelYMoveRelative = Eu
+            has: GG => "wheelYMoveRelative" in GG,
+            set: (GG, bG) => {
+              GG.wheelYMoveRelative = bG
             }
           },
-          metadata: Zu
-        }, null, Ou), (0, su.e)(uu, null, Xu, {
+          metadata: LG
+        }, null, KG), (0, wG.k)(GG, null, yG, {
           kind: "setter",
           name: "wheelZMoveRelative",
           static: !1,
           private: !1,
           access: {
-            has: uu => "wheelZMoveRelative" in uu,
-            set: (uu, Eu) => {
-              uu.wheelZMoveRelative = Eu
+            has: GG => "wheelZMoveRelative" in GG,
+            set: (GG, bG) => {
+              GG.wheelZMoveRelative = bG
             }
           },
-          metadata: Zu
-        }, null, Ou), (0, su.e)(uu, null, lu, {
+          metadata: LG
+        }, null, KG), (0, wG.k)(GG, null, kG, {
           kind: "setter",
           name: "wheelXRotateRelative",
           static: !1,
           private: !1,
           access: {
-            has: uu => "wheelXRotateRelative" in uu,
-            set: (uu, Eu) => {
-              uu.wheelXRotateRelative = Eu
+            has: GG => "wheelXRotateRelative" in GG,
+            set: (GG, bG) => {
+              GG.wheelXRotateRelative = bG
             }
           },
-          metadata: Zu
-        }, null, Ou), (0, su.e)(uu, null, qu, {
+          metadata: LG
+        }, null, KG), (0, wG.k)(GG, null, UG, {
           kind: "setter",
           name: "wheelYRotateRelative",
           static: !1,
           private: !1,
           access: {
-            has: uu => "wheelYRotateRelative" in uu,
-            set: (uu, Eu) => {
-              uu.wheelYRotateRelative = Eu
+            has: GG => "wheelYRotateRelative" in GG,
+            set: (GG, bG) => {
+              GG.wheelYRotateRelative = bG
             }
           },
-          metadata: Zu
-        }, null, Ou), (0, su.e)(uu, null, fu, {
+          metadata: LG
+        }, null, KG), (0, wG.k)(GG, null, YG, {
           kind: "setter",
           name: "wheelZRotateRelative",
           static: !1,
           private: !1,
           access: {
-            has: uu => "wheelZRotateRelative" in uu,
-            set: (uu, Eu) => {
-              uu.wheelZRotateRelative = Eu
+            has: GG => "wheelZRotateRelative" in GG,
+            set: (GG, bG) => {
+              GG.wheelZRotateRelative = bG
             }
           },
-          metadata: Zu
-        }, null, Ou), (0, su.e)(uu, null, Cu, {
+          metadata: LG
+        }, null, KG), (0, wG.k)(GG, null, VG, {
           kind: "setter",
           name: "wheelXMoveScene",
           static: !1,
           private: !1,
           access: {
-            has: uu => "wheelXMoveScene" in uu,
-            set: (uu, Eu) => {
-              uu.wheelXMoveScene = Eu
+            has: GG => "wheelXMoveScene" in GG,
+            set: (GG, bG) => {
+              GG.wheelXMoveScene = bG
             }
           },
-          metadata: Zu
-        }, null, Ou), (0, su.e)(uu, null, bu, {
+          metadata: LG
+        }, null, KG), (0, wG.k)(GG, null, pG, {
           kind: "setter",
           name: "wheelYMoveScene",
           static: !1,
           private: !1,
           access: {
-            has: uu => "wheelYMoveScene" in uu,
-            set: (uu, Eu) => {
-              uu.wheelYMoveScene = Eu
+            has: GG => "wheelYMoveScene" in GG,
+            set: (GG, bG) => {
+              GG.wheelYMoveScene = bG
             }
           },
-          metadata: Zu
-        }, null, Ou), (0, su.e)(uu, null, cu, {
+          metadata: LG
+        }, null, KG), (0, wG.k)(GG, null, fG, {
           kind: "setter",
           name: "wheelZMoveScene",
           static: !1,
           private: !1,
           access: {
-            has: uu => "wheelZMoveScene" in uu,
-            set: (uu, Eu) => {
-              uu.wheelZMoveScene = Eu
+            has: GG => "wheelZMoveScene" in GG,
+            set: (GG, bG) => {
+              GG.wheelZMoveScene = bG
             }
           },
-          metadata: Zu
-        }, null, Ou), Zu && Object.defineProperty(uu, Symbol.metadata, {
+          metadata: LG
+        }, null, KG), LG && Object.defineProperty(GG, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Zu
+          value: LG
         })
-      })(), uu
+      })(), GG
     })();
-    lu.d.FreeCameraMouseWheelInput = Du;
-    let gu = (() => {
-      var uu;
-      let Eu, ju, Xu = [],
-        lu = [],
-        qu = [],
-        Cu = [];
-      return uu = class {
+    kG.d.FreeCameraMouseWheelInput = JG;
+    let rG = (() => {
+      var GG;
+      let bG, ZG, yG = [],
+        kG = [],
+        UG = [],
+        VG = [];
+      return GG = class {
         constructor() {
-          let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          this.allowMouse = uu, this.touchAngularSensibility = (0, su.g)(this, Xu, 2e5), this.touchMoveSensibility = ((0, su.g)(this, lu), (0, su.g)(this, qu, 250)), this.singleFingerRotate = ((0, su.g)(this, Cu), !1), this._offsetX = null, this._offsetY = null, this._pointerPressed = new Array, this._isSafari = fu.h.IsSafari()
+          let GG = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          this.allowMouse = GG, this.touchAngularSensibility = (0, wG.n)(this, yG, 2e5), this.touchMoveSensibility = ((0, wG.n)(this, kG), (0, wG.n)(this, UG, 250)), this.singleFingerRotate = ((0, wG.n)(this, VG), !1), this._offsetX = null, this._offsetY = null, this._pointerPressed = new Array, this._isSafari = YG.f.IsSafari()
         }
-        attachControl(uu) {
-          uu = fu.h.BackCompatCameraNoPreventDefault(arguments);
-          let Eu = null;
+        attachControl(GG) {
+          GG = YG.f.BackCompatCameraNoPreventDefault(arguments);
+          let bG = null;
           if (void 0 === this._pointerInput && (this._onLostFocus = () => {
               this._offsetX = null, this._offsetY = null
-            }, this._pointerInput = ju => {
-              const su = ju.event,
-                Uu = "mouse" === su.pointerType || this._isSafari && "undefined" === typeof su.pointerType;
-              if (this.allowMouse || !Uu)
-                if (ju.type === cu.d.POINTERDOWN) {
-                  if (uu || su.preventDefault(), this._pointerPressed.push(su.pointerId), 1 !== this._pointerPressed.length) return;
-                  Eu = {
-                    x: su.clientX,
-                    y: su.clientY
+            }, this._pointerInput = ZG => {
+              const wG = ZG.event,
+                SG = "mouse" === wG.pointerType || this._isSafari && "undefined" === typeof wG.pointerType;
+              if (this.allowMouse || !SG)
+                if (ZG.type === fG.b.POINTERDOWN) {
+                  if (GG || wG.preventDefault(), this._pointerPressed.push(wG.pointerId), 1 !== this._pointerPressed.length) return;
+                  bG = {
+                    x: wG.clientX,
+                    y: wG.clientY
                   }
-                } else if (ju.type === cu.d.POINTERUP) {
-                uu || su.preventDefault();
-                const ju = this._pointerPressed.indexOf(su.pointerId);
-                if (-1 === ju) return;
-                if (this._pointerPressed.splice(ju, 1), 0 != ju) return;
-                Eu = null, this._offsetX = null, this._offsetY = null
-              } else if (ju.type === cu.d.POINTERMOVE) {
-                if (uu || su.preventDefault(), !Eu) return;
-                if (0 != this._pointerPressed.indexOf(su.pointerId)) return;
-                this._offsetX = su.clientX - Eu.x, this._offsetY = -(su.clientY - Eu.y)
+                } else if (ZG.type === fG.b.POINTERUP) {
+                GG || wG.preventDefault();
+                const ZG = this._pointerPressed.indexOf(wG.pointerId);
+                if (-1 === ZG) return;
+                if (this._pointerPressed.splice(ZG, 1), 0 != ZG) return;
+                bG = null, this._offsetX = null, this._offsetY = null
+              } else if (ZG.type === fG.b.POINTERMOVE) {
+                if (GG || wG.preventDefault(), !bG) return;
+                if (0 != this._pointerPressed.indexOf(wG.pointerId)) return;
+                this._offsetX = wG.clientX - bG.x, this._offsetY = -(wG.clientY - bG.y)
               }
-            }), this._observer = this.camera.hV()._inputManager._addCameraPointerObserver(this._pointerInput, cu.d.POINTERDOWN | cu.d.POINTERUP | cu.d.POINTERMOVE), this._onLostFocus) {
-            const uu = this.camera.wO().getInputElement();
-            uu && uu.addEventListener("blur", this._onLostFocus)
+            }), this._observer = this.camera.Dv()._inputManager._addCameraPointerObserver(this._pointerInput, fG.b.POINTERDOWN | fG.b.POINTERUP | fG.b.POINTERMOVE), this._onLostFocus) {
+            const GG = this.camera.CK().getInputElement();
+            GG && GG.addEventListener("blur", this._onLostFocus)
           }
         }
         detachControl() {
           if (this._pointerInput) {
-            if (this._observer && (this.camera.hV()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null), this._onLostFocus) {
-              const uu = this.camera.wO().getInputElement();
-              uu && uu.removeEventListener("blur", this._onLostFocus), this._onLostFocus = null
+            if (this._observer && (this.camera.Dv()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null), this._onLostFocus) {
+              const GG = this.camera.CK().getInputElement();
+              GG && GG.removeEventListener("blur", this._onLostFocus), this._onLostFocus = null
             }
             this._pointerPressed.length = 0, this._offsetX = null, this._offsetY = null
           }
@@ -729,21 +729,21 @@ export const modules = {
         checkInputs() {
           if (null === this._offsetX || null === this._offsetY) return;
           if (0 === this._offsetX && 0 === this._offsetY) return;
-          const uu = this.camera,
-            Eu = uu.movement.input,
-            ju = Eu.getEntry("touch", "rotate"),
-            su = Eu.getEntry("touch", "translate"),
-            Uu = uu._calculateHandednessMultiplier(),
-            Xu = this.singleFingerRotate && 1 === this._pointerPressed.length || !this.singleFingerRotate && this._pointerPressed.length > 1;
-          if (ju) {
-            const Eu = ju.sensitivity ?? 1 / this.touchAngularSensibility;
-            uu.cameraRotation.y = this._offsetX * Uu * Eu, Xu && (uu.cameraRotation.x = -this._offsetY * Uu * Eu)
+          const GG = this.camera,
+            bG = GG.movement.input,
+            ZG = bG.getEntry("touch", "rotate"),
+            wG = bG.getEntry("touch", "translate"),
+            SG = GG._calculateHandednessMultiplier(),
+            yG = this.singleFingerRotate && 1 === this._pointerPressed.length || !this.singleFingerRotate && this._pointerPressed.length > 1;
+          if (ZG) {
+            const bG = ZG.sensitivity ?? 1 / this.touchAngularSensibility;
+            GG.cameraRotation.y = this._offsetX * SG * bG, yG && (GG.cameraRotation.x = -this._offsetY * SG * bG)
           }
-          if (!Xu && su) {
-            const Eu = uu._computeLocalCameraSpeed(),
-              ju = su.sensitivity ?? (0 !== this.touchMoveSensibility ? 1 / this.touchMoveSensibility : 0),
-              Uu = Zu.m.dO[0];
-            Uu.T6(0, 0, Eu * this._offsetY * ju), Zu.e.RotationYawPitchRollToRef(uu.rotation.y, uu.rotation.x, 0, uu._cameraRotationMatrix), Zu.t.TransformCoordinatesToRef(Uu, uu._cameraRotationMatrix, Uu), uu.cameraDirection.addInPlace(Uu)
+          if (!yG && wG) {
+            const bG = GG._computeLocalCameraSpeed(),
+              ZG = wG.sensitivity ?? (0 !== this.touchMoveSensibility ? 1 / this.touchMoveSensibility : 0),
+              SG = LG.j.mK[0];
+            SG.fGG(0, 0, bG * this._offsetY * ZG), LG.e.RotationYawPitchRollToRef(GG.rotation.y, GG.rotation.x, 0, GG._cameraRotationMatrix), LG.p.TransformCoordinatesToRef(SG, GG._cameraRotationMatrix, SG), GG.cameraDirection.addInPlace(SG)
           }
         }
         getClassName() {
@@ -753,204 +753,204 @@ export const modules = {
           return "touch"
         }
       }, (() => {
-        const Zu = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        Eu = [(0, Uu.E)()], ju = [(0, Uu.E)()], (0, su.e)(null, null, Eu, {
+        const LG = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        bG = [(0, SG.Q)()], ZG = [(0, SG.Q)()], (0, wG.k)(null, null, bG, {
           kind: "field",
           name: "touchAngularSensibility",
           static: !1,
           private: !1,
           access: {
-            has: uu => "touchAngularSensibility" in uu,
-            get: uu => uu.touchAngularSensibility,
-            set: (uu, Eu) => {
-              uu.touchAngularSensibility = Eu
+            has: GG => "touchAngularSensibility" in GG,
+            get: GG => GG.touchAngularSensibility,
+            set: (GG, bG) => {
+              GG.touchAngularSensibility = bG
             }
           },
-          metadata: Zu
-        }, Xu, lu), (0, su.e)(null, null, ju, {
+          metadata: LG
+        }, yG, kG), (0, wG.k)(null, null, ZG, {
           kind: "field",
           name: "touchMoveSensibility",
           static: !1,
           private: !1,
           access: {
-            has: uu => "touchMoveSensibility" in uu,
-            get: uu => uu.touchMoveSensibility,
-            set: (uu, Eu) => {
-              uu.touchMoveSensibility = Eu
+            has: GG => "touchMoveSensibility" in GG,
+            get: GG => GG.touchMoveSensibility,
+            set: (GG, bG) => {
+              GG.touchMoveSensibility = bG
             }
           },
-          metadata: Zu
-        }, qu, Cu), Zu && Object.defineProperty(uu, Symbol.metadata, {
+          metadata: LG
+        }, UG, VG), LG && Object.defineProperty(GG, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Zu
+          value: LG
         })
-      })(), uu
+      })(), GG
     })();
-    lu.d.FreeCameraTouchInput = gu;
-    var Mu, eu, Gu, pu = ju(40153);
-    class wu extends lu.h {
-      constructor(uu) {
-        super(uu), this._mouseInput = null, this._mouseWheelInput = null
+    kG.d.FreeCameraTouchInput = rG;
+    var zG, EG, oG, XG = ZG(40258);
+    class uG extends kG.f {
+      constructor(GG) {
+        super(GG), this._mouseInput = null, this._mouseWheelInput = null
       }
       addKeyboard() {
-        return this.add(new Cu), this
+        return this.add(new VG), this
       }
       addMouse() {
-        let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._mouseInput || (this._mouseInput = new Nu(uu), this.add(this._mouseInput)), this
+        let GG = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._mouseInput || (this._mouseInput = new QG(GG), this.add(this._mouseInput)), this
       }
       removeMouse() {
         return this._mouseInput && this.remove(this._mouseInput), this
       }
       addMouseWheel() {
-        return this._mouseWheelInput || (this._mouseWheelInput = new Du, this.add(this._mouseWheelInput)), this
+        return this._mouseWheelInput || (this._mouseWheelInput = new JG, this.add(this._mouseWheelInput)), this
       }
       removeMouseWheel() {
         return this._mouseWheelInput && this.remove(this._mouseWheelInput), this
       }
       addTouch() {
-        return this.add(new gu), this
+        return this.add(new rG), this
       }
       clear() {
         super.clear(), this._mouseInput = null
       }
-    }(Mu = wu.prototype).addDeviceOrientation ?? (Mu.addDeviceOrientation = (0, pu.g)("FreeCameraInputsManager", "addDeviceOrientation")), (eu = wu.prototype).addVirtualJoystick ?? (eu.addVirtualJoystick = (0, pu.g)("FreeCameraInputsManager", "addVirtualJoystick")), (Gu = wu.prototype).addGamepad ?? (Gu.addGamepad = (0, pu.g)("FreeCameraInputsManager", "addGamepad"));
-    var Ju = ju(40168),
-      du = ju(37532);
-    let au = (() => {
-        var uu;
-        let Eu, ju, lu, qu, Cu = Xu.e,
-          bu = [],
-          cu = [],
-          Nu = [],
-          Ou = [],
-          Yu = [],
-          hu = [],
-          Du = [],
-          gu = [];
-        return uu = class extends Cu {
+    }(zG = uG.prototype).addDeviceOrientation ?? (zG.addDeviceOrientation = (0, XG.h)("FreeCameraInputsManager", "addDeviceOrientation")), (EG = uG.prototype).addVirtualJoystick ?? (EG.addVirtualJoystick = (0, XG.h)("FreeCameraInputsManager", "addVirtualJoystick")), (oG = uG.prototype).addGamepad ?? (oG.addGamepad = (0, XG.h)("FreeCameraInputsManager", "addGamepad"));
+    var iG = ZG(40280),
+      CG = ZG(37484);
+    let WG = (() => {
+        var GG;
+        let bG, ZG, kG, UG, VG = yG.e,
+          pG = [],
+          fG = [],
+          QG = [],
+          KG = [],
+          hG = [],
+          dG = [],
+          JG = [],
+          rG = [];
+        return GG = class extends VG {
           get angularSensibility() {
-            const uu = this.inputs.attached.mouse;
-            return uu ? uu.angularSensibility : 0
+            const GG = this.inputs.attached.mouse;
+            return GG ? GG.angularSensibility : 0
           }
-          set angularSensibility(uu) {
-            const Eu = this.inputs.attached.mouse;
-            Eu && (Eu.angularSensibility = uu)
+          set angularSensibility(GG) {
+            const bG = this.inputs.attached.mouse;
+            bG && (bG.angularSensibility = GG)
           }
           get keysUp() {
-            const uu = this.inputs.attached.keyboard;
-            return uu ? uu.keysUp : []
+            const GG = this.inputs.attached.keyboard;
+            return GG ? GG.keysUp : []
           }
-          set keysUp(uu) {
-            const Eu = this.inputs.attached.keyboard;
-            Eu && (Eu.keysUp = uu)
+          set keysUp(GG) {
+            const bG = this.inputs.attached.keyboard;
+            bG && (bG.keysUp = GG)
           }
           get keysUpward() {
-            const uu = this.inputs.attached.keyboard;
-            return uu ? uu.keysUpward : []
+            const GG = this.inputs.attached.keyboard;
+            return GG ? GG.keysUpward : []
           }
-          set keysUpward(uu) {
-            const Eu = this.inputs.attached.keyboard;
-            Eu && (Eu.keysUpward = uu)
+          set keysUpward(GG) {
+            const bG = this.inputs.attached.keyboard;
+            bG && (bG.keysUpward = GG)
           }
           get keysDown() {
-            const uu = this.inputs.attached.keyboard;
-            return uu ? uu.keysDown : []
+            const GG = this.inputs.attached.keyboard;
+            return GG ? GG.keysDown : []
           }
-          set keysDown(uu) {
-            const Eu = this.inputs.attached.keyboard;
-            Eu && (Eu.keysDown = uu)
+          set keysDown(GG) {
+            const bG = this.inputs.attached.keyboard;
+            bG && (bG.keysDown = GG)
           }
           get keysDownward() {
-            const uu = this.inputs.attached.keyboard;
-            return uu ? uu.keysDownward : []
+            const GG = this.inputs.attached.keyboard;
+            return GG ? GG.keysDownward : []
           }
-          set keysDownward(uu) {
-            const Eu = this.inputs.attached.keyboard;
-            Eu && (Eu.keysDownward = uu)
+          set keysDownward(GG) {
+            const bG = this.inputs.attached.keyboard;
+            bG && (bG.keysDownward = GG)
           }
           get keysLeft() {
-            const uu = this.inputs.attached.keyboard;
-            return uu ? uu.keysLeft : []
+            const GG = this.inputs.attached.keyboard;
+            return GG ? GG.keysLeft : []
           }
-          set keysLeft(uu) {
-            const Eu = this.inputs.attached.keyboard;
-            Eu && (Eu.keysLeft = uu)
+          set keysLeft(GG) {
+            const bG = this.inputs.attached.keyboard;
+            bG && (bG.keysLeft = GG)
           }
           get keysRight() {
-            const uu = this.inputs.attached.keyboard;
-            return uu ? uu.keysRight : []
+            const GG = this.inputs.attached.keyboard;
+            return GG ? GG.keysRight : []
           }
-          set keysRight(uu) {
-            const Eu = this.inputs.attached.keyboard;
-            Eu && (Eu.keysRight = uu)
+          set keysRight(GG) {
+            const bG = this.inputs.attached.keyboard;
+            bG && (bG.keysRight = GG)
           }
           get keysRotateLeft() {
-            const uu = this.inputs.attached.keyboard;
-            return uu ? uu.keysRotateLeft : []
+            const GG = this.inputs.attached.keyboard;
+            return GG ? GG.keysRotateLeft : []
           }
-          set keysRotateLeft(uu) {
-            const Eu = this.inputs.attached.keyboard;
-            Eu && (Eu.keysRotateLeft = uu)
+          set keysRotateLeft(GG) {
+            const bG = this.inputs.attached.keyboard;
+            bG && (bG.keysRotateLeft = GG)
           }
           get keysRotateRight() {
-            const uu = this.inputs.attached.keyboard;
-            return uu ? uu.keysRotateRight : []
+            const GG = this.inputs.attached.keyboard;
+            return GG ? GG.keysRotateRight : []
           }
-          set keysRotateRight(uu) {
-            const Eu = this.inputs.attached.keyboard;
-            Eu && (Eu.keysRotateRight = uu)
+          set keysRotateRight(GG) {
+            const bG = this.inputs.attached.keyboard;
+            bG && (bG.keysRotateRight = GG)
           }
           get keysRotateUp() {
-            const uu = this.inputs.attached.keyboard;
-            return uu ? uu.keysRotateUp : []
+            const GG = this.inputs.attached.keyboard;
+            return GG ? GG.keysRotateUp : []
           }
-          set keysRotateUp(uu) {
-            const Eu = this.inputs.attached.keyboard;
-            Eu && (Eu.keysRotateUp = uu)
+          set keysRotateUp(GG) {
+            const bG = this.inputs.attached.keyboard;
+            bG && (bG.keysRotateUp = GG)
           }
           get keysRotateDown() {
-            const uu = this.inputs.attached.keyboard;
-            return uu ? uu.keysRotateDown : []
+            const GG = this.inputs.attached.keyboard;
+            return GG ? GG.keysRotateDown : []
           }
-          set keysRotateDown(uu) {
-            const Eu = this.inputs.attached.keyboard;
-            Eu && (Eu.keysRotateDown = uu)
+          set keysRotateDown(GG) {
+            const bG = this.inputs.attached.keyboard;
+            bG && (bG.keysRotateDown = GG)
           }
-          constructor(uu, Eu, ju) {
-            var Uu;
-            super(uu, Eu, ju, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3]), Uu = this, this.ellipsoid = (0, su.g)(this, bu, new Zu.t(.5, 1, .5)), this.ellipsoidOffset = ((0, su.g)(this, cu), (0, su.g)(this, Nu, new Zu.t(0, 0, 0))), this.checkCollisions = ((0, su.g)(this, Ou), (0, su.g)(this, Yu, !1)), this.applyGravity = ((0, su.g)(this, hu), (0, su.g)(this, Du, !1)), this.inputs = (0, su.g)(this, gu), this._needMoveForGravity = !1, this._oldPosition = Zu.t.Zero(), this._diffPosition = Zu.t.Zero(), this._newPosition = Zu.t.Zero(), this._collisionMask = -1, this._onCollisionPositionChange = function(uu, Eu) {
-              let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-              Uu._newPosition.yJ(Eu), Uu._newPosition.subtractToRef(Uu._oldPosition, Uu._diffPosition), Uu._diffPosition.length() > Ju.d.CollisionsEpsilon && (Uu.position.addToRef(Uu._diffPosition, Uu._deferredPositionUpdate), Uu._deferOnly ? Uu._deferredUpdated = !0 : Uu.position.yJ(Uu._deferredPositionUpdate), Uu.fc && ju && Uu.fc(ju))
-            }, this.inputs = new wu(this), this.inputs.addKeyboard().addMouse()
+          constructor(GG, bG, ZG) {
+            var SG;
+            super(GG, bG, ZG, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3]), SG = this, this.ellipsoid = (0, wG.n)(this, pG, new LG.p(.5, 1, .5)), this.ellipsoidOffset = ((0, wG.n)(this, fG), (0, wG.n)(this, QG, new LG.p(0, 0, 0))), this.checkCollisions = ((0, wG.n)(this, KG), (0, wG.n)(this, hG, !1)), this.applyGravity = ((0, wG.n)(this, dG), (0, wG.n)(this, JG, !1)), this.inputs = (0, wG.n)(this, rG), this._needMoveForGravity = !1, this._oldPosition = LG.p.Zero(), this._diffPosition = LG.p.Zero(), this._newPosition = LG.p.Zero(), this._collisionMask = -1, this._onCollisionPositionChange = function(GG, bG) {
+              let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+              SG._newPosition.oW(bG), SG._newPosition.subtractToRef(SG._oldPosition, SG._diffPosition), SG._diffPosition.length() > iG.c.CollisionsEpsilon && (SG.position.addToRef(SG._diffPosition, SG._deferredPositionUpdate), SG._deferOnly ? SG._deferredUpdated = !0 : SG.position.oW(SG._deferredPositionUpdate), SG.Uf && ZG && SG.Uf(ZG))
+            }, this.inputs = new uG(this), this.inputs.addKeyboard().addMouse()
           }
-          attachControl(uu, Eu) {
-            Eu = fu.h.BackCompatCameraNoPreventDefault(arguments), this.inputs.attachElement(Eu)
+          attachControl(GG, bG) {
+            bG = YG.f.BackCompatCameraNoPreventDefault(arguments), this.inputs.attachElement(bG)
           }
           detachControl() {
-            this.inputs.detachElement(), this.cameraDirection = new Zu.t(0, 0, 0), this.cameraRotation = new Zu.p(0, 0)
+            this.inputs.detachElement(), this.cameraDirection = new LG.p(0, 0, 0), this.cameraRotation = new LG.m(0, 0)
           }
           get collisionMask() {
             return this._collisionMask
           }
-          set collisionMask(uu) {
-            this._collisionMask = isNaN(uu) ? -1 : uu
+          set collisionMask(GG) {
+            this._collisionMask = isNaN(GG) ? -1 : GG
           }
-          _collideWithWorld(uu) {
-            let Eu;
-            Eu = this.parent ? Zu.t.TransformCoordinates(this.position, this.parent.getWorldMatrix()) : this.position, Eu.subtractFromFloatsToRef(0, this.ellipsoid.y, 0, this._oldPosition), this._oldPosition.addInPlace(this.ellipsoidOffset);
-            const ju = this.hV().collisionCoordinator;
-            this._collider || (this._collider = ju.createCollider()), this._collider._radius = this.ellipsoid, this._collider.collisionMask = this._collisionMask;
-            let su = uu;
-            this.applyGravity && (su = uu.add(this.hV().gravity)), ju.getNewPosition(this._oldPosition, su, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
+          _collideWithWorld(GG) {
+            let bG;
+            bG = this.parent ? LG.p.TransformCoordinates(this.position, this.parent.getWorldMatrix()) : this.position, bG.subtractFromFloatsToRef(0, this.ellipsoid.y, 0, this._oldPosition), this._oldPosition.addInPlace(this.ellipsoidOffset);
+            const ZG = this.Dv().collisionCoordinator;
+            this._collider || (this._collider = ZG.createCollider()), this._collider._radius = this.ellipsoid, this._collider.collisionMask = this._collisionMask;
+            let wG = GG;
+            this.applyGravity && (wG = GG.add(this.Dv().gravity)), ZG.getNewPosition(this._oldPosition, wG, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
           }
           _checkInputs() {
-            this._localDirection || (this._localDirection = Zu.t.Zero(), this._transformedDirection = Zu.t.Zero()), this.inputs.checkInputs(), super._checkInputs()
+            this._localDirection || (this._localDirection = LG.p.Zero(), this._transformedDirection = LG.p.Zero()), this.inputs.checkInputs(), super._checkInputs()
           }
-          set needMoveForGravity(uu) {
-            this._needMoveForGravity = uu
+          set needMoveForGravity(GG) {
+            this._needMoveForGravity = GG
           }
           get needMoveForGravity() {
             return this._needMoveForGravity
@@ -959,7 +959,7 @@ export const modules = {
             return this._needMoveForGravity || Math.abs(this.cameraDirection.x) > 0 || Math.abs(this.cameraDirection.y) > 0 || Math.abs(this.cameraDirection.z) > 0
           }
           _updatePosition() {
-            this.checkCollisions && this.hV().collisionsEnabled ? this._collideWithWorld(this.cameraDirection) : super._updatePosition()
+            this.checkCollisions && this.Dv().collisionsEnabled ? this._collideWithWorld(this.cameraDirection) : super._updatePosition()
           }
           dispose() {
             this.inputs.clear(), super.dispose()
@@ -968,70 +968,70 @@ export const modules = {
             return "FreeCamera"
           }
         }, (() => {
-          const Zu = "function" === typeof Symbol && Symbol.metadata ? Object.create(Cu[Symbol.metadata] ?? null) : void 0;
-          Eu = [(0, Uu.A)()], ju = [(0, Uu.A)()], lu = [(0, Uu.E)()], qu = [(0, Uu.E)()], (0, su.e)(null, null, Eu, {
+          const LG = "function" === typeof Symbol && Symbol.metadata ? Object.create(VG[Symbol.metadata] ?? null) : void 0;
+          bG = [(0, SG.M)()], ZG = [(0, SG.M)()], kG = [(0, SG.Q)()], UG = [(0, SG.Q)()], (0, wG.k)(null, null, bG, {
             kind: "field",
             name: "ellipsoid",
             static: !1,
             private: !1,
             access: {
-              has: uu => "ellipsoid" in uu,
-              get: uu => uu.ellipsoid,
-              set: (uu, Eu) => {
-                uu.ellipsoid = Eu
+              has: GG => "ellipsoid" in GG,
+              get: GG => GG.ellipsoid,
+              set: (GG, bG) => {
+                GG.ellipsoid = bG
               }
             },
-            metadata: Zu
-          }, bu, cu), (0, su.e)(null, null, ju, {
+            metadata: LG
+          }, pG, fG), (0, wG.k)(null, null, ZG, {
             kind: "field",
             name: "ellipsoidOffset",
             static: !1,
             private: !1,
             access: {
-              has: uu => "ellipsoidOffset" in uu,
-              get: uu => uu.ellipsoidOffset,
-              set: (uu, Eu) => {
-                uu.ellipsoidOffset = Eu
+              has: GG => "ellipsoidOffset" in GG,
+              get: GG => GG.ellipsoidOffset,
+              set: (GG, bG) => {
+                GG.ellipsoidOffset = bG
               }
             },
-            metadata: Zu
-          }, Nu, Ou), (0, su.e)(null, null, lu, {
+            metadata: LG
+          }, QG, KG), (0, wG.k)(null, null, kG, {
             kind: "field",
             name: "checkCollisions",
             static: !1,
             private: !1,
             access: {
-              has: uu => "checkCollisions" in uu,
-              get: uu => uu.checkCollisions,
-              set: (uu, Eu) => {
-                uu.checkCollisions = Eu
+              has: GG => "checkCollisions" in GG,
+              get: GG => GG.checkCollisions,
+              set: (GG, bG) => {
+                GG.checkCollisions = bG
               }
             },
-            metadata: Zu
-          }, Yu, hu), (0, su.e)(null, null, qu, {
+            metadata: LG
+          }, hG, dG), (0, wG.k)(null, null, UG, {
             kind: "field",
             name: "applyGravity",
             static: !1,
             private: !1,
             access: {
-              has: uu => "applyGravity" in uu,
-              get: uu => uu.applyGravity,
-              set: (uu, Eu) => {
-                uu.applyGravity = Eu
+              has: GG => "applyGravity" in GG,
+              get: GG => GG.applyGravity,
+              set: (GG, bG) => {
+                GG.applyGravity = bG
               }
             },
-            metadata: Zu
-          }, Du, gu), Zu && Object.defineProperty(uu, Symbol.metadata, {
+            metadata: LG
+          }, JG, rG), LG && Object.defineProperty(GG, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Zu
+            value: LG
           })
-        })(), uu
+        })(), GG
       })(),
-      Pu = !1;
-    Pu || (Pu = !0, (0, du.f)("BABYLON.FreeCamera", au))
+      mG = !1;
+    mG || (mG = !0, (0, CG.i)("BABYLON.FreeCamera", WG))
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

@@ -1,16 +1,16 @@
 export const id = 145;
 export const ids = [145];
 export const modules = {
-  8290: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      encodeBinaryMessageWithMetricsCookies: () => Uu
+  8119: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      encodeBinaryMessageWithMetricsCookies: () => SG
     });
-    var su = ju(3946);
+    var wG = ZG(3766);
 
-    function Uu(uu) {
-      return su.k.toBuffer(uu)
+    function SG(GG) {
+      return wG.f.toBuffer(GG)
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

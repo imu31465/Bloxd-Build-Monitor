@@ -1,582 +1,582 @@
 export const id = 320;
 export const ids = [320];
 export const modules = {
-  42145: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      ReadExrDataAsync: () => bE,
-      _ExrTextureLoader: () => CE
+  42317: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      ReadExrDataAsync: () => pb,
+      _ExrTextureLoader: () => Vb
     });
-    var su = ju(39032),
-      Uu = ju(37519),
-      Zu = ju(40326);
-    const Xu = 4,
-      lu = 4,
-      qu = 1,
-      fu = 2,
-      Cu = 8,
-      bu = 65536,
-      cu = bu >> 3,
-      Nu = 14,
-      Ou = 65537,
-      Yu = 1 << Nu,
-      hu = Yu - 1,
-      Du = 59,
-      gu = 63,
-      Mu = 2 + gu - Du;
-    var eu, Gu;
+    var wG = ZG(39093),
+      SG = ZG(37471),
+      LG = ZG(40451);
+    const yG = 4,
+      kG = 4,
+      UG = 1,
+      YG = 2,
+      VG = 8,
+      pG = 65536,
+      fG = pG >> 3,
+      QG = 14,
+      KG = 65537,
+      hG = 1 << QG,
+      dG = hG - 1,
+      JG = 59,
+      rG = 63,
+      zG = 2 + rG - JG;
+    var EG, oG;
 
-    function pu(uu, Eu) {
-      const ju = new Uint8Array(uu);
-      let su = 0;
-      for (; 0 != ju[Eu.value + su];) su += 1;
-      const Uu = (new TextDecoder).decode(ju.slice(Eu.value, Eu.value + su));
-      return Eu.value = Eu.value + su + 1, Uu
+    function XG(GG, bG) {
+      const ZG = new Uint8Array(GG);
+      let wG = 0;
+      for (; 0 != ZG[bG.value + wG];) wG += 1;
+      const SG = (new TextDecoder).decode(ZG.slice(bG.value, bG.value + wG));
+      return bG.value = bG.value + wG + 1, SG
     }
 
-    function wu(uu, Eu) {
-      const ju = uu.getInt32(Eu.value, !0);
-      return Eu.value += Xu, ju
+    function uG(GG, bG) {
+      const ZG = GG.getInt32(bG.value, !0);
+      return bG.value += yG, ZG
     }
 
-    function Ju(uu, Eu) {
-      const ju = uu.getUint32(Eu.value, !0);
-      return Eu.value += Xu, ju
+    function iG(GG, bG) {
+      const ZG = GG.getUint32(bG.value, !0);
+      return bG.value += yG, ZG
     }
 
-    function du(uu, Eu) {
-      const ju = uu.getUint8(Eu.value);
-      return Eu.value += qu, ju
+    function CG(GG, bG) {
+      const ZG = GG.getUint8(bG.value);
+      return bG.value += UG, ZG
     }
 
-    function au(uu, Eu) {
-      const ju = uu.getUint16(Eu.value, !0);
-      return Eu.value += fu, ju
+    function WG(GG, bG) {
+      const ZG = GG.getUint16(bG.value, !0);
+      return bG.value += YG, ZG
     }
 
-    function Pu(uu, Eu) {
-      const ju = uu[Eu.value];
-      return Eu.value += qu, ju
+    function mG(GG, bG) {
+      const ZG = GG[bG.value];
+      return bG.value += UG, ZG
     }
 
-    function ou(uu, Eu) {
-      let ju;
-      return ju = "getBigInt64" in DataView.prototype ? Number(uu.getBigInt64(Eu.value, !0)) : uu.getUint32(Eu.value + 4, !0) + Number(uu.getUint32(Eu.value, !0) << 32), Eu.value += Cu, ju
+    function IG(GG, bG) {
+      let ZG;
+      return ZG = "getBigInt64" in DataView.prototype ? Number(GG.getBigInt64(bG.value, !0)) : GG.getUint32(bG.value + 4, !0) + Number(GG.getUint32(bG.value, !0) << 32), bG.value += VG, ZG
     }
 
-    function ku(uu, Eu) {
-      const ju = uu.getFloat32(Eu.value, !0);
-      return Eu.value += lu, ju
+    function FG(GG, bG) {
+      const ZG = GG.getFloat32(bG.value, !0);
+      return bG.value += kG, ZG
     }
 
-    function mu(uu, Eu) {
-      return (0, Zu.e)(au(uu, Eu))
+    function vG(GG, bG) {
+      return (0, LG.c)(WG(GG, bG))
     }
 
-    function vu(uu, Eu) {
-      return (0, Zu.k)((0, Uu.Clamp)(ku(uu, Eu), -Zu.i, Zu.i))
+    function aG(GG, bG) {
+      return (0, LG.h)((0, SG.Clamp)(FG(GG, bG), -LG.f, LG.f))
     }
 
-    function Ku(uu, Eu, ju, su) {
-      switch (ju) {
+    function cG(GG, bG, ZG, wG) {
+      switch (ZG) {
         case "string":
         case "stringvector":
         case "iccProfile":
-          return function(uu, Eu, ju) {
-            const su = (new TextDecoder).decode(new Uint8Array(uu).slice(Eu.value, Eu.value + ju));
-            return Eu.value = Eu.value + ju, su
-          }(uu.buffer, Eu, su);
+          return function(GG, bG, ZG) {
+            const wG = (new TextDecoder).decode(new Uint8Array(GG).slice(bG.value, bG.value + ZG));
+            return bG.value = bG.value + ZG, wG
+          }(GG.buffer, bG, wG);
         case "chlist":
-          return function(uu, Eu, ju) {
-            const su = Eu.value,
-              Uu = [];
-            for (; Eu.value < su + ju - 1;) {
-              const ju = pu(uu.buffer, Eu),
-                su = wu(uu, Eu),
-                Zu = du(uu, Eu);
-              Eu.value += 3;
-              const Xu = wu(uu, Eu),
-                lu = wu(uu, Eu);
-              Uu.push({
-                name: ju,
-                pixelType: su,
-                pLinear: Zu,
-                xSampling: Xu,
-                ySampling: lu
+          return function(GG, bG, ZG) {
+            const wG = bG.value,
+              SG = [];
+            for (; bG.value < wG + ZG - 1;) {
+              const ZG = XG(GG.buffer, bG),
+                wG = uG(GG, bG),
+                LG = CG(GG, bG);
+              bG.value += 3;
+              const yG = uG(GG, bG),
+                kG = uG(GG, bG);
+              SG.push({
+                name: ZG,
+                pixelType: wG,
+                pLinear: LG,
+                xSampling: yG,
+                ySampling: kG
               })
             }
-            return Eu.value += 1, Uu
-          }(uu, Eu, su);
+            return bG.value += 1, SG
+          }(GG, bG, wG);
         case "chromaticities":
-          return function(uu, Eu) {
+          return function(GG, bG) {
             return {
-              redX: ku(uu, Eu),
-              redY: ku(uu, Eu),
-              greenX: ku(uu, Eu),
-              greenY: ku(uu, Eu),
-              blueX: ku(uu, Eu),
-              blueY: ku(uu, Eu),
-              whiteX: ku(uu, Eu),
-              whiteY: ku(uu, Eu)
+              redX: FG(GG, bG),
+              redY: FG(GG, bG),
+              greenX: FG(GG, bG),
+              greenY: FG(GG, bG),
+              blueX: FG(GG, bG),
+              blueY: FG(GG, bG),
+              whiteX: FG(GG, bG),
+              whiteY: FG(GG, bG)
             }
-          }(uu, Eu);
+          }(GG, bG);
         case "compression":
-          return function(uu, Eu) {
-            return du(uu, Eu)
-          }(uu, Eu);
+          return function(GG, bG) {
+            return CG(GG, bG)
+          }(GG, bG);
         case "box2i":
-          return function(uu, Eu) {
+          return function(GG, bG) {
             return {
-              xMin: wu(uu, Eu),
-              yMin: wu(uu, Eu),
-              xMax: wu(uu, Eu),
-              yMax: wu(uu, Eu)
+              xMin: uG(GG, bG),
+              yMin: uG(GG, bG),
+              xMax: uG(GG, bG),
+              yMax: uG(GG, bG)
             }
-          }(uu, Eu);
+          }(GG, bG);
         case "lineOrder":
-          return function(uu, Eu) {
-            const ju = du(uu, Eu);
-            return Gu[ju]
-          }(uu, Eu);
+          return function(GG, bG) {
+            const ZG = CG(GG, bG);
+            return oG[ZG]
+          }(GG, bG);
         case "float":
-          return ku(uu, Eu);
+          return FG(GG, bG);
         case "v2f":
-          return function(uu, Eu) {
-            return [ku(uu, Eu), ku(uu, Eu)]
-          }(uu, Eu);
+          return function(GG, bG) {
+            return [FG(GG, bG), FG(GG, bG)]
+          }(GG, bG);
         case "v3f":
-          return function(uu, Eu) {
-            return [ku(uu, Eu), ku(uu, Eu), ku(uu, Eu)]
-          }(uu, Eu);
+          return function(GG, bG) {
+            return [FG(GG, bG), FG(GG, bG), FG(GG, bG)]
+          }(GG, bG);
         case "int":
-          return wu(uu, Eu);
+          return uG(GG, bG);
         case "rational":
-          return function(uu, Eu) {
-            return [wu(uu, Eu), Ju(uu, Eu)]
-          }(uu, Eu);
+          return function(GG, bG) {
+            return [uG(GG, bG), iG(GG, bG)]
+          }(GG, bG);
         case "timecode":
-          return function(uu, Eu) {
-            return [Ju(uu, Eu), Ju(uu, Eu)]
-          }(uu, Eu);
+          return function(GG, bG) {
+            return [iG(GG, bG), iG(GG, bG)]
+          }(GG, bG);
         case "preview":
-          return Eu.value += su, "skipped";
+          return bG.value += wG, "skipped";
         default:
-          return void(Eu.value += su)
+          return void(bG.value += wG)
       }
     }
 
-    function Vu(uu) {
-      for (let Eu = 1; Eu < uu.length; Eu++) {
-        const ju = uu[Eu - 1] + uu[Eu] - 128;
-        uu[Eu] = ju
+    function lG(GG) {
+      for (let bG = 1; bG < GG.length; bG++) {
+        const ZG = GG[bG - 1] + GG[bG] - 128;
+        GG[bG] = ZG
       }
     }
 
-    function ru(uu, Eu) {
-      let ju = 0,
-        su = Math.floor((uu.length + 1) / 2),
-        Uu = 0;
-      const Zu = uu.length - 1;
-      for (; !(Uu > Zu) && (Eu[Uu++] = uu[ju++], !(Uu > Zu));) Eu[Uu++] = uu[su++]
-    }! function(uu) {
-      uu[uu.NO_COMPRESSION = 0] = "NO_COMPRESSION", uu[uu.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", uu[uu.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", uu[uu.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", uu[uu.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", uu[uu.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
-    }(eu || (eu = {})),
-    function(uu) {
-      uu[uu.INCREASING_Y = 0] = "INCREASING_Y", uu[uu.DECREASING_Y = 1] = "DECREASING_Y"
-    }(Gu || (Gu = {}));
-    const Qu = 20000630;
+    function jG(GG, bG) {
+      let ZG = 0,
+        wG = Math.floor((GG.length + 1) / 2),
+        SG = 0;
+      const LG = GG.length - 1;
+      for (; !(SG > LG) && (bG[SG++] = GG[ZG++], !(SG > LG));) bG[SG++] = GG[wG++]
+    }! function(GG) {
+      GG[GG.NO_COMPRESSION = 0] = "NO_COMPRESSION", GG[GG.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", GG[GG.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", GG[GG.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", GG[GG.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", GG[GG.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
+    }(EG || (EG = {})),
+    function(GG) {
+      GG[GG.INCREASING_Y = 0] = "INCREASING_Y", GG[GG.DECREASING_Y = 1] = "DECREASING_Y"
+    }(oG || (oG = {}));
+    const PG = 20000630;
 
-    function iu(uu, Eu) {
-      if (uu.getUint32(0, !0) != Qu) throw new Error("Incorrect OpenEXR format");
-      const ju = uu.getUint8(4),
-        Uu = uu.getUint8(5),
-        Zu = {
-          singleTile: !!(2 & Uu),
-          longName: !!(4 & Uu),
-          deepFormat: !!(8 & Uu),
-          multiPart: !!(16 & Uu)
+    function MG(GG, bG) {
+      if (GG.getUint32(0, !0) != PG) throw new Error("Incorrect OpenEXR format");
+      const ZG = GG.getUint8(4),
+        SG = GG.getUint8(5),
+        LG = {
+          singleTile: !!(2 & SG),
+          longName: !!(4 & SG),
+          deepFormat: !!(8 & SG),
+          multiPart: !!(16 & SG)
         };
-      Eu.value = 8;
-      const Xu = {};
-      let lu = !0;
-      for (; lu;) {
-        const ju = pu(uu.buffer, Eu);
-        if (ju) {
-          const Uu = pu(uu.buffer, Eu),
-            Zu = Ku(uu, Eu, Uu, Ju(uu, Eu));
-          void 0 === Zu ? su.b.Warn(`Unknown header attribute type ${Uu}'.`) : Xu[ju] = Zu
-        } else lu = !1
+      bG.value = 8;
+      const yG = {};
+      let kG = !0;
+      for (; kG;) {
+        const ZG = XG(GG.buffer, bG);
+        if (ZG) {
+          const SG = XG(GG.buffer, bG),
+            LG = cG(GG, bG, SG, iG(GG, bG));
+          void 0 === LG ? wG.c.Warn(`Unknown header attribute type ${SG}'.`) : yG[ZG] = LG
+        } else kG = !1
       }
-      if (0 != (-5 & Uu)) throw new Error("Unsupported file format");
+      if (0 != (-5 & SG)) throw new Error("Unsupported file format");
       return {
-        version: ju,
-        spec: Zu,
-        ...Xu
-      }
-    }
-    const Wu = 32768,
-      Su = 65535;
-
-    function Iu(uu, Eu, ju, su, Uu) {
-      for (; ju < uu;) Eu = Eu << 8 | Pu(su, Uu), ju += 8;
-      return {
-        l: Eu >> (ju -= uu) & (1 << uu) - 1,
-        c: Eu,
-        lc: ju
+        version: ZG,
+        spec: LG,
+        ...yG
       }
     }
+    const AG = 32768,
+      sG = 65535;
 
-    function Fu(uu, Eu, ju, su) {
+    function qG(GG, bG, ZG, wG, SG) {
+      for (; ZG < GG;) bG = bG << 8 | mG(wG, SG), ZG += 8;
       return {
-        c: uu = uu << 8 | Pu(ju, su),
-        lc: Eu += 8
+        l: bG >> (ZG -= GG) & (1 << GG) - 1,
+        c: bG,
+        lc: ZG
       }
     }
 
-    function Bu(uu, Eu, ju, su, Uu, Zu, Xu, lu, qu) {
-      if (uu == Eu) {
-        if (su < 8) {
-          const uu = Fu(ju, su, Uu, Zu);
-          ju = uu.c, su = uu.lc
+    function nG(GG, bG, ZG, wG) {
+      return {
+        c: GG = GG << 8 | mG(ZG, wG),
+        lc: bG += 8
+      }
+    }
+
+    function gG(GG, bG, ZG, wG, SG, LG, yG, kG, UG) {
+      if (GG == bG) {
+        if (wG < 8) {
+          const GG = nG(ZG, wG, SG, LG);
+          ZG = GG.c, wG = GG.lc
         }
-        let uu = ju >> (su -= 8);
-        if (uu = new Uint8Array([uu])[0], lu.value + uu > qu) return null;
-        const Eu = Xu[lu.value - 1];
-        for (; uu-- > 0;) Xu[lu.value++] = Eu
+        let GG = ZG >> (wG -= 8);
+        if (GG = new Uint8Array([GG])[0], kG.value + GG > UG) return null;
+        const bG = yG[kG.value - 1];
+        for (; GG-- > 0;) yG[kG.value++] = bG
       } else {
-        if (!(lu.value < qu)) return null;
-        Xu[lu.value++] = uu
+        if (!(kG.value < UG)) return null;
+        yG[kG.value++] = GG
       }
       return {
-        c: ju,
-        lc: su
+        c: ZG,
+        lc: wG
       }
     }
-    const Lu = new Array(59);
+    const eG = new Array(59);
 
-    function tu(uu, Eu, ju, su, Uu, Zu) {
-      const Xu = Eu;
-      let lu = 0,
-        qu = 0;
-      for (; su <= Uu; su++) {
-        if (Xu.value - Eu.value > ju) return;
-        let fu = Iu(6, lu, qu, uu, Xu);
-        const Cu = fu.l;
-        if (lu = fu.c, qu = fu.lc, Zu[su] = Cu, Cu == gu) {
-          if (Xu.value - Eu.value > ju) throw new Error("Error in HufUnpackEncTable");
-          fu = Iu(8, lu, qu, uu, Xu);
-          let Cu = fu.l + Mu;
-          if (lu = fu.c, qu = fu.lc, su + Cu > Uu + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; Cu--;) Zu[su++] = 0;
-          su--
-        } else if (Cu >= Du) {
-          let uu = Cu - Du + 2;
-          if (su + uu > Uu + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; uu--;) Zu[su++] = 0;
-          su--
+    function RG(GG, bG, ZG, wG, SG, LG) {
+      const yG = bG;
+      let kG = 0,
+        UG = 0;
+      for (; wG <= SG; wG++) {
+        if (yG.value - bG.value > ZG) return;
+        let YG = qG(6, kG, UG, GG, yG);
+        const VG = YG.l;
+        if (kG = YG.c, UG = YG.lc, LG[wG] = VG, VG == rG) {
+          if (yG.value - bG.value > ZG) throw new Error("Error in HufUnpackEncTable");
+          YG = qG(8, kG, UG, GG, yG);
+          let VG = YG.l + zG;
+          if (kG = YG.c, UG = YG.lc, wG + VG > SG + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; VG--;) LG[wG++] = 0;
+          wG--
+        } else if (VG >= JG) {
+          let GG = VG - JG + 2;
+          if (wG + GG > SG + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; GG--;) LG[wG++] = 0;
+          wG--
         }
-      }! function(uu) {
-        for (let ju = 0; ju <= 58; ++ju) Lu[ju] = 0;
-        for (let ju = 0; ju < Ou; ++ju) Lu[uu[ju]] += 1;
-        let Eu = 0;
-        for (let ju = 58; ju > 0; --ju) {
-          const uu = Eu + Lu[ju] >> 1;
-          Lu[ju] = Eu, Eu = uu
+      }! function(GG) {
+        for (let ZG = 0; ZG <= 58; ++ZG) eG[ZG] = 0;
+        for (let ZG = 0; ZG < KG; ++ZG) eG[GG[ZG]] += 1;
+        let bG = 0;
+        for (let ZG = 58; ZG > 0; --ZG) {
+          const GG = bG + eG[ZG] >> 1;
+          eG[ZG] = bG, bG = GG
         }
-        for (let ju = 0; ju < Ou; ++ju) {
-          const Eu = uu[ju];
-          Eu > 0 && (uu[ju] = Eu | Lu[Eu]++ << 6)
+        for (let ZG = 0; ZG < KG; ++ZG) {
+          const bG = GG[ZG];
+          bG > 0 && (GG[ZG] = bG | eG[bG]++ << 6)
         }
-      }(Zu)
+      }(LG)
     }
 
-    function xu(uu) {
-      return 63 & uu
+    function TG(GG) {
+      return 63 & GG
     }
 
-    function Tu(uu) {
-      return uu >> 6
+    function HG(GG) {
+      return GG >> 6
     }
 
-    function Hu(uu, Eu, ju, su, Uu, Zu) {
-      const Xu = ju.value,
-        lu = Ju(Eu, ju),
-        qu = Ju(Eu, ju);
-      ju.value += 4;
-      const fu = Ju(Eu, ju);
-      if (ju.value += 4, lu < 0 || lu >= Ou || qu < 0 || qu >= Ou) throw new Error("Wrong HUF_ENCSIZE");
-      const Cu = new Array(Ou),
-        bu = new Array(Yu);
-      ! function(uu) {
-        for (let Eu = 0; Eu < Yu; Eu++) uu[Eu] = {}, uu[Eu].len = 0, uu[Eu].lit = 0, uu[Eu].p = null
-      }(bu);
-      if (tu(uu, ju, su - (ju.value - Xu), lu, qu, Cu), fu > 8 * (su - (ju.value - Xu))) throw new Error("Wrong hufUncompress");
-      ! function(uu, Eu, ju, su) {
-        for (; Eu <= ju; Eu++) {
-          const ju = Tu(uu[Eu]),
-            Uu = xu(uu[Eu]);
-          if (ju >> Uu) throw new Error("Invalid table entry");
-          if (Uu > Nu) {
-            const uu = su[ju >> Uu - Nu];
-            if (uu.len) throw new Error("Invalid table entry");
-            if (uu.lit++, uu.p) {
-              const Eu = uu.p;
-              uu.p = new Array(uu.lit);
-              for (let ju = 0; ju < uu.lit - 1; ++ju) uu.p[ju] = Eu[ju]
-            } else uu.p = new Array(1);
-            uu.p[uu.lit - 1] = Eu
-          } else if (Uu) {
-            let uu = 0;
-            for (let Zu = 1 << Nu - Uu; Zu > 0; Zu--) {
-              const Zu = su[(ju << Nu - Uu) + uu];
-              if (Zu.len || Zu.p) throw new Error("Invalid table entry");
-              Zu.len = Uu, Zu.lit = Eu, uu++
+    function tG(GG, bG, ZG, wG, SG, LG) {
+      const yG = ZG.value,
+        kG = iG(bG, ZG),
+        UG = iG(bG, ZG);
+      ZG.value += 4;
+      const YG = iG(bG, ZG);
+      if (ZG.value += 4, kG < 0 || kG >= KG || UG < 0 || UG >= KG) throw new Error("Wrong HUF_ENCSIZE");
+      const VG = new Array(KG),
+        pG = new Array(hG);
+      ! function(GG) {
+        for (let bG = 0; bG < hG; bG++) GG[bG] = {}, GG[bG].len = 0, GG[bG].lit = 0, GG[bG].p = null
+      }(pG);
+      if (RG(GG, ZG, wG - (ZG.value - yG), kG, UG, VG), YG > 8 * (wG - (ZG.value - yG))) throw new Error("Wrong hufUncompress");
+      ! function(GG, bG, ZG, wG) {
+        for (; bG <= ZG; bG++) {
+          const ZG = HG(GG[bG]),
+            SG = TG(GG[bG]);
+          if (ZG >> SG) throw new Error("Invalid table entry");
+          if (SG > QG) {
+            const GG = wG[ZG >> SG - QG];
+            if (GG.len) throw new Error("Invalid table entry");
+            if (GG.lit++, GG.p) {
+              const bG = GG.p;
+              GG.p = new Array(GG.lit);
+              for (let ZG = 0; ZG < GG.lit - 1; ++ZG) GG.p[ZG] = bG[ZG]
+            } else GG.p = new Array(1);
+            GG.p[GG.lit - 1] = bG
+          } else if (SG) {
+            let GG = 0;
+            for (let LG = 1 << QG - SG; LG > 0; LG--) {
+              const LG = wG[(ZG << QG - SG) + GG];
+              if (LG.len || LG.p) throw new Error("Invalid table entry");
+              LG.len = SG, LG.lit = bG, GG++
             }
           }
         }
-      }(Cu, lu, qu, bu),
-      function(uu, Eu, ju, su, Uu, Zu, Xu, lu, qu) {
-        let fu = 0,
-          Cu = 0;
-        const bu = Xu,
-          cu = Math.trunc(su.value + (Uu + 7) / 8);
-        for (; su.value < cu;) {
-          let Uu = Fu(fu, Cu, ju, su);
-          for (fu = Uu.c, Cu = Uu.lc; Cu >= Nu;) {
-            const Xu = Eu[fu >> Cu - Nu & hu];
-            if (Xu.len) {
-              Cu -= Xu.len;
-              const uu = Bu(Xu.lit, Zu, fu, Cu, ju, su, lu, qu, bu);
-              uu && (fu = uu.c, Cu = uu.lc)
+      }(VG, kG, UG, pG),
+      function(GG, bG, ZG, wG, SG, LG, yG, kG, UG) {
+        let YG = 0,
+          VG = 0;
+        const pG = yG,
+          fG = Math.trunc(wG.value + (SG + 7) / 8);
+        for (; wG.value < fG;) {
+          let SG = nG(YG, VG, ZG, wG);
+          for (YG = SG.c, VG = SG.lc; VG >= QG;) {
+            const yG = bG[YG >> VG - QG & dG];
+            if (yG.len) {
+              VG -= yG.len;
+              const GG = gG(yG.lit, LG, YG, VG, ZG, wG, kG, UG, pG);
+              GG && (YG = GG.c, VG = GG.lc)
             } else {
-              if (!Xu.p) throw new Error("hufDecode issues");
-              let Eu;
-              for (Eu = 0; Eu < Xu.lit; Eu++) {
-                const Nu = xu(uu[Xu.p[Eu]]);
-                for (; Cu < Nu && su.value < cu;) Uu = Fu(fu, Cu, ju, su), fu = Uu.c, Cu = Uu.lc;
-                if (Cu >= Nu && Tu(uu[Xu.p[Eu]]) == (fu >> Cu - Nu & (1 << Nu) - 1)) {
-                  Cu -= Nu;
-                  const uu = Bu(Xu.p[Eu], Zu, fu, Cu, ju, su, lu, qu, bu);
-                  uu && (fu = uu.c, Cu = uu.lc);
+              if (!yG.p) throw new Error("hufDecode issues");
+              let bG;
+              for (bG = 0; bG < yG.lit; bG++) {
+                const QG = TG(GG[yG.p[bG]]);
+                for (; VG < QG && wG.value < fG;) SG = nG(YG, VG, ZG, wG), YG = SG.c, VG = SG.lc;
+                if (VG >= QG && HG(GG[yG.p[bG]]) == (YG >> VG - QG & (1 << QG) - 1)) {
+                  VG -= QG;
+                  const GG = gG(yG.p[bG], LG, YG, VG, ZG, wG, kG, UG, pG);
+                  GG && (YG = GG.c, VG = GG.lc);
                   break
                 }
               }
-              if (Eu == Xu.lit) throw new Error("HufDecode issues")
+              if (bG == yG.lit) throw new Error("HufDecode issues")
             }
           }
         }
-        const Ou = 8 - Uu & 7;
-        for (fu >>= Ou, Cu -= Ou; Cu > 0;) {
-          const uu = Eu[fu << Nu - Cu & hu];
-          if (!uu.len) throw new Error("HufDecode issues");
+        const KG = 8 - SG & 7;
+        for (YG >>= KG, VG -= KG; VG > 0;) {
+          const GG = bG[YG << QG - VG & dG];
+          if (!GG.len) throw new Error("HufDecode issues");
           {
-            Cu -= uu.len;
-            const Eu = Bu(uu.lit, Zu, fu, Cu, ju, su, lu, qu, bu);
-            Eu && (fu = Eu.c, Cu = Eu.lc)
+            VG -= GG.len;
+            const bG = gG(GG.lit, LG, YG, VG, ZG, wG, kG, UG, pG);
+            bG && (YG = bG.c, VG = bG.lc)
           }
         }
-      }(Cu, bu, uu, ju, fu, qu, Zu, Uu, {
+      }(VG, pG, GG, ZG, YG, UG, LG, SG, {
         value: 0
       })
     }
 
-    function Au(uu) {
-      return 65535 & uu
+    function DG(GG) {
+      return 65535 & GG
     }
 
-    function nu(uu) {
-      const Eu = Au(uu);
-      return Eu > 32767 ? Eu - 65536 : Eu
+    function NG(GG) {
+      const bG = DG(GG);
+      return bG > 32767 ? bG - 65536 : bG
     }
 
-    function yu(uu, Eu) {
-      const ju = nu(uu),
-        su = nu(Eu),
-        Uu = ju + (1 & su) + (su >> 1);
+    function OG(GG, bG) {
+      const ZG = NG(GG),
+        wG = NG(bG),
+        SG = ZG + (1 & wG) + (wG >> 1);
       return {
-        a: Uu,
-        b: Uu - su
+        a: SG,
+        b: SG - wG
       }
     }
 
-    function zu(uu, Eu) {
-      const ju = Au(uu),
-        su = Au(Eu),
-        Uu = ju - (su >> 1) & Su;
+    function xG(GG, bG) {
+      const ZG = DG(GG),
+        wG = DG(bG),
+        SG = ZG - (wG >> 1) & sG;
       return {
-        a: su + Uu - Wu & Su,
-        b: Uu
+        a: wG + SG - AG & sG,
+        b: SG
       }
     }
 
-    function Ru(uu, Eu, ju, su, Uu, Zu, Xu) {
-      const lu = Xu < 16384,
-        qu = ju > Uu ? Uu : ju;
-      let fu, Cu, bu = 1;
-      for (; bu <= qu;) bu <<= 1;
-      for (bu >>= 1, fu = bu, bu >>= 1; bu >= 1;) {
-        Cu = 0;
-        const Xu = Cu + Zu * (Uu - fu),
-          qu = Zu * bu,
-          cu = Zu * fu,
-          Nu = su * bu,
-          Ou = su * fu;
-        let Yu, hu, Du, gu;
-        for (; Cu <= Xu; Cu += cu) {
-          let Uu = Cu;
-          const Zu = Cu + su * (ju - fu);
-          for (; Uu <= Zu; Uu += Ou) {
-            const ju = Uu + Nu,
-              su = Uu + qu,
-              Zu = su + Nu;
-            if (lu) {
-              let Xu = yu(uu[Uu + Eu], uu[su + Eu]);
-              Yu = Xu.a, Du = Xu.b, Xu = yu(uu[ju + Eu], uu[Zu + Eu]), hu = Xu.a, gu = Xu.b, Xu = yu(Yu, hu), uu[Uu + Eu] = Xu.a, uu[ju + Eu] = Xu.b, Xu = yu(Du, gu), uu[su + Eu] = Xu.a, uu[Zu + Eu] = Xu.b
+    function BG(GG, bG, ZG, wG, SG, LG, yG) {
+      const kG = yG < 16384,
+        UG = ZG > SG ? SG : ZG;
+      let YG, VG, pG = 1;
+      for (; pG <= UG;) pG <<= 1;
+      for (pG >>= 1, YG = pG, pG >>= 1; pG >= 1;) {
+        VG = 0;
+        const yG = VG + LG * (SG - YG),
+          UG = LG * pG,
+          fG = LG * YG,
+          QG = wG * pG,
+          KG = wG * YG;
+        let hG, dG, JG, rG;
+        for (; VG <= yG; VG += fG) {
+          let SG = VG;
+          const LG = VG + wG * (ZG - YG);
+          for (; SG <= LG; SG += KG) {
+            const ZG = SG + QG,
+              wG = SG + UG,
+              LG = wG + QG;
+            if (kG) {
+              let yG = OG(GG[SG + bG], GG[wG + bG]);
+              hG = yG.a, JG = yG.b, yG = OG(GG[ZG + bG], GG[LG + bG]), dG = yG.a, rG = yG.b, yG = OG(hG, dG), GG[SG + bG] = yG.a, GG[ZG + bG] = yG.b, yG = OG(JG, rG), GG[wG + bG] = yG.a, GG[LG + bG] = yG.b
             } else {
-              let Xu = zu(uu[Uu + Eu], uu[su + Eu]);
-              Yu = Xu.a, Du = Xu.b, Xu = zu(uu[ju + Eu], uu[Zu + Eu]), hu = Xu.a, gu = Xu.b, Xu = zu(Yu, hu), uu[Uu + Eu] = Xu.a, uu[ju + Eu] = Xu.b, Xu = zu(Du, gu), uu[su + Eu] = Xu.a, uu[Zu + Eu] = Xu.b
+              let yG = xG(GG[SG + bG], GG[wG + bG]);
+              hG = yG.a, JG = yG.b, yG = xG(GG[ZG + bG], GG[LG + bG]), dG = yG.a, rG = yG.b, yG = xG(hG, dG), GG[SG + bG] = yG.a, GG[ZG + bG] = yG.b, yG = xG(JG, rG), GG[wG + bG] = yG.a, GG[LG + bG] = yG.b
             }
           }
-          if (ju & bu) {
-            const ju = Uu + qu;
-            let su;
-            su = lu ? yu(uu[Uu + Eu], uu[ju + Eu]) : zu(uu[Uu + Eu], uu[ju + Eu]), Yu = su.a, uu[ju + Eu] = su.b, uu[Uu + Eu] = Yu
+          if (ZG & pG) {
+            const ZG = SG + UG;
+            let wG;
+            wG = kG ? OG(GG[SG + bG], GG[ZG + bG]) : xG(GG[SG + bG], GG[ZG + bG]), hG = wG.a, GG[ZG + bG] = wG.b, GG[SG + bG] = hG
           }
         }
-        if (Uu & bu) {
-          let Uu = Cu;
-          const Zu = Cu + su * (ju - fu);
-          for (; Uu <= Zu; Uu += Ou) {
-            const ju = Uu + Nu;
-            let su;
-            su = lu ? yu(uu[Uu + Eu], uu[ju + Eu]) : zu(uu[Uu + Eu], uu[ju + Eu]), Yu = su.a, uu[ju + Eu] = su.b, uu[Uu + Eu] = Yu
+        if (SG & pG) {
+          let SG = VG;
+          const LG = VG + wG * (ZG - YG);
+          for (; SG <= LG; SG += KG) {
+            const ZG = SG + QG;
+            let wG;
+            wG = kG ? OG(GG[SG + bG], GG[ZG + bG]) : xG(GG[SG + bG], GG[ZG + bG]), hG = wG.a, GG[ZG + bG] = wG.b, GG[SG + bG] = hG
           }
         }
-        fu = bu, bu >>= 1
+        YG = pG, pG >>= 1
       }
-      return Cu
+      return VG
     }
 
-    function uE(uu) {
-      return new DataView(uu.array.buffer, uu.offset.value, uu.size)
+    function Gb(GG) {
+      return new DataView(GG.array.buffer, GG.offset.value, GG.size)
     }
 
-    function EE(uu) {
-      const Eu = uu.viewer.buffer.slice(uu.offset.value, uu.offset.value + uu.size),
-        ju = new Uint8Array(function(uu) {
-          let Eu = uu.byteLength;
-          const ju = [];
-          let su = 0;
-          const Uu = new DataView(uu);
-          for (; Eu > 0;) {
-            const uu = Uu.getInt8(su++);
-            if (uu < 0) {
-              const Zu = -uu;
-              Eu -= Zu + 1;
-              for (let uu = 0; uu < Zu; uu++) ju.push(Uu.getUint8(su++))
+    function bb(GG) {
+      const bG = GG.viewer.buffer.slice(GG.offset.value, GG.offset.value + GG.size),
+        ZG = new Uint8Array(function(GG) {
+          let bG = GG.byteLength;
+          const ZG = [];
+          let wG = 0;
+          const SG = new DataView(GG);
+          for (; bG > 0;) {
+            const GG = SG.getInt8(wG++);
+            if (GG < 0) {
+              const LG = -GG;
+              bG -= LG + 1;
+              for (let GG = 0; GG < LG; GG++) ZG.push(SG.getUint8(wG++))
             } else {
-              const Zu = uu;
-              Eu -= 2;
-              const Xu = Uu.getUint8(su++);
-              for (let uu = 0; uu < Zu + 1; uu++) ju.push(Xu)
+              const LG = GG;
+              bG -= 2;
+              const yG = SG.getUint8(wG++);
+              for (let GG = 0; GG < LG + 1; GG++) ZG.push(yG)
             }
           }
-          return ju
-        }(Eu)),
-        su = new Uint8Array(ju.length);
-      return Vu(ju), ru(ju, su), new DataView(su.buffer)
+          return ZG
+        }(bG)),
+        wG = new Uint8Array(ZG.length);
+      return lG(ZG), jG(ZG, wG), new DataView(wG.buffer)
     }
 
-    function jE(uu) {
-      const Eu = uu.array.slice(uu.offset.value, uu.offset.value + uu.size),
-        ju = fflate.unzlibSync(Eu),
-        su = new Uint8Array(ju.length);
-      return Vu(ju), ru(ju, su), new DataView(su.buffer)
+    function Zb(GG) {
+      const bG = GG.array.slice(GG.offset.value, GG.offset.value + GG.size),
+        ZG = fflate.unzlibSync(bG),
+        wG = new Uint8Array(ZG.length);
+      return lG(ZG), jG(ZG, wG), new DataView(wG.buffer)
     }
 
-    function sE(uu) {
-      const Eu = uu.array.slice(uu.offset.value, uu.offset.value + uu.size),
-        ju = fflate.unzlibSync(Eu),
-        su = uu.lines * uu.channels * uu.width,
-        Uu = 1 == uu.type ? new Uint16Array(su) : new Uint32Array(su);
-      let Zu = 0,
-        Xu = 0;
-      const lu = new Array(4);
-      for (let qu = 0; qu < uu.lines; qu++)
-        for (let Eu = 0; Eu < uu.channels; Eu++) {
-          let Eu = 0;
-          switch (uu.type) {
+    function wb(GG) {
+      const bG = GG.array.slice(GG.offset.value, GG.offset.value + GG.size),
+        ZG = fflate.unzlibSync(bG),
+        wG = GG.lines * GG.channels * GG.width,
+        SG = 1 == GG.type ? new Uint16Array(wG) : new Uint32Array(wG);
+      let LG = 0,
+        yG = 0;
+      const kG = new Array(4);
+      for (let UG = 0; UG < GG.lines; UG++)
+        for (let bG = 0; bG < GG.channels; bG++) {
+          let bG = 0;
+          switch (GG.type) {
             case 1:
-              lu[0] = Zu, lu[1] = lu[0] + uu.width, Zu = lu[1] + uu.width;
-              for (let su = 0; su < uu.width; ++su) {
-                Eu += ju[lu[0]++] << 8 | ju[lu[1]++], Uu[Xu] = Eu, Xu++
+              kG[0] = LG, kG[1] = kG[0] + GG.width, LG = kG[1] + GG.width;
+              for (let wG = 0; wG < GG.width; ++wG) {
+                bG += ZG[kG[0]++] << 8 | ZG[kG[1]++], SG[yG] = bG, yG++
               }
               break;
             case 2:
-              lu[0] = Zu, lu[1] = lu[0] + uu.width, lu[2] = lu[1] + uu.width, Zu = lu[2] + uu.width;
-              for (let su = 0; su < uu.width; ++su) {
-                Eu += ju[lu[0]++] << 24 | ju[lu[1]++] << 16 | ju[lu[2]++] << 8, Uu[Xu] = Eu, Xu++
+              kG[0] = LG, kG[1] = kG[0] + GG.width, kG[2] = kG[1] + GG.width, LG = kG[2] + GG.width;
+              for (let wG = 0; wG < GG.width; ++wG) {
+                bG += ZG[kG[0]++] << 24 | ZG[kG[1]++] << 16 | ZG[kG[2]++] << 8, SG[yG] = bG, yG++
               }
           }
         }
-      return new DataView(Uu.buffer)
+      return new DataView(SG.buffer)
     }
 
-    function UE(uu) {
-      const Eu = uu.viewer,
-        ju = {
-          value: uu.offset.value
+    function Sb(GG) {
+      const bG = GG.viewer,
+        ZG = {
+          value: GG.offset.value
         },
-        su = new Uint16Array(uu.width * uu.scanlineBlockSize * (uu.channels * uu.type)),
-        Uu = new Uint8Array(cu);
-      let Zu = 0;
-      const Xu = new Array(uu.channels);
-      for (let fu = 0; fu < uu.channels; fu++) Xu[fu] = {}, Xu[fu].start = Zu, Xu[fu].end = Xu[fu].start, Xu[fu].nx = uu.width, Xu[fu].ny = uu.lines, Xu[fu].size = uu.type, Zu += Xu[fu].nx * Xu[fu].ny * Xu[fu].size;
-      const lu = au(Eu, ju),
-        qu = au(Eu, ju);
-      if (qu >= cu) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
-      if (lu <= qu)
-        for (let fu = 0; fu < qu - lu + 1; fu++) Uu[fu + lu] = du(Eu, ju);
-      const Cu = new Uint16Array(bu),
-        Nu = function(uu, Eu) {
-          let ju = 0;
-          for (let Uu = 0; Uu < bu; ++Uu)(0 == Uu || uu[Uu >> 3] & 1 << (7 & Uu)) && (Eu[ju++] = Uu);
-          const su = ju - 1;
-          for (; ju < bu;) Eu[ju++] = 0;
-          return su
-        }(Uu, Cu),
-        Ou = Ju(Eu, ju);
-      Hu(uu.array, Eu, ju, Ou, su, Zu);
-      for (let fu = 0; fu < uu.channels; ++fu) {
-        const uu = Xu[fu];
-        for (let Eu = 0; Eu < Xu[fu].size; ++Eu) Ru(su, uu.start + Eu, uu.nx, uu.size, uu.ny, uu.nx * uu.size, Nu)
-      }! function(uu, Eu, ju) {
-        for (let su = 0; su < ju; ++su) Eu[su] = uu[Eu[su]]
-      }(Cu, su, Zu);
-      let Yu = 0;
-      const hu = new Uint8Array(su.buffer.byteLength);
-      for (let bu = 0; bu < uu.lines; bu++)
-        for (let Eu = 0; Eu < uu.channels; Eu++) {
-          const uu = Xu[Eu],
-            ju = uu.nx * uu.size,
-            Uu = new Uint8Array(su.buffer, uu.end * fu, ju * fu);
-          hu.set(Uu, Yu), Yu += ju * fu, uu.end += ju
+        wG = new Uint16Array(GG.width * GG.scanlineBlockSize * (GG.channels * GG.type)),
+        SG = new Uint8Array(fG);
+      let LG = 0;
+      const yG = new Array(GG.channels);
+      for (let YG = 0; YG < GG.channels; YG++) yG[YG] = {}, yG[YG].start = LG, yG[YG].end = yG[YG].start, yG[YG].nx = GG.width, yG[YG].ny = GG.lines, yG[YG].size = GG.type, LG += yG[YG].nx * yG[YG].ny * yG[YG].size;
+      const kG = WG(bG, ZG),
+        UG = WG(bG, ZG);
+      if (UG >= fG) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
+      if (kG <= UG)
+        for (let YG = 0; YG < UG - kG + 1; YG++) SG[YG + kG] = CG(bG, ZG);
+      const VG = new Uint16Array(pG),
+        QG = function(GG, bG) {
+          let ZG = 0;
+          for (let SG = 0; SG < pG; ++SG)(0 == SG || GG[SG >> 3] & 1 << (7 & SG)) && (bG[ZG++] = SG);
+          const wG = ZG - 1;
+          for (; ZG < pG;) bG[ZG++] = 0;
+          return wG
+        }(SG, VG),
+        KG = iG(bG, ZG);
+      tG(GG.array, bG, ZG, KG, wG, LG);
+      for (let YG = 0; YG < GG.channels; ++YG) {
+        const GG = yG[YG];
+        for (let bG = 0; bG < yG[YG].size; ++bG) BG(wG, GG.start + bG, GG.nx, GG.size, GG.ny, GG.nx * GG.size, QG)
+      }! function(GG, bG, ZG) {
+        for (let wG = 0; wG < ZG; ++wG) bG[wG] = GG[bG[wG]]
+      }(VG, wG, LG);
+      let hG = 0;
+      const dG = new Uint8Array(wG.buffer.byteLength);
+      for (let pG = 0; pG < GG.lines; pG++)
+        for (let bG = 0; bG < GG.channels; bG++) {
+          const GG = yG[bG],
+            ZG = GG.nx * GG.size,
+            SG = new Uint8Array(wG.buffer, GG.end * YG, ZG * YG);
+          dG.set(SG, hG), hG += ZG * YG, GG.end += ZG
         }
-      return new DataView(hu.buffer)
+      return new DataView(dG.buffer)
     }
-    var ZE, XE = ju(40356);
-    ! function(uu) {
-      uu[uu.Float = 0] = "Float", uu[uu.HalfFloat = 1] = "HalfFloat"
-    }(ZE || (ZE = {}));
-    class lE {}
-    async function qE(uu, Eu, ju, su) {
-      const Uu = {
+    var Lb, yb = ZG(40477);
+    ! function(GG) {
+      GG[GG.Float = 0] = "Float", GG[GG.HalfFloat = 1] = "HalfFloat"
+    }(Lb || (Lb = {}));
+    class kb {}
+    async function Ub(GG, bG, ZG, wG) {
+      const SG = {
         size: 0,
-        viewer: Eu,
-        array: new Uint8Array(Eu.buffer),
-        offset: ju,
-        width: uu.dataWindow.xMax - uu.dataWindow.xMin + 1,
-        height: uu.dataWindow.yMax - uu.dataWindow.yMin + 1,
-        channels: uu.channels.length,
+        viewer: bG,
+        array: new Uint8Array(bG.buffer),
+        offset: ZG,
+        width: GG.dataWindow.xMax - GG.dataWindow.xMin + 1,
+        height: GG.dataWindow.yMax - GG.dataWindow.yMin + 1,
+        channels: GG.channels.length,
         channelLineOffsets: {},
         scanOrder: () => 0,
         bytesPerLine: 0,
@@ -595,174 +595,174 @@ export const modules = {
         linearSpace: !1,
         textureType: 0
       };
-      switch (uu.compression) {
-        case eu.NO_COMPRESSION:
-          Uu.lines = 1, Uu.uncompress = uE;
+      switch (GG.compression) {
+        case EG.NO_COMPRESSION:
+          SG.lines = 1, SG.uncompress = Gb;
           break;
-        case eu.RLE_COMPRESSION:
-          Uu.lines = 1, Uu.uncompress = EE;
+        case EG.RLE_COMPRESSION:
+          SG.lines = 1, SG.uncompress = bb;
           break;
-        case eu.ZIPS_COMPRESSION:
-          Uu.lines = 1, Uu.uncompress = jE, await XE.h.LoadScriptAsync(lE.FFLATEUrl);
+        case EG.ZIPS_COMPRESSION:
+          SG.lines = 1, SG.uncompress = Zb, await yb.f.LoadScriptAsync(kb.FFLATEUrl);
           break;
-        case eu.ZIP_COMPRESSION:
-          Uu.lines = 16, Uu.uncompress = jE, await XE.h.LoadScriptAsync(lE.FFLATEUrl);
+        case EG.ZIP_COMPRESSION:
+          SG.lines = 16, SG.uncompress = Zb, await yb.f.LoadScriptAsync(kb.FFLATEUrl);
           break;
-        case eu.PIZ_COMPRESSION:
-          Uu.lines = 32, Uu.uncompress = UE;
+        case EG.PIZ_COMPRESSION:
+          SG.lines = 32, SG.uncompress = Sb;
           break;
-        case eu.PXR24_COMPRESSION:
-          Uu.lines = 16, Uu.uncompress = sE, await XE.h.LoadScriptAsync(lE.FFLATEUrl);
+        case EG.PXR24_COMPRESSION:
+          SG.lines = 16, SG.uncompress = wb, await yb.f.LoadScriptAsync(kb.FFLATEUrl);
           break;
         default:
-          throw new Error(eu[uu.compression] + " is unsupported")
+          throw new Error(EG[GG.compression] + " is unsupported")
       }
-      Uu.scanlineBlockSize = Uu.lines;
-      const Zu = {};
-      for (const lu of uu.channels) switch (lu.name) {
+      SG.scanlineBlockSize = SG.lines;
+      const LG = {};
+      for (const kG of GG.channels) switch (kG.name) {
         case "R":
         case "G":
         case "B":
         case "A":
         case "Y":
-          Zu[lu.name] = !0, Uu.type = lu.pixelType
+          LG[kG.name] = !0, SG.type = kG.pixelType
       }
-      let Xu = !1;
-      if (Zu.R && Zu.G && Zu.B && Zu.A) Uu.outputChannels = 4, Uu.decodeChannels = {
+      let yG = !1;
+      if (LG.R && LG.G && LG.B && LG.A) SG.outputChannels = 4, SG.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (Zu.R && Zu.G && Zu.B) Xu = !0, Uu.outputChannels = 4, Uu.decodeChannels = {
+      else if (LG.R && LG.G && LG.B) yG = !0, SG.outputChannels = 4, SG.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (Zu.R && Zu.G) Uu.outputChannels = 2, Uu.decodeChannels = {
+      else if (LG.R && LG.G) SG.outputChannels = 2, SG.decodeChannels = {
         R: 0,
         G: 1
       };
-      else if (Zu.R) Uu.outputChannels = 1, Uu.decodeChannels = {
+      else if (LG.R) SG.outputChannels = 1, SG.decodeChannels = {
         R: 0
       };
       else {
-        if (!Zu.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
-        Uu.outputChannels = 1, Uu.decodeChannels = {
+        if (!LG.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
+        SG.outputChannels = 1, SG.decodeChannels = {
           Y: 0
         }
       }
-      if (1 === Uu.type) switch (su) {
-        case ZE.Float:
-          Uu.getter = mu, Uu.inputSize = fu;
+      if (1 === SG.type) switch (wG) {
+        case Lb.Float:
+          SG.getter = vG, SG.inputSize = YG;
           break;
-        case ZE.HalfFloat:
-          Uu.getter = au, Uu.inputSize = fu
+        case Lb.HalfFloat:
+          SG.getter = WG, SG.inputSize = YG
       } else {
-        if (2 !== Uu.type) throw new Error("Unsupported pixelType " + Uu.type + " for " + uu.compression);
-        switch (su) {
-          case ZE.Float:
-            Uu.getter = ku, Uu.inputSize = lu;
+        if (2 !== SG.type) throw new Error("Unsupported pixelType " + SG.type + " for " + GG.compression);
+        switch (wG) {
+          case Lb.Float:
+            SG.getter = FG, SG.inputSize = kG;
             break;
-          case ZE.HalfFloat:
-            Uu.getter = vu, Uu.inputSize = lu
+          case Lb.HalfFloat:
+            SG.getter = aG, SG.inputSize = kG
         }
       }
-      Uu.blockCount = Uu.height / Uu.scanlineBlockSize;
-      for (let lu = 0; lu < Uu.blockCount; lu++) ou(Eu, ju);
-      const qu = Uu.width * Uu.height * Uu.outputChannels;
-      switch (su) {
-        case ZE.Float:
-          Uu.byteArray = new Float32Array(qu), Uu.textureType = 1, Xu && Uu.byteArray.fill(1, 0, qu);
+      SG.blockCount = SG.height / SG.scanlineBlockSize;
+      for (let kG = 0; kG < SG.blockCount; kG++) IG(bG, ZG);
+      const UG = SG.width * SG.height * SG.outputChannels;
+      switch (wG) {
+        case Lb.Float:
+          SG.byteArray = new Float32Array(UG), SG.textureType = 1, yG && SG.byteArray.fill(1, 0, UG);
           break;
-        case ZE.HalfFloat:
-          Uu.byteArray = new Uint16Array(qu), Uu.textureType = 2, Xu && Uu.byteArray.fill(15360, 0, qu);
+        case Lb.HalfFloat:
+          SG.byteArray = new Uint16Array(UG), SG.textureType = 2, yG && SG.byteArray.fill(15360, 0, UG);
           break;
         default:
-          throw new Error("Unsupported type: " + su)
+          throw new Error("Unsupported type: " + wG)
       }
-      let Cu = 0;
-      for (const lu of uu.channels) void 0 !== Uu.decodeChannels[lu.name] && (Uu.channelLineOffsets[lu.name] = Cu * Uu.width), Cu += 2 * lu.pixelType;
-      return Uu.bytesPerLine = Uu.width * Cu, Uu.outLineWidth = Uu.width * Uu.outputChannels, "INCREASING_Y" === uu.lineOrder ? Uu.scanOrder = uu => uu : Uu.scanOrder = uu => Uu.height - 1 - uu, 4 == Uu.outputChannels ? (Uu.format = 5, Uu.linearSpace = !0) : (Uu.format = 6, Uu.linearSpace = !1), Uu
+      let VG = 0;
+      for (const kG of GG.channels) void 0 !== SG.decodeChannels[kG.name] && (SG.channelLineOffsets[kG.name] = VG * SG.width), VG += 2 * kG.pixelType;
+      return SG.bytesPerLine = SG.width * VG, SG.outLineWidth = SG.width * SG.outputChannels, "INCREASING_Y" === GG.lineOrder ? SG.scanOrder = GG => GG : SG.scanOrder = GG => SG.height - 1 - GG, 4 == SG.outputChannels ? (SG.format = 5, SG.linearSpace = !0) : (SG.format = 6, SG.linearSpace = !1), SG
     }
 
-    function fE(uu, Eu, ju, su) {
-      const Uu = {
+    function Yb(GG, bG, ZG, wG) {
+      const SG = {
         value: 0
       };
-      for (let Zu = 0; Zu < uu.height / uu.scanlineBlockSize; Zu++) {
-        const Xu = wu(ju, su) - Eu.dataWindow.yMin;
-        uu.size = Ju(ju, su), uu.lines = Xu + uu.scanlineBlockSize > uu.height ? uu.height - Xu : uu.scanlineBlockSize;
-        const lu = uu.size < uu.lines * uu.bytesPerLine && uu.uncompress ? uu.uncompress(uu) : uE(uu);
-        su.value += uu.size;
-        for (let ju = 0; ju < uu.scanlineBlockSize; ju++) {
-          const su = Zu * uu.scanlineBlockSize,
-            Xu = ju + uu.scanOrder(su);
-          if (Xu >= uu.height) continue;
-          const qu = ju * uu.bytesPerLine,
-            fu = (uu.height - 1 - Xu) * uu.outLineWidth;
-          for (let ju = 0; ju < uu.channels; ju++) {
-            const su = Eu.channels[ju].name,
-              Zu = uu.channelLineOffsets[su],
-              Xu = uu.decodeChannels[su];
-            if (void 0 !== Xu) {
-              Uu.value = qu + Zu;
-              for (let Eu = 0; Eu < uu.width; Eu++) {
-                const ju = fu + Eu * uu.outputChannels + Xu;
-                uu.byteArray && (uu.byteArray[ju] = uu.getter(lu, Uu))
+      for (let LG = 0; LG < GG.height / GG.scanlineBlockSize; LG++) {
+        const yG = uG(ZG, wG) - bG.dataWindow.yMin;
+        GG.size = iG(ZG, wG), GG.lines = yG + GG.scanlineBlockSize > GG.height ? GG.height - yG : GG.scanlineBlockSize;
+        const kG = GG.size < GG.lines * GG.bytesPerLine && GG.uncompress ? GG.uncompress(GG) : Gb(GG);
+        wG.value += GG.size;
+        for (let ZG = 0; ZG < GG.scanlineBlockSize; ZG++) {
+          const wG = LG * GG.scanlineBlockSize,
+            yG = ZG + GG.scanOrder(wG);
+          if (yG >= GG.height) continue;
+          const UG = ZG * GG.bytesPerLine,
+            YG = (GG.height - 1 - yG) * GG.outLineWidth;
+          for (let ZG = 0; ZG < GG.channels; ZG++) {
+            const wG = bG.channels[ZG].name,
+              LG = GG.channelLineOffsets[wG],
+              yG = GG.decodeChannels[wG];
+            if (void 0 !== yG) {
+              SG.value = UG + LG;
+              for (let bG = 0; bG < GG.width; bG++) {
+                const ZG = YG + bG * GG.outputChannels + yG;
+                GG.byteArray && (GG.byteArray[ZG] = GG.getter(kG, SG))
               }
             }
           }
         }
       }
     }
-    lE.DefaultOutputType = ZE.HalfFloat, lE.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
-    class CE {
+    kb.DefaultOutputType = Lb.HalfFloat, kb.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
+    class Vb {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(uu, Eu, ju, su, Uu) {
+      loadCubeData(GG, bG, ZG, wG, SG) {
         throw ".exr not supported in Cube."
       }
-      loadData(uu, Eu, ju) {
-        const Uu = new DataView(uu.buffer),
-          Zu = {
+      loadData(GG, bG, ZG) {
+        const SG = new DataView(GG.buffer),
+          LG = {
             value: 0
           },
-          Xu = iu(Uu, Zu);
-        qE(Xu, Uu, Zu, lE.DefaultOutputType).then((uu => {
-          fE(uu, Xu, Uu, Zu);
-          const su = Xu.dataWindow.xMax - Xu.dataWindow.xMin + 1,
-            lu = Xu.dataWindow.yMax - Xu.dataWindow.yMin + 1;
-          ju(su, lu, Eu.generateMipMaps, !1, (() => {
-            const ju = Eu.wO();
-            Eu.format = Xu.format, Eu.type = uu.textureType, Eu.invertY = !1, Eu._gammaSpace = !Xu.linearSpace, uu.byteArray && ju._uploadDataToTextureDirectly(Eu, uu.byteArray, 0, 0, void 0, !0)
+          yG = MG(SG, LG);
+        Ub(yG, SG, LG, kb.DefaultOutputType).then((GG => {
+          Yb(GG, yG, SG, LG);
+          const wG = yG.dataWindow.xMax - yG.dataWindow.xMin + 1,
+            kG = yG.dataWindow.yMax - yG.dataWindow.yMin + 1;
+          ZG(wG, kG, bG.generateMipMaps, !1, (() => {
+            const ZG = bG.CK();
+            bG.format = yG.format, bG.type = GG.textureType, bG.invertY = !1, bG._gammaSpace = !yG.linearSpace, GG.byteArray && ZG._uploadDataToTextureDirectly(bG, GG.byteArray, 0, 0, void 0, !0)
           }))
-        })).catch((uu => {
-          su.b.Error("Failed to load EXR texture: ", uu)
+        })).catch((GG => {
+          wG.c.Error("Failed to load EXR texture: ", GG)
         }))
       }
     }
-    async function bE(uu) {
-      const Eu = new DataView(uu),
-        ju = {
+    async function pb(GG) {
+      const bG = new DataView(GG),
+        ZG = {
           value: 0
         },
-        Uu = iu(Eu, ju);
+        SG = MG(bG, ZG);
       try {
-        const uu = await qE(Uu, Eu, ju, ZE.Float);
-        return fE(uu, Uu, Eu, ju), uu.byteArray ? {
-          width: Uu.dataWindow.xMax - Uu.dataWindow.xMin + 1,
-          height: Uu.dataWindow.yMax - Uu.dataWindow.yMin + 1,
-          data: new Float32Array(uu.byteArray)
-        } : (su.b.Error("Failed to decode EXR data: No byte array available."), {
+        const GG = await Ub(SG, bG, ZG, Lb.Float);
+        return Yb(GG, SG, bG, ZG), GG.byteArray ? {
+          width: SG.dataWindow.xMax - SG.dataWindow.xMin + 1,
+          height: SG.dataWindow.yMax - SG.dataWindow.yMin + 1,
+          data: new Float32Array(GG.byteArray)
+        } : (wG.c.Error("Failed to decode EXR data: No byte array available."), {
           width: 0,
           height: 0,
           data: null
         })
-      } catch (Zu) {
-        su.b.Error("Failed to load EXR data: ", Zu)
+      } catch (LG) {
+        wG.c.Error("Failed to load EXR data: ", LG)
       }
       return {
         width: 0,
@@ -773,4 +773,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

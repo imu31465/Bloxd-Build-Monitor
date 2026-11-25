@@ -1,143 +1,143 @@
 export const id = 43;
 export const ids = [43];
 export const modules = {
-  41761: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Xu
+  41918: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => yG
     });
-    var su = ju(131),
-      Uu = ju(1135);
+    var wG = ZG(116),
+      SG = ZG(1036);
 
-    function Zu(uu) {
-      return (0, su.isDiscordClient)() ? `https://${Uu.e.discordDomain}/${uu.href}` : uu.href
+    function LG(GG) {
+      return (0, wG.isDiscordClient)() ? `https://${SG.c.discordDomain}/${GG.href}` : GG.href
     }
-    const Xu = {
-      scriptUrl: Zu(new ju.U(ju(41768))),
-      wasmBinaryUrl: Zu(new ju.U(ju(41772)))
+    const yG = {
+      scriptUrl: LG(new ZG.U(ZG(41927))),
+      wasmBinaryUrl: LG(new ZG.U(ZG(41932)))
     }
   },
-  34628: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Uu,
-      d: () => Zu,
-      e: () => Xu
+  34569: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => SG,
+      f: () => LG,
+      j: () => yG
     });
-    const su = 1179937895,
-      Uu = 1313821514;
+    const wG = 1179937895,
+      SG = 1313821514;
 
-    function Zu(uu) {
-      const Eu = new DataView(uu.buffer, uu.byteOffset, uu.byteLength);
-      if (uu.byteLength < 20 || Eu.getUint32(0, !0) !== su || 2 !== Eu.getUint32(4, !0)) return null;
-      const ju = Math.min(Eu.getUint32(8, !0), uu.byteLength),
-        Zu = Eu.getUint32(12, !0);
-      if (Eu.getUint32(16, !0) !== Uu || 20 + Zu > ju) return null;
-      let Xu;
+    function LG(GG) {
+      const bG = new DataView(GG.buffer, GG.byteOffset, GG.byteLength);
+      if (GG.byteLength < 20 || bG.getUint32(0, !0) !== wG || 2 !== bG.getUint32(4, !0)) return null;
+      const ZG = Math.min(bG.getUint32(8, !0), GG.byteLength),
+        LG = bG.getUint32(12, !0);
+      if (bG.getUint32(16, !0) !== SG || 20 + LG > ZG) return null;
+      let yG;
       try {
-        Xu = JSON.parse((new TextDecoder).decode(uu.subarray(20, 20 + Zu)))
+        yG = JSON.parse((new TextDecoder).decode(GG.subarray(20, 20 + LG)))
       } catch {
         return null
       }
-      return "object" === typeof Xu && null !== Xu ? {
-        json: Xu,
-        jsonEnd: 20 + Zu,
-        length: ju
+      return "object" === typeof yG && null !== yG ? {
+        json: yG,
+        jsonEnd: 20 + LG,
+        length: ZG
       } : null
     }
 
-    function Xu(uu) {
-      var Eu;
-      const ju = null === (Eu = Zu(uu)) || void 0 === Eu ? void 0 : Eu.json;
-      if (void 0 === ju || !Array.isArray(ju.extensionsUsed) || !ju.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
-      const su = ju.meshes;
-      return Array.isArray(su) && su.some((uu => {
-        const Eu = null === uu || void 0 === uu ? void 0 : uu.primitives;
-        return Array.isArray(Eu) && Eu.some((uu => {
-          const Eu = null === uu || void 0 === uu ? void 0 : uu.extensions;
-          return null != (null === Eu || void 0 === Eu ? void 0 : Eu.KHR_draco_mesh_compression)
+    function yG(GG) {
+      var bG;
+      const ZG = null === (bG = LG(GG)) || void 0 === bG ? void 0 : bG.json;
+      if (void 0 === ZG || !Array.isArray(ZG.extensionsUsed) || !ZG.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
+      const wG = ZG.meshes;
+      return Array.isArray(wG) && wG.some((GG => {
+        const bG = null === GG || void 0 === GG ? void 0 : GG.primitives;
+        return Array.isArray(bG) && bG.some((GG => {
+          const bG = null === GG || void 0 === GG ? void 0 : GG.extensions;
+          return null != (null === bG || void 0 === bG ? void 0 : bG.KHR_draco_mesh_compression)
         }))
       }))
     }
   },
-  51314: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      MODELS_MODULE_RETRY_DELAYS_MS: () => Du,
-      pageModelPool: () => eu
+  51469: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      MODELS_MODULE_RETRY_DELAYS_MS: () => JG,
+      pageModelPool: () => EG
     });
-    var su = ju(3020),
-      Uu = ju(36713),
-      Zu = ju(41093),
-      Xu = ju(41761),
-      lu = ju(36684);
+    var wG = ZG(2872),
+      SG = ZG(36643),
+      LG = ZG(41248),
+      yG = ZG(41918),
+      kG = ZG(36606);
     Error;
-    class qu extends Error {
-      constructor(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        super(`Draco ${uu}: ${Eu}`), this.stage = uu, this.url = ju, this.status = su, this.name = "DracoLoadError"
+    class UG extends Error {
+      constructor(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        super(`Draco ${GG}: ${bG}`), this.stage = GG, this.url = ZG, this.status = wG, this.name = "DracoLoadError"
       }
       get goneUrl() {
         return 404 === this.status || 410 === this.status ? this.url : null
       }
     }
 
-    function fu(uu, Eu) {
-      let ju = null,
-        Uu = !1;
+    function YG(GG, bG) {
+      let ZG = null,
+        SG = !1;
       return {
         get: () => {
-          if (null === ju) {
-            const Zu = async function(uu, Eu) {
+          if (null === ZG) {
+            const LG = async function(GG, bG) {
               try {
-                return (await (0, su.K)(uu)).buffer
-              } catch (ju) {
-                throw new qu(Eu, (0, lu.j)(ju), uu, ju instanceof su.g ? ju.status : null)
+                return (await (0, wG.K)(GG)).buffer
+              } catch (ZG) {
+                throw new UG(bG, (0, kG.h)(ZG), GG, ZG instanceof wG.g ? ZG.status : null)
               }
-            }(uu, Eu);
-            ju = Zu, Zu.then((() => {
-              Uu = ju === Zu
+            }(GG, bG);
+            ZG = LG, LG.then((() => {
+              SG = ZG === LG
             }), (() => {
-              ju = null
+              ZG = null
             }))
           }
-          return ju
+          return ZG
         },
         forget: () => {
-          Uu && (ju = null, Uu = !1)
+          SG && (ZG = null, SG = !1)
         }
       }
     }
 
-    function Cu(uu, Eu) {
-      const ju = fu(Eu, "wasm"),
-        su = fu(uu, "script");
+    function VG(GG, bG) {
+      const ZG = YG(bG, "wasm"),
+        wG = YG(GG, "script");
       return async function() {
-        arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (ju.forget(), su.forget());
-        const [uu, Eu] = await Promise.all([ju.get(), su.get()]);
+        arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (ZG.forget(), wG.forget());
+        const [GG, bG] = await Promise.all([ZG.get(), wG.get()]);
         return {
-          script: Eu,
-          wasmBinary: uu
+          script: bG,
+          wasmBinary: GG
         }
       }
     }
-    var bu = ju(34628),
-      cu = ju(3290),
-      Nu = ju(41046),
-      Ou = ju(41153);
-    class Yu extends Error {
-      constructor(uu) {
-        super(`no model worker could install it: ${uu}`), this.name = "DracoInstallError"
+    var pG = ZG(34569),
+      fG = ZG(3104),
+      QG = ZG(41182),
+      KG = ZG(41324);
+    class hG extends Error {
+      constructor(GG) {
+        super(`no model worker could install it: ${GG}`), this.name = "DracoInstallError"
       }
     }
-    class hu {
-      constructor(uu) {
-        this.opts = uu, this.queue = [], this.slots = [], this.stopped = null, this.create = null, this.zN = null, this.downloads = 0, this.installFailure = "", this.nextSeq = 0, this.jobLosses = 0, this.resting = !1;
-        for (let Eu = 0; Eu < Math.max(1, uu.count); Eu++) this.slots.push({
+    class dG {
+      constructor(GG) {
+        this.opts = GG, this.queue = [], this.slots = [], this.stopped = null, this.create = null, this.GK = null, this.downloads = 0, this.installFailure = "", this.nextSeq = 0, this.jobLosses = 0, this.resting = !1;
+        for (let bG = 0; bG < Math.max(1, GG.count); bG++) this.slots.push({
           worker: null,
           starting: !1,
           timer: null,
           job: null,
           seq: 0,
-          zN: "none",
+          GK: "none",
           installSeq: 0,
           failedDownload: 0,
           losses: 0,
@@ -147,18 +147,18 @@ export const modules = {
         this.downloadDecoder(), this.pump()
       }
       get pending() {
-        return this.queue.length + this.slots.filter((uu => null !== uu.job)).length
+        return this.queue.length + this.slots.filter((GG => null !== GG.job)).length
       }
-      build(uu, Eu) {
-        if (null !== this.stopped) return Promise.resolve((0, Nu.s)(uu, this.stopped));
-        const ju = (0, bu.e)(Eu);
-        return ju && this.downloadDecoder(), new Promise((su => {
+      build(GG, bG) {
+        if (null !== this.stopped) return Promise.resolve((0, QG.r)(GG, this.stopped));
+        const ZG = (0, pG.j)(bG);
+        return ZG && this.downloadDecoder(), new Promise((wG => {
           this.queue.push({
-            word: uu,
-            glb: Eu,
-            draco: ju,
+            word: GG,
+            glb: bG,
+            draco: ZG,
             attempts: 0,
-            resolve: su
+            resolve: wG
           }), this.pump()
         }))
       }
@@ -172,225 +172,225 @@ export const modules = {
         this.fail(null)
       }
       files() {
-        return "object" === typeof this.zN ? this.zN : null
+        return "object" === typeof this.GK ? this.GK : null
       }
       pump() {
-        const uu = this.resting && 0 === this.queue.length,
-          Eu = this.files();
-        for (const ju of this.slots) {
+        const GG = this.resting && 0 === this.queue.length,
+          bG = this.files();
+        for (const ZG of this.slots) {
           if (null !== this.stopped) return;
-          if (ju.gaveUp || ju.starting) continue;
-          if (null === ju.worker) {
-            uu || this.start(ju);
+          if (ZG.gaveUp || ZG.starting) continue;
+          if (null === ZG.worker) {
+            GG || this.start(ZG);
             continue
           }
-          if (uu) {
-            null === ju.job && "installing" !== ju.zN && this.end(ju);
+          if (GG) {
+            null === ZG.job && "installing" !== ZG.GK && this.end(ZG);
             continue
           }
-          if (null !== Eu && "none" === ju.zN && ju.failedDownload !== this.downloads && this.install(ju, ju.worker, Eu), null !== ju.job) continue;
-          const su = this.queue.findIndex((uu => "installed" === ju.zN || !uu.draco));
-          su >= 0 && this.run(ju, ju.worker, this.queue.splice(su, 1)[0])
+          if (null !== bG && "none" === ZG.GK && ZG.failedDownload !== this.downloads && this.install(ZG, ZG.worker, bG), null !== ZG.job) continue;
+          const wG = this.queue.findIndex((GG => "installed" === ZG.GK || !GG.draco));
+          wG >= 0 && this.run(ZG, ZG.worker, this.queue.splice(wG, 1)[0])
         }
         null === this.stopped && this.checkDecoder()
       }
       checkDecoder() {
         if (null === this.files()) return;
-        this.slots.some((uu => !uu.gaveUp && ("none" !== uu.zN || uu.failedDownload !== this.downloads))) || (this.zN = "uninstallable", this.decoderFailed(new Yu(this.installFailure)))
+        this.slots.some((GG => !GG.gaveUp && ("none" !== GG.GK || GG.failedDownload !== this.downloads))) || (this.GK = "uninstallable", this.decoderFailed(new hG(this.installFailure)))
       }
-      start(uu) {
-        if (uu.losses >= 6) return uu.gaveUp = !0, void(this.slots.every((uu => uu.gaveUp)) && this.fail(new Error("every model worker went 6 times with no file built")));
-        uu.starting = !0, this.create ??= this.opts.loadWorker(), Promise.all([this.create, this.opts.module]).then((Eu => {
-          let [ju, su] = Eu;
-          null === this.stopped && this.launch(uu, ju, su)
-        }), (uu => {
-          this.fail(uu)
+      start(GG) {
+        if (GG.losses >= 6) return GG.gaveUp = !0, void(this.slots.every((GG => GG.gaveUp)) && this.fail(new Error("every model worker went 6 times with no file built")));
+        GG.starting = !0, this.create ??= this.opts.loadWorker(), Promise.all([this.create, this.opts.module]).then((bG => {
+          let [ZG, wG] = bG;
+          null === this.stopped && this.launch(GG, ZG, wG)
+        }), (GG => {
+          this.fail(GG)
         }))
       }
-      launch(uu, Eu, ju) {
-        let su;
+      launch(GG, bG, ZG) {
+        let wG;
         try {
-          su = Eu()
-        } catch (Uu) {
-          return void this.lose(uu, `a model worker could not be created (${String(Uu)})`)
+          wG = bG()
+        } catch (SG) {
+          return void this.lose(GG, `a model worker could not be created (${String(SG)})`)
         }
-        uu.worker = su, this.startTimer(uu, 3e4, (Eu => {
-          this.lose(uu, `a model worker did not start: ${(0,Ou.p)(Eu)}`)
-        })), su.onmessage = Eu => {
+        GG.worker = wG, this.startTimer(GG, 3e4, (bG => {
+          this.lose(GG, `a model worker did not start: ${(0,KG.h)(bG)}`)
+        })), wG.onmessage = bG => {
           let {
-            data: ju
-          } = Eu;
-          this.answered(uu, su, ju)
-        }, su.onerror = Eu => {
-          this.lose(uu, uu.starting ? `a model worker failed to start: ${Eu.message}` : `a model worker failed: ${Eu.message}`)
-        }, su.postMessage({
+            data: ZG
+          } = bG;
+          this.answered(GG, wG, ZG)
+        }, wG.onerror = bG => {
+          this.lose(GG, GG.starting ? `a model worker failed to start: ${bG.message}` : `a model worker failed: ${bG.message}`)
+        }, wG.postMessage({
           type: "start",
-          module: ju
+          module: ZG
         })
       }
-      end(uu) {
-        const Eu = uu.worker;
-        null !== Eu && (Eu.onmessage = null, Eu.onerror = null, Eu.terminate()), uu.worker = null, uu.zN = "none", uu.startedAt = void 0
+      end(GG) {
+        const bG = GG.worker;
+        null !== bG && (bG.onmessage = null, bG.onerror = null, bG.terminate()), GG.worker = null, GG.GK = "none", GG.startedAt = void 0
       }
-      startTimer(uu, Eu, ju) {
-        uu.timer = new Ou.l(Eu, (Eu => {
-          uu.timer = null, ju(Eu)
+      startTimer(GG, bG, ZG) {
+        GG.timer = new KG.f(bG, (bG => {
+          GG.timer = null, ZG(bG)
         }), void 0, this.opts.visibility)
       }
-      clearTimer(uu) {
-        var Eu;
-        null === (Eu = uu.timer) || void 0 === Eu || Eu.cancel(), uu.timer = null
+      clearTimer(GG) {
+        var bG;
+        null === (bG = GG.timer) || void 0 === bG || bG.cancel(), GG.timer = null
       }
-      answered(uu, Eu, ju) {
-        if ("lost" === ju.type) return void this.lose(uu, ju.reason);
-        if (uu.starting) return "started" !== ju.type ? void this.lose(uu, `a model worker answered ${ju.type} before it started`) : (this.clearTimer(uu), uu.starting = !1, uu.startedAt = performance.now(), void this.pump());
-        if ("dracoInstalled" === ju.type || "dracoFailed" === ju.type) {
-          if (ju.seq !== uu.installSeq) return;
-          return void("installing" === uu.zN ? (this.clearTimer(uu), "dracoInstalled" === ju.type ? (uu.zN = "installed", this.pump()) : this.installFailed(uu, ju.reason)) : "dracoInstalled" === ju.type && "none" === uu.zN && uu.failedDownload === this.downloads && (uu.zN = "installed", uu.failedDownload = 0, this.pump()))
+      answered(GG, bG, ZG) {
+        if ("lost" === ZG.type) return void this.lose(GG, ZG.reason);
+        if (GG.starting) return "started" !== ZG.type ? void this.lose(GG, `a model worker answered ${ZG.type} before it started`) : (this.clearTimer(GG), GG.starting = !1, GG.startedAt = performance.now(), void this.pump());
+        if ("dracoInstalled" === ZG.type || "dracoFailed" === ZG.type) {
+          if (ZG.seq !== GG.installSeq) return;
+          return void("installing" === GG.GK ? (this.clearTimer(GG), "dracoInstalled" === ZG.type ? (GG.GK = "installed", this.pump()) : this.installFailed(GG, ZG.reason)) : "dracoInstalled" === ZG.type && "none" === GG.GK && GG.failedDownload === this.downloads && (GG.GK = "installed", GG.failedDownload = 0, this.pump()))
         }
-        const su = uu.job;
-        null !== su && "started" !== ju.type && ju.seq === uu.seq && ("trapped" !== ju.type ? (uu.job = null, uu.losses = 0, this.jobLosses = 0, su.resolve(new Uint8Array(ju.record)), this.pump()) : this.lose(uu, ju.trap, !0))
+        const wG = GG.job;
+        null !== wG && "started" !== ZG.type && ZG.seq === GG.seq && ("trapped" !== ZG.type ? (GG.job = null, GG.losses = 0, this.jobLosses = 0, wG.resolve(new Uint8Array(ZG.record)), this.pump()) : this.lose(GG, ZG.trap, !0))
       }
-      install(uu, Eu, ju) {
-        const su = this.nextSeq++;
-        uu.zN = "installing", uu.installSeq = su, this.startTimer(uu, 3e4, (Eu => {
-          this.installFailed(uu, `no install within ${Math.round(Eu)} ms`)
+      install(GG, bG, ZG) {
+        const wG = this.nextSeq++;
+        GG.GK = "installing", GG.installSeq = wG, this.startTimer(GG, 3e4, (bG => {
+          this.installFailed(GG, `no install within ${Math.round(bG)} ms`)
         }));
-        const Uu = ju.script.slice(0),
-          Zu = ju.wasmBinary.slice(0);
-        Eu.postMessage({
+        const SG = ZG.script.slice(0),
+          LG = ZG.wasmBinary.slice(0);
+        bG.postMessage({
           type: "installDraco",
-          seq: su,
-          script: Uu,
-          wasmBinary: Zu
-        }, [Uu, Zu])
+          seq: wG,
+          script: SG,
+          wasmBinary: LG
+        }, [SG, LG])
       }
-      installFailed(uu, Eu) {
-        console.warn(`[modelPool] a model worker could not install the Draco decoder: ${Eu}`), this.noInstall(uu, Eu), this.pump()
+      installFailed(GG, bG) {
+        console.warn(`[modelPool] a model worker could not install the Draco decoder: ${bG}`), this.noInstall(GG, bG), this.pump()
       }
-      noInstall(uu, Eu) {
-        uu.zN = "none", uu.failedDownload = this.downloads, this.installFailure = Eu
+      noInstall(GG, bG) {
+        GG.GK = "none", GG.failedDownload = this.downloads, this.installFailure = bG
       }
       downloadDecoder() {
-        if (null !== this.stopped || "downloading" === this.zN || null !== this.files()) return;
-        const uu = "uninstallable" === this.zN;
-        this.zN = "downloading", this.opts.downloadFiles(uu).then((uu => {
-          null === this.stopped && (this.zN = uu, this.downloads++, this.pump())
-        }), (uu => {
-          this.zN = null, this.decoderFailed(uu)
+        if (null !== this.stopped || "downloading" === this.GK || null !== this.files()) return;
+        const GG = "uninstallable" === this.GK;
+        this.GK = "downloading", this.opts.downloadFiles(GG).then((GG => {
+          null === this.stopped && (this.GK = GG, this.downloads++, this.pump())
+        }), (GG => {
+          this.GK = null, this.decoderFailed(GG)
         }))
       }
-      decoderFailed(uu) {
+      decoderFailed(GG) {
         if (null !== this.stopped) return;
-        const Eu = (0, lu.j)(uu);
-        let ju = 0;
-        for (const su of this.queue.splice(0)) su.draco ? (su.resolve((0, Nu.h)(su.word, Eu)), ju++) : this.queue.push(su);
-        ju > 0 && this.opts.onDecoderFailed(uu), this.pump()
+        const bG = (0, kG.h)(GG);
+        let ZG = 0;
+        for (const wG of this.queue.splice(0)) wG.draco ? (wG.resolve((0, QG.j)(wG.word, bG)), ZG++) : this.queue.push(wG);
+        ZG > 0 && this.opts.onDecoderFailed(GG), this.pump()
       }
-      run(uu, Eu, ju) {
-        const su = this.nextSeq++;
-        uu.seq = su, uu.job = ju, ju.attempts++;
-        const Uu = ju.glb.slice();
-        Eu.postMessage({
+      run(GG, bG, ZG) {
+        const wG = this.nextSeq++;
+        GG.seq = wG, GG.job = ZG, ZG.attempts++;
+        const SG = ZG.glb.slice();
+        bG.postMessage({
           type: "job",
-          seq: su,
-          word: ju.word,
-          glb: Uu.buffer
-        }, [Uu.buffer])
+          seq: wG,
+          word: ZG.word,
+          glb: SG.buffer
+        }, [SG.buffer])
       }
-      lose(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this.clearTimer(uu);
-        const su = !ju && "installing" === uu.zN;
-        void 0 !== uu.startedAt && performance.now() - uu.startedAt >= 6e4 && (uu.losses = 0), this.end(uu), uu.starting = !1, su && this.noInstall(uu, Eu);
-        const Uu = uu.job;
-        if (uu.job = null, null !== Uu || su || uu.losses++, this.opts.onWorkerLost(Eu), null !== Uu && su) Uu.attempts--, this.queue.unshift(Uu);
-        else if (null !== Uu && (Uu.attempts < 2 ? this.queue.unshift(Uu) : Uu.resolve((0, Nu.o)(Uu.word, Eu)), this.jobLosses++, this.jobLosses >= 32)) return void this.fail(new Error("model workers were lost on 32 jobs with no file built"));
+      lose(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this.clearTimer(GG);
+        const wG = !ZG && "installing" === GG.GK;
+        void 0 !== GG.startedAt && performance.now() - GG.startedAt >= 6e4 && (GG.losses = 0), this.end(GG), GG.starting = !1, wG && this.noInstall(GG, bG);
+        const SG = GG.job;
+        if (GG.job = null, null !== SG || wG || GG.losses++, this.opts.onWorkerLost(bG), null !== SG && wG) SG.attempts--, this.queue.unshift(SG);
+        else if (null !== SG && (SG.attempts < 2 ? this.queue.unshift(SG) : SG.resolve((0, QG.o)(SG.word, bG)), this.jobLosses++, this.jobLosses >= 32)) return void this.fail(new Error("model workers were lost on 32 jobs with no file built"));
         this.pump()
       }
-      fail(uu) {
+      fail(GG) {
         if (null !== this.stopped) return;
-        this.stopped = null === uu ? "the model workers stopped" : `the model workers could not start: ${(0,lu.j)(uu)}`;
-        const Eu = this.stopped,
-          ju = uu => {
-            uu.resolve((0, Nu.s)(uu.word, Eu))
+        this.stopped = null === GG ? "the model workers stopped" : `the model workers could not start: ${(0,kG.h)(GG)}`;
+        const bG = this.stopped,
+          ZG = GG => {
+            GG.resolve((0, QG.r)(GG.word, bG))
           };
-        for (const Uu of this.slots) {
-          var su;
-          this.clearTimer(Uu), null === (su = Uu.worker) || void 0 === su || su.terminate(), Uu.worker = null, null !== Uu.job && ju(Uu.job), Uu.job = null
+        for (const SG of this.slots) {
+          var wG;
+          this.clearTimer(SG), null === (wG = SG.worker) || void 0 === wG || wG.terminate(), SG.worker = null, null !== SG.job && ZG(SG.job), SG.job = null
         }
-        this.queue.splice(0).forEach(ju), null !== uu && this.opts.onUnavailable(uu)
+        this.queue.splice(0).forEach(ZG), null !== GG && this.opts.onUnavailable(GG)
       }
     }
-    const Du = [...su.v, 5e3, 15e3, 3e4];
-    let gu = null;
-    const Mu = new Set;
+    const JG = [...wG.t, 5e3, 15e3, 3e4];
+    let rG = null;
+    const zG = new Set;
 
-    function eu(uu) {
-      return Mu.add(uu), gu ??= function() {
-        let uu = (Eu = navigator.hardwareConcurrency, lu = "deviceMemory" in navigator ? navigator.deviceMemory : void 0, Eu > 2 && !(0, cu.p)(lu) ? 2 : 1);
-        var Eu, lu;
-        const fu = new hu({
-          module: (0, Uu.i)(Zu.c, {
-            delays: Du,
-            onRetry: (uu, Eu) => {
-              gu === fu && Gu((ju => {
-                ju.onModuleRetry(uu, Eu)
+    function EG(GG) {
+      return zG.add(GG), rG ??= function() {
+        let GG = (bG = navigator.hardwareConcurrency, kG = "deviceMemory" in navigator ? navigator.deviceMemory : void 0, bG > 2 && !(0, fG.s)(kG) ? 2 : 1);
+        var bG, kG;
+        const YG = new dG({
+          module: (0, SG.h)(LG.b, {
+            delays: JG,
+            onRetry: (GG, bG) => {
+              rG === YG && oG((ZG => {
+                ZG.onModuleRetry(GG, bG)
               }))
             }
           }),
-          downloadFiles: Cu(Xu.b.scriptUrl, Xu.b.wasmBinaryUrl),
-          loadWorker: async () => (await ju.e(44).then((() => ju(61716)))).createModelWorker,
-          count: uu,
-          onUnavailable: uu => {
-            if (gu === fu) {
-              gu = null;
-              const Eu = function(uu) {
-                return uu instanceof su.d ? [Zu.c.url().href] : void 0
-              }(uu);
-              Gu((ju => {
-                ju.onUnavailable(uu, Eu)
+          downloadFiles: VG(yG.e.scriptUrl, yG.e.wasmBinaryUrl),
+          loadWorker: async () => (await ZG.e(44).then((() => ZG(62063)))).createModelWorker,
+          count: GG,
+          onUnavailable: GG => {
+            if (rG === YG) {
+              rG = null;
+              const bG = function(GG) {
+                return GG instanceof wG.e ? [LG.b.url().href] : void 0
+              }(GG);
+              oG((ZG => {
+                ZG.onUnavailable(GG, bG)
               }))
             }
           },
-          onDecoderFailed: uu => {
-            if (gu === fu) {
-              const Eu = uu instanceof qu ? uu.goneUrl : null,
-                ju = null === Eu ? void 0 : [Eu];
-              Gu((Eu => {
-                Eu.onDecoderFailed(uu, ju)
+          onDecoderFailed: GG => {
+            if (rG === YG) {
+              const bG = GG instanceof UG ? GG.goneUrl : null,
+                ZG = null === bG ? void 0 : [bG];
+              oG((bG => {
+                bG.onDecoderFailed(GG, ZG)
               }))
             }
           },
-          onWorkerLost: uu => {
-            gu === fu && Gu((Eu => {
-              Eu.onWorkerLost(uu)
+          onWorkerLost: GG => {
+            rG === YG && oG((bG => {
+              bG.onWorkerLost(GG)
             }))
           }
         });
-        return fu
+        return YG
       }(), {
-        pool: gu,
+        pool: rG,
         unlisten: () => {
-          Mu.delete(uu)
+          zG.delete(GG)
         }
       }
     }
 
-    function Gu(uu) {
-      for (const ju of [...Mu]) try {
-        uu(ju)
-      } catch (Eu) {
-        console.error("[pageModelPool] a listener threw", Eu)
+    function oG(GG) {
+      for (const ZG of [...zG]) try {
+        GG(ZG)
+      } catch (bG) {
+        console.error("[pageModelPool] a listener threw", bG)
       }
     }
   },
-  41768: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
+  41927: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
   },
-  41772: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
+  41932: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

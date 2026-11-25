@@ -1,92 +1,92 @@
 export const id = 4;
 export const ids = [4];
 export const modules = {
-  36794: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      getBlockModelIconUrl: () => cu,
-      hasBlockModelIcon: () => fu
+  36746: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      getBlockModelIconUrl: () => fG,
+      hasBlockModelIcon: () => YG
     });
-    var su = ju(36784),
-      Uu = ju(36779);
-    const Zu = ju(36800),
-      Xu = new Map(Zu.keys().filter((uu => uu.startsWith("./"))).map((uu => [uu.slice(2, -5), uu]))),
-      lu = new Map,
-      qu = new Map;
+    var wG = ZG(36733),
+      SG = ZG(36729);
+    const LG = ZG(36749),
+      yG = new Map(LG.keys().filter((GG => GG.startsWith("./"))).map((GG => [GG.slice(2, -5), GG]))),
+      kG = new Map,
+      UG = new Map;
 
-    function fu(uu) {
-      return Xu.has(uu)
+    function YG(GG) {
+      return yG.has(GG)
     }
 
-    function Cu(uu) {
-      return Zu(Xu.get(uu))
+    function VG(GG) {
+      return LG(yG.get(GG))
     }
-    async function bu(uu, Eu, ju) {
+    async function pG(GG, bG, ZG) {
       const {
-        data: su,
-        texture: Zu
+        data: wG,
+        texture: LG
       } = await
-      function(uu) {
-        let Eu = lu.get(uu);
-        return Eu || (Eu = Cu(uu).then((async uu => {
-          const Eu = new Image;
-          Eu.src = uu.texture, await Eu.decode();
-          const ju = document.createElement("canvas");
-          ju.width = Eu.width, ju.height = Eu.height;
-          const su = ju.getContext("2d");
-          return su.drawImage(Eu, 0, 0), {
-            data: uu,
+      function(GG) {
+        let bG = kG.get(GG);
+        return bG || (bG = VG(GG).then((async GG => {
+          const bG = new Image;
+          bG.src = GG.texture, await bG.decode();
+          const ZG = document.createElement("canvas");
+          ZG.width = bG.width, ZG.height = bG.height;
+          const wG = ZG.getContext("2d");
+          return wG.drawImage(bG, 0, 0), {
+            data: GG,
             texture: {
-              width: Eu.width,
-              height: Eu.height,
-              pixels: su.getImageData(0, 0, Eu.width, Eu.height).data
+              width: bG.width,
+              height: bG.height,
+              pixels: wG.getImageData(0, 0, bG.width, bG.height).data
             }
           }
-        })), Eu.catch((() => {
-          lu.delete(uu)
-        })), lu.set(uu, Eu)), Eu
-      }(uu), Xu = document.createElement("canvas");
-      return Xu.width = Eu, Xu.height = Eu, Xu.getContext("2d").putImageData(new ImageData((0, Uu.m)(su, Zu, Eu, ju), Eu, Eu), 0, 0), Xu.toDataURL()
+        })), bG.catch((() => {
+          kG.delete(GG)
+        })), kG.set(GG, bG)), bG
+      }(GG), yG = document.createElement("canvas");
+      return yG.width = bG, yG.height = bG, yG.getContext("2d").putImageData(new ImageData((0, SG.o)(wG, LG, bG, ZG), bG, bG), 0, 0), yG.toDataURL()
     }
 
-    function cu(uu, Eu, ju) {
-      const Uu = `${Eu}|${ju}|${uu}`;
-      let Zu = qu.get(Uu);
-      return Zu || (Zu = (0, su.g)(uu, (() => Cu(uu)), Eu, ju).then((su => null !== su && void 0 !== su ? su : bu(uu, Eu, ju))), Zu.catch((() => {
-        qu.delete(Uu)
-      })), qu.set(Uu, Zu)), Zu
+    function fG(GG, bG, ZG) {
+      const SG = `${bG}|${ZG}|${GG}`;
+      let LG = UG.get(SG);
+      return LG || (LG = (0, wG.g)(GG, (() => VG(GG)), bG, ZG).then((wG => null !== wG && void 0 !== wG ? wG : pG(GG, bG, ZG))), LG.catch((() => {
+        UG.delete(SG)
+      })), UG.set(SG, LG)), LG
     }
   },
-  36800: (uu, Eu, ju) => {
-    var su = {
-      "./Artisan Bench.json": [41410, 280],
-      "./Aspen Item Pedestal.json": [41412, 281],
-      "./Cedar Item Pedestal.json": [41415, 282],
-      "./Cherry Item Pedestal.json": [41418, 283],
-      "./Furnace.json": [41421, 284],
-      "./Jungle Item Pedestal.json": [41424, 285],
-      "./Mango Item Pedestal.json": [41433, 286],
-      "./Palm Item Pedestal.json": [41438, 287],
-      "./Pear Item Pedestal.json": [41443, 288],
-      "./Pine Item Pedestal.json": [41449, 289],
-      "./Plum Item Pedestal.json": [41458, 290],
-      "./Potion Table.json": [41466, 291],
-      "./Salvaging Table.json": [41471, 292],
-      "./Showcase.json": [41477, 293],
-      "./Spectral Item Pedestal.json": [41485, 294],
-      "./Workbench.json": [41491, 295]
+  36749: (GG, bG, ZG) => {
+    var wG = {
+      "./Artisan Bench.json": [41581, 280],
+      "./Aspen Item Pedestal.json": [41589, 281],
+      "./Cedar Item Pedestal.json": [41597, 282],
+      "./Cherry Item Pedestal.json": [41602, 283],
+      "./Furnace.json": [41611, 284],
+      "./Jungle Item Pedestal.json": [41614, 285],
+      "./Mango Item Pedestal.json": [41621, 286],
+      "./Palm Item Pedestal.json": [41625, 287],
+      "./Pear Item Pedestal.json": [41627, 288],
+      "./Pine Item Pedestal.json": [41635, 289],
+      "./Plum Item Pedestal.json": [41643, 290],
+      "./Potion Table.json": [41650, 291],
+      "./Salvaging Table.json": [41655, 292],
+      "./Showcase.json": [41662, 293],
+      "./Spectral Item Pedestal.json": [41669, 294],
+      "./Workbench.json": [41678, 295]
     };
 
-    function Uu(uu) {
-      if (!ju.o(su, uu)) return Promise.resolve().then((() => {
-        var Eu = new Error("Cannot find module '" + uu + "'");
-        throw Eu.code = "MODULE_NOT_FOUND", Eu
+    function SG(GG) {
+      if (!ZG.o(wG, GG)) return Promise.resolve().then((() => {
+        var bG = new Error("Cannot find module '" + GG + "'");
+        throw bG.code = "MODULE_NOT_FOUND", bG
       }));
-      var Eu = su[uu],
-        Uu = Eu[0];
-      return ju.e(Eu[1]).then((() => ju(Uu)))
+      var bG = wG[GG],
+        SG = bG[0];
+      return ZG.e(bG[1]).then((() => ZG(SG)))
     }
-    Uu.keys = () => Object.keys(su), Uu.id = 36800, uu.exports = Uu
+    SG.keys = () => Object.keys(wG), SG.id = 36749, GG.exports = SG
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

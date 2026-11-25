@@ -2,10 +2,10 @@
  "context": {
   "module": "bloxd_wasm_anim_bg",
   "environment": "staging.bloxd.io",
-  "build": "dz8ef.98c5e741",
-  "url": "https://staging.bloxd.io/static/media/bloxd_wasm_anim_bg.f947c22ef067e991ee5e.wasm",
-  "sha256": "b0759d22815334552b8854b47c63eec9a03952d38dd1a922a5af613c34fa435b",
-  "analyzed_at": "2026-11-25T13:06:26+09:00",
+  "build": "wp3j0a.a13381cf",
+  "url": "https://staging.bloxd.io/static/media/bloxd_wasm_anim_bg.ee427ae85608d3954ac4.wasm",
+  "sha256": "4aa0ad1549e0d5c6e1e816ef89f5c6c760fcacd619ca992ecbfbe1cf2f199e59",
+  "analyzed_at": "2026-11-25T16:44:18+09:00",
   "referenced_by": "bloxd-wasm-anim.js"
  },
  "facts": {
@@ -139,36 +139,36 @@
   },
   "imports": [
    {
-    "module": "Nmrj",
-    "name": "hGGF",
+    "module": "s11N",
+    "name": "n9In",
     "kind": "func",
     "index": 0,
     "type": "(i32 i32) -> ()"
    },
    {
-    "module": "Nmrj",
-    "name": "x8Gb",
+    "module": "s11N",
+    "name": "rm7o",
     "kind": "func",
     "index": 1,
     "type": "(i32) -> ()"
    },
    {
-    "module": "Nmrj",
-    "name": "YYHf",
+    "module": "s11N",
+    "name": "ZnEp",
     "kind": "func",
     "index": 2,
     "type": "(i32 i32) -> ()"
    },
    {
-    "module": "Nmrj",
-    "name": "fIEe",
+    "module": "s11N",
+    "name": "eN3c",
     "kind": "func",
     "index": 3,
     "type": "(i32 i32) -> (i32)"
    },
    {
-    "module": "Nmrj",
-    "name": "VTqC",
+    "module": "s11N",
+    "name": "hq3D",
     "kind": "func",
     "index": 4,
     "type": "(i32 i32) -> ()"
@@ -176,40 +176,16 @@
   ],
   "exports": [
    {
-    "name": "R3ol",
-    "kind": "global",
-    "index": 2,
-    "type": ""
-   },
-   {
-    "name": "zgPY",
-    "kind": "func",
-    "index": 237,
-    "type": "(i32 i32 i32) -> ()"
-   },
-   {
-    "name": "uQhP",
-    "kind": "func",
-    "index": 213,
-    "type": "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)"
-   },
-   {
-    "name": "nwig",
+    "name": "gMm3",
     "kind": "func",
     "index": 261,
     "type": "() -> ()"
    },
    {
-    "name": "dI49",
+    "name": "HQKJ",
     "kind": "func",
-    "index": 228,
-    "type": "(i32 i32 i32) -> (i32 i32)"
-   },
-   {
-    "name": "WdXm",
-    "kind": "func",
-    "index": 222,
-    "type": "(i32 i32) -> (i32)"
+    "index": 261,
+    "type": "() -> ()"
    },
    {
     "name": "memory",
@@ -218,22 +194,46 @@
     "type": ""
    },
    {
-    "name": "DyqQ",
+    "name": "sIgm",
     "kind": "global",
     "index": 1,
     "type": ""
    },
    {
-    "name": "hkhq",
-    "kind": "func",
-    "index": 261,
-    "type": "() -> ()"
+    "name": "jTfZ",
+    "kind": "global",
+    "index": 2,
+    "type": ""
    },
    {
-    "name": "EECR",
+    "name": "x7sh",
     "kind": "func",
     "index": 223,
     "type": "(i32 i32 i32 i32) -> (i32)"
+   },
+   {
+    "name": "YpXY",
+    "kind": "func",
+    "index": 222,
+    "type": "(i32 i32) -> (i32)"
+   },
+   {
+    "name": "adFy",
+    "kind": "func",
+    "index": 213,
+    "type": "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)"
+   },
+   {
+    "name": "tlWo",
+    "kind": "func",
+    "index": 237,
+    "type": "(i32 i32 i32) -> ()"
+   },
+   {
+    "name": "pMoE",
+    "kind": "func",
+    "index": 228,
+    "type": "(i32 i32 i32) -> (i32 i32)"
    }
   ],
   "globals": [
@@ -1223,7 +1223,7 @@
      "bytes": 23
     }
    ],
-   "module_name": "eae8dfd7c4edfa3e.821",
+   "module_name": "d2757b8276008e7d.821",
    "producers": {}
   },
   "strings": [
@@ -1473,15 +1473,6 @@
  },
  "history": [
   {
-   "build": "fqwnlq.985c8f39",
-   "at": "2026-11-24T11:40:16+09:00",
-   "size": 415630,
-   "sha256": "e9f60e55d6a938ba",
-   "functions": 258,
-   "exports": 10,
-   "imports": 5
-  },
-  {
    "build": "31kiid.1299b0d6",
    "at": "2026-11-24T12:43:14+09:00",
    "size": 415630,
@@ -1576,6 +1567,15 @@
    "at": "2026-11-25T13:06:26+09:00",
    "size": 415630,
    "sha256": "b0759d2281533455",
+   "functions": 258,
+   "exports": 10,
+   "imports": 5
+  },
+  {
+   "build": "wp3j0a.a13381cf",
+   "at": "2026-11-25T16:44:18+09:00",
+   "size": 415630,
+   "sha256": "4aa0ad1549e0d5c6",
    "functions": 258,
    "exports": 10,
    "imports": 5

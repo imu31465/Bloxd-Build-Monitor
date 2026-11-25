@@ -1,167 +1,167 @@
 export const id = 274;
 export const ids = [274];
 export const modules = {
-  41870: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => hu,
-      h: () => lu,
-      i: () => Xu,
-      l: () => fu
+  42043: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => dG,
+      f: () => kG,
+      i: () => yG,
+      m: () => YG
     });
-    var su = ju(37671),
-      Uu = ju(39056),
-      Zu = ju(39052);
+    var wG = ZG(37618),
+      SG = ZG(39116),
+      LG = ZG(39111);
 
-    function Xu(uu, Eu, ju, su) {
-      const Uu = Zu.v;
-      Eu.fill(0), uu.gravity.toArray(Eu, Uu.gravity), uu.colorDead.toArray(Eu, Uu.colorDead), ju[Uu.ramp] = uu.useRampGradients ? 1 : 0;
-      const Xu = uu.getColorGradients(),
-        lu = cu(uu, Xu, "colour", su);
-      ju[Uu.colorCount] = lu;
-      for (let Zu = 0; Zu < lu; Zu++) {
-        var qu;
-        const uu = Xu[Nu(Xu, Zu)];
-        Eu[Uu.colorPositions + Zu] = uu.gradient, uu.color1.toArray(Eu, Uu.color1 + 4 * Zu), (null !== (qu = uu.color2) && void 0 !== qu ? qu : uu.color1).toArray(Eu, Uu.color2 + 4 * Zu)
+    function yG(GG, bG, ZG, wG) {
+      const SG = LG.t;
+      bG.fill(0), GG.gravity.toArray(bG, SG.gravity), GG.colorDead.toArray(bG, SG.colorDead), ZG[SG.ramp] = GG.useRampGradients ? 1 : 0;
+      const yG = GG.getColorGradients(),
+        kG = fG(GG, yG, "colour", wG);
+      ZG[SG.colorCount] = kG;
+      for (let LG = 0; LG < kG; LG++) {
+        var UG;
+        const GG = yG[QG(yG, LG)];
+        bG[SG.colorPositions + LG] = GG.gradient, GG.color1.toArray(bG, SG.color1 + 4 * LG), (null !== (UG = GG.color2) && void 0 !== UG ? UG : GG.color1).toArray(bG, SG.color2 + 4 * LG)
       }
-      const fu = uu.getVelocityGradients(),
-        Cu = cu(uu, fu, "RY", su);
-      ju[Uu.velocityCount] = Cu;
-      for (let Zu = 0; Zu < Cu; Zu++) gu(Eu, Uu.RY + 4 * Zu, fu[Nu(fu, Zu)]);
-      const bu = uu.useRampGradients ? uu.getColorRemapGradients() : null,
-        Ou = cu(uu, bu, "colour remap", su);
-      ju[Uu.remapCount] = Ou;
-      for (let Zu = 0; Zu < Ou; Zu++) gu(Eu, Uu.remap + 4 * Zu, bu[Nu(bu, Zu)])
+      const YG = GG.getVelocityGradients(),
+        VG = fG(GG, YG, "Sd", wG);
+      ZG[SG.velocityCount] = VG;
+      for (let LG = 0; LG < VG; LG++) rG(bG, SG.Sd + 4 * LG, YG[QG(YG, LG)]);
+      const pG = GG.useRampGradients ? GG.getColorRemapGradients() : null,
+        KG = fG(GG, pG, "colour remap", wG);
+      ZG[SG.remapCount] = KG;
+      for (let LG = 0; LG < KG; LG++) rG(bG, SG.remap + 4 * LG, pG[QG(pG, LG)])
     }
 
-    function lu() {
+    function kG() {
       return {
         key: [],
-        texels: new Uint8Array(4 * Zu.j)
+        texels: new Uint8Array(4 * LG.f)
       }
     }
-    const qu = [];
+    const UG = [];
 
-    function fu(uu, Eu) {
-      return Cu(uu, qu), !Du(qu, Eu.key) && (Eu.key.length = 0, Eu.key.push(...qu), Eu.key.length > 0 && function(uu, Eu) {
-        for (let ju = 0; ju < Zu.j; ju++) Uu.m.GetCurrentGradient(ju / Zu.j, uu, ((uu, Eu, ju) => {
-          su.Color3.LerpToRef(uu.color, Eu.color, ju, bu)
-        })), Eu[4 * ju] = 255 * bu.r, Eu[4 * ju + 1] = 255 * bu.g, Eu[4 * ju + 2] = 255 * bu.b, Eu[4 * ju + 3] = 255
-      }(uu.getRampGradients(), Eu.texels), !0)
+    function YG(GG, bG) {
+      return VG(GG, UG), !JG(UG, bG.key) && (bG.key.length = 0, bG.key.push(...UG), bG.key.length > 0 && function(GG, bG) {
+        for (let ZG = 0; ZG < LG.f; ZG++) SG.m.GetCurrentGradient(ZG / LG.f, GG, ((GG, bG, ZG) => {
+          wG.Color3.LerpToRef(GG.color, bG.color, ZG, pG)
+        })), bG[4 * ZG] = 255 * pG.r, bG[4 * ZG + 1] = 255 * pG.g, bG[4 * ZG + 2] = 255 * pG.b, bG[4 * ZG + 3] = 255
+      }(GG.getRampGradients(), bG.texels), !0)
     }
 
-    function Cu(uu, Eu) {
-      Eu.length = 0;
-      const ju = uu.useRampGradients ? uu.getRampGradients() : null;
-      if (null !== ju && void 0 !== ju && ju.length) {
-        Eu.push(ju.length);
-        for (const uu of ju) Eu.push(uu.gradient, uu.color.r, uu.color.g, uu.color.b)
+    function VG(GG, bG) {
+      bG.length = 0;
+      const ZG = GG.useRampGradients ? GG.getRampGradients() : null;
+      if (null !== ZG && void 0 !== ZG && ZG.length) {
+        bG.push(ZG.length);
+        for (const GG of ZG) bG.push(GG.gradient, GG.color.r, GG.color.g, GG.color.b)
       }
     }
-    const bu = new su.Color3;
+    const pG = new wG.Color3;
 
-    function cu(uu, Eu, ju, su) {
-      return Eu ? Eu.length > Zu.b ? (su(`particleStops:${ju}`, `GPU particles use the first 2 and last ${Zu.b-2} of more than ${Zu.b} ${ju} gradient stops (${uu.name})`), Zu.b) : Eu.length : 0
+    function fG(GG, bG, ZG, wG) {
+      return bG ? bG.length > LG.b ? (wG(`particleStops:${ZG}`, `GPU particles use the first 2 and last ${LG.b-2} of more than ${LG.b} ${ZG} gradient stops (${GG.name})`), LG.b) : bG.length : 0
     }
 
-    function Nu(uu, Eu) {
-      return Eu < 2 || uu.length <= Zu.b ? Eu : uu.length - Zu.b + Eu
+    function QG(GG, bG) {
+      return bG < 2 || GG.length <= LG.b ? bG : GG.length - LG.b + bG
     }
-    const Ou = new Float32Array(Zu.p),
-      Yu = new Uint32Array(Ou.buffer);
+    const KG = new Float32Array(LG.m),
+      hG = new Uint32Array(KG.buffer);
 
-    function hu(uu, Eu, ju) {
-      return Xu(uu, Ou, Yu, ju), Eu && Du(Yu, Eu) ? null : Yu.slice()
+    function dG(GG, bG, ZG) {
+      return yG(GG, KG, hG, ZG), bG && JG(hG, bG) ? null : hG.slice()
     }
 
-    function Du(uu, Eu) {
-      if (uu.length !== Eu.length) return !1;
-      for (let ju = 0; ju < uu.length; ju++)
-        if (uu[ju] !== Eu[ju]) return !1;
+    function JG(GG, bG) {
+      if (GG.length !== bG.length) return !1;
+      for (let ZG = 0; ZG < GG.length; ZG++)
+        if (GG[ZG] !== bG[ZG]) return !1;
       return !0
     }
 
-    function gu(uu, Eu, ju) {
-      var su;
-      uu[Eu] = ju.gradient, uu[Eu + 1] = ju.factor1, uu[Eu + 2] = null !== (su = ju.factor2) && void 0 !== su ? su : ju.factor1
+    function rG(GG, bG, ZG) {
+      var wG;
+      GG[bG] = ZG.gradient, GG[bG + 1] = ZG.factor1, GG[bG + 2] = null !== (wG = ZG.factor2) && void 0 !== wG ? wG : ZG.factor1
     }
   },
-  41373: (uu, Eu, ju) => {
-    function su(uu, Eu, ju) {
-      const su = Eu * Eu * 4,
-        Uu = uu[0].layers,
-        Zu = Uu * (uu.length - 1) + uu[uu.length - 1].layers,
-        Xu = new Uint8Array(Zu * su);
-      uu.forEach(((Eu, ju) => {
-        const Zu = ju + 1 < uu.length ? Math.min(Eu.layers, Uu) : Eu.layers;
-        Xu.set(new Uint8Array(Eu.pixels.buffer, Eu.pixels.byteOffset, Zu * su), ju * Uu * su)
+  41544: (GG, bG, ZG) => {
+    function wG(GG, bG, ZG) {
+      const wG = bG * bG * 4,
+        SG = GG[0].layers,
+        LG = SG * (GG.length - 1) + GG[GG.length - 1].layers,
+        yG = new Uint8Array(LG * wG);
+      GG.forEach(((bG, ZG) => {
+        const LG = ZG + 1 < GG.length ? Math.min(bG.layers, SG) : bG.layers;
+        yG.set(new Uint8Array(bG.pixels.buffer, bG.pixels.byteOffset, LG * wG), ZG * SG * wG)
       }));
-      const lu = Math.max(1, Math.min(Zu, ju || Zu));
-      if (lu === Zu) return [{
-        pixels: Xu,
-        layers: Zu
+      const kG = Math.max(1, Math.min(LG, ZG || LG));
+      if (kG === LG) return [{
+        pixels: yG,
+        layers: LG
       }];
-      const qu = [];
-      for (let fu = 0; fu < Zu; fu += lu) {
-        const uu = Math.min(Zu, fu + lu);
-        qu.push({
-          pixels: Xu.slice(fu * su, uu * su),
-          layers: uu - fu
+      const UG = [];
+      for (let YG = 0; YG < LG; YG += kG) {
+        const GG = Math.min(LG, YG + kG);
+        UG.push({
+          pixels: yG.slice(YG * wG, GG * wG),
+          layers: GG - YG
         })
       }
-      return qu
+      return UG
     }
-    ju.d(Eu, {
-      e: () => su,
-      g: () => Zu
+    ZG.d(bG, {
+      c: () => wG,
+      g: () => LG
     });
-    const Uu = new WeakMap;
+    const SG = new WeakMap;
 
-    function Zu(uu, Eu, ju) {
-      var su, Zu;
-      const Xu = null !== (su = Uu.get(uu)) && void 0 !== su ? su : new Map;
-      Uu.set(uu, Xu);
-      const lu = null !== (Zu = Xu.get(Eu[0])) && void 0 !== Zu ? Zu : [];
-      Xu.set(Eu[0], lu);
-      const qu = lu.find((uu => uu.urls.length === Eu.length && uu.urls.every(((uu, ju) => uu === Eu[ju]))));
-      if (qu) return qu.built;
-      const fu = {
-        urls: [...Eu],
-        built: ju()
+    function LG(GG, bG, ZG) {
+      var wG, LG;
+      const yG = null !== (wG = SG.get(GG)) && void 0 !== wG ? wG : new Map;
+      SG.set(GG, yG);
+      const kG = null !== (LG = yG.get(bG[0])) && void 0 !== LG ? LG : [];
+      yG.set(bG[0], kG);
+      const UG = kG.find((GG => GG.urls.length === bG.length && GG.urls.every(((GG, ZG) => GG === bG[ZG]))));
+      if (UG) return UG.built;
+      const YG = {
+        urls: [...bG],
+        built: ZG()
       };
-      return lu.push(fu), fu.built.catch((() => {
-        lu.splice(lu.indexOf(fu), 1)
-      })), fu.built
+      return kG.push(YG), YG.built.catch((() => {
+        kG.splice(kG.indexOf(YG), 1)
+      })), YG.built
     }
   },
-  41861: (uu, Eu, ju) => {
-    function su() {
-      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      const Eu = new Set;
-      return (ju, su) => {
-        Eu.has(ju) || (Eu.add(ju), console.warn(uu + su))
+  42035: (GG, bG, ZG) => {
+    function wG() {
+      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      const bG = new Set;
+      return (ZG, wG) => {
+        bG.has(ZG) || (bG.add(ZG), console.warn(GG + wG))
       }
     }
-    ju.d(Eu, {
-      d: () => su
+    ZG.d(bG, {
+      e: () => wG
     })
   },
-  41900: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      createLiteRendererAsync: () => iq,
-      liteBabylonBackend: () => Su,
-      setPipelineFailureHook: () => lE
+  42070: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      createLiteRendererAsync: () => MU,
+      liteBabylonBackend: () => sG,
+      setPipelineFailureHook: () => kb
     });
-    var su = ju(37671),
-      Uu = ju(37993),
-      Zu = ju(38298),
-      Xu = ju(37621),
-      lu = ju(38306);
-    class qu extends lu.e {
+    var wG = ZG(37618),
+      SG = ZG(37993),
+      LG = ZG(38304),
+      yG = ZG(37559),
+      kG = ZG(38318);
+    class UG extends kG.e {
       constructor() {
-        for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
-        super(...Eu), this.color = new su.Color3(1, 1, 1), this.alpha = 1, this.material = {
+        for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
+        super(...bG), this.color = new wG.Color3(1, 1, 1), this.alpha = 1, this.material = {
           name: "colorShader",
-          uniqueId: Eu[0].hV().getUniqueId(),
+          uniqueId: bG[0].Dv().getUniqueId(),
           shaderPath: "color",
           fillMode: 4,
           sideOrientation: null,
@@ -175,7 +175,7 @@ export const modules = {
           zOffsetUnits: 0,
           disableColorWrite: !1,
           getClassName: () => "ShaderMaterial",
-          needAlphaBlendingForMesh: uu => uu.visibility < 1 || uu.hasVertexAlpha,
+          needAlphaBlendingForMesh: GG => GG.visibility < 1 || GG.hasVertexAlpha,
           needAlphaTestingForMesh: () => !1,
           dispose: () => {}
         }
@@ -184,46 +184,46 @@ export const modules = {
         return "LinesMesh"
       }
     }
-    const fu = ["VERTEXCOLOR", "VERTEXALPHA", "INSTANCES", "THIN_INSTANCES", "INSTANCESCOLOR", "FOG", "LITE_FRONT_LAYER"],
-      Cu = uu => 1 << fu.indexOf(uu),
-      bu = Cu("VERTEXCOLOR"),
-      cu = Cu("INSTANCES"),
-      Nu = Cu("THIN_INSTANCES"),
-      Ou = Cu("INSTANCESCOLOR"),
-      Yu = Cu("FOG"),
-      hu = Cu("LITE_FRONT_LAYER");
+    const YG = ["VERTEXCOLOR", "VERTEXALPHA", "INSTANCES", "THIN_INSTANCES", "INSTANCESCOLOR", "FOG", "LITE_FRONT_LAYER"],
+      VG = GG => 1 << YG.indexOf(GG),
+      pG = VG("VERTEXCOLOR"),
+      fG = VG("INSTANCES"),
+      QG = VG("THIN_INSTANCES"),
+      KG = VG("INSTANCESCOLOR"),
+      hG = VG("FOG"),
+      dG = VG("LITE_FRONT_LAYER");
 
-    function Du(uu, Eu, ju, su) {
-      let Uu = 0;
-      return uu.isVerticesDataPresent("color") && (Uu |= bu), "none" !== Eu && (Uu |= cu), "thin" === Eu && (Uu |= Nu, uu.isVerticesDataPresent("instanceColor") && (Uu |= Ou)), su.fogEnabled && uu.applyFog && 0 !== su.fogMode && (Uu |= Yu), ju >= 1 && (Uu |= hu), Uu
+    function JG(GG, bG, ZG, wG) {
+      let SG = 0;
+      return GG.isVerticesDataPresent("color") && (SG |= pG), "none" !== bG && (SG |= fG), "thin" === bG && (SG |= QG, GG.isVerticesDataPresent("instanceColor") && (SG |= KG)), wG.fogEnabled && GG.applyFog && 0 !== wG.fogMode && (SG |= hG), ZG >= 1 && (SG |= dG), SG
     }
 
-    function gu(uu, Eu) {
-      uu.updateColor4("color", Eu.color, Eu.alpha)
+    function rG(GG, bG) {
+      GG.updateColor4("color", bG.color, bG.alpha)
     }
-    var Mu = ju(38232),
-      eu = ju(37816),
-      Gu = ju(37704),
-      pu = ju(37582),
-      wu = ju(38218),
-      Ju = ju(38226),
-      du = ju(37603),
-      au = ju(37612),
-      Pu = ju(37630);
-    const ou = pu.c.GLSL;
-    class ku {
-      constructor(uu, Eu) {
-        this.name = uu, this.vY = Eu, this.uniqueId = void 0, this.checkReadyOnlyOnce = !1, this._blockDirtyMechanism = !1, this.disposers = [], this.wV = {
-          addOnce: uu => {
-            this.disposers.push(uu)
+    var zG = ZG(38248),
+      EG = ZG(37788),
+      oG = ZG(37647),
+      XG = ZG(37532),
+      uG = ZG(38234),
+      iG = ZG(38243),
+      CG = ZG(37550),
+      WG = ZG(37556),
+      mG = ZG(37567);
+    const IG = XG.c.GLSL;
+    class FG {
+      constructor(GG, bG) {
+        this.name = GG, this.Ah = bG, this.uniqueId = void 0, this.checkReadyOnlyOnce = !1, this._blockDirtyMechanism = !1, this.disposers = [], this.Gl = {
+          addOnce: GG => {
+            this.disposers.push(GG)
           }
-        }, this.uniqueId = Eu.getUniqueId()
+        }, this.uniqueId = bG.getUniqueId()
       }
       get isFrozen() {
         return this.checkReadyOnlyOnce
       }
-      hV() {
-        return this.vY
+      Dv() {
+        return this.Ah
       }
       getClassName() {
         return "LiteMaterial"
@@ -238,89 +238,89 @@ export const modules = {
       get fillMode() {
         return this.model.fillMode
       }
-      needAlphaBlendingForMesh(uu) {
-        return (0, du.S)(this.model, uu.visibility, uu.hasVertexAlpha)
+      needAlphaBlendingForMesh(GG) {
+        return (0, CG.U)(this.model, GG.visibility, GG.hasVertexAlpha)
       }
-      needAlphaTestingForMesh(uu) {
-        return (0, du.W)(this.model, uu.visibility, uu.hasVertexAlpha)
+      needAlphaTestingForMesh(GG) {
+        return (0, CG.Y)(this.model, GG.visibility, GG.hasVertexAlpha)
       }
       dispose() {
-        (0, eu.k)(this);
-        for (const uu of this.disposers.splice(0)) uu()
+        (0, EG.k)(this);
+        for (const GG of this.disposers.splice(0)) GG()
       }
       get model() {
-        return (0, du.$)(this)
+        return (0, CG.eb)(this)
       }
     }
-    const mu = new WeakSet;
+    const vG = new WeakSet;
 
-    function vu(uu) {
-      return mu.has(uu)
+    function aG(GG) {
+      return vG.has(GG)
     }
 
-    function Ku(uu) {
-      mu.add(uu)
+    function cG(GG) {
+      vG.add(GG)
     }
-    const Vu = {
-      create: (uu, Eu) => ((0, Gu.s)(uu, new ku(uu.name, Eu)), au.c.defines()),
+    const lG = {
+      create: (GG, bG) => ((0, oG.r)(GG, new FG(GG.name, bG)), WG.b.defines()),
       write: () => {},
-      addFeature: (uu, Eu) => {
-        const ju = uu.mirror;
-        Eu.feature === Ju.h && Eu.state.dirLightCount > 0 && (uu.disableLighting = !0, (0, du.Z)(uu)), "BLOXD_LIGHTING" in Eu.defines && (0, eu.h)(ju), Eu.feature === wu.h && ((0, Mu.i)(Eu.state, ou), function(uu, Eu) {
-          const ju = uu.hV().wO();
+      addFeature: (GG, bG) => {
+        const ZG = GG.mirror;
+        bG.feature === iG.l && bG.state.dirLightCount > 0 && (GG.disableLighting = !0, (0, CG.cb)(GG)), "BLOXD_LIGHTING" in bG.defines && (0, EG.h)(ZG), bG.feature === uG.i && ((0, zG.k)(bG.state, IG), function(GG, bG) {
+          const ZG = GG.Dv().CK();
           setTimeout((() => {
-            ju.atlasArrays(Eu.sources).then((ju => {
-              (0, Mu.b)(uu, Eu, ju.map((uu => ({
-                atlas: uu,
-                layers: uu.layers
-              }))), ju[0].layerWidth, ou)
-            })).catch((uu => {
-              console.error("Failed to build the atlas's texture arrays", uu)
+            ZG.atlasArrays(bG.sources).then((ZG => {
+              (0, zG.c)(GG, bG, ZG.map((GG => ({
+                atlas: GG,
+                layers: GG.layers
+              }))), ZG[0].layerWidth, IG)
+            })).catch((GG => {
+              console.error("Failed to build the atlas's texture arrays", GG)
             }))
           }))
-        }(ju, Eu.state))
+        }(ZG, bG.state))
       },
-      texture: (uu, Eu, ju) => {
+      texture: (GG, bG, ZG) => {
         let {
-          data: su,
-          sets: Uu
-        } = ju;
-        var Zu;
-        (Ku(uu), su) && (uu.uvSet = null !== (Zu = null === Uu || void 0 === Uu ? void 0 : Uu.coordinatesIndex) && void 0 !== Zu ? Zu : 0, (0, Gu.bb)(uu.matrix, null !== Uu && void 0 !== Uu ? Uu : {}))
+          data: wG,
+          sets: SG
+        } = ZG;
+        var LG;
+        (cG(GG), wG) && (GG.uvSet = null !== (LG = null === SG || void 0 === SG ? void 0 : SG.coordinatesIndex) && void 0 !== LG ? LG : 0, (0, oG.Y)(GG.matrix, null !== SG && void 0 !== SG ? SG : {}))
       },
-      cube: Ku,
-      canvas: (uu, Eu, ju) => {
+      cube: cG,
+      canvas: (GG, bG, ZG) => {
         let {
-          width: su,
-          height: Uu,
-          mipmaps: Zu,
-          samplingMode: Xu = Pu.i.trilinear,
-          hasAlpha: lu = !1,
-          wrap: qu = Pu.e.clamp
-        } = ju;
-        const fu = uu.wO().createCanvas(su, Uu),
-          Cu = new Pu.l("2d", {
+          width: wG,
+          height: SG,
+          mipmaps: LG,
+          samplingMode: yG = mG.g.trilinear,
+          hasAlpha: kG = !1,
+          wrap: UG = mG.c.clamp
+        } = ZG;
+        const YG = GG.CK().createCanvas(wG, SG),
+          VG = new mG.k("2d", {
             kind: "canvas",
-            width: su,
-            height: Uu,
-            canvas: fu
+            width: wG,
+            height: SG,
+            canvas: YG
           }, {
-            samplingMode: Xu,
-            wrapU: qu,
-            wrapV: qu,
-            noMipmap: !Zu,
+            samplingMode: yG,
+            wrapU: UG,
+            wrapV: UG,
+            noMipmap: !LG,
             invertY: !0
           });
-        return Cu.hasAlpha = lu, Ku(Cu), Cu
+        return VG.hasAlpha = kG, cG(VG), VG
       }
     };
-    var ru = ju(37837),
-      Qu = ju(37514);
-    class iu {
-      constructor(uu, Eu, ju) {
-        this.engine = uu, this.clearColor = Eu, this.ambientColor = ju, this.onBeforeRenderObservable = new Qu.d, this.onBeforeCameraRenderObservable = new Qu.d, this.onAfterRenderObservable = new Qu.d, this.activeCamera = null, this.useRightHandedSystem = !1, this.iblIntensity = 1, this.particlesEnabled = !0, this.meshes = [], this.materials = [], this.textures = [], this.transformNodes = [], this.WG = [], this.frustumPlanes = void 0, this.draw = () => {}, this.frameId = 0, this.animationRatio = 1, this.lastId = 0, this.pending = []
+    var jG = ZG(37808),
+      PG = ZG(37465);
+    class MG {
+      constructor(GG, bG, ZG) {
+        this.engine = GG, this.clearColor = bG, this.ambientColor = ZG, this.onBeforeRenderObservable = new PG.c, this.onBeforeCameraRenderObservable = new PG.c, this.onAfterRenderObservable = new PG.c, this.activeCamera = null, this.useRightHandedSystem = !1, this.iblIntensity = 1, this.particlesEnabled = !0, this.meshes = [], this.materials = [], this.textures = [], this.transformNodes = [], this.lE = [], this.frustumPlanes = void 0, this.draw = () => {}, this.frameId = 0, this.animationRatio = 1, this.lastId = 0, this.pending = []
       }
-      wO() {
+      CK() {
         return this.engine
       }
       getUniqueId() {
@@ -332,11 +332,11 @@ export const modules = {
       getAnimationRatio() {
         return this.animationRatio
       }
-      addPendingData(uu) {
-        this.pending.push(uu)
+      addPendingData(GG) {
+        this.pending.push(GG)
       }
-      removePendingData(uu) {
-        const Eu = this.pending.indexOf(uu); - 1 !== Eu && this.pending.splice(Eu, 1)
+      removePendingData(GG) {
+        const bG = this.pending.indexOf(GG); - 1 !== bG && this.pending.splice(bG, 1)
       }
       getWaitingItemsCount() {
         return this.pending.length
@@ -352,208 +352,208 @@ export const modules = {
       }
     }
 
-    function Wu() {
+    function AG() {
       throw new Error("Lite has no WebGL engine, Babylon particles or Babylon picks")
     }
-    const Su = {
-      oju: Wu,
-      zsu: (uu, Eu) => {
-        const ju = new iu(uu.engine, su.b.FromArray(Eu.clearColor), su.Color3.FromArray(Eu.ambientColor));
-        (0, Xu.b)(Vu, ju), uu.vY = ju,
-          function(uu, Eu) {
-            const ju = Object.assign((0, ru.j)(uu, "camera"), {
+    const sG = {
+      gZG: AG,
+      USG: (GG, bG) => {
+        const ZG = new MG(GG.engine, wG.e.FromArray(bG.clearColor), wG.Color3.FromArray(bG.ambientColor));
+        (0, yG.c)(lG, ZG), GG.Ah = ZG,
+          function(GG, bG) {
+            const ZG = Object.assign((0, jG.f)(GG, "camera"), {
               layerMask: 268435455
             });
-            uu.model.nodes.setWorldSource(ju.row, uu.model.view.worldMatrix), uu.camera = Eu.activeCamera = ju
-          }(uu, ju), (0, Uu.h)(uu, ((uu, Eu, ju) => (0, Zu.h)(uu, Eu, ju, lu.e)))
+            GG.model.nodes.setWorldSource(ZG.row, GG.model.view.worldMatrix), GG.camera = bG.activeCamera = ZG
+          }(GG, ZG), (0, SG.i)(GG, ((GG, bG, ZG) => (0, LG.g)(GG, bG, ZG, kG.e)))
       },
-      Hsu: () => {},
+      SSG: () => {},
       setBabylonFog: () => {},
-      uUu: Wu,
-      UUu: () => {},
-      linesFromArrays: (uu, Eu, ju) => (0, Zu.h)(uu, Eu, ju, qu),
-      KY: () => {},
-      sUu: Wu
+      VSG: AG,
+      KSG: () => {},
+      linesFromArrays: (GG, bG, ZG) => (0, LG.g)(GG, bG, ZG, UG),
+      sh: () => {},
+      QSG: AG
     };
-    var Iu = ju(41959),
-      Fu = ju(41972),
-      Bu = ju(41984);
-    class Lu {
-      constructor(uu) {
+    var qG = ZG(42141),
+      nG = ZG(42150),
+      gG = ZG(42161);
+    class eG {
+      constructor(GG) {
         this.deviceLost = void 0, this.lost = !1, this.refusedFrames = 0, this.refused = void 0;
-        const Eu = new Promise((uu => {
-          this.refused = uu
+        const bG = new Promise((GG => {
+          this.refused = GG
         }));
-        this.deviceLost = Promise.race([uu, Eu]), this.deviceLost.then((() => {
+        this.deviceLost = Promise.race([GG, bG]), this.deviceLost.then((() => {
           this.lost = !0
         }))
       }
       frameDrawn() {
         this.refusedFrames = 0
       }
-      frameFailed(uu) {
-        (function(uu) {
+      frameFailed(GG) {
+        (function(GG) {
           const {
-            name: Eu,
-            message: ju
-          } = null !== uu && void 0 !== uu ? uu : {};
-          return "InvalidStateError" === Eu && "string" === typeof ju && ju.startsWith("GPUDevice.")
-        })(uu) && (this.refusedFrames++, 3 === this.refusedFrames && this.refused({
+            name: bG,
+            message: ZG
+          } = null !== GG && void 0 !== GG ? GG : {};
+          return "InvalidStateError" === bG && "string" === typeof ZG && ZG.startsWith("GPUDevice.")
+        })(GG) && (this.refusedFrames++, 3 === this.refusedFrames && this.refused({
           reason: "unknown",
-          message: uu.message,
+          message: GG.message,
           framesRefused: !0
         }))
       }
     }
-    var tu = ju(41373),
-      xu = ju(39065);
+    var RG = ZG(41544),
+      TG = ZG(39121);
 
-    function Tu(uu) {
-      return Math.max(4, 4 * Math.ceil(uu / 4))
+    function HG(GG) {
+      return Math.max(4, 4 * Math.ceil(GG / 4))
     }
 
-    function Hu(uu, Eu, ju, su) {
-      const Uu = uu.createBuffer({
-        label: su,
-        size: Tu(Eu.byteLength),
-        usage: ju,
+    function tG(GG, bG, ZG, wG) {
+      const SG = GG.createBuffer({
+        label: wG,
+        size: HG(bG.byteLength),
+        usage: ZG,
         mappedAtCreation: !0
       });
-      return new Uint8Array(Uu.getMappedRange(), 0, Eu.byteLength).set(new Uint8Array(Eu.buffer, Eu.byteOffset, Eu.byteLength)), Uu.unmap(), Uu
+      return new Uint8Array(SG.getMappedRange(), 0, bG.byteLength).set(new Uint8Array(bG.buffer, bG.byteOffset, bG.byteLength)), SG.unmap(), SG
     }
 
-    function Au(uu, Eu) {
-      return Math.floor(Math.log2(Math.max(uu, Eu))) + 1
+    function DG(GG, bG) {
+      return Math.floor(Math.log2(Math.max(GG, bG))) + 1
     }
 
-    function nu(uu, Eu, ju, su, Uu, Zu) {
-      const Xu = uu.createTexture({
-          label: Zu,
+    function NG(GG, bG, ZG, wG, SG, LG) {
+      const yG = GG.createTexture({
+          label: LG,
           size: {
-            width: ju,
-            height: su,
-            depthOrArrayLayers: Uu
+            width: ZG,
+            height: wG,
+            depthOrArrayLayers: SG
           },
           format: "rgba8unorm",
-          mipLevelCount: Au(ju, su),
+          mipLevelCount: DG(ZG, wG),
           usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
         }),
-        lu = (Eu, ju, su, Zu) => {
-          uu.queue.writeTexture({
-            texture: Xu,
-            mipLevel: ju
-          }, Eu, {
-            bytesPerRow: 4 * su,
-            rowsPerImage: Zu
+        kG = (bG, ZG, wG, LG) => {
+          GG.queue.writeTexture({
+            texture: yG,
+            mipLevel: ZG
+          }, bG, {
+            bytesPerRow: 4 * wG,
+            rowsPerImage: LG
           }, {
-            width: su,
-            height: Zu,
-            depthOrArrayLayers: Uu
+            width: wG,
+            height: LG,
+            depthOrArrayLayers: SG
           })
         };
-      lu(Eu, 0, ju, su);
-      let qu = 1;
-      for (const fu of function*(uu, Eu, ju, su) {
-          let Uu = uu,
-            Zu = Eu,
-            Xu = ju;
-          for (; Zu > 1 || Xu > 1;) {
-            const uu = Math.max(1, Zu >> 1),
-              Eu = Math.max(1, Xu >> 1),
-              ju = new Uint8Array(uu * Eu * su * 4),
-              lu = 4 * Zu;
-            let qu = 0;
-            for (let fu = 0; fu < su; fu++) {
-              const su = fu * lu * Xu;
-              for (let fu = 0; fu < Eu; fu++) {
-                const Eu = su + Math.min(2 * fu, Xu - 1) * lu,
-                  Cu = su + Math.min(2 * fu + 1, Xu - 1) * lu;
-                for (let su = 0; su < uu; su++) {
-                  const uu = 4 * Math.min(2 * su, Zu - 1),
-                    Xu = 4 * Math.min(2 * su + 1, Zu - 1);
-                  for (let su = 0; su < 4; su++) ju[qu++] = Uu[Eu + uu + su] + Uu[Eu + Xu + su] + Uu[Cu + uu + su] + Uu[Cu + Xu + su] + 2 >> 2
+      kG(bG, 0, ZG, wG);
+      let UG = 1;
+      for (const YG of function*(GG, bG, ZG, wG) {
+          let SG = GG,
+            LG = bG,
+            yG = ZG;
+          for (; LG > 1 || yG > 1;) {
+            const GG = Math.max(1, LG >> 1),
+              bG = Math.max(1, yG >> 1),
+              ZG = new Uint8Array(GG * bG * wG * 4),
+              kG = 4 * LG;
+            let UG = 0;
+            for (let YG = 0; YG < wG; YG++) {
+              const wG = YG * kG * yG;
+              for (let YG = 0; YG < bG; YG++) {
+                const bG = wG + Math.min(2 * YG, yG - 1) * kG,
+                  VG = wG + Math.min(2 * YG + 1, yG - 1) * kG;
+                for (let wG = 0; wG < GG; wG++) {
+                  const GG = 4 * Math.min(2 * wG, LG - 1),
+                    yG = 4 * Math.min(2 * wG + 1, LG - 1);
+                  for (let wG = 0; wG < 4; wG++) ZG[UG++] = SG[bG + GG + wG] + SG[bG + yG + wG] + SG[VG + GG + wG] + SG[VG + yG + wG] + 2 >> 2
                 }
               }
             }
             yield {
-              data: ju,
-              width: uu,
-              height: Eu
-            }, Uu = ju, Zu = uu, Xu = Eu
+              data: ZG,
+              width: GG,
+              height: bG
+            }, SG = ZG, LG = GG, yG = bG
           }
-        }(Eu, ju, su, Uu)) lu(fu.data, qu++, fu.width, fu.height);
-      return Xu
+        }(bG, ZG, wG, SG)) kG(YG.data, UG++, YG.width, YG.height);
+      return yG
     }
-    const yu = {
+    const OG = {
       premultiplyAlpha: "none",
       colorSpaceConversion: "none"
     };
 
-    function zu(uu) {
-      if (uu.startsWith("data:")) {
-        const Eu = uu.search(/[;,]/);
-        return `data:${Eu>5?uu.slice(5,Eu):""} URL of ${uu.length} characters`
+    function xG(GG) {
+      if (GG.startsWith("data:")) {
+        const bG = GG.search(/[;,]/);
+        return `data:${bG>5?GG.slice(5,bG):""} URL of ${GG.length} characters`
       }
-      return uu.length > 80 ? `${uu.slice(0,80)}...` : uu
+      return GG.length > 80 ? `${GG.slice(0,80)}...` : GG
     }
-    async function Ru(uu) {
-      const Eu = await fetch(uu);
-      if (!Eu.ok) throw new Error(`${zu(uu)}: ${Eu.status} ${Eu.statusText}`);
-      return createImageBitmap(await Eu.blob(), yu)
+    async function BG(GG) {
+      const bG = await fetch(GG);
+      if (!bG.ok) throw new Error(`${xG(GG)}: ${bG.status} ${bG.statusText}`);
+      return createImageBitmap(await bG.blob(), OG)
     }
-    async function uE(uu) {
-      const Eu = await Ru(uu),
-        ju = new OffscreenCanvas(Eu.width, Eu.height),
-        su = ju.getContext("2d", {
+    async function Gb(GG) {
+      const bG = await BG(GG),
+        ZG = new OffscreenCanvas(bG.width, bG.height),
+        wG = ZG.getContext("2d", {
           willReadFrequently: !0
         });
-      if (!su) throw new Error("No 2D context to decode an image");
-      su.drawImage(Eu, 0, 0);
+      if (!wG) throw new Error("No 2D context to decode an image");
+      wG.drawImage(bG, 0, 0);
       const {
-        data: Uu
-      } = su.getImageData(0, 0, Eu.width, Eu.height);
-      return Eu.close(), {
-        pixels: new Uint8Array(Uu.buffer, Uu.byteOffset, Uu.byteLength),
-        width: ju.width,
-        height: ju.height
+        data: SG
+      } = wG.getImageData(0, 0, bG.width, bG.height);
+      return bG.close(), {
+        pixels: new Uint8Array(SG.buffer, SG.byteOffset, SG.byteLength),
+        width: ZG.width,
+        height: ZG.height
       }
     }
 
-    function EE(uu, Eu) {
-      return (0, tu.g)(uu, Eu.urls, (async () => {
-        const ju = await Promise.all(Eu.urls.map((async (uu, ju) => {
-            var su, Uu, Zu, Xu, lu;
-            return null !== (Xu = null !== (Uu = null === (Zu = Eu.pixels) || void 0 === Zu ? void 0 : Zu[ju]) && void 0 !== Uu ? Uu : null, lu = Eu.layerWidth, su = null !== Xu && void 0 !== Xu && Xu.byteLength && lu && Xu.byteLength % (lu * lu * 4) === 0 ? {
-              pixels: Xu,
-              layerWidth: lu,
-              layers: Xu.byteLength / (lu * lu * 4)
-            } : null) && void 0 !== su ? su : await async function(uu) {
+    function bb(GG, bG) {
+      return (0, RG.g)(GG, bG.urls, (async () => {
+        const ZG = await Promise.all(bG.urls.map((async (GG, ZG) => {
+            var wG, SG, LG, yG, kG;
+            return null !== (yG = null !== (SG = null === (LG = bG.pixels) || void 0 === LG ? void 0 : LG[ZG]) && void 0 !== SG ? SG : null, kG = bG.layerWidth, wG = null !== yG && void 0 !== yG && yG.byteLength && kG && yG.byteLength % (kG * kG * 4) === 0 ? {
+              pixels: yG,
+              layerWidth: kG,
+              layers: yG.byteLength / (kG * kG * 4)
+            } : null) && void 0 !== wG ? wG : await async function(GG) {
               const {
-                pixels: Eu,
-                width: ju
-              } = await uE(uu);
+                pixels: bG,
+                width: ZG
+              } = await Gb(GG);
               return {
-                pixels: Eu,
-                layerWidth: ju,
-                layers: Eu.byteLength / (ju * ju * 4)
+                pixels: bG,
+                layerWidth: ZG,
+                layers: bG.byteLength / (ZG * ZG * 4)
               }
-            }(uu)
+            }(GG)
           }))),
-          su = ju[0].layerWidth;
-        return (0, tu.e)(ju, su, uu.limits.maxTextureArrayLayers).map(((ju, Uu) => {
+          wG = ZG[0].layerWidth;
+        return (0, RG.c)(ZG, wG, GG.limits.maxTextureArrayLayers).map(((ZG, SG) => {
           let {
-            pixels: Zu,
-            layers: Xu
-          } = ju;
+            pixels: LG,
+            layers: yG
+          } = ZG;
           return {
-            texture: nu(uu, Zu, su, su, Xu, `atlas-${Uu}-${zu(Eu.urls[0])}`),
-            layerWidth: su,
-            layers: Xu
+            texture: NG(GG, LG, wG, wG, yG, `atlas-${SG}-${xG(bG.urls[0])}`),
+            layerWidth: wG,
+            layers: yG
           }
         }))
       }))
     }
-    const jE = new Map([
+    const Zb = new Map([
         [0, "zero"],
         [1, "one"],
         [768, "src"],
@@ -566,7 +566,7 @@ export const modules = {
         [775, "one-minus-dst"],
         [776, "src-alpha-saturated"]
       ]),
-      sE = new Map([
+      wb = new Map([
         [1, [770, 1, "add"]],
         [2, [770, 771, "add"]],
         [3, [0, 769, "add"]],
@@ -584,106 +584,106 @@ export const modules = {
         [19, [1, 1, "max"]]
       ]);
 
-    function UE(uu) {
-      for (const Eu of (0, xu.k)(uu))
-        if (!sE.has((0, xu.j)(Eu))) return !1;
+    function Sb(GG) {
+      for (const bG of (0, TG.o)(GG))
+        if (!wb.has((0, TG.k)(bG))) return !1;
       return !0
     }
 
-    function ZE(uu) {
-      const Eu = sE.get(uu);
-      if (!Eu) return null;
-      const [ju, su, Uu] = Eu;
+    function Lb(GG) {
+      const bG = wb.get(GG);
+      if (!bG) return null;
+      const [ZG, wG, SG] = bG;
       return {
-        srcFactor: jE.get(ju),
-        dstFactor: jE.get(su),
-        operation: Uu
+        srcFactor: Zb.get(ZG),
+        dstFactor: Zb.get(wG),
+        operation: SG
       }
     }
-    let XE = null;
+    let yb = null;
 
-    function lE(uu) {
-      XE = uu
+    function kb(GG) {
+      yb = GG
     }
-    const qE = new WeakSet;
+    const Ub = new WeakSet;
 
-    function fE(uu) {
-      return qE.has(uu)
+    function Yb(GG) {
+      return Ub.has(GG)
     }
 
-    function CE(uu, Eu, ju, su) {
-      let Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-      var Zu;
-      fE(uu) || (null === (Zu = XE) || void 0 === Zu || Zu(Eu, ju, su, Uu))
+    function Vb(GG, bG, ZG, wG) {
+      let SG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+      var LG;
+      Yb(GG) || (null === (LG = yb) || void 0 === LG || LG(bG, ZG, wG, SG))
     }
-    class bE {
-      constructor(uu) {
-        this.resources = uu, this.matrixKey = {
-          Mb: 0
+    class pb {
+      constructor(GG) {
+        this.resources = GG, this.matrixKey = {
+          rp: 0
         }, this.attributesKey = {
-          Mb: 0
+          rp: 0
         }, this.inputs = Object.create(null);
-        for (let Eu = 0; Eu < 4; Eu++) this.inputs[`world${Eu}`] = new OE(this.matrixKey, 16 * Eu, 64, 4)
+        for (let bG = 0; bG < 4; bG++) this.inputs[`world${bG}`] = new Kb(this.matrixKey, 16 * bG, 64, 4)
       }
       release() {
         this.resources.liveUploads.delete(this), this.resources.bufferDeleted(this.matrixKey), this.resources.bufferDeleted(this.attributesKey)
       }
-      bind(uu, Eu) {
-        this.resources.liveUploads.add(this), this.resources.vertexBufferCreated(this.matrixKey, uu, !0), Eu && this.resources.vertexBufferCreated(this.attributesKey, Eu, !0)
+      bind(GG, bG) {
+        this.resources.liveUploads.add(this), this.resources.vertexBufferCreated(this.matrixKey, GG, !0), bG && this.resources.vertexBufferCreated(this.attributesKey, bG, !0)
       }
     }
-    class cE extends bE {
-      constructor(uu, Eu, ju) {
-        super(uu), this.mesh = Eu, this.rowStride = void 0, this.matrices = null, this.attributes = null;
-        const su = this.inputs;
-        let Uu = 0;
+    class fb extends pb {
+      constructor(GG, bG, ZG) {
+        super(GG), this.mesh = bG, this.rowStride = void 0, this.matrices = null, this.attributes = null;
+        const wG = this.inputs;
+        let SG = 0;
         for (const {
-            size: Xu
+            size: yG
           }
-          of ju) Uu += Xu;
+          of ZG) SG += yG;
         for (const {
-            name: Xu,
-            offset: lu,
-            size: qu,
-            type: fu
+            name: yG,
+            offset: kG,
+            size: UG,
+            type: YG
           }
-          of ju) su[Xu] = new OE(this.attributesKey, 4 * lu, 4 * Uu, qu, !0, fu);
-        this.rowStride = Uu, uu.E_.set(Eu, this);
-        const Zu = Eu.isVerticesDataPresent;
-        Eu.isVerticesDataPresent = (uu, ju) => uu in su || Zu.call(Eu, uu, ju)
+          of ZG) wG[yG] = new Kb(this.attributesKey, 4 * kG, 4 * SG, UG, !0, YG);
+        this.rowStride = SG, GG.j_.set(bG, this);
+        const LG = bG.isVerticesDataPresent;
+        bG.isVerticesDataPresent = (GG, ZG) => GG in wG || LG.call(bG, GG, ZG)
       }
-      attach(uu, Eu) {
-        this.matrices = uu, this.attributes = Eu, this.bind(uu, Eu), this.mirror(uu, uu.length, uu.length / 16)
+      attach(GG, bG) {
+        this.matrices = GG, this.attributes = bG, this.bind(GG, bG), this.mirror(GG, GG.length, GG.length / 16)
       }
       rebind() {
         this.bind(this.matrices, this.attributes)
       }
-      R_(uu) {
-        this.matrices && this.resources.vertexBufferUpdated(this.matrixKey, this.matrices, 0, uu ? 64 * uu : void 0)
+      T6(GG) {
+        this.matrices && this.resources.vertexBufferUpdated(this.matrixKey, this.matrices, 0, GG ? 64 * GG : void 0)
       }
-      E1() {
+      GGG() {
         this.attributes && this.resources.vertexBufferUpdated(this.attributesKey, this.attributes)
       }
-      matrixRows(uu, Eu) {
-        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 16 * uu, 16 * Eu)
+      matrixRows(GG, bG) {
+        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 16 * GG, 16 * bG)
       }
-      attributeRows(uu, Eu) {
-        this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, uu * this.rowStride, Eu * this.rowStride)
+      attributeRows(GG, bG) {
+        this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, GG * this.rowStride, bG * this.rowStride)
       }
       release() {
         super.release(), this.matrices = null, this.attributes = null, this.mirror(null, 512, 0)
       }
-      mirror(uu, Eu, ju) {
-        const su = this.mesh._thinInstanceDataStorage;
-        su.matrixData = uu, su.matrixBufferSize = Eu, su.worldMatrices = null, su.instancesCount = ju
+      mirror(GG, bG, ZG) {
+        const wG = this.mesh._thinInstanceDataStorage;
+        wG.matrixData = GG, wG.matrixBufferSize = bG, wG.worldMatrices = null, wG.instancesCount = ZG
       }
     }
-    class NE extends bE {
-      constructor(uu, Eu, ju) {
-        var su, Uu, Zu, Xu;
-        super(uu), this.layout = void 0, this.offsets = void 0, this.rowStride = void 0, this.matrices = new Float32Array(512), this.attributes = void 0, this.frame = -1, this.count = 0, this.packedSource = null, this.packedBatch = null, this.layout = null !== (su = null === ju || void 0 === ju ? void 0 : ju.interleavedKinds) && void 0 !== su ? su : null, this.offsets = null !== (Uu = null === ju || void 0 === ju ? void 0 : ju.interleavedOffsets) && void 0 !== Uu ? Uu : [], this.rowStride = null !== (Zu = null === ju || void 0 === ju ? void 0 : ju.interleavedRowStride) && void 0 !== Zu ? Zu : 0, null === (Xu = this.layout) || void 0 === Xu || Xu.forEach(((uu, Eu) => {
-          this.inputs[uu] = new OE(this.attributesKey, 4 * this.offsets[Eu], 4 * this.rowStride, ju.strides[uu])
-        })), this.attributes = this.rowStride > 0 ? new Float32Array(32 * this.rowStride) : null, this.bind(this.matrices, this.attributes), uu.batchUploads.set(Eu, this), Eu.wV.addOnce((() => {
+    class Qb extends pb {
+      constructor(GG, bG, ZG) {
+        var wG, SG, LG, yG;
+        super(GG), this.layout = void 0, this.offsets = void 0, this.rowStride = void 0, this.matrices = new Float32Array(512), this.attributes = void 0, this.frame = -1, this.count = 0, this.packedSource = null, this.packedBatch = null, this.layout = null !== (wG = null === ZG || void 0 === ZG ? void 0 : ZG.interleavedKinds) && void 0 !== wG ? wG : null, this.offsets = null !== (SG = null === ZG || void 0 === ZG ? void 0 : ZG.interleavedOffsets) && void 0 !== SG ? SG : [], this.rowStride = null !== (LG = null === ZG || void 0 === ZG ? void 0 : ZG.interleavedRowStride) && void 0 !== LG ? LG : 0, null === (yG = this.layout) || void 0 === yG || yG.forEach(((GG, bG) => {
+          this.inputs[GG] = new Kb(this.attributesKey, 4 * this.offsets[bG], 4 * this.rowStride, ZG.strides[GG])
+        })), this.attributes = this.rowStride > 0 ? new Float32Array(32 * this.rowStride) : null, this.bind(this.matrices, this.attributes), GG.batchUploads.set(bG, this), bG.Gl.addOnce((() => {
           this.release()
         }))
       }
@@ -693,49 +693,49 @@ export const modules = {
       get packedMatrices() {
         return this.matrices
       }
-      packedRowMesh(uu) {
-        const Eu = this.packedBatch;
-        return Eu.renderSelf ? 0 === uu ? this.packedSource : Eu.instances[uu - 1] : Eu.instances[uu]
+      packedRowMesh(GG) {
+        const bG = this.packedBatch;
+        return bG.renderSelf ? 0 === GG ? this.packedSource : bG.instances[GG - 1] : bG.instances[GG]
       }
       get packedAttributes() {
         return this.attributes
       }
-      pack(uu, Eu, ju, su) {
-        const Uu = (Eu.renderSelf ? 1 : 0) + Eu.rows.length;
-        if (this.frame = su, this.count = Uu, this.packedSource = uu, this.packedBatch = Eu, 0 === Uu) return;
-        if (uu.getWorldMatrix(), 16 * Uu > this.matrices.length) {
-          let uu = this.matrices.length / 16;
-          for (; uu < Uu;) uu *= 2;
-          this.matrices = new Float32Array(16 * uu), this.attributes &&= new Float32Array(uu * this.rowStride), this.bind(this.matrices, this.attributes)
+      pack(GG, bG, ZG, wG) {
+        const SG = (bG.renderSelf ? 1 : 0) + bG.rows.length;
+        if (this.frame = wG, this.count = SG, this.packedSource = GG, this.packedBatch = bG, 0 === SG) return;
+        if (GG.getWorldMatrix(), 16 * SG > this.matrices.length) {
+          let GG = this.matrices.length / 16;
+          for (; GG < SG;) GG *= 2;
+          this.matrices = new Float32Array(16 * GG), this.attributes &&= new Float32Array(GG * this.rowStride), this.bind(this.matrices, this.attributes)
         }
-        let Zu = 0;
-        Eu.renderSelf && this.packRow(Zu++, uu, Eu.row, ju);
-        for (let Xu = 0; Xu < Eu.rows.length; Xu++) this.packRow(Zu++, Eu.instances[Xu], Eu.rows[Xu], ju);
-        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 0, 16 * Uu), this.attributes && this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, 0, Uu * this.rowStride)
+        let LG = 0;
+        bG.renderSelf && this.packRow(LG++, GG, bG.row, ZG);
+        for (let yG = 0; yG < bG.rows.length; yG++) this.packRow(LG++, bG.instances[yG], bG.rows[yG], ZG);
+        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 0, 16 * SG), this.attributes && this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, 0, SG * this.rowStride)
       }
-      packRow(uu, Eu, ju, su) {
-        const Uu = this.matrices;
-        if (ju < 0) Uu.set(Eu.getWorldMatrix().m, 16 * uu);
+      packRow(GG, bG, ZG, wG) {
+        const SG = this.matrices;
+        if (ZG < 0) SG.set(bG.getWorldMatrix().m, 16 * GG);
         else
-          for (let fu = 0; fu < 16; fu++) Uu[16 * uu + fu] = su[16 * ju + fu];
-        const Zu = this.attributes;
-        if (!Zu) return;
-        const Xu = Eu.Hr,
-          lu = this.layout;
-        for (let fu = 0; fu < lu.length; fu++) {
-          var qu;
-          const Eu = null !== (qu = Xu[lu[fu]]) && void 0 !== qu ? qu : 0,
-            ju = uu * this.rowStride + this.offsets[fu];
-          Eu.toArray ? Eu.toArray(Zu, ju) : Eu.copyToArray ? Eu.copyToArray(Zu, ju) : Zu[ju] = Eu
+          for (let YG = 0; YG < 16; YG++) SG[16 * GG + YG] = wG[16 * ZG + YG];
+        const LG = this.attributes;
+        if (!LG) return;
+        const yG = bG.hA,
+          kG = this.layout;
+        for (let YG = 0; YG < kG.length; YG++) {
+          var UG;
+          const bG = null !== (UG = yG[kG[YG]]) && void 0 !== UG ? UG : 0,
+            ZG = GG * this.rowStride + this.offsets[YG];
+          bG.toArray ? bG.toArray(LG, ZG) : bG.copyToArray ? bG.copyToArray(LG, ZG) : LG[ZG] = bG
         }
       }
     }
-    class OE {
-      constructor(uu, Eu, ju, su) {
-        let Uu = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          Zu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5126,
-          Xu = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        this.key = uu, this.byteOffset = Eu, this.byteStride = ju, this.size = su, this.instanced = Uu, this.type = Zu, this.normalized = Xu
+    class Kb {
+      constructor(GG, bG, ZG, wG) {
+        let SG = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          LG = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5126,
+          yG = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        this.key = GG, this.byteOffset = bG, this.byteStride = ZG, this.size = wG, this.instanced = SG, this.type = LG, this.normalized = yG
       }
       getBuffer() {
         return this.key
@@ -747,61 +747,61 @@ export const modules = {
         return this.instanced
       }
     }
-    const YE = "CANVAS_ALPHA_ONE",
-      hE = `override ${YE}: bool = false;`,
-      DE = {
+    const hb = "CANVAS_ALPHA_ONE",
+      db = `override ${hb}: bool = false;`,
+      Jb = {
         srcFactor: "zero",
         dstFactor: "one",
         operation: "add"
       };
 
-    function gE(uu, Eu, ju) {
-      var su;
-      let Uu = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const Zu = null !== (su = Eu._colorFormat) && void 0 !== su ? su : "bgra8unorm",
-        Xu = Uu ? 15 : 0;
-      return ju ? {
-        ...uu,
+    function rb(GG, bG, ZG) {
+      var wG;
+      let SG = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const LG = null !== (wG = bG._colorFormat) && void 0 !== wG ? wG : "bgra8unorm",
+        yG = SG ? 15 : 0;
+      return ZG ? {
+        ...GG,
         targets: [{
-          format: Zu,
+          format: LG,
           blend: {
-            color: ju,
-            alpha: DE
+            color: ZG,
+            alpha: Jb
           },
-          writeMask: Xu
+          writeMask: yG
         }]
       } : {
-        ...uu,
+        ...GG,
         constants: {
-          ...uu.constants,
-          [YE]: 1
+          ...GG.constants,
+          [hb]: 1
         },
         targets: [{
-          format: Zu,
-          writeMask: Xu
+          format: LG,
+          writeMask: yG
         }]
       }
     }
 
-    function ME(uu, Eu) {
-      uu._renderables.push(Eu)
+    function zb(GG, bG) {
+      GG._renderables.push(bG)
     }
 
-    function eE(uu) {
-      return uu._device
+    function Eb(GG) {
+      return GG._device
     }
 
-    function GE(uu) {
-      var Eu, ju;
-      return null !== (Eu = null === (ju = uu._frameGraph) || void 0 === ju ? void 0 : ju._tasks) && void 0 !== Eu ? Eu : []
+    function ob(GG) {
+      var bG, ZG;
+      return null !== (bG = null === (ZG = GG._frameGraph) || void 0 === ZG ? void 0 : ZG._tasks) && void 0 !== bG ? bG : []
     }
 
-    function pE(uu) {
-      return uu._currentEncoder
+    function Xb(GG) {
+      return GG._currentEncoder
     }
 
-    function wE(uu) {
-      return uu.createBindGroupLayout({
+    function ub(GG) {
+      return GG.createBindGroupLayout({
         label: "lite-scene-equivalent",
         entries: [{
           binding: 0,
@@ -818,98 +818,98 @@ export const modules = {
         }]
       })
     }
-    const JE = "greater-equal",
-      dE = 2e5,
-      aE = 1e5,
-      PE = new WeakMap;
+    const ib = "greater-equal",
+      Cb = 2e5,
+      Wb = 1e5,
+      mb = new WeakMap;
 
-    function oE(uu, Eu) {
-      let ju = PE.get(uu);
-      if (!ju) {
-        ju = {
-          module: uu.createShaderModule({
+    function Ib(GG, bG) {
+      let ZG = mb.get(GG);
+      if (!ZG) {
+        ZG = {
+          module: GG.createShaderModule({
             label: "placeholder",
             code: "@vertex fn v() -> @builtin(position) vec4f { return vec4f(0.0, 0.0, 0.0, 1.0); }\n@fragment fn f() -> @location(0) vec4f { return vec4f(0.0); }"
           }),
           pipelines: new Map
-        }, PE.set(uu, ju)
+        }, mb.set(GG, ZG)
       }
-      const su = `${Eu._colorFormat}|${Eu._depthStencilFormat}|${Eu._sampleCount}`;
-      let Uu = ju.pipelines.get(su);
-      if (!Uu) {
-        var Zu;
+      const wG = `${bG._colorFormat}|${bG._depthStencilFormat}|${bG._sampleCount}`;
+      let SG = ZG.pipelines.get(wG);
+      if (!SG) {
+        var LG;
         const {
-          module: Xu
-        } = ju;
-        Uu = uu.createRenderPipeline({
-          label: `placeholder ${su}`,
-          layout: uu.createPipelineLayout({
+          module: yG
+        } = ZG;
+        SG = GG.createRenderPipeline({
+          label: `placeholder ${wG}`,
+          layout: GG.createPipelineLayout({
             bindGroupLayouts: []
           }),
           vertex: {
-            module: Xu,
+            module: yG,
             entryPoint: "v"
           },
           fragment: {
-            module: Xu,
+            module: yG,
             entryPoint: "f",
             targets: [{
-              format: null !== (Zu = Eu._colorFormat) && void 0 !== Zu ? Zu : "bgra8unorm",
+              format: null !== (LG = bG._colorFormat) && void 0 !== LG ? LG : "bgra8unorm",
               writeMask: 0
             }]
           },
-          depthStencil: Eu._depthStencilFormat ? {
-            format: Eu._depthStencilFormat,
+          depthStencil: bG._depthStencilFormat ? {
+            format: bG._depthStencilFormat,
             depthCompare: "always",
             depthWriteEnabled: !1
           } : void 0,
           multisample: {
-            count: Eu._sampleCount
+            count: bG._sampleCount
           }
-        }), ju.pipelines.set(su, Uu)
+        }), ZG.pipelines.set(wG, SG)
       }
-      return Uu
+      return SG
     }
 
-    function kE(uu, Eu, ju) {
-      const su = Eu.eye,
-        Uu = Eu.viewMatrix;
-      uu[0] = su[0] + Uu[2] * ju, uu[1] = su[1] + Uu[6] * ju, uu[2] = su[2] + Uu[10] * ju
+    function Fb(GG, bG, ZG) {
+      const wG = bG.eye,
+        SG = bG.viewMatrix;
+      GG[0] = wG[0] + SG[2] * ZG, GG[1] = wG[1] + SG[6] * ZG, GG[2] = wG[2] + SG[10] * ZG
     }
-    var mE = ju(38344),
-      vE = ju(41861),
-      KE = ju(37595);
-    const VE = Math.PI,
-      rE = VE / 1.95,
-      QE = [5e-4 / 94, 125e-7, 5e-4 / 18],
-      iE = [
+    var vb = ZG(38363),
+      ab = ZG(42035),
+      cb = ZG(37547);
+    const lb = Math.PI,
+      jb = lb / 1.95,
+      Pb = [5e-4 / 94, 125e-7, 5e-4 / 18],
+      Mb = [
         [68e-8, .686],
         [55e-8, .678],
         [45e-8, .666]
-      ].map((uu => {
-        let [Eu, ju] = uu;
-        return .434 * VE * Math.pow(2 * VE / Eu, 2) * ju
+      ].map((GG => {
+        let [bG, ZG] = GG;
+        return .434 * lb * Math.pow(2 * lb / bG, 2) * ZG
       }));
 
-    function WE(uu, Eu, ju) {
+    function Ab(GG, bG, ZG) {
       const {
-        up: su,
-        mieDirectionalG: Uu
-      } = uu, Zu = 1 - FE(1 - Math.exp(Eu[1] / 45e4), 0, 1), Xu = uu.rayleigh - (1 - Zu), lu = Math.hypot(Eu[0], Eu[1], Eu[2]), qu = lu > 0 ? 1 / lu : 0, fu = ju.sunDir;
-      for (let Nu = 0; Nu < 3; Nu++) fu[Nu] = Eu[Nu] * qu;
-      const Cu = fu[0] * su[0] + fu[1] * su[1] + fu[2] * su[2],
-        bu = 1e3 * Math.max(0, 1 - Math.exp(-(rE - Math.acos(FE(Cu, -1, 1))) / 1.5));
-      ju.sunE = bu;
-      const cu = .2 * uu.turbidity * 1e-17 * uu.mieCoefficient;
-      for (let Nu = 0; Nu < 3; Nu++) {
-        const uu = QE[Nu] * Xu,
-          Eu = iE[Nu] * cu,
-          su = bu / (uu + Eu);
-        ju.inScatterR[Nu] = uu * su, ju.inScatterM[Nu] = Eu * su, ju.extinctionBeta[Nu] = 8400 * uu + 1250 * Eu
+        up: wG,
+        mieDirectionalG: SG
+      } = GG, LG = 1 - nb(1 - Math.exp(bG[1] / 45e4), 0, 1), yG = GG.rayleigh - (1 - LG), kG = Math.hypot(bG[0], bG[1], bG[2]), UG = kG > 0 ? 1 / kG : 0, YG = ZG.sunDir;
+      for (let QG = 0; QG < 3; QG++) YG[QG] = bG[QG] * UG;
+      const VG = YG[0] * wG[0] + YG[1] * wG[1] + YG[2] * wG[2],
+        pG = 1e3 * Math.max(0, 1 - Math.exp(-(jb - Math.acos(nb(VG, -1, 1))) / 1.5));
+      ZG.sunE = pG;
+      const fG = .2 * GG.turbidity * 1e-17 * GG.mieCoefficient;
+      for (let QG = 0; QG < 3; QG++) {
+        const GG = Pb[QG] * yG,
+          bG = Mb[QG] * fG,
+          wG = pG / (GG + bG);
+        ZG.inScatterR[QG] = GG * wG, ZG.inScatterM[QG] = bG * wG, ZG.extinctionBeta[QG] = 8400 * GG + 1250 * bG
       }
-      return ju.sunsetMix = FE(Math.pow(1 - Cu, 5), 0, 1), ju.sunDiscE = 19e3 * bu, ju.mieScale = (1 - Uu * Uu) / (4 * VE), ju.mieBase = 1 + Uu * Uu, ju.mieSlope = 2 * Uu, ju
+      return ZG.sunsetMix = nb(Math.pow(1 - VG, 5), 0, 1), ZG.sunDiscE = 19e3 * pG, ZG.mieScale = (1 - SG * SG) / (4 * lb), ZG.mieBase = 1 + SG * SG, ZG.mieSlope = 2 * SG, ZG
     }
-    const SE = {
+    const sb = {
       A: .15,
       B: .5,
       C: .1,
@@ -917,599 +917,599 @@ export const modules = {
       E: .02,
       F: .3
     };
-    const IE = 1 / function(uu) {
+    const qb = 1 / function(GG) {
       const {
-        A: Eu,
-        B: ju,
-        C: su,
-        D: Uu,
-        E: Zu,
-        F: Xu
-      } = SE;
-      return (uu * (Eu * uu + su * ju) + Uu * Zu) / (uu * (Eu * uu + ju) + Uu * Xu) - Zu / Xu
+        A: bG,
+        B: ZG,
+        C: wG,
+        D: SG,
+        E: LG,
+        F: yG
+      } = sb;
+      return (GG * (bG * GG + wG * ZG) + SG * LG) / (GG * (bG * GG + ZG) + SG * yG) - LG / yG
     }(1e3);
 
-    function FE(uu, Eu, ju) {
-      return Math.min(Math.max(uu, Eu), ju)
+    function nb(GG, bG, ZG) {
+      return Math.min(Math.max(GG, bG), ZG)
     }
-    const BE = /^\s*#(ifdef|ifndef|if|elif|else|endif|define|undef)\b(.*)$/;
+    const gb = /^\s*#(ifdef|ifndef|if|elif|else|endif|define|undef)\b(.*)$/;
 
-    function LE(uu, Eu) {
-      const ju = new Map(Eu),
-        su = [],
-        Uu = [],
-        Zu = () => 0 === Uu.length || Uu[Uu.length - 1].active;
-      let Xu = null;
-      const lu = () => {
-        const uu = [...ju].filter((uu => {
-            let [, Eu] = uu;
-            return !0 !== Eu
+    function eb(GG, bG) {
+      const ZG = new Map(bG),
+        wG = [],
+        SG = [],
+        LG = () => 0 === SG.length || SG[SG.length - 1].active;
+      let yG = null;
+      const kG = () => {
+        const GG = [...ZG].filter((GG => {
+            let [, bG] = GG;
+            return !0 !== bG
           })),
-          Eu = uu.map((uu => {
-            let [Eu] = uu;
-            return Eu
+          bG = GG.map((GG => {
+            let [bG] = GG;
+            return bG
           })).join("|");
-        Xu = uu.length ? new RegExp(`\\b(${Eu})\\b`, "g") : null
+        yG = GG.length ? new RegExp(`\\b(${bG})\\b`, "g") : null
       };
-      lu();
-      for (const qu of uu.split("\n")) {
-        const uu = BE.exec(qu);
-        if (!uu) {
-          Zu() && su.push(Xu ? tE(qu, Xu, ju) : qu);
+      kG();
+      for (const UG of GG.split("\n")) {
+        const GG = gb.exec(UG);
+        if (!GG) {
+          LG() && wG.push(yG ? Rb(UG, yG, ZG) : UG);
           continue
         }
-        const Eu = uu[1],
-          fu = uu[2].trim();
-        if ("ifdef" === Eu || "ifndef" === Eu || "if" === Eu) {
-          const uu = Zu(),
-            su = "if" === Eu ? xE(fu, ju) : ju.has(fu) === ("ifdef" === Eu);
-          Uu.push({
-            active: uu && su,
-            parentActive: uu,
-            taken: su
+        const bG = GG[1],
+          YG = GG[2].trim();
+        if ("ifdef" === bG || "ifndef" === bG || "if" === bG) {
+          const GG = LG(),
+            wG = "if" === bG ? Tb(YG, ZG) : ZG.has(YG) === ("ifdef" === bG);
+          SG.push({
+            active: GG && wG,
+            parentActive: GG,
+            taken: wG
           })
-        } else if ("elif" === Eu || "else" === Eu) {
-          const uu = Uu[Uu.length - 1];
-          if (!uu) throw new Error(`#${Eu} without #if`);
-          const su = !uu.taken && ("else" === Eu || xE(fu, ju));
-          uu.active = uu.parentActive && su, uu.taken = uu.taken || su
-        } else if ("endif" === Eu) {
-          if (!Uu.pop()) throw new Error("#endif without #if")
-        } else if (Zu()) {
-          const [uu, ...su] = fu.split(/\s+/);
-          "undef" === Eu ? ju.delete(uu) : ju.set(uu, !su.length || su.join(" ")), lu()
+        } else if ("elif" === bG || "else" === bG) {
+          const GG = SG[SG.length - 1];
+          if (!GG) throw new Error(`#${bG} without #if`);
+          const wG = !GG.taken && ("else" === bG || Tb(YG, ZG));
+          GG.active = GG.parentActive && wG, GG.taken = GG.taken || wG
+        } else if ("endif" === bG) {
+          if (!SG.pop()) throw new Error("#endif without #if")
+        } else if (LG()) {
+          const [GG, ...wG] = YG.split(/\s+/);
+          "undef" === bG ? ZG.delete(GG) : ZG.set(GG, !wG.length || wG.join(" ")), kG()
         }
       }
-      if (Uu.length) throw new Error("Unterminated #if");
-      return su.join("\n")
+      if (SG.length) throw new Error("Unterminated #if");
+      return wG.join("\n")
     }
 
-    function tE(uu, Eu, ju) {
-      return uu.replace(Eu, (uu => {
-        const Eu = ju.get(uu);
-        return "string" === typeof Eu ? Eu : uu
+    function Rb(GG, bG, ZG) {
+      return GG.replace(bG, (GG => {
+        const bG = ZG.get(GG);
+        return "string" === typeof bG ? bG : GG
       }))
     }
 
-    function xE(uu, Eu) {
-      var ju;
-      const su = null !== (ju = uu.match(/defined|\d+(\.\d+)?|\w+|&&|\|\||==|!=|>=|<=|[()!<>]/g)) && void 0 !== ju ? ju : [];
-      let Uu = 0;
-      const Zu = () => su[Uu],
-        Xu = () => su[Uu++],
-        lu = uu => {
-          const ju = /^\d/.test(uu) ? uu : Eu.get(uu);
-          return "string" === typeof ju ? parseInt(ju) : Number.NaN
+    function Tb(GG, bG) {
+      var ZG;
+      const wG = null !== (ZG = GG.match(/defined|\d+(\.\d+)?|\w+|&&|\|\||==|!=|>=|<=|[()!<>]/g)) && void 0 !== ZG ? ZG : [];
+      let SG = 0;
+      const LG = () => wG[SG],
+        yG = () => wG[SG++],
+        kG = GG => {
+          const ZG = /^\d/.test(GG) ? GG : bG.get(GG);
+          return "string" === typeof ZG ? parseInt(ZG) : Number.NaN
         },
-        qu = () => {
-          const uu = Xu();
-          if ("!" === uu) return !qu();
-          if ("(" === uu) {
-            const uu = Cu();
-            return Xu(), uu
+        UG = () => {
+          const GG = yG();
+          if ("!" === GG) return !UG();
+          if ("(" === GG) {
+            const GG = VG();
+            return yG(), GG
           }
-          if ("defined" === uu) {
-            const uu = "(" === Zu();
-            uu && Xu();
-            const ju = Xu();
-            return uu && Xu(), Eu.has(ju)
+          if ("defined" === GG) {
+            const GG = "(" === LG();
+            GG && yG();
+            const ZG = yG();
+            return GG && yG(), bG.has(ZG)
           }
-          const ju = Zu();
-          if ("==" === ju || "!=" === ju || ">" === ju || "<" === ju || ">=" === ju || "<=" === ju) {
-            Xu();
-            const Eu = lu(uu),
-              su = lu(Xu());
-            if (Number.isNaN(Eu) || Number.isNaN(su)) return !1;
-            switch (ju) {
+          const ZG = LG();
+          if ("==" === ZG || "!=" === ZG || ">" === ZG || "<" === ZG || ">=" === ZG || "<=" === ZG) {
+            yG();
+            const bG = kG(GG),
+              wG = kG(yG());
+            if (Number.isNaN(bG) || Number.isNaN(wG)) return !1;
+            switch (ZG) {
               case "==":
-                return Eu === su;
+                return bG === wG;
               case "!=":
-                return Eu !== su;
+                return bG !== wG;
               case ">":
-                return Eu > su;
+                return bG > wG;
               case "<":
-                return Eu < su;
+                return bG < wG;
               case ">=":
-                return Eu >= su;
+                return bG >= wG;
               default:
-                return Eu <= su
+                return bG <= wG
             }
           }
-          return Eu.has(uu)
+          return bG.has(GG)
         },
-        fu = () => {
-          let uu = qu();
+        YG = () => {
+          let GG = UG();
           for (;
-            "&&" === Zu();) {
-            Xu();
-            const Eu = qu();
-            uu = uu && Eu
+            "&&" === LG();) {
+            yG();
+            const bG = UG();
+            GG = GG && bG
           }
-          return uu
+          return GG
         },
-        Cu = () => {
-          let uu = fu();
+        VG = () => {
+          let GG = YG();
           for (;
-            "||" === Zu();) {
-            Xu();
-            const Eu = fu();
-            uu = uu || Eu
+            "||" === LG();) {
+            yG();
+            const bG = YG();
+            GG = GG || bG
           }
-          return uu
+          return GG
         },
-        bu = Cu();
-      if (Uu !== su.length) throw new Error(`Cannot evaluate #if ${uu}`);
-      return bu
+        pG = VG();
+      if (SG !== wG.length) throw new Error(`Cannot evaluate #if ${GG}`);
+      return pG
     }
-    var TE = ju(37589),
-      HE = ju(37907),
-      AE = ju(37909),
-      nE = ju(40952),
-      yE = ju(39095);
-    const zE = 32,
-      RE = [10, 3, 10],
-      uj = [21, 7, 21],
-      Ej = uj[0] * uj[1] * uj[2],
-      jj = 0,
-      sj = 1,
-      Uj = 2,
-      Zj = 3,
-      Xj = 64,
-      lj = 512,
-      qj = 4 * Ej,
-      fj = 1536,
-      Cj = qj + Ej * fj,
-      bj = 1073741824,
-      cj = Cj + 1;
+    var Hb = ZG(37541),
+      tb = ZG(37885),
+      Db = ZG(37892),
+      Nb = ZG(41084),
+      Ob = ZG(39158);
+    const xb = 32,
+      Bb = [10, 3, 10],
+      GZ = [21, 7, 21],
+      bZ = GZ[0] * GZ[1] * GZ[2],
+      ZZ = 0,
+      wZ = 1,
+      SZ = 2,
+      LZ = 3,
+      yZ = 64,
+      kZ = 512,
+      UZ = 4 * bZ,
+      YZ = 1536,
+      VZ = UZ + bZ * YZ,
+      pZ = 1073741824,
+      fZ = VZ + 1;
 
-    function Nj(uu, Eu) {
-      const ju = uu % Eu;
-      return ju < 0 ? ju + Eu : ju
-    }
-
-    function Oj(uu, Eu, ju) {
-      return su = Nj(uu, uj[0]), Uu = Nj(Eu, uj[1]), Zu = Nj(ju, uj[2]), su + uj[0] * (Uu + uj[1] * Zu);
-      var su, Uu, Zu
+    function QZ(GG, bG) {
+      const ZG = GG % bG;
+      return ZG < 0 ? ZG + bG : ZG
     }
 
-    function Yj(uu, Eu, ju) {
-      return uu + 8 * (Eu + 8 * ju)
+    function KZ(GG, bG, ZG) {
+      return wG = QZ(GG, GZ[0]), SG = QZ(bG, GZ[1]), LG = QZ(ZG, GZ[2]), wG + GZ[0] * (SG + GZ[1] * LG);
+      var wG, SG, LG
     }
 
-    function hj(uu, Eu, ju) {
-      return uu + 4 * (Eu + 4 * ju)
+    function hZ(GG, bG, ZG) {
+      return GG + 8 * (bG + 8 * ZG)
     }
-    const Dj = 65535,
-      gj = 0,
-      Mj = 1,
-      ej = 2,
-      Gj = 3;
 
-    function pj(uu) {
-      return Math.ceil(uu * uu / 32)
+    function dZ(GG, bG, ZG) {
+      return GG + 4 * (bG + 4 * ZG)
     }
-    const wj = 8192,
-      Jj = 1 << 18,
-      dj = 65536,
-      aj = 294912,
-      Pj = 128,
-      oj = 4096,
-      kj = 16,
-      mj = 16385,
-      vj = 81921,
-      Kj = 147457,
-      Vj = 4194304;
-    const rj = [0, 0, 0],
-      Qj = [0, 0, 0];
+    const JZ = 65535,
+      rZ = 0,
+      zZ = 1,
+      EZ = 2,
+      oZ = 3;
 
-    function ij(uu, Eu, ju, su) {
-      ! function(uu, Eu, ju) {
-        const [su, Uu, Zu] = [uu[0], uu[1], uu[2]];
-        let Xu, lu, qu;
-        Math.abs(Uu) < .99 ? (Xu = Zu, lu = 0, qu = -su) : (Xu = -Uu, lu = su, qu = 0);
-        const fu = Math.hypot(Xu, lu, qu);
-        Eu[0] = Xu / fu, Eu[1] = lu / fu, Eu[2] = qu / fu, ju[0] = Uu * Eu[2] - Zu * Eu[1], ju[1] = Zu * Eu[0] - su * Eu[2], ju[2] = su * Eu[1] - Uu * Eu[0]
-      }(su, rj, Qj);
-      const Uu = 1 / 32;
-      for (const [Zu, Xu] of [
-          [0, rj],
-          [4, Qj]
+    function XZ(GG) {
+      return Math.ceil(GG * GG / 32)
+    }
+    const uZ = 8192,
+      iZ = 1 << 18,
+      CZ = 65536,
+      WZ = 294912,
+      mZ = 128,
+      IZ = 4096,
+      FZ = 16,
+      vZ = 16385,
+      aZ = 81921,
+      cZ = 147457,
+      lZ = 4194304;
+    const jZ = [0, 0, 0],
+      PZ = [0, 0, 0];
+
+    function MZ(GG, bG, ZG, wG) {
+      ! function(GG, bG, ZG) {
+        const [wG, SG, LG] = [GG[0], GG[1], GG[2]];
+        let yG, kG, UG;
+        Math.abs(SG) < .99 ? (yG = LG, kG = 0, UG = -wG) : (yG = -SG, kG = wG, UG = 0);
+        const YG = Math.hypot(yG, kG, UG);
+        bG[0] = yG / YG, bG[1] = kG / YG, bG[2] = UG / YG, ZG[0] = SG * bG[2] - LG * bG[1], ZG[1] = LG * bG[0] - wG * bG[2], ZG[2] = wG * bG[1] - SG * bG[0]
+      }(wG, jZ, PZ);
+      const SG = 1 / 32;
+      for (const [LG, yG] of [
+          [0, jZ],
+          [4, PZ]
         ]) {
-        for (let ju = 0; ju < 3; ju++) uu[Eu + Zu + ju] = Xu[ju] * Uu;
-        uu[Eu + Zu + 3] = -(Xu[0] * ju[0] + Xu[1] * ju[1] + Xu[2] * ju[2]) * Uu
+        for (let ZG = 0; ZG < 3; ZG++) GG[bG + LG + ZG] = yG[ZG] * SG;
+        GG[bG + LG + 3] = -(yG[0] * ZG[0] + yG[1] * ZG[1] + yG[2] * ZG[2]) * SG
       }
     }
-    class Wj {
+    class AZ {
       constructor() {
-        this.words = new Uint32Array(Kj), this.parts = 0, this.refs = 0, this.floats = new Float32Array(this.words.buffer), this.rects = new Int32Array(16384), this.counts = new Uint32Array(16384), this.inverse = new Float64Array(16), this.view = new Float32Array(8), this.viewAt = 0, this.light = [0, 1, 0]
+        this.words = new Uint32Array(cZ), this.parts = 0, this.refs = 0, this.floats = new Float32Array(this.words.buffer), this.rects = new Int32Array(16384), this.counts = new Uint32Array(16384), this.inverse = new Float64Array(16), this.view = new Float32Array(8), this.viewAt = 0, this.light = [0, 1, 0]
       }
-      NN(uu, Eu) {
-        this.parts = 0, this.refs = 0, this.view = uu, this.viewAt = Eu;
-        const ju = uu[Eu + 1] * uu[Eu + 6] - uu[Eu + 2] * uu[Eu + 5],
-          su = uu[Eu + 2] * uu[Eu + 4] - uu[Eu] * uu[Eu + 6],
-          Uu = uu[Eu] * uu[Eu + 5] - uu[Eu + 1] * uu[Eu + 4],
-          Zu = Math.hypot(ju, su, Uu) || 1;
-        this.light[0] = ju / Zu, this.light[1] = su / Zu, this.light[2] = Uu / Zu
+      hQ(GG, bG) {
+        this.parts = 0, this.refs = 0, this.view = GG, this.viewAt = bG;
+        const ZG = GG[bG + 1] * GG[bG + 6] - GG[bG + 2] * GG[bG + 5],
+          wG = GG[bG + 2] * GG[bG + 4] - GG[bG] * GG[bG + 6],
+          SG = GG[bG] * GG[bG + 5] - GG[bG + 1] * GG[bG + 4],
+          LG = Math.hypot(ZG, wG, SG) || 1;
+        this.light[0] = ZG / LG, this.light[1] = wG / LG, this.light[2] = SG / LG
       }
-      add(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (this.parts >= oj || ! function(uu, Eu, ju) {
-            const su = uu[Eu],
-              Uu = uu[Eu + 1],
-              Zu = uu[Eu + 2],
-              Xu = uu[Eu + 3],
-              lu = uu[Eu + 4],
-              qu = uu[Eu + 5],
-              fu = uu[Eu + 6],
-              Cu = uu[Eu + 7],
-              bu = uu[Eu + 8],
-              cu = uu[Eu + 9],
-              Nu = uu[Eu + 10],
-              Ou = uu[Eu + 11],
-              Yu = uu[Eu + 12],
-              hu = uu[Eu + 13],
-              Du = uu[Eu + 14],
-              gu = uu[Eu + 15],
-              Mu = su * qu - Uu * lu,
-              eu = su * fu - Zu * lu,
-              Gu = su * Cu - Xu * lu,
-              pu = Uu * fu - Zu * qu,
-              wu = Uu * Cu - Xu * qu,
-              Ju = Zu * Cu - Xu * fu,
-              du = bu * hu - cu * Yu,
-              au = bu * Du - Nu * Yu,
-              Pu = bu * gu - Ou * Yu,
-              ou = cu * Du - Nu * hu,
-              ku = cu * gu - Ou * hu,
-              mu = Nu * gu - Ou * Du,
-              vu = Mu * mu - eu * ku + Gu * ou + pu * Pu - wu * au + Ju * du;
-            if (!(Math.abs(vu) > 1e-12)) return !1;
-            const Ku = 1 / vu;
-            return ju[0] = (qu * mu - fu * ku + Cu * ou) * Ku, ju[1] = (Zu * ku - Uu * mu - Xu * ou) * Ku, ju[2] = (hu * Ju - Du * wu + gu * pu) * Ku, ju[3] = (Nu * wu - cu * Ju - Ou * pu) * Ku, ju[4] = (fu * Pu - lu * mu - Cu * au) * Ku, ju[5] = (su * mu - Zu * Pu + Xu * au) * Ku, ju[6] = (Du * Gu - Yu * Ju - gu * eu) * Ku, ju[7] = (bu * Ju - Nu * Gu + Ou * eu) * Ku, ju[8] = (lu * ku - qu * Pu + Cu * du) * Ku, ju[9] = (Uu * Pu - su * ku - Xu * du) * Ku, ju[10] = (Yu * wu - hu * Gu + gu * Mu) * Ku, ju[11] = (cu * Gu - bu * wu - Ou * Mu) * Ku, ju[12] = (qu * au - lu * ou - fu * du) * Ku, ju[13] = (su * ou - Uu * au + Zu * du) * Ku, ju[14] = (hu * eu - Yu * pu - Du * Mu) * Ku, ju[15] = (bu * pu - cu * eu + Nu * Mu) * Ku, !0
-          }(Eu, ju, this.inverse)) return;
+      add(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (this.parts >= IZ || ! function(GG, bG, ZG) {
+            const wG = GG[bG],
+              SG = GG[bG + 1],
+              LG = GG[bG + 2],
+              yG = GG[bG + 3],
+              kG = GG[bG + 4],
+              UG = GG[bG + 5],
+              YG = GG[bG + 6],
+              VG = GG[bG + 7],
+              pG = GG[bG + 8],
+              fG = GG[bG + 9],
+              QG = GG[bG + 10],
+              KG = GG[bG + 11],
+              hG = GG[bG + 12],
+              dG = GG[bG + 13],
+              JG = GG[bG + 14],
+              rG = GG[bG + 15],
+              zG = wG * UG - SG * kG,
+              EG = wG * YG - LG * kG,
+              oG = wG * VG - yG * kG,
+              XG = SG * YG - LG * UG,
+              uG = SG * VG - yG * UG,
+              iG = LG * VG - yG * YG,
+              CG = pG * dG - fG * hG,
+              WG = pG * JG - QG * hG,
+              mG = pG * rG - KG * hG,
+              IG = fG * JG - QG * dG,
+              FG = fG * rG - KG * dG,
+              vG = QG * rG - KG * JG,
+              aG = zG * vG - EG * FG + oG * IG + XG * mG - uG * WG + iG * CG;
+            if (!(Math.abs(aG) > 1e-12)) return !1;
+            const cG = 1 / aG;
+            return ZG[0] = (UG * vG - YG * FG + VG * IG) * cG, ZG[1] = (LG * FG - SG * vG - yG * IG) * cG, ZG[2] = (dG * iG - JG * uG + rG * XG) * cG, ZG[3] = (QG * uG - fG * iG - KG * XG) * cG, ZG[4] = (YG * mG - kG * vG - VG * WG) * cG, ZG[5] = (wG * vG - LG * mG + yG * WG) * cG, ZG[6] = (JG * oG - hG * iG - rG * EG) * cG, ZG[7] = (pG * iG - QG * oG + KG * EG) * cG, ZG[8] = (kG * FG - UG * mG + VG * CG) * cG, ZG[9] = (SG * mG - wG * FG - yG * CG) * cG, ZG[10] = (hG * uG - dG * oG + rG * zG) * cG, ZG[11] = (fG * oG - pG * uG - KG * zG) * cG, ZG[12] = (UG * WG - kG * IG - YG * CG) * cG, ZG[13] = (wG * IG - SG * WG + LG * CG) * cG, ZG[14] = (dG * EG - hG * XG - JG * zG) * cG, ZG[15] = (pG * XG - fG * EG + QG * zG) * cG, !0
+          }(bG, ZG, this.inverse)) return;
         const {
-          view: su,
-          viewAt: Uu
-        } = this, Zu = ju;
-        let Xu = 1 / 0,
-          lu = 1 / 0,
-          qu = -1 / 0,
-          fu = -1 / 0,
-          Cu = -1 / 0;
-        const [bu, cu, Nu] = this.light;
-        for (let Gu = 0; Gu < 8; Gu++) {
-          const ju = 1 & Gu ? uu.hi[0] : uu.lo[0],
-            Ou = 2 & Gu ? uu.hi[1] : uu.lo[1],
-            Yu = 4 & Gu ? uu.hi[2] : uu.lo[2],
-            hu = ju * Eu[Zu] + Ou * Eu[Zu + 4] + Yu * Eu[Zu + 8] + Eu[Zu + 12],
-            Du = ju * Eu[Zu + 1] + Ou * Eu[Zu + 5] + Yu * Eu[Zu + 9] + Eu[Zu + 13],
-            gu = ju * Eu[Zu + 2] + Ou * Eu[Zu + 6] + Yu * Eu[Zu + 10] + Eu[Zu + 14],
-            Mu = su[Uu] * hu + su[Uu + 1] * Du + su[Uu + 2] * gu + su[Uu + 3],
-            eu = su[Uu + 4] * hu + su[Uu + 5] * Du + su[Uu + 6] * gu + su[Uu + 7];
-          Xu = Math.min(Xu, Mu), lu = Math.min(lu, eu), qu = Math.max(qu, Mu), fu = Math.max(fu, eu), Cu = Math.max(Cu, bu * hu + cu * Du + Nu * gu)
+          view: wG,
+          viewAt: SG
+        } = this, LG = ZG;
+        let yG = 1 / 0,
+          kG = 1 / 0,
+          UG = -1 / 0,
+          YG = -1 / 0,
+          VG = -1 / 0;
+        const [pG, fG, QG] = this.light;
+        for (let oG = 0; oG < 8; oG++) {
+          const ZG = 1 & oG ? GG.hi[0] : GG.lo[0],
+            KG = 2 & oG ? GG.hi[1] : GG.lo[1],
+            hG = 4 & oG ? GG.hi[2] : GG.lo[2],
+            dG = ZG * bG[LG] + KG * bG[LG + 4] + hG * bG[LG + 8] + bG[LG + 12],
+            JG = ZG * bG[LG + 1] + KG * bG[LG + 5] + hG * bG[LG + 9] + bG[LG + 13],
+            rG = ZG * bG[LG + 2] + KG * bG[LG + 6] + hG * bG[LG + 10] + bG[LG + 14],
+            zG = wG[SG] * dG + wG[SG + 1] * JG + wG[SG + 2] * rG + wG[SG + 3],
+            EG = wG[SG + 4] * dG + wG[SG + 5] * JG + wG[SG + 6] * rG + wG[SG + 7];
+          yG = Math.min(yG, zG), kG = Math.min(kG, EG), UG = Math.max(UG, zG), YG = Math.max(YG, EG), VG = Math.max(VG, pG * dG + fG * JG + QG * rG)
         }
-        if (qu < -1 || fu < -1 || Xu >= 1 || lu >= 1) return;
-        const Ou = this.parts++,
-          Yu = this.rects;
-        Yu[4 * Ou] = Sj(Xu), Yu[4 * Ou + 1] = Sj(lu), Yu[4 * Ou + 2] = Sj(qu), Yu[4 * Ou + 3] = Sj(fu);
-        const hu = this.inverse,
+        if (UG < -1 || YG < -1 || yG >= 1 || kG >= 1) return;
+        const KG = this.parts++,
+          hG = this.rects;
+        hG[4 * KG] = sZ(yG), hG[4 * KG + 1] = sZ(kG), hG[4 * KG + 2] = sZ(UG), hG[4 * KG + 3] = sZ(YG);
+        const dG = this.inverse,
           {
-            cell: Du,
-            dims: gu,
-            lo: Mu
-          } = uu,
-          eu = vj + Ou * kj;
-        for (let Gu = 0; Gu < 3; Gu++) this.floats[eu + 4 * Gu] = hu[Gu] / Du, this.floats[eu + 4 * Gu + 1] = hu[4 + Gu] / Du, this.floats[eu + 4 * Gu + 2] = hu[8 + Gu] / Du, this.floats[eu + 4 * Gu + 3] = (hu[12 + Gu] - Mu[Gu]) / Du;
-        this.words[eu + 12] = uu.at, this.floats[eu + 13] = Cu + .001 * (1 + Math.abs(Cu)), this.words[eu + 14] = gu[0] | gu[1] << 8 | gu[2] << 16
+            cell: JG,
+            dims: rG,
+            lo: zG
+          } = GG,
+          EG = aZ + KG * FZ;
+        for (let oG = 0; oG < 3; oG++) this.floats[EG + 4 * oG] = dG[oG] / JG, this.floats[EG + 4 * oG + 1] = dG[4 + oG] / JG, this.floats[EG + 4 * oG + 2] = dG[8 + oG] / JG, this.floats[EG + 4 * oG + 3] = (dG[12 + oG] - zG[oG]) / JG;
+        this.words[EG + 12] = GG.at, this.floats[EG + 13] = VG + .001 * (1 + Math.abs(VG)), this.words[EG + 14] = rG[0] | rG[1] << 8 | rG[2] << 16
       }
       finish() {
-        const uu = Pj,
+        const GG = mZ,
           {
-            counts: Eu,
-            rects: ju,
-            words: su
+            counts: bG,
+            rects: ZG,
+            words: wG
           } = this;
-        Eu.fill(0);
-        let Uu = 0,
-          Zu = 0;
-        for (; Zu < this.parts; Zu++) {
-          const su = 4 * Zu,
-            Xu = (ju[su + 2] - ju[su] + 1) * (ju[su + 3] - ju[su + 1] + 1);
-          if (Uu + Xu > 65536) break;
-          Uu += Xu;
-          for (let Uu = ju[su + 1]; Uu <= ju[su + 3]; Uu++)
-            for (let Zu = ju[su]; Zu <= ju[su + 2]; Zu++) Eu[Uu * uu + Zu]++
+        bG.fill(0);
+        let SG = 0,
+          LG = 0;
+        for (; LG < this.parts; LG++) {
+          const wG = 4 * LG,
+            yG = (ZG[wG + 2] - ZG[wG] + 1) * (ZG[wG + 3] - ZG[wG + 1] + 1);
+          if (SG + yG > 65536) break;
+          SG += yG;
+          for (let SG = ZG[wG + 1]; SG <= ZG[wG + 3]; SG++)
+            for (let LG = ZG[wG]; LG <= ZG[wG + 2]; LG++) bG[SG * GG + LG]++
         }
-        let Xu = 0;
-        for (let qu = 0; qu < 16384; qu++) su[qu] = Xu, Xu += Eu[qu], Eu[qu] = su[qu];
-        su[16384] = Xu;
-        for (let qu = 0; qu < Zu; qu++) {
-          const Uu = 4 * qu;
-          for (let Zu = ju[Uu + 1]; Zu <= ju[Uu + 3]; Zu++)
-            for (let Xu = ju[Uu]; Xu <= ju[Uu + 2]; Xu++) su[mj + Eu[Zu * uu + Xu]++] = qu
+        let yG = 0;
+        for (let UG = 0; UG < 16384; UG++) wG[UG] = yG, yG += bG[UG], bG[UG] = wG[UG];
+        wG[16384] = yG;
+        for (let UG = 0; UG < LG; UG++) {
+          const SG = 4 * UG;
+          for (let LG = ZG[SG + 1]; LG <= ZG[SG + 3]; LG++)
+            for (let yG = ZG[SG]; yG <= ZG[SG + 2]; yG++) wG[vZ + bG[LG * GG + yG]++] = UG
         }
-        const lu = this.floats;
-        for (let qu = 0; qu < 16384; qu++) {
-          const uu = mj + su[qu],
-            Eu = uu + Math.min(su[qu + 1] - su[qu], 64);
-          for (let ju = uu + 1; ju < Eu; ju++) {
-            const Eu = su[ju],
-              Uu = lu[81934 + Eu * kj];
-            let Zu = ju - 1;
-            for (; Zu >= uu && lu[81934 + su[Zu] * kj] < Uu; Zu--) su[Zu + 1] = su[Zu];
-            su[Zu + 1] = Eu
+        const kG = this.floats;
+        for (let UG = 0; UG < 16384; UG++) {
+          const GG = vZ + wG[UG],
+            bG = GG + Math.min(wG[UG + 1] - wG[UG], 64);
+          for (let ZG = GG + 1; ZG < bG; ZG++) {
+            const bG = wG[ZG],
+              SG = kG[81934 + bG * FZ];
+            let LG = ZG - 1;
+            for (; LG >= GG && kG[81934 + wG[LG] * FZ] < SG; LG--) wG[LG + 1] = wG[LG];
+            wG[LG + 1] = bG
           }
         }
-        this.refs = Uu
+        this.refs = SG
       }
     }
 
-    function Sj(uu) {
-      return Math.min(127, Math.max(0, Math.floor((.5 * uu + .5) * Pj)))
+    function sZ(GG) {
+      return Math.min(127, Math.max(0, Math.floor((.5 * GG + .5) * mZ)))
     }
 
-    function Ij(uu, Eu, ju, su, Uu) {
-      for (let Zu = 0; Zu < 4; Zu++)
-        for (let Xu = 0; Xu < 4; Xu++) Uu[4 * Zu + Xu] = uu[Eu + 4 * Zu] * ju[su + Xu] + uu[Eu + 4 * Zu + 1] * ju[su + 4 + Xu] + uu[Eu + 4 * Zu + 2] * ju[su + 8 + Xu] + uu[Eu + 4 * Zu + 3] * ju[su + 12 + Xu]
+    function qZ(GG, bG, ZG, wG, SG) {
+      for (let LG = 0; LG < 4; LG++)
+        for (let yG = 0; yG < 4; yG++) SG[4 * LG + yG] = GG[bG + 4 * LG] * ZG[wG + yG] + GG[bG + 4 * LG + 1] * ZG[wG + 4 + yG] + GG[bG + 4 * LG + 2] * ZG[wG + 8 + yG] + GG[bG + 4 * LG + 3] * ZG[wG + 12 + yG]
     }
 
-    function Fj(uu, Eu, ju, su, Uu) {
-      const Zu = uu[0] - Eu,
-        Xu = uu[1] - ju,
-        lu = uu[2] - su,
-        qu = uu[3] - Eu,
-        fu = uu[4] - ju,
-        Cu = uu[5] - su,
-        bu = uu[6] - Eu,
-        cu = uu[7] - ju,
-        Nu = uu[8] - su;
-      if (Math.min(Zu, qu, bu) > Uu || Math.max(Zu, qu, bu) < -Uu) return !1;
-      if (Math.min(Xu, fu, cu) > Uu || Math.max(Xu, fu, cu) < -Uu) return !1;
-      if (Math.min(lu, Cu, Nu) > Uu || Math.max(lu, Cu, Nu) < -Uu) return !1;
-      const Ou = qu - Zu,
-        Yu = fu - Xu,
-        hu = Cu - lu,
-        Du = bu - qu,
-        gu = cu - fu,
-        Mu = Nu - Cu,
-        eu = Yu * Mu - hu * gu,
-        Gu = hu * Du - Ou * Mu,
-        pu = Ou * gu - Yu * Du;
-      if (Math.abs(eu * Zu + Gu * Xu + pu * lu) > Uu * (Math.abs(eu) + Math.abs(Gu) + Math.abs(pu))) return !1;
-      const wu = [Ou, Yu, hu, Du, gu, Mu, Zu - bu, Xu - cu, lu - Nu];
-      for (let Ju = 0; Ju < 3; Ju++) {
-        const uu = wu[3 * Ju],
-          Eu = wu[3 * Ju + 1],
-          ju = wu[3 * Ju + 2];
-        for (let su = 0; su < 3; su++) {
-          const Ou = 0 === su ? 0 : 1 === su ? ju : -Eu,
-            Yu = 0 === su ? -ju : 1 === su ? 0 : uu,
-            hu = 0 === su ? Eu : 1 === su ? -uu : 0,
-            Du = Ou * Zu + Yu * Xu + hu * lu,
-            gu = Ou * qu + Yu * fu + hu * Cu,
-            Mu = Ou * bu + Yu * cu + hu * Nu,
-            eu = Uu * (Math.abs(Ou) + Math.abs(Yu) + Math.abs(hu));
-          if (Math.min(Du, gu, Mu) > eu || Math.max(Du, gu, Mu) < -eu) return !1
+    function nZ(GG, bG, ZG, wG, SG) {
+      const LG = GG[0] - bG,
+        yG = GG[1] - ZG,
+        kG = GG[2] - wG,
+        UG = GG[3] - bG,
+        YG = GG[4] - ZG,
+        VG = GG[5] - wG,
+        pG = GG[6] - bG,
+        fG = GG[7] - ZG,
+        QG = GG[8] - wG;
+      if (Math.min(LG, UG, pG) > SG || Math.max(LG, UG, pG) < -SG) return !1;
+      if (Math.min(yG, YG, fG) > SG || Math.max(yG, YG, fG) < -SG) return !1;
+      if (Math.min(kG, VG, QG) > SG || Math.max(kG, VG, QG) < -SG) return !1;
+      const KG = UG - LG,
+        hG = YG - yG,
+        dG = VG - kG,
+        JG = pG - UG,
+        rG = fG - YG,
+        zG = QG - VG,
+        EG = hG * zG - dG * rG,
+        oG = dG * JG - KG * zG,
+        XG = KG * rG - hG * JG;
+      if (Math.abs(EG * LG + oG * yG + XG * kG) > SG * (Math.abs(EG) + Math.abs(oG) + Math.abs(XG))) return !1;
+      const uG = [KG, hG, dG, JG, rG, zG, LG - pG, yG - fG, kG - QG];
+      for (let iG = 0; iG < 3; iG++) {
+        const GG = uG[3 * iG],
+          bG = uG[3 * iG + 1],
+          ZG = uG[3 * iG + 2];
+        for (let wG = 0; wG < 3; wG++) {
+          const KG = 0 === wG ? 0 : 1 === wG ? ZG : -bG,
+            hG = 0 === wG ? -ZG : 1 === wG ? 0 : GG,
+            dG = 0 === wG ? bG : 1 === wG ? -GG : 0,
+            JG = KG * LG + hG * yG + dG * kG,
+            rG = KG * UG + hG * YG + dG * VG,
+            zG = KG * pG + hG * fG + dG * QG,
+            EG = SG * (Math.abs(KG) + Math.abs(hG) + Math.abs(dG));
+          if (Math.min(JG, rG, zG) > EG || Math.max(JG, rG, zG) < -EG) return !1
         }
       }
       return !0
     }
-    const Bj = new Float32Array(1);
-    new Uint32Array(Bj.buffer);
-    var Lj = ju(39101);
+    const gZ = new Float32Array(1);
+    new Uint32Array(gZ.buffer);
+    var eZ = ZG(39163);
 
-    function tj(uu) {
-      const [Eu, ju, su] = Lj.o;
-      return `struct BloxdSpSunShadow {\n\teyeChunk: vec3i,\n\tstaleCount: u32,\n\tvolumeLo: vec3i,\n\tentityX: vec4f,\n\tentityY: vec4f,\n\tstale: array<vec4i, 4>,\n}\n@group(${uu.group}) @binding(${uu.uniform}) var<uniform> bloxdSpSunShadow: BloxdSpSunShadow;\nfn bloxdSpVolumeTexel(cell: vec3i) -> vec3i {\n\treturn cell & vec3i(${Eu-1}, ${ju-1}, ${su-1});\n}\n`
+    function RZ(GG) {
+      const [bG, ZG, wG] = eZ.t;
+      return `struct BloxdSpSunShadow {\n\teyeChunk: vec3i,\n\tstaleCount: u32,\n\tvolumeLo: vec3i,\n\tentityX: vec4f,\n\tentityY: vec4f,\n\tstale: array<vec4i, 4>,\n}\n@group(${GG.group}) @binding(${GG.uniform}) var<uniform> bloxdSpSunShadow: BloxdSpSunShadow;\nfn bloxdSpVolumeTexel(cell: vec3i) -> vec3i {\n\treturn cell & vec3i(${bG-1}, ${ZG-1}, ${wG-1});\n}\n`
     }
 
-    function xj(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        ju = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        su = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const [Uu, Zu, Xu] = uj, [lu, qu, fu] = RE, Cu = Math.log2(zE), bu = su ? "var<private> bloxdSpCrossed: bool;\n" : "", cu = su ? "\t\t\tbloxdSpCrossed = true;\n" : "";
-      return `@group(${uu.group}) @binding(${uu.ac}) var<storage, read> bloxdSpShadowVoxels: array<u32>;\n@group(${uu.group}) @binding(${uu.special}) var<storage, read> bloxdSpShadowSpecial: array<u32>;\n${ju?"var<private> bloxdSpPlaneTolerance: f32;\n":""}${bu}struct BloxdSpBoxExit {\n\tt: f32,\n\taxis: i32,\n\tcell: vec3i,\n}\n// inv: 1 / d, 0 where d is, taken once per ray rather than divided per exit\nfn bloxdSpExitBox(o: vec3f, d: vec3f, inv: vec3f, lo: vec3i, offset: vec3i, size: i32) -> BloxdSpBoxExit {\n\tlet low = vec3f(lo - offset);\n\tlet far = select(low, low + f32(size), d > vec3f(0.0));\n\tlet ta = select(vec3f(1e30), (far - o) * inv, d != vec3f(0.0));\n\tvar axis = 0;\n\tvar t = ta.x;\n\tif (ta.y < t) {\n\t\tt = ta.y;\n\t\taxis = 1;\n\t}\n\tif (ta.z < t) {\n\t\tt = ta.z;\n\t\taxis = 2;\n\t}\n\tlet inside = clamp(vec3i(floor(o + t * d)) + offset, lo, lo + vec3i(size - 1));\n\tlet beyond = select(lo - vec3i(1), lo + vec3i(size), d > vec3f(0.0));\n\t// select, not cell[axis] = beyond[axis]: dynamic indexing spills the vector to memory on some drivers (~9% of the frame on Mali)\n\tlet cell = select(inside, beyond, vec3<bool>(axis == 0, axis == 1, axis == 2));\n\treturn BloxdSpBoxExit(t, axis, cell);\n}\nfn bloxdSpMaskBit(word: u32, bit: u32) -> bool {\n\treturn ((bloxdSpShadowSpecial[word + (bit >> 5u)] >> (bit & 31u)) & 1u) == 1u;\n}\nfn bloxdSpCasterBlocks(caster: u32, o: vec3f, d: vec3f, cell: vec3i, offset: vec3i, t0: f32, t1: f32, axis: i32) -> bool {\n\tlet base = 0u + caster * 4u;\n\tlet kind = bloxdSpShadowSpecial[base];\n\tlet data = bloxdSpShadowSpecial[base + 1u];\n\t// Every loop here has a fixed bound, whatever the buffers hold: a GPU stuck in one loses the device\n\tlet count = min(bloxdSpShadowSpecial[base + 2u], 4u);\n\tlet size = bloxdSpShadowSpecial[base + 3u];\n\tlet q = o - vec3f(cell - offset);\n\tif (kind == ${Mj}u) {\n\t\tlet qs = q * 8.0;\n\t\tlet ds = d * 8.0;\n\t\tlet invs = select(vec3f(0.0), 1.0 / ds, ds != vec3f(0.0));\n\t\tvar sub = clamp(vec3i(floor(qs + t0 * ds)), vec3i(0), vec3i(7));\n\t\tfor (var step = 0; step < 24; step++) {\n\t\t\tif (bloxdSpMaskBit(data, u32(sub.x + 8 * (sub.y + 8 * sub.z)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t\tlet exit = bloxdSpExitBox(qs, ds, invs, sub, vec3i(0), 1);\n\t\t\t// Only the axis it left by can be out of the shape\n\t\t\tif (exit.t >= t1 || any(exit.cell < vec3i(0)) || any(exit.cell >= vec3i(8))) {\n\t\t\t\treturn false;\n\t\t\t}\n\t\t\tsub = exit.cell;\n\t\t}\n\t\treturn false;\n\t}\n\tlet fs = f32(size);\n\tif (kind == ${ej}u) {\n\t\tfor (var p = 0u; p < count; p++) {\n\t\t\tlet plane = data + p * 4u;\n\t\t\tlet tx = bitcast<f32>(bloxdSpShadowSpecial[plane]);\n\t\t\tlet tz = bitcast<f32>(bloxdSpShadowSpecial[plane + 1u]);\n\t\t\tlet along = bitcast<f32>(bloxdSpShadowSpecial[plane + 2u]);\n\t\t\tlet dn = d.x * tz - d.z * tx;\n\t\t\tif (abs(dn) < 1e-6) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet t = (along - ((q.x - 0.5) * tz - (q.z - 0.5) * tx)) / dn;\n\t\t\t// Not a plane the trace starts on (SUN_SHADOW_PLANE_START), nor in its first cell one within depth's error of it\n\t\t\tif (t < select(t0, t0 + 0.0009765625, axis < 0) || t > t1${ju?" || (axis < 0 && abs(t * dn) < bloxdSpPlaneTolerance)":""}) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet h = q + t * d;\n\t\t\tlet u = (h.x - 0.5) * tx + (h.z - 0.5) * tz + 0.5;\n\t\t\tlet v = 1.0 - h.y;\n\t\t\tif (u < 0.0 || u >= 1.0 || v < 0.0 || v >= 1.0) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tif (bloxdSpMaskBit(bloxdSpShadowSpecial[plane + 3u], u32(floor(u * fs)) + size * u32(floor(v * fs)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t}\n\t\treturn false;\n\t}\n\tif (kind == ${Gj}u && axis >= 0) {\n\t\t// In through the +axis face going down the axis, else the -axis face; faces go +x, -x, +y, -y, +z, -z\n\t\tlet plusFace = d[axis] < 0.0;\n\t\tlet face = u32(2 * axis) + select(1u, 0u, plusFace);\n\t\tlet h = clamp(q + t0 * d, vec3f(0.0), vec3f(1.0));\n\t\t// As terrain samples faces (terrainShader.ts packedUv)\n\t\tvar uv = vec2f(select(h.x, 1.0 - h.x, plusFace), 1.0 - h.y);\n\t\tif (axis == 0) {\n\t\t\tuv = vec2f(select(1.0 - h.z, h.z, plusFace), 1.0 - h.y);\n\t\t} else if (axis == 1) {\n\t\t\tuv = vec2f(select(1.0 - h.x, h.x, plusFace), 1.0 - h.z);\n\t\t}\n\t\tlet texel = min(vec2u(floor(uv * fs)), vec2u(size - 1u));\n\t\treturn bloxdSpMaskBit(data + face * ((size * size + 31u) / 32u), texel.x + size * texel.y);\n\t}\n\treturn false;\n}\nfn bloxdSpWindowSlot(chunk: vec3i) -> u32 {\n\tlet window = vec3i(${Uu}, ${Zu}, ${Xu});\n\tlet r = chunk % window;\n\tlet s = select(r, r + window, r < vec3i(0));\n\treturn u32(s.x + ${Uu} * (s.y + ${Zu} * s.z));\n}\nfn bloxdSpWindowHas(chunk: vec3i) -> bool {\n\treturn all(abs(chunk - bloxdSpSunShadow.eyeChunk) <= vec3i(${lu}, ${qu}, ${fu}));\n}\nfn bloxdSpCellFull(cell: vec3i) -> bool {\n\tlet chunk = cell >> vec3u(${Cu}u);\n\tif (!bloxdSpWindowHas(chunk)) {\n\t\treturn false;\n\t}\n\tlet slot = bloxdSpWindowSlot(chunk);\n\tlet record = slot * 4u;\n\tlet named = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\tlet state = bloxdSpShadowVoxels[record + 3u] & 255u;\n\tif (!named || state != ${Zj}u) {\n\t\treturn named && state == ${Uj}u;\n\t}\n\tlet local = cell - chunk * 32;\n\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\tlet brickBase = ${qj}u + slot * 1536u + brick * 3u;\n\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\tif (((bloxdSpShadowVoxels[brickBase + (bit >> 5u)] >> (bit & 31u)) & 1u) == 0u) {\n\t\treturn false;\n\t}\n\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\tif (pool == 0u) {\n\t\treturn true;\n\t}\n\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\treturn ((entry >> ((bit & 1u) * 16u)) & 0xffffu) == 65535u;\n}\n// ownCell: whether the caster in the cell it starts in can block it (sunShadowTrace.ts traceSunShadow)\nfn bloxdSpShadowMarch(o: vec3f, d: vec3f, offset: vec3i, maxSteps: i32, ownCell: bool) -> vec4f {\n\tvar cell = vec3i(floor(o)) + offset;\n\tvar t = 0.0;\n\tvar axis = -1;\n\tlet inv = select(vec3f(0.0), 1.0 / d, d != vec3f(0.0));\n\t// The chunk the slot and record were read for: they change only with it\n\tvar cached = vec3i(-2147483647);\n\tvar slot = 0u;\n\tvar named = false;\n\tvar state = 0u;\n\t// Rising above the window's highest cell that may block, it crosses nothing more (0: never written)\n\tlet windowWord = bloxdSpShadowVoxels[${Cj}u];\n\tlet windowTop = select(2147483647, bitcast<i32>(windowWord) - 1073741824, d.y > 0.0 && windowWord != 0u);\n${Eu?"\tlet exits = bloxdSpRayFresh(o, d, offset);\n":""}\tfor (var step = 0; step < maxSteps; step++) {\n${Eu?`\t\tif (exits && step > 0 && step % ${Aj} == 0 && bloxdSpVolumeOpenLit(o + t * d, offset)) {\n\t\t\treturn vec4f(o + t * d, -1.0);\n\t\t}\n`:""}\t\tif (cell.y > windowTop) {\n\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t}\n\t\tlet chunk = cell >> vec3u(${Cu}u);\n\t\tif (any(chunk != cached)) {\n\t\t\tif (!bloxdSpWindowHas(chunk)) {\n\t\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t\t}\n\t\t\tcached = chunk;\n\t\t\tslot = bloxdSpWindowSlot(chunk);\n\t\t\tlet record = slot * 4u;\n\t\t\tnamed = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\t\t\tstate = bloxdSpShadowVoxels[record + 3u];\n\t\t}\n\t\tlet chunkLo = chunk * 32;\n\t\tlet kind = state & 255u;\n\t\t// Rising above its highest cell that may block, it crosses nothing more in the chunk\n\t\tif (!named || kind == ${jj}u || kind == ${sj}u || (d.y > 0.0 && cell.y - chunkLo.y > i32(state >> 8u))) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo, offset, 32);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tif (kind == ${Uj}u) {\n\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t}\n\t\tlet local = cell - chunkLo;\n\t\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\t\tlet brickBase = ${qj}u + slot * 1536u + brick * 3u;\n\t\tlet low = bloxdSpShadowVoxels[brickBase];\n\t\tlet high = bloxdSpShadowVoxels[brickBase + 1u];\n\t\tif (low == 0u && high == 0u) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo + (local & vec3i(~3)), offset, 4);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\t\tlet exit = bloxdSpExitBox(o, d, inv, cell, offset, 1);\n\t\tif (((select(high, low, bit < 32u) >> (bit & 31u)) & 1u) == 1u) {\n\t\t\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\t\t\tif (pool == 0u) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n\t\t\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\t\t\tlet caster = (entry >> ((bit & 1u) * 16u)) & 0xffffu;\n\t\t\tif (caster == 65535u || ((ownCell || axis >= 0) && bloxdSpCasterBlocks(caster, o, d, cell, offset, t, exit.t, axis))) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n${cu}\t\t}\n\t\tt = max(t, exit.t);\n\t\taxis = exit.axis;\n\t\tcell = exit.cell;\n\t}\n\treturn vec4f(o + t * d, -1.0);\n}\n`
+    function TZ(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        ZG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        wG = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const [SG, LG, yG] = GZ, [kG, UG, YG] = Bb, VG = Math.log2(xb), pG = wG ? "var<private> bloxdSpCrossed: bool;\n" : "", fG = wG ? "\t\t\tbloxdSpCrossed = true;\n" : "";
+      return `@group(${GG.group}) @binding(${GG.Wf}) var<storage, read> bloxdSpShadowVoxels: array<u32>;\n@group(${GG.group}) @binding(${GG.special}) var<storage, read> bloxdSpShadowSpecial: array<u32>;\n${ZG?"var<private> bloxdSpPlaneTolerance: f32;\n":""}${pG}struct BloxdSpBoxExit {\n\tt: f32,\n\taxis: i32,\n\tcell: vec3i,\n}\n// inv: 1 / d, 0 where d is, taken once per ray rather than divided per exit\nfn bloxdSpExitBox(o: vec3f, d: vec3f, inv: vec3f, lo: vec3i, offset: vec3i, size: i32) -> BloxdSpBoxExit {\n\tlet low = vec3f(lo - offset);\n\tlet far = select(low, low + f32(size), d > vec3f(0.0));\n\tlet ta = select(vec3f(1e30), (far - o) * inv, d != vec3f(0.0));\n\tvar axis = 0;\n\tvar t = ta.x;\n\tif (ta.y < t) {\n\t\tt = ta.y;\n\t\taxis = 1;\n\t}\n\tif (ta.z < t) {\n\t\tt = ta.z;\n\t\taxis = 2;\n\t}\n\tlet inside = clamp(vec3i(floor(o + t * d)) + offset, lo, lo + vec3i(size - 1));\n\tlet beyond = select(lo - vec3i(1), lo + vec3i(size), d > vec3f(0.0));\n\t// select, not cell[axis] = beyond[axis]: dynamic indexing spills the vector to memory on some drivers (~9% of the frame on Mali)\n\tlet cell = select(inside, beyond, vec3<bool>(axis == 0, axis == 1, axis == 2));\n\treturn BloxdSpBoxExit(t, axis, cell);\n}\nfn bloxdSpMaskBit(word: u32, bit: u32) -> bool {\n\treturn ((bloxdSpShadowSpecial[word + (bit >> 5u)] >> (bit & 31u)) & 1u) == 1u;\n}\nfn bloxdSpCasterBlocks(caster: u32, o: vec3f, d: vec3f, cell: vec3i, offset: vec3i, t0: f32, t1: f32, axis: i32) -> bool {\n\tlet base = 0u + caster * 4u;\n\tlet kind = bloxdSpShadowSpecial[base];\n\tlet data = bloxdSpShadowSpecial[base + 1u];\n\t// Every loop here has a fixed bound, whatever the buffers hold: a GPU stuck in one loses the device\n\tlet count = min(bloxdSpShadowSpecial[base + 2u], 4u);\n\tlet size = bloxdSpShadowSpecial[base + 3u];\n\tlet q = o - vec3f(cell - offset);\n\tif (kind == ${zZ}u) {\n\t\tlet qs = q * 8.0;\n\t\tlet ds = d * 8.0;\n\t\tlet invs = select(vec3f(0.0), 1.0 / ds, ds != vec3f(0.0));\n\t\tvar sub = clamp(vec3i(floor(qs + t0 * ds)), vec3i(0), vec3i(7));\n\t\tfor (var step = 0; step < 24; step++) {\n\t\t\tif (bloxdSpMaskBit(data, u32(sub.x + 8 * (sub.y + 8 * sub.z)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t\tlet exit = bloxdSpExitBox(qs, ds, invs, sub, vec3i(0), 1);\n\t\t\t// Only the axis it left by can be out of the shape\n\t\t\tif (exit.t >= t1 || any(exit.cell < vec3i(0)) || any(exit.cell >= vec3i(8))) {\n\t\t\t\treturn false;\n\t\t\t}\n\t\t\tsub = exit.cell;\n\t\t}\n\t\treturn false;\n\t}\n\tlet fs = f32(size);\n\tif (kind == ${EZ}u) {\n\t\tfor (var p = 0u; p < count; p++) {\n\t\t\tlet plane = data + p * 4u;\n\t\t\tlet tx = bitcast<f32>(bloxdSpShadowSpecial[plane]);\n\t\t\tlet tz = bitcast<f32>(bloxdSpShadowSpecial[plane + 1u]);\n\t\t\tlet along = bitcast<f32>(bloxdSpShadowSpecial[plane + 2u]);\n\t\t\tlet dn = d.x * tz - d.z * tx;\n\t\t\tif (abs(dn) < 1e-6) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet t = (along - ((q.x - 0.5) * tz - (q.z - 0.5) * tx)) / dn;\n\t\t\t// Not a plane the trace starts on (SUN_SHADOW_PLANE_START), nor in its first cell one within depth's error of it\n\t\t\tif (t < select(t0, t0 + 0.0009765625, axis < 0) || t > t1${ZG?" || (axis < 0 && abs(t * dn) < bloxdSpPlaneTolerance)":""}) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet h = q + t * d;\n\t\t\tlet u = (h.x - 0.5) * tx + (h.z - 0.5) * tz + 0.5;\n\t\t\tlet v = 1.0 - h.y;\n\t\t\tif (u < 0.0 || u >= 1.0 || v < 0.0 || v >= 1.0) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tif (bloxdSpMaskBit(bloxdSpShadowSpecial[plane + 3u], u32(floor(u * fs)) + size * u32(floor(v * fs)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t}\n\t\treturn false;\n\t}\n\tif (kind == ${oZ}u && axis >= 0) {\n\t\t// In through the +axis face going down the axis, else the -axis face; faces go +x, -x, +y, -y, +z, -z\n\t\tlet plusFace = d[axis] < 0.0;\n\t\tlet face = u32(2 * axis) + select(1u, 0u, plusFace);\n\t\tlet h = clamp(q + t0 * d, vec3f(0.0), vec3f(1.0));\n\t\t// As terrain samples faces (terrainShader.ts packedUv)\n\t\tvar uv = vec2f(select(h.x, 1.0 - h.x, plusFace), 1.0 - h.y);\n\t\tif (axis == 0) {\n\t\t\tuv = vec2f(select(1.0 - h.z, h.z, plusFace), 1.0 - h.y);\n\t\t} else if (axis == 1) {\n\t\t\tuv = vec2f(select(1.0 - h.x, h.x, plusFace), 1.0 - h.z);\n\t\t}\n\t\tlet texel = min(vec2u(floor(uv * fs)), vec2u(size - 1u));\n\t\treturn bloxdSpMaskBit(data + face * ((size * size + 31u) / 32u), texel.x + size * texel.y);\n\t}\n\treturn false;\n}\nfn bloxdSpWindowSlot(chunk: vec3i) -> u32 {\n\tlet window = vec3i(${SG}, ${LG}, ${yG});\n\tlet r = chunk % window;\n\tlet s = select(r, r + window, r < vec3i(0));\n\treturn u32(s.x + ${SG} * (s.y + ${LG} * s.z));\n}\nfn bloxdSpWindowHas(chunk: vec3i) -> bool {\n\treturn all(abs(chunk - bloxdSpSunShadow.eyeChunk) <= vec3i(${kG}, ${UG}, ${YG}));\n}\nfn bloxdSpCellFull(cell: vec3i) -> bool {\n\tlet chunk = cell >> vec3u(${VG}u);\n\tif (!bloxdSpWindowHas(chunk)) {\n\t\treturn false;\n\t}\n\tlet slot = bloxdSpWindowSlot(chunk);\n\tlet record = slot * 4u;\n\tlet named = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\tlet state = bloxdSpShadowVoxels[record + 3u] & 255u;\n\tif (!named || state != ${LZ}u) {\n\t\treturn named && state == ${SZ}u;\n\t}\n\tlet local = cell - chunk * 32;\n\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\tlet brickBase = ${UZ}u + slot * 1536u + brick * 3u;\n\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\tif (((bloxdSpShadowVoxels[brickBase + (bit >> 5u)] >> (bit & 31u)) & 1u) == 0u) {\n\t\treturn false;\n\t}\n\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\tif (pool == 0u) {\n\t\treturn true;\n\t}\n\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\treturn ((entry >> ((bit & 1u) * 16u)) & 0xffffu) == 65535u;\n}\n// ownCell: whether the caster in the cell it starts in can block it (sunShadowTrace.ts traceSunShadow)\nfn bloxdSpShadowMarch(o: vec3f, d: vec3f, offset: vec3i, maxSteps: i32, ownCell: bool) -> vec4f {\n\tvar cell = vec3i(floor(o)) + offset;\n\tvar t = 0.0;\n\tvar axis = -1;\n\tlet inv = select(vec3f(0.0), 1.0 / d, d != vec3f(0.0));\n\t// The chunk the slot and record were read for: they change only with it\n\tvar cached = vec3i(-2147483647);\n\tvar slot = 0u;\n\tvar named = false;\n\tvar state = 0u;\n\t// Rising above the window's highest cell that may block, it crosses nothing more (0: never written)\n\tlet windowWord = bloxdSpShadowVoxels[${VZ}u];\n\tlet windowTop = select(2147483647, bitcast<i32>(windowWord) - 1073741824, d.y > 0.0 && windowWord != 0u);\n${bG?"\tlet exits = bloxdSpRayFresh(o, d, offset);\n":""}\tfor (var step = 0; step < maxSteps; step++) {\n${bG?`\t\tif (exits && step > 0 && step % ${DZ} == 0 && bloxdSpVolumeOpenLit(o + t * d, offset)) {\n\t\t\treturn vec4f(o + t * d, -1.0);\n\t\t}\n`:""}\t\tif (cell.y > windowTop) {\n\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t}\n\t\tlet chunk = cell >> vec3u(${VG}u);\n\t\tif (any(chunk != cached)) {\n\t\t\tif (!bloxdSpWindowHas(chunk)) {\n\t\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t\t}\n\t\t\tcached = chunk;\n\t\t\tslot = bloxdSpWindowSlot(chunk);\n\t\t\tlet record = slot * 4u;\n\t\t\tnamed = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\t\t\tstate = bloxdSpShadowVoxels[record + 3u];\n\t\t}\n\t\tlet chunkLo = chunk * 32;\n\t\tlet kind = state & 255u;\n\t\t// Rising above its highest cell that may block, it crosses nothing more in the chunk\n\t\tif (!named || kind == ${ZZ}u || kind == ${wZ}u || (d.y > 0.0 && cell.y - chunkLo.y > i32(state >> 8u))) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo, offset, 32);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tif (kind == ${SZ}u) {\n\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t}\n\t\tlet local = cell - chunkLo;\n\t\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\t\tlet brickBase = ${UZ}u + slot * 1536u + brick * 3u;\n\t\tlet low = bloxdSpShadowVoxels[brickBase];\n\t\tlet high = bloxdSpShadowVoxels[brickBase + 1u];\n\t\tif (low == 0u && high == 0u) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo + (local & vec3i(~3)), offset, 4);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\t\tlet exit = bloxdSpExitBox(o, d, inv, cell, offset, 1);\n\t\tif (((select(high, low, bit < 32u) >> (bit & 31u)) & 1u) == 1u) {\n\t\t\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\t\t\tif (pool == 0u) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n\t\t\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\t\t\tlet caster = (entry >> ((bit & 1u) * 16u)) & 0xffffu;\n\t\t\tif (caster == 65535u || ((ownCell || axis >= 0) && bloxdSpCasterBlocks(caster, o, d, cell, offset, t, exit.t, axis))) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n${fG}\t\t}\n\t\tt = max(t, exit.t);\n\t\taxis = exit.axis;\n\t\tcell = exit.cell;\n\t}\n\treturn vec4f(o + t * d, -1.0);\n}\n`
     }
-    const Tj = {
+    const HZ = {
       group: 0,
       uniform: 0,
-      ac: 1,
+      Wf: 1,
       special: 2,
       work: 3,
       volume: 4
     };
 
-    function Hj() {
-      const uu = Tj;
-      return `${tj(uu)}${xj(uu,!1,!1,!0)}struct BloxdSpVolumeBox {\n\tlo: vec3i,\n\tfirst: u32,\n\tsize: vec3u,\n}\nstruct BloxdSpVolumeWork {\n\tlight: vec3f,\n\tboxes: u32,\n\tbox: array<BloxdSpVolumeBox, ${Lj.b}>,\n}\n@group(${uu.group}) @binding(${uu.work}) var<uniform> bloxdSpVolumeWork: BloxdSpVolumeWork;\n@group(${uu.group}) @binding(${uu.volume}) var bloxdSpVolumeOut: texture_storage_3d<rgba8unorm, write>;\n@compute @workgroup_size(${Lj.j})\nfn main(@builtin(global_invocation_id) id: vec3u) {\n\tvar at = 0u;\n\tlet boxes = min(bloxdSpVolumeWork.boxes, ${Lj.b}u);\n\tfor (var b = 1u; b < boxes; b++) {\n\t\tif (id.x >= bloxdSpVolumeWork.box[b].first) {\n\t\t\tat = b;\n\t\t}\n\t}\n\tlet box = bloxdSpVolumeWork.box[at];\n\tlet index = id.x - box.first;\n\tif (index >= box.size.x * box.size.y * box.size.z) {\n\t\treturn;\n\t}\n\tlet r = box.lo + vec3i(vec3u(index % box.size.x, (index / box.size.x) % box.size.y, index / (box.size.x * box.size.y)));\n\t// From the cell's centre, relative to the volume's corner: exact in f32\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet cell = lo + r;\n\tlet open = !bloxdSpCellFull(cell);\n\tvar lit = 0.0;\n\tbloxdSpCrossed = false;\n\tif (open) {\n\t\t// Past its own caster: a cell's light is what reaches it (sunShadowVolume.ts sunShadowVolumeCell)\n\t\tlet march = bloxdSpShadowMarch(vec3f(r) + vec3f(0.5), bloxdSpVolumeWork.light, lo, ${Lj.f}, false);\n\t\tlit = select(march.w, 1.0, march.w < 0.0);\n\t}\n\ttextureStore(bloxdSpVolumeOut, bloxdSpVolumeTexel(cell), vec4f(lit, select(0.0, 1.0, open), select(0.0, 1.0, lit == 1.0 && !bloxdSpCrossed), 1.0));\n}\n`
+    function tZ() {
+      const GG = HZ;
+      return `${RZ(GG)}${TZ(GG,!1,!1,!0)}struct BloxdSpVolumeBox {\n\tlo: vec3i,\n\tfirst: u32,\n\tsize: vec3u,\n}\nstruct BloxdSpVolumeWork {\n\tlight: vec3f,\n\tboxes: u32,\n\tbox: array<BloxdSpVolumeBox, ${eZ.e}>,\n}\n@group(${GG.group}) @binding(${GG.work}) var<uniform> bloxdSpVolumeWork: BloxdSpVolumeWork;\n@group(${GG.group}) @binding(${GG.volume}) var bloxdSpVolumeOut: texture_storage_3d<rgba8unorm, write>;\n@compute @workgroup_size(${eZ.o})\nfn main(@builtin(global_invocation_id) id: vec3u) {\n\tvar at = 0u;\n\tlet boxes = min(bloxdSpVolumeWork.boxes, ${eZ.e}u);\n\tfor (var b = 1u; b < boxes; b++) {\n\t\tif (id.x >= bloxdSpVolumeWork.box[b].first) {\n\t\t\tat = b;\n\t\t}\n\t}\n\tlet box = bloxdSpVolumeWork.box[at];\n\tlet index = id.x - box.first;\n\tif (index >= box.size.x * box.size.y * box.size.z) {\n\t\treturn;\n\t}\n\tlet r = box.lo + vec3i(vec3u(index % box.size.x, (index / box.size.x) % box.size.y, index / (box.size.x * box.size.y)));\n\t// From the cell's centre, relative to the volume's corner: exact in f32\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet cell = lo + r;\n\tlet open = !bloxdSpCellFull(cell);\n\tvar lit = 0.0;\n\tbloxdSpCrossed = false;\n\tif (open) {\n\t\t// Past its own caster: a cell's light is what reaches it (sunShadowVolume.ts sunShadowVolumeCell)\n\t\tlet march = bloxdSpShadowMarch(vec3f(r) + vec3f(0.5), bloxdSpVolumeWork.light, lo, ${eZ.h}, false);\n\t\tlit = select(march.w, 1.0, march.w < 0.0);\n\t}\n\ttextureStore(bloxdSpVolumeOut, bloxdSpVolumeTexel(cell), vec4f(lit, select(0.0, 1.0, open), select(0.0, 1.0, lit == 1.0 && !bloxdSpCrossed), 1.0));\n}\n`
     }
-    const Aj = 2;
-    const nj = "fn bloxdSpNormalCode(n: vec3f) -> f32 {\n\tlet a = abs(n);\n\tif (a.x >= a.y && a.x >= a.z) {\n\t\treturn select(1.0, 0.0, n.x > 0.0);\n\t}\n\tif (a.y >= a.z) {\n\t\treturn select(3.0, 2.0, n.y > 0.0);\n\t}\n\treturn select(5.0, 4.0, n.z > 0.0);\n}\n";
+    const DZ = 2;
+    const NZ = "fn bloxdSpNormalCode(n: vec3f) -> f32 {\n\tlet a = abs(n);\n\tif (a.x >= a.y && a.x >= a.z) {\n\t\treturn select(1.0, 0.0, n.x > 0.0);\n\t}\n\tif (a.y >= a.z) {\n\t\treturn select(3.0, 2.0, n.y > 0.0);\n\t}\n\treturn select(5.0, 4.0, n.z > 0.0);\n}\n";
 
-    function yj(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
-      const su = `var<private> bloxdSpShadowPosition: vec3f;\nfn bloxdSpShadowLight() -> vec4f {\n\t// Towards the sun or moon, as the CPU works it out (sunShadowLight)\n\tlet bloxdSpLight = -${Eu.shadowDirection};\n\treturn vec4f(bloxdSpLight, smoothstep(0.0, 0.1, bloxdSpLight.y));\n}\n`,
-        Uu = "trace" === ju || "lit" === ju,
-        Zu = "maskEdge" === ju ? "bloxdSpMaskEdge()" : "textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0).r",
-        Xu = Uu ? `\tlet bloxdSpOrigin = bloxdSpShadowPosition + bloxdSpShadowNormal * 0.25;\n\tlet bloxdSpMarch = bloxdSpShadowMarch(bloxdSpOrigin, bloxdSpLight.xyz, ${Eu.renderOffset}, 64, true);\n\tvar bloxdSpLit = bloxdSpMarch.w;\n\tif (bloxdSpLit < 0.0) {\n\t\t// Out of steps, or open and lit from here: on from the volume, from where it got to\n\t\tbloxdSpLit = bloxdSpVolumeAt(bloxdSpMarch.xyz, ${Eu.renderOffset});\n\t}\n\tif (bloxdSpLit > 0.0 && !bloxdSpShadowFirstPerson) {\n\t\t// Lifeforms and items, but not on the first-person held item, which the body you're in would shade as you turn\n\t\tbloxdSpLit *= bloxdSpEntityLight(bloxdSpShadowPosition, bloxdSpLight.xyz, bloxdSpFacingDot);\n\t}\n\treturn ${"lit"===ju?"bloxdSpLit":"bloxdSpLight.w * bloxdSpFacing * bloxdSpLit"};\n` : `\treturn bloxdSpLight.w * bloxdSpFacing * ${Zu};\n`;
-      return `${su}${uu.sunShadow?`var<private> bloxdSpShadowNormal: vec3f;\nvar<private> bloxdSpShadowEmissive: bool;\nvar<private> bloxdSpShadowFirstPerson: bool;\n${Uu?function(){const[uu,Eu,ju]=Lj.o;return`fn bloxdSpRayFresh(o: vec3f, d: vec3f, offset: vec3i) -> bool {\n\tif (bloxdSpSunShadow.staleCount > 4u) {\n\t\treturn false;\n\t}\n\tlet inv = select(vec3f(1e30), 1.0 / d, d != vec3f(0.0));\n\tlet count = bloxdSpSunShadow.staleCount;\n\tfor (var b = 0u; b < count; b++) {\n\t\tlet lo = vec3f(bloxdSpSunShadow.stale[b].xyz - offset) - 1.0;\n\t\tlet a = (lo - o) * inv;\n\t\tlet z = (lo + 34.0 - o) * inv;\n\t\tlet near = max(max(min(a.x, z.x), min(a.y, z.y)), min(a.z, z.z));\n\t\tlet far = min(min(max(a.x, z.x), max(a.y, z.y)), max(a.z, z.z));\n\t\tif (far >= max(near, 0.0)) {\n\t\t\treturn false;\n\t\t}\n\t}\n\treturn true;\n}\nfn bloxdSpVolumeOpenLit(p: vec3f, offset: vec3i) -> bool {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${uu}.0, ${Eu}.0, ${ju}.0);\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.5)) || any(r > size - vec3f(0.5))) {\n\t\treturn false;\n\t}\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, (r + vec3f(bloxdSpVolumeTexel(lo))) / size, 0.0);\n\treturn sample.b >= 0.999;\n}\n`}():""}fn bloxdShadow() -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\t// A face lit by its own light\n\tif (bloxdSpShadowEmissive) {\n\t\treturn 1.0;\n\t}\n\tlet bloxdSpFacingDot = dot(bloxdSpShadowNormal, bloxdSpLight.xyz);\n\tlet bloxdSpFacing = smoothstep(0.0, 0.5, bloxdSpFacingDot);\n\tif (bloxdSpLight.w <= 0.0 || bloxdSpFacing <= 0.0) {\n\t\treturn 0.0;\n\t}\n${Xu}}\n`:""}${uu.airShadow?`fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\tlet bloxdSpAt = mix(${Eu.eyePosition}, bloxdSpShadowPosition, clamp(bloxdSpT, 0.0, 1.0));\n\treturn bloxdSpLight.w * bloxdSpVolumeAt(bloxdSpAt, ${Eu.renderOffset});\n}\n`:""}`
+    function OZ(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
+      const wG = `var<private> bloxdSpShadowPosition: vec3f;\nfn bloxdSpShadowLight() -> vec4f {\n\t// Towards the sun or moon, as the CPU works it out (sunShadowLight)\n\tlet bloxdSpLight = -${bG.shadowDirection};\n\treturn vec4f(bloxdSpLight, smoothstep(0.0, 0.1, bloxdSpLight.y));\n}\n`,
+        SG = "trace" === ZG || "lit" === ZG,
+        LG = "maskEdge" === ZG ? "bloxdSpMaskEdge()" : "textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0).r",
+        yG = SG ? `\tlet bloxdSpOrigin = bloxdSpShadowPosition + bloxdSpShadowNormal * 0.25;\n\tlet bloxdSpMarch = bloxdSpShadowMarch(bloxdSpOrigin, bloxdSpLight.xyz, ${bG.renderOffset}, 64, true);\n\tvar bloxdSpLit = bloxdSpMarch.w;\n\tif (bloxdSpLit < 0.0) {\n\t\t// Out of steps, or open and lit from here: on from the volume, from where it got to\n\t\tbloxdSpLit = bloxdSpVolumeAt(bloxdSpMarch.xyz, ${bG.renderOffset});\n\t}\n\tif (bloxdSpLit > 0.0 && !bloxdSpShadowFirstPerson) {\n\t\t// Lifeforms and items, but not on the first-person held item, which the body you're in would shade as you turn\n\t\tbloxdSpLit *= bloxdSpEntityLight(bloxdSpShadowPosition, bloxdSpLight.xyz, bloxdSpFacingDot);\n\t}\n\treturn ${"lit"===ZG?"bloxdSpLit":"bloxdSpLight.w * bloxdSpFacing * bloxdSpLit"};\n` : `\treturn bloxdSpLight.w * bloxdSpFacing * ${LG};\n`;
+      return `${wG}${GG.sunShadow?`var<private> bloxdSpShadowNormal: vec3f;\nvar<private> bloxdSpShadowEmissive: bool;\nvar<private> bloxdSpShadowFirstPerson: bool;\n${SG?function(){const[GG,bG,ZG]=eZ.t;return`fn bloxdSpRayFresh(o: vec3f, d: vec3f, offset: vec3i) -> bool {\n\tif (bloxdSpSunShadow.staleCount > 4u) {\n\t\treturn false;\n\t}\n\tlet inv = select(vec3f(1e30), 1.0 / d, d != vec3f(0.0));\n\tlet count = bloxdSpSunShadow.staleCount;\n\tfor (var b = 0u; b < count; b++) {\n\t\tlet lo = vec3f(bloxdSpSunShadow.stale[b].xyz - offset) - 1.0;\n\t\tlet a = (lo - o) * inv;\n\t\tlet z = (lo + 34.0 - o) * inv;\n\t\tlet near = max(max(min(a.x, z.x), min(a.y, z.y)), min(a.z, z.z));\n\t\tlet far = min(min(max(a.x, z.x), max(a.y, z.y)), max(a.z, z.z));\n\t\tif (far >= max(near, 0.0)) {\n\t\t\treturn false;\n\t\t}\n\t}\n\treturn true;\n}\nfn bloxdSpVolumeOpenLit(p: vec3f, offset: vec3i) -> bool {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${GG}.0, ${bG}.0, ${ZG}.0);\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.5)) || any(r > size - vec3f(0.5))) {\n\t\treturn false;\n\t}\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, (r + vec3f(bloxdSpVolumeTexel(lo))) / size, 0.0);\n\treturn sample.b >= 0.999;\n}\n`}():""}fn bloxdShadow() -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\t// A face lit by its own light\n\tif (bloxdSpShadowEmissive) {\n\t\treturn 1.0;\n\t}\n\tlet bloxdSpFacingDot = dot(bloxdSpShadowNormal, bloxdSpLight.xyz);\n\tlet bloxdSpFacing = smoothstep(0.0, 0.5, bloxdSpFacingDot);\n\tif (bloxdSpLight.w <= 0.0 || bloxdSpFacing <= 0.0) {\n\t\treturn 0.0;\n\t}\n${yG}}\n`:""}${GG.airShadow?`fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\tlet bloxdSpAt = mix(${bG.eyePosition}, bloxdSpShadowPosition, clamp(bloxdSpT, 0.0, 1.0));\n\treturn bloxdSpLight.w * bloxdSpVolumeAt(bloxdSpAt, ${bG.renderOffset});\n}\n`:""}`
     }
-    const zj = "bloxdSpOwnTexture";
+    const xZ = "bloxdSpOwnTexture";
 
-    function Rj(uu) {
-      return `u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(${uu.texture}) - 1u)))`
+    function BZ(GG) {
+      return `u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(${GG.texture}) - 1u)))`
     }
-    const us = `fn bloxdSpFlags(bloxdSpWord: u32) -> BloxdFlags {\n\tvar bloxdSpOut: BloxdFlags;\n${mE.e.map((uu=>{let[Eu,ju]=uu;return`\tbloxdSpOut.${Eu} = (bloxdSpWord & ${ju}u) != 0u;\n`})).join("")}\treturn bloxdSpOut;\n}\n`;
+    const Gw = `fn bloxdSpFlags(bloxdSpWord: u32) -> BloxdFlags {\n\tvar bloxdSpOut: BloxdFlags;\n${vb.f.map((GG=>{let[bG,ZG]=GG;return`\tbloxdSpOut.${bG} = (bloxdSpWord & ${ZG}u) != 0u;\n`})).join("")}\treturn bloxdSpOut;\n}\n`;
 
-    function Es(uu) {
-      return `bloxdSpFlags(${uu})`
+    function bw(GG) {
+      return `bloxdSpFlags(${GG})`
     }
-    const ss = `${nE.i}.eyePosition`;
+    const Zw = `${Nb.i}.eyePosition`;
 
-    function Us(uu, Eu, ju, su, Uu) {
-      const Zu = uu.indexOf(Eu);
-      if (Zu < 0 || uu.indexOf(Eu, Zu + 1) >= 0) throw new Error(`Lite's ${Uu} program changed at the shader pack ${su} hook: ${Zu<0?"no":"more than one"} anchor (lite/${Uu}ShaderPack.ts)`);
-      return uu.slice(0, Zu) + ju + uu.slice(Zu + Eu.length)
-    }
-
-    function Zs(uu) {
-      return uu.sunShadow || uu.airShadow
+    function ww(GG, bG, ZG, wG, SG) {
+      const LG = GG.indexOf(bG);
+      if (LG < 0 || GG.indexOf(bG, LG + 1) >= 0) throw new Error(`Lite's ${SG} program changed at the shader pack ${wG} hook: ${LG<0?"no":"more than one"} anchor (lite/${SG}ShaderPack.ts)`);
+      return GG.slice(0, LG) + ZG + GG.slice(LG + bG.length)
     }
 
-    function Xs(uu, Eu) {
-      return Eu && Zs(uu)
+    function Sw(GG) {
+      return GG.sunShadow || GG.airShadow
     }
-    const ls = {
-      group: nE.f,
-      ...nE.o
+
+    function Lw(GG, bG) {
+      return bG && Sw(GG)
+    }
+    const yw = {
+      group: Nb.f,
+      ...Nb.m
     };
 
-    function qs(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
-      if (!Zs(uu)) return "";
-      if (Eu) {
-        const Eu = ls,
-          Uu = "trace" === ju || "lit" === ju;
-        let Zu = "";
-        uu.sunShadow && (Zu = Uu ? `${xj(Eu,!0,"lit"===ju)}${su=Eu,`@group(${su.group}) @binding(${su.entities}) var<storage, read> bloxdSpShadowEntities: array<u32>;\n@group(${su.group}) @binding(${su.entityGrids}) var<storage, read> bloxdSpShadowEntityGrids: array<u32>;\nfn bloxdSpEntityRow(i: u32) -> vec4f {\n\treturn bitcast<vec4f>(vec4u(bloxdSpShadowEntities[i], bloxdSpShadowEntities[i + 1u], bloxdSpShadowEntities[i + 2u], bloxdSpShadowEntities[i + 3u]));\n}\nfn bloxdSpEntityLight(p: vec3f, light: vec3f, facing: f32) -> f32 {\n\tlet p4 = vec4f(p, 1.0);\n\tlet across = vec2f(dot(bloxdSpSunShadow.entityX, p4), dot(bloxdSpSunShadow.entityY, p4));\n\tif (any(abs(across) >= vec2f(1.0))) {\n\t\treturn 1.0;\n\t}\n\tlet bin = vec2u(clamp(vec2i(floor((across * 0.5 + 0.5) * 128.0)), vec2i(0), vec2i(127)));\n\tlet b = bin.y * 128u + bin.x;\n\tlet start = bloxdSpShadowEntities[b];\n\tlet count = min(bloxdSpShadowEntities[b + 1u] - start, 64u);\n\tlet along = dot(p, light);\n\tfor (var k = 0u; k < count; k++) {\n\t\tlet base = 81921u + bloxdSpShadowEntities[16385u + start + k] * 16u;\n\t\t// Ending before the fragment along the light, as do those after it: their rays can't meet them\n\t\tif (bitcast<f32>(bloxdSpShadowEntities[base + 13u]) < along) {\n\t\t\tbreak;\n\t\t}\n\t\tlet r0 = bloxdSpEntityRow(base);\n\t\tlet r1 = bloxdSpEntityRow(base + 4u);\n\t\tlet r2 = bloxdSpEntityRow(base + 8u);\n\t\tlet packed = bloxdSpShadowEntities[base + 14u];\n\t\tlet dims = vec3u(packed & 0xffu, (packed >> 8u) & 0xffu, packed >> 16u);\n\t\t// In cells from the grid's low corner, and per unit along the light\n\t\tlet q = vec3f(dot(r0, p4), dot(r1, p4), dot(r2, p4));\n\t\t// Its rows' least squared length: the square of 1 over its largest scale, in cells\n\t\tlet shortest = min(min(dot(r0.xyz, r0.xyz), dot(r1.xyz, r1.xyz)), dot(r2.xyz, r2.xyz));\n\t\tvar dq = vec3f(dot(r0.xyz, light), dot(r1.xyz, light), dot(r2.xyz, light));\n\t\tdq = select(dq, vec3f(1e-9), abs(dq) < vec3f(1e-9));\n\t\tlet inv = 1.0 / dq;\n\t\tlet size = vec3f(dims);\n\t\tlet ta = -q * inv;\n\t\tlet tb = (size - q) * inv;\n\t\tlet tlo = min(ta, tb);\n\t\tlet thi = max(ta, tb);\n\t\t// Off the face's plane, past the cells around its own surface: its largest cells, over how fast the light leaves the\n\t\t// plane (finite as the face turns away)\n\t\tlet t0 = max(max(tlo.x, tlo.y), max(tlo.z, 2.0 * inverseSqrt(shortest) / max(facing, 1e-3)));\n\t\tlet t1 = min(min(thi.x, thi.y), thi.z);\n\t\tif (t0 >= t1) {\n\t\t\tcontinue;\n\t\t}\n\t\tlet up = dq > vec3f(0.0);\n\t\tvar at = vec3i(clamp(floor(q + dq * t0), vec3f(0.0), size - 1.0));\n\t\tlet step = select(vec3i(-1), vec3i(1), up);\n\t\tlet delta = abs(inv);\n\t\tvar next = (vec3f(at) + select(vec3f(0.0), vec3f(1.0), up) - q) * inv;\n\t\tlet data = bloxdSpShadowEntities[base + 12u];\n\t\tfor (var s = 0; s < 198; s++) {\n\t\t\tlet index = u32(at.x) + dims.x * (u32(at.y) + dims.y * u32(at.z));\n\t\t\tif ((bloxdSpShadowEntityGrids[data + (index >> 5u)] & (1u << (index & 31u))) != 0u) {\n\t\t\t\treturn 0.0;\n\t\t\t}\n\t\t\tif (next.x <= next.y && next.x <= next.z) {\n\t\t\t\tat.x += step.x;\n\t\t\t\tnext.x += delta.x;\n\t\t\t} else if (next.y <= next.z) {\n\t\t\t\tat.y += step.y;\n\t\t\t\tnext.y += delta.y;\n\t\t\t} else {\n\t\t\t\tat.z += step.z;\n\t\t\t\tnext.z += delta.z;\n\t\t\t}\n\t\t\tif (any(at < vec3i(0)) || any(at >= vec3i(dims))) {\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn 1.0;\n}\n`}` : function(uu, Eu, ju) {
-          const su = `@group(${uu}) @binding(${Eu}) var bloxdSpShadowMask: texture_2d<f32>;\nvar<private> bloxdSpShadowPixel: vec2i;\n`;
-          return ju ? `${su}var<private> bloxdSpShadowZ: f32;\nvar<private> bloxdSpShadowDz: vec2f;\n${nj}fn bloxdSpMaskEdge() -> f32 {\n\tlet code = bloxdSpNormalCode(bloxdSpShadowNormal);\n\tlet tolerance = abs(bloxdSpShadowDz.x) + abs(bloxdSpShadowDz.y) + 1e-7;\n\tlet m = textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0);\n\tlet mCode = floor(m.r * 0.5);\n\tlet mError = select(1e30, abs(m.g - bloxdSpShadowZ), mCode == code);\n\tif (mError <= tolerance) {\n\t\treturn m.r - mCode * 2.0;\n\t}\n\tlet last = vec2i(textureDimensions(bloxdSpShadowMask)) - 1;\n\tvar lit = m.r - mCode * 2.0;\n\tvar error = mError;\n${["-1, 0","1, 0","0, -1","0, 1"].map((uu=>`\t{\n\t\tlet o = vec2i(${uu});\n\t\tlet q = textureLoad(bloxdSpShadowMask, clamp(bloxdSpShadowPixel + o, vec2i(0), last), 0);\n\t\tlet qCode = floor(q.r * 0.5);\n\t\tlet e = abs(q.g - (bloxdSpShadowZ + dot(vec2f(o), bloxdSpShadowDz)));\n\t\tif (qCode == code && e < error) {\n\t\t\terror = e;\n\t\t\tlit = q.r - qCode * 2.0;\n\t\t}\n\t}\n`)).join("")}\treturn lit;\n}\n` : su
-        }(Eu.group, nE.q, "maskEdge" === ju));
-        const Xu = {
-          shadowDirection: `${nE.i}.shadowDirection`,
-          renderOffset: `${nE.i}.renderOffset`,
-          eyePosition: `${nE.i}.eyePosition`
+    function kw(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
+      if (!Sw(GG)) return "";
+      if (bG) {
+        const bG = yw,
+          SG = "trace" === ZG || "lit" === ZG;
+        let LG = "";
+        GG.sunShadow && (LG = SG ? `${TZ(bG,!0,"lit"===ZG)}${wG=bG,`@group(${wG.group}) @binding(${wG.entities}) var<storage, read> bloxdSpShadowEntities: array<u32>;\n@group(${wG.group}) @binding(${wG.entityGrids}) var<storage, read> bloxdSpShadowEntityGrids: array<u32>;\nfn bloxdSpEntityRow(i: u32) -> vec4f {\n\treturn bitcast<vec4f>(vec4u(bloxdSpShadowEntities[i], bloxdSpShadowEntities[i + 1u], bloxdSpShadowEntities[i + 2u], bloxdSpShadowEntities[i + 3u]));\n}\nfn bloxdSpEntityLight(p: vec3f, light: vec3f, facing: f32) -> f32 {\n\tlet p4 = vec4f(p, 1.0);\n\tlet across = vec2f(dot(bloxdSpSunShadow.entityX, p4), dot(bloxdSpSunShadow.entityY, p4));\n\tif (any(abs(across) >= vec2f(1.0))) {\n\t\treturn 1.0;\n\t}\n\tlet bin = vec2u(clamp(vec2i(floor((across * 0.5 + 0.5) * 128.0)), vec2i(0), vec2i(127)));\n\tlet b = bin.y * 128u + bin.x;\n\tlet start = bloxdSpShadowEntities[b];\n\tlet count = min(bloxdSpShadowEntities[b + 1u] - start, 64u);\n\tlet along = dot(p, light);\n\tfor (var k = 0u; k < count; k++) {\n\t\tlet base = 81921u + bloxdSpShadowEntities[16385u + start + k] * 16u;\n\t\t// Ending before the fragment along the light, as do those after it: their rays can't meet them\n\t\tif (bitcast<f32>(bloxdSpShadowEntities[base + 13u]) < along) {\n\t\t\tbreak;\n\t\t}\n\t\tlet r0 = bloxdSpEntityRow(base);\n\t\tlet r1 = bloxdSpEntityRow(base + 4u);\n\t\tlet r2 = bloxdSpEntityRow(base + 8u);\n\t\tlet packed = bloxdSpShadowEntities[base + 14u];\n\t\tlet dims = vec3u(packed & 0xffu, (packed >> 8u) & 0xffu, packed >> 16u);\n\t\t// In cells from the grid's low corner, and per unit along the light\n\t\tlet q = vec3f(dot(r0, p4), dot(r1, p4), dot(r2, p4));\n\t\t// Its rows' least squared length: the square of 1 over its largest scale, in cells\n\t\tlet shortest = min(min(dot(r0.xyz, r0.xyz), dot(r1.xyz, r1.xyz)), dot(r2.xyz, r2.xyz));\n\t\tvar dq = vec3f(dot(r0.xyz, light), dot(r1.xyz, light), dot(r2.xyz, light));\n\t\tdq = select(dq, vec3f(1e-9), abs(dq) < vec3f(1e-9));\n\t\tlet inv = 1.0 / dq;\n\t\tlet size = vec3f(dims);\n\t\tlet ta = -q * inv;\n\t\tlet tb = (size - q) * inv;\n\t\tlet tlo = min(ta, tb);\n\t\tlet thi = max(ta, tb);\n\t\t// Off the face's plane, past the cells around its own surface: its largest cells, over how fast the light leaves the\n\t\t// plane (finite as the face turns away)\n\t\tlet t0 = max(max(tlo.x, tlo.y), max(tlo.z, 2.0 * inverseSqrt(shortest) / max(facing, 1e-3)));\n\t\tlet t1 = min(min(thi.x, thi.y), thi.z);\n\t\tif (t0 >= t1) {\n\t\t\tcontinue;\n\t\t}\n\t\tlet up = dq > vec3f(0.0);\n\t\tvar at = vec3i(clamp(floor(q + dq * t0), vec3f(0.0), size - 1.0));\n\t\tlet step = select(vec3i(-1), vec3i(1), up);\n\t\tlet delta = abs(inv);\n\t\tvar next = (vec3f(at) + select(vec3f(0.0), vec3f(1.0), up) - q) * inv;\n\t\tlet data = bloxdSpShadowEntities[base + 12u];\n\t\tfor (var s = 0; s < 198; s++) {\n\t\t\tlet index = u32(at.x) + dims.x * (u32(at.y) + dims.y * u32(at.z));\n\t\t\tif ((bloxdSpShadowEntityGrids[data + (index >> 5u)] & (1u << (index & 31u))) != 0u) {\n\t\t\t\treturn 0.0;\n\t\t\t}\n\t\t\tif (next.x <= next.y && next.x <= next.z) {\n\t\t\t\tat.x += step.x;\n\t\t\t\tnext.x += delta.x;\n\t\t\t} else if (next.y <= next.z) {\n\t\t\t\tat.y += step.y;\n\t\t\t\tnext.y += delta.y;\n\t\t\t} else {\n\t\t\t\tat.z += step.z;\n\t\t\t\tnext.z += delta.z;\n\t\t\t}\n\t\t\tif (any(at < vec3i(0)) || any(at >= vec3i(dims))) {\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn 1.0;\n}\n`}` : function(GG, bG, ZG) {
+          const wG = `@group(${GG}) @binding(${bG}) var bloxdSpShadowMask: texture_2d<f32>;\nvar<private> bloxdSpShadowPixel: vec2i;\n`;
+          return ZG ? `${wG}var<private> bloxdSpShadowZ: f32;\nvar<private> bloxdSpShadowDz: vec2f;\n${NZ}fn bloxdSpMaskEdge() -> f32 {\n\tlet code = bloxdSpNormalCode(bloxdSpShadowNormal);\n\tlet tolerance = abs(bloxdSpShadowDz.x) + abs(bloxdSpShadowDz.y) + 1e-7;\n\tlet m = textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0);\n\tlet mCode = floor(m.r * 0.5);\n\tlet mError = select(1e30, abs(m.g - bloxdSpShadowZ), mCode == code);\n\tif (mError <= tolerance) {\n\t\treturn m.r - mCode * 2.0;\n\t}\n\tlet last = vec2i(textureDimensions(bloxdSpShadowMask)) - 1;\n\tvar lit = m.r - mCode * 2.0;\n\tvar error = mError;\n${["-1, 0","1, 0","0, -1","0, 1"].map((GG=>`\t{\n\t\tlet o = vec2i(${GG});\n\t\tlet q = textureLoad(bloxdSpShadowMask, clamp(bloxdSpShadowPixel + o, vec2i(0), last), 0);\n\t\tlet qCode = floor(q.r * 0.5);\n\t\tlet e = abs(q.g - (bloxdSpShadowZ + dot(vec2f(o), bloxdSpShadowDz)));\n\t\tif (qCode == code && e < error) {\n\t\t\terror = e;\n\t\t\tlit = q.r - qCode * 2.0;\n\t\t}\n\t}\n`)).join("")}\treturn lit;\n}\n` : wG
+        }(bG.group, Nb.q, "maskEdge" === ZG));
+        const yG = {
+          shadowDirection: `${Nb.i}.shadowDirection`,
+          renderOffset: `${Nb.i}.renderOffset`,
+          eyePosition: `${Nb.i}.eyePosition`
         };
-        return `${tj(Eu)}${Zu}${function(uu){const[Eu,ju,su]=Lj.o;return`@group(${uu.group}) @binding(${uu.volume}) var bloxdSpShadowVolume: texture_3d<f32>;\n@group(${uu.group}) @binding(${uu.sampler}) var bloxdSpShadowVolumeSampler: sampler;\nfn bloxdSpVolumeAt(p: vec3f, offset: vec3i) -> f32 {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${Eu}.0, ${ju}.0, ${su}.0);\n\t// From the volume's low corner, in whole blocks either side, so f32 keeps it exact\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.0)) || any(r > size)) {\n\t\treturn 1.0;\n\t}\n\t// Clear of the edges, where filtering would wrap onto the far side\n\tlet uvw = (clamp(r, vec3f(0.5), size - vec3f(0.5)) + vec3f(bloxdSpVolumeTexel(lo))) / size;\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, uvw, 0.0);\n\tif (sample.g < 0.03125) {\n\t\treturn 1.0;\n\t}\n\treturn min(sample.r / sample.g, 1.0);\n}\n`}(Eu)}${yj(uu,Xu,ju)}`
+        return `${RZ(bG)}${LG}${function(GG){const[bG,ZG,wG]=eZ.t;return`@group(${GG.group}) @binding(${GG.volume}) var bloxdSpShadowVolume: texture_3d<f32>;\n@group(${GG.group}) @binding(${GG.sampler}) var bloxdSpShadowVolumeSampler: sampler;\nfn bloxdSpVolumeAt(p: vec3f, offset: vec3i) -> f32 {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${bG}.0, ${ZG}.0, ${wG}.0);\n\t// From the volume's low corner, in whole blocks either side, so f32 keeps it exact\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.0)) || any(r > size)) {\n\t\treturn 1.0;\n\t}\n\t// Clear of the edges, where filtering would wrap onto the far side\n\tlet uvw = (clamp(r, vec3f(0.5), size - vec3f(0.5)) + vec3f(bloxdSpVolumeTexel(lo))) / size;\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, uvw, 0.0);\n\tif (sample.g < 0.03125) {\n\t\treturn 1.0;\n\t}\n\treturn min(sample.r / sample.g, 1.0);\n}\n`}(bG)}${OZ(GG,yG,ZG)}`
       }
-      var su;
-      return `${uu.sunShadow?"fn bloxdShadow() -> f32 {\n\treturn 1.0;\n}\n":""}${uu.airShadow?"fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\treturn 1.0;\n}\n":""}`
+      var wG;
+      return `${GG.sunShadow?"fn bloxdShadow() -> f32 {\n\treturn 1.0;\n}\n":""}${GG.airShadow?"fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\treturn 1.0;\n}\n":""}`
     }
 
-    function fs(uu, Eu, ju, su) {
-      let Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "trace";
-      if (!Eu) return "";
-      const Zu = (Xu = "fragmentInputs.vPositionW", lu = uu.sunShadow ? {
-        normal: ju,
-        flags: su
-      } : null, `\n\tbloxdSpShadowPosition = ${Xu};\n${lu?`\tbloxdSpShadowNormal = normalize(${lu.normal});\n\tbloxdSpShadowEmissive = (${lu.flags} & ${mE.c.emissive}u) != 0u;\n\tbloxdSpShadowFirstPerson = (${lu.flags} & ${mE.h}u) != 0u;\n`:""}`);
-      var Xu, lu;
-      return uu.sunShadow && ("mask" === Uu || "maskEdge" === Uu) ? `${Zu}${qu="fragmentInputs.position",fu="maskEdge"===Uu,`\n\tbloxdSpShadowPixel = vec2i(${qu}.xy);\n${fu?`\tbloxdSpShadowZ = ${qu}.z;\n\tbloxdSpShadowDz = vec2f(dpdx(${qu}.z), dpdy(${qu}.z));\n`:""}`}` : Zu;
-      var qu, fu
+    function Uw(GG, bG, ZG, wG) {
+      let SG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "trace";
+      if (!bG) return "";
+      const LG = (yG = "fragmentInputs.vPositionW", kG = GG.sunShadow ? {
+        normal: ZG,
+        flags: wG
+      } : null, `\n\tbloxdSpShadowPosition = ${yG};\n${kG?`\tbloxdSpShadowNormal = normalize(${kG.normal});\n\tbloxdSpShadowEmissive = (${kG.flags} & ${vb.c.emissive}u) != 0u;\n\tbloxdSpShadowFirstPerson = (${kG.flags} & ${vb.j}u) != 0u;\n`:""}`);
+      var yG, kG;
+      return GG.sunShadow && ("mask" === SG || "maskEdge" === SG) ? `${LG}${UG="fragmentInputs.position",YG="maskEdge"===SG,`\n\tbloxdSpShadowPixel = vec2i(${UG}.xy);\n${YG?`\tbloxdSpShadowZ = ${UG}.z;\n\tbloxdSpShadowDz = vec2f(dpdx(${UG}.z), dpdy(${UG}.z));\n`:""}`}` : LG;
+      var UG, YG
     }
-    const Cs = "bloxdSpTextureRotation",
-      bs = "bloxdSpTextureLayers",
-      cs = `@group(${nE.f}) @binding(${nE.t}) var<storage, read> ${bs}: array<u32>;\n`;
+    const Yw = "bloxdSpTextureRotation",
+      Vw = "bloxdSpTextureLayers",
+      pw = `@group(${Nb.f}) @binding(${Nb.u}) var<storage, read> ${Vw}: array<u32>;\n`;
 
-    function Ns(uu) {
-      return `\tvertexOutputs.vPackTexture = ${bs}[min(u32(${uu}), arrayLength(&${bs}) - 1u)];\n`
-    }
-
-    function Os(uu) {
-      return void 0 !== uu.uv
+    function fw(GG) {
+      return `\tvertexOutputs.vPackTexture = ${Vw}[min(u32(${GG}), arrayLength(&${Vw}) - 1u)];\n`
     }
 
-    function Ys(uu) {
-      if (!uu) return "fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn vec2u(1u);\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\treturn vec4f(1.0);\n}\n";
-      if (Os(uu)) return function(uu) {
+    function Qw(GG) {
+      return void 0 !== GG.uv
+    }
+
+    function Kw(GG) {
+      if (!GG) return "fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn vec2u(1u);\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\treturn vec4f(1.0);\n}\n";
+      if (Qw(GG)) return function(GG) {
         const {
-          texture: Eu,
-          cells: ju,
-          layers: su
-        } = uu, Uu = `textureDimensions(${Eu}, bloxdSpLevel)`, Zu = ju ? `max(vec2u(vec2f(${Uu}) / ${ju}), vec2u(1u))` : Uu, Xu = ju ? `fn bloxdSpOwnTexel(bloxdSpCellIndex: f32, bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${Zu};\n\tlet bloxdSpIndex = u32(round(bloxdSpCellIndex));\n\tlet bloxdSpAcross = max(u32(round(${ju}.x)), 1u);\n\tlet bloxdSpDown = max(u32(round(${ju}.y)), 1u);\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\tlet bloxdSpCellAt = vec2u(bloxdSpIndex % bloxdSpAcross, bloxdSpIndex / bloxdSpAcross % bloxdSpDown);\n\treturn textureLoad(${Eu}, min(bloxdSpCellAt * bloxdSpSize + bloxdSpAt, ${Uu} - 1u), bloxdSpLevel);\n}\n` : `fn bloxdSpOwnTexel(bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${Zu};\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\treturn textureLoad(${Eu}, bloxdSpAt, bloxdSpLevel);\n}\n`;
-        let lu;
-        if (ju)
-          if (1 === su.length) lu = `\treturn bloxdSpOwnTexel(${su[0]}, bloxdSpUv, bloxdSpLevel);\n`;
+          texture: bG,
+          cells: ZG,
+          layers: wG
+        } = GG, SG = `textureDimensions(${bG}, bloxdSpLevel)`, LG = ZG ? `max(vec2u(vec2f(${SG}) / ${ZG}), vec2u(1u))` : SG, yG = ZG ? `fn bloxdSpOwnTexel(bloxdSpCellIndex: f32, bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${LG};\n\tlet bloxdSpIndex = u32(round(bloxdSpCellIndex));\n\tlet bloxdSpAcross = max(u32(round(${ZG}.x)), 1u);\n\tlet bloxdSpDown = max(u32(round(${ZG}.y)), 1u);\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\tlet bloxdSpCellAt = vec2u(bloxdSpIndex % bloxdSpAcross, bloxdSpIndex / bloxdSpAcross % bloxdSpDown);\n\treturn textureLoad(${bG}, min(bloxdSpCellAt * bloxdSpSize + bloxdSpAt, ${SG} - 1u), bloxdSpLevel);\n}\n` : `fn bloxdSpOwnTexel(bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${LG};\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\treturn textureLoad(${bG}, bloxdSpAt, bloxdSpLevel);\n}\n`;
+        let kG;
+        if (ZG)
+          if (1 === wG.length) kG = `\treturn bloxdSpOwnTexel(${wG[0]}, bloxdSpUv, bloxdSpLevel);\n`;
           else {
-            const uu = su.length - 1;
-            lu = `\tvar bloxdSpColour = bloxdSpOwnTexel(${su[uu]}, bloxdSpUv, bloxdSpLevel);\n\tbloxdSpColour = vec4f(bloxdSpColour.rgb * bloxdSpColour.a, bloxdSpColour.a);\n`;
-            for (let Eu = uu - 1; Eu >= 0; Eu--) lu += `\t{\n\t\tlet bloxdSpLayer = bloxdSpOwnTexel(${su[Eu]}, bloxdSpUv, bloxdSpLevel);\n\t\tbloxdSpColour = vec4f(mix(bloxdSpColour.rgb, bloxdSpLayer.rgb, bloxdSpLayer.a), bloxdSpLayer.a + bloxdSpColour.a * (1.0 - bloxdSpLayer.a));\n\t}\n`;
-            lu += "\treturn vec4f(bloxdSpColour.rgb / max(bloxdSpColour.a, 0.001), bloxdSpColour.a);\n"
+            const GG = wG.length - 1;
+            kG = `\tvar bloxdSpColour = bloxdSpOwnTexel(${wG[GG]}, bloxdSpUv, bloxdSpLevel);\n\tbloxdSpColour = vec4f(bloxdSpColour.rgb * bloxdSpColour.a, bloxdSpColour.a);\n`;
+            for (let bG = GG - 1; bG >= 0; bG--) kG += `\t{\n\t\tlet bloxdSpLayer = bloxdSpOwnTexel(${wG[bG]}, bloxdSpUv, bloxdSpLevel);\n\t\tbloxdSpColour = vec4f(mix(bloxdSpColour.rgb, bloxdSpLayer.rgb, bloxdSpLayer.a), bloxdSpLayer.a + bloxdSpColour.a * (1.0 - bloxdSpLayer.a));\n\t}\n`;
+            kG += "\treturn vec4f(bloxdSpColour.rgb / max(bloxdSpColour.a, 0.001), bloxdSpColour.a);\n"
           }
-        else lu = "\treturn bloxdSpOwnTexel(bloxdSpUv, bloxdSpLevel);\n";
-        return `${uu.id?`var<private> ${zj}: u32;\n`:""}${Xu}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\tlet bloxdSpLevel = ${Rj(uu)};\n\treturn ${Zu};\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId != ${uu.id?zj:"0u"}) {\n\t\treturn vec4f(1.0);\n\t}\n\tlet bloxdSpLevel = ${Rj(uu)};\n${lu}}\n`
-      }(uu);
-      const Eu = uu,
-        ju = uu => {
-          const ju = uu > 0 ? `bloxdSpLayer - ${Eu.layers*uu}u` : "bloxdSpLayer";
-          return `return textureSampleLevel(textureAtlas${uu}, ${Eu.sampler}, bloxdSpTurned, ${ju}, round(bloxdSpMipLevel));`
+        else kG = "\treturn bloxdSpOwnTexel(bloxdSpUv, bloxdSpLevel);\n";
+        return `${GG.id?`var<private> ${xZ}: u32;\n`:""}${yG}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\tlet bloxdSpLevel = ${BZ(GG)};\n\treturn ${LG};\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId != ${GG.id?xZ:"0u"}) {\n\t\treturn vec4f(1.0);\n\t}\n\tlet bloxdSpLevel = ${BZ(GG)};\n${kG}}\n`
+      }(GG);
+      const bG = GG,
+        ZG = GG => {
+          const ZG = GG > 0 ? `bloxdSpLayer - ${bG.layers*GG}u` : "bloxdSpLayer";
+          return `return textureSampleLevel(textureAtlas${GG}, ${bG.sampler}, bloxdSpTurned, ${ZG}, round(bloxdSpMipLevel));`
         };
-      let su = "";
-      for (let Zu = 0; Zu < Eu.count - 1; Zu++) su += `\tif (bloxdSpLayer < ${Eu.layers*(Zu+1)}u) {\n\t\t${ju(Zu)}\n\t}\n`;
-      const Uu = Eu.frame ? `${Eu.frame("f32(bloxdSpTextureId - 1u)","let bloxdSpFrame = ")}\tlet bloxdSpLayer = u32(round(bloxdSpFrame));\n` : "\tlet bloxdSpLayer = bloxdSpTextureId - 1u;\n";
-      return `var<private> ${Cs}: u32;\n${cs}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn textureDimensions(textureAtlas0, u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(textureAtlas0) - 1u))));\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId == 0u) {\n\t\treturn vec4f(1.0);\n\t}\n\t// Each quarter turn clockwise the face shows its texture at reads the unturned texture at (v, 1 - u)\n\tvar bloxdSpTurned = bloxdSpUv;\n\tif (${Cs} == 1u) {\n\t\tbloxdSpTurned = vec2f(bloxdSpUv.y, 1.0 - bloxdSpUv.x);\n\t} else if (${Cs} == 2u) {\n\t\tbloxdSpTurned = 1.0 - bloxdSpUv;\n\t} else if (${Cs} == 3u) {\n\t\tbloxdSpTurned = vec2f(1.0 - bloxdSpUv.y, bloxdSpUv.x);\n\t}\n${Uu}${su}\t${ju(Eu.count-1)}\n}\n`
+      let wG = "";
+      for (let LG = 0; LG < bG.count - 1; LG++) wG += `\tif (bloxdSpLayer < ${bG.layers*(LG+1)}u) {\n\t\t${ZG(LG)}\n\t}\n`;
+      const SG = bG.frame ? `${bG.frame("f32(bloxdSpTextureId - 1u)","let bloxdSpFrame = ")}\tlet bloxdSpLayer = u32(round(bloxdSpFrame));\n` : "\tlet bloxdSpLayer = bloxdSpTextureId - 1u;\n";
+      return `var<private> ${Yw}: u32;\n${pw}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn textureDimensions(textureAtlas0, u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(textureAtlas0) - 1u))));\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId == 0u) {\n\t\treturn vec4f(1.0);\n\t}\n\t// Each quarter turn clockwise the face shows its texture at reads the unturned texture at (v, 1 - u)\n\tvar bloxdSpTurned = bloxdSpUv;\n\tif (${Yw} == 1u) {\n\t\tbloxdSpTurned = vec2f(bloxdSpUv.y, 1.0 - bloxdSpUv.x);\n\t} else if (${Yw} == 2u) {\n\t\tbloxdSpTurned = 1.0 - bloxdSpUv;\n\t} else if (${Yw} == 3u) {\n\t\tbloxdSpTurned = vec2f(1.0 - bloxdSpUv.y, bloxdSpUv.x);\n\t}\n${SG}${wG}\t${ZG(bG.count-1)}\n}\n`
     }
 
-    function hs(uu, Eu, ju) {
-      return !!uu.surface && "bloxdDefaultSurface" !== uu.surface && function(uu, Eu) {
-        return "liquid" === Eu || !uu
-      }(Eu, ju)
+    function hw(GG, bG, ZG) {
+      return !!GG.surface && "bloxdDefaultSurface" !== GG.surface && function(GG, bG) {
+        return "liquid" === bG || !GG
+      }(bG, ZG)
     }
 
-    function Ds(uu, Eu) {
-      return uu.vertex ? `\n\t{\n\t\tlet bloxdSpVertexIn = BloxdVertexIn(worldPos.xyz, vertexOutputs.vNormalW, ${Eu.vertexLocalPosition}, ${Es(Eu.vertexFlags)});\n\t\tlet bloxdSpVertex = ${uu.vertex}(bloxdSpVertexIn);\n\t\tworldPos = vec4f(bloxdSpVertex.position, worldPos.w);\n\t}\n` : ""
+    function dw(GG, bG) {
+      return GG.vertex ? `\n\t{\n\t\tlet bloxdSpVertexIn = BloxdVertexIn(worldPos.xyz, vertexOutputs.vNormalW, ${bG.vertexLocalPosition}, ${bw(bG.vertexFlags)});\n\t\tlet bloxdSpVertex = ${GG.vertex}(bloxdSpVertexIn);\n\t\tworldPos = vec4f(bloxdSpVertex.position, worldPos.w);\n\t}\n` : ""
     }
 
-    function gs(uu, Eu, ju, su, Uu) {
-      if (!uu.surface) return "";
-      const Zu = (uu, Eu) => `\n\tlet bloxdSpTexelUV = ${uu};\n\tlet bloxdSpDdx = dpdx(bloxdSpTexelUV);\n\tlet bloxdSpDdy = dpdy(bloxdSpTexelUV);\n\tlet bloxdSpLod = 0.5 * log2(max(max(dot(bloxdSpDdx, bloxdSpDdx), dot(bloxdSpDdy, bloxdSpDdy)), 1e-10));\n\tlet bloxdSpMipLevel = clamp(bloxdSpLod, 0.0, f32(textureNumLevels(${Eu}) - 1u));`;
-      let Xu = "",
-        lu = "0u, 0u, vec2f(0.0), 0.0";
-      const qu = su && Os(su) ? su : null,
-        fu = su && !Os(su) ? su : null;
-      if (qu) {
-        Xu = `${qu.id?`\n\tlet bloxdSpTexture = ${qu.id};\n\t${zj} = bloxdSpTexture & 0xffffu;`:""}\n\tlet bloxdSpUv = ${qu.uv};${Zu(function(uu,Eu){var ju;return`${null!==(ju=uu.levelUv)&&void 0!==ju?ju:uu.cells?`${Eu} / ${uu.cells}`:Eu} * vec2f(textureDimensions(${uu.texture}))`}(qu,"bloxdSpUv"),qu.texture)}`, lu = (qu.id ? `${zj}, bloxdSpTexture >> 16u` : "0u, 0u") + ", bloxdSpUv, bloxdSpMipLevel"
-      } else fu && (Xu = `\n\tlet bloxdSpTexture = fragmentInputs.vPackTexture;\n\t${Cs} = bloxdSpTexture >> 16u;${Zu(`fragmentInputs.vMainUV1 * ${(0,TE.fb)(fu.width)}`,"textureAtlas0")}`, lu = `bloxdSpTexture & 0xffffu, ${Cs}, fragmentInputs.vMainUV1, bloxdSpMipLevel`);
-      const Cu = Uu.overlayColour,
-        bu = Cu ? "mix(bloxdSpSurface.colour, bloxdSpSurface.overlayColour.rgb, bloxdSpSurface.overlayColour.a)" : "bloxdSpSurface.colour",
-        cu = "bloxdDefaultSurface" !== uu.surface || Cu ? `\n\tbaseColor = vec4f(${bu}, baseColor.a);` : "",
-        Nu = hs(uu, Eu, ju) ? `\n\t${Uu.alphaOut} = bloxdSpSurface.alpha;` : "";
-      return `${Xu}\n\tlet bloxdSpSurfaceIn = BloxdSurfaceIn(baseColor.rgb, ${Uu.alpha}, ${Uu.enchantTier}, ${Uu.enchantColour}, ${Uu.enchantSpeed}, ${null!==Cu&&void 0!==Cu?Cu:"vec4f(0.0)"}, fragmentInputs.vPositionW, ${Uu.normal}, ${Uu.localPosition}, ${Es(Uu.flags)}, ${lu});\n\tlet bloxdSpSurface = ${uu.surface}(bloxdSpSurfaceIn);${cu}${Nu}\n`
+    function Jw(GG, bG, ZG, wG, SG) {
+      if (!GG.surface) return "";
+      const LG = (GG, bG) => `\n\tlet bloxdSpTexelUV = ${GG};\n\tlet bloxdSpDdx = dpdx(bloxdSpTexelUV);\n\tlet bloxdSpDdy = dpdy(bloxdSpTexelUV);\n\tlet bloxdSpLod = 0.5 * log2(max(max(dot(bloxdSpDdx, bloxdSpDdx), dot(bloxdSpDdy, bloxdSpDdy)), 1e-10));\n\tlet bloxdSpMipLevel = clamp(bloxdSpLod, 0.0, f32(textureNumLevels(${bG}) - 1u));`;
+      let yG = "",
+        kG = "0u, 0u, vec2f(0.0), 0.0";
+      const UG = wG && Qw(wG) ? wG : null,
+        YG = wG && !Qw(wG) ? wG : null;
+      if (UG) {
+        yG = `${UG.id?`\n\tlet bloxdSpTexture = ${UG.id};\n\t${xZ} = bloxdSpTexture & 0xffffu;`:""}\n\tlet bloxdSpUv = ${UG.uv};${LG(function(GG,bG){var ZG;return`${null!==(ZG=GG.levelUv)&&void 0!==ZG?ZG:GG.cells?`${bG} / ${GG.cells}`:bG} * vec2f(textureDimensions(${GG.texture}))`}(UG,"bloxdSpUv"),UG.texture)}`, kG = (UG.id ? `${xZ}, bloxdSpTexture >> 16u` : "0u, 0u") + ", bloxdSpUv, bloxdSpMipLevel"
+      } else YG && (yG = `\n\tlet bloxdSpTexture = fragmentInputs.vPackTexture;\n\t${Yw} = bloxdSpTexture >> 16u;${LG(`fragmentInputs.vMainUV1 * ${(0,Hb.tb)(YG.width)}`,"textureAtlas0")}`, kG = `bloxdSpTexture & 0xffffu, ${Yw}, fragmentInputs.vMainUV1, bloxdSpMipLevel`);
+      const VG = SG.overlayColour,
+        pG = VG ? "mix(bloxdSpSurface.colour, bloxdSpSurface.overlayColour.rgb, bloxdSpSurface.overlayColour.a)" : "bloxdSpSurface.colour",
+        fG = "bloxdDefaultSurface" !== GG.surface || VG ? `\n\tbaseColor = vec4f(${pG}, baseColor.a);` : "",
+        QG = hw(GG, bG, ZG) ? `\n\t${SG.alphaOut} = bloxdSpSurface.alpha;` : "";
+      return `${yG}\n\tlet bloxdSpSurfaceIn = BloxdSurfaceIn(baseColor.rgb, ${SG.alpha}, ${SG.enchantTier}, ${SG.enchantColour}, ${SG.enchantSpeed}, ${null!==VG&&void 0!==VG?VG:"vec4f(0.0)"}, fragmentInputs.vPositionW, ${SG.normal}, ${SG.localPosition}, ${bw(SG.flags)}, ${kG});\n\tlet bloxdSpSurface = ${GG.surface}(bloxdSpSurfaceIn);${fG}${QG}\n`
     }
-    const Ms = "bloxdSpLightIn";
+    const rw = "bloxdSpLightIn";
 
-    function es(uu, Eu, ju, su) {
-      if (!uu.light) return "";
-      const Uu = Eu ? `${TE.j}.rgb, ${TE.j}.w, uniforms.uAmbientLightColour, uniforms.uSkyLightColour, ${TE.g}` : "vec3f(0.0), 1.0, vec3f(1.0), vec3f(1.0), vec3f(0.0)",
+    function zw(GG, bG, ZG, wG) {
+      if (!GG.light) return "";
+      const SG = bG ? `${Hb.k}.rgb, ${Hb.k}.w, uniforms.uAmbientLightColour, uniforms.uSkyLightColour, ${Hb.g}` : "vec3f(0.0), 1.0, vec3f(1.0), vec3f(1.0), vec3f(0.0)",
         {
-          lambert: Zu,
-          diffuse: Xu,
-          emissive: lu,
-          ambient: qu,
-          fogColour: fu,
-          fogAlpha: Cu,
-          normal: bu
-        } = su;
-      return `\tvar ${Ms} = BloxdLightIn(vec3f(0.0), ${ju?Zu:"0.0"}, ${Xu}, ${lu}, ${qu}, ${Uu}, ${fu}, ${Cu}, fragmentInputs.vPositionW, ${bu}, bloxdSpSurfaceIn.localPosition, bloxdSpSurfaceIn.flags, bloxdSpSurfaceIn.textureId, bloxdSpSurfaceIn.textureRotation, bloxdSpSurfaceIn.uv, bloxdSpSurfaceIn.mipLevel);\n\t${Ms}.litColour = bloxdLitColour(bloxdSpSurface, ${Ms});\n`
+          lambert: LG,
+          diffuse: yG,
+          emissive: kG,
+          ambient: UG,
+          fogColour: YG,
+          fogAlpha: VG,
+          normal: pG
+        } = wG;
+      return `\tvar ${rw} = BloxdLightIn(vec3f(0.0), ${ZG?LG:"0.0"}, ${yG}, ${kG}, ${UG}, ${SG}, ${YG}, ${VG}, fragmentInputs.vPositionW, ${pG}, bloxdSpSurfaceIn.localPosition, bloxdSpSurfaceIn.flags, bloxdSpSurfaceIn.textureId, bloxdSpSurfaceIn.textureRotation, bloxdSpSurfaceIn.uv, bloxdSpSurfaceIn.mipLevel);\n\t${rw}.litColour = bloxdLitColour(bloxdSpSurface, ${rw});\n`
     }
 
-    function Gs(uu) {
-      return uu.light ? `\n\t{\n\t\tlet bloxdSpLight = ${uu.light}(bloxdSpSurface, ${Ms});\n\t\tcolor = vec4f(bloxdSpLight.colour, color.a);\n\t}\n` : ""
+    function Ew(GG) {
+      return GG.light ? `\n\t{\n\t\tlet bloxdSpLight = ${GG.light}(bloxdSpSurface, ${rw});\n\t\tcolor = vec4f(bloxdSpLight.colour, color.a);\n\t}\n` : ""
     }
-    const ps = "\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n",
-      ws = "\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n",
-      ds = "\treturn color;\n}",
-      as = {
+    const ow = "\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n",
+      Xw = "\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n",
+      uw = "\treturn color;\n}",
+      iw = {
         vertexFlags: "vertexOutputs.vBlockFlags",
         vertexLocalPosition: "vec3f(0.0)",
         flags: "fragmentInputs.vBlockFlags",
@@ -1528,57 +1528,57 @@ export const modules = {
         localPosition: "vec3f(0.0)",
         overlayColour: null
       };
-    const Ps = Object.freeze({});
+    const Cw = Object.freeze({});
 
-    function os(uu) {
-      var Eu;
-      return !(null === (Eu = (0, yE.i)(uu)) || void 0 === Eu || !Eu.sceneDepth)
+    function Ww(GG) {
+      var bG;
+      return !(null === (bG = (0, Ob.e)(GG)) || void 0 === bG || !bG.sceneDepth)
     }
 
-    function ks(uu) {
-      const Eu = (0, yE.i)(uu);
-      return !!Eu && hs(Eu.hooks, Eu.strict, Eu.program)
+    function mw(GG) {
+      const bG = (0, Ob.e)(GG);
+      return !!bG && hw(bG.hooks, bG.strict, bG.program)
     }
 
-    function ms(uu, Eu, ju, su) {
-      return Us(uu, Eu, ju, su, "terrain")
+    function Iw(GG, bG, ZG, wG) {
+      return ww(GG, bG, ZG, wG, "terrain")
     }
 
-    function vs(uu, Eu, ju) {
-      let su = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "none";
-      const Zu = function(uu) {
-          return (0, yE.e)(uu.packVariant, uu.liquid ? "liquid" : "terrain")
-        }(uu),
+    function Fw(GG, bG, ZG) {
+      let wG = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        SG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "none";
+      const LG = function(GG) {
+          return (0, Ob.c)(GG.packVariant, GG.liquid ? "liquid" : "terrain")
+        }(GG),
         {
-          hooks: Xu
-        } = Zu,
-        lu = Xs(Zu, su),
-        qu = "edge" === Uu ? "maskEdge" : "plain" === Uu ? "mask" : "trace",
-        fu = Ds(Xu, as);
-      fu && (Eu = ms(Eu, "\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n", `\tvar worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);${fu}\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n`, "vertex"));
-      const Cu = "atlas" === uu.texture ? {
-          count: uu.atlasCount,
-          layers: uu.atlasLayers,
-          width: uu.I5,
+          hooks: yG
+        } = LG,
+        kG = Lw(LG, wG),
+        UG = "edge" === SG ? "maskEdge" : "plain" === SG ? "mask" : "trace",
+        YG = dw(yG, iw);
+      YG && (bG = Iw(bG, "\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n", `\tvar worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);${YG}\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n`, "vertex"));
+      const VG = "atlas" === GG.texture ? {
+          count: GG.atlasCount,
+          layers: GG.atlasLayers,
+          width: GG.N9,
           sampler: "atlasSampler",
-          frame: uu.animated ? ju : null
+          frame: GG.animated ? ZG : null
         } : null,
-        bu = `${Zu.sceneDepth?"\n\tbloxdSpPixel = vec2i(fragmentInputs.position.xy);\n\tbloxdSpPositionW = fragmentInputs.vPositionW;\n":""}${fs(Zu,lu,as.normal,as.flags,qu)}${gs(Xu,Zu.strict,Zu.program,Cu,as)}`;
-      bu && (Eu = ms(Eu, ps, `${ps.slice(0,-1)}${bu}`, "surface"));
-      const cu = Gs(Xu);
-      return cu && (Eu = ms(Eu, ws, `${es(Xu,uu.lighting,uu.dirLightCount>0,as)}${ws}`, "light input"), Eu = ms(Eu, ds, `${cu.slice(1)}${ds}`, "light")), `${(0,nE.z)()}${Zu.sceneDepth?`@group(${nE.f}) @binding(${nE.n}) var bloxdSpSceneDepth: texture_2d<f32>;\nvar<private> bloxdSpPixel: vec2i;\nvar<private> bloxdSpPositionW: vec3f;\nfn bloxdOpaqueBehind() -> BloxdOpaqueBehind {\n\tlet bloxdSpZ = textureLoad(bloxdSpSceneDepth, bloxdSpPixel, 0).r;\n\tif (bloxdSpZ <= 0.0) {\n\t\treturn BloxdOpaqueBehind(false, vec3f(0.0), 0.0);\n\t}\n\tlet bloxdSpEye = ${ss};\n\tlet bloxdSpScale = max(bloxdSpZ / (scene.view * vec4f(bloxdSpPositionW, 1.0)).z, 1.0);\n\tlet bloxdSpBehind = bloxdSpEye + (bloxdSpPositionW - bloxdSpEye) * bloxdSpScale;\n\treturn BloxdOpaqueBehind(true, bloxdSpBehind, distance(bloxdSpBehind, bloxdSpEye));\n}\n`:""}${qs(Zu,lu,qu)}${Ys(Cu)}${us}fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * 0.5)) + bloxdRenderOffset();\n}\n${Zu.code}${Eu}`
+        pG = `${LG.sceneDepth?"\n\tbloxdSpPixel = vec2i(fragmentInputs.position.xy);\n\tbloxdSpPositionW = fragmentInputs.vPositionW;\n":""}${Uw(LG,kG,iw.normal,iw.flags,UG)}${Jw(yG,LG.strict,LG.program,VG,iw)}`;
+      pG && (bG = Iw(bG, ow, `${ow.slice(0,-1)}${pG}`, "surface"));
+      const fG = Ew(yG);
+      return fG && (bG = Iw(bG, Xw, `${zw(yG,GG.lighting,GG.dirLightCount>0,iw)}${Xw}`, "light input"), bG = Iw(bG, uw, `${fG.slice(1)}${uw}`, "light")), `${(0,Nb.x)()}${LG.sceneDepth?`@group(${Nb.f}) @binding(${Nb.l}) var bloxdSpSceneDepth: texture_2d<f32>;\nvar<private> bloxdSpPixel: vec2i;\nvar<private> bloxdSpPositionW: vec3f;\nfn bloxdOpaqueBehind() -> BloxdOpaqueBehind {\n\tlet bloxdSpZ = textureLoad(bloxdSpSceneDepth, bloxdSpPixel, 0).r;\n\tif (bloxdSpZ <= 0.0) {\n\t\treturn BloxdOpaqueBehind(false, vec3f(0.0), 0.0);\n\t}\n\tlet bloxdSpEye = ${Zw};\n\tlet bloxdSpScale = max(bloxdSpZ / (scene.view * vec4f(bloxdSpPositionW, 1.0)).z, 1.0);\n\tlet bloxdSpBehind = bloxdSpEye + (bloxdSpPositionW - bloxdSpEye) * bloxdSpScale;\n\treturn BloxdOpaqueBehind(true, bloxdSpBehind, distance(bloxdSpBehind, bloxdSpEye));\n}\n`:""}${kw(LG,kG,UG)}${Kw(VG)}${Gw}fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * 0.5)) + bloxdRenderOffset();\n}\n${LG.code}${bG}`
     }
-    const Ks = pu.c.WGSL;
+    const vw = XG.c.WGSL;
 
-    function Vs(uu) {
-      return void 0 !== uu.packVariant
+    function aw(GG) {
+      return void 0 !== GG.packVariant
     }
-    const rs = {
-        ZUu: 0,
-        XUu: 4,
-        lUu: 8,
-        qUu: 12,
+    const lw = {
+        hSG: 0,
+        dSG: 4,
+        JSG: 8,
+        rSG: 12,
         fogInfos: 16,
         fogColour: 20,
         outputHeight: 23,
@@ -1586,19 +1586,19 @@ export const modules = {
         dirLights: 28,
         aoLevels: 44
       },
-      Qs = rs.aoLevels + 4,
-      is = {
+      jw = lw.aoLevels + 4,
+      Pw = {
         diffuse: 0,
         ambientAndCutoff: 4,
         emissiveAndLevel: 8,
         anim: 12
       },
-      Ws = "\nstruct TerrainFrameUniforms {\n\tuHeldLightColour: vec4f,\n\tuHeldLightPos: vec4f,\n\tuSkyLightColour: vec3f,\n\tuAmbientLightColour: vec3f,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tsceneAmbient: vec3f,\n\tuDirLights: array<vec4f, 4>,\n\taoLevels: vec4f,\n}\n",
-      Ss = "\nstruct TerrainMaterialUniforms {\n\tvDiffuseColor: vec4f,\n\tambientAndCutoff: vec4f,\n\temissiveAndLevel: vec4f,\n\tanim: vec4f,\n}\n",
-      Is = "\nstruct LiteSceneUniforms {\n\tviewProjection: mat4x4f,\n\tview: mat4x4f,\n\tvEyePosition: vec4f,\n}\n@group(0) @binding(0) var<uniform> scene: LiteSceneUniforms;\nfn liteWorldLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, clip.z * 0.5, clip.w);\n}\nfn liteFrontLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, (clip.z + clip.w) * 0.5, clip.w);\n}\n",
-      Fs = "\n\tlet fading = fragmentInputs.vVisibility < 255.0 / 256.0;\n\tif (fading && fragmentInputs.vVisibility < bayerDither(vec2f(fragmentInputs.position.x, uniforms.outputHeight - fragmentInputs.position.y))) {\n\t\tdiscard;\n\t}\n",
-      Bs = "\nfn calcFogFactor(fogDistance: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = uniforms.vFogInfos.y;\n\tlet fogEnd = uniforms.vFogInfos.z;\n\tlet fogDensity = uniforms.vFogInfos.w;\n\tlet dist = length(fogDistance);\n\tif (uniforms.vFogInfos.x == 3.0) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (uniforms.vFogInfos.x == 1.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (uniforms.vFogInfos.x == 2.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n",
-      Ls = {
+      Mw = "\nstruct TerrainFrameUniforms {\n\tuHeldLightColour: vec4f,\n\tuHeldLightPos: vec4f,\n\tuSkyLightColour: vec3f,\n\tuAmbientLightColour: vec3f,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tsceneAmbient: vec3f,\n\tuDirLights: array<vec4f, 4>,\n\taoLevels: vec4f,\n}\n",
+      Aw = "\nstruct TerrainMaterialUniforms {\n\tvDiffuseColor: vec4f,\n\tambientAndCutoff: vec4f,\n\temissiveAndLevel: vec4f,\n\tanim: vec4f,\n}\n",
+      sw = "\nstruct LiteSceneUniforms {\n\tviewProjection: mat4x4f,\n\tview: mat4x4f,\n\tvEyePosition: vec4f,\n}\n@group(0) @binding(0) var<uniform> scene: LiteSceneUniforms;\nfn liteWorldLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, clip.z * 0.5, clip.w);\n}\nfn liteFrontLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, (clip.z + clip.w) * 0.5, clip.w);\n}\n",
+      qw = "\n\tlet fading = fragmentInputs.vVisibility < 255.0 / 256.0;\n\tif (fading && fragmentInputs.vVisibility < bayerDither(vec2f(fragmentInputs.position.x, uniforms.outputHeight - fragmentInputs.position.y))) {\n\t\tdiscard;\n\t}\n",
+      nw = "\nfn calcFogFactor(fogDistance: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = uniforms.vFogInfos.y;\n\tlet fogEnd = uniforms.vFogInfos.z;\n\tlet fogDensity = uniforms.vFogInfos.w;\n\tlet dist = length(fogDistance);\n\tif (uniforms.vFogInfos.x == 3.0) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (uniforms.vFogInfos.x == 1.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (uniforms.vFogInfos.x == 2.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n",
+      gw = {
         position: 0,
         normal: 1,
         color: 2,
@@ -1606,84 +1606,84 @@ export const modules = {
         packedLight: 5,
         blockFlagWords: 7
       },
-      ts = 0,
-      xs = 3,
-      Ts = 4,
-      Hs = 5,
-      As = `\nfn packedNormal(dir: u32) -> vec4f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\treturn vec4f(select(0.0, s, axis == 0u), select(0.0, s, axis == 1u), select(0.0, s, axis == 2u), 0.0);\n}\nfn packedUv(p: vec3f, dir: u32, corner: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet du = select(-${HE.d}, ${HE.d}, corner == 0u || corner == 3u);\n\tlet dv = select(-${HE.d}, ${HE.d}, corner < 2u);\n\tif (axis == 0u) {\n\t\treturn vec2f(s * (p.z + du), -(p.y + dv));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(s * (p.x + dv), -(p.z + du));\n\t}\n\treturn vec2f(-s * (p.x + du), -(p.y + dv));\n}\n`,
-      ns = `\n@group(1) @binding(2) var<storage, read> quads: array<u32>;\n// A quad's light: its four slots' packed values as u16, two a word, the lower slot in the low half (liteTerrainArena.ts)\n@group(1) @binding(3) var<storage, read> quadLight: array<u32>;\nfn quadSlotLight(quad: u32, slot: u32) -> f32 {\n\tlet pair = quadLight[quad * 2u + (slot >> 1u)];\n\treturn f32(select(pair, pair >> 16u, (slot & 1u) == 1u) & 0xffffu);\n}\nfn slotCorner(dir: u32, diagonal: u32, slot: u32) -> u32 {\n\tlet reversed = any(vec3u(dir) == vec3u(${[0,1,2,3,4,5].filter((uu=>AE.e>>uu&1)).join("u, ")}u));\n\treturn (diagonal + select(slot, 4u - slot, reversed)) & 3u;\n}\nfn quadCorner(r0: u32, axis: u32, corner: u32) -> vec3f {\n\tlet w = f32(((r0 >> 18u) & 63u) + 1u) * select(0.0, 1.0, corner == 1u || corner == 2u);\n\tlet h = f32(((r0 >> 24u) & 63u) + 1u) * select(0.0, 1.0, corner >= 2u);\n\tlet du = select(vec3f(0.0, 0.0, w), vec3f(w, 0.0, 0.0), axis == 2u);\n\tlet dv = select(vec3f(0.0, h, 0.0), vec3f(h, 0.0, 0.0), axis == 1u);\n\treturn vec3f(f32(r0 & 63u), f32((r0 >> 6u) & 63u), f32((r0 >> 12u) & 63u)) + du + dv;\n}\n`;
-    const ys = {
-      Tb: "material.anim.x",
+      ew = 0,
+      Rw = 3,
+      Tw = 4,
+      Hw = 5,
+      tw = `\nfn packedNormal(dir: u32) -> vec4f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\treturn vec4f(select(0.0, s, axis == 0u), select(0.0, s, axis == 1u), select(0.0, s, axis == 2u), 0.0);\n}\nfn packedUv(p: vec3f, dir: u32, corner: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet du = select(-${tb.d}, ${tb.d}, corner == 0u || corner == 3u);\n\tlet dv = select(-${tb.d}, ${tb.d}, corner < 2u);\n\tif (axis == 0u) {\n\t\treturn vec2f(s * (p.z + du), -(p.y + dv));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(s * (p.x + dv), -(p.z + du));\n\t}\n\treturn vec2f(-s * (p.x + du), -(p.y + dv));\n}\n`,
+      Dw = `\n@group(1) @binding(2) var<storage, read> quads: array<u32>;\n// A quad's light: its four slots' packed values as u16, two a word, the lower slot in the low half (liteTerrainArena.ts)\n@group(1) @binding(3) var<storage, read> quadLight: array<u32>;\nfn quadSlotLight(quad: u32, slot: u32) -> f32 {\n\tlet pair = quadLight[quad * 2u + (slot >> 1u)];\n\treturn f32(select(pair, pair >> 16u, (slot & 1u) == 1u) & 0xffffu);\n}\nfn slotCorner(dir: u32, diagonal: u32, slot: u32) -> u32 {\n\tlet reversed = any(vec3u(dir) == vec3u(${[0,1,2,3,4,5].filter((GG=>Db.e>>GG&1)).join("u, ")}u));\n\treturn (diagonal + select(slot, 4u - slot, reversed)) & 3u;\n}\nfn quadCorner(r0: u32, axis: u32, corner: u32) -> vec3f {\n\tlet w = f32(((r0 >> 18u) & 63u) + 1u) * select(0.0, 1.0, corner == 1u || corner == 2u);\n\tlet h = f32(((r0 >> 24u) & 63u) + 1u) * select(0.0, 1.0, corner >= 2u);\n\tlet du = select(vec3f(0.0, 0.0, w), vec3f(w, 0.0, 0.0), axis == 2u);\n\tlet dv = select(vec3f(0.0, h, 0.0), vec3f(h, 0.0, 0.0), axis == 1u);\n\treturn vec3f(f32(r0 & 63u), f32((r0 >> 6u) & 63u), f32((r0 >> 12u) & 63u)) + du + dv;\n}\n`;
+    const Nw = {
+      Tp: "material.anim.x",
       stride: "material.anim.y",
       count: "material.anim.z",
-      perTexture: uu => `animDataPerTex[${uu}]`
+      perTexture: GG => `animDataPerTex[${GG}]`
     };
 
-    function zs(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ys;
-      return `\n\tlet atlasIdxIn = ${uu};\n\tlet animTick = ${ju.Tb};\n\tlet animTickStride = ${ju.stride};\n\tlet numAnimTextures = ${ju.count};\n\t${(0,wu.d)(pu.c.WGSL,ju.perTexture)}\n\t${Eu}animLayer;\n`
+    function Ow(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Nw;
+      return `\n\tlet atlasIdxIn = ${GG};\n\tlet animTick = ${ZG.Tp};\n\tlet animTickStride = ${ZG.stride};\n\tlet numAnimTextures = ${ZG.count};\n\t${(0,uG.e)(XG.c.WGSL,ZG.perTexture)}\n\t${bG}animLayer;\n`
     }
 
-    function Rs(uu) {
-      const Eu = (Eu, ju) => {
-        const su = Eu > 0 ? `fragmentInputs.texAtlasIndex - ${uu.atlasLayers.toFixed(1)} * ${Eu.toFixed(1)}` : "fragmentInputs.texAtlasIndex";
-        return `${ju?"textureSampleLevel":"textureSample"}(textureAtlas${Eu}, atlasSampler, fragmentInputs.vMainUV1, i32(round(${su}))${ju?", atlasLod":""})`
+    function xw(GG) {
+      const bG = (bG, ZG) => {
+        const wG = bG > 0 ? `fragmentInputs.texAtlasIndex - ${GG.atlasLayers.toFixed(1)} * ${bG.toFixed(1)}` : "fragmentInputs.texAtlasIndex";
+        return `${ZG?"textureSampleLevel":"textureSample"}(textureAtlas${bG}, atlasSampler, fragmentInputs.vMainUV1, i32(round(${wG}))${ZG?", atlasLod":""})`
       };
-      if (1 === uu.atlasCount) return `baseColor = ${Eu(0,!1)};`;
-      let ju = `\n\tlet atlasTexelUV = fragmentInputs.vMainUV1 * ${(0,TE.fb)(uu.I5)};\n\tlet atlasDdx = dpdx(atlasTexelUV);\n\tlet atlasDdy = dpdy(atlasTexelUV);\n\tlet atlasLod = 0.5 * log2(max(max(dot(atlasDdx, atlasDdx), dot(atlasDdy, atlasDdy)), 1e-10));\n`;
-      for (let su = 0; su < uu.atlasCount; su++) {
-        const Uu = uu.atlasLayers * (su + 1) - .5;
-        ju += `${su>0?" else ":"\n\t"}if (fragmentInputs.texAtlasIndex < ${(0,TE.fb)(Uu)}) {\n\t\tbaseColor = ${Eu(su,!0)};\n\t}`
+      if (1 === GG.atlasCount) return `baseColor = ${bG(0,!1)};`;
+      let ZG = `\n\tlet atlasTexelUV = fragmentInputs.vMainUV1 * ${(0,Hb.tb)(GG.N9)};\n\tlet atlasDdx = dpdx(atlasTexelUV);\n\tlet atlasDdy = dpdy(atlasTexelUV);\n\tlet atlasLod = 0.5 * log2(max(max(dot(atlasDdx, atlasDdx), dot(atlasDdy, atlasDdy)), 1e-10));\n`;
+      for (let wG = 0; wG < GG.atlasCount; wG++) {
+        const SG = GG.atlasLayers * (wG + 1) - .5;
+        ZG += `${wG>0?" else ":"\n\t"}if (fragmentInputs.texAtlasIndex < ${(0,Hb.tb)(SG)}) {\n\t\tbaseColor = ${bG(wG,!0)};\n\t}`
       }
-      return ju
+      return ZG
     }
 
-    function uU(uu) {
-      return `terrain-${uu.texture}${"atlas"===uu.texture?uu.atlasCount:""}${uu.animated?"-anim":""}${uu.alphaTest?"-test":""}${uu.lighting?"-lit":""}-dir${uu.dirLightCount}${uu.packed?"-packed":""}${Vs(uu)?`-sp${uu.packVariant}`:""}${uu.liquid?"-liquid":""}${uu.resting?"-rest":""}`
+    function Bw(GG) {
+      return `terrain-${GG.texture}${"atlas"===GG.texture?GG.atlasCount:""}${GG.animated?"-anim":""}${GG.alphaTest?"-test":""}${GG.lighting?"-lit":""}-dir${GG.dirLightCount}${GG.packed?"-packed":""}${aw(GG)?`-sp${GG.packVariant}`:""}${GG.liquid?"-liquid":""}${GG.resting?"-rest":""}`
     }
 
-    function EU(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
-      const su = function(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "none";
-        const ju = "none" !== uu.texture,
-          su = "atlas" === uu.texture,
-          Uu = uu.dirLightCount > 0,
-          Zu = Vs(uu);
-        if (uu.dirLightCount > 4) throw new Error(`Terrain supports 4 directional lights, not ${uu.dirLightCount}`);
-        let Xu = 1,
-          lu = "@group(2) @binding(0) var<uniform> material: TerrainMaterialUniforms;\n";
-        if (su) {
-          uu.animated && (lu += `@group(2) @binding(${Xu++}) var<storage, read> animDataPerTex: array<f32>;\n`), lu += `@group(2) @binding(${Xu++}) var atlasSampler: sampler;\n`;
-          for (let Eu = 0; Eu < uu.atlasCount; Eu++) lu += `@group(2) @binding(${Xu++}) var textureAtlas${Eu}: texture_2d_array<f32>;\n`
-        } else "single" === uu.texture && (lu += `@group(2) @binding(${Xu++}) var diffuseSamplerSampler: sampler;\n`, lu += `@group(2) @binding(${Xu++}) var diffuseSampler: texture_2d<f32>;\n`);
-        const qu = function(uu) {
-            const Eu = Ls,
-              ju = "none" !== uu.texture,
-              su = "atlas" === uu.texture,
-              Uu = Vs(uu);
-            return uu.packed ? {
-              declarations: `\nstruct PackedVertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@builtin(vertex_index) vertexIndex: u32,\n}\nstruct VertexInputs {\n\tchunkSlot: u32,\n\tposition: vec3f,\n\tnormal: vec4f,\n\tcolor: vec4f,\n\t${ju?"uv: vec2f,":""}\n\t${su?"texAtlasIndices: f32,":""}\n\t${uu.lighting?"aPackedLightLevels: f32,":""}\n\t${Uu?"blockFlagWords: vec2u,":""}\n}\n${As}\n${ns}\n${"single"===uu.texture?"\nfn packedFaceUvOffset(r0: u32, dir: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet x = f32(r0 & 63u);\n\tlet y = f32((r0 >> 6u) & 63u);\n\tlet z = f32((r0 >> 12u) & 63u);\n\tif (axis == 0u) {\n\t\treturn vec2f(-s * z, y + f32(((r0 >> 24u) & 63u) + 1u));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(-s * x, z + f32(((r0 >> 18u) & 63u) + 1u));\n\t}\n\treturn vec2f(s * x, y + f32(((r0 >> 24u) & 63u) + 1u));\n}\n":""}\n`,
+    function GS(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
+      const wG = function(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "none";
+        const ZG = "none" !== GG.texture,
+          wG = "atlas" === GG.texture,
+          SG = GG.dirLightCount > 0,
+          LG = aw(GG);
+        if (GG.dirLightCount > 4) throw new Error(`Terrain supports 4 directional lights, not ${GG.dirLightCount}`);
+        let yG = 1,
+          kG = "@group(2) @binding(0) var<uniform> material: TerrainMaterialUniforms;\n";
+        if (wG) {
+          GG.animated && (kG += `@group(2) @binding(${yG++}) var<storage, read> animDataPerTex: array<f32>;\n`), kG += `@group(2) @binding(${yG++}) var atlasSampler: sampler;\n`;
+          for (let bG = 0; bG < GG.atlasCount; bG++) kG += `@group(2) @binding(${yG++}) var textureAtlas${bG}: texture_2d_array<f32>;\n`
+        } else "single" === GG.texture && (kG += `@group(2) @binding(${yG++}) var diffuseSamplerSampler: sampler;\n`, kG += `@group(2) @binding(${yG++}) var diffuseSampler: texture_2d<f32>;\n`);
+        const UG = function(GG) {
+            const bG = gw,
+              ZG = "none" !== GG.texture,
+              wG = "atlas" === GG.texture,
+              SG = aw(GG);
+            return GG.packed ? {
+              declarations: `\nstruct PackedVertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@builtin(vertex_index) vertexIndex: u32,\n}\nstruct VertexInputs {\n\tchunkSlot: u32,\n\tposition: vec3f,\n\tnormal: vec4f,\n\tcolor: vec4f,\n\t${ZG?"uv: vec2f,":""}\n\t${wG?"texAtlasIndices: f32,":""}\n\t${GG.lighting?"aPackedLightLevels: f32,":""}\n\t${SG?"blockFlagWords: vec2u,":""}\n}\n${tw}\n${Dw}\n${"single"===GG.texture?"\nfn packedFaceUvOffset(r0: u32, dir: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet x = f32(r0 & 63u);\n\tlet y = f32((r0 >> 6u) & 63u);\n\tlet z = f32((r0 >> 12u) & 63u);\n\tif (axis == 0u) {\n\t\treturn vec2f(-s * z, y + f32(((r0 >> 24u) & 63u) + 1u));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(-s * x, z + f32(((r0 >> 18u) & 63u) + 1u));\n\t}\n\treturn vec2f(s * x, y + f32(((r0 >> 24u) & 63u) + 1u));\n}\n":""}\n`,
               parameter: "packedInputs: PackedVertexInputs",
-              decode: `\n\tvar vertexInputs: VertexInputs;\n\tlet part = chunks[packedInputs.chunkSlot];\n\tlet drawn = packedInputs.vertexIndex >> 2u;\n\tlet quad = select(drawn, drawn - part.faceCount, drawn >= part.faceEnd);\n\tlet slot = packedInputs.vertexIndex & 3u;\n\tlet r2 = quads[quad * 3u + 2u];\n\tlet dir = r2 & 7u;\n\tlet corner = slotCorner(dir, (r2 >> 11u) & 1u, slot);\n\tlet position = quadCorner(quads[quad * 3u], dir >> 1u, corner);\n\tlet face = quads[quad * 3u + 1u];\n\t// A constant shift a slot, as render-shaders' terrain.wgsl decodes it\n\tlet aoBits = r2 >> 3u;\n\tlet ao = select(select(aoBits, aoBits >> 2u, slot == 1u), select(aoBits >> 4u, aoBits >> 6u, slot == 3u), slot >= 2u) & 3u;\n\tvertexInputs.chunkSlot = packedInputs.chunkSlot;\n\tvertexInputs.position = position;\n\tvertexInputs.normal = packedNormal(dir);\n\t// Packed parts are untinted, so the colour is the AO level's, as unorm8 decodes it; its alpha no program reads\n\tvertexInputs.color = vec4f(vec3f(uniforms.aoLevels[ao]), 1.0);\n\t${ju?"vertexInputs.uv = packedUv(position, dir, corner);":""}\n\t${"single"===uu.texture?"vertexInputs.uv += packedFaceUvOffset(quads[quad * 3u], dir);":""}\n\t${su?"vertexInputs.texAtlasIndices = f32(face & 0xffffu);":""}\n\t${uu.lighting?"vertexInputs.aPackedLightLevels = quadSlotLight(quad, slot);":""}\n\t${Uu?"vertexInputs.blockFlagWords = vec2u(face, face << 8u);":""}\n`
+              decode: `\n\tvar vertexInputs: VertexInputs;\n\tlet part = chunks[packedInputs.chunkSlot];\n\tlet drawn = packedInputs.vertexIndex >> 2u;\n\tlet quad = select(drawn, drawn - part.faceCount, drawn >= part.faceEnd);\n\tlet slot = packedInputs.vertexIndex & 3u;\n\tlet r2 = quads[quad * 3u + 2u];\n\tlet dir = r2 & 7u;\n\tlet corner = slotCorner(dir, (r2 >> 11u) & 1u, slot);\n\tlet position = quadCorner(quads[quad * 3u], dir >> 1u, corner);\n\tlet face = quads[quad * 3u + 1u];\n\t// A constant shift a slot, as render-shaders' terrain.wgsl decodes it\n\tlet aoBits = r2 >> 3u;\n\tlet ao = select(select(aoBits, aoBits >> 2u, slot == 1u), select(aoBits >> 4u, aoBits >> 6u, slot == 3u), slot >= 2u) & 3u;\n\tvertexInputs.chunkSlot = packedInputs.chunkSlot;\n\tvertexInputs.position = position;\n\tvertexInputs.normal = packedNormal(dir);\n\t// Packed parts are untinted, so the colour is the AO level's, as unorm8 decodes it; its alpha no program reads\n\tvertexInputs.color = vec4f(vec3f(uniforms.aoLevels[ao]), 1.0);\n\t${ZG?"vertexInputs.uv = packedUv(position, dir, corner);":""}\n\t${"single"===GG.texture?"vertexInputs.uv += packedFaceUvOffset(quads[quad * 3u], dir);":""}\n\t${wG?"vertexInputs.texAtlasIndices = f32(face & 0xffffu);":""}\n\t${GG.lighting?"vertexInputs.aPackedLightLevels = quadSlotLight(quad, slot);":""}\n\t${SG?"vertexInputs.blockFlagWords = vec2u(face, face << 8u);":""}\n`
             } : {
-              declarations: `\nstruct VertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@location(${Eu.position}) position: vec3f,\n\t@location(${Eu.normal}) normal: vec4f,\n\t@location(${Eu.color}) color: vec4f,\n\t${ju?`@location(${Eu.uv}) uv: vec2f,`:""}\n\t${uu.lighting?`@location(${Eu.packedLight}) aPackedLightLevels: f32,`:""}\n\t${Uu?`@location(${Eu.blockFlagWords}) blockFlagWords: vec2u,`:""}\n}\n`,
+              declarations: `\nstruct VertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@location(${bG.position}) position: vec3f,\n\t@location(${bG.normal}) normal: vec4f,\n\t@location(${bG.color}) color: vec4f,\n\t${ZG?`@location(${bG.uv}) uv: vec2f,`:""}\n\t${GG.lighting?`@location(${bG.packedLight}) aPackedLightLevels: f32,`:""}\n\t${SG?`@location(${bG.blockFlagWords}) blockFlagWords: vec2u,`:""}\n}\n`,
               parameter: "vertexInputs: VertexInputs",
               decode: ""
             }
-          }(uu),
-          fu = `\n${Is}\n${Ws}\n${Ss}\n@group(1) @binding(0) var<uniform> uniforms: TerrainFrameUniforms;\n/** Per chunk part, indexed by the draw's first instance (TERRAIN_CHUNK_SLOT_WORDS words). */\nstruct TerrainChunk {\n\t/** Into the render frame. */\n\ttranslation: vec3f,\n\t/** The fade-in. */\n\tvisibility: f32,\n\t/** Quad records only: where the part's faces end in its page, in records, and how many it has. */\n\tfaceEnd: u32,\n\tfaceCount: u32,\n}\n@group(1) @binding(1) var<storage, read> chunks: array<TerrainChunk>;\n${lu}\n${hE}\n${qu.declarations}\nstruct Varyings {\n\t${"none"===Eu?"":"// Invariant: at 1x the scene's pass draws over the pre-pass's depth with an equal test\n\t@invariant "}@builtin(position) position: vec4f,\n\t// Centroid, as an edge pixel's centre can lie past its face and packs floor this to find the block\n\t@location(0) @interpolate(perspective, centroid) vPositionW: vec3f,\n\t@location(1) vNormalW: vec3f,\n\t@location(2) vColor: vec3f,\n\t@location(3) vFogDistance: vec3f,\n\t${uu.resting?"":"@location(4) @interpolate(flat) vVisibility: f32,"}\n\t${Uu?"@location(5) vTerrainLambert: f32,":""}\n\t${ju?"@location(6) @interpolate(perspective, centroid) vMainUV1: vec2f,":""}\n\t${su?"@location(7) texAtlasIndex: f32,":""}\n\t${uu.lighting?"@location(8) vLightLevels: vec4f,":""}\n\t${Zu?"@location(9) @interpolate(flat) vBlockFlags: u32,":""}\n\t${Zu&&su?"@location(10) @interpolate(flat) vPackTexture: u32,":""}\n}\n\n${uu.resting?"":(0,TE.q)(Ks)}\n${Bs}\n\n@vertex\nfn mainVertex(${qu.parameter}) -> Varyings {\n\t${qu.decode}\n\tvar vertexOutputs: Varyings;\n\tlet chunk = chunks[vertexInputs.chunkSlot];\n\t${Zu?`vertexOutputs.vBlockFlags = ((vertexInputs.blockFlagWords.x >> 24u) << 8u) | (vertexInputs.blockFlagWords.y >> 24u) | ${mE.c.placed}u;`:""}\n\t${Zu&&su?Ns("vertexInputs.texAtlasIndices").trim():""}\n\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n\tvertexOutputs.vColor = vertexInputs.color.rgb;\n\tvertexOutputs.vFogDistance = (scene.view * worldPos).xyz;\n\t${uu.resting?"":"vertexOutputs.vVisibility = chunk.visibility;"}\n\t${ju?"vertexOutputs.vMainUV1 = vertexInputs.uv;":""}\n\t${su?function(uu){return uu?zs("vertexInputs.texAtlasIndices","vertexOutputs.texAtlasIndex = "):"vertexOutputs.texAtlasIndex = vertexInputs.texAtlasIndices;"}(uu.animated):""}\n\t${"single"===uu.texture&&uu.animated?"\n\tlet frameTick = floor(material.anim.x / material.anim.z);\n\tlet animTexIndex = frameTick - material.anim.y * floor(frameTick / material.anim.y);\n\tvertexOutputs.vMainUV1.y = (vertexOutputs.vMainUV1.y + animTexIndex) / material.anim.y;\n":""}\n\t${(0,TE.S)(Ks)}\n\t${(0,TE.z)(Ks,uu.dirLightCount)}\n\treturn vertexOutputs;\n}\n\n@fragment\nfn mainFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${uu.resting?"":Fs}\n\tvar baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${su?Rs(uu):""}\n\t${"single"===uu.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${ju?"alpha *= baseColor.a;\n\tbaseColor = vec4f(baseColor.rgb * material.emissiveAndLevel.w, baseColor.a);":""}\n\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n\t${uu.alphaTest?"if (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}\n\talpha = 1.0;":""}\n\tvar diffuseBase = vec3f(0.0);\n\t${Uu?"diffuseBase += vec3f(fragmentInputs.vTerrainLambert);":""}\n\tlet ambient = material.ambientAndCutoff.xyz * uniforms.sceneAmbient;\n\tlet finalDiffuse = clamp(diffuseBase * material.vDiffuseColor.rgb + material.emissiveAndLevel.xyz + ambient, vec3f(0.0), vec3f(1.0)) * baseColor.rgb;\n\t// Nothing past here changes alpha: light, fog and a pack's light hook keep it\n\tvar color = vec4f(finalDiffuse, select(alpha, 1.0, ${YE}));\n\t${Vs(uu)?(0,TE.$)(pu.c.WGSL):(0,TE.E)(Ks)}\n\tcolor = vec4f(max(color.rgb, vec3f(0.0)), color.a);\n\tlet fog = calcFogFactor(fragmentInputs.vFogDistance);\n\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n\treturn color;\n}\n`,
-          Cu = new Set;
-        uu.lighting && Cu.add("BLOXD_LIGHTING");
-        Uu && Cu.add("BLOXD_TERRAIN_DIRECTIONAL");
-        return LE(fu, new Map([...Cu].map((uu => [uu, !0]))))
-      }(uu, ju);
-      if (!Vs(uu)) return su;
-      const Uu = vs(uu, su, zs, Eu, ju);
-      return "none" === ju ? Uu : `${Uu}${function(uu){const Eu="none"!==uu.texture&&uu.alphaTest;return`\n@fragment\nfn prepassFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${uu.resting?"":Fs}\n\t${uu.alphaTest?`var baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${Eu&&"atlas"===uu.texture?Rs(uu):""}\n\t${Eu&&"single"===uu.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${Eu?"alpha *= baseColor.a;":""}\n\tif (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}`:""}\n\tlet emissive = (fragmentInputs.vBlockFlags & ${mE.c.emissive}u) != 0u;\n\treturn vec4f(normalize(fragmentInputs.vNormalW) * 0.5 + 0.5, select(0.0, 1.0, emissive));\n}\n`}(uu)}`
+          }(GG),
+          YG = `\n${sw}\n${Mw}\n${Aw}\n@group(1) @binding(0) var<uniform> uniforms: TerrainFrameUniforms;\n/** Per chunk part, indexed by the draw's first instance (TERRAIN_CHUNK_SLOT_WORDS words). */\nstruct TerrainChunk {\n\t/** Into the render frame. */\n\ttranslation: vec3f,\n\t/** The fade-in. */\n\tvisibility: f32,\n\t/** Quad records only: where the part's faces end in its page, in records, and how many it has. */\n\tfaceEnd: u32,\n\tfaceCount: u32,\n}\n@group(1) @binding(1) var<storage, read> chunks: array<TerrainChunk>;\n${kG}\n${db}\n${UG.declarations}\nstruct Varyings {\n\t${"none"===bG?"":"// Invariant: at 1x the scene's pass draws over the pre-pass's depth with an equal test\n\t@invariant "}@builtin(position) position: vec4f,\n\t// Centroid, as an edge pixel's centre can lie past its face and packs floor this to find the block\n\t@location(0) @interpolate(perspective, centroid) vPositionW: vec3f,\n\t@location(1) vNormalW: vec3f,\n\t@location(2) vColor: vec3f,\n\t@location(3) vFogDistance: vec3f,\n\t${GG.resting?"":"@location(4) @interpolate(flat) vVisibility: f32,"}\n\t${SG?"@location(5) vTerrainLambert: f32,":""}\n\t${ZG?"@location(6) @interpolate(perspective, centroid) vMainUV1: vec2f,":""}\n\t${wG?"@location(7) texAtlasIndex: f32,":""}\n\t${GG.lighting?"@location(8) vLightLevels: vec4f,":""}\n\t${LG?"@location(9) @interpolate(flat) vBlockFlags: u32,":""}\n\t${LG&&wG?"@location(10) @interpolate(flat) vPackTexture: u32,":""}\n}\n\n${GG.resting?"":(0,Hb.t)(vw)}\n${nw}\n\n@vertex\nfn mainVertex(${UG.parameter}) -> Varyings {\n\t${UG.decode}\n\tvar vertexOutputs: Varyings;\n\tlet chunk = chunks[vertexInputs.chunkSlot];\n\t${LG?`vertexOutputs.vBlockFlags = ((vertexInputs.blockFlagWords.x >> 24u) << 8u) | (vertexInputs.blockFlagWords.y >> 24u) | ${vb.c.placed}u;`:""}\n\t${LG&&wG?fw("vertexInputs.texAtlasIndices").trim():""}\n\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n\tvertexOutputs.vColor = vertexInputs.color.rgb;\n\tvertexOutputs.vFogDistance = (scene.view * worldPos).xyz;\n\t${GG.resting?"":"vertexOutputs.vVisibility = chunk.visibility;"}\n\t${ZG?"vertexOutputs.vMainUV1 = vertexInputs.uv;":""}\n\t${wG?function(GG){return GG?Ow("vertexInputs.texAtlasIndices","vertexOutputs.texAtlasIndex = "):"vertexOutputs.texAtlasIndex = vertexInputs.texAtlasIndices;"}(GG.animated):""}\n\t${"single"===GG.texture&&GG.animated?"\n\tlet frameTick = floor(material.anim.x / material.anim.z);\n\tlet animTexIndex = frameTick - material.anim.y * floor(frameTick / material.anim.y);\n\tvertexOutputs.vMainUV1.y = (vertexOutputs.vMainUV1.y + animTexIndex) / material.anim.y;\n":""}\n\t${(0,Hb.cb)(vw)}\n\t${(0,Hb.J)(vw,GG.dirLightCount)}\n\treturn vertexOutputs;\n}\n\n@fragment\nfn mainFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${GG.resting?"":qw}\n\tvar baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${wG?xw(GG):""}\n\t${"single"===GG.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${ZG?"alpha *= baseColor.a;\n\tbaseColor = vec4f(baseColor.rgb * material.emissiveAndLevel.w, baseColor.a);":""}\n\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n\t${GG.alphaTest?"if (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}\n\talpha = 1.0;":""}\n\tvar diffuseBase = vec3f(0.0);\n\t${SG?"diffuseBase += vec3f(fragmentInputs.vTerrainLambert);":""}\n\tlet ambient = material.ambientAndCutoff.xyz * uniforms.sceneAmbient;\n\tlet finalDiffuse = clamp(diffuseBase * material.vDiffuseColor.rgb + material.emissiveAndLevel.xyz + ambient, vec3f(0.0), vec3f(1.0)) * baseColor.rgb;\n\t// Nothing past here changes alpha: light, fog and a pack's light hook keep it\n\tvar color = vec4f(finalDiffuse, select(alpha, 1.0, ${hb}));\n\t${aw(GG)?(0,Hb.ob)(XG.c.WGSL):(0,Hb.S)(vw)}\n\tcolor = vec4f(max(color.rgb, vec3f(0.0)), color.a);\n\tlet fog = calcFogFactor(fragmentInputs.vFogDistance);\n\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n\treturn color;\n}\n`,
+          VG = new Set;
+        GG.lighting && VG.add("BLOXD_LIGHTING");
+        SG && VG.add("BLOXD_TERRAIN_DIRECTIONAL");
+        return eb(YG, new Map([...VG].map((GG => [GG, !0]))))
+      }(GG, ZG);
+      if (!aw(GG)) return wG;
+      const SG = Fw(GG, wG, Ow, bG, ZG);
+      return "none" === ZG ? SG : `${SG}${function(GG){const bG="none"!==GG.texture&&GG.alphaTest;return`\n@fragment\nfn prepassFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${GG.resting?"":qw}\n\t${GG.alphaTest?`var baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${bG&&"atlas"===GG.texture?xw(GG):""}\n\t${bG&&"single"===GG.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${bG?"alpha *= baseColor.a;":""}\n\tif (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}`:""}\n\tlet emissive = (fragmentInputs.vBlockFlags & ${vb.c.emissive}u) != 0u;\n\treturn vec4f(normalize(fragmentInputs.vNormalW) * 0.5 + 0.5, select(0.0, 1.0, emissive));\n}\n`}(GG)}`
     }
-    const jU = new Map([
+    const bS = new Map([
       ["float", {
         wgsl: "f32",
         align: 1,
@@ -1711,40 +1711,40 @@ export const modules = {
       }]
     ]);
 
-    function sU(uu, Eu) {
-      const ju = new Map;
-      let su = 0;
-      const Uu = [],
-        Zu = [],
-        Xu = [];
-      for (const fu of Eu) {
-        var lu, qu;
-        const Eu = null !== (lu = fu.type.trim().split(/\s+/).pop()) && void 0 !== lu ? lu : fu.type,
-          Cu = jU.get(Eu);
-        if (!Cu) throw new Error(`Lite: no uniform layout for ${fu.name}: ${fu.type}`);
-        const bu = null !== (qu = fu.arraySize) && void 0 !== qu ? qu : 0,
-          cu = bu ? 4 : Cu.align;
-        su = Math.ceil(su / cu) * cu;
-        const Nu = bu ? 4 * Math.ceil(Cu.floats / 4) : Cu.floats;
-        if (ju.set(fu.name, {
-            offset: su,
-            floats: Cu.floats,
-            arraySize: bu,
-            stride: Nu
-          }), bu && Cu.floats <= 2) {
-          const Eu = `${uu}_${Xu.length}_strided`;
-          Zu.push(`struct ${Eu} {\n\t@size(16) el: ${Cu.wgsl},\n}`), Xu.push(fu.name), Uu.push(`\t@align(16) ${fu.name}: array<${Eu}, ${bu}>,`)
-        } else bu ? Uu.push(`\t@align(16) ${fu.name}: array<${Cu.wgsl}, ${bu}>,`) : Uu.push(`\t${fu.name}: ${Cu.wgsl},`);
-        su += bu ? Nu * bu : Cu.floats
+    function ZS(GG, bG) {
+      const ZG = new Map;
+      let wG = 0;
+      const SG = [],
+        LG = [],
+        yG = [];
+      for (const YG of bG) {
+        var kG, UG;
+        const bG = null !== (kG = YG.type.trim().split(/\s+/).pop()) && void 0 !== kG ? kG : YG.type,
+          VG = bS.get(bG);
+        if (!VG) throw new Error(`Lite: no uniform layout for ${YG.name}: ${YG.type}`);
+        const pG = null !== (UG = YG.arraySize) && void 0 !== UG ? UG : 0,
+          fG = pG ? 4 : VG.align;
+        wG = Math.ceil(wG / fG) * fG;
+        const QG = pG ? 4 * Math.ceil(VG.floats / 4) : VG.floats;
+        if (ZG.set(YG.name, {
+            offset: wG,
+            floats: VG.floats,
+            arraySize: pG,
+            stride: QG
+          }), pG && VG.floats <= 2) {
+          const bG = `${GG}_${yG.length}_strided`;
+          LG.push(`struct ${bG} {\n\t@size(16) el: ${VG.wgsl},\n}`), yG.push(YG.name), SG.push(`\t@align(16) ${YG.name}: array<${bG}, ${pG}>,`)
+        } else pG ? SG.push(`\t@align(16) ${YG.name}: array<${VG.wgsl}, ${pG}>,`) : SG.push(`\t${YG.name}: ${VG.wgsl},`);
+        wG += pG ? QG * pG : VG.floats
       }
       return {
-        slots: ju,
-        floats: Math.max(4, 4 * Math.ceil(su / 4)),
-        wgsl: `${Zu.join("\n")}\nstruct ${uu} {\n${Uu.join("\n")}\n}\n`,
-        stridedArrays: Xu
+        slots: ZG,
+        floats: Math.max(4, 4 * Math.ceil(wG / 4)),
+        wgsl: `${LG.join("\n")}\nstruct ${GG} {\n${SG.join("\n")}\n}\n`,
+        stridedArrays: yG
       }
     }
-    const UU = [{
+    const wS = [{
         name: "vDiffuseColor",
         type: "vec4"
       }, {
@@ -1772,14 +1772,14 @@ export const modules = {
         name: "reflectionMatrix",
         type: "mat4"
       }],
-      ZU = [{
+      SS = [{
         name: "vOpacityInfos",
         type: "vec2"
       }, {
         name: "opacityMatrix",
         type: "mat4"
       }],
-      XU = [{
+      LS = [{
         name: "vEmissiveInfos",
         type: "vec2"
       }, {
@@ -1787,18 +1787,18 @@ export const modules = {
         type: "mat4"
       }];
 
-    function lU(uu, Eu) {
-      return `#if defined(${uu}) && ${uu}DIRECTUV == 0\nvarying v${Eu}UV: vec2f;\n#endif`
+    function yS(GG, bG) {
+      return `#if defined(${GG}) && ${GG}DIRECTUV == 0\nvarying v${bG}UV: vec2f;\n#endif`
     }
 
-    function qU(uu, Eu, ju) {
-      return `#if defined(${uu}) && ${uu}DIRECTUV == 0\nif (uniforms.v${Eu}Infos.x==0.)\n{vertexOutputs.v${Eu}UV= (uniforms.${ju}Matrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.v${Eu}UV= (uniforms.${ju}Matrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif`
+    function kS(GG, bG, ZG) {
+      return `#if defined(${GG}) && ${GG}DIRECTUV == 0\nif (uniforms.v${bG}Infos.x==0.)\n{vertexOutputs.v${bG}UV= (uniforms.${ZG}Matrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.v${bG}UV= (uniforms.${ZG}Matrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif`
     }
 
-    function fU(uu, Eu, ju) {
-      return `#ifdef ${uu}\n#if ${uu}DIRECTUV == 1\n#define v${Eu}UV vMainUV1\n#elif ${uu}DIRECTUV == 2\n#define v${Eu}UV vMainUV2\n#else\nvarying v${Eu}UV: vec2f;\n#endif\nvar ${ju}SamplerSampler: sampler;\nvar ${ju}Sampler: texture_2d<f32>;\n#endif`
+    function US(GG, bG, ZG) {
+      return `#ifdef ${GG}\n#if ${GG}DIRECTUV == 1\n#define v${bG}UV vMainUV1\n#elif ${GG}DIRECTUV == 2\n#define v${bG}UV vMainUV2\n#else\nvarying v${bG}UV: vec2f;\n#endif\nvar ${ZG}SamplerSampler: sampler;\nvar ${ZG}Sampler: texture_2d<f32>;\n#endif`
     }
-    const CU = {
+    const YS = {
         lights: 0,
         lightStride: 12,
         fogInfos: 96,
@@ -1807,90 +1807,90 @@ export const modules = {
         animTick: 104,
         timeMs: 105
       },
-      bU = 256,
-      cU = "\nstruct LiteLight {\n\tvLightData: vec4f,\n\tvLightDiffuse: vec4f,\n\tvLightSpecular: vec4f,\n}\nstruct LiteFrameUniforms {\n\tlights: array<LiteLight, 8>,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tanimTick: f32,\n\ttimeMs: f32,\n}\n@group(1) @binding(0) var<uniform> frame: LiteFrameUniforms;\nstruct Mesh {\n\tworld: mat4x4f,\n\tvisibility: f32,\n}\n@group(1) @binding(1) var<uniform> mesh: Mesh;\nstruct Internals {\n\tyFactor_: f32,\n\ttextureOutputHeight_: f32,\n}\nconst internals = Internals(1.0, 0.0);\n",
-      NU = "#ifdef INSTANCES\nattribute world0: vec4f;\nattribute world1: vec4f;\nattribute world2: vec4f;\nattribute world3: vec4f;\n#ifdef INSTANCESCOLOR\nattribute instanceColor: vec4f;\n#endif\n#endif",
-      OU = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#ifdef THIN_INSTANCES\nfinalWorld=mesh.world*finalWorld;\n#endif\n#else\nvar finalWorld=mesh.world;\n#endif",
-      YU = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvertexOutputs.vColor=vec4f(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvertexOutputs.vColor*=colorUpdated;\n#else\nvertexOutputs.vColor=vec4f(vertexOutputs.vColor.rgb*colorUpdated.rgb,vertexOutputs.vColor.a);\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvertexOutputs.vColor*=vertexInputs.instanceColor;\n#endif\n#endif",
-      hU = "#ifdef LITE_FRONT_LAYER\nvertexOutputs.position=liteFrontLayer(vertexOutputs.position);\n#else\nvertexOutputs.position=liteWorldLayer(vertexOutputs.position);\n#endif\nreturn vertexOutputs;",
-      DU = "#ifdef FOG\nfn CalcFogFactor()->f32\n{var fogCoeff: f32=1.0;\nvar fogStart: f32=frame.vFogInfos.y;\nvar fogEnd: f32=frame.vFogInfos.z;\nvar fogDensity: f32=frame.vFogInfos.w;\nvar fogDistance: f32=length(fragmentInputs.vFogDistance);\nif (3.==frame.vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);\n}\nelse if (1.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDensity);\n}\nelse if (2.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDistance*fogDensity*fogDensity);\n}\nreturn clamp(fogCoeff,0.0,1.0);\n}\n#endif",
-      gU = "const LinearEncodePowerApprox: f32=2.2;\nconst GammaEncodePowerApprox: f32=1.0/LinearEncodePowerApprox;\nfn inverseMat3(inMatrix: mat3x3f)->mat3x3f {let a00: f32=inMatrix[0][0];let a01: f32=inMatrix[0][1];let a02: f32=inMatrix[0][2];let a10: f32=inMatrix[1][0];let a11: f32=inMatrix[1][1];let a12: f32=inMatrix[1][2];let a20: f32=inMatrix[2][0];let a21: f32=inMatrix[2][1];let a22: f32=inMatrix[2][2];let b01: f32=a22*a11-a12*a21;let b11: f32=-a22*a10+a12*a20;let b21: f32=a21*a10-a11*a20;let det: f32=a00*b01+a01*b11+a02*b21;return mat3x3f(b01/det,(-a22*a01+a02*a21)/det,(a12*a01-a02*a11)/det,\nb11/det,(a22*a00-a02*a20)/det,(-a12*a00+a02*a10)/det,\nb21/det,(-a21*a00+a01*a20)/det,(a11*a00-a01*a10)/det);}\nfn toLinearSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(LinearEncodePowerApprox));}\nfn toGammaSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(GammaEncodePowerApprox));}\nfn fromRGBD(rgbd: vec4<f32>)->vec3f {let rgb=toLinearSpaceVec3(rgbd.rgb);return rgb/rgbd.a;}",
-      MU = `\nattribute position: vec3f;\n#ifdef NORMAL\nattribute normal: vec3f;\n#endif\n#ifdef UV1\nattribute uv: vec2f;\n#endif\n#ifdef UV2\nattribute uv2: vec2f;\n#endif\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${NU}\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nvarying vDiffuseUV: vec2f;\n#endif\n${lU("OPACITY","Opacity")}\n${lU("EMISSIVE","Emissive")}\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\n${gU}\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvar positionUpdated: vec3f=vertexInputs.position;\n#ifdef NORMAL\nvar normalUpdated: vec3f=vertexInputs.normal;\n#endif\n#ifdef UV1\nvar uvUpdated: vec2f=vertexInputs.uv;\n#endif\n#ifdef UV2\nvar uv2Updated: vec2f=vertexInputs.uv2;\n#endif\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvertexOutputs.vPositionUVW=positionUpdated;\n#endif\n#define CUSTOM_VERTEX_UPDATE_POSITION\n#define CUSTOM_VERTEX_UPDATE_NORMAL\n${OU}\nvar worldPos: vec4f=finalWorld*vec4f(positionUpdated,1.0);\n#ifdef NORMAL\nvar normalWorld: mat3x3f= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz);\n#if defined(INSTANCES) && defined(THIN_INSTANCES)\nvertexOutputs.vNormalW=normalUpdated/ vec3f(dot(normalWorld[0],normalWorld[0]),dot(normalWorld[1],normalWorld[1]),dot(normalWorld[2],normalWorld[2]));vertexOutputs.vNormalW=normalize(normalWorld*vertexOutputs.vNormalW);\n#else\n#ifdef NONUNIFORMSCALING\nnormalWorld=transpose(inverseMat3(normalWorld));\n#endif\nvertexOutputs.vNormalW=normalize(normalWorld*normalUpdated);\n#endif\n#endif\n#define CUSTOM_VERTEX_UPDATE_WORLDPOS\nvertexOutputs.position=scene.viewProjection*worldPos;\nvertexOutputs.vPositionW= worldPos.xyz;\n#ifndef UV1\nvar uvUpdated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV1\nvertexOutputs.vMainUV1=uvUpdated;\n#endif\n#ifndef UV2\nvar uv2Updated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV2\nvertexOutputs.vMainUV2=uv2Updated;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nif (uniforms.vDiffuseInfos.x==0.)\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif\n${qU("OPACITY","Opacity","opacity")}\n${qU("EMISSIVE","Emissive","emissive")}\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${YU}\n#define CUSTOM_VERTEX_MAIN_END\n${hU}\n}\n`;
-    const eU = `\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef DIFFUSE\n#if DIFFUSEDIRECTUV == 1\n#define vDiffuseUV vMainUV1\n#elif DIFFUSEDIRECTUV == 2\n#define vDiffuseUV vMainUV2\n#else\nvarying vDiffuseUV: vec2f;\n#endif\nvar diffuseSamplerSampler: sampler;\nvar diffuseSampler: texture_2d<f32>;\n#endif\n${fU("OPACITY","Opacity","opacity")}\n${fU("EMISSIVE","Emissive","emissive")}\nstruct lightingInfo\n{diffuse: vec3f,\n};\nfn computeLighting(viewDirectionW: vec3f,vNormal: vec3f,lightData: vec4f,diffuseColor: vec3f,specularColor: vec3f,range: f32,glossiness: f32)->lightingInfo {var result: lightingInfo;\nvar lightVectorW: vec3f;\nvar attenuation: f32=1.0;\nif (lightData.w==0.)\n{var direction: vec3f=lightData.xyz-fragmentInputs.vPositionW;\nattenuation=max(0.,1.0-length(direction)/range);\nlightVectorW=normalize(direction);\n}\nelse\n{lightVectorW=normalize(-lightData.xyz);\n}\nvar ndl: f32=max(0.,dot(vNormal,lightVectorW));\nresult.diffuse=ndl*diffuseColor*attenuation;\nreturn result;\n}\nfn TEXRD(t: texture_2d<f32>,ts: sampler,uv: vec2f)->vec4f {return textureSample(t,ts,uv);\n}\n#ifdef REFLECTION\nvar reflectionCubeSamplerSampler: sampler;var reflectionCubeSampler: texture_cube<f32>;\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\nfn computeSkyBoxCoords(positionW: vec3f,reflectionMatrix: mat4x4f)->vec3f\n{return (reflectionMatrix* vec4f(positionW,1.)).xyz;}\nfn computeReflectionCoords(worldPos: vec4f,worldNormal: vec3f)->vec3f\n{\n#ifdef REFLECTIONMAP_SKYBOX\nreturn computeSkyBoxCoords(fragmentInputs.vPositionUVW,uniforms.reflectionMatrix);\n#else\nreturn vec3f(0.);\n#endif\n}\n#endif\n${gU}\n${DU}\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\nvar viewDirectionW: vec3f=normalize(scene.vEyePosition.xyz-fragmentInputs.vPositionW);var baseColor: vec4f= vec4f(1.,1.,1.,1.);var diffuseColor: vec3f=uniforms.vDiffuseColor.rgb;var alpha: f32=uniforms.vDiffuseColor.a;\n#ifdef NORMAL\nvar normalW: vec3f=normalize(fragmentInputs.vNormalW);\n#else\nvar normalW: vec3f=normalize(cross(dpdx(fragmentInputs.vPositionW),dpdy(fragmentInputs.vPositionW)));\nnormalW=select(-normalW,normalW,dot(normalW,viewDirectionW)>=0.0);\n#endif\n#ifdef TWOSIDEDLIGHTING\nnormalW=select(-normalW,normalW,fragmentInputs.frontFacing);\n#endif\nvar uvOffset: vec2f= vec2f(0.0,0.0);\n#ifdef DIFFUSE\nbaseColor=TEXRD(diffuseSampler,diffuseSamplerSampler,fragmentInputs.vDiffuseUV+uvOffset);\n#if defined(ALPHATEST) && !defined(ALPHATEST_AFTERALLALPHACOMPUTATIONS)\nif (baseColor.a<uniforms.alphaCutOff) {discard;}\n#endif\n#ifdef ALPHAFROMDIFFUSE\nalpha*=baseColor.a;\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_ALPHA\nbaseColor=vec4f(baseColor.rgb*uniforms.vDiffuseInfos.y,baseColor.a);\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nbaseColor=vec4f(baseColor.rgb*fragmentInputs.vColor.rgb,baseColor.a);\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_DIFFUSE\nvar baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n#define CUSTOM_FRAGMENT_BEFORE_LIGHTS\nvar glossiness: f32=uniforms.vSpecularColor.a;var specularColor: vec3f=uniforms.vSpecularColor.rgb;\nvar diffuseBase: vec3f= vec3f(0.,0.,0.);var info: lightingInfo;\nvar shadow: f32=1.;var aggShadow: f32=0.;var numLights: f32=0.;\n${Array.from({length:4},((uu,Eu)=>function(uu){const Eu=`
+      VS = 256,
+      pS = "\nstruct LiteLight {\n\tvLightData: vec4f,\n\tvLightDiffuse: vec4f,\n\tvLightSpecular: vec4f,\n}\nstruct LiteFrameUniforms {\n\tlights: array<LiteLight, 8>,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tanimTick: f32,\n\ttimeMs: f32,\n}\n@group(1) @binding(0) var<uniform> frame: LiteFrameUniforms;\nstruct Mesh {\n\tworld: mat4x4f,\n\tvisibility: f32,\n}\n@group(1) @binding(1) var<uniform> mesh: Mesh;\nstruct Internals {\n\tyFactor_: f32,\n\ttextureOutputHeight_: f32,\n}\nconst internals = Internals(1.0, 0.0);\n",
+      fS = "#ifdef INSTANCES\nattribute world0: vec4f;\nattribute world1: vec4f;\nattribute world2: vec4f;\nattribute world3: vec4f;\n#ifdef INSTANCESCOLOR\nattribute instanceColor: vec4f;\n#endif\n#endif",
+      QS = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#ifdef THIN_INSTANCES\nfinalWorld=mesh.world*finalWorld;\n#endif\n#else\nvar finalWorld=mesh.world;\n#endif",
+      KS = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvertexOutputs.vColor=vec4f(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvertexOutputs.vColor*=colorUpdated;\n#else\nvertexOutputs.vColor=vec4f(vertexOutputs.vColor.rgb*colorUpdated.rgb,vertexOutputs.vColor.a);\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvertexOutputs.vColor*=vertexInputs.instanceColor;\n#endif\n#endif",
+      hS = "#ifdef LITE_FRONT_LAYER\nvertexOutputs.position=liteFrontLayer(vertexOutputs.position);\n#else\nvertexOutputs.position=liteWorldLayer(vertexOutputs.position);\n#endif\nreturn vertexOutputs;",
+      dS = "#ifdef FOG\nfn CalcFogFactor()->f32\n{var fogCoeff: f32=1.0;\nvar fogStart: f32=frame.vFogInfos.y;\nvar fogEnd: f32=frame.vFogInfos.z;\nvar fogDensity: f32=frame.vFogInfos.w;\nvar fogDistance: f32=length(fragmentInputs.vFogDistance);\nif (3.==frame.vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);\n}\nelse if (1.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDensity);\n}\nelse if (2.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDistance*fogDensity*fogDensity);\n}\nreturn clamp(fogCoeff,0.0,1.0);\n}\n#endif",
+      JS = "const LinearEncodePowerApprox: f32=2.2;\nconst GammaEncodePowerApprox: f32=1.0/LinearEncodePowerApprox;\nfn inverseMat3(inMatrix: mat3x3f)->mat3x3f {let a00: f32=inMatrix[0][0];let a01: f32=inMatrix[0][1];let a02: f32=inMatrix[0][2];let a10: f32=inMatrix[1][0];let a11: f32=inMatrix[1][1];let a12: f32=inMatrix[1][2];let a20: f32=inMatrix[2][0];let a21: f32=inMatrix[2][1];let a22: f32=inMatrix[2][2];let b01: f32=a22*a11-a12*a21;let b11: f32=-a22*a10+a12*a20;let b21: f32=a21*a10-a11*a20;let det: f32=a00*b01+a01*b11+a02*b21;return mat3x3f(b01/det,(-a22*a01+a02*a21)/det,(a12*a01-a02*a11)/det,\nb11/det,(a22*a00-a02*a20)/det,(-a12*a00+a02*a10)/det,\nb21/det,(-a21*a00+a01*a20)/det,(a11*a00-a01*a10)/det);}\nfn toLinearSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(LinearEncodePowerApprox));}\nfn toGammaSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(GammaEncodePowerApprox));}\nfn fromRGBD(rgbd: vec4<f32>)->vec3f {let rgb=toLinearSpaceVec3(rgbd.rgb);return rgb/rgbd.a;}",
+      rS = `\nattribute position: vec3f;\n#ifdef NORMAL\nattribute normal: vec3f;\n#endif\n#ifdef UV1\nattribute uv: vec2f;\n#endif\n#ifdef UV2\nattribute uv2: vec2f;\n#endif\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${fS}\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nvarying vDiffuseUV: vec2f;\n#endif\n${yS("OPACITY","Opacity")}\n${yS("EMISSIVE","Emissive")}\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\n${JS}\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvar positionUpdated: vec3f=vertexInputs.position;\n#ifdef NORMAL\nvar normalUpdated: vec3f=vertexInputs.normal;\n#endif\n#ifdef UV1\nvar uvUpdated: vec2f=vertexInputs.uv;\n#endif\n#ifdef UV2\nvar uv2Updated: vec2f=vertexInputs.uv2;\n#endif\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvertexOutputs.vPositionUVW=positionUpdated;\n#endif\n#define CUSTOM_VERTEX_UPDATE_POSITION\n#define CUSTOM_VERTEX_UPDATE_NORMAL\n${QS}\nvar worldPos: vec4f=finalWorld*vec4f(positionUpdated,1.0);\n#ifdef NORMAL\nvar normalWorld: mat3x3f= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz);\n#if defined(INSTANCES) && defined(THIN_INSTANCES)\nvertexOutputs.vNormalW=normalUpdated/ vec3f(dot(normalWorld[0],normalWorld[0]),dot(normalWorld[1],normalWorld[1]),dot(normalWorld[2],normalWorld[2]));vertexOutputs.vNormalW=normalize(normalWorld*vertexOutputs.vNormalW);\n#else\n#ifdef NONUNIFORMSCALING\nnormalWorld=transpose(inverseMat3(normalWorld));\n#endif\nvertexOutputs.vNormalW=normalize(normalWorld*normalUpdated);\n#endif\n#endif\n#define CUSTOM_VERTEX_UPDATE_WORLDPOS\nvertexOutputs.position=scene.viewProjection*worldPos;\nvertexOutputs.vPositionW= worldPos.xyz;\n#ifndef UV1\nvar uvUpdated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV1\nvertexOutputs.vMainUV1=uvUpdated;\n#endif\n#ifndef UV2\nvar uv2Updated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV2\nvertexOutputs.vMainUV2=uv2Updated;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nif (uniforms.vDiffuseInfos.x==0.)\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif\n${kS("OPACITY","Opacity","opacity")}\n${kS("EMISSIVE","Emissive","emissive")}\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${KS}\n#define CUSTOM_VERTEX_MAIN_END\n${hS}\n}\n`;
+    const zS = `\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef DIFFUSE\n#if DIFFUSEDIRECTUV == 1\n#define vDiffuseUV vMainUV1\n#elif DIFFUSEDIRECTUV == 2\n#define vDiffuseUV vMainUV2\n#else\nvarying vDiffuseUV: vec2f;\n#endif\nvar diffuseSamplerSampler: sampler;\nvar diffuseSampler: texture_2d<f32>;\n#endif\n${US("OPACITY","Opacity","opacity")}\n${US("EMISSIVE","Emissive","emissive")}\nstruct lightingInfo\n{diffuse: vec3f,\n};\nfn computeLighting(viewDirectionW: vec3f,vNormal: vec3f,lightData: vec4f,diffuseColor: vec3f,specularColor: vec3f,range: f32,glossiness: f32)->lightingInfo {var result: lightingInfo;\nvar lightVectorW: vec3f;\nvar attenuation: f32=1.0;\nif (lightData.w==0.)\n{var direction: vec3f=lightData.xyz-fragmentInputs.vPositionW;\nattenuation=max(0.,1.0-length(direction)/range);\nlightVectorW=normalize(direction);\n}\nelse\n{lightVectorW=normalize(-lightData.xyz);\n}\nvar ndl: f32=max(0.,dot(vNormal,lightVectorW));\nresult.diffuse=ndl*diffuseColor*attenuation;\nreturn result;\n}\nfn TEXRD(t: texture_2d<f32>,ts: sampler,uv: vec2f)->vec4f {return textureSample(t,ts,uv);\n}\n#ifdef REFLECTION\nvar reflectionCubeSamplerSampler: sampler;var reflectionCubeSampler: texture_cube<f32>;\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\nfn computeSkyBoxCoords(positionW: vec3f,reflectionMatrix: mat4x4f)->vec3f\n{return (reflectionMatrix* vec4f(positionW,1.)).xyz;}\nfn computeReflectionCoords(worldPos: vec4f,worldNormal: vec3f)->vec3f\n{\n#ifdef REFLECTIONMAP_SKYBOX\nreturn computeSkyBoxCoords(fragmentInputs.vPositionUVW,uniforms.reflectionMatrix);\n#else\nreturn vec3f(0.);\n#endif\n}\n#endif\n${JS}\n${dS}\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\nvar viewDirectionW: vec3f=normalize(scene.vEyePosition.xyz-fragmentInputs.vPositionW);var baseColor: vec4f= vec4f(1.,1.,1.,1.);var diffuseColor: vec3f=uniforms.vDiffuseColor.rgb;var alpha: f32=uniforms.vDiffuseColor.a;\n#ifdef NORMAL\nvar normalW: vec3f=normalize(fragmentInputs.vNormalW);\n#else\nvar normalW: vec3f=normalize(cross(dpdx(fragmentInputs.vPositionW),dpdy(fragmentInputs.vPositionW)));\nnormalW=select(-normalW,normalW,dot(normalW,viewDirectionW)>=0.0);\n#endif\n#ifdef TWOSIDEDLIGHTING\nnormalW=select(-normalW,normalW,fragmentInputs.frontFacing);\n#endif\nvar uvOffset: vec2f= vec2f(0.0,0.0);\n#ifdef DIFFUSE\nbaseColor=TEXRD(diffuseSampler,diffuseSamplerSampler,fragmentInputs.vDiffuseUV+uvOffset);\n#if defined(ALPHATEST) && !defined(ALPHATEST_AFTERALLALPHACOMPUTATIONS)\nif (baseColor.a<uniforms.alphaCutOff) {discard;}\n#endif\n#ifdef ALPHAFROMDIFFUSE\nalpha*=baseColor.a;\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_ALPHA\nbaseColor=vec4f(baseColor.rgb*uniforms.vDiffuseInfos.y,baseColor.a);\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nbaseColor=vec4f(baseColor.rgb*fragmentInputs.vColor.rgb,baseColor.a);\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_DIFFUSE\nvar baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n#define CUSTOM_FRAGMENT_BEFORE_LIGHTS\nvar glossiness: f32=uniforms.vSpecularColor.a;var specularColor: vec3f=uniforms.vSpecularColor.rgb;\nvar diffuseBase: vec3f= vec3f(0.,0.,0.);var info: lightingInfo;\nvar shadow: f32=1.;var aggShadow: f32=0.;var numLights: f32=0.;\n${Array.from({length:4},((GG,bG)=>function(GG){const bG=`
     frame.lights[LITE_LIGHT$ {
-        uu
+        GG
       }
       _SLOT] `;return`
     #ifdef LIGHT$ {
-      uu
+      GG
     }\
     nvar diffuse$ {
-      uu
+      GG
     }: vec4f = $ {
-      Eu
+      bG
     }.vLightDiffuse;\
     n #define CUSTOM_LIGHT$ {
-      uu
+      GG
     }
     _COLOR\ ninfo = computeLighting(viewDirectionW, normalW, $ {
-      Eu
+      bG
     }.vLightData, diffuse$ {
-      uu
+      GG
     }.rgb, $ {
-      Eu
+      bG
     }.vLightSpecular.rgb, diffuse$ {
-      uu
+      GG
     }.a, glossiness);\
     nshadow = 1.;\
     naggShadow += shadow;\
     nnumLights += 1.0;\
     ndiffuseBase += info.diffuse * shadow;\
-    n #endif`}(Eu))).join("\n")}\naggShadow=aggShadow/numLights;var refractionColor: vec4f= vec4f(0.,0.,0.,1.);\nvar reflectionColor: vec4f= vec4f(0.,0.,0.,1.);\n#ifdef REFLECTION\nvar vReflectionUVW: vec3f=computeReflectionCoords( vec4f(fragmentInputs.vPositionW,1.0),normalW);\n#ifdef REFLECTIONMAP_OPPOSITEZ\nvReflectionUVW=vec3f(vReflectionUVW.x,vReflectionUVW.y,vReflectionUVW.z*-1.0);\n#endif\n#ifdef ROUGHNESS\nvar bias: f32=uniforms.vReflectionInfos.y;\nreflectionColor=textureSampleLevel(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW,bias);\n#else\nreflectionColor=textureSample(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW);\n#endif\n#ifdef LITE_REFLECTION_LUMINANCE\nreflectionColor=vec4f(reflectionColor.rrr,1.0);\n#endif\n#ifdef RGBDREFLECTION\nreflectionColor=vec4f(fromRGBD(reflectionColor),reflectionColor.a);\n#endif\n#ifdef IS_REFLECTION_LINEAR\nreflectionColor=vec4f(toGammaSpaceVec3(reflectionColor.rgb),reflectionColor.a);\n#endif\nreflectionColor=vec4f(reflectionColor.rgb*uniforms.vReflectionInfos.x,reflectionColor.a);\n#endif\n#ifdef OPACITY\nvar opacityMap: vec4f=TEXRD(opacitySampler,opacitySamplerSampler,fragmentInputs.vOpacityUV+uvOffset);\n#ifdef OPACITYRGB\nopacityMap=vec4f(opacityMap.rgb* vec3f(0.3,0.59,0.11),opacityMap.a);alpha*=(opacityMap.x+opacityMap.y+opacityMap.z)* uniforms.vOpacityInfos.y;\n#else\nalpha*=opacityMap.a*uniforms.vOpacityInfos.y;\n#endif\n#endif\n#if defined(VERTEXALPHA) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nalpha*=fragmentInputs.vColor.a;\n#endif\n#ifdef ALPHATEST\n#ifdef ALPHATEST_AFTERALLALPHACOMPUTATIONS\nif (alpha<uniforms.alphaCutOff) {discard;}\n#endif\n#ifndef ALPHABLEND\nalpha=1.0;\n#endif\n#endif\nvar emissiveColor: vec3f=uniforms.vEmissiveColor;\n#ifdef EMISSIVE\nemissiveColor+=TEXRD(emissiveSampler,emissiveSamplerSampler,fragmentInputs.vEmissiveUV+uvOffset).rgb*uniforms.vEmissiveInfos.y;\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\n#ifdef LINKEMISSIVEWITHDIFFUSE\nvar finalDiffuse: vec3f=clamp((diffuseBase+emissiveColor)*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+emissiveColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#endif\n#endif\nvar finalSpecular: vec3f= vec3f(0.0);\n#ifdef REFLECTIONOVERALPHA\nalpha=clamp(alpha+dot(reflectionColor.rgb, vec3f(0.3,0.59,0.11)),0.0,1.0);\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar color: vec4f= vec4f(clamp(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+emissiveColor+refractionColor.rgb,vec3f(0.0),vec3f(1.0)),alpha);\n#else\nvar color: vec4f= vec4f(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+refractionColor.rgb,alpha);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FOG\ncolor=vec4f(max(color.rgb,vec3f(0.)),color.a);\n#ifdef FOG\nvar fog: f32=CalcFogFactor();\ncolor= vec4f(mix(frame.vFogColor,color.rgb,fog),color.a);\n#endif\ncolor=vec4f(color.rgb,color.a*mesh.visibility);\n#ifdef PREMULTIPLYALPHA\ncolor=vec4f(color.rgb*color.a, color.a);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FRAGCOLOR\nfragmentOutputs.color=color;\n#define CUSTOM_FRAGMENT_MAIN_END\nreturn fragmentOutputs;\n}\n`, GU = /^([gimus]+)!/, pU = new Set;
+    n #endif`}(bG))).join("\n")}\naggShadow=aggShadow/numLights;var refractionColor: vec4f= vec4f(0.,0.,0.,1.);\nvar reflectionColor: vec4f= vec4f(0.,0.,0.,1.);\n#ifdef REFLECTION\nvar vReflectionUVW: vec3f=computeReflectionCoords( vec4f(fragmentInputs.vPositionW,1.0),normalW);\n#ifdef REFLECTIONMAP_OPPOSITEZ\nvReflectionUVW=vec3f(vReflectionUVW.x,vReflectionUVW.y,vReflectionUVW.z*-1.0);\n#endif\n#ifdef ROUGHNESS\nvar bias: f32=uniforms.vReflectionInfos.y;\nreflectionColor=textureSampleLevel(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW,bias);\n#else\nreflectionColor=textureSample(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW);\n#endif\n#ifdef LITE_REFLECTION_LUMINANCE\nreflectionColor=vec4f(reflectionColor.rrr,1.0);\n#endif\n#ifdef RGBDREFLECTION\nreflectionColor=vec4f(fromRGBD(reflectionColor),reflectionColor.a);\n#endif\n#ifdef IS_REFLECTION_LINEAR\nreflectionColor=vec4f(toGammaSpaceVec3(reflectionColor.rgb),reflectionColor.a);\n#endif\nreflectionColor=vec4f(reflectionColor.rgb*uniforms.vReflectionInfos.x,reflectionColor.a);\n#endif\n#ifdef OPACITY\nvar opacityMap: vec4f=TEXRD(opacitySampler,opacitySamplerSampler,fragmentInputs.vOpacityUV+uvOffset);\n#ifdef OPACITYRGB\nopacityMap=vec4f(opacityMap.rgb* vec3f(0.3,0.59,0.11),opacityMap.a);alpha*=(opacityMap.x+opacityMap.y+opacityMap.z)* uniforms.vOpacityInfos.y;\n#else\nalpha*=opacityMap.a*uniforms.vOpacityInfos.y;\n#endif\n#endif\n#if defined(VERTEXALPHA) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nalpha*=fragmentInputs.vColor.a;\n#endif\n#ifdef ALPHATEST\n#ifdef ALPHATEST_AFTERALLALPHACOMPUTATIONS\nif (alpha<uniforms.alphaCutOff) {discard;}\n#endif\n#ifndef ALPHABLEND\nalpha=1.0;\n#endif\n#endif\nvar emissiveColor: vec3f=uniforms.vEmissiveColor;\n#ifdef EMISSIVE\nemissiveColor+=TEXRD(emissiveSampler,emissiveSamplerSampler,fragmentInputs.vEmissiveUV+uvOffset).rgb*uniforms.vEmissiveInfos.y;\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\n#ifdef LINKEMISSIVEWITHDIFFUSE\nvar finalDiffuse: vec3f=clamp((diffuseBase+emissiveColor)*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+emissiveColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#endif\n#endif\nvar finalSpecular: vec3f= vec3f(0.0);\n#ifdef REFLECTIONOVERALPHA\nalpha=clamp(alpha+dot(reflectionColor.rgb, vec3f(0.3,0.59,0.11)),0.0,1.0);\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar color: vec4f= vec4f(clamp(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+emissiveColor+refractionColor.rgb,vec3f(0.0),vec3f(1.0)),alpha);\n#else\nvar color: vec4f= vec4f(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+refractionColor.rgb,alpha);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FOG\ncolor=vec4f(max(color.rgb,vec3f(0.)),color.a);\n#ifdef FOG\nvar fog: f32=CalcFogFactor();\ncolor= vec4f(mix(frame.vFogColor,color.rgb,fog),color.a);\n#endif\ncolor=vec4f(color.rgb,color.a*mesh.visibility);\n#ifdef PREMULTIPLYALPHA\ncolor=vec4f(color.rgb*color.a, color.a);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FRAGCOLOR\nfragmentOutputs.color=color;\n#define CUSTOM_FRAGMENT_MAIN_END\nreturn fragmentOutputs;\n}\n`, ES = /^([gimus]+)!/, oS = new Set;
 
-    function wU(uu) {
-      pU.has(uu) || (pU.add(uu), console.warn(`Lite: no place for plugin code at ${uu} in the standard shader: it is left out`))
+    function XS(GG) {
+      oS.has(GG) || (oS.add(GG), console.warn(`Lite: no place for plugin code at ${GG} in the standard shader: it is left out`))
     }
 
-    function JU(uu, Eu) {
-      let ju = uu;
-      const su = new Map;
-      for (const [Zu, Xu] of Eu) {
-        var Uu;
-        su.set(Zu, `${null!==(Uu=su.get(Zu))&&void 0!==Uu?Uu:""}${Xu}\n`)
+    function uS(GG, bG) {
+      let ZG = GG;
+      const wG = new Map;
+      for (const [LG, yG] of bG) {
+        var SG;
+        wG.set(LG, `${null!==(SG=wG.get(LG))&&void 0!==SG?SG:""}${yG}\n`)
       }
-      for (const [Zu, Xu] of su) {
-        if (!Zu.startsWith("!")) {
-          const uu = `#define ${Zu}`;
-          if (!ju.includes(uu)) {
-            wU(Zu);
+      for (const [LG, yG] of wG) {
+        if (!LG.startsWith("!")) {
+          const GG = `#define ${LG}`;
+          if (!ZG.includes(GG)) {
+            XS(LG);
             continue
           }
-          ju = ju.replace(uu, (() => `\n${Xu}\n${uu}`));
+          ZG = ZG.replace(GG, (() => `\n${yG}\n${GG}`));
           continue
         }
-        let uu = Zu.substring(1),
-          Eu = "g";
-        if (uu.startsWith("!")) Eu = "", uu = uu.substring(1);
+        let GG = LG.substring(1),
+          bG = "g";
+        if (GG.startsWith("!")) bG = "", GG = GG.substring(1);
         else {
-          const ju = GU.exec(uu);
-          ju && (Eu = ju[1], uu = uu.substring(Eu.length + 1))
+          const ZG = ES.exec(GG);
+          ZG && (bG = ZG[1], GG = GG.substring(bG.length + 1))
         }
-        const su = new RegExp(uu, Eu.includes("g") ? Eu : `${Eu}g`);
-        let Uu = su.exec(ju);
-        for (Uu || wU(Zu); Uu;) {
-          const uu = Uu,
-            Eu = Xu.replace(/\$(\d+)/g, ((Eu, ju) => Number(ju) < uu.length ? uu[Number(ju)] : ""));
-          ju = ju.substring(0, uu.index) + Eu + ju.substring(uu.index + uu[0].length), su.lastIndex = uu.index + Eu.length, Uu = su.exec(ju)
+        const wG = new RegExp(GG, bG.includes("g") ? bG : `${bG}g`);
+        let SG = wG.exec(ZG);
+        for (SG || XS(LG); SG;) {
+          const GG = SG,
+            bG = yG.replace(/\$(\d+)/g, ((bG, ZG) => Number(ZG) < GG.length ? GG[Number(ZG)] : ""));
+          ZG = ZG.substring(0, GG.index) + bG + ZG.substring(GG.index + GG[0].length), wG.lastIndex = GG.index + bG.length, SG = wG.exec(ZG)
         }
       }
-      return ju
+      return ZG
     }
-    const dU = /\b(?:(attribute|uniform)|(?:(flat|linear|perspective)\s+)?(?:(center|centroid|sample)\s+)?varying)\s+(\w+)\s*:\s*([\w<>, ]+?)\s*;/g,
-      aU = /\bvar\s+(\w+)\s*:\s*sampler\s*;/g,
-      PU = /\bvar\s+(\w+)\s*:\s*(texture_\w+(?:<\s*f32\s*>)?)\s*;/g;
+    const iS = /\b(?:(attribute|uniform)|(?:(flat|linear|perspective)\s+)?(?:(center|centroid|sample)\s+)?varying)\s+(\w+)\s*:\s*([\w<>, ]+?)\s*;/g,
+      CS = /\bvar\s+(\w+)\s*:\s*sampler\s*;/g,
+      WS = /\bvar\s+(\w+)\s*:\s*(texture_\w+(?:<\s*f32\s*>)?)\s*;/g;
 
-    function oU(uu) {
-      const Eu = {
+    function mS(GG) {
+      const bG = {
         attributes: [],
         varyings: [],
         uniforms: [],
@@ -1898,421 +1898,421 @@ export const modules = {
         samplers: new Set,
         body: ""
       };
-      let ju = uu.replace(dU, ((uu, ju, su, Uu, Zu, Xu) => ("attribute" === ju ? Eu.attributes.push({
-        name: Zu,
-        type: Xu
-      }) : void 0 === ju ? Eu.varyings.push({
-        name: Zu,
-        type: Xu,
-        interpolation: mU(Xu, su, Uu)
-      }) : Eu.uniforms.push({
-        name: Zu,
-        type: kU(Xu)
+      let ZG = GG.replace(iS, ((GG, ZG, wG, SG, LG, yG) => ("attribute" === ZG ? bG.attributes.push({
+        name: LG,
+        type: yG
+      }) : void 0 === ZG ? bG.varyings.push({
+        name: LG,
+        type: yG,
+        interpolation: FS(yG, wG, SG)
+      }) : bG.uniforms.push({
+        name: LG,
+        type: IS(yG)
       }), "")));
-      return ju = ju.replace(aU, ((uu, ju) => (Eu.samplers.add(ju), ""))), ju = ju.replace(PU, ((uu, ju, su) => (Eu.textures.push({
-        name: ju,
-        type: su
-      }), ""))), Eu.body = ju, Eu
+      return ZG = ZG.replace(CS, ((GG, ZG) => (bG.samplers.add(ZG), ""))), ZG = ZG.replace(WS, ((GG, ZG, wG) => (bG.textures.push({
+        name: ZG,
+        type: wG
+      }), ""))), bG.body = ZG, bG
     }
 
-    function kU(uu) {
-      const Eu = uu.replace(/\s+/g, "").replace("vec2<f32>", "vec2f").replace("vec3<f32>", "vec3f").replace("vec4<f32>", "vec4f").replace("mat4x4<f32>", "mat4x4f"),
-        ju = new Map([
+    function IS(GG) {
+      const bG = GG.replace(/\s+/g, "").replace("vec2<f32>", "vec2f").replace("vec3<f32>", "vec3f").replace("vec4<f32>", "vec4f").replace("mat4x4<f32>", "mat4x4f"),
+        ZG = new Map([
           ["f32", "float"],
           ["vec2f", "vec2"],
           ["vec3f", "vec3"],
           ["vec4f", "vec4"],
           ["mat4x4f", "mat4"]
-        ]).get(Eu);
-      if (!ju) throw new Error(`Lite: unsupported uniform type ${uu}`);
-      return ju
+        ]).get(bG);
+      if (!ZG) throw new Error(`Lite: unsupported uniform type ${GG}`);
+      return ZG
     }
 
-    function mU(uu, Eu, ju) {
-      return void 0 === Eu && void 0 === ju ? /^(u32|i32|vec\du|vec\di|vec\d<[ui]32>)$/.test(uu.replace(/\s+/g, "")) ? "@interpolate(flat) " : "" : "flat" === Eu ? "@interpolate(flat) " : `@interpolate(${null!==Eu&&void 0!==Eu?Eu:"perspective"}, ${null!==ju&&void 0!==ju?ju:"center"}) `
+    function FS(GG, bG, ZG) {
+      return void 0 === bG && void 0 === ZG ? /^(u32|i32|vec\du|vec\di|vec\d<[ui]32>)$/.test(GG.replace(/\s+/g, "")) ? "@interpolate(flat) " : "" : "flat" === bG ? "@interpolate(flat) " : `@interpolate(${null!==bG&&void 0!==bG?bG:"perspective"}, ${null!==ZG&&void 0!==ZG?ZG:"center"}) `
     }
 
-    function vU(uu) {
-      return QU({
-        defines: uu.defines,
-        vertex: JU(MU, uu.vertexCode),
-        fragment: JU(eU, uu.fragmentCode),
-        members: [...UU, ...uu.defines.has("OPACITY") ? ZU : [], ...uu.defines.has("EMISSIVE") ? XU : [], ...uu.pluginUniforms],
+    function vS(GG) {
+      return jS({
+        defines: GG.defines,
+        vertex: uS(rS, GG.vertexCode),
+        fragment: uS(zS, GG.fragmentCode),
+        members: [...wS, ...GG.defines.has("OPACITY") ? SS : [], ...GG.defines.has("EMISSIVE") ? LS : [], ...GG.pluginUniforms],
         structName: "StandardUniforms"
       })
     }
 
-    function KU(uu) {
-      const Eu = uu.replace(/\breturn\s+fragmentOutputs\s*;/g, "return canvasOutputs();");
-      if (Eu === uu) throw new Error("Lite: fragment main has no return");
-      return Eu
+    function aS(GG) {
+      const bG = GG.replace(/\breturn\s+fragmentOutputs\s*;/g, "return canvasOutputs();");
+      if (bG === GG) throw new Error("Lite: fragment main has no return");
+      return bG
     }
-    const VU = `\nattribute position: vec3f;\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${NU}\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n${OU}\nvar worldPos: vec4f=finalWorld*vec4f(vertexInputs.position,1.0);\nvertexOutputs.position=scene.viewProjection*worldPos;\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${YU}\n${hU}\n}\n`,
-      rU = `\nuniform color: vec4f;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n${DU}\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvar color: vec4f=fragmentInputs.vColor;\n#else\nvar color: vec4f=uniforms.color;\n#endif\n#ifdef FOG\ncolor=vec4f(mix(frame.vFogColor,color.rgb,CalcFogFactor()),color.a);\n#endif\nfragmentOutputs.color=color;\nreturn fragmentOutputs;\n}\n`;
+    const cS = `\nattribute position: vec3f;\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${fS}\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n${QS}\nvar worldPos: vec4f=finalWorld*vec4f(vertexInputs.position,1.0);\nvertexOutputs.position=scene.viewProjection*worldPos;\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${KS}\n${hS}\n}\n`,
+      lS = `\nuniform color: vec4f;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n${dS}\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvar color: vec4f=fragmentInputs.vColor;\n#else\nvar color: vec4f=uniforms.color;\n#endif\n#ifdef FOG\ncolor=vec4f(mix(frame.vFogColor,color.rgb,CalcFogFactor()),color.a);\n#endif\nfragmentOutputs.color=color;\nreturn fragmentOutputs;\n}\n`;
 
-    function QU(uu) {
-      const Eu = uu.defines,
-        ju = oU(LE(uu.vertex, Eu)),
-        su = oU(LE(uu.fragment, Eu)),
-        Uu = new Map;
-      for (const Mu of [...ju.varyings, ...su.varyings]) Uu.has(Mu.name) || Uu.set(Mu.name, Mu);
-      const Zu = [...Uu.values()].map(((uu, Eu) => `\t@location(${Eu}) ${uu.interpolation}${uu.name}: ${uu.type},`)),
-        Xu = [...uu.members];
-      for (const Mu of [...ju.uniforms, ...su.uniforms]) Xu.some((uu => uu.name === Mu.name)) || Xu.push(Mu);
-      const lu = sU(uu.structName, Xu),
-        qu = [],
-        fu = [];
-      let Cu = 1;
-      const bu = new Set;
-      for (const Mu of [...ju.textures, ...su.textures]) {
-        if (bu.has(Mu.name)) continue;
-        bu.add(Mu.name);
-        const uu = `${Mu.name}Sampler`,
-          Eu = Cu++,
-          ju = Cu++,
-          su = Mu.type.startsWith("texture_2d_array") ? "2d-array" : Mu.type.startsWith("texture_cube") ? "cube" : "2d";
-        qu.push({
-          name: Mu.name,
-          binding: Eu,
-          samplerBinding: ju,
-          dimension: su
-        }), fu.push(`@group(2) @binding(${Eu}) var ${Mu.name}: ${Mu.type};`), fu.push(`@group(2) @binding(${ju}) var ${uu}: sampler;`)
+    function jS(GG) {
+      const bG = GG.defines,
+        ZG = mS(eb(GG.vertex, bG)),
+        wG = mS(eb(GG.fragment, bG)),
+        SG = new Map;
+      for (const zG of [...ZG.varyings, ...wG.varyings]) SG.has(zG.name) || SG.set(zG.name, zG);
+      const LG = [...SG.values()].map(((GG, bG) => `\t@location(${bG}) ${GG.interpolation}${GG.name}: ${GG.type},`)),
+        yG = [...GG.members];
+      for (const zG of [...ZG.uniforms, ...wG.uniforms]) yG.some((GG => GG.name === zG.name)) || yG.push(zG);
+      const kG = ZS(GG.structName, yG),
+        UG = [],
+        YG = [];
+      let VG = 1;
+      const pG = new Set;
+      for (const zG of [...ZG.textures, ...wG.textures]) {
+        if (pG.has(zG.name)) continue;
+        pG.add(zG.name);
+        const GG = `${zG.name}Sampler`,
+          bG = VG++,
+          ZG = VG++,
+          wG = zG.type.startsWith("texture_2d_array") ? "2d-array" : zG.type.startsWith("texture_cube") ? "cube" : "2d";
+        UG.push({
+          name: zG.name,
+          binding: bG,
+          samplerBinding: ZG,
+          dimension: wG
+        }), YG.push(`@group(2) @binding(${bG}) var ${zG.name}: ${zG.type};`), YG.push(`@group(2) @binding(${ZG}) var ${GG}: sampler;`)
       }
-      for (const Mu of [...ju.samplers, ...su.samplers])
-        if (!bu.has(Mu.replace(/Sampler$/, ""))) throw new Error(`Lite: sampler ${Mu} has no texture`);
-      const cu = [Is, cU, lu.wgsl, `@group(2) @binding(0) var<uniform> uniforms: ${uu.structName};`, ...fu].join("\n"),
-        Nu = ju.attributes,
-        Ou = ["struct VertexInputs {", "\t@builtin(vertex_index) vertexIndex: u32,", "\t@builtin(instance_index) instanceIndex: u32,", ...ju.attributes.map(((uu, Eu) => `\t@location(${Eu}) ${uu.name}: ${uu.type},`)), "}", "var<private> vertexInputs: VertexInputs;"].join("\n"),
-        Yu = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...Zu, "}", "var<private> vertexOutputs: FragmentInputs;"].join("\n"),
-        hu = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...su.body.includes("fragmentInputs.frontFacing") ? ["\t@builtin(front_facing) frontFacing: bool,"] : [], ...Zu, "}", "var<private> fragmentInputs: FragmentInputs;", "struct FragmentOutputs {", "\t@location(0) color: vec4f,", "}", "var<private> fragmentOutputs: FragmentOutputs;", hE, "fn canvasOutputs() -> FragmentOutputs {", `\tif (${YE}) {`, "\t\tfragmentOutputs.color.a = 1.0;", "\t}", "\treturn fragmentOutputs;", "}"].join("\n"),
-        Du = uu => {
-          for (const Eu of lu.stridedArrays) uu = uu.replace(new RegExp(`\\b${Eu}\\s*\\[(.*?)\\]`, "g"), `${Eu}[$1].el`);
-          return uu
+      for (const zG of [...ZG.samplers, ...wG.samplers])
+        if (!pG.has(zG.replace(/Sampler$/, ""))) throw new Error(`Lite: sampler ${zG} has no texture`);
+      const fG = [sw, pS, kG.wgsl, `@group(2) @binding(0) var<uniform> uniforms: ${GG.structName};`, ...YG].join("\n"),
+        QG = ZG.attributes,
+        KG = ["struct VertexInputs {", "\t@builtin(vertex_index) vertexIndex: u32,", "\t@builtin(instance_index) instanceIndex: u32,", ...ZG.attributes.map(((GG, bG) => `\t@location(${bG}) ${GG.name}: ${GG.type},`)), "}", "var<private> vertexInputs: VertexInputs;"].join("\n"),
+        hG = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...LG, "}", "var<private> vertexOutputs: FragmentInputs;"].join("\n"),
+        dG = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...wG.body.includes("fragmentInputs.frontFacing") ? ["\t@builtin(front_facing) frontFacing: bool,"] : [], ...LG, "}", "var<private> fragmentInputs: FragmentInputs;", "struct FragmentOutputs {", "\t@location(0) color: vec4f,", "}", "var<private> fragmentOutputs: FragmentOutputs;", db, "fn canvasOutputs() -> FragmentOutputs {", `\tif (${hb}) {`, "\t\tfragmentOutputs.color.a = 1.0;", "\t}", "\treturn fragmentOutputs;", "}"].join("\n"),
+        JG = GG => {
+          for (const bG of kG.stridedArrays) GG = GG.replace(new RegExp(`\\b${bG}\\s*\\[(.*?)\\]`, "g"), `${bG}[$1].el`);
+          return GG
         };
       return {
-        vertex: `${cu}\n${Ou}\n${Yu}\n${Du(ju.body)}`,
-        fragment: `diagnostic(off, derivative_uniformity);\n${cu}\n${hu}\n${KU((gu=Du(su.body),gu.includes("fragmentInputs.position")?gu.replace("fragmentInputs = input;","fragmentInputs = input;\nfragmentInputs.position.y = frame.outputHeight - fragmentInputs.position.y;"):gu))}`,
-        attributes: Nu,
-        material: lu,
-        textures: qu
+        vertex: `${fG}\n${KG}\n${hG}\n${JG(ZG.body)}`,
+        fragment: `diagnostic(off, derivative_uniformity);\n${fG}\n${dG}\n${aS((rG=JG(wG.body),rG.includes("fragmentInputs.position")?rG.replace("fragmentInputs = input;","fragmentInputs = input;\nfragmentInputs.position.y = frame.outputHeight - fragmentInputs.position.y;"):rG))}`,
+        attributes: QG,
+        material: kG,
+        textures: UG
       };
-      var gu
+      var rG
     }
-    const iU = [6, 4, 5, 7, 6, 5, 0, 2, 3, 1, 0, 3, 5, 1, 3, 7, 5, 3, 0, 4, 6, 2, 0, 6, 3, 2, 6, 7, 3, 6, 0, 1, 5, 4, 0, 5],
-      WU = uu => ({
-        name: uu,
+    const PS = [6, 4, 5, 7, 6, 5, 0, 2, 3, 1, 0, 3, 5, 1, 3, 7, 5, 3, 0, 4, 6, 2, 0, 6, 3, 2, 6, 7, 3, 6, 0, 1, 5, 4, 0, 5],
+      MS = GG => ({
+        name: GG,
         type: "vec3"
       }),
-      SU = uu => ({
-        name: uu,
+      AS = GG => ({
+        name: GG,
         type: "float"
       }),
-      IU = sU("EarthSkyUniforms", [WU("viewFrom"), SU("exposureScale"), WU("zenithOffset"), SU("fogOn"), WU("up"), SU("ditherOn"), WU("sun"), SU("turbidity"), WU("tint"), SU("rayleigh"), WU("sunDir"), SU("mieStrength"), WU("inScatterR"), SU("mieFocus"), WU("inScatterM"), SU("sunE"), WU("extinctionBeta"), SU("sunsetMix"), SU("mieScale"), SU("mieBase"), SU("mieSlope"), SU("sunDiscE"), SU("exposure")]),
-      FU = `${Is}\n${cU}\n${IU.wgsl}\n@group(2) @binding(0) var<uniform> sky: EarthSkyUniforms;\nstruct EarthSkyVarying {\n\t@builtin(position) position: vec4f,\n\t@location(0) worldPosition: vec3f,\n\t@location(1) fogDistance: vec3f,\n\t@location(2) tint: vec3f,\n}\n`,
-      BU = `\n@vertex\nfn main(@builtin(vertex_index) index: u32) -> EarthSkyVarying {\n\tlet corners = array<u32, 36>(${iU.join(", ")});\n\tlet corner = corners[index];\n\tlet position = vec3f(f32(corner & 1u), f32((corner >> 1u) & 1u), f32(corner >> 2u)) - 0.5;\n\tvar out: EarthSkyVarying;\n\tout.position = liteWorldLayer(scene.viewProjection * mesh.world * vec4f(position, 1.0));\n\tlet worldPosition = mesh.world * vec4f(position, 1.0);\n\tout.worldPosition = worldPosition.xyz;\n\tout.fogDistance = (scene.view * worldPosition).xyz;\n\tout.tint = sky.tint;\n\treturn out;\n}\n`,
-      LU = `\n${hE}\nconst PI: f32 = 3.141592653589793238462643383279502884197169;\nconst SUN_DISC_COS: f32 = 0.999956676946448443553574619906976478926848692873900859324;\n${Object.entries(SE).map((uu=>{let[Eu,ju]=uu;return`const TONE_${Eu}: f32 = ${ju};`})).join(" ")}\n\n// The rest of main's prelude, as it was, for sky pack overrides that use it; the default calls none of it\nconst WAVELENGTHS: vec3f = vec3f(680E-9, 550E-9, 450E-9);\nconst MIE_K: vec3f = vec3f(0.686, 0.678, 0.666);\nconst MIE_V: f32 = 4.0;\nconst RAYLEIGH_ZENITH_LENGTH: f32 = 8.4E3;\nconst MIE_ZENITH_LENGTH: f32 = 1.25E3;\nconst SUN_INTENSITY: f32 = 1000.0;\nconst SUN_CUTOFF: f32 = PI / 1.95;\nconst SUN_STEEPNESS: f32 = 1.5;\nconst TONE_WHITE: f32 = 1000.0;\n\nfn rayleighBeta() -> vec3f { return vec3f(0.0005) / vec3f(94, 40, 18); }\n\nfn rayleighPhase(cosTheta: f32) -> f32 { return (3.0 / (16.0 * PI)) * (1.0 + pow(cosTheta, 2.0)); }\n\nfn mieBeta(wavelengths: vec3f, k: vec3f, turbidity: f32) -> vec3f {\n\tvar c: f32 = (0.2 * turbidity) * 10E-18;\n\treturn 0.434 * c * PI * pow((2.0 * PI) / wavelengths, vec3f(MIE_V - 2.0)) * k;\n}\n\nfn henyeyGreenstein(cosTheta: f32, g: f32) -> f32 {\n\treturn (1.0 / (4.0 * PI)) * ((1.0 - pow(g, 2.0)) / pow(1.0 - 2.0 * g * cosTheta + pow(g, 2.0), 1.5));\n}\n\nfn sunIntensity(zenithAngleCos: f32) -> f32 {\n\treturn SUN_INTENSITY * max(0.0, 1.0 - exp((-(SUN_CUTOFF - acos(zenithAngleCos)) / SUN_STEEPNESS)));\n}\n\n// A sky shader pack can replace earthSkyRadiance (the scattering, over EarthSkyInput) or earthSkyColour (the tonemap) by\n// name. The prelude, EarthSkyInput and both signatures are main's, so a pack written against main compiles unchanged.\nstruct EarthSkyInput {\n\tview: vec3f, zenithView: vec3f, sun: vec3f, up: vec3f,\n\tturbidity: f32, rayleigh: f32, mieStrength: f32, mieFocus: f32,\n}\n\nfn filmic(x: vec3f) -> vec3f {\n\treturn ((x * (TONE_A * x + TONE_C * TONE_B) + TONE_D * TONE_E) / (x * (TONE_A * x + TONE_B) + TONE_D * TONE_F)) - TONE_E / TONE_F;\n}\n\n// The default reads input's view, zenithView and up, and the terms the CPU precomputes from the frame's uniforms\n// (earthSkyDerived.ts) straight from sky: they already include input's sun, turbidity, rayleigh, mieStrength and mieFocus.\nfn earthSkyRadiance(input: EarthSkyInput) -> vec3f {\n\t// cos(acos(x)) is x: the Rayleigh and Mie optical lengths share this denominator\n\tlet cosZenith = max(0.0, dot(input.up, input.zenithView));\n\tlet zenithAngle = acos(cosZenith);\n\tlet opticalLength = 1.0 / (cosZenith + 0.15 * pow(93.885 - ((zenithAngle * 180.0) / PI), -1.253));\n\tlet extinction = exp(-sky.extinctionBeta * opticalLength);\n\tlet cosTheta = dot(input.view, sky.sunDir);\n\tlet rCos = cosTheta * 0.5 + 0.5;\n\tlet rPhase = (3.0 / (16.0 * PI)) * (1.0 + rCos * rCos);\n\tlet mBase = sky.mieBase - sky.mieSlope * cosTheta;\n\tlet mPhase = sky.mieScale * inverseSqrt(mBase) / mBase;\n\tlet scattered = sky.inScatterR * rPhase + sky.inScatterM * mPhase;\n\tlet lit = scattered * (1.0 - extinction);\n\tlet inScattered = lit * sqrt(lit) * mix(vec3f(1.0), sqrt(scattered * extinction), vec3f(sky.sunsetMix));\n\tlet sunDisc = smoothstep(SUN_DISC_COS, SUN_DISC_COS + 0.00002, cosTheta);\n\tlet night = (0.1 + sky.sunDiscE * sunDisc) * extinction;\n\treturn (inScattered + night) * 0.04 + vec3f(0.0, 0.001, 0.0025) * 0.3;\n}\n\n// The contract for overrides: exposure is SkyMaterial's luminance (main passes sky.exposure), as Babylon's tonemap reads it.\n// The default tonemaps with the frame's precomputed sky.exposureScale, its log2(2 / exposure^4), written together with it.\nfn earthSkyColour(radiance: vec3f, exposure: f32) -> vec3f {\n\treturn filmic(sky.exposureScale * radiance) * ${IE};\n}\n\nfn ditherOffset(seed: vec2f, variance: f32) -> f32 {\n\tlet rand: f32 = fract(sin(dot(seed.xy, vec2f(12.9898, 78.233))) * 43758.5453);\n\tlet normVariance: f32 = variance / 255.0;\n\treturn mix(-normVariance, normVariance, rand);\n}\n\nfn fogFactor(fromEye: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = frame.vFogInfos.y;\n\tlet fogEnd = frame.vFogInfos.z;\n\tlet fogDensity = frame.vFogInfos.w;\n\tlet dist = length(fromEye);\n\tif (3.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (1.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (2.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n\n@fragment\nfn main(input: EarthSkyVarying) -> @location(0) vec4f {\n\tlet toSky = input.worldPosition - sky.viewFrom;\n\tlet radiance = earthSkyRadiance(EarthSkyInput(normalize(toSky), normalize(toSky + sky.zenithOffset), sky.sun, sky.up, sky.turbidity, sky.rayleigh, sky.mieStrength, sky.mieFocus));\n\t// Parity: off, the dither and fog branches are skipped, as Babylon leaves them out with its defines; the dither reads the WebGL frag coord, as in Babylon\n\tvar dither = 0.0;\n\tif (sky.ditherOn != 0.0) { dither = ditherOffset(vec2f(input.position.x, frame.outputHeight - input.position.y), 0.5); }\n\tvar colour = clamp(vec4f(earthSkyColour(radiance, sky.exposure) * input.tint + dither, 1.0), vec4f(0.0), vec4f(1.0));\n\tif (sky.fogOn != 0.0) { colour = vec4f(mix(frame.vFogColor, colour.rgb, fogFactor(input.fogDistance)), colour.a); }\n\t// The canvas's alpha on the unblended pipeline it draws in (canvasFragment)\n\tif (${YE}) { colour.a = 1.0; }\n\treturn colour;\n}\n`;
-    var tU = ju(37488);
-    const xU = new tU.dO,
-      TU = new tU.dO,
-      HU = new tU.Quaternion,
-      AU = new Float64Array(3),
-      nU = new class {
+      sS = ZS("EarthSkyUniforms", [MS("viewFrom"), AS("exposureScale"), MS("zenithOffset"), AS("fogOn"), MS("up"), AS("ditherOn"), MS("sun"), AS("turbidity"), MS("tint"), AS("rayleigh"), MS("sunDir"), AS("mieStrength"), MS("inScatterR"), AS("mieFocus"), MS("inScatterM"), AS("sunE"), MS("extinctionBeta"), AS("sunsetMix"), AS("mieScale"), AS("mieBase"), AS("mieSlope"), AS("sunDiscE"), AS("exposure")]),
+      qS = `${sw}\n${pS}\n${sS.wgsl}\n@group(2) @binding(0) var<uniform> sky: EarthSkyUniforms;\nstruct EarthSkyVarying {\n\t@builtin(position) position: vec4f,\n\t@location(0) worldPosition: vec3f,\n\t@location(1) fogDistance: vec3f,\n\t@location(2) tint: vec3f,\n}\n`,
+      nS = `\n@vertex\nfn main(@builtin(vertex_index) index: u32) -> EarthSkyVarying {\n\tlet corners = array<u32, 36>(${PS.join(", ")});\n\tlet corner = corners[index];\n\tlet position = vec3f(f32(corner & 1u), f32((corner >> 1u) & 1u), f32(corner >> 2u)) - 0.5;\n\tvar out: EarthSkyVarying;\n\tout.position = liteWorldLayer(scene.viewProjection * mesh.world * vec4f(position, 1.0));\n\tlet worldPosition = mesh.world * vec4f(position, 1.0);\n\tout.worldPosition = worldPosition.xyz;\n\tout.fogDistance = (scene.view * worldPosition).xyz;\n\tout.tint = sky.tint;\n\treturn out;\n}\n`,
+      gS = `\n${db}\nconst PI: f32 = 3.141592653589793238462643383279502884197169;\nconst SUN_DISC_COS: f32 = 0.999956676946448443553574619906976478926848692873900859324;\n${Object.entries(sb).map((GG=>{let[bG,ZG]=GG;return`const TONE_${bG}: f32 = ${ZG};`})).join(" ")}\n\n// The rest of main's prelude, as it was, for sky pack overrides that use it; the default calls none of it\nconst WAVELENGTHS: vec3f = vec3f(680E-9, 550E-9, 450E-9);\nconst MIE_K: vec3f = vec3f(0.686, 0.678, 0.666);\nconst MIE_V: f32 = 4.0;\nconst RAYLEIGH_ZENITH_LENGTH: f32 = 8.4E3;\nconst MIE_ZENITH_LENGTH: f32 = 1.25E3;\nconst SUN_INTENSITY: f32 = 1000.0;\nconst SUN_CUTOFF: f32 = PI / 1.95;\nconst SUN_STEEPNESS: f32 = 1.5;\nconst TONE_WHITE: f32 = 1000.0;\n\nfn rayleighBeta() -> vec3f { return vec3f(0.0005) / vec3f(94, 40, 18); }\n\nfn rayleighPhase(cosTheta: f32) -> f32 { return (3.0 / (16.0 * PI)) * (1.0 + pow(cosTheta, 2.0)); }\n\nfn mieBeta(wavelengths: vec3f, k: vec3f, turbidity: f32) -> vec3f {\n\tvar c: f32 = (0.2 * turbidity) * 10E-18;\n\treturn 0.434 * c * PI * pow((2.0 * PI) / wavelengths, vec3f(MIE_V - 2.0)) * k;\n}\n\nfn henyeyGreenstein(cosTheta: f32, g: f32) -> f32 {\n\treturn (1.0 / (4.0 * PI)) * ((1.0 - pow(g, 2.0)) / pow(1.0 - 2.0 * g * cosTheta + pow(g, 2.0), 1.5));\n}\n\nfn sunIntensity(zenithAngleCos: f32) -> f32 {\n\treturn SUN_INTENSITY * max(0.0, 1.0 - exp((-(SUN_CUTOFF - acos(zenithAngleCos)) / SUN_STEEPNESS)));\n}\n\n// A sky shader pack can replace earthSkyRadiance (the scattering, over EarthSkyInput) or earthSkyColour (the tonemap) by\n// name. The prelude, EarthSkyInput and both signatures are main's, so a pack written against main compiles unchanged.\nstruct EarthSkyInput {\n\tview: vec3f, zenithView: vec3f, sun: vec3f, up: vec3f,\n\tturbidity: f32, rayleigh: f32, mieStrength: f32, mieFocus: f32,\n}\n\nfn filmic(x: vec3f) -> vec3f {\n\treturn ((x * (TONE_A * x + TONE_C * TONE_B) + TONE_D * TONE_E) / (x * (TONE_A * x + TONE_B) + TONE_D * TONE_F)) - TONE_E / TONE_F;\n}\n\n// The default reads input's view, zenithView and up, and the terms the CPU precomputes from the frame's uniforms\n// (earthSkyDerived.ts) straight from sky: they already include input's sun, turbidity, rayleigh, mieStrength and mieFocus.\nfn earthSkyRadiance(input: EarthSkyInput) -> vec3f {\n\t// cos(acos(x)) is x: the Rayleigh and Mie optical lengths share this denominator\n\tlet cosZenith = max(0.0, dot(input.up, input.zenithView));\n\tlet zenithAngle = acos(cosZenith);\n\tlet opticalLength = 1.0 / (cosZenith + 0.15 * pow(93.885 - ((zenithAngle * 180.0) / PI), -1.253));\n\tlet extinction = exp(-sky.extinctionBeta * opticalLength);\n\tlet cosTheta = dot(input.view, sky.sunDir);\n\tlet rCos = cosTheta * 0.5 + 0.5;\n\tlet rPhase = (3.0 / (16.0 * PI)) * (1.0 + rCos * rCos);\n\tlet mBase = sky.mieBase - sky.mieSlope * cosTheta;\n\tlet mPhase = sky.mieScale * inverseSqrt(mBase) / mBase;\n\tlet scattered = sky.inScatterR * rPhase + sky.inScatterM * mPhase;\n\tlet lit = scattered * (1.0 - extinction);\n\tlet inScattered = lit * sqrt(lit) * mix(vec3f(1.0), sqrt(scattered * extinction), vec3f(sky.sunsetMix));\n\tlet sunDisc = smoothstep(SUN_DISC_COS, SUN_DISC_COS + 0.00002, cosTheta);\n\tlet night = (0.1 + sky.sunDiscE * sunDisc) * extinction;\n\treturn (inScattered + night) * 0.04 + vec3f(0.0, 0.001, 0.0025) * 0.3;\n}\n\n// The contract for overrides: exposure is SkyMaterial's luminance (main passes sky.exposure), as Babylon's tonemap reads it.\n// The default tonemaps with the frame's precomputed sky.exposureScale, its log2(2 / exposure^4), written together with it.\nfn earthSkyColour(radiance: vec3f, exposure: f32) -> vec3f {\n\treturn filmic(sky.exposureScale * radiance) * ${qb};\n}\n\nfn ditherOffset(seed: vec2f, variance: f32) -> f32 {\n\tlet rand: f32 = fract(sin(dot(seed.xy, vec2f(12.9898, 78.233))) * 43758.5453);\n\tlet normVariance: f32 = variance / 255.0;\n\treturn mix(-normVariance, normVariance, rand);\n}\n\nfn fogFactor(fromEye: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = frame.vFogInfos.y;\n\tlet fogEnd = frame.vFogInfos.z;\n\tlet fogDensity = frame.vFogInfos.w;\n\tlet dist = length(fromEye);\n\tif (3.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (1.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (2.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n\n@fragment\nfn main(input: EarthSkyVarying) -> @location(0) vec4f {\n\tlet toSky = input.worldPosition - sky.viewFrom;\n\tlet radiance = earthSkyRadiance(EarthSkyInput(normalize(toSky), normalize(toSky + sky.zenithOffset), sky.sun, sky.up, sky.turbidity, sky.rayleigh, sky.mieStrength, sky.mieFocus));\n\t// Parity: off, the dither and fog branches are skipped, as Babylon leaves them out with its defines; the dither reads the WebGL frag coord, as in Babylon\n\tvar dither = 0.0;\n\tif (sky.ditherOn != 0.0) { dither = ditherOffset(vec2f(input.position.x, frame.outputHeight - input.position.y), 0.5); }\n\tvar colour = clamp(vec4f(earthSkyColour(radiance, sky.exposure) * input.tint + dither, 1.0), vec4f(0.0), vec4f(1.0));\n\tif (sky.fogOn != 0.0) { colour = vec4f(mix(frame.vFogColor, colour.rgb, fogFactor(input.fogDistance)), colour.a); }\n\t// The canvas's alpha on the unblended pipeline it draws in (canvasFragment)\n\tif (${hb}) { colour.a = 1.0; }\n\treturn colour;\n}\n`;
+    var eS = ZG(37432);
+    const RS = new eS.mK,
+      TS = new eS.mK,
+      HS = new eS.Quaternion,
+      tS = new Float64Array(3),
+      DS = new class {
         constructor() {
           this.sunDir = new Float64Array(3), this.sunE = 0, this.inScatterR = new Float64Array(3), this.inScatterM = new Float64Array(3), this.extinctionBeta = new Float64Array(3), this.sunsetMix = 0, this.sunDiscE = 0, this.mieScale = 0, this.mieBase = 0, this.mieSlope = 0
         }
       },
-      yU = new Float64Array(16);
+      NS = new Float64Array(16);
 
-    function zU(uu, Eu, ju) {
-      const su = ju.worldMatrix;
-      var Uu;
-      uu.updateFloat3("viewFrom", su[12], su[13], su[14]), uu.updateFloatsFrom("zenithOffset", Eu.cameraOffset, 0, 3), uu.updateFloatsFrom("up", Eu.up, 0, 3), Eu.luminance > 0 && (uu.updateFloat("exposure", Eu.luminance), uu.updateFloat("exposureScale", (Uu = Eu.luminance, Math.log2(2 / Math.pow(Uu, 4))))), uu.updateFloat("turbidity", Eu.turbidity), uu.updateFloat("rayleigh", Eu.rayleigh), uu.updateFloat("mieStrength", Eu.mieCoefficient), uu.updateFloat("mieFocus", Eu.mieDirectionalG), uu.updateFloatsFrom("tint", Eu.tint, 0, 3), uu.updateFloat("fogOn", Eu.fog && ju.fogEnabled && 0 !== ju.fogMode ? 1 : 0), uu.updateFloat("ditherOn", Eu.dithering ? 1 : 0);
-      const Zu = Eu.sunPosition;
-      if (xU.set(Zu[0], Zu[1], Zu[2]), !Eu.useSunPosition) {
-        const uu = Math.PI * (Eu.inclination - .5),
-          ju = 2 * Math.PI * (Eu.azimuth - .5);
-        xU.set(Eu.distance * Math.cos(ju) * Math.cos(uu), Eu.distance * Math.sin(-uu), Eu.distance * Math.sin(ju) * Math.cos(uu)), tU.Quaternion.FromUnitVectorsToRef(tU.dO.UpReadOnly, TU.set(Eu.up[0], Eu.up[1], Eu.up[2]), HU), xU.rotateByQuaternionToRef(HU, xU)
+    function OS(GG, bG, ZG) {
+      const wG = ZG.worldMatrix;
+      var SG;
+      GG.updateFloat3("viewFrom", wG[12], wG[13], wG[14]), GG.updateFloatsFrom("zenithOffset", bG.cameraOffset, 0, 3), GG.updateFloatsFrom("up", bG.up, 0, 3), bG.luminance > 0 && (GG.updateFloat("exposure", bG.luminance), GG.updateFloat("exposureScale", (SG = bG.luminance, Math.log2(2 / Math.pow(SG, 4))))), GG.updateFloat("turbidity", bG.turbidity), GG.updateFloat("rayleigh", bG.rayleigh), GG.updateFloat("mieStrength", bG.mieCoefficient), GG.updateFloat("mieFocus", bG.mieDirectionalG), GG.updateFloatsFrom("tint", bG.tint, 0, 3), GG.updateFloat("fogOn", bG.fog && ZG.fogEnabled && 0 !== ZG.fogMode ? 1 : 0), GG.updateFloat("ditherOn", bG.dithering ? 1 : 0);
+      const LG = bG.sunPosition;
+      if (RS.set(LG[0], LG[1], LG[2]), !bG.useSunPosition) {
+        const GG = Math.PI * (bG.inclination - .5),
+          ZG = 2 * Math.PI * (bG.azimuth - .5);
+        RS.set(bG.distance * Math.cos(ZG) * Math.cos(GG), bG.distance * Math.sin(-GG), bG.distance * Math.sin(ZG) * Math.cos(GG)), eS.Quaternion.FromUnitVectorsToRef(eS.mK.UpReadOnly, TS.set(bG.up[0], bG.up[1], bG.up[2]), HS), RS.rotateByQuaternionToRef(HS, RS)
       }
-      uu.updateVector3("sun", xU), AU[0] = xU.x, AU[1] = xU.y, AU[2] = xU.z;
-      const Xu = WE(Eu, AU, nU);
-      uu.updateFloatsFrom("sunDir", Xu.sunDir, 0, 3), uu.updateFloat("sunE", Xu.sunE), uu.updateFloatsFrom("inScatterR", Xu.inScatterR, 0, 3), uu.updateFloatsFrom("inScatterM", Xu.inScatterM, 0, 3), uu.updateFloatsFrom("extinctionBeta", Xu.extinctionBeta, 0, 3), uu.updateFloat("sunsetMix", Xu.sunsetMix), uu.updateFloat("sunDiscE", Xu.sunDiscE), uu.updateFloat("mieScale", Xu.mieScale), uu.updateFloat("mieBase", Xu.mieBase), uu.updateFloat("mieSlope", Xu.mieSlope)
+      GG.updateVector3("sun", RS), tS[0] = RS.x, tS[1] = RS.y, tS[2] = RS.z;
+      const yG = Ab(bG, tS, DS);
+      GG.updateFloatsFrom("sunDir", yG.sunDir, 0, 3), GG.updateFloat("sunE", yG.sunE), GG.updateFloatsFrom("inScatterR", yG.inScatterR, 0, 3), GG.updateFloatsFrom("inScatterM", yG.inScatterM, 0, 3), GG.updateFloatsFrom("extinctionBeta", yG.extinctionBeta, 0, 3), GG.updateFloat("sunsetMix", yG.sunsetMix), GG.updateFloat("sunDiscE", yG.sunDiscE), GG.updateFloat("mieScale", yG.mieScale), GG.updateFloat("mieBase", yG.mieBase), GG.updateFloat("mieSlope", yG.mieSlope)
     }
 
-    function RU(uu, Eu) {
-      const ju = yU;
-      ju[0] = Eu.far, ju[5] = Eu.far, ju[10] = Eu.far, ju[15] = 1;
-      const su = uu.infiniteDistance;
-      for (let Uu = 0; Uu < 3; Uu++) ju[12 + Uu] = uu.position[Uu] + (su ? Eu.worldMatrix[12 + Uu] : 0);
-      return yU
+    function xS(GG, bG) {
+      const ZG = NS;
+      ZG[0] = bG.far, ZG[5] = bG.far, ZG[10] = bG.far, ZG[15] = 1;
+      const wG = GG.infiniteDistance;
+      for (let SG = 0; SG < 3; SG++) ZG[12 + SG] = GG.position[SG] + (wG ? bG.worldMatrix[12 + SG] : 0);
+      return NS
     }
-    class uZ {
+    class BS {
       constructor() {
         this.pipeline = null, this.materialGroup = null, this.packGroup = null, this.vertexBuffers = [], this.vertexOffsets = [], this.indexBuffer = null
       }
       reset() {
         this.pipeline = null, this.materialGroup = null, this.packGroup = null, this.vertexBuffers.length = 0, this.vertexOffsets.length = 0, this.indexBuffer = null
       }
-      bind(uu, Eu, ju, su, Uu) {
-        ju !== this.pipeline && (uu.setPipeline(ju), this.pipeline = ju), uu.setBindGroup(1, su, [Uu]);
-        const Zu = Eu.material.bindGroup;
-        Zu !== this.materialGroup && (uu.setBindGroup(2, Zu), this.materialGroup = Zu);
-        const Xu = Eu.program.packGroup;
-        Xu && Xu !== this.packGroup && (uu.setBindGroup(nE.f, Xu), this.packGroup = Xu);
+      bind(GG, bG, ZG, wG, SG) {
+        ZG !== this.pipeline && (GG.setPipeline(ZG), this.pipeline = ZG), GG.setBindGroup(1, wG, [SG]);
+        const LG = bG.material.bindGroup;
+        LG !== this.materialGroup && (GG.setBindGroup(2, LG), this.materialGroup = LG);
+        const yG = bG.program.packGroup;
+        yG && yG !== this.packGroup && (GG.setBindGroup(Nb.f, yG), this.packGroup = yG);
         const {
-          vertexBuffers: lu,
-          vertexOffsets: qu
+          vertexBuffers: kG,
+          vertexOffsets: UG
         } = this;
-        for (let fu = 0; fu < Eu.vertexBuffers.length; fu++) lu[fu] === Eu.vertexBuffers[fu] && qu[fu] === Eu.vertexOffsets[fu] || (uu.setVertexBuffer(fu, Eu.vertexBuffers[fu], Eu.vertexOffsets[fu]), lu[fu] = Eu.vertexBuffers[fu], qu[fu] = Eu.vertexOffsets[fu]);
-        Eu.indexBuffer && Eu.indexBuffer !== this.indexBuffer && (uu.setIndexBuffer(Eu.indexBuffer, Eu.indexFormat), this.indexBuffer = Eu.indexBuffer)
+        for (let YG = 0; YG < bG.vertexBuffers.length; YG++) kG[YG] === bG.vertexBuffers[YG] && UG[YG] === bG.vertexOffsets[YG] || (GG.setVertexBuffer(YG, bG.vertexBuffers[YG], bG.vertexOffsets[YG]), kG[YG] = bG.vertexBuffers[YG], UG[YG] = bG.vertexOffsets[YG]);
+        bG.indexBuffer && bG.indexBuffer !== this.indexBuffer && (GG.setIndexBuffer(bG.indexBuffer, bG.indexFormat), this.indexBuffer = bG.indexBuffer)
       }
     }
-    class EZ {
-      constructor(uu, Eu, ju, su) {
-        this.modelMeshes = uu, this.m_ = Eu, this.maker = ju, this.warnOnce = su, this.skyDraws = [], this.opaqueDraws = [], this.transparentDraws = [], this.frontDraws = [], this.warnIfNotDrawn = (uu, Eu) => {
-          (Eu < -1 || Eu > 1) && this.warnOnce(`group:${Eu}`, `rendering group ${Eu} is not drawn`)
+    class GL {
+      constructor(GG, bG, ZG, wG) {
+        this.modelMeshes = GG, this.Z5 = bG, this.maker = ZG, this.warnOnce = wG, this.skyDraws = [], this.opaqueDraws = [], this.transparentDraws = [], this.frontDraws = [], this.warnIfNotDrawn = (GG, bG) => {
+          (bG < -1 || bG > 1) && this.warnOnce(`group:${bG}`, `rendering group ${bG} is not drawn`)
         }
       }
       clear() {
         this.skyDraws.length = 0, this.opaqueDraws.length = 0, this.transparentDraws.length = 0, this.frontDraws.length = 0
       }
-      collect(uu) {
-        this.collectGroup(uu, -1, this.skyDraws, this.skyDraws, !0), this.collectGroup(uu, 0, this.opaqueDraws, this.transparentDraws, !1), this.collectGroup(uu, 1, this.frontDraws, this.frontDraws, !0), this.modelMeshes.forEachGroup(this.warnIfNotDrawn), this.m_.forEachGroup(this.warnIfNotDrawn), this.opaqueDraws.sort(jZ), this.transparentDraws.sort(sZ)
+      collect(GG) {
+        this.collectGroup(GG, -1, this.skyDraws, this.skyDraws, !0), this.collectGroup(GG, 0, this.opaqueDraws, this.transparentDraws, !1), this.collectGroup(GG, 1, this.frontDraws, this.frontDraws, !0), this.modelMeshes.forEachGroup(this.warnIfNotDrawn), this.Z5.forEachGroup(this.warnIfNotDrawn), this.opaqueDraws.sort(bL), this.transparentDraws.sort(ZL)
       }
-      collectGroup(uu, Eu, ju, su, Uu) {
-        const Zu = this.modelMeshes.group(Eu),
-          Xu = this.m_.group(Eu),
-          lu = 0 === Eu ? null === Xu || void 0 === Xu ? void 0 : Xu.opaque : void 0;
-        this.collectList(uu, null === Zu || void 0 === Zu ? void 0 : Zu.opaque, lu || null === Xu || void 0 === Xu ? void 0 : Xu.opaque, Eu, !1, ju, Uu), lu && (this.m_.drawn += this.maker.bundleDraws(uu, lu, Eu)), this.collectList(uu, null === Zu || void 0 === Zu ? void 0 : Zu.alphaTest, void 0, Eu, !1, ju, Uu), this.collectList(uu, null === Zu || void 0 === Zu ? void 0 : Zu.transparent, null === Xu || void 0 === Xu ? void 0 : Xu.transparent, Eu, !0, su, Uu)
+      collectGroup(GG, bG, ZG, wG, SG) {
+        const LG = this.modelMeshes.group(bG),
+          yG = this.Z5.group(bG),
+          kG = 0 === bG ? null === yG || void 0 === yG ? void 0 : yG.opaque : void 0;
+        this.collectList(GG, null === LG || void 0 === LG ? void 0 : LG.opaque, kG || null === yG || void 0 === yG ? void 0 : yG.opaque, bG, !1, ZG, SG), kG && (this.Z5.drawn += this.maker.bundleDraws(GG, kG, bG)), this.collectList(GG, null === LG || void 0 === LG ? void 0 : LG.alphaTest, void 0, bG, !1, ZG, SG), this.collectList(GG, null === LG || void 0 === LG ? void 0 : LG.transparent, null === yG || void 0 === yG ? void 0 : yG.transparent, bG, !0, wG, SG)
       }
-      collectList(uu, Eu, ju, su, Uu, Zu, Xu) {
-        var lu;
-        const qu = Zu.length;
-        Eu && this.maker.pushDraws(uu, Eu.units, Eu.units.length, su, Uu, Zu, Eu.rows), ju && (this.m_.drawn += this.maker.pushDraws(uu, ju, ju.length, su, Uu, Zu));
-        const fu = Uu ? null === (lu = this.modelMeshes.group(su)) || void 0 === lu ? void 0 : lu.text : void 0;
-        fu && this.maker.pushDraws(uu, fu.units, fu.units.length, su, !0, Zu, fu.rows), Xu && UZ(Zu, qu)
-      }
-    }
-
-    function jZ(uu, Eu) {
-      return uu.program.id - Eu.program.id || uu.material.owner.uniqueId - Eu.material.owner.uniqueId
-    }
-
-    function sZ(uu, Eu) {
-      return uu.material.owner.uniqueId - Eu.material.owner.uniqueId
-    }
-
-    function UZ(uu, Eu) {
-      for (let ju = Eu + 1; ju < uu.length; ju++) {
-        const su = uu[ju];
-        let Uu = ju - 1;
-        for (; Uu >= Eu && sZ(uu[Uu], su) > 0; Uu--) uu[Uu + 1] = uu[Uu];
-        uu[Uu + 1] = su
+      collectList(GG, bG, ZG, wG, SG, LG, yG) {
+        var kG;
+        const UG = LG.length;
+        bG && this.maker.pushDraws(GG, bG.units, bG.units.length, wG, SG, LG, bG.rows), ZG && (this.Z5.drawn += this.maker.pushDraws(GG, ZG, ZG.length, wG, SG, LG));
+        const YG = SG ? null === (kG = this.modelMeshes.group(wG)) || void 0 === kG ? void 0 : kG.text : void 0;
+        YG && this.maker.pushDraws(GG, YG.units, YG.units.length, wG, !0, LG, YG.rows), yG && wL(LG, UG)
       }
     }
-    const ZZ = {};
 
-    function XZ(uu) {
-      return uu.hasThinInstances ? "thin" : uu.fUu || uu._userInstancedBuffersStorage ? "instanced" : "none"
+    function bL(GG, bG) {
+      return GG.program.id - bG.program.id || GG.material.owner.uniqueId - bG.material.owner.uniqueId
     }
 
-    function lZ(uu, Eu, ju) {
-      return uu ? (ju._needUVs = !0, uu.optimizeUVAllocation && (0, Pu.F)(uu.matrix) ? (ju[`${Eu}DIRECTUV`] = uu.uvSet + 1, ju[`MAINUV${uu.uvSet+1}`] = !0) : ju[`${Eu}DIRECTUV`] = 0, !0) : (ju[`${Eu}DIRECTUV`] = 0, !1)
+    function ZL(GG, bG) {
+      return GG.material.owner.uniqueId - bG.material.owner.uniqueId
     }
 
-    function qZ(uu) {
-      const Eu = new Map;
-      for (const ju in uu) {
-        if (95 === ju.charCodeAt(0)) continue;
-        const su = uu[ju],
-          Uu = typeof su;
-        "number" === Uu || "string" === Uu ? Eu.set(ju, String(su)) : su && "function" !== Uu && Eu.set(ju, !0)
+    function wL(GG, bG) {
+      for (let ZG = bG + 1; ZG < GG.length; ZG++) {
+        const wG = GG[ZG];
+        let SG = ZG - 1;
+        for (; SG >= bG && ZL(GG[SG], wG) > 0; SG--) GG[SG + 1] = GG[SG];
+        GG[SG + 1] = wG
       }
-      return Eu
+    }
+    const SL = {};
+
+    function LL(GG) {
+      return GG.hasThinInstances ? "thin" : GG.zSG || GG._userInstancedBuffersStorage ? "instanced" : "none"
     }
 
-    function fZ(uu) {
-      const Eu = {
+    function yL(GG, bG, ZG) {
+      return GG ? (ZG._needUVs = !0, GG.optimizeUVAllocation && (0, mG.C)(GG.matrix) ? (ZG[`${bG}DIRECTUV`] = GG.uvSet + 1, ZG[`MAINUV${GG.uvSet+1}`] = !0) : ZG[`${bG}DIRECTUV`] = 0, !0) : (ZG[`${bG}DIRECTUV`] = 0, !1)
+    }
+
+    function kL(GG) {
+      const bG = new Map;
+      for (const ZG in GG) {
+        if (95 === ZG.charCodeAt(0)) continue;
+        const wG = GG[ZG],
+          SG = typeof wG;
+        "number" === SG || "string" === SG ? bG.set(ZG, String(wG)) : wG && "function" !== SG && bG.set(ZG, !0)
+      }
+      return bG
+    }
+
+    function UL(GG) {
+      const bG = {
         markAllAsDirty: () => {}
       };
       for (const {
-          defines: ju
+          defines: ZG
         }
-        of uu.features)
-        for (const uu in ju) Eu[uu] = ju[uu];
-      return Eu
+        of GG.features)
+        for (const GG in ZG) bG[GG] = ZG[GG];
+      return bG
     }
 
-    function CZ(uu) {
-      const Eu = uu.parts.geometry;
-      return null !== Eu && void 0 !== Eu && Eu.live ? Eu : null
+    function YL(GG) {
+      const bG = GG.parts.geometry;
+      return null !== bG && void 0 !== bG && bG.live ? bG : null
     }
 
-    function bZ(uu) {
-      var Eu;
-      return null !== (Eu = CZ(uu)) && void 0 !== Eu ? Eu : ZZ
+    function VL(GG) {
+      var bG;
+      return null !== (bG = YL(GG)) && void 0 !== bG ? bG : SL
     }
-    class cZ {
-      constructor(uu, Eu, ju) {
-        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-        this.resources = uu, this.warnOnce = Eu, this.programWithModel = ju, this.packFailed = su, this.drawStates = new WeakMap, this.view = void 0, this.modelPackVariant = 0
+    class pL {
+      constructor(GG, bG, ZG) {
+        let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+        this.resources = GG, this.warnOnce = bG, this.programWithModel = ZG, this.packFailed = wG, this.drawStates = new WeakMap, this.view = void 0, this.modelPackVariant = 0
       }
-      programFor(uu, Eu, ju, su, Uu) {
-        const Zu = Eu.owner;
-        let Xu = this.drawStates.get(Eu);
-        if (!Xu) {
-          const uu = Eu.parts.materials[Eu.range];
-          if (!uu) return this.warnOnce("model", `${ju.name} on ${Zu.name} is not a model material, so it is not drawn on WebGPU (adoptModelMaterial); further ones are not reported`), null;
-          Xu = {
-            defines: fZ(uu),
-            model: uu,
+      programFor(GG, bG, ZG, wG, SG) {
+        const LG = bG.owner;
+        let yG = this.drawStates.get(bG);
+        if (!yG) {
+          const GG = bG.parts.materials[bG.range];
+          if (!GG) return this.warnOnce("model", `${ZG.name} on ${LG.name} is not a model material, so it is not drawn on WebGPU (adoptModelMaterial); further ones are not reported`), null;
+          yG = {
+            defines: UL(GG),
+            model: GG,
             modelVersion: -1,
             definesKey: "",
             program: null,
-            instancing: Uu,
-            groupId: su,
+            instancing: SG,
+            groupId: wG,
             geometry: null,
             instanceLayout: null,
             definesBits: 0,
             packVariant: 0
-          }, this.drawStates.set(Eu, Xu)
+          }, this.drawStates.set(bG, yG)
         }
-        if (this.programCurrent(Xu, Eu, Uu, su)) return Xu.program;
+        if (this.programCurrent(yG, bG, SG, wG)) return yG.program;
         const {
-          model: lu
-        } = Xu, qu = bZ(Eu), fu = this.instanceLayout(Zu, Uu), Cu = this.definesBits(Zu);
-        if (!this.prepareModelDefines(uu, Zu, lu, Xu.defines, su, Uu)) return null;
-        Xu.instancing = Uu, Xu.groupId = su, Xu.modelVersion = lu.version, Xu.geometry = qu, Xu.instanceLayout = fu, Xu.definesBits = Cu;
-        const bu = function(uu) {
-          let Eu = "";
-          for (const [ju, su] of uu) Eu += !0 === su ? `${ju};` : `${ju}=${su};`;
-          return Eu
-        }(qZ(Xu.defines));
-        return bu === Xu.definesKey && Xu.packVariant === this.modelPackVariant && Xu.program && !this.packFailed(Xu.program) || (Xu.definesKey = bu, Xu.packVariant = this.modelPackVariant, Xu.program = this.programWithModel(lu, Xu.defines, bu)), Xu.program
+          model: kG
+        } = yG, UG = VL(bG), YG = this.instanceLayout(LG, SG), VG = this.definesBits(LG);
+        if (!this.prepareModelDefines(GG, LG, kG, yG.defines, wG, SG)) return null;
+        yG.instancing = SG, yG.groupId = wG, yG.modelVersion = kG.version, yG.geometry = UG, yG.instanceLayout = YG, yG.definesBits = VG;
+        const pG = function(GG) {
+          let bG = "";
+          for (const [ZG, wG] of GG) bG += !0 === wG ? `${ZG};` : `${ZG}=${wG};`;
+          return bG
+        }(kL(yG.defines));
+        return pG === yG.definesKey && yG.packVariant === this.modelPackVariant && yG.program && !this.packFailed(yG.program) || (yG.definesKey = pG, yG.packVariant = this.modelPackVariant, yG.program = this.programWithModel(kG, yG.defines, pG)), yG.program
       }
-      programCurrent(uu, Eu, ju, su) {
-        return null !== uu.program && !this.packFailed(uu.program) && uu.instancing === ju && uu.groupId === su && this.definesHold(uu, Eu, ju)
+      programCurrent(GG, bG, ZG, wG) {
+        return null !== GG.program && !this.packFailed(GG.program) && GG.instancing === ZG && GG.groupId === wG && this.definesHold(GG, bG, ZG)
       }
-      definesHold(uu, Eu, ju) {
-        return uu.modelVersion === uu.model.version && uu.geometry === bZ(Eu) && uu.instanceLayout === this.instanceLayout(Eu.owner, ju) && uu.definesBits === this.definesBits(Eu.owner) && uu.packVariant === this.modelPackVariant
+      definesHold(GG, bG, ZG) {
+        return GG.modelVersion === GG.model.version && GG.geometry === VL(bG) && GG.instanceLayout === this.instanceLayout(bG.owner, ZG) && GG.definesBits === this.definesBits(bG.owner) && GG.packVariant === this.modelPackVariant
       }
-      modelPackKind(uu) {
-        var Eu;
-        return 0 === this.modelPackVariant ? null : null !== (Eu = (0, du.z)(uu, Ju.h.name)) && void 0 !== Eu && Eu.active ? "placed" : uu.item ? "item" : uu.lifeform ? "lifeform" : uu.box ? "box" : null
+      modelPackKind(GG) {
+        var bG;
+        return 0 === this.modelPackVariant ? null : null !== (bG = (0, CG.z)(GG, iG.l.name)) && void 0 !== bG && bG.active ? "placed" : GG.item ? "item" : GG.lifeform ? "lifeform" : GG.box ? "box" : null
       }
-      instanceLayout(uu, Eu) {
-        var ju, su, Uu;
-        return "thin" === Eu ? null !== (Uu = this.resources.E_.get(uu)) && void 0 !== Uu ? Uu : null : "instanced" === Eu && null !== (ju = null === (su = uu._userInstancedBuffersStorage) || void 0 === su ? void 0 : su.interleavedKinds) && void 0 !== ju ? ju : null
+      instanceLayout(GG, bG) {
+        var ZG, wG, SG;
+        return "thin" === bG ? null !== (SG = this.resources.j_.get(GG)) && void 0 !== SG ? SG : null : "instanced" === bG && null !== (ZG = null === (wG = GG._userInstancedBuffersStorage) || void 0 === wG ? void 0 : wG.interleavedKinds) && void 0 !== ZG ? ZG : null
       }
-      definesBits(uu) {
-        const Eu = this.view;
-        return (uu.visibility < 1 ? 1 : 0) | (uu.hasVertexAlpha ? 2 : 0) | (uu.applyFog ? 4 : 0) | (uu.useVertexColors ? 8 : 0) | (uu.nonUniformScaling ? 16 : 0) | (Eu.fogEnabled && 0 !== Eu.fogMode ? 32 : 0) | (Eu.lightsEnabled ? 64 : 0) | Eu.lightCount << 7
+      definesBits(GG) {
+        const bG = this.view;
+        return (GG.visibility < 1 ? 1 : 0) | (GG.hasVertexAlpha ? 2 : 0) | (GG.applyFog ? 4 : 0) | (GG.useVertexColors ? 8 : 0) | (GG.nonUniformScaling ? 16 : 0) | (bG.fogEnabled && 0 !== bG.fogMode ? 32 : 0) | (bG.lightsEnabled ? 64 : 0) | bG.lightCount << 7
       }
-      prepareLightDefines(uu, Eu, ju) {
-        let su = 0;
-        if (this.view.lightsEnabled && !Eu) {
-          const Eu = Math.min(ju, 4);
-          for (; su < this.view.lightCount && (uu[`LIGHT${su}`] = !0, uu[`LITE_LIGHT${su}_SLOT`] = su, su++, uu._needNormals = !0, su !== Eu););
+      prepareLightDefines(GG, bG, ZG) {
+        let wG = 0;
+        if (this.view.lightsEnabled && !bG) {
+          const bG = Math.min(ZG, 4);
+          for (; wG < this.view.lightCount && (GG[`LIGHT${wG}`] = !0, GG[`LITE_LIGHT${wG}_SLOT`] = wG, wG++, GG._needNormals = !0, wG !== bG););
         }
-        for (let Uu = su; Uu < 4; Uu++) uu[`LIGHT${Uu}`] = !1, uu[`LITE_LIGHT${Uu}_SLOT`] = void 0
+        for (let SG = wG; SG < 4; SG++) GG[`LIGHT${SG}`] = !1, GG[`LITE_LIGHT${SG}_SLOT`] = void 0
       }
-      prepareModelDefines(uu, Eu, ju, su, Uu, Zu) {
+      prepareModelDefines(GG, bG, ZG, wG, SG, LG) {
         const {
-          features: Xu
-        } = ju;
-        su._needNormals = !1, su._needUVs = !1;
-        const lu = this.view;
-        this.prepareLightDefines(su, ju.disableLighting, ju.maxSimultaneousLights), su.MAINUV1 = !1, su.MAINUV2 = !1;
-        const qu = ju.diffuseTexture;
-        qu ? (su._needUVs = !0, su.DIFFUSE = !0, qu.optimizeUVAllocation && (0, Pu.F)(qu.matrix) ? (su.DIFFUSEDIRECTUV = qu.uvSet + 1, su[`MAINUV${qu.uvSet+1}`] = !0) : su.DIFFUSEDIRECTUV = 0, qu.uvSet > 1 && this.warnOnce(`uvset:${ju.name}`, `${ju.name} samples UV set ${qu.uvSet+1}, which is not supported`)) : (su.DIFFUSE = !1, su.DIFFUSEDIRECTUV = 0);
-        const fu = ju.opacityTexture,
-          Cu = ju.emissiveTexture;
-        su.OPACITY = lZ(fu, "OPACITY", su), su.OPACITYRGB = null !== fu && fu.getAlphaFromRGB, su.EMISSIVE = lZ(Cu, "EMISSIVE", su), (fu && fu.uvSet > 1 || Cu && Cu.uvSet > 1) && this.warnOnce(`uvset:${ju.name}`, `${ju.name} samples a UV set past 2, which is not supported`);
-        const bu = ju.reflectionTexture,
-          cu = null !== bu;
-        if (cu) {
-          if (!this.resources.boundTexture(bu)) return !1;
-          su._needNormals = !0
+          features: yG
+        } = ZG;
+        wG._needNormals = !1, wG._needUVs = !1;
+        const kG = this.view;
+        this.prepareLightDefines(wG, ZG.disableLighting, ZG.maxSimultaneousLights), wG.MAINUV1 = !1, wG.MAINUV2 = !1;
+        const UG = ZG.diffuseTexture;
+        UG ? (wG._needUVs = !0, wG.DIFFUSE = !0, UG.optimizeUVAllocation && (0, mG.C)(UG.matrix) ? (wG.DIFFUSEDIRECTUV = UG.uvSet + 1, wG[`MAINUV${UG.uvSet+1}`] = !0) : wG.DIFFUSEDIRECTUV = 0, UG.uvSet > 1 && this.warnOnce(`uvset:${ZG.name}`, `${ZG.name} samples UV set ${UG.uvSet+1}, which is not supported`)) : (wG.DIFFUSE = !1, wG.DIFFUSEDIRECTUV = 0);
+        const YG = ZG.opacityTexture,
+          VG = ZG.emissiveTexture;
+        wG.OPACITY = yL(YG, "OPACITY", wG), wG.OPACITYRGB = null !== YG && YG.getAlphaFromRGB, wG.EMISSIVE = yL(VG, "EMISSIVE", wG), (YG && YG.uvSet > 1 || VG && VG.uvSet > 1) && this.warnOnce(`uvset:${ZG.name}`, `${ZG.name} samples a UV set past 2, which is not supported`);
+        const pG = ZG.reflectionTexture,
+          fG = null !== pG;
+        if (fG) {
+          if (!this.resources.boundTexture(pG)) return !1;
+          wG._needNormals = !0
         }
-        su.REFLECTION = cu, su.REFLECTIONMAP_3D = cu, su.REFLECTIONMAP_SKYBOX = cu, su.REFLECTIONMAP_OPPOSITEZ = cu && (uu.useRightHandedSystem ? !bu.invertZ : bu.invertZ), su.ROUGHNESS = cu && ju.roughness > 0, su.REFLECTIONOVERALPHA = cu && ju.useReflectionOverAlpha, su.LITE_REFLECTION_LUMINANCE = cu && "cube" === bu.source.kind && bu.source.luminance, (Eu.skeleton || Eu.morphTargetManager) && this.warnOnce(`skin:${Eu.name}`, `${Eu.name} has bones or morph targets, which are not supported`), su.FOG = ju.fogEnabled && Eu.applyFog && lu.fogEnabled && 0 !== lu.fogMode, su.NONUNIFORMSCALING = Eu.nonUniformScaling;
+        wG.REFLECTION = fG, wG.REFLECTIONMAP_3D = fG, wG.REFLECTIONMAP_SKYBOX = fG, wG.REFLECTIONMAP_OPPOSITEZ = fG && (GG.useRightHandedSystem ? !pG.invertZ : pG.invertZ), wG.ROUGHNESS = fG && ZG.roughness > 0, wG.REFLECTIONOVERALPHA = fG && ZG.useReflectionOverAlpha, wG.LITE_REFLECTION_LUMINANCE = fG && "cube" === pG.source.kind && pG.source.luminance, (bG.skeleton || bG.morphTargetManager) && this.warnOnce(`skin:${bG.name}`, `${bG.name} has bones or morph targets, which are not supported`), wG.FOG = ZG.fogEnabled && bG.applyFog && kG.fogEnabled && 0 !== kG.fogMode, wG.NONUNIFORMSCALING = bG.nonUniformScaling;
         const {
-          visibility: Nu,
-          hasVertexAlpha: Ou
-        } = Eu;
-        su.ALPHATEST = (0, du.W)(ju, Nu, Ou), su.ALPHAFROMDIFFUSE = (0, du.fb)(ju), su.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== ju.transparencyMode, su.ALPHABLEND = null === ju.transparencyMode || (0, du.S)(ju, Nu, Ou), su.PREMULTIPLYALPHA = 7 === ju.alphaMode || 8 === ju.alphaMode, su.EMISSIVEASILLUMINATION = ju.useEmissiveAsIllumination, su.LINKEMISSIVEWITHDIFFUSE = ju.linkEmissiveWithDiffuse, su.TWOSIDEDLIGHTING = !ju.backFaceCulling && ju.twoSidedLighting, su.INSTANCES = "none" !== Zu, su.THIN_INSTANCES = "thin" === Zu, su.LITE_FRONT_LAYER = Uu >= 1;
+          visibility: QG,
+          hasVertexAlpha: KG
+        } = bG;
+        wG.ALPHATEST = (0, CG.Y)(ZG, QG, KG), wG.ALPHAFROMDIFFUSE = (0, CG.kb)(ZG), wG.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== ZG.transparencyMode, wG.ALPHABLEND = null === ZG.transparencyMode || (0, CG.U)(ZG, QG, KG), wG.PREMULTIPLYALPHA = 7 === ZG.alphaMode || 8 === ZG.alphaMode, wG.EMISSIVEASILLUMINATION = ZG.useEmissiveAsIllumination, wG.LINKEMISSIVEWITHDIFFUSE = ZG.linkEmissiveWithDiffuse, wG.TWOSIDEDLIGHTING = !ZG.backFaceCulling && ZG.twoSidedLighting, wG.INSTANCES = "none" !== LG, wG.THIN_INSTANCES = "thin" === LG, wG.LITE_FRONT_LAYER = SG >= 1;
         for (const {
-            feature: wu,
-            state: Ju,
-            active: du
+            feature: uG,
+            state: iG,
+            active: CG
           }
-          of Xu) {
-          var Yu, hu;
-          if (du) null === (Yu = (hu = (0, KE.h)(wu)).prepareDefinesBeforeAttributes) || void 0 === Yu || Yu.call(hu, Ju, su, uu, Eu)
+          of yG) {
+          var hG, dG;
+          if (CG) null === (hG = (dG = (0, cb.j)(uG)).prepareDefinesBeforeAttributes) || void 0 === hG || hG.call(dG, iG, wG, GG, bG)
         }
-        this.modelPackKind(ju) && (su._needNormals = !0), su.NORMAL = su._needNormals && Eu.isVerticesDataPresent("normal"), su.UV1 = su._needUVs && Eu.isVerticesDataPresent("uv"), su.UV2 = su._needUVs && Eu.isVerticesDataPresent("uv2");
-        const Du = Eu.useVertexColors && Eu.isVerticesDataPresent("color");
-        su.VERTEXCOLOR = Du, su.VERTEXALPHA = Eu.hasVertexAlpha && Du, su.INSTANCESCOLOR = "none" !== Zu && Eu.isVerticesDataPresent("instanceColor");
+        this.modelPackKind(ZG) && (wG._needNormals = !0), wG.NORMAL = wG._needNormals && bG.isVerticesDataPresent("normal"), wG.UV1 = wG._needUVs && bG.isVerticesDataPresent("uv"), wG.UV2 = wG._needUVs && bG.isVerticesDataPresent("uv2");
+        const JG = bG.useVertexColors && bG.isVerticesDataPresent("color");
+        wG.VERTEXCOLOR = JG, wG.VERTEXALPHA = bG.hasVertexAlpha && JG, wG.INSTANCESCOLOR = "none" !== LG && bG.isVerticesDataPresent("instanceColor");
         for (const {
-            feature: wu,
-            state: Ju,
-            active: du
+            feature: uG,
+            state: iG,
+            active: CG
           }
-          of Xu) {
-          var gu, Mu;
-          if (du) null === (gu = (Mu = (0, KE.h)(wu)).prepareDefines) || void 0 === gu || gu.call(Mu, Ju, su, uu, Eu, ju)
+          of yG) {
+          var rG, zG;
+          if (CG) null === (rG = (zG = (0, cb.j)(uG)).prepareDefines) || void 0 === rG || rG.call(zG, iG, wG, GG, bG, ZG)
         }
-        const eu = uu.wO();
+        const EG = GG.CK();
         for (const {
-            feature: wu,
-            state: Ju,
-            active: du
+            feature: uG,
+            state: iG,
+            active: CG
           }
-          of Xu) {
-          var Gu, pu;
-          if (du && !1 === (null === (Gu = (pu = (0, KE.h)(wu)).isReadyForSubMesh) || void 0 === Gu ? void 0 : Gu.call(pu, Ju, su, uu, eu))) return !1
+          of yG) {
+          var oG, XG;
+          if (CG && !1 === (null === (oG = (XG = (0, cb.j)(uG)).isReadyForSubMesh) || void 0 === oG ? void 0 : oG.call(XG, iG, wG, GG, EG))) return !1
         }
         return !0
       }
     }
 
-    function NZ(uu, Eu, ju) {
-      return uu.codeVersion !== Eu.version && function(uu, Eu) {
-        const ju = [],
-          su = [];
+    function fL(GG, bG, ZG) {
+      return GG.codeVersion !== bG.version && function(GG, bG) {
+        const ZG = [],
+          wG = [];
         for (const {
-            feature: cu,
-            state: Nu,
-            active: Ou
+            feature: fG,
+            state: QG,
+            active: KG
           }
-          of Eu.features) {
-          var Uu, Zu, Xu, lu;
-          if (Ou) OZ(null === (Uu = (Zu = (0, KE.h)(cu)).getCustomCode) || void 0 === Uu ? void 0 : Uu.call(Zu, Nu, "vertex", pu.c.WGSL), ju), OZ(null === (Xu = (lu = (0, KE.h)(cu)).getCustomCode) || void 0 === Xu ? void 0 : Xu.call(lu, Nu, "fragment", pu.c.WGSL), su)
+          of bG.features) {
+          var SG, LG, yG, kG;
+          if (KG) QL(null === (SG = (LG = (0, cb.j)(fG)).getCustomCode) || void 0 === SG ? void 0 : SG.call(LG, QG, "vertex", XG.c.WGSL), ZG), QL(null === (yG = (kG = (0, cb.j)(fG)).getCustomCode) || void 0 === yG ? void 0 : yG.call(kG, QG, "fragment", XG.c.WGSL), wG)
         }
-        const qu = [];
+        const UG = [];
         for (const {
-            feature: cu,
-            state: Nu
+            feature: fG,
+            state: QG
           }
-          of Eu.features) {
-          var fu, Cu;
-          const uu = null === (fu = (Cu = (0, KE.h)(cu)).getUniforms) || void 0 === fu ? void 0 : fu.call(Cu, Nu, pu.c.WGSL);
-          for (const Eu of null !== (bu = null === uu || void 0 === uu ? void 0 : uu.ubo) && void 0 !== bu ? bu : []) {
-            var bu;
-            Eu.size && Eu.type && qu.push({
-              name: Eu.name,
-              type: Eu.type,
-              arraySize: Eu.arraySize
+          of bG.features) {
+          var YG, VG;
+          const GG = null === (YG = (VG = (0, cb.j)(fG)).getUniforms) || void 0 === YG ? void 0 : YG.call(VG, QG, XG.c.WGSL);
+          for (const bG of null !== (pG = null === GG || void 0 === GG ? void 0 : GG.ubo) && void 0 !== pG ? pG : []) {
+            var pG;
+            bG.size && bG.type && UG.push({
+              name: bG.name,
+              type: bG.type,
+              arraySize: bG.arraySize
             })
           }
         }
-        uu.vertexCode = ju, uu.fragmentCode = su, uu.pluginUniforms = qu, uu.codeKey = JSON.stringify([ju, su, qu]), uu.codeVersion = Eu.version
-      }(uu, Eu), `${ju}#${uu.codeKey}`
+        GG.vertexCode = ZG, GG.fragmentCode = wG, GG.pluginUniforms = UG, GG.codeKey = JSON.stringify([ZG, wG, UG]), GG.codeVersion = bG.version
+      }(GG, bG), `${ZG}#${GG.codeKey}`
     }
 
-    function OZ(uu, Eu) {
-      if (uu)
-        for (const ju in uu) uu[ju] && Eu.push([ju, uu[ju]])
+    function QL(GG, bG) {
+      if (GG)
+        for (const ZG in GG) GG[ZG] && bG.push([ZG, GG[ZG]])
     }
-    const YZ = new Map([
+    const KL = new Map([
       [512, "never"],
       [513, "greater"],
       [514, "equal"],
@@ -2322,326 +2322,326 @@ export const modules = {
       [518, "less-equal"],
       [519, "always"]
     ]);
-    class hZ {
-      constructor(uu) {
-        this.warnOnce = uu, this.states = new Map
+    class hL {
+      constructor(GG) {
+        this.warnOnce = GG, this.states = new Map
       }
-      renderState(uu, Eu, ju, su) {
-        var Uu;
-        let Zu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "triangle-list",
-          Xu = null !== (Uu = uu.sideOrientation) && void 0 !== Uu ? Uu : Eu.sideOrientation;
-        Eu._getWorldMatrixDeterminant() < 0 && (Xu = 0 === Xu ? 1 : 0);
-        const lu = "triangle-list" === Zu,
-          qu = ju ? uu.alphaMode : 0,
-          fu = (!ju || (0 === qu || uu.forceDepthWrite)) && !uu.disableDepthWrite,
-          Cu = lu && uu.backFaceCulling ? uu.cullBackFaces ? "back" : "front" : "none",
-          bu = lu && 0 !== Xu ? "ccw" : "cw",
-          cu = uu.depthFunction,
-          Nu = lu ? uu.zOffset : 0,
-          Ou = lu ? uu.zOffsetUnits : 0,
-          Yu = !uu.disableColorWrite;
-        return su && su.alphaMode === qu && su.depthWrite === fu && su.depthFunction === cu && su.cullMode === Cu && su.frontFace === bu && su.zOffset === Nu && su.zOffsetUnits === Ou && su.colourWrite === Yu && su.topology === Zu ? su : this.stateFor(qu, fu, cu, Cu, bu, Nu, Ou, Yu, Zu)
+      renderState(GG, bG, ZG, wG) {
+        var SG;
+        let LG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "triangle-list",
+          yG = null !== (SG = GG.sideOrientation) && void 0 !== SG ? SG : bG.sideOrientation;
+        bG._getWorldMatrixDeterminant() < 0 && (yG = 0 === yG ? 1 : 0);
+        const kG = "triangle-list" === LG,
+          UG = ZG ? GG.alphaMode : 0,
+          YG = (!ZG || (0 === UG || GG.forceDepthWrite)) && !GG.disableDepthWrite,
+          VG = kG && GG.backFaceCulling ? GG.cullBackFaces ? "back" : "front" : "none",
+          pG = kG && 0 !== yG ? "ccw" : "cw",
+          fG = GG.depthFunction,
+          QG = kG ? GG.zOffset : 0,
+          KG = kG ? GG.zOffsetUnits : 0,
+          hG = !GG.disableColorWrite;
+        return wG && wG.alphaMode === UG && wG.depthWrite === YG && wG.depthFunction === fG && wG.cullMode === VG && wG.frontFace === pG && wG.zOffset === QG && wG.zOffsetUnits === KG && wG.colourWrite === hG && wG.topology === LG ? wG : this.stateFor(UG, YG, fG, VG, pG, QG, KG, hG, LG)
       }
-      stateFor(uu, Eu, ju, su, Uu, Zu, Xu, lu, qu) {
-        const fu = `${uu}|${Eu}|${ju}|${su}|${Uu}|${Zu}|${Xu}|${lu}|${qu}`;
-        let Cu = this.states.get(fu);
-        if (!Cu) {
-          var bu;
-          const cu = uu ? ZE(uu) : null;
-          uu && !cu && this.warnOnce(`alpha:${uu}`, `alpha mode ${uu} is not supported`), Cu = {
-            key: fu,
-            alphaMode: uu,
-            depthFunction: ju,
-            zOffset: Zu,
-            zOffsetUnits: Xu,
-            topology: qu,
-            blend: cu,
-            depthWrite: Eu,
-            depthCompare: ju && null !== (bu = YZ.get(ju)) && void 0 !== bu ? bu : null,
-            cullMode: su,
-            frontFace: Uu,
-            depthBias: -Xu,
-            depthBiasSlopeScale: -Zu,
-            colourWrite: lu
-          }, this.states.set(fu, Cu)
+      stateFor(GG, bG, ZG, wG, SG, LG, yG, kG, UG) {
+        const YG = `${GG}|${bG}|${ZG}|${wG}|${SG}|${LG}|${yG}|${kG}|${UG}`;
+        let VG = this.states.get(YG);
+        if (!VG) {
+          var pG;
+          const fG = GG ? Lb(GG) : null;
+          GG && !fG && this.warnOnce(`alpha:${GG}`, `alpha mode ${GG} is not supported`), VG = {
+            key: YG,
+            alphaMode: GG,
+            depthFunction: ZG,
+            zOffset: LG,
+            zOffsetUnits: yG,
+            topology: UG,
+            blend: fG,
+            depthWrite: bG,
+            depthCompare: ZG && null !== (pG = KL.get(ZG)) && void 0 !== pG ? pG : null,
+            cullMode: wG,
+            frontFace: SG,
+            depthBias: -yG,
+            depthBiasSlopeScale: -LG,
+            colourWrite: kG
+          }, this.states.set(YG, VG)
         }
-        return Cu
+        return VG
       }
     }
-    var DZ = ju(37830);
+    var dL = ZG(37800);
 
-    function gZ(uu) {
-      if (!uu.frozen) return -1;
-      let Eu = uu.version;
+    function JL(GG) {
+      if (!GG.frozen) return -1;
+      let bG = GG.version;
       for (const {
-          feature: ju,
-          state: su,
-          active: Uu
+          feature: ZG,
+          state: wG,
+          active: SG
         }
-        of uu.features) {
-        if (!Uu || !ju.bind) continue;
-        const uu = (0, KE.h)(ju).uniformsVersion;
-        if (!uu) return -1;
-        Eu += uu(su)
+        of GG.features) {
+        if (!SG || !ZG.bind) continue;
+        const GG = (0, cb.j)(ZG).uniformsVersion;
+        if (!GG) return -1;
+        bG += GG(wG)
       }
-      return Eu
+      return bG
     }
-    class MZ {
-      constructor(uu, Eu, ju) {
-        this.slots = uu, this.data = Eu, this.textures = ju, this.useUbo = !0, this.currentEffect = null, this.expected = new Set
+    class rL {
+      constructor(GG, bG, ZG) {
+        this.slots = GG, this.data = bG, this.textures = ZG, this.useUbo = !0, this.currentEffect = null, this.expected = new Set
       }
-      updateFloat(uu, Eu) {
-        this.write4(uu, Eu, 0, 0, 0, 1)
+      updateFloat(GG, bG) {
+        this.write4(GG, bG, 0, 0, 0, 1)
       }
-      updateFloat2(uu, Eu, ju) {
-        this.write4(uu, Eu, ju, 0, 0, 2)
+      updateFloat2(GG, bG, ZG) {
+        this.write4(GG, bG, ZG, 0, 0, 2)
       }
-      updateFloat3(uu, Eu, ju, su) {
-        this.write4(uu, Eu, ju, su, 0, 3)
+      updateFloat3(GG, bG, ZG, wG) {
+        this.write4(GG, bG, ZG, wG, 0, 3)
       }
-      updateFloat4(uu, Eu, ju, su, Uu) {
-        this.write4(uu, Eu, ju, su, Uu, 4)
+      updateFloat4(GG, bG, ZG, wG, SG) {
+        this.write4(GG, bG, ZG, wG, SG, 4)
       }
-      updateVector3(uu, Eu) {
-        this.write4(uu, Eu.x, Eu.y, Eu.z, 0, 3)
+      updateVector3(GG, bG) {
+        this.write4(GG, bG.x, bG.y, bG.z, 0, 3)
       }
-      updateVector4(uu, Eu) {
-        this.write4(uu, Eu.x, Eu.y, Eu.z, Eu.w, 4)
+      updateVector4(GG, bG) {
+        this.write4(GG, bG.x, bG.y, bG.z, bG.w, 4)
       }
-      updateColor3(uu, Eu) {
-        this.write4(uu, Eu.r, Eu.g, Eu.b, 0, 3)
+      updateColor3(GG, bG) {
+        this.write4(GG, bG.r, bG.g, bG.b, 0, 3)
       }
-      updateColor4(uu, Eu, ju) {
-        this.write4(uu, Eu.r, Eu.g, Eu.b, ju, 4)
+      updateColor4(GG, bG, ZG) {
+        this.write4(GG, bG.r, bG.g, bG.b, ZG, 4)
       }
-      updateFloatsFrom(uu, Eu, ju, su) {
-        const Uu = this.slots.get(uu);
-        if (!Uu) return;
-        const Zu = this.data,
-          Xu = Uu.offset;
-        for (let lu = 0; lu < su; lu++) Zu[Xu + lu] = Eu[ju + lu]
+      updateFloatsFrom(GG, bG, ZG, wG) {
+        const SG = this.slots.get(GG);
+        if (!SG) return;
+        const LG = this.data,
+          yG = SG.offset;
+        for (let kG = 0; kG < wG; kG++) LG[yG + kG] = bG[ZG + kG]
       }
-      updateFloat3TimesFloats(uu, Eu, ju, su) {
-        const Uu = this.slots.get(uu);
-        if (!Uu) return;
-        const Zu = this.data,
-          Xu = Uu.offset;
-        Zu[Xu] = Eu[ju] * su[0], Zu[Xu + 1] = Eu[ju + 1] * su[1], Zu[Xu + 2] = Eu[ju + 2] * su[2]
+      updateFloat3TimesFloats(GG, bG, ZG, wG) {
+        const SG = this.slots.get(GG);
+        if (!SG) return;
+        const LG = this.data,
+          yG = SG.offset;
+        LG[yG] = bG[ZG] * wG[0], LG[yG + 1] = bG[ZG + 1] * wG[1], LG[yG + 2] = bG[ZG + 2] * wG[2]
       }
-      y_(uu, Eu) {
-        const ju = this.slots.get(uu);
-        ju && this.data.set(Eu.m, ju.offset)
+      R6(GG, bG) {
+        const ZG = this.slots.get(GG);
+        ZG && this.data.set(bG.m, ZG.offset)
       }
-      updateMatrixFloats(uu, Eu) {
-        const ju = this.slots.get(uu);
-        ju && this.data.set(Eu, ju.offset)
+      updateMatrixFloats(GG, bG) {
+        const ZG = this.slots.get(GG);
+        ZG && this.data.set(bG, ZG.offset)
       }
-      updateFloatArray(uu, Eu) {
-        const ju = this.slots.get(uu);
-        if (!ju) return;
-        if (!ju.arraySize || ju.stride === ju.floats) return void this.data.set(Eu, ju.offset);
-        const su = Math.min(Eu.length, ju.floats * ju.arraySize);
-        for (let Uu = 0; Uu < su; Uu++) this.data[ju.offset + Math.floor(Uu / ju.floats) * ju.stride + Uu % ju.floats] = Eu[Uu]
+      updateFloatArray(GG, bG) {
+        const ZG = this.slots.get(GG);
+        if (!ZG) return;
+        if (!ZG.arraySize || ZG.stride === ZG.floats) return void this.data.set(bG, ZG.offset);
+        const wG = Math.min(bG.length, ZG.floats * ZG.arraySize);
+        for (let SG = 0; SG < wG; SG++) this.data[ZG.offset + Math.floor(SG / ZG.floats) * ZG.stride + SG % ZG.floats] = bG[SG]
       }
-      updateArray(uu, Eu) {
-        this.updateFloatArray(uu, Eu)
+      updateArray(GG, bG) {
+        this.updateFloatArray(GG, bG)
       }
-      setTexture(uu, Eu) {
-        this.textures.set(uu, Eu), this.expected.delete(uu)
+      setTexture(GG, bG) {
+        this.textures.set(GG, bG), this.expected.delete(GG)
       }
-      expectTexture(uu) {
-        this.textures.set(uu, null), this.expected.add(uu)
+      expectTexture(GG) {
+        this.textures.set(GG, null), this.expected.add(GG)
       }
-      write4(uu, Eu, ju, su, Uu, Zu) {
-        const Xu = this.slots.get(uu);
-        if (!Xu) return;
-        const lu = this.data,
-          qu = Xu.offset;
-        lu[qu] = Eu, Zu > 1 && (lu[qu + 1] = ju), Zu > 2 && (lu[qu + 2] = su), Zu > 3 && (lu[qu + 3] = Uu)
+      write4(GG, bG, ZG, wG, SG, LG) {
+        const yG = this.slots.get(GG);
+        if (!yG) return;
+        const kG = this.data,
+          UG = yG.offset;
+        kG[UG] = bG, LG > 1 && (kG[UG + 1] = ZG), LG > 2 && (kG[UG + 2] = wG), LG > 3 && (kG[UG + 3] = SG)
       }
     }
 
-    function eZ(uu, Eu) {
-      const ju = CU,
-        su = DZ.f,
-        Uu = uu.lights,
-        Zu = Math.min(uu.lightCount, 8);
-      for (let Xu = 0; Xu < Zu; Xu++) {
-        const uu = ju.lights + Xu * ju.lightStride,
-          Zu = Xu * DZ.c;
-        Eu[uu] = Uu[Zu + su.vector], Eu[uu + 1] = Uu[Zu + su.vector + 1], Eu[uu + 2] = Uu[Zu + su.vector + 2], Eu[uu + 3] = Uu[Zu + su.kind] === DZ.d.directional ? 1 : 0, Eu[uu + 4] = Uu[Zu + su.diffuse], Eu[uu + 5] = Uu[Zu + su.diffuse + 1], Eu[uu + 6] = Uu[Zu + su.diffuse + 2], Eu[uu + 7] = Uu[Zu + su.range], Eu[uu + 8] = Uu[Zu + su.specular], Eu[uu + 9] = Uu[Zu + su.specular + 1], Eu[uu + 10] = Uu[Zu + su.specular + 2], Eu[uu + 11] = Uu[Zu + su.range]
+    function zL(GG, bG) {
+      const ZG = YS,
+        wG = dL.j,
+        SG = GG.lights,
+        LG = Math.min(GG.lightCount, 8);
+      for (let yG = 0; yG < LG; yG++) {
+        const GG = ZG.lights + yG * ZG.lightStride,
+          LG = yG * dL.d;
+        bG[GG] = SG[LG + wG.vector], bG[GG + 1] = SG[LG + wG.vector + 1], bG[GG + 2] = SG[LG + wG.vector + 2], bG[GG + 3] = SG[LG + wG.kind] === dL.h.directional ? 1 : 0, bG[GG + 4] = SG[LG + wG.diffuse], bG[GG + 5] = SG[LG + wG.diffuse + 1], bG[GG + 6] = SG[LG + wG.diffuse + 2], bG[GG + 7] = SG[LG + wG.range], bG[GG + 8] = SG[LG + wG.specular], bG[GG + 9] = SG[LG + wG.specular + 1], bG[GG + 10] = SG[LG + wG.specular + 2], bG[GG + 11] = SG[LG + wG.range]
       }
-      Eu[ju.fogInfos] = uu.fogMode, Eu[ju.fogInfos + 1] = uu.fogStart, Eu[ju.fogInfos + 2] = uu.fogEnd, Eu[ju.fogInfos + 3] = uu.fogDensity, Eu[ju.fogColour] = uu.fogColour[0], Eu[ju.fogColour + 1] = uu.fogColour[1], Eu[ju.fogColour + 2] = uu.fogColour[2], Eu[ju.outputHeight] = uu.renderHeight, Eu[ju.animTick] = uu.animTick, Eu[ju.timeMs] = uu.timeMs
+      bG[ZG.fogInfos] = GG.fogMode, bG[ZG.fogInfos + 1] = GG.fogStart, bG[ZG.fogInfos + 2] = GG.fogEnd, bG[ZG.fogInfos + 3] = GG.fogDensity, bG[ZG.fogColour] = GG.fogColour[0], bG[ZG.fogColour + 1] = GG.fogColour[1], bG[ZG.fogColour + 2] = GG.fogColour[2], bG[ZG.outputHeight] = GG.renderHeight, bG[ZG.animTick] = GG.animTick, bG[ZG.timeMs] = GG.timeMs
     }
-    class GZ {
-      constructor(uu) {
-        this.instancesOf = uu
+    class EL {
+      constructor(GG) {
+        this.instancesOf = GG
       }
-      refreshModelUniforms(uu, Eu, ju, su) {
-        const Uu = gZ(ju);
-        if (Uu >= 0 && Uu === Eu.heldVersion && Eu.textures.get("diffuseSampler") === ju.diffuseTexture && Eu.textures.get("reflectionCubeSampler") === ju.reflectionTexture && Eu.textures.get("opacitySampler") === ju.opacityTexture && Eu.textures.get("emissiveSampler") === ju.emissiveTexture) return !0;
-        if (Uu < 0)
-          for (const Zu of this.instancesOf(ju)) Zu.heldVersion = -1;
-        return this.writeModelUniforms(uu, Eu, ju, su), Eu.heldVersion = Uu, !1
+      refreshModelUniforms(GG, bG, ZG, wG) {
+        const SG = JL(ZG);
+        if (SG >= 0 && SG === bG.heldVersion && bG.textures.get("diffuseSampler") === ZG.diffuseTexture && bG.textures.get("reflectionCubeSampler") === ZG.reflectionTexture && bG.textures.get("opacitySampler") === ZG.opacityTexture && bG.textures.get("emissiveSampler") === ZG.emissiveTexture) return !0;
+        if (SG < 0)
+          for (const LG of this.instancesOf(ZG)) LG.heldVersion = -1;
+        return this.writeModelUniforms(GG, bG, ZG, wG), bG.heldVersion = SG, !1
       }
-      writeModelUniforms(uu, Eu, ju, su) {
+      writeModelUniforms(GG, bG, ZG, wG) {
         const {
-          ubo: Uu
-        } = Eu, Zu = ju.diffuseTexture, Xu = ju.diffuseColor;
-        Uu.updateFloat4("vDiffuseColor", Xu[0], Xu[1], Xu[2], ju.alpha), Zu && (Uu.updateFloat2("vDiffuseInfos", Zu.uvSet, Zu.level), Uu.updateMatrixFloats("diffuseMatrix", Zu.matrix)), Uu.updateFloat("alphaCutOff", ju.alphaCutOff), Uu.updateFloatsFrom("vEmissiveColor", ju.emissiveColor, 0, 3), Uu.updateFloat3TimesFloats("vAmbientColor", su.ambientColour, 0, ju.ambientColor);
-        const lu = ju.specularColor;
-        Uu.updateFloat4("vSpecularColor", lu[0], lu[1], lu[2], ju.specularPower), Uu.setTexture("diffuseSampler", Zu);
-        const qu = ju.opacityTexture;
-        qu && (Uu.updateFloat2("vOpacityInfos", qu.uvSet, qu.level), Uu.updateMatrixFloats("opacityMatrix", qu.matrix)), Uu.setTexture("opacitySampler", qu);
-        const fu = ju.emissiveTexture;
-        fu && (Uu.updateFloat2("vEmissiveInfos", fu.uvSet, fu.level), Uu.updateMatrixFloats("emissiveMatrix", fu.matrix)), Uu.setTexture("emissiveSampler", fu);
-        const Cu = ju.reflectionTexture;
-        Cu && Uu.updateMatrixFloats("reflectionMatrix", Cu.matrix), Uu.updateFloat2("vReflectionInfos", Cu ? Cu.level * uu.iblIntensity : 0, ju.roughness), Uu.setTexture("reflectionCubeSampler", Cu);
-        const bu = uu.wO();
+          ubo: SG
+        } = bG, LG = ZG.diffuseTexture, yG = ZG.diffuseColor;
+        SG.updateFloat4("vDiffuseColor", yG[0], yG[1], yG[2], ZG.alpha), LG && (SG.updateFloat2("vDiffuseInfos", LG.uvSet, LG.level), SG.updateMatrixFloats("diffuseMatrix", LG.matrix)), SG.updateFloat("alphaCutOff", ZG.alphaCutOff), SG.updateFloatsFrom("vEmissiveColor", ZG.emissiveColor, 0, 3), SG.updateFloat3TimesFloats("vAmbientColor", wG.ambientColour, 0, ZG.ambientColor);
+        const kG = ZG.specularColor;
+        SG.updateFloat4("vSpecularColor", kG[0], kG[1], kG[2], ZG.specularPower), SG.setTexture("diffuseSampler", LG);
+        const UG = ZG.opacityTexture;
+        UG && (SG.updateFloat2("vOpacityInfos", UG.uvSet, UG.level), SG.updateMatrixFloats("opacityMatrix", UG.matrix)), SG.setTexture("opacitySampler", UG);
+        const YG = ZG.emissiveTexture;
+        YG && (SG.updateFloat2("vEmissiveInfos", YG.uvSet, YG.level), SG.updateMatrixFloats("emissiveMatrix", YG.matrix)), SG.setTexture("emissiveSampler", YG);
+        const VG = ZG.reflectionTexture;
+        VG && SG.updateMatrixFloats("reflectionMatrix", VG.matrix), SG.updateFloat2("vReflectionInfos", VG ? VG.level * GG.iblIntensity : 0, ZG.roughness), SG.setTexture("reflectionCubeSampler", VG);
+        const pG = GG.CK();
         for (const {
-            feature: Ou,
-            state: Yu,
-            active: hu
+            feature: KG,
+            state: hG,
+            active: dG
           }
-          of ju.features) {
-          var cu, Nu;
-          if (hu) null === (cu = (Nu = (0, KE.h)(Ou)).bind) || void 0 === cu || cu.call(Nu, Yu, Uu, uu, bu)
+          of ZG.features) {
+          var fG, QG;
+          if (dG) null === (fG = (QG = (0, cb.j)(KG)).bind) || void 0 === fG || fG.call(QG, hG, SG, GG, pG)
         }
       }
     }
 
-    function pZ(uu) {
-      const Eu = uu.replace(/\s+/g, "");
-      return /u32|^vec\du$/.test(Eu) ? "u32" : /i32|^vec\di$/.test(Eu) ? "i32" : "f32"
+    function oL(GG) {
+      const bG = GG.replace(/\s+/g, "");
+      return /u32|^vec\du$/.test(bG) ? "u32" : /i32|^vec\di$/.test(bG) ? "i32" : "f32"
     }
 
-    function wZ(uu, Eu) {
-      const ju = uu.getSize(),
-        su = pZ(Eu),
-        Uu = uu => 4 === ju ? `${uu}x4` : 2 === ju ? `${uu}x2` : null;
-      if ("f32" === su) {
-        if (5126 === uu.type) return 1 === ju ? "float32" : ju >= 2 && ju <= 4 ? `float32x${ju}` : null;
-        if (!uu.normalized) return null;
-        switch (uu.type) {
+    function XL(GG, bG) {
+      const ZG = GG.getSize(),
+        wG = oL(bG),
+        SG = GG => 4 === ZG ? `${GG}x4` : 2 === ZG ? `${GG}x2` : null;
+      if ("f32" === wG) {
+        if (5126 === GG.type) return 1 === ZG ? "float32" : ZG >= 2 && ZG <= 4 ? `float32x${ZG}` : null;
+        if (!GG.normalized) return null;
+        switch (GG.type) {
           case 5121:
-            return Uu("unorm8");
+            return SG("unorm8");
           case 5120:
-            return Uu("snorm8");
+            return SG("snorm8");
           case 5123:
-            return Uu("unorm16");
+            return SG("unorm16");
           case 5122:
-            return Uu("snorm16")
+            return SG("snorm16")
         }
         return null
       }
-      const Zu = "u32" === su ? "uint" : "sint";
-      switch (uu.type) {
+      const LG = "u32" === wG ? "uint" : "sint";
+      switch (GG.type) {
         case 5125:
         case 5124:
-          return 1 === ju ? `${Zu}32` : ju <= 4 ? `${Zu}32x${ju}` : null;
+          return 1 === ZG ? `${LG}32` : ZG <= 4 ? `${LG}32x${ZG}` : null;
         case 5121:
         case 5120:
-          return Uu(`${Zu}8`);
+          return SG(`${LG}8`);
         case 5123:
         case 5122:
-          return Uu(`${Zu}16`)
+          return SG(`${LG}16`)
       }
       return null
     }
 
-    function JZ(uu) {
-      var Eu;
-      const ju = /(8|16|32)(?:x(\d))?$/.exec(uu);
-      return ju ? Number(ju[1]) / 8 * Number(null !== (Eu = ju[2]) && void 0 !== Eu ? Eu : 1) : 4
+    function uL(GG) {
+      var bG;
+      const ZG = /(8|16|32)(?:x(\d))?$/.exec(GG);
+      return ZG ? Number(ZG[1]) / 8 * Number(null !== (bG = ZG[2]) && void 0 !== bG ? bG : 1) : 4
     }
-    class dZ {
-      constructor(uu, Eu, ju) {
-        this.resources = uu, this.limits = Eu, this.warnOnce = ju, this.layouts = new Map
+    class iL {
+      constructor(GG, bG, ZG) {
+        this.resources = GG, this.limits = bG, this.warnOnce = ZG, this.layouts = new Map
       }
-      resolveInputs(uu, Eu, ju, su) {
-        const Uu = [],
-          Zu = ju.program.attributes,
-          Xu = [];
-        for (let Cu = 0; Cu < Zu.length; Cu++) {
-          const ju = Zu[Cu],
-            lu = ju.optional ? null : this.resources.vertexInput(uu, ju.name, su);
-          if (!lu) {
-            const uu = pZ(ju.type),
-              Eu = "u32" === uu ? "uint32x4" : "i32" === uu ? "sint32x4" : "float32x4";
-            Xu.push(null);
-            const su = Uu.find((uu => null === uu.data));
-            su ? su.attributes.push({
-              shaderLocation: Cu,
+      resolveInputs(GG, bG, ZG, wG) {
+        const SG = [],
+          LG = ZG.program.attributes,
+          yG = [];
+        for (let VG = 0; VG < LG.length; VG++) {
+          const ZG = LG[VG],
+            kG = ZG.optional ? null : this.resources.vertexInput(GG, ZG.name, wG);
+          if (!kG) {
+            const GG = oL(ZG.type),
+              bG = "u32" === GG ? "uint32x4" : "i32" === GG ? "sint32x4" : "float32x4";
+            yG.push(null);
+            const wG = SG.find((GG => null === GG.data));
+            wG ? wG.attributes.push({
+              shaderLocation: VG,
               offset: 0,
-              format: Eu
-            }) : Uu.push({
+              format: bG
+            }) : SG.push({
               data: null,
               base: 0,
               stride: 0,
               step: "vertex",
               attributes: [{
-                shaderLocation: Cu,
+                shaderLocation: VG,
                 offset: 0,
-                format: Eu
+                format: bG
               }]
             });
             continue
           }
-          const qu = lu.getBuffer();
-          Xu.push(lu);
-          const fu = wZ(lu, ju.type);
-          if (!fu) return this.warnOnce(`format:${Eu}:${ju.name}`, `${Eu}'s ${ju.name} (type ${lu.type}, size ${lu.getSize()}) has no WebGPU vertex format`), null;
-          const bu = lu.getIsInstanced() ? "instance" : "vertex",
-            cu = lu.byteStride,
-            Nu = JZ(fu),
-            Ou = Uu.find((uu => uu.data === qu && uu.stride === cu && uu.step === bu && lu.byteOffset >= uu.base && lu.byteOffset - uu.base + Nu <= cu));
-          Ou ? Ou.attributes.push({
-            shaderLocation: Cu,
-            offset: lu.byteOffset - Ou.base,
-            format: fu
-          }) : Uu.push({
-            data: qu,
-            base: lu.byteOffset,
-            stride: cu,
-            step: bu,
+          const UG = kG.getBuffer();
+          yG.push(kG);
+          const YG = XL(kG, ZG.type);
+          if (!YG) return this.warnOnce(`format:${bG}:${ZG.name}`, `${bG}'s ${ZG.name} (type ${kG.type}, size ${kG.getSize()}) has no WebGPU vertex format`), null;
+          const pG = kG.getIsInstanced() ? "instance" : "vertex",
+            fG = kG.byteStride,
+            QG = uL(YG),
+            KG = SG.find((GG => GG.data === UG && GG.stride === fG && GG.step === pG && kG.byteOffset >= GG.base && kG.byteOffset - GG.base + QG <= fG));
+          KG ? KG.attributes.push({
+            shaderLocation: VG,
+            offset: kG.byteOffset - KG.base,
+            format: YG
+          }) : SG.push({
+            data: UG,
+            base: kG.byteOffset,
+            stride: fG,
+            step: pG,
             attributes: [{
-              shaderLocation: Cu,
+              shaderLocation: VG,
               offset: 0,
-              format: fu
+              format: YG
             }]
           })
         }
-        if (Uu.length > this.limits.maxVertexBuffers) return this.warnOnce(`slots:${Eu}`, `${Eu} needs ${Uu.length} vertex buffers`), null;
-        let lu = "";
-        for (const Cu of Uu) {
-          lu += `${Cu.stride}${"instance"===Cu.step?"i":"v"}`;
-          for (const uu of Cu.attributes) lu += `,${uu.shaderLocation}:${uu.offset}:${uu.format}`;
-          lu += ";"
+        if (SG.length > this.limits.maxVertexBuffers) return this.warnOnce(`slots:${bG}`, `${bG} needs ${SG.length} vertex buffers`), null;
+        let kG = "";
+        for (const VG of SG) {
+          kG += `${VG.stride}${"instance"===VG.step?"i":"v"}`;
+          for (const GG of VG.attributes) kG += `,${GG.shaderLocation}:${GG.offset}:${GG.format}`;
+          kG += ";"
         }
-        let qu = this.layouts.get(lu);
-        qu || (qu = {
-          key: lu,
-          buffers: Uu.map((uu => ({
-            arrayStride: uu.stride,
-            stepMode: uu.step,
-            attributes: uu.attributes
+        let UG = this.layouts.get(kG);
+        UG || (UG = {
+          key: kG,
+          buffers: SG.map((GG => ({
+            arrayStride: GG.stride,
+            stepMode: GG.step,
+            attributes: GG.attributes
           }))),
-          instanceEnds: Uu.map((uu => {
-            let Eu = -1;
-            if ("instance" === uu.step)
-              for (const ju of uu.attributes) Eu = Math.max(Eu, ju.offset + JZ(ju.format));
-            return Eu
+          instanceEnds: SG.map((GG => {
+            let bG = -1;
+            if ("instance" === GG.step)
+              for (const ZG of GG.attributes) bG = Math.max(bG, ZG.offset + uL(ZG.format));
+            return bG
           }))
-        }, this.layouts.set(lu, qu));
-        const fu = Uu.map((uu => uu.base));
+        }, this.layouts.set(kG, UG));
+        const YG = SG.map((GG => GG.base));
         return {
-          program: ju,
-          sources: Xu,
-          layout: qu,
-          slotData: Uu.map((uu => uu.data)),
-          Q_: fu,
+          program: ZG,
+          sources: yG,
+          layout: UG,
+          slotData: SG.map((GG => GG.data)),
+          i5: YG,
           buffers: [],
-          offsets: fu,
+          offsets: YG,
           ends: [],
           state: null,
           pipelineKey: "",
@@ -2657,39 +2657,39 @@ export const modules = {
       }
     }
 
-    function aZ(uu, Eu, ju, su) {
-      const Uu = Eu.program.program.attributes;
-      for (let Zu = 0; Zu < Uu.length; Zu++) {
-        if ((Uu[Zu].optional ? null : ju.vertexInput(uu, Uu[Zu].name, su)) !== Eu.sources[Zu]) return !1
+    function CL(GG, bG, ZG, wG) {
+      const SG = bG.program.program.attributes;
+      for (let LG = 0; LG < SG.length; LG++) {
+        if ((SG[LG].optional ? null : ZG.vertexInput(GG, SG[LG].name, wG)) !== bG.sources[LG]) return !1
       }
       return !0
     }
-    const PZ = 64;
-    class oZ {
-      constructor(uu, Eu, ju, su) {
-        this.device = uu, this.layout = Eu, this.frameBuffer = ju, this.label = su, this.data = new Float32Array(4096), this.buffer = void 0, this.bindGroup = void 0, this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup()
+    const WL = 64;
+    class mL {
+      constructor(GG, bG, ZG, wG) {
+        this.device = GG, this.layout = bG, this.frameBuffer = ZG, this.label = wG, this.data = new Float32Array(4096), this.buffer = void 0, this.bindGroup = void 0, this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup()
       }
-      ensure(uu) {
-        if (uu * PZ <= this.data.length) return !1;
-        let Eu = 2 * this.data.length;
-        for (; uu * PZ > Eu;) Eu *= 2;
-        const ju = new Float32Array(Eu);
-        return ju.set(this.data), this.data = ju, this.buffer.destroy(), this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup(), !0
+      ensure(GG) {
+        if (GG * WL <= this.data.length) return !1;
+        let bG = 2 * this.data.length;
+        for (; GG * WL > bG;) bG *= 2;
+        const ZG = new Float32Array(bG);
+        return ZG.set(this.data), this.data = ZG, this.buffer.destroy(), this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup(), !0
       }
-      write(uu, Eu, ju) {
-        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        const Uu = this.data,
-          Zu = uu * PZ;
-        let Xu = Uu[Zu + 16] !== ju;
-        for (let lu = 0; lu < 16 && !Xu; lu++) Xu = Uu[Zu + lu] !== Eu[su + lu];
-        if (Xu) {
-          for (let uu = 0; uu < 16; uu++) Uu[Zu + uu] = Eu[su + uu];
-          Uu[Zu + 16] = ju
+      write(GG, bG, ZG) {
+        let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        const SG = this.data,
+          LG = GG * WL;
+        let yG = SG[LG + 16] !== ZG;
+        for (let kG = 0; kG < 16 && !yG; kG++) yG = SG[LG + kG] !== bG[wG + kG];
+        if (yG) {
+          for (let GG = 0; GG < 16; GG++) SG[LG + GG] = bG[wG + GG];
+          SG[LG + 16] = ZG
         }
-        return Xu
+        return yG
       }
-      upload(uu, Eu) {
-        this.device.queue.writeBuffer(this.buffer, uu * bU, this.data, uu * PZ, (Eu - uu) * PZ)
+      upload(GG, bG) {
+        this.device.queue.writeBuffer(this.buffer, GG * VS, this.data, GG * WL, (bG - GG) * WL)
       }
       createBuffer() {
         return this.device.createBuffer({
@@ -2718,124 +2718,124 @@ export const modules = {
       }
     }
 
-    function kZ(uu) {
-      return uu.gpu[Pu.f.lite] ??= uu.materials.map(((Eu, ju) => ({
-        parts: uu,
-        range: ju,
-        owner: uu.owner
+    function IL(GG) {
+      return GG.gpu[mG.e.lite] ??= GG.materials.map(((bG, ZG) => ({
+        parts: GG,
+        range: ZG,
+        owner: GG.owner
       })))
     }
 
-    function mZ(uu) {
-      var Eu, ju, su;
-      return null !== (Eu = null !== (ju = null === (su = uu.parts.materials[uu.range]) || void 0 === su ? void 0 : su.mirror) && void 0 !== ju ? ju : uu.owner.material) && void 0 !== Eu ? Eu : null
+    function FL(GG) {
+      var bG, ZG, wG;
+      return null !== (bG = null !== (ZG = null === (wG = GG.parts.materials[GG.range]) || void 0 === wG ? void 0 : wG.mirror) && void 0 !== ZG ? ZG : GG.owner.material) && void 0 !== bG ? bG : null
     }
-    const vZ = ["opaque", "alphaTest", "transparent", "text"];
+    const vL = ["opaque", "alphaTest", "transparent", "text"];
 
-    function KZ(uu) {
-      for (const Eu of vZ) uu[Eu].units.length = 0, uu[Eu].rows.length = 0
+    function aL(GG) {
+      for (const bG of vL) GG[bG].units.length = 0, GG[bG].rows.length = 0
     }
-    class VZ {
+    class cL {
       constructor() {
-        this.selectedCount = 0, this.model = null, this.mirror = null, this.groups = new Map, this.batches = new WeakMap, this.rows = new Int32Array(0), this.frame = 0, this.warnOnce = (0, vE.d)("Lite: ")
+        this.selectedCount = 0, this.model = null, this.mirror = null, this.groups = new Map, this.batches = new WeakMap, this.rows = new Int32Array(0), this.frame = 0, this.warnOnce = (0, ab.e)("Lite: ")
       }
-      attach(uu, Eu) {
-        this.model = uu, this.mirror = Eu
+      attach(GG, bG) {
+        this.model = GG, this.mirror = bG
       }
       get worlds() {
-        return this.model.nodes.zb
+        return this.model.nodes.Op
       }
       get visibility() {
         return this.model.meshes.visibility
       }
-      group(uu) {
-        return this.groups.get(uu)
+      group(GG) {
+        return this.groups.get(GG)
       }
-      forEachGroup(uu) {
-        this.groups.forEach(uu)
+      forEachGroup(GG) {
+        this.groups.forEach(GG)
       }
-      forEachSelected(uu) {
-        for (const [Eu, ju] of this.groups)
-          for (const su of vZ)
-            for (const Uu of ju[su].units) uu(Uu.owner, "text" === su ? "transparent" : su, Eu)
+      forEachSelected(GG) {
+        for (const [bG, ZG] of this.groups)
+          for (const wG of vL)
+            for (const SG of ZG[wG].units) GG(SG.owner, "text" === wG ? "transparent" : wG, bG)
       }
-      select(uu, Eu) {
-        this.frame++, this.selectedCount = 0, this.groups.forEach(KZ);
+      select(GG, bG) {
+        this.frame++, this.selectedCount = 0, this.groups.forEach(aL);
         const {
-          model: ju,
-          mirror: su
+          model: ZG,
+          mirror: wG
         } = this;
-        if (!ju || !su || !uu) return;
-        this.rows.length < ju.nodes.Mb && (this.rows = new Int32Array(ju.nodes.Mb));
-        const Uu = this.rows,
-          Zu = ju.meshes;
-        for (let lu = 0; lu < Zu.looseCount; lu++) {
-          const uu = Zu.loose[lu],
-            ju = su.nodes[uu];
-          ju && !ju.isBlocked && ju.isEnabled() && !ju.Of.hasAZeroComponent && Zu.selects(uu, Eu.frustum) && (this.activate(ju, uu), this.selectedCount++)
+        if (!ZG || !wG || !GG) return;
+        this.rows.length < ZG.nodes.rp && (this.rows = new Int32Array(ZG.nodes.rp));
+        const SG = this.rows,
+          LG = ZG.meshes;
+        for (let kG = 0; kG < LG.looseCount; kG++) {
+          const GG = LG.loose[kG],
+            ZG = wG.nodes[GG];
+          ZG && !ZG.isBlocked && ZG.isEnabled() && !ZG.nY.hasAZeroComponent && LG.selects(GG, bG.frustum) && (this.activate(ZG, GG), this.selectedCount++)
         }
-        const Xu = Zu.selectTextPlanes(Eu.frustum, Uu);
-        for (let lu = 0; lu < Xu; lu++) {
-          const Eu = Uu[lu],
-            Zu = su.nodes[Eu],
-            Xu = ju.meshes.parts[Eu];
-          if (!Zu.isVisible || !(Zu.visibility > 0) || 0 === (Zu.layerMask & uu.layerMask) || !Xu) continue;
-          const qu = this.groupOf(ju.meshes.layer[Eu]).text;
-          for (const uu of kZ(Xu)) qu.units.push(uu), qu.rows.push(Eu);
+        const yG = LG.selectTextPlanes(bG.frustum, SG);
+        for (let kG = 0; kG < yG; kG++) {
+          const bG = SG[kG],
+            LG = wG.nodes[bG],
+            yG = ZG.meshes.parts[bG];
+          if (!LG.isVisible || !(LG.visibility > 0) || 0 === (LG.layerMask & GG.layerMask) || !yG) continue;
+          const UG = this.groupOf(ZG.meshes.layer[bG]).text;
+          for (const GG of IL(yG)) UG.units.push(GG), UG.rows.push(bG);
           this.selectedCount++
         }
       }
-      instanceBatch(uu) {
-        const Eu = this.batchOf(uu);
-        return Eu.dispatched || (Eu.dispatched = Eu.renderSelf = !0, Eu.row = this.rowOf(uu)), Eu
+      instanceBatch(GG) {
+        const bG = this.batchOf(GG);
+        return bG.dispatched || (bG.dispatched = bG.renderSelf = !0, bG.row = this.rowOf(GG)), bG
       }
-      rowOf(uu) {
-        return uu.row
+      rowOf(GG) {
+        return GG.row
       }
-      activate(uu, Eu) {
-        if (!uu.JV) {
-          const ju = uu;
-          if (ju.fUu) {
-            const uu = this.batchOf(ju);
-            uu.dispatched = !0, uu.renderSelf = !0, uu.row = Eu
+      activate(GG, bG) {
+        if (!GG.Ul) {
+          const ZG = GG;
+          if (ZG.zSG) {
+            const GG = this.batchOf(ZG);
+            GG.dispatched = !0, GG.renderSelf = !0, GG.row = bG
           }
-          return void this.dispatch(ju, Eu, Eu)
+          return void this.dispatch(ZG, bG, bG)
         }
-        const ju = uu,
-          su = ju.CUu;
-        if (su._getWorldMatrixDeterminant() >= 0 !== ju._getWorldMatrixDeterminant() >= 0) return void this.warnOnce(`mirrored:${su.name}`, `A mirrored InstancedMesh of ${su.name} is not drawn yet`);
-        const Uu = this.batchOf(su);
-        Uu.instances.push(ju), Uu.rows.push(Eu), Uu.dispatched || (Uu.dispatched = !0, this.dispatch(su, Eu, this.rowOf(su)))
+        const ZG = GG,
+          wG = ZG.ESG;
+        if (wG._getWorldMatrixDeterminant() >= 0 !== ZG._getWorldMatrixDeterminant() >= 0) return void this.warnOnce(`mirrored:${wG.name}`, `A mirrored InstancedMesh of ${wG.name} is not drawn yet`);
+        const SG = this.batchOf(wG);
+        SG.instances.push(ZG), SG.rows.push(bG), SG.dispatched || (SG.dispatched = !0, this.dispatch(wG, bG, this.rowOf(wG)))
       }
-      batchOf(uu) {
-        let Eu = this.batches.get(uu);
-        return Eu || (Eu = {
+      batchOf(GG) {
+        let bG = this.batches.get(GG);
+        return bG || (bG = {
           frame: 0,
           dispatched: !1,
           renderSelf: !1,
           row: -1,
           instances: [],
           rows: []
-        }, this.batches.set(uu, Eu)), Eu.frame !== this.frame && (Eu.frame = this.frame, Eu.dispatched = !1, Eu.renderSelf = !1, Eu.instances.length = 0, Eu.rows.length = 0), Eu
+        }, this.batches.set(GG, bG)), bG.frame !== this.frame && (bG.frame = this.frame, bG.dispatched = !1, bG.renderSelf = !1, bG.instances.length = 0, bG.rows.length = 0), bG
       }
-      dispatch(uu, Eu, ju) {
+      dispatch(GG, bG, ZG) {
         const {
-          layer: su,
-          parts: Uu
+          layer: wG,
+          parts: SG
         } = this.model.meshes;
-        if (!Uu[Eu]) return;
-        const Zu = this.groupOf(su[Eu]),
-          Xu = uu;
-        for (const lu of kZ(Uu[Eu])) {
-          const uu = mZ(lu);
-          if (!uu) continue;
-          const Eu = uu.needAlphaBlendingForMesh(Xu) ? Zu.transparent : uu.needAlphaTestingForMesh(Xu) ? Zu.alphaTest : Zu.opaque;
-          Eu.units.push(lu), Eu.rows.push(ju)
+        if (!SG[bG]) return;
+        const LG = this.groupOf(wG[bG]),
+          yG = GG;
+        for (const kG of IL(SG[bG])) {
+          const GG = FL(kG);
+          if (!GG) continue;
+          const bG = GG.needAlphaBlendingForMesh(yG) ? LG.transparent : GG.needAlphaTestingForMesh(yG) ? LG.alphaTest : LG.opaque;
+          bG.units.push(kG), bG.rows.push(ZG)
         }
       }
-      groupOf(uu) {
-        let Eu = this.groups.get(uu);
-        return Eu || (Eu = {
+      groupOf(GG) {
+        let bG = this.groups.get(GG);
+        return bG || (bG = {
           opaque: {
             units: [],
             rows: []
@@ -2852,225 +2852,225 @@ export const modules = {
             units: [],
             rows: []
           }
-        }, this.groups.set(uu, Eu)), Eu
+        }, this.groups.set(GG, bG)), bG
       }
     }
 
-    function rZ(uu) {
-      uu.opaque.length = 0, uu.transparent.length = 0
+    function lL(GG) {
+      GG.opaque.length = 0, GG.transparent.length = 0
     }
-    class QZ {
+    class jL {
       constructor() {
-        this.dl = new Map, this.enabled = [], this.groups = new Map, this.oN = [], this.warned = new Set, this.selected = 0, this.drawn = 0
+        this.Ik = new Map, this.enabled = [], this.groups = new Map, this.vQ = [], this.warned = new Set, this.selected = 0, this.drawn = 0
       }
-      add(uu) {
-        if (this.dl.has(uu)) return;
-        const Eu = {
-          mesh: uu,
-          observer: uu.onEffectiveEnabledStateChangedObservable.add((uu => {
-            this.Wk(Eu, uu)
+      add(GG) {
+        if (this.Ik.has(GG)) return;
+        const bG = {
+          mesh: GG,
+          observer: GG.onEffectiveEnabledStateChangedObservable.add((GG => {
+            this.DW(bG, GG)
           })),
           index: -1,
           steady: null
         };
-        this.dl.set(uu, Eu), this.Wk(Eu, uu.isEnabled())
+        this.Ik.set(GG, bG), this.DW(bG, GG.isEnabled())
       }
-      remove(uu) {
-        const Eu = this.dl.get(uu);
-        Eu && (Eu.observer.remove(!0), this.Wk(Eu, !1), this.dl.delete(uu))
+      remove(GG) {
+        const bG = this.Ik.get(GG);
+        bG && (bG.observer.remove(!0), this.DW(bG, !1), this.Ik.delete(GG))
       }
       dropSteady() {
-        for (const uu of this.dl.values()) uu.steady = null
+        for (const GG of this.Ik.values()) GG.steady = null
       }
-      base(uu) {
-        return this.dl.get(uu)
+      base(GG) {
+        return this.Ik.get(GG)
       }
       drawStats() {
         return {
           drawn: this.drawn,
           selected: this.selected,
-          dl: this.dl.size
+          Ik: this.Ik.size
         }
       }
-      forEachSelected(uu) {
-        for (const [Eu, ju] of this.groups) {
-          for (const su of ju.opaque) uu(su.owner, "opaque", Eu);
-          for (const su of ju.transparent) uu(su.owner, "transparent", Eu)
+      forEachSelected(GG) {
+        for (const [bG, ZG] of this.groups) {
+          for (const wG of ZG.opaque) GG(wG.owner, "opaque", bG);
+          for (const wG of ZG.transparent) GG(wG.owner, "transparent", bG)
         }
-        for (const Eu of this.oN) uu(Eu.mesh, "opaque", 0)
+        for (const bG of this.vQ) GG(bG.mesh, "opaque", 0)
       }
-      group(uu) {
-        return this.groups.get(uu)
+      group(GG) {
+        return this.groups.get(GG)
       }
-      forEachGroup(uu) {
-        this.groups.forEach(uu)
+      forEachGroup(GG) {
+        this.groups.forEach(GG)
       }
-      select(uu, Eu) {
-        if (this.drawn = 0, this.selected = 0, this.oN.length = 0, this.groups.forEach(rZ), !uu) return;
-        const ju = this.enabled;
-        for (let su = 0; su < ju.length; su++) {
-          const Uu = ju[su];
-          if (Uu.steady && Eu(Uu, uu)) {
-            this.selected++, this.oN.push(Uu);
+      select(GG, bG) {
+        if (this.drawn = 0, this.selected = 0, this.vQ.length = 0, this.groups.forEach(lL), !GG) return;
+        const ZG = this.enabled;
+        for (let wG = 0; wG < ZG.length; wG++) {
+          const SG = ZG[wG];
+          if (SG.steady && bG(SG, GG)) {
+            this.selected++, this.vQ.push(SG);
             continue
           }
-          const Zu = Uu.mesh;
-          if (Zu.isBlocked || Zu.Of.hasAZeroComponent) continue;
-          if (!Zu.isVisible || Zu.visibility <= 0 || 0 === (Zu.layerMask & uu.layerMask)) continue;
-          if (Zu.fUu) {
-            this.warned.has(Zu.name) || (this.warned.add(Zu.name), console.warn(`Lite: thin instance base ${Zu.name} has InstancedMeshes and is not drawn`));
+          const LG = SG.mesh;
+          if (LG.isBlocked || LG.nY.hasAZeroComponent) continue;
+          if (!LG.isVisible || LG.visibility <= 0 || 0 === (LG.layerMask & GG.layerMask)) continue;
+          if (LG.zSG) {
+            this.warned.has(LG.name) || (this.warned.add(LG.name), console.warn(`Lite: thin instance base ${LG.name} has InstancedMeshes and is not drawn`));
             continue
           }
           const {
-            parts: Xu
-          } = Zu;
-          if (!Xu) continue;
-          Zu.computeWorldMatrix(), this.selected++;
-          const lu = this.listsFor(Zu.renderingGroupId);
-          for (const uu of kZ(Xu)) {
-            const Eu = mZ(uu);
-            Eu && (Eu.needAlphaBlendingForMesh(Zu) ? lu.transparent.push(uu) : lu.opaque.push(uu))
+            parts: yG
+          } = LG;
+          if (!yG) continue;
+          LG.computeWorldMatrix(), this.selected++;
+          const kG = this.listsFor(LG.renderingGroupId);
+          for (const GG of IL(yG)) {
+            const bG = FL(GG);
+            bG && (bG.needAlphaBlendingForMesh(LG) ? kG.transparent.push(GG) : kG.opaque.push(GG))
           }
         }
       }
-      Wk(uu, Eu) {
-        if (Eu === uu.index >= 0) return;
-        uu.steady = null;
-        const ju = this.enabled;
-        if (Eu) uu.index = ju.length, ju.push(uu);
+      DW(GG, bG) {
+        if (bG === GG.index >= 0) return;
+        GG.steady = null;
+        const ZG = this.enabled;
+        if (bG) GG.index = ZG.length, ZG.push(GG);
         else {
-          const Eu = ju.pop();
-          Eu !== uu && (ju[uu.index] = Eu, Eu.index = uu.index), uu.index = -1
+          const bG = ZG.pop();
+          bG !== GG && (ZG[GG.index] = bG, bG.index = GG.index), GG.index = -1
         }
       }
-      listsFor(uu) {
-        let Eu = this.groups.get(uu);
-        return Eu || (Eu = {
+      listsFor(GG) {
+        let bG = this.groups.get(GG);
+        return bG || (bG = {
           opaque: [],
           transparent: []
-        }, this.groups.set(uu, Eu)), Eu
+        }, this.groups.set(GG, bG)), bG
       }
     }
-    var iZ = ju(39881);
-    class WZ {
+    var PL = ZG(39967);
+    class ML {
       constructor() {
-        this.bundle = null, this.stale = !0, this.dl = new Set
+        this.bundle = null, this.stale = !0, this.Ik = new Set
       }
     }
-    class SZ {
-      constructor(uu, Eu, ju) {
-        this.device = uu, this.slots = Eu, this.host = ju, this.records = new Map, this.freeSlots = [], this.slotCount = 0, this.slotsFrom = Number.POSITIVE_INFINITY, this.slotsTo = -1, this.args = new Uint32Array(320), this.argsBuffer = void 0, this.argsDirty = !1, this.main = new WZ, this.sK = new WZ, this.rangedEpoch = -1, this.bundles = [], this.recordedTarget = "", this.recordedSceneGroup = null, this.binder = new uZ, this.frame = 0, this.drawn = 0, this.direct = void 0, this.directThisFrame = !1, this.endRecordFrame = uu => {
-          uu.seen !== this.frame && (uu.draw && (uu.draw = null, this.args[5 * uu.slot + 1] = 0, this.argsDirty = !0, this.sK.stale ||= uu.sK), this.frame - uu.seen > 120 && (this.records.delete(uu.unit), this.freeSlots.push(uu.slot), uu.recorded && (this.bundleOf(uu).stale = !0)))
-        }, this.argsBuffer = this.createArgsBuffer(), this.direct = function(uu) {
-          var Eu, ju;
-          let su = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null !== (Eu = null === (ju = globalThis.navigator) || void 0 === ju ? void 0 : ju.userAgent) && void 0 !== Eu ? Eu : "";
-          const Uu = uu.adapterInfo;
-          return "intel" === (null === Uu || void 0 === Uu ? void 0 : Uu.vendor) && "gen-12lp" === Uu.architecture && su.includes("Windows")
-        }(uu), (0, iZ.D)(this.direct)
+    class AL {
+      constructor(GG, bG, ZG) {
+        this.device = GG, this.slots = bG, this.host = ZG, this.records = new Map, this.freeSlots = [], this.slotCount = 0, this.slotsFrom = Number.POSITIVE_INFINITY, this.slotsTo = -1, this.args = new Uint32Array(320), this.argsBuffer = void 0, this.argsDirty = !1, this.main = new ML, this.qI = new ML, this.rangedEpoch = -1, this.bundles = [], this.recordedTarget = "", this.recordedSceneGroup = null, this.binder = new BS, this.frame = 0, this.drawn = 0, this.direct = void 0, this.directThisFrame = !1, this.endRecordFrame = GG => {
+          GG.seen !== this.frame && (GG.draw && (GG.draw = null, this.args[5 * GG.slot + 1] = 0, this.argsDirty = !0, this.qI.stale ||= GG.qI), this.frame - GG.seen > 120 && (this.records.delete(GG.unit), this.freeSlots.push(GG.slot), GG.recorded && (this.bundleOf(GG).stale = !0)))
+        }, this.argsBuffer = this.createArgsBuffer(), this.direct = function(GG) {
+          var bG, ZG;
+          let wG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null !== (bG = null === (ZG = globalThis.navigator) || void 0 === ZG ? void 0 : ZG.userAgent) && void 0 !== bG ? bG : "";
+          const SG = GG.adapterInfo;
+          return "intel" === (null === SG || void 0 === SG ? void 0 : SG.vendor) && "gen-12lp" === SG.architecture && wG.includes("Windows")
+        }(GG), (0, PL.N)(this.direct)
       }
-      wG() {
-        this.frame++, this.drawn = 0, this.directThisFrame = this.direct, (0, iZ.D)(this.directThisFrame)
+      yE() {
+        this.frame++, this.drawn = 0, this.directThisFrame = this.direct, (0, PL.N)(this.directThisFrame)
       }
-      add(uu, Eu, ju, su) {
-        let Uu = this.records.get(uu);
-        return Uu || (Uu = this.createRecord(uu), this.records.set(uu, Uu)), Uu.recorded && FZ(Uu, Eu) || (this.bundleOf(Uu).stale = !0), this.place(Uu, Eu, ju, su), Uu
+      add(GG, bG, ZG, wG) {
+        let SG = this.records.get(GG);
+        return SG || (SG = this.createRecord(GG), this.records.set(GG, SG)), SG.recorded && qL(SG, bG) || (this.bundleOf(SG).stale = !0), this.place(SG, bG, ZG, wG), SG
       }
-      bundleOf(uu) {
-        return uu.sK ? this.sK : this.main
+      bundleOf(GG) {
+        return GG.qI ? this.qI : this.main
       }
-      addAgain(uu, Eu, ju, su) {
-        uu.recorded || (this.bundleOf(uu).stale = !0), this.place(uu, Eu, ju, su)
+      addAgain(GG, bG, ZG, wG) {
+        GG.recorded || (this.bundleOf(GG).stale = !0), this.place(GG, bG, ZG, wG)
       }
-      place(uu, Eu, ju, su) {
-        uu.seen = this.frame, uu.sK && null === uu.draw && (this.sK.stale = !0), uu.draw = Eu, this.drawn++, ju && this.slots.write(uu.slot, ju, su) && (this.slotsFrom = Math.min(this.slotsFrom, uu.slot), this.slotsTo = Math.max(this.slotsTo, uu.slot));
-        const Uu = this.args,
-          Zu = 5 * uu.slot;
-        Uu[Zu] === Eu.count && Uu[Zu + 1] === Eu.instances && Uu[Zu + 2] === Eu.first || (Uu[Zu] = Eu.count, Uu[Zu + 1] = Eu.instances, Uu[Zu + 2] = Eu.first, this.argsDirty = !0, this.sK.stale ||= uu.sK)
+      place(GG, bG, ZG, wG) {
+        GG.seen = this.frame, GG.qI && null === GG.draw && (this.qI.stale = !0), GG.draw = bG, this.drawn++, ZG && this.slots.write(GG.slot, ZG, wG) && (this.slotsFrom = Math.min(this.slotsFrom, GG.slot), this.slotsTo = Math.max(this.slotsTo, GG.slot));
+        const SG = this.args,
+          LG = 5 * GG.slot;
+        SG[LG] === bG.count && SG[LG + 1] === bG.instances && SG[LG + 2] === bG.first || (SG[LG] = bG.count, SG[LG + 1] = bG.instances, SG[LG + 2] = bG.first, this.argsDirty = !0, this.qI.stale ||= GG.qI)
       }
-      JG() {
+      kE() {
         this.records.forEach(this.endRecordFrame), this.argsDirty && !this.directThisFrame && (this.device.queue.writeBuffer(this.argsBuffer, 0, this.args, 0, 5 * this.slotCount), this.argsDirty = !1), this.slotsTo >= 0 && (this.slots.upload(this.slotsFrom, this.slotsTo + 1), this.slotsFrom = Number.POSITIVE_INFINITY, this.slotsTo = -1)
       }
-      forEachDrawn(uu) {
-        for (const Eu of this.records.values()) Eu.draw && Eu.seen === this.frame && !Eu.sK && uu(Eu.draw, this.slots.data, Eu.slot * bU / 4)
+      forEachDrawn(GG) {
+        for (const bG of this.records.values()) bG.draw && bG.seen === this.frame && !bG.qI && GG(bG.draw, this.slots.data, bG.slot * VS / 4)
       }
-      resourceDestroyed(uu) {
-        this.main.stale ||= this.main.dl.has(uu), this.sK.stale ||= this.sK.dl.has(uu)
+      resourceDestroyed(GG) {
+        this.main.stale ||= this.main.Ik.has(GG), this.qI.stale ||= this.qI.Ik.has(GG)
       }
-      execute(uu, Eu, ju) {
+      execute(GG, bG, ZG) {
         if (0 === this.drawn) return 0;
-        if (this.directThisFrame) return this.encode(uu, Eu, ju, "direct"), this.drawn;
-        const su = this.host.sceneGroup(Eu);
-        if (!su) return this.main.bundle = null, this.sK.bundle = null, this.recordedSceneGroup = null, this.encode(uu, Eu, ju, "direct"), this.drawn;
-        this.recordedTarget === ju && this.recordedSceneGroup === su || (this.recordedTarget = ju, this.recordedSceneGroup = su, this.main.stale = !0, this.sK.stale = !0);
-        const Uu = this.main,
-          Zu = this.sK;
-        let Xu = !1;
-        !Uu.stale && Uu.bundle || (Uu.bundle = this.record(Eu, ju, su, "indirect"), Xu = !0);
-        const lu = (0, iZ.i)();
-        return (Zu.stale || this.rangedEpoch !== lu) && (this.rangedEpoch = lu, Zu.bundle = this.drawsRanged() ? this.record(Eu, ju, su, "sK") : this.noRangedBundle(), Xu = !0), Xu && (this.bundles = Zu.bundle ? [Uu.bundle, Zu.bundle] : [Uu.bundle]), uu.executeBundles(this.bundles), uu.setBindGroup(0, su), this.drawn
+        if (this.directThisFrame) return this.encode(GG, bG, ZG, "direct"), this.drawn;
+        const wG = this.host.sceneGroup(bG);
+        if (!wG) return this.main.bundle = null, this.qI.bundle = null, this.recordedSceneGroup = null, this.encode(GG, bG, ZG, "direct"), this.drawn;
+        this.recordedTarget === ZG && this.recordedSceneGroup === wG || (this.recordedTarget = ZG, this.recordedSceneGroup = wG, this.main.stale = !0, this.qI.stale = !0);
+        const SG = this.main,
+          LG = this.qI;
+        let yG = !1;
+        !SG.stale && SG.bundle || (SG.bundle = this.record(bG, ZG, wG, "indirect"), yG = !0);
+        const kG = (0, PL.o)();
+        return (LG.stale || this.rangedEpoch !== kG) && (this.rangedEpoch = kG, LG.bundle = this.drawsRanged() ? this.record(bG, ZG, wG, "qI") : this.noRangedBundle(), yG = !0), yG && (this.bundles = LG.bundle ? [SG.bundle, LG.bundle] : [SG.bundle]), GG.executeBundles(this.bundles), GG.setBindGroup(0, wG), this.drawn
       }
-      record(uu, Eu, ju, su) {
-        const Uu = this.device.createRenderBundleEncoder({
-          label: "sK" === su ? "thin-bases-ranged" : "thin-bases",
-          colorFormats: uu._colorFormat ? [uu._colorFormat] : [],
-          depthStencilFormat: uu._depthStencilFormat,
-          sampleCount: uu._sampleCount
+      record(GG, bG, ZG, wG) {
+        const SG = this.device.createRenderBundleEncoder({
+          label: "qI" === wG ? "thin-bases-ranged" : "thin-bases",
+          colorFormats: GG._colorFormat ? [GG._colorFormat] : [],
+          depthStencilFormat: GG._depthStencilFormat,
+          sampleCount: GG._sampleCount
         });
-        return Uu.setBindGroup(0, ju), this.encode(Uu, uu, Eu, su), Uu.finish()
+        return SG.setBindGroup(0, ZG), this.encode(SG, GG, bG, wG), SG.finish()
       }
       noRangedBundle() {
-        for (const uu of this.records.values()) uu.sK && (uu.recorded = !1);
-        return this.sK.dl.clear(), this.sK.stale = !1, null
+        for (const GG of this.records.values()) GG.qI && (GG.recorded = !1);
+        return this.qI.Ik.clear(), this.qI.stale = !1, null
       }
       drawsRanged() {
-        for (const uu of this.records.values())
-          if (uu.sK && uu.draw) return !0;
+        for (const GG of this.records.values())
+          if (GG.qI && GG.draw) return !0;
         return !1
       }
-      encode(uu, Eu, ju, su) {
-        const Uu = [];
-        for (const qu of this.records.values()) "direct" !== su && qu.sK !== ("sK" === su) || (qu.recorded = !1, qu.draw && Uu.push(qu));
-        Uu.sort(BZ);
-        const Zu = "direct" === su ? null : "sK" === su ? this.sK : this.main;
-        null === Zu || void 0 === Zu || Zu.dl.clear(), this.binder.reset();
-        let Xu = !1;
-        for (const qu of Uu) {
-          var lu;
-          const Uu = qu.draw,
-            fu = this.host.pipelineFor(Uu, Eu, ju);
-          if (!fu) {
-            this.host.pipelineCompiling(Uu, ju) ? Xu = !0 : Zu && this.keep(qu, Uu, Zu.dl);
+      encode(GG, bG, ZG, wG) {
+        const SG = [];
+        for (const UG of this.records.values()) "direct" !== wG && UG.qI !== ("qI" === wG) || (UG.recorded = !1, UG.draw && SG.push(UG));
+        SG.sort(nL);
+        const LG = "direct" === wG ? null : "qI" === wG ? this.qI : this.main;
+        null === LG || void 0 === LG || LG.Ik.clear(), this.binder.reset();
+        let yG = !1;
+        for (const UG of SG) {
+          var kG;
+          const SG = UG.draw,
+            YG = this.host.pipelineFor(SG, bG, ZG);
+          if (!YG) {
+            this.host.pipelineCompiling(SG, ZG) ? yG = !0 : LG && this.keep(UG, SG, LG.Ik);
             continue
           }
-          let Cu;
-          if (qu.sK && "indirect" !== su) {
-            const uu = qu.unit.owner;
-            Cu = "direct" === su && (0, iZ.r)(uu) || (0, iZ.l)(uu) || void 0
+          let VG;
+          if (UG.qI && "indirect" !== wG) {
+            const GG = UG.unit.owner;
+            VG = "direct" === wG && (0, PL.A)(GG) || (0, PL.q)(GG) || void 0
           }
-          if (Zu && this.keep(qu, Uu, Zu.dl), 0 === (null === (lu = Cu) || void 0 === lu ? void 0 : lu.count)) continue;
-          this.binder.bind(uu, Uu, fu, this.slots.bindGroup, qu.slot * bU);
-          const bu = 5 * qu.slot;
-          if ("indirect" === su) {
-            Uu.indexBuffer ? uu.drawIndexedIndirect(this.argsBuffer, 4 * bu) : uu.drawIndirect(this.argsBuffer, 4 * bu);
+          if (LG && this.keep(UG, SG, LG.Ik), 0 === (null === (kG = VG) || void 0 === kG ? void 0 : kG.count)) continue;
+          this.binder.bind(GG, SG, YG, this.slots.bindGroup, UG.slot * VS);
+          const pG = 5 * UG.slot;
+          if ("indirect" === wG) {
+            SG.indexBuffer ? GG.drawIndexedIndirect(this.argsBuffer, 4 * pG) : GG.drawIndirect(this.argsBuffer, 4 * pG);
             continue
           }
-          const cu = this.args;
-          Cu ? IZ(uu, null !== Uu.indexBuffer, cu, bu, Cu) : Uu.indexBuffer ? uu.drawIndexed(cu[bu], cu[bu + 1], cu[bu + 2], 0, 0) : uu.draw(cu[bu], cu[bu + 1], cu[bu + 2], 0)
+          const fG = this.args;
+          VG ? sL(GG, null !== SG.indexBuffer, fG, pG, VG) : SG.indexBuffer ? GG.drawIndexed(fG[pG], fG[pG + 1], fG[pG + 2], 0, 0) : GG.draw(fG[pG], fG[pG + 1], fG[pG + 2], 0)
         }
-        Zu && (Zu.stale = Xu)
+        LG && (LG.stale = yG)
       }
-      keep(uu, Eu, ju) {
-        uu.recorded = !0, uu.pipelineKey = Eu.pipelineKey, uu.materialGroup = Eu.material.bindGroup, uu.vertexBuffers.length = 0, uu.vertexBuffers.push(...Eu.vertexBuffers), uu.vertexOffsets = Eu.vertexOffsets, uu.indexBuffer = Eu.indexBuffer, uu.indexFormat = Eu.indexFormat;
-        for (const su of Eu.vertexBuffers) ju.add(su);
-        Eu.indexBuffer && ju.add(Eu.indexBuffer), ju.add(Eu.material.buffer);
-        for (const su of Eu.material.bound) su && ju.add(su)
+      keep(GG, bG, ZG) {
+        GG.recorded = !0, GG.pipelineKey = bG.pipelineKey, GG.materialGroup = bG.material.bindGroup, GG.vertexBuffers.length = 0, GG.vertexBuffers.push(...bG.vertexBuffers), GG.vertexOffsets = bG.vertexOffsets, GG.indexBuffer = bG.indexBuffer, GG.indexFormat = bG.indexFormat;
+        for (const wG of bG.vertexBuffers) ZG.add(wG);
+        bG.indexBuffer && ZG.add(bG.indexBuffer), ZG.add(bG.material.buffer);
+        for (const wG of bG.material.bound) wG && ZG.add(wG)
       }
-      createRecord(uu) {
-        let Eu = this.freeSlots.pop();
-        return void 0 === Eu && (Eu = this.slotCount++, this.grow()), {
-          unit: uu,
-          slot: Eu,
-          sK: void 0 !== (0, iZ.l)(uu.owner),
+      createRecord(GG) {
+        let bG = this.freeSlots.pop();
+        return void 0 === bG && (bG = this.slotCount++, this.grow()), {
+          unit: GG,
+          slot: bG,
+          qI: void 0 !== (0, PL.q)(GG.owner),
           seen: -1,
           draw: null,
           recorded: !1,
@@ -3083,9 +3083,9 @@ export const modules = {
         }
       }
       grow() {
-        if (this.slots.ensure(this.slotCount) && (this.slotsFrom = 0, this.slotsTo = this.slotCount - 1, this.main.stale = !0, this.sK.stale = !0), 5 * this.slotCount > this.args.length) {
-          const uu = new Uint32Array(2 * this.args.length);
-          uu.set(this.args), this.args = uu, this.argsBuffer.destroy(), this.argsBuffer = this.createArgsBuffer(), this.argsDirty = !0, this.main.stale = !0
+        if (this.slots.ensure(this.slotCount) && (this.slotsFrom = 0, this.slotsTo = this.slotCount - 1, this.main.stale = !0, this.qI.stale = !0), 5 * this.slotCount > this.args.length) {
+          const GG = new Uint32Array(2 * this.args.length);
+          GG.set(this.args), this.args = GG, this.argsBuffer.destroy(), this.argsBuffer = this.createArgsBuffer(), this.argsDirty = !0, this.main.stale = !0
         }
       }
       createArgsBuffer() {
@@ -3097,556 +3097,556 @@ export const modules = {
       }
     }
 
-    function IZ(uu, Eu, ju, su, Uu) {
-      const Zu = ju[su + 1],
-        Xu = Uu.data;
-      for (let lu = 0; lu < Uu.count; lu++) {
-        const Uu = Math.min(Xu[2 * lu], Zu),
-          qu = Math.min(Xu[2 * lu + 1], Zu - Uu);
-        0 !== qu && (Eu ? uu.drawIndexed(ju[su], qu, ju[su + 2], 0, Uu) : uu.draw(ju[su], qu, ju[su + 2], Uu))
+    function sL(GG, bG, ZG, wG, SG) {
+      const LG = ZG[wG + 1],
+        yG = SG.data;
+      for (let kG = 0; kG < SG.count; kG++) {
+        const SG = Math.min(yG[2 * kG], LG),
+          UG = Math.min(yG[2 * kG + 1], LG - SG);
+        0 !== UG && (bG ? GG.drawIndexed(ZG[wG], UG, ZG[wG + 2], 0, SG) : GG.draw(ZG[wG], UG, ZG[wG + 2], SG))
       }
     }
 
-    function FZ(uu, Eu) {
-      if (uu.pipelineKey !== Eu.pipelineKey || uu.materialGroup !== Eu.material.bindGroup || uu.indexBuffer !== Eu.indexBuffer || uu.indexFormat !== Eu.indexFormat || uu.vertexOffsets !== Eu.vertexOffsets || uu.vertexBuffers.length !== Eu.vertexBuffers.length) return !1;
-      for (let ju = 0; ju < uu.vertexBuffers.length; ju++)
-        if (uu.vertexBuffers[ju] !== Eu.vertexBuffers[ju]) return !1;
+    function qL(GG, bG) {
+      if (GG.pipelineKey !== bG.pipelineKey || GG.materialGroup !== bG.material.bindGroup || GG.indexBuffer !== bG.indexBuffer || GG.indexFormat !== bG.indexFormat || GG.vertexOffsets !== bG.vertexOffsets || GG.vertexBuffers.length !== bG.vertexBuffers.length) return !1;
+      for (let ZG = 0; ZG < GG.vertexBuffers.length; ZG++)
+        if (GG.vertexBuffers[ZG] !== bG.vertexBuffers[ZG]) return !1;
       return !0
     }
 
-    function BZ(uu, Eu) {
-      return jZ(uu.draw, Eu.draw)
+    function nL(GG, bG) {
+      return bL(GG.draw, bG.draw)
     }
-    const LZ = new WeakMap,
-      tZ = {
+    const gL = new WeakMap,
+      eL = {
         depth: !1,
         sunShadow: !1
       };
 
-    function xZ(uu, Eu) {
-      let ju = LZ.get(uu);
-      ju || (ju = new Map, LZ.set(uu, ju));
-      const su = `${Eu.depth?"-depth":""}${Eu.sunShadow?"-shadow":""}${Eu.shadowMask?"-mask":""}`;
-      let Uu = ju.get(su);
-      if (!Uu) {
-        const Zu = [{
-          binding: nE.b,
+    function RL(GG, bG) {
+      let ZG = gL.get(GG);
+      ZG || (ZG = new Map, gL.set(GG, ZG));
+      const wG = `${bG.depth?"-depth":""}${bG.sunShadow?"-shadow":""}${bG.shadowMask?"-mask":""}`;
+      let SG = ZG.get(wG);
+      if (!SG) {
+        const LG = [{
+          binding: Nb.b,
           visibility: GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
           buffer: {
             type: "uniform",
-            minBindingSize: nE.g
+            minBindingSize: Nb.h
           }
         }, {
-          binding: nE.t,
+          binding: Nb.u,
           visibility: GPUShaderStage.VERTEX,
           buffer: {
             type: "read-only-storage"
           }
         }];
-        Eu.depth && Zu.push({
-          binding: nE.n,
+        bG.depth && LG.push({
+          binding: Nb.l,
           visibility: GPUShaderStage.FRAGMENT,
           texture: {
             sampleType: "unfilterable-float"
           }
-        }), Eu.sunShadow && Zu.push(... function() {
-          const uu = GPUShaderStage.FRAGMENT,
-            Eu = nE.o;
+        }), bG.sunShadow && LG.push(... function() {
+          const GG = GPUShaderStage.FRAGMENT,
+            bG = Nb.m;
           return [{
-            binding: Eu.uniform,
-            visibility: uu,
+            binding: bG.uniform,
+            visibility: GG,
             buffer: {
               type: "uniform"
             }
           }, {
-            binding: Eu.ac,
-            visibility: uu,
+            binding: bG.Wf,
+            visibility: GG,
             buffer: {
               type: "read-only-storage"
             }
           }, {
-            binding: Eu.special,
-            visibility: uu,
+            binding: bG.special,
+            visibility: GG,
             buffer: {
               type: "read-only-storage"
             }
           }, {
-            binding: Eu.volume,
-            visibility: uu,
+            binding: bG.volume,
+            visibility: GG,
             texture: {
               sampleType: "float",
               viewDimension: "3d"
             }
           }, {
-            binding: Eu.sampler,
-            visibility: uu,
+            binding: bG.sampler,
+            visibility: GG,
             sampler: {
               type: "filtering"
             }
           }, {
-            binding: Eu.entities,
-            visibility: uu,
+            binding: bG.entities,
+            visibility: GG,
             buffer: {
               type: "read-only-storage"
             }
           }, {
-            binding: Eu.entityGrids,
-            visibility: uu,
+            binding: bG.entityGrids,
+            visibility: GG,
             buffer: {
               type: "read-only-storage"
             }
           }]
-        }()), Eu.shadowMask && Zu.push({
-          binding: nE.q,
+        }()), bG.shadowMask && LG.push({
+          binding: Nb.q,
           visibility: GPUShaderStage.FRAGMENT,
           texture: {
             sampleType: "unfilterable-float"
           }
-        }), Uu = uu.createBindGroupLayout({
-          label: `${Eu.depth?"terrain-":""}shader-pack-inputs${su}`,
-          entries: Zu
-        }), ju.set(su, Uu)
+        }), SG = GG.createBindGroupLayout({
+          label: `${bG.depth?"terrain-":""}shader-pack-inputs${wG}`,
+          entries: LG
+        }), ZG.set(wG, SG)
       }
-      return Uu
+      return SG
     }
 
-    function TZ(uu) {
-      return xZ(uu, tZ)
+    function TL(GG) {
+      return RL(GG, eL)
     }
 
-    function HZ(uu, Eu) {
-      if (!Eu) return !1;
-      const ju = (0, yE.i)(uu);
-      return !!ju && Xs(ju, Eu)
+    function HL(GG, bG) {
+      if (!bG) return !1;
+      const ZG = (0, Ob.e)(GG);
+      return !!ZG && Lw(ZG, bG)
     }
 
-    function AZ(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        su = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (!Vs(Eu)) return [];
-      return [xZ(uu, {
-        depth: os(Eu.packVariant),
-        sunShadow: HZ(Eu.packVariant, ju),
-        shadowMask: su
+    function tL(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        wG = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (!aw(bG)) return [];
+      return [RL(GG, {
+        depth: Ww(bG.packVariant),
+        sunShadow: HL(bG.packVariant, ZG),
+        shadowMask: wG
       })]
     }
-    class nZ {
-      constructor(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.device = uu, this.sunShadow = ju, this.bindGroup = void 0, this.buffer = void 0, this.textures = void 0, this.data = new ArrayBuffer(nE.g), this.groups = new Map, this.depthView = null, this.maskView = null, this.buffer = uu.createBuffer({
+    class DL {
+      constructor(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.device = GG, this.sunShadow = ZG, this.bindGroup = void 0, this.buffer = void 0, this.textures = void 0, this.data = new ArrayBuffer(Nb.h), this.groups = new Map, this.depthView = null, this.maskView = null, this.buffer = GG.createBuffer({
           label: "shader-pack-inputs",
-          size: nE.g,
+          size: Nb.h,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
         });
-        const su = (0, nE.w)(Eu);
-        this.textures = uu.createBuffer({
+        const wG = (0, Nb.v)(bG);
+        this.textures = GG.createBuffer({
           label: "shader-pack-textures",
-          size: su.byteLength,
+          size: wG.byteLength,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), uu.queue.writeBuffer(this.textures, 0, su), this.bindGroup = uu.createBindGroup({
+        }), GG.queue.writeBuffer(this.textures, 0, wG), this.bindGroup = GG.createBindGroup({
           label: "shader-pack-inputs",
-          layout: TZ(uu),
+          layout: TL(GG),
           entries: this.entries()
         })
       }
       entries() {
         return [{
-          binding: nE.b,
+          binding: Nb.b,
           resource: {
             buffer: this.buffer
           }
         }, {
-          binding: nE.t,
+          binding: Nb.u,
           resource: {
             buffer: this.textures
           }
         }]
       }
-      write(uu, Eu, ju) {
-        (0, nE.D)(this.data, {
-          seconds: uu.seconds(),
-          lit: ju,
-          renderOffset: uu.renderOffset(),
-          fuu: uu.fuu(),
-          eyePosition: Eu,
-          shadowDirection: uu.shadowDirection()
+      write(GG, bG, ZG) {
+        (0, Nb.A)(this.data, {
+          seconds: GG.seconds(),
+          lit: ZG,
+          renderOffset: GG.renderOffset(),
+          XGG: GG.XGG(),
+          eyePosition: bG,
+          shadowDirection: GG.shadowDirection()
         }), this.device.queue.writeBuffer(this.buffer, 0, this.data)
       }
-      bindGroupFor(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const su = Eu ? this.sunShadow : null;
-        if ((Eu || ju) && !su) throw new Error("A shader pack program binds sun shadows on a page without them");
-        if (!uu && !su) return this.bindGroup;
-        (uu && uu !== this.depthView || ju && ju !== this.maskView) && (this.depthView = null !== uu && void 0 !== uu ? uu : this.depthView, this.maskView = null !== ju && void 0 !== ju ? ju : this.maskView, this.groups.clear());
-        const Uu = (uu ? 1 : 0) | (su ? 2 : 0) | (ju ? 4 : 0);
-        let Zu = this.groups.get(Uu);
-        if (!Zu) {
-          const Eu = this.entries();
-          uu && Eu.push({
-            binding: nE.n,
-            resource: uu
-          }), su && Eu.push(...su.entries()), ju && Eu.push({
-            binding: nE.q,
-            resource: ju
-          }), Zu = this.device.createBindGroup({
-            label: `${uu||ju?"terrain-":""}shader-pack-inputs${uu?"-depth":""}${su?"-shadow":""}${ju?"-mask":""}`,
-            layout: xZ(this.device, {
-              depth: !!uu,
-              sunShadow: !!su,
-              shadowMask: !!ju
+      bindGroupFor(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const wG = bG ? this.sunShadow : null;
+        if ((bG || ZG) && !wG) throw new Error("A shader pack program binds sun shadows on a page without them");
+        if (!GG && !wG) return this.bindGroup;
+        (GG && GG !== this.depthView || ZG && ZG !== this.maskView) && (this.depthView = null !== GG && void 0 !== GG ? GG : this.depthView, this.maskView = null !== ZG && void 0 !== ZG ? ZG : this.maskView, this.groups.clear());
+        const SG = (GG ? 1 : 0) | (wG ? 2 : 0) | (ZG ? 4 : 0);
+        let LG = this.groups.get(SG);
+        if (!LG) {
+          const bG = this.entries();
+          GG && bG.push({
+            binding: Nb.l,
+            resource: GG
+          }), wG && bG.push(...wG.entries()), ZG && bG.push({
+            binding: Nb.q,
+            resource: ZG
+          }), LG = this.device.createBindGroup({
+            label: `${GG||ZG?"terrain-":""}shader-pack-inputs${GG?"-depth":""}${wG?"-shadow":""}${ZG?"-mask":""}`,
+            layout: RL(this.device, {
+              depth: !!GG,
+              sunShadow: !!wG,
+              shadowMask: !!ZG
             }),
-            entries: Eu
-          }), this.groups.set(Uu, Zu)
+            entries: bG
+          }), this.groups.set(SG, LG)
         }
-        return Zu
+        return LG
       }
-      bind(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        uu.setBindGroup(nE.f, this.bindGroupFor(Eu, ju, su))
+      bind(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        GG.setBindGroup(Nb.f, this.bindGroupFor(bG, ZG, wG))
       }
     }
 
-    function yZ(uu, Eu, ju) {
-      if (uu.gpuVersion === Eu.gpuBuffersVersion) return !0;
-      let su;
+    function NL(GG, bG, ZG) {
+      if (GG.gpuVersion === bG.gpuBuffersVersion) return !0;
+      let wG;
       do {
-        if (su = Eu.gpuBuffersVersion, !zZ(uu, Eu, ju)) return !1
-      } while (Eu.gpuBuffersVersion !== su);
-      return uu.gpuVersion = su, uu.fitInstances = 0, !0
+        if (wG = bG.gpuBuffersVersion, !OL(GG, bG, ZG)) return !1
+      } while (bG.gpuBuffersVersion !== wG);
+      return GG.gpuVersion = wG, GG.fitInstances = 0, !0
     }
 
-    function zZ(uu, Eu, ju) {
-      let su = null;
-      for (let Zu = 0; Zu < uu.slotData.length; Zu++) {
-        var Uu;
-        const Xu = uu.slotData[Zu],
-          lu = Xu ? Eu.gpuBuffer(Xu) : ju;
-        if (!lu) return !1;
-        Xu && uu.layout.instanceEnds[Zu] < 0 && Eu.cover(Xu, Number.POSITIVE_INFINITY), uu.buffers[Zu] = lu;
-        const qu = uu.Q_[Zu] + (Xu ? Eu.gpuOffset(Xu) : 0);
-        qu !== (null !== (Uu = su) && void 0 !== Uu ? Uu : uu.offsets)[Zu] && (su ??= uu.offsets.slice(), su[Zu] = qu), uu.ends[Zu] = Xu ? Eu.gpuEnd(Xu) : lu.size
+    function OL(GG, bG, ZG) {
+      let wG = null;
+      for (let LG = 0; LG < GG.slotData.length; LG++) {
+        var SG;
+        const yG = GG.slotData[LG],
+          kG = yG ? bG.gpuBuffer(yG) : ZG;
+        if (!kG) return !1;
+        yG && GG.layout.instanceEnds[LG] < 0 && bG.cover(yG, Number.POSITIVE_INFINITY), GG.buffers[LG] = kG;
+        const UG = GG.i5[LG] + (yG ? bG.gpuOffset(yG) : 0);
+        UG !== (null !== (SG = wG) && void 0 !== SG ? SG : GG.offsets)[LG] && (wG ??= GG.offsets.slice(), wG[LG] = UG), GG.ends[LG] = yG ? bG.gpuEnd(yG) : kG.size
       }
-      return su && (uu.offsets = su), !0
+      return wG && (GG.offsets = wG), !0
     }
 
-    function RZ(uu, Eu, ju, su) {
-      if (Eu <= uu.fitInstances) return null;
+    function xL(GG, bG, ZG, wG) {
+      if (bG <= GG.fitInstances) return null;
       const {
-        layout: Uu,
-        ends: Zu,
-        offsets: Xu,
-        slotData: lu,
-        Q_: qu
-      } = uu;
-      let fu = !1;
-      for (let Cu = 0; Cu < Uu.buffers.length; Cu++) {
-        const uu = Uu.instanceEnds[Cu];
-        if (uu < 0) continue;
-        const su = (Eu - 1) * Uu.buffers[Cu].arrayStride + uu;
-        if (Zu[Cu] - Xu[Cu] < su) return {
-          index: Cu,
-          needed: su
+        layout: SG,
+        ends: LG,
+        offsets: yG,
+        slotData: kG,
+        i5: UG
+      } = GG;
+      let YG = !1;
+      for (let VG = 0; VG < SG.buffers.length; VG++) {
+        const GG = SG.instanceEnds[VG];
+        if (GG < 0) continue;
+        const wG = (bG - 1) * SG.buffers[VG].arrayStride + GG;
+        if (LG[VG] - yG[VG] < wG) return {
+          index: VG,
+          needed: wG
         };
-        const bu = lu[Cu];
-        bu && ju.cover(bu, qu[Cu] + su) && (fu = !0)
+        const pG = kG[VG];
+        pG && ZG.cover(pG, UG[VG] + wG) && (YG = !0)
       }
-      return fu && yZ(uu, ju, su), uu.fitInstances = Eu, null
+      return YG && NL(GG, ZG, wG), GG.fitInstances = bG, null
     }
-    var uX = ju(38209),
-      EX = ju(38236);
-    const jX = "vertexOutputs.position=scene.viewProjection*worldPos;\n",
-      sX = "var baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n",
-      UX = "color=vec4f(color.rgb,color.a*mesh.visibility);\n",
-      ZX = `((vertexInputs.aPackedLightLevels >> 16u) | ${mE.c.placed}u)`,
-      XX = "u32(vertexInputs.aShaderPackItem.x)",
-      lX = `${mE.c.lifeform}u`;
+    var BL = ZG(38218),
+      Gy = ZG(38256);
+    const by = "vertexOutputs.position=scene.viewProjection*worldPos;\n",
+      Zy = "var baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n",
+      wy = "color=vec4f(color.rgb,color.a*mesh.visibility);\n",
+      Sy = `((vertexInputs.aPackedLightLevels >> 16u) | ${vb.c.placed}u)`,
+      Ly = "u32(vertexInputs.aShaderPackItem.x)",
+      yy = `${vb.c.lifeform}u`;
 
-    function qX(uu) {
-      return "item" === uu.kind ? "bloxdSpItemLocalPosition(positionUpdated, vertexInputs.aShaderPackItem)" : "positionUpdated"
+    function ky(GG) {
+      return "item" === GG.kind ? "bloxdSpItemLocalPosition(positionUpdated, vertexInputs.aShaderPackItem)" : "positionUpdated"
     }
-    const fX = "bloxdSpEnchant",
-      CX = "floor(finalWorld[3].xyz)";
+    const Uy = "bloxdSpEnchant",
+      Yy = "floor(finalWorld[3].xyz)";
 
-    function bX(uu, Eu, ju) {
-      return "placed" === Eu.kind && uu.reads[ju].includes("bloxdFragmentBlockPosition")
-    }
-
-    function cX(uu, Eu) {
-      let [ju, su] = uu;
-      return ju === Eu.point && su === Eu.code
+    function Vy(GG, bG, ZG) {
+      return "placed" === bG.kind && GG.reads[ZG].includes("bloxdFragmentBlockPosition")
     }
 
-    function NX(uu, Eu) {
-      var ju, su, Uu;
-      const Zu = null === (ju = uu.find((uu => uu.texture))) || void 0 === ju ? void 0 : ju.texture,
-        Xu = null === (su = uu.find((uu => uu.enchantTier))) || void 0 === su ? void 0 : su.enchantTier,
-        lu = null === (Uu = uu.find((uu => uu.overlay))) || void 0 === Uu ? void 0 : Uu.overlay,
-        qu = lu ? Eu.filter((uu => cX(uu, lu))).length : 0;
-      return lu && 1 === qu ? {
-        texture: Zu,
-        overlay: lu,
-        enchantTier: Xu
+    function py(GG, bG) {
+      let [ZG, wG] = GG;
+      return ZG === bG.point && wG === bG.code
+    }
+
+    function fy(GG, bG) {
+      var ZG, wG, SG;
+      const LG = null === (ZG = GG.find((GG => GG.texture))) || void 0 === ZG ? void 0 : ZG.texture,
+        yG = null === (wG = GG.find((GG => GG.enchantTier))) || void 0 === wG ? void 0 : wG.enchantTier,
+        kG = null === (SG = GG.find((GG => GG.overlay))) || void 0 === SG ? void 0 : SG.overlay,
+        UG = kG ? bG.filter((GG => py(GG, kG))).length : 0;
+      return kG && 1 === UG ? {
+        texture: LG,
+        overlay: kG,
+        enchantTier: yG
       } : {
-        texture: Zu,
-        enchantTier: Xu
+        texture: LG,
+        enchantTier: yG
       }
     }
 
-    function OX(uu) {
-      if ("item" === uu.kind) {
+    function Qy(GG) {
+      if ("item" === GG.kind) {
         return {
-          vertexFlags: `(${XX} & 0xffffu)`,
+          vertexFlags: `(${Ly} & 0xffffu)`,
           varying: "vPackItem",
-          value: XX,
+          value: Ly,
           flags: "(fragmentInputs.vPackItem & 0xffffu)",
           enchantTier: "(fragmentInputs.vPackItem >> 16u)"
         }
       }
-      return uu.defines.BLOXD_LIGHT_WORD ? {
-        vertexFlags: ZX,
+      return GG.defines.BLOXD_LIGHT_WORD ? {
+        vertexFlags: Sy,
         varying: "vPackFlags",
-        value: ZX,
+        value: Sy,
         flags: "fragmentInputs.vPackFlags",
         enchantTier: "0u"
       } : null
     }
 
-    function YX(uu) {
-      return "lifeform" === uu.kind ? lX : "0u"
+    function Ky(GG) {
+      return "lifeform" === GG.kind ? yy : "0u"
     }
 
-    function hX(uu) {
-      return !!uu.BLOXD_PLUGIN_ENCHANTMENT
+    function hy(GG) {
+      return !!GG.BLOXD_PLUGIN_ENCHANTMENT
     }
 
-    function DX(uu, Eu) {
+    function dy(GG, bG) {
       const {
-        enchantTier: ju
-      } = Eu;
-      return ju && hX(Eu.defines) && "lifeform" === Eu.kind && wX(uu, "enchantTier") ? ju : null
+        enchantTier: ZG
+      } = bG;
+      return ZG && hy(bG.defines) && "lifeform" === bG.kind && Xy(GG, "enchantTier") ? ZG : null
     }
 
-    function gX(uu, Eu) {
-      return hX(Eu.defines) && wX(uu, "enchantSpeed")
+    function Jy(GG, bG) {
+      return hy(bG.defines) && Xy(GG, "enchantSpeed")
     }
 
-    function MX(uu) {
+    function ry(GG) {
       const {
-        overlay: Eu,
-        defines: ju
-      } = uu;
-      if (!Eu || !ju.DIFFUSE) return null;
-      const su = ju.VERTEXCOLOR || ju.INSTANCESCOLOR && ju.INSTANCES;
-      return `vec4f(${Eu.colour}.rgb * uniforms.vDiffuseInfos.y${su?" * fragmentInputs.vColor.rgb":""}, ${Eu.colour}.a)`
+        overlay: bG,
+        defines: ZG
+      } = GG;
+      if (!bG || !ZG.DIFFUSE) return null;
+      const wG = ZG.VERTEXCOLOR || ZG.INSTANCESCOLOR && ZG.INSTANCES;
+      return `vec4f(${bG.colour}.rgb * uniforms.vDiffuseInfos.y${wG?" * fragmentInputs.vColor.rgb":""}, ${bG.colour}.a)`
     }
-    const eX = "fragmentInputs.vPackTexture";
+    const zy = "fragmentInputs.vPackTexture";
 
-    function GX(uu) {
+    function Ey(GG) {
       const {
-        atlas: Eu,
-        defines: ju,
-        texture: su
-      } = uu;
-      if (Eu || !ju.DIFFUSE) return null;
-      if (su) return {
+        atlas: bG,
+        defines: ZG,
+        texture: wG
+      } = GG;
+      if (bG || !ZG.DIFFUSE) return null;
+      if (wG) return {
         texture: "diffuseSampler",
-        ...su
+        ...wG
       };
-      const Uu = {
+      const SG = {
         texture: "diffuseSampler",
         cells: null,
         layers: [],
-        uv: `fragmentInputs.${1===ju.DIFFUSEDIRECTUV?"vMainUV1":2===ju.DIFFUSEDIRECTUV?"vMainUV2":"vDiffuseUV"}`
+        uv: `fragmentInputs.${1===ZG.DIFFUSEDIRECTUV?"vMainUV1":2===ZG.DIFFUSEDIRECTUV?"vMainUV2":"vDiffuseUV"}`
       };
-      if ("box" !== uu.kind) return Uu;
-      if (!ju.BLOXD_PLUGIN_ANIMATED) return {
-        ...Uu,
-        id: eX
+      if ("box" !== GG.kind) return SG;
+      if (!ZG.BLOXD_PLUGIN_ANIMATED) return {
+        ...SG,
+        id: zy
       };
-      const Zu = pu.c.WGSL,
-        Xu = (0, pu.Ab)(Zu, "uAnimStatesNum"),
-        lu = (0, pu.gb)(Zu, (0, uX.f)(Zu), Xu),
-        qu = "fragmentInputs.vMainUV1";
+      const LG = XG.c.WGSL,
+        yG = (0, XG.ub)(LG, "uAnimStatesNum"),
+        kG = (0, XG.Z)(LG, (0, BL.e)(LG), yG),
+        UG = "fragmentInputs.vMainUV1";
       return {
         texture: "diffuseSampler",
-        cells: `vec2f(1.0, ${Xu})`,
-        layers: [lu],
-        uv: `vec2f(${qu}.x, ${qu}.y * ${Xu} - ${lu})`,
-        levelUv: qu,
-        id: eX
+        cells: `vec2f(1.0, ${yG})`,
+        layers: [kG],
+        uv: `vec2f(${UG}.x, ${UG}.y * ${yG} - ${kG})`,
+        levelUv: UG,
+        id: zy
       }
     }
 
-    function pX(uu, Eu) {
-      return "box" === Eu.kind && !!uu.hooks.surface && null !== GX(Eu)
+    function oy(GG, bG) {
+      return "box" === bG.kind && !!GG.hooks.surface && null !== Ey(bG)
     }
 
-    function wX(uu, Eu) {
-      return uu.reads.fragment.includes(Eu)
+    function Xy(GG, bG) {
+      return GG.reads.fragment.includes(bG)
     }
 
-    function JX(uu) {
-      return !!uu.BLOXD_LIGHTING && !uu.BLOXD_UNLIT
+    function uy(GG) {
+      return !!GG.BLOXD_LIGHTING && !GG.BLOXD_UNLIT
     }
 
-    function dX(uu, Eu, ju, su) {
-      const Uu = uu.filter((uu => {
-        let [ju, su] = uu;
-        return "CUSTOM_FRAGMENT_BEFORE_FOG" === ju && su === Eu
+    function iy(GG, bG, ZG, wG) {
+      const SG = GG.filter((GG => {
+        let [ZG, wG] = GG;
+        return "CUSTOM_FRAGMENT_BEFORE_FOG" === ZG && wG === bG
       }));
-      if (1 !== Uu.length) throw new Error(`A model program for shader packs has ${0===Uu.length?"no":"more than one"} ${su} code before fog (lite/modelShaderPack.ts)`);
-      return uu.map((uu => uu === Uu[0] ? [uu[0], ju] : uu))
+      if (1 !== SG.length) throw new Error(`A model program for shader packs has ${0===SG.length?"no":"more than one"} ${wG} code before fog (lite/modelShaderPack.ts)`);
+      return GG.map((GG => GG === SG[0] ? [GG[0], ZG] : GG))
     }
 
-    function aX(uu, Eu, ju, su) {
+    function Cy(GG, bG, ZG, wG) {
       const {
-        hooks: Uu
-      } = uu, {
-        kind: Zu,
-        defines: Xu
-      } = Eu, lu = [...ju];
-      var qu;
-      Eu.atlas && Uu.surface && lu.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", Ns("atlasIdxIn")]), "item" === Zu && lu.push(["CUSTOM_VERTEX_DEFINITIONS", (0, pu.g)(pu.c.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "\nfn bloxdSpQuarterTurns(v: vec2f, quarters: u32) -> vec2f {\n    let c = select(select(0.0, -1.0, quarters == 2u), 1.0, quarters == 0u);\n    let s = select(select(0.0, -1.0, quarters == 3u), 1.0, quarters == 1u);\n    return vec2f(v.x * c - v.y * s, v.x * s + v.y * c);\n}\nfn bloxdSpItemLocalPosition(position: vec3f, item: vec4f) -> vec3f {\n    let p = position * item.y + vec3f(0.0, item.z, 0.0);\n    let turn = u32(item.w);\n    let yz = bloxdSpQuarterTurns(p.yz, turn >> 2u);\n    let zx = bloxdSpQuarterTurns(vec2f(yz.y, p.x), turn & 3u);\n    return vec3f(zx.y, yz.x, zx.x);\n}\n"]), pX(uu, Eu) && lu.push(["CUSTOM_VERTEX_DEFINITIONS", (0, pu.g)(pu.c.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", (qu = "vertexInputs.aShaderPackItem.x", `\tvertexOutputs.vPackTexture = select(0u, ${bs}[min(u32(${qu}) - 1u, arrayLength(&${bs}) - 1u)], ${qu} > 0.5);\n`)]);
-      const fu = OX(Eu);
-      fu && (Uu.surface || Uu.light) && lu.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${fu.varying}: u32;`], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.${fu.varying} = ${fu.value};`]);
-      let Cu = su;
-      if (bX(uu, Eu, "fragment") && (lu.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackCell: vec3i;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackCell = vec3i(${CX});`]), Cu = [...Cu, ["CUSTOM_FRAGMENT_MAIN_BEGIN", "bloxdSpCell = vec3f(fragmentInputs.vPackCell);"]]), wX(uu, "localPosition") && lu.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackLocalPosition: vec3f;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackLocalPosition = ${qX(Eu)};`]), hX(Xu) && Uu.surface) {
-        gX(uu, Eu) && lu.push(["CUSTOM_VERTEX_DEFINITIONS", "flat varying vPackEnchantSpeed: f32;"], ["CUSTOM_VERTEX_MAIN_END", "vertexOutputs.vPackEnchantSpeed = vertexInputs.aEnchantmentSpeed;"]);
-        const ju = DX(uu, Eu);
-        ju && lu.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackEnchantTier: u32;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackEnchantTier = u32(${ju});`]);
-        const su = (0, pu.tb)(pu.c.WGSL, "color", "mix(color.xyz, bloxdSpSurface.enchantColour.rgb, bloxdSpSurface.enchantColour.a)");
-        Cu = [...dX(Cu, (0, EX.j)(pu.c.WGSL), su, "enchantment"), ["CUSTOM_FRAGMENT_DEFINITIONS", (0, EX.b)(fX)]]
+        hooks: SG
+      } = GG, {
+        kind: LG,
+        defines: yG
+      } = bG, kG = [...ZG];
+      var UG;
+      bG.atlas && SG.surface && kG.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", fw("atlasIdxIn")]), "item" === LG && kG.push(["CUSTOM_VERTEX_DEFINITIONS", (0, XG.g)(XG.c.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "\nfn bloxdSpQuarterTurns(v: vec2f, quarters: u32) -> vec2f {\n    let c = select(select(0.0, -1.0, quarters == 2u), 1.0, quarters == 0u);\n    let s = select(select(0.0, -1.0, quarters == 3u), 1.0, quarters == 1u);\n    return vec2f(v.x * c - v.y * s, v.x * s + v.y * c);\n}\nfn bloxdSpItemLocalPosition(position: vec3f, item: vec4f) -> vec3f {\n    let p = position * item.y + vec3f(0.0, item.z, 0.0);\n    let turn = u32(item.w);\n    let yz = bloxdSpQuarterTurns(p.yz, turn >> 2u);\n    let zx = bloxdSpQuarterTurns(vec2f(yz.y, p.x), turn & 3u);\n    return vec3f(zx.y, yz.x, zx.x);\n}\n"]), oy(GG, bG) && kG.push(["CUSTOM_VERTEX_DEFINITIONS", (0, XG.g)(XG.c.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", (UG = "vertexInputs.aShaderPackItem.x", `\tvertexOutputs.vPackTexture = select(0u, ${Vw}[min(u32(${UG}) - 1u, arrayLength(&${Vw}) - 1u)], ${UG} > 0.5);\n`)]);
+      const YG = Qy(bG);
+      YG && (SG.surface || SG.light) && kG.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${YG.varying}: u32;`], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.${YG.varying} = ${YG.value};`]);
+      let VG = wG;
+      if (Vy(GG, bG, "fragment") && (kG.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackCell: vec3i;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackCell = vec3i(${Yy});`]), VG = [...VG, ["CUSTOM_FRAGMENT_MAIN_BEGIN", "bloxdSpCell = vec3f(fragmentInputs.vPackCell);"]]), Xy(GG, "localPosition") && kG.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackLocalPosition: vec3f;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackLocalPosition = ${ky(bG)};`]), hy(yG) && SG.surface) {
+        Jy(GG, bG) && kG.push(["CUSTOM_VERTEX_DEFINITIONS", "flat varying vPackEnchantSpeed: f32;"], ["CUSTOM_VERTEX_MAIN_END", "vertexOutputs.vPackEnchantSpeed = vertexInputs.aEnchantmentSpeed;"]);
+        const ZG = dy(GG, bG);
+        ZG && kG.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackEnchantTier: u32;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackEnchantTier = u32(${ZG});`]);
+        const wG = (0, XG.mb)(XG.c.WGSL, "color", "mix(color.xyz, bloxdSpSurface.enchantColour.rgb, bloxdSpSurface.enchantColour.a)");
+        VG = [...iy(VG, (0, Gy.j)(XG.c.WGSL), wG, "enchantment"), ["CUSTOM_FRAGMENT_DEFINITIONS", (0, Gy.e)(Uy)]]
       }
       const {
-        overlay: bu
-      } = Eu;
-      bu && MX(Eu) && Uu.surface && (Cu = Cu.filter((uu => !cX(uu, bu))));
-      const cu = Uu.light ? function(uu) {
-        return "placed" === uu.kind ? {
+        overlay: pG
+      } = bG;
+      pG && ry(bG) && SG.surface && (VG = VG.filter((GG => !py(GG, pG))));
+      const fG = SG.light ? function(GG) {
+        return "placed" === GG.kind ? {
           name: "terrain",
-          engine: (0, TE.E)(pu.c.WGSL),
-          pack: (0, TE.$)(pu.c.WGSL)
-        } : uu.defines.BLOXD_PLUGIN_ENTITY_LIGHT ? {
+          engine: (0, Hb.S)(XG.c.WGSL),
+          pack: (0, Hb.ob)(XG.c.WGSL)
+        } : GG.defines.BLOXD_PLUGIN_ENTITY_LIGHT ? {
           name: "entity",
-          engine: (0, TE.A)(pu.c.WGSL),
-          pack: (0, TE.X)(pu.c.WGSL)
+          engine: (0, Hb.K)(XG.c.WGSL),
+          pack: (0, Hb.hb)(XG.c.WGSL)
         } : null
-      }(Eu) : null;
-      if (cu && (Cu = dX(Cu, cu.engine, cu.pack, `${cu.name} light`), "placed" !== Zu && JX(Xu))) {
-        const uu = Xu.BLOXD_UNIFORM_ENTITY_LIGHT ? (0, pu.Ab)(pu.c.WGSL, "uEntityLightLevels") : (0, pu.Fb)(pu.c.WGSL, "aLightLevels");
-        lu.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${TE.e}: vec4f;`], ["CUSTOM_VERTEX_MAIN_END", (0, TE._)(pu.c.WGSL, uu)])
+      }(bG) : null;
+      if (fG && (VG = iy(VG, fG.engine, fG.pack, `${fG.name} light`), "placed" !== LG && uy(yG))) {
+        const GG = yG.BLOXD_UNIFORM_ENTITY_LIGHT ? (0, XG.ub)(XG.c.WGSL, "uEntityLightLevels") : (0, XG.Cb)(XG.c.WGSL, "aLightLevels");
+        kG.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${Hb.d}: vec4f;`], ["CUSTOM_VERTEX_MAIN_END", (0, Hb.kb)(XG.c.WGSL, GG)])
       }
       return {
-        vertexCode: lu,
-        fragmentCode: Cu
+        vertexCode: kG,
+        fragmentCode: VG
       }
     }
 
-    function PX(uu, Eu, ju, su) {
-      return Us(uu, Eu, ju, su, "model")
+    function Wy(GG, bG, ZG, wG) {
+      return ww(GG, bG, ZG, wG, "model")
     }
-    const oX = "\t@builtin(position) position: vec4f,\n";
+    const my = "\t@builtin(position) position: vec4f,\n";
 
-    function kX(uu, Eu) {
-      const ju = /^(?:(?:diagnostic|enable|requires)\b[^;]*;\n)*/.exec(uu)[0];
-      return `${ju}${Eu}${uu.slice(ju.length)}`
+    function Iy(GG, bG) {
+      const ZG = /^(?:(?:diagnostic|enable|requires)\b[^;]*;\n)*/.exec(GG)[0];
+      return `${ZG}${bG}${GG.slice(ZG.length)}`
     }
 
-    function mX(uu, Eu, ju) {
-      let su = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    function Fy(GG, bG, ZG) {
+      let wG = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
       const {
-        hooks: Uu
-      } = Eu, Zu = Xs(Eu, su), {
-        kind: Xu,
-        defines: lu
-      } = ju, qu = function(uu, Eu) {
-        var ju, su, Uu;
+        hooks: SG
+      } = bG, LG = Lw(bG, wG), {
+        kind: yG,
+        defines: kG
+      } = ZG, UG = function(GG, bG) {
+        var ZG, wG, SG;
         const {
-          defines: Zu
-        } = Eu, Xu = OX(Eu), lu = !!Zu.FOG, qu = hX(Zu), fu = null !== (ju = null === Xu || void 0 === Xu ? void 0 : Xu.enchantTier) && void 0 !== ju ? ju : DX(uu, Eu) ? "fragmentInputs.vPackEnchantTier" : "0u", Cu = "lifeform" === Eu.kind && !Zu.ALPHAFROMDIFFUSE;
+          defines: LG
+        } = bG, yG = Qy(bG), kG = !!LG.FOG, UG = hy(LG), YG = null !== (ZG = null === yG || void 0 === yG ? void 0 : yG.enchantTier) && void 0 !== ZG ? ZG : dy(GG, bG) ? "fragmentInputs.vPackEnchantTier" : "0u", VG = "lifeform" === bG.kind && !LG.ALPHAFROMDIFFUSE;
         return {
-          vertexFlags: null !== (su = null === Xu || void 0 === Xu ? void 0 : Xu.vertexFlags) && void 0 !== su ? su : YX(Eu),
-          vertexLocalPosition: qX(Eu),
-          flags: null !== (Uu = null === Xu || void 0 === Xu ? void 0 : Xu.flags) && void 0 !== Uu ? Uu : YX(Eu),
+          vertexFlags: null !== (wG = null === yG || void 0 === yG ? void 0 : yG.vertexFlags) && void 0 !== wG ? wG : Ky(bG),
+          vertexLocalPosition: ky(bG),
+          flags: null !== (SG = null === yG || void 0 === yG ? void 0 : yG.flags) && void 0 !== SG ? SG : Ky(bG),
           normal: "normalW",
-          alpha: Cu ? "alpha * baseColor.a" : "alpha",
-          alphaOut: Cu ? "baseColor.a" : "alpha",
+          alpha: VG ? "alpha * baseColor.a" : "alpha",
+          alphaOut: VG ? "baseColor.a" : "alpha",
           lambert: "diffuseBase.r",
           diffuse: "diffuseColor",
           emissive: "emissiveColor",
           ambient: "uniforms.vAmbientColor",
-          fogColour: lu ? "frame.vFogColor" : "vec3f(0.0)",
-          fogAlpha: lu ? "1.0 - fog" : "0.0",
-          enchantTier: fu,
-          enchantColour: qu ? `${fX}(fragmentInputs.vEnchantRgbAndRotY, fragmentInputs.vPositionAndAnimTick, baseColor.rgb)` : "vec4f(0.0)",
-          enchantSpeed: gX(uu, Eu) ? "fragmentInputs.vPackEnchantSpeed" : "0.0",
-          localPosition: wX(uu, "localPosition") ? "fragmentInputs.vPackLocalPosition" : "vec3f(0.0)",
-          overlayColour: MX(Eu)
+          fogColour: kG ? "frame.vFogColor" : "vec3f(0.0)",
+          fogAlpha: kG ? "1.0 - fog" : "0.0",
+          enchantTier: YG,
+          enchantColour: UG ? `${Uy}(fragmentInputs.vEnchantRgbAndRotY, fragmentInputs.vPositionAndAnimTick, baseColor.rgb)` : "vec4f(0.0)",
+          enchantSpeed: Jy(GG, bG) ? "fragmentInputs.vPackEnchantSpeed" : "0.0",
+          localPosition: Xy(GG, "localPosition") ? "fragmentInputs.vPackLocalPosition" : "vec3f(0.0)",
+          overlayColour: ry(bG)
         }
-      }(Eu, ju), fu = uu.textures.filter((uu => /^textureAtlas\d+$/.test(uu.name))).length, Cu = ju.atlas && fu > 0 ? {
-        count: fu,
-        layers: ju.atlas.layers,
-        width: ju.atlas.width,
+      }(bG, ZG), YG = GG.textures.filter((GG => /^textureAtlas\d+$/.test(GG.name))).length, VG = ZG.atlas && YG > 0 ? {
+        count: YG,
+        layers: ZG.atlas.layers,
+        width: ZG.atlas.width,
         sampler: "textureAtlas0Sampler",
-        frame: uu.material.slots.has("uAnimDataPerTex") ? (Eu, ju) => zs(Eu, ju, function(uu) {
-          const Eu = uu.material.stridedArrays.includes("uAnimDataPerTex") ? ".el" : "";
+        frame: GG.material.slots.has("uAnimDataPerTex") ? (bG, ZG) => Ow(bG, ZG, function(GG) {
+          const bG = GG.material.stridedArrays.includes("uAnimDataPerTex") ? ".el" : "";
           return {
-            Tb: "frame.animTick",
+            Tp: "frame.animTick",
             stride: "uniforms.uAnimData.y",
             count: "uniforms.uAnimData.z",
-            perTexture: uu => `uniforms.uAnimDataPerTex[${uu}]${Eu}`
+            perTexture: GG => `uniforms.uAnimDataPerTex[${GG}]${bG}`
           }
-        }(uu)) : null
-      } : null, bu = "placed" === Xu ? "var<private> bloxdSpCell: vec3f;\nfn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\tlet bloxdSpBehind = bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0);\n\tlet bloxdSpInside = all(abs(bloxdSpBehind - bloxdSpCell - 0.5) <= vec3f(0.5 + 1.0 / 256.0));\n\treturn select(vec3i(floor(bloxdSpBehind)), vec3i(bloxdSpCell), bloxdSpInside) + bloxdRenderOffset();\n}\n" : "fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0))) + bloxdRenderOffset();\n}\n", cu = null !== Cu && void 0 !== Cu ? Cu : GX(ju), Nu = function(uu, ju) {
-        let su = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        return `${(0,nE.z)()}${qs(Eu,ju)}${su}${Ys(uu)}${us}${bu}${Eu.code}`
+        }(GG)) : null
+      } : null, pG = "placed" === yG ? "var<private> bloxdSpCell: vec3f;\nfn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\tlet bloxdSpBehind = bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0);\n\tlet bloxdSpInside = all(abs(bloxdSpBehind - bloxdSpCell - 0.5) <= vec3f(0.5 + 1.0 / 256.0));\n\treturn select(vec3i(floor(bloxdSpBehind)), vec3i(bloxdSpCell), bloxdSpInside) + bloxdRenderOffset();\n}\n" : "fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0))) + bloxdRenderOffset();\n}\n", fG = null !== VG && void 0 !== VG ? VG : Ey(ZG), QG = function(GG, ZG) {
+        let wG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+        return `${(0,Nb.x)()}${kw(bG,ZG)}${wG}${Kw(GG)}${Gw}${pG}${bG.code}`
       };
       let {
-        vertex: Ou,
-        fragment: Yu
-      } = uu;
-      const hu = Ds(Uu, qu);
-      if (hu) {
-        const uu = bX(Eu, ju, "vertex") ? `\tbloxdSpCell = ${CX};\n` : "";
-        Ou = PX(Ou, jX, `${uu}${hu.slice(1)}${jX}`, "vertex")
+        vertex: KG,
+        fragment: hG
+      } = GG;
+      const dG = dw(SG, UG);
+      if (dG) {
+        const GG = Vy(bG, ZG, "vertex") ? `\tbloxdSpCell = ${Yy};\n` : "";
+        KG = Wy(KG, by, `${GG}${dG.slice(1)}${by}`, "vertex")
       }
-      const Du = `${fs(Eu,Zu,function(uu,Eu){return Eu.TWOSIDEDLIGHTING?uu:`select(-(${uu}), ${uu}, fragmentInputs.frontFacing)`}(qu.normal,lu),qu.flags)}${gs(Uu,Eu.strict,Eu.program,cu,qu)}`;
-      Du && (Yu = PX(Yu, sX, `${Du.slice(1)}${sX}`, "surface")), Zu && Eu.sunShadow && !lu.TWOSIDEDLIGHTING && (Yu = PX(Yu, oX, `${oX}\t@builtin(front_facing) frontFacing: bool,\n`, "front facing"));
-      const gu = Gs(Uu);
-      if (gu) {
-        const uu = es(Uu, JX(lu), !0, qu);
-        Yu = PX(Yu, UX, `${uu}${gu.slice(1)}${UX}`, "light")
+      const JG = `${Uw(bG,LG,function(GG,bG){return bG.TWOSIDEDLIGHTING?GG:`select(-(${GG}), ${GG}, fragmentInputs.frontFacing)`}(UG.normal,kG),UG.flags)}${Jw(SG,bG.strict,bG.program,fG,UG)}`;
+      JG && (hG = Wy(hG, Zy, `${JG.slice(1)}${Zy}`, "surface")), LG && bG.sunShadow && !kG.TWOSIDEDLIGHTING && (hG = Wy(hG, my, `${my}\t@builtin(front_facing) frontFacing: bool,\n`, "front facing"));
+      const rG = Ew(SG);
+      if (rG) {
+        const GG = zw(SG, uy(kG), !0, UG);
+        hG = Wy(hG, wy, `${GG}${rG.slice(1)}${wy}`, "light")
       }
-      const Mu = pX(Eu, ju) ? cs : "";
+      const zG = oy(bG, ZG) ? pw : "";
       return {
-        ...uu,
-        vertex: kX(Ou, Nu(Cu, !1, Mu)),
-        fragment: kX(Yu, Nu(cu, Zu))
+        ...GG,
+        vertex: Iy(KG, QG(VG, !1, zG)),
+        fragment: Iy(hG, QG(fG, LG))
       }
     }
-    const vX = {
+    const vy = {
       name: "earthSky",
       uniqueId: -1
     };
-    class KX {
-      constructor(uu, Eu) {
-        this.resources = uu, this.epoch = Eu, this.instances = new Map, this.vertexCode = [], this.fragmentCode = [], this.pluginUniforms = [], this.codeKey = "", this.codeVersion = -1
+    class ay {
+      constructor(GG, bG) {
+        this.resources = GG, this.epoch = bG, this.instances = new Map, this.vertexCode = [], this.fragmentCode = [], this.pluginUniforms = [], this.codeKey = "", this.codeVersion = -1
       }
       release() {
-        for (const uu of this.instances.values()) uu.released = !0, this.resources.destroyBuffer(uu.buffer);
+        for (const GG of this.instances.values()) GG.released = !0, this.resources.destroyBuffer(GG.buffer);
         this.instances.clear()
       }
     }
 
-    function VX(uu) {
-      return uu.failed && null !== uu.packGroup
+    function cy(GG) {
+      return GG.failed && null !== GG.packGroup
     }
-    class rX {
-      constructor(uu, Eu, ju) {
-        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new QZ,
-          Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new VZ;
-        this.device = uu, this.resources = Eu, this.skyLastRenderable = void 0, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.frontRenderable = void 0, this.m_ = void 0, this.modelMeshes = void 0, this.thinBundle = void 0, this.binder = new uZ, this.sceneLayout = void 0, this.frameLayout = void 0, this.frameUniforms = new Float32Array(108), this.frameBuffer = void 0, this.meshSlots = void 0, this.zeroBuffer = void 0, this.programs = new Map, this.earthSkyProgram = null, this.earthSkyUniforms = null, this.earthSkyFrom = null, this.drawDefines = void 0, this.modelUniforms = new GZ((uu => this.modelSlot(uu).instances.values())), this.vertexLayouts = void 0, this.inputs = new WeakMap, this.unbuildable = new Set, this.linePrograms = new Map, this.materials = new WeakMap, this.pipelines = new Map, this.compiling = 0, this.warnOnce = (0, vE.d)("Lite: "), this.renderStates = new hZ(this.warnOnce), this.nextProgramId = 0, this.frame = 0, this.packInputs = null, this.sunShadow = null, this.caster = {}, this.casterWorlds = new Float32Array(0), this.view = void 0, this.steadyPhase = 0, this.keepSteadyBase = (uu, Eu) => this.keepSteady(uu, Eu), this.lists = void 0, this.slotCount = 0, this.m_ = su, this.modelMeshes = Uu, this.lists = new EZ(Uu, su, this, this.warnOnce), this.drawDefines = new cZ(Eu, this.warnOnce, ((uu, Eu, ju) => this.programWithModel(uu, Eu, ju)), VX), this.vertexLayouts = new dZ(Eu, uu.limits, this.warnOnce), this.sceneLayout = wE(uu), this.frameLayout = uu.createBindGroupLayout({
+    class ly {
+      constructor(GG, bG, ZG) {
+        let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new jL,
+          SG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new cL;
+        this.device = GG, this.resources = bG, this.skyLastRenderable = void 0, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.frontRenderable = void 0, this.Z5 = void 0, this.modelMeshes = void 0, this.thinBundle = void 0, this.binder = new BS, this.sceneLayout = void 0, this.frameLayout = void 0, this.frameUniforms = new Float32Array(108), this.frameBuffer = void 0, this.meshSlots = void 0, this.zeroBuffer = void 0, this.programs = new Map, this.earthSkyProgram = null, this.earthSkyUniforms = null, this.earthSkyFrom = null, this.drawDefines = void 0, this.modelUniforms = new EL((GG => this.modelSlot(GG).instances.values())), this.vertexLayouts = void 0, this.inputs = new WeakMap, this.unbuildable = new Set, this.linePrograms = new Map, this.materials = new WeakMap, this.pipelines = new Map, this.compiling = 0, this.warnOnce = (0, ab.e)("Lite: "), this.renderStates = new hL(this.warnOnce), this.nextProgramId = 0, this.frame = 0, this.packInputs = null, this.sunShadow = null, this.caster = {}, this.casterWorlds = new Float32Array(0), this.view = void 0, this.steadyPhase = 0, this.keepSteadyBase = (GG, bG) => this.keepSteady(GG, bG), this.lists = void 0, this.slotCount = 0, this.Z5 = wG, this.modelMeshes = SG, this.lists = new GL(SG, wG, this, this.warnOnce), this.drawDefines = new pL(bG, this.warnOnce, ((GG, bG, ZG) => this.programWithModel(GG, bG, ZG)), cy), this.vertexLayouts = new iL(bG, GG.limits, this.warnOnce), this.sceneLayout = ub(GG), this.frameLayout = GG.createBindGroupLayout({
           label: "meshes-frame",
           entries: [{
             binding: 0,
@@ -3663,91 +3663,91 @@ export const modules = {
               minBindingSize: 80
             }
           }]
-        }), this.frameBuffer = uu.createBuffer({
+        }), this.frameBuffer = GG.createBuffer({
           label: "meshes-frame",
           size: this.frameUniforms.byteLength,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.meshSlots = new oZ(uu, this.frameLayout, this.frameBuffer, "meshes-per-draw"), this.zeroBuffer = uu.createBuffer({
+        }), this.meshSlots = new mL(GG, this.frameLayout, this.frameBuffer, "meshes-per-draw"), this.zeroBuffer = GG.createBuffer({
           label: "meshes-zero-attribute",
           size: 16,
           usage: GPUBufferUsage.VERTEX
-        }), this.thinBundle = new SZ(uu, new oZ(uu, this.frameLayout, this.frameBuffer, "thin-bases-slots"), {
-          pipelineFor: (uu, Eu, ju) => this.pipelineFor(uu, Eu, ju),
-          pipelineCompiling: (uu, Eu) => !uu.program.failed && !1 !== this.pipelines.get(`${uu.pipelineKey}|${Eu}`),
-          sceneGroup: uu => {
-            const Eu = ju(uu);
-            return Eu || this.warnOnce("scene-group", "no render task draws to this target: thin bases are drawn without a bundle"), Eu
+        }), this.thinBundle = new AL(GG, new mL(GG, this.frameLayout, this.frameBuffer, "thin-bases-slots"), {
+          pipelineFor: (GG, bG, ZG) => this.pipelineFor(GG, bG, ZG),
+          pipelineCompiling: (GG, bG) => !GG.program.failed && !1 !== this.pipelines.get(`${GG.pipelineKey}|${bG}`),
+          sceneGroup: GG => {
+            const bG = ZG(GG);
+            return bG || this.warnOnce("scene-group", "no render task draws to this target: thin bases are drawn without a bundle"), bG
           }
-        }), Eu.onDestroy = uu => {
-          this.thinBundle.resourceDestroyed(uu)
+        }), bG.onDestroy = GG => {
+          this.thinBundle.resourceDestroyed(GG)
         }, this.skyLastRenderable = this.renderable(1e3, !1, this.lists.skyDraws), this.opaqueRenderable = this.renderable(150, !1, this.lists.opaqueDraws, this.thinBundle), this.transparentRenderable = this.renderable(300, !0, this.lists.transparentDraws), this.frontRenderable = this.renderable(400, !0, this.lists.frontDraws)
       }
-      renderable(uu, Eu, ju) {
-        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        const Uu = {
-          order: uu,
-          isTransparent: Eu,
-          _direct: !Eu,
-          bind: (uu, Eu) => this.createBinding(Uu, Eu, ju, su)
+      renderable(GG, bG, ZG) {
+        let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        const SG = {
+          order: GG,
+          isTransparent: bG,
+          _direct: !bG,
+          bind: (GG, bG) => this.createBinding(SG, bG, ZG, wG)
         };
-        return Uu
+        return SG
       }
       get pipelinesCompiling() {
         return this.compiling
       }
-      prepare(uu, Eu, ju) {
-        var su;
-        let Uu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this.frame++, this.view = Eu, this.drawDefines.view = Eu, this.thinBundle.wG(), this.writeFrameUniforms();
-        const Zu = null !== (su = null === Uu || void 0 === Uu ? void 0 : Uu.defineFor("model")) && void 0 !== su ? su : 0;
-        this.drawDefines.modelPackVariant = Zu, Uu && 0 !== Zu && (this.packInputs ??= new nZ(this.device, Uu.textureLayers(), this.sunShadow), this.packInputs.write(Uu, Eu.eye, Uu.aY())), this.lists.clear(), this.slotCount = 0;
-        const Xu = uu.activeCamera;
-        this.m_.select(Xu, this.keepSteadyBase), this.modelMeshes.select(Xu, Eu), ju && this.pushEarthSky(ju), this.lists.collect(uu), this.thinBundle.JG(), this.uploadMeshSlots()
+      prepare(GG, bG, ZG) {
+        var wG;
+        let SG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        this.frame++, this.view = bG, this.drawDefines.view = bG, this.thinBundle.yE(), this.writeFrameUniforms();
+        const LG = null !== (wG = null === SG || void 0 === SG ? void 0 : SG.defineFor("model")) && void 0 !== wG ? wG : 0;
+        this.drawDefines.modelPackVariant = LG, SG && 0 !== LG && (this.packInputs ??= new DL(this.device, SG.textureLayers(), this.sunShadow), this.packInputs.write(SG, bG.eye, SG.Fh())), this.lists.clear(), this.slotCount = 0;
+        const yG = GG.activeCamera;
+        this.Z5.select(yG, this.keepSteadyBase), this.modelMeshes.select(yG, bG), ZG && this.pushEarthSky(ZG), this.lists.collect(GG), this.thinBundle.kE(), this.uploadMeshSlots()
       }
-      pushDraws(uu, Eu, ju, su, Uu, Zu) {
-        let Xu = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
-        const lu = Zu.length;
-        for (let qu = 0; qu < ju; qu++) {
-          const ju = Eu[qu];
-          let lu = this.retainedDraw(uu, ju, su, Uu);
-          if (void 0 === lu && (lu = this.drawFor(uu, ju, su, Uu), this.retain(ju, lu)), lu) {
-            const uu = ju.owner,
-              Eu = Xu ? Xu[qu] : -1;
-            lu.slotOffset = Eu < 0 ? this.writeMeshSlot(uu.getWorldMatrix().m, uu.visibility) : this.writeMeshSlot(this.modelMeshes.worlds, this.modelMeshes.visibility[Eu], 16 * Eu), Zu.push(lu)
+      pushDraws(GG, bG, ZG, wG, SG, LG) {
+        let yG = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
+        const kG = LG.length;
+        for (let UG = 0; UG < ZG; UG++) {
+          const ZG = bG[UG];
+          let kG = this.retainedDraw(GG, ZG, wG, SG);
+          if (void 0 === kG && (kG = this.drawFor(GG, ZG, wG, SG), this.retain(ZG, kG)), kG) {
+            const GG = ZG.owner,
+              bG = yG ? yG[UG] : -1;
+            kG.slotOffset = bG < 0 ? this.writeMeshSlot(GG.getWorldMatrix().m, GG.visibility) : this.writeMeshSlot(this.modelMeshes.worlds, this.modelMeshes.visibility[bG], 16 * bG), LG.push(kG)
           }
         }
-        return Zu.length - lu
+        return LG.length - kG
       }
-      bundleDraws(uu, Eu, ju) {
-        let su = 0;
-        for (const Uu of Eu) {
-          let Eu = this.retainedDraw(uu, Uu, ju, !1);
-          const Zu = void 0 !== Eu;
-          if (void 0 === Eu && (Eu = this.drawFor(uu, Uu, ju, !1), this.retain(Uu, Eu)), Eu) {
-            const uu = Uu.owner,
-              ju = this.thinBundle.add(Uu, Eu, uu.getWorldMatrix().m, uu.visibility);
-            Zu && this.steadyFrom(Uu, Eu, ju), su++
+      bundleDraws(GG, bG, ZG) {
+        let wG = 0;
+        for (const SG of bG) {
+          let bG = this.retainedDraw(GG, SG, ZG, !1);
+          const LG = void 0 !== bG;
+          if (void 0 === bG && (bG = this.drawFor(GG, SG, ZG, !1), this.retain(SG, bG)), bG) {
+            const GG = SG.owner,
+              ZG = this.thinBundle.add(SG, bG, GG.getWorldMatrix().m, GG.visibility);
+            LG && this.steadyFrom(SG, bG, ZG), wG++
           }
         }
-        return su
+        return wG
       }
-      steadyFrom(uu, Eu, ju) {
-        const su = uu.owner,
-          Uu = this.m_.base(su),
-          Zu = su.material,
+      steadyFrom(GG, bG, ZG) {
+        const wG = GG.owner,
+          SG = this.Z5.base(wG),
+          LG = wG.material,
           {
-            drawState: Xu,
-            instance: lu
-          } = Eu.inputs.retained;
-        if (!Uu || !Zu || 1 !== uu.parts.materials.length || mZ(uu) !== Zu) return;
-        const qu = Uu.steady ??= {
-          unit: uu,
-          material: Zu,
+            drawState: yG,
+            instance: kG
+          } = bG.inputs.retained;
+        if (!SG || !LG || 1 !== GG.parts.materials.length || FL(GG) !== LG) return;
+        const UG = SG.steady ??= {
+          unit: GG,
+          material: LG,
           visibility: 1,
-          draw: Eu,
-          record: ju,
-          drawState: Xu,
-          instance: lu,
+          draw: bG,
+          record: ZG,
+          drawState: yG,
+          instance: kG,
           bindGroup: null,
           gpuVersion: -1,
           fitInstances: 0,
@@ -3755,1307 +3755,1307 @@ export const modules = {
           handedFrame: -1,
           phase: this.steadyPhase++ % 8
         };
-        qu.unit = uu, qu.material = Zu, qu.visibility = su.visibility, qu.draw = Eu, qu.record = ju, qu.drawState = Xu, qu.instance = lu, qu.bindGroup = lu.bindGroup, qu.gpuVersion = this.resources.gpuBuffersVersion, qu.fitInstances = Eu.inputs.fitInstances, qu.worldFlag = su.getWorldMatrix().updateFlag, qu.handedFrame = this.frame
+        UG.unit = GG, UG.material = LG, UG.visibility = wG.visibility, UG.draw = bG, UG.record = ZG, UG.drawState = yG, UG.instance = kG, UG.bindGroup = kG.bindGroup, UG.gpuVersion = this.resources.gpuBuffersVersion, UG.fitInstances = bG.inputs.fitInstances, UG.worldFlag = wG.getWorldMatrix().updateFlag, UG.handedFrame = this.frame
       }
-      keepSteady(uu, Eu) {
-        const ju = uu.steady;
-        if (ju.handedFrame !== this.frame - 1 || (this.frame + ju.phase) % 8 === 0) return !1;
-        const su = uu.mesh,
+      keepSteady(GG, bG) {
+        const ZG = GG.steady;
+        if (ZG.handedFrame !== this.frame - 1 || (this.frame + ZG.phase) % 8 === 0) return !1;
+        const wG = GG.mesh,
           {
-            unit: Uu,
-            draw: Zu,
-            instance: Xu,
-            drawState: lu
-          } = ju,
-          qu = su.forcedInstanceCount || su.F_;
-        if (!su.isVisible || su.fUu || su.visibility !== ju.visibility || 0 === (su.layerMask & Eu.layerMask) || su.material !== ju.material || 0 !== su.renderingGroupId || su.hasVertexAlpha || !this.drawDefines.definesHold(lu, Uu, lu.instancing) || ju.gpuVersion !== this.resources.gpuBuffersVersion || !this.inputsStamped(Zu.inputs, Uu, lu.instancing, Zu.program) || Zu.program.failed || Xu.released || qu <= 0 || qu > ju.fitInstances) return !1;
-        if (Xu.frame !== this.frame && this.bindMaterial(Xu, this.modelUniforms.refreshModelUniforms(su.hV(), Xu, Xu.model, this.view)), !Xu.bindable || Xu.bindGroup !== ju.bindGroup) return !1;
-        const fu = su.computeWorldMatrix(),
-          Cu = fu.updateFlag !== ju.worldFlag;
-        return ju.worldFlag = fu.updateFlag, Zu.instances = qu, this.thinBundle.addAgain(ju.record, Zu, Cu ? fu.m : null, ju.visibility), ju.handedFrame = this.frame, this.m_.drawn++, !0
+            unit: SG,
+            draw: LG,
+            instance: yG,
+            drawState: kG
+          } = ZG,
+          UG = wG.forcedInstanceCount || wG.B5;
+        if (!wG.isVisible || wG.zSG || wG.visibility !== ZG.visibility || 0 === (wG.layerMask & bG.layerMask) || wG.material !== ZG.material || 0 !== wG.renderingGroupId || wG.hasVertexAlpha || !this.drawDefines.definesHold(kG, SG, kG.instancing) || ZG.gpuVersion !== this.resources.gpuBuffersVersion || !this.inputsStamped(LG.inputs, SG, kG.instancing, LG.program) || LG.program.failed || yG.released || UG <= 0 || UG > ZG.fitInstances) return !1;
+        if (yG.frame !== this.frame && this.bindMaterial(yG, this.modelUniforms.refreshModelUniforms(wG.Dv(), yG, yG.model, this.view)), !yG.bindable || yG.bindGroup !== ZG.bindGroup) return !1;
+        const YG = wG.computeWorldMatrix(),
+          VG = YG.updateFlag !== ZG.worldFlag;
+        return ZG.worldFlag = YG.updateFlag, LG.instances = UG, this.thinBundle.addAgain(ZG.record, LG, VG ? YG.m : null, ZG.visibility), ZG.handedFrame = this.frame, this.Z5.drawn++, !0
       }
-      retainedDraw(uu, Eu, ju, su) {
-        const Uu = this.inputs.get(Eu),
-          Zu = null === Uu || void 0 === Uu ? void 0 : Uu.retained;
-        if (!Uu || !Zu) return;
+      retainedDraw(GG, bG, ZG, wG) {
+        const SG = this.inputs.get(bG),
+          LG = null === SG || void 0 === SG ? void 0 : SG.retained;
+        if (!SG || !LG) return;
         const {
-          drawState: Xu,
-          program: lu,
-          instance: qu,
-          instancing: fu
-        } = Zu, Cu = Eu.owner;
-        if (XZ(Cu) !== fu) return;
-        const bu = this.instanceCount(Cu, fu);
-        if (bu <= 0) return null;
-        if (qu.released || lu.failed || Xu.program !== lu || !this.drawDefines.programCurrent(Xu, Eu, fu, ju) || !this.inputsStamped(Uu, Eu, fu, lu) || Cu.isUnIndexed !== Zu.unIndexed || this.indexKey(Eu) !== Zu.indexData) return;
-        if (Zu.indexBuffer && Zu.gpuVersion !== this.resources.gpuBuffersVersion) {
-          const uu = this.resources.gpuBuffer(Zu.indexData);
-          if (!uu) return;
-          Zu.indexBuffer = uu, Zu.gpuVersion = this.resources.gpuBuffersVersion
+          drawState: yG,
+          program: kG,
+          instance: UG,
+          instancing: YG
+        } = LG, VG = bG.owner;
+        if (LL(VG) !== YG) return;
+        const pG = this.instanceCount(VG, YG);
+        if (pG <= 0) return null;
+        if (UG.released || kG.failed || yG.program !== kG || !this.drawDefines.programCurrent(yG, bG, YG, ZG) || !this.inputsStamped(SG, bG, YG, kG) || VG.isUnIndexed !== LG.unIndexed || this.indexKey(bG) !== LG.indexData) return;
+        if (LG.indexBuffer && LG.gpuVersion !== this.resources.gpuBuffersVersion) {
+          const GG = this.resources.gpuBuffer(LG.indexData);
+          if (!GG) return;
+          LG.indexBuffer = GG, LG.gpuVersion = this.resources.gpuBuffersVersion
         }
-        let cu = !1;
-        if (qu.frame !== this.frame && (cu = this.modelUniforms.refreshModelUniforms(uu, qu, qu.model, this.view)), !this.bindMaterial(qu, cu) || !this.withGpuBuffers(Uu) || !this.instanceBuffersFit(Cu.name, Uu, bu)) return null;
-        const Nu = this.makeDraw(lu, Uu, this.renderStates.renderState(Xu.model, Cu, su, Uu.state), qu, bu);
-        return this.setRange(Nu, Eu, Zu.indexBuffer, Zu.indexData), Nu
+        let fG = !1;
+        if (UG.frame !== this.frame && (fG = this.modelUniforms.refreshModelUniforms(GG, UG, UG.model, this.view)), !this.bindMaterial(UG, fG) || !this.withGpuBuffers(SG) || !this.instanceBuffersFit(VG.name, SG, pG)) return null;
+        const QG = this.makeDraw(kG, SG, this.renderStates.renderState(yG.model, VG, wG, SG.state), UG, pG);
+        return this.setRange(QG, bG, LG.indexBuffer, LG.indexData), QG
       }
-      retain(uu, Eu) {
-        const ju = this.drawDefines.drawStates.get(uu);
-        if (!Eu || !ju || ju.program !== Eu.program) {
-          const Eu = this.inputs.get(uu);
-          return void(Eu && (Eu.retained = null))
+      retain(GG, bG) {
+        const ZG = this.drawDefines.drawStates.get(GG);
+        if (!bG || !ZG || ZG.program !== bG.program) {
+          const bG = this.inputs.get(GG);
+          return void(bG && (bG.retained = null))
         }
-        const su = uu.owner,
-          Uu = ju.instancing,
-          Zu = this.indexKey(uu),
-          Xu = Eu.inputs.retained;
-        Xu ? (Xu.drawState = ju, Xu.instancing = Uu, Xu.program = Eu.program, Xu.instance = Eu.material, Xu.indexData = Zu, Xu.unIndexed = su.isUnIndexed, Xu.indexBuffer = Eu.indexBuffer, Xu.gpuVersion = this.resources.gpuBuffersVersion) : Eu.inputs.retained = {
-          drawState: ju,
-          instancing: Uu,
-          program: Eu.program,
-          instance: Eu.material,
-          indexData: Zu,
-          unIndexed: su.isUnIndexed,
-          indexBuffer: Eu.indexBuffer,
+        const wG = GG.owner,
+          SG = ZG.instancing,
+          LG = this.indexKey(GG),
+          yG = bG.inputs.retained;
+        yG ? (yG.drawState = ZG, yG.instancing = SG, yG.program = bG.program, yG.instance = bG.material, yG.indexData = LG, yG.unIndexed = wG.isUnIndexed, yG.indexBuffer = bG.indexBuffer, yG.gpuVersion = this.resources.gpuBuffersVersion) : bG.inputs.retained = {
+          drawState: ZG,
+          instancing: SG,
+          program: bG.program,
+          instance: bG.material,
+          indexData: LG,
+          unIndexed: wG.isUnIndexed,
+          indexBuffer: bG.indexBuffer,
           gpuVersion: this.resources.gpuBuffersVersion
         }
       }
-      drawFor(uu, Eu, ju, su) {
-        const Uu = Eu.owner,
-          Zu = mZ(Eu);
-        if (!Zu) return null;
-        const Xu = Zu.getClassName();
-        let lu = null;
-        if (function(uu) {
-            return "LinesMesh" === uu.getClassName()
-          }(Uu)) {
-          if (! function(uu) {
-              return "ShaderMaterial" === uu.getClassName() && "color" === uu.shaderPath
-            }(Zu)) return this.warnOnce(`lines:${Xu}`, `A LinesMesh with a ${Xu} is not drawn yet (${Zu.name})`), null;
-          lu = Uu
-        } else if ("StandardMaterial" !== Xu && "LiteMaterial" !== Xu) return this.warnOnce(`class:${Xu}`, `${Xu} is not drawn yet (${Zu.name})`), null;
-        const qu = XZ(Uu),
-          fu = this.instanceCount(Uu, qu);
-        if (fu <= 0) return null;
-        const Cu = lu ? this.lineProgramFor(Uu, ju, qu) : this.drawDefines.programFor(uu, Eu, Zu, ju, qu);
-        if (!Cu || Cu.failed) return null;
-        const bu = lu ? null : this.drawDefines.drawStates.get(Eu).model,
-          cu = bu ? this.modelInstance(bu, Cu) : this.materialInstance(Uu, Cu);
-        let Nu = !1;
-        if (cu.frame !== this.frame && (lu ? gu(cu.ubo, lu) : Nu = this.modelUniforms.refreshModelUniforms(uu, cu, cu.model, this.view)), !this.bindMaterial(cu, Nu)) return null;
-        const Ou = this.meshInputs(Eu, Cu, qu);
-        if (!Ou || !this.instanceBuffersFit(Uu.name, Ou, fu)) return null;
-        const Yu = this.indexKey(Eu);
-        let hu = null;
-        if (Yu && !Uu.isUnIndexed && (hu = this.resources.gpuBuffer(Yu), !hu)) return null;
-        const Du = this.renderStates.renderState(null !== bu && void 0 !== bu ? bu : Zu, Uu, su, Ou.state, lu ? "line-list" : "triangle-list"),
-          Mu = this.makeDraw(Cu, Ou, Du, cu, fu);
-        return this.setRange(Mu, Eu, hu, Yu), Mu
+      drawFor(GG, bG, ZG, wG) {
+        const SG = bG.owner,
+          LG = FL(bG);
+        if (!LG) return null;
+        const yG = LG.getClassName();
+        let kG = null;
+        if (function(GG) {
+            return "LinesMesh" === GG.getClassName()
+          }(SG)) {
+          if (! function(GG) {
+              return "ShaderMaterial" === GG.getClassName() && "color" === GG.shaderPath
+            }(LG)) return this.warnOnce(`lines:${yG}`, `A LinesMesh with a ${yG} is not drawn yet (${LG.name})`), null;
+          kG = SG
+        } else if ("StandardMaterial" !== yG && "LiteMaterial" !== yG) return this.warnOnce(`class:${yG}`, `${yG} is not drawn yet (${LG.name})`), null;
+        const UG = LL(SG),
+          YG = this.instanceCount(SG, UG);
+        if (YG <= 0) return null;
+        const VG = kG ? this.lineProgramFor(SG, ZG, UG) : this.drawDefines.programFor(GG, bG, LG, ZG, UG);
+        if (!VG || VG.failed) return null;
+        const pG = kG ? null : this.drawDefines.drawStates.get(bG).model,
+          fG = pG ? this.modelInstance(pG, VG) : this.materialInstance(SG, VG);
+        let QG = !1;
+        if (fG.frame !== this.frame && (kG ? rG(fG.ubo, kG) : QG = this.modelUniforms.refreshModelUniforms(GG, fG, fG.model, this.view)), !this.bindMaterial(fG, QG)) return null;
+        const KG = this.meshInputs(bG, VG, UG);
+        if (!KG || !this.instanceBuffersFit(SG.name, KG, YG)) return null;
+        const hG = this.indexKey(bG);
+        let dG = null;
+        if (hG && !SG.isUnIndexed && (dG = this.resources.gpuBuffer(hG), !dG)) return null;
+        const JG = this.renderStates.renderState(null !== pG && void 0 !== pG ? pG : LG, SG, wG, KG.state, kG ? "line-list" : "triangle-list"),
+          zG = this.makeDraw(VG, KG, JG, fG, YG);
+        return this.setRange(zG, bG, dG, hG), zG
       }
-      indexKey(uu) {
-        const Eu = CZ(uu);
-        return Eu ? this.resources.modelIndex(Eu) : null
+      indexKey(GG) {
+        const bG = YL(GG);
+        return bG ? this.resources.modelIndex(bG) : null
       }
-      setRange(uu, Eu, ju, su) {
-        ju && (uu.indexBuffer = ju, uu.indexFormat = this.resources.indexFormat(su));
-        const Uu = 4 * Eu.range + (ju ? 0 : 2);
-        uu.unit = Eu, uu.first = Eu.parts.HY[Uu], uu.count = Eu.parts.HY[Uu + 1]
+      setRange(GG, bG, ZG, wG) {
+        ZG && (GG.indexBuffer = ZG, GG.indexFormat = this.resources.indexFormat(wG));
+        const SG = 4 * bG.range + (ZG ? 0 : 2);
+        GG.unit = bG, GG.first = bG.parts.Bh[SG], GG.count = bG.parts.Bh[SG + 1]
       }
-      makeDraw(uu, Eu, ju, su, Uu) {
-        Eu.state !== ju && (Eu.state = ju, Eu.pipelineKey = `${uu.id}|${Eu.layout.key}|${ju.key}`, Eu.pipeline = null);
-        const Zu = Eu.draw ??= {
-          program: uu,
-          inputs: Eu,
+      makeDraw(GG, bG, ZG, wG, SG) {
+        bG.state !== ZG && (bG.state = ZG, bG.pipelineKey = `${GG.id}|${bG.layout.key}|${ZG.key}`, bG.pipeline = null);
+        const LG = bG.draw ??= {
+          program: GG,
+          inputs: bG,
           pipelineKey: "",
-          layout: Eu.layout,
-          state: ju,
-          material: su,
+          layout: bG.layout,
+          state: ZG,
+          material: wG,
           slotOffset: 0,
-          vertexBuffers: Eu.buffers,
-          vertexOffsets: Eu.offsets,
+          vertexBuffers: bG.buffers,
+          vertexOffsets: bG.offsets,
           indexBuffer: null,
           indexFormat: "uint16",
           first: 0,
           count: 0,
-          instances: Uu,
+          instances: SG,
           unit: null
         };
-        return Zu.program = uu, Zu.pipelineKey = Eu.pipelineKey, Zu.state = ju, Zu.material = su, Zu.vertexOffsets = Eu.offsets, Zu.indexBuffer = null, Zu.instances = Uu, Zu
+        return LG.program = GG, LG.pipelineKey = bG.pipelineKey, LG.state = ZG, LG.material = wG, LG.vertexOffsets = bG.offsets, LG.indexBuffer = null, LG.instances = SG, LG
       }
-      instanceCount(uu, Eu) {
-        switch (Eu) {
+      instanceCount(GG, bG) {
+        switch (bG) {
           case "thin":
-            return uu.forcedInstanceCount || uu.F_;
+            return GG.forcedInstanceCount || GG.B5;
           case "instanced":
-            return this.prepareInstances(uu);
+            return this.prepareInstances(GG);
           case "none":
             return 1
         }
       }
-      prepareInstances(uu) {
-        const Eu = function(uu, Eu) {
-          const ju = Eu._userInstancedBuffersStorage,
-            su = uu.batchUploads.get(Eu);
-          if (su) {
-            var Uu;
-            if (su.layout === (null !== (Uu = null === ju || void 0 === ju ? void 0 : ju.interleavedKinds) && void 0 !== Uu ? Uu : null)) return su;
-            su.release()
+      prepareInstances(GG) {
+        const bG = function(GG, bG) {
+          const ZG = bG._userInstancedBuffersStorage,
+            wG = GG.batchUploads.get(bG);
+          if (wG) {
+            var SG;
+            if (wG.layout === (null !== (SG = null === ZG || void 0 === ZG ? void 0 : ZG.interleavedKinds) && void 0 !== SG ? SG : null)) return wG;
+            wG.release()
           }
-          return new NE(uu, Eu, ju)
-        }(this.resources, uu);
-        return Eu.frame !== this.frame && Eu.pack(uu, this.modelMeshes.instanceBatch(uu), this.modelMeshes.worlds, this.frame), Eu.count
+          return new Qb(GG, bG, ZG)
+        }(this.resources, GG);
+        return bG.frame !== this.frame && bG.pack(GG, this.modelMeshes.instanceBatch(GG), this.modelMeshes.worlds, this.frame), bG.count
       }
-      programWithModel(uu, Eu, ju) {
-        const su = this.modelSlot(uu),
-          Uu = NZ(su, uu, ju),
-          Zu = this.drawDefines.modelPackKind(uu),
-          Xu = Zu ? function(uu, Eu, ju, su) {
-            const Uu = (0, du.z)(uu, wu.h.name),
-              Zu = [];
+      programWithModel(GG, bG, ZG) {
+        const wG = this.modelSlot(GG),
+          SG = fL(wG, GG, ZG),
+          LG = this.drawDefines.modelPackKind(GG),
+          yG = LG ? function(GG, bG, ZG, wG) {
+            const SG = (0, CG.z)(GG, uG.i.name),
+              LG = [];
             for (const {
-                feature: qu,
-                state: fu,
-                active: Cu
+                feature: UG,
+                state: YG,
+                active: VG
               }
-              of uu.features) {
-              var Xu, lu;
-              const uu = Cu ? null === (Xu = (lu = (0, KE.h)(qu)).AN) || void 0 === Xu ? void 0 : Xu.call(lu, fu) : void 0;
-              uu && Zu.push(uu)
+              of GG.features) {
+              var yG, kG;
+              const GG = VG ? null === (yG = (kG = (0, cb.j)(UG)).OQ) || void 0 === yG ? void 0 : yG.call(kG, YG) : void 0;
+              GG && LG.push(GG)
             }
             return {
-              kind: Eu,
-              atlas: null !== Uu && void 0 !== Uu && Uu.active ? (0, wu.c)(Uu.state) : null,
-              defines: ju,
-              ...NX(Zu, su)
+              kind: bG,
+              atlas: null !== SG && void 0 !== SG && SG.active ? (0, uG.b)(SG.state) : null,
+              defines: ZG,
+              ...fy(LG, wG)
             }
-          }(uu, Zu, Eu, su.fragmentCode) : null;
-        if (Xu && function(uu) {
-            const Eu = uu.defines;
-            return (null === uu.atlas || !!Eu.DIFFUSE && 1 === Eu.DIFFUSEDIRECTUV) && !!Eu.NORMAL && !Eu.REFLECTION && !Eu.EMISSIVEASILLUMINATION && !Eu.LINKEMISSIVEWITHDIFFUSE
-          }(Xu)) {
-          const ju = this.modelPackProgram(uu, Eu, `${Uu}#${Zu}#sp${this.drawDefines.modelPackVariant}`, su, Xu);
-          if (ju && !ju.failed) return ju
+          }(GG, LG, bG, wG.fragmentCode) : null;
+        if (yG && function(GG) {
+            const bG = GG.defines;
+            return (null === GG.atlas || !!bG.DIFFUSE && 1 === bG.DIFFUSEDIRECTUV) && !!bG.NORMAL && !bG.REFLECTION && !bG.EMISSIVEASILLUMINATION && !bG.LINKEMISSIVEWITHDIFFUSE
+          }(yG)) {
+          const ZG = this.modelPackProgram(GG, bG, `${SG}#${LG}#sp${this.drawDefines.modelPackVariant}`, wG, yG);
+          if (ZG && !ZG.failed) return ZG
         }
-        const lu = this.programs.get(Uu);
-        if (lu || this.unbuildable.has(Uu)) return null !== lu && void 0 !== lu ? lu : null;
-        let qu;
+        const kG = this.programs.get(SG);
+        if (kG || this.unbuildable.has(SG)) return null !== kG && void 0 !== kG ? kG : null;
+        let UG;
         try {
-          qu = vU({
-            defines: qZ(Eu),
-            vertexCode: su.vertexCode,
-            fragmentCode: su.fragmentCode,
-            pluginUniforms: su.pluginUniforms
+          UG = vS({
+            defines: kL(bG),
+            vertexCode: wG.vertexCode,
+            fragmentCode: wG.fragmentCode,
+            pluginUniforms: wG.pluginUniforms
           })
-        } catch (fu) {
-          return this.unbuildable.add(Uu), this.warnOnce(`build:${Uu}`, `could not build a program for ${uu.name}: ${String(fu)}`), null
+        } catch (YG) {
+          return this.unbuildable.add(SG), this.warnOnce(`build:${SG}`, `could not build a program for ${GG.name}: ${String(YG)}`), null
         }
-        return this.createProgram(Uu, qu, "standard")
+        return this.createProgram(SG, UG, "standard")
       }
-      modelPackProgram(uu, Eu, ju, su, Uu) {
-        const Zu = this.programs.get(ju);
-        if (Zu || this.unbuildable.has(ju)) return null !== Zu && void 0 !== Zu ? Zu : null;
-        const Xu = this.drawDefines.modelPackVariant;
-        let lu;
+      modelPackProgram(GG, bG, ZG, wG, SG) {
+        const LG = this.programs.get(ZG);
+        if (LG || this.unbuildable.has(ZG)) return null !== LG && void 0 !== LG ? LG : null;
+        const yG = this.drawDefines.modelPackVariant;
+        let kG;
         try {
-          const uu = function(uu) {
-              return (0, yE.e)(uu, "model")
-            }(Xu),
-            ju = aX(uu, Uu, su.vertexCode, su.fragmentCode);
-          lu = mX(vU({
-            defines: qZ(Eu),
-            ...ju,
-            pluginUniforms: su.pluginUniforms
-          }), uu, Uu, !!this.sunShadow)
-        } catch (Cu) {
-          return this.unbuildable.add(ju), this.warnOnce(`build:${ju}`, `could not build a shader pack program for ${uu.name}, which draws without the pack: ${String(Cu)}`), null
+          const GG = function(GG) {
+              return (0, Ob.c)(GG, "model")
+            }(yG),
+            ZG = Cy(GG, SG, wG.vertexCode, wG.fragmentCode);
+          kG = Fy(vS({
+            defines: kL(bG),
+            ...ZG,
+            pluginUniforms: wG.pluginUniforms
+          }), GG, SG, !!this.sunShadow)
+        } catch (VG) {
+          return this.unbuildable.add(ZG), this.warnOnce(`build:${ZG}`, `could not build a shader pack program for ${GG.name}, which draws without the pack: ${String(VG)}`), null
         }
-        const qu = HZ(Xu, !!this.sunShadow),
-          fu = {
-            group: this.packInputs.bindGroupFor(null, qu),
-            layout: xZ(this.device, {
+        const UG = HL(yG, !!this.sunShadow),
+          YG = {
+            group: this.packInputs.bindGroupFor(null, UG),
+            layout: RL(this.device, {
               depth: !1,
-              sunShadow: qu
+              sunShadow: UG
             })
           };
-        return this.createProgram(ju, lu, function(uu) {
-          return `standard-sp${uu}`
-        }(Xu), fu)
+        return this.createProgram(ZG, kG, function(GG) {
+          return `standard-sp${GG}`
+        }(yG), YG)
       }
-      lineProgramFor(uu, Eu, ju) {
-        const su = Du(uu, ju, Eu, this.view);
-        let Uu = this.linePrograms.get(su);
-        var Zu;
-        return Uu || (Uu = this.createProgram(`lines#${su}`, (Zu = function(uu) {
-          const Eu = new Map;
-          for (let ju = 0; ju < fu.length; ju++) uu & 1 << ju && Eu.set(fu[ju], !0);
-          return Eu
-        }(su), QU({
-          defines: Zu,
-          vertex: VU,
-          fragment: rU,
+      lineProgramFor(GG, bG, ZG) {
+        const wG = JG(GG, ZG, bG, this.view);
+        let SG = this.linePrograms.get(wG);
+        var LG;
+        return SG || (SG = this.createProgram(`lines#${wG}`, (LG = function(GG) {
+          const bG = new Map;
+          for (let ZG = 0; ZG < YG.length; ZG++) GG & 1 << ZG && bG.set(YG[ZG], !0);
+          return bG
+        }(wG), jS({
+          defines: LG,
+          vertex: cS,
+          fragment: lS,
           members: [],
           structName: "MaterialUniforms"
-        })), "color"), this.linePrograms.set(su, Uu)), Uu
+        })), "color"), this.linePrograms.set(wG, SG)), SG
       }
-      createProgram(uu, Eu, ju) {
-        var su;
-        let Uu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        const Zu = this.nextProgramId++,
-          Xu = `${ju}-${Zu}`,
-          lu = GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
-          qu = [{
+      createProgram(GG, bG, ZG) {
+        var wG;
+        let SG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        const LG = this.nextProgramId++,
+          yG = `${ZG}-${LG}`,
+          kG = GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
+          UG = [{
             binding: 0,
-            visibility: lu,
+            visibility: kG,
             buffer: {
               type: "uniform"
             }
           }];
-        for (const bu of Eu.textures) qu.push({
-          binding: bu.binding,
-          visibility: lu,
+        for (const pG of bG.textures) UG.push({
+          binding: pG.binding,
+          visibility: kG,
           texture: {
-            viewDimension: bu.dimension
+            viewDimension: pG.dimension
           }
-        }), qu.push({
-          binding: bu.samplerBinding,
-          visibility: lu,
+        }), UG.push({
+          binding: pG.samplerBinding,
+          visibility: kG,
           sampler: {}
         });
-        const fu = this.device.createBindGroupLayout({
-            label: Xu,
-            entries: qu
+        const YG = this.device.createBindGroupLayout({
+            label: yG,
+            entries: UG
           }),
-          Cu = {
-            key: uu,
-            id: Zu,
-            kind: ju,
-            program: Eu,
+          VG = {
+            key: GG,
+            id: LG,
+            kind: ZG,
+            program: bG,
             vertex: this.device.createShaderModule({
-              label: `${Xu}-vertex`,
-              code: Eu.vertex
+              label: `${yG}-vertex`,
+              code: bG.vertex
             }),
             fragment: this.device.createShaderModule({
-              label: `${Xu}-fragment`,
-              code: Eu.fragment
+              label: `${yG}-fragment`,
+              code: bG.fragment
             }),
-            materialLayout: fu,
+            materialLayout: YG,
             pipelineLayout: this.device.createPipelineLayout({
-              label: Xu,
-              bindGroupLayouts: [this.sceneLayout, this.frameLayout, fu, ...Uu ? [Uu.layout] : []]
+              label: yG,
+              bindGroupLayouts: [this.sceneLayout, this.frameLayout, YG, ...SG ? [SG.layout] : []]
             }),
-            packGroup: null !== (su = null === Uu || void 0 === Uu ? void 0 : Uu.group) && void 0 !== su ? su : null,
+            packGroup: null !== (wG = null === SG || void 0 === SG ? void 0 : SG.group) && void 0 !== wG ? wG : null,
             failed: !1
           };
-        return this.programs.set(uu, Cu), Cu
+        return this.programs.set(GG, VG), VG
       }
       writeFrameUniforms() {
-        const uu = this.frameUniforms;
-        eZ(this.view, uu), this.device.queue.writeBuffer(this.frameBuffer, 0, uu)
+        const GG = this.frameUniforms;
+        zL(this.view, GG), this.device.queue.writeBuffer(this.frameBuffer, 0, GG)
       }
-      materialInstance(uu, Eu) {
-        let ju = this.materials.get(uu);
-        if (!ju) {
-          const Eu = new Map;
-          this.materials.set(uu, Eu);
+      materialInstance(GG, bG) {
+        let ZG = this.materials.get(GG);
+        if (!ZG) {
+          const bG = new Map;
+          this.materials.set(GG, bG);
           const {
-            resources: su,
-            materials: Uu
+            resources: wG,
+            materials: SG
           } = this;
-          uu.wV.addOnce((() => {
-            for (const uu of Eu.values()) uu.released = !0, su.destroyBuffer(uu.buffer);
-            Uu.delete(uu)
-          })), ju = Eu
+          GG.Gl.addOnce((() => {
+            for (const GG of bG.values()) GG.released = !0, wG.destroyBuffer(GG.buffer);
+            SG.delete(GG)
+          })), ZG = bG
         }
-        let su = ju.get(Eu.key);
-        return su || (su = this.newMaterialInstance(uu, null, Eu), ju.set(Eu.key, su)), su
+        let wG = ZG.get(bG.key);
+        return wG || (wG = this.newMaterialInstance(GG, null, bG), ZG.set(bG.key, wG)), wG
       }
-      modelInstance(uu, Eu) {
-        const ju = this.modelSlot(uu);
-        let su = ju.instances.get(Eu.key);
-        return su || (su = this.newMaterialInstance(uu, uu, Eu), ju.instances.set(Eu.key, su)), su
+      modelInstance(GG, bG) {
+        const ZG = this.modelSlot(GG);
+        let wG = ZG.instances.get(bG.key);
+        return wG || (wG = this.newMaterialInstance(GG, GG, bG), ZG.instances.set(bG.key, wG)), wG
       }
-      modelSlot(uu) {
-        var Eu;
-        let ju = uu.gpu[Pu.f.lite];
-        return (null === (Eu = ju) || void 0 === Eu ? void 0 : Eu.epoch) !== this.resources.epoch && (ju = new KX(this.resources, this.resources.epoch), uu.gpu[Pu.f.lite] = ju), ju
+      modelSlot(GG) {
+        var bG;
+        let ZG = GG.gpu[mG.e.lite];
+        return (null === (bG = ZG) || void 0 === bG ? void 0 : bG.epoch) !== this.resources.epoch && (ZG = new ay(this.resources, this.resources.epoch), GG.gpu[mG.e.lite] = ZG), ZG
       }
-      newMaterialInstance(uu, Eu, ju) {
-        const su = ju.program.material.floats,
-          Uu = new Float32Array(su),
-          Zu = new Map;
+      newMaterialInstance(GG, bG, ZG) {
+        const wG = ZG.program.material.floats,
+          SG = new Float32Array(wG),
+          LG = new Map;
         return {
-          owner: uu,
-          model: Eu,
-          program: ju,
-          data: Uu,
-          uploaded: new Float32Array(su).fill(Number.NaN),
+          owner: GG,
+          model: bG,
+          program: ZG,
+          data: SG,
+          uploaded: new Float32Array(wG).fill(Number.NaN),
           buffer: this.device.createBuffer({
-            label: `${uu.name}-uniforms`,
-            size: Math.max(16, 4 * su),
+            label: `${GG.name}-uniforms`,
+            size: Math.max(16, 4 * wG),
             usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
           }),
-          textures: Zu,
-          ubo: new MZ(ju.program.material.slots, Uu, Zu),
+          textures: LG,
+          ubo: new rL(ZG.program.material.slots, SG, LG),
           bindGroup: null,
-          bound: new Array(2 * ju.program.textures.length).fill(null),
+          bound: new Array(2 * ZG.program.textures.length).fill(null),
           frame: -1,
           bindable: !1,
           released: !1,
           heldVersion: -1
         }
       }
-      pushEarthSky(uu) {
-        var Eu;
-        const ju = this.earthSkyProgram ??= this.createProgram("earthSky", {
-            vertex: FU + BU,
-            fragment: FU + LU,
+      pushEarthSky(GG) {
+        var bG;
+        const ZG = this.earthSkyProgram ??= this.createProgram("earthSky", {
+            vertex: qS + nS,
+            fragment: qS + gS,
             attributes: [],
-            material: IU,
+            material: sS,
             textures: []
           }, "earthSky"),
-          su = this.earthSkyUniforms ??= this.newMaterialInstance(vX, null, ju);
-        this.earthSkyFrom !== uu && (this.earthSkyFrom = uu, su.data.fill(0)), zU(su.ubo, uu, this.view);
-        const Uu = this.vertexInputs(ju, vX, "earthSky", ju, null);
-        if (ju.failed || !Uu || !this.bindMaterial(su, !1)) return;
-        const Zu = null !== (Eu = Uu.state) && void 0 !== Eu ? Eu : this.renderStates.stateFor(0, !1, 0, "none", "cw", 0, 0, !0, "triangle-list"),
-          Xu = this.makeDraw(ju, Uu, Zu, su, 1);
-        Xu.count = iU.length;
-        const lu = RU(uu, this.view);
-        Xu.slotOffset = this.writeMeshSlot(lu, 1), this.lists.skyDraws.push(Xu)
+          wG = this.earthSkyUniforms ??= this.newMaterialInstance(vy, null, ZG);
+        this.earthSkyFrom !== GG && (this.earthSkyFrom = GG, wG.data.fill(0)), OS(wG.ubo, GG, this.view);
+        const SG = this.vertexInputs(ZG, vy, "earthSky", ZG, null);
+        if (ZG.failed || !SG || !this.bindMaterial(wG, !1)) return;
+        const LG = null !== (bG = SG.state) && void 0 !== bG ? bG : this.renderStates.stateFor(0, !1, 0, "none", "cw", 0, 0, !0, "triangle-list"),
+          yG = this.makeDraw(ZG, SG, LG, wG, 1);
+        yG.count = PS.length;
+        const kG = xS(GG, this.view);
+        yG.slotOffset = this.writeMeshSlot(kG, 1), this.lists.skyDraws.push(yG)
       }
-      uploadIfChanged(uu) {
+      uploadIfChanged(GG) {
         const {
-          data: Eu,
-          uploaded: ju
-        } = uu;
-        for (let su = 0; su < Eu.length; su++)
-          if (Eu[su] !== ju[su]) return ju.set(Eu), void this.device.queue.writeBuffer(uu.buffer, 0, Eu)
+          data: bG,
+          uploaded: ZG
+        } = GG;
+        for (let wG = 0; wG < bG.length; wG++)
+          if (bG[wG] !== ZG[wG]) return ZG.set(bG), void this.device.queue.writeBuffer(GG.buffer, 0, bG)
       }
-      bindMaterial(uu, Eu) {
-        return uu.frame !== this.frame && (uu.frame = this.frame, Eu || this.uploadIfChanged(uu), uu.bindable = this.bindTextures(uu)), uu.bindable
+      bindMaterial(GG, bG) {
+        return GG.frame !== this.frame && (GG.frame = this.frame, bG || this.uploadIfChanged(GG), GG.bindable = this.bindTextures(GG)), GG.bindable
       }
-      bindTextures(uu) {
+      bindTextures(GG) {
         const {
-          program: Eu,
-          bound: ju
-        } = uu, su = Eu.program.textures;
-        let Uu = !uu.bindGroup,
-          Zu = !0;
-        for (let Xu = 0; Xu < su.length; Xu++) {
-          const Eu = uu.textures.get(su[Xu].name),
-            lu = Eu ? this.resources.boundTexture(Eu) : null;
-          lu ? ju[2 * Xu] === lu.view && ju[2 * Xu + 1] === lu.sampler || (ju[2 * Xu] = lu.view, ju[2 * Xu + 1] = lu.sampler, Uu = !0) : (Eu || uu.ubo.expected.has(su[Xu].name) || this.warnOnce(`texture:${uu.owner.name}:${su[Xu].name}`, `${uu.owner.name} has no ${su[Xu].name}`), Zu = !1)
+          program: bG,
+          bound: ZG
+        } = GG, wG = bG.program.textures;
+        let SG = !GG.bindGroup,
+          LG = !0;
+        for (let yG = 0; yG < wG.length; yG++) {
+          const bG = GG.textures.get(wG[yG].name),
+            kG = bG ? this.resources.boundTexture(bG) : null;
+          kG ? ZG[2 * yG] === kG.view && ZG[2 * yG + 1] === kG.sampler || (ZG[2 * yG] = kG.view, ZG[2 * yG + 1] = kG.sampler, SG = !0) : (bG || GG.ubo.expected.has(wG[yG].name) || this.warnOnce(`texture:${GG.owner.name}:${wG[yG].name}`, `${GG.owner.name} has no ${wG[yG].name}`), LG = !1)
         }
-        if (!Zu) return Uu && (uu.bindGroup = null), !1;
-        if (Uu) {
-          const Uu = [{
+        if (!LG) return SG && (GG.bindGroup = null), !1;
+        if (SG) {
+          const SG = [{
             binding: 0,
             resource: {
-              buffer: uu.buffer
+              buffer: GG.buffer
             }
           }];
-          for (let uu = 0; uu < su.length; uu++) Uu.push({
-            binding: su[uu].binding,
-            resource: ju[2 * uu]
-          }), Uu.push({
-            binding: su[uu].samplerBinding,
-            resource: ju[2 * uu + 1]
+          for (let GG = 0; GG < wG.length; GG++) SG.push({
+            binding: wG[GG].binding,
+            resource: ZG[2 * GG]
+          }), SG.push({
+            binding: wG[GG].samplerBinding,
+            resource: ZG[2 * GG + 1]
           });
-          uu.bindGroup = this.device.createBindGroup({
-            label: `${uu.owner.name}-material`,
-            layout: Eu.materialLayout,
-            entries: Uu
+          GG.bindGroup = this.device.createBindGroup({
+            label: `${GG.owner.name}-material`,
+            layout: bG.materialLayout,
+            entries: SG
           })
         }
         return !0
       }
-      writeMeshSlot(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return this.meshSlots.ensure(this.slotCount + 1), this.meshSlots.write(this.slotCount, uu, Eu, ju), this.slotCount++ * bU
+      writeMeshSlot(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        return this.meshSlots.ensure(this.slotCount + 1), this.meshSlots.write(this.slotCount, GG, bG, ZG), this.slotCount++ * VS
       }
       uploadMeshSlots() {
         this.slotCount > 0 && this.meshSlots.upload(0, this.slotCount)
       }
-      vertexInputs(uu, Eu, ju, su, Uu) {
-        let Zu = this.inputs.get(uu);
-        if (!Zu || Zu.program !== su || !aZ(Eu, Zu, this.resources, Uu)) {
-          var Xu;
-          if (Zu = null !== (Xu = this.vertexLayouts.resolveInputs(Eu, ju, su, Uu)) && void 0 !== Xu ? Xu : void 0, !Zu) return null;
-          this.inputs.set(uu, Zu)
+      vertexInputs(GG, bG, ZG, wG, SG) {
+        let LG = this.inputs.get(GG);
+        if (!LG || LG.program !== wG || !CL(bG, LG, this.resources, SG)) {
+          var yG;
+          if (LG = null !== (yG = this.vertexLayouts.resolveInputs(bG, ZG, wG, SG)) && void 0 !== yG ? yG : void 0, !LG) return null;
+          this.inputs.set(GG, LG)
         }
-        return this.withGpuBuffers(Zu)
+        return this.withGpuBuffers(LG)
       }
-      meshInputs(uu, Eu, ju) {
-        const su = this.inputs.get(uu);
-        if (su && this.inputsStamped(su, uu, ju, Eu)) return this.withGpuBuffers(su);
-        const Uu = uu.owner,
-          Zu = CZ(uu),
-          Xu = this.vertexInputs(uu, Uu, Uu.name, Eu, Zu);
-        return Xu && (Xu.geometry = bZ(uu), Xu.instanceLayout = this.drawDefines.instanceLayout(Uu, ju)), Xu
+      meshInputs(GG, bG, ZG) {
+        const wG = this.inputs.get(GG);
+        if (wG && this.inputsStamped(wG, GG, ZG, bG)) return this.withGpuBuffers(wG);
+        const SG = GG.owner,
+          LG = YL(GG),
+          yG = this.vertexInputs(GG, SG, SG.name, bG, LG);
+        return yG && (yG.geometry = VL(GG), yG.instanceLayout = this.drawDefines.instanceLayout(SG, ZG)), yG
       }
-      inputsStamped(uu, Eu, ju, su) {
-        return function(uu, Eu, ju, su) {
-          return uu.program === ju && uu.geometry === bZ(Eu) && uu.instanceLayout === su
-        }(uu, Eu, su, this.drawDefines.instanceLayout(Eu.owner, ju))
+      inputsStamped(GG, bG, ZG, wG) {
+        return function(GG, bG, ZG, wG) {
+          return GG.program === ZG && GG.geometry === VL(bG) && GG.instanceLayout === wG
+        }(GG, bG, wG, this.drawDefines.instanceLayout(bG.owner, ZG))
       }
-      withGpuBuffers(uu) {
-        return yZ(uu, this.resources, this.zeroBuffer) ? uu : null
+      withGpuBuffers(GG) {
+        return NL(GG, this.resources, this.zeroBuffer) ? GG : null
       }
-      instanceBuffersFit(uu, Eu, ju) {
-        const su = RZ(Eu, ju, this.resources, this.zeroBuffer);
-        if (su) {
-          const Uu = Eu.ends[su.index] - Eu.offsets[su.index] + Eu.Q_[su.index];
-          return this.warnOnce(`overrun:${uu}`, `${uu} draws ${ju} instances from a ${Uu}-byte buffer (${su.needed} needed)`), !1
+      instanceBuffersFit(GG, bG, ZG) {
+        const wG = xL(bG, ZG, this.resources, this.zeroBuffer);
+        if (wG) {
+          const SG = bG.ends[wG.index] - bG.offsets[wG.index] + bG.i5[wG.index];
+          return this.warnOnce(`overrun:${GG}`, `${GG} draws ${ZG} instances from a ${SG}-byte buffer (${wG.needed} needed)`), !1
         }
         return !0
       }
-      createBinding(uu, Eu, ju, su) {
-        const Uu = `${Eu._colorFormat}|${Eu._depthStencilFormat}|${Eu._depthCompare}|${Eu._sampleCount}`,
-          Zu = oE(this.device, Eu);
-        if (uu === this.skyLastRenderable) {
-          let ju = null;
+      createBinding(GG, bG, ZG, wG) {
+        const SG = `${bG._colorFormat}|${bG._depthStencilFormat}|${bG._depthCompare}|${bG._sampleCount}`,
+          LG = Ib(this.device, bG);
+        if (GG === this.skyLastRenderable) {
+          let ZG = null;
           return {
-            renderable: uu,
-            pipeline: Zu,
-            draw: uu => ju ? this.drawSky(uu, Eu, Uu, ju) : 0,
-            update: uu => {
-              ju = uu
+            renderable: GG,
+            pipeline: LG,
+            draw: GG => ZG ? this.drawSky(GG, bG, SG, ZG) : 0,
+            update: GG => {
+              ZG = GG
             }
           }
         }
         return {
-          renderable: uu,
-          pipeline: Zu,
-          draw: uu => (su ? su.execute(uu, Eu, Uu) : 0) + this.drawList(uu, Eu, Uu, ju)
+          renderable: GG,
+          pipeline: LG,
+          draw: GG => (wG ? wG.execute(GG, bG, SG) : 0) + this.drawList(GG, bG, SG, ZG)
         }
       }
-      drawSky(uu, Eu, ju, su) {
-        const Uu = this.lists.skyDraws,
-          Zu = Uu.length > 0;
-        if (Zu) {
-          var Xu;
-          const ju = (null !== (Xu = Eu._depthCompare) && void 0 !== Xu ? Xu : JE).startsWith("greater") ? 0 : 1;
-          uu.setViewport(0, 0, su.targetWidth, su.targetHeight, ju, ju)
+      drawSky(GG, bG, ZG, wG) {
+        const SG = this.lists.skyDraws,
+          LG = SG.length > 0;
+        if (LG) {
+          var yG;
+          const ZG = (null !== (yG = bG._depthCompare) && void 0 !== yG ? yG : ib).startsWith("greater") ? 0 : 1;
+          GG.setViewport(0, 0, wG.targetWidth, wG.targetHeight, ZG, ZG)
         }
-        const lu = this.drawList(uu, Eu, ju, Uu);
-        return Zu && uu.setViewport(0, 0, su.targetWidth, su.targetHeight, 0, 1), lu
+        const kG = this.drawList(GG, bG, ZG, SG);
+        return LG && GG.setViewport(0, 0, wG.targetWidth, wG.targetHeight, 0, 1), kG
       }
-      drawList(uu, Eu, ju, su) {
-        let Uu = 0;
-        const Zu = this.binder;
-        Zu.reset();
-        for (const Xu of su) {
-          const su = this.pipelineFor(Xu, Eu, ju);
-          su && (Zu.bind(uu, Xu, su, this.meshSlots.bindGroup, Xu.slotOffset), Xu.indexBuffer ? uu.drawIndexed(Xu.count, Xu.instances, Xu.first, 0, 0) : uu.draw(Xu.count, Xu.instances, Xu.first, 0), Uu++)
+      drawList(GG, bG, ZG, wG) {
+        let SG = 0;
+        const LG = this.binder;
+        LG.reset();
+        for (const yG of wG) {
+          const wG = this.pipelineFor(yG, bG, ZG);
+          wG && (LG.bind(GG, yG, wG, this.meshSlots.bindGroup, yG.slotOffset), yG.indexBuffer ? GG.drawIndexed(yG.count, yG.instances, yG.first, 0, 0) : GG.draw(yG.count, yG.instances, yG.first, 0), SG++)
         }
-        return Uu
+        return SG
       }
-      pipelineFor(uu, Eu, ju) {
-        var su, Uu;
-        if (uu.program.failed) return null;
-        const Zu = uu.inputs;
-        if (Zu.pipeline && Zu.pipelineTarget === ju) return Zu.pipeline;
-        const Xu = `${uu.pipelineKey}|${ju}`,
-          lu = this.pipelines.get(Xu);
-        if (void 0 !== lu) return lu && (Zu.pipeline = lu, Zu.pipelineTarget = ju), lu || null;
-        this.pipelines.set(Xu, null);
+      pipelineFor(GG, bG, ZG) {
+        var wG, SG;
+        if (GG.program.failed) return null;
+        const LG = GG.inputs;
+        if (LG.pipeline && LG.pipelineTarget === ZG) return LG.pipeline;
+        const yG = `${GG.pipelineKey}|${ZG}`,
+          kG = this.pipelines.get(yG);
+        if (void 0 !== kG) return kG && (LG.pipeline = kG, LG.pipelineTarget = ZG), kG || null;
+        this.pipelines.set(yG, null);
         const {
-          program: qu,
-          layout: fu,
-          state: Cu
-        } = uu, bu = {
-          label: `standard-${qu.id}`,
-          layout: qu.pipelineLayout,
+          program: UG,
+          layout: YG,
+          state: VG
+        } = GG, pG = {
+          label: `standard-${UG.id}`,
+          layout: UG.pipelineLayout,
           vertex: {
-            module: qu.vertex,
+            module: UG.vertex,
             entryPoint: "main",
-            buffers: fu.buffers
+            buffers: YG.buffers
           },
-          fragment: gE({
-            module: qu.fragment,
+          fragment: rb({
+            module: UG.fragment,
             entryPoint: "main"
-          }, Eu, Cu.blend, Cu.colourWrite),
-          depthStencil: Eu._depthStencilFormat ? {
-            format: Eu._depthStencilFormat,
-            depthCompare: null !== (su = null !== (Uu = Cu.depthCompare) && void 0 !== Uu ? Uu : Eu._depthCompare) && void 0 !== su ? su : JE,
-            depthWriteEnabled: Cu.depthWrite,
-            depthBias: Cu.depthBias,
-            depthBiasSlopeScale: Cu.depthBiasSlopeScale
+          }, bG, VG.blend, VG.colourWrite),
+          depthStencil: bG._depthStencilFormat ? {
+            format: bG._depthStencilFormat,
+            depthCompare: null !== (wG = null !== (SG = VG.depthCompare) && void 0 !== SG ? SG : bG._depthCompare) && void 0 !== wG ? wG : ib,
+            depthWriteEnabled: VG.depthWrite,
+            depthBias: VG.depthBias,
+            depthBiasSlopeScale: VG.depthBiasSlopeScale
           } : void 0,
           multisample: {
-            count: Eu._sampleCount
+            count: bG._sampleCount
           },
           primitive: {
-            topology: Cu.topology,
-            frontFace: Cu.frontFace,
-            cullMode: Cu.cullMode
+            topology: VG.topology,
+            frontFace: VG.frontFace,
+            cullMode: VG.cullMode
           }
         };
-        return this.compiling++, this.device.createRenderPipelineAsync(bu).then((uu => {
-          this.compiling--, this.pipelines.set(Xu, uu)
-        }), (uu => {
-          this.compiling--, this.reportFailure(qu, Xu, uu)
+        return this.compiling++, this.device.createRenderPipelineAsync(pG).then((GG => {
+          this.compiling--, this.pipelines.set(yG, GG)
+        }), (GG => {
+          this.compiling--, this.reportFailure(UG, yG, GG)
         })), null
       }
-      forEachSunShadowCaster(uu) {
-        const Eu = this.caster,
-          ju = (ju, su, Uu) => {
-            const Zu = ju.unit && function(uu) {
-              const Eu = uu.material.model;
-              return null !== Eu && (Eu.lifeform || Eu.item) && Eu.castsSunShadow && "triangle-list" === uu.state.topology
-            }(ju) ? CZ(ju.unit) : null;
-            if (!Zu) return;
-            const Xu = ju.unit.owner;
-            switch (Eu.geometry = Zu, Eu.skip = Xu.noSunShadowVertices, Eu.indexed = null !== ju.indexBuffer, Eu.first = ju.first, Eu.count = ju.count, Eu.zb = su, Eu.worldAt = Uu, Eu.instances = null, Eu.instanceCount = 1, Eu.thin = !1, XZ(Xu)) {
+      forEachSunShadowCaster(GG) {
+        const bG = this.caster,
+          ZG = (ZG, wG, SG) => {
+            const LG = ZG.unit && function(GG) {
+              const bG = GG.material.model;
+              return null !== bG && (bG.lifeform || bG.item) && bG.castsSunShadow && "triangle-list" === GG.state.topology
+            }(ZG) ? YL(ZG.unit) : null;
+            if (!LG) return;
+            const yG = ZG.unit.owner;
+            switch (bG.geometry = LG, bG.skip = yG.noSunShadowVertices, bG.indexed = null !== ZG.indexBuffer, bG.first = ZG.first, bG.count = ZG.count, bG.Op = wG, bG.worldAt = SG, bG.instances = null, bG.instanceCount = 1, bG.thin = !1, LL(yG)) {
               case "thin": {
-                const uu = Xu._thinInstanceDataStorage.matrixData;
-                if (!uu) return;
-                Eu.instances = uu, Eu.instanceCount = Math.min(ju.instances, uu.length / 16), Eu.thin = !0;
+                const GG = yG._thinInstanceDataStorage.matrixData;
+                if (!GG) return;
+                bG.instances = GG, bG.instanceCount = Math.min(ZG.instances, GG.length / 16), bG.thin = !0;
                 break
               }
               case "instanced": {
-                const uu = this.resources.batchUploads.get(Xu);
-                if (!uu || uu.frame !== this.frame || !this.writeBatchCasters(uu)) return;
+                const GG = this.resources.batchUploads.get(yG);
+                if (!GG || GG.frame !== this.frame || !this.writeBatchCasters(GG)) return;
                 break
               }
             }
-            uu(Eu)
+            GG(bG)
           };
-        for (const su of this.lists.opaqueDraws) ju(su, this.meshSlots.data, su.slotOffset / 4);
-        this.thinBundle.forEachDrawn(ju)
+        for (const wG of this.lists.opaqueDraws) ZG(wG, this.meshSlots.data, wG.slotOffset / 4);
+        this.thinBundle.forEachDrawn(ZG)
       }
-      writeBatchCasters(uu) {
+      writeBatchCasters(GG) {
         const {
-          caster: Eu
-        } = this, ju = uu.packedMatrices, su = uu.count;
-        Eu.instances = ju, Eu.instanceCount = su;
-        let Uu = -1;
-        for (let Zu = 0; Zu < su; Zu++) {
-          const Eu = QX(uu.packedRowMesh(Zu));
-          Eu && Uu < 0 ? (this.casterWorlds.length < 16 * su && (this.casterWorlds = new Float32Array(ju.length)), this.casterWorlds.set(ju.subarray(0, 16 * Zu)), Uu = Zu) : !Eu && Uu >= 0 && (this.casterWorlds.set(ju.subarray(16 * Zu, 16 * Zu + 16), 16 * Uu), Uu++)
+          caster: bG
+        } = this, ZG = GG.packedMatrices, wG = GG.count;
+        bG.instances = ZG, bG.instanceCount = wG;
+        let SG = -1;
+        for (let LG = 0; LG < wG; LG++) {
+          const bG = jy(GG.packedRowMesh(LG));
+          bG && SG < 0 ? (this.casterWorlds.length < 16 * wG && (this.casterWorlds = new Float32Array(ZG.length)), this.casterWorlds.set(ZG.subarray(0, 16 * LG)), SG = LG) : !bG && SG >= 0 && (this.casterWorlds.set(ZG.subarray(16 * LG, 16 * LG + 16), 16 * SG), SG++)
         }
-        return Uu >= 0 && (Eu.instances = this.casterWorlds, Eu.instanceCount = Uu), Eu.instanceCount > 0
+        return SG >= 0 && (bG.instances = this.casterWorlds, bG.instanceCount = SG), bG.instanceCount > 0
       }
-      async reportFailure(uu, Eu, ju) {
-        const su = [];
-        let Uu = !0;
-        for (const [Zu, Xu] of [
-            ["vertex", uu.vertex],
-            ["fragment", uu.fragment]
+      async reportFailure(GG, bG, ZG) {
+        const wG = [];
+        let SG = !0;
+        for (const [LG, yG] of [
+            ["vertex", GG.vertex],
+            ["fragment", GG.fragment]
           ]) {
-          const uu = await Xu.getCompilationInfo();
-          for (const Eu of uu.messages) Uu &&= "error" !== Eu.type, su.push(`${Zu}:${Eu.lineNum}:${Eu.linePos} ${Eu.type}: ${Eu.message}`)
+          const GG = await yG.getCompilationInfo();
+          for (const bG of GG.messages) SG &&= "error" !== bG.type, wG.push(`${LG}:${bG.lineNum}:${bG.linePos} ${bG.type}: ${bG.message}`)
         }
-        if (Uu && !uu.packGroup) return this.pipelines.set(Eu, !1), console.error(`Lite: pipeline ${Eu} failed`, ju), void CE(this.device, "mesh", uu.kind, ju);
-        uu.failed || (uu.failed = !0, console.error(`Lite: program ${uu.id} failed`, ju, su.join("\n"), {
-          program: uu.program,
-          key: uu.key
-        }), CE(this.device, "mesh", uu.kind, ju, Uu ? null : su[0]))
+        if (SG && !GG.packGroup) return this.pipelines.set(bG, !1), console.error(`Lite: pipeline ${bG} failed`, ZG), void Vb(this.device, "mesh", GG.kind, ZG);
+        GG.failed || (GG.failed = !0, console.error(`Lite: program ${GG.id} failed`, ZG, wG.join("\n"), {
+          program: GG.program,
+          key: GG.key
+        }), Vb(this.device, "mesh", GG.kind, ZG, SG ? null : wG[0]))
       }
     }
 
-    function QX(uu) {
-      var Eu, ju;
-      const su = null === (Eu = uu.Hr) || void 0 === Eu || null === (ju = Eu.aShaderPackItem) || void 0 === ju ? void 0 : ju.x;
-      return void 0 !== su && 0 !== (su & mE.h)
+    function jy(GG) {
+      var bG, ZG;
+      const wG = null === (bG = GG.hA) || void 0 === bG || null === (ZG = bG.aShaderPackItem) || void 0 === ZG ? void 0 : ZG.x;
+      return void 0 !== wG && 0 !== (wG & vb.j)
     }
-    var iX = ju(41938),
-      WX = ju(41943),
-      SX = ju(41951),
-      IX = ju(41906);
-    const FX = [0, 3, 1, 4, 2, 5];
+    var Py = ZG(42129),
+      My = ZG(42133),
+      Ay = ZG(42135),
+      sy = ZG(42079);
+    const qy = [0, 3, 1, 4, 2, 5];
 
-    function BX(uu, Eu, ju, su, Uu) {
-      const Zu = ju[0].width;
+    function ny(GG, bG, ZG, wG, SG) {
+      const LG = ZG[0].width;
       try {
-        return Uu ? function(uu, Eu, ju) {
-          const su = (0, IX.c)(uu, ju, ju, 6);
-          for (let Uu = 0; Uu < 6; Uu++)(0, IX.d)(uu, su, Uu, Eu[FX[Uu]], {
+        return SG ? function(GG, bG, ZG) {
+          const wG = (0, sy.e)(GG, ZG, ZG, 6);
+          for (let SG = 0; SG < 6; SG++)(0, sy.f)(GG, wG, SG, bG[qy[SG]], {
             invertY: !1
           });
-          return su.texture
-        }(uu, ju, Zu) : function(uu, Eu, ju, su) {
-          const Uu = uu.createTexture({
+          return wG.texture
+        }(GG, ZG, LG) : function(GG, bG, ZG, wG) {
+          const SG = GG.createTexture({
             label: "sink-cube",
             size: {
-              width: ju,
-              height: ju,
+              width: ZG,
+              height: ZG,
               depthOrArrayLayers: 6
             },
-            format: su,
+            format: wG,
             usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST | GPUTextureUsage.RENDER_ATTACHMENT
           });
-          for (let Zu = 0; Zu < 6; Zu++) uu.queue.copyExternalImageToTexture({
-            source: Eu[FX[Zu]]
+          for (let LG = 0; LG < 6; LG++) GG.queue.copyExternalImageToTexture({
+            source: bG[qy[LG]]
           }, {
-            texture: Uu,
+            texture: SG,
             origin: {
               x: 0,
               y: 0,
-              z: Zu
+              z: LG
             }
           }, {
-            width: ju,
-            height: ju
+            width: ZG,
+            height: ZG
           });
-          return Uu
-        }(Eu, ju, Zu, 1 === su ? "r8unorm" : "rgba8unorm")
+          return SG
+        }(bG, ZG, LG, 1 === wG ? "r8unorm" : "rgba8unorm")
       } finally {
-        LX(ju)
+        gy(ZG)
       }
     }
 
-    function LX(uu) {
-      for (const Eu of null !== uu && void 0 !== uu ? uu : []) null === Eu || void 0 === Eu || Eu.close()
+    function gy(GG) {
+      for (const bG of null !== GG && void 0 !== GG ? GG : []) null === bG || void 0 === bG || bG.close()
     }
-    async function tX(uu) {
-      const Eu = [],
-        ju = [];
-      if (await Promise.all(uu.map(((uu, su) => (Eu[su] = null, uu.then((uu => {
-          Eu[su] = uu
-        }), (uu => {
-          ju.push(uu)
-        })))))), ju.length > 0) throw LX(Eu), ju[0];
-      return Eu
+    async function ey(GG) {
+      const bG = [],
+        ZG = [];
+      if (await Promise.all(GG.map(((GG, wG) => (bG[wG] = null, GG.then((GG => {
+          bG[wG] = GG
+        }), (GG => {
+          ZG.push(GG)
+        })))))), ZG.length > 0) throw gy(bG), ZG[0];
+      return bG
     }
-    class xX {
-      constructor(uu) {
-        this.Mb = uu, this.starts = [], this.lengths = [], this.used = 0, uu > 0 && (this.starts.push(0), this.lengths.push(uu))
+    class Ry {
+      constructor(GG) {
+        this.rp = GG, this.starts = [], this.lengths = [], this.used = 0, GG > 0 && (this.starts.push(0), this.lengths.push(GG))
       }
-      allocate(uu) {
+      allocate(GG) {
         const {
-          starts: Eu,
-          lengths: ju
+          starts: bG,
+          lengths: ZG
         } = this;
-        for (let su = 0; su < Eu.length; su++) {
-          if (ju[su] < uu) continue;
-          const Uu = Eu[su];
-          return ju[su] === uu ? (Eu.splice(su, 1), ju.splice(su, 1)) : (Eu[su] += uu, ju[su] -= uu), this.used += uu, Uu
+        for (let wG = 0; wG < bG.length; wG++) {
+          if (ZG[wG] < GG) continue;
+          const SG = bG[wG];
+          return ZG[wG] === GG ? (bG.splice(wG, 1), ZG.splice(wG, 1)) : (bG[wG] += GG, ZG[wG] -= GG), this.used += GG, SG
         }
         return -1
       }
-      free(uu, Eu) {
-        this.used -= Eu;
-        const ju = Math.min(uu + Eu, this.Mb);
-        ju > uu && this.release(uu, ju - uu)
+      free(GG, bG) {
+        this.used -= bG;
+        const ZG = Math.min(GG + bG, this.rp);
+        ZG > GG && this.release(GG, ZG - GG)
       }
-      grow(uu) {
-        const Eu = this.Mb;
-        this.Mb = uu, this.release(Eu, uu - Eu)
+      grow(GG) {
+        const bG = this.rp;
+        this.rp = GG, this.release(bG, GG - bG)
       }
-      truncate(uu) {
+      truncate(GG) {
         const {
-          starts: Eu,
-          lengths: ju
+          starts: bG,
+          lengths: ZG
         } = this;
-        for (let su = Eu.length - 1; su >= 0 && Eu[su] + ju[su] > uu; su--) Eu[su] >= uu ? (Eu.splice(su, 1), ju.splice(su, 1)) : ju[su] = uu - Eu[su];
-        this.Mb = uu
+        for (let wG = bG.length - 1; wG >= 0 && bG[wG] + ZG[wG] > GG; wG--) bG[wG] >= GG ? (bG.splice(wG, 1), ZG.splice(wG, 1)) : ZG[wG] = GG - bG[wG];
+        this.rp = GG
       }
-      release(uu, Eu) {
+      release(GG, bG) {
         const {
-          starts: ju,
-          lengths: su
+          starts: ZG,
+          lengths: wG
         } = this;
-        let Uu = 0,
-          Zu = ju.length;
-        for (; Uu < Zu;) {
-          const Eu = Uu + Zu >> 1;
-          ju[Eu] < uu ? Uu = Eu + 1 : Zu = Eu
+        let SG = 0,
+          LG = ZG.length;
+        for (; SG < LG;) {
+          const bG = SG + LG >> 1;
+          ZG[bG] < GG ? SG = bG + 1 : LG = bG
         }
-        const Xu = Uu,
-          lu = Xu > 0 && ju[Xu - 1] + su[Xu - 1] === uu,
-          qu = Xu < ju.length && uu + Eu === ju[Xu];
-        lu && qu ? (su[Xu - 1] += Eu + su[Xu], ju.splice(Xu, 1), su.splice(Xu, 1)) : lu ? su[Xu - 1] += Eu : qu ? (ju[Xu] = uu, su[Xu] += Eu) : (ju.splice(Xu, 0, uu), su.splice(Xu, 0, Eu))
+        const yG = SG,
+          kG = yG > 0 && ZG[yG - 1] + wG[yG - 1] === GG,
+          UG = yG < ZG.length && GG + bG === ZG[yG];
+        kG && UG ? (wG[yG - 1] += bG + wG[yG], ZG.splice(yG, 1), wG.splice(yG, 1)) : kG ? wG[yG - 1] += bG : UG ? (ZG[yG] = GG, wG[yG] += bG) : (ZG.splice(yG, 0, GG), wG.splice(yG, 0, bG))
       }
     }
-    const TX = 256;
-    class HX {
-      constructor(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16384,
-          su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1048576;
-        this.device = uu, this.onReplaced = Eu, this.mergeGap = ju, this.gpu = null, this.bytes = void 0, this.words = void 0, this.sourceWords = new WeakMap, this.HY = void 0, this.dirtyStarts = [], this.dirtyEnds = [], this.order = [], this.replaced = [], this.retired = [], this.freed = [], this.holding = !0;
-        const Uu = Math.max(TX, Math.ceil(su / TX) * TX);
-        this.bytes = new Uint8Array(Uu), this.words = new Uint32Array(this.bytes.buffer), this.HY = new xX(Uu / TX)
+    const Ty = 256;
+    class Hy {
+      constructor(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16384,
+          wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1048576;
+        this.device = GG, this.onReplaced = bG, this.mergeGap = ZG, this.gpu = null, this.bytes = void 0, this.words = void 0, this.sourceWords = new WeakMap, this.Bh = void 0, this.dirtyStarts = [], this.dirtyEnds = [], this.order = [], this.replaced = [], this.retired = [], this.freed = [], this.holding = !0;
+        const SG = Math.max(Ty, Math.ceil(wG / Ty) * Ty);
+        this.bytes = new Uint8Array(SG), this.words = new Uint32Array(this.bytes.buffer), this.Bh = new Ry(SG / Ty)
       }
       get buffer() {
         return this.gpu ??= this.createGpu(this.bytes.byteLength)
       }
-      static slotBytes(uu) {
-        return Math.max(1, Math.ceil(uu / TX)) * TX
+      static slotBytes(GG) {
+        return Math.max(1, Math.ceil(GG / Ty)) * Ty
       }
-      allocate(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : uu;
-        const su = HX.slotBytes(uu),
-          Uu = su / TX;
-        let Zu = this.HY.allocate(Uu);
-        Zu < 0 && (this.grow(this.HY.Mb + Uu), Zu = this.HY.allocate(Uu));
-        const Xu = Zu * TX;
-        return this.growTo(Xu + Math.max(ju, su)), this.gpu ??= this.createGpu(this.bytes.byteLength), this.bytes.fill(0, Xu, Xu + su), Eu && this.bytes.set(new Uint8Array(Eu.buffer, Eu.byteOffset, Math.min(Eu.byteLength, su)), Xu), this.markDirty(Xu, Xu + su), Xu
+      allocate(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : GG;
+        const wG = Hy.slotBytes(GG),
+          SG = wG / Ty;
+        let LG = this.Bh.allocate(SG);
+        LG < 0 && (this.grow(this.Bh.rp + SG), LG = this.Bh.allocate(SG));
+        const yG = LG * Ty;
+        return this.growTo(yG + Math.max(ZG, wG)), this.gpu ??= this.createGpu(this.bytes.byteLength), this.bytes.fill(0, yG, yG + wG), bG && this.bytes.set(new Uint8Array(bG.buffer, bG.byteOffset, Math.min(bG.byteLength, wG)), yG), this.markDirty(yG, yG + wG), yG
       }
-      growTo(uu) {
-        const Eu = Math.ceil(uu / TX);
-        Eu > this.HY.Mb && this.grow(Eu)
+      growTo(GG) {
+        const bG = Math.ceil(GG / Ty);
+        bG > this.Bh.rp && this.grow(bG)
       }
-      free(uu, Eu) {
-        this.freed.push(uu, Eu)
+      free(GG, bG) {
+        this.freed.push(GG, bG)
       }
-      write(uu, Eu, ju, su) {
-        let Uu = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (su <= 0) return;
-        su <= 1024 && 0 === (3 & (uu | ju | su)) ? this.copyWords(uu >> 2, Eu.buffer, ju >> 2, su >> 2) : this.bytes.set(new Uint8Array(Eu.buffer, ju, su), uu);
-        let Zu = uu + su;
-        if (Uu) {
-          const Eu = uu + 4 * Math.ceil(su / 4);
-          this.bytes.fill(0, Zu, Eu), Zu = Eu
+      write(GG, bG, ZG, wG) {
+        let SG = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (wG <= 0) return;
+        wG <= 1024 && 0 === (3 & (GG | ZG | wG)) ? this.copyWords(GG >> 2, bG.buffer, ZG >> 2, wG >> 2) : this.bytes.set(new Uint8Array(bG.buffer, ZG, wG), GG);
+        let LG = GG + wG;
+        if (SG) {
+          const bG = GG + 4 * Math.ceil(wG / 4);
+          this.bytes.fill(0, LG, bG), LG = bG
         }
-        this.markDirty(uu, Zu)
+        this.markDirty(GG, LG)
       }
-      copyWords(uu, Eu, ju, su) {
-        let Uu = this.sourceWords.get(Eu);
-        Uu || (Uu = new Uint32Array(Eu, 0, Eu.byteLength >> 2), this.sourceWords.set(Eu, Uu));
-        const Zu = this.words;
-        for (let Xu = 0; Xu < su; Xu++) Zu[uu + Xu] = Uu[ju + Xu]
+      copyWords(GG, bG, ZG, wG) {
+        let SG = this.sourceWords.get(bG);
+        SG || (SG = new Uint32Array(bG, 0, bG.byteLength >> 2), this.sourceWords.set(bG, SG));
+        const LG = this.words;
+        for (let yG = 0; yG < wG; yG++) LG[GG + yG] = SG[ZG + yG]
       }
-      move(uu, Eu, ju) {
-        this.bytes.copyWithin(Eu, uu, uu + ju), this.markDirty(Eu, Eu + ju)
+      move(GG, bG, ZG) {
+        this.bytes.copyWithin(bG, GG, GG + ZG), this.markDirty(bG, bG + ZG)
       }
       flush() {
-        for (const Eu of this.retired) this.onReplaced(Eu), Eu.destroy();
+        for (const bG of this.retired) this.onReplaced(bG), bG.destroy();
         this.retired.length = 0;
-        const uu = this.dirtyStarts.length;
-        if (uu > 0) {
+        const GG = this.dirtyStarts.length;
+        if (GG > 0) {
           const {
-            dirtyStarts: Eu,
-            dirtyEnds: ju,
-            order: su
+            dirtyStarts: bG,
+            dirtyEnds: ZG,
+            order: wG
           } = this;
-          su.length = uu;
-          for (let lu = 0; lu < uu; lu++) su[lu] = lu;
-          uu > 1 && su.sort(((uu, ju) => Eu[uu] - Eu[ju]));
-          const Uu = this.mergeGap;
-          let Zu = Eu[su[0]],
-            Xu = ju[su[0]];
-          for (let lu = 1; lu < uu; lu++) {
-            const uu = su[lu];
-            Eu[uu] - Xu <= Uu ? Xu = Math.max(Xu, ju[uu]) : (this.send(Zu, Xu), Zu = Eu[uu], Xu = ju[uu])
+          wG.length = GG;
+          for (let kG = 0; kG < GG; kG++) wG[kG] = kG;
+          GG > 1 && wG.sort(((GG, ZG) => bG[GG] - bG[ZG]));
+          const SG = this.mergeGap;
+          let LG = bG[wG[0]],
+            yG = ZG[wG[0]];
+          for (let kG = 1; kG < GG; kG++) {
+            const GG = wG[kG];
+            bG[GG] - yG <= SG ? yG = Math.max(yG, ZG[GG]) : (this.send(LG, yG), LG = bG[GG], yG = ZG[GG])
           }
-          this.send(Zu, Xu), Eu.length = 0, ju.length = 0
+          this.send(LG, yG), bG.length = 0, ZG.length = 0
         }
         this.holding = !1
       }
-      JG() {
+      kE() {
         this.holding = !0, this.retired.push(...this.replaced), this.replaced.length = 0;
-        const uu = this.freed;
-        for (let Eu = 0; Eu < uu.length; Eu += 2) this.HY.free(uu[Eu] / TX, uu[Eu + 1] / TX);
-        uu.length = 0
+        const GG = this.freed;
+        for (let bG = 0; bG < GG.length; bG += 2) this.Bh.free(GG[bG] / Ty, GG[bG + 1] / Ty);
+        GG.length = 0
       }
-      send(uu, Eu) {
-        this.device.queue.writeBuffer(this.gpu, uu, this.bytes.buffer, uu, Eu - uu);
-        for (const ju of this.replaced) {
-          const su = Math.min(Eu, ju.size);
-          su > uu && this.device.queue.writeBuffer(ju, uu, this.bytes.buffer, uu, su - uu)
+      send(GG, bG) {
+        this.device.queue.writeBuffer(this.gpu, GG, this.bytes.buffer, GG, bG - GG);
+        for (const ZG of this.replaced) {
+          const wG = Math.min(bG, ZG.size);
+          wG > GG && this.device.queue.writeBuffer(ZG, GG, this.bytes.buffer, GG, wG - GG)
         }
       }
-      markDirty(uu, Eu) {
-        uu &= -4, Eu = Eu + 3 & -4, this.holding ? (this.dirtyStarts.push(uu), this.dirtyEnds.push(Eu)) : this.send(uu, Eu)
+      markDirty(GG, bG) {
+        GG &= -4, bG = bG + 3 & -4, this.holding ? (this.dirtyStarts.push(GG), this.dirtyEnds.push(bG)) : this.send(GG, bG)
       }
-      grow(uu) {
-        const Eu = this.HY.Mb,
-          ju = Math.max(2 * Eu, uu),
-          su = new Uint8Array(ju * TX);
-        su.set(this.bytes);
-        const Uu = this.gpu;
-        this.gpu = this.createGpu(su.byteLength), this.bytes = su, this.words = new Uint32Array(su.buffer), this.HY.grow(ju), Uu && (this.replaced.push(Uu), this.onReplaced(Uu)), this.dirtyStarts.length = 0, this.dirtyEnds.length = 0, this.markDirty(0, Eu * TX)
+      grow(GG) {
+        const bG = this.Bh.rp,
+          ZG = Math.max(2 * bG, GG),
+          wG = new Uint8Array(ZG * Ty);
+        wG.set(this.bytes);
+        const SG = this.gpu;
+        this.gpu = this.createGpu(wG.byteLength), this.bytes = wG, this.words = new Uint32Array(wG.buffer), this.Bh.grow(ZG), SG && (this.replaced.push(SG), this.onReplaced(SG)), this.dirtyStarts.length = 0, this.dirtyEnds.length = 0, this.markDirty(0, bG * Ty)
       }
-      createGpu(uu) {
+      createGpu(GG) {
         return this.device.createBuffer({
           label: "sink-dynamic-arena",
-          size: uu,
+          size: GG,
           usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST
         })
       }
     }
 
-    function AX(uu) {
-      return Array.isArray(uu) ? new Float32Array(uu) : uu
+    function ty(GG) {
+      return Array.isArray(GG) ? new Float32Array(GG) : GG
     }
 
-    function nX(uu, Eu, ju, su, Uu) {
-      const Zu = Tu(Uu),
-        Xu = Math.min(Uu, su.byteLength);
-      if (Zu === Xu && su.byteOffset % 4 === 0) return void uu.queue.writeBuffer(Eu, ju, su.buffer, su.byteOffset, Zu);
-      const lu = new Uint8Array(Zu);
-      lu.set(new Uint8Array(su.buffer, su.byteOffset, Xu)), uu.queue.writeBuffer(Eu, ju, lu)
+    function Dy(GG, bG, ZG, wG, SG) {
+      const LG = HG(SG),
+        yG = Math.min(SG, wG.byteLength);
+      if (LG === yG && wG.byteOffset % 4 === 0) return void GG.queue.writeBuffer(bG, ZG, wG.buffer, wG.byteOffset, LG);
+      const kG = new Uint8Array(LG);
+      kG.set(new Uint8Array(wG.buffer, wG.byteOffset, yG)), GG.queue.writeBuffer(bG, ZG, kG)
     }
 
-    function yX(uu, Eu, ju) {
-      const su = "linear",
-        Uu = "nearest";
-      let Zu = Uu,
-        Xu = Uu,
-        lu = "nearest",
-        qu = !Eu;
-      switch (uu) {
+    function Ny(GG, bG, ZG) {
+      const wG = "linear",
+        SG = "nearest";
+      let LG = SG,
+        yG = SG,
+        kG = "nearest",
+        UG = !bG;
+      switch (GG) {
         case 11:
-          Zu = su, Xu = su;
+          LG = wG, yG = wG;
           break;
         case 3:
-          Zu = su, Xu = su, lu = Eu ? "linear" : "nearest";
+          LG = wG, yG = wG, kG = bG ? "linear" : "nearest";
           break;
         case 8:
-          lu = Eu ? "linear" : "nearest";
+          kG = bG ? "linear" : "nearest";
           break;
         case 4:
           break;
         case 5:
-          Xu = su;
+          yG = wG;
           break;
         case 6:
-          Xu = su, lu = Eu ? "linear" : "nearest";
+          yG = wG, kG = bG ? "linear" : "nearest";
           break;
         case 7:
-          Xu = su, qu = !0;
+          yG = wG, UG = !0;
           break;
         case 9:
-          Zu = su;
+          LG = wG;
           break;
         case 10:
-          Zu = su, lu = Eu ? "linear" : "nearest";
+          LG = wG, kG = bG ? "linear" : "nearest";
           break;
         case 2:
-          Zu = su, Xu = su, ju > 1 ? (lu = "linear", qu = !1) : qu = !0;
+          LG = wG, yG = wG, ZG > 1 ? (kG = "linear", UG = !1) : UG = !0;
           break;
         case 12:
-          Zu = su, qu = !0;
+          LG = wG, UG = !0;
           break;
         default:
-          qu = !0
+          UG = !0
       }
-      return ju > 1 && !qu ? {
-        magFilter: su,
-        minFilter: su,
+      return ZG > 1 && !UG ? {
+        magFilter: wG,
+        minFilter: wG,
         mipmapFilter: "linear",
-        maxAnisotropy: ju
+        maxAnisotropy: ZG
       } : {
-        magFilter: Zu,
-        minFilter: Xu,
-        mipmapFilter: lu,
-        ...qu ? {
+        magFilter: LG,
+        minFilter: yG,
+        mipmapFilter: kG,
+        ...UG ? {
           lodMinClamp: 0,
           lodMaxClamp: 0
         } : {}
       }
     }
 
-    function zX(uu) {
-      return 0 === uu ? "clamp-to-edge" : 2 === uu ? "mirror-repeat" : "repeat"
+    function Oy(GG) {
+      return 0 === GG ? "clamp-to-edge" : 2 === GG ? "mirror-repeat" : "repeat"
     }
-    class RX {
-      constructor(uu, Eu) {
+    class xy {
+      constructor(GG, bG) {
         let {
-          vertexArena: ju = !0
+          vertexArena: ZG = !0
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.engine = uu, this.device = Eu, this.buffers = new WeakMap, this.E_ = new WeakMap, this.batchUploads = new WeakMap, this.textures = new Map, this.samplers = new Map, this.atlasBindings = new WeakMap, this.atlasSources = new WeakMap, this.atlasRebuilds = new WeakSet, this.rebindWaiters = [], this.epoch = 0, this.liveUploads = new Set, this.gpuBuffersVersion = 0, this.onDestroy = null, this.pending = 0, this.firstBindDecodes = 0, this.arena = void 0, this.arena = ju ? this.createArena() : null
+        this.engine = GG, this.device = bG, this.buffers = new WeakMap, this.j_ = new WeakMap, this.batchUploads = new WeakMap, this.textures = new Map, this.samplers = new Map, this.atlasBindings = new WeakMap, this.atlasSources = new WeakMap, this.atlasRebuilds = new WeakSet, this.rebindWaiters = [], this.epoch = 0, this.liveUploads = new Set, this.gpuBuffersVersion = 0, this.onDestroy = null, this.pending = 0, this.firstBindDecodes = 0, this.arena = void 0, this.arena = ZG ? this.createArena() : null
       }
       createArena() {
-        return new HX(this.device, (uu => {
-          var Eu;
-          null === (Eu = this.onDestroy) || void 0 === Eu || Eu.call(this, uu), this.gpuBuffersVersion++
+        return new Hy(this.device, (GG => {
+          var bG;
+          null === (bG = this.onDestroy) || void 0 === bG || bG.call(this, GG), this.gpuBuffersVersion++
         }))
       }
-      rebind(uu, Eu) {
-        this.engine = uu, this.device = Eu, this.epoch++, this.buffers = new WeakMap, this.textures.clear(), this.samplers.clear(), this.atlasBindings = new WeakMap, this.atlasRebuilds = new WeakSet, this.arena &&= this.createArena(), this.pending = 0, this.gpuBuffersVersion++;
-        for (const ju of this.liveUploads) ju.rebind();
-        for (const ju of this.rebindWaiters.splice(0)) ju()
+      rebind(GG, bG) {
+        this.engine = GG, this.device = bG, this.epoch++, this.buffers = new WeakMap, this.textures.clear(), this.samplers.clear(), this.atlasBindings = new WeakMap, this.atlasRebuilds = new WeakSet, this.arena &&= this.createArena(), this.pending = 0, this.gpuBuffersVersion++;
+        for (const ZG of this.liveUploads) ZG.rebind();
+        for (const ZG of this.rebindWaiters.splice(0)) ZG()
       }
       flushUploads() {
-        var uu;
-        null === (uu = this.arena) || void 0 === uu || uu.flush()
+        var GG;
+        null === (GG = this.arena) || void 0 === GG || GG.flush()
       }
       endUploadFrame() {
-        var uu;
-        null === (uu = this.arena) || void 0 === uu || uu.JG()
+        var GG;
+        null === (GG = this.arena) || void 0 === GG || GG.kE()
       }
-      vertexBufferCreated(uu, Eu, ju) {
-        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ju ? "sink-dynamic-vertices" : "sink-vertices";
-        this.bufferDeleted(uu);
-        const Uu = AX(Eu);
-        uu.Mb = Uu.byteLength, this.buffers.set(uu, {
+      vertexBufferCreated(GG, bG, ZG) {
+        let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ZG ? "sink-dynamic-vertices" : "sink-vertices";
+        this.bufferDeleted(GG);
+        const SG = ty(bG);
+        GG.rp = SG.byteLength, this.buffers.set(GG, {
           gpu: null,
           slot: -1,
           slotBytes: 0,
           size: 0,
-          arena: ju && null !== this.arena,
-          pending: Uu,
+          arena: ZG && null !== this.arena,
+          pending: SG,
           ownsPending: !1,
           usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC,
-          label: su
+          label: wG
         })
       }
-      vertexBufferUpdated(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          su = arguments.length > 3 ? arguments[3] : void 0;
-        const Uu = this.buffers.get(uu);
-        if (!Uu) return;
-        const Zu = AX(Eu),
-          Xu = void 0 === su ? Zu.byteLength : Math.min(su, Zu.byteLength);
-        this.update(Uu, Zu, ju, Xu)
+      vertexBufferUpdated(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          wG = arguments.length > 3 ? arguments[3] : void 0;
+        const SG = this.buffers.get(GG);
+        if (!SG) return;
+        const LG = ty(bG),
+          yG = void 0 === wG ? LG.byteLength : Math.min(wG, LG.byteLength);
+        this.update(SG, LG, ZG, yG)
       }
-      vertexBufferFloatsUpdated(uu, Eu, ju, su) {
-        const Uu = this.buffers.get(uu);
-        if (!Uu) return;
-        const Zu = ju * Float32Array.BYTES_PER_ELEMENT,
-          Xu = (su - ju) * Float32Array.BYTES_PER_ELEMENT;
-        Uu.slot >= 0 && Xu > 0 && Zu + Xu <= Uu.size ? this.writeSlot(Uu, Zu, Eu, Eu.byteOffset + Zu, Xu, !1) : Uu.gpu && Xu > 0 && Zu + Xu <= Uu.gpu.size ? this.device.queue.writeBuffer(Uu.gpu, Zu, Eu.buffer, Eu.byteOffset + Zu, Xu) : this.update(Uu, Eu.subarray(ju, su), Zu, Xu)
+      vertexBufferFloatsUpdated(GG, bG, ZG, wG) {
+        const SG = this.buffers.get(GG);
+        if (!SG) return;
+        const LG = ZG * Float32Array.BYTES_PER_ELEMENT,
+          yG = (wG - ZG) * Float32Array.BYTES_PER_ELEMENT;
+        SG.slot >= 0 && yG > 0 && LG + yG <= SG.size ? this.writeSlot(SG, LG, bG, bG.byteOffset + LG, yG, !1) : SG.gpu && yG > 0 && LG + yG <= SG.gpu.size ? this.device.queue.writeBuffer(SG.gpu, LG, bG.buffer, bG.byteOffset + LG, yG) : this.update(SG, bG.subarray(ZG, wG), LG, yG)
       }
-      indexBufferCreated(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "sink-indices";
-        this.bufferDeleted(uu);
-        const su = function(uu) {
-          if (uu instanceof Uint16Array || uu instanceof Uint32Array) return uu;
-          for (let Eu = 0; Eu < uu.length; Eu++)
-            if (uu[Eu] >= 65535) return new Uint32Array(uu);
-          return new Uint16Array(uu)
-        }(Eu);
-        uu.is32Bits = 4 === su.BYTES_PER_ELEMENT, uu.Mb = su.byteLength, this.buffers.set(uu, {
+      indexBufferCreated(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "sink-indices";
+        this.bufferDeleted(GG);
+        const wG = function(GG) {
+          if (GG instanceof Uint16Array || GG instanceof Uint32Array) return GG;
+          for (let bG = 0; bG < GG.length; bG++)
+            if (GG[bG] >= 65535) return new Uint32Array(GG);
+          return new Uint16Array(GG)
+        }(bG);
+        GG.is32Bits = 4 === wG.BYTES_PER_ELEMENT, GG.rp = wG.byteLength, this.buffers.set(GG, {
           gpu: null,
           slot: -1,
           slotBytes: 0,
           size: 0,
           arena: !1,
-          pending: su,
-          ownsPending: su !== Eu,
+          pending: wG,
+          ownsPending: wG !== bG,
           usage: GPUBufferUsage.INDEX | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC,
-          label: ju
+          label: ZG
         })
       }
-      bufferDeleted(uu) {
-        const Eu = this.buffers.get(uu);
-        null !== Eu && void 0 !== Eu && Eu.gpu ? (this.destroyBuffer(Eu.gpu), this.gpuBuffersVersion++) : Eu && Eu.slot >= 0 && (this.arena.free(Eu.slot, Eu.slotBytes), this.gpuBuffersVersion++), this.buffers.delete(uu)
+      bufferDeleted(GG) {
+        const bG = this.buffers.get(GG);
+        null !== bG && void 0 !== bG && bG.gpu ? (this.destroyBuffer(bG.gpu), this.gpuBuffersVersion++) : bG && bG.slot >= 0 && (this.arena.free(bG.slot, bG.slotBytes), this.gpuBuffersVersion++), this.buffers.delete(GG)
       }
-      update(uu, Eu, ju, su) {
-        if (uu.slot >= 0) this.updateSlot(uu, Eu, ju, su);
-        else if (uu.gpu) {
-          if (ju + Tu(su) > uu.gpu.size) {
-            const Eu = this.device.createBuffer({
-                label: uu.label,
-                size: Tu(Math.max(2 * uu.gpu.size, ju + su)),
-                usage: uu.usage | GPUBufferUsage.COPY_SRC
+      update(GG, bG, ZG, wG) {
+        if (GG.slot >= 0) this.updateSlot(GG, bG, ZG, wG);
+        else if (GG.gpu) {
+          if (ZG + HG(wG) > GG.gpu.size) {
+            const bG = this.device.createBuffer({
+                label: GG.label,
+                size: HG(Math.max(2 * GG.gpu.size, ZG + wG)),
+                usage: GG.usage | GPUBufferUsage.COPY_SRC
               }),
-              Uu = this.device.createCommandEncoder();
-            Uu.copyBufferToBuffer(uu.gpu, 0, Eu, 0, uu.gpu.size), this.device.queue.submit([Uu.finish()]), this.destroyBuffer(uu.gpu), this.gpuBuffersVersion++, uu.gpu = Eu
+              SG = this.device.createCommandEncoder();
+            SG.copyBufferToBuffer(GG.gpu, 0, bG, 0, GG.gpu.size), this.device.queue.submit([SG.finish()]), this.destroyBuffer(GG.gpu), this.gpuBuffersVersion++, GG.gpu = bG
           }
-          nX(this.device, uu.gpu, ju, Eu, su)
+          Dy(this.device, GG.gpu, ZG, bG, wG)
         } else {
-          const Zu = new Uint8Array(Eu.buffer, Eu.byteOffset, su),
-            Xu = uu.pending;
-          if (Xu && uu.ownsPending && ju + su <= Xu.byteLength) new Uint8Array(Xu.buffer, Xu.byteOffset, Xu.byteLength).set(Zu, ju);
-          else if (Xu && 0 === ju && su === Xu.byteLength && Eu.byteLength === su) uu.pending = Eu, uu.ownsPending = !1;
+          const LG = new Uint8Array(bG.buffer, bG.byteOffset, wG),
+            yG = GG.pending;
+          if (yG && GG.ownsPending && ZG + wG <= yG.byteLength) new Uint8Array(yG.buffer, yG.byteOffset, yG.byteLength).set(LG, ZG);
+          else if (yG && 0 === ZG && wG === yG.byteLength && bG.byteLength === wG) GG.pending = bG, GG.ownsPending = !1;
           else {
-            var Uu;
-            const Eu = new Uint8Array(Math.max(null !== (Uu = null === Xu || void 0 === Xu ? void 0 : Xu.byteLength) && void 0 !== Uu ? Uu : 0, ju + su));
-            Xu && Eu.set(new Uint8Array(Xu.buffer, Xu.byteOffset, Xu.byteLength)), Eu.set(Zu, ju), uu.pending = Eu, uu.ownsPending = !0
+            var SG;
+            const bG = new Uint8Array(Math.max(null !== (SG = null === yG || void 0 === yG ? void 0 : yG.byteLength) && void 0 !== SG ? SG : 0, ZG + wG));
+            yG && bG.set(new Uint8Array(yG.buffer, yG.byteOffset, yG.byteLength)), bG.set(LG, ZG), GG.pending = bG, GG.ownsPending = !0
           }
         }
       }
-      updateSlot(uu, Eu, ju, su) {
-        const Uu = this.arena;
-        ju + Tu(su) > uu.size && (uu.size = Tu(Math.max(2 * uu.size, ju + su)), Uu.growTo(uu.slot + uu.size), this.gpuBuffersVersion++), 0 === su ? this.writeSlot(uu, ju, El, 0, 4, !1) : this.writeSlot(uu, ju, Eu, Eu.byteOffset, su, !0)
+      updateSlot(GG, bG, ZG, wG) {
+        const SG = this.arena;
+        ZG + HG(wG) > GG.size && (GG.size = HG(Math.max(2 * GG.size, ZG + wG)), SG.growTo(GG.slot + GG.size), this.gpuBuffersVersion++), 0 === wG ? this.writeSlot(GG, ZG, Gk, 0, 4, !1) : this.writeSlot(GG, ZG, bG, bG.byteOffset, wG, !0)
       }
-      writeSlot(uu, Eu, ju, su, Uu, Zu) {
-        const Xu = Eu + (Zu ? Tu(Uu) : Uu);
-        Xu > uu.slotBytes && this.moveSlot(uu, Xu), this.arena.write(uu.slot + Eu, ju, su, Uu, Zu)
+      writeSlot(GG, bG, ZG, wG, SG, LG) {
+        const yG = bG + (LG ? HG(SG) : SG);
+        yG > GG.slotBytes && this.moveSlot(GG, yG), this.arena.write(GG.slot + bG, ZG, wG, SG, LG)
       }
-      moveSlot(uu, Eu) {
-        const ju = this.arena,
-          su = HX.slotBytes(Math.max(Eu, Math.min(2 * uu.slotBytes, uu.size))),
-          Uu = ju.allocate(su, null, uu.size);
-        ju.move(uu.slot, Uu, uu.slotBytes), ju.free(uu.slot, uu.slotBytes), uu.slot = Uu, uu.slotBytes = su, this.gpuBuffersVersion++
+      moveSlot(GG, bG) {
+        const ZG = this.arena,
+          wG = Hy.slotBytes(Math.max(bG, Math.min(2 * GG.slotBytes, GG.size))),
+          SG = ZG.allocate(wG, null, GG.size);
+        ZG.move(GG.slot, SG, GG.slotBytes), ZG.free(GG.slot, GG.slotBytes), GG.slot = SG, GG.slotBytes = wG, this.gpuBuffersVersion++
       }
-      cover(uu, Eu) {
-        const ju = this.buffers.get(uu);
-        if (!ju || ju.slot < 0) return !1;
-        const su = Math.min(Eu, ju.size);
-        return !(su <= ju.slotBytes) && (this.moveSlot(ju, su), !0)
+      cover(GG, bG) {
+        const ZG = this.buffers.get(GG);
+        if (!ZG || ZG.slot < 0) return !1;
+        const wG = Math.min(bG, ZG.size);
+        return !(wG <= ZG.slotBytes) && (this.moveSlot(ZG, wG), !0)
       }
-      destroyBuffer(uu) {
-        var Eu;
-        null === (Eu = this.onDestroy) || void 0 === Eu || Eu.call(this, uu), uu.destroy()
+      destroyBuffer(GG) {
+        var bG;
+        null === (bG = this.onDestroy) || void 0 === bG || bG.call(this, GG), GG.destroy()
       }
-      gpuBuffer(uu) {
-        const Eu = this.buffers.get(uu);
-        if (!Eu) return null;
-        if (Eu.slot >= 0) return this.arena.buffer;
-        if (Eu.arena && Eu.pending) {
-          const uu = Eu.pending,
-            ju = this.arena;
-          return Eu.size = Tu(uu.byteLength), Eu.slotBytes = HX.slotBytes(function(uu) {
-            const Eu = new Uint8Array(uu.buffer, uu.byteOffset, uu.byteLength);
-            let ju = Eu.length;
-            if (uu.byteOffset % 4 === 0) {
-              for (; ju % 4 !== 0 && 0 === Eu[ju - 1];) ju--;
-              if (ju % 4 === 0) {
-                const Eu = new Uint32Array(uu.buffer, uu.byteOffset, ju / 4);
-                let su = Eu.length;
-                for (; su > 0 && 0 === Eu[su - 1];) su--;
-                ju = 4 * su
+      gpuBuffer(GG) {
+        const bG = this.buffers.get(GG);
+        if (!bG) return null;
+        if (bG.slot >= 0) return this.arena.buffer;
+        if (bG.arena && bG.pending) {
+          const GG = bG.pending,
+            ZG = this.arena;
+          return bG.size = HG(GG.byteLength), bG.slotBytes = Hy.slotBytes(function(GG) {
+            const bG = new Uint8Array(GG.buffer, GG.byteOffset, GG.byteLength);
+            let ZG = bG.length;
+            if (GG.byteOffset % 4 === 0) {
+              for (; ZG % 4 !== 0 && 0 === bG[ZG - 1];) ZG--;
+              if (ZG % 4 === 0) {
+                const bG = new Uint32Array(GG.buffer, GG.byteOffset, ZG / 4);
+                let wG = bG.length;
+                for (; wG > 0 && 0 === bG[wG - 1];) wG--;
+                ZG = 4 * wG
               }
             }
-            for (; ju > 0 && 0 === Eu[ju - 1];) ju--;
-            return ju
-          }(uu)), Eu.slot = ju.allocate(Eu.slotBytes, uu, Eu.size), Eu.pending = null, ju.buffer
+            for (; ZG > 0 && 0 === bG[ZG - 1];) ZG--;
+            return ZG
+          }(GG)), bG.slot = ZG.allocate(bG.slotBytes, GG, bG.size), bG.pending = null, ZG.buffer
         }
-        if (!Eu.gpu && Eu.pending) {
-          const uu = Eu.pending;
-          Eu.gpu = this.device.createBuffer({
-            label: Eu.label,
-            size: Tu(uu.byteLength),
-            usage: Eu.usage
-          }), nX(this.device, Eu.gpu, 0, uu, uu.byteLength), Eu.pending = null
+        if (!bG.gpu && bG.pending) {
+          const GG = bG.pending;
+          bG.gpu = this.device.createBuffer({
+            label: bG.label,
+            size: HG(GG.byteLength),
+            usage: bG.usage
+          }), Dy(this.device, bG.gpu, 0, GG, GG.byteLength), bG.pending = null
         }
-        return Eu.gpu
+        return bG.gpu
       }
-      gpuOffset(uu) {
-        var Eu, ju;
-        const su = null !== (Eu = null === (ju = this.buffers.get(uu)) || void 0 === ju ? void 0 : ju.slot) && void 0 !== Eu ? Eu : -1;
-        return su < 0 ? 0 : su
+      gpuOffset(GG) {
+        var bG, ZG;
+        const wG = null !== (bG = null === (ZG = this.buffers.get(GG)) || void 0 === ZG ? void 0 : ZG.slot) && void 0 !== bG ? bG : -1;
+        return wG < 0 ? 0 : wG
       }
-      gpuEnd(uu) {
-        var Eu, ju;
-        const su = this.buffers.get(uu);
-        return su ? su.slot >= 0 ? su.slot + su.size : null !== (Eu = null === (ju = su.gpu) || void 0 === ju ? void 0 : ju.size) && void 0 !== Eu ? Eu : 0 : 0
+      gpuEnd(GG) {
+        var bG, ZG;
+        const wG = this.buffers.get(GG);
+        return wG ? wG.slot >= 0 ? wG.slot + wG.size : null !== (bG = null === (ZG = wG.gpu) || void 0 === ZG ? void 0 : ZG.size) && void 0 !== bG ? bG : 0 : 0
       }
-      vertexInput(uu, Eu, ju) {
-        var su, Uu, Zu, Xu;
-        return null !== (su = null !== (Uu = ju && this.modelInput(ju, Eu)) && void 0 !== Uu ? Uu : null === (Zu = null !== (Xu = this.E_.get(uu)) && void 0 !== Xu ? Xu : this.batchUploads.get(uu)) || void 0 === Zu ? void 0 : Zu.inputs[Eu]) && void 0 !== su ? su : null
+      vertexInput(GG, bG, ZG) {
+        var wG, SG, LG, yG;
+        return null !== (wG = null !== (SG = ZG && this.modelInput(ZG, bG)) && void 0 !== SG ? SG : null === (LG = null !== (yG = this.j_.get(GG)) && void 0 !== yG ? yG : this.batchUploads.get(GG)) || void 0 === LG ? void 0 : LG.inputs[bG]) && void 0 !== wG ? wG : null
       }
-      modelInput(uu, Eu) {
-        const ju = this.geometrySlot(uu);
-        let su = ju.inputs.get(Eu);
-        if (void 0 === su) {
-          const Uu = uu.vertexAttributes.find((uu => uu.kind === Eu));
-          su = Uu ? new OE(this.modelKey(ju, Uu.data, !1), Uu.offset, Uu.stride, Uu.components, !1, Uu.glType, Uu.isNormalized) : null, ju.inputs.set(Eu, su)
+      modelInput(GG, bG) {
+        const ZG = this.geometrySlot(GG);
+        let wG = ZG.inputs.get(bG);
+        if (void 0 === wG) {
+          const SG = GG.vertexAttributes.find((GG => GG.kind === bG));
+          wG = SG ? new Kb(this.modelKey(ZG, SG.data, !1), SG.offset, SG.stride, SG.components, !1, SG.glType, SG.isNormalized) : null, ZG.inputs.set(bG, wG)
         }
-        return su
+        return wG
       }
-      modelIndex(uu) {
-        return uu.indexData && this.modelKey(this.geometrySlot(uu), uu.indexData, !0)
+      modelIndex(GG) {
+        return GG.indexData && this.modelKey(this.geometrySlot(GG), GG.indexData, !0)
       }
-      geometrySlot(uu) {
-        var Eu;
-        let ju = uu.gpu[Pu.f.lite];
-        if ((null === (Eu = ju) || void 0 === Eu ? void 0 : Eu.epoch) !== this.epoch) {
-          const Eu = new Map,
-            su = () => {
-              for (const uu of Eu.values()) this.bufferDeleted(uu)
+      geometrySlot(GG) {
+        var bG;
+        let ZG = GG.gpu[mG.e.lite];
+        if ((null === (bG = ZG) || void 0 === bG ? void 0 : bG.epoch) !== this.epoch) {
+          const bG = new Map,
+            wG = () => {
+              for (const GG of bG.values()) this.bufferDeleted(GG)
             },
-            Uu = uu => {
-              const ju = Eu.get(uu);
-              ju && this.vertexBufferUpdated(ju, uu)
+            SG = GG => {
+              const ZG = bG.get(GG);
+              ZG && this.vertexBufferUpdated(ZG, GG)
             };
-          ju = {
-            keys: Eu,
+          ZG = {
+            keys: bG,
             inputs: new Map,
-            release: su,
-            updated: Uu,
+            release: wG,
+            updated: SG,
             epoch: this.epoch
-          }, uu.gpu[Pu.f.lite] = ju
+          }, GG.gpu[mG.e.lite] = ZG
         }
-        return ju
+        return ZG
       }
-      modelKey(uu, Eu, ju) {
-        let su = uu.keys.get(Eu);
-        if (!su) {
-          if (ju) {
-            const uu = {
-              Mb: 0,
+      modelKey(GG, bG, ZG) {
+        let wG = GG.keys.get(bG);
+        if (!wG) {
+          if (ZG) {
+            const GG = {
+              rp: 0,
               is32Bits: !1
             };
-            this.indexBufferCreated(uu, Eu, "model-indices"), su = uu
-          } else su = {
-            Mb: 0
-          }, this.vertexBufferCreated(su, Eu, !1, "model-vertices");
-          uu.keys.set(Eu, su)
+            this.indexBufferCreated(GG, bG, "model-indices"), wG = GG
+          } else wG = {
+            rp: 0
+          }, this.vertexBufferCreated(wG, bG, !1, "model-vertices");
+          GG.keys.set(bG, wG)
         }
-        return su
+        return wG
       }
-      indexFormat(uu) {
-        return uu.is32Bits ? "uint32" : "uint16"
+      indexFormat(GG) {
+        return GG.is32Bits ? "uint32" : "uint16"
       }
       get texturesLoading() {
         return this.pending
       }
-      releaseSlot(uu, Eu) {
-        --uu.refs > 0 || (this.releaseTexture(uu), LX(uu.images), null !== Eu && this.textures.delete(Eu))
+      releaseSlot(GG, bG) {
+        --GG.refs > 0 || (this.releaseTexture(GG), gy(GG.images), null !== bG && this.textures.delete(bG))
       }
-      load(uu, Eu) {
+      load(GG, bG) {
         const {
-          epoch: ju
-        } = this, su = Eu.decoded = async function(uu) {
-          if ("cube" === uu.kind) return async function(uu) {
-            if (6 !== uu.length) throw new Error(`${uu.length} files where six faces were expected`);
-            const Eu = await tX(uu.map((uu => Ru(uu)))),
-              ju = Eu[0].width;
-            return tX(Eu.map((async uu => {
-              if (uu.width === ju && uu.height === ju) return uu;
+          epoch: ZG
+        } = this, wG = bG.decoded = async function(GG) {
+          if ("cube" === GG.kind) return async function(GG) {
+            if (6 !== GG.length) throw new Error(`${GG.length} files where six faces were expected`);
+            const bG = await ey(GG.map((GG => BG(GG)))),
+              ZG = bG[0].width;
+            return ey(bG.map((async GG => {
+              if (GG.width === ZG && GG.height === ZG) return GG;
               try {
-                return await createImageBitmap(uu, {
-                  ...yu,
-                  resizeWidth: ju,
-                  resizeHeight: ju
+                return await createImageBitmap(GG, {
+                  ...OG,
+                  resizeWidth: ZG,
+                  resizeHeight: ZG
                 })
               } finally {
-                uu.close()
+                GG.close()
               }
             })))
-          }(uu.files);
-          if ("data" === uu.kind && uu.data) return [await createImageBitmap(new Blob([uu.data]), yu)];
-          return [await Ru(ul(uu))]
-        }(uu.source).then((uu => {
-          0 === Eu.refs || ju !== this.epoch ? LX(uu) : Eu.images = uu
+          }(GG.files);
+          if ("data" === GG.kind && GG.data) return [await createImageBitmap(new Blob([GG.data]), OG)];
+          return [await BG(By(GG))]
+        }(GG.source).then((GG => {
+          0 === bG.refs || ZG !== this.epoch ? gy(GG) : bG.images = GG
         }));
-        this.track(Eu, ul(uu.source), su, (() => {
-          Eu.wanted && !Eu.failed && Eu.refs > 0 && this.upload(uu, Eu)
+        this.track(bG, By(GG.source), wG, (() => {
+          bG.wanted && !bG.failed && bG.refs > 0 && this.upload(GG, bG)
         }))
       }
-      canvasUpdated(uu, Eu, ju) {
+      canvasUpdated(GG, bG, ZG) {
         const {
-          state: su
-        } = this.textureSlot(uu);
-        su.dynamicSource = {
-          invertY: Eu,
-          premultiplied: ju
-        }, su.dynamic && this.pushDynamic(uu.source, su)
+          state: wG
+        } = this.textureSlot(GG);
+        wG.dynamicSource = {
+          invertY: bG,
+          premultiplied: ZG
+        }, wG.dynamic && this.pushDynamic(GG.source, wG)
       }
-      async atlasArrays(uu) {
+      async atlasArrays(GG) {
         const {
-          device: Eu,
-          epoch: ju
+          device: bG,
+          epoch: ZG
         } = this;
-        let su;
+        let wG;
         try {
-          su = await EE(Eu, uu)
-        } catch (Zu) {
-          if (ju === this.epoch) {
-            if (!fE(Eu)) throw Zu;
-            await new Promise((uu => {
-              this.rebindWaiters.push(uu)
+          wG = await bb(bG, GG)
+        } catch (LG) {
+          if (ZG === this.epoch) {
+            if (!Yb(bG)) throw LG;
+            await new Promise((GG => {
+              this.rebindWaiters.push(GG)
             }))
           }
-          return this.atlasArrays(uu)
+          return this.atlasArrays(GG)
         }
-        if (su.forEach(((Eu, ju) => {
-            this.atlasSources.has(Eu) || this.atlasSources.set(Eu, {
-              sources: uu,
-              index: ju,
-              stride: su[0].layers
+        if (wG.forEach(((bG, ZG) => {
+            this.atlasSources.has(bG) || this.atlasSources.set(bG, {
+              sources: GG,
+              index: ZG,
+              stride: wG[0].layers
             })
-          })), ju !== this.epoch) return su;
-        const Uu = (0, iX.e)(this.engine, {
+          })), ZG !== this.epoch) return wG;
+        const SG = (0, Py.e)(this.engine, {
           magFilter: "nearest",
           minFilter: "nearest",
           mipmapFilter: "linear",
           addressModeU: "repeat",
           addressModeV: "repeat"
         });
-        for (const Xu of su) this.atlasBindings.has(Xu) || this.atlasBindings.set(Xu, {
-          view: Xu.texture.createView({
+        for (const yG of wG) this.atlasBindings.has(yG) || this.atlasBindings.set(yG, {
+          view: yG.texture.createView({
             dimension: "2d-array"
           }),
-          sampler: Uu
+          sampler: SG
         });
-        return su
+        return wG
       }
-      boundTexture(uu) {
-        const Eu = this.atlasBindings.get(uu);
-        if (Eu) return Eu;
-        const ju = this.atlasSources.get(uu);
-        if (ju) return this.rebuildAtlas(uu, ju), null;
-        const su = uu;
-        if (su.released) return null;
-        const Uu = this.textureSlot(su, !0),
+      boundTexture(GG) {
+        const bG = this.atlasBindings.get(GG);
+        if (bG) return bG;
+        const ZG = this.atlasSources.get(GG);
+        if (ZG) return this.rebuildAtlas(GG, ZG), null;
+        const wG = GG;
+        if (wG.released) return null;
+        const SG = this.textureSlot(wG, !0),
           {
-            state: Zu
-          } = Uu;
-        if (!Zu.view && (Zu.wanted = !0, Zu.loading || Zu.failed || this.upload(su, Zu), !Zu.view)) return null;
-        const Xu = this.chosenSampler(su, Uu),
-          lu = Uu.bound;
-        return lu && lu.view === Zu.view && lu.sampler === Xu ? lu : (Uu.bound = {
-          view: Zu.view,
-          sampler: Xu
-        }, Uu.bound)
+            state: LG
+          } = SG;
+        if (!LG.view && (LG.wanted = !0, LG.loading || LG.failed || this.upload(wG, LG), !LG.view)) return null;
+        const yG = this.chosenSampler(wG, SG),
+          kG = SG.bound;
+        return kG && kG.view === LG.view && kG.sampler === yG ? kG : (SG.bound = {
+          view: LG.view,
+          sampler: yG
+        }, SG.bound)
       }
-      rebuildAtlas(uu, Eu) {
+      rebuildAtlas(GG, bG) {
         let {
-          sources: ju,
-          index: su,
-          stride: Uu
-        } = Eu;
-        if (this.atlasRebuilds.has(uu)) return;
-        this.atlasRebuilds.add(uu);
+          sources: ZG,
+          index: wG,
+          stride: SG
+        } = bG;
+        if (this.atlasRebuilds.has(GG)) return;
+        this.atlasRebuilds.add(GG);
         const {
-          epoch: Zu
+          epoch: LG
         } = this;
-        this.atlasArrays(ju).then((Eu => {
-          Eu[0].layers === Uu && Eu[su] ? Zu === this.epoch && this.atlasBindings.set(uu, this.atlasBindings.get(Eu[su])) : console.error(`Lite: the new device splits the atlas ${zu(ju.urls[0])} into other arrays than its materials read`)
-        }), (uu => {
-          console.error(`Lite: could not build the atlas ${zu(ju.urls[0])} again on a new device`, uu)
+        this.atlasArrays(ZG).then((bG => {
+          bG[0].layers === SG && bG[wG] ? LG === this.epoch && this.atlasBindings.set(GG, this.atlasBindings.get(bG[wG])) : console.error(`Lite: the new device splits the atlas ${xG(ZG.urls[0])} into other arrays than its materials read`)
+        }), (GG => {
+          console.error(`Lite: could not build the atlas ${xG(ZG.urls[0])} again on a new device`, GG)
         }))
       }
-      textureLoaded(uu) {
-        var Eu, ju;
-        return null !== (Eu = null === (ju = this.heldSlot(uu)) || void 0 === ju ? void 0 : ju.state.decoded) && void 0 !== Eu ? Eu : null
+      textureLoaded(GG) {
+        var bG, ZG;
+        return null !== (bG = null === (ZG = this.heldSlot(GG)) || void 0 === ZG ? void 0 : ZG.state.decoded) && void 0 !== bG ? bG : null
       }
-      textureFailed(uu) {
-        var Eu;
-        return !0 === (null === (Eu = this.heldSlot(uu)) || void 0 === Eu ? void 0 : Eu.state.failed)
+      textureFailed(GG) {
+        var bG;
+        return !0 === (null === (bG = this.heldSlot(GG)) || void 0 === bG ? void 0 : bG.state.failed)
       }
-      heldSlot(uu) {
-        const Eu = uu.gpu[Pu.f.lite];
-        return (null === Eu || void 0 === Eu ? void 0 : Eu.epoch) === this.epoch ? Eu : void 0
+      heldSlot(GG) {
+        const bG = GG.gpu[mG.e.lite];
+        return (null === bG || void 0 === bG ? void 0 : bG.epoch) === this.epoch ? bG : void 0
       }
-      chosenSampler(uu, Eu) {
+      chosenSampler(GG, bG) {
         const {
-          samplingMode: ju,
-          wrapU: su,
-          wrapV: Uu
-        } = uu.sampler, Zu = Eu.state.hasMips, Xu = function(uu, Eu) {
+          samplingMode: ZG,
+          wrapU: wG,
+          wrapV: SG
+        } = GG.sampler, LG = bG.state.hasMips, yG = function(GG, bG) {
           const {
-            bilinear: ju,
-            trilinear: su
-          } = Pu.i;
-          return !Eu && uu !== ju || 11 !== uu && uu !== su && uu !== ju ? 1 : 4
-        }(ju, Zu), lu = Eu.sampler;
-        if (lu && lu.samplingMode === ju && lu.hasMips === Zu && lu.anisotropy === Xu && lu.wrapU === su && lu.wrapV === Uu) return lu.sampler;
-        const qu = this.samplerFor(ju, Zu, Xu, su, Uu);
-        return Eu.sampler = {
-          samplingMode: ju,
-          hasMips: Zu,
-          anisotropy: Xu,
-          wrapU: su,
-          wrapV: Uu,
-          sampler: qu
-        }, qu
+            bilinear: ZG,
+            trilinear: wG
+          } = mG.g;
+          return !bG && GG !== ZG || 11 !== GG && GG !== wG && GG !== ZG ? 1 : 4
+        }(ZG, LG), kG = bG.sampler;
+        if (kG && kG.samplingMode === ZG && kG.hasMips === LG && kG.anisotropy === yG && kG.wrapU === wG && kG.wrapV === SG) return kG.sampler;
+        const UG = this.samplerFor(ZG, LG, yG, wG, SG);
+        return bG.sampler = {
+          samplingMode: ZG,
+          hasMips: LG,
+          anisotropy: yG,
+          wrapU: wG,
+          wrapV: SG,
+          sampler: UG
+        }, UG
       }
-      releaseTexture(uu) {
-        var Eu, ju;
-        uu.view && (null === (ju = this.onDestroy) || void 0 === ju || ju.call(this, uu.view));
-        null === (Eu = uu.destroy) || void 0 === Eu || Eu.call(uu)
+      releaseTexture(GG) {
+        var bG, ZG;
+        GG.view && (null === (ZG = this.onDestroy) || void 0 === ZG || ZG.call(this, GG.view));
+        null === (bG = GG.destroy) || void 0 === bG || bG.call(GG)
       }
-      textureSlot(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const ju = uu.gpu[Pu.f.lite];
-        if ((null === ju || void 0 === ju ? void 0 : ju.epoch) === this.epoch) return ju;
-        const su = function(uu) {
+      textureSlot(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const ZG = GG.gpu[mG.e.lite];
+        if ((null === ZG || void 0 === ZG ? void 0 : ZG.epoch) === this.epoch) return ZG;
+        const wG = function(GG) {
           let {
-            source: Eu,
-            sampler: ju
-          } = uu;
-          return "canvas" === Eu.kind ? null : `${Eu.kind}|${ul(Eu)}|${ju.noMipmap}|${ju.samplingMode}|${ju.invertY}`
-        }(uu);
-        let Uu = null === su ? void 0 : this.textures.get(su);
-        var Zu;
-        Uu || (Uu = {
+            source: bG,
+            sampler: ZG
+          } = GG;
+          return "canvas" === bG.kind ? null : `${bG.kind}|${By(bG)}|${ZG.noMipmap}|${ZG.samplingMode}|${ZG.invertY}`
+        }(GG);
+        let SG = null === wG ? void 0 : this.textures.get(wG);
+        var LG;
+        SG || (SG = {
           refs: 0,
           view: null,
           destroy: null,
@@ -5066,212 +5066,212 @@ export const modules = {
           hasMips: !1,
           images: null,
           dynamic: null,
-          dynamicSource: null !== (Zu = null === ju || void 0 === ju ? void 0 : ju.state.dynamicSource) && void 0 !== Zu ? Zu : null
-        }, null !== su && (this.textures.set(su, Uu), this.load(uu, Uu), Eu && !ju && this.firstBindDecodes++));
-        Uu.refs++;
-        const Xu = Uu,
+          dynamicSource: null !== (LG = null === ZG || void 0 === ZG ? void 0 : ZG.state.dynamicSource) && void 0 !== LG ? LG : null
+        }, null !== wG && (this.textures.set(wG, SG), this.load(GG, SG), bG && !ZG && this.firstBindDecodes++));
+        SG.refs++;
+        const yG = SG,
           {
-            epoch: lu
+            epoch: kG
           } = this,
-          qu = {
-            state: Uu,
+          UG = {
+            state: SG,
             bound: null,
             sampler: null,
             release: () => {
-              lu === this.epoch && this.releaseSlot(Xu, su)
+              kG === this.epoch && this.releaseSlot(yG, wG)
             },
-            epoch: lu
+            epoch: kG
           };
-        return uu.gpu[Pu.f.lite] = qu, qu
+        return GG.gpu[mG.e.lite] = UG, UG
       }
-      samplerFor(uu, Eu, ju, su, Uu) {
-        const Zu = `${uu}|${Eu}|${ju}|${su}|${Uu}`;
-        let Xu = this.samplers.get(Zu);
-        if (!Xu) {
-          const lu = {
-            ...yX(uu, Eu, ju),
-            addressModeU: zX(su),
-            addressModeV: zX(Uu)
+      samplerFor(GG, bG, ZG, wG, SG) {
+        const LG = `${GG}|${bG}|${ZG}|${wG}|${SG}`;
+        let yG = this.samplers.get(LG);
+        if (!yG) {
+          const kG = {
+            ...Ny(GG, bG, ZG),
+            addressModeU: Oy(wG),
+            addressModeV: Oy(SG)
           };
-          Xu = (0, iX.e)(this.engine, lu), this.samplers.set(Zu, Xu)
+          yG = (0, Py.e)(this.engine, kG), this.samplers.set(LG, yG)
         }
-        return Xu
+        return yG
       }
-      upload(uu, Eu) {
+      upload(GG, bG) {
         const {
-          source: ju,
-          sampler: su
-        } = uu;
-        Eu.hasMips = !su.noMipmap, "canvas" === ju.kind ? this.createDynamic(ju, Eu) : "cube" === ju.kind ? this.uploadCube(Eu, ju.luminance) : this.uploadImage(Eu, !0 === su.invertY, ju.url)
+          source: ZG,
+          sampler: wG
+        } = GG;
+        bG.hasMips = !wG.noMipmap, "canvas" === ZG.kind ? this.createDynamic(ZG, bG) : "cube" === ZG.kind ? this.uploadCube(bG, ZG.luminance) : this.uploadImage(bG, !0 === wG.invertY, ZG.url)
       }
-      uploadImage(uu, Eu, ju) {
-        const [su] = uu.images;
-        uu.images = null;
+      uploadImage(GG, bG, ZG) {
+        const [wG] = GG.images;
+        GG.images = null;
         const {
-          epoch: Uu
-        } = this, Zu = (0, WX.d)(this.engine, su, {
-          mipMaps: uu.hasMips,
-          invertY: Eu,
+          epoch: SG
+        } = this, LG = (0, My.d)(this.engine, wG, {
+          mipMaps: GG.hasMips,
+          invertY: bG,
           srgb: !1
-        }).then((Eu => {
-          su.close(), 0 !== uu.refs && Uu === this.epoch ? (uu.view = Eu.view, uu.destroy = Eu.texture.destroy.bind(Eu.texture)) : Eu.texture.destroy()
+        }).then((bG => {
+          wG.close(), 0 !== GG.refs && SG === this.epoch ? (GG.view = bG.view, GG.destroy = bG.texture.destroy.bind(bG.texture)) : bG.texture.destroy()
         }));
-        this.track(uu, ju, Zu)
+        this.track(GG, ZG, LG)
       }
-      track(uu, Eu, ju, su) {
+      track(GG, bG, ZG, wG) {
         const {
-          epoch: Uu
+          epoch: SG
         } = this;
-        uu.loading = !0, this.pending++, ju.catch((ju => {
-          Uu === this.epoch && (uu.failed = !0, console.warn(`Lite: could not load texture ${zu(Eu)}`, ju))
+        GG.loading = !0, this.pending++, ZG.catch((ZG => {
+          SG === this.epoch && (GG.failed = !0, console.warn(`Lite: could not load texture ${xG(bG)}`, ZG))
         })).finally((() => {
-          Uu === this.epoch && (uu.loading = !1, this.pending--, null === su || void 0 === su || su())
+          SG === this.epoch && (GG.loading = !1, this.pending--, null === wG || void 0 === wG || wG())
         }))
       }
-      uploadCube(uu, Eu) {
-        const ju = uu.images;
-        uu.images = null;
-        const su = BX(this.engine, this.device, ju, (0, Pu.x)(Eu), uu.hasMips);
-        uu.view = su.createView({
+      uploadCube(GG, bG) {
+        const ZG = GG.images;
+        GG.images = null;
+        const wG = ny(this.engine, this.device, ZG, (0, mG.v)(bG), GG.hasMips);
+        GG.view = wG.createView({
           dimension: "cube"
-        }), uu.destroy = () => {
-          su.destroy()
+        }), GG.destroy = () => {
+          wG.destroy()
         }
       }
-      createDynamic(uu, Eu) {
+      createDynamic(GG, bG) {
         const {
-          canvas: ju
-        } = uu, su = (0, SX.d)(this.engine, Math.max(1, ju.width), Math.max(1, ju.height), {
-          mipMaps: Eu.hasMips,
+          canvas: ZG
+        } = GG, wG = (0, Ay.c)(this.engine, Math.max(1, ZG.width), Math.max(1, ZG.height), {
+          mipMaps: bG.hasMips,
           srgb: !1
         });
-        Eu.dynamic = su, Eu.view = su.view, Eu.destroy = () => {
-          su.texture.destroy()
-        }, this.pushDynamic(uu, Eu)
+        bG.dynamic = wG, bG.view = wG.view, bG.destroy = () => {
+          wG.texture.destroy()
+        }, this.pushDynamic(GG, bG)
       }
-      pushDynamic(uu, Eu) {
-        const ju = Eu.dynamicSource,
-          su = Eu.dynamic,
+      pushDynamic(GG, bG) {
+        const ZG = bG.dynamicSource,
+          wG = bG.dynamic,
           {
-            canvas: Uu
-          } = uu;
-        if (ju && su && 0 !== Uu.width && 0 !== Uu.height) return Uu.width !== su.width || Uu.height !== su.height ? (this.releaseTexture(Eu), Eu.dynamic = null, Eu.view = null, void this.createDynamic(uu, Eu)) : void(0, SX.e)(this.engine, su, Uu, {
-          invertY: ju.invertY,
-          premultiplyAlpha: ju.premultiplied
+            canvas: SG
+          } = GG;
+        if (ZG && wG && 0 !== SG.width && 0 !== SG.height) return SG.width !== wG.width || SG.height !== wG.height ? (this.releaseTexture(bG), bG.dynamic = null, bG.view = null, void this.createDynamic(GG, bG)) : void(0, Ay.e)(this.engine, wG, SG, {
+          invertY: ZG.invertY,
+          premultiplyAlpha: ZG.premultiplied
         })
       }
     }
 
-    function ul(uu) {
-      return "cube" === uu.kind ? uu.rootUrl : "canvas" === uu.kind ? "canvas" : uu.url
+    function By(GG) {
+      return "cube" === GG.kind ? GG.rootUrl : "canvas" === GG.kind ? "canvas" : GG.url
     }
-    const El = new Uint8Array(4);
-    var jl = ju(39093);
+    const Gk = new Uint8Array(4);
+    var bk = ZG(39152);
 
-    function sl(uu) {
-      const Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "store" : "discard";
-      uu._colorAttachment.storeOp = uu._targetSignature._sampleCount > 1 ? Eu : "store";
-      const ju = uu._renderPassDescriptor.depthStencilAttachment;
-      ju && (ju.depthStoreOp = Eu, ju.stencilStoreOp && (ju.stencilStoreOp = Eu))
+    function Zk(GG) {
+      const bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "store" : "discard";
+      GG._colorAttachment.storeOp = GG._targetSignature._sampleCount > 1 ? bG : "store";
+      const ZG = GG._renderPassDescriptor.depthStencilAttachment;
+      ZG && (ZG.depthStoreOp = bG, ZG.stencilStoreOp && (ZG.stencilStoreOp = bG))
     }
-    var Ul = ju(38154),
-      Zl = ju(38211),
-      Xl = ju(37854),
-      ll = ju(39887);
-    const ql = new Float64Array([1, 1, 1]),
-      fl = new Float64Array([0, 1, 0]),
-      Cl = new Float64Array(4),
-      bl = new Float32Array(16),
-      cl = new Float64Array(3),
-      Nl = new Float64Array(4);
+    var wk = ZG(38175),
+      Sk = ZG(38225),
+      Lk = ZG(37835),
+      yk = ZG(39970);
+    const kk = new Float64Array([1, 1, 1]),
+      Uk = new Float64Array([0, 1, 0]),
+      Yk = new Float64Array(4),
+      Vk = new Float32Array(16),
+      pk = new Float64Array(3),
+      fk = new Float64Array(4);
 
-    function Ol(uu, Eu, ju) {
-      uu.fov = Eu.fov, uu.near = Eu.near, uu.far = Eu.far, uu.renderWidth = ju.renderWidth, uu.renderHeight = ju.renderHeight, (0, Xl.p)(Eu.holderRotation, 0, Cl, 0), (0, Xl.d)(ql, 0, Cl, 0, Eu.holderPosition, 0, bl);
-      const su = Eu.jR;
-      cl[0] = su[0], cl[1] = su[1], cl[2] = su[2] + 1;
-      const Uu = uu.viewMatrix;
-      (0, Xl.i)(su, cl, fl, Uu), (0, Xl.f)(Uu, 0, Uu), (0, Xl.j)(Uu, bl, 0, Uu), (0, Xl.f)(Uu, 0, Uu);
-      const Zu = uu.worldMatrix;
-      (0, Xl.f)(Uu, 0, Zu), uu.eye[0] = Zu[12], uu.eye[1] = Zu[13], uu.eye[2] = Zu[14], Nl[0] = uu.fov, Nl[1] = uu.renderWidth / uu.renderHeight, Nl[2] = uu.near, Nl[3] = uu.far, (0, Xl.l)(Nl, uu.projectionMatrix), (0, Xl.j)(Uu, uu.projectionMatrix, 0, uu.viewProjectionMatrix), (0, ll.h)(uu.viewProjectionMatrix, uu.frustum)
+    function Qk(GG, bG, ZG) {
+      GG.fov = bG.fov, GG.near = bG.near, GG.far = bG.far, GG.renderWidth = ZG.renderWidth, GG.renderHeight = ZG.renderHeight, (0, Lk.s)(bG.holderRotation, 0, Yk, 0), (0, Lk.d)(kk, 0, Yk, 0, bG.holderPosition, 0, Vk);
+      const wG = bG.I3;
+      pk[0] = wG[0], pk[1] = wG[1], pk[2] = wG[2] + 1;
+      const SG = GG.viewMatrix;
+      (0, Lk.j)(wG, pk, Uk, SG), (0, Lk.g)(SG, 0, SG), (0, Lk.n)(SG, Vk, 0, SG), (0, Lk.g)(SG, 0, SG);
+      const LG = GG.worldMatrix;
+      (0, Lk.g)(SG, 0, LG), GG.eye[0] = LG[12], GG.eye[1] = LG[13], GG.eye[2] = LG[14], fk[0] = GG.fov, fk[1] = GG.renderWidth / GG.renderHeight, fk[2] = GG.near, fk[3] = GG.far, (0, Lk.q)(fk, GG.projectionMatrix), (0, Lk.n)(SG, GG.projectionMatrix, 0, GG.viewProjectionMatrix), (0, yk.g)(GG.viewProjectionMatrix, GG.frustum)
     }
 
-    function Yl(uu, Eu) {
-      let ju = uu.frustumPlanes;
-      ju || (ju = uu.frustumPlanes = Array.from({
+    function Kk(GG, bG) {
+      let ZG = GG.frustumPlanes;
+      ZG || (ZG = GG.frustumPlanes = Array.from({
         length: 6
-      }, (() => new Ul.d(0, 0, 0, 0))));
-      for (let su = 0; su < 6; su++) {
-        const uu = ju[su].normal;
-        uu._x = Eu[4 * su], uu._y = Eu[4 * su + 1], uu._z = Eu[4 * su + 2], uu._isDirty = !0, ju[su].d = Eu[4 * su + 3]
+      }, (() => new wk.b(0, 0, 0, 0))));
+      for (let wG = 0; wG < 6; wG++) {
+        const GG = ZG[wG].normal;
+        GG._x = bG[4 * wG], GG._y = bG[4 * wG + 1], GG._z = bG[4 * wG + 2], GG._isDirty = !0, ZG[wG].d = bG[4 * wG + 3]
       }
     }
 
-    function hl(uu, Eu) {
-      const ju = Eu.clearColor;
-      uu.clearColour[0] = ju.r, uu.clearColour[1] = ju.g, uu.clearColour[2] = ju.b, uu.clearColour[3] = ju.a;
-      const su = Eu.ambientColor;
-      uu.ambientColour[0] = su.r, uu.ambientColour[1] = su.g, uu.ambientColour[2] = su.b, uu.animationRatio = Eu.animationRatio, uu.frameId = Eu.frameId, uu.version++
+    function hk(GG, bG) {
+      const ZG = bG.clearColor;
+      GG.clearColour[0] = ZG.r, GG.clearColour[1] = ZG.g, GG.clearColour[2] = ZG.b, GG.clearColour[3] = ZG.a;
+      const wG = bG.ambientColor;
+      GG.ambientColour[0] = wG.r, GG.ambientColour[1] = wG.g, GG.ambientColour[2] = wG.b, GG.animationRatio = bG.animationRatio, GG.frameId = bG.frameId, GG.version++
     }
 
-    function Dl(uu) {
-      const Eu = uu.model.view;
-      return Eu.animTick = (0, Zl.e)(), Eu.timeMs = performance.now(), hl(Eu, uu.vY), uu.model.update(Eu.frameId), Eu
+    function dk(GG) {
+      const bG = GG.model.view;
+      return bG.animTick = (0, Sk.e)(), bG.timeMs = performance.now(), hk(bG, GG.Ah), GG.model.update(bG.frameId), bG
     }
 
-    function gl(uu) {
-      const Eu = uu.vY,
+    function Jk(GG) {
+      const bG = GG.Ah,
         {
-          view: ju,
-          uR: su
-        } = uu.model;
-      return Ol(ju, su, Eu.wO()), Eu.onBeforeRenderObservable.notifyObservers(Eu), Yl(Eu, ju.frustum), Eu.onBeforeCameraRenderObservable.notifyObservers(Eu.activeCamera), Dl(uu)
+          view: ZG,
+          o3: wG
+        } = GG.model;
+      return Qk(ZG, wG, bG.CK()), bG.onBeforeRenderObservable.notifyObservers(bG), Kk(bG, ZG.frustum), bG.onBeforeCameraRenderObservable.notifyObservers(bG.activeCamera), dk(GG)
     }
-    var Ml = ju(37821),
-      el = ju(37922),
-      Gl = ju(38206);
+    var rk = ZG(37793),
+      zk = ZG(37910),
+      Ek = ZG(38214);
 
-    function pl(uu) {
-      var Eu, ju;
-      const su = (0, du.$)(uu);
-      if (!su || su.diffuseTexture && (0, Gl.h)(uu)) return null;
-      const Uu = null === (Eu = (0, du.z)(su, wu.h.name)) || void 0 === Eu ? void 0 : Eu.state,
-        Zu = null === (ju = (0, du.z)(su, uX.c.name)) || void 0 === ju ? void 0 : ju.state,
-        Xu = new Float32Array(16);
-      return function(uu, Eu, ju, su) {
-        var Uu, Zu;
-        const Xu = is;
-        su.set(uu.diffuseColor, Xu.diffuse), su[Xu.diffuse + 3] = uu.alpha, su.set(uu.ambientColor, Xu.ambientAndCutoff), su[Xu.ambientAndCutoff + 3] = uu.alphaCutOff, su.set(uu.emissiveColor, Xu.emissiveAndLevel), su[Xu.emissiveAndLevel + 3] = null !== (Uu = null === (Zu = uu.diffuseTexture) || void 0 === Zu ? void 0 : Zu.level) && void 0 !== Uu ? Uu : 1, null !== Eu && void 0 !== Eu && Eu.animDataPerTex ? (su[Xu.anim + 1] = Zl.b, su[Xu.anim + 2] = Eu.animDataPerTex.length / 3 - 1) : ju && (su[Xu.anim + 1] = ju.numAnimStates, su[Xu.anim + 2] = ju.ticksPerAnimState)
-      }(su, Uu, Zu, Xu), {
-        model: su,
-        atlas: Uu,
-        texture: Uu ? "atlas" : su.diffuseTexture ? "single" : "none",
-        animated: Uu ? !!Uu.animDataPerTex : !!Zu,
-        liquid: (0, Gl.j)(uu),
-        customRenderMat: (0, Gl.h)(uu),
-        uniformData: Xu
+    function Xk(GG) {
+      var bG, ZG;
+      const wG = (0, CG.eb)(GG);
+      if (!wG || wG.diffuseTexture && (0, Ek.g)(GG)) return null;
+      const SG = null === (bG = (0, CG.z)(wG, uG.i.name)) || void 0 === bG ? void 0 : bG.state,
+        LG = null === (ZG = (0, CG.z)(wG, BL.c.name)) || void 0 === ZG ? void 0 : ZG.state,
+        yG = new Float32Array(16);
+      return function(GG, bG, ZG, wG) {
+        var SG, LG;
+        const yG = Pw;
+        wG.set(GG.diffuseColor, yG.diffuse), wG[yG.diffuse + 3] = GG.alpha, wG.set(GG.ambientColor, yG.ambientAndCutoff), wG[yG.ambientAndCutoff + 3] = GG.alphaCutOff, wG.set(GG.emissiveColor, yG.emissiveAndLevel), wG[yG.emissiveAndLevel + 3] = null !== (SG = null === (LG = GG.diffuseTexture) || void 0 === LG ? void 0 : LG.level) && void 0 !== SG ? SG : 1, null !== bG && void 0 !== bG && bG.animDataPerTex ? (wG[yG.anim + 1] = Sk.d, wG[yG.anim + 2] = bG.animDataPerTex.length / 3 - 1) : ZG && (wG[yG.anim + 1] = ZG.numAnimStates, wG[yG.anim + 2] = ZG.ticksPerAnimState)
+      }(wG, SG, LG, yG), {
+        model: wG,
+        atlas: SG,
+        texture: SG ? "atlas" : wG.diffuseTexture ? "single" : "none",
+        animated: SG ? !!SG.animDataPerTex : !!LG,
+        liquid: (0, Ek.k)(GG),
+        customRenderMat: (0, Ek.g)(GG),
+        uniformData: yG
       }
     }
-    var wl = ju(3012);
-    class Jl {
-      constructor(uu) {
-        this.units = uu, this.buffer = void 0, this.twin = null, this.bufferReady = !1, this.twinReady = !1
+    var uk = ZG(2865);
+    class ik {
+      constructor(GG) {
+        this.units = GG, this.buffer = void 0, this.twin = null, this.bufferReady = !1, this.twinReady = !1
       }
       get ready() {
         return this.bufferReady && (!this.twin || this.twinReady)
       }
       destroy() {
-        var uu;
-        this.buffer.destroy(), null === (uu = this.twin) || void 0 === uu || uu.destroy()
+        var GG;
+        this.buffer.destroy(), null === (GG = this.twin) || void 0 === GG || GG.destroy()
       }
     }
-    class dl {
-      constructor(uu, Eu) {
-        this.arena = uu, this.HY = void 0, this.buffer = void 0, this.twin = null, this.usable = 0, this.backings = [], this.growable = !0, this.dropped = !1, this.HY = new xX(Eu);
-        const ju = new Jl(Eu);
-        ju.buffer = this.createBuffer(ju, !1), this.backings.push(ju), this.refresh()
+    class Ck {
+      constructor(GG, bG) {
+        this.arena = GG, this.Bh = void 0, this.buffer = void 0, this.twin = null, this.usable = 0, this.backings = [], this.growable = !0, this.dropped = !1, this.Bh = new Ry(bG);
+        const ZG = new ik(bG);
+        ZG.buffer = this.createBuffer(ZG, !1), this.backings.push(ZG), this.refresh()
       }
-      get Mb() {
-        return this.HY.Mb
+      get rp() {
+        return this.Bh.rp
       }
       get canGrow() {
         return this.growable && !this.dropped
@@ -5283,51 +5283,51 @@ export const modules = {
         return null !== this.backings[this.backings.length - 1].twin
       }
       get allocatedBytes() {
-        let uu = 0;
-        for (const Eu of this.backings) uu += Eu.units * (this.arena.unitBytes + (Eu.twin ? this.arena.twinUnitBytes : 0));
-        return uu
+        let GG = 0;
+        for (const bG of this.backings) GG += bG.units * (this.arena.unitBytes + (bG.twin ? this.arena.twinUnitBytes : 0));
+        return GG
       }
-      holds(uu) {
-        return uu.start + uu.length <= this.usable
+      holds(GG) {
+        return GG.start + GG.length <= this.usable
       }
-      lost(uu) {
-        return this.dropped || uu.start + uu.length > this.Mb
+      lost(GG) {
+        return this.dropped || GG.start + GG.length > this.rp
       }
-      write(uu, Eu) {
+      write(GG, bG) {
         const {
-          device: ju,
-          unitBytes: su
+          device: ZG,
+          unitBytes: wG
         } = this.arena;
-        for (const Uu of this.backings) {
-          const Zu = (Uu.units - uu.start) * su;
-          Zu > 0 && ju.queue.writeBuffer(Uu.buffer, uu.start * su, Eu, 0, Math.min(Eu.byteLength, Zu))
+        for (const SG of this.backings) {
+          const LG = (SG.units - GG.start) * wG;
+          LG > 0 && ZG.queue.writeBuffer(SG.buffer, GG.start * wG, bG, 0, Math.min(bG.byteLength, LG))
         }
       }
-      writeLight(uu, Eu) {
+      writeLight(GG, bG) {
         const {
-          device: ju,
-          twinUnitBytes: su,
-          verticesPerUnit: Uu
+          device: ZG,
+          twinUnitBytes: wG,
+          verticesPerUnit: SG
         } = this.arena, {
-          light: Zu,
-          count: Xu
-        } = this.arena.twinLight(Eu, Math.min(Eu.length, uu.length * Uu));
-        for (const lu of this.backings) {
-          lu.twin || (lu.twin = this.createBuffer(lu, !0));
-          const Eu = (lu.units - uu.start) * Uu;
-          Eu > 0 && ju.queue.writeBuffer(lu.twin, uu.start * su, Zu, 0, Math.min(Xu, Eu))
+          light: LG,
+          count: yG
+        } = this.arena.twinLight(bG, Math.min(bG.length, GG.length * SG));
+        for (const kG of this.backings) {
+          kG.twin || (kG.twin = this.createBuffer(kG, !0));
+          const bG = (kG.units - GG.start) * SG;
+          bG > 0 && ZG.queue.writeBuffer(kG.twin, GG.start * wG, LG, 0, Math.min(yG, bG))
         }
       }
-      grow(uu) {
+      grow(GG) {
         this.arena.assertNotDrawing();
         const {
-          device: Eu,
-          unitBytes: ju,
-          label: su
-        } = this.arena, Uu = this.backings[this.backings.length - 1], Zu = new Jl(uu), Xu = Eu.createCommandEncoder({
-          label: `${su}-grow`
+          device: bG,
+          unitBytes: ZG,
+          label: wG
+        } = this.arena, SG = this.backings[this.backings.length - 1], LG = new ik(GG), yG = bG.createCommandEncoder({
+          label: `${wG}-grow`
         });
-        Zu.buffer = this.createBuffer(Zu, !1), Xu.copyBufferToBuffer(Uu.buffer, 0, Zu.buffer, 0, Uu.units * ju), Uu.twin && (Zu.twin = this.createBuffer(Zu, !0), Xu.copyBufferToBuffer(Uu.twin, 0, Zu.twin, 0, Uu.units * this.arena.twinUnitBytes)), Eu.queue.submit([Xu.finish()]), this.backings.push(Zu), this.HY.grow(uu)
+        LG.buffer = this.createBuffer(LG, !1), yG.copyBufferToBuffer(SG.buffer, 0, LG.buffer, 0, SG.units * ZG), SG.twin && (LG.twin = this.createBuffer(LG, !0), yG.copyBufferToBuffer(SG.twin, 0, LG.twin, 0, SG.units * this.arena.twinUnitBytes)), bG.queue.submit([yG.finish()]), this.backings.push(LG), this.Bh.grow(GG)
       }
       retire() {
         this.dropped = !0, this.refresh()
@@ -5335,243 +5335,243 @@ export const modules = {
       drop() {
         if (!this.dropped) {
           this.dropped = !0;
-          for (const uu of this.backings) uu.destroy();
+          for (const GG of this.backings) GG.destroy();
           this.refresh(), this.arena.remove(this)
         }
       }
-      createBuffer(uu, Eu) {
+      createBuffer(GG, bG) {
         const {
-          device: ju,
-          unitBytes: su,
-          twinUnitBytes: Uu,
-          usage: Zu,
-          label: Xu
+          device: ZG,
+          unitBytes: wG,
+          twinUnitBytes: SG,
+          usage: LG,
+          label: yG
         } = this.arena;
-        ju.pushErrorScope("out-of-memory");
-        const lu = ju.createBuffer({
-          label: Eu ? `${Xu}-light` : Xu,
-          size: uu.units * (Eu ? Uu : su),
-          usage: (Eu ? this.arena.twinUsage : Zu) | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC
+        ZG.pushErrorScope("out-of-memory");
+        const kG = ZG.createBuffer({
+          label: bG ? `${yG}-light` : yG,
+          size: GG.units * (bG ? SG : wG),
+          usage: (bG ? this.arena.twinUsage : LG) | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC
         });
-        return this.arena.awaitingVerdict++, ju.popErrorScope().then((ju => {
-          this.arena.awaitingVerdict--, this.settle(uu, Eu, !ju, !0)
-        }), (ju => {
-          this.arena.awaitingVerdict--, this.arena.warnOnce("noVerdict", `no out-of-memory verdict for a ${Xu} buffer, taken as failed: ${String(ju)}`), this.settle(uu, Eu, !1, !1)
-        })), lu
+        return this.arena.awaitingVerdict++, ZG.popErrorScope().then((ZG => {
+          this.arena.awaitingVerdict--, this.settle(GG, bG, !ZG, !0)
+        }), (ZG => {
+          this.arena.awaitingVerdict--, this.arena.warnOnce("noVerdict", `no out-of-memory verdict for a ${yG} buffer, taken as failed: ${String(ZG)}`), this.settle(GG, bG, !1, !1)
+        })), kG
       }
-      settle(uu, Eu, ju, su) {
-        const Uu = this.backings.indexOf(uu);
-        if (!(this.dropped || Uu < 0)) {
-          if (!ju) {
-            if (su && this.arena.ranOutOfMemory(uu.units, uu.units * (Eu ? this.arena.twinUnitBytes : this.arena.unitBytes)), 0 === Uu) return void this.drop();
-            for (const uu of this.backings.splice(Uu)) uu.destroy();
-            return this.HY.truncate(this.backings[Uu - 1].units), this.growable = !1, void this.promote()
+      settle(GG, bG, ZG, wG) {
+        const SG = this.backings.indexOf(GG);
+        if (!(this.dropped || SG < 0)) {
+          if (!ZG) {
+            if (wG && this.arena.ranOutOfMemory(GG.units, GG.units * (bG ? this.arena.twinUnitBytes : this.arena.unitBytes)), 0 === SG) return void this.drop();
+            for (const GG of this.backings.splice(SG)) GG.destroy();
+            return this.Bh.truncate(this.backings[SG - 1].units), this.growable = !1, void this.promote()
           }
-          Eu ? uu.twinReady = !0 : (uu.bufferReady = !0, this.arena.allocatedBuffer(uu.units)), this.promote()
+          bG ? GG.twinReady = !0 : (GG.bufferReady = !0, this.arena.allocatedBuffer(GG.units)), this.promote()
         }
       }
       promote() {
         const {
-          backings: uu
+          backings: GG
         } = this;
-        let Eu = 0;
-        for (; Eu + 1 < uu.length && uu[Eu].ready && uu[Eu + 1].ready;) Eu++;
-        for (const ju of uu.splice(0, Eu)) ju.destroy();
+        let bG = 0;
+        for (; bG + 1 < GG.length && GG[bG].ready && GG[bG + 1].ready;) bG++;
+        for (const ZG of GG.splice(0, bG)) ZG.destroy();
         this.refresh()
       }
       refresh() {
-        const uu = this.backings[0];
-        this.buffer = uu.buffer, this.twin = uu.twinReady ? uu.twin : null, this.usable = !this.dropped && uu.bufferReady ? uu.units : 0
+        const GG = this.backings[0];
+        this.buffer = GG.buffer, this.twin = GG.twinReady ? GG.twin : null, this.usable = !this.dropped && GG.bufferReady ? GG.units : 0
       }
     }
-    class al {
-      constructor(uu, Eu, ju, su) {
+    class Wk {
+      constructor(GG, bG, ZG, wG) {
         let {
-          verticesPerUnit: Uu = 1,
-          twinUsage: Zu = GPUBufferUsage.VERTEX
+          verticesPerUnit: SG = 1,
+          twinUsage: LG = GPUBufferUsage.VERTEX
         } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-        if (this.device = uu, this.unitBytes = Eu, this.usage = ju, this.label = su, this.pages = [], this.drawing = !1, this.awaitingVerdict = 0, this.verticesPerUnit = void 0, this.twinUsage = void 0, this.twinValueBytes = void 0, this.twinUnitBytes = void 0, this.limit = -1, this.ceiling = -1, this.failed = 1 / 0, this.shortages = 0, this.forgetFailedAt = 0, this.shortageUntil = -1 / 0, this.warnOnce = (0, vE.d)("Lite terrain: "), this.padded = new Uint16Array(0), this.widened = new Float32Array(0), Eu % 4 !== 0) throw new Error(`${su}: ${Eu}-byte units cannot keep every range four-byte aligned`);
-        this.verticesPerUnit = Uu, this.twinUsage = Zu, this.twinValueBytes = Uu > 1 ? 2 : 4, this.twinUnitBytes = this.twinValueBytes * Uu
+        if (this.device = GG, this.unitBytes = bG, this.usage = ZG, this.label = wG, this.pages = [], this.drawing = !1, this.awaitingVerdict = 0, this.verticesPerUnit = void 0, this.twinUsage = void 0, this.twinValueBytes = void 0, this.twinUnitBytes = void 0, this.limit = -1, this.ceiling = -1, this.failed = 1 / 0, this.shortages = 0, this.forgetFailedAt = 0, this.shortageUntil = -1 / 0, this.warnOnce = (0, ab.e)("Lite terrain: "), this.padded = new Uint16Array(0), this.widened = new Float32Array(0), bG % 4 !== 0) throw new Error(`${wG}: ${bG}-byte units cannot keep every range four-byte aligned`);
+        this.verticesPerUnit = SG, this.twinUsage = LG, this.twinValueBytes = SG > 1 ? 2 : 4, this.twinUnitBytes = this.twinValueBytes * SG
       }
-      twinLight(uu, Eu) {
-        if (4 === this.twinValueBytes) return this.widened.length < Eu && (this.widened = new Float32Array(Math.max(Eu, 2 * this.widened.length))), this.widened.set(uu.subarray(0, Eu)), {
+      twinLight(GG, bG) {
+        if (4 === this.twinValueBytes) return this.widened.length < bG && (this.widened = new Float32Array(Math.max(bG, 2 * this.widened.length))), this.widened.set(GG.subarray(0, bG)), {
           light: this.widened,
-          count: Eu
+          count: bG
         };
-        const ju = Eu % this.verticesPerUnit;
-        if (0 === ju) return {
-          light: uu,
-          count: Eu
+        const ZG = bG % this.verticesPerUnit;
+        if (0 === ZG) return {
+          light: GG,
+          count: bG
         };
-        const su = Eu - ju + this.verticesPerUnit;
-        return this.padded.length < su && (this.padded = new Uint16Array(Math.max(su, 2 * this.padded.length))), this.padded.set(uu.subarray(0, Eu)), this.padded.fill(0, Eu, su), {
+        const wG = bG - ZG + this.verticesPerUnit;
+        return this.padded.length < wG && (this.padded = new Uint16Array(Math.max(wG, 2 * this.padded.length))), this.padded.set(GG.subarray(0, bG)), this.padded.fill(0, bG, wG), {
           light: this.padded,
-          count: su
+          count: wG
         }
       }
-      allocate(uu) {
-        if (this.assertNotDrawing(), this.limit < 0 && (this.limit = this.ceiling = this.pageLimit()), uu > this.limit) return null;
+      allocate(GG) {
+        if (this.assertNotDrawing(), this.limit < 0 && (this.limit = this.ceiling = this.pageLimit()), GG > this.limit) return null;
         this.failed !== 1 / 0 && performance.now() >= this.forgetFailedAt && (this.failed = 1 / 0, this.ceiling = this.limit);
-        for (const Uu of this.pages) {
-          const Eu = Uu.HY.allocate(uu);
-          if (Eu >= 0) return {
-            page: Uu,
-            start: Eu,
-            length: uu
+        for (const SG of this.pages) {
+          const bG = SG.Bh.allocate(GG);
+          if (bG >= 0) return {
+            page: SG,
+            start: bG,
+            length: GG
           }
         }
-        const Eu = this.pages[this.pages.length - 1];
-        if (null !== Eu && void 0 !== Eu && Eu.canGrow) {
-          const ju = Math.min(this.ceiling, Math.max(2 * Eu.Mb, Eu.Mb + uu));
-          if (ju - Eu.Mb >= uu) return Eu.grow(ju), {
-            page: Eu,
-            start: Eu.HY.allocate(uu),
-            length: uu
+        const bG = this.pages[this.pages.length - 1];
+        if (null !== bG && void 0 !== bG && bG.canGrow) {
+          const ZG = Math.min(this.ceiling, Math.max(2 * bG.rp, bG.rp + GG));
+          if (ZG - bG.rp >= GG) return bG.grow(ZG), {
+            page: bG,
+            start: bG.Bh.allocate(GG),
+            length: GG
           }
         }
-        Eu && Eu !== this.pages[0] && 0 === Eu.HY.used && Eu.drop();
-        const ju = Math.floor(1048576 / this.unitBytes),
-          su = new dl(this, Math.max(uu, Math.min(this.ceiling, ju)));
-        return this.pages.push(su), {
-          page: su,
-          start: su.HY.allocate(uu),
-          length: uu
+        bG && bG !== this.pages[0] && 0 === bG.Bh.used && bG.drop();
+        const ZG = Math.floor(1048576 / this.unitBytes),
+          wG = new Ck(this, Math.max(GG, Math.min(this.ceiling, ZG)));
+        return this.pages.push(wG), {
+          page: wG,
+          start: wG.Bh.allocate(GG),
+          length: GG
         }
       }
-      free(uu) {
+      free(GG) {
         this.assertNotDrawing();
         const {
-          page: Eu
-        } = uu;
-        Eu.HY.free(uu.start, uu.length), 0 === Eu.HY.used && Eu !== this.pages[0] && Eu !== this.pages[this.pages.length - 1] && Eu.drop()
+          page: bG
+        } = GG;
+        bG.Bh.free(GG.start, GG.length), 0 === bG.Bh.used && bG !== this.pages[0] && bG !== this.pages[this.pages.length - 1] && bG.drop()
       }
       retire() {
-        for (const uu of this.pages) uu.retire()
+        for (const GG of this.pages) GG.retire()
       }
-      remove(uu) {
-        const Eu = this.pages.indexOf(uu);
-        Eu >= 0 && this.pages.splice(Eu, 1)
+      remove(GG) {
+        const bG = this.pages.indexOf(GG);
+        bG >= 0 && this.pages.splice(bG, 1)
       }
-      ranOutOfMemory(uu, Eu) {
-        this.warnOnce("outOfMemory", `out of GPU memory for a ${Eu}-byte ${this.label} buffer; its chunks are meshed again`), this.failed = Math.min(this.failed, uu), this.ceiling = Math.max(1, Math.floor(Math.min(this.ceiling, uu) / 2));
-        const ju = performance.now();
-        ju >= this.shortageUntil && (this.forgetFailedAt = ju + Math.min(6e5, 3e4 * 2 ** this.shortages++), this.shortageUntil = ju + 1e3)
+      ranOutOfMemory(GG, bG) {
+        this.warnOnce("outOfMemory", `out of GPU memory for a ${bG}-byte ${this.label} buffer; its chunks are meshed again`), this.failed = Math.min(this.failed, GG), this.ceiling = Math.max(1, Math.floor(Math.min(this.ceiling, GG) / 2));
+        const ZG = performance.now();
+        ZG >= this.shortageUntil && (this.forgetFailedAt = ZG + Math.min(6e5, 3e4 * 2 ** this.shortages++), this.shortageUntil = ZG + 1e3)
       }
-      allocatedBuffer(uu) {
-        uu >= this.failed && (this.failed = 1 / 0);
-        const Eu = Math.min(2 * uu, Math.floor((uu + this.failed) / 2));
-        this.ceiling = Math.min(this.limit, Math.max(this.ceiling, Eu))
+      allocatedBuffer(GG) {
+        GG >= this.failed && (this.failed = 1 / 0);
+        const bG = Math.min(2 * GG, Math.floor((GG + this.failed) / 2));
+        this.ceiling = Math.min(this.limit, Math.max(this.ceiling, bG))
       }
       stats() {
-        let uu = 0,
-          Eu = 0,
-          ju = 0,
-          su = 0;
-        for (const Uu of this.pages) uu += Uu.Mb, Eu += Uu.HY.used, ju += Uu.hasTwin ? Uu.Mb * this.twinUnitBytes : 0, su += Uu.allocatedBytes;
+        let GG = 0,
+          bG = 0,
+          ZG = 0,
+          wG = 0;
+        for (const SG of this.pages) GG += SG.rp, bG += SG.Bh.used, ZG += SG.hasTwin ? SG.rp * this.twinUnitBytes : 0, wG += SG.allocatedBytes;
         return {
           pages: this.pages.length,
-          capacityBytes: uu * this.unitBytes,
-          usedBytes: Eu * this.unitBytes,
-          twinBytes: ju,
-          allocatedBytes: su
+          capacityBytes: GG * this.unitBytes,
+          usedBytes: bG * this.unitBytes,
+          twinBytes: ZG,
+          allocatedBytes: wG
         }
       }
       assertNotDrawing() {}
       pageLimit() {
         const {
-          maxBufferSize: uu,
-          maxStorageBufferBindingSize: Eu
+          maxBufferSize: GG,
+          maxStorageBufferBindingSize: bG
         } = this.device.limits;
-        let ju = Math.floor(Math.min(67108864, uu) / this.unitBytes);
-        return this.usage & GPUBufferUsage.STORAGE && (ju = Math.min(ju, Math.floor(Eu / this.unitBytes))), this.twinUsage & GPUBufferUsage.STORAGE && (ju = Math.min(ju, Math.floor(Eu / this.twinUnitBytes))), ju
+        let ZG = Math.floor(Math.min(67108864, GG) / this.unitBytes);
+        return this.usage & GPUBufferUsage.STORAGE && (ZG = Math.min(ZG, Math.floor(bG / this.unitBytes))), this.twinUsage & GPUBufferUsage.STORAGE && (ZG = Math.min(ZG, Math.floor(bG / this.twinUnitBytes))), ZG
       }
     }
-    const Pl = 16383;
+    const mk = 16383;
 
-    function ol(uu, Eu, ju, su, Uu) {
-      let Zu = 0;
-      for (let Xu = ju; Xu < su; Xu += Pl) uu.drawIndexed(6 * Math.min(Pl, su - Xu), 1, 0, Eu + 4 * Xu, Uu), Zu++;
-      return Zu
+    function Ik(GG, bG, ZG, wG, SG) {
+      let LG = 0;
+      for (let yG = ZG; yG < wG; yG += mk) GG.drawIndexed(6 * Math.min(mk, wG - yG), 1, 0, bG + 4 * yG, SG), LG++;
+      return LG
     }
-    class kl {
-      constructor(uu, Eu) {
-        this.recordsGroup = Eu, this.vertexArena = void 0, this.quadArena = void 0, this.quadPattern = void 0, this.fullSky = new Uint16Array(0), this.boundVertices = null, this.boundLight = null, this.boundRecords = null, this.boundRecordsLight = null, this.boundPattern = !1;
-        const ju = HE.g.strideWithoutAtlas;
-        this.vertexArena = new al(uu, ju, GPUBufferUsage.VERTEX, `terrain-vertices-${ju}`), this.quadArena = new al(uu, el.e, GPUBufferUsage.STORAGE, "terrain-quads", {
+    class Fk {
+      constructor(GG, bG) {
+        this.recordsGroup = bG, this.vertexArena = void 0, this.quadArena = void 0, this.quadPattern = void 0, this.fullSky = new Uint16Array(0), this.boundVertices = null, this.boundLight = null, this.boundRecords = null, this.boundRecordsLight = null, this.boundPattern = !1;
+        const ZG = tb.f.strideWithoutAtlas;
+        this.vertexArena = new Wk(GG, ZG, GPUBufferUsage.VERTEX, `terrain-vertices-${ZG}`), this.quadArena = new Wk(GG, zk.b, GPUBufferUsage.STORAGE, "terrain-quads", {
           verticesPerUnit: 4,
           twinUsage: GPUBufferUsage.STORAGE
         });
-        const su = (0, AE.f)(new Uint16Array(98298), Pl);
-        this.quadPattern = uu.createBuffer({
+        const wG = (0, Db.f)(new Uint16Array(98298), mk);
+        this.quadPattern = GG.createBuffer({
           label: "terrain-quad-pattern",
-          size: su.byteLength,
+          size: wG.byteLength,
           usage: GPUBufferUsage.INDEX | GPUBufferUsage.COPY_DST
-        }), uu.queue.writeBuffer(this.quadPattern, 0, su)
+        }), GG.queue.writeBuffer(this.quadPattern, 0, wG)
       }
       retire() {
         this.vertexArena.retire(), this.quadArena.retire()
       }
-      set(uu, Eu) {
-        const ju = Eu.packedVertices,
-          su = ju ? this.quadArena.allocate(uu.faceCount) : this.vertexArena.allocate(uu.vertexCount);
-        if (!su) return !1;
-        uu.vertices = su;
-        const Uu = ju ? new Uint8Array(ju.buffer, ju.byteOffset, ju.byteLength) : new Uint8Array(Eu.vertices);
-        return su.page.write(su, Uu), !0
+      set(GG, bG) {
+        const ZG = bG.packedVertices,
+          wG = ZG ? this.quadArena.allocate(GG.faceCount) : this.vertexArena.allocate(GG.vertexCount);
+        if (!wG) return !1;
+        GG.vertices = wG;
+        const SG = ZG ? new Uint8Array(ZG.buffer, ZG.byteOffset, ZG.byteLength) : new Uint8Array(bG.vertices);
+        return wG.page.write(wG, SG), !0
       }
-      setLight(uu, Eu) {
+      setLight(GG, bG) {
         const {
-          vertices: ju
-        } = uu;
-        ju && 0 !== Eu.length && ju.page.live && (Eu.length < uu.vertexCount ? ju.page.arena.warnOnce("shortLight", `a part's ${Eu.length} light values are fewer than its ${uu.vertexCount} vertices, so its light is left as it was`) : (ju.page.writeLight(ju, Eu), uu.lit = !0))
+          vertices: ZG
+        } = GG;
+        ZG && 0 !== bG.length && ZG.page.live && (bG.length < GG.vertexCount ? ZG.page.arena.warnOnce("shortLight", `a part's ${bG.length} light values are fewer than its ${GG.vertexCount} vertices, so its light is left as it was`) : (ZG.page.writeLight(ZG, bG), GG.lit = !0))
       }
-      lightFullSky(uu, Eu) {
-        this.fullSky.length < Eu && (this.fullSky = new Uint16Array(Math.max(Eu, 4096)).fill(wl.g));
-        for (const ju of uu) {
-          const uu = ju.vertices;
-          uu.page.live && (uu.page.writeLight(uu, this.fullSky), ju.lit = !0)
+      lightFullSky(GG, bG) {
+        this.fullSky.length < bG && (this.fullSky = new Uint16Array(Math.max(bG, 4096)).fill(uk.k));
+        for (const ZG of GG) {
+          const GG = ZG.vertices;
+          GG.page.live && (GG.page.writeLight(GG, this.fullSky), ZG.lit = !0)
         }
       }
-      backed(uu) {
+      backed(GG) {
         const {
-          vertices: Eu
-        } = uu;
-        return !!Eu && Eu.page.holds(Eu)
+          vertices: bG
+        } = GG;
+        return !!bG && bG.page.holds(bG)
       }
-      lost(uu) {
+      lost(GG) {
         const {
-          vertices: Eu
-        } = uu;
-        return !!Eu && Eu.page.lost(Eu)
+          vertices: bG
+        } = GG;
+        return !!bG && bG.page.lost(bG)
       }
-      release(uu) {
-        uu.vertices && uu.vertices.page.arena.free(uu.vertices), uu.vertices = null, uu.lit = !1
+      release(GG) {
+        GG.vertices && GG.vertices.page.arena.free(GG.vertices), GG.vertices = null, GG.lit = !1
       }
-      setDrawing(uu) {
+      setDrawing(GG) {
         this.forgetBound()
       }
-      draw(uu, Eu, ju) {
-        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Eu.faceCount;
-        const Zu = Eu.vertices,
-          Xu = Zu.page,
-          lu = ju ? Xu.twin : null;
-        if (!Xu.holds(Zu) || ju && !lu) return 0;
+      draw(GG, bG, ZG) {
+        let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          SG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : bG.faceCount;
+        const LG = bG.vertices,
+          yG = LG.page,
+          kG = ZG ? yG.twin : null;
+        if (!yG.holds(LG) || ZG && !kG) return 0;
         const {
-          verticesPerUnit: qu
-        } = Xu.arena;
-        let fu = Zu.start * qu;
-        this.boundPattern || (uu.setIndexBuffer(this.quadPattern, "uint16"), this.boundPattern = !0);
-        const Cu = su + Uu;
-        if (qu > 1) return Xu.buffer === this.boundRecords && lu === this.boundRecordsLight || (uu.setBindGroup(1, this.recordsGroup(Xu.buffer, lu)), this.boundRecords = Xu.buffer, this.boundRecordsLight = lu), ol(uu, fu, su, Cu, Eu.slot);
-        Xu.buffer !== this.boundVertices && (uu.setVertexBuffer(0, Xu.buffer), this.boundVertices = Xu.buffer), lu && lu !== this.boundLight && (uu.setVertexBuffer(1, lu), this.boundLight = lu);
-        const bu = Eu.faceCount;
-        return Cu <= bu ? ol(uu, fu, su, Cu, Eu.slot) : ol(uu, fu, su, bu, Eu.slot) + ol(uu, fu, Math.max(su, bu) - bu, Cu - bu, Eu.slot)
+          verticesPerUnit: UG
+        } = yG.arena;
+        let YG = LG.start * UG;
+        this.boundPattern || (GG.setIndexBuffer(this.quadPattern, "uint16"), this.boundPattern = !0);
+        const VG = wG + SG;
+        if (UG > 1) return yG.buffer === this.boundRecords && kG === this.boundRecordsLight || (GG.setBindGroup(1, this.recordsGroup(yG.buffer, kG)), this.boundRecords = yG.buffer, this.boundRecordsLight = kG), Ik(GG, YG, wG, VG, bG.slot);
+        yG.buffer !== this.boundVertices && (GG.setVertexBuffer(0, yG.buffer), this.boundVertices = yG.buffer), kG && kG !== this.boundLight && (GG.setVertexBuffer(1, kG), this.boundLight = kG);
+        const pG = bG.faceCount;
+        return VG <= pG ? Ik(GG, YG, wG, VG, bG.slot) : Ik(GG, YG, wG, pG, bG.slot) + Ik(GG, YG, Math.max(wG, pG) - pG, VG - pG, bG.slot)
       }
       get buffersAwaitingVerdict() {
-        let uu = 0;
-        for (const Eu of this.arenas()) uu += Eu.awaitingVerdict;
-        return uu
+        let GG = 0;
+        for (const bG of this.arenas()) GG += bG.awaitingVerdict;
+        return GG
       }* arenas() {
         yield this.vertexArena, yield this.quadArena
       }
@@ -5579,117 +5579,117 @@ export const modules = {
         this.boundVertices = this.boundLight = this.boundRecords = this.boundRecordsLight = null, this.boundPattern = !1
       }
     }
-    class ml {
-      constructor(uu, Eu, ju, su) {
-        this.device = uu, this.splitBefore = Eu, this.wanted = !1, this.pipeline = null, this.building = !0, this.unprojectBuffer = void 0, this.unproject = new Float32Array(2), this.near = 0, this.far = 0, this.copy = null, this.retired = null, this.unprojectBuffer = uu.createBuffer({
+    class vk {
+      constructor(GG, bG, ZG, wG) {
+        this.device = GG, this.splitBefore = bG, this.wanted = !1, this.pipeline = null, this.building = !0, this.unprojectBuffer = void 0, this.unproject = new Float32Array(2), this.near = 0, this.far = 0, this.copy = null, this.retired = null, this.unprojectBuffer = GG.createBuffer({
           label: "scene-depth-unproject",
           size: 8,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
         });
-        const Uu = uu.createShaderModule({
+        const SG = GG.createShaderModule({
           label: "scene-depth-copy",
-          code: (Zu = ju._targetSignature._sampleCount > 1, `\n@group(0) @binding(0) var depth: ${Zu?"texture_depth_multisampled_2d":"texture_depth_2d"};\n@group(0) @binding(1) var<uniform> unproject: vec2f;\n\n@vertex\nfn copyVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn copyFragment(@builtin(position) pixel: vec4f) -> @location(0) f32 {\n\tlet d = textureLoad(depth, vec2i(pixel.xy), 0);\n\tif (d <= 0.0) {\n\t\treturn 0.0;\n\t}\n\treturn unproject.y / (2.0 * d + unproject.x);\n}\n`)
+          code: (LG = ZG._targetSignature._sampleCount > 1, `\n@group(0) @binding(0) var depth: ${LG?"texture_depth_multisampled_2d":"texture_depth_2d"};\n@group(0) @binding(1) var<uniform> unproject: vec2f;\n\n@vertex\nfn copyVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn copyFragment(@builtin(position) pixel: vec4f) -> @location(0) f32 {\n\tlet d = textureLoad(depth, vec2i(pixel.xy), 0);\n\tif (d <= 0.0) {\n\t\treturn 0.0;\n\t}\n\treturn unproject.y / (2.0 * d + unproject.x);\n}\n`)
         });
-        var Zu;
-        uu.createRenderPipelineAsync({
+        var LG;
+        GG.createRenderPipelineAsync({
           label: "scene-depth-copy",
           layout: "auto",
           vertex: {
-            module: Uu,
+            module: SG,
             entryPoint: "copyVertex"
           },
           fragment: {
-            module: Uu,
+            module: SG,
             entryPoint: "copyFragment",
             targets: [{
               format: "r32float"
             }]
           }
-        }).then((uu => {
-          this.pipeline = uu, this.building = !1
-        }), (uu => {
-          this.building = !1, console.error("Lite: the scene depth copy failed to build, so liquids find nothing behind them", uu)
-        })), ju._executeWithTransmission = () => this.execute(ju, su)
+        }).then((GG => {
+          this.pipeline = GG, this.building = !1
+        }), (GG => {
+          this.building = !1, console.error("Lite: the scene depth copy failed to build, so liquids find nothing behind them", GG)
+        })), ZG._executeWithTransmission = () => this.execute(ZG, wG)
       }
       get compiling() {
         return this.building
       }
-      setWanted(uu) {
-        this.wanted = uu
+      setWanted(GG) {
+        this.wanted = GG
       }
-      setPlanes(uu, Eu) {
-        uu === this.near && Eu === this.far || (this.near = uu, this.far = Eu, this.unproject[0] = uu / (Eu - uu), this.unproject[1] = Eu * uu / (Eu - uu), this.device.queue.writeBuffer(this.unprojectBuffer, 0, this.unproject))
+      setPlanes(GG, bG) {
+        GG === this.near && bG === this.far || (this.near = GG, this.far = bG, this.unproject[0] = GG / (bG - GG), this.unproject[1] = bG * GG / (bG - GG), this.device.queue.writeBuffer(this.unprojectBuffer, 0, this.unproject))
       }
       get view() {
-        var uu, Eu;
-        return null !== (uu = null === (Eu = this.copy) || void 0 === Eu ? void 0 : Eu.view) && void 0 !== uu ? uu : null
+        var GG, bG;
+        return null !== (GG = null === (bG = this.copy) || void 0 === bG ? void 0 : bG.view) && void 0 !== GG ? GG : null
       }
-      execute(uu, Eu) {
-        var ju;
-        null === (ju = this.retired) || void 0 === ju || ju.destroy(), this.retired = null;
-        const su = pE(Eu),
-          Uu = uu._transparentBindings,
-          Zu = this.wanted && this.pipeline ? this.splitIndex(Uu) : -1,
-          Xu = uu._colorAttachment,
-          lu = Xu.resolveTarget;
-        Zu >= 0 && (Xu.resolveTarget = void 0, sl(uu, !0));
-        let qu = su.beginRenderPass(uu._renderPassDescriptor);
-        qu.setBindGroup(0, uu._sceneBG);
-        let fu = this.drawList(qu, Eu, uu._opaqueBindings, 0, uu._opaqueBindings.length);
-        if (fu += this.drawList(qu, Eu, uu._directBindings, 0, uu._directBindings.length), fu += this.drawList(qu, Eu, Uu, 0, Zu >= 0 ? Zu : Uu.length), qu.end(), Zu < 0) return fu;
-        sl(uu);
-        const Cu = uu._renderPassDescriptor.depthStencilAttachment,
+      execute(GG, bG) {
+        var ZG;
+        null === (ZG = this.retired) || void 0 === ZG || ZG.destroy(), this.retired = null;
+        const wG = Xb(bG),
+          SG = GG._transparentBindings,
+          LG = this.wanted && this.pipeline ? this.splitIndex(SG) : -1,
+          yG = GG._colorAttachment,
+          kG = yG.resolveTarget;
+        LG >= 0 && (yG.resolveTarget = void 0, Zk(GG, !0));
+        let UG = wG.beginRenderPass(GG._renderPassDescriptor);
+        UG.setBindGroup(0, GG._sceneBG);
+        let YG = this.drawList(UG, bG, GG._opaqueBindings, 0, GG._opaqueBindings.length);
+        if (YG += this.drawList(UG, bG, GG._directBindings, 0, GG._directBindings.length), YG += this.drawList(UG, bG, SG, 0, LG >= 0 ? LG : SG.length), UG.end(), LG < 0) return YG;
+        Zk(GG);
+        const VG = GG._renderPassDescriptor.depthStencilAttachment,
           {
-            depthLoadOp: bu,
-            stencilLoadOp: cu
-          } = Cu,
-          Nu = Xu.loadOp;
-        Xu.resolveTarget = lu;
+            depthLoadOp: pG,
+            stencilLoadOp: fG
+          } = VG,
+          QG = yG.loadOp;
+        yG.resolveTarget = kG;
         try {
-          this.copyDepth(su, uu), Xu.loadOp = "load", Cu.depthLoadOp = "load", cu && (Cu.stencilLoadOp = "load"), qu = su.beginRenderPass(uu._renderPassDescriptor), qu.setBindGroup(0, uu._sceneBG), fu += this.drawList(qu, Eu, Uu, Zu, Uu.length), qu.end()
+          this.copyDepth(wG, GG), yG.loadOp = "load", VG.depthLoadOp = "load", fG && (VG.stencilLoadOp = "load"), UG = wG.beginRenderPass(GG._renderPassDescriptor), UG.setBindGroup(0, GG._sceneBG), YG += this.drawList(UG, bG, SG, LG, SG.length), UG.end()
         } finally {
-          Xu.loadOp = Nu, Cu.depthLoadOp = bu, Cu.stencilLoadOp = cu
+          yG.loadOp = QG, VG.depthLoadOp = pG, VG.stencilLoadOp = fG
         }
-        return fu
+        return YG
       }
-      splitIndex(uu) {
-        for (let Eu = 0; Eu < uu.length; Eu++)
-          if (uu[Eu].renderable === this.splitBefore) return Eu;
+      splitIndex(GG) {
+        for (let bG = 0; bG < GG.length; bG++)
+          if (GG[bG].renderable === this.splitBefore) return bG;
         return -1
       }
-      drawList(uu, Eu, ju, su, Uu) {
-        let Zu = null,
-          Xu = 0;
-        for (let lu = su; lu < Uu; lu++) {
-          const su = ju[lu],
-            Uu = su.renderable.mesh;
-          Uu && !1 === Uu.visible || (su.pipeline !== Zu && (uu.setPipeline(su.pipeline), Zu = su.pipeline), Xu += su.draw(uu, Eu))
+      drawList(GG, bG, ZG, wG, SG) {
+        let LG = null,
+          yG = 0;
+        for (let kG = wG; kG < SG; kG++) {
+          const wG = ZG[kG],
+            SG = wG.renderable.mesh;
+          SG && !1 === SG.visible || (wG.pipeline !== LG && (GG.setPipeline(wG.pipeline), LG = wG.pipeline), yG += wG.draw(GG, bG))
         }
-        return Xu
+        return yG
       }
-      copyDepth(uu, Eu) {
-        var ju, su;
-        const Uu = (null !== (ju = Eu._config.depth) && void 0 !== ju ? ju : Eu._config.rt)._depthTexture,
-          Zu = (null === (su = this.copy) || void 0 === su ? void 0 : su.source) === Uu ? this.copy : this.remakeCopy(Uu),
-          Xu = uu.beginRenderPass(Zu.pass);
-        Xu.setPipeline(this.pipeline), Xu.setBindGroup(0, Zu.bindGroup), Xu.draw(3), Xu.end()
+      copyDepth(GG, bG) {
+        var ZG, wG;
+        const SG = (null !== (ZG = bG._config.depth) && void 0 !== ZG ? ZG : bG._config.rt)._depthTexture,
+          LG = (null === (wG = this.copy) || void 0 === wG ? void 0 : wG.source) === SG ? this.copy : this.remakeCopy(SG),
+          yG = GG.beginRenderPass(LG.pass);
+        yG.setPipeline(this.pipeline), yG.setBindGroup(0, LG.bindGroup), yG.draw(3), yG.end()
       }
-      remakeCopy(uu) {
-        var Eu, ju;
-        this.retired = null !== (Eu = null === (ju = this.copy) || void 0 === ju ? void 0 : ju.texture) && void 0 !== Eu ? Eu : null;
-        const su = this.device.createTexture({
+      remakeCopy(GG) {
+        var bG, ZG;
+        this.retired = null !== (bG = null === (ZG = this.copy) || void 0 === ZG ? void 0 : ZG.texture) && void 0 !== bG ? bG : null;
+        const wG = this.device.createTexture({
             label: "scene-depth",
-            size: [uu.width, uu.height],
+            size: [GG.width, GG.height],
             format: "r32float",
             usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
           }),
-          Uu = su.createView(),
-          Zu = this.device.createBindGroup({
+          SG = wG.createView(),
+          LG = this.device.createBindGroup({
             label: "scene-depth-copy",
             layout: this.pipeline.getBindGroupLayout(0),
             entries: [{
               binding: 0,
-              resource: uu.createView({
+              resource: GG.createView({
                 aspect: "depth-only"
               })
             }, {
@@ -5699,36 +5699,36 @@ export const modules = {
               }
             }]
           }),
-          Xu = {
+          yG = {
             label: "scene-depth-copy",
             colorAttachments: [{
-              view: Uu,
+              view: SG,
               loadOp: "clear",
               storeOp: "store",
               clearValue: [0, 0, 0, 0]
             }]
           };
         return this.copy = {
-          source: uu,
-          texture: su,
-          view: Uu,
-          bindGroup: Zu,
-          pass: Xu
+          source: GG,
+          texture: wG,
+          view: SG,
+          bindGroup: LG,
+          pass: yG
         }, this.copy
       }
     }
-    const vl = "rgba8unorm";
+    const ak = "rgba8unorm";
 
-    function Kl(uu) {
-      return uu ? 15 : 1
+    function ck(GG) {
+      return GG ? 15 : 1
     }
-    class Vl {
-      constructor(uu, Eu, ju, su) {
-        this.device = uu, this.terrain = su, this.pipeline = null, this.building = !0, this.edge = void 0, this.layout = void 0, this.empty = void 0, this.cameraBuffer = void 0, this.camera = new Float32Array(16), this.targets = null, this.retired = null, this.edge = Eu._targetSignature._sampleCount > 1, this.cameraBuffer = uu.createBuffer({
+    class lk {
+      constructor(GG, bG, ZG, wG) {
+        this.device = GG, this.terrain = wG, this.pipeline = null, this.building = !0, this.edge = void 0, this.layout = void 0, this.empty = void 0, this.cameraBuffer = void 0, this.camera = new Float32Array(16), this.targets = null, this.retired = null, this.edge = bG._targetSignature._sampleCount > 1, this.cameraBuffer = GG.createBuffer({
           label: "sun-shadow-mask-camera",
           size: 64,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.layout = uu.createBindGroupLayout({
+        }), this.layout = GG.createBindGroupLayout({
           label: "sun-shadow-mask",
           entries: [{
             binding: 0,
@@ -5750,158 +5750,158 @@ export const modules = {
             }
           }]
         });
-        const Uu = uu.createBindGroupLayout({
+        const SG = GG.createBindGroupLayout({
           label: "sun-shadow-mask-empty",
           entries: []
         });
-        this.empty = uu.createBindGroup({
+        this.empty = GG.createBindGroup({
           label: "sun-shadow-mask-empty",
-          layout: Uu,
+          layout: SG,
           entries: []
         });
-        const Zu = uu.createShaderModule({
+        const LG = GG.createShaderModule({
           label: "sun-shadow-mask",
-          code: (Xu = this.edge, `${(0,nE.z)()}${qs({sunShadow:!0,airShadow:!1},!0,"lit")}\n@group(0) @binding(0) var bloxdSmDepth: texture_2d<f32>;\nstruct BloxdSmCamera {\n\teye: vec3f,\n\ttolerance: f32,\n\tright: vec3f,\n\tdepthScale: f32,\n\tup: vec3f,\n\tdepthBias: f32,\n\tforward: vec3f,\n}\n@group(0) @binding(1) var<uniform> bloxdSmCamera: BloxdSmCamera;\n@group(0) @binding(2) var bloxdSmNormal: texture_2d<f32>;\n${Xu?nj:""}\n@vertex\nfn maskVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn maskFragment(@builtin(position) pixel: vec4f) -> @location(0) vec4f {\n\tlet at = vec2i(pixel.xy);\n\tlet d = textureLoad(bloxdSmDepth, at, 0).x;\n\tif (d <= 0.0) {\n\t\treturn vec4f(${Kl(Xu)}.0, 0.0, 0.0, 0.0);\n\t}\n\t// View z from the depth as it is, then along the pixel's ray: an inverse view-projection would round d against 1\n\tlet size = vec2f(textureDimensions(bloxdSmDepth));\n\tlet ndc = vec2f(pixel.x / size.x * 2.0 - 1.0, 1.0 - pixel.y / size.y * 2.0);\n\tlet z = bloxdSmCamera.depthScale / (2.0 * d + bloxdSmCamera.depthBias);\n\tlet packed = textureLoad(bloxdSmNormal, at, 0);\n\tbloxdSpShadowPosition = bloxdSmCamera.eye + z * (bloxdSmCamera.forward + ndc.x * bloxdSmCamera.right + ndc.y * bloxdSmCamera.up);\n\t// Capped well inside the quarter block origins start off their face: past it, a few pixels\n\tbloxdSpPlaneTolerance = min(z * z * bloxdSmCamera.tolerance, 0.125);\n\tbloxdSpShadowNormal = normalize(packed.xyz * 2.0 - 1.0);\n\tbloxdSpShadowEmissive = packed.w > 0.5;\n\treturn ${Xu?"vec4f(bloxdSpNormalCode(bloxdSpShadowNormal) * 2.0 + bloxdShadow(), d, 0.0, 0.0)":"vec4f(bloxdShadow())"};\n}\n`)
+          code: (yG = this.edge, `${(0,Nb.x)()}${kw({sunShadow:!0,airShadow:!1},!0,"lit")}\n@group(0) @binding(0) var bloxdSmDepth: texture_2d<f32>;\nstruct BloxdSmCamera {\n\teye: vec3f,\n\ttolerance: f32,\n\tright: vec3f,\n\tdepthScale: f32,\n\tup: vec3f,\n\tdepthBias: f32,\n\tforward: vec3f,\n}\n@group(0) @binding(1) var<uniform> bloxdSmCamera: BloxdSmCamera;\n@group(0) @binding(2) var bloxdSmNormal: texture_2d<f32>;\n${yG?NZ:""}\n@vertex\nfn maskVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn maskFragment(@builtin(position) pixel: vec4f) -> @location(0) vec4f {\n\tlet at = vec2i(pixel.xy);\n\tlet d = textureLoad(bloxdSmDepth, at, 0).x;\n\tif (d <= 0.0) {\n\t\treturn vec4f(${ck(yG)}.0, 0.0, 0.0, 0.0);\n\t}\n\t// View z from the depth as it is, then along the pixel's ray: an inverse view-projection would round d against 1\n\tlet size = vec2f(textureDimensions(bloxdSmDepth));\n\tlet ndc = vec2f(pixel.x / size.x * 2.0 - 1.0, 1.0 - pixel.y / size.y * 2.0);\n\tlet z = bloxdSmCamera.depthScale / (2.0 * d + bloxdSmCamera.depthBias);\n\tlet packed = textureLoad(bloxdSmNormal, at, 0);\n\tbloxdSpShadowPosition = bloxdSmCamera.eye + z * (bloxdSmCamera.forward + ndc.x * bloxdSmCamera.right + ndc.y * bloxdSmCamera.up);\n\t// Capped well inside the quarter block origins start off their face: past it, a few pixels\n\tbloxdSpPlaneTolerance = min(z * z * bloxdSmCamera.tolerance, 0.125);\n\tbloxdSpShadowNormal = normalize(packed.xyz * 2.0 - 1.0);\n\tbloxdSpShadowEmissive = packed.w > 0.5;\n\treturn ${yG?"vec4f(bloxdSpNormalCode(bloxdSpShadowNormal) * 2.0 + bloxdShadow(), d, 0.0, 0.0)":"vec4f(bloxdShadow())"};\n}\n`)
         });
-        var Xu;
-        uu.createRenderPipelineAsync({
+        var yG;
+        GG.createRenderPipelineAsync({
           label: "sun-shadow-mask",
-          layout: uu.createPipelineLayout({
-            bindGroupLayouts: [this.layout, Uu, Uu, xZ(uu, {
+          layout: GG.createPipelineLayout({
+            bindGroupLayouts: [this.layout, SG, SG, RL(GG, {
               depth: !1,
               sunShadow: !0
             })]
           }),
           vertex: {
-            module: Zu,
+            module: LG,
             entryPoint: "maskVertex"
           },
           fragment: {
-            module: Zu,
+            module: LG,
             entryPoint: "maskFragment",
             targets: [{
               format: this.maskFormat
             }]
           }
-        }).then((uu => {
-          this.pipeline = uu, this.building = !1
-        }), (uu => {
-          this.building = !1, console.error("Lite: the sun shadow mask's trace failed to build, so terrain reading it is lit", uu)
+        }).then((GG => {
+          this.pipeline = GG, this.building = !1
+        }), (GG => {
+          this.building = !1, console.error("Lite: the sun shadow mask's trace failed to build, so terrain reading it is lit", GG)
         }));
-        const lu = Eu._executeWithTransmission;
-        Eu._executeWithTransmission = uu => this.execute(Eu, ju, (() => lu ? lu(uu) : function(uu, Eu) {
-          const ju = pE(Eu).beginRenderPass(uu._renderPassDescriptor);
-          ju.setBindGroup(0, uu._sceneBG);
-          let su = rl(ju, Eu, uu._opaqueBindings);
-          return su += rl(ju, Eu, uu._directBindings), su += rl(ju, Eu, uu._transparentBindings), ju.end(), su
-        }(Eu, ju)))
+        const kG = bG._executeWithTransmission;
+        bG._executeWithTransmission = GG => this.execute(bG, ZG, (() => kG ? kG(GG) : function(GG, bG) {
+          const ZG = Xb(bG).beginRenderPass(GG._renderPassDescriptor);
+          ZG.setBindGroup(0, GG._sceneBG);
+          let wG = jk(ZG, bG, GG._opaqueBindings);
+          return wG += jk(ZG, bG, GG._directBindings), wG += jk(ZG, bG, GG._transparentBindings), ZG.end(), wG
+        }(bG, ZG)))
       }
       get compiling() {
         return this.building
       }
       get view() {
-        var uu, Eu;
-        return null !== (uu = null === (Eu = this.targets) || void 0 === Eu ? void 0 : Eu.maskView) && void 0 !== uu ? uu : null
+        var GG, bG;
+        return null !== (GG = null === (bG = this.targets) || void 0 === bG ? void 0 : bG.maskView) && void 0 !== GG ? GG : null
       }
       get maskFormat() {
         return this.edge ? "rg32float" : "r8unorm"
       }
-      prepare(uu) {
-        ! function(uu, Eu) {
-          const ju = uu.worldMatrix,
-            su = uu.projectionMatrix,
-            Uu = 1 / su[0],
-            Zu = 1 / su[5],
-            Xu = uu.far * uu.near / (uu.far - uu.near);
-          Eu[0] = uu.eye[0], Eu[1] = uu.eye[1], Eu[2] = uu.eye[2], Eu[3] = 2 ** -23 / Xu, Eu[4] = ju[0] * Uu, Eu[5] = ju[1] * Uu, Eu[6] = ju[2] * Uu, Eu[7] = Xu, Eu[8] = ju[4] * Zu, Eu[9] = ju[5] * Zu, Eu[10] = ju[6] * Zu, Eu[11] = uu.near / (uu.far - uu.near), Eu[12] = ju[8], Eu[13] = ju[9], Eu[14] = ju[10], Eu[15] = 0
-        }(uu, this.camera), this.device.queue.writeBuffer(this.cameraBuffer, 0, this.camera)
+      prepare(GG) {
+        ! function(GG, bG) {
+          const ZG = GG.worldMatrix,
+            wG = GG.projectionMatrix,
+            SG = 1 / wG[0],
+            LG = 1 / wG[5],
+            yG = GG.far * GG.near / (GG.far - GG.near);
+          bG[0] = GG.eye[0], bG[1] = GG.eye[1], bG[2] = GG.eye[2], bG[3] = 2 ** -23 / yG, bG[4] = ZG[0] * SG, bG[5] = ZG[1] * SG, bG[6] = ZG[2] * SG, bG[7] = yG, bG[8] = ZG[4] * LG, bG[9] = ZG[5] * LG, bG[10] = ZG[6] * LG, bG[11] = GG.near / (GG.far - GG.near), bG[12] = ZG[8], bG[13] = ZG[9], bG[14] = ZG[10], bG[15] = 0
+        }(GG, this.camera), this.device.queue.writeBuffer(this.cameraBuffer, 0, this.camera)
       }
-      execute(uu, Eu, ju) {
-        if (this.retire(), !this.terrain.readsMask) return ju();
-        const su = this.targetsFor(uu),
-          Uu = pE(Eu),
-          Zu = uu._renderPassDescriptor.depthStencilAttachment;
-        this.edge || (su.prepass.depthStencilAttachment.view = Zu.view);
-        const Xu = this.terrain.drawPrepass(Uu, su.prepass, uu._sceneBG);
-        if (0 === Xu) return ju();
-        if (this.trace(Uu, su), this.edge) return Xu + 1 + ju();
+      execute(GG, bG, ZG) {
+        if (this.retire(), !this.terrain.readsMask) return ZG();
+        const wG = this.targetsFor(GG),
+          SG = Xb(bG),
+          LG = GG._renderPassDescriptor.depthStencilAttachment;
+        this.edge || (wG.prepass.depthStencilAttachment.view = LG.view);
+        const yG = this.terrain.drawPrepass(SG, wG.prepass, GG._sceneBG);
+        if (0 === yG) return ZG();
+        if (this.trace(SG, wG), this.edge) return yG + 1 + ZG();
         const {
-          depthLoadOp: lu,
-          stencilLoadOp: qu
-        } = Zu;
-        Zu.depthLoadOp = "load", qu && (Zu.stencilLoadOp = "load");
+          depthLoadOp: kG,
+          stencilLoadOp: UG
+        } = LG;
+        LG.depthLoadOp = "load", UG && (LG.stencilLoadOp = "load");
         try {
-          return Xu + 1 + ju()
+          return yG + 1 + ZG()
         } finally {
-          Zu.depthLoadOp = lu, Zu.stencilLoadOp = qu
+          LG.depthLoadOp = kG, LG.stencilLoadOp = UG
         }
       }
-      trace(uu, Eu) {
-        const ju = this.terrain.sunShadowGroup(),
-          su = uu.beginRenderPass(Eu.trace);
-        this.pipeline && ju && (su.setPipeline(this.pipeline), su.setBindGroup(0, Eu.bindGroup), su.setBindGroup(1, this.empty), su.setBindGroup(2, this.empty), su.setBindGroup(3, ju), su.draw(3)), su.end()
+      trace(GG, bG) {
+        const ZG = this.terrain.sunShadowGroup(),
+          wG = GG.beginRenderPass(bG.trace);
+        this.pipeline && ZG && (wG.setPipeline(this.pipeline), wG.setBindGroup(0, bG.bindGroup), wG.setBindGroup(1, this.empty), wG.setBindGroup(2, this.empty), wG.setBindGroup(3, ZG), wG.draw(3)), wG.end()
       }
       retire() {
-        const uu = this.retired;
-        var Eu;
-        uu && (uu.mask.destroy(), uu.normals.destroy(), null === (Eu = uu.depth) || void 0 === Eu || Eu.destroy(), this.retired = null)
+        const GG = this.retired;
+        var bG;
+        GG && (GG.mask.destroy(), GG.normals.destroy(), null === (bG = GG.depth) || void 0 === bG || bG.destroy(), this.retired = null)
       }
-      targetsFor(uu) {
-        var Eu, ju;
-        const su = (null !== (Eu = uu._config.depth) && void 0 !== Eu ? Eu : uu._config.rt)._depthTexture;
-        return (null === (ju = this.targets) || void 0 === ju ? void 0 : ju.source) === su ? this.targets : this.remake(uu, su)
+      targetsFor(GG) {
+        var bG, ZG;
+        const wG = (null !== (bG = GG._config.depth) && void 0 !== bG ? bG : GG._config.rt)._depthTexture;
+        return (null === (ZG = this.targets) || void 0 === ZG ? void 0 : ZG.source) === wG ? this.targets : this.remake(GG, wG)
       }
-      remake(uu, Eu) {
-        var ju;
+      remake(GG, bG) {
+        var ZG;
         this.retired = this.targets;
-        const su = [Eu.width, Eu.height],
-          Uu = this.device.createTexture({
+        const wG = [bG.width, bG.height],
+          SG = this.device.createTexture({
             label: "sun-shadow-mask",
-            size: su,
+            size: wG,
             format: this.maskFormat,
             usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
           }),
-          Zu = this.device.createTexture({
+          LG = this.device.createTexture({
             label: "sun-shadow-prepass-normals",
-            size: su,
-            format: vl,
+            size: wG,
+            format: ak,
             usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
           }),
-          Xu = null !== (ju = uu._targetSignature._depthStencilFormat) && void 0 !== ju ? ju : Eu.format,
-          lu = this.edge ? this.device.createTexture({
+          yG = null !== (ZG = GG._targetSignature._depthStencilFormat) && void 0 !== ZG ? ZG : bG.format,
+          kG = this.edge ? this.device.createTexture({
             label: "sun-shadow-prepass-depth",
-            size: su,
-            format: Xu,
+            size: wG,
+            format: yG,
             usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
           }) : null,
-          qu = uu._renderPassDescriptor.depthStencilAttachment,
-          fu = Xu.includes("stencil"),
-          Cu = {
+          UG = GG._renderPassDescriptor.depthStencilAttachment,
+          YG = yG.includes("stencil"),
+          VG = {
             label: "sun-shadow-prepass",
             colorAttachments: [{
-              view: Zu.createView(),
+              view: LG.createView(),
               loadOp: "clear",
               storeOp: "store",
               clearValue: [.5, 1, .5, 0]
             }],
             depthStencilAttachment: {
-              view: lu ? lu.createView() : qu.view,
-              depthClearValue: qu.depthClearValue,
+              view: kG ? kG.createView() : UG.view,
+              depthClearValue: UG.depthClearValue,
               depthLoadOp: "clear",
               depthStoreOp: "store",
-              ...fu ? {
-                stencilClearValue: qu.stencilClearValue,
+              ...YG ? {
+                stencilClearValue: UG.stencilClearValue,
                 stencilLoadOp: "clear",
                 stencilStoreOp: "store"
               } : {}
             }
           },
-          bu = this.device.createBindGroup({
+          pG = this.device.createBindGroup({
             label: "sun-shadow-mask",
             layout: this.layout,
             entries: [{
               binding: 0,
-              resource: (null !== lu && void 0 !== lu ? lu : Eu).createView({
+              resource: (null !== kG && void 0 !== kG ? kG : bG).createView({
                 aspect: "depth-only"
               })
             }, {
@@ -5911,213 +5911,213 @@ export const modules = {
               }
             }, {
               binding: 2,
-              resource: Zu.createView()
+              resource: LG.createView()
             }]
           }),
-          cu = {
+          fG = {
             label: "sun-shadow-mask",
             colorAttachments: [{
-              view: Uu.createView(),
+              view: SG.createView(),
               loadOp: "clear",
               storeOp: "store",
-              clearValue: [Kl(this.edge), 0, 0, 0]
+              clearValue: [ck(this.edge), 0, 0, 0]
             }]
           };
         return this.targets = {
-          source: Eu,
-          mask: Uu,
-          maskView: Uu.createView(),
-          normals: Zu,
-          depth: lu,
-          bindGroup: bu,
-          prepass: Cu,
-          trace: cu
+          source: bG,
+          mask: SG,
+          maskView: SG.createView(),
+          normals: LG,
+          depth: kG,
+          bindGroup: pG,
+          prepass: VG,
+          trace: fG
         }, this.targets
       }
     }
 
-    function rl(uu, Eu, ju) {
-      let su = null,
-        Uu = 0;
-      for (const Zu of ju) {
-        const ju = Zu.renderable.mesh;
-        ju && !1 === ju.visible || (Zu.pipeline !== su && (uu.setPipeline(Zu.pipeline), su = Zu.pipeline), Uu += Zu.draw(uu, Eu))
+    function jk(GG, bG, ZG) {
+      let wG = null,
+        SG = 0;
+      for (const LG of ZG) {
+        const ZG = LG.renderable.mesh;
+        ZG && !1 === ZG.visible || (LG.pipeline !== wG && (GG.setPipeline(LG.pipeline), wG = LG.pipeline), SG += LG.draw(GG, bG))
       }
-      return Uu
+      return SG
     }
-    const Ql = 6e4,
-      il = {
+    const Pk = 6e4,
+      Mk = {
         status: "ok"
       },
-      Wl = {
+      Ak = {
         status: "skipped"
       };
-    async function Sl(uu, Eu) {
+    async function sk(GG, bG) {
       const {
-        isCancelled: ju
-      } = uu;
-      if (ju()) return {
-        status: "Lj"
+        isCancelled: ZG
+      } = GG;
+      if (ZG()) return {
+        status: "RZ"
       };
       const {
-        target: su
-      } = Eu;
-      if (!su) return console.warn("Shader pack: skipped the compile check, as Lite hasn't bound terrain yet"), {
+        target: wG
+      } = bG;
+      if (!wG) return console.warn("Shader pack: skipped the compile check, as Lite hasn't bound terrain yet"), {
         status: "skipped"
       };
-      const Uu = [],
-        Zu = Promise.all(Array.from(new Set(uu.materials), (async ju => {
-          Uu.push(await async function(uu, Eu, ju, su) {
-            const Uu = {
-              lighting: uu.lighting,
-              dirLightCount: Math.min(uu.dirLightCount, 4),
-              AN: uu.runtime
+      const SG = [],
+        LG = Promise.all(Array.from(new Set(GG.materials), (async ZG => {
+          SG.push(await async function(GG, bG, ZG, wG) {
+            const SG = {
+              lighting: GG.lighting,
+              dirLightCount: Math.min(GG.dirLightCount, 4),
+              OQ: GG.runtime
             };
             try {
-              const Zu = Eu.material(su);
-              return Zu && Vs(Eu.programKey(Zu, !1, Uu)) ? (await Zu.ready, uu.isCancelled() ? il : Zu.bindGroupLayout ? await async function(uu, Eu, ju, su) {
+              const LG = bG.material(wG);
+              return LG && aw(bG.programKey(LG, !1, SG)) ? (await LG.ready, GG.isCancelled() ? Mk : LG.bindGroupLayout ? await async function(GG, bG, ZG, wG) {
                 const {
-                  device: Uu
-                } = uu;
-                let Zu, Xu;
-                Uu.pushErrorScope("validation");
+                  device: SG
+                } = GG;
+                let LG, yG;
+                SG.pushErrorScope("validation");
                 try {
-                  Zu = uu.pipelineBuild(Eu, ju, su)
+                  LG = GG.pipelineBuild(bG, ZG, wG)
                 } finally {
-                  Xu = Uu.popErrorScope().catch((() => null))
+                  yG = SG.popErrorScope().catch((() => null))
                 }
-                const [lu, qu] = await Promise.all([Xu, Zu.built.then((() => null), (uu => null !== uu && void 0 !== uu ? uu : new Error("pipeline failed")))]);
-                if (!lu && !qu) return il;
-                const fu = await Il(Zu.module),
-                  Cu = fu.length > 0 ? fu.map((uu => `${Zu.name} ${uu.lineNum}:${uu.linePos}: ${uu.message}`)).join("\n") : `${Zu.name}: ${Fl(null!==qu&&void 0!==qu?qu:lu)}`;
+                const [kG, UG] = await Promise.all([yG, LG.built.then((() => null), (GG => null !== GG && void 0 !== GG ? GG : new Error("pipeline failed")))]);
+                if (!kG && !UG) return Mk;
+                const YG = await qk(LG.module),
+                  VG = YG.length > 0 ? YG.map((GG => `${LG.name} ${GG.lineNum}:${GG.linePos}: ${GG.message}`)).join("\n") : `${LG.name}: ${nk(null!==UG&&void 0!==UG?UG:kG)}`;
                 return {
                   status: "failed",
-                  material: Eu.model.name,
-                  message: Cu
+                  material: bG.model.name,
+                  message: VG
                 }
-              }(Eu, Zu, Eu.programKey(Zu, "none" !== Zu.texture, Uu), ju): (console.warn(`Shader pack: skipped the compile check for "${su.name}", whose textures failed to load`), Wl)) : il
-            } catch (Zu) {
+              }(bG, LG, bG.programKey(LG, "none" !== LG.texture, SG), ZG): (console.warn(`Shader pack: skipped the compile check for "${wG.name}", whose textures failed to load`), Ak)) : Mk
+            } catch (LG) {
               return {
                 status: "failed",
-                material: su.name,
-                message: Fl(Zu)
+                material: wG.name,
+                message: nk(LG)
               }
             }
-          }(uu, Eu, su, ju))
+          }(GG, bG, wG, ZG))
         }))),
-        Xu = function(uu, Eu) {
-          let ju, su, Uu = !1;
-          const Zu = new Promise((Zu => {
-            var Xu;
-            ju = setTimeout((() => {
-              Zu("timeout")
-            }), null !== (Xu = Eu.timeoutMs) && void 0 !== Xu ? Xu : Ql), su = setInterval((() => {
-              Eu.isCancelled() && Zu("Lj")
-            }), 50), uu.lost.then((() => {
-              Uu = !0, Zu("lost")
+        yG = function(GG, bG) {
+          let ZG, wG, SG = !1;
+          const LG = new Promise((LG => {
+            var yG;
+            ZG = setTimeout((() => {
+              LG("timeout")
+            }), null !== (yG = bG.timeoutMs) && void 0 !== yG ? yG : Pk), wG = setInterval((() => {
+              bG.isCancelled() && LG("RZ")
+            }), 50), GG.lost.then((() => {
+              SG = !0, LG("lost")
             }))
           }));
           return {
-            signal: Zu,
-            lost: () => Uu,
+            signal: LG,
+            lost: () => SG,
             dispose: () => {
-              clearTimeout(ju), clearInterval(su)
+              clearTimeout(ZG), clearInterval(wG)
             }
           }
-        }(Eu.device, uu);
-      let lu;
+        }(bG.device, GG);
+      let kG;
       try {
-        lu = await Promise.race([Zu.then((() => "done")), Xu.signal])
+        kG = await Promise.race([LG.then((() => "done")), yG.signal])
       } finally {
-        Xu.dispose()
+        yG.dispose()
       }
-      if ("Lj" === lu || ju()) return {
-        status: "Lj"
+      if ("RZ" === kG || ZG()) return {
+        status: "RZ"
       };
-      const qu = Uu.find((uu => "failed" === uu.status));
-      return qu && "lost" !== lu && !Xu.lost() && await new Promise((uu => {
-        setTimeout(uu, 0)
-      })), "lost" === lu || Xu.lost() ? (console.warn("Shader pack: skipped the compile check, as the GPU device was lost"), {
+      const UG = SG.find((GG => "failed" === GG.status));
+      return UG && "lost" !== kG && !yG.lost() && await new Promise((GG => {
+        setTimeout(GG, 0)
+      })), "lost" === kG || yG.lost() ? (console.warn("Shader pack: skipped the compile check, as the GPU device was lost"), {
         status: "skipped"
-      }) : qu ? {
+      }) : UG ? {
         status: "failed",
         failure: {
-          material: qu.material,
-          message: qu.message
+          material: UG.material,
+          message: UG.message
         }
-      } : "timeout" === lu ? (console.warn(`Shader pack: skipped the compile check, which didn't finish in ${(null!==(fu=uu.timeoutMs)&&void 0!==fu?fu:Ql)/1e3} s`), {
+      } : "timeout" === kG ? (console.warn(`Shader pack: skipped the compile check, which didn't finish in ${(null!==(YG=GG.timeoutMs)&&void 0!==YG?YG:Pk)/1e3} s`), {
         status: "skipped"
-      }) : Uu.some((uu => "skipped" === uu.status)) ? {
+      }) : SG.some((GG => "skipped" === GG.status)) ? {
         status: "skipped"
       } : {
         status: "ok"
       };
-      var fu
+      var YG
     }
-    async function Il(uu) {
-      if (!uu) return [];
+    async function qk(GG) {
+      if (!GG) return [];
       try {
-        return (await uu.getCompilationInfo()).messages.filter((uu => "error" === uu.type))
+        return (await GG.getCompilationInfo()).messages.filter((GG => "error" === GG.type))
       } catch {
         return []
       }
     }
 
-    function Fl(uu) {
-      var Eu;
-      return null !== (Eu = null === uu || void 0 === uu ? void 0 : uu.message) && void 0 !== Eu ? Eu : String(uu)
+    function nk(GG) {
+      var bG;
+      return null !== (bG = null === GG || void 0 === GG ? void 0 : GG.message) && void 0 !== bG ? bG : String(GG)
     }
 
-    function Bl(uu, Eu, ju, su, Uu) {
-      Vs(Eu) ? Il(su).then((Eu => {
-        const [su] = Eu;
-        CE(uu, "terrain", ju, Uu, su ? `${su.lineNum}:${su.linePos} error: ${su.message}` : null)
-      })) : CE(uu, "terrain", ju, Uu)
+    function gk(GG, bG, ZG, wG, SG) {
+      aw(bG) ? qk(wG).then((bG => {
+        const [wG] = bG;
+        Vb(GG, "terrain", ZG, SG, wG ? `${wG.lineNum}:${wG.linePos} error: ${wG.message}` : null)
+      })) : Vb(GG, "terrain", ZG, SG)
     }
-    var Ll = ju(37931),
-      tl = ju(37941),
-      xl = ju(37954),
-      Tl = ju(2999);
+    var ek = ZG(37918),
+      Rk = ZG(37928),
+      Tk = ZG(37941),
+      Hk = ZG(2854);
 
-    function Hl(uu, Eu, ju, su, Uu) {
-      const Zu = Math.hypot(ju[0], ju[1], ju[2]);
-      if (!(Zu > 0)) return;
-      const Xu = [ju[0] / Zu, ju[1] / Zu, ju[2] / Zu],
-        lu = [Math.floor(Eu[0]), Math.floor(Eu[1]), Math.floor(Eu[2])],
-        qu = [0, 0, 0],
-        fu = [1 / 0, 1 / 0, 1 / 0],
-        Cu = [1 / 0, 1 / 0, 1 / 0];
-      for (let Nu = 0; Nu < 3; Nu++) Xu[Nu] > 0 ? (qu[Nu] = 1, fu[Nu] = (lu[Nu] + 1 - Eu[Nu]) / Xu[Nu], Cu[Nu] = 1 / Xu[Nu]) : Xu[Nu] < 0 && (qu[Nu] = -1, fu[Nu] = (lu[Nu] - Eu[Nu]) / Xu[Nu], Cu[Nu] = -1 / Xu[Nu]);
+    function tk(GG, bG, ZG, wG, SG) {
+      const LG = Math.hypot(ZG[0], ZG[1], ZG[2]);
+      if (!(LG > 0)) return;
+      const yG = [ZG[0] / LG, ZG[1] / LG, ZG[2] / LG],
+        kG = [Math.floor(bG[0]), Math.floor(bG[1]), Math.floor(bG[2])],
+        UG = [0, 0, 0],
+        YG = [1 / 0, 1 / 0, 1 / 0],
+        VG = [1 / 0, 1 / 0, 1 / 0];
+      for (let QG = 0; QG < 3; QG++) yG[QG] > 0 ? (UG[QG] = 1, YG[QG] = (kG[QG] + 1 - bG[QG]) / yG[QG], VG[QG] = 1 / yG[QG]) : yG[QG] < 0 && (UG[QG] = -1, YG[QG] = (kG[QG] - bG[QG]) / yG[QG], VG[QG] = -1 / yG[QG]);
       const {
-        hO: bu
-      } = uu;
-      let cu = uu.dL(lu[0], lu[1], lu[2]);
+        rK: pG
+      } = GG;
+      let fG = GG.KD(kG[0], kG[1], kG[2]);
       for (;;) {
-        const Eu = fu[0] < fu[1] ? fu[0] < fu[2] ? 0 : 2 : fu[1] < fu[2] ? 1 : 2;
-        if (fu[Eu] > su) return;
-        const ju = qu[Eu] > 0 ? lu[Eu] + 1 : lu[Eu];
-        lu[Eu] += qu[Eu], fu[Eu] += Cu[Eu];
-        const Zu = uu.dL(lu[0], lu[1], lu[2]),
-          Xu = Zu !== cu && !(uu.opaque[cu] && uu.opaque[Zu]);
-        if (Xu) {
-          const su = [lu[0], lu[1], lu[2]];
-          su[Eu] = ju;
-          const Zu = Math.floor(su[0] / bu),
-            Xu = Math.floor(su[1] / bu),
-            qu = Math.floor(su[2] / bu);
-          !uu.isDrawn(Zu, Xu, qu) && uu.hasParts(Zu, Xu, qu) && Uu.add(`${Zu},${Xu},${qu}`)
+        const bG = YG[0] < YG[1] ? YG[0] < YG[2] ? 0 : 2 : YG[1] < YG[2] ? 1 : 2;
+        if (YG[bG] > wG) return;
+        const ZG = UG[bG] > 0 ? kG[bG] + 1 : kG[bG];
+        kG[bG] += UG[bG], YG[bG] += VG[bG];
+        const LG = GG.KD(kG[0], kG[1], kG[2]),
+          yG = LG !== fG && !(GG.opaque[fG] && GG.opaque[LG]);
+        if (yG) {
+          const wG = [kG[0], kG[1], kG[2]];
+          wG[bG] = ZG;
+          const LG = Math.floor(wG[0] / pG),
+            yG = Math.floor(wG[1] / pG),
+            UG = Math.floor(wG[2] / pG);
+          !GG.isDrawn(LG, yG, UG) && GG.hasParts(LG, yG, UG) && SG.add(`${LG},${yG},${UG}`)
         }
-        if (Xu && uu.occluders[Zu]) return;
-        cu = Zu
+        if (yG && GG.occluders[LG]) return;
+        fG = LG
       }
     }
 
-    function Al(uu, Eu) {
-      return uu.group - Eu.group || uu.nearest - Eu.nearest
+    function Dk(GG, bG) {
+      return GG.group - bG.group || GG.nearest - bG.nearest
     }
-    class nl {
-      constructor(uu, Eu) {
-        this.device = uu, this.rD = Eu, this.data = new Float32Array(2048), this.words = new Uint32Array(this.data.buffer), this.buffer = void 0, this.free = [], this.next = 0, this.dirtyMin = 1 / 0, this.dirtyMax = -1, this.buffer = this.createBuffer()
+    class Nk {
+      constructor(GG, bG) {
+        this.device = GG, this.PJ = bG, this.data = new Float32Array(2048), this.words = new Uint32Array(this.data.buffer), this.buffer = void 0, this.free = [], this.next = 0, this.dirtyMin = 1 / 0, this.dirtyMax = -1, this.buffer = this.createBuffer()
       }
       createBuffer() {
         return this.device.createBuffer({
@@ -6127,57 +6127,57 @@ export const modules = {
         })
       }
       allocate() {
-        var uu;
-        const Eu = null !== (uu = this.free.pop()) && void 0 !== uu ? uu : this.next++;
-        if (8 * Eu >= this.data.length) {
-          const uu = new Float32Array(2 * this.data.length);
-          uu.set(this.data), this.data = uu, this.words = new Uint32Array(uu.buffer), this.buffer.destroy(), this.buffer = this.createBuffer(), this.markDirty(0, this.next - 1), this.rD()
+        var GG;
+        const bG = null !== (GG = this.free.pop()) && void 0 !== GG ? GG : this.next++;
+        if (8 * bG >= this.data.length) {
+          const GG = new Float32Array(2 * this.data.length);
+          GG.set(this.data), this.data = GG, this.words = new Uint32Array(GG.buffer), this.buffer.destroy(), this.buffer = this.createBuffer(), this.markDirty(0, this.next - 1), this.PJ()
         }
-        return Eu
+        return bG
       }
-      release(uu) {
-        this.free.push(uu)
+      release(GG) {
+        this.free.push(GG)
       }
-      set(uu, Eu, ju, su, Uu) {
-        const Zu = 8 * uu + ts;
-        this.data[Zu] = Eu, this.data[Zu + 1] = ju, this.data[Zu + 2] = su, this.setVisibility(uu, Uu)
+      set(GG, bG, ZG, wG, SG) {
+        const LG = 8 * GG + ew;
+        this.data[LG] = bG, this.data[LG + 1] = ZG, this.data[LG + 2] = wG, this.setVisibility(GG, SG)
       }
-      setVisibility(uu, Eu) {
-        this.data[8 * uu + xs] = Eu, this.markDirty(uu, uu)
+      setVisibility(GG, bG) {
+        this.data[8 * GG + Rw] = bG, this.markDirty(GG, GG)
       }
-      setFaces(uu, Eu, ju) {
-        const su = 8 * uu;
-        this.words[su + Ts] = Eu, this.words[su + Hs] = ju, this.markDirty(uu, uu)
+      setFaces(GG, bG, ZG) {
+        const wG = 8 * GG;
+        this.words[wG + Tw] = bG, this.words[wG + Hw] = ZG, this.markDirty(GG, GG)
       }
-      markDirty(uu, Eu) {
-        this.dirtyMin = Math.min(this.dirtyMin, uu), this.dirtyMax = Math.max(this.dirtyMax, Eu)
+      markDirty(GG, bG) {
+        this.dirtyMin = Math.min(this.dirtyMin, GG), this.dirtyMax = Math.max(this.dirtyMax, bG)
       }
       flush() {
         if (this.dirtyMax < this.dirtyMin) return;
         this.device.queue.writeBuffer(this.buffer, 8 * this.dirtyMin * 4, this.data, 8 * this.dirtyMin, 8 * (this.dirtyMax - this.dirtyMin + 1)), this.dirtyMin = 1 / 0, this.dirtyMax = -1
       }
     }
-    const yl = Ls,
-      zl = !0;
-    const Rl = {
+    const Ok = gw,
+      xk = !0;
+    const Bk = {
         arrayStride: 4,
         stepMode: "vertex",
         attributes: [{
-          shaderLocation: yl.packedLight,
+          shaderLocation: Ok.packedLight,
           offset: 0,
           format: "float32"
         }]
       },
-      uq = {
+      GU = {
         srcFactor: "src-alpha",
         dstFactor: "one-minus-src-alpha",
         operation: "add"
       };
-    class Eq {
-      constructor(uu) {
-        this.device = uu, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.sceneDepth = null, this.sunShadow = null, this.shadowMask = null, this.chunks = new Map, this.materials = new Map, this.slots = void 0, this.sceneLayout = void 0, this.frameLayout = void 0, this.materialLayouts = new Map, this.frameUniforms = new Float32Array(Qs), this.dirLightUniforms = this.frameUniforms.subarray(rs.dirLights, rs.aoLevels), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.recordsGroups = new WeakMap, this.modules = new Map, this.pipelines = new Map, this.prepassOf = new WeakMap, this.maskPipelines = 0, this.builds = new Map, this.target = null, this.compiling = 0, this.sampler = void 0, this.geometry = void 0, this.warnOnce = (0, vE.d)(), this.faceGroups = !0, this.visibilityGraph = zl, this.visCull = zl, this.visCheck = !1, this.visCullMinDistance = xl.d, this.visCheckFrame = 0, this.visCandidates = [], this.visCandidateBatches = [], this.visPassable = new Set, this.visBatchDraws = new Map, this.visDrawsMaterial = null, this.visDrawsBits = 0, this.visCulledParts = 0, this.visCulledTriangles = 0, this.visViolations = 0, this.visSweeps = 0, this.submittedTriangles = 0, this.chunkSorter = new Zq, this.opaqueBatches = [], this.transparent = [], this.unlit = [], this.lighting = !1, this.dirLightCount = 0, this.aoLevelsWritten = !1, this.originOffset = [0, 0, 0], this.eye = [0, 0, 0], this.faceRanges = new Int32Array(4), this.faceEpoch = 0, this.faceEye = [NaN, NaN, NaN], this.faceFocalPx = NaN, this.AN = null, this.shaderPackInputs = null, this.depthStandIn = null, this.geometry = new kl(uu, ((uu, Eu) => this.recordsGroup(uu, Eu))), this.slots = new nl(uu, (() => {
+    class bU {
+      constructor(GG) {
+        this.device = GG, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.sceneDepth = null, this.sunShadow = null, this.shadowMask = null, this.chunks = new Map, this.materials = new Map, this.slots = void 0, this.sceneLayout = void 0, this.frameLayout = void 0, this.materialLayouts = new Map, this.frameUniforms = new Float32Array(jw), this.dirLightUniforms = this.frameUniforms.subarray(lw.dirLights, lw.aoLevels), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.recordsGroups = new WeakMap, this.modules = new Map, this.pipelines = new Map, this.prepassOf = new WeakMap, this.maskPipelines = 0, this.builds = new Map, this.target = null, this.compiling = 0, this.sampler = void 0, this.geometry = void 0, this.warnOnce = (0, ab.e)(), this.faceGroups = !0, this.visibilityGraph = xk, this.visCull = xk, this.visCheck = !1, this.visCullMinDistance = Tk.d, this.visCheckFrame = 0, this.visCandidates = [], this.visCandidateBatches = [], this.visPassable = new Set, this.visBatchDraws = new Map, this.visDrawsMaterial = null, this.visDrawsBits = 0, this.visCulledParts = 0, this.visCulledTriangles = 0, this.visViolations = 0, this.visSweeps = 0, this.submittedTriangles = 0, this.chunkSorter = new LU, this.opaqueBatches = [], this.transparent = [], this.unlit = [], this.lighting = !1, this.dirLightCount = 0, this.aoLevelsWritten = !1, this.originOffset = [0, 0, 0], this.eye = [0, 0, 0], this.faceRanges = new Int32Array(4), this.faceEpoch = 0, this.faceEye = [NaN, NaN, NaN], this.faceFocalPx = NaN, this.OQ = null, this.shaderPackInputs = null, this.depthStandIn = null, this.geometry = new Fk(GG, ((GG, bG) => this.recordsGroup(GG, bG))), this.slots = new Nk(GG, (() => {
           this.frameBindGroup = this.createFrameBindGroup(), this.recordsGroups = new WeakMap
-        })), this.sceneLayout = wE(uu), this.frameLayout = uu.createBindGroupLayout({
+        })), this.sceneLayout = ub(GG), this.frameLayout = GG.createBindGroupLayout({
           label: "terrain-frame",
           entries: [{
             binding: 0,
@@ -6204,11 +6204,11 @@ export const modules = {
               type: "read-only-storage"
             }
           }]
-        }), this.frameBuffer = uu.createBuffer({
+        }), this.frameBuffer = GG.createBuffer({
           label: "terrain-frame",
           size: this.frameUniforms.byteLength,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.frameBindGroup = this.createFrameBindGroup(), this.sampler = uu.createSampler({
+        }), this.frameBindGroup = this.createFrameBindGroup(), this.sampler = GG.createSampler({
           label: "terrain",
           magFilter: "nearest",
           minFilter: "nearest",
@@ -6219,23 +6219,23 @@ export const modules = {
           order: 100,
           isTransparent: !1,
           _direct: !0,
-          bind: (uu, Eu) => this.createBinding(this.opaqueRenderable, Eu, !1)
+          bind: (GG, bG) => this.createBinding(this.opaqueRenderable, bG, !1)
         }, this.transparentRenderable = {
           order: 200,
           isTransparent: !0,
           _worldCenter: [0, 0, 0],
-          bind: (uu, Eu) => this.createBinding(this.transparentRenderable, Eu, !0)
+          bind: (GG, bG) => this.createBinding(this.transparentRenderable, bG, !0)
         }
       }
       retire() {
         this.geometry.retire()
       }
-      installSceneDepth(uu, Eu) {
-        this.sceneDepth = new ml(this.device, this.transparentRenderable, uu, Eu)
+      installSceneDepth(GG, bG) {
+        this.sceneDepth = new vk(this.device, this.transparentRenderable, GG, bG)
       }
       createFrameBindGroup() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return this.device.createBindGroup({
           label: "terrain-frame",
           layout: this.frameLayout,
@@ -6252,28 +6252,28 @@ export const modules = {
           }, {
             binding: 2,
             resource: {
-              buffer: null !== uu && void 0 !== uu ? uu : this.slots.buffer
+              buffer: null !== GG && void 0 !== GG ? GG : this.slots.buffer
             }
           }, {
             binding: 3,
             resource: {
-              buffer: null !== Eu && void 0 !== Eu ? Eu : this.slots.buffer
+              buffer: null !== bG && void 0 !== bG ? bG : this.slots.buffer
             }
           }]
         })
       }
-      recordsGroup(uu, Eu) {
-        const ju = null !== Eu && void 0 !== Eu ? Eu : uu;
-        let su = this.recordsGroups.get(ju);
-        return su || (su = this.createFrameBindGroup(uu, Eu), this.recordsGroups.set(ju, su)), su
+      recordsGroup(GG, bG) {
+        const ZG = null !== bG && void 0 !== bG ? bG : GG;
+        let wG = this.recordsGroups.get(ZG);
+        return wG || (wG = this.createFrameBindGroup(GG, bG), this.recordsGroups.set(ZG, wG)), wG
       }
-      setChunkMesh(uu, Eu, ju) {
-        var su;
-        let Uu = this.chunks.get(uu);
-        Uu ? this.geometry.release(Uu) : (Uu = {
-          mesh: uu,
+      setChunkMesh(GG, bG, ZG) {
+        var wG;
+        let SG = this.chunks.get(GG);
+        SG ? this.geometry.release(SG) : (SG = {
+          mesh: GG,
           slot: this.slots.allocate(),
-          origin: [ju[0], ju[1], ju[2]],
+          origin: [ZG[0], ZG[1], ZG[2]],
           material: null,
           vertices: null,
           lit: !1,
@@ -6282,7 +6282,7 @@ export const modules = {
           packed: !1,
           lostRemeshes: 0,
           lostRetryAt: 0,
-          visibility: uu.visibility,
+          visibility: GG.visibility,
           distance: 0,
           faceGroups: null,
           planePX: 0,
@@ -6302,23 +6302,23 @@ export const modules = {
           cj: NaN,
           ck: NaN,
           key: NaN
-        }, this.chunks.set(uu, Uu), this.writeSlot(Uu)), Uu.material = uu.material ? this.materialFor(uu.material) : null, Uu.packed = !!Eu.packedVertices, Uu.vertexCount = (0, el.g)(Eu), Uu.faceCount = Uu.vertexCount / 4;
-        const Zu = null !== (su = Eu.faceGroups) && void 0 !== su ? su : null;
-        if (Uu.faceGroups = Zu, Zu) {
-          const uu = Ll.k;
-          Uu.planePX = Zu[uu], Uu.planeNX = Zu[uu + 1], Uu.planePY = Zu[uu + 2], Uu.planeNY = Zu[uu + 3], Uu.planePZ = Zu[uu + 4], Uu.planeNZ = Zu[uu + 5]
+        }, this.chunks.set(GG, SG), this.writeSlot(SG)), SG.material = GG.material ? this.materialFor(GG.material) : null, SG.packed = !!bG.packedVertices, SG.vertexCount = (0, zk.d)(bG), SG.faceCount = SG.vertexCount / 4;
+        const LG = null !== (wG = bG.faceGroups) && void 0 !== wG ? wG : null;
+        if (SG.faceGroups = LG, LG) {
+          const GG = ek.i;
+          SG.planePX = LG[GG], SG.planeNX = LG[GG + 1], SG.planePY = LG[GG + 2], SG.planeNY = LG[GG + 3], SG.planePZ = LG[GG + 4], SG.planeNZ = LG[GG + 5]
         }
-        this.drawWhole(Uu), 0 !== Uu.faceCount && (this.geometry.set(Uu, Eu) ? (Uu.packed && this.slots.setFaces(Uu.slot, Uu.vertices.start + Uu.faceCount, Uu.faceCount), Eu.sO && this.setChunkMeshLight(uu, Eu.sO)) : this.warnOnce("tooBig", `Lite terrain: a chunk of ${Uu.vertexCount} vertices is more than a buffer may hold, and is left out.`))
+        this.drawWhole(SG), 0 !== SG.faceCount && (this.geometry.set(SG, bG) ? (SG.packed && this.slots.setFaces(SG.slot, SG.vertices.start + SG.faceCount, SG.faceCount), bG.LK && this.setChunkMeshLight(GG, bG.LK)) : this.warnOnce("tooBig", `Lite terrain: a chunk of ${SG.vertexCount} vertices is more than a buffer may hold, and is left out.`))
       }
-      setChunkMeshLight(uu, Eu) {
-        const ju = this.chunks.get(uu);
-        ju && this.geometry.setLight(ju, Eu)
+      setChunkMeshLight(GG, bG) {
+        const ZG = this.chunks.get(GG);
+        ZG && this.geometry.setLight(ZG, bG)
       }
       drawStats() {
-        let uu = this.transparent.length;
-        for (const Eu of this.opaqueBatches) uu += Eu.meshes.length;
+        let GG = this.transparent.length;
+        for (const bG of this.opaqueBatches) GG += bG.meshes.length;
         return {
-          drawn: uu,
+          drawn: GG,
           loaded: this.chunks.size,
           triangles: this.submittedTriangles,
           visCulled: this.visCulledParts,
@@ -6334,559 +6334,559 @@ export const modules = {
       get buffersAwaitingVerdict() {
         return this.geometry.buffersAwaitingVerdict
       }
-      removeChunkMesh(uu) {
-        const Eu = this.chunks.get(uu);
-        Eu && (this.geometry.release(Eu), this.slots.release(Eu.slot), this.chunks.delete(uu))
+      removeChunkMesh(GG) {
+        const bG = this.chunks.get(GG);
+        bG && (this.geometry.release(bG), this.slots.release(bG.slot), this.chunks.delete(GG))
       }
-      remeshLost(uu, Eu) {
-        this.geometry.release(Eu), Eu.lostRetryAt = performance.now() + Math.min(6e4, 1e3 * 2 ** Eu.lostRemeshes++);
-        const ju = uu.zb,
-          [su, Uu, Zu] = ju.Esu(Eu.origin[0], Eu.origin[1], Eu.origin[2]),
-          Xu = ju.CY.bY(su, Uu, Zu);
-        Xu && (Xu.qY = !0, Xu.NY = !0, ju.fY(Xu, !1))
+      remeshLost(GG, bG) {
+        this.geometry.release(bG), bG.lostRetryAt = performance.now() + Math.min(6e4, 1e3 * 2 ** bG.lostRemeshes++);
+        const ZG = GG.Op,
+          [wG, SG, LG] = ZG.hwG(bG.origin[0], bG.origin[1], bG.origin[2]),
+          yG = ZG.Qh.Kh(wG, SG, LG);
+        yG && (yG.ph = !0, yG.dh = !0, ZG.fh(yG, !1))
       }
-      chooseFaceRanges(uu, Eu, ju) {
-        const su = this.faceRanges;
-        uu.faceMask = ju, uu.rangeCount = (0, tl.j)(Eu, ju, su), uu.first0 = su[0], uu.count0 = su[1], uu.first1 = su[2], uu.count1 = su[3]
+      chooseFaceRanges(GG, bG, ZG) {
+        const wG = this.faceRanges;
+        GG.faceMask = ZG, GG.rangeCount = (0, Rk.q)(bG, ZG, wG), GG.first0 = wG[0], GG.count0 = wG[1], GG.first1 = wG[2], GG.count1 = wG[3]
       }
-      drawWhole(uu) {
-        uu.faceMask = -1, uu.faceEpoch = -1, uu.rangeCount = 1, uu.first0 = 0, uu.count0 = uu.faceCount
+      drawWhole(GG) {
+        GG.faceMask = -1, GG.faceEpoch = -1, GG.rangeCount = 1, GG.first0 = 0, GG.count0 = GG.faceCount
       }
-      writeSlot(uu) {
-        const [Eu, ju, su] = this.originOffset;
-        this.slots.set(uu.slot, uu.origin[0] - Eu, uu.origin[1] - ju, uu.origin[2] - su, uu.visibility)
+      writeSlot(GG) {
+        const [bG, ZG, wG] = this.originOffset;
+        this.slots.set(GG.slot, GG.origin[0] - bG, GG.origin[1] - ZG, GG.origin[2] - wG, GG.visibility)
       }
-      materialFor(uu) {
-        const Eu = this.materials.get(uu);
-        if (Eu) return Eu;
-        const ju = pl(uu);
-        if (!ju) return this.warnOnce(`material:${uu.name}`, `Lite terrain cannot draw material "${uu.name}"; its chunks are skipped.`), null;
+      materialFor(GG) {
+        const bG = this.materials.get(GG);
+        if (bG) return bG;
+        const ZG = Xk(GG);
+        if (!ZG) return this.warnOnce(`material:${GG.name}`, `Lite terrain cannot draw material "${GG.name}"; its chunks are skipped.`), null;
         const {
-          model: su,
-          atlas: Uu,
-          texture: Zu,
-          animated: Xu,
-          uniformData: lu
-        } = ju, qu = {
+          model: wG,
+          atlas: SG,
+          texture: LG,
+          animated: yG,
+          uniformData: kG
+        } = ZG, UG = {
           id: this.materials.size,
-          model: su,
-          texture: Zu,
-          animated: Xu,
-          uniformData: lu,
+          model: wG,
+          texture: LG,
+          animated: yG,
+          uniformData: kG,
           uniformBuffer: this.device.createBuffer({
-            label: `terrain-material-${uu.name}`,
-            size: lu.byteLength,
+            label: `terrain-material-${GG.name}`,
+            size: kG.byteLength,
             usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
           }),
-          liquid: ju.liquid,
-          customRenderMat: ju.customRenderMat,
+          liquid: ZG.liquid,
+          customRenderMat: ZG.customRenderMat,
           atlasCount: 0,
-          I5: 0,
+          N9: 0,
           atlasLayers: 0,
           bindGroup: null,
           bindGroupLayout: null,
           ready: Promise.resolve(),
           pipelineIds: [null, null, null, null]
         };
-        return this.materials.set(uu, qu), this.device.queue.writeBuffer(qu.uniformBuffer, 0, lu), qu.ready = this.createMaterialBindGroup(qu, Uu).catch((Eu => {
-          console.error(`Lite terrain failed to load the textures of material "${uu.name}"`, Eu)
-        })), qu
+        return this.materials.set(GG, UG), this.device.queue.writeBuffer(UG.uniformBuffer, 0, kG), UG.ready = this.createMaterialBindGroup(UG, SG).catch((bG => {
+          console.error(`Lite terrain failed to load the textures of material "${GG.name}"`, bG)
+        })), UG
       }
-      materialLayout(uu) {
-        const Eu = function(uu) {
-            const Eu = ["uniforms"];
-            if ("atlas" === uu.texture) {
-              uu.animated && Eu.push("animData"), Eu.push("sampler");
-              for (let ju = 0; ju < uu.atlasCount; ju++) Eu.push("textureArray")
-            } else "single" === uu.texture && Eu.push("sampler", "texture");
-            return Eu
-          }(uu),
-          ju = Eu.join(",");
-        let su = this.materialLayouts.get(ju);
-        if (!su) {
-          const uu = GPUShaderStage.FRAGMENT;
-          su = this.device.createBindGroupLayout({
-            label: `terrain-material-${ju}`,
-            entries: Eu.map(((Eu, ju) => {
-              switch (Eu) {
+      materialLayout(GG) {
+        const bG = function(GG) {
+            const bG = ["uniforms"];
+            if ("atlas" === GG.texture) {
+              GG.animated && bG.push("animData"), bG.push("sampler");
+              for (let ZG = 0; ZG < GG.atlasCount; ZG++) bG.push("textureArray")
+            } else "single" === GG.texture && bG.push("sampler", "texture");
+            return bG
+          }(GG),
+          ZG = bG.join(",");
+        let wG = this.materialLayouts.get(ZG);
+        if (!wG) {
+          const GG = GPUShaderStage.FRAGMENT;
+          wG = this.device.createBindGroupLayout({
+            label: `terrain-material-${ZG}`,
+            entries: bG.map(((bG, ZG) => {
+              switch (bG) {
                 case "uniforms":
                   return {
-                    binding: ju, visibility: GPUShaderStage.VERTEX | uu, buffer: {
+                    binding: ZG, visibility: GPUShaderStage.VERTEX | GG, buffer: {
                       type: "uniform"
                     }
                   };
                 case "animData":
                   return {
-                    binding: ju, visibility: GPUShaderStage.VERTEX | uu, buffer: {
+                    binding: ZG, visibility: GPUShaderStage.VERTEX | GG, buffer: {
                       type: "read-only-storage"
                     }
                   };
                 case "sampler":
                   return {
-                    binding: ju, visibility: uu, sampler: {
+                    binding: ZG, visibility: GG, sampler: {
                       type: "filtering"
                     }
                   };
                 case "texture":
                   return {
-                    binding: ju, visibility: uu, texture: {
+                    binding: ZG, visibility: GG, texture: {
                       sampleType: "float",
                       viewDimension: "2d"
                     }
                   };
                 case "textureArray":
                   return {
-                    binding: ju, visibility: uu, texture: {
+                    binding: ZG, visibility: GG, texture: {
                       sampleType: "float",
                       viewDimension: "2d-array"
                     }
                   }
               }
             }))
-          }), this.materialLayouts.set(ju, su)
+          }), this.materialLayouts.set(ZG, wG)
         }
-        return su
+        return wG
       }
-      async createMaterialBindGroup(uu, Eu) {
-        const ju = [{
-          buffer: uu.uniformBuffer
+      async createMaterialBindGroup(GG, bG) {
+        const ZG = [{
+          buffer: GG.uniformBuffer
         }];
-        if (Eu) {
-          const su = await EE(this.device, Eu.sources);
-          uu.atlasCount = su.length, uu.I5 = su[0].layerWidth, uu.atlasLayers = su[0].layers, Eu.animDataPerTex && ju.push({
-            buffer: Hu(this.device, Float32Array.from(Eu.animDataPerTex), GPUBufferUsage.STORAGE, "terrain-anim")
-          }), ju.push(this.sampler);
-          for (const uu of su) ju.push(uu.texture.createView({
+        if (bG) {
+          const wG = await bb(this.device, bG.sources);
+          GG.atlasCount = wG.length, GG.N9 = wG[0].layerWidth, GG.atlasLayers = wG[0].layers, bG.animDataPerTex && ZG.push({
+            buffer: tG(this.device, Float32Array.from(bG.animDataPerTex), GPUBufferUsage.STORAGE, "terrain-anim")
+          }), ZG.push(this.sampler);
+          for (const GG of wG) ZG.push(GG.texture.createView({
             dimension: "2d-array"
           }))
-        } else if ("single" === uu.texture) {
+        } else if ("single" === GG.texture) {
           const {
-            url: Eu
-          } = uu.model.diffuseTexture.source, {
-            pixels: su,
-            width: Uu,
-            height: Zu
-          } = await uE(Eu);
-          ju.push(this.sampler), ju.push(nu(this.device, su, Uu, Zu, 1, `terrain-${Eu}`).createView({
+            url: bG
+          } = GG.model.diffuseTexture.source, {
+            pixels: wG,
+            width: SG,
+            height: LG
+          } = await Gb(bG);
+          ZG.push(this.sampler), ZG.push(NG(this.device, wG, SG, LG, 1, `terrain-${bG}`).createView({
             dimension: "2d"
           }))
         }
-        const su = this.materialLayout(this.programKey(uu, !1));
-        uu.bindGroupLayout = su, uu.bindGroup = this.device.createBindGroup({
-          label: `terrain-material-${uu.model.name}`,
-          layout: su,
-          entries: ju.map(((uu, Eu) => ({
-            binding: Eu,
-            resource: uu
+        const wG = this.materialLayout(this.programKey(GG, !1));
+        GG.bindGroupLayout = wG, GG.bindGroup = this.device.createBindGroup({
+          label: `terrain-material-${GG.model.name}`,
+          layout: wG,
+          entries: ZG.map(((GG, bG) => ({
+            binding: bG,
+            resource: GG
           })))
         })
       }
-      programKey(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const su = ju ? ju.lighting : this.lighting,
-          Uu = ju ? ju.AN : this.AN,
-          Zu = {
-            texture: uu.texture,
-            atlasCount: uu.atlasCount,
-            I5: uu.I5,
-            atlasLayers: uu.atlasLayers,
-            animated: uu.animated,
-            alphaTest: uu.model.transparencyMode === du.q.alphaTest,
-            lighting: su,
-            dirLightCount: ju ? ju.dirLightCount : this.dirLightCount,
-            packed: Eu
+      programKey(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const wG = ZG ? ZG.lighting : this.lighting,
+          SG = ZG ? ZG.OQ : this.OQ,
+          LG = {
+            texture: GG.texture,
+            atlasCount: GG.atlasCount,
+            N9: GG.N9,
+            atlasLayers: GG.atlasLayers,
+            animated: GG.animated,
+            alphaTest: GG.model.transparencyMode === CG.q.alphaTest,
+            lighting: wG,
+            dirLightCount: ZG ? ZG.dirLightCount : this.dirLightCount,
+            packed: bG
           };
-        if (!Uu) return Zu;
-        const Xu = this.shaderPackFields(uu, Uu),
-          lu = "atlas" === uu.texture && uu.model.transparencyMode === du.q.opaque && ks(Xu.packVariant);
+        if (!SG) return LG;
+        const yG = this.shaderPackFields(GG, SG),
+          kG = "atlas" === GG.texture && GG.model.transparencyMode === CG.q.opaque && mw(yG.packVariant);
         return {
-          ...Zu,
-          ...Xu,
-          alphaTest: Zu.alphaTest || lu
+          ...LG,
+          ...yG,
+          alphaTest: LG.alphaTest || kG
         }
       }
-      shaderPackFields(uu, Eu) {
-        const ju = this.packVariant(uu, Eu);
-        return void 0 === ju ? Ps : {
-          packVariant: ju,
-          liquid: uu.liquid
+      shaderPackFields(GG, bG) {
+        const ZG = this.packVariant(GG, bG);
+        return void 0 === ZG ? Cw : {
+          packVariant: ZG,
+          liquid: GG.liquid
         }
       }
-      packVariant(uu, Eu) {
-        return uu.customRenderMat ? void 0 : function(uu, Eu) {
-          const ju = uu ? uu.defineFor(Eu ? "liquid" : "terrain") : 0;
-          return 0 === ju ? void 0 : ju
-        }(Eu, uu.liquid)
+      packVariant(GG, bG) {
+        return GG.customRenderMat ? void 0 : function(GG, bG) {
+          const ZG = GG ? GG.defineFor(bG ? "liquid" : "terrain") : 0;
+          return 0 === ZG ? void 0 : ZG
+        }(bG, GG.liquid)
       }
-      isBlended(uu) {
-        return uu.model.transparencyMode === du.q.alphaBlend
+      isBlended(GG) {
+        return GG.model.transparencyMode === CG.q.alphaBlend
       }
-      shaderModule(uu, Eu) {
-        let ju = this.modules.get(uu);
-        return ju || (ju = this.device.createShaderModule({
-          label: Eu,
-          code: uu
-        }), this.modules.set(uu, ju)), ju
+      shaderModule(GG, bG) {
+        let ZG = this.modules.get(GG);
+        return ZG || (ZG = this.device.createShaderModule({
+          label: bG,
+          code: GG
+        }), this.modules.set(GG, ZG)), ZG
       }
-      pipelineFor(uu, Eu, ju) {
-        let su = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (!uu.bindGroupLayout) return null;
-        if (!su) return this.pipelineOf(uu, Eu, ju);
-        const Uu = this.pipelineIdNow(uu, Eu, !0, ju),
-          Zu = this.pipelines.get(Uu);
-        if (Zu) return Zu;
-        const Xu = this.pipelineOf(uu, Eu, ju);
-        return Xu && void 0 === Zu && this.startPipeline(Uu, uu, {
-          ...this.programKey(uu, Eu),
-          resting: su
-        }, ju), Xu
+      pipelineFor(GG, bG, ZG) {
+        let wG = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (!GG.bindGroupLayout) return null;
+        if (!wG) return this.pipelineOf(GG, bG, ZG);
+        const SG = this.pipelineIdNow(GG, bG, !0, ZG),
+          LG = this.pipelines.get(SG);
+        if (LG) return LG;
+        const yG = this.pipelineOf(GG, bG, ZG);
+        return yG && void 0 === LG && this.startPipeline(SG, GG, {
+          ...this.programKey(GG, bG),
+          resting: wG
+        }, ZG), yG
       }
-      pipelineOf(uu, Eu, ju) {
-        const su = this.pipelineIdNow(uu, Eu, !1, ju),
-          Uu = this.pipelines.get(su);
-        return void 0 !== Uu ? Uu : (this.startPipeline(su, uu, this.programKey(uu, Eu), ju), null)
+      pipelineOf(GG, bG, ZG) {
+        const wG = this.pipelineIdNow(GG, bG, !1, ZG),
+          SG = this.pipelines.get(wG);
+        return void 0 !== SG ? SG : (this.startPipeline(wG, GG, this.programKey(GG, bG), ZG), null)
       }
-      pipelineIdNow(uu, Eu, ju, su) {
+      pipelineIdNow(GG, bG, ZG, wG) {
         const {
-          lighting: Uu,
-          dirLightCount: Zu
+          lighting: SG,
+          dirLightCount: LG
         } = this, {
-          transparencyMode: Xu,
-          backFaceCulling: lu
-        } = uu.model, qu = this.packVariant(uu, this.AN), fu = (Eu ? 2 : 0) + (ju ? 1 : 0), Cu = uu.pipelineIds[fu];
-        if (null !== Cu && Cu.lighting === Uu && Cu.dirLightCount === Zu && Cu.packVariant === qu && Cu.transparencyMode === Xu && Cu.cull === lu && Cu.atlasCount === uu.atlasCount && Cu.I5 === uu.I5 && Cu.atlasLayers === uu.atlasLayers && Cu.colorFormat === su._colorFormat && Cu.depthStencilFormat === su._depthStencilFormat && Cu.sampleCount === su._sampleCount) return Cu.id;
-        const bu = this.programKey(uu, Eu),
-          cu = this.pipelineId(uu, ju ? {
-            ...bu,
-            resting: ju
-          } : bu, su);
-        return uu.pipelineIds[fu] = {
-          id: cu,
-          lighting: Uu,
-          dirLightCount: Zu,
-          packVariant: qu,
-          transparencyMode: Xu,
-          cull: lu,
-          atlasCount: uu.atlasCount,
-          I5: uu.I5,
-          atlasLayers: uu.atlasLayers,
-          colorFormat: su._colorFormat,
-          depthStencilFormat: su._depthStencilFormat,
-          sampleCount: su._sampleCount
-        }, cu
+          transparencyMode: yG,
+          backFaceCulling: kG
+        } = GG.model, UG = this.packVariant(GG, this.OQ), YG = (bG ? 2 : 0) + (ZG ? 1 : 0), VG = GG.pipelineIds[YG];
+        if (null !== VG && VG.lighting === SG && VG.dirLightCount === LG && VG.packVariant === UG && VG.transparencyMode === yG && VG.cull === kG && VG.atlasCount === GG.atlasCount && VG.N9 === GG.N9 && VG.atlasLayers === GG.atlasLayers && VG.colorFormat === wG._colorFormat && VG.depthStencilFormat === wG._depthStencilFormat && VG.sampleCount === wG._sampleCount) return VG.id;
+        const pG = this.programKey(GG, bG),
+          fG = this.pipelineId(GG, ZG ? {
+            ...pG,
+            resting: ZG
+          } : pG, wG);
+        return GG.pipelineIds[YG] = {
+          id: fG,
+          lighting: SG,
+          dirLightCount: LG,
+          packVariant: UG,
+          transparencyMode: yG,
+          cull: kG,
+          atlasCount: GG.atlasCount,
+          N9: GG.N9,
+          atlasLayers: GG.atlasLayers,
+          colorFormat: wG._colorFormat,
+          depthStencilFormat: wG._depthStencilFormat,
+          sampleCount: wG._sampleCount
+        }, fG
       }
-      pipelineId(uu, Eu, ju) {
-        return jq(Eu, this.isBlended(uu), uu.model.backFaceCulling, ju)
+      pipelineId(GG, bG, ZG) {
+        return ZU(bG, this.isBlended(GG), GG.model.backFaceCulling, ZG)
       }
-      pipelineBuild(uu, Eu, ju) {
-        var su;
-        const Uu = this.pipelineId(uu, Eu, ju);
-        return null !== (su = this.builds.get(Uu)) && void 0 !== su ? su : this.startPipeline(Uu, uu, Eu, ju)
+      pipelineBuild(GG, bG, ZG) {
+        var wG;
+        const SG = this.pipelineId(GG, bG, ZG);
+        return null !== (wG = this.builds.get(SG)) && void 0 !== wG ? wG : this.startPipeline(SG, GG, bG, ZG)
       }
-      startPipeline(uu, Eu, ju, su) {
-        var Uu;
-        this.pipelines.set(uu, null);
-        const Zu = uU(ju),
-          Xu = this.isBlended(Eu),
-          lu = this.shadowMask && su._depthStencilFormat ? function(uu, Eu, ju, su) {
-            if (void 0 === uu.packVariant || uu.liquid || Eu) return "none";
-            const Uu = (0, yE.i)(uu.packVariant);
-            return null === Uu || void 0 === Uu || !Uu.sunShadow || !Xs(Uu, ju) || Uu.discards || uu.alphaTest && ks(uu.packVariant) ? "none" : su ? "edge" : "plain"
-          }(ju, Xu, !!this.sunShadow, su._sampleCount > 1) : "none";
-        let qu;
+      startPipeline(GG, bG, ZG, wG) {
+        var SG;
+        this.pipelines.set(GG, null);
+        const LG = Bw(ZG),
+          yG = this.isBlended(bG),
+          kG = this.shadowMask && wG._depthStencilFormat ? function(GG, bG, ZG, wG) {
+            if (void 0 === GG.packVariant || GG.liquid || bG) return "none";
+            const SG = (0, Ob.e)(GG.packVariant);
+            return null === SG || void 0 === SG || !SG.sunShadow || !Lw(SG, ZG) || SG.discards || GG.alphaTest && mw(GG.packVariant) ? "none" : wG ? "edge" : "plain"
+          }(ZG, yG, !!this.sunShadow, wG._sampleCount > 1) : "none";
+        let UG;
         try {
-          qu = EU(ju, !!this.sunShadow, lu)
-        } catch (hu) {
-          if (!Vs(ju)) throw hu;
-          return this.failedPackBuild(uu, ju, Zu, hu)
+          UG = GS(ZG, !!this.sunShadow, kG)
+        } catch (dG) {
+          if (!aw(ZG)) throw dG;
+          return this.failedPackBuild(GG, ZG, LG, dG)
         }
-        const fu = this.shaderModule(qu, Zu),
-          Cu = [];
-        ju.packed || (Cu.push(function(uu, Eu) {
-          const ju = [{
-            shaderLocation: yl.position,
-            offset: HE.g.mj,
+        const YG = this.shaderModule(UG, LG),
+          VG = [];
+        ZG.packed || (VG.push(function(GG, bG) {
+          const ZG = [{
+            shaderLocation: Ok.position,
+            offset: tb.f.vZ,
             format: "float32x3"
           }, {
-            shaderLocation: yl.normal,
-            offset: HE.g.normalOffset,
+            shaderLocation: Ok.normal,
+            offset: tb.f.normalOffset,
             format: "snorm8x4"
           }, {
-            shaderLocation: yl.color,
-            offset: HE.g.colorOffset,
+            shaderLocation: Ok.color,
+            offset: tb.f.colorOffset,
             format: "unorm8x4"
           }];
-          return uu && ju.push({
-            shaderLocation: yl.uv,
-            offset: HE.g.uvOffset,
+          return GG && ZG.push({
+            shaderLocation: Ok.uv,
+            offset: tb.f.uvOffset,
             format: "float32x2"
-          }), Eu && ju.push({
-            shaderLocation: yl.blockFlagWords,
-            offset: HE.g.normalOffset,
+          }), bG && ZG.push({
+            shaderLocation: Ok.blockFlagWords,
+            offset: tb.f.normalOffset,
             format: "uint32x2"
           }), {
-            arrayStride: HE.g.strideWithoutAtlas,
+            arrayStride: tb.f.strideWithoutAtlas,
             stepMode: "vertex",
-            attributes: ju
+            attributes: ZG
           }
-        }("none" !== ju.texture, Vs(ju))), ju.lighting && Cu.push(Rl));
-        const bu = Eu.model.backFaceCulling,
-          cu = {
-            label: Zu,
+        }("none" !== ZG.texture, aw(ZG))), ZG.lighting && VG.push(Bk));
+        const pG = bG.model.backFaceCulling,
+          fG = {
+            label: LG,
             layout: this.device.createPipelineLayout({
-              bindGroupLayouts: [this.sceneLayout, this.frameLayout, Eu.bindGroupLayout, ...AZ(this.device, ju, !!this.sunShadow, "none" !== lu)]
+              bindGroupLayouts: [this.sceneLayout, this.frameLayout, bG.bindGroupLayout, ...tL(this.device, ZG, !!this.sunShadow, "none" !== kG)]
             }),
             vertex: {
-              module: fu,
+              module: YG,
               entryPoint: "mainVertex",
-              buffers: Cu
+              buffers: VG
             },
-            fragment: gE({
-              module: fu,
+            fragment: rb({
+              module: YG,
               entryPoint: "mainFragment"
-            }, su, Xu ? uq : null),
-            depthStencil: su._depthStencilFormat ? {
-              format: su._depthStencilFormat,
-              depthCompare: null !== (Uu = su._depthCompare) && void 0 !== Uu ? Uu : JE,
+            }, wG, yG ? GU : null),
+            depthStencil: wG._depthStencilFormat ? {
+              format: wG._depthStencilFormat,
+              depthCompare: null !== (SG = wG._depthCompare) && void 0 !== SG ? SG : ib,
               depthWriteEnabled: !0
             } : void 0,
             multisample: {
-              count: su._sampleCount
+              count: wG._sampleCount
             },
             primitive: {
               topology: "triangle-list",
               frontFace: "ccw",
-              cullMode: bu ? "back" : "none"
+              cullMode: pG ? "back" : "none"
             }
           },
-          Nu = ju.resting ? 0 : 1;
-        this.compiling += Nu;
-        const Ou = "none" === lu ? this.device.createRenderPipelineAsync(cu) : this.startMaskPipelines(fu, cu, "edge" === lu);
-        Ou.then((Eu => {
-          this.compiling -= Nu, this.pipelines.set(uu, Eu)
-        }), (uu => {
-          this.compiling -= Nu, console.error(`Lite terrain pipeline ${Zu} failed`, uu), Bl(this.device, ju, Zu, fu, uu)
+          QG = ZG.resting ? 0 : 1;
+        this.compiling += QG;
+        const KG = "none" === kG ? this.device.createRenderPipelineAsync(fG) : this.startMaskPipelines(YG, fG, "edge" === kG);
+        KG.then((bG => {
+          this.compiling -= QG, this.pipelines.set(GG, bG)
+        }), (GG => {
+          this.compiling -= QG, console.error(`Lite terrain pipeline ${LG} failed`, GG), gk(this.device, ZG, LG, YG, GG)
         }));
-        const Yu = {
-          name: Zu,
-          module: fu,
-          built: Ou
+        const hG = {
+          name: LG,
+          module: YG,
+          built: KG
         };
-        return this.builds.set(uu, Yu), Yu
+        return this.builds.set(GG, hG), hG
       }
-      startMaskPipelines(uu, Eu, ju) {
-        const su = Eu.depthStencil,
-          Uu = this.device.createRenderPipelineAsync(ju ? Eu : {
-            ...Eu,
+      startMaskPipelines(GG, bG, ZG) {
+        const wG = bG.depthStencil,
+          SG = this.device.createRenderPipelineAsync(ZG ? bG : {
+            ...bG,
             depthStencil: {
-              ...su,
+              ...wG,
               depthCompare: "equal",
               depthWriteEnabled: !1
             }
           }),
-          Zu = this.device.createRenderPipelineAsync({
-            ...Eu,
-            label: `${Eu.label}-prepass`,
+          LG = this.device.createRenderPipelineAsync({
+            ...bG,
+            label: `${bG.label}-prepass`,
             fragment: {
-              module: uu,
+              module: GG,
               entryPoint: "prepassFragment",
               targets: [{
-                format: vl
+                format: ak
               }]
             },
             multisample: {
               count: 1
             }
           });
-        return Promise.all([Uu, Zu]).then((uu => {
-          let [Eu, ju] = uu;
-          return this.prepassOf.set(Eu, ju), this.maskPipelines++, Eu
+        return Promise.all([SG, LG]).then((GG => {
+          let [bG, ZG] = GG;
+          return this.prepassOf.set(bG, ZG), this.maskPipelines++, bG
         }))
       }
-      failedPackBuild(uu, Eu, ju, su) {
-        console.error(`Lite terrain pipeline ${ju} failed`, su), Bl(this.device, Eu, ju, null, su);
-        const Uu = Promise.reject(su);
-        Uu.catch((() => {}));
-        const Zu = {
-          name: ju,
+      failedPackBuild(GG, bG, ZG, wG) {
+        console.error(`Lite terrain pipeline ${ZG} failed`, wG), gk(this.device, bG, ZG, null, wG);
+        const SG = Promise.reject(wG);
+        SG.catch((() => {}));
+        const LG = {
+          name: ZG,
           module: null,
-          built: Uu
+          built: SG
         };
-        return this.builds.set(uu, Zu), Zu
+        return this.builds.set(GG, LG), LG
       }
-      checkShaderPack(uu) {
-        return Sl(uu, {
+      checkShaderPack(GG) {
+        return sk(GG, {
           device: this.device,
           target: this.target,
-          material: uu => this.materialFor(uu),
-          programKey: (uu, Eu, ju) => this.programKey(uu, Eu, ju),
-          pipelineBuild: (uu, Eu, ju) => this.pipelineBuild(uu, Eu, ju)
+          material: GG => this.materialFor(GG),
+          programKey: (GG, bG, ZG) => this.programKey(GG, bG, ZG),
+          pipelineBuild: (GG, bG, ZG) => this.pipelineBuild(GG, bG, ZG)
         })
       }
-      createBinding(uu, Eu, ju) {
-        return this.target = Eu, {
-          renderable: uu,
-          pipeline: oE(this.device, Eu),
-          draw: uu => {
+      createBinding(GG, bG, ZG) {
+        return this.target = bG, {
+          renderable: GG,
+          pipeline: Ib(this.device, bG),
+          draw: GG => {
             this.geometry.setDrawing(!0);
             try {
-              return ju ? this.drawTransparent(uu, Eu) : this.drawOpaque(uu, Eu)
+              return ZG ? this.drawTransparent(GG, bG) : this.drawOpaque(GG, bG)
             } finally {
               this.geometry.setDrawing(!1)
             }
           }
         }
       }
-      prepare(uu, Eu) {
-        var ju, su, Uu, Zu;
+      prepare(GG, bG) {
+        var ZG, wG, SG, LG;
         const {
-          Uc: Xu
-        } = uu;
-        this.lighting = uu.aY;
-        const lu = (0, Ml.x)(Eu);
-        this.dirLightCount = Math.min(lu, 4), this.AN = null !== (ju = Xu.AN) && void 0 !== ju ? ju : null, lu > 4 && this.warnOnce("dirLights", "Lite terrain lights with the first 4 directional lights only."), this.writeFrameUniforms(uu, Eu), this.animateMaterials(Eu.animTick);
-        const qu = Xu.ec,
-          fu = qu[0] !== this.originOffset[0] || qu[1] !== this.originOffset[1] || qu[2] !== this.originOffset[2];
-        fu && (this.originOffset[0] = qu[0], this.originOffset[1] = qu[1], this.originOffset[2] = qu[2]);
-        const Cu = Eu.eye;
-        this.eye[0] = Cu[0], this.eye[1] = Cu[1], this.eye[2] = Cu[2], this.writeShaderPackInputs();
-        const bu = Eu.projectionMatrix,
-          cu = 0 === bu[15];
-        let Nu = 0;
-        (fu || this.eye[0] !== this.faceEye[0] || this.eye[1] !== this.faceEye[1] || this.eye[2] !== this.faceEye[2]) && (this.faceEpoch++, this.faceEye[0] = this.eye[0], this.faceEye[1] = this.eye[1], this.faceEye[2] = this.eye[2]);
+          wf: yG
+        } = GG;
+        this.lighting = GG.Fh;
+        const kG = (0, rk.x)(bG);
+        this.dirLightCount = Math.min(kG, 4), this.OQ = null !== (ZG = yG.OQ) && void 0 !== ZG ? ZG : null, kG > 4 && this.warnOnce("dirLights", "Lite terrain lights with the first 4 directional lights only."), this.writeFrameUniforms(GG, bG), this.animateMaterials(bG.animTick);
+        const UG = yG.zf,
+          YG = UG[0] !== this.originOffset[0] || UG[1] !== this.originOffset[1] || UG[2] !== this.originOffset[2];
+        YG && (this.originOffset[0] = UG[0], this.originOffset[1] = UG[1], this.originOffset[2] = UG[2]);
+        const VG = bG.eye;
+        this.eye[0] = VG[0], this.eye[1] = VG[1], this.eye[2] = VG[2], this.writeShaderPackInputs();
+        const pG = bG.projectionMatrix,
+          fG = 0 === pG[15];
+        let QG = 0;
+        (YG || this.eye[0] !== this.faceEye[0] || this.eye[1] !== this.faceEye[1] || this.eye[2] !== this.faceEye[2]) && (this.faceEpoch++, this.faceEye[0] = this.eye[0], this.faceEye[1] = this.eye[1], this.faceEye[2] = this.eye[2]);
         let {
-          faceEpoch: Ou
+          faceEpoch: KG
         } = this;
-        kE(this.transparentRenderable._worldCenter, Eu, aE), this.resetBatches(cu), this.transparent.length = 0, this.unlit.length = 0;
-        const Yu = Xu.zb.duu,
-          hu = Yu / 2 * Math.sqrt(3);
-        let Du = 0;
-        const gu = !!this.AN && os(this.AN.defineFor("liquid"));
-        let Mu = !1;
-        const eu = null !== (su = null === (Uu = Xu.mG) || void 0 === Uu ? void 0 : Uu.visibility) && void 0 !== su ? su : null,
-          Gu = this.visCull && cu && 0 === this.compiling && null !== eu && Xu.zb.Jsu[0] >= this.visCullMinDistance ? this.target : null,
-          pu = this.visPassable,
-          wu = this.visCandidates,
-          Ju = this.visCandidateBatches;
-        pu.clear(), this.visBatchDraws.clear(), this.visDrawsMaterial = null;
-        let du = 0;
+        Fb(this.transparentRenderable._worldCenter, bG, Wb), this.resetBatches(fG), this.transparent.length = 0, this.unlit.length = 0;
+        const hG = yG.Op.sGG,
+          dG = hG / 2 * Math.sqrt(3);
+        let JG = 0;
+        const rG = !!this.OQ && Ww(this.OQ.defineFor("liquid"));
+        let zG = !1;
+        const EG = null !== (wG = null === (SG = yG.QE) || void 0 === SG ? void 0 : SG.visibility) && void 0 !== wG ? wG : null,
+          oG = this.visCull && fG && 0 === this.compiling && null !== EG && yG.Op.PwG[0] >= this.visCullMinDistance ? this.target : null,
+          XG = this.visPassable,
+          uG = this.visCandidates,
+          iG = this.visCandidateBatches;
+        XG.clear(), this.visBatchDraws.clear(), this.visDrawsMaterial = null;
+        let CG = 0;
         this.visCulledParts = 0, this.visCulledTriangles = 0;
-        let au = 0;
-        const Pu = (uu, ju) => {
-          if (!ju) return this.transparent.push(uu), void(au += 2 * uu.faceCount);
-          if (null !== uu.faceGroups && ju.faceCull) {
-            if (0 === Nu && (Nu = (0, tl.b)(bu, Eu.renderWidth, Eu.renderHeight), Nu !== this.faceFocalPx && (this.faceFocalPx = Nu, Ou = ++this.faceEpoch)), uu.faceEpoch !== Ou) {
-              uu.faceEpoch = Ou;
-              const Eu = Math.sqrt(uu.distance) + hu,
-                ju = (0, tl.g)(uu.planePX, uu.planeNX, uu.planePY, uu.planeNY, uu.planePZ, uu.planeNZ, this.eye[0] - (uu.origin[0] - this.originOffset[0]), this.eye[1] - (uu.origin[1] - this.originOffset[1]), this.eye[2] - (uu.origin[2] - this.originOffset[2]), (0, tl.d)(Eu, Nu));
-              ju !== uu.faceMask && this.chooseFaceRanges(uu, uu.faceGroups, ju)
+        let WG = 0;
+        const mG = (GG, ZG) => {
+          if (!ZG) return this.transparent.push(GG), void(WG += 2 * GG.faceCount);
+          if (null !== GG.faceGroups && ZG.faceCull) {
+            if (0 === QG && (QG = (0, Rk.d)(pG, bG.renderWidth, bG.renderHeight), QG !== this.faceFocalPx && (this.faceFocalPx = QG, KG = ++this.faceEpoch)), GG.faceEpoch !== KG) {
+              GG.faceEpoch = KG;
+              const bG = Math.sqrt(GG.distance) + dG,
+                ZG = (0, Rk.k)(GG.planePX, GG.planeNX, GG.planePY, GG.planeNY, GG.planePZ, GG.planeNZ, this.eye[0] - (GG.origin[0] - this.originOffset[0]), this.eye[1] - (GG.origin[1] - this.originOffset[1]), this.eye[2] - (GG.origin[2] - this.originOffset[2]), (0, Rk.h)(bG, QG));
+              ZG !== GG.faceMask && this.chooseFaceRanges(GG, GG.faceGroups, ZG)
             }
-            if (0 === uu.rangeCount) return
-          } else - 1 !== uu.faceMask && this.drawWhole(uu);
-          ju.meshes.push(uu), au += 2 * ((uu.rangeCount > 0 ? uu.count0 : 0) + (uu.rangeCount > 1 ? uu.count1 : 0))
+            if (0 === GG.rangeCount) return
+          } else - 1 !== GG.faceMask && this.drawWhole(GG);
+          ZG.meshes.push(GG), WG += 2 * ((GG.rangeCount > 0 ? GG.count0 : 0) + (GG.rangeCount > 1 ? GG.count1 : 0))
         };
-        for (const ku of this.chunks.values()) {
-          fu && this.writeSlot(ku);
-          const uu = ku.mesh.visibility;
-          uu !== ku.visibility && (ku.visibility = uu, this.slots.setVisibility(ku.slot, uu));
+        for (const FG of this.chunks.values()) {
+          YG && this.writeSlot(FG);
+          const GG = FG.mesh.visibility;
+          GG !== FG.visibility && (FG.visibility = GG, this.slots.setVisibility(FG.slot, GG));
           const {
-            material: ju
-          } = ku;
-          this.geometry.lost(ku) && performance.now() >= ku.lostRetryAt && this.remeshLost(Xu, ku);
-          const su = !(null === ju || void 0 === ju || !ju.bindGroup) && this.geometry.backed(ku),
-            Uu = su && this.lighting && !ku.vertices.page.twin;
-          if (Gu && (Number.isNaN(ku.key) && (ku.ci = Math.floor(ku.origin[0] / Yu), ku.cj = Math.floor(ku.origin[1] / Yu), ku.ck = Math.floor(ku.origin[2] / Yu), ku.key = (0, Tl.k)(ku.ci, ku.cj, ku.ck)), (!su || uu < 1 || Uu || !this.batchDraws(ju, ku.packed, Gu)) && this.visSeeThrough(ku, Gu) && pu.add(ku.key)), !su) continue;
-          Uu || (ku.lostRemeshes = 0);
-          const Zu = ku.origin[0] - this.originOffset[0],
-            lu = ku.origin[1] - this.originOffset[1],
-            qu = ku.origin[2] - this.originOffset[2];
-          if (!(0, ll.e)(Eu.frustum, Zu, lu, qu, Yu)) continue;
-          const Cu = Zu + Yu / 2 - this.eye[0],
-            bu = lu + Yu / 2 - this.eye[1],
-            Nu = qu + Yu / 2 - this.eye[2];
-          if (ku.distance = Cu * Cu + bu * bu + Nu * Nu, this.lighting && !ku.lit && (Du = Math.max(Du, ku.vertexCount), this.unlit.push(ku)), Uu) continue;
-          const Ou = this.isBlended(ju) ? null : this.batchFor(ju, ku.packed, ku.vertices.page, 1 === uu, cu);
-          Gu ? (wu[du] = ku, Ju[du++] = Ou) : Pu(ku, Ou)
+            material: ZG
+          } = FG;
+          this.geometry.lost(FG) && performance.now() >= FG.lostRetryAt && this.remeshLost(yG, FG);
+          const wG = !(null === ZG || void 0 === ZG || !ZG.bindGroup) && this.geometry.backed(FG),
+            SG = wG && this.lighting && !FG.vertices.page.twin;
+          if (oG && (Number.isNaN(FG.key) && (FG.ci = Math.floor(FG.origin[0] / hG), FG.cj = Math.floor(FG.origin[1] / hG), FG.ck = Math.floor(FG.origin[2] / hG), FG.key = (0, Hk.g)(FG.ci, FG.cj, FG.ck)), (!wG || GG < 1 || SG || !this.batchDraws(ZG, FG.packed, oG)) && this.visSeeThrough(FG, oG) && XG.add(FG.key)), !wG) continue;
+          SG || (FG.lostRemeshes = 0);
+          const LG = FG.origin[0] - this.originOffset[0],
+            kG = FG.origin[1] - this.originOffset[1],
+            UG = FG.origin[2] - this.originOffset[2];
+          if (!(0, yk.e)(bG.frustum, LG, kG, UG, hG)) continue;
+          const VG = LG + hG / 2 - this.eye[0],
+            pG = kG + hG / 2 - this.eye[1],
+            QG = UG + hG / 2 - this.eye[2];
+          if (FG.distance = VG * VG + pG * pG + QG * QG, this.lighting && !FG.lit && (JG = Math.max(JG, FG.vertexCount), this.unlit.push(FG)), SG) continue;
+          const KG = this.isBlended(ZG) ? null : this.batchFor(ZG, FG.packed, FG.vertices.page, 1 === GG, fG);
+          oG ? (uG[CG] = FG, iG[CG++] = KG) : mG(FG, KG)
         }
-        const ou = Gu ? this.sweepVisibility(uu, Eu, eu) : null;
-        null === (Zu = (0, iZ.u)(Xu)) || void 0 === Zu || Zu.update(Eu.frustum, this.originOffset, Yu, ou);
-        for (let ku = 0; ku < du; ku++) {
-          const uu = wu[ku];
-          !ou || ou.isDrawn(uu.ci, uu.cj, uu.ck) ? Pu(uu, Ju[ku]) : (this.visCulledParts++, this.visCulledTriangles += 2 * uu.faceCount)
+        const IG = oG ? this.sweepVisibility(GG, bG, EG) : null;
+        null === (LG = (0, PL.B)(yG)) || void 0 === LG || LG.update(bG.frustum, this.originOffset, hG, IG);
+        for (let FG = 0; FG < CG; FG++) {
+          const GG = uG[FG];
+          !IG || IG.isDrawn(GG.ci, GG.cj, GG.ck) ? mG(GG, iG[FG]) : (this.visCulledParts++, this.visCulledTriangles += 2 * GG.faceCount)
         }
-        for (const ku of this.transparent) Mu ||= gu && ku.material.liquid && !ku.material.customRenderMat;
-        this.submittedTriangles = au, ou && this.visCheck && ++this.visCheckFrame >= 60 && (this.visCheckFrame = 0, this.runVisCheck(uu, Eu, ou)), this.slots.flush(), this.sceneDepth ? this.sceneDepth.setWanted(Mu) : Mu && this.warnOnce("sceneDepth", "Lite: a shader pack reads scene depth on a page that didn't turn it on, so liquids find nothing behind them"), this.lighting && Du > 0 && this.geometry.lightFullSky(this.unlit, Du);
-        for (const ku of this.opaqueBatches) this.chunkSorter.sort(ku.meshes, 1) || ku.meshes.sort(sq);
-        this.orderBatches(), this.chunkSorter.sort(this.transparent, -1) || this.transparent.sort(Uq)
+        for (const FG of this.transparent) zG ||= rG && FG.material.liquid && !FG.material.customRenderMat;
+        this.submittedTriangles = WG, IG && this.visCheck && ++this.visCheckFrame >= 60 && (this.visCheckFrame = 0, this.runVisCheck(GG, bG, IG)), this.slots.flush(), this.sceneDepth ? this.sceneDepth.setWanted(zG) : zG && this.warnOnce("sceneDepth", "Lite: a shader pack reads scene depth on a page that didn't turn it on, so liquids find nothing behind them"), this.lighting && JG > 0 && this.geometry.lightFullSky(this.unlit, JG);
+        for (const FG of this.opaqueBatches) this.chunkSorter.sort(FG.meshes, 1) || FG.meshes.sort(wU);
+        this.orderBatches(), this.chunkSorter.sort(this.transparent, -1) || this.transparent.sort(SU)
       }
-      sweepVisibility(uu, Eu, ju) {
+      sweepVisibility(GG, bG, ZG) {
         const {
-          zb: su
-        } = uu.Uc, Uu = su.duu, Zu = this.visPassable, Xu = this.eye[0] + this.originOffset[0], lu = this.eye[1] + this.originOffset[1], qu = this.eye[2] + this.originOffset[2];
-        if (!ju.eyeClear(Xu, lu, qu, Eu.near, Eu.projectionMatrix, su)) return null;
-        const [fu, Cu] = su.Jsu, bu = ju.update(Xu, lu, qu, Uu, fu, Cu, Zu);
-        return this.visSweeps = ju.sweeps, bu ? ju : null
+          Op: wG
+        } = GG.wf, SG = wG.sGG, LG = this.visPassable, yG = this.eye[0] + this.originOffset[0], kG = this.eye[1] + this.originOffset[1], UG = this.eye[2] + this.originOffset[2];
+        if (!ZG.eyeClear(yG, kG, UG, bG.near, bG.projectionMatrix, wG)) return null;
+        const [YG, VG] = wG.PwG, pG = ZG.update(yG, kG, UG, SG, YG, VG, LG);
+        return this.visSweeps = ZG.sweeps, pG ? ZG : null
       }
-      visSeeThrough(uu, Eu) {
+      visSeeThrough(GG, bG) {
         const {
-          material: ju
-        } = uu;
-        return (!ju || !this.isBlended(ju)) && (uu.mesh.visibility < 1 || !(null !== ju && void 0 !== ju && ju.bindGroup) || uu.faceCount > 0 && (!this.geometry.backed(uu) || this.lighting && !uu.vertices.page.twin) || !this.batchDraws(ju, uu.packed, Eu))
+          material: ZG
+        } = GG;
+        return (!ZG || !this.isBlended(ZG)) && (GG.mesh.visibility < 1 || !(null !== ZG && void 0 !== ZG && ZG.bindGroup) || GG.faceCount > 0 && (!this.geometry.backed(GG) || this.lighting && !GG.vertices.page.twin) || !this.batchDraws(ZG, GG.packed, bG))
       }
-      batchDraws(uu, Eu, ju) {
-        var su;
-        const Uu = Eu ? 2 : 0;
-        if (uu === this.visDrawsMaterial && function(uu, Eu) {
-            return 0 !== (uu & 1 << Eu)
-          }(this.visDrawsBits, Uu)) return 0 !== (this.visDrawsBits & 2 << Uu);
-        let Zu = null !== (su = this.visBatchDraws.get(uu)) && void 0 !== su ? su : 0;
-        if (!(Zu & 1 << Uu)) {
-          Zu |= 1 << Uu | (!!uu.bindGroupLayout && this.canDraw(uu, Eu) && !!this.pipelines.get(this.pipelineIdNow(uu, Eu, !1, ju)) ? 2 << Uu : 0), this.visBatchDraws.set(uu, Zu)
+      batchDraws(GG, bG, ZG) {
+        var wG;
+        const SG = bG ? 2 : 0;
+        if (GG === this.visDrawsMaterial && function(GG, bG) {
+            return 0 !== (GG & 1 << bG)
+          }(this.visDrawsBits, SG)) return 0 !== (this.visDrawsBits & 2 << SG);
+        let LG = null !== (wG = this.visBatchDraws.get(GG)) && void 0 !== wG ? wG : 0;
+        if (!(LG & 1 << SG)) {
+          LG |= 1 << SG | (!!GG.bindGroupLayout && this.canDraw(GG, bG) && !!this.pipelines.get(this.pipelineIdNow(GG, bG, !1, ZG)) ? 2 << SG : 0), this.visBatchDraws.set(GG, LG)
         }
-        return this.visDrawsMaterial = uu, this.visDrawsBits = Zu, 0 !== (Zu & 2 << Uu)
+        return this.visDrawsMaterial = GG, this.visDrawsBits = LG, 0 !== (LG & 2 << SG)
       }
-      runVisCheck(uu, Eu, ju) {
+      runVisCheck(GG, bG, ZG) {
         const {
-          Uc: su
-        } = uu, {
-          zb: Uu
-        } = su, Zu = Uu.duu, Xu = new Set;
-        for (const Nu of this.chunks.values()) Xu.add(Nu.key);
-        const lu = tU.Matrix.FromArray(Eu.viewProjectionMatrix).invert(),
-          [qu, fu, Cu] = this.originOffset,
-          bu = new tU.dO,
-          cu = function(uu, Eu, ju, su) {
-            const Uu = new Set;
-            for (let Zu = 0; Zu < 27; Zu++)
-              for (let Xu = 0; Xu < 48; Xu++) {
-                const lu = ju((Xu + .5) / 48 * 2 - 1, (Zu + .5) / 27 * 2 - 1);
-                Hl(uu, Eu, [lu[0] - Eu[0], lu[1] - Eu[1], lu[2] - Eu[2]], su, Uu)
+          wf: wG
+        } = GG, {
+          Op: SG
+        } = wG, LG = SG.sGG, yG = new Set;
+        for (const QG of this.chunks.values()) yG.add(QG.key);
+        const kG = eS.Matrix.FromArray(bG.viewProjectionMatrix).invert(),
+          [UG, YG, VG] = this.originOffset,
+          pG = new eS.mK,
+          fG = function(GG, bG, ZG, wG) {
+            const SG = new Set;
+            for (let LG = 0; LG < 27; LG++)
+              for (let yG = 0; yG < 48; yG++) {
+                const kG = ZG((yG + .5) / 48 * 2 - 1, (LG + .5) / 27 * 2 - 1);
+                tk(GG, bG, [kG[0] - bG[0], kG[1] - bG[1], kG[2] - bG[2]], wG, SG)
               }
-            return Uu
+            return SG
           }({
-            dL: (uu, Eu, ju) => Uu.dL(uu, Eu, ju),
-            occluders: ju.occluders,
-            opaque: ju.opaque,
-            hO: Zu,
-            isDrawn: (uu, Eu, su) => ju.isDrawn(uu, Eu, su),
-            hasParts: (uu, Eu, ju) => Xu.has((0, Tl.k)(uu, Eu, ju))
-          }, [this.eye[0] + qu, this.eye[1] + fu, this.eye[2] + Cu], ((uu, Eu) => (tU.dO.TransformCoordinatesFromFloatsToRef(uu, Eu, .5, lu, bu), [bu.x + qu, bu.y + fu, bu.z + Cu])), (Uu.Jsu[0] + 1) * Zu);
-        this.visViolations = cu.size;
-        for (const Nu of cu) this.warnOnce(`vis:${Nu}`, `Lite terrain cave culling skipped chunk ${Nu}, which a ray from the eye reaches.`)
+            KD: (GG, bG, ZG) => SG.KD(GG, bG, ZG),
+            occluders: ZG.occluders,
+            opaque: ZG.opaque,
+            rK: LG,
+            isDrawn: (GG, bG, wG) => ZG.isDrawn(GG, bG, wG),
+            hasParts: (GG, bG, ZG) => yG.has((0, Hk.g)(GG, bG, ZG))
+          }, [this.eye[0] + UG, this.eye[1] + YG, this.eye[2] + VG], ((GG, bG) => (eS.mK.TransformCoordinatesFromFloatsToRef(GG, bG, .5, kG, pG), [pG.x + UG, pG.y + YG, pG.z + VG])), (SG.PwG[0] + 1) * LG);
+        this.visViolations = fG.size;
+        for (const QG of fG) this.warnOnce(`vis:${QG}`, `Lite terrain cave culling skipped chunk ${QG}, which a ray from the eye reaches.`)
       }
       writeShaderPackInputs() {
-        var uu;
-        null !== (uu = this.AN) && void 0 !== uu && uu.isRunning() && (this.shaderPackInputs ??= new nZ(this.device, this.AN.textureLayers(), this.sunShadow), this.shaderPackInputs.write(this.AN, this.eye, this.lighting))
+        var GG;
+        null !== (GG = this.OQ) && void 0 !== GG && GG.isRunning() && (this.shaderPackInputs ??= new DL(this.device, this.OQ.textureLayers(), this.sunShadow), this.shaderPackInputs.write(this.OQ, this.eye, this.lighting))
       }
-      bindShaderPackInputs(uu, Eu, ju) {
-        var su, Uu, Zu, Xu;
-        let lu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const qu = this.packVariant(Eu, ju);
-        if (void 0 === qu) return;
-        this.shaderPackInputs || (this.shaderPackInputs = new nZ(this.device, ju.textureLayers(), this.sunShadow), this.shaderPackInputs.write(ju, this.eye, this.lighting));
-        const fu = os(qu) ? null !== (su = null === (Uu = this.sceneDepth) || void 0 === Uu ? void 0 : Uu.view) && void 0 !== su ? su : this.standIn() : null,
-          Cu = lu ? null !== (Zu = null === (Xu = this.shadowMask) || void 0 === Xu ? void 0 : Xu.view) && void 0 !== Zu ? Zu : this.standIn() : null;
-        this.shaderPackInputs.bind(uu, fu, HZ(qu, !!this.sunShadow), Cu)
+      bindShaderPackInputs(GG, bG, ZG) {
+        var wG, SG, LG, yG;
+        let kG = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const UG = this.packVariant(bG, ZG);
+        if (void 0 === UG) return;
+        this.shaderPackInputs || (this.shaderPackInputs = new DL(this.device, ZG.textureLayers(), this.sunShadow), this.shaderPackInputs.write(ZG, this.eye, this.lighting));
+        const YG = Ww(UG) ? null !== (wG = null === (SG = this.sceneDepth) || void 0 === SG ? void 0 : SG.view) && void 0 !== wG ? wG : this.standIn() : null,
+          VG = kG ? null !== (LG = null === (yG = this.shadowMask) || void 0 === yG ? void 0 : yG.view) && void 0 !== LG ? LG : this.standIn() : null;
+        this.shaderPackInputs.bind(GG, YG, HL(UG, !!this.sunShadow), VG)
       }
       standIn() {
         return this.depthStandIn ??= this.device.createTexture({
@@ -6897,954 +6897,954 @@ export const modules = {
         }).createView()
       }
       sunShadowGroup() {
-        var uu, Eu;
-        return null !== (uu = null === (Eu = this.shaderPackInputs) || void 0 === Eu ? void 0 : Eu.bindGroupFor(null, !0)) && void 0 !== uu ? uu : null
+        var GG, bG;
+        return null !== (GG = null === (bG = this.shaderPackInputs) || void 0 === bG ? void 0 : bG.bindGroupFor(null, !0)) && void 0 !== GG ? GG : null
       }
-      resetBatches(uu) {
-        const Eu = this.opaqueBatches;
-        let ju = 0;
-        for (const su of Eu) su.meshes.length > 0 && (su.meshes.length = 0, su.faceCull = this.batchFaceCull(su.material, uu), Eu[ju++] = su);
-        Eu.length = ju
+      resetBatches(GG) {
+        const bG = this.opaqueBatches;
+        let ZG = 0;
+        for (const wG of bG) wG.meshes.length > 0 && (wG.meshes.length = 0, wG.faceCull = this.batchFaceCull(wG.material, GG), bG[ZG++] = wG);
+        bG.length = ZG
       }
       orderBatches() {
-        const uu = this.opaqueBatches;
-        for (let Eu = 0; Eu < uu.length; Eu++) {
-          const ju = uu[Eu];
-          ju.group = Eu;
-          for (let su = 0; su < Eu; su++) {
-            const Eu = uu[su];
-            if (Eu.material === ju.material && Eu.packed === ju.packed) {
-              ju.group = Eu.group;
+        const GG = this.opaqueBatches;
+        for (let bG = 0; bG < GG.length; bG++) {
+          const ZG = GG[bG];
+          ZG.group = bG;
+          for (let wG = 0; wG < bG; wG++) {
+            const bG = GG[wG];
+            if (bG.material === ZG.material && bG.packed === ZG.packed) {
+              ZG.group = bG.group;
               break
             }
           }
-          ju.nearest = ju.meshes.length > 0 ? ju.meshes[0].distance : 1 / 0
+          ZG.nearest = ZG.meshes.length > 0 ? ZG.meshes[0].distance : 1 / 0
         }
-        uu.sort(Al)
+        GG.sort(Dk)
       }
-      batchFor(uu, Eu, ju, su, Uu) {
-        for (const Xu of this.opaqueBatches)
-          if (Xu.material === uu && Xu.packed === Eu && Xu.page === ju && Xu.resting === su) return Xu;
-        const Zu = {
-          material: uu,
-          packed: Eu,
-          page: ju,
-          resting: su,
+      batchFor(GG, bG, ZG, wG, SG) {
+        for (const yG of this.opaqueBatches)
+          if (yG.material === GG && yG.packed === bG && yG.page === ZG && yG.resting === wG) return yG;
+        const LG = {
+          material: GG,
+          packed: bG,
+          page: ZG,
+          resting: wG,
           meshes: [],
           group: 0,
           nearest: 0,
-          faceCull: this.batchFaceCull(uu, Uu)
+          faceCull: this.batchFaceCull(GG, SG)
         };
-        return this.opaqueBatches.push(Zu), Zu
+        return this.opaqueBatches.push(LG), LG
       }
-      batchFaceCull(uu, Eu) {
-        return !(!Eu || !(0, Ll.o)(uu.model)) && (!this.AN || ! function(uu) {
-          var Eu;
-          return !(null === (Eu = (0, yE.i)(uu)) || void 0 === Eu || !Eu.movesVertices)
-        }(this.packVariant(uu, this.AN)))
+      batchFaceCull(GG, bG) {
+        return !(!bG || !(0, ek.n)(GG.model)) && (!this.OQ || ! function(GG) {
+          var bG;
+          return !(null === (bG = (0, Ob.e)(GG)) || void 0 === bG || !bG.movesVertices)
+        }(this.packVariant(GG, this.OQ)))
       }
-      writeFrameUniforms(uu, Eu) {
-        const ju = this.frameUniforms,
-          su = rs;
-        if ((0, Ml.y)(uu, ju), ju[su.fogInfos] = Eu.fogEnabled ? Eu.fogMode : 0, ju[su.fogInfos + 1] = Eu.fogStart, ju[su.fogInfos + 2] = Eu.fogEnd, ju[su.fogInfos + 3] = Eu.fogDensity, ju.set(Eu.fogColour, su.fogColour), ju[su.outputHeight] = Eu.renderHeight, ju.set(Eu.ambientColour, su.sceneAmbient), (0, Ml.t)(Eu, this.dirLightCount, this.dirLightUniforms), !this.aoLevelsWritten) {
-          const Eu = (0, el.j)(uu.TO, uu.MO, uu.eO);
-          for (let uu = 0; uu < 4; uu++) ju[su.aoLevels + uu] = Eu[uu] / 255;
+      writeFrameUniforms(GG, bG) {
+        const ZG = this.frameUniforms,
+          wG = lw;
+        if ((0, rk.B)(GG, ZG), ZG[wG.fogInfos] = bG.fogEnabled ? bG.fogMode : 0, ZG[wG.fogInfos + 1] = bG.fogStart, ZG[wG.fogInfos + 2] = bG.fogEnd, ZG[wG.fogInfos + 3] = bG.fogDensity, ZG.set(bG.fogColour, wG.fogColour), ZG[wG.outputHeight] = bG.renderHeight, ZG.set(bG.ambientColour, wG.sceneAmbient), (0, rk.t)(bG, this.dirLightCount, this.dirLightUniforms), !this.aoLevelsWritten) {
+          const bG = (0, zk.g)(GG.DK, GG.oK, GG.XK);
+          for (let GG = 0; GG < 4; GG++) ZG[wG.aoLevels + GG] = bG[GG] / 255;
           this.aoLevelsWritten = !0
         }
-        this.device.queue.writeBuffer(this.frameBuffer, 0, ju)
+        this.device.queue.writeBuffer(this.frameBuffer, 0, ZG)
       }
-      animateMaterials(uu) {
-        const Eu = is.anim;
-        for (const ju of this.materials.values()) ju.animated && (ju.uniformData[Eu] = uu, this.device.queue.writeBuffer(ju.uniformBuffer, 4 * Eu, ju.uniformData, Eu, 1))
+      animateMaterials(GG) {
+        const bG = Pw.anim;
+        for (const ZG of this.materials.values()) ZG.animated && (ZG.uniformData[bG] = GG, this.device.queue.writeBuffer(ZG.uniformBuffer, 4 * bG, ZG.uniformData, bG, 1))
       }
-      canDraw(uu, Eu) {
-        return !("atlas" === uu.texture && !Eu) || (this.warnOnce(`stride:${uu.id}`, `Lite terrain: material "${uu.model.name}" samples the atlas but its mesh has no quad records, which hold its atlas indices.`), !1)
+      canDraw(GG, bG) {
+        return !("atlas" === GG.texture && !bG) || (this.warnOnce(`stride:${GG.id}`, `Lite terrain: material "${GG.model.name}" samples the atlas but its mesh has no quad records, which hold its atlas indices.`), !1)
       }
-      drawOpaque(uu, Eu) {
-        let ju = 0;
-        uu.setBindGroup(1, this.frameBindGroup);
-        for (const su of this.opaqueBatches) {
-          if (!su.meshes.length || !this.canDraw(su.material, su.packed)) continue;
-          const Uu = this.pipelineFor(su.material, su.packed, Eu, su.resting);
-          Uu && (uu.setPipeline(Uu), uu.setBindGroup(2, su.material.bindGroup), this.AN && this.bindShaderPackInputs(uu, su.material, this.AN, this.prepassOf.has(Uu)), ju += this.drawBatch(uu, su))
+      drawOpaque(GG, bG) {
+        let ZG = 0;
+        GG.setBindGroup(1, this.frameBindGroup);
+        for (const wG of this.opaqueBatches) {
+          if (!wG.meshes.length || !this.canDraw(wG.material, wG.packed)) continue;
+          const SG = this.pipelineFor(wG.material, wG.packed, bG, wG.resting);
+          SG && (GG.setPipeline(SG), GG.setBindGroup(2, wG.material.bindGroup), this.OQ && this.bindShaderPackInputs(GG, wG.material, this.OQ, this.prepassOf.has(SG)), ZG += this.drawBatch(GG, wG))
         }
-        return ju
+        return ZG
       }
       get readsMask() {
         return this.maskPipelines > 0
       }
-      drawPrepass(uu, Eu, ju) {
-        const su = this.target,
-          Uu = this.AN;
-        if (!su || !Uu || 0 === this.maskPipelines) return 0;
-        let Zu = 0,
-          Xu = null;
+      drawPrepass(GG, bG, ZG) {
+        const wG = this.target,
+          SG = this.OQ;
+        if (!wG || !SG || 0 === this.maskPipelines) return 0;
+        let LG = 0,
+          yG = null;
         this.geometry.setDrawing(!0);
         try {
-          for (const lu of this.opaqueBatches) {
-            if (!lu.meshes.length || !this.canDraw(lu.material, lu.packed)) continue;
-            const qu = this.pipelineFor(lu.material, lu.packed, su, lu.resting),
-              fu = qu && this.prepassOf.get(qu);
-            fu && (Xu || (Xu = uu.beginRenderPass(Eu), Xu.setBindGroup(0, ju), Xu.setBindGroup(1, this.frameBindGroup)), Xu.setPipeline(fu), Xu.setBindGroup(2, lu.material.bindGroup), this.bindShaderPackInputs(Xu, lu.material, Uu, !0), Zu += this.drawBatch(Xu, lu))
+          for (const kG of this.opaqueBatches) {
+            if (!kG.meshes.length || !this.canDraw(kG.material, kG.packed)) continue;
+            const UG = this.pipelineFor(kG.material, kG.packed, wG, kG.resting),
+              YG = UG && this.prepassOf.get(UG);
+            YG && (yG || (yG = GG.beginRenderPass(bG), yG.setBindGroup(0, ZG), yG.setBindGroup(1, this.frameBindGroup)), yG.setPipeline(YG), yG.setBindGroup(2, kG.material.bindGroup), this.bindShaderPackInputs(yG, kG.material, SG, !0), LG += this.drawBatch(yG, kG))
           }
         } finally {
-          var lu;
-          null === (lu = Xu) || void 0 === lu || lu.end(), this.geometry.setDrawing(!1)
+          var kG;
+          null === (kG = yG) || void 0 === kG || kG.end(), this.geometry.setDrawing(!1)
         }
-        return Zu
+        return LG
       }
-      drawBatch(uu, Eu) {
-        let ju = 0;
-        for (const su of Eu.meshes) {
+      drawBatch(GG, bG) {
+        let ZG = 0;
+        for (const wG of bG.meshes) {
           const {
-            rangeCount: Eu
-          } = su;
-          Eu > 0 && (ju += this.geometry.draw(uu, su, this.lighting, su.first0, su.count0), Eu > 1 && (ju += this.geometry.draw(uu, su, this.lighting, su.first1, su.count1)))
+            rangeCount: bG
+          } = wG;
+          bG > 0 && (ZG += this.geometry.draw(GG, wG, this.lighting, wG.first0, wG.count0), bG > 1 && (ZG += this.geometry.draw(GG, wG, this.lighting, wG.first1, wG.count1)))
         }
-        return ju
+        return ZG
       }
-      drawTransparent(uu, Eu) {
-        let ju = 0,
-          su = null,
-          Uu = null;
-        uu.setBindGroup(1, this.frameBindGroup);
-        for (const Zu of this.transparent) {
-          const Xu = Zu.material;
-          if (!this.canDraw(Xu, Zu.packed)) continue;
-          const lu = this.pipelineFor(Xu, Zu.packed, Eu);
-          lu && (lu !== su && (uu.setPipeline(lu), su = lu, this.AN && this.bindShaderPackInputs(uu, Xu, this.AN)), Xu !== Uu && (uu.setBindGroup(2, Xu.bindGroup), Uu = Xu), ju += this.geometry.draw(uu, Zu, this.lighting))
+      drawTransparent(GG, bG) {
+        let ZG = 0,
+          wG = null,
+          SG = null;
+        GG.setBindGroup(1, this.frameBindGroup);
+        for (const LG of this.transparent) {
+          const yG = LG.material;
+          if (!this.canDraw(yG, LG.packed)) continue;
+          const kG = this.pipelineFor(yG, LG.packed, bG);
+          kG && (kG !== wG && (GG.setPipeline(kG), wG = kG, this.OQ && this.bindShaderPackInputs(GG, yG, this.OQ)), yG !== SG && (GG.setBindGroup(2, yG.bindGroup), SG = yG), ZG += this.geometry.draw(GG, LG, this.lighting))
         }
-        return ju
+        return ZG
       }
     }
 
-    function jq(uu, Eu, ju, su) {
-      return `${uU(uu)}|${uu.atlasLayers}|${uu.I5}|${Eu}|${ju}|${su._colorFormat}|${su._depthStencilFormat}|${su._sampleCount}`
+    function ZU(GG, bG, ZG, wG) {
+      return `${Bw(GG)}|${GG.atlasLayers}|${GG.N9}|${bG}|${ZG}|${wG._colorFormat}|${wG._depthStencilFormat}|${wG._sampleCount}`
     }
 
-    function sq(uu, Eu) {
-      return uu.distance - Eu.distance
+    function wU(GG, bG) {
+      return GG.distance - bG.distance
     }
 
-    function Uq(uu, Eu) {
-      return Eu.distance - uu.distance
+    function SU(GG, bG) {
+      return bG.distance - GG.distance
     }
-    class Zq {
+    class LU {
       constructor() {
         this.left = []
       }
-      sort(uu, Eu) {
-        for (let ju = 0; ju < uu.length; ju++) {
-          const Eu = uu[ju].distance;
-          if (Eu - Eu !== 0) return !1
+      sort(GG, bG) {
+        for (let ZG = 0; ZG < GG.length; ZG++) {
+          const bG = GG[ZG].distance;
+          if (bG - bG !== 0) return !1
         }
-        return this.sortRange(uu, 0, uu.length, Eu), !0
+        return this.sortRange(GG, 0, GG.length, bG), !0
       }
-      sortRange(uu, Eu, ju, su) {
-        if (ju - Eu <= 16) {
-          for (let Uu = Eu + 1; Uu < ju; Uu++) {
-            const ju = uu[Uu],
-              Zu = su * ju.distance;
-            let Xu = Uu - 1;
-            for (; Xu >= Eu && su * uu[Xu].distance > Zu; Xu--) uu[Xu + 1] = uu[Xu];
-            uu[Xu + 1] = ju
+      sortRange(GG, bG, ZG, wG) {
+        if (ZG - bG <= 16) {
+          for (let SG = bG + 1; SG < ZG; SG++) {
+            const ZG = GG[SG],
+              LG = wG * ZG.distance;
+            let yG = SG - 1;
+            for (; yG >= bG && wG * GG[yG].distance > LG; yG--) GG[yG + 1] = GG[yG];
+            GG[yG + 1] = ZG
           }
           return
         }
-        const Uu = Eu + ju >>> 1;
-        if (this.sortRange(uu, Eu, Uu, su), this.sortRange(uu, Uu, ju, su), su * uu[Uu - 1].distance <= su * uu[Uu].distance) return;
+        const SG = bG + ZG >>> 1;
+        if (this.sortRange(GG, bG, SG, wG), this.sortRange(GG, SG, ZG, wG), wG * GG[SG - 1].distance <= wG * GG[SG].distance) return;
         const {
-          left: Zu
-        } = this, Xu = Uu - Eu;
-        for (let Cu = 0; Cu < Xu; Cu++) Zu[Cu] = uu[Eu + Cu];
-        let lu = 0,
-          qu = Uu,
-          fu = Eu;
-        for (; lu < Xu && qu < ju;) uu[fu++] = su * uu[qu].distance < su * Zu[lu].distance ? uu[qu++] : Zu[lu++];
-        for (; lu < Xu;) uu[fu++] = Zu[lu++]
+          left: LG
+        } = this, yG = SG - bG;
+        for (let VG = 0; VG < yG; VG++) LG[VG] = GG[bG + VG];
+        let kG = 0,
+          UG = SG,
+          YG = bG;
+        for (; kG < yG && UG < ZG;) GG[YG++] = wG * GG[UG].distance < wG * LG[kG].distance ? GG[UG++] : LG[kG++];
+        for (; kG < yG;) GG[YG++] = LG[kG++]
       }
     }
-    const Xq = Math.ceil(102);
+    const yU = Math.ceil(102);
 
-    function lq(uu, Eu, ju, su) {
-      let Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Eu;
-      const Zu = Math.min(Eu, ju),
-        Xu = new Uint32Array(pj(su));
-      for (let lu = 0; lu < su; lu++) {
-        const Eu = Math.floor(lu * Zu / su),
-          ju = Math.max(Eu + 1, Math.floor((lu + 1) * Zu / su));
-        for (let qu = 0; qu < su; qu++) {
-          const fu = Math.floor(qu * Zu / su),
-            Cu = Math.max(fu + 1, Math.floor((qu + 1) * Zu / su));
-          let bu = 0;
-          for (let su = Eu; su < ju; su++)
-            for (let Eu = fu; Eu < Cu; Eu++) uu[su * Uu + Eu] >= Xq && bu++;
-          if (2 * bu >= (ju - Eu) * (Cu - fu)) {
-            const uu = qu + su * lu;
-            Xu[uu >>> 5] |= 1 << (31 & uu)
+    function kU(GG, bG, ZG, wG) {
+      let SG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : bG;
+      const LG = Math.min(bG, ZG),
+        yG = new Uint32Array(XZ(wG));
+      for (let kG = 0; kG < wG; kG++) {
+        const bG = Math.floor(kG * LG / wG),
+          ZG = Math.max(bG + 1, Math.floor((kG + 1) * LG / wG));
+        for (let UG = 0; UG < wG; UG++) {
+          const YG = Math.floor(UG * LG / wG),
+            VG = Math.max(YG + 1, Math.floor((UG + 1) * LG / wG));
+          let pG = 0;
+          for (let wG = bG; wG < ZG; wG++)
+            for (let bG = YG; bG < VG; bG++) GG[wG * SG + bG] >= yU && pG++;
+          if (2 * pG >= (ZG - bG) * (VG - YG)) {
+            const GG = UG + wG * kG;
+            yG[GG >>> 5] |= 1 << (31 & GG)
           }
         }
       }
-      return Xu
+      return yG
     }
 
-    function qq(uu) {
-      return Math.max(1, Math.min(16, uu))
+    function UU(GG) {
+      return Math.max(1, Math.min(16, GG))
     }
-    class fq {
-      constructor(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : console.warn;
-        this.sink = uu, this.loadTexture = Eu, this.warn = ju, this.blockCaster = new Uint16Array(1), this.builtVersion = -1, this.byKey = new Map, this.nextCaster = 1, this.nextMaskWord = 0, this.warned = new Set, this.textures = new Map, this.loads = [], this.pending = Promise.resolve(), this.planesLoading = 0
+    class YU {
+      constructor(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : console.warn;
+        this.sink = GG, this.loadTexture = bG, this.warn = ZG, this.blockCaster = new Uint16Array(1), this.builtVersion = -1, this.byKey = new Map, this.nextCaster = 1, this.nextMaskWord = 0, this.warned = new Set, this.textures = new Map, this.loads = [], this.pending = Promise.resolve(), this.planesLoading = 0
       }
-      update(uu, Eu) {
-        return (uu.YF !== this.builtVersion || this.blockCaster.length !== Eu) && (this.build(uu, Eu), !0)
+      update(GG, bG) {
+        return (GG.pT !== this.builtVersion || this.blockCaster.length !== bG) && (this.build(GG, bG), !0)
       }
-      build(uu, Eu) {
-        this.builtVersion = uu.YF;
-        const ju = new Uint16Array(Eu),
-          su = new Map;
-        for (let Uu = 1; Uu < Eu; Uu++) {
-          const Eu = this.classify(uu, Uu, su);
-          if (null === Eu || Eu === Dj) {
-            ju[Uu] = null === Eu ? 0 : Dj;
+      build(GG, bG) {
+        this.builtVersion = GG.pT;
+        const ZG = new Uint16Array(bG),
+          wG = new Map;
+        for (let SG = 1; SG < bG; SG++) {
+          const bG = this.classify(GG, SG, wG);
+          if (null === bG || bG === JZ) {
+            ZG[SG] = null === bG ? 0 : JZ;
             continue
           }
-          let Zu = this.byKey.get(Eu.key);
-          void 0 === Zu && (Zu = this.allocate(Eu), this.byKey.set(Eu.key, Zu)), ju[Uu] = Zu
+          let LG = this.byKey.get(bG.key);
+          void 0 === LG && (LG = this.allocate(bG), this.byKey.set(bG.key, LG)), ZG[SG] = LG
         }
-        this.blockCaster = ju, this.pending = Promise.all(this.loads).then((() => {}))
+        this.blockCaster = ZG, this.pending = Promise.all(this.loads).then((() => {}))
       }
-      option(uu, Eu) {
-        const ju = uu.N9[Eu];
-        if ("function" !== typeof ju) return ju;
+      option(GG, bG) {
+        const ZG = GG.E_[bG];
+        if ("function" !== typeof ZG) return ZG;
         try {
-          return ju()
-        } catch (su) {
-          return this.warnOnce(`Sun shadows: no caster option for block ${Eu}: ${su instanceof Error?su.message:String(su)}`), null
+          return ZG()
+        } catch (wG) {
+          return this.warnOnce(`Sun shadows: no caster option for block ${bG}: ${wG instanceof Error?wG.message:String(wG)}`), null
         }
       }
-      classify(uu, Eu, ju) {
-        const su = this.option(uu, Eu);
-        if ("none" === su) return null;
-        if (su && su.planes.length > 0) {
-          const uu = su.planes.slice(0, 4);
+      classify(GG, bG, ZG) {
+        const wG = this.option(GG, bG);
+        if ("none" === wG) return null;
+        if (wG && wG.planes.length > 0) {
+          const GG = wG.planes.slice(0, 4);
           return {
             kind: "planes",
-            key: `planes:${JSON.stringify(uu)}`,
-            planes: uu
+            key: `planes:${JSON.stringify(GG)}`,
+            planes: GG
           }
         }
-        if (uu.ZN[Eu]) return null;
-        const Uu = uu.lN[Eu] ? uu.kF(Eu) : null;
-        if (Uu && Uu.length >= 6) {
-          const uu = function(uu) {
-            const Eu = new Uint32Array(16);
-            for (let ju = 0; ju + 6 <= uu.length; ju += 6) {
-              const su = [0, 1, 2].map((Eu => Math.max(0, Math.ceil(8 * uu[ju + Eu] - .5)))),
-                Uu = [0, 1, 2].map((Eu => Math.min(7, Math.floor(8 * uu[ju + Eu + 3] - .5))));
-              for (let uu = su[2]; uu <= Uu[2]; uu++)
-                for (let ju = su[1]; ju <= Uu[1]; ju++)
-                  for (let Zu = su[0]; Zu <= Uu[0]; Zu++) {
-                    const su = Zu + 8 * (ju + 8 * uu);
-                    Eu[su >>> 5] |= 1 << (31 & su)
+        if (GG.kQ[bG]) return null;
+        const SG = GG.YQ[bG] ? GG.XT(bG) : null;
+        if (SG && SG.length >= 6) {
+          const GG = function(GG) {
+            const bG = new Uint32Array(16);
+            for (let ZG = 0; ZG + 6 <= GG.length; ZG += 6) {
+              const wG = [0, 1, 2].map((bG => Math.max(0, Math.ceil(8 * GG[ZG + bG] - .5)))),
+                SG = [0, 1, 2].map((bG => Math.min(7, Math.floor(8 * GG[ZG + bG + 3] - .5))));
+              for (let GG = wG[2]; GG <= SG[2]; GG++)
+                for (let ZG = wG[1]; ZG <= SG[1]; ZG++)
+                  for (let LG = wG[0]; LG <= SG[0]; LG++) {
+                    const wG = LG + 8 * (ZG + 8 * GG);
+                    bG[wG >>> 5] |= 1 << (31 & wG)
                   }
             }
-            return Eu
-          }(Uu);
-          return function(uu) {
-            return uu.every((uu => 4294967295 === uu))
-          }(uu) ? Dj : uu.every((uu => 0 === uu)) ? null : {
+            return bG
+          }(SG);
+          return function(GG) {
+            return GG.every((GG => 4294967295 === GG))
+          }(GG) ? JZ : GG.every((GG => 0 === GG)) ? null : {
             kind: "shape",
-            key: `shape:${uu.join(",")}`,
-            mask: uu
+            key: `shape:${GG.join(",")}`,
+            mask: GG
           }
         }
-        if (uu.NJ[Eu] || !uu.HO[Eu]) return null;
-        const Zu = [0, 1, 2, 3, 4, 5].map((su => {
-          const Uu = uu.nO[6 * Eu + su];
-          let Zu = ju.get(Uu);
-          return void 0 === Zu && (Zu = function(uu) {
-            if (!uu || uu.XY) return null;
+        if (GG.zC[bG] || !GG.NK[bG]) return null;
+        const LG = [0, 1, 2, 3, 4, 5].map((wG => {
+          const SG = GG.xK[6 * bG + wG];
+          let LG = ZG.get(SG);
+          return void 0 === LG && (LG = function(GG) {
+            if (!GG || GG.Yh) return null;
             const {
-              i5: Eu,
-              I5: ju,
-              o5: su
-            } = uu;
-            if (!Eu || !ju || !(ju > 0) || void 0 === su || !(su >= 0)) return null;
-            const Uu = Eu[0],
-              Zu = ju * ju * 4;
-            if (!Uu || Uu.byteLength < Zu) return null;
-            const Xu = Math.floor(Uu.byteLength / Zu),
-              lu = Eu[Math.floor(su / Xu)];
-            if (!lu) return null;
-            const qu = new Uint8Array(lu.buffer, lu.byteOffset, lu.byteLength),
-              fu = su % Xu * Zu;
-            if (fu + Zu > qu.length) return null;
-            const Cu = new Uint8Array(ju * ju);
-            let bu = !1;
-            for (let cu = 0; cu < Cu.length; cu++) Cu[cu] = qu[fu + 4 * cu + 3], bu ||= Cu[cu] < Xq;
-            return bu ? {
-              alpha: Cu,
-              width: ju
+              I9: bG,
+              N9: ZG,
+              W9: wG
+            } = GG;
+            if (!bG || !ZG || !(ZG > 0) || void 0 === wG || !(wG >= 0)) return null;
+            const SG = bG[0],
+              LG = ZG * ZG * 4;
+            if (!SG || SG.byteLength < LG) return null;
+            const yG = Math.floor(SG.byteLength / LG),
+              kG = bG[Math.floor(wG / yG)];
+            if (!kG) return null;
+            const UG = new Uint8Array(kG.buffer, kG.byteOffset, kG.byteLength),
+              YG = wG % yG * LG;
+            if (YG + LG > UG.length) return null;
+            const VG = new Uint8Array(ZG * ZG);
+            let pG = !1;
+            for (let fG = 0; fG < VG.length; fG++) VG[fG] = UG[YG + 4 * fG + 3], pG ||= VG[fG] < yU;
+            return pG ? {
+              alpha: VG,
+              width: ZG
             } : null
-          }(uu.ZY(Uu)), ju.set(Uu, Zu)), Zu
+          }(GG.Uh(SG)), ZG.set(SG, LG)), LG
         }));
-        if (Zu.every((uu => null === uu))) return Dj;
-        const Xu = qq(Math.max(...Zu.map((uu => {
-            var Eu;
-            return null !== (Eu = null === uu || void 0 === uu ? void 0 : uu.width) && void 0 !== Eu ? Eu : 1
+        if (LG.every((GG => null === GG))) return JZ;
+        const yG = UU(Math.max(...LG.map((GG => {
+            var bG;
+            return null !== (bG = null === GG || void 0 === GG ? void 0 : GG.width) && void 0 !== bG ? bG : 1
           })))),
-          lu = new Uint32Array(pj(Xu)).fill(4294967295),
-          qu = Zu.map((uu => null === uu ? lu : lq(uu.alpha, uu.width, uu.width, Xu)));
+          kG = new Uint32Array(XZ(yG)).fill(4294967295),
+          UG = LG.map((GG => null === GG ? kG : kU(GG.alpha, GG.width, GG.width, yG)));
         return {
           kind: "cutout",
-          key: `cutout:${Xu}:${qu.map((uu=>uu.join(","))).join("|")}`,
-          size: Xu,
-          faces: qu
+          key: `cutout:${yG}:${UG.map((GG=>GG.join(","))).join("|")}`,
+          size: yG,
+          faces: UG
         }
       }
-      allocate(uu) {
-        if (this.nextCaster >= wj) return this.warnOnce("Sun shadows: more than 8191 casters; the rest cast nothing."), 0;
-        const Eu = this.nextCaster++;
-        if (this.writeCaster(Eu, gj, 0, 0, 0), "shape" === uu.kind) {
-          const ju = this.allocateMask(uu.mask.length);
-          ju >= 0 && (this.sink(ju, uu.mask), this.writeCaster(Eu, Mj, ju, 0, 8))
-        } else if ("cutout" === uu.kind) {
-          const ju = pj(uu.size),
-            su = this.allocateMask(6 * ju);
-          if (su >= 0) {
-            const Uu = new Uint32Array(6 * ju);
-            uu.faces.forEach(((uu, Eu) => {
-              Uu.set(uu, Eu * ju)
-            })), this.sink(su, Uu), this.writeCaster(Eu, Gj, su, 0, uu.size)
+      allocate(GG) {
+        if (this.nextCaster >= uZ) return this.warnOnce("Sun shadows: more than 8191 casters; the rest cast nothing."), 0;
+        const bG = this.nextCaster++;
+        if (this.writeCaster(bG, rZ, 0, 0, 0), "shape" === GG.kind) {
+          const ZG = this.allocateMask(GG.mask.length);
+          ZG >= 0 && (this.sink(ZG, GG.mask), this.writeCaster(bG, zZ, ZG, 0, 8))
+        } else if ("cutout" === GG.kind) {
+          const ZG = XZ(GG.size),
+            wG = this.allocateMask(6 * ZG);
+          if (wG >= 0) {
+            const SG = new Uint32Array(6 * ZG);
+            GG.faces.forEach(((GG, bG) => {
+              SG.set(GG, bG * ZG)
+            })), this.sink(wG, SG), this.writeCaster(bG, oZ, wG, 0, GG.size)
           }
-        } else this.planesLoading++, this.loads.push(this.loadPlanes(Eu, uu.planes).finally((() => {
+        } else this.planesLoading++, this.loads.push(this.loadPlanes(bG, GG.planes).finally((() => {
           this.planesLoading--
         })));
-        return Eu
+        return bG
       }
-      async loadPlanes(uu, Eu) {
-        const ju = await Promise.all(Eu.map((uu => this.texture(uu.texture))));
-        if (ju.some((uu => null === uu))) return;
-        const su = ju,
-          Uu = qq(Math.max(...su.map((uu => Math.min(uu.width, uu.height))))),
-          Zu = pj(Uu),
-          Xu = this.allocateMask(Eu.length * (4 + Zu));
-        if (Xu < 0) return;
-        const lu = new Uint32Array(Eu.length * (4 + Zu)),
-          qu = 4 * Eu.length;
-        Eu.forEach(((uu, Eu) => {
-          const ju = Xu + qu + Eu * Zu;
-          lu.set(function(uu, Eu) {
-            const [ju, su] = uu.tangent, Uu = Math.hypot(ju, su) || 1, Zu = ju / Uu, Xu = su / Uu, lu = uu.centre[0] * Xu - uu.centre[1] * Zu, qu = new Uint32Array(4);
-            return new Float32Array(qu.buffer, 0, 3).set([Zu, Xu, lu]), qu[3] = Eu, qu
-          }(uu, ju), 4 * Eu), lu.set(lq(su[Eu].alpha, su[Eu].width, su[Eu].height, Uu), qu + Eu * Zu)
-        })), this.sink(Xu, lu), this.writeCaster(uu, ej, Xu, Eu.length, Uu)
+      async loadPlanes(GG, bG) {
+        const ZG = await Promise.all(bG.map((GG => this.texture(GG.texture))));
+        if (ZG.some((GG => null === GG))) return;
+        const wG = ZG,
+          SG = UU(Math.max(...wG.map((GG => Math.min(GG.width, GG.height))))),
+          LG = XZ(SG),
+          yG = this.allocateMask(bG.length * (4 + LG));
+        if (yG < 0) return;
+        const kG = new Uint32Array(bG.length * (4 + LG)),
+          UG = 4 * bG.length;
+        bG.forEach(((GG, bG) => {
+          const ZG = yG + UG + bG * LG;
+          kG.set(function(GG, bG) {
+            const [ZG, wG] = GG.tangent, SG = Math.hypot(ZG, wG) || 1, LG = ZG / SG, yG = wG / SG, kG = GG.centre[0] * yG - GG.centre[1] * LG, UG = new Uint32Array(4);
+            return new Float32Array(UG.buffer, 0, 3).set([LG, yG, kG]), UG[3] = bG, UG
+          }(GG, ZG), 4 * bG), kG.set(kU(wG[bG].alpha, wG[bG].width, wG[bG].height, SG), UG + bG * LG)
+        })), this.sink(yG, kG), this.writeCaster(GG, EZ, yG, bG.length, SG)
       }
-      texture(uu) {
-        let Eu = this.textures.get(uu);
-        return Eu || (Eu = this.loadTexture(uu).catch((Eu => (this.warn(`Sun shadows: no mask for ${uu}: ${Eu instanceof Error?Eu.message:String(Eu)}`), null))), this.textures.set(uu, Eu)), Eu
+      texture(GG) {
+        let bG = this.textures.get(GG);
+        return bG || (bG = this.loadTexture(GG).catch((bG => (this.warn(`Sun shadows: no mask for ${GG}: ${bG instanceof Error?bG.message:String(bG)}`), null))), this.textures.set(GG, bG)), bG
       }
-      allocateMask(uu) {
-        if (this.nextMaskWord + uu > Jj) return this.warnOnce("Sun shadows: casters' masks are over 262144 words; the rest cast nothing."), -1;
-        const Eu = 32768 + this.nextMaskWord;
-        return this.nextMaskWord += uu, Eu
+      allocateMask(GG) {
+        if (this.nextMaskWord + GG > iZ) return this.warnOnce("Sun shadows: casters' masks are over 262144 words; the rest cast nothing."), -1;
+        const bG = 32768 + this.nextMaskWord;
+        return this.nextMaskWord += GG, bG
       }
-      writeCaster(uu, Eu, ju, su, Uu) {
-        this.sink(0 + 4 * uu, Uint32Array.of(Eu, ju, su, Uu))
+      writeCaster(GG, bG, ZG, wG, SG) {
+        this.sink(0 + 4 * GG, Uint32Array.of(bG, ZG, wG, SG))
       }
-      warnOnce(uu) {
-        this.warned.has(uu) || (this.warned.add(uu), this.warn(uu))
+      warnOnce(GG) {
+        this.warned.has(GG) || (this.warned.add(GG), this.warn(GG))
       }
     }
-    var Cq = ju(2969);
+    var VU = ZG(2829);
 
-    function bq(uu) {
-      return !uu.qY && !uu.pw && !uu.iO
+    function pU(GG) {
+      return !GG.ph && !GG.bC && !GG.sK
     }
 
-    function cq() {
+    function fU() {
       return {
-        bricks: new Uint32Array(fj),
+        bricks: new Uint32Array(YZ),
         cells: new Uint16Array(32768),
-        special: new Uint8Array(lj)
+        special: new Uint8Array(kZ)
       }
     }
-    class Nq {
-      constructor(uu, Eu, ju) {
-        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : console.warn;
-        this.casters = uu, this.writeVoxels = Eu, this.writePool = ju, this.warn = su, this.eyeChunk = null, this.slotChunk = new Array(Ej).fill(null), this.slotVersion = new Float64Array(Ej).fill(-1), this.slotPool = new Array(Ej).fill(null), this.starved = new Uint8Array(Ej), this.queue = [], this.queued = new Uint8Array(Ej), this.queueSorted = !0, this.freePool = new Uint32Array(dj), this.freeCount = dj, this.casterTable = null, this.warnedPool = !1, this.scratch = cq(), this.victimScratch = cq(), this.record = new Uint32Array(4), this.entry = new Uint32Array(32), this.records = new Int32Array(4 * Ej), this.windowTopStale = !0, this.windowTop = new Uint32Array(1), this.encoded = null;
-        for (let Uu = 0; Uu < dj; Uu++) this.freePool[Uu] = 65535 - Uu
+    class QU {
+      constructor(GG, bG, ZG) {
+        let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : console.warn;
+        this.casters = GG, this.writeVoxels = bG, this.writePool = ZG, this.warn = wG, this.eyeChunk = null, this.slotChunk = new Array(bZ).fill(null), this.slotVersion = new Float64Array(bZ).fill(-1), this.slotPool = new Array(bZ).fill(null), this.starved = new Uint8Array(bZ), this.queue = [], this.queued = new Uint8Array(bZ), this.queueSorted = !0, this.freePool = new Uint32Array(CZ), this.freeCount = CZ, this.casterTable = null, this.warnedPool = !1, this.scratch = fU(), this.victimScratch = fU(), this.record = new Uint32Array(4), this.entry = new Uint32Array(32), this.records = new Int32Array(4 * bZ), this.windowTopStale = !0, this.windowTop = new Uint32Array(1), this.encoded = null;
+        for (let SG = 0; SG < CZ; SG++) this.freePool[SG] = 65535 - SG
       }
       get queuedCount() {
         return this.queue.length
       }
       get poolInUse() {
-        return dj - this.freeCount
+        return CZ - this.freeCount
       }
-      chunkAdded(uu) {
-        if (null === this.eyeChunk || !this.inRadius(uu.i, uu.j, uu.k)) return;
-        const Eu = Oj(uu.i, uu.j, uu.k);
-        this.slotChunk[Eu] = uu, this.slotVersion[Eu] = -1, this.enqueue(Eu)
+      chunkAdded(GG) {
+        if (null === this.eyeChunk || !this.inRadius(GG.i, GG.j, GG.k)) return;
+        const bG = KZ(GG.i, GG.j, GG.k);
+        this.slotChunk[bG] = GG, this.slotVersion[bG] = -1, this.enqueue(bG)
       }
-      update(uu, Eu, ju) {
-        const su = this.casters.blockCaster;
-        if (su !== this.casterTable) {
-          this.casterTable = su;
-          for (let uu = 0; uu < Ej; uu++) this.slotVersion[uu] = -1, this.slotChunk[uu] && this.enqueue(uu)
+      update(GG, bG, ZG) {
+        const wG = this.casters.blockCaster;
+        if (wG !== this.casterTable) {
+          this.casterTable = wG;
+          for (let GG = 0; GG < bZ; GG++) this.slotVersion[GG] = -1, this.slotChunk[GG] && this.enqueue(GG)
         }
-        const Uu = Math.floor(uu[0] / 32),
-          Zu = Math.floor(uu[1] / 32),
-          Xu = Math.floor(uu[2] / 32);
-        (null === this.eyeChunk || this.eyeChunk[0] !== Uu || this.eyeChunk[1] !== Zu || this.eyeChunk[2] !== Xu) && (this.eyeChunk = [Uu, Zu, Xu], this.follow(Eu), this.queueSorted = !1, this.requeueStarved(), this.windowTopStale = !0);
-        for (let lu = 0; lu < Ej; lu++) {
-          const uu = this.slotChunk[lu];
-          uu && (uu.Gw || uu.IO !== this.slotVersion[lu]) && this.enqueue(lu)
+        const SG = Math.floor(GG[0] / 32),
+          LG = Math.floor(GG[1] / 32),
+          yG = Math.floor(GG[2] / 32);
+        (null === this.eyeChunk || this.eyeChunk[0] !== SG || this.eyeChunk[1] !== LG || this.eyeChunk[2] !== yG) && (this.eyeChunk = [SG, LG, yG], this.follow(bG), this.queueSorted = !1, this.requeueStarved(), this.windowTopStale = !0);
+        for (let kG = 0; kG < bZ; kG++) {
+          const GG = this.slotChunk[kG];
+          GG && (GG.Tu || GG.gK !== this.slotVersion[kG]) && this.enqueue(kG)
         }
-        this.drain(ju), this.windowTopStale && this.writeWindowTop()
+        this.drain(ZG), this.windowTopStale && this.writeWindowTop()
       }
-      writeRecord(uu, Eu) {
-        this.records.set(Eu, 4 * uu), this.windowTopStale = !0, this.writeVoxels(4 * uu, Eu)
+      writeRecord(GG, bG) {
+        this.records.set(bG, 4 * GG), this.windowTopStale = !0, this.writeVoxels(4 * GG, bG)
       }
       writeWindowTop() {
         this.windowTopStale = !1;
-        const uu = this.records;
-        let Eu = -1 / 0;
-        for (let su = 0; su < uu.length; su += 4) {
-          const ju = 255 & uu[su + 3];
-          ju !== Uj && ju !== Zj || !this.inRadius(uu[su], uu[su + 1], uu[su + 2]) || (Eu = Math.max(Eu, uu[su + 1] * zE + (uu[su + 3] >>> 8)))
+        const GG = this.records;
+        let bG = -1 / 0;
+        for (let wG = 0; wG < GG.length; wG += 4) {
+          const ZG = 255 & GG[wG + 3];
+          ZG !== SZ && ZG !== LZ || !this.inRadius(GG[wG], GG[wG + 1], GG[wG + 2]) || (bG = Math.max(bG, GG[wG + 1] * xb + (GG[wG + 3] >>> 8)))
         }
-        const ju = Eu === -1 / 0 ? 1 : Eu + bj;
-        ju !== this.windowTop[0] && (this.windowTop[0] = ju, this.writeVoxels(Cj, this.windowTop))
+        const ZG = bG === -1 / 0 ? 1 : bG + pZ;
+        ZG !== this.windowTop[0] && (this.windowTop[0] = ZG, this.writeVoxels(VZ, this.windowTop))
       }
-      follow(uu) {
-        const Eu = this.eyeChunk,
-          [ju, su, Uu] = RE;
-        for (let Xu = -Uu; Xu <= Uu; Xu++)
-          for (let Uu = -su; Uu <= su; Uu++)
-            for (let su = -ju; su <= ju; su++) {
-              var Zu;
-              const ju = Eu[0] + su,
-                lu = Eu[1] + Uu,
-                qu = Eu[2] + Xu,
-                fu = Oj(ju, lu, qu),
-                Cu = this.slotChunk[fu];
-              if (Cu && !Cu.Gw && Cu.i === ju && Cu.j === lu && Cu.k === qu) continue;
-              const bu = null !== (Zu = uu(ju, lu, qu)) && void 0 !== Zu ? Zu : null;
-              Cu && (Cu.i !== ju || Cu.j !== lu || Cu.k !== qu) && this.slotPool[fu] && (this.release(fu), this.record.fill(0), this.writeRecord(fu, this.record)), this.slotChunk[fu] = bu, this.slotVersion[fu] = -1, (bu || Cu) && this.enqueue(fu)
+      follow(GG) {
+        const bG = this.eyeChunk,
+          [ZG, wG, SG] = Bb;
+        for (let yG = -SG; yG <= SG; yG++)
+          for (let SG = -wG; SG <= wG; SG++)
+            for (let wG = -ZG; wG <= ZG; wG++) {
+              var LG;
+              const ZG = bG[0] + wG,
+                kG = bG[1] + SG,
+                UG = bG[2] + yG,
+                YG = KZ(ZG, kG, UG),
+                VG = this.slotChunk[YG];
+              if (VG && !VG.Tu && VG.i === ZG && VG.j === kG && VG.k === UG) continue;
+              const pG = null !== (LG = GG(ZG, kG, UG)) && void 0 !== LG ? LG : null;
+              VG && (VG.i !== ZG || VG.j !== kG || VG.k !== UG) && this.slotPool[YG] && (this.release(YG), this.record.fill(0), this.writeRecord(YG, this.record)), this.slotChunk[YG] = pG, this.slotVersion[YG] = -1, (pG || VG) && this.enqueue(YG)
             }
       }
       requeueStarved() {
-        for (let uu = 0; uu < Ej; uu++) this.starved[uu] && this.slotChunk[uu] && this.enqueue(uu)
+        for (let GG = 0; GG < bZ; GG++) this.starved[GG] && this.slotChunk[GG] && this.enqueue(GG)
       }
-      enqueue(uu) {
-        this.queued[uu] || (this.queued[uu] = 1, this.queue.push(uu), this.queueSorted = !1)
+      enqueue(GG) {
+        this.queued[GG] || (this.queued[GG] = 1, this.queue.push(GG), this.queueSorted = !1)
       }
-      drain(uu) {
+      drain(GG) {
         if (0 === this.queue.length) return;
         if (!this.queueSorted) {
-          const uu = new Map;
-          for (const Eu of this.queue) uu.set(Eu, this.slotDistance(Eu));
-          this.queue.sort(((Eu, ju) => uu.get(ju) - uu.get(Eu))), this.queueSorted = !0
+          const GG = new Map;
+          for (const bG of this.queue) GG.set(bG, this.slotDistance(bG));
+          this.queue.sort(((bG, ZG) => GG.get(ZG) - GG.get(bG))), this.queueSorted = !0
         }
-        const Eu = performance.now();
-        let ju = 0;
-        const su = [];
-        for (; this.queue.length > 0 && (0 === ju || performance.now() - Eu < uu);) {
-          const uu = this.queue.pop(),
-            Eu = this.slotChunk[uu];
-          !Eu || Eu.Gw || bq(Eu) ? (this.queued[uu] = 0, this.encodeSlot(uu), ju++) : su.push(uu)
+        const bG = performance.now();
+        let ZG = 0;
+        const wG = [];
+        for (; this.queue.length > 0 && (0 === ZG || performance.now() - bG < GG);) {
+          const GG = this.queue.pop(),
+            bG = this.slotChunk[GG];
+          !bG || bG.Tu || pU(bG) ? (this.queued[GG] = 0, this.encodeSlot(GG), ZG++) : wG.push(GG)
         }
-        for (let Uu = su.length - 1; Uu >= 0; Uu--) this.queue.push(su[Uu])
+        for (let SG = wG.length - 1; SG >= 0; SG--) this.queue.push(wG[SG])
       }
-      slotDistance(uu) {
-        const Eu = this.slotChunk[uu],
-          ju = this.eyeChunk;
-        return Eu ? Math.max(Math.abs(Eu.i - ju[0]), Math.abs(Eu.j - ju[1]), Math.abs(Eu.k - ju[2])) : 0
+      slotDistance(GG) {
+        const bG = this.slotChunk[GG],
+          ZG = this.eyeChunk;
+        return bG ? Math.max(Math.abs(bG.i - ZG[0]), Math.abs(bG.j - ZG[1]), Math.abs(bG.k - ZG[2])) : 0
       }
-      inRadius(uu, Eu, ju) {
-        const su = this.eyeChunk,
-          [Uu, Zu, Xu] = RE;
-        return Math.abs(uu - su[0]) <= Uu && Math.abs(Eu - su[1]) <= Zu && Math.abs(ju - su[2]) <= Xu
+      inRadius(GG, bG, ZG) {
+        const wG = this.eyeChunk,
+          [SG, LG, yG] = Bb;
+        return Math.abs(GG - wG[0]) <= SG && Math.abs(bG - wG[1]) <= LG && Math.abs(ZG - wG[2]) <= yG
       }
-      release(uu) {
-        const Eu = this.slotPool[uu];
-        if (Eu) {
-          for (let uu = Eu.length - 1; uu >= 0; uu--) this.freePool[this.freeCount++] = Eu[uu];
-          this.slotPool[uu] = null
+      release(GG) {
+        const bG = this.slotPool[GG];
+        if (bG) {
+          for (let GG = bG.length - 1; GG >= 0; GG--) this.freePool[this.freeCount++] = bG[GG];
+          this.slotPool[GG] = null
         }
       }
-      encodeSlot(uu) {
-        var Eu, ju, su, Uu, Zu;
-        let Xu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.scratch,
-          lu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        const qu = null !== (Eu = null === (ju = this.slotPool[uu]) || void 0 === ju ? void 0 : ju.length) && void 0 !== Eu ? Eu : 0;
-        this.release(uu), this.starved[uu] = 0;
-        const fu = this.slotChunk[uu],
-          Cu = this.record;
-        if (!fu || fu.Gw || !fu.ac) return this.slotChunk[uu] = null, this.slotVersion[uu] = -1, Cu.fill(0), this.writeRecord(uu, Cu), void(qu > 0 && this.requeueStarved());
-        this.slotVersion[uu] = fu.IO;
-        const bu = this.encodeBricks(fu, uu, Xu, lu);
-        Cu[0] = fu.i, Cu[1] = fu.j, Cu[2] = fu.k, Cu[3] = bu, this.writeRecord(uu, Cu), null === (su = this.encoded) || void 0 === su || su.call(this, fu), lu && (null !== (Uu = null === (Zu = this.slotPool[uu]) || void 0 === Zu ? void 0 : Zu.length) && void 0 !== Uu ? Uu : 0) < qu && this.requeueStarved()
+      encodeSlot(GG) {
+        var bG, ZG, wG, SG, LG;
+        let yG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.scratch,
+          kG = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        const UG = null !== (bG = null === (ZG = this.slotPool[GG]) || void 0 === ZG ? void 0 : ZG.length) && void 0 !== bG ? bG : 0;
+        this.release(GG), this.starved[GG] = 0;
+        const YG = this.slotChunk[GG],
+          VG = this.record;
+        if (!YG || YG.Tu || !YG.Wf) return this.slotChunk[GG] = null, this.slotVersion[GG] = -1, VG.fill(0), this.writeRecord(GG, VG), void(UG > 0 && this.requeueStarved());
+        this.slotVersion[GG] = YG.gK;
+        const pG = this.encodeBricks(YG, GG, yG, kG);
+        VG[0] = YG.i, VG[1] = YG.j, VG[2] = YG.k, VG[3] = pG, this.writeRecord(GG, VG), null === (wG = this.encoded) || void 0 === wG || wG.call(this, YG), kG && (null !== (SG = null === (LG = this.slotPool[GG]) || void 0 === LG ? void 0 : LG.length) && void 0 !== SG ? SG : 0) < UG && this.requeueStarved()
       }
-      encodeBricks(uu, Eu, ju, su) {
-        if (uu.ZO) return sj;
-        const Uu = this.casters.blockCaster,
+      encodeBricks(GG, bG, ZG, wG) {
+        if (GG.kK) return wZ;
+        const SG = this.casters.blockCaster,
           {
-            data: Zu,
-            stride: Xu,
-            offset: lu
-          } = uu.ac,
-          [qu, fu, Cu] = Xu,
-          bu = zE,
+            data: LG,
+            stride: yG,
+            offset: kG
+          } = GG.Wf,
+          [UG, YG, VG] = yG,
+          pG = xb,
           {
-            bricks: cu,
-            cells: Nu,
-            special: Ou
-          } = ju;
-        cu.fill(0), Ou.fill(0);
-        let Yu = 0,
-          hu = 0,
-          Du = 0;
-        for (let gu = 0; gu < bu; gu++) {
-          const Eu = gu >> 2,
-            ju = 3 & gu,
-            su = uu.JN[gu],
-            Xu = su === Cq.f ? -1 : su < Uu.length ? Uu[su] : 0;
-          if (0 !== Xu)
-            for (let uu = 0; uu < bu; uu++) {
-              const su = uu >> 2,
-                Mu = 3 & uu;
-              let eu = lu + uu * qu + gu * fu;
-              for (let uu = 0; uu < bu; uu++, eu += Cu) {
-                let lu = Xu;
-                if (lu < 0) {
-                  const uu = Zu[eu];
-                  if (lu = uu < Uu.length ? Uu[uu] : 0, 0 === lu) continue
+            bricks: fG,
+            cells: QG,
+            special: KG
+          } = ZG;
+        fG.fill(0), KG.fill(0);
+        let hG = 0,
+          dG = 0,
+          JG = 0;
+        for (let rG = 0; rG < pG; rG++) {
+          const bG = rG >> 2,
+            ZG = 3 & rG,
+            wG = GG.WQ[rG],
+            yG = wG === VU.c ? -1 : wG < SG.length ? SG[wG] : 0;
+          if (0 !== yG)
+            for (let GG = 0; GG < pG; GG++) {
+              const wG = GG >> 2,
+                zG = 3 & GG;
+              let EG = kG + GG * UG + rG * YG;
+              for (let GG = 0; GG < pG; GG++, EG += VG) {
+                let kG = yG;
+                if (kG < 0) {
+                  const GG = LG[EG];
+                  if (kG = GG < SG.length ? SG[GG] : 0, 0 === kG) continue
                 }
-                const qu = Yj(su, Eu, uu >> 2),
-                  fu = hj(Mu, ju, 3 & uu);
-                cu[3 * qu + (fu >>> 5)] |= 1 << (31 & fu), Nu[qu * Xj + fu] = lu, Yu++, Du = gu, lu === Dj ? hu++ : Ou[qu] = 1
+                const UG = hZ(wG, bG, GG >> 2),
+                  YG = dZ(zG, ZG, 3 & GG);
+                fG[3 * UG + (YG >>> 5)] |= 1 << (31 & YG), QG[UG * yZ + YG] = kG, hG++, JG = rG, kG === JZ ? dG++ : KG[UG] = 1
               }
             }
         }
-        return 0 === Yu ? sj : 32768 === hu ? Uj | Du << 8 : (this.writePoolEntries(Eu, ju, su), this.writeVoxels(qj + Eu * fj, cu), Zj | Du << 8)
+        return 0 === hG ? wZ : 32768 === dG ? SZ | JG << 8 : (this.writePoolEntries(bG, ZG, wG), this.writeVoxels(UZ + bG * YZ, fG), LZ | JG << 8)
       }
-      writePoolEntries(uu, Eu, ju) {
+      writePoolEntries(GG, bG, ZG) {
         const {
-          bricks: su,
-          cells: Uu,
-          special: Zu
-        } = Eu, Xu = this.entry;
-        let lu = 0;
-        for (let Cu = 0; Cu < lj; Cu++) lu += Zu[Cu];
-        if (0 === lu) return;
-        ju && this.freeCount < lu && this.evictBeyond(uu, lu);
-        const qu = new Uint32Array(ju ? Math.min(lu, this.freeCount) : 0);
-        let fu = 0;
-        for (let Cu = 0; Cu < lj; Cu++) {
-          if (!Zu[Cu]) continue;
-          const ju = 3 * Cu;
-          if (fu === qu.length) {
-            this.dropSpecials(Eu, Cu), this.starved[uu] = 1;
+          bricks: wG,
+          cells: SG,
+          special: LG
+        } = bG, yG = this.entry;
+        let kG = 0;
+        for (let VG = 0; VG < kZ; VG++) kG += LG[VG];
+        if (0 === kG) return;
+        ZG && this.freeCount < kG && this.evictBeyond(GG, kG);
+        const UG = new Uint32Array(ZG ? Math.min(kG, this.freeCount) : 0);
+        let YG = 0;
+        for (let VG = 0; VG < kZ; VG++) {
+          if (!LG[VG]) continue;
+          const ZG = 3 * VG;
+          if (YG === UG.length) {
+            this.dropSpecials(bG, VG), this.starved[GG] = 1;
             continue
           }
-          const lu = this.freePool[--this.freeCount];
-          qu[fu++] = lu;
-          for (let uu = 0; uu < Xj; uu++) {
-            const Eu = su[ju + (uu >>> 5)] >>> (31 & uu) & 1 ? Uu[Cu * Xj + uu] : 0;
-            1 & uu ? Xu[uu >> 1] |= Eu << 16 : Xu[uu >> 1] = Eu
+          const kG = this.freePool[--this.freeCount];
+          UG[YG++] = kG;
+          for (let GG = 0; GG < yZ; GG++) {
+            const bG = wG[ZG + (GG >>> 5)] >>> (31 & GG) & 1 ? SG[VG * yZ + GG] : 0;
+            1 & GG ? yG[GG >> 1] |= bG << 16 : yG[GG >> 1] = bG
           }
-          su[ju + 2] = lu + 1, this.writePool(aj + 32 * lu, Xu)
+          wG[ZG + 2] = kG + 1, this.writePool(WZ + 32 * kG, yG)
         }
-        qu.length > 0 && (this.slotPool[uu] = qu)
+        UG.length > 0 && (this.slotPool[GG] = UG)
       }
-      evictBeyond(uu, Eu) {
-        const ju = this.slotDistance(uu),
-          su = [];
-        for (let Uu = 0; Uu < Ej; Uu++) Uu !== uu && this.slotPool[Uu] && this.slotDistance(Uu) > ju && su.push(Uu);
-        su.sort(((uu, Eu) => this.slotDistance(Eu) - this.slotDistance(uu)));
-        for (const Uu of su) {
-          if (this.freeCount >= Eu) return;
-          const uu = this.slotChunk[Uu];
-          uu && !uu.Gw && uu.ac && (uu.IO === this.slotVersion[Uu] || bq(uu)) && this.encodeSlot(Uu, this.victimScratch, !1)
+      evictBeyond(GG, bG) {
+        const ZG = this.slotDistance(GG),
+          wG = [];
+        for (let SG = 0; SG < bZ; SG++) SG !== GG && this.slotPool[SG] && this.slotDistance(SG) > ZG && wG.push(SG);
+        wG.sort(((GG, bG) => this.slotDistance(bG) - this.slotDistance(GG)));
+        for (const SG of wG) {
+          if (this.freeCount >= bG) return;
+          const GG = this.slotChunk[SG];
+          GG && !GG.Tu && GG.Wf && (GG.gK === this.slotVersion[SG] || pU(GG)) && this.encodeSlot(SG, this.victimScratch, !1)
         }
       }
-      dropSpecials(uu, Eu) {
+      dropSpecials(GG, bG) {
         this.warnedPool || (this.warnedPool = !0, this.warn("Sun shadows: the special pool's 65536 entries are in use; plants and shapes in the furthest chunks cast nothing."));
-        const ju = 3 * Eu;
-        for (let su = 0; su < Xj; su++) uu.cells[Eu * Xj + su] !== Dj && (uu.bricks[ju + (su >>> 5)] &= ~(1 << (31 & su)))
+        const ZG = 3 * bG;
+        for (let wG = 0; wG < yZ; wG++) GG.cells[bG * yZ + wG] !== JZ && (GG.bricks[ZG + (wG >>> 5)] &= ~(1 << (31 & wG)))
       }
     }
-    var Oq = ju(37867);
-    class Yq {
-      constructor(uu) {
-        this.device = uu, this.frameBuffer = void 0, this.gridBuffer = void 0, this.frame = new Wj, this.grids = new WeakMap, this.gridTop = 0, this.gridsFull = !1, this.uploadedEmpty = !1, this.zb = new Float64Array(16), this.bakeDeadline = 0, this.frameBuffer = uu.createBuffer({
+    var KU = ZG(37845);
+    class hU {
+      constructor(GG) {
+        this.device = GG, this.frameBuffer = void 0, this.gridBuffer = void 0, this.frame = new AZ, this.grids = new WeakMap, this.gridTop = 0, this.gridsFull = !1, this.uploadedEmpty = !1, this.Op = new Float64Array(16), this.bakeDeadline = 0, this.frameBuffer = GG.createBuffer({
           label: "sun-shadow-entities",
           size: 589828,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), this.gridBuffer = uu.createBuffer({
+        }), this.gridBuffer = GG.createBuffer({
           label: "sun-shadow-entity-grids",
           size: 16777216,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
         })
       }
-      update(uu, Eu, ju) {
+      update(GG, bG, ZG) {
         this.gridsFull && (this.gridsFull = !1, this.grids = new WeakMap, this.gridTop = 0), this.bakeDeadline = -1;
         const {
-          frame: su
+          frame: wG
         } = this;
-        su.NN(uu, Eu), ju.forEachSunShadowCaster((uu => {
-          this.add(uu)
-        })), su.finish();
-        const Uu = 0 === su.parts;
-        if (Uu && this.uploadedEmpty) return;
-        this.uploadedEmpty = Uu;
+        wG.hQ(GG, bG), ZG.forEachSunShadowCaster((GG => {
+          this.add(GG)
+        })), wG.finish();
+        const SG = 0 === wG.parts;
+        if (SG && this.uploadedEmpty) return;
+        this.uploadedEmpty = SG;
         const {
-          queue: Zu
+          queue: LG
         } = this.device, {
-          words: Xu
-        } = su;
-        Zu.writeBuffer(this.frameBuffer, 0, Xu, 0, 16385), su.refs > 0 && Zu.writeBuffer(this.frameBuffer, 65540, Xu, mj, su.refs), Uu || Zu.writeBuffer(this.frameBuffer, 327684, Xu, vj, su.parts * kj)
+          words: yG
+        } = wG;
+        LG.writeBuffer(this.frameBuffer, 0, yG, 0, 16385), wG.refs > 0 && LG.writeBuffer(this.frameBuffer, 65540, yG, vZ, wG.refs), SG || LG.writeBuffer(this.frameBuffer, 327684, yG, aZ, wG.parts * FZ)
       }
-      add(uu) {
-        const Eu = this.gridFor(uu);
-        if (!Eu) return;
+      add(GG) {
+        const bG = this.gridFor(GG);
+        if (!bG) return;
         const {
-          frame: ju
+          frame: ZG
         } = this, {
-          zb: su,
-          worldAt: Uu,
-          instances: Zu,
-          instanceCount: Xu,
-          thin: lu
-        } = uu;
-        if (Zu)
-          for (let qu = 0; qu < Xu; qu++) lu ? (Ij(Zu, 16 * qu, su, Uu, this.zb), ju.add(Eu, this.zb)) : ju.add(Eu, Zu, 16 * qu);
-        else ju.add(Eu, su, Uu)
+          Op: wG,
+          worldAt: SG,
+          instances: LG,
+          instanceCount: yG,
+          thin: kG
+        } = GG;
+        if (LG)
+          for (let UG = 0; UG < yG; UG++) kG ? (qZ(LG, 16 * UG, wG, SG, this.Op), ZG.add(bG, this.Op)) : ZG.add(bG, LG, 16 * UG);
+        else ZG.add(bG, wG, SG)
       }
-      gridFor(uu) {
+      gridFor(GG) {
         let {
-          geometry: Eu,
-          indexed: ju,
-          first: su,
-          count: Uu,
-          skip: Zu
-        } = uu, Xu = this.grids.get(Eu);
-        Xu || (Xu = new Map, this.grids.set(Eu, Xu));
-        const lu = `${ju?su:-1-su}:${Uu}:${null!==Zu&&void 0!==Zu?Zu:""}`;
-        let qu = Xu.get(lu);
-        if (void 0 !== qu || this.gridsFull) return qu;
-        const fu = performance.now();
-        if (this.bakeDeadline < 0) this.bakeDeadline = fu + 2;
-        else if (fu > this.bakeDeadline) return;
-        return qu = this.bake(Eu, ju, su, Uu, Zu), void 0 !== qu && Xu.set(lu, qu), qu
+          geometry: bG,
+          indexed: ZG,
+          first: wG,
+          count: SG,
+          skip: LG
+        } = GG, yG = this.grids.get(bG);
+        yG || (yG = new Map, this.grids.set(bG, yG));
+        const kG = `${ZG?wG:-1-wG}:${SG}:${null!==LG&&void 0!==LG?LG:""}`;
+        let UG = yG.get(kG);
+        if (void 0 !== UG || this.gridsFull) return UG;
+        const YG = performance.now();
+        if (this.bakeDeadline < 0) this.bakeDeadline = YG + 2;
+        else if (YG > this.bakeDeadline) return;
+        return UG = this.bake(bG, ZG, wG, SG, LG), void 0 !== UG && yG.set(kG, UG), UG
       }
-      bake(uu, Eu, ju, su, Uu) {
-        const Zu = uu.vertexAttributes.find((uu => "position" === uu.kind)),
-          Xu = Zu ? function(uu, Eu, ju, su) {
-            let Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-            const Zu = uu => Eu ? Eu[ju + uu] : ju + uu,
-              Xu = uu => null !== Uu && [0, 1, 2].some((Eu => {
-                const ju = Zu(uu + Eu);
-                return ju >= Uu[0] && ju < Uu[1]
+      bake(GG, bG, ZG, wG, SG) {
+        const LG = GG.vertexAttributes.find((GG => "position" === GG.kind)),
+          yG = LG ? function(GG, bG, ZG, wG) {
+            let SG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+            const LG = GG => bG ? bG[ZG + GG] : ZG + GG,
+              yG = GG => null !== SG && [0, 1, 2].some((bG => {
+                const ZG = LG(GG + bG);
+                return ZG >= SG[0] && ZG < SG[1]
               })),
-              lu = [1 / 0, 1 / 0, 1 / 0],
-              qu = [-1 / 0, -1 / 0, -1 / 0];
-            for (let gu = 0; gu + 2 < su; gu += 3)
-              if (!Xu(gu))
-                for (let Eu = 0; Eu < 3; Eu++) {
-                  const ju = Zu(gu + Eu);
-                  for (let Eu = 0; Eu < 3; Eu++) lu[Eu] = Math.min(lu[Eu], uu[3 * ju + Eu]), qu[Eu] = Math.max(qu[Eu], uu[3 * ju + Eu])
+              kG = [1 / 0, 1 / 0, 1 / 0],
+              UG = [-1 / 0, -1 / 0, -1 / 0];
+            for (let rG = 0; rG + 2 < wG; rG += 3)
+              if (!yG(rG))
+                for (let bG = 0; bG < 3; bG++) {
+                  const ZG = LG(rG + bG);
+                  for (let bG = 0; bG < 3; bG++) kG[bG] = Math.min(kG[bG], GG[3 * ZG + bG]), UG[bG] = Math.max(UG[bG], GG[3 * ZG + bG])
                 }
-            const fu = Math.max(qu[0] - lu[0], qu[1] - lu[1], qu[2] - lu[2]);
-            if (!(fu > 0)) return null;
-            const Cu = fu / 64,
-              bu = [0, 0, 0],
-              cu = [0, 0, 0],
-              Nu = [0, 0, 0];
-            for (let gu = 0; gu < 3; gu++) bu[gu] = Math.min(65, Math.ceil((qu[gu] - lu[gu]) / Cu) + 1), cu[gu] = lu[gu] - Cu / 2, Nu[gu] = cu[gu] + bu[gu] * Cu;
-            const Ou = new Uint32Array(Math.ceil(bu[0] * bu[1] * bu[2] / 32)),
-              Yu = new Float64Array(9),
-              hu = [0, 0, 0],
-              Du = [0, 0, 0];
-            for (let gu = 0; gu + 2 < su; gu += 3)
-              if (!Xu(gu)) {
-                for (let Eu = 0; Eu < 3; Eu++) {
-                  const ju = Zu(gu + Eu);
-                  for (let su = 0; su < 3; su++) Yu[3 * Eu + su] = uu[3 * ju + su]
+            const YG = Math.max(UG[0] - kG[0], UG[1] - kG[1], UG[2] - kG[2]);
+            if (!(YG > 0)) return null;
+            const VG = YG / 64,
+              pG = [0, 0, 0],
+              fG = [0, 0, 0],
+              QG = [0, 0, 0];
+            for (let rG = 0; rG < 3; rG++) pG[rG] = Math.min(65, Math.ceil((UG[rG] - kG[rG]) / VG) + 1), fG[rG] = kG[rG] - VG / 2, QG[rG] = fG[rG] + pG[rG] * VG;
+            const KG = new Uint32Array(Math.ceil(pG[0] * pG[1] * pG[2] / 32)),
+              hG = new Float64Array(9),
+              dG = [0, 0, 0],
+              JG = [0, 0, 0];
+            for (let rG = 0; rG + 2 < wG; rG += 3)
+              if (!yG(rG)) {
+                for (let bG = 0; bG < 3; bG++) {
+                  const ZG = LG(rG + bG);
+                  for (let wG = 0; wG < 3; wG++) hG[3 * bG + wG] = GG[3 * ZG + wG]
                 }
-                for (let uu = 0; uu < 3; uu++) {
-                  const Eu = Math.min(Yu[uu], Yu[3 + uu], Yu[6 + uu]),
-                    ju = Math.max(Yu[uu], Yu[3 + uu], Yu[6 + uu]);
-                  hu[uu] = Math.max(0, Math.floor((Eu - cu[uu]) / Cu - 1e-6)), Du[uu] = Math.min(bu[uu] - 1, Math.floor((ju - cu[uu]) / Cu + 1e-6))
+                for (let GG = 0; GG < 3; GG++) {
+                  const bG = Math.min(hG[GG], hG[3 + GG], hG[6 + GG]),
+                    ZG = Math.max(hG[GG], hG[3 + GG], hG[6 + GG]);
+                  dG[GG] = Math.max(0, Math.floor((bG - fG[GG]) / VG - 1e-6)), JG[GG] = Math.min(pG[GG] - 1, Math.floor((ZG - fG[GG]) / VG + 1e-6))
                 }
-                for (let uu = hu[2]; uu <= Du[2]; uu++)
-                  for (let Eu = hu[1]; Eu <= Du[1]; Eu++)
-                    for (let ju = hu[0]; ju <= Du[0]; ju++)
-                      if (Fj(Yu, cu[0] + (ju + .5) * Cu, cu[1] + (Eu + .5) * Cu, cu[2] + (uu + .5) * Cu, Cu / 2)) {
-                        const su = ju + bu[0] * (Eu + bu[1] * uu);
-                        Ou[su >>> 5] |= 1 << (31 & su)
+                for (let GG = dG[2]; GG <= JG[2]; GG++)
+                  for (let bG = dG[1]; bG <= JG[1]; bG++)
+                    for (let ZG = dG[0]; ZG <= JG[0]; ZG++)
+                      if (nZ(hG, fG[0] + (ZG + .5) * VG, fG[1] + (bG + .5) * VG, fG[2] + (GG + .5) * VG, VG / 2)) {
+                        const wG = ZG + pG[0] * (bG + pG[1] * GG);
+                        KG[wG >>> 5] |= 1 << (31 & wG)
                       }
               } return {
-              words: Ou,
-              lo: cu,
-              hi: Nu,
-              cell: Cu,
-              dims: bu
+              words: KG,
+              lo: fG,
+              hi: QG,
+              cell: VG,
+              dims: pG
             }
-          }((0, Oq.j)(Zu, uu.vertexCount), Eu ? uu.indexData : null, ju, su, Uu) : null;
-        if (!Xu) return null;
+          }((0, KU.j)(LG, GG.vertexCount), bG ? GG.indexData : null, ZG, wG, SG) : null;
+        if (!yG) return null;
         const {
-          words: lu,
-          ...qu
-        } = Xu;
-        if (this.gridTop + lu.length > Vj) return void(this.gridsFull = !0);
-        const fu = this.gridTop;
-        return this.gridTop += lu.length, this.device.queue.writeBuffer(this.gridBuffer, 4 * fu, lu), {
-          ...qu,
-          at: fu
+          words: kG,
+          ...UG
+        } = yG;
+        if (this.gridTop + kG.length > lZ) return void(this.gridsFull = !0);
+        const YG = this.gridTop;
+        return this.gridTop += kG.length, this.device.queue.writeBuffer(this.gridBuffer, 4 * YG, kG), {
+          ...UG,
+          at: YG
         }
       }
     }
-    const hq = Math.cos(1 * Math.PI / 180);
+    const dU = Math.cos(1 * Math.PI / 180);
 
-    function Dq(uu, Eu) {
-      return uu[0] * Eu[0] + uu[1] * Eu[1] + uu[2] * Eu[2] < hq
+    function JU(GG, bG) {
+      return GG[0] * bG[0] + GG[1] * bG[1] + GG[2] * bG[2] < dU
     }
-    async function gq(uu) {
+    async function rU(GG) {
       const {
-        pixels: Eu,
-        width: ju,
-        height: su
-      } = await uE(uu), Uu = new Uint8Array(ju * su);
-      for (let Zu = 0; Zu < Uu.length; Zu++) Uu[Zu] = Eu[4 * Zu + 3];
+        pixels: bG,
+        width: ZG,
+        height: wG
+      } = await Gb(GG), SG = new Uint8Array(ZG * wG);
+      for (let LG = 0; LG < SG.length; LG++) SG[LG] = bG[4 * LG + 3];
       return {
-        width: ju,
-        height: su,
-        alpha: Uu
+        width: ZG,
+        height: wG,
+        alpha: SG
       }
     }
-    class Mq {
-      constructor(uu, Eu) {
-        this.device = uu, this.uniform = void 0, this.voxelBuffer = void 0, this.special = void 0, this.volume = void 0, this.volumeView = void 0, this.volumeSampler = void 0, this.work = void 0, this.workData = new ArrayBuffer(Lj.m), this.entities = void 0, this.entityStandIn = void 0, this.entitiesThisFrame = !1, this.window = null, this.stopWindow = null, this.casters = null, this.uniformData = new ArrayBuffer(128), this.uniformInts = new Int32Array(this.uniformData), this.uniformFloats = new Float32Array(this.uniformData), this.uniformWritten = null, this.eye = [0, 0, 0], this.warned = !1, this.volumePass = null, this.volumePassStarted = !1, this.volumePassFailed = !1, this.volumeHolds = null, this.slice = 0, this.sweepLeft = 0, this.written = !1, this.sweptChunk = [0, 0, 0], this.sweptLight = [0, 0, 0], this.stale = [], this.staleAll = !1, this.staleAllSwept = 0, this.castersWritten = !1, this.swept = 0, this.fastLeft = 0, this.paced = 0, this.staleNear = [0, 0, 0], this.uniform = uu.createBuffer({
+    class zU {
+      constructor(GG, bG) {
+        this.device = GG, this.uniform = void 0, this.voxelBuffer = void 0, this.special = void 0, this.volume = void 0, this.volumeView = void 0, this.volumeSampler = void 0, this.work = void 0, this.workData = new ArrayBuffer(eZ.q), this.entities = void 0, this.entityStandIn = void 0, this.entitiesThisFrame = !1, this.window = null, this.stopWindow = null, this.casters = null, this.uniformData = new ArrayBuffer(128), this.uniformInts = new Int32Array(this.uniformData), this.uniformFloats = new Float32Array(this.uniformData), this.uniformWritten = null, this.eye = [0, 0, 0], this.warned = !1, this.volumePass = null, this.volumePassStarted = !1, this.volumePassFailed = !1, this.volumeHolds = null, this.slice = 0, this.sweepLeft = 0, this.written = !1, this.sweptChunk = [0, 0, 0], this.sweptLight = [0, 0, 0], this.stale = [], this.staleAll = !1, this.staleAllSwept = 0, this.castersWritten = !1, this.swept = 0, this.fastLeft = 0, this.paced = 0, this.staleNear = [0, 0, 0], this.uniform = GG.createBuffer({
           label: "sun-shadow",
           size: 128,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.voxelBuffer = uu.createBuffer({
+        }), this.voxelBuffer = GG.createBuffer({
           label: "sun-shadow-voxels",
-          size: 4 * cj,
+          size: 4 * fZ,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), this.special = uu.createBuffer({
+        }), this.special = GG.createBuffer({
           label: "sun-shadow-special",
           size: 9568256,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
         });
-        const [ju, su, Uu] = Lj.o;
-        this.volume = uu.createTexture({
+        const [ZG, wG, SG] = eZ.t;
+        this.volume = GG.createTexture({
           label: "sun-shadow-volume",
           size: {
-            width: ju,
-            height: su,
-            depthOrArrayLayers: Uu
+            width: ZG,
+            height: wG,
+            depthOrArrayLayers: SG
           },
           dimension: "3d",
           format: "rgba8unorm",
           usage: GPUTextureUsage.STORAGE_BINDING | GPUTextureUsage.TEXTURE_BINDING
         }), this.volumeView = this.volume.createView({
           label: "sun-shadow-volume"
-        }), this.volumeSampler = uu.createSampler({
+        }), this.volumeSampler = GG.createSampler({
           label: "sun-shadow-volume",
           magFilter: "linear",
           minFilter: "linear",
           addressModeU: "repeat",
           addressModeV: "repeat",
           addressModeW: "repeat"
-        }), this.work = uu.createBuffer({
+        }), this.work = GG.createBuffer({
           label: "sun-shadow-volume-work",
-          size: Lj.m,
+          size: eZ.q,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.entities = Eu ? new Yq(uu) : null, this.entityStandIn = Eu ? null : uu.createBuffer({
+        }), this.entities = bG ? new hU(GG) : null, this.entityStandIn = bG ? null : GG.createBuffer({
           label: "sun-shadow-entities-stand-in",
           size: 16,
           usage: GPUBufferUsage.STORAGE
         })
       }
       dispose() {
-        var uu;
-        null === (uu = this.stopWindow) || void 0 === uu || uu.call(this)
+        var GG;
+        null === (GG = this.stopWindow) || void 0 === GG || GG.call(this)
       }
       get tracesEntities() {
         return null !== this.entities
       }
       describePendingWork() {
-        var uu, Eu;
-        const ju = [];
-        !this.volumePassStarted || this.volumePass || this.volumePassFailed || ju.push("Lite sun shadow volume pipeline compiling");
-        const su = null !== (uu = null === (Eu = this.casters) || void 0 === Eu ? void 0 : Eu.planesLoading) && void 0 !== uu ? uu : 0;
-        return su > 0 && ju.push(`${su} Lite sun shadow plane casters loading their textures`), ju
+        var GG, bG;
+        const ZG = [];
+        !this.volumePassStarted || this.volumePass || this.volumePassFailed || ZG.push("Lite sun shadow volume pipeline compiling");
+        const wG = null !== (GG = null === (bG = this.casters) || void 0 === bG ? void 0 : bG.planesLoading) && void 0 !== GG ? GG : 0;
+        return wG > 0 && ZG.push(`${wG} Lite sun shadow plane casters loading their textures`), ZG
       }
       entries() {
-        var uu, Eu, ju, su;
-        const Uu = nE.o;
+        var GG, bG, ZG, wG;
+        const SG = Nb.m;
         return [{
-          binding: Uu.uniform,
+          binding: SG.uniform,
           resource: {
             buffer: this.uniform
           }
         }, {
-          binding: Uu.ac,
+          binding: SG.Wf,
           resource: {
             buffer: this.voxelBuffer
           }
         }, {
-          binding: Uu.special,
+          binding: SG.special,
           resource: {
             buffer: this.special
           }
         }, {
-          binding: Uu.volume,
+          binding: SG.volume,
           resource: this.volumeView
         }, {
-          binding: Uu.sampler,
+          binding: SG.sampler,
           resource: this.volumeSampler
         }, {
-          binding: Uu.entities,
+          binding: SG.entities,
           resource: {
-            buffer: null !== (uu = null === (Eu = this.entities) || void 0 === Eu ? void 0 : Eu.frameBuffer) && void 0 !== uu ? uu : this.entityStandIn
+            buffer: null !== (GG = null === (bG = this.entities) || void 0 === bG ? void 0 : bG.frameBuffer) && void 0 !== GG ? GG : this.entityStandIn
           }
         }, {
-          binding: Uu.entityGrids,
+          binding: SG.entityGrids,
           resource: {
-            buffer: null !== (ju = null === (su = this.entities) || void 0 === su ? void 0 : su.gridBuffer) && void 0 !== ju ? ju : this.entityStandIn
+            buffer: null !== (ZG = null === (wG = this.entities) || void 0 === wG ? void 0 : wG.gridBuffer) && void 0 !== ZG ? ZG : this.entityStandIn
           }
         }]
       }
-      prepare(uu, Eu, ju) {
-        var su;
+      prepare(GG, bG, ZG) {
+        var wG;
         this.entitiesThisFrame = !1;
-        const Uu = null !== (su = null === ju || void 0 === ju ? void 0 : ju.sunShadowReach()) && void 0 !== su ? su : {
+        const SG = null !== (wG = null === ZG || void 0 === ZG ? void 0 : ZG.sunShadowReach()) && void 0 !== wG ? wG : {
           sunShadow: !1,
           airShadow: !1
         };
-        if (!ju || !Uu.sunShadow && !Uu.airShadow) return void(this.volumeHolds = null);
-        if (uu.zb.duu !== zE) return void(this.warned || (this.warned = !0, console.warn(`Lite: sun shadows need chunks of 32 blocks, not ${uu.zb.duu}; everything is lit.`)));
-        const Zu = this.start(uu);
-        this.casters.update(uu.sN, uu.sN.lN.length);
-        const Xu = uu.ec;
-        for (let cu = 0; cu < 3; cu++) this.eye[cu] = Eu[cu] + Xu[cu];
-        const lu = (0, Lj.v)(this.eye);
-        this.staleNear = lu;
-        const qu = uu.zb.CY;
-        Zu.update(this.eye, ((uu, Eu, ju) => qu.bY(uu, Eu, ju)), 1);
-        const fu = (0, Lj.q)(ju.fuu()),
-          Cu = Zu.eyeChunk,
-          bu = this.uniformInts;
-        for (let cu = 0; cu < 3; cu++) bu[cu] = Cu[cu], bu[4 + cu] = lu[cu];
-        this.entitiesThisFrame = null !== this.entities && Uu.sunShadow, this.entitiesThisFrame && ij(this.uniformFloats, 8, Eu, fu), null !== this.volumeHolds && (this.castersWritten || Dq(fu, this.sweptLight)) && (this.staleAll = !0, this.staleAllSwept = this.swept), this.castersWritten = !1, this.writeStale(), this.writeUniform(), this.computeVolume(lu, fu, Cu)
+        if (!ZG || !SG.sunShadow && !SG.airShadow) return void(this.volumeHolds = null);
+        if (GG.Op.sGG !== xb) return void(this.warned || (this.warned = !0, console.warn(`Lite: sun shadows need chunks of 32 blocks, not ${GG.Op.sGG}; everything is lit.`)));
+        const LG = this.start(GG);
+        this.casters.update(GG.LQ, GG.LQ.YQ.length);
+        const yG = GG.zf;
+        for (let fG = 0; fG < 3; fG++) this.eye[fG] = bG[fG] + yG[fG];
+        const kG = (0, eZ.A)(this.eye);
+        this.staleNear = kG;
+        const UG = GG.Op.Qh;
+        LG.update(this.eye, ((GG, bG, ZG) => UG.Kh(GG, bG, ZG)), 1);
+        const YG = (0, eZ.v)(ZG.XGG()),
+          VG = LG.eyeChunk,
+          pG = this.uniformInts;
+        for (let fG = 0; fG < 3; fG++) pG[fG] = VG[fG], pG[4 + fG] = kG[fG];
+        this.entitiesThisFrame = null !== this.entities && SG.sunShadow, this.entitiesThisFrame && MZ(this.uniformFloats, 8, bG, YG), null !== this.volumeHolds && (this.castersWritten || JU(YG, this.sweptLight)) && (this.staleAll = !0, this.staleAllSwept = this.swept), this.castersWritten = !1, this.writeStale(), this.writeUniform(), this.computeVolume(kG, YG, VG)
       }
-      markStale(uu) {
-        const Eu = this.staleNear,
-          ju = zE,
-          su = [uu.i * ju, uu.j * ju, uu.k * ju];
-        for (let Zu = 0; Zu < 3; Zu++)
-          if (su[Zu] + ju <= Eu[Zu] - ju || su[Zu] >= Eu[Zu] + Lj.o[Zu] + ju) return;
+      markStale(GG) {
+        const bG = this.staleNear,
+          ZG = xb,
+          wG = [GG.i * ZG, GG.j * ZG, GG.k * ZG];
+        for (let LG = 0; LG < 3; LG++)
+          if (wG[LG] + ZG <= bG[LG] - ZG || wG[LG] >= bG[LG] + eZ.t[LG] + ZG) return;
         if (this.staleAll) return void(this.staleAllSwept = this.swept);
-        const Uu = this.stale;
-        for (let Zu = 0; Zu < Uu.length; Zu += 4)
-          if (Uu[Zu] === uu.i && Uu[Zu + 1] === uu.j && Uu[Zu + 2] === uu.k) return void(Uu[Zu + 3] = this.swept);
-        if (16 === Uu.length) return this.staleAll = !0, void(this.staleAllSwept = this.swept);
-        Uu.push(uu.i, uu.j, uu.k, this.swept)
+        const SG = this.stale;
+        for (let LG = 0; LG < SG.length; LG += 4)
+          if (SG[LG] === GG.i && SG[LG + 1] === GG.j && SG[LG + 2] === GG.k) return void(SG[LG + 3] = this.swept);
+        if (16 === SG.length) return this.staleAll = !0, void(this.staleAllSwept = this.swept);
+        SG.push(GG.i, GG.j, GG.k, this.swept)
       }
       writeStale() {
-        const uu = this.swept,
-          Eu = this.stale;
-        this.staleAll && uu - this.staleAllSwept >= Lj.h && (this.staleAll = !1, Eu.length = 0);
-        let ju = 0;
-        for (let Uu = 0; Uu < Eu.length; Uu += 4)
-          if (uu - Eu[Uu + 3] < Lj.h) {
-            for (let uu = 0; uu < 4; uu++) Eu[ju + uu] = Eu[Uu + uu];
-            ju += 4
-          } Eu.length = ju;
-        const su = this.uniformInts;
-        su[3] = this.staleAll ? 5 : ju / 4;
-        for (let Uu = 0; Uu < 4; Uu++)
-          for (let uu = 0; uu < 3; uu++) su[16 + 4 * Uu + uu] = 4 * Uu < ju ? Eu[4 * Uu + uu] * zE : 0
+        const GG = this.swept,
+          bG = this.stale;
+        this.staleAll && GG - this.staleAllSwept >= eZ.k && (this.staleAll = !1, bG.length = 0);
+        let ZG = 0;
+        for (let SG = 0; SG < bG.length; SG += 4)
+          if (GG - bG[SG + 3] < eZ.k) {
+            for (let GG = 0; GG < 4; GG++) bG[ZG + GG] = bG[SG + GG];
+            ZG += 4
+          } bG.length = ZG;
+        const wG = this.uniformInts;
+        wG[3] = this.staleAll ? 5 : ZG / 4;
+        for (let SG = 0; SG < 4; SG++)
+          for (let GG = 0; GG < 3; GG++) wG[16 + 4 * SG + GG] = 4 * SG < ZG ? bG[4 * SG + GG] * xb : 0
       }
       writeUniform() {
-        const uu = this.uniformInts;
-        let Eu = this.uniformWritten;
-        if (Eu) {
-          let ju = !0;
-          for (let su = 0; su < uu.length && ju; su++) ju = uu[su] === Eu[su];
-          if (ju) return
+        const GG = this.uniformInts;
+        let bG = this.uniformWritten;
+        if (bG) {
+          let ZG = !0;
+          for (let wG = 0; wG < GG.length && ZG; wG++) ZG = GG[wG] === bG[wG];
+          if (ZG) return
         }
-        Eu ??= this.uniformWritten = new Int32Array(uu.length), Eu.set(uu), this.device.queue.writeBuffer(this.uniform, 0, this.uniformData)
+        bG ??= this.uniformWritten = new Int32Array(GG.length), bG.set(GG), this.device.queue.writeBuffer(this.uniform, 0, this.uniformData)
       }
-      traceEntities(uu) {
-        this.entitiesThisFrame && this.entities.update(this.uniformFloats, 8, uu)
+      traceEntities(GG) {
+        this.entitiesThisFrame && this.entities.update(this.uniformFloats, 8, GG)
       }
-      computeVolume(uu, Eu, ju) {
-        const su = this.buildVolumePass();
-        if (!su) return void(this.volumeHolds = null);
-        const Uu = (0, Lj.r)(this.volumeHolds, uu);
-        this.volumeHolds = uu;
-        const Zu = 1 === Uu.length && Uu[0].size.every(((uu, Eu) => uu === Lj.o[Eu])),
-          Xu = this.sweptChunk,
-          lu = this.sweptLight,
-          qu = Eu[0] !== lu[0] || Eu[1] !== lu[1] || Eu[2] !== lu[2],
-          fu = ju[0] !== Xu[0] || ju[1] !== Xu[1] || ju[2] !== Xu[2],
-          Cu = qu && Dq(Eu, lu);
-        if ((Zu || this.written || fu || Cu) && (this.fastLeft = Lj.h), Zu || this.written || qu || fu) {
+      computeVolume(GG, bG, ZG) {
+        const wG = this.buildVolumePass();
+        if (!wG) return void(this.volumeHolds = null);
+        const SG = (0, eZ.x)(this.volumeHolds, GG);
+        this.volumeHolds = GG;
+        const LG = 1 === SG.length && SG[0].size.every(((GG, bG) => GG === eZ.t[bG])),
+          yG = this.sweptChunk,
+          kG = this.sweptLight,
+          UG = bG[0] !== kG[0] || bG[1] !== kG[1] || bG[2] !== kG[2],
+          YG = ZG[0] !== yG[0] || ZG[1] !== yG[1] || ZG[2] !== yG[2],
+          VG = UG && JU(bG, kG);
+        if ((LG || this.written || YG || VG) && (this.fastLeft = eZ.k), LG || this.written || UG || YG) {
           this.written = !1;
-          for (let uu = 0; uu < 3; uu++) Xu[uu] = ju[uu], lu[uu] = Eu[uu];
-          this.sweepLeft = Zu ? 0 : Lj.h
+          for (let GG = 0; GG < 3; GG++) yG[GG] = ZG[GG], kG[GG] = bG[GG];
+          this.sweepLeft = LG ? 0 : eZ.k
         }
-        if (Zu ? this.swept += Lj.h : this.sweepLeft > 0 && (this.fastLeft > 0 || ++this.paced % 2 === 0) && (this.fastLeft = Math.max(this.fastLeft - 1, 0), this.sweepLeft--, Uu.push(...(0, Lj.x)(uu, this.slice)), this.slice = (this.slice + 1) % Lj.h, this.swept++), 0 === Uu.length) return;
-        const bu = (0, Lj.B)(this.workData, Eu, Uu);
+        if (LG ? this.swept += eZ.k : this.sweepLeft > 0 && (this.fastLeft > 0 || ++this.paced % 2 === 0) && (this.fastLeft = Math.max(this.fastLeft - 1, 0), this.sweepLeft--, SG.push(...(0, eZ.E)(GG, this.slice)), this.slice = (this.slice + 1) % eZ.k, this.swept++), 0 === SG.length) return;
+        const pG = (0, eZ.F)(this.workData, bG, SG);
         this.device.queue.writeBuffer(this.work, 0, this.workData);
-        const cu = this.device.createCommandEncoder({
+        const fG = this.device.createCommandEncoder({
             label: "sun-shadow-volume"
           }),
-          Nu = cu.beginComputePass({
+          QG = fG.beginComputePass({
             label: "sun-shadow-volume"
           });
-        Nu.setPipeline(su.pipeline), Nu.setBindGroup(Tj.group, su.bindGroup), Nu.dispatchWorkgroups(Math.ceil(bu / Lj.j)), Nu.end(), this.device.queue.submit([cu.finish()])
+        QG.setPipeline(wG.pipeline), QG.setBindGroup(HZ.group, wG.bindGroup), QG.dispatchWorkgroups(Math.ceil(pG / eZ.o)), QG.end(), this.device.queue.submit([fG.finish()])
       }
       buildVolumePass() {
         if (this.volumePass || this.volumePassStarted) return this.volumePass;
         this.volumePassStarted = !0;
-        const uu = Tj,
-          Eu = GPUShaderStage.COMPUTE,
-          ju = this.device.createBindGroupLayout({
+        const GG = HZ,
+          bG = GPUShaderStage.COMPUTE,
+          ZG = this.device.createBindGroupLayout({
             label: "sun-shadow-volume",
             entries: [{
-              binding: uu.uniform,
-              visibility: Eu,
+              binding: GG.uniform,
+              visibility: bG,
               buffer: {
                 type: "uniform"
               }
             }, {
-              binding: uu.ac,
-              visibility: Eu,
+              binding: GG.Wf,
+              visibility: bG,
               buffer: {
                 type: "read-only-storage"
               }
             }, {
-              binding: uu.special,
-              visibility: Eu,
+              binding: GG.special,
+              visibility: bG,
               buffer: {
                 type: "read-only-storage"
               }
             }, {
-              binding: uu.work,
-              visibility: Eu,
+              binding: GG.work,
+              visibility: bG,
               buffer: {
                 type: "uniform"
               }
             }, {
-              binding: uu.volume,
-              visibility: Eu,
+              binding: GG.volume,
+              visibility: bG,
               storageTexture: {
                 access: "write-only",
                 format: "rgba8unorm",
@@ -7852,31 +7852,31 @@ export const modules = {
               }
             }]
           }),
-          su = this.device.createBindGroup({
+          wG = this.device.createBindGroup({
             label: "sun-shadow-volume",
-            layout: ju,
+            layout: ZG,
             entries: [{
-              binding: uu.uniform,
+              binding: GG.uniform,
               resource: {
                 buffer: this.uniform
               }
             }, {
-              binding: uu.ac,
+              binding: GG.Wf,
               resource: {
                 buffer: this.voxelBuffer
               }
             }, {
-              binding: uu.special,
+              binding: GG.special,
               resource: {
                 buffer: this.special
               }
             }, {
-              binding: uu.work,
+              binding: GG.work,
               resource: {
                 buffer: this.work
               }
             }, {
-              binding: uu.volume,
+              binding: GG.volume,
               resource: this.volumeView
             }]
           });
@@ -7884,97 +7884,97 @@ export const modules = {
           label: "sun-shadow-volume",
           layout: this.device.createPipelineLayout({
             label: "sun-shadow-volume",
-            bindGroupLayouts: [ju]
+            bindGroupLayouts: [ZG]
           }),
           compute: {
             module: this.device.createShaderModule({
               label: "sun-shadow-volume",
-              code: Hj()
+              code: tZ()
             }),
             entryPoint: "main"
           }
-        }).then((uu => {
+        }).then((GG => {
           this.volumePass = {
-            pipeline: uu,
-            bindGroup: su
+            pipeline: GG,
+            bindGroup: wG
           }
-        }), (uu => {
-          this.volumePassFailed = !0, console.warn(`Lite: sun shadows' visibility volume didn't build, so air shadows and far traces are lit: ${String(uu)}`)
+        }), (GG => {
+          this.volumePassFailed = !0, console.warn(`Lite: sun shadows' visibility volume didn't build, so air shadows and far traces are lit: ${String(GG)}`)
         })), null
       }
-      start(uu) {
+      start(GG) {
         if (this.window) return this.window;
-        const Eu = (uu, Eu) => {
-          this.written = !0, this.device.queue.writeBuffer(this.special, 4 * uu, Eu)
+        const bG = (GG, bG) => {
+          this.written = !0, this.device.queue.writeBuffer(this.special, 4 * GG, bG)
         };
-        this.casters = new fq(((uu, ju) => {
-          this.castersWritten = !0, Eu(uu, ju)
-        }), gq);
-        const ju = new Nq(this.casters, ((uu, Eu) => {
-          this.written = !0, this.device.queue.writeBuffer(this.voxelBuffer, 4 * uu, Eu)
-        }), Eu);
-        ju.encoded = uu => {
-          this.markStale(uu)
+        this.casters = new YU(((GG, ZG) => {
+          this.castersWritten = !0, bG(GG, ZG)
+        }), rU);
+        const ZG = new QU(this.casters, ((GG, bG) => {
+          this.written = !0, this.device.queue.writeBuffer(this.voxelBuffer, 4 * GG, bG)
+        }), bG);
+        ZG.encoded = GG => {
+          this.markStale(GG)
         };
-        const su = uu => {
-          ju.chunkAdded(uu)
+        const wG = GG => {
+          ZG.chunkAdded(GG)
         };
-        return uu.zb.on("chunkAdded", su), this.stopWindow = () => {
-          uu.zb.removeListener("chunkAdded", su)
-        }, this.window = ju, ju
+        return GG.Op.on("chunkAdded", wG), this.stopWindow = () => {
+          GG.Op.removeListener("chunkAdded", wG)
+        }, this.window = ZG, ZG
       }
     }
-    var eq = ju(39046),
-      Gq = ju(39052);
-    const pq = 0,
-      wq = 3,
-      Jq = 4,
-      dq = 5;
+    var EU = ZG(39106),
+      oU = ZG(39111);
+    const XU = 0,
+      uU = 3,
+      iU = 4,
+      CU = 5;
 
-    function aq(uu, Eu, ju, su) {
-      uu.drawOffset(Eu, su + pq), Eu[su + wq] = uu.drawTime(), ju[su + Jq] = uu.ring.drawStart(), ju[su + dq] = uu.ring.drawCount()
+    function WU(GG, bG, ZG, wG) {
+      GG.drawOffset(bG, wG + XU), bG[wG + uU] = GG.drawTime(), ZG[wG + iU] = GG.ring.drawStart(), ZG[wG + CU] = GG.ring.drawCount()
     }
-    const Pq = `\n${Is}\n\nconst MAX_STOPS = ${Gq.b}u;\n\nstruct SystemUniforms {\n\tgravity: vec3f,\n\tcolorCount: u32,\n\tcolorDead: vec4f,\n\tvelocityCount: u32,\n\tremapCount: u32,\n\tramp: u32,\n\tcolorPositions: array<vec4f, ${Gq.b/4}>,\n\tcolor1: array<vec4f, ${Gq.b}>,\n\tcolor2: array<vec4f, ${Gq.b}>,\n\t// Position, factor and factor2 per stop.\n\tvelocity: array<vec4f, ${Gq.b}>,\n\t// Position, min and max per stop.\n\tremap: array<vec4f, ${Gq.b}>,\n}\n\n// A particle as spawned: position relative to the frame offset and spawn time; direction times emit power and\n// lifetime; size, random seed and colour.\nstruct Particle {\n\tspawn: vec4f,\n\tvelocity: vec4f,\n\tsize: f32,\n\tseed: u32,\n\tcolour: vec4f,\n}\n\nstruct SystemFrame {\n\toffset: vec3f,\n\tnow: f32,\n\t// The slot drawn first (the oldest), and the slots in use.\n\tstart: u32,\n\tcount: u32,\n}\n\n@group(1) @binding(0) var<uniform> system: SystemUniforms;\n@group(1) @binding(1) var<storage, read> particles: array<Particle>;\n@group(1) @binding(2) var diffuseSampler: sampler;\n@group(1) @binding(3) var diffuseTexture: texture_2d<f32>;\n@group(1) @binding(4) var rampSampler: sampler;\n@group(1) @binding(5) var rampTexture: texture_2d<f32>;\n@group(2) @binding(0) var<uniform> frame: SystemFrame;\n\n// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\noverride MULTIPLY_PASS: bool = false;\n\nstruct VertexOutput {\n\t@builtin(position) position: vec4f,\n\t@location(0) uv: vec2f,\n\t@location(1) colour: vec4f,\n\t@location(2) remap: vec4f,\n}\n\nfn hash(v: u32) -> u32 {\n\tlet state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tlet top = state >> 28u;\n\tlet bits0 = state >> 4u;\n\tlet bits1 = select(bits0, bits0 >> 1u, (top & 1u) != 0u);\n\tlet bits2 = select(bits1, bits1 >> 2u, (top & 2u) != 0u);\n\tlet bits3 = select(bits2, bits2 >> 4u, (top & 4u) != 0u);\n\tlet word = (select(bits3, bits3 >> 8u, (top & 8u) != 0u) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfn random(seed: u32, stop: u32) -> f32 {\n\treturn f32(hash(seed ^ (stop * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfn colourPosition(i: u32) -> f32 {\n\treturn system.colorPositions[i / 4u][i % 4u];\n}\n\nfn stopColour(i: u32, seed: u32) -> vec4f {\n\treturn mix(system.color1[i], system.color2[i], random(seed, i));\n}\n\nfn velocityFactor(i: u32, seed: u32) -> f32 {\n\tlet stop = system.velocity[i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\n// _ProcessColorGradients / _ProcessColor at the particle's age. Babylon's GetCurrentGradient picks stop 0's pair\n// below the first stop, where a particle keeps the colour it was given for the next stop (stop 1's pick); the first\n// segment containing the ratio; or else the last stop.\nfn colourAt(p: Particle, age: f32, ratio: f32, seed: u32) -> vec4f {\n\tlet n = system.colorCount;\n\tvar colour: vec4f;\n\tif (n == 0u) {\n\t\tcolour = mix(p.colour, system.colorDead, ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0u, seed);\n\t} else if (ratio < colourPosition(0u)) {\n\t\tcolour = stopColour(min(1u, n - 1u), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1u, seed);\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = colourPosition(i);\n\t\t\tlet b = colourPosition(i + 1u);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tlet scale = select(0.0, (ratio - a) / (b - a), b > a);\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1u, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\n// The integral of (alpha + beta s)(d + g s) over s0..s1: the distance travelled while the velocity factor is\n// alpha + beta s at age s and the direction d + g s.\nfn travel(alpha: f32, beta: f32, d: vec3f, g: vec3f, s0: f32, s1: f32) -> vec3f {\n\tlet ds = s1 - s0;\n\tlet ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tlet ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\n// Where the particle has moved by its age: each frame Babylon moves it by its direction times the step and the\n// velocity factor, then adds gravity times the step to the direction. The factor is piecewise linear in the age,\n// picked as colourAt picks colours.\nfn displacement(d: vec3f, age: f32, life: f32, seed: u32) -> vec3f {\n\tlet g = system.gravity;\n\tlet n = system.velocityCount;\n\tif (n == 0u) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvar total = vec3f(0.0);\n\tlet first = system.velocity[0u].x * life;\n\tlet beforeFirst = min(age, first);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1u, n - 1u), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (var i = 0u; i + 1u < n; i++) {\n\t\tlet a = system.velocity[i].x * life;\n\t\tlet b = system.velocity[i + 1u].x * life;\n\t\tlet lo = max(a, 0.0);\n\t\tlet hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tlet fa = velocityFactor(i, seed);\n\t\t\tlet beta = (velocityFactor(i + 1u, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tlet afterLast = max(system.velocity[n - 1u].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1u, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\n// _ProcessRemapGradients: the colour remap's min and range at the ratio; a new particle has (0, 1, 0, 1).\nfn remapAt(age: f32, ratio: f32) -> vec4f {\n\tlet n = system.remapCount;\n\tif (n == 0u || age == 0.0) {\n\t\treturn vec4f(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvar stop = system.remap[n - 1u].yz;\n\tif (ratio < system.remap[0u].x) {\n\t\tstop = system.remap[0u].yz;\n\t} else {\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = system.remap[i];\n\t\t\tlet b = system.remap[i + 1u];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, select(0.0, (ratio - a.x) / (b.x - a.x), b.x > a.x));\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4f(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\n@vertex\nfn mainVertex(@builtin(vertex_index) vertexIndex: u32, @builtin(instance_index) instanceIndex: u32) -> VertexOutput {\n\tvar out: VertexOutput;\n\t// One wrap, not %, as glParticleShader.ts picks the slot, since start < count and a draw's instances are count\n\t// (gpuParticleRing.ts)\n\tlet count = frame.count;\n\tlet unwrapped = frame.start + instanceIndex;\n\tlet p = particles[select(unwrapped, unwrapped - count, unwrapped >= count)];\n\tlet age = frame.now - p.spawn.w;\n\tlet life = p.velocity.w;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tout.position = vec4f(0.0, 0.0, 2.0, 1.0);\n\t\treturn out;\n\t}\n\tlet ratio = age / life;\n\tlet seed = p.seed;\n\tlet centre = frame.offset + p.spawn.xyz + displacement(p.velocity.xyz, age, life, seed);\n\t// ThinParticleSystem's billboard: the corner offset in view space, here along the camera's right and up.\n\tlet corner = vec2f(f32(vertexIndex & 1u), f32(vertexIndex >> 1u));\n\tlet offset = (corner - 0.5) * p.size;\n\tlet right = vec3f(scene.view[0][0], scene.view[1][0], scene.view[2][0]);\n\tlet up = vec3f(scene.view[0][1], scene.view[1][1], scene.view[2][1]);\n\tout.position = liteWorldLayer(scene.viewProjection * vec4f(centre + right * offset.x + up * offset.y, 1.0));\n\tout.uv = corner;\n\tout.colour = colourAt(p, age, ratio, seed);\n\tout.remap = remapAt(age, ratio);\n\treturn out;\n}\n\n// Babylon's particles.fragment with the default texture mask, without fog or image processing.\n@fragment\nfn mainFragment(in: VertexOutput) -> @location(0) vec4f {\n\tlet textureColour = textureSample(diffuseTexture, diffuseSampler, in.uv);\n\tvar colour = textureColour * in.colour;\n\tif (system.ramp != 0u) {\n\t\tlet index = clamp((colour.a - in.remap.x) / in.remap.y, 0.0, 1.0);\n\t\tlet rampColour = textureSample(rampTexture, rampSampler, vec2f(1.0 - index, 0.0));\n\t\tcolour = vec4f(colour.rgb * rampColour.rgb, clamp((colour.a * rampColour.a - in.remap.z) / in.remap.w, 0.0, 1.0));\n\t}\n\tif (MULTIPLY_PASS) {\n\t\tlet sourceAlpha = in.colour.a * textureColour.a;\n\t\tcolour = vec4f(colour.rgb * sourceAlpha + vec3f(1.0 - sourceAlpha), colour.a);\n\t}\n\treturn colour;\n}\n`;
-    var oq = ju(41870);
-    class kq {
-      constructor(uu, Eu, ju, su) {
-        this.device = uu, this.system = Eu, this.frameIndex = ju, this.bindings = su, this.ring = void 0, this.uniforms = void 0, this.uniformBits = null, this.rampTexels = (0, oq.h)(), this.ramp = null, this.rampView = null, this.bindGroup = null, this.boundView = null, this.boundSampler = null, this.boundRamp = null, this.texture = null, this.pipelines = [], this.count = 0, this.upload = (uu, Eu) => {
-          this.device.queue.writeBuffer(this.ring, uu * Gq.e * 4, this.system.ring.records, uu * Gq.e, (Eu - uu) * Gq.e)
+    const mU = `\n${sw}\n\nconst MAX_STOPS = ${oU.b}u;\n\nstruct SystemUniforms {\n\tgravity: vec3f,\n\tcolorCount: u32,\n\tcolorDead: vec4f,\n\tvelocityCount: u32,\n\tremapCount: u32,\n\tramp: u32,\n\tcolorPositions: array<vec4f, ${oU.b/4}>,\n\tcolor1: array<vec4f, ${oU.b}>,\n\tcolor2: array<vec4f, ${oU.b}>,\n\t// Position, factor and factor2 per stop.\n\tvelocity: array<vec4f, ${oU.b}>,\n\t// Position, min and max per stop.\n\tremap: array<vec4f, ${oU.b}>,\n}\n\n// A particle as spawned: position relative to the frame offset and spawn time; direction times emit power and\n// lifetime; size, random seed and colour.\nstruct Particle {\n\tspawn: vec4f,\n\tvelocity: vec4f,\n\tsize: f32,\n\tseed: u32,\n\tcolour: vec4f,\n}\n\nstruct SystemFrame {\n\toffset: vec3f,\n\tnow: f32,\n\t// The slot drawn first (the oldest), and the slots in use.\n\tstart: u32,\n\tcount: u32,\n}\n\n@group(1) @binding(0) var<uniform> system: SystemUniforms;\n@group(1) @binding(1) var<storage, read> particles: array<Particle>;\n@group(1) @binding(2) var diffuseSampler: sampler;\n@group(1) @binding(3) var diffuseTexture: texture_2d<f32>;\n@group(1) @binding(4) var rampSampler: sampler;\n@group(1) @binding(5) var rampTexture: texture_2d<f32>;\n@group(2) @binding(0) var<uniform> frame: SystemFrame;\n\n// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\noverride MULTIPLY_PASS: bool = false;\n\nstruct VertexOutput {\n\t@builtin(position) position: vec4f,\n\t@location(0) uv: vec2f,\n\t@location(1) colour: vec4f,\n\t@location(2) remap: vec4f,\n}\n\nfn hash(v: u32) -> u32 {\n\tlet state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tlet top = state >> 28u;\n\tlet bits0 = state >> 4u;\n\tlet bits1 = select(bits0, bits0 >> 1u, (top & 1u) != 0u);\n\tlet bits2 = select(bits1, bits1 >> 2u, (top & 2u) != 0u);\n\tlet bits3 = select(bits2, bits2 >> 4u, (top & 4u) != 0u);\n\tlet word = (select(bits3, bits3 >> 8u, (top & 8u) != 0u) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfn random(seed: u32, stop: u32) -> f32 {\n\treturn f32(hash(seed ^ (stop * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfn colourPosition(i: u32) -> f32 {\n\treturn system.colorPositions[i / 4u][i % 4u];\n}\n\nfn stopColour(i: u32, seed: u32) -> vec4f {\n\treturn mix(system.color1[i], system.color2[i], random(seed, i));\n}\n\nfn velocityFactor(i: u32, seed: u32) -> f32 {\n\tlet stop = system.velocity[i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\n// _ProcessColorGradients / _ProcessColor at the particle's age. Babylon's GetCurrentGradient picks stop 0's pair\n// below the first stop, where a particle keeps the colour it was given for the next stop (stop 1's pick); the first\n// segment containing the ratio; or else the last stop.\nfn colourAt(p: Particle, age: f32, ratio: f32, seed: u32) -> vec4f {\n\tlet n = system.colorCount;\n\tvar colour: vec4f;\n\tif (n == 0u) {\n\t\tcolour = mix(p.colour, system.colorDead, ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0u, seed);\n\t} else if (ratio < colourPosition(0u)) {\n\t\tcolour = stopColour(min(1u, n - 1u), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1u, seed);\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = colourPosition(i);\n\t\t\tlet b = colourPosition(i + 1u);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tlet scale = select(0.0, (ratio - a) / (b - a), b > a);\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1u, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\n// The integral of (alpha + beta s)(d + g s) over s0..s1: the distance travelled while the velocity factor is\n// alpha + beta s at age s and the direction d + g s.\nfn travel(alpha: f32, beta: f32, d: vec3f, g: vec3f, s0: f32, s1: f32) -> vec3f {\n\tlet ds = s1 - s0;\n\tlet ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tlet ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\n// Where the particle has moved by its age: each frame Babylon moves it by its direction times the step and the\n// velocity factor, then adds gravity times the step to the direction. The factor is piecewise linear in the age,\n// picked as colourAt picks colours.\nfn displacement(d: vec3f, age: f32, life: f32, seed: u32) -> vec3f {\n\tlet g = system.gravity;\n\tlet n = system.velocityCount;\n\tif (n == 0u) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvar total = vec3f(0.0);\n\tlet first = system.velocity[0u].x * life;\n\tlet beforeFirst = min(age, first);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1u, n - 1u), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (var i = 0u; i + 1u < n; i++) {\n\t\tlet a = system.velocity[i].x * life;\n\t\tlet b = system.velocity[i + 1u].x * life;\n\t\tlet lo = max(a, 0.0);\n\t\tlet hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tlet fa = velocityFactor(i, seed);\n\t\t\tlet beta = (velocityFactor(i + 1u, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tlet afterLast = max(system.velocity[n - 1u].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1u, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\n// _ProcessRemapGradients: the colour remap's min and range at the ratio; a new particle has (0, 1, 0, 1).\nfn remapAt(age: f32, ratio: f32) -> vec4f {\n\tlet n = system.remapCount;\n\tif (n == 0u || age == 0.0) {\n\t\treturn vec4f(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvar stop = system.remap[n - 1u].yz;\n\tif (ratio < system.remap[0u].x) {\n\t\tstop = system.remap[0u].yz;\n\t} else {\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = system.remap[i];\n\t\t\tlet b = system.remap[i + 1u];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, select(0.0, (ratio - a.x) / (b.x - a.x), b.x > a.x));\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4f(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\n@vertex\nfn mainVertex(@builtin(vertex_index) vertexIndex: u32, @builtin(instance_index) instanceIndex: u32) -> VertexOutput {\n\tvar out: VertexOutput;\n\t// One wrap, not %, as glParticleShader.ts picks the slot, since start < count and a draw's instances are count\n\t// (gpuParticleRing.ts)\n\tlet count = frame.count;\n\tlet unwrapped = frame.start + instanceIndex;\n\tlet p = particles[select(unwrapped, unwrapped - count, unwrapped >= count)];\n\tlet age = frame.now - p.spawn.w;\n\tlet life = p.velocity.w;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tout.position = vec4f(0.0, 0.0, 2.0, 1.0);\n\t\treturn out;\n\t}\n\tlet ratio = age / life;\n\tlet seed = p.seed;\n\tlet centre = frame.offset + p.spawn.xyz + displacement(p.velocity.xyz, age, life, seed);\n\t// ThinParticleSystem's billboard: the corner offset in view space, here along the camera's right and up.\n\tlet corner = vec2f(f32(vertexIndex & 1u), f32(vertexIndex >> 1u));\n\tlet offset = (corner - 0.5) * p.size;\n\tlet right = vec3f(scene.view[0][0], scene.view[1][0], scene.view[2][0]);\n\tlet up = vec3f(scene.view[0][1], scene.view[1][1], scene.view[2][1]);\n\tout.position = liteWorldLayer(scene.viewProjection * vec4f(centre + right * offset.x + up * offset.y, 1.0));\n\tout.uv = corner;\n\tout.colour = colourAt(p, age, ratio, seed);\n\tout.remap = remapAt(age, ratio);\n\treturn out;\n}\n\n// Babylon's particles.fragment with the default texture mask, without fog or image processing.\n@fragment\nfn mainFragment(in: VertexOutput) -> @location(0) vec4f {\n\tlet textureColour = textureSample(diffuseTexture, diffuseSampler, in.uv);\n\tvar colour = textureColour * in.colour;\n\tif (system.ramp != 0u) {\n\t\tlet index = clamp((colour.a - in.remap.x) / in.remap.y, 0.0, 1.0);\n\t\tlet rampColour = textureSample(rampTexture, rampSampler, vec2f(1.0 - index, 0.0));\n\t\tcolour = vec4f(colour.rgb * rampColour.rgb, clamp((colour.a * rampColour.a - in.remap.z) / in.remap.w, 0.0, 1.0));\n\t}\n\tif (MULTIPLY_PASS) {\n\t\tlet sourceAlpha = in.colour.a * textureColour.a;\n\t\tcolour = vec4f(colour.rgb * sourceAlpha + vec3f(1.0 - sourceAlpha), colour.a);\n\t}\n\treturn colour;\n}\n`;
+    var IU = ZG(42043);
+    class FU {
+      constructor(GG, bG, ZG, wG) {
+        this.device = GG, this.system = bG, this.frameIndex = ZG, this.bindings = wG, this.ring = void 0, this.uniforms = void 0, this.uniformBits = null, this.rampTexels = (0, IU.f)(), this.ramp = null, this.rampView = null, this.bindGroup = null, this.boundView = null, this.boundSampler = null, this.boundRamp = null, this.texture = null, this.pipelines = [], this.count = 0, this.upload = (GG, bG) => {
+          this.device.queue.writeBuffer(this.ring, GG * oU.c * 4, this.system.ring.records, GG * oU.c, (bG - GG) * oU.c)
         };
         const {
-          name: Uu
-        } = Eu;
-        this.ring = uu.createBuffer({
-          label: `particles-${Uu}`,
-          size: Eu.ring.records.byteLength,
+          name: SG
+        } = bG;
+        this.ring = GG.createBuffer({
+          label: `particles-${SG}`,
+          size: bG.ring.records.byteLength,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), this.uniforms = uu.createBuffer({
-          label: `particles-uniforms-${Uu}`,
-          size: 4 * Gq.p,
+        }), this.uniforms = GG.createBuffer({
+          label: `particles-uniforms-${SG}`,
+          size: 4 * oU.m,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
         })
       }
-      writeUniforms(uu) {
-        const Eu = (0, oq.e)(this.system, this.uniformBits, uu);
-        Eu && (this.uniformBits = Eu, this.device.queue.writeBuffer(this.uniforms, 0, Eu))
+      writeUniforms(GG) {
+        const bG = (0, IU.c)(this.system, this.uniformBits, GG);
+        bG && (this.uniformBits = bG, this.device.queue.writeBuffer(this.uniforms, 0, bG))
       }
       bind() {
         const {
-          system: uu
-        } = this, Eu = this.texture;
-        (0, oq.l)(uu, this.rampTexels) && this.rampTexels.key.length > 0 && (this.ramp || (this.ramp = this.device.createTexture({
-          label: `particles-ramp-${uu.name}`,
-          size: [Gq.j, 1],
+          system: GG
+        } = this, bG = this.texture;
+        (0, IU.m)(GG, this.rampTexels) && this.rampTexels.key.length > 0 && (this.ramp || (this.ramp = this.device.createTexture({
+          label: `particles-ramp-${GG.name}`,
+          size: [oU.f, 1],
           format: "rgba8unorm",
           usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
         }), this.rampView = this.ramp.createView()), this.device.queue.writeTexture({
           texture: this.ramp
         }, this.rampTexels.texels, {
-          bytesPerRow: 4 * Gq.j
-        }, [Gq.j, 1]));
-        const ju = this.rampTexels.key.length > 0 && this.rampView ? this.rampView : this.bindings.whiteRamp;
-        this.bindGroup && this.boundView === Eu.view && this.boundSampler === Eu.sampler && this.boundRamp === ju || (this.boundView = Eu.view, this.boundSampler = Eu.sampler, this.boundRamp = ju, this.bindGroup = this.device.createBindGroup({
-          label: `particles-${uu.name}`,
+          bytesPerRow: 4 * oU.f
+        }, [oU.f, 1]));
+        const ZG = this.rampTexels.key.length > 0 && this.rampView ? this.rampView : this.bindings.whiteRamp;
+        this.bindGroup && this.boundView === bG.view && this.boundSampler === bG.sampler && this.boundRamp === ZG || (this.boundView = bG.view, this.boundSampler = bG.sampler, this.boundRamp = ZG, this.bindGroup = this.device.createBindGroup({
+          label: `particles-${GG.name}`,
           layout: this.bindings.layout,
           entries: [{
             binding: 0,
@@ -7988,49 +7988,49 @@ export const modules = {
             }
           }, {
             binding: 2,
-            resource: Eu.sampler
+            resource: bG.sampler
           }, {
             binding: 3,
-            resource: Eu.view
+            resource: bG.view
           }, {
             binding: 4,
             resource: this.bindings.rampSampler
           }, {
             binding: 5,
-            resource: ju
+            resource: ZG
           }]
         }))
       }
       destroy() {
-        var uu;
-        this.ring.destroy(), this.uniforms.destroy(), null === (uu = this.ramp) || void 0 === uu || uu.destroy()
+        var GG;
+        this.ring.destroy(), this.uniforms.destroy(), null === (GG = this.ramp) || void 0 === GG || GG.destroy()
       }
     }
-    class mq {
-      constructor(uu, Eu) {
-        this.device = uu, this.resources = Eu, this.renderable = void 0, this.systems = new Map, this.draws = [], this.bindings = void 0, this.frameLayout = void 0, this.pipelineLayout = void 0, this.module = void 0, this.pipelines = new Map, this.frameData = new Float32Array(4096), this.frameBits = new Uint32Array(this.frameData.buffer), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.freeFrameIndices = [], this.nextFrameIndex = 0, this.target = null, this.targetPipelines = null, this.preparedTarget = null, this.warnOnce = (0, vE.d)(), this.build(), this.renderable = {
+    class vU {
+      constructor(GG, bG) {
+        this.device = GG, this.resources = bG, this.renderable = void 0, this.systems = new Map, this.draws = [], this.bindings = void 0, this.frameLayout = void 0, this.pipelineLayout = void 0, this.module = void 0, this.pipelines = new Map, this.frameData = new Float32Array(4096), this.frameBits = new Uint32Array(this.frameData.buffer), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.freeFrameIndices = [], this.nextFrameIndex = 0, this.target = null, this.targetPipelines = null, this.preparedTarget = null, this.warnOnce = (0, ab.e)(), this.build(), this.renderable = {
           order: 251,
           isTransparent: !0,
           _worldCenter: [0, 0, 0],
-          bind: (uu, Eu) => (this.bindTarget(Eu), {
+          bind: (GG, bG) => (this.bindTarget(bG), {
             renderable: this.renderable,
-            pipeline: oE(this.device, Eu),
-            draw: uu => Eu === this.preparedTarget ? this.draw(uu) : 0
+            pipeline: Ib(this.device, bG),
+            draw: GG => bG === this.preparedTarget ? this.draw(GG) : 0
           })
         }
       }
-      rebind(uu) {
-        this.device = uu, this.build(), this.pipelines.clear(), this.target = null, this.targetPipelines = null, this.preparedTarget = null, this.draws.length = 0;
-        for (const [Eu, ju] of this.systems) {
-          const su = new kq(uu, Eu, ju.frameIndex, this.bindings),
-            Uu = Eu.ring.drawCount();
-          Uu > 0 && su.upload(0, Uu), this.systems.set(Eu, su)
+      rebind(GG) {
+        this.device = GG, this.build(), this.pipelines.clear(), this.target = null, this.targetPipelines = null, this.preparedTarget = null, this.draws.length = 0;
+        for (const [bG, ZG] of this.systems) {
+          const wG = new FU(GG, bG, ZG.frameIndex, this.bindings),
+            SG = bG.ring.drawCount();
+          SG > 0 && wG.upload(0, SG), this.systems.set(bG, wG)
         }
       }
       build() {
         const {
-          device: uu
-        } = this, Eu = uu.createBindGroupLayout({
+          device: GG
+        } = this, bG = GG.createBindGroupLayout({
           label: "particles-system",
           entries: [{
             binding: 0,
@@ -8070,7 +8070,7 @@ export const modules = {
             }
           }]
         });
-        this.frameLayout = uu.createBindGroupLayout({
+        this.frameLayout = GG.createBindGroupLayout({
           label: "particles-frame",
           entries: [{
             binding: 0,
@@ -8080,152 +8080,152 @@ export const modules = {
               hasDynamicOffset: !0
             }
           }]
-        }), this.pipelineLayout = uu.createPipelineLayout({
-          bindGroupLayouts: [wE(uu), Eu, this.frameLayout]
-        }), this.module = uu.createShaderModule({
+        }), this.pipelineLayout = GG.createPipelineLayout({
+          bindGroupLayouts: [ub(GG), bG, this.frameLayout]
+        }), this.module = GG.createShaderModule({
           label: "particles",
-          code: Pq
+          code: mU
         });
-        const ju = uu.createTexture({
+        const ZG = GG.createTexture({
           label: "particles-no-ramp",
           size: [1, 1],
           format: "rgba8unorm",
           usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
         });
-        uu.queue.writeTexture({
-          texture: ju
+        GG.queue.writeTexture({
+          texture: ZG
         }, new Uint8Array([255, 255, 255, 255]), {
           bytesPerRow: 4
         }, [1, 1]), this.bindings = {
-          layout: Eu,
-          rampSampler: uu.createSampler({
+          layout: bG,
+          rampSampler: GG.createSampler({
             label: "particles-ramp",
             magFilter: "nearest",
             minFilter: "nearest",
             addressModeU: "repeat",
             addressModeV: "repeat"
           }),
-          whiteRamp: ju.createView()
+          whiteRamp: ZG.createView()
         }, this.frameBuffer = this.createFrameBuffer(), this.frameBindGroup = this.createFrameBindGroup()
       }
-      get cUu() {
+      get XSG() {
         return this.systems.size
       }
       reset() {
-        for (const uu of this.systems.keys()) uu.reset()
+        for (const GG of this.systems.keys()) GG.reset()
       }
       describePendingWork() {
-        return (0, eq.g)(this.systems.keys(), "Lite")
+        return (0, EU.c)(this.systems.keys(), "Lite")
       }
-      Kr(uu, Eu) {
-        const ju = new eq.c(uu, Eu, this);
-        return this.systems.set(ju, new kq(this.device, ju, this.allocateFrameIndex(), this.bindings)), ju
+      rM(GG, bG) {
+        const ZG = new EU.b(GG, bG, this);
+        return this.systems.set(ZG, new FU(this.device, ZG, this.allocateFrameIndex(), this.bindings)), ZG
       }
-      I6(uu, Eu) {
-        for (const ju of this.systems.keys()) ju.I6(uu, Eu)
+      pGG(GG, bG) {
+        for (const ZG of this.systems.keys()) ZG.pGG(GG, bG)
       }
-      canDraw(uu) {
-        const Eu = this.systems.get(uu),
-          ju = uu.texture ? this.resources.boundTexture(uu.texture) : null;
-        if (!Eu || !ju || !this.targetPipelines) return !1;
-        if (Eu.texture = ju, Eu.pipelines.length = 0, !UE(uu.blendMode)) return this.warnOnce(`blend:${uu.blendMode}`, `particle blend mode ${uu.blendMode} is not drawn (${uu.name})`), !0;
-        const su = (0, xu.k)(uu.blendMode);
-        for (const Uu of su) {
-          const uu = this.pipelineFor(Uu);
-          if (!1 === uu) return Eu.pipelines.length = 0, !0;
-          uu && Eu.pipelines.push(uu)
+      canDraw(GG) {
+        const bG = this.systems.get(GG),
+          ZG = GG.texture ? this.resources.boundTexture(GG.texture) : null;
+        if (!bG || !ZG || !this.targetPipelines) return !1;
+        if (bG.texture = ZG, bG.pipelines.length = 0, !Sb(GG.blendMode)) return this.warnOnce(`blend:${GG.blendMode}`, `particle blend mode ${GG.blendMode} is not drawn (${GG.name})`), !0;
+        const wG = (0, TG.o)(GG.blendMode);
+        for (const SG of wG) {
+          const GG = this.pipelineFor(SG);
+          if (!1 === GG) return bG.pipelines.length = 0, !0;
+          GG && bG.pipelines.push(GG)
         }
-        return Eu.pipelines.length === su.length
+        return bG.pipelines.length === wG.length
       }
-      disposeStopped(uu) {
-        uu.dispose()
+      disposeStopped(GG) {
+        GG.dispose()
       }
-      remove(uu) {
-        const Eu = this.systems.get(uu);
-        Eu && (this.systems.delete(uu), Eu.destroy(), this.freeFrameIndices.push(Eu.frameIndex))
+      remove(GG) {
+        const bG = this.systems.get(GG);
+        bG && (this.systems.delete(GG), bG.destroy(), this.freeFrameIndices.push(bG.frameIndex))
       }
-      prepare(uu) {
-        const Eu = uu.animationRatio || 1;
-        kE(this.renderable._worldCenter, uu, dE), this.preparedTarget = this.target, this.draws.length = 0;
-        let ju = 0;
-        for (const su of this.systems.values()) {
-          const uu = su.system;
-          if (!uu.animateIfActive(Eu)) continue;
-          if (uu.ring.takeUploads(su.upload), !uu.hasLiveParticles() || 0 === su.pipelines.length) continue;
-          su.writeUniforms(this.warnOnce), su.bind();
-          const Uu = 64 * su.frameIndex;
-          su.count = uu.ring.drawCount(), aq(uu, this.frameData, this.frameBits, Uu), ju = Math.max(ju, Uu + 64), this.draws.push(su)
+      prepare(GG) {
+        const bG = GG.animationRatio || 1;
+        Fb(this.renderable._worldCenter, GG, Cb), this.preparedTarget = this.target, this.draws.length = 0;
+        let ZG = 0;
+        for (const wG of this.systems.values()) {
+          const GG = wG.system;
+          if (!GG.animateIfActive(bG)) continue;
+          if (GG.ring.takeUploads(wG.upload), !GG.hasLiveParticles() || 0 === wG.pipelines.length) continue;
+          wG.writeUniforms(this.warnOnce), wG.bind();
+          const SG = 64 * wG.frameIndex;
+          wG.count = GG.ring.drawCount(), WU(GG, this.frameData, this.frameBits, SG), ZG = Math.max(ZG, SG + 64), this.draws.push(wG)
         }
-        ju > 0 && this.device.queue.writeBuffer(this.frameBuffer, 0, this.frameData, 0, ju)
+        ZG > 0 && this.device.queue.writeBuffer(this.frameBuffer, 0, this.frameData, 0, ZG)
       }
-      draw(uu) {
-        let Eu = 0,
-          ju = null;
-        for (const su of this.draws) {
-          uu.setBindGroup(1, su.bindGroup), uu.setBindGroup(2, this.frameBindGroup, [256 * su.frameIndex]);
-          for (const Uu of su.pipelines) Uu !== ju && (uu.setPipeline(Uu), ju = Uu), uu.draw(4, su.count), Eu++
+      draw(GG) {
+        let bG = 0,
+          ZG = null;
+        for (const wG of this.draws) {
+          GG.setBindGroup(1, wG.bindGroup), GG.setBindGroup(2, this.frameBindGroup, [256 * wG.frameIndex]);
+          for (const SG of wG.pipelines) SG !== ZG && (GG.setPipeline(SG), ZG = SG), GG.draw(4, wG.count), bG++
         }
-        return Eu
+        return bG
       }
-      bindTarget(uu) {
-        this.target = uu;
-        const Eu = `${uu._colorFormat}|${uu._depthStencilFormat}|${uu._depthCompare}|${uu._sampleCount}`;
-        let ju = this.pipelines.get(Eu);
-        ju || (ju = new Map, this.pipelines.set(Eu, ju)), this.targetPipelines = ju
+      bindTarget(GG) {
+        this.target = GG;
+        const bG = `${GG._colorFormat}|${GG._depthStencilFormat}|${GG._depthCompare}|${GG._sampleCount}`;
+        let ZG = this.pipelines.get(bG);
+        ZG || (ZG = new Map, this.pipelines.set(bG, ZG)), this.targetPipelines = ZG
       }
-      pipelineFor(uu) {
-        var Eu;
-        const ju = this.targetPipelines,
-          su = ju.get(uu);
-        if (void 0 !== su) return su;
-        ju.set(uu, null);
-        const Uu = this.target,
-          Zu = uu === xu.e,
-          Xu = null !== (Eu = Uu._depthCompare) && void 0 !== Eu ? Eu : JE,
+      pipelineFor(GG) {
+        var bG;
+        const ZG = this.targetPipelines,
+          wG = ZG.get(GG);
+        if (void 0 !== wG) return wG;
+        ZG.set(GG, null);
+        const SG = this.target,
+          LG = GG === TG.e,
+          yG = null !== (bG = SG._depthCompare) && void 0 !== bG ? bG : ib,
           {
-            device: lu
+            device: kG
           } = this;
-        return lu.createRenderPipelineAsync({
-          label: `particles-${uu}`,
+        return kG.createRenderPipelineAsync({
+          label: `particles-${GG}`,
           layout: this.pipelineLayout,
           vertex: {
             module: this.module,
             entryPoint: "mainVertex"
           },
-          fragment: gE({
+          fragment: rb({
             module: this.module,
             entryPoint: "mainFragment",
             constants: {
-              MULTIPLY_PASS: Zu ? 1 : 0
+              MULTIPLY_PASS: LG ? 1 : 0
             }
-          }, Uu, ZE((0, xu.j)(uu))),
+          }, SG, Lb((0, TG.k)(GG))),
           primitive: {
             topology: "triangle-strip",
             cullMode: "none"
           },
-          depthStencil: Uu._depthStencilFormat ? {
-            format: Uu._depthStencilFormat,
-            depthCompare: Xu,
+          depthStencil: SG._depthStencilFormat ? {
+            format: SG._depthStencilFormat,
+            depthCompare: yG,
             depthWriteEnabled: !1
           } : void 0,
           multisample: {
-            count: Uu._sampleCount
+            count: SG._sampleCount
           }
-        }).then((Eu => {
-          ju.set(uu, Eu)
-        }), (Eu => {
-          ju.set(uu, !1), console.error("Lite particle pipeline failed", Eu), CE(lu, "particles", `blend-${uu}`, Eu)
+        }).then((bG => {
+          ZG.set(GG, bG)
+        }), (bG => {
+          ZG.set(GG, !1), console.error("Lite particle pipeline failed", bG), Vb(kG, "particles", `blend-${GG}`, bG)
         })), null
       }
       allocateFrameIndex() {
-        const uu = this.freeFrameIndices.pop();
-        if (void 0 !== uu) return uu;
-        const Eu = this.nextFrameIndex++;
-        if (64 * (Eu + 1) > this.frameData.length) {
-          const uu = new Float32Array(2 * this.frameData.length);
-          uu.set(this.frameData), this.frameData = uu, this.frameBits = new Uint32Array(uu.buffer), this.frameBuffer.destroy(), this.frameBuffer = this.createFrameBuffer(), this.frameBindGroup = this.createFrameBindGroup()
+        const GG = this.freeFrameIndices.pop();
+        if (void 0 !== GG) return GG;
+        const bG = this.nextFrameIndex++;
+        if (64 * (bG + 1) > this.frameData.length) {
+          const GG = new Float32Array(2 * this.frameData.length);
+          GG.set(this.frameData), this.frameData = GG, this.frameBits = new Uint32Array(GG.buffer), this.frameBuffer.destroy(), this.frameBuffer = this.createFrameBuffer(), this.frameBindGroup = this.createFrameBindGroup()
         }
-        return Eu
+        return bG
       }
       createFrameBuffer() {
         return this.device.createBuffer({
@@ -8248,15 +8248,15 @@ export const modules = {
         })
       }
     }
-    class vq {
-      constructor(uu, Eu, ju, su, Uu) {
-        this.lite = uu, this.canvas = Eu, this.info = ju, this.resources = Uu, this.bsu = !1, this.needPOTTextures = !1, this.W9 = !0, this.renderWidth = void 0, this.renderHeight = void 0, this.performanceMonitor = {
+    class aU {
+      constructor(GG, bG, ZG, wG, SG) {
+        this.lite = GG, this.canvas = bG, this.info = ZG, this.resources = SG, this.iwG = !1, this.needPOTTextures = !1, this.F_ = !0, this.renderWidth = void 0, this.renderHeight = void 0, this.performanceMonitor = {
           reset: () => {
             this.lastFrameTime = null
           }
-        }, this.caps = void 0, this.deltaTime = 0, this.lastFrameTime = null, this.renderWidth = Eu.width, this.renderHeight = Eu.height, this.caps = {
-          maxTextureSize: su.maxTextureDimension2D,
-          texture2DArrayMaxLayerCount: su.maxTextureArrayLayers
+        }, this.caps = void 0, this.deltaTime = 0, this.lastFrameTime = null, this.renderWidth = bG.width, this.renderHeight = bG.height, this.caps = {
+          maxTextureSize: wG.maxTextureDimension2D,
+          texture2DArrayMaxLayerCount: wG.maxTextureArrayLayers
         }
       }
       getCaps() {
@@ -8265,8 +8265,8 @@ export const modules = {
       detach() {
         this.lite = null
       }
-      rebind(uu) {
-        this.lite = uu, (0, Iu.q)(uu, this.renderWidth, this.renderHeight)
+      rebind(GG) {
+        this.lite = GG, (0, qG.r)(GG, this.renderWidth, this.renderHeight)
       }
       getRenderWidth() {
         return this.renderWidth
@@ -8277,26 +8277,26 @@ export const modules = {
       getHardwareScalingLevel() {
         return 1
       }
-      setSize(uu, Eu) {
-        if (this.renderWidth === uu && this.renderHeight === Eu) return !1;
-        const ju = this.renderWidth,
-          su = this.renderHeight;
-        this.renderWidth = uu, this.renderHeight = Eu;
-        const Uu = this.lite;
-        if (null === Uu) return !0;
+      setSize(GG, bG) {
+        if (this.renderWidth === GG && this.renderHeight === bG) return !1;
+        const ZG = this.renderWidth,
+          wG = this.renderHeight;
+        this.renderWidth = GG, this.renderHeight = bG;
+        const SG = this.lite;
+        if (null === SG) return !0;
         try {
-          (0, Iu.q)(Uu, uu, Eu)
-        } catch (Zu) {
-          if (Zu instanceof DOMException && "InvalidStateError" === Zu.name) {
-            this.renderWidth = ju, this.renderHeight = su;
+          (0, qG.r)(SG, GG, bG)
+        } catch (LG) {
+          if (LG instanceof DOMException && "InvalidStateError" === LG.name) {
+            this.renderWidth = ZG, this.renderHeight = wG;
             try {
-              (0, Iu.q)(Uu, ju, su)
+              (0, qG.r)(SG, ZG, wG)
             } catch {
-              this.canvas.width = ju, this.canvas.height = su
+              this.canvas.width = ZG, this.canvas.height = wG
             }
-            return console.warn("WebGPU could not allocate render targets for resize", uu, Eu, Zu.message), !1
+            return console.warn("WebGPU could not allocate render targets for resize", GG, bG, LG.message), !1
           }
-          throw Zu
+          throw LG
         }
         return !0
       }
@@ -8307,52 +8307,52 @@ export const modules = {
       getInfo() {
         return this.info
       }
-      wG() {
-        const uu = performance.now();
-        this.deltaTime = null === this.lastFrameTime ? 0 : uu - this.lastFrameTime, this.lastFrameTime = uu
+      yE() {
+        const GG = performance.now();
+        this.deltaTime = null === this.lastFrameTime ? 0 : GG - this.lastFrameTime, this.lastFrameTime = GG
       }
       getDeltaTime() {
         return this.deltaTime
       }
-      createCanvas(uu, Eu) {
-        const ju = document.createElement("canvas");
-        return ju.width = uu, ju.height = Eu, ju
+      createCanvas(GG, bG) {
+        const ZG = document.createElement("canvas");
+        return ZG.width = GG, ZG.height = bG, ZG
       }
-      E_(uu, Eu) {
-        var ju;
-        return null !== (ju = this.resources.E_.get(uu)) && void 0 !== ju ? ju : new cE(this.resources, uu, Eu)
+      j_(GG, bG) {
+        var ZG;
+        return null !== (ZG = this.resources.j_.get(GG)) && void 0 !== ZG ? ZG : new fb(this.resources, GG, bG)
       }
-      atlasArrays(uu) {
-        return this.resources.atlasArrays(uu)
+      atlasArrays(GG) {
+        return this.resources.atlasArrays(GG)
       }
     }
-    class Kq {
+    class cU {
       constructor() {
         this.fov = .8, this.nearPlane = 1, this.farPlane = 1e3, this.children = [], this.worldMatrix = new Float32Array(16), this.worldMatrixVersion = 0, this._viewCache = new Float32Array(16), this._projCache = new Float32Array(16), this._vpCache = new Float32Array(16)
       }
-      copyFromView(uu) {
-        this.fov = uu.fov, this.nearPlane = uu.near, this.farPlane = uu.far;
-        const Eu = uu.worldMatrix;
-        for (let ju = 0; ju < 16; ju++)
-          if (this.worldMatrix[ju] !== Eu[ju]) return this.worldMatrix.set(Eu), void this.worldMatrixVersion++
+      copyFromView(GG) {
+        this.fov = GG.fov, this.nearPlane = GG.near, this.farPlane = GG.far;
+        const bG = GG.worldMatrix;
+        for (let ZG = 0; ZG < 16; ZG++)
+          if (this.worldMatrix[ZG] !== bG[ZG]) return this.worldMatrix.set(bG), void this.worldMatrixVersion++
       }
     }
-    class Vq {
-      constructor(uu, Eu, ju, su) {
-        this.canvas = Eu, this.options = ju, this.TEu = void 0, this.backendName = "WebGPU (Lite)", this.m_ = void 0, this.modelMeshes = void 0, this.particles = void 0, this.resources = void 0, this.camera = new Kq, this.lastFrameTime = 0, this.engine = void 0, this.vY = void 0, this.sceneTask = void 0, this.device = void 0, this.liteTerrain = void 0, this.meshes = void 0, this.sunShadow = void 0, this.refusals = void 0, this.halted = !1, this.tO = null, this.firstTerrain = null, this.trialFrames = 0, this.install(uu);
+    class lU {
+      constructor(GG, bG, ZG, wG) {
+        this.canvas = bG, this.options = ZG, this.LZG = void 0, this.backendName = "WebGPU (Lite)", this.Z5 = void 0, this.modelMeshes = void 0, this.particles = void 0, this.resources = void 0, this.camera = new cU, this.lastFrameTime = 0, this.engine = void 0, this.Ah = void 0, this.sceneTask = void 0, this.device = void 0, this.liteTerrain = void 0, this.meshes = void 0, this.sunShadow = void 0, this.refusals = void 0, this.halted = !1, this.HK = null, this.firstTerrain = null, this.trialFrames = 0, this.install(GG);
         const {
-          resources: Uu,
-          meshes: Zu
-        } = uu;
-        this.resources = Uu, this.particles = uu.particles, this.TEu = new vq(uu.engine, Eu, su, uu.device.limits, Uu), (0, Pu.E)({
-          dl: uu => {
-            vu(uu) && Uu.textureSlot(uu)
+          resources: SG,
+          meshes: LG
+        } = GG;
+        this.resources = SG, this.particles = GG.particles, this.LZG = new aU(GG.engine, bG, wG, GG.device.limits, SG), (0, mG.B)({
+          Ik: GG => {
+            aG(GG) && SG.textureSlot(GG)
           },
-          loaded: uu => vu(uu) ? Uu.textureLoaded(uu) : null,
-          canvasUpdated: (uu, Eu, ju) => {
-            vu(uu) && Uu.canvasUpdated(uu, Eu, ju)
+          loaded: GG => aG(GG) ? SG.textureLoaded(GG) : null,
+          canvasUpdated: (GG, bG, ZG) => {
+            aG(GG) && SG.canvasUpdated(GG, bG, ZG)
           }
-        }), this.m_ = Zu.m_, this.modelMeshes = Zu.modelMeshes
+        }), this.Z5 = LG.Z5, this.modelMeshes = LG.modelMeshes
       }
       get gpuDevice() {
         return this.device
@@ -8363,82 +8363,82 @@ export const modules = {
       get terrain() {
         return this.liteTerrain
       }
-      install(uu) {
-        this.engine = uu.engine, this.vY = uu.vY, this.sceneTask = uu.sceneTask, this.device = uu.device, this.liteTerrain = uu.terrain, this.meshes = uu.meshes, this.sunShadow = uu.sunShadow;
-        const Eu = new Lu(uu.device.lost);
-        this.refusals = Eu, Eu.deviceLost.then((() => {
-          var Eu;
-          Eu = uu.device, qE.add(Eu)
-        })), uu.vY.camera = this.camera
+      install(GG) {
+        this.engine = GG.engine, this.Ah = GG.Ah, this.sceneTask = GG.sceneTask, this.device = GG.device, this.liteTerrain = GG.terrain, this.meshes = GG.meshes, this.sunShadow = GG.sunShadow;
+        const bG = new eG(GG.device.lost);
+        this.refusals = bG, bG.deviceLost.then((() => {
+          var bG;
+          bG = GG.device, Ub.add(bG)
+        })), GG.Ah.camera = this.camera
       }
       async rebuild() {
-        var uu, Eu, ju, su, Uu;
-        const Zu = await Wq();
-        this.halted = !0, this.liteTerrain.retire(), null === (uu = this.sunShadow) || void 0 === uu || uu.dispose(), this.TEu.detach();
+        var GG, bG, ZG, wG, SG;
+        const LG = await AU();
+        this.halted = !0, this.liteTerrain.retire(), null === (GG = this.sunShadow) || void 0 === GG || GG.dispose(), this.LZG.detach();
         try {
-          (0, Fu.e)(this.engine)
-        } catch (Cu) {
-          console.warn("Lite: disposing the lost device's engine threw", Cu)
+          (0, nG.e)(this.engine)
+        } catch (VG) {
+          console.warn("Lite: disposing the lost device's engine threw", VG)
         }
-        const Xu = {
-            width: this.TEu.renderWidth,
-            height: this.TEu.renderHeight
+        const yG = {
+            width: this.LZG.renderWidth,
+            height: this.LZG.renderHeight
           },
-          lu = await Sq(this.canvas, this.options, Xu, Zu),
-          qu = eE(lu),
-          fu = Iq(qu);
+          kG = await sU(this.canvas, this.options, yG, LG),
+          UG = Eb(kG),
+          YG = qU(UG);
         try {
-          this.resources.rebind(lu, qu), this.particles.rebind(qu), this.m_.dropSteady();
-          const uu = {
+          this.resources.rebind(kG, UG), this.particles.rebind(UG), this.Z5.dropSteady();
+          const GG = {
               resources: this.resources,
               particles: this.particles,
-              m_: this.m_,
+              Z5: this.Z5,
               modelMeshes: this.modelMeshes
             },
-            Eu = await Fq(lu, qu, this.options, uu),
-            ju = fu();
-          if (null !== ju) throw new Error(`WebGPU device lost while Lite was rebuilding (${ju.reason}): ${ju.message}`);
+            bG = await nU(kG, UG, this.options, GG),
+            ZG = YG();
+          if (null !== ZG) throw new Error(`WebGPU device lost while Lite was rebuilding (${ZG.reason}): ${ZG.message}`);
           const {
-            r: su,
-            g: Uu,
-            b: Zu
-          } = this.vY.clearColor;
-          this.install(Eu), this.setClearColour(su, Uu, Zu), this.TEu.rebind(lu)
-        } catch (Cu) {
-          throw qu.destroy(), Cu
+            r: wG,
+            g: SG,
+            b: LG
+          } = this.Ah.clearColor;
+          this.install(bG), this.setClearColour(wG, SG, LG), this.LZG.rebind(kG)
+        } catch (VG) {
+          throw UG.destroy(), VG
         }
-        return this.lastFrameTime = 0, this.halted = !1, this.trialFrames = 30, null === (Eu = this.tO) || void 0 === Eu || Eu.resize(), null === (ju = this.tO) || void 0 === ju || null === (su = ju.Uc) || void 0 === su || null === (Uu = su.mG) || void 0 === Uu || Uu.remeshForRendererRebuild(), {
+        return this.lastFrameTime = 0, this.halted = !1, this.trialFrames = 30, null === (bG = this.HK) || void 0 === bG || bG.resize(), null === (ZG = this.HK) || void 0 === ZG || null === (wG = ZG.wf) || void 0 === wG || null === (SG = wG.QE) || void 0 === SG || SG.remeshForRendererRebuild(), {
           terrainDrawn: this.whenTerrainDrawn()
         }
       }
       whenTerrainDrawn() {
-        return new Promise(((uu, Eu) => {
+        return new Promise(((GG, bG) => {
           this.firstTerrain = {
-            drawn: uu,
-            failed: Eu
+            drawn: GG,
+            failed: bG
           }
         }))
       }
       get castsEntitySunShadows() {
-        var uu, Eu;
-        return null !== (uu = null === (Eu = this.sunShadow) || void 0 === Eu ? void 0 : Eu.tracesEntities) && void 0 !== uu && uu
+        var GG, bG;
+        return null !== (GG = null === (bG = this.sunShadow) || void 0 === bG ? void 0 : bG.tracesEntities) && void 0 !== GG && GG
       }
       get sampleCount() {
         return this.engine.msaaSamples
       }
-      attach(uu) {
-        this.tO = uu, this.modelMeshes.attach(uu.model, uu.sceneMirror);
-        const Eu = uu.vY;
-        this.setClearColour(Eu.clearColor.r, Eu.clearColor.g, Eu.clearColor.b), Eu.draw = () => {
-          this.drawFrame(uu, Eu)
+      attach(GG) {
+        this.HK = GG, this.modelMeshes.attach(GG.model, GG.sceneMirror);
+        const bG = GG.Ah;
+        this.setClearColour(bG.clearColor.r, bG.clearColor.g, bG.clearColor.b), bG.draw = () => {
+          this.drawFrame(GG, bG)
         }
       }
-      render(uu) {
+      render(GG) {
         if (!this.refusals.lost && !this.halted) {
           try {
-            this.TEu.wG(), uu.vY.render()
-          } catch (Eu) {
-            throw this.refusals.frameFailed(Eu), this.firstTerrain && this.trialFrames > 0 && (this.halted = !0, this.firstTerrain.failed(Eu), this.firstTerrain = null), Eu
+            this.LZG.yE(), GG.Ah.render()
+          } catch (bG) {
+            throw this.refusals.frameFailed(bG), this.firstTerrain && this.trialFrames > 0 && (this.halted = !0, this.firstTerrain.failed(bG), this.firstTerrain = null), bG
           }
           this.refusals.frameDrawn(), this.trialFrames > 0 && this.trialFrames--
         }
@@ -8447,175 +8447,175 @@ export const modules = {
         return this.engine.drawCallCount
       }
       describePendingWork() {
-        var uu, Eu, ju, su;
-        const Uu = [...this.particles.describePendingWork(), ...null !== (uu = null === (Eu = this.sunShadow) || void 0 === Eu ? void 0 : Eu.describePendingWork()) && void 0 !== uu ? uu : []],
-          Zu = this.meshes.pipelinesCompiling + this.terrain.pipelinesCompiling + (null !== (ju = this.terrain.sceneDepth) && void 0 !== ju && ju.compiling ? 1 : 0) + (null !== (su = this.terrain.shadowMask) && void 0 !== su && su.compiling ? 1 : 0);
-        Zu > 0 && Uu.push(`${Zu} Lite pipelines compiling`);
-        const Xu = this.terrain.buffersAwaitingVerdict;
-        Xu > 0 && Uu.push(`${Xu} Lite terrain buffers awaiting their out-of-memory verdict`);
-        const lu = this.resources.texturesLoading;
-        return lu > 0 && Uu.push(`${lu} Lite textures loading`), Uu
+        var GG, bG, ZG, wG;
+        const SG = [...this.particles.describePendingWork(), ...null !== (GG = null === (bG = this.sunShadow) || void 0 === bG ? void 0 : bG.describePendingWork()) && void 0 !== GG ? GG : []],
+          LG = this.meshes.pipelinesCompiling + this.terrain.pipelinesCompiling + (null !== (ZG = this.terrain.sceneDepth) && void 0 !== ZG && ZG.compiling ? 1 : 0) + (null !== (wG = this.terrain.shadowMask) && void 0 !== wG && wG.compiling ? 1 : 0);
+        LG > 0 && SG.push(`${LG} Lite pipelines compiling`);
+        const yG = this.terrain.buffersAwaitingVerdict;
+        yG > 0 && SG.push(`${yG} Lite terrain buffers awaiting their out-of-memory verdict`);
+        const kG = this.resources.texturesLoading;
+        return kG > 0 && SG.push(`${kG} Lite textures loading`), SG
       }
-      prepareTexture(uu) {
-        return null !== this.resources.boundTexture(uu) || this.resources.textureFailed(uu)
+      prepareTexture(GG) {
+        return null !== this.resources.boundTexture(GG) || this.resources.textureFailed(GG)
       }
-      drawFrame(uu, Eu) {
-        var ju, su, Uu, Zu, Xu, lu;
-        const qu = gl(uu);
-        this.camera.copyFromView(qu), this.setClearColour(qu.clearColour[0], qu.clearColour[1], qu.clearColour[2]), null === (ju = this.sunShadow) || void 0 === ju || ju.prepare(uu.Uc, qu.eye, null !== (su = uu.Uc.AN) && void 0 !== su ? su : null), this.terrain.prepare(uu, qu), null === (Uu = this.terrain.sceneDepth) || void 0 === Uu || Uu.setPlanes(qu.near, qu.far), null === (Zu = this.terrain.shadowMask) || void 0 === Zu || Zu.prepare(qu), sl(this.sceneTask), this.meshes.prepare(Eu, qu, uu.model.earthSky, null !== (Xu = uu.Uc.AN) && void 0 !== Xu ? Xu : null), this.particles.prepare(qu);
-        const fu = performance.now();
-        this.resources.flushUploads(), null === (lu = this.sunShadow) || void 0 === lu || lu.traceEntities(this.meshes);
+      drawFrame(GG, bG) {
+        var ZG, wG, SG, LG, yG, kG;
+        const UG = Jk(GG);
+        this.camera.copyFromView(UG), this.setClearColour(UG.clearColour[0], UG.clearColour[1], UG.clearColour[2]), null === (ZG = this.sunShadow) || void 0 === ZG || ZG.prepare(GG.wf, UG.eye, null !== (wG = GG.wf.OQ) && void 0 !== wG ? wG : null), this.terrain.prepare(GG, UG), null === (SG = this.terrain.sceneDepth) || void 0 === SG || SG.setPlanes(UG.near, UG.far), null === (LG = this.terrain.shadowMask) || void 0 === LG || LG.prepare(UG), Zk(this.sceneTask), this.meshes.prepare(bG, UG, GG.model.earthSky, null !== (yG = GG.wf.OQ) && void 0 !== yG ? yG : null), this.particles.prepare(UG);
+        const YG = performance.now();
+        this.resources.flushUploads(), null === (kG = this.sunShadow) || void 0 === kG || kG.traceEntities(this.meshes);
         try {
-          (0, Iu.m)(this.engine, this.lastFrameTime > 0 ? fu - this.lastFrameTime : 0)
+          (0, qG.o)(this.engine, this.lastFrameTime > 0 ? YG - this.lastFrameTime : 0)
         } finally {
           this.resources.endUploadFrame()
         }
-        this.lastFrameTime = fu, this.firstTerrain && this.liteTerrain.drawStats().drawn > 0 && (this.firstTerrain.drawn(fu), this.firstTerrain = null)
+        this.lastFrameTime = YG, this.firstTerrain && this.liteTerrain.drawStats().drawn > 0 && (this.firstTerrain.drawn(YG), this.firstTerrain = null)
       }
-      setClearColour(uu, Eu, ju) {
-        const su = this.vY.clearColor;
-        su.r = uu, su.g = Eu, su.b = ju, su.a = 1
+      setClearColour(GG, bG, ZG) {
+        const wG = this.Ah.clearColor;
+        wG.r = GG, wG.g = bG, wG.b = ZG, wG.a = 1
       }
     }
 
-    function rq(uu) {
-      const Eu = {};
-      for (const ju in uu.limits) {
-        const su = uu.limits[ju];
-        "number" === typeof su && (Eu[ju] = su)
+    function jU(GG) {
+      const bG = {};
+      for (const ZG in GG.limits) {
+        const wG = GG.limits[ZG];
+        "number" === typeof wG && (bG[ZG] = wG)
       }
-      return Eu
+      return bG
     }
-    const Qq = "WebGPU device lost while Lite was starting";
-    async function iq(uu, Eu) {
-      const ju = await Wq(),
-        su = ju.info,
-        Uu = {
-          vendor: (null === su || void 0 === su ? void 0 : su.vendor) || "unknown vendor",
-          renderer: (null === su || void 0 === su ? void 0 : su.architecture) || "unknown renderer",
-          version: (null === su || void 0 === su ? void 0 : su.description) || "unknown version"
+    const PU = "WebGPU device lost while Lite was starting";
+    async function MU(GG, bG) {
+      const ZG = await AU(),
+        wG = ZG.info,
+        SG = {
+          vendor: (null === wG || void 0 === wG ? void 0 : wG.vendor) || "unknown vendor",
+          renderer: (null === wG || void 0 === wG ? void 0 : wG.architecture) || "unknown renderer",
+          version: (null === wG || void 0 === wG ? void 0 : wG.description) || "unknown version"
         };
-      uu.style.background = "black";
-      const Zu = await Sq(uu, Eu, Eu.bufferSize, ju),
-        Xu = eE(Zu),
-        lu = Iq(Xu);
+      GG.style.background = "black";
+      const LG = await sU(GG, bG, bG.bufferSize, ZG),
+        yG = Eb(LG),
+        kG = qU(yG);
       try {
-        const ju = new Vq(await Fq(Zu, Xu, Eu, null), uu, Eu, Uu),
-          su = lu();
-        if (null !== su) {
+        const ZG = new lU(await nU(LG, yG, bG, null), GG, bG, SG),
+          wG = kG();
+        if (null !== wG) {
           const {
-            reason: uu,
-            message: Eu
-          } = su;
-          throw Object.assign(new Error(`${Qq} (${uu}): ${Eu}`), {
-            fallbackReason: Qq
+            reason: GG,
+            message: bG
+          } = wG;
+          throw Object.assign(new Error(`${PU} (${GG}): ${bG}`), {
+            fallbackReason: PU
           })
         }
-        return ju
-      } catch (qu) {
-        throw Xu.destroy(), null === lu() ? qu : (0, jl.h)(qu, "device")
+        return ZG
+      } catch (UG) {
+        throw yG.destroy(), null === kG() ? UG : (0, bk.f)(UG, "device")
       }
     }
-    async function Wq() {
-      const uu = await navigator.gpu.requestAdapter({
+    async function AU() {
+      const GG = await navigator.gpu.requestAdapter({
         powerPreference: "high-performance"
       });
-      if (!uu) throw (0, jl.h)(new Error("No WebGPU adapter"), "no_adapter");
-      return uu
+      if (!GG) throw (0, bk.f)(new Error("No WebGPU adapter"), "no_adapter");
+      return GG
     }
-    async function Sq(uu, Eu, ju, su) {
-      let Uu;
+    async function sU(GG, bG, ZG, wG) {
+      let SG;
       try {
-        Uu = await (0, Iu.g)(uu, {
-          msaaSamples: Eu.Jju ? 4 : 1,
-          requiredLimits: rq(su),
+        SG = await (0, qG.e)(GG, {
+          msaaSamples: bG.MZG ? 4 : 1,
+          requiredLimits: jU(wG),
           alphaMode: "premultiplied"
         })
-      } catch (Xu) {
-        throw (0, jl.h)(Xu, "#47" === (null === (Zu = Xu) || void 0 === Zu ? void 0 : Zu.message) ? "no_adapter" : "device")
+      } catch (yG) {
+        throw (0, bk.f)(yG, "#47" === (null === (LG = yG) || void 0 === LG ? void 0 : LG.message) ? "no_adapter" : "device")
       }
-      var Zu;
-      return null !== ju && (0, Iu.q)(Uu, ju.width, ju.height), Uu
+      var LG;
+      return null !== ZG && (0, qG.r)(SG, ZG.width, ZG.height), SG
     }
 
-    function Iq(uu) {
-      let Eu = null;
-      return uu.lost.then((uu => {
-        Eu = uu, console.error(`WebGPU device lost (${uu.reason}): ${uu.message}`)
-      })), () => Eu
+    function qU(GG) {
+      let bG = null;
+      return GG.lost.then((GG => {
+        bG = GG, console.error(`WebGPU device lost (${GG.reason}): ${GG.message}`)
+      })), () => bG
     }
-    async function Fq(uu, Eu, ju, su) {
-      var Uu, Zu;
+    async function nU(GG, bG, ZG, wG) {
+      var SG, LG;
       let {
-        sceneDepth: Xu,
-        sunShadow: lu
-      } = ju;
-      const qu = (0, Bu.d)(uu),
-        fu = null !== (Uu = null === su || void 0 === su ? void 0 : su.resources) && void 0 !== Uu ? Uu : new RX(uu, Eu),
-        Cu = new Eq(Eu),
-        bu = new rX(Eu, fu, (uu => function(uu, Eu) {
-          for (const su of GE(uu)) {
-            var ju;
-            if (su._targetSignature === Eu) return null !== (ju = su._sceneBG) && void 0 !== ju ? ju : null
+        sceneDepth: yG,
+        sunShadow: kG
+      } = ZG;
+      const UG = (0, gG.e)(GG),
+        YG = null !== (SG = null === wG || void 0 === wG ? void 0 : wG.resources) && void 0 !== SG ? SG : new xy(GG, bG),
+        VG = new bU(bG),
+        pG = new ly(bG, YG, (GG => function(GG, bG) {
+          for (const wG of ob(GG)) {
+            var ZG;
+            if (wG._targetSignature === bG) return null !== (ZG = wG._sceneBG) && void 0 !== ZG ? ZG : null
           }
           return null
-        }(qu, uu)), null === su || void 0 === su ? void 0 : su.m_, null === su || void 0 === su ? void 0 : su.modelMeshes),
-        cu = null !== (Zu = null === su || void 0 === su ? void 0 : su.particles) && void 0 !== Zu ? Zu : new mq(Eu, fu);
-      for (const Yu of function(uu, Eu, ju) {
-          return [Eu.opaqueRenderable, uu.opaqueRenderable, uu.skyLastRenderable, ju.renderable, Eu.transparentRenderable, uu.transparentRenderable, uu.frontRenderable]
-        }(bu, Cu, cu)) ME(qu, Yu);
-      const Nu = function(uu) {
-        for (const Eu of GE(uu))
-          if ("vY" === Eu.name) return Eu;
+        }(UG, GG)), null === wG || void 0 === wG ? void 0 : wG.Z5, null === wG || void 0 === wG ? void 0 : wG.modelMeshes),
+        fG = null !== (LG = null === wG || void 0 === wG ? void 0 : wG.particles) && void 0 !== LG ? LG : new vU(bG, YG);
+      for (const hG of function(GG, bG, ZG) {
+          return [bG.opaqueRenderable, GG.opaqueRenderable, GG.skyLastRenderable, ZG.renderable, bG.transparentRenderable, GG.transparentRenderable, GG.frontRenderable]
+        }(pG, VG, fG)) zb(UG, hG);
+      const QG = function(GG) {
+        for (const bG of ob(GG))
+          if ("Ah" === bG.name) return bG;
         throw new Error("Lite: the scene has no render task named scene")
-      }(qu);
-      Xu && Cu.installSceneDepth(Nu, uu);
-      const Ou = lu ? new Mq(Eu, lu.entities) : null;
-      return Cu.sunShadow = Ou, Ou && null !== lu && void 0 !== lu && lu.entities && (Cu.shadowMask = new Vl(Eu, Nu, uu, Cu)), bu.sunShadow = Ou, await (0, Bu.f)(qu), {
-        engine: uu,
-        vY: qu,
-        sceneTask: Nu,
-        device: Eu,
-        terrain: Cu,
-        meshes: bu,
-        sunShadow: Ou,
-        resources: fu,
-        particles: cu
+      }(UG);
+      yG && VG.installSceneDepth(QG, GG);
+      const KG = kG ? new zU(bG, kG.entities) : null;
+      return VG.sunShadow = KG, KG && null !== kG && void 0 !== kG && kG.entities && (VG.shadowMask = new lk(bG, QG, GG, VG)), pG.sunShadow = KG, await (0, gG.f)(UG), {
+        engine: GG,
+        Ah: UG,
+        sceneTask: QG,
+        device: bG,
+        terrain: VG,
+        meshes: pG,
+        sunShadow: KG,
+        resources: YG,
+        particles: fG
       }
     }
   },
-  40952: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      D: () => Ou,
-      b: () => Uu,
-      f: () => su,
-      g: () => cu,
-      i: () => Cu,
-      k: () => hu,
-      n: () => Zu,
-      o: () => lu,
-      q: () => qu,
-      t: () => Xu,
-      w: () => Yu,
-      z: () => Nu
+  41084: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      A: () => KG,
+      b: () => SG,
+      f: () => wG,
+      h: () => fG,
+      i: () => VG,
+      j: () => dG,
+      l: () => LG,
+      m: () => kG,
+      q: () => UG,
+      u: () => yG,
+      v: () => hG,
+      x: () => QG
     });
-    const su = 3,
-      Uu = 0,
-      Zu = 1,
-      Xu = 2,
-      lu = {
+    const wG = 3,
+      SG = 0,
+      LG = 1,
+      yG = 2,
+      kG = {
         uniform: 3,
-        ac: 4,
+        Wf: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      qu = 10,
-      fu = "BloxdPackInputs",
-      Cu = "bloxdPackInputs",
-      bu = [{
+      UG = 10,
+      YG = "BloxdPackInputs",
+      VG = "bloxdPackInputs",
+      pG = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -8640,37 +8640,37 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      cu = 80;
+      fG = 80;
 
-    function Nu() {
-      const uu = bu.map((uu => {
+    function QG() {
+      const GG = pG.map((GG => {
         let {
-          name: Eu,
-          type: ju
-        } = uu;
-        return `    ${Eu}: ${ju},\n`
+          name: bG,
+          type: ZG
+        } = GG;
+        return `    ${bG}: ${ZG},\n`
       })).join("");
-      return `struct ${fu} {\n${uu}}\n@group(${su}) @binding(${Uu}) var<uniform> ${Cu}: ${fu};\n`
+      return `struct ${YG} {\n${GG}}\n@group(${wG}) @binding(${SG}) var<uniform> ${VG}: ${YG};\n`
     }
 
-    function Ou(uu, Eu) {
-      const ju = new DataView(uu, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, cu),
-        [su, Uu, Zu, Xu, lu, qu] = bu;
-      ju.setFloat32(su.offset, Eu.seconds, !0), ju.setUint32(Uu.offset, Eu.lit ? 1 : 0, !0);
-      for (let fu = 0; fu < 3; fu++) ju.setInt32(Zu.offset + 4 * fu, Eu.renderOffset[fu], !0), ju.setFloat32(Xu.offset + 4 * fu, Eu.fuu[fu], !0), ju.setFloat32(lu.offset + 4 * fu, Eu.eyePosition[fu], !0), ju.setFloat32(qu.offset + 4 * fu, Eu.shadowDirection[fu], !0)
+    function KG(GG, bG) {
+      const ZG = new DataView(GG, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, fG),
+        [wG, SG, LG, yG, kG, UG] = pG;
+      ZG.setFloat32(wG.offset, bG.seconds, !0), ZG.setUint32(SG.offset, bG.lit ? 1 : 0, !0);
+      for (let YG = 0; YG < 3; YG++) ZG.setInt32(LG.offset + 4 * YG, bG.renderOffset[YG], !0), ZG.setFloat32(yG.offset + 4 * YG, bG.XGG[YG], !0), ZG.setFloat32(kG.offset + 4 * YG, bG.eyePosition[YG], !0), ZG.setFloat32(UG.offset + 4 * YG, bG.shadowDirection[YG], !0)
     }
 
-    function Yu(uu) {
-      const Eu = new Uint32Array(Math.max(1, uu.length));
-      return uu.forEach(((uu, ju) => {
+    function hG(GG) {
+      const bG = new Uint32Array(Math.max(1, GG.length));
+      return GG.forEach(((GG, ZG) => {
         let {
-          id: su,
-          rotation: Uu
-        } = uu;
-        Eu[ju] = 65535 & su | (3 & Uu) << 16
-      })), Eu
+          id: wG,
+          rotation: SG
+        } = GG;
+        bG[ZG] = 65535 & wG | (3 & SG) << 16
+      })), bG
     }
-    const hu = {
+    const dG = {
       off: 0,
       strict: 1,
       allow: 2
@@ -8678,4 +8678,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

@@ -1,632 +1,632 @@
 export const id = 279;
 export const ids = [279];
 export const modules = {
-  41319: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Mu,
-      f: () => Ku,
-      g: () => hu,
-      k: () => Du,
-      o: () => cu,
-      r: () => Yu,
-      t: () => Ou,
-      u: () => Nu
+  41487: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => zG,
+      f: () => cG,
+      j: () => dG,
+      l: () => JG,
+      o: () => fG,
+      r: () => hG,
+      s: () => KG,
+      u: () => QG
     });
-    var su = ju(37494),
-      Uu = ju(37680),
-      Zu = ju(37519),
-      Xu = ju(41321),
-      lu = ju(40467),
-      qu = ju(40268),
-      fu = ju(40302),
-      Cu = ju(40272),
-      bu = ju(37532);
-    const cu = Object.freeze(new su.i(0, 0, 0, 0)),
-      Nu = Object.freeze(su.t.Zero()),
-      Ou = Object.freeze(su.p.Zero()),
-      Yu = Object.freeze(qu.e.Zero()),
-      hu = Object.freeze(Uu.c.Black()),
-      Du = Object.freeze(new Uu.g(0, 0, 0, 0)),
-      gu = {
+    var wG = ZG(37439),
+      SG = ZG(37621),
+      LG = ZG(37471),
+      yG = ZG(41493),
+      kG = ZG(40599),
+      UG = ZG(40407),
+      YG = ZG(40432),
+      VG = ZG(40416),
+      pG = ZG(37484);
+    const fG = Object.freeze(new wG.g(0, 0, 0, 0)),
+      QG = Object.freeze(wG.p.Zero()),
+      KG = Object.freeze(wG.m.Zero()),
+      hG = Object.freeze(UG.c.Zero()),
+      dG = Object.freeze(SG.c.Black()),
+      JG = Object.freeze(new SG.d(0, 0, 0, 0)),
+      rG = {
         key: 0,
         repeatCount: 0,
-        ZU: 2
+        Dw: 2
       };
-    class Mu {
-      static _PrepareAnimation(uu, Eu, ju, Zu, Xu, lu, fu, Cu) {
-        let bu;
-        if (!isNaN(parseFloat(Xu)) && isFinite(Xu) ? bu = Mu.ANIMATIONTYPE_FLOAT : Xu instanceof su.i ? bu = Mu.ANIMATIONTYPE_QUATERNION : Xu instanceof su.t ? bu = Mu.ANIMATIONTYPE_VECTOR3 : Xu instanceof su.p ? bu = Mu.ANIMATIONTYPE_VECTOR2 : Xu instanceof Uu.c ? bu = Mu.ANIMATIONTYPE_COLOR3 : Xu instanceof Uu.g ? bu = Mu.ANIMATIONTYPE_COLOR4 : Xu instanceof qu.e && (bu = Mu.ANIMATIONTYPE_SIZE), void 0 == bu) return null;
-        const cu = new Mu(uu, Eu, ju, bu, fu),
-          Nu = [{
+    class zG {
+      static _PrepareAnimation(GG, bG, ZG, LG, yG, kG, YG, VG) {
+        let pG;
+        if (!isNaN(parseFloat(yG)) && isFinite(yG) ? pG = zG.ANIMATIONTYPE_FLOAT : yG instanceof wG.g ? pG = zG.ANIMATIONTYPE_QUATERNION : yG instanceof wG.p ? pG = zG.ANIMATIONTYPE_VECTOR3 : yG instanceof wG.m ? pG = zG.ANIMATIONTYPE_VECTOR2 : yG instanceof SG.c ? pG = zG.ANIMATIONTYPE_COLOR3 : yG instanceof SG.d ? pG = zG.ANIMATIONTYPE_COLOR4 : yG instanceof UG.c && (pG = zG.ANIMATIONTYPE_SIZE), void 0 == pG) return null;
+        const fG = new zG(GG, bG, ZG, pG, YG),
+          QG = [{
             frame: 0,
-            value: Xu
+            value: yG
           }, {
-            frame: Zu,
-            value: lu
+            frame: LG,
+            value: kG
           }];
-        return cu.setKeys(Nu), void 0 !== Cu && cu.setEasingFunction(Cu), cu
+        return fG.setKeys(QG), void 0 !== VG && fG.setEasingFunction(VG), fG
       }
       get runtimeAnimations() {
         return this._runtimeAnimations
       }
       get hasRunningRuntimeAnimations() {
-        for (const uu of this._runtimeAnimations)
-          if (!uu.isStopped()) return !0;
+        for (const GG of this._runtimeAnimations)
+          if (!GG.isStopped()) return !0;
         return !1
       }
-      constructor(uu, Eu, ju, su, Uu, Zu) {
-        this.name = uu, this.targetProperty = Eu, this.framePerSecond = ju, this.dataType = su, this.ZU = Uu, this.enableBlending = Zu, this._easingFunction = null, this._runtimeAnimations = new Array, this._events = new Array, this.blendingSpeed = .01, this._ranges = {}, this._coreAnimation = null, this.targetPropertyPath = Eu.split("."), this.dataType = su, this.ZU = void 0 === Uu ? Mu.ANIMATIONLOOPMODE_CYCLE : Uu, this.uniqueId = Mu._UniqueIdGenerator++
+      constructor(GG, bG, ZG, wG, SG, LG) {
+        this.name = GG, this.targetProperty = bG, this.framePerSecond = ZG, this.dataType = wG, this.Dw = SG, this.enableBlending = LG, this._easingFunction = null, this._runtimeAnimations = new Array, this._events = new Array, this.blendingSpeed = .01, this._ranges = {}, this._coreAnimation = null, this.targetPropertyPath = bG.split("."), this.dataType = wG, this.Dw = void 0 === SG ? zG.ANIMATIONLOOPMODE_CYCLE : SG, this.uniqueId = zG._UniqueIdGenerator++
       }
-      toString(uu) {
-        let Eu = "Name: " + this.name + ", property: " + this.targetProperty;
-        if (Eu += ", datatype: " + ["Float", "dO", "Quaternion", "Matrix", "Color3", "Vector2"][this.dataType], Eu += ", nKeys: " + (this._keys ? this._keys.length : "none"), Eu += ", nRanges: " + (this._ranges ? Object.keys(this._ranges).length : "none"), uu) {
-          Eu += ", Ranges: {";
-          let uu = !0;
-          for (const ju in this._ranges) uu || (Eu += ", "), uu = !1, Eu += ju;
-          Eu += "}"
+      toString(GG) {
+        let bG = "Name: " + this.name + ", property: " + this.targetProperty;
+        if (bG += ", datatype: " + ["Float", "mK", "Quaternion", "Matrix", "Color3", "Vector2"][this.dataType], bG += ", nKeys: " + (this._keys ? this._keys.length : "none"), bG += ", nRanges: " + (this._ranges ? Object.keys(this._ranges).length : "none"), GG) {
+          bG += ", Ranges: {";
+          let GG = !0;
+          for (const ZG in this._ranges) GG || (bG += ", "), GG = !1, bG += ZG;
+          bG += "}"
         }
-        return Eu
+        return bG
       }
-      addEvent(uu) {
-        this._events.push(uu), this._events.sort(((uu, Eu) => uu.frame - Eu.frame))
+      addEvent(GG) {
+        this._events.push(GG), this._events.sort(((GG, bG) => GG.frame - bG.frame))
       }
-      removeEvents(uu) {
-        for (let Eu = 0; Eu < this._events.length; Eu++) this._events[Eu].frame === uu && (this._events.splice(Eu, 1), Eu--)
+      removeEvents(GG) {
+        for (let bG = 0; bG < this._events.length; bG++) this._events[bG].frame === GG && (this._events.splice(bG, 1), bG--)
       }
       getEvents() {
         return this._events
       }
-      createRange(uu, Eu, ju) {
-        this._ranges[uu] || (this._ranges[uu] = new Xu.b(uu, Eu, ju))
+      createRange(GG, bG, ZG) {
+        this._ranges[GG] || (this._ranges[GG] = new yG.c(GG, bG, ZG))
       }
-      deleteRange(uu) {
-        let Eu = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const ju = this._ranges[uu];
-        if (ju) {
-          if (Eu) {
-            const uu = ju.from,
-              Eu = ju.to;
-            for (let ju = this._keys.length - 1; ju >= 0; ju--) this._keys[ju].frame >= uu && this._keys[ju].frame <= Eu && this._keys.splice(ju, 1)
+      deleteRange(GG) {
+        let bG = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const ZG = this._ranges[GG];
+        if (ZG) {
+          if (bG) {
+            const GG = ZG.from,
+              bG = ZG.to;
+            for (let ZG = this._keys.length - 1; ZG >= 0; ZG--) this._keys[ZG].frame >= GG && this._keys[ZG].frame <= bG && this._keys.splice(ZG, 1)
           }
-          this._ranges[uu] = null
+          this._ranges[GG] = null
         }
       }
-      getRange(uu) {
-        return this._ranges[uu]
+      getRange(GG) {
+        return this._ranges[GG]
       }
       getKeys() {
         return this._keys
       }
       getHighestFrame() {
-        let uu = 0;
-        for (let Eu = 0, ju = this._keys.length; Eu < ju; Eu++) uu < this._keys[Eu].frame && (uu = this._keys[Eu].frame);
-        return uu
+        let GG = 0;
+        for (let bG = 0, ZG = this._keys.length; bG < ZG; bG++) GG < this._keys[bG].frame && (GG = this._keys[bG].frame);
+        return GG
       }
       getEasingFunction() {
         return this._easingFunction
       }
-      setEasingFunction(uu) {
-        this._easingFunction = uu
+      setEasingFunction(GG) {
+        this._easingFunction = GG
       }
-      floatInterpolateFunction(uu, Eu, ju) {
-        return (0, Zu.Lerp)(uu, Eu, ju)
+      floatInterpolateFunction(GG, bG, ZG) {
+        return (0, LG.Lerp)(GG, bG, ZG)
       }
-      floatInterpolateFunctionWithTangents(uu, Eu, ju, su, Uu) {
-        return (0, Zu.Hermite)(uu, Eu, ju, su, Uu)
+      floatInterpolateFunctionWithTangents(GG, bG, ZG, wG, SG) {
+        return (0, LG.Hermite)(GG, bG, ZG, wG, SG)
       }
-      quaternionInterpolateFunction(uu, Eu, ju) {
-        return su.i.Slerp(uu, Eu, ju)
+      quaternionInterpolateFunction(GG, bG, ZG) {
+        return wG.g.Slerp(GG, bG, ZG)
       }
-      quaternionInterpolateFunctionWithTangents(uu, Eu, ju, Uu, Zu) {
-        return su.i.Hermite(uu, Eu, ju, Uu, Zu).normalize()
+      quaternionInterpolateFunctionWithTangents(GG, bG, ZG, SG, LG) {
+        return wG.g.Hermite(GG, bG, ZG, SG, LG).normalize()
       }
-      vector3InterpolateFunction(uu, Eu, ju) {
-        return su.t.Lerp(uu, Eu, ju)
+      vector3InterpolateFunction(GG, bG, ZG) {
+        return wG.p.Lerp(GG, bG, ZG)
       }
-      vector3InterpolateFunctionWithTangents(uu, Eu, ju, Uu, Zu) {
-        return su.t.Hermite(uu, Eu, ju, Uu, Zu)
+      vector3InterpolateFunctionWithTangents(GG, bG, ZG, SG, LG) {
+        return wG.p.Hermite(GG, bG, ZG, SG, LG)
       }
-      vector2InterpolateFunction(uu, Eu, ju) {
-        return su.p.Lerp(uu, Eu, ju)
+      vector2InterpolateFunction(GG, bG, ZG) {
+        return wG.m.Lerp(GG, bG, ZG)
       }
-      vector2InterpolateFunctionWithTangents(uu, Eu, ju, Uu, Zu) {
-        return su.p.Hermite(uu, Eu, ju, Uu, Zu)
+      vector2InterpolateFunctionWithTangents(GG, bG, ZG, SG, LG) {
+        return wG.m.Hermite(GG, bG, ZG, SG, LG)
       }
-      sizeInterpolateFunction(uu, Eu, ju) {
-        return qu.e.Lerp(uu, Eu, ju)
+      sizeInterpolateFunction(GG, bG, ZG) {
+        return UG.c.Lerp(GG, bG, ZG)
       }
-      color3InterpolateFunction(uu, Eu, ju) {
-        return Uu.c.Lerp(uu, Eu, ju)
+      color3InterpolateFunction(GG, bG, ZG) {
+        return SG.c.Lerp(GG, bG, ZG)
       }
-      color3InterpolateFunctionWithTangents(uu, Eu, ju, su, Zu) {
-        return Uu.c.Hermite(uu, Eu, ju, su, Zu)
+      color3InterpolateFunctionWithTangents(GG, bG, ZG, wG, LG) {
+        return SG.c.Hermite(GG, bG, ZG, wG, LG)
       }
-      color4InterpolateFunction(uu, Eu, ju) {
-        return Uu.g.Lerp(uu, Eu, ju)
+      color4InterpolateFunction(GG, bG, ZG) {
+        return SG.d.Lerp(GG, bG, ZG)
       }
-      color4InterpolateFunctionWithTangents(uu, Eu, ju, su, Zu) {
-        return Uu.g.Hermite(uu, Eu, ju, su, Zu)
+      color4InterpolateFunctionWithTangents(GG, bG, ZG, wG, LG) {
+        return SG.d.Hermite(GG, bG, ZG, wG, LG)
       }
-      _getKeyValue(uu) {
-        return "function" === typeof uu ? uu() : uu
+      _getKeyValue(GG) {
+        return "function" === typeof GG ? GG() : GG
       }
-      evaluate(uu) {
-        return gu.key = 0, this._interpolate(uu, gu)
+      evaluate(GG) {
+        return rG.key = 0, this._interpolate(GG, rG)
       }
-      _interpolate(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (Eu.ZU === Mu.ANIMATIONLOOPMODE_CONSTANT && Eu.repeatCount > 0) return Eu.highLimitValue.clone ? Eu.highLimitValue.clone() : Eu.highLimitValue;
-        const su = this._keys;
-        let Uu;
-        if (this._coreAnimation) Uu = this._coreAnimation._key;
+      _interpolate(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (bG.Dw === zG.ANIMATIONLOOPMODE_CONSTANT && bG.repeatCount > 0) return bG.highLimitValue.clone ? bG.highLimitValue.clone() : bG.highLimitValue;
+        const wG = this._keys;
+        let SG;
+        if (this._coreAnimation) SG = this._coreAnimation._key;
         else {
-          const Zu = su.length;
-          for (Uu = Eu.key; Uu >= 0 && uu < su[Uu].frame;) --Uu;
-          for (; Uu + 1 <= Zu - 1 && uu >= su[Uu + 1].frame;) ++Uu;
-          if (Eu.key = Uu, Uu < 0) return ju ? void 0 : this._getKeyValue(su[0].value);
-          if (Uu + 1 > Zu - 1) return ju ? void 0 : this._getKeyValue(su[Zu - 1].value);
-          this._key = Uu
+          const LG = wG.length;
+          for (SG = bG.key; SG >= 0 && GG < wG[SG].frame;) --SG;
+          for (; SG + 1 <= LG - 1 && GG >= wG[SG + 1].frame;) ++SG;
+          if (bG.key = SG, SG < 0) return ZG ? void 0 : this._getKeyValue(wG[0].value);
+          if (SG + 1 > LG - 1) return ZG ? void 0 : this._getKeyValue(wG[LG - 1].value);
+          this._key = SG
         }
-        const Zu = su[Uu],
-          Xu = su[Uu + 1];
-        if (ju && (uu === Zu.frame || uu === Xu.frame)) return;
-        const lu = this._getKeyValue(Zu.value),
-          qu = this._getKeyValue(Xu.value);
-        if (1 === Zu.interpolation) return Xu.frame > uu ? lu : qu;
-        const fu = void 0 !== Zu.outTangent && void 0 !== Xu.inTangent,
-          Cu = Xu.frame - Zu.frame;
-        let bu = (uu - Zu.frame) / Cu;
-        const gu = Zu.easingFunction || this.getEasingFunction();
-        switch (gu && (bu = gu.ease(bu)), this.dataType) {
-          case Mu.ANIMATIONTYPE_FLOAT: {
-            const uu = fu ? this.floatInterpolateFunctionWithTangents(lu, Zu.outTangent * Cu, qu, Xu.inTangent * Cu, bu) : this.floatInterpolateFunction(lu, qu, bu);
-            switch (Eu.ZU) {
-              case Mu.ANIMATIONLOOPMODE_CYCLE:
-              case Mu.ANIMATIONLOOPMODE_CONSTANT:
-              case Mu.ANIMATIONLOOPMODE_YOYO:
-                return uu;
-              case Mu.ANIMATIONLOOPMODE_RELATIVE:
-              case Mu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return (Eu.offsetValue ?? 0) * Eu.repeatCount + uu
+        const LG = wG[SG],
+          yG = wG[SG + 1];
+        if (ZG && (GG === LG.frame || GG === yG.frame)) return;
+        const kG = this._getKeyValue(LG.value),
+          UG = this._getKeyValue(yG.value);
+        if (1 === LG.interpolation) return yG.frame > GG ? kG : UG;
+        const YG = void 0 !== LG.outTangent && void 0 !== yG.inTangent,
+          VG = yG.frame - LG.frame;
+        let pG = (GG - LG.frame) / VG;
+        const rG = LG.easingFunction || this.getEasingFunction();
+        switch (rG && (pG = rG.ease(pG)), this.dataType) {
+          case zG.ANIMATIONTYPE_FLOAT: {
+            const GG = YG ? this.floatInterpolateFunctionWithTangents(kG, LG.outTangent * VG, UG, yG.inTangent * VG, pG) : this.floatInterpolateFunction(kG, UG, pG);
+            switch (bG.Dw) {
+              case zG.ANIMATIONLOOPMODE_CYCLE:
+              case zG.ANIMATIONLOOPMODE_CONSTANT:
+              case zG.ANIMATIONLOOPMODE_YOYO:
+                return GG;
+              case zG.ANIMATIONLOOPMODE_RELATIVE:
+              case zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return (bG.offsetValue ?? 0) * bG.repeatCount + GG
             }
             break
           }
-          case Mu.ANIMATIONTYPE_QUATERNION: {
-            const uu = fu ? this.quaternionInterpolateFunctionWithTangents(lu, Zu.outTangent.scale(Cu), qu, Xu.inTangent.scale(Cu), bu) : this.quaternionInterpolateFunction(lu, qu, bu);
-            switch (Eu.ZU) {
-              case Mu.ANIMATIONLOOPMODE_CYCLE:
-              case Mu.ANIMATIONLOOPMODE_CONSTANT:
-              case Mu.ANIMATIONLOOPMODE_YOYO:
-                return uu;
-              case Mu.ANIMATIONLOOPMODE_RELATIVE:
-              case Mu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return uu.addInPlace((Eu.offsetValue || cu).scale(Eu.repeatCount))
+          case zG.ANIMATIONTYPE_QUATERNION: {
+            const GG = YG ? this.quaternionInterpolateFunctionWithTangents(kG, LG.outTangent.scale(VG), UG, yG.inTangent.scale(VG), pG) : this.quaternionInterpolateFunction(kG, UG, pG);
+            switch (bG.Dw) {
+              case zG.ANIMATIONLOOPMODE_CYCLE:
+              case zG.ANIMATIONLOOPMODE_CONSTANT:
+              case zG.ANIMATIONLOOPMODE_YOYO:
+                return GG;
+              case zG.ANIMATIONLOOPMODE_RELATIVE:
+              case zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return GG.addInPlace((bG.offsetValue || fG).scale(bG.repeatCount))
             }
-            return uu
+            return GG
           }
-          case Mu.ANIMATIONTYPE_VECTOR3: {
-            const uu = fu ? this.vector3InterpolateFunctionWithTangents(lu, Zu.outTangent.scale(Cu), qu, Xu.inTangent.scale(Cu), bu) : this.vector3InterpolateFunction(lu, qu, bu);
-            switch (Eu.ZU) {
-              case Mu.ANIMATIONLOOPMODE_CYCLE:
-              case Mu.ANIMATIONLOOPMODE_CONSTANT:
-              case Mu.ANIMATIONLOOPMODE_YOYO:
-                return uu;
-              case Mu.ANIMATIONLOOPMODE_RELATIVE:
-              case Mu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return uu.add((Eu.offsetValue || Nu).scale(Eu.repeatCount))
-            }
-            break
-          }
-          case Mu.ANIMATIONTYPE_VECTOR2: {
-            const uu = fu ? this.vector2InterpolateFunctionWithTangents(lu, Zu.outTangent.scale(Cu), qu, Xu.inTangent.scale(Cu), bu) : this.vector2InterpolateFunction(lu, qu, bu);
-            switch (Eu.ZU) {
-              case Mu.ANIMATIONLOOPMODE_CYCLE:
-              case Mu.ANIMATIONLOOPMODE_CONSTANT:
-              case Mu.ANIMATIONLOOPMODE_YOYO:
-                return uu;
-              case Mu.ANIMATIONLOOPMODE_RELATIVE:
-              case Mu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return uu.add((Eu.offsetValue || Ou).scale(Eu.repeatCount))
+          case zG.ANIMATIONTYPE_VECTOR3: {
+            const GG = YG ? this.vector3InterpolateFunctionWithTangents(kG, LG.outTangent.scale(VG), UG, yG.inTangent.scale(VG), pG) : this.vector3InterpolateFunction(kG, UG, pG);
+            switch (bG.Dw) {
+              case zG.ANIMATIONLOOPMODE_CYCLE:
+              case zG.ANIMATIONLOOPMODE_CONSTANT:
+              case zG.ANIMATIONLOOPMODE_YOYO:
+                return GG;
+              case zG.ANIMATIONLOOPMODE_RELATIVE:
+              case zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return GG.add((bG.offsetValue || QG).scale(bG.repeatCount))
             }
             break
           }
-          case Mu.ANIMATIONTYPE_SIZE:
-            switch (Eu.ZU) {
-              case Mu.ANIMATIONLOOPMODE_CYCLE:
-              case Mu.ANIMATIONLOOPMODE_CONSTANT:
-              case Mu.ANIMATIONLOOPMODE_YOYO:
-                return this.sizeInterpolateFunction(lu, qu, bu);
-              case Mu.ANIMATIONLOOPMODE_RELATIVE:
-              case Mu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return this.sizeInterpolateFunction(lu, qu, bu).add((Eu.offsetValue || Yu).scale(Eu.repeatCount))
+          case zG.ANIMATIONTYPE_VECTOR2: {
+            const GG = YG ? this.vector2InterpolateFunctionWithTangents(kG, LG.outTangent.scale(VG), UG, yG.inTangent.scale(VG), pG) : this.vector2InterpolateFunction(kG, UG, pG);
+            switch (bG.Dw) {
+              case zG.ANIMATIONLOOPMODE_CYCLE:
+              case zG.ANIMATIONLOOPMODE_CONSTANT:
+              case zG.ANIMATIONLOOPMODE_YOYO:
+                return GG;
+              case zG.ANIMATIONLOOPMODE_RELATIVE:
+              case zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return GG.add((bG.offsetValue || KG).scale(bG.repeatCount))
+            }
+            break
+          }
+          case zG.ANIMATIONTYPE_SIZE:
+            switch (bG.Dw) {
+              case zG.ANIMATIONLOOPMODE_CYCLE:
+              case zG.ANIMATIONLOOPMODE_CONSTANT:
+              case zG.ANIMATIONLOOPMODE_YOYO:
+                return this.sizeInterpolateFunction(kG, UG, pG);
+              case zG.ANIMATIONLOOPMODE_RELATIVE:
+              case zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return this.sizeInterpolateFunction(kG, UG, pG).add((bG.offsetValue || hG).scale(bG.repeatCount))
             }
             break;
-          case Mu.ANIMATIONTYPE_COLOR3: {
-            const uu = fu ? this.color3InterpolateFunctionWithTangents(lu, Zu.outTangent.scale(Cu), qu, Xu.inTangent.scale(Cu), bu) : this.color3InterpolateFunction(lu, qu, bu);
-            switch (Eu.ZU) {
-              case Mu.ANIMATIONLOOPMODE_CYCLE:
-              case Mu.ANIMATIONLOOPMODE_CONSTANT:
-              case Mu.ANIMATIONLOOPMODE_YOYO:
-                return uu;
-              case Mu.ANIMATIONLOOPMODE_RELATIVE:
-              case Mu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return uu.add((Eu.offsetValue || hu).scale(Eu.repeatCount))
+          case zG.ANIMATIONTYPE_COLOR3: {
+            const GG = YG ? this.color3InterpolateFunctionWithTangents(kG, LG.outTangent.scale(VG), UG, yG.inTangent.scale(VG), pG) : this.color3InterpolateFunction(kG, UG, pG);
+            switch (bG.Dw) {
+              case zG.ANIMATIONLOOPMODE_CYCLE:
+              case zG.ANIMATIONLOOPMODE_CONSTANT:
+              case zG.ANIMATIONLOOPMODE_YOYO:
+                return GG;
+              case zG.ANIMATIONLOOPMODE_RELATIVE:
+              case zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return GG.add((bG.offsetValue || dG).scale(bG.repeatCount))
             }
             break
           }
-          case Mu.ANIMATIONTYPE_COLOR4: {
-            const uu = fu ? this.color4InterpolateFunctionWithTangents(lu, Zu.outTangent.scale(Cu), qu, Xu.inTangent.scale(Cu), bu) : this.color4InterpolateFunction(lu, qu, bu);
-            switch (Eu.ZU) {
-              case Mu.ANIMATIONLOOPMODE_CYCLE:
-              case Mu.ANIMATIONLOOPMODE_CONSTANT:
-              case Mu.ANIMATIONLOOPMODE_YOYO:
-                return uu;
-              case Mu.ANIMATIONLOOPMODE_RELATIVE:
-              case Mu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return uu.add((Eu.offsetValue || Du).scale(Eu.repeatCount))
+          case zG.ANIMATIONTYPE_COLOR4: {
+            const GG = YG ? this.color4InterpolateFunctionWithTangents(kG, LG.outTangent.scale(VG), UG, yG.inTangent.scale(VG), pG) : this.color4InterpolateFunction(kG, UG, pG);
+            switch (bG.Dw) {
+              case zG.ANIMATIONLOOPMODE_CYCLE:
+              case zG.ANIMATIONLOOPMODE_CONSTANT:
+              case zG.ANIMATIONLOOPMODE_YOYO:
+                return GG;
+              case zG.ANIMATIONLOOPMODE_RELATIVE:
+              case zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return GG.add((bG.offsetValue || JG).scale(bG.repeatCount))
             }
             break
           }
-          case Mu.ANIMATIONTYPE_MATRIX:
-            switch (Eu.ZU) {
-              case Mu.ANIMATIONLOOPMODE_CYCLE:
-              case Mu.ANIMATIONLOOPMODE_CONSTANT:
-              case Mu.ANIMATIONLOOPMODE_YOYO:
-                return Mu.AllowMatricesInterpolation ? this.matrixInterpolateFunction(lu, qu, bu, Eu.workValue) : lu;
-              case Mu.ANIMATIONLOOPMODE_RELATIVE:
-              case Mu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return lu
+          case zG.ANIMATIONTYPE_MATRIX:
+            switch (bG.Dw) {
+              case zG.ANIMATIONLOOPMODE_CYCLE:
+              case zG.ANIMATIONLOOPMODE_CONSTANT:
+              case zG.ANIMATIONLOOPMODE_YOYO:
+                return zG.AllowMatricesInterpolation ? this.matrixInterpolateFunction(kG, UG, pG, bG.workValue) : kG;
+              case zG.ANIMATIONLOOPMODE_RELATIVE:
+              case zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return kG
             }
         }
         return 0
       }
-      matrixInterpolateFunction(uu, Eu, ju, Uu) {
-        return Mu.AllowMatrixDecomposeForInterpolation ? Uu ? (su.e.DecomposeLerpToRef(uu, Eu, ju, Uu), Uu) : su.e.DecomposeLerp(uu, Eu, ju) : Uu ? (su.e.LerpToRef(uu, Eu, ju, Uu), Uu) : su.e.Lerp(uu, Eu, ju)
+      matrixInterpolateFunction(GG, bG, ZG, SG) {
+        return zG.AllowMatrixDecomposeForInterpolation ? SG ? (wG.e.DecomposeLerpToRef(GG, bG, ZG, SG), SG) : wG.e.DecomposeLerp(GG, bG, ZG) : SG ? (wG.e.LerpToRef(GG, bG, ZG, SG), SG) : wG.e.Lerp(GG, bG, ZG)
       }
       clone() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Eu = new Mu(this.name, this.targetPropertyPath.join("."), this.framePerSecond, this.dataType, this.ZU);
-        if (Eu.enableBlending = this.enableBlending, Eu.blendingSpeed = this.blendingSpeed, this._keys && Eu.setKeys(this._keys, !1, uu), this._ranges) {
-          Eu._ranges = {};
-          for (const uu in this._ranges) {
-            const ju = this._ranges[uu];
-            ju && (Eu._ranges[uu] = ju.clone())
+        let GG = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const bG = new zG(this.name, this.targetPropertyPath.join("."), this.framePerSecond, this.dataType, this.Dw);
+        if (bG.enableBlending = this.enableBlending, bG.blendingSpeed = this.blendingSpeed, this._keys && bG.setKeys(this._keys, !1, GG), this._ranges) {
+          bG._ranges = {};
+          for (const GG in this._ranges) {
+            const ZG = this._ranges[GG];
+            ZG && (bG._ranges[GG] = ZG.clone())
           }
         }
-        return Eu
+        return bG
       }
-      setKeys(uu) {
-        let Eu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) this._keys = uu;
-        else if (this._keys = uu.slice(0), Eu)
-          for (let ju = 0; ju < this._keys.length; ju++) {
-            const uu = this._keys[ju];
-            this._keys[ju] = {
-              frame: uu.frame,
-              value: uu.value.clone ? uu.value.clone() : uu.value,
-              inTangent: uu.inTangent && uu.inTangent.clone ? uu.inTangent.clone() : uu.inTangent,
-              outTangent: uu.outTangent && uu.outTangent.clone ? uu.outTangent.clone() : uu.outTangent,
-              interpolation: uu.interpolation,
-              lockedTangent: uu.lockedTangent,
-              easingFunction: uu.easingFunction
+      setKeys(GG) {
+        let bG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) this._keys = GG;
+        else if (this._keys = GG.slice(0), bG)
+          for (let ZG = 0; ZG < this._keys.length; ZG++) {
+            const GG = this._keys[ZG];
+            this._keys[ZG] = {
+              frame: GG.frame,
+              value: GG.value.clone ? GG.value.clone() : GG.value,
+              inTangent: GG.inTangent && GG.inTangent.clone ? GG.inTangent.clone() : GG.inTangent,
+              outTangent: GG.outTangent && GG.outTangent.clone ? GG.outTangent.clone() : GG.outTangent,
+              interpolation: GG.interpolation,
+              lockedTangent: GG.lockedTangent,
+              easingFunction: GG.easingFunction
             }
           }
       }
-      createKeyForFrame(uu) {
-        gu.key = 0;
-        const Eu = this._interpolate(uu, gu, !0);
-        if (!Eu) return this._keys[gu.key].frame === uu ? gu.key : gu.key + 1;
-        const ju = {
-          frame: uu,
-          value: Eu.clone ? Eu.clone() : Eu
+      createKeyForFrame(GG) {
+        rG.key = 0;
+        const bG = this._interpolate(GG, rG, !0);
+        if (!bG) return this._keys[rG.key].frame === GG ? rG.key : rG.key + 1;
+        const ZG = {
+          frame: GG,
+          value: bG.clone ? bG.clone() : bG
         };
-        return this._keys.splice(gu.key + 1, 0, ju), gu.key + 1
+        return this._keys.splice(rG.key + 1, 0, ZG), rG.key + 1
       }
       serialize() {
-        const uu = {};
-        uu.name = this.name, uu.property = this.targetProperty, uu.framePerSecond = this.framePerSecond, uu.dataType = this.dataType, uu.loopBehavior = this.ZU, uu.enableBlending = this.enableBlending, uu.blendingSpeed = this.blendingSpeed;
-        const Eu = this.dataType;
-        uu.keys = [];
-        const ju = this.getKeys();
-        for (let su = 0; su < ju.length; su++) {
-          const Uu = ju[su],
-            Zu = {};
-          switch (Zu.frame = Uu.frame, Eu) {
-            case Mu.ANIMATIONTYPE_FLOAT:
-              Zu.values = [Uu.value], void 0 !== Uu.inTangent && Zu.values.push(Uu.inTangent), void 0 !== Uu.outTangent && (void 0 === Uu.inTangent && Zu.values.push(void 0), Zu.values.push(Uu.outTangent)), void 0 !== Uu.interpolation && (void 0 === Uu.inTangent && Zu.values.push(void 0), void 0 === Uu.outTangent && Zu.values.push(void 0), Zu.values.push(Uu.interpolation));
+        const GG = {};
+        GG.name = this.name, GG.property = this.targetProperty, GG.framePerSecond = this.framePerSecond, GG.dataType = this.dataType, GG.loopBehavior = this.Dw, GG.enableBlending = this.enableBlending, GG.blendingSpeed = this.blendingSpeed;
+        const bG = this.dataType;
+        GG.keys = [];
+        const ZG = this.getKeys();
+        for (let wG = 0; wG < ZG.length; wG++) {
+          const SG = ZG[wG],
+            LG = {};
+          switch (LG.frame = SG.frame, bG) {
+            case zG.ANIMATIONTYPE_FLOAT:
+              LG.values = [SG.value], void 0 !== SG.inTangent && LG.values.push(SG.inTangent), void 0 !== SG.outTangent && (void 0 === SG.inTangent && LG.values.push(void 0), LG.values.push(SG.outTangent)), void 0 !== SG.interpolation && (void 0 === SG.inTangent && LG.values.push(void 0), void 0 === SG.outTangent && LG.values.push(void 0), LG.values.push(SG.interpolation));
               break;
-            case Mu.ANIMATIONTYPE_QUATERNION:
-            case Mu.ANIMATIONTYPE_MATRIX:
-            case Mu.ANIMATIONTYPE_VECTOR3:
-            case Mu.ANIMATIONTYPE_COLOR3:
-            case Mu.ANIMATIONTYPE_COLOR4:
-              Zu.values = Uu.value.Osu(), void 0 != Uu.inTangent && Zu.values.push(Uu.inTangent.Osu()), void 0 != Uu.outTangent && (void 0 === Uu.inTangent && Zu.values.push(void 0), Zu.values.push(Uu.outTangent.Osu())), void 0 !== Uu.interpolation && (void 0 === Uu.inTangent && Zu.values.push(void 0), void 0 === Uu.outTangent && Zu.values.push(void 0), Zu.values.push(Uu.interpolation))
+            case zG.ANIMATIONTYPE_QUATERNION:
+            case zG.ANIMATIONTYPE_MATRIX:
+            case zG.ANIMATIONTYPE_VECTOR3:
+            case zG.ANIMATIONTYPE_COLOR3:
+            case zG.ANIMATIONTYPE_COLOR4:
+              LG.values = SG.value.mwG(), void 0 != SG.inTangent && LG.values.push(SG.inTangent.mwG()), void 0 != SG.outTangent && (void 0 === SG.inTangent && LG.values.push(void 0), LG.values.push(SG.outTangent.mwG())), void 0 !== SG.interpolation && (void 0 === SG.inTangent && LG.values.push(void 0), void 0 === SG.outTangent && LG.values.push(void 0), LG.values.push(SG.interpolation))
           }
-          uu.keys.push(Zu)
+          GG.keys.push(LG)
         }
-        uu.HY = [];
-        for (const su in this._ranges) {
-          const Eu = this._ranges[su];
-          if (!Eu) continue;
-          const ju = {};
-          ju.name = su, ju.from = Eu.from, ju.to = Eu.to, uu.HY.push(ju)
+        GG.Bh = [];
+        for (const wG in this._ranges) {
+          const bG = this._ranges[wG];
+          if (!bG) continue;
+          const ZG = {};
+          ZG.name = wG, ZG.from = bG.from, ZG.to = bG.to, GG.Bh.push(ZG)
         }
-        return uu
+        return GG
       }
-      static _UniversalLerp(uu, Eu, ju) {
-        const su = uu.constructor;
-        return su.Lerp ? su.Lerp(uu, Eu, ju) : su.Slerp ? su.Slerp(uu, Eu, ju) : uu.toFixed ? uu * (1 - ju) + ju * Eu : Eu
+      static _UniversalLerp(GG, bG, ZG) {
+        const wG = GG.constructor;
+        return wG.Lerp ? wG.Lerp(GG, bG, ZG) : wG.Slerp ? wG.Slerp(GG, bG, ZG) : GG.toFixed ? GG * (1 - ZG) + ZG * bG : bG
       }
     }
 
-    function eu(uu, Eu, ju) {
-      let Uu;
-      Uu = "object" === typeof Eu ? Eu : {
-        referenceFrame: Eu ?? 0,
-        range: ju,
+    function EG(GG, bG, ZG) {
+      let SG;
+      SG = "object" === typeof bG ? bG : {
+        referenceFrame: bG ?? 0,
+        range: ZG,
         cloneOriginalAnimation: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         clonedAnimationName: arguments.length > 4 ? arguments[4] : void 0
       };
-      let Zu = uu;
-      Uu.cloneOriginalAnimation && (Zu = uu.clone(), Zu.name = Uu.clonedAnimationName || Zu.name);
-      const Xu = Zu.getKeys();
-      if (!Xu.length) return Zu;
-      const lu = Uu.referenceFrame && Uu.referenceFrame >= 0 ? Uu.referenceFrame : 0;
-      let qu = 0;
-      const fu = Xu[0];
-      let Cu = Xu.length - 1;
-      const bu = Xu[Cu],
-        cu = {
-          referenceValue: fu.value,
-          referencePosition: su.m.dO[0],
-          referenceQuaternion: su.m.Quaternion[0],
-          referenceScaling: su.m.dO[1],
-          keyPosition: su.m.dO[2],
-          keyQuaternion: su.m.Quaternion[1],
-          keyScaling: su.m.dO[3]
+      let LG = GG;
+      SG.cloneOriginalAnimation && (LG = GG.clone(), LG.name = SG.clonedAnimationName || LG.name);
+      const yG = LG.getKeys();
+      if (!yG.length) return LG;
+      const kG = SG.referenceFrame && SG.referenceFrame >= 0 ? SG.referenceFrame : 0;
+      let UG = 0;
+      const YG = yG[0];
+      let VG = yG.length - 1;
+      const pG = yG[VG],
+        fG = {
+          referenceValue: YG.value,
+          referencePosition: wG.j.mK[0],
+          referenceQuaternion: wG.j.Quaternion[0],
+          referenceScaling: wG.j.mK[1],
+          keyPosition: wG.j.mK[2],
+          keyQuaternion: wG.j.Quaternion[1],
+          keyScaling: wG.j.mK[3]
         };
-      let Nu = fu.frame,
-        Ou = bu.frame;
-      if (Uu.range) {
-        const uu = Zu.getRange(Uu.range);
-        uu && (Nu = uu.from, Ou = uu.to)
-      } else Nu = Uu.fromFrame ?? Nu, Ou = Uu.toFrame ?? Ou;
-      Nu !== fu.frame && (qu = Zu.createKeyForFrame(Nu)), Ou !== bu.frame && (Cu = Zu.createKeyForFrame(Ou));
-      const Yu = Zu.getKeys();
-      if (1 === Yu.length) {
-        const uu = Zu._getKeyValue(Yu[0].value);
-        cu.referenceValue = uu.clone ? uu.clone() : uu
-      } else if (lu <= fu.frame) {
-        const uu = Zu._getKeyValue(fu.value);
-        cu.referenceValue = uu.clone ? uu.clone() : uu
-      } else if (lu >= bu.frame) {
-        const uu = Zu._getKeyValue(bu.value);
-        cu.referenceValue = uu.clone ? uu.clone() : uu
+      let QG = YG.frame,
+        KG = pG.frame;
+      if (SG.range) {
+        const GG = LG.getRange(SG.range);
+        GG && (QG = GG.from, KG = GG.to)
+      } else QG = SG.fromFrame ?? QG, KG = SG.toFrame ?? KG;
+      QG !== YG.frame && (UG = LG.createKeyForFrame(QG)), KG !== pG.frame && (VG = LG.createKeyForFrame(KG));
+      const hG = LG.getKeys();
+      if (1 === hG.length) {
+        const GG = LG._getKeyValue(hG[0].value);
+        fG.referenceValue = GG.clone ? GG.clone() : GG
+      } else if (kG <= YG.frame) {
+        const GG = LG._getKeyValue(YG.value);
+        fG.referenceValue = GG.clone ? GG.clone() : GG
+      } else if (kG >= pG.frame) {
+        const GG = LG._getKeyValue(pG.value);
+        fG.referenceValue = GG.clone ? GG.clone() : GG
       } else {
-        gu.key = 0;
-        const uu = Zu._interpolate(lu, gu);
-        cu.referenceValue = uu.clone ? uu.clone() : uu
+        rG.key = 0;
+        const GG = LG._interpolate(kG, rG);
+        fG.referenceValue = GG.clone ? GG.clone() : GG
       }
-      Zu.dataType === Mu.ANIMATIONTYPE_QUATERNION ? cu.referenceValue.normalize().conjugateInPlace() : Zu.dataType === Mu.ANIMATIONTYPE_MATRIX && (cu.referenceValue.decompose(cu.referenceScaling, cu.referenceQuaternion, cu.referencePosition), cu.referenceQuaternion.normalize().conjugateInPlace());
-      let hu = Number.MAX_VALUE;
-      const Du = Uu.clipKeys ? [] : null;
-      for (let gu = qu; gu <= Cu; gu++) {
-        let uu = Yu[gu];
-        if ((Du || Uu.cloneOriginalAnimation) && (uu = {
-            frame: uu.frame,
-            value: uu.value.clone ? uu.value.clone() : uu.value,
-            inTangent: uu.inTangent,
-            outTangent: uu.outTangent,
-            interpolation: uu.interpolation,
-            lockedTangent: uu.lockedTangent,
-            easingFunction: uu.easingFunction
-          }, Du && (hu === Number.MAX_VALUE && (hu = uu.frame), uu.frame -= hu, Du.push(uu))), !gu || Zu.dataType === Mu.ANIMATIONTYPE_FLOAT || uu.value !== fu.value) switch (Zu.dataType) {
-          case Mu.ANIMATIONTYPE_MATRIX:
-            uu.value.decompose(cu.keyScaling, cu.keyQuaternion, cu.keyPosition), cu.keyPosition.Qsu(cu.referencePosition), cu.keyScaling.divideInPlace(cu.referenceScaling), cu.referenceQuaternion.multiplyToRef(cu.keyQuaternion, cu.keyQuaternion), su.e.ComposeToRef(cu.keyScaling, cu.keyQuaternion, cu.keyPosition, uu.value);
+      LG.dataType === zG.ANIMATIONTYPE_QUATERNION ? fG.referenceValue.normalize().conjugateInPlace() : LG.dataType === zG.ANIMATIONTYPE_MATRIX && (fG.referenceValue.decompose(fG.referenceScaling, fG.referenceQuaternion, fG.referencePosition), fG.referenceQuaternion.normalize().conjugateInPlace());
+      let dG = Number.MAX_VALUE;
+      const JG = SG.clipKeys ? [] : null;
+      for (let rG = UG; rG <= VG; rG++) {
+        let GG = hG[rG];
+        if ((JG || SG.cloneOriginalAnimation) && (GG = {
+            frame: GG.frame,
+            value: GG.value.clone ? GG.value.clone() : GG.value,
+            inTangent: GG.inTangent,
+            outTangent: GG.outTangent,
+            interpolation: GG.interpolation,
+            lockedTangent: GG.lockedTangent,
+            easingFunction: GG.easingFunction
+          }, JG && (dG === Number.MAX_VALUE && (dG = GG.frame), GG.frame -= dG, JG.push(GG))), !rG || LG.dataType === zG.ANIMATIONTYPE_FLOAT || GG.value !== YG.value) switch (LG.dataType) {
+          case zG.ANIMATIONTYPE_MATRIX:
+            GG.value.decompose(fG.keyScaling, fG.keyQuaternion, fG.keyPosition), fG.keyPosition.twG(fG.referencePosition), fG.keyScaling.divideInPlace(fG.referenceScaling), fG.referenceQuaternion.multiplyToRef(fG.keyQuaternion, fG.keyQuaternion), wG.e.ComposeToRef(fG.keyScaling, fG.keyQuaternion, fG.keyPosition, GG.value);
             break;
-          case Mu.ANIMATIONTYPE_QUATERNION:
-            cu.referenceValue.multiplyToRef(uu.value, uu.value);
+          case zG.ANIMATIONTYPE_QUATERNION:
+            fG.referenceValue.multiplyToRef(GG.value, GG.value);
             break;
-          case Mu.ANIMATIONTYPE_VECTOR2:
-          case Mu.ANIMATIONTYPE_VECTOR3:
-          case Mu.ANIMATIONTYPE_COLOR3:
-          case Mu.ANIMATIONTYPE_COLOR4:
-            uu.value.subtractToRef(cu.referenceValue, uu.value);
+          case zG.ANIMATIONTYPE_VECTOR2:
+          case zG.ANIMATIONTYPE_VECTOR3:
+          case zG.ANIMATIONTYPE_COLOR3:
+          case zG.ANIMATIONTYPE_COLOR4:
+            GG.value.subtractToRef(fG.referenceValue, GG.value);
             break;
-          case Mu.ANIMATIONTYPE_SIZE:
-            uu.value.width -= cu.referenceValue.width, uu.value.height -= cu.referenceValue.height;
+          case zG.ANIMATIONTYPE_SIZE:
+            GG.value.width -= fG.referenceValue.width, GG.value.height -= fG.referenceValue.height;
             break;
           default:
-            uu.value -= cu.referenceValue
+            GG.value -= fG.referenceValue
         }
       }
-      return Du && Zu.setKeys(Du, !0), Zu
+      return JG && LG.setKeys(JG, !0), LG
     }
 
-    function Gu(uu, Eu, ju, su) {
-      const Uu = new Mu(uu + "Animation", uu, ju, Eu, Mu.ANIMATIONLOOPMODE_CONSTANT);
-      return Uu.setEasingFunction(su), Uu
+    function oG(GG, bG, ZG, wG) {
+      const SG = new zG(GG + "Animation", GG, ZG, bG, zG.ANIMATIONLOOPMODE_CONSTANT);
+      return SG.setEasingFunction(wG), SG
     }
 
-    function pu(uu, Eu, ju, su, Uu, Zu, Xu, lu, qu, fu, Cu) {
-      const bu = Mu._PrepareAnimation(uu, ju, su, Uu, Zu, Xu, lu, qu);
-      return bu ? (Eu.hV && (Cu = Eu.hV()), Cu ? Cu.beginDirectAnimation(Eu, [bu], 0, Uu, bu.ZU !== Mu.ANIMATIONLOOPMODE_CONSTANT, 1, fu) : null) : null
+    function XG(GG, bG, ZG, wG, SG, LG, yG, kG, UG, YG, VG) {
+      const pG = zG._PrepareAnimation(GG, ZG, wG, SG, LG, yG, kG, UG);
+      return pG ? (bG.Dv && (VG = bG.Dv()), VG ? VG.beginDirectAnimation(bG, [pG], 0, SG, pG.Dw !== zG.ANIMATIONLOOPMODE_CONSTANT, 1, YG) : null) : null
     }
 
-    function wu(uu, Eu, ju, su, Uu, Zu, Xu, lu, qu, fu, Cu) {
-      const bu = Mu._PrepareAnimation(uu, su, Uu, Zu, Xu, lu, qu, fu);
-      if (!bu) return null;
-      return Eu.hV().beginDirectHierarchyAnimation(Eu, ju, [bu], 0, Zu, 1 === bu.ZU, 1, Cu)
+    function uG(GG, bG, ZG, wG, SG, LG, yG, kG, UG, YG, VG) {
+      const pG = zG._PrepareAnimation(GG, wG, SG, LG, yG, kG, UG, YG);
+      if (!pG) return null;
+      return bG.Dv().beginDirectHierarchyAnimation(bG, ZG, [pG], 0, LG, 1 === pG.Dw, 1, VG)
     }
 
-    function Ju(uu, Eu, ju, su, Uu, Zu, Xu, lu, qu, fu) {
-      const Cu = Mu._PrepareAnimation(uu, ju, su, Uu, Zu, Xu, lu, qu);
-      return Cu ? (Eu.animations.push(Cu), Eu.hV().beginAnimation(Eu, 0, Uu, 1 === Cu.ZU, 1, fu)) : null
+    function iG(GG, bG, ZG, wG, SG, LG, yG, kG, UG, YG) {
+      const VG = zG._PrepareAnimation(GG, ZG, wG, SG, LG, yG, kG, UG);
+      return VG ? (bG.animations.push(VG), bG.Dv().beginAnimation(bG, 0, SG, 1 === VG.Dw, 1, YG)) : null
     }
 
-    function du(uu, Eu, ju, su, Uu, Zu, Xu) {
-      let lu = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-        qu = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-        fu = arguments.length > 9 ? arguments[9] : void 0;
-      if (Xu <= 0) return ju[uu] = Eu, lu && lu(), null;
-      const Cu = Uu * (Xu / 1e3);
-      Zu.setKeys(fu ?? [{
+    function CG(GG, bG, ZG, wG, SG, LG, yG) {
+      let kG = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+        UG = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+        YG = arguments.length > 9 ? arguments[9] : void 0;
+      if (yG <= 0) return ZG[GG] = bG, kG && kG(), null;
+      const VG = SG * (yG / 1e3);
+      LG.setKeys(YG ?? [{
         frame: 0,
-        value: ju[uu].clone ? ju[uu].clone() : ju[uu]
+        value: ZG[GG].clone ? ZG[GG].clone() : ZG[GG]
       }, {
-        frame: Cu,
-        value: Eu
-      }]), ju.animations || (ju.animations = []), ju.animations.push(Zu);
-      return su.beginAnimation(ju, 0, Cu, !1, 1, lu ?? void 0, void 0, qu)
+        frame: VG,
+        value: bG
+      }]), ZG.animations || (ZG.animations = []), ZG.animations.push(LG);
+      return wG.beginAnimation(ZG, 0, VG, !1, 1, kG ?? void 0, void 0, UG)
     }
 
-    function au(uu, Eu) {
-      Cu.e.AppendSerializedAnimations(uu, Eu)
+    function WG(GG, bG) {
+      VG.b.AppendSerializedAnimations(GG, bG)
     }
 
-    function Pu(uu) {
-      const Eu = new Mu(uu.name, uu.property, uu.framePerSecond, uu.dataType, uu.loopBehavior),
-        ju = uu.dataType,
-        Zu = [];
-      let Xu, lu;
-      for (uu.enableBlending && (Eu.enableBlending = uu.enableBlending), uu.blendingSpeed && (Eu.blendingSpeed = uu.blendingSpeed), lu = 0; lu < uu.keys.length; lu++) {
-        const Eu = uu.keys[lu];
-        let qu, fu, Cu;
-        switch (ju) {
-          case Mu.ANIMATIONTYPE_FLOAT:
-            Xu = Eu.values[0], Eu.values.length >= 2 && (qu = Eu.values[1]), Eu.values.length >= 3 && (fu = Eu.values[2]), Eu.values.length >= 4 && (Cu = Eu.values[3]);
+    function mG(GG) {
+      const bG = new zG(GG.name, GG.property, GG.framePerSecond, GG.dataType, GG.loopBehavior),
+        ZG = GG.dataType,
+        LG = [];
+      let yG, kG;
+      for (GG.enableBlending && (bG.enableBlending = GG.enableBlending), GG.blendingSpeed && (bG.blendingSpeed = GG.blendingSpeed), kG = 0; kG < GG.keys.length; kG++) {
+        const bG = GG.keys[kG];
+        let UG, YG, VG;
+        switch (ZG) {
+          case zG.ANIMATIONTYPE_FLOAT:
+            yG = bG.values[0], bG.values.length >= 2 && (UG = bG.values[1]), bG.values.length >= 3 && (YG = bG.values[2]), bG.values.length >= 4 && (VG = bG.values[3]);
             break;
-          case Mu.ANIMATIONTYPE_QUATERNION:
-            if (Xu = su.i.FromArray(Eu.values), Eu.values.length >= 8) {
-              const uu = su.i.FromArray(Eu.values.slice(4, 8));
-              uu.equals(su.i.Zero()) || (qu = uu)
+          case zG.ANIMATIONTYPE_QUATERNION:
+            if (yG = wG.g.FromArray(bG.values), bG.values.length >= 8) {
+              const GG = wG.g.FromArray(bG.values.slice(4, 8));
+              GG.equals(wG.g.Zero()) || (UG = GG)
             }
-            if (Eu.values.length >= 12) {
-              const uu = su.i.FromArray(Eu.values.slice(8, 12));
-              uu.equals(su.i.Zero()) || (fu = uu)
+            if (bG.values.length >= 12) {
+              const GG = wG.g.FromArray(bG.values.slice(8, 12));
+              GG.equals(wG.g.Zero()) || (YG = GG)
             }
-            Eu.values.length >= 13 && (Cu = Eu.values[12]);
+            bG.values.length >= 13 && (VG = bG.values[12]);
             break;
-          case Mu.ANIMATIONTYPE_MATRIX:
-            Xu = su.e.FromArray(Eu.values), Eu.values.length >= 17 && (Cu = Eu.values[16]);
+          case zG.ANIMATIONTYPE_MATRIX:
+            yG = wG.e.FromArray(bG.values), bG.values.length >= 17 && (VG = bG.values[16]);
             break;
-          case Mu.ANIMATIONTYPE_COLOR3:
-            Xu = Uu.c.FromArray(Eu.values), Eu.values[3] && (qu = Uu.c.FromArray(Eu.values[3])), Eu.values[4] && (fu = Uu.c.FromArray(Eu.values[4])), Eu.values[5] && (Cu = Eu.values[5]);
+          case zG.ANIMATIONTYPE_COLOR3:
+            yG = SG.c.FromArray(bG.values), bG.values[3] && (UG = SG.c.FromArray(bG.values[3])), bG.values[4] && (YG = SG.c.FromArray(bG.values[4])), bG.values[5] && (VG = bG.values[5]);
             break;
-          case Mu.ANIMATIONTYPE_COLOR4:
-            Xu = Uu.g.FromArray(Eu.values), Eu.values[4] && (qu = Uu.g.FromArray(Eu.values[4])), Eu.values[5] && (fu = Uu.g.FromArray(Eu.values[5])), Eu.values[6] && (Cu = Eu.values[6]);
+          case zG.ANIMATIONTYPE_COLOR4:
+            yG = SG.d.FromArray(bG.values), bG.values[4] && (UG = SG.d.FromArray(bG.values[4])), bG.values[5] && (YG = SG.d.FromArray(bG.values[5])), bG.values[6] && (VG = bG.values[6]);
             break;
-          case Mu.ANIMATIONTYPE_VECTOR3:
+          case zG.ANIMATIONTYPE_VECTOR3:
           default:
-            Xu = su.t.FromArray(Eu.values), Eu.values[3] && (qu = su.t.FromArray(Eu.values[3])), Eu.values[4] && (fu = su.t.FromArray(Eu.values[4])), Eu.values[5] && (Cu = Eu.values[5])
+            yG = wG.p.FromArray(bG.values), bG.values[3] && (UG = wG.p.FromArray(bG.values[3])), bG.values[4] && (YG = wG.p.FromArray(bG.values[4])), bG.values[5] && (VG = bG.values[5])
         }
-        const bu = {};
-        bu.frame = Eu.frame, bu.value = Xu, void 0 != qu && (bu.inTangent = qu), void 0 != fu && (bu.outTangent = fu), void 0 != Cu && (bu.interpolation = Cu), Zu.push(bu)
+        const pG = {};
+        pG.frame = bG.frame, pG.value = yG, void 0 != UG && (pG.inTangent = UG), void 0 != YG && (pG.outTangent = YG), void 0 != VG && (pG.interpolation = VG), LG.push(pG)
       }
-      if (Eu.setKeys(Zu), uu.HY)
-        for (lu = 0; lu < uu.HY.length; lu++) Xu = uu.HY[lu], Eu.createRange(Xu.name, Xu.from, Xu.to);
-      return Eu
+      if (bG.setKeys(LG), GG.Bh)
+        for (kG = 0; kG < GG.Bh.length; kG++) yG = GG.Bh[kG], bG.createRange(yG.name, yG.from, yG.to);
+      return bG
     }
-    async function ou(uu, Eu) {
-      return await new Promise(((ju, su) => {
-        const Uu = new fu.b;
-        Uu.addEventListener("readystatechange", (() => {
-          if (4 == Uu.readyState)
-            if (200 == Uu.status) {
-              let Eu = JSON.parse(Uu.responseText);
-              if (Eu.animations && (Eu = Eu.animations), Eu.length) {
-                const uu = [];
-                for (const ju of Eu) uu.push(Pu(ju));
-                ju(uu)
+    async function IG(GG, bG) {
+      return await new Promise(((ZG, wG) => {
+        const SG = new YG.b;
+        SG.addEventListener("readystatechange", (() => {
+          if (4 == SG.readyState)
+            if (200 == SG.status) {
+              let bG = JSON.parse(SG.responseText);
+              if (bG.animations && (bG = bG.animations), bG.length) {
+                const GG = [];
+                for (const ZG of bG) GG.push(mG(ZG));
+                ZG(GG)
               } else {
-                const su = Pu(Eu);
-                uu && (su.name = uu), ju(su)
+                const wG = mG(bG);
+                GG && (wG.name = GG), ZG(wG)
               }
-            } else su("Unable to load the animation")
-        })), Uu.open("GET", Eu), Uu.send()
+            } else wG("Unable to load the animation")
+        })), SG.open("GET", bG), SG.send()
       }))
     }
-    async function ku(uu) {
-      const Eu = this?.SnippetUrl ?? Mu.SnippetUrl;
-      return await new Promise(((ju, su) => {
-        const Uu = new fu.b;
-        Uu.addEventListener("readystatechange", (() => {
-          if (4 == Uu.readyState)
-            if (200 == Uu.status) {
-              const Eu = JSON.parse(JSON.parse(Uu.responseText).jsonPayload);
-              if (Eu.animations) {
-                const su = JSON.parse(Eu.animations),
-                  Uu = [];
-                for (const Eu of su.animations) {
-                  const ju = Pu(Eu);
-                  ju.snippetId = uu, Uu.push(ju)
+    async function FG(GG) {
+      const bG = this?.SnippetUrl ?? zG.SnippetUrl;
+      return await new Promise(((ZG, wG) => {
+        const SG = new YG.b;
+        SG.addEventListener("readystatechange", (() => {
+          if (4 == SG.readyState)
+            if (200 == SG.status) {
+              const bG = JSON.parse(JSON.parse(SG.responseText).jsonPayload);
+              if (bG.animations) {
+                const wG = JSON.parse(bG.animations),
+                  SG = [];
+                for (const bG of wG.animations) {
+                  const ZG = mG(bG);
+                  ZG.snippetId = GG, SG.push(ZG)
                 }
-                ju(Uu)
+                ZG(SG)
               } else {
-                const su = Pu(JSON.parse(Eu.animation));
-                su.snippetId = uu, ju(su)
+                const wG = mG(JSON.parse(bG.animation));
+                wG.snippetId = GG, ZG(wG)
               }
-            } else su("Unable to load the snippet " + uu)
-        })), Uu.open("GET", Eu + "/" + uu.replace(/#/g, "/")), Uu.send()
+            } else wG("Unable to load the snippet " + GG)
+        })), SG.open("GET", bG + "/" + GG.replace(/#/g, "/")), SG.send()
       }))
     }
-    Mu._UniqueIdGenerator = 0, Mu.AllowMatricesInterpolation = !1, Mu.AllowMatrixDecomposeForInterpolation = !0, Mu.InheritOriginalValueFromActiveAnimations = !1, Mu.SnippetUrl = "https://snippet.babylonjs.com", Mu.ANIMATIONTYPE_FLOAT = 0, Mu.ANIMATIONTYPE_VECTOR3 = 1, Mu.ANIMATIONTYPE_QUATERNION = 2, Mu.ANIMATIONTYPE_MATRIX = 3, Mu.ANIMATIONTYPE_COLOR3 = 4, Mu.ANIMATIONTYPE_COLOR4 = 7, Mu.ANIMATIONTYPE_VECTOR2 = 5, Mu.ANIMATIONTYPE_SIZE = 6, Mu.ANIMATIONLOOPMODE_RELATIVE = 0, Mu.ANIMATIONLOOPMODE_CYCLE = 1, Mu.ANIMATIONLOOPMODE_CONSTANT = 2, Mu.ANIMATIONLOOPMODE_YOYO = 4, Mu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT = 5;
-    const mu = ku;
-    let vu = !1;
+    zG._UniqueIdGenerator = 0, zG.AllowMatricesInterpolation = !1, zG.AllowMatrixDecomposeForInterpolation = !0, zG.InheritOriginalValueFromActiveAnimations = !1, zG.SnippetUrl = "https://snippet.babylonjs.com", zG.ANIMATIONTYPE_FLOAT = 0, zG.ANIMATIONTYPE_VECTOR3 = 1, zG.ANIMATIONTYPE_QUATERNION = 2, zG.ANIMATIONTYPE_MATRIX = 3, zG.ANIMATIONTYPE_COLOR3 = 4, zG.ANIMATIONTYPE_COLOR4 = 7, zG.ANIMATIONTYPE_VECTOR2 = 5, zG.ANIMATIONTYPE_SIZE = 6, zG.ANIMATIONLOOPMODE_RELATIVE = 0, zG.ANIMATIONLOOPMODE_CYCLE = 1, zG.ANIMATIONLOOPMODE_CONSTANT = 2, zG.ANIMATIONLOOPMODE_YOYO = 4, zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT = 5;
+    const vG = FG;
+    let aG = !1;
 
-    function Ku() {
-      vu || (vu = !0, Mu.Parse = Pu, Mu.ParseFromFileAsync = ou, Mu.ParseFromSnippetAsync = ku, Mu.CreateFromSnippetAsync = mu, Mu.CreateAnimation = Gu, Mu.CreateAndStartAnimation = pu, Mu.CreateAndStartHierarchyAnimation = wu, Mu.CreateMergeAndStartAnimation = Ju, Mu.MakeAnimationAdditive = eu, Mu.TransitionTo = du, Mu.AppendSerializedAnimations = au, (0, bu.f)("BABYLON.Animation", Mu), lu.c._AnimationRangeFactory = (uu, Eu, ju) => new Xu.b(uu, Eu, ju))
+    function cG() {
+      aG || (aG = !0, zG.Parse = mG, zG.ParseFromFileAsync = IG, zG.ParseFromSnippetAsync = FG, zG.CreateFromSnippetAsync = vG, zG.CreateAnimation = oG, zG.CreateAndStartAnimation = XG, zG.CreateAndStartHierarchyAnimation = uG, zG.CreateMergeAndStartAnimation = iG, zG.MakeAnimationAdditive = EG, zG.TransitionTo = CG, zG.AppendSerializedAnimations = WG, (0, pG.i)("BABYLON.Animation", zG), kG.e._AnimationRangeFactory = (GG, bG, ZG) => new yG.c(GG, bG, ZG))
     }
   },
-  41321: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => su
+  41493: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => wG
     });
-    class su {
-      constructor(uu, Eu, ju) {
-        this.name = uu, this.from = Eu, this.to = ju
+    class wG {
+      constructor(GG, bG, ZG) {
+        this.name = GG, this.from = bG, this.to = ZG
       }
       clone() {
-        return new su(this.name, this.from, this.to)
+        return new wG(this.name, this.from, this.to)
       }
     }
   },
-  41378: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => su.b,
-      e: () => su.j
+  41552: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => wG.c,
+      c: () => wG.l
     });
-    var su = ju(40399);
-    (0, su.d)()
+    var wG = ZG(40524);
+    (0, wG.g)()
   },
-  41360: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => su.g
+  41527: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => wG.d
     });
-    var su = ju(40739);
-    (0, su.e)()
+    var wG = ZG(40857);
+    (0, wG.b)()
   },
-  41335: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => su.b
+  41502: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => wG.e
     });
-    var su = ju(40731);
-    (0, su.c)()
+    var wG = ZG(40844);
+    (0, wG.h)()
   },
-  41387: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => su.e
+  41560: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => wG.c
     });
-    var su = ju(40661);
-    (0, su.f)()
+    var wG = ZG(40784);
+    (0, wG.g)()
   },
-  41329: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => su.e
+  41498: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => wG.d
     });
-    var su = ju(40706);
-    (0, su.d)()
+    var wG = ZG(40820);
+    (0, wG.b)()
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

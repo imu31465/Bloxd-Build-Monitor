@@ -1,394 +1,394 @@
 export const id = 239;
 export const ids = [239];
 export const modules = {
-  37562: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => lu,
-      g: () => Xu,
-      h: () => Uu
+  37509: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => kG,
+      f: () => yG,
+      i: () => SG
     });
-    const su = 1024,
-      Uu = 16,
-      Zu = 36e4;
-    class Xu {
-      constructor(uu) {
-        this.boneCount = uu, this.rotation = void 0, this.position = void 0, this.scale = void 0, this.touched = void 0, this.rotation = new Float64Array(3 * uu), this.position = new Float64Array(3 * uu), this.scale = new Float64Array(3 * uu).fill(1), this.touched = new Uint8Array(uu)
+    const wG = 1024,
+      SG = 16,
+      LG = 36e4;
+    class yG {
+      constructor(GG) {
+        this.boneCount = GG, this.rotation = void 0, this.position = void 0, this.scale = void 0, this.touched = void 0, this.rotation = new Float64Array(3 * GG), this.position = new Float64Array(3 * GG), this.scale = new Float64Array(3 * GG).fill(1), this.touched = new Uint8Array(GG)
       }
       clampToLimits() {
-        for (let uu = 0; uu < this.boneCount; uu++)
-          if (0 !== this.touched[uu])
-            for (let Eu = 3 * uu; Eu < 3 * uu + 3; Eu++) {
-              const uu = this.rotation[Eu],
-                ju = this.position[Eu],
-                Xu = this.scale[Eu];
-              uu >= -36e4 && uu <= Zu || (this.rotation[Eu] = qu(uu, Zu)), ju >= -1024 && ju <= su || (this.position[Eu] = qu(ju, su)), Xu >= -Uu && Xu <= Uu || (this.scale[Eu] = qu(Xu, Uu, 1))
+        for (let GG = 0; GG < this.boneCount; GG++)
+          if (0 !== this.touched[GG])
+            for (let bG = 3 * GG; bG < 3 * GG + 3; bG++) {
+              const GG = this.rotation[bG],
+                ZG = this.position[bG],
+                yG = this.scale[bG];
+              GG >= -36e4 && GG <= LG || (this.rotation[bG] = UG(GG, LG)), ZG >= -1024 && ZG <= wG || (this.position[bG] = UG(ZG, wG)), yG >= -SG && yG <= SG || (this.scale[bG] = UG(yG, SG, 1))
             }
       }
       reset() {
-        for (let uu = 0; uu < this.boneCount; uu++)
-          if (0 !== this.touched[uu]) {
-            this.touched[uu] = 0;
-            for (let Eu = 3 * uu; Eu < 3 * uu + 3; Eu++) this.rotation[Eu] = 0, this.position[Eu] = 0, this.scale[Eu] = 1
+        for (let GG = 0; GG < this.boneCount; GG++)
+          if (0 !== this.touched[GG]) {
+            this.touched[GG] = 0;
+            for (let bG = 3 * GG; bG < 3 * GG + 3; bG++) this.rotation[bG] = 0, this.position[bG] = 0, this.scale[bG] = 1
           }
       }
     }
-    class lu {
-      constructor(uu) {
-        this.rotation = void 0, this.position = void 0, this.scaleDelta = void 0, this.boneWeight = void 0, this.touched = void 0, this.overrides = void 0, this.touchedBones = void 0, this.touchedCount = 0, this.rotation = new Float64Array(3 * uu), this.position = new Float64Array(3 * uu), this.scaleDelta = new Float64Array(3 * uu), this.boneWeight = new Float64Array(uu), this.touched = new Uint8Array(uu), this.overrides = new Uint8Array(uu), this.touchedBones = new Int32Array(uu)
+    class kG {
+      constructor(GG) {
+        this.rotation = void 0, this.position = void 0, this.scaleDelta = void 0, this.boneWeight = void 0, this.touched = void 0, this.overrides = void 0, this.touchedBones = void 0, this.touchedCount = 0, this.rotation = new Float64Array(3 * GG), this.position = new Float64Array(3 * GG), this.scaleDelta = new Float64Array(3 * GG), this.boneWeight = new Float64Array(GG), this.touched = new Uint8Array(GG), this.overrides = new Uint8Array(GG), this.touchedBones = new Int32Array(GG)
       }
-      touch(uu, Eu, ju) {
-        0 === this.touched[uu] && (this.touched[uu] = 1, this.touchedBones[this.touchedCount++] = uu), this.boneWeight[uu] += Eu, ju && (this.overrides[uu] = 1)
+      touch(GG, bG, ZG) {
+        0 === this.touched[GG] && (this.touched[GG] = 1, this.touchedBones[this.touchedCount++] = GG), this.boneWeight[GG] += bG, ZG && (this.overrides[GG] = 1)
       }
-      applyTo(uu, Eu, ju) {
-        let su = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        for (let Uu = 0; Uu < this.touchedCount; Uu++) {
-          const Zu = this.touchedBones[Uu],
-            Xu = this.boneWeight[Zu];
-          if (ju || 1 === this.overrides[Zu]) {
-            const ju = Eu * Math.min(1, Xu);
-            for (let Eu = 3 * Zu; Eu < 3 * Zu + 3; Eu++) uu.rotation[Eu] += (this.rotation[Eu] / Xu - uu.rotation[Eu]) * ju, uu.position[Eu] += (this.position[Eu] / Xu - uu.position[Eu]) * ju, uu.scale[Eu] += (1 + this.scaleDelta[Eu] / Xu - uu.scale[Eu]) * ju
+      applyTo(GG, bG, ZG) {
+        let wG = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        for (let SG = 0; SG < this.touchedCount; SG++) {
+          const LG = this.touchedBones[SG],
+            yG = this.boneWeight[LG];
+          if (ZG || 1 === this.overrides[LG]) {
+            const ZG = bG * Math.min(1, yG);
+            for (let bG = 3 * LG; bG < 3 * LG + 3; bG++) GG.rotation[bG] += (this.rotation[bG] / yG - GG.rotation[bG]) * ZG, GG.position[bG] += (this.position[bG] / yG - GG.position[bG]) * ZG, GG.scale[bG] += (1 + this.scaleDelta[bG] / yG - GG.scale[bG]) * ZG
           } else {
-            const ju = su && Xu > 1 ? Eu / Xu : Eu;
-            for (let Eu = 3 * Zu; Eu < 3 * Zu + 3; Eu++) uu.rotation[Eu] += this.rotation[Eu] * ju, uu.position[Eu] += this.position[Eu] * ju, uu.scale[Eu] *= 1 + this.scaleDelta[Eu] * ju
+            const ZG = wG && yG > 1 ? bG / yG : bG;
+            for (let bG = 3 * LG; bG < 3 * LG + 3; bG++) GG.rotation[bG] += this.rotation[bG] * ZG, GG.position[bG] += this.position[bG] * ZG, GG.scale[bG] *= 1 + this.scaleDelta[bG] * ZG
           }
-          uu.touched[Zu] = 1
+          GG.touched[LG] = 1
         }
       }
       clear() {
-        for (let uu = 0; uu < this.touchedCount; uu++) {
-          const Eu = this.touchedBones[uu];
-          this.touched[Eu] = 0, this.overrides[Eu] = 0, this.boneWeight[Eu] = 0;
-          for (let uu = 3 * Eu; uu < 3 * Eu + 3; uu++) this.rotation[uu] = 0, this.position[uu] = 0, this.scaleDelta[uu] = 0
+        for (let GG = 0; GG < this.touchedCount; GG++) {
+          const bG = this.touchedBones[GG];
+          this.touched[bG] = 0, this.overrides[bG] = 0, this.boneWeight[bG] = 0;
+          for (let GG = 3 * bG; GG < 3 * bG + 3; GG++) this.rotation[GG] = 0, this.position[GG] = 0, this.scaleDelta[GG] = 0
         }
         this.touchedCount = 0
       }
     }
 
-    function qu(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      return Number.isNaN(uu) ? ju : Math.min(Eu, Math.max(-Eu, uu))
+    function UG(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      return Number.isNaN(GG) ? ZG : Math.min(bG, Math.max(-bG, GG))
     }
   },
-  37554: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => qu,
-      d: () => lu
+  37503: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => UG,
+      i: () => kG
     });
-    var su = ju(37541),
-      Uu = ju(349),
-      Zu = ju(1955),
-      Xu = ju(37562);
+    var wG = ZG(37491),
+      SG = ZG(352),
+      LG = ZG(1873),
+      yG = ZG(37509);
 
-    function lu(uu) {
-      if ("UU" in uu) return du.createAnimationScript(uu);
-      return new Cu(uu).createAnimationScript()
+    function kG(GG) {
+      if ("tw" in GG) return CG.createAnimationScript(GG);
+      return new VG(GG).createAnimationScript()
     }
 
-    function qu(uu, Eu, ju, Uu) {
-      const Zu = uu.UU <= 0 ? 1 : Eu + ju * Math.max(0, Uu) / uu.UU;
-      return uu.ZU === su.k.LoopOnLastFrame ? Zu % 1 : uu.ZU === su.k.NoLoop && Zu >= 1 ? null : Math.min(1, Zu)
+    function UG(GG, bG, ZG, SG) {
+      const LG = GG.tw <= 0 ? 1 : bG + ZG * Math.max(0, SG) / GG.tw;
+      return GG.Dw === wG.n.LoopOnLastFrame ? LG % 1 : GG.Dw === wG.n.NoLoop && LG >= 1 ? null : Math.min(1, LG)
     }
-    class fu {
-      createAnimationScript(uu) {
+    class YG {
+      createAnimationScript(GG) {
         const {
-          UU: Eu,
-          loop: ju,
-          XU: su
-        } = uu;
+          tw: bG,
+          loop: ZG,
+          Nw: wG
+        } = GG;
         return {
-          UU: Math.round(Eu),
-          ZU: this.createLoopMode(null !== ju && void 0 !== ju && ju),
-          XU: this.createNodeSkeletonAnimationScript(null !== su && void 0 !== su ? su : null)
+          tw: Math.round(bG),
+          Dw: this.createLoopMode(null !== ZG && void 0 !== ZG && ZG),
+          Nw: this.createNodeSkeletonAnimationScript(null !== wG && void 0 !== wG ? wG : null)
         }
       }
-      createLoopMode(uu) {
-        switch (uu) {
+      createLoopMode(GG) {
+        switch (GG) {
           case !1:
-            return su.k.NoLoop;
+            return wG.n.NoLoop;
           case !0:
-            return su.k.LoopOnLastFrame;
+            return wG.n.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return su.k.HoldOnLastFrame
+            return wG.n.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${uu}`)
+        throw new Error(`Invalid loop mode schema: ${GG}`)
       }
-      createNodeSkeletonAnimationScript(uu) {
-        if (null === uu) return null;
-        const Eu = {};
-        for (const ju in uu) {
-          const su = uu[ju];
-          Eu[ju] = this.createNodeAnimationScript(su)
+      createNodeSkeletonAnimationScript(GG) {
+        if (null === GG) return null;
+        const bG = {};
+        for (const ZG in GG) {
+          const wG = GG[ZG];
+          bG[ZG] = this.createNodeAnimationScript(wG)
         }
-        return Eu
+        return bG
       }
-      createNodeAnimationScript(uu) {
+      createNodeAnimationScript(GG) {
         const {
-          timeline: Eu
-        } = uu, ju = Eu.filter((uu => Number.isFinite(uu.timeFraction)));
-        return ju.sort(((uu, Eu) => uu.timeFraction - Eu.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(ju, "rotation", Nu),
-          position: this.createTimelineFromKeyframes(ju, "position", Yu),
-          scale: this.createTimelineFromKeyframes(ju, "scale", Yu, Du)
+          timeline: bG
+        } = GG, ZG = bG.filter((GG => Number.isFinite(GG.timeFraction)));
+        return ZG.sort(((GG, bG) => GG.timeFraction - bG.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(ZG, "rotation", QG),
+          position: this.createTimelineFromKeyframes(ZG, "position", hG),
+          scale: this.createTimelineFromKeyframes(ZG, "scale", hG, JG)
         }
       }
-      createTimelineFromKeyframes(uu, Eu, ju) {
-        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uu => uu;
-        const Uu = [];
-        for (const fu of uu) {
-          const uu = fu[Eu];
-          if (uu) {
-            const Eu = this.createAnimationFrameWithoutPrecomputes(fu.timeFraction, uu, su);
-            bu(Eu) && Uu.push(Eu)
+      createTimelineFromKeyframes(GG, bG, ZG) {
+        let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : GG => GG;
+        const SG = [];
+        for (const YG of GG) {
+          const GG = YG[bG];
+          if (GG) {
+            const bG = this.createAnimationFrameWithoutPrecomputes(YG.timeFraction, GG, wG);
+            pG(bG) && SG.push(bG)
           }
         }
-        const Zu = [];
-        for (let fu = 0; fu < Uu.length; fu++) {
-          var Xu, lu, qu;
-          const uu = Uu[fu],
-            Eu = null !== (Xu = Uu[fu - 1]) && void 0 !== Xu ? Xu : uu,
-            su = null !== (lu = Uu[fu + 1]) && void 0 !== lu ? lu : uu,
-            Cu = null !== (qu = Uu[fu + 2]) && void 0 !== qu ? qu : su;
-          Zu.push({
-            ...uu,
-            ...ju(Eu.post, Eu.timeFraction, uu.post, uu.timeFraction, su.pre, su.timeFraction, Cu.pre, Cu.timeFraction)
+        const LG = [];
+        for (let YG = 0; YG < SG.length; YG++) {
+          var yG, kG, UG;
+          const GG = SG[YG],
+            bG = null !== (yG = SG[YG - 1]) && void 0 !== yG ? yG : GG,
+            wG = null !== (kG = SG[YG + 1]) && void 0 !== kG ? kG : GG,
+            VG = null !== (UG = SG[YG + 2]) && void 0 !== UG ? UG : wG;
+          LG.push({
+            ...GG,
+            ...ZG(bG.post, bG.timeFraction, GG.post, GG.timeFraction, wG.pre, wG.timeFraction, VG.pre, VG.timeFraction)
           })
         }
-        return Zu
+        return LG
       }
-      createAnimationFrameWithoutPrecomputes(uu, Eu, ju) {
-        let su, Uu, Zu = null;
-        var Xu;
-        if ("object" === typeof Eu && "point" in Eu) Zu = null !== (Xu = Eu.fU) && void 0 !== Xu ? Xu : null, su = Eu.point, Uu = Eu.point;
-        else if ("object" === typeof Eu && "pre" in Eu) {
-          var lu;
-          Zu = null !== (lu = Eu.fU) && void 0 !== lu ? lu : null, su = Eu.pre, Uu = Eu.post
-        } else su = Eu, Uu = Eu;
+      createAnimationFrameWithoutPrecomputes(GG, bG, ZG) {
+        let wG, SG, LG = null;
+        var yG;
+        if ("object" === typeof bG && "point" in bG) LG = null !== (yG = bG.Bw) && void 0 !== yG ? yG : null, wG = bG.point, SG = bG.point;
+        else if ("object" === typeof bG && "pre" in bG) {
+          var kG;
+          LG = null !== (kG = bG.Bw) && void 0 !== kG ? kG : null, wG = bG.pre, SG = bG.post
+        } else wG = bG, SG = bG;
         return {
-          timeFraction: uu,
-          fU: this.createLerpMode(Zu),
-          pre: ju(su),
-          post: ju(Uu)
+          timeFraction: GG,
+          Bw: this.createLerpMode(LG),
+          pre: ZG(wG),
+          post: ZG(SG)
         }
       }
-      createLerpMode(uu) {
-        return null === uu ? su.h.Linear : fu.LERP_MODE_SCHEMA_MAPPING[uu]
+      createLerpMode(GG) {
+        return null === GG ? wG.l.Linear : YG.LERP_MODE_SCHEMA_MAPPING[GG]
       }
     }
-    fu.LERP_MODE_SCHEMA_MAPPING = {
-      linear: su.h.Linear,
-      "catmull-rom-spline": su.h.CatmullRomSpline
+    YG.LERP_MODE_SCHEMA_MAPPING = {
+      linear: wG.l.Linear,
+      "catmull-rom-spline": wG.l.CatmullRomSpline
     };
-    class Cu {
-      constructor(uu) {
-        this.animationSchema = uu
+    class VG {
+      constructor(GG) {
+        this.animationSchema = GG
       }
       createAnimationScript() {
         const {
-          animation_length: uu,
-          loop: Eu,
-          bones: ju
+          animation_length: GG,
+          loop: bG,
+          bones: ZG
         } = this.animationSchema;
         return {
-          UU: Math.round(1e3 * uu),
-          ZU: this.createLoopMode(null !== Eu && void 0 !== Eu && Eu),
-          XU: this.createNodeSkeletonAnimationScript(null !== ju && void 0 !== ju ? ju : null)
+          tw: Math.round(1e3 * GG),
+          Dw: this.createLoopMode(null !== bG && void 0 !== bG && bG),
+          Nw: this.createNodeSkeletonAnimationScript(null !== ZG && void 0 !== ZG ? ZG : null)
         }
       }
-      createLoopMode(uu) {
-        switch (uu) {
+      createLoopMode(GG) {
+        switch (GG) {
           case !1:
-            return su.k.NoLoop;
+            return wG.n.NoLoop;
           case !0:
-            return su.k.LoopOnLastFrame;
+            return wG.n.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return su.k.HoldOnLastFrame
+            return wG.n.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${uu}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${GG}`)
       }
-      createNodeSkeletonAnimationScript(uu) {
-        if (null === uu) return null;
-        const Eu = {};
-        for (const ju in uu) {
-          const su = uu[ju];
-          Eu[ju] = this.createNodeAnimationScript(su)
+      createNodeSkeletonAnimationScript(GG) {
+        if (null === GG) return null;
+        const bG = {};
+        for (const ZG in GG) {
+          const wG = GG[ZG];
+          bG[ZG] = this.createNodeAnimationScript(wG)
         }
-        return Eu
+        return bG
       }
-      createNodeAnimationScript(uu) {
+      createNodeAnimationScript(GG) {
         const {
-          rotation: Eu,
-          position: ju,
-          scale: su
-        } = uu;
+          rotation: bG,
+          position: ZG,
+          scale: wG
+        } = GG;
         return {
-          rotation: this.createAnimationTimeline(null !== Eu && void 0 !== Eu ? Eu : null, Mu, Nu, !0),
-          position: this.createAnimationTimeline(null !== ju && void 0 !== ju ? ju : null, Gu, Yu, !1),
-          scale: this.createAnimationTimeline(null !== su && void 0 !== su ? su : null, hu, Yu, !1)
+          rotation: this.createAnimationTimeline(null !== bG && void 0 !== bG ? bG : null, zG, QG, !0),
+          position: this.createAnimationTimeline(null !== ZG && void 0 !== ZG ? ZG : null, oG, hG, !1),
+          scale: this.createAnimationTimeline(null !== wG && void 0 !== wG ? wG : null, dG, hG, !1)
         }
       }
-      createAnimationTimeline(uu, Eu, ju, su) {
-        if (null === uu) return [];
-        (Array.isArray(uu) || "number" === typeof uu) && (uu = {
-          "0.0": uu
+      createAnimationTimeline(GG, bG, ZG, wG) {
+        if (null === GG) return [];
+        (Array.isArray(GG) || "number" === typeof GG) && (GG = {
+          "0.0": GG
         });
-        const Uu = Object.entries(uu).map((uu => {
-          let [ju, su] = uu;
-          const Uu = Number(ju) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(Uu, su, Eu)
-        })).filter(bu);
-        Uu.sort(((uu, Eu) => uu.timeFraction - Eu.timeFraction)), su && function(uu) {
-          for (let Eu = 1; Eu < uu.length; Eu++) {
-            const ju = uu[Eu - 1].post,
-              su = uu[Eu],
-              Uu = pu(su.pre),
-              Zu = pu(su.post),
-              Xu = Ju(ju, su.pre);
-            Ju(ju, Uu) < Xu && (uu[Eu] = {
-              ...su,
-              pre: Uu,
-              post: Zu
+        const SG = Object.entries(GG).map((GG => {
+          let [ZG, wG] = GG;
+          const SG = Number(ZG) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(SG, wG, bG)
+        })).filter(pG);
+        SG.sort(((GG, bG) => GG.timeFraction - bG.timeFraction)), wG && function(GG) {
+          for (let bG = 1; bG < GG.length; bG++) {
+            const ZG = GG[bG - 1].post,
+              wG = GG[bG],
+              SG = XG(wG.pre),
+              LG = XG(wG.post),
+              yG = iG(ZG, wG.pre);
+            iG(ZG, SG) < yG && (GG[bG] = {
+              ...wG,
+              pre: SG,
+              post: LG
             })
           }
-        }(Uu);
-        const Zu = [];
-        for (let fu = 0; fu < Uu.length; fu++) {
-          var Xu, lu, qu;
-          const uu = Uu[fu],
-            Eu = null !== (Xu = Uu[fu - 1]) && void 0 !== Xu ? Xu : uu,
-            su = null !== (lu = Uu[fu + 1]) && void 0 !== lu ? lu : uu,
-            Cu = null !== (qu = Uu[fu + 2]) && void 0 !== qu ? qu : su;
-          Zu.push({
-            ...uu,
-            ...ju(Eu.post, Eu.timeFraction, uu.post, uu.timeFraction, su.pre, su.timeFraction, Cu.pre, Cu.timeFraction)
+        }(SG);
+        const LG = [];
+        for (let YG = 0; YG < SG.length; YG++) {
+          var yG, kG, UG;
+          const GG = SG[YG],
+            bG = null !== (yG = SG[YG - 1]) && void 0 !== yG ? yG : GG,
+            wG = null !== (kG = SG[YG + 1]) && void 0 !== kG ? kG : GG,
+            VG = null !== (UG = SG[YG + 2]) && void 0 !== UG ? UG : wG;
+          LG.push({
+            ...GG,
+            ...ZG(bG.post, bG.timeFraction, GG.post, GG.timeFraction, wG.pre, wG.timeFraction, VG.pre, VG.timeFraction)
           })
         }
-        return Zu
+        return LG
       }
-      createAnimationFrameWithoutPrecomputes(uu, Eu, ju) {
-        let su, Uu, Zu = null;
-        if ("object" === typeof Eu && "post" in Eu) {
-          var Xu;
-          Zu = null !== (Xu = Eu.lerp_mode) && void 0 !== Xu ? Xu : null, Uu = ju(Eu.post), su = void 0 !== Eu.pre ? ju(Eu.pre) : Uu
+      createAnimationFrameWithoutPrecomputes(GG, bG, ZG) {
+        let wG, SG, LG = null;
+        if ("object" === typeof bG && "post" in bG) {
+          var yG;
+          LG = null !== (yG = bG.lerp_mode) && void 0 !== yG ? yG : null, SG = ZG(bG.post), wG = void 0 !== bG.pre ? ZG(bG.pre) : SG
         } else {
-          const uu = ju(Eu);
-          Uu = uu, su = uu
+          const GG = ZG(bG);
+          SG = GG, wG = GG
         }
         return {
-          timeFraction: uu,
-          fU: this.createLerpMode(Zu),
-          pre: su,
-          post: Uu
+          timeFraction: GG,
+          Bw: this.createLerpMode(LG),
+          pre: wG,
+          post: SG
         }
       }
-      createLerpMode(uu) {
-        return null === uu ? su.h.Linear : Cu.LERP_MODE_SCHEMA_MAPPING[uu]
+      createLerpMode(GG) {
+        return null === GG ? wG.l.Linear : VG.LERP_MODE_SCHEMA_MAPPING[GG]
       }
     }
 
-    function bu(uu) {
-      return Number.isFinite(uu.timeFraction) && cu(uu.pre) && cu(uu.post)
+    function pG(GG) {
+      return Number.isFinite(GG.timeFraction) && fG(GG.pre) && fG(GG.post)
     }
 
-    function cu(uu) {
-      return Number.isFinite(uu[0]) && Number.isFinite(uu[1]) && Number.isFinite(uu[2])
+    function fG(GG) {
+      return Number.isFinite(GG[0]) && Number.isFinite(GG[1]) && Number.isFinite(GG[2])
     }
 
-    function Nu(uu, Eu, ju, su, Uu, Zu, Xu, lu) {
-      const qu = Zu - Eu,
-        fu = Zu - su,
-        Cu = lu - su,
-        bu = [null, null, null];
-      for (let cu = 0; cu < bu.length; cu++) bu[cu] = Ou(uu[cu], ju[cu], Uu[cu], Xu[cu], qu, Cu);
+    function QG(GG, bG, ZG, wG, SG, LG, yG, kG) {
+      const UG = LG - bG,
+        YG = LG - wG,
+        VG = kG - wG,
+        pG = [null, null, null];
+      for (let fG = 0; fG < pG.length; fG++) pG[fG] = KG(GG[fG], ZG[fG], SG[fG], yG[fG], UG, VG);
       return {
-        CU: fu,
-        bU: bu
+        GS: YG,
+        bS: pG
       }
     }
 
-    function Ou(uu, Eu, ju, su, Zu, Xu) {
+    function KG(GG, bG, ZG, wG, LG, yG) {
       return {
-        NU: Uu.b.computeShortestRotation(uu, ju) / Zu,
-        OU: Uu.b.computeShortestRotation(Eu, su) / Xu,
-        delta: Uu.b.computeShortestRotation(Eu, ju)
+        wS: SG.c.computeShortestRotation(GG, ZG) / LG,
+        SS: SG.c.computeShortestRotation(bG, wG) / yG,
+        delta: SG.c.computeShortestRotation(bG, ZG)
       }
     }
 
-    function Yu(uu, Eu, ju, su, Uu, Zu, Xu, lu) {
-      const qu = Zu - Eu,
-        fu = Zu - su,
-        Cu = lu - su,
-        bu = [null, null, null];
-      for (let cu = 0; cu < bu.length; cu++) bu[cu] = {
-        NU: (Uu[cu] - uu[cu]) / qu,
-        OU: (Xu[cu] - ju[cu]) / Cu,
-        delta: Uu[cu] - ju[cu]
+    function hG(GG, bG, ZG, wG, SG, LG, yG, kG) {
+      const UG = LG - bG,
+        YG = LG - wG,
+        VG = kG - wG,
+        pG = [null, null, null];
+      for (let fG = 0; fG < pG.length; fG++) pG[fG] = {
+        wS: (SG[fG] - GG[fG]) / UG,
+        SS: (yG[fG] - ZG[fG]) / VG,
+        delta: SG[fG] - ZG[fG]
       };
       return {
-        CU: fu,
-        bU: bu
+        GS: YG,
+        bS: pG
       }
     }
 
-    function hu(uu) {
-      return Du("number" === typeof uu ? [uu, uu, uu] : uu)
+    function dG(GG) {
+      return JG("number" === typeof GG ? [GG, GG, GG] : GG)
     }
 
-    function Du(uu) {
-      return [gu(uu[0]), gu(uu[1]), gu(uu[2])]
+    function JG(GG) {
+      return [rG(GG[0]), rG(GG[1]), rG(GG[2])]
     }
 
-    function gu(uu) {
-      return Number.isFinite(uu) ? Math.min(Xu.h, Math.max(-Xu.h, uu)) : uu
+    function rG(GG) {
+      return Number.isFinite(GG) ? Math.min(yG.i, Math.max(-yG.i, GG)) : GG
     }
 
-    function Mu(uu) {
-      const [Eu, ju, su] = uu, Xu = -(0, Zu.k)(Eu), lu = -(0, Zu.k)(ju), qu = (0, Zu.k)(su), fu = Uu.b.quaternionFromEulerZYX(Xu, lu, qu);
-      return Uu.b.eulerYXZFromQuaternion(fu)
+    function zG(GG) {
+      const [bG, ZG, wG] = GG, yG = -(0, LG.j)(bG), kG = -(0, LG.j)(ZG), UG = (0, LG.j)(wG), YG = SG.c.quaternionFromEulerZYX(yG, kG, UG);
+      return SG.c.eulerYXZFromQuaternion(YG)
     }
-    Cu.LERP_MODE_SCHEMA_MAPPING = {
-      linear: su.h.Linear,
-      catmullrom: su.h.CatmullRomSpline
+    VG.LERP_MODE_SCHEMA_MAPPING = {
+      linear: wG.l.Linear,
+      catmullrom: wG.l.CatmullRomSpline
     };
-    const eu = 1 / 16;
+    const EG = 1 / 16;
 
-    function Gu(uu) {
-      return [-uu[0] * eu, uu[1] * eu, uu[2] * eu]
+    function oG(GG) {
+      return [-GG[0] * EG, GG[1] * EG, GG[2] * EG]
     }
 
-    function pu(uu) {
-      const [Eu, ju, su] = uu;
-      return [Eu >= 0 ? Math.PI - Eu : -Math.PI - Eu, wu(ju + Math.PI), wu(su + Math.PI)]
+    function XG(GG) {
+      const [bG, ZG, wG] = GG;
+      return [bG >= 0 ? Math.PI - bG : -Math.PI - bG, uG(ZG + Math.PI), uG(wG + Math.PI)]
     }
 
-    function wu(uu) {
-      return Uu.b.mod(uu + Math.PI, 2 * Math.PI) - Math.PI
+    function uG(GG) {
+      return SG.c.mod(GG + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function Ju(uu, Eu) {
-      return Math.abs(Uu.b.computeShortestRotation(uu[0], Eu[0])) + Math.abs(Uu.b.computeShortestRotation(uu[1], Eu[1])) + Math.abs(Uu.b.computeShortestRotation(uu[2], Eu[2]))
+    function iG(GG, bG) {
+      return Math.abs(SG.c.computeShortestRotation(GG[0], bG[0])) + Math.abs(SG.c.computeShortestRotation(GG[1], bG[1])) + Math.abs(SG.c.computeShortestRotation(GG[2], bG[2]))
     }
-    const du = new fu
+    const CG = new YG
   },
-  37541: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Xu,
-      f: () => Zu,
-      h: () => su,
-      k: () => Uu
+  37491: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => yG,
+      h: () => LG,
+      l: () => wG,
+      n: () => SG
     });
-    let su = function(uu) {
-        return uu[uu.Linear = 0] = "Linear", uu[uu.CatmullRomSpline = 1] = "CatmullRomSpline", uu
+    let wG = function(GG) {
+        return GG[GG.Linear = 0] = "Linear", GG[GG.CatmullRomSpline = 1] = "CatmullRomSpline", GG
       }({}),
-      Uu = function(uu) {
-        return uu[uu.NoLoop = 0] = "NoLoop", uu[uu.LoopOnLastFrame = 1] = "LoopOnLastFrame", uu[uu.HoldOnLastFrame = 2] = "HoldOnLastFrame", uu
+      SG = function(GG) {
+        return GG[GG.NoLoop = 0] = "NoLoop", GG[GG.LoopOnLastFrame = 1] = "LoopOnLastFrame", GG[GG.HoldOnLastFrame = 2] = "HoldOnLastFrame", GG
       }({}),
-      Zu = function(uu) {
-        return uu[uu.Movement = 0] = "Movement", uu[uu.Action = 1] = "Action", uu[uu.Emote = 2] = "Emote", uu[uu.Custom = 3] = "Custom", uu
+      LG = function(GG) {
+        return GG[GG.Movement = 0] = "Movement", GG[GG.Action = 1] = "Action", GG[GG.Emote = 2] = "Emote", GG[GG.Custom = 3] = "Custom", GG
       }({}),
-      Xu = function(uu) {
-        return uu[uu.Start = 0] = "Start", uu[uu.Stop = 1] = "Stop", uu
+      yG = function(GG) {
+        return GG[GG.Start = 0] = "Start", GG[GG.Stop = 1] = "Stop", GG
       }({})
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

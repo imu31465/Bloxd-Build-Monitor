@@ -1,69 +1,69 @@
 export const id = 33;
 export const ids = [33];
 export const modules = {
-  34416: (uu, Eu, ju) => {
-    function su(uu, Eu) {
-      return 0 === uu.length ? 0 : uu[Math.min(uu.length - 1, Math.floor(Eu * uu.length))]
+  34341: (GG, bG, ZG) => {
+    function wG(GG, bG) {
+      return 0 === GG.length ? 0 : GG[Math.min(GG.length - 1, Math.floor(bG * GG.length))]
     }
 
-    function Uu(uu) {
-      return uu.toFixed(1)
+    function SG(GG) {
+      return GG.toFixed(1)
     }
-    ju.d(Eu, {
-      d: () => Uu,
-      g: () => su
+    ZG.d(bG, {
+      e: () => SG,
+      i: () => wG
     })
   },
-  34409: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      FIRST_SUMMARIES_FOR_MS: () => hu,
-      FIRST_SUMMARY_MS: () => Yu,
-      FrameDebugLog: () => Ju,
-      OUTLIER_BURST: () => gu,
-      OUTLIER_MS: () => Du,
-      OUTLIER_REFILL_MS: () => Mu,
-      SUMMARY_MS: () => Ou,
-      startFrameDebug: () => au
+  34336: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      FIRST_SUMMARIES_FOR_MS: () => dG,
+      FIRST_SUMMARY_MS: () => hG,
+      FrameDebugLog: () => iG,
+      OUTLIER_BURST: () => rG,
+      OUTLIER_MS: () => JG,
+      OUTLIER_REFILL_MS: () => zG,
+      SUMMARY_MS: () => KG,
+      startFrameDebug: () => WG
     });
-    var su = ju(4976),
-      Uu = ju(4965),
-      Zu = ju(34416),
-      Xu = ju(2943),
-      lu = ju(1145),
-      qu = ju(3143);
-    class fu {
+    var wG = ZG(4818),
+      SG = ZG(4804),
+      LG = ZG(34341),
+      yG = ZG(2801),
+      kG = ZG(1053),
+      UG = ZG(2961);
+    class YG {
       constructor() {
-        this.kind = void 0, this.entries = new Float64Array(256), this.next = 0, this.size = 0, this.onLongFrame = uu => {
-          const Eu = uu;
-          this.add(Eu.startTime, Eu.duration, Eu.blockingDuration, (0, lu.o)(Eu))
-        }, this.onLongTask = uu => {
-          this.add(uu.startTime, uu.duration, 0, 0)
-        }, null !== (0, qu.b)("long-animation-frame", this.onLongFrame) ? this.kind = "loaf" : this.kind = null !== (0, qu.b)("longtask", this.onLongTask) ? "longtask" : null
+        this.kind = void 0, this.entries = new Float64Array(256), this.next = 0, this.size = 0, this.onLongFrame = GG => {
+          const bG = GG;
+          this.add(bG.startTime, bG.duration, bG.blockingDuration, (0, kG.m)(bG))
+        }, this.onLongTask = GG => {
+          this.add(GG.startTime, GG.duration, 0, 0)
+        }, null !== (0, UG.e)("long-animation-frame", this.onLongFrame) ? this.kind = "loaf" : this.kind = null !== (0, UG.e)("longtask", this.onLongTask) ? "longtask" : null
       }
-      add(uu, Eu, ju, su) {
-        this.entries.set([uu, Eu, ju, su], 4 * this.next), this.next = (this.next + 1) % 64, this.size = Math.min(this.size + 1, 64)
+      add(GG, bG, ZG, wG) {
+        this.entries.set([GG, bG, ZG, wG], 4 * this.next), this.next = (this.next + 1) % 64, this.size = Math.min(this.size + 1, 64)
       }
-      describe(uu, Eu) {
+      describe(GG, bG) {
         if (null === this.kind) return "long tasks n/a";
-        let ju = 0,
-          su = 0,
-          Uu = 0,
-          Zu = 0;
-        for (let lu = 0; lu < this.size; lu++) {
-          const Xu = 4 * lu,
-            qu = this.entries[Xu] + this.entries[Xu + 1];
-          qu > uu && qu <= Eu + 2 && (ju++, su += this.entries[Xu + 1], Uu += this.entries[Xu + 2], Zu += this.entries[Xu + 3])
+        let ZG = 0,
+          wG = 0,
+          SG = 0,
+          LG = 0;
+        for (let kG = 0; kG < this.size; kG++) {
+          const yG = 4 * kG,
+            UG = this.entries[yG] + this.entries[yG + 1];
+          UG > GG && UG <= bG + 2 && (ZG++, wG += this.entries[yG + 1], SG += this.entries[yG + 2], LG += this.entries[yG + 3])
         }
-        const Xu = "loaf" === this.kind && ju > 0 ? ` (blocking ${Uu.toFixed(0)}, script ${Zu.toFixed(0)})` : "";
-        return `${ju} ${this.kind} ${su.toFixed(0)} ms${Xu}`
+        const yG = "loaf" === this.kind && ZG > 0 ? ` (blocking ${SG.toFixed(0)}, script ${LG.toFixed(0)})` : "";
+        return `${ZG} ${this.kind} ${wG.toFixed(0)} ms${yG}`
       }
     }
-    var Cu = ju(34424);
+    var VG = ZG(34345);
 
-    function bu(uu, Eu) {
-      return Eu < 0 || uu < Eu ? uu : uu - Eu
+    function pG(GG, bG) {
+      return bG < 0 || GG < bG ? GG : GG - bG
     }
-    class cu {
+    class fG {
       constructor() {
         this.source = null, this.now = {
           chunksReceived: -1,
@@ -83,15 +83,15 @@ export const modules = {
           jobsInFlight: -1,
           workersLive: -1,
           workersRetired: -1
-        }, this.lastMs = 0, this.hidden = new Cu.b, this.hiddenBefore = {
+        }, this.lastMs = 0, this.hidden = new VG.c, this.hiddenBefore = {
           changes: 0,
           hiddenMs: 0
         }
       }
-      setSource(uu) {
-        this.source = uu
+      setSource(GG) {
+        this.source = GG
       }
-      start(uu) {
+      start(GG) {
         this.before = {
           chunksReceived: -1,
           chunksCancelled: -1,
@@ -101,123 +101,123 @@ export const modules = {
           jobsInFlight: -1,
           workersLive: -1,
           workersRetired: -1
-        }, this.lastMs = uu
+        }, this.lastMs = GG
       }
-      take(uu) {
-        var Eu;
-        const ju = [];
-        if (!0 === (null === (Eu = this.source) || void 0 === Eu ? void 0 : Eu.call(this, this.now)) && (su = this.now, Uu = this.before, su.chunksReceived !== Uu.chunksReceived || su.chunksCancelled !== Uu.chunksCancelled || su.chunksStored !== Uu.chunksStored || su.jobsSent !== Uu.jobsSent || su.jobsDone !== Uu.jobsDone || su.jobsInFlight !== Uu.jobsInFlight || su.workersLive !== Uu.workersLive || su.workersRetired !== Uu.workersRetired)) {
-          ju.push(function(uu, Eu) {
-            const ju = [`chunks +${bu(uu.chunksReceived,Eu.chunksReceived)} got`, `+${bu(uu.chunksCancelled,Eu.chunksCancelled)} cancelled`];
-            uu.chunksStored >= 0 && ju.push(`${uu.chunksStored} stored`);
-            const su = `jobs +${bu(uu.jobsSent,Eu.jobsSent)} sent, +${bu(uu.jobsDone,Eu.jobsDone)} done, ${uu.jobsInFlight} in flight`;
-            return `${ju.join(", ")}; ${su}; workers ${uu.workersLive} live, ${uu.workersRetired} retired`
+      take(GG) {
+        var bG;
+        const ZG = [];
+        if (!0 === (null === (bG = this.source) || void 0 === bG ? void 0 : bG.call(this, this.now)) && (wG = this.now, SG = this.before, wG.chunksReceived !== SG.chunksReceived || wG.chunksCancelled !== SG.chunksCancelled || wG.chunksStored !== SG.chunksStored || wG.jobsSent !== SG.jobsSent || wG.jobsDone !== SG.jobsDone || wG.jobsInFlight !== SG.jobsInFlight || wG.workersLive !== SG.workersLive || wG.workersRetired !== SG.workersRetired)) {
+          ZG.push(function(GG, bG) {
+            const ZG = [`chunks +${pG(GG.chunksReceived,bG.chunksReceived)} got`, `+${pG(GG.chunksCancelled,bG.chunksCancelled)} cancelled`];
+            GG.chunksStored >= 0 && ZG.push(`${GG.chunksStored} stored`);
+            const wG = `jobs +${pG(GG.jobsSent,bG.jobsSent)} sent, +${pG(GG.jobsDone,bG.jobsDone)} done, ${GG.jobsInFlight} in flight`;
+            return `${ZG.join(", ")}; ${wG}; workers ${GG.workersLive} live, ${GG.workersRetired} retired`
           }(this.now, this.before));
-          const uu = this.before;
-          this.before = this.now, this.now = uu
+          const GG = this.before;
+          this.before = this.now, this.now = GG
         }
-        var su, Uu;
-        const Zu = this.hidden.totals(uu),
-          Xu = Zu.changes - this.hiddenBefore.changes,
-          lu = Zu.hiddenMs - this.hiddenBefore.hiddenMs;
-        if ((Xu > 0 || lu > 0) && (ju.push((0, Cu.d)({
-            changes: Xu,
-            hiddenMs: lu
-          })), this.hiddenBefore = Zu), 0 === ju.length) return null;
-        const qu = `load ${Math.round((uu-this.lastMs)/1e3)}s: ${ju.join("; ")}`;
-        return this.lastMs = uu, qu
+        var wG, SG;
+        const LG = this.hidden.totals(GG),
+          yG = LG.changes - this.hiddenBefore.changes,
+          kG = LG.hiddenMs - this.hiddenBefore.hiddenMs;
+        if ((yG > 0 || kG > 0) && (ZG.push((0, VG.f)({
+            changes: yG,
+            hiddenMs: kG
+          })), this.hiddenBefore = LG), 0 === ZG.length) return null;
+        const UG = `load ${Math.round((GG-this.lastMs)/1e3)}s: ${ZG.join("; ")}`;
+        return this.lastMs = GG, UG
       }
     }
-    class Nu {
+    class QG {
       constructor() {
         this.count = 0, this.paced = 0, this.skipped = 0, this.run = 0, this.longest = 0, this.longestMs = 0, this.longestAhead = -1
       }
       drawn() {
         this.run = 0
       }
-      add(uu, Eu, ju) {
-        this.count++, "paced" === uu ? this.paced++ : "skipped" === uu && this.skipped++, this.run++, this.run > this.longest && (this.longest = this.run, this.longestMs = Eu, this.longestAhead = ju)
+      add(GG, bG, ZG) {
+        this.count++, "paced" === GG ? this.paced++ : "skipped" === GG && this.skipped++, this.run++, this.run > this.longest && (this.longest = this.run, this.longestMs = bG, this.longestAhead = ZG)
       }
       describe() {
         if (0 === this.count) return "0 undrawn";
-        const uu = this.count - this.paced - this.skipped;
-        return `${this.count} undrawn: ${this.paced} paced, ${this.skipped} skipped, ${uu} other, longest ${this.longest} in ${(0,Zu.d)(this.longestMs)} ms at ${this.longestAhead} ahead`
+        const GG = this.count - this.paced - this.skipped;
+        return `${this.count} undrawn: ${this.paced} paced, ${this.skipped} skipped, ${GG} other, longest ${this.longest} in ${(0,LG.e)(this.longestMs)} ms at ${this.longestAhead} ahead`
       }
       reset() {
         this.count = 0, this.paced = 0, this.skipped = 0, this.longest = 0, this.longestMs = 0, this.longestAhead = -1
       }
     }
-    const Ou = 2e4,
-      Yu = 5e3,
-      hu = 6e4,
-      Du = 250,
-      gu = 10,
-      Mu = 6e4,
-      eu = 8192;
+    const KG = 2e4,
+      hG = 5e3,
+      dG = 6e4,
+      JG = 250,
+      rG = 10,
+      zG = 6e4,
+      EG = 8192;
 
-    function Gu(uu) {
-      return uu.mainMs = 0, uu.renderMs = 0, uu.ticks = 0, uu.tickMs = 0, uu.rafs = 0, uu.pendingBefore = -1, uu.pendingMax = -1, uu.pendingAfter = -1, uu
+    function oG(GG) {
+      return GG.mainMs = 0, GG.renderMs = 0, GG.ticks = 0, GG.tickMs = 0, GG.rafs = 0, GG.pendingBefore = -1, GG.pendingMax = -1, GG.pendingAfter = -1, GG
     }
 
-    function pu() {
-      return Gu({})
+    function XG() {
+      return oG({})
     }
-    class wu {
+    class uG {
       constructor() {
-        this.intervals = new Float64Array(eu), this.totals = pu(), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = new Nu, this.shown = 0, this.dropped = 0
+        this.intervals = new Float64Array(EG), this.totals = XG(), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = new QG, this.shown = 0, this.dropped = 0
       }
       reset() {
-        Gu(this.totals), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn.reset(), this.shown = 0, this.dropped = 0
+        oG(this.totals), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn.reset(), this.shown = 0, this.dropped = 0
       }
     }
-    class Ju {
+    class iG {
       constructor() {
-        this.longTasks = new fu, this.summary = new wu, this.current = pu(), this.lastDrawnStartMs = -1, this.lastPending = -1, this.ahead = -1, this.tokens = gu, this.lastRefillMs = performance.now(), this.waiting = [], this.outlierTimer = null, this.flushTimer = null, this.startedMs = 0, this.lastFlushMs = 0, this.loadLine = new cu, this.inGameSinceFlush = !1, this.visibilityChanged = () => {
+        this.longTasks = new YG, this.summary = new uG, this.current = XG(), this.lastDrawnStartMs = -1, this.lastPending = -1, this.ahead = -1, this.tokens = rG, this.lastRefillMs = performance.now(), this.waiting = [], this.outlierTimer = null, this.flushTimer = null, this.startedMs = 0, this.lastFlushMs = 0, this.loadLine = new fG, this.inGameSinceFlush = !1, this.visibilityChanged = () => {
           this.restart(), this.loadLine.hidden.changed(performance.now())
         }, this.restart = () => {
           this.lastDrawnStartMs = -1
         }, this.animationFrame = () => {
           this.current.rafs++
-        }, this.wasmFrame = (uu, Eu, ju, Uu, Zu, Xu) => {
-          this.ahead = uu.headerWord(su.K.Pacing) & su.cb.AheadMask, this.frame(Eu, ju, Uu, Zu, uu.headerWord(su.K.RenderUs) / 1e3, uu.headerWord(su.K.TicksRun), Xu, uu.headerWord(su.K.RenderPending))
-        }, this.wasmPeekPaced = uu => {
-          const Eu = performance.now();
-          this.frame(Eu, Eu, "paced", uu, 0, 0, 0, this.lastPending)
-        }, this.jsFrame = (uu, Eu, ju) => {
-          this.frame(uu, Eu, "drawn", ju, Eu - uu, 0, 0, -1)
-        }, this.jsTick = uu => {
-          this.current.mainMs += uu, this.current.ticks++, this.current.tickMs += uu
+        }, this.wasmFrame = (GG, bG, ZG, SG, LG, yG) => {
+          this.ahead = GG.headerWord(wG.K.Pacing) & wG.$.AheadMask, this.frame(bG, ZG, SG, LG, GG.headerWord(wG.K.RenderUs) / 1e3, GG.headerWord(wG.K.TicksRun), yG, GG.headerWord(wG.K.RenderPending))
+        }, this.wasmPeekPaced = GG => {
+          const bG = performance.now();
+          this.frame(bG, bG, "paced", GG, 0, 0, 0, this.lastPending)
+        }, this.jsFrame = (GG, bG, ZG) => {
+          this.frame(GG, bG, "drawn", ZG, bG - GG, 0, 0, -1)
+        }, this.jsTick = GG => {
+          this.current.mainMs += GG, this.current.ticks++, this.current.tickMs += GG
         }, this.logOutliers = () => {
           this.outlierTimer = null;
-          const uu = performance.now();
-          let Eu = 0;
-          for (const ju of this.waiting) {
-            if (ju.dueMs > uu) {
-              this.waiting[Eu++] = ju;
+          const GG = performance.now();
+          let bG = 0;
+          for (const ZG of this.waiting) {
+            if (ZG.dueMs > GG) {
+              this.waiting[bG++] = ZG;
               continue
             }
-            const su = [`long frame ${(0,Zu.d)(ju.intervalMs)} ms ending at ${(0,Zu.d)(ju.endMs)} ms: main ${(0,Zu.d)(ju.mainMs)} (render ${(0,Zu.d)(ju.renderMs)}, ${ju.ticks} ticks ${(0,Zu.d)(ju.tickMs)}), outside ${(0,Zu.d)(ju.intervalMs-ju.mainMs)}`, `${ju.rafs} rafs`];
-            ju.pendingBefore >= 0 && su.push(`pending ${ju.pendingBefore} -> ${ju.pendingAfter} (max ${ju.pendingMax})`), su.push(this.longTasks.describe(ju.endMs - ju.intervalMs, ju.endMs)), (0, Xu.k)("frame", su.join("; "))
+            const wG = [`long frame ${(0,LG.e)(ZG.intervalMs)} ms ending at ${(0,LG.e)(ZG.endMs)} ms: main ${(0,LG.e)(ZG.mainMs)} (render ${(0,LG.e)(ZG.renderMs)}, ${ZG.ticks} ticks ${(0,LG.e)(ZG.tickMs)}), outside ${(0,LG.e)(ZG.intervalMs-ZG.mainMs)}`, `${ZG.rafs} rafs`];
+            ZG.pendingBefore >= 0 && wG.push(`pending ${ZG.pendingBefore} -> ${ZG.pendingAfter} (max ${ZG.pendingMax})`), wG.push(this.longTasks.describe(ZG.endMs - ZG.intervalMs, ZG.endMs)), (0, yG.j)("frame", wG.join("; "))
           }
-          this.waiting.length = Eu, Eu > 0 && (this.outlierTimer = setTimeout(this.logOutliers, this.waiting[0].dueMs - uu))
+          this.waiting.length = bG, bG > 0 && (this.outlierTimer = setTimeout(this.logOutliers, this.waiting[0].dueMs - GG))
         }, this.flush = () => {
           this.flushTimer = null;
-          const uu = performance.now(),
-            Eu = Math.round((uu - this.lastFlushMs) / 1e3);
-          this.lastFlushMs = uu, this.scheduleFlush();
-          if (this.logSummary(Eu) || this.inGameSinceFlush) {
-            const Eu = this.loadLine.take(uu);
-            null !== Eu && (0, Xu.k)("frame", Eu)
+          const GG = performance.now(),
+            bG = Math.round((GG - this.lastFlushMs) / 1e3);
+          this.lastFlushMs = GG, this.scheduleFlush();
+          if (this.logSummary(bG) || this.inGameSinceFlush) {
+            const bG = this.loadLine.take(GG);
+            null !== bG && (0, yG.j)("frame", bG)
           }
           this.inGameSinceFlush = !1, this.summary.reset()
         }, document.addEventListener("visibilitychange", this.visibilityChanged)
       }
-      start(uu, Eu) {
-        var ju;
-        this.restart(), this.startedMs = performance.now(), this.lastFlushMs = this.startedMs, this.loadLine.start(this.startedMs), this.scheduleFlush(), (0, Xu.k)("frame", `start: ${uu} client, ${Eu}, dpr ${window.devicePixelRatio}, long tasks ${null!==(ju=this.longTasks.kind)&&void 0!==ju?ju:"n/a"}; a summary each ${Ou/1e3} s in game (${Yu/1e3} s for the first ${hu/1e3} s), outliers over ${Du} ms`)
+      start(GG, bG) {
+        var ZG;
+        this.restart(), this.startedMs = performance.now(), this.lastFlushMs = this.startedMs, this.loadLine.start(this.startedMs), this.scheduleFlush(), (0, yG.j)("frame", `start: ${GG} client, ${bG}, dpr ${window.devicePixelRatio}, long tasks ${null!==(ZG=this.longTasks.kind)&&void 0!==ZG?ZG:"n/a"}; a summary each ${KG/1e3} s in game (${hG/1e3} s for the first ${dG/1e3} s), outliers over ${JG} ms`)
       }
-      setLoadCounts(uu) {
-        this.loadLine.setSource(uu)
+      setLoadCounts(GG) {
+        this.loadLine.setSource(GG)
       }
       joined() {
         this.startedMs = performance.now(), this.scheduleFlush()
@@ -227,68 +227,68 @@ export const modules = {
       }
       scheduleFlush() {
         null !== this.flushTimer && clearTimeout(this.flushTimer);
-        const uu = performance.now() - this.startedMs < hu;
-        this.flushTimer = setTimeout(this.flush, uu ? Yu : Ou)
+        const GG = performance.now() - this.startedMs < dG;
+        this.flushTimer = setTimeout(this.flush, GG ? hG : KG)
       }
-      frame(uu, Eu, ju, su, Zu, Xu, lu, qu) {
-        if (!su) return this.restart(), void(this.lastPending = qu);
-        const fu = this.current;
-        (0, Uu.e)(ju) ? (this.lastDrawnStartMs >= 0 && (fu.pendingAfter = this.lastPending, this.closeInterval(uu - this.lastDrawnStartMs, uu)), this.lastDrawnStartMs = uu, Gu(fu).pendingBefore = this.lastPending, this.summary.undrawn.drawn()) : this.lastDrawnStartMs >= 0 && this.summary.undrawn.add(ju, Eu - this.lastDrawnStartMs, this.ahead), fu.mainMs += Eu - uu, fu.renderMs += Zu, fu.ticks += Xu, fu.tickMs += lu, fu.pendingMax = Math.max(fu.pendingMax, qu), this.lastPending = qu, this.summary.totals.pendingMax = Math.max(this.summary.totals.pendingMax, qu)
+      frame(GG, bG, ZG, wG, LG, yG, kG, UG) {
+        if (!wG) return this.restart(), void(this.lastPending = UG);
+        const YG = this.current;
+        (0, SG.e)(ZG) ? (this.lastDrawnStartMs >= 0 && (YG.pendingAfter = this.lastPending, this.closeInterval(GG - this.lastDrawnStartMs, GG)), this.lastDrawnStartMs = GG, oG(YG).pendingBefore = this.lastPending, this.summary.undrawn.drawn()) : this.lastDrawnStartMs >= 0 && this.summary.undrawn.add(ZG, bG - this.lastDrawnStartMs, this.ahead), YG.mainMs += bG - GG, YG.renderMs += LG, YG.ticks += yG, YG.tickMs += kG, YG.pendingMax = Math.max(YG.pendingMax, UG), this.lastPending = UG, this.summary.totals.pendingMax = Math.max(this.summary.totals.pendingMax, UG)
       }
-      closeInterval(uu, Eu) {
-        const ju = this.summary,
-          su = this.current;
-        ju.frames < eu && (ju.intervals[ju.frames] = uu), ju.frames++, ju.maxMs = Math.max(ju.maxMs, uu);
-        const Uu = ju.totals;
-        Uu.mainMs += su.mainMs, Uu.renderMs += su.renderMs, Uu.ticks += su.ticks, Uu.tickMs += su.tickMs, Uu.rafs += su.rafs, uu > 50 && ju.slow++, uu > Du && this.outlier(uu, Eu)
+      closeInterval(GG, bG) {
+        const ZG = this.summary,
+          wG = this.current;
+        ZG.frames < EG && (ZG.intervals[ZG.frames] = GG), ZG.frames++, ZG.maxMs = Math.max(ZG.maxMs, GG);
+        const SG = ZG.totals;
+        SG.mainMs += wG.mainMs, SG.renderMs += wG.renderMs, SG.ticks += wG.ticks, SG.tickMs += wG.tickMs, SG.rafs += wG.rafs, GG > 50 && ZG.slow++, GG > JG && this.outlier(GG, bG)
       }
-      outlier(uu, Eu) {
-        const ju = Math.floor((Eu - this.lastRefillMs) / Mu);
-        ju > 0 && (this.tokens = Math.min(gu, this.tokens + ju), this.lastRefillMs += ju * Mu), 0 !== this.tokens ? (this.tokens--, this.summary.shown++, this.waiting.push({
+      outlier(GG, bG) {
+        const ZG = Math.floor((bG - this.lastRefillMs) / zG);
+        ZG > 0 && (this.tokens = Math.min(rG, this.tokens + ZG), this.lastRefillMs += ZG * zG), 0 !== this.tokens ? (this.tokens--, this.summary.shown++, this.waiting.push({
           ...this.current,
-          endMs: Eu,
-          intervalMs: uu,
+          endMs: bG,
+          intervalMs: GG,
           dueMs: performance.now() + 1e3
         }), this.outlierTimer ??= setTimeout(this.logOutliers, 1e3)) : this.summary.dropped++
       }
-      logSummary(uu) {
-        const Eu = this.summary,
-          ju = Eu.totals;
-        if (0 === Eu.frames) return Eu.undrawn.count > 0 && (0, Xu.k)("frame", `${uu}s: no frames drawn, ${Eu.undrawn.describe()}; pending max ${ju.pendingMax}`), Eu.undrawn.count > 0;
-        const su = Eu.intervals.subarray(0, Math.min(Eu.frames, eu)).sort(),
-          Uu = [`${Eu.frames} frames, median ${(0,Zu.d)((0,Zu.g)(su,.5))} p95 ${(0,Zu.d)((0,Zu.g)(su,.95))} max ${(0,Zu.d)(Eu.maxMs)} ms, ${Eu.slow} over 50, ${Eu.shown+Eu.dropped} over ${Du}`, `${ju.rafs} rafs, ${Eu.undrawn.describe()}`, `main ${(0,Zu.d)(ju.mainMs)} ms (render ${(0,Zu.d)(ju.renderMs)}, ${ju.ticks} ticks ${(0,Zu.d)(ju.tickMs)})`];
-        return ju.pendingMax >= 0 && Uu.push(`pending max ${ju.pendingMax}`), this.ahead >= 0 && Uu.push(`${this.ahead} frames ahead`), Uu.push(`outliers ${Eu.shown} logged, ${Eu.dropped} dropped`), (0, Xu.k)("frame", `${uu}s: ${Uu.join("; ")}`), !0
+      logSummary(GG) {
+        const bG = this.summary,
+          ZG = bG.totals;
+        if (0 === bG.frames) return bG.undrawn.count > 0 && (0, yG.j)("frame", `${GG}s: no frames drawn, ${bG.undrawn.describe()}; pending max ${ZG.pendingMax}`), bG.undrawn.count > 0;
+        const wG = bG.intervals.subarray(0, Math.min(bG.frames, EG)).sort(),
+          SG = [`${bG.frames} frames, median ${(0,LG.e)((0,LG.i)(wG,.5))} p95 ${(0,LG.e)((0,LG.i)(wG,.95))} max ${(0,LG.e)(bG.maxMs)} ms, ${bG.slow} over 50, ${bG.shown+bG.dropped} over ${JG}`, `${ZG.rafs} rafs, ${bG.undrawn.describe()}`, `main ${(0,LG.e)(ZG.mainMs)} ms (render ${(0,LG.e)(ZG.renderMs)}, ${ZG.ticks} ticks ${(0,LG.e)(ZG.tickMs)})`];
+        return ZG.pendingMax >= 0 && SG.push(`pending max ${ZG.pendingMax}`), this.ahead >= 0 && SG.push(`${this.ahead} frames ahead`), SG.push(`outliers ${bG.shown} logged, ${bG.dropped} dropped`), (0, yG.j)("frame", `${GG}s: ${SG.join("; ")}`), !0
       }
     }
-    let du = null;
+    let CG = null;
 
-    function au(uu, Eu) {
-      return du ??= new Ju, du.start(uu, Eu), du
+    function WG(GG, bG) {
+      return CG ??= new iG, CG.start(GG, bG), CG
     }
   },
-  34424: (uu, Eu, ju) => {
-    function su(uu) {
-      return `hidden ${uu.changes} changes, ${Math.round(uu.hiddenMs)} ms`
+  34345: (GG, bG, ZG) => {
+    function wG(GG) {
+      return `hidden ${GG.changes} changes, ${Math.round(GG.hiddenMs)} ms`
     }
-    ju.d(Eu, {
-      b: () => Uu,
-      d: () => su
+    ZG.d(bG, {
+      c: () => SG,
+      f: () => wG
     });
-    class Uu {
+    class SG {
       constructor() {
         this.changes = 0, this.hiddenMs = 0, this.hiddenSinceMs = document.hidden ? performance.now() : -1
       }
-      changed(uu) {
-        this.changes++, document.hidden ? this.hiddenSinceMs = uu : this.hiddenSinceMs >= 0 && (this.hiddenMs += uu - this.hiddenSinceMs, this.hiddenSinceMs = -1)
+      changed(GG) {
+        this.changes++, document.hidden ? this.hiddenSinceMs = GG : this.hiddenSinceMs >= 0 && (this.hiddenMs += GG - this.hiddenSinceMs, this.hiddenSinceMs = -1)
       }
-      totals(uu) {
+      totals(GG) {
         return {
           changes: this.changes,
-          hiddenMs: this.hiddenMs + (this.hiddenSinceMs >= 0 ? uu - this.hiddenSinceMs : 0)
+          hiddenMs: this.hiddenMs + (this.hiddenSinceMs >= 0 ? GG - this.hiddenSinceMs : 0)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

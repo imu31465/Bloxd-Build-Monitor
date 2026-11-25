@@ -1,132 +1,132 @@
 export const id = 219;
 export const ids = [219];
 export const modules = {
-  36759: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      default: () => Ju
+  36695: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      default: () => iG
     });
-    var su = ju(1105),
-      Uu = ju.n(su),
-      Zu = ju(1580),
-      Xu = ju(1100),
-      lu = ju(822),
-      qu = ju(1244),
-      fu = ju(1506),
-      Cu = ju(1570),
-      bu = ju(3756),
-      cu = ju(1116),
-      Nu = ju(3667),
-      Ou = ju(2709),
-      Yu = ju(1154);
-    const hu = 2;
+    var wG = ZG(1006),
+      SG = ZG.n(wG),
+      LG = ZG(1457),
+      yG = ZG(1003),
+      kG = ZG(751),
+      UG = ZG(1151),
+      YG = ZG(1393),
+      VG = ZG(1444),
+      pG = ZG(3535),
+      fG = ZG(1016),
+      QG = ZG(3458),
+      KG = ZG(2557),
+      hG = ZG(1067);
+    const dG = 2;
 
-    function Du(uu) {
-      return "firstPartyGame" === uu.type ? {
+    function JG(GG) {
+      return "firstPartyGame" === GG.type ? {
         type: "game",
-        gameNameWithVariation: uu.gameNameWithVariation
+        gameNameWithVariation: GG.gameNameWithVariation
       } : {
         type: "preview",
-        preview: uu.preview
+        preview: GG.preview
       }
     }
 
-    function gu(uu) {
+    function rG(GG) {
       let {
-        game: Eu,
-        disabled: ju,
-        showPlaceholder: su
-      } = uu;
-      return null !== Eu ? (0, Yu.jsx)(Nu.e, {
-        source: Du(Eu),
+        game: bG,
+        disabled: ZG,
+        showPlaceholder: wG
+      } = GG;
+      return null !== bG ? (0, hG.jsx)(QG.g, {
+        source: JG(bG),
         gameWidth: "100%",
         useLongRatio: !0,
-        disabled: ju,
+        disabled: ZG,
         entrySource: "customGamePlace"
-      }) : su ? (0, Yu.jsx)(Nu.c, {
+      }) : wG ? (0, hG.jsx)(QG.d, {
         gameWidth: "100%",
         useLongRatio: !0
       }) : null
     }
 
-    function Mu(uu) {
-      var Eu;
+    function zG(GG) {
+      var bG;
       let {
-        category: ju,
-        title: su,
-        tintColour: Uu,
-        layout: Zu,
-        games: Xu,
-        landscape: lu = !1
-      } = uu;
+        category: ZG,
+        title: wG,
+        tintColour: SG,
+        layout: LG,
+        games: yG,
+        landscape: kG = !1
+      } = GG;
       const {
-        followsLeader: qu
-      } = (0, Ou.g)(), fu = null !== (Eu = null === Xu || void 0 === Xu ? void 0 : Xu.slice(0, Zu.gameCount)) && void 0 !== Eu ? Eu : [], bu = {
-        "--custom-game-place-tint": Uu
+        followsLeader: UG
+      } = (0, KG.i)(), YG = null !== (bG = null === yG || void 0 === yG ? void 0 : yG.slice(0, LG.gameCount)) && void 0 !== bG ? bG : [], pG = {
+        "--custom-game-place-tint": SG
       };
-      return (0, Yu.jsxs)("div", {
+      return (0, hG.jsxs)("div", {
         className: "CustomGamePlacePanel AnimFadeIn",
-        style: bu,
-        children: [(0, Yu.jsx)("h2", {
+        style: pG,
+        children: [(0, hG.jsx)("h2", {
           className: "CustomGamePlacePanelHeading",
-          children: (0, Yu.jsxs)(Cu.LinkPreserveSearch, {
-            to: `/custom-games/${encodeURIComponent(ju)}`,
+          children: (0, hG.jsxs)(VG.LinkPreserveSearch, {
+            to: `/custom-games/${encodeURIComponent(ZG)}`,
             className: "CustomGamePlacePanelTitle SmallTextBold",
-            children: [(0, Yu.jsx)("span", {
-              children: su
-            }), (0, Yu.jsx)(cu.e, {
+            children: [(0, hG.jsx)("span", {
+              children: wG
+            }), (0, hG.jsx)(fG.c, {
               name: "arrow-up"
             })]
           })
-        }), (0, Yu.jsx)("div", {
+        }), (0, hG.jsx)("div", {
           className: "CustomGamePlacePanelGames",
           style: {
-            gridTemplateColumns: `repeat(${lu?Zu.columnCount:hu}, ${lu?"var(--custom-game-place-tile-width)":"minmax(0, 1fr)"})`
+            gridTemplateColumns: `repeat(${kG?LG.columnCount:dG}, ${kG?"var(--custom-game-place-tile-width)":"minmax(0, 1fr)"})`
           },
           children: Array.from({
-            length: Zu.gameCount
-          }, ((uu, Eu) => {
-            var ju;
-            return (0, Yu.jsx)(gu, {
-              game: null !== (ju = fu[Eu]) && void 0 !== ju ? ju : null,
-              disabled: qu,
-              showPlaceholder: !Xu
-            }, Eu)
+            length: LG.gameCount
+          }, ((GG, bG) => {
+            var ZG;
+            return (0, hG.jsx)(rG, {
+              game: null !== (ZG = YG[bG]) && void 0 !== ZG ? ZG : null,
+              disabled: UG,
+              showPlaceholder: !yG
+            }, bG)
           }))
         })]
       })
     }
 
-    function eu(uu) {
+    function EG(GG) {
       let {
-        categories: Eu
-      } = uu;
+        categories: bG
+      } = GG;
 
-      function ju(uu) {
-        const ju = Eu[uu];
-        return (0, Yu.jsx)(Mu, {
-          ...ju,
+      function ZG(GG) {
+        const ZG = bG[GG];
+        return (0, hG.jsx)(zG, {
+          ...ZG,
           landscape: !0
-        }, ju.id)
+        }, ZG.id)
       }
-      return (0, Yu.jsxs)("div", {
+      return (0, hG.jsxs)("div", {
         className: "CustomGamePlaceMosaic CustomGamePlaceMosaicLandscape AnimFadeIn",
-        children: [(0, Yu.jsxs)("div", {
+        children: [(0, hG.jsxs)("div", {
           className: "CustomGamePlaceUpper",
-          children: [(0, Yu.jsxs)("div", {
+          children: [(0, hG.jsxs)("div", {
             className: "CustomGamePlaceMain",
-            children: [(0, Yu.jsxs)("div", {
+            children: [(0, hG.jsxs)("div", {
               className: "CustomGamePlaceRow",
-              children: [ju(0), ju(2)]
-            }), ju(1)]
-          }), ju(4)]
-        }), (0, Yu.jsxs)("div", {
+              children: [ZG(0), ZG(2)]
+            }), ZG(1)]
+          }), ZG(4)]
+        }), (0, hG.jsxs)("div", {
           className: "CustomGamePlaceRow",
-          children: [ju(3), ju(5)]
+          children: [ZG(3), ZG(5)]
         })]
       })
     }
-    const Gu = ["section1", "section2", "section3", "section4", "section5", "section6"],
-      pu = {
+    const oG = ["section1", "section2", "section3", "section4", "section5", "section6"],
+      XG = {
         section1: {
           gameCount: 4,
           columnCount: 2
@@ -152,67 +152,67 @@ export const modules = {
           columnCount: 4
         }
       };
-    var wu = ju(1170);
+    var uG = ZG(1081);
 
-    function Ju() {
-      var uu;
+    function iG() {
+      var GG;
       const {
-        t: Eu
-      } = (0, qu.A)(), ju = (0, Zu.B)(), su = (0, wu.l)(), cu = (0, bu.b)({
+        t: bG
+      } = (0, UG.w)(), ZG = (0, LG.v)(), wG = (0, uG.g)(), fG = (0, pG.e)({
         refresh: !0
-      }), Nu = ju.customGamePlace;
-      if (!(0, Xu.m)(Nu)) return (0, Yu.jsx)(Cu.NavigatePreserveSearch, {
+      }), QG = ZG.customGamePlace;
+      if (!(0, yG.m)(QG)) return (0, hG.jsx)(VG.NavigatePreserveSearch, {
         to: "/"
       });
-      const Ou = lu.c[Nu],
-        hu = Xu.d[Nu],
-        Du = null !== (uu = null === cu || void 0 === cu ? void 0 : cu[Nu]) && void 0 !== uu ? uu : null,
-        gu = [];
-      for (let Uu = 0; Uu < hu.length; Uu++) {
-        var Ju;
-        const uu = Gu[Uu];
-        if (!uu) continue;
-        const ju = hu[Uu];
-        gu.push({
-          id: ju.id,
-          category: ju.category,
-          title: Eu(ju.displayTranslationKey),
-          tintColour: ju.tintColour,
-          layout: pu[uu],
-          games: null !== (Ju = null === Du || void 0 === Du ? void 0 : Du[ju.id]) && void 0 !== Ju ? Ju : null
+      const KG = kG.d[QG],
+        dG = yG.e[QG],
+        JG = null !== (GG = null === fG || void 0 === fG ? void 0 : fG[QG]) && void 0 !== GG ? GG : null,
+        rG = [];
+      for (let SG = 0; SG < dG.length; SG++) {
+        var iG;
+        const GG = oG[SG];
+        if (!GG) continue;
+        const ZG = dG[SG];
+        rG.push({
+          id: ZG.id,
+          category: ZG.category,
+          title: bG(ZG.displayTranslationKey),
+          tintColour: ZG.tintColour,
+          layout: XG[GG],
+          games: null !== (iG = null === JG || void 0 === JG ? void 0 : JG[ZG.id]) && void 0 !== iG ? iG : null
         })
       }
-      return (0, Yu.jsxs)("div", {
+      return (0, hG.jsxs)("div", {
         className: "CustomGamePlaceContainer AnimFadeIn",
-        children: [(0, Yu.jsx)("div", {
+        children: [(0, hG.jsx)("div", {
           className: "BackgroundImage",
           style: {
-            backgroundImage: `url(/textures/games/${Nu}/${Ou.largePicture}.png)`
+            backgroundImage: `url(/textures/games/${QG}/${KG.largePicture}.png)`
           }
-        }), (0, Yu.jsx)("h1", {
+        }), (0, hG.jsx)("h1", {
           className: "VisuallyHidden",
-          children: Eu(Ou.title)
-        }), (0, Yu.jsx)("div", {
+          children: bG(KG.title)
+        }), (0, hG.jsx)("div", {
           className: "CustomGamePlaceHeaderContainer",
-          children: (0, Yu.jsx)(fu.d, {
-            onClick: () => (0, Cu.navigatePreserveSearch)("/"),
-            children: Eu("homePage:backToGames")
+          children: (0, hG.jsx)(YG.b, {
+            onClick: () => (0, VG.navigatePreserveSearch)("/"),
+            children: bG("homePage:backToGames")
           })
-        }), !su && (0, Yu.jsx)(eu, {
-          categories: gu
-        }), su && (0, Yu.jsx)("div", {
-          className: Uu()("CustomGamePlaceMosaic", "CustomGamePlaceMosaicPortrait"),
-          children: gu.map((uu => (0, Yu.jsx)(Mu, {
-            category: uu.category,
-            title: uu.title,
-            tintColour: uu.tintColour,
-            layout: uu.layout,
-            games: uu.games
-          }, uu.id)))
+        }), !wG && (0, hG.jsx)(EG, {
+          categories: rG
+        }), wG && (0, hG.jsx)("div", {
+          className: SG()("CustomGamePlaceMosaic", "CustomGamePlaceMosaicPortrait"),
+          children: rG.map((GG => (0, hG.jsx)(zG, {
+            category: GG.category,
+            title: GG.title,
+            tintColour: GG.tintColour,
+            layout: GG.layout,
+            games: GG.games
+          }, GG.id)))
         })]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

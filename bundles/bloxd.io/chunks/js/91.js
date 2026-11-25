@@ -1,58 +1,58 @@
 export const id = 91;
 export const ids = [91];
 export const modules = {
-  36770: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Cu,
-      g: () => lu,
-      i: () => fu,
-      m: () => qu,
-      q: () => Mu
+  36707: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => VG,
+      g: () => kG,
+      k: () => YG,
+      l: () => UG,
+      m: () => zG
     });
-    var su = ju(656),
-      Uu = ju(1802),
-      Zu = ju(4976);
-    class Xu {
-      constructor(uu, Eu) {
-        this.width = uu, this.Mb = Eu, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(uu * Eu)
+    var wG = ZG(612),
+      SG = ZG(1721),
+      LG = ZG(4818);
+    class yG {
+      constructor(GG, bG) {
+        this.width = GG, this.rp = bG, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(GG * bG)
       }
-      push(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const ju = this.data,
-          su = this.next * this.width;
-        for (let Uu = 0; Uu < this.width; Uu++) ju[su + Uu] = uu[Eu + Uu];
-        this.next = (this.next + 1) % this.Mb, this.size = Math.min(this.size + 1, this.Mb)
+      push(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const ZG = this.data,
+          wG = this.next * this.width;
+        for (let SG = 0; SG < this.width; SG++) ZG[wG + SG] = GG[bG + SG];
+        this.next = (this.next + 1) % this.rp, this.size = Math.min(this.size + 1, this.rp)
       }
       rows() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
-        const ju = [],
-          su = (this.next - this.size + this.Mb) % this.Mb;
-        for (let Uu = 0; Uu < this.size; Uu++) {
-          const Zu = (su + Uu) % this.Mb * this.width;
-          this.data[Zu + uu] >= Eu && ju.push(Array.from(this.data.subarray(Zu, Zu + this.width)))
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
+        const ZG = [],
+          wG = (this.next - this.size + this.rp) % this.rp;
+        for (let SG = 0; SG < this.size; SG++) {
+          const LG = (wG + SG) % this.rp * this.width;
+          this.data[LG + GG] >= bG && ZG.push(Array.from(this.data.subarray(LG, LG + this.width)))
         }
-        return ju
+        return ZG
       }
       lines() {
-        return this.rows().map((uu => uu.join(",")))
+        return this.rows().map((GG => GG.join(",")))
       }
     }
-    const lu = 10,
-      qu = {
+    const kG = 10,
+      UG = {
         idle: 0,
-        oN: 1,
-        XV: 2,
-        lV: 3,
-        uh: 4
+        vQ: 1,
+        vF: 2,
+        lF: 3,
+        Ld: 4
       },
-      fu = {
+      YG = {
         none: 0,
         skipped: 1,
         paced: 2,
         drawn: 3
       },
-      Cu = {
+      VG = {
         lockGained: 1,
         lockLost: 2,
         lockError: 3,
@@ -66,91 +66,91 @@ export const modules = {
         stepsLost: 11,
         cameraSetsLost: 12
       },
-      bu = 12e3,
-      cu = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
-      Nu = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
-      Ou = ["nowMs", "dtMs", "heading", "pitch", "kind"],
-      Yu = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
-      hu = ["nowMs", "change", "count"];
+      pG = 12e3,
+      fG = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
+      QG = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
+      KG = ["nowMs", "dtMs", "heading", "pitch", "kind"],
+      hG = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
+      dG = ["nowMs", "change", "count"];
 
-    function Du(uu) {
-      return "js" === uu ? Cu.jsClient : Cu.wasmClient
+    function JG(GG) {
+      return "js" === GG ? VG.jsClient : VG.wasmClient
     }
-    class gu {
+    class rG {
       constructor() {
-        this.steps = new Xu(lu, bu), this.events = new Xu(Nu.length, bu), this.frames = new Xu(Ou.length, bu), this.cameraSets = new Xu(Zu.f, 256), this.changes = new Xu(hu.length, 256)
+        this.steps = new yG(kG, pG), this.events = new yG(QG.length, pG), this.frames = new yG(KG.length, pG), this.cameraSets = new yG(LG.h, 256), this.changes = new yG(dG.length, 256)
       }
     }
-    const Mu = new class {
+    const zG = new class {
       constructor() {
-        this.rings = null, this.sample = new Float64Array(Nu.length), this.startedClient = null, this.startedAtMs = 0
+        this.rings = null, this.sample = new Float64Array(QG.length), this.startedClient = null, this.startedAtMs = 0
       }
       get client() {
         return this.startedClient
       }
-      start(uu, Eu) {
-        this.startedClient = uu, this.startedAtMs = performance.now(), null !== this.rings ? this.change(Du(uu)) : Eu && this.allocate()
+      start(GG, bG) {
+        this.startedClient = GG, this.startedAtMs = performance.now(), null !== this.rings ? this.change(JG(GG)) : bG && this.allocate()
       }
       lockGained() {
-        this.allocate(), this.change(Cu.lockGained)
+        this.allocate(), this.change(VG.lockGained)
       }
       allocate() {
-        null === this.rings && (this.rings = new gu, null !== this.startedClient && this.changeAt(this.startedAtMs, Du(this.startedClient), 1))
+        null === this.rings && (this.rings = new rG, null !== this.startedClient && this.changeAt(this.startedAtMs, JG(this.startedClient), 1))
       }
-      step(uu, Eu) {
-        var ju;
-        uu[Eu + 6] !== qu.uh && (null === (ju = this.rings) || void 0 === ju || ju.steps.push(uu, Eu))
+      step(GG, bG) {
+        var ZG;
+        GG[bG + 6] !== UG.Ld && (null === (ZG = this.rings) || void 0 === ZG || ZG.steps.push(GG, bG))
       }
-      cameraSet(uu, Eu) {
-        var ju;
-        null === (ju = this.rings) || void 0 === ju || ju.cameraSets.push(uu, Eu)
+      cameraSet(GG, bG) {
+        var ZG;
+        null === (ZG = this.rings) || void 0 === ZG || ZG.cameraSets.push(GG, bG)
       }
-      mouseMove(uu, Eu) {
-        const ju = this.rings;
-        if (null === ju) return;
-        const su = this.sample;
-        su[0] = uu.timeStamp, su[1] = performance.now(), su[2] = uu.movementX, su[3] = uu.movementY, su[4] = Eu ? 1 : 0, ju.events.push(su)
+      mouseMove(GG, bG) {
+        const ZG = this.rings;
+        if (null === ZG) return;
+        const wG = this.sample;
+        wG[0] = GG.timeStamp, wG[1] = performance.now(), wG[2] = GG.movementX, wG[3] = GG.movementY, wG[4] = bG ? 1 : 0, ZG.events.push(wG)
       }
-      frame(uu, Eu, ju, su) {
-        const Uu = this.rings;
-        if (null === Uu || su === fu.none) return;
-        const Zu = this.sample;
-        Zu[0] = performance.now(), Zu[1] = uu, Zu[2] = Eu, Zu[3] = ju, Zu[4] = su, Uu.frames.push(Zu)
+      frame(GG, bG, ZG, wG) {
+        const SG = this.rings;
+        if (null === SG || wG === YG.none) return;
+        const LG = this.sample;
+        LG[0] = performance.now(), LG[1] = GG, LG[2] = bG, LG[3] = ZG, LG[4] = wG, SG.frames.push(LG)
       }
-      change(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.changeAt(performance.now(), uu, Eu)
+      change(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.changeAt(performance.now(), GG, bG)
       }
-      changeAt(uu, Eu, ju) {
-        const su = this.rings;
-        if (null === su) return;
-        const Uu = this.sample;
-        Uu[0] = uu, Uu[1] = Eu, Uu[2] = ju, su.changes.push(Uu)
+      changeAt(GG, bG, ZG) {
+        const wG = this.rings;
+        if (null === wG) return;
+        const SG = this.sample;
+        SG[0] = GG, SG[1] = bG, SG[2] = ZG, wG.changes.push(SG)
       }
       dumpText() {
-        var uu, Eu;
-        const ju = this.rings;
-        return [`look records (${this.startedClient}): ${cu.join(",")}`, ...null !== (uu = null === ju || void 0 === ju ? void 0 : ju.steps.lines()) && void 0 !== uu ? uu : [], `mousemove events: ${Nu.join(",")}`, ...null !== (Eu = null === ju || void 0 === ju ? void 0 : ju.events.lines()) && void 0 !== Eu ? Eu : []].join("\n")
+        var GG, bG;
+        const ZG = this.rings;
+        return [`look records (${this.startedClient}): ${fG.join(",")}`, ...null !== (GG = null === ZG || void 0 === ZG ? void 0 : ZG.steps.lines()) && void 0 !== GG ? GG : [], `mousemove events: ${QG.join(",")}`, ...null !== (bG = null === ZG || void 0 === ZG ? void 0 : ZG.events.lines()) && void 0 !== bG ? bG : []].join("\n")
       }
-      toJson(uu, Eu) {
-        var ju;
-        const Uu = uu - 6e4,
-          Zu = this.rings,
-          Xu = function(uu, Eu) {
-            var ju;
-            let su = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-            const Zu = null !== (ju = null === uu || void 0 === uu ? void 0 : uu.rows(su, Uu)) && void 0 !== ju ? ju : [];
+      toJson(GG, bG) {
+        var ZG;
+        const SG = GG - 6e4,
+          LG = this.rings,
+          yG = function(GG, bG) {
+            var ZG;
+            let wG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+            const LG = null !== (ZG = null === GG || void 0 === GG ? void 0 : GG.rows(wG, SG)) && void 0 !== ZG ? ZG : [];
             return {
-              columns: Eu,
-              fromMs: 0 === Zu.length ? null : Zu[0][su],
-              rows: Zu
+              columns: bG,
+              fromMs: 0 === LG.length ? null : LG[0][wG],
+              rows: LG
             }
           };
         return {
-          version: su.b,
-          client: null !== (ju = this.startedClient) && void 0 !== ju ? ju : "not started",
+          version: wG.e,
+          client: null !== (ZG = this.startedClient) && void 0 !== ZG ? ZG : "not started",
           savedAt: (new Date).toISOString(),
-          savedAtMs: uu,
+          savedAtMs: GG,
           keptMs: 6e4,
           page: window.location.href,
           userAgent: navigator.userAgent,
@@ -159,260 +159,260 @@ export const modules = {
             width: window.screen.width,
             height: window.screen.height
           },
-          rh: null !== document.pointerLockElement,
+          gd: null !== document.pointerLockElement,
           visibility: document.visibilityState,
-          ...Eu,
-          outcomes: qu,
-          frameKinds: fu,
-          changes: Cu,
-          lookSteps: Xu(null === Zu || void 0 === Zu ? void 0 : Zu.steps, cu),
-          mouseMoves: Xu(null === Zu || void 0 === Zu ? void 0 : Zu.events, Nu, 1),
-          frames: Xu(null === Zu || void 0 === Zu ? void 0 : Zu.frames, Ou),
-          cameraSets: Xu(null === Zu || void 0 === Zu ? void 0 : Zu.cameraSets, Yu),
-          pageChanges: Xu(null === Zu || void 0 === Zu ? void 0 : Zu.changes, hu)
+          ...bG,
+          outcomes: UG,
+          frameKinds: YG,
+          changes: VG,
+          lookSteps: yG(null === LG || void 0 === LG ? void 0 : LG.steps, fG),
+          mouseMoves: yG(null === LG || void 0 === LG ? void 0 : LG.events, QG, 1),
+          frames: yG(null === LG || void 0 === LG ? void 0 : LG.frames, KG),
+          cameraSets: yG(null === LG || void 0 === LG ? void 0 : LG.cameraSets, hG),
+          pageChanges: yG(null === LG || void 0 === LG ? void 0 : LG.changes, dG)
         }
       }
-      save(uu) {
-        const Eu = JSON.stringify(this.toJson(performance.now(), uu));
-        (0, Uu.d)(new Blob([Eu], {
+      save(GG) {
+        const bG = JSON.stringify(this.toJson(performance.now(), GG));
+        (0, SG.b)(new Blob([bG], {
           type: "application/json"
         }), `bloxd-mouse-look-${(new Date).toISOString().replace(/[:.]/g,"-")}.json`)
       }
     }
   },
-  36762: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      LOOK_DEBUG_HEADER: () => Cu,
-      endLookDebugTake: () => Du,
-      noteLookDroppedCopy: () => gu,
-      saveLookCapture: () => Mu,
-      startLookDebug: () => hu
+  36701: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      LOOK_DEBUG_HEADER: () => VG,
+      endLookDebugTake: () => JG,
+      noteLookDroppedCopy: () => rG,
+      saveLookCapture: () => zG,
+      startLookDebug: () => dG
     });
-    var su = ju(4976),
-      Uu = ju(2943),
-      Zu = ju(1955);
-    const Xu = new Map(Object.entries(su.h).map((uu => {
-      let [Eu, ju] = uu;
-      return [ju, Eu]
+    var wG = ZG(4818),
+      SG = ZG(2801),
+      LG = ZG(1873);
+    const yG = new Map(Object.entries(wG.k).map((GG => {
+      let [bG, ZG] = GG;
+      return [ZG, bG]
     })));
 
-    function lu(uu) {
-      return (0, Zu.A)(uu).toFixed(1)
+    function kG(GG) {
+      return (0, LG.C)(GG).toFixed(1)
     }
 
-    function qu(uu, Eu) {
-      return `camera set by ${Xu.get(uu[Eu+1])}: heading ${`${lu(uu[Eu+2])} -> ${lu(uu[Eu+4])}`} deg, pitch ${`${lu(uu[Eu+3])} -> ${lu(uu[Eu+5])}`} deg, at ${uu[Eu].toFixed(1)} ms`
+    function UG(GG, bG) {
+      return `camera set by ${yG.get(GG[bG+1])}: heading ${`${kG(GG[bG+2])} -> ${kG(GG[bG+4])}`} deg, pitch ${`${kG(GG[bG+3])} -> ${kG(GG[bG+5])}`} deg, at ${GG[bG].toFixed(1)} ms`
     }
-    var fu = ju(36770);
-    const Cu = 2;
+    var YG = ZG(36707);
+    const VG = 2;
 
-    function bu(uu) {
-      return Number.isFinite(uu) ? String(Math.round(10 * uu) / 10) : String(uu)
+    function pG(GG) {
+      return Number.isFinite(GG) ? String(Math.round(10 * GG) / 10) : String(GG)
     }
 
-    function cu(uu) {
-      return Number.isFinite(uu) ? uu.toFixed(1) : String(uu)
+    function fG(GG) {
+      return Number.isFinite(GG) ? GG.toFixed(1) : String(GG)
     }
-    class Nu {
+    class QG {
       constructor() {
-        this.frames = 0, this.looked = 0, this.idle = 0, this.XV = 0, this.pastLimit = 0, this.lockSkips = 0, this.uh = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
+        this.frames = 0, this.looked = 0, this.idle = 0, this.vF = 0, this.pastLimit = 0, this.lockSkips = 0, this.Ld = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
       }
       moved() {
-        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.XV > 0 || this.dropped > 0 || this.cameraSets > 0
+        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.vF > 0 || this.dropped > 0 || this.cameraSets > 0
       }
       hasEvent() {
-        return this.XV > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
+        return this.vF > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
       }
     }
-    class Ou {
+    class KG {
       constructor() {
-        var uu = this;
-        this.topicOn = (0, Uu.p)("look"), this.remote = (0, Uu.r)(), this.tally = new Nu, this.takes = null, this.started = !1, this.record = function(Eu) {
-          let ju = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          if (fu.q.step(Eu, ju), !uu.topicOn) return;
-          const su = Eu[ju],
-            Uu = Eu[ju + 1],
-            Zu = Eu[ju + 2],
-            Xu = Eu[ju + 3],
-            lu = Eu[ju + 4],
-            qu = Eu[ju + 5],
-            Cu = Eu[ju + 6],
-            Nu = Eu[ju + 7],
-            Ou = Eu[ju + 8],
-            Yu = Eu[ju + 9],
-            hu = uu.tally;
-          switch (hu.frames++, Cu) {
-            case fu.m.idle:
-              return void hu.idle++;
-            case fu.m.uh:
-              return void hu.uh++;
-            case fu.m.lV:
-              return hu.lockSkips++, void(0 === Zu && 0 === Xu || uu.outlier(`lock skip dropped raw (${bu(Zu)}, ${bu(Xu)}) at ${cu(su)} ms`))
+        var GG = this;
+        this.topicOn = (0, SG.m)("look"), this.remote = (0, SG.n)(), this.tally = new QG, this.takes = null, this.started = !1, this.record = function(bG) {
+          let ZG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          if (YG.m.step(bG, ZG), !GG.topicOn) return;
+          const wG = bG[ZG],
+            SG = bG[ZG + 1],
+            LG = bG[ZG + 2],
+            yG = bG[ZG + 3],
+            kG = bG[ZG + 4],
+            UG = bG[ZG + 5],
+            VG = bG[ZG + 6],
+            QG = bG[ZG + 7],
+            KG = bG[ZG + 8],
+            hG = bG[ZG + 9],
+            dG = GG.tally;
+          switch (dG.frames++, VG) {
+            case YG.l.idle:
+              return void dG.idle++;
+            case YG.l.Ld:
+              return void dG.Ld++;
+            case YG.l.lF:
+              return dG.lockSkips++, void(0 === LG && 0 === yG || GG.outlier(`lock skip dropped raw (${pG(LG)}, ${pG(yG)}) at ${fG(wG)} ms`))
           }
-          hu.looked++, Number.isFinite(Uu) && (hu.dtMin = Math.min(hu.dtMin, Uu), hu.dtMax = Math.max(hu.dtMax, Uu), hu.dtSum += Uu, Uu > 0 && (hu.peakRate = Math.max(hu.peakRate, Math.hypot(lu, qu) / Uu))), hu.raw[0] += Zu, hu.raw[1] += Xu, hu.turned[0] += lu, hu.turned[1] += qu;
-          const Du = Math.abs(Zu) > Yu || Math.abs(Xu) > Yu,
-            gu = `raw (${bu(Zu)}, ${bu(Xu)}) over ${cu(Uu)} ms, limit ${bu(Yu)}, filter v (${Nu.toFixed(3)}, ${Ou.toFixed(3)}) px/ms, at ${cu(su)} ms`;
-          Cu === fu.m.XV ? (hu.XV++, uu.outlier(`spike put right: ${gu} -> turned (${bu(lu)}, ${bu(qu)})`)) : Du ? (hu.pastLimit++, uu.outlier(`kept past limit: ${gu}`)) : Uu > 50 && (hu.longFrames++, uu.remote || uu.outlier(`long frame: ${gu}, turned in full`))
-        }, this.onMouseMove = uu => {
-          const Eu = null !== document.pointerLockElement;
-          if (fu.q.mouseMove(uu, Eu), !this.topicOn) return;
-          const ju = this.tally,
+          dG.looked++, Number.isFinite(SG) && (dG.dtMin = Math.min(dG.dtMin, SG), dG.dtMax = Math.max(dG.dtMax, SG), dG.dtSum += SG, SG > 0 && (dG.peakRate = Math.max(dG.peakRate, Math.hypot(kG, UG) / SG))), dG.raw[0] += LG, dG.raw[1] += yG, dG.turned[0] += kG, dG.turned[1] += UG;
+          const JG = Math.abs(LG) > hG || Math.abs(yG) > hG,
+            rG = `raw (${pG(LG)}, ${pG(yG)}) over ${fG(SG)} ms, limit ${pG(hG)}, filter v (${QG.toFixed(3)}, ${KG.toFixed(3)}) px/ms, at ${fG(wG)} ms`;
+          VG === YG.l.vF ? (dG.vF++, GG.outlier(`spike put right: ${rG} -> turned (${pG(kG)}, ${pG(UG)})`)) : JG ? (dG.pastLimit++, GG.outlier(`kept past limit: ${rG}`)) : SG > 50 && (dG.longFrames++, GG.remote || GG.outlier(`long frame: ${rG}, turned in full`))
+        }, this.onMouseMove = GG => {
+          const bG = null !== document.pointerLockElement;
+          if (YG.m.mouseMove(GG, bG), !this.topicOn) return;
+          const ZG = this.tally,
             {
-              movementX: su,
-              movementY: Uu
-            } = uu;
-          ju.events++;
-          const Zu = Math.max(Math.abs(su), Math.abs(Uu));
-          ju.eventMax = Math.max(ju.eventMax, Zu), Zu >= 200 && (ju.bigEvents++, this.eventOutlier(`big mousemove (${su}, ${Uu}) at ${cu(uu.timeStamp)} ms, lock ${Eu?"dl":"free"}`))
+              movementX: wG,
+              movementY: SG
+            } = GG;
+          ZG.events++;
+          const LG = Math.max(Math.abs(wG), Math.abs(SG));
+          ZG.eventMax = Math.max(ZG.eventMax, LG), LG >= 200 && (ZG.bigEvents++, this.eventOutlier(`big mousemove (${wG}, ${SG}) at ${fG(GG.timeStamp)} ms, lock ${bG?"Ik":"free"}`))
         }, this.onLockChange = () => {
-          const uu = document.pointerLockElement;
-          uu ? fu.q.lockGained() : fu.q.change(fu.d.lockLost), this.topicOn && (0, Uu.k)("look", `pointer lock ${uu?`gained (${uu.tagName.toLowerCase()})`:"lost"} at ${cu(performance.now())} ms`)
+          const GG = document.pointerLockElement;
+          GG ? YG.m.lockGained() : YG.m.change(YG.c.lockLost), this.topicOn && (0, SG.j)("look", `pointer lock ${GG?`gained (${GG.tagName.toLowerCase()})`:"lost"} at ${fG(performance.now())} ms`)
         }, this.onLockError = () => {
-          fu.q.change(fu.d.lockError), this.topicOn && (0, Uu.k)("look", `pointer lock request failed at ${cu(performance.now())} ms`)
+          YG.m.change(YG.c.lockError), this.topicOn && (0, SG.j)("look", `pointer lock request failed at ${fG(performance.now())} ms`)
         }, this.onVisibility = () => {
-          fu.q.change("hidden" === document.visibilityState ? fu.d.hidden : fu.d.visible), this.topicOn && (0, Uu.k)("look", `page ${document.visibilityState} at ${cu(performance.now())} ms`)
+          YG.m.change("hidden" === document.visibilityState ? YG.c.hidden : YG.c.visible), this.topicOn && (0, SG.j)("look", `page ${document.visibilityState} at ${fG(performance.now())} ms`)
         }, this.onFocus = () => {
-          fu.q.change(fu.d.focus)
+          YG.m.change(YG.c.focus)
         }, this.onBlur = () => {
-          fu.q.change(fu.d.blur)
+          YG.m.change(YG.c.blur)
         }, this.flush = () => {
           if (this.takeRecords(), !this.topicOn) return;
-          const uu = this.tally;
-          if (this.tally = new Nu, !uu.moved() || this.remote && !uu.hasEvent()) return;
-          const Eu = uu.looked > 0 ? uu.dtSum / uu.looked : NaN,
-            ju = [`${uu.frames} frames (${uu.looked} looked, ${uu.idle} idle${"wasm"===fu.q.client?`, ${uu.uh} carried`:""})`, `dt avg ${cu(Eu)} min ${cu(uu.dtMin)} max ${cu(uu.dtMax)}, ${uu.longFrames} long`, `${uu.events} mousemoves (max ${bu(uu.eventMax)} px, ${uu.bigEvents} big)`, `raw (${bu(uu.raw[0])}, ${bu(uu.raw[1])}) turned (${bu(uu.turned[0])}, ${bu(uu.turned[1])})`, `peak ${uu.peakRate.toFixed(2)} px/ms`, `put right ${uu.XV}, past limit ${uu.pastLimit}, lock skips ${uu.lockSkips}`, "lock " + (document.pointerLockElement ? "dl" : "free")];
-          uu.dropped > 0 && ju.push(`${uu.dropped} doubled spike copies dropped`), uu.cameraSets > 0 && ju.push(`${uu.cameraSets} camera sets`), uu.cameraSetsLost > 0 && ju.push(`${uu.cameraSetsLost} camera set records lost`), uu.lost > 0 && ju.push(`${uu.lost} records lost`), uu.suppressed > 0 && ju.push(`${uu.suppressed} outlier lines not shown`), (0, Uu.k)("look", `1s: ${ju.join("; ")}`)
+          const GG = this.tally;
+          if (this.tally = new QG, !GG.moved() || this.remote && !GG.hasEvent()) return;
+          const bG = GG.looked > 0 ? GG.dtSum / GG.looked : NaN,
+            ZG = [`${GG.frames} frames (${GG.looked} looked, ${GG.idle} idle${"wasm"===YG.m.client?`, ${GG.Ld} carried`:""})`, `dt avg ${fG(bG)} min ${fG(GG.dtMin)} max ${fG(GG.dtMax)}, ${GG.longFrames} long`, `${GG.events} mousemoves (max ${pG(GG.eventMax)} px, ${GG.bigEvents} big)`, `raw (${pG(GG.raw[0])}, ${pG(GG.raw[1])}) turned (${pG(GG.turned[0])}, ${pG(GG.turned[1])})`, `peak ${GG.peakRate.toFixed(2)} px/ms`, `put right ${GG.vF}, past limit ${GG.pastLimit}, lock skips ${GG.lockSkips}`, "lock " + (document.pointerLockElement ? "Ik" : "free")];
+          GG.dropped > 0 && ZG.push(`${GG.dropped} doubled spike copies dropped`), GG.cameraSets > 0 && ZG.push(`${GG.cameraSets} camera sets`), GG.cameraSetsLost > 0 && ZG.push(`${GG.cameraSetsLost} camera set records lost`), GG.lost > 0 && ZG.push(`${GG.lost} records lost`), GG.suppressed > 0 && ZG.push(`${GG.suppressed} outlier lines not shown`), (0, SG.j)("look", `1s: ${ZG.join("; ")}`)
         }
       }
-      start(uu, Eu) {
-        if (fu.q.start(uu, null !== document.pointerLockElement), this.takes = Eu, this.topicOn) {
+      start(GG, bG) {
+        if (YG.m.start(GG, null !== document.pointerLockElement), this.takes = bG, this.topicOn) {
           const {
-            screen: Eu
+            screen: bG
           } = window;
-          (0, Uu.k)("look", `start: ${uu} client, dpr ${window.devicePixelRatio}, screen ${Eu.width}x${Eu.height}, pointer lock ${document.pointerLockElement?"dl":"free"}`)
+          (0, SG.j)("look", `start: ${GG} client, dpr ${window.devicePixelRatio}, screen ${bG.width}x${bG.height}, pointer lock ${document.pointerLockElement?"Ik":"free"}`)
         }
         this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
           capture: !0,
           passive: !0
-        }), window.addEventListener("focus", this.onFocus), window.addEventListener("blur", this.onBlur), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.topicOn && !this.remote && (0, Uu.j)("look", (() => fu.q.dumpText())))
+        }), window.addEventListener("focus", this.onFocus), window.addEventListener("blur", this.onBlur), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.topicOn && !this.remote && (0, SG.i)("look", (() => YG.m.dumpText())))
       }
-      outlier(uu) {
-        const Eu = this.tally;
-        Eu.outliers >= 20 ? Eu.suppressed++ : (Eu.outliers++, (0, Uu.k)("look", uu))
+      outlier(GG) {
+        const bG = this.tally;
+        bG.outliers >= 20 ? bG.suppressed++ : (bG.outliers++, (0, SG.j)("look", GG))
       }
-      eventOutlier(uu) {
-        const Eu = this.tally;
-        Eu.eventLines >= 10 ? Eu.suppressed++ : (Eu.eventLines++, (0, Uu.k)("look", uu))
+      eventOutlier(GG) {
+        const bG = this.tally;
+        bG.eventLines >= 10 ? bG.suppressed++ : (bG.eventLines++, (0, SG.j)("look", GG))
       }
       takeRecords() {
         if (null === this.takes) return;
-        const uu = this.takes.look();
-        if (uu.length >= Cu) {
-          this.counted(fu.d.stepsLost, uu[0]), this.counted(fu.d.droppedCopies, uu[1]);
-          for (let Eu = Cu; Eu + fu.g <= uu.length; Eu += fu.g) this.record(uu, Eu)
+        const GG = this.takes.look();
+        if (GG.length >= VG) {
+          this.counted(YG.c.stepsLost, GG[0]), this.counted(YG.c.droppedCopies, GG[1]);
+          for (let bG = VG; bG + YG.g <= GG.length; bG += YG.g) this.record(GG, bG)
         }
-        const Eu = this.takes.cameraSets();
-        if (Eu.length >= su.b) {
-          this.counted(fu.d.cameraSetsLost, Eu[0]);
-          for (let uu = su.b; uu + su.f <= Eu.length; uu += su.f) fu.q.cameraSet(Eu, uu), this.topicOn && (this.tally.cameraSets++, this.outlier(qu(Eu, uu)))
+        const bG = this.takes.cameraSets();
+        if (bG.length >= wG.e) {
+          this.counted(YG.c.cameraSetsLost, bG[0]);
+          for (let GG = wG.e; GG + wG.h <= bG.length; GG += wG.h) YG.m.cameraSet(bG, GG), this.topicOn && (this.tally.cameraSets++, this.outlier(UG(bG, GG)))
         }
       }
       droppedCopy() {
-        this.counted(fu.d.droppedCopies, 1)
+        this.counted(YG.c.droppedCopies, 1)
       }
-      counted(uu, Eu) {
-        if (0 === Eu) return;
-        if (fu.q.change(uu, Eu), !this.topicOn) return;
-        const ju = this.tally;
-        uu === fu.d.droppedCopies ? ju.dropped += Eu : uu === fu.d.stepsLost ? ju.lost += Eu : ju.cameraSetsLost += Eu
+      counted(GG, bG) {
+        if (0 === bG) return;
+        if (YG.m.change(GG, bG), !this.topicOn) return;
+        const ZG = this.tally;
+        GG === YG.c.droppedCopies ? ZG.dropped += bG : GG === YG.c.stepsLost ? ZG.lost += bG : ZG.cameraSetsLost += bG
       }
       endTake() {
         this.takeRecords(), this.takes = null
       }
     }
-    let Yu = null;
+    let hG = null;
 
-    function hu(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      return Yu ??= new Ou, Yu.start(uu, Eu), Yu.record
+    function dG(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      return hG ??= new KG, hG.start(GG, bG), hG.record
     }
 
-    function Du() {
-      var uu;
-      null === (uu = Yu) || void 0 === uu || uu.endTake()
+    function JG() {
+      var GG;
+      null === (GG = hG) || void 0 === GG || GG.endTake()
     }
 
-    function gu() {
-      var uu;
-      null === (uu = Yu) || void 0 === uu || uu.droppedCopy()
+    function rG() {
+      var GG;
+      null === (GG = hG) || void 0 === GG || GG.droppedCopy()
     }
-    async function Mu(uu) {
-      var Eu;
-      null === (Eu = Yu) || void 0 === Eu || Eu.takeRecords();
+    async function zG(GG) {
+      var bG;
+      null === (bG = hG) || void 0 === bG || bG.takeRecords();
       const {
-        clientHintsRead: su,
-        debugDeviceLines: Uu
-      } = await ju.e(29).then((() => ju(34431)));
-      await su, fu.q.save({
-        ...uu,
-        device: Uu()
+        clientHintsRead: wG,
+        debugDeviceLines: SG
+      } = await ZG.e(29).then((() => ZG(34354)));
+      await wG, YG.m.save({
+        ...GG,
+        device: SG()
       })
     }
   },
-  4976: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      $: () => Gu,
-      C: () => Xu,
-      Cb: () => Wu,
-      F: () => lu,
-      Gb: () => Qu,
-      H: () => su,
-      Jb: () => hu,
-      K: () => Zu,
-      L: () => eu,
-      Nb: () => ou,
-      O: () => zu,
-      Pb: () => Pu,
-      R: () => bu,
-      S: () => cu,
-      Sb: () => iu,
-      Ub: () => tu,
-      V: () => Cu,
-      Wb: () => Su,
-      X: () => fu,
-      Xb: () => Fu,
-      Yb: () => Bu,
-      ac: () => du,
-      b: () => gu,
-      cb: () => qu,
-      db: () => Yu,
-      ec: () => au,
-      f: () => Du,
-      fb: () => Ou,
-      fc: () => Tu,
-      g: () => nu,
-      h: () => Mu,
-      hb: () => ku,
-      j: () => Au,
-      jc: () => Uu,
-      lb: () => vu,
-      mb: () => Ku,
-      mc: () => yu,
-      n: () => Nu,
-      pb: () => mu,
-      r: () => Ju,
-      s: () => Hu,
-      tb: () => Vu,
-      ub: () => xu,
-      v: () => wu,
-      vb: () => Lu,
-      xb: () => Iu,
-      y: () => pu,
-      zb: () => ru
+  4818: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      $: () => UG,
+      Ab: () => jG,
+      B: () => yG,
+      D: () => kG,
+      Db: () => AG,
+      Gb: () => PG,
+      H: () => wG,
+      Hb: () => dG,
+      K: () => LG,
+      Kb: () => IG,
+      M: () => EG,
+      Mb: () => mG,
+      Ob: () => MG,
+      Pb: () => RG,
+      Q: () => xG,
+      R: () => pG,
+      Sb: () => sG,
+      T: () => fG,
+      U: () => VG,
+      Vb: () => nG,
+      X: () => YG,
+      Zb: () => gG,
+      _: () => oG,
+      _b: () => CG,
+      ab: () => hG,
+      bb: () => KG,
+      cc: () => WG,
+      e: () => rG,
+      eb: () => FG,
+      fc: () => HG,
+      gb: () => aG,
+      h: () => JG,
+      i: () => NG,
+      ib: () => cG,
+      ic: () => SG,
+      jc: () => OG,
+      k: () => zG,
+      lb: () => vG,
+      m: () => DG,
+      o: () => QG,
+      ob: () => lG,
+      pb: () => TG,
+      q: () => iG,
+      r: () => tG,
+      sb: () => eG,
+      v: () => uG,
+      wb: () => qG,
+      x: () => XG
     });
-    const su = 32,
-      Uu = 33.333333333333336,
-      Zu = {
+    const wG = 32,
+      SG = 33.333333333333336,
+      LG = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -446,36 +446,36 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      Xu = {
+      yG = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      lu = {
+      kG = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      qu = {
+      UG = {
         AheadMask: 15,
         Defaulted: 128,
         LagsShift: 8,
         CountMask: 4095
       },
-      fu = {
+      YG = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      Cu = {
+      VG = {
         PlayerBound: 32,
         JoinPreload: 64
       },
-      bu = 14,
-      cu = {
+      pG = 14,
+      fG = {
         ChunksReceived: 0,
         ChunksStored: 1,
         JobsSent: 2,
@@ -491,14 +491,14 @@ export const modules = {
         FirstViewGaps: 12,
         FirstViewGapMs: 13
       },
-      Nu = {
+      QG = {
         Look: 0,
         Remesh: 1,
         CameraSet: 2
       },
-      Ou = 8,
-      Yu = 1,
-      hu = {
+      KG = 8,
+      hG = 1,
+      dG = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -507,16 +507,16 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      Du = 6,
-      gu = 1,
-      Mu = {
+      JG = 6,
+      rG = 1,
+      zG = {
         SetCamDir: 0,
         Forced: 1,
         ScriptedTake: 2,
         ScriptedPose: 3,
         ScriptedRelease: 4
       },
-      eu = {
+      EG = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -544,12 +544,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      Gu = {
+      oG = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      pu = {
+      XG = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -602,7 +602,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      wu = {
+      uG = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -612,10 +612,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      Ju = 4,
-      du = 4,
-      au = 65535,
-      Pu = {
+      iG = 4,
+      CG = 4,
+      WG = 65535,
+      mG = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -628,7 +628,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      ou = {
+      IG = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -636,12 +636,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      ku = 88,
-      mu = 0,
-      vu = 24,
-      Ku = 48,
-      Vu = 80,
-      ru = {
+      FG = 88,
+      vG = 0,
+      aG = 24,
+      cG = 48,
+      lG = 80,
+      jG = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -652,18 +652,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      Qu = {
+      PG = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      iu = {
+      MG = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      Wu = {
+      AG = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -681,34 +681,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      Su = {
+      sG = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      Iu = 65535,
-      Fu = {
+      qG = 65535,
+      nG = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      Bu = {
+      gG = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      Lu = 2,
-      tu = {
+      eG = 2,
+      RG = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      xu = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      Tu = {
+      TG = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      HG = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -722,7 +722,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      Hu = {
+      tG = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -749,7 +749,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      Au = {
+      DG = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -907,8 +907,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      nu = 8,
-      yu = {
+      NG = 8,
+      OG = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -933,8 +933,8 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      zu = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      xG = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

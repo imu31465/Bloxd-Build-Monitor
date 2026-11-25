@@ -1,329 +1,329 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var uu = __webpack_require__.u,
-        Eu = __webpack_require__.e,
-        ju = {},
-        su = {};
-      __webpack_require__.u = function(Eu) {
-        return uu(Eu) + (ju.hasOwnProperty(Eu) ? "?" + ju[Eu] : "")
-      }, __webpack_require__.e = function(Uu) {
-        return Eu(Uu).catch((function(Eu) {
-          var Zu = su.hasOwnProperty(Uu) ? su[Uu] : 4;
-          if (Zu < 1) {
-            var Xu = uu(Uu);
-            if (Eu.message = "Loading chunk " + Uu + " failed after 4 retries.\n(" + Xu + ")", Eu.request = Xu, ju[Uu] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete su[Uu]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === Eu.code) {
-              var lu = __webpack_require__.miniCssF(Uu);
-              Eu.message = Eu.message.replace("Loading chunk", "Loading CSS chunk").replace(Xu, lu), Eu.request = lu
+      var GG = __webpack_require__.u,
+        bG = __webpack_require__.e,
+        ZG = {},
+        wG = {};
+      __webpack_require__.u = function(bG) {
+        return GG(bG) + (ZG.hasOwnProperty(bG) ? "?" + ZG[bG] : "")
+      }, __webpack_require__.e = function(SG) {
+        return bG(SG).catch((function(bG) {
+          var LG = wG.hasOwnProperty(SG) ? wG[SG] : 4;
+          if (LG < 1) {
+            var yG = GG(SG);
+            if (bG.message = "Loading chunk " + SG + " failed after 4 retries.\n(" + yG + ")", bG.request = yG, ZG[SG] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete wG[SG]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === bG.code) {
+              var kG = __webpack_require__.miniCssF(SG);
+              bG.message = bG.message.replace("Loading chunk", "Loading CSS chunk").replace(yG, kG), bG.request = kG
             }
-            throw Eu
+            throw bG
           }
-          return new Promise((function(uu) {
-            var Eu = 4 - Zu + 1;
+          return new Promise((function(GG) {
+            var bG = 4 - LG + 1;
             setTimeout((function() {
-              var Eu = "cache-bust=" + Date.now();
-              ju[Uu] = Eu, su[Uu] = Zu - 1, uu(__webpack_require__.e(Uu))
-            }), function(uu) {
-              return 500 * Math.pow(2, uu)
-            }(Eu))
+              var bG = "cache-bust=" + Date.now();
+              ZG[SG] = bG, wG[SG] = LG - 1, GG(__webpack_require__.e(SG))
+            }), function(GG) {
+              return 500 * Math.pow(2, GG)
+            }(bG))
           }))
         }))
       }
     }
   })();
-  const uu = Math.SQRT1_2,
-    Eu = Math.SQRT1_2 / 2,
-    ju = Math.sqrt(3) / 2,
-    su = 2 * uu,
-    Uu = 2 * Eu + ju;
+  const GG = Math.SQRT1_2,
+    bG = Math.SQRT1_2 / 2,
+    ZG = Math.sqrt(3) / 2,
+    wG = 2 * GG,
+    SG = 2 * bG + ZG;
 
-  function Zu(Eu, ju) {
-    const su = ju > 0 ? ju + 1 : 0,
-      Zu = .6 * Eu - ju / uu;
-    return Math.max(0, Math.min(Zu, (Eu - 2 * su) / Uu))
+  function LG(bG, ZG) {
+    const wG = ZG > 0 ? ZG + 1 : 0,
+      LG = .6 * bG - ZG / GG;
+    return Math.max(0, Math.min(LG, (bG - 2 * wG) / SG))
   }
-  const Xu = [15, 15, 15],
-    lu = {
+  const yG = [15, 15, 15],
+    kG = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function qu(uu, Eu, ju, Xu) {
+  function UG(GG, bG, ZG, yG) {
     const {
-      vertices: lu,
-      uvs: qu,
-      indices: fu,
-      shades: Cu
-    } = uu, cu = function(uu, Eu) {
-      const ju = Zu(uu, Eu),
-        Xu = su * ju,
-        lu = Uu * ju;
+      vertices: kG,
+      uvs: UG,
+      indices: YG,
+      shades: VG
+    } = GG, fG = function(GG, bG) {
+      const ZG = LG(GG, bG),
+        yG = wG * ZG,
+        kG = SG * ZG;
       return {
-        left: (uu - Xu) / 2,
-        top: (uu - lu) / 2,
-        width: Xu,
-        height: lu
+        left: (GG - yG) / 2,
+        top: (GG - kG) / 2,
+        width: yG,
+        height: kG
       }
-    }(ju, Xu), Nu = new Float32Array(lu.length);
-    for (let su = 0; su < lu.length; su += 3) Nu[su] = cu.left + lu[su] * cu.width, Nu[su + 1] = cu.top + lu[su + 1] * cu.height, Nu[su + 2] = lu[su + 2];
-    const Ou = new Float32Array(ju * ju).fill(-1 / 0),
-      Yu = new Uint8ClampedArray(ju * ju * 4),
-      hu = 255 * uu.alphaCutoff;
-    for (let su = 0; su < fu.length; su += 3) {
-      const [uu, Uu, Zu] = [fu[su], fu[su + 1], fu[su + 2]], [Xu, lu, bu] = [3 * uu, 3 * Uu, 3 * Zu], [cu, Du, gu, Mu, eu, Gu] = [Nu[Xu], Nu[Xu + 1], Nu[lu], Nu[lu + 1], Nu[bu], Nu[bu + 1]], pu = (gu - cu) * (Gu - Du) - (eu - cu) * (Mu - Du);
-      if (Math.abs(pu) < 1e-9) continue;
-      const wu = Cu[su / 3],
-        [Ju, du, au, Pu, ou, ku] = [qu[2 * uu], qu[2 * uu + 1], qu[2 * Uu], qu[2 * Uu + 1], qu[2 * Zu], qu[2 * Zu + 1]],
-        mu = Math.max(0, Math.floor(Math.min(cu, gu, eu))),
-        vu = Math.min(ju - 1, Math.ceil(Math.max(cu, gu, eu))),
-        Ku = Math.max(0, Math.floor(Math.min(Du, Mu, Gu))),
-        Vu = Math.min(ju - 1, Math.ceil(Math.max(Du, Mu, Gu)));
-      for (let su = Ku; su <= Vu; su++)
-        for (let uu = mu; uu <= vu; uu++) {
-          const [Uu, Zu] = [uu + .5, su + .5], qu = ((Uu - cu) * (Gu - Du) - (eu - cu) * (Zu - Du)) / pu, fu = ((gu - cu) * (Zu - Du) - (Uu - cu) * (Mu - Du)) / pu, Cu = 1 - qu - fu;
-          if (Cu < 0 || qu < 0 || fu < 0) continue;
-          const mu = Cu * Nu[Xu + 2] + qu * Nu[lu + 2] + fu * Nu[bu + 2],
-            vu = su * ju + uu;
-          if (mu <= Ou[vu]) continue;
-          const Ku = Math.max(0, Math.min(Eu.width - 1, Math.floor((Cu * Ju + qu * au + fu * ou) * Eu.width))),
-            Vu = 4 * (Math.max(0, Math.min(Eu.height - 1, Math.floor((Cu * du + qu * Pu + fu * ku) * Eu.height))) * Eu.width + Ku);
-          Eu.pixels[Vu + 3] < hu || (Ou[vu] = mu, Yu[4 * vu] = Eu.pixels[Vu] * wu, Yu[4 * vu + 1] = Eu.pixels[Vu + 1] * wu, Yu[4 * vu + 2] = Eu.pixels[Vu + 2] * wu, Yu[4 * vu + 3] = 255)
+    }(ZG, yG), QG = new Float32Array(kG.length);
+    for (let wG = 0; wG < kG.length; wG += 3) QG[wG] = fG.left + kG[wG] * fG.width, QG[wG + 1] = fG.top + kG[wG + 1] * fG.height, QG[wG + 2] = kG[wG + 2];
+    const KG = new Float32Array(ZG * ZG).fill(-1 / 0),
+      hG = new Uint8ClampedArray(ZG * ZG * 4),
+      dG = 255 * GG.alphaCutoff;
+    for (let wG = 0; wG < YG.length; wG += 3) {
+      const [GG, SG, LG] = [YG[wG], YG[wG + 1], YG[wG + 2]], [yG, kG, pG] = [3 * GG, 3 * SG, 3 * LG], [fG, JG, rG, zG, EG, oG] = [QG[yG], QG[yG + 1], QG[kG], QG[kG + 1], QG[pG], QG[pG + 1]], XG = (rG - fG) * (oG - JG) - (EG - fG) * (zG - JG);
+      if (Math.abs(XG) < 1e-9) continue;
+      const uG = VG[wG / 3],
+        [iG, CG, WG, mG, IG, FG] = [UG[2 * GG], UG[2 * GG + 1], UG[2 * SG], UG[2 * SG + 1], UG[2 * LG], UG[2 * LG + 1]],
+        vG = Math.max(0, Math.floor(Math.min(fG, rG, EG))),
+        aG = Math.min(ZG - 1, Math.ceil(Math.max(fG, rG, EG))),
+        cG = Math.max(0, Math.floor(Math.min(JG, zG, oG))),
+        lG = Math.min(ZG - 1, Math.ceil(Math.max(JG, zG, oG)));
+      for (let wG = cG; wG <= lG; wG++)
+        for (let GG = vG; GG <= aG; GG++) {
+          const [SG, LG] = [GG + .5, wG + .5], UG = ((SG - fG) * (oG - JG) - (EG - fG) * (LG - JG)) / XG, YG = ((rG - fG) * (LG - JG) - (SG - fG) * (zG - JG)) / XG, VG = 1 - UG - YG;
+          if (VG < 0 || UG < 0 || YG < 0) continue;
+          const vG = VG * QG[yG + 2] + UG * QG[kG + 2] + YG * QG[pG + 2],
+            aG = wG * ZG + GG;
+          if (vG <= KG[aG]) continue;
+          const cG = Math.max(0, Math.min(bG.width - 1, Math.floor((VG * iG + UG * WG + YG * IG) * bG.width))),
+            lG = 4 * (Math.max(0, Math.min(bG.height - 1, Math.floor((VG * CG + UG * mG + YG * FG) * bG.height))) * bG.width + cG);
+          bG.pixels[lG + 3] < dG || (KG[aG] = vG, hG[4 * aG] = bG.pixels[lG] * uG, hG[4 * aG + 1] = bG.pixels[lG + 1] * uG, hG[4 * aG + 2] = bG.pixels[lG + 2] * uG, hG[4 * aG + 3] = 255)
         }
     }
-    return bu(Yu, ju, Xu), Yu
+    return pG(hG, ZG, yG), hG
   }
-  let fu = NaN,
-    Cu = new Int32Array(0);
+  let YG = NaN,
+    VG = new Int32Array(0);
 
-  function bu(uu, Eu, ju) {
-    let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Eu => 0 !== uu[4 * Eu + 3];
-    const Uu = new Uint8Array(Eu * Eu);
-    for (let Xu = 0; Xu < Eu * Eu; Xu++) Uu[Xu] = su(Xu) ? 1 : 0;
-    const Zu = (uu, ju) => uu >= 0 && ju >= 0 && uu < Eu && ju < Eu && 0 === Uu[ju * Eu + uu],
-      lu = new Float32Array(Eu * Eu).fill(1 / 0),
-      qu = function(uu) {
-        if (uu !== fu) {
-          const Eu = Math.ceil(uu + 1),
-            ju = [];
-          for (let su = -Eu; su <= Eu; su++)
-            for (let Uu = -Eu; Uu <= Eu; Uu++) {
-              const Eu = Uu * Uu + su * su;
-              Eu > 0 && Eu < (uu + 1) ** 2 && ju.push(Uu, su, Eu)
+  function pG(GG, bG, ZG) {
+    let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bG => 0 !== GG[4 * bG + 3];
+    const SG = new Uint8Array(bG * bG);
+    for (let yG = 0; yG < bG * bG; yG++) SG[yG] = wG(yG) ? 1 : 0;
+    const LG = (GG, ZG) => GG >= 0 && ZG >= 0 && GG < bG && ZG < bG && 0 === SG[ZG * bG + GG],
+      kG = new Float32Array(bG * bG).fill(1 / 0),
+      UG = function(GG) {
+        if (GG !== YG) {
+          const bG = Math.ceil(GG + 1),
+            ZG = [];
+          for (let wG = -bG; wG <= bG; wG++)
+            for (let SG = -bG; SG <= bG; SG++) {
+              const bG = SG * SG + wG * wG;
+              bG > 0 && bG < (GG + 1) ** 2 && ZG.push(SG, wG, bG)
             }
-          fu = uu, Cu = Int32Array.from(ju)
+          YG = GG, VG = Int32Array.from(ZG)
         }
-        return Cu
-      }(ju);
-    for (let Xu = 0; Xu < Eu; Xu++)
-      for (let uu = 0; uu < Eu; uu++) {
-        if (1 === Uu[Xu * Eu + uu] && (Zu(uu - 1, Xu) || Zu(uu + 1, Xu) || Zu(uu, Xu - 1) || Zu(uu, Xu + 1)))
-          for (let ju = 0; ju < qu.length; ju += 3) {
-            const su = uu + qu[ju],
-              Uu = Xu + qu[ju + 1];
-            if (su >= 0 && Uu >= 0 && su < Eu && Uu < Eu) {
-              const uu = Uu * Eu + su;
-              lu[uu] = Math.min(lu[uu], qu[ju + 2])
+        return VG
+      }(ZG);
+    for (let yG = 0; yG < bG; yG++)
+      for (let GG = 0; GG < bG; GG++) {
+        if (1 === SG[yG * bG + GG] && (LG(GG - 1, yG) || LG(GG + 1, yG) || LG(GG, yG - 1) || LG(GG, yG + 1)))
+          for (let ZG = 0; ZG < UG.length; ZG += 3) {
+            const wG = GG + UG[ZG],
+              SG = yG + UG[ZG + 1];
+            if (wG >= 0 && SG >= 0 && wG < bG && SG < bG) {
+              const GG = SG * bG + wG;
+              kG[GG] = Math.min(kG[GG], UG[ZG + 2])
             }
           }
       }
-    for (let fu = 0; fu < Eu * Eu; fu++) 1 !== Uu[fu] && lu[fu] !== 1 / 0 && (uu.set(Xu, 4 * fu), uu[4 * fu + 3] = Math.round(255 * Math.min(1, ju + 1 - Math.sqrt(lu[fu]))))
+    for (let YG = 0; YG < bG * bG; YG++) 1 !== SG[YG] && kG[YG] !== 1 / 0 && (GG.set(yG, 4 * YG), GG[4 * YG + 3] = Math.round(255 * Math.min(1, ZG + 1 - Math.sqrt(kG[YG]))))
   }
-  const cu = {
+  const fG = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    Nu = {
+    QG = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    Ou = {
+    KG = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const Yu = 1e-6;
+  const hG = 1e-6;
 
-  function hu(uu, Eu, ju, su) {
+  function dG(GG, bG, ZG, wG) {
     let {
-      origin: Uu,
-      across: Zu,
-      down: Xu,
-      texture: lu,
-      rect: [qu, fu, Cu, bu],
-      shade: cu
-    } = su;
-    const Nu = Zu.x * Xu.y - Zu.y * Xu.x;
-    if (Math.abs(Nu) < 1e-9) return;
-    const Ou = [Uu.x, Uu.x + Zu.x, Uu.x + Xu.x, Uu.x + Zu.x + Xu.x],
-      hu = [Uu.y, Uu.y + Zu.y, Uu.y + Xu.y, Uu.y + Zu.y + Xu.y],
-      Du = Math.max(0, Math.floor(Math.min(...Ou))),
-      gu = Math.min(ju - 1, Math.ceil(Math.max(...Ou))),
-      Mu = Math.max(0, Math.floor(Math.min(...hu))),
-      eu = Math.min(ju - 1, Math.ceil(Math.max(...hu)));
-    for (let Gu = Mu; Gu <= eu; Gu++)
-      for (let su = Du; su <= gu; su++) {
-        const Ou = su + .5 - Uu.x,
-          hu = Gu + .5 - Uu.y,
-          Du = (Ou * Xu.y - hu * Xu.x) / Nu,
-          gu = (Zu.x * hu - Zu.y * Ou) / Nu;
-        if (Du < -Yu || Du > 1 + Yu || gu < -Yu || gu > 1 + Yu) continue;
-        const Mu = Gu * ju + su;
-        Eu[Mu] = 1;
-        const eu = qu + Math.min(Math.max(Du, 0), 1) * (Cu - qu),
-          pu = fu + Math.min(Math.max(gu, 0), 1) * (bu - fu),
-          wu = Math.min(lu.width - 1, Math.floor(eu * lu.width)),
-          Ju = 4 * (Math.min(lu.height - 1, Math.floor(pu * lu.height)) * lu.width + wu),
-          du = lu.pixels[Ju + 3] / 255;
-        if (0 === du) continue;
-        const au = 4 * Mu,
-          Pu = uu[au + 3] / 255 * (1 - du),
-          ou = du + Pu;
-        for (let Eu = 0; Eu < 3; Eu++) uu[au + Eu] = (lu.pixels[Ju + Eu] * cu * du + uu[au + Eu] * Pu) / ou;
-        uu[au + 3] = 255 * ou
+      origin: SG,
+      across: LG,
+      down: yG,
+      texture: kG,
+      rect: [UG, YG, VG, pG],
+      shade: fG
+    } = wG;
+    const QG = LG.x * yG.y - LG.y * yG.x;
+    if (Math.abs(QG) < 1e-9) return;
+    const KG = [SG.x, SG.x + LG.x, SG.x + yG.x, SG.x + LG.x + yG.x],
+      dG = [SG.y, SG.y + LG.y, SG.y + yG.y, SG.y + LG.y + yG.y],
+      JG = Math.max(0, Math.floor(Math.min(...KG))),
+      rG = Math.min(ZG - 1, Math.ceil(Math.max(...KG))),
+      zG = Math.max(0, Math.floor(Math.min(...dG))),
+      EG = Math.min(ZG - 1, Math.ceil(Math.max(...dG)));
+    for (let oG = zG; oG <= EG; oG++)
+      for (let wG = JG; wG <= rG; wG++) {
+        const KG = wG + .5 - SG.x,
+          dG = oG + .5 - SG.y,
+          JG = (KG * yG.y - dG * yG.x) / QG,
+          rG = (LG.x * dG - LG.y * KG) / QG;
+        if (JG < -hG || JG > 1 + hG || rG < -hG || rG > 1 + hG) continue;
+        const zG = oG * ZG + wG;
+        bG[zG] = 1;
+        const EG = UG + Math.min(Math.max(JG, 0), 1) * (VG - UG),
+          XG = YG + Math.min(Math.max(rG, 0), 1) * (pG - YG),
+          uG = Math.min(kG.width - 1, Math.floor(EG * kG.width)),
+          iG = 4 * (Math.min(kG.height - 1, Math.floor(XG * kG.height)) * kG.width + uG),
+          CG = kG.pixels[iG + 3] / 255;
+        if (0 === CG) continue;
+        const WG = 4 * zG,
+          mG = GG[WG + 3] / 255 * (1 - CG),
+          IG = CG + mG;
+        for (let bG = 0; bG < 3; bG++) GG[WG + bG] = (kG.pixels[iG + bG] * fG * CG + GG[WG + bG] * mG) / IG;
+        GG[WG + 3] = 255 * IG
       }
   }
 
-  function Du(uu, Eu, ju) {
-    const su = uu.get(Eu);
-    if (void 0 === su) throw new Error(`no ${ju} was sent for ${Eu.slice(0,100)}`);
-    return su
+  function JG(GG, bG, ZG) {
+    const wG = GG.get(bG);
+    if (void 0 === wG) throw new Error(`no ${ZG} was sent for ${bG.slice(0,100)}`);
+    return wG
   }
-  const gu = {
-      pixelsOf(uu) {
-        const Eu = new OffscreenCanvas(uu.width, uu.height),
-          ju = Eu.getContext("2d");
-        if (!ju) throw new Error("no 2D context");
-        return ju.drawImage(uu, 0, 0), uu.close(), {
-          width: Eu.width,
-          height: Eu.height,
-          pixels: ju.getImageData(0, 0, Eu.width, Eu.height).data
+  const rG = {
+      pixelsOf(GG) {
+        const bG = new OffscreenCanvas(GG.width, GG.height),
+          ZG = bG.getContext("2d");
+        if (!ZG) throw new Error("no 2D context");
+        return ZG.drawImage(GG, 0, 0), GG.close(), {
+          width: bG.width,
+          height: bG.height,
+          pixels: ZG.getImageData(0, 0, bG.width, bG.height).data
         }
       },
-      async encode(uu, Eu) {
-        const ju = new OffscreenCanvas(Eu, Eu),
-          su = ju.getContext("2d");
-        if (!su) throw new Error("no 2D context");
-        su.putImageData(new ImageData(uu, Eu, Eu), 0, 0);
-        const Uu = await ju.convertToBlob();
-        return new Promise(((uu, Eu) => {
-          const ju = new FileReader;
-          ju.onload = () => {
-            uu(ju.result)
-          }, ju.onerror = () => {
-            var uu;
-            Eu(null !== (uu = ju.error) && void 0 !== uu ? uu : new Error("the icon did not encode"))
-          }, ju.readAsDataURL(Uu)
+      async encode(GG, bG) {
+        const ZG = new OffscreenCanvas(bG, bG),
+          wG = ZG.getContext("2d");
+        if (!wG) throw new Error("no 2D context");
+        wG.putImageData(new ImageData(GG, bG, bG), 0, 0);
+        const SG = await ZG.convertToBlob();
+        return new Promise(((GG, bG) => {
+          const ZG = new FileReader;
+          ZG.onload = () => {
+            GG(ZG.result)
+          }, ZG.onerror = () => {
+            var GG;
+            bG(null !== (GG = ZG.error) && void 0 !== GG ? GG : new Error("the icon did not encode"))
+          }, ZG.readAsDataURL(SG)
         }))
       }
     },
-    Mu = globalThis.WorkerGlobalScope;
-  void 0 !== Mu && globalThis instanceof Mu && function(su, Uu) {
-    const Xu = new Map,
-      fu = new Map,
-      Cu = (uu, Eu, ju) => {
+    zG = globalThis.WorkerGlobalScope;
+  void 0 !== zG && globalThis instanceof zG && function(wG, SG) {
+    const yG = new Map,
+      YG = new Map,
+      VG = (GG, bG, ZG) => {
         (async () => {
           try {
-            su.postMessage({
+            wG.postMessage({
               type: "drawn",
-              id: uu,
-              url: await Uu.encode(ju(), Eu)
+              id: GG,
+              url: await SG.encode(ZG(), bG)
             })
-          } catch (Zu) {
-            su.postMessage({
+          } catch (LG) {
+            wG.postMessage({
               type: "failed",
-              message: String(Zu)
+              message: String(LG)
             })
           }
         })()
       };
-    su.onmessage = su => {
+    wG.onmessage = wG => {
       let {
-        data: Yu
-      } = su;
-      if ("texture" === Yu.type) Xu.set(Yu.url, Uu.pixelsOf(Yu.bitmap));
-      else if ("model" === Yu.type) fu.set(Yu.name, {
-        geometry: Yu.geometry,
-        texture: Uu.pixelsOf(Yu.bitmap)
+        data: hG
+      } = wG;
+      if ("texture" === hG.type) yG.set(hG.url, SG.pixelsOf(hG.bitmap));
+      else if ("model" === hG.type) YG.set(hG.name, {
+        geometry: hG.geometry,
+        texture: SG.pixelsOf(hG.bitmap)
       });
-      else if ("draw" === Yu.type) {
+      else if ("draw" === hG.type) {
         const {
-          id: su,
-          top: Uu,
-          left: qu,
-          right: fu,
-          itemType: gu,
-          size: Mu,
-          outlineWidth: eu
-        } = Yu;
-        Cu(su, Mu, (() => function(su, Uu, Xu, qu) {
-          const fu = Zu(Xu, qu),
-            Cu = fu * uu,
-            cu = fu * Eu,
-            Nu = fu * ju,
-            Ou = Math.max(...Uu.boxes.map((uu => uu[4]))),
-            Yu = Xu / 2,
-            Du = cu + (Xu - cu - cu - Ou * Nu) / 2,
-            gu = (uu, Eu, ju) => ({
-              x: Yu + (uu - ju) * Cu,
-              y: Du - cu + (uu + ju) * cu + (Ou - Eu) * Nu
+          id: wG,
+          top: SG,
+          left: UG,
+          right: YG,
+          itemType: rG,
+          size: zG,
+          outlineWidth: EG
+        } = hG;
+        VG(wG, zG, (() => function(wG, SG, yG, UG) {
+          const YG = LG(yG, UG),
+            VG = YG * GG,
+            fG = YG * bG,
+            QG = YG * ZG,
+            KG = Math.max(...SG.boxes.map((GG => GG[4]))),
+            hG = yG / 2,
+            JG = fG + (yG - fG - fG - KG * QG) / 2,
+            rG = (GG, bG, ZG) => ({
+              x: hG + (GG - ZG) * VG,
+              y: JG - fG + (GG + ZG) * fG + (KG - bG) * QG
             }),
-            Mu = (uu, Eu, ju, su, Zu, Xu) => ({
-              origin: uu,
+            zG = (GG, bG, ZG, wG, LG, yG) => ({
+              origin: GG,
               across: {
-                x: Eu.x - uu.x,
-                y: Eu.y - uu.y
+                x: bG.x - GG.x,
+                y: bG.y - GG.y
               },
               down: {
-                x: ju.x - uu.x,
-                y: ju.y - uu.y
+                x: ZG.x - GG.x,
+                y: ZG.y - GG.y
               },
-              texture: su,
-              rect: Uu.cropFaces ? Zu : [0, 0, 1, 1],
-              shade: Xu
+              texture: wG,
+              rect: SG.cropFaces ? LG : [0, 0, 1, 1],
+              shade: yG
             }),
-            eu = new Uint8ClampedArray(Xu * Xu * 4),
-            Gu = new Uint8Array(Xu * Xu),
-            pu = lu;
-          for (const [uu, Eu, ju, Zu, lu, bu] of Uu.boxes) {
-            const Uu = Mu(gu(Zu, lu, bu), gu(Zu, lu, ju), gu(Zu, Eu, bu), su.right, [1 - bu, 1 - lu, 1 - ju, 1 - Eu], pu.right),
-              qu = Mu(gu(uu, lu, bu), gu(Zu, lu, bu), gu(uu, Eu, bu), su.left, [uu, 1 - lu, Zu, 1 - Eu], pu.left),
-              fu = Mu(gu(uu, lu, ju), gu(Zu, lu, ju), gu(uu, lu, bu), su.top, [uu, ju, Zu, bu], pu.top);
-            for (const uu of [Uu, qu, fu]) hu(eu, Gu, Xu, uu)
+            EG = new Uint8ClampedArray(yG * yG * 4),
+            oG = new Uint8Array(yG * yG),
+            XG = kG;
+          for (const [GG, bG, ZG, LG, kG, pG] of SG.boxes) {
+            const SG = zG(rG(LG, kG, pG), rG(LG, kG, ZG), rG(LG, bG, pG), wG.right, [1 - pG, 1 - kG, 1 - ZG, 1 - bG], XG.right),
+              UG = zG(rG(GG, kG, pG), rG(LG, kG, pG), rG(GG, bG, pG), wG.left, [GG, 1 - kG, LG, 1 - bG], XG.left),
+              YG = zG(rG(GG, kG, ZG), rG(LG, kG, ZG), rG(GG, kG, pG), wG.top, [GG, ZG, LG, pG], XG.top);
+            for (const GG of [SG, UG, YG]) dG(EG, oG, yG, GG)
           }
-          return bu(eu, Xu, qu, (uu => 1 === Gu[uu])), eu
+          return pG(EG, yG, UG, (GG => 1 === oG[GG])), EG
         }({
-          top: Du(Xu, Uu, "texture"),
-          left: Du(Xu, qu, "texture"),
-          right: Du(Xu, fu, "texture")
-        }, function(uu) {
-          return "SlabBlock" === uu ? Nu : "StairsBlock" === uu ? Ou : cu
-        }(gu), Mu, eu)))
+          top: JG(yG, SG, "texture"),
+          left: JG(yG, UG, "texture"),
+          right: JG(yG, YG, "texture")
+        }, function(GG) {
+          return "SlabBlock" === GG ? QG : "StairsBlock" === GG ? KG : fG
+        }(rG), zG, EG)))
       } else {
         const {
-          id: uu,
-          name: Eu,
-          size: ju,
-          outlineWidth: su
-        } = Yu;
-        Cu(uu, ju, (() => {
+          id: GG,
+          name: bG,
+          size: ZG,
+          outlineWidth: wG
+        } = hG;
+        VG(GG, ZG, (() => {
           const {
-            geometry: uu,
-            texture: Uu
-          } = Du(fu, Eu, "model");
-          return qu(uu, Uu, ju, su)
+            geometry: GG,
+            texture: SG
+          } = JG(YG, bG, "model");
+          return UG(GG, SG, ZG, wG)
         }))
       }
-    }, su.postMessage({
+    }, wG.postMessage({
       type: "started"
     })
-  }(globalThis, gu)
+  }(globalThis, rG)
 })();

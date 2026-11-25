@@ -1,60 +1,60 @@
 export const id = 137;
 export const ids = [137];
 export const modules = {
-  36713: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Au,
-      i: () => Ru,
-      k: () => yu,
-      o: () => Hu
+  36643: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => DG,
+      h: () => BG,
+      j: () => OG,
+      l: () => tG
     });
-    var su = ju(3017),
-      Uu = ju(3038),
-      Zu = ju(6818),
-      Xu = ju(4874),
-      lu = ju(3029),
-      qu = ju(3020);
-    const fu = "bloxd-wasmDownloaded",
-      Cu = 12;
+    var wG = ZG(2868),
+      SG = ZG(2881),
+      LG = ZG(6617),
+      yG = ZG(4708),
+      kG = ZG(2878),
+      UG = ZG(2872);
+    const YG = "bloxd-wasmDownloaded",
+      VG = 12;
 
-    function bu(uu) {
-      return uu.pathname.slice(uu.pathname.lastIndexOf("/") + 1)
+    function pG(GG) {
+      return GG.pathname.slice(GG.pathname.lastIndexOf("/") + 1)
     }
 
-    function cu() {
+    function fG() {
       try {
         if ("undefined" === typeof localStorage) return null;
-        const uu = JSON.parse(localStorage.getItem(fu) ?? "[]");
-        return Array.isArray(uu) ? uu.filter((uu => "string" === typeof uu)) : []
-      } catch (uu) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", uu), null
+        const GG = JSON.parse(localStorage.getItem(YG) ?? "[]");
+        return Array.isArray(GG) ? GG.filter((GG => "string" === typeof GG)) : []
+      } catch (GG) {
+        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", GG), null
       }
     }
-    const Nu = Reflect.apply,
-      Ou = "undefined" === typeof Worker ? void 0 : Worker,
-      Yu = Ou?.prototype.postMessage,
-      hu = Ou?.prototype.terminate,
-      Du = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      gu = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      Mu = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      eu = function() {
+    const QG = Reflect.apply,
+      KG = "undefined" === typeof Worker ? void 0 : Worker,
+      hG = KG?.prototype.postMessage,
+      dG = KG?.prototype.terminate,
+      JG = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
+      rG = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
+      zG = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
+      EG = function() {
         try {
-          return (0, Xu.m)(Ou, "Worker", !0) && (0, Xu.m)(Yu, "postMessage") && (0, Xu.m)(hu, "terminate") && (0, Xu.m)(Mu, "buffer") && void 0 !== Du && void 0 !== gu
+          return (0, yG.i)(KG, "Worker", !0) && (0, yG.i)(hG, "postMessage") && (0, yG.i)(dG, "terminate") && (0, yG.i)(zG, "buffer") && void 0 !== JG && void 0 !== rG
         } catch {
           return !1
         }
       }();
-    let Gu = !1;
+    let oG = !1;
 
-    function pu() {
-      return eu && !Gu
+    function XG() {
+      return EG && !oG
     }
-    class wu {
+    class uG {
       worker = null;
       failed = !1;
       constructor() {
-        if (pu()) try {
-          this.worker = du(), Nu(Du, this.worker, ["error", () => {
+        if (XG()) try {
+          this.worker = CG(), QG(JG, this.worker, ["error", () => {
             this.failed = !0
           }])
         } catch {
@@ -62,125 +62,125 @@ export const modules = {
         }
       }
       take() {
-        const uu = this.worker;
-        if (this.worker = null, null !== uu && this.failed) throw Nu(hu, uu, []), new Error("it did not run");
-        return uu
+        const GG = this.worker;
+        if (this.worker = null, null !== GG && this.failed) throw QG(dG, GG, []), new Error("it did not run");
+        return GG
       }
       stop() {
-        const uu = this.worker;
-        this.worker = null, null !== uu && Nu(hu, uu, [])
+        const GG = this.worker;
+        this.worker = null, null !== GG && QG(dG, GG, [])
       }
     }
-    class Ju {
+    class iG {
       decoded;
       worker;
       reject;
-      constructor(uu, Eu, ju, su, Zu) {
+      constructor(GG, bG, ZG, wG, LG) {
         try {
-          this.worker = Zu?.take() ?? du()
-        } catch (fu) {
-          throw Gu = !0, new Error(`The zstd decoder's worker did not start: ${(0,lu.d)(fu)}`)
+          this.worker = LG?.take() ?? CG()
+        } catch (YG) {
+          throw oG = !0, new Error(`The zstd decoder's worker did not start: ${(0,kG.f)(YG)}`)
         }
-        const Xu = this.worker;
-        this.decoded = (0, Uu.i)(((Eu, Uu) => {
-          this.reject = Uu;
-          const Zu = (uu, Eu) => {
-            Nu(Du, Xu, [uu, Eu])
+        const yG = this.worker;
+        this.decoded = (0, SG.i)(((bG, SG) => {
+          this.reject = SG;
+          const LG = (GG, bG) => {
+            QG(JG, yG, [GG, bG])
           };
-          Zu("message", (uu => {
-            su();
+          LG("message", (GG => {
+            wG();
             try {
-              const su = Nu(gu, uu, []);
-              if (!0 === su) Eu();
+              const wG = QG(rG, GG, []);
+              if (!0 === wG) bG();
               else {
-                if ("string" === typeof su) throw su.startsWith(lu.c) && (Gu = !0), new Error(su);
-                ju(su, Nu(qu.A, su, []))
+                if ("string" === typeof wG) throw wG.startsWith(kG.e) && (oG = !0), new Error(wG);
+                ZG(wG, QG(UG.w, wG, []))
               }
-            } catch (fu) {
-              Uu(fu)
+            } catch (YG) {
+              SG(YG)
             }
-          })), Zu("error", (() => {
-            Gu = !0, Uu(new Error("The zstd decoder's worker did not run"))
-          })), Zu("messageerror", (() => {
-            Uu(new Error(`${uu}'s decoder sent a piece that could not be read`))
+          })), LG("error", (() => {
+            oG = !0, SG(new Error("The zstd decoder's worker did not run"))
+          })), LG("messageerror", (() => {
+            SG(new Error(`${GG}'s decoder sent a piece that could not be read`))
           }))
-        })), (0, qu.Y)(this.decoded), Nu(Yu, Xu, [
-          [uu, Eu]
+        })), (0, UG.X)(this.decoded), QG(hG, yG, [
+          [GG, bG]
         ])
       }
-      push(uu) {
-        Nu(Yu, this.worker, [uu, [Nu(Mu, uu, [])]])
+      push(GG) {
+        QG(hG, this.worker, [GG, [QG(zG, GG, [])]])
       }
       end() {
-        Nu(Yu, this.worker, [null])
+        QG(hG, this.worker, [null])
       }
       markWorkerFailed() {
-        Gu = !0
+        oG = !0
       }
-      fail(uu) {
-        this.reject(uu), this.terminate()
+      fail(GG) {
+        this.reject(GG), this.terminate()
       }
       terminate() {
-        Nu(hu, this.worker, [])
+        QG(dG, this.worker, [])
       }
     }
 
-    function du() {
-      if (globalThis.Worker !== Ou) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(ju.p + ju.u(68), ju.b), {
+    function CG() {
+      if (globalThis.Worker !== KG) throw new Error("Worker is not the one the page loaded with");
+      return new Worker(new URL(ZG.p + ZG.u(68), ZG.b), {
         name: "wasmZstdDecoder",
         type: "module"
       })
     }
-    const au = Reflect.apply,
-      Pu = ArrayBuffer,
-      ou = "undefined" === typeof Response ? void 0 : Response,
-      ku = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      mu = function() {
-        let uu;
-        void 0 !== ku && new ku({
+    const WG = Reflect.apply,
+      mG = ArrayBuffer,
+      IG = "undefined" === typeof Response ? void 0 : Response,
+      FG = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      vG = function() {
+        let GG;
+        void 0 !== FG && new FG({
           __proto__: null,
-          start(Eu) {
+          start(bG) {
             const {
-              enqueue: ju,
-              close: su,
-              error: Uu
-            } = Object.getPrototypeOf(Eu);
-            uu = {
-              enqueue: ju,
-              close: su,
-              error: Uu
+              enqueue: ZG,
+              close: wG,
+              error: SG
+            } = Object.getPrototypeOf(bG);
+            GG = {
+              enqueue: ZG,
+              close: wG,
+              error: SG
             }
           }
         }, {
           __proto__: null
         });
-        return uu
+        return GG
       }(),
-      vu = function() {
+      aG = function() {
         try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== mu && (0, Xu.m)(ou, "Response", !0) && (0, Xu.m)(ku, "ReadableStream", !0) && (0, Xu.m)(mu.enqueue, "enqueue") && (0, Xu.m)(mu.close, "close") && (0, Xu.m)(mu.error, "error") && (0, Xu.m)(qu.$, "body") && (0, Xu.m)(qu.P, "getReader") && (0, Xu.m)(qu._, "read")
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== vG && (0, yG.i)(IG, "Response", !0) && (0, yG.i)(FG, "ReadableStream", !0) && (0, yG.i)(vG.enqueue, "enqueue") && (0, yG.i)(vG.close, "close") && (0, yG.i)(vG.error, "error") && (0, yG.i)(UG.$, "body") && (0, yG.i)(UG.N, "getReader") && (0, yG.i)(UG._, "read")
         } catch {
           return !1
         }
       }();
-    async function Ku(uu, Eu, ju, su, Zu, Xu, fu) {
-      const Cu = new Pu(Eu),
+    async function cG(GG, bG, ZG, wG, LG, yG, YG) {
+      const VG = new mG(bG),
         {
-          controller: bu,
-          compiled: cu
-        } = function(uu) {
+          controller: pG,
+          compiled: fG
+        } = function(GG) {
           try {
-            let uu;
-            const Eu = new ku({
+            let GG;
+            const bG = new FG({
                 __proto__: null,
-                start(Eu) {
-                  uu = Eu
+                start(bG) {
+                  GG = bG
                 }
               }, {
                 __proto__: null
               }),
-              ju = new ou(Eu, {
+              ZG = new IG(bG, {
                 __proto__: null,
                 headers: {
                   __proto__: null,
@@ -188,355 +188,355 @@ export const modules = {
                 }
               });
             return {
-              controller: uu,
-              compiled: (0, qu.Y)((0, qu.D)((0, qu.gb)(ju)))
+              controller: GG,
+              compiled: (0, UG.X)((0, UG.B)((0, UG.db)(ZG)))
             }
-          } catch (Eu) {
-            throw new Error(`${uu} could not be streamed into a compile: ${(0,lu.d)(Eu)}`)
+          } catch (bG) {
+            throw new Error(`${GG} could not be streamed into a compile: ${(0,kG.f)(bG)}`)
           }
-        }(uu),
+        }(GG),
         {
-          enqueue: Nu,
-          close: Ou,
-          error: Yu
-        } = mu,
-        hu = uu => {
+          enqueue: QG,
+          close: KG,
+          error: hG
+        } = vG,
+        dG = GG => {
           try {
-            au(Yu, bu, [uu])
+            WG(hG, pG, [GG])
           } catch {}
         };
-      let Du = 0;
-      const gu = (ju, su) => {
-        if (Du + su > Eu) throw new Error(`${uu} decoded past its module's ${Eu} bytes`);
-        au(qu.cb, new qu.o(Cu), [new qu.o(ju), Du]);
+      let JG = 0;
+      const rG = (ZG, wG) => {
+        if (JG + wG > bG) throw new Error(`${GG} decoded past its module's ${bG} bytes`);
+        WG(UG.ab, new UG.q(VG), [new UG.q(ZG), JG]);
         try {
-          au(Nu, bu, [new qu.o(Cu, Du, su)])
+          WG(QG, pG, [new UG.q(VG, JG, wG)])
         } catch {}
-        Du += su
+        JG += wG
       };
-      let Mu, eu;
+      let zG, EG;
       try {
-        Mu = new Ju(uu, Eu, gu, su, fu)
-      } catch (du) {
-        throw hu(du), du
+        zG = new iG(GG, bG, rG, wG, YG)
+      } catch (CG) {
+        throw dG(CG), CG
       }
-      const Gu = uu => {
-        Mu.fail(uu), void 0 !== eu && Vu(eu)
+      const oG = GG => {
+        zG.fail(GG), void 0 !== EG && lG(EG)
       };
-      let pu = !1;
-      ju.addEventListener("abort", (() => {
-        pu && Mu.markWorkerFailed(), Gu(new Error(`${uu} stalled`))
+      let XG = !1;
+      ZG.addEventListener("abort", (() => {
+        XG && zG.markWorkerFailed(), oG(new Error(`${GG} stalled`))
       }), {
         once: !0
-      }), (0, Uu.s)(cu, (() => {}), Gu);
+      }), (0, SG.u)(fG, (() => {}), oG);
       try {
-        let Xu;
+        let yG;
         try {
-          Xu = await fetch(uu, {
-            signal: ju
+          yG = await fetch(GG, {
+            signal: ZG
           })
-        } catch (du) {
-          throw new Error(`Fetching ${uu} failed: ${(0,lu.d)(du)}`)
+        } catch (CG) {
+          throw new Error(`Fetching ${GG} failed: ${(0,kG.f)(CG)}`)
         }
         const {
-          ok: fu,
-          status: Cu,
-          body: bu
-        } = function(uu, Eu) {
+          ok: YG,
+          status: VG,
+          body: pG
+        } = function(GG, bG) {
           try {
             const {
-              ok: uu,
-              status: ju
-            } = Eu;
+              ok: GG,
+              status: ZG
+            } = bG;
             return {
-              ok: uu,
-              status: ju,
-              body: au(qu.$, Eu, [])
+              ok: GG,
+              status: ZG,
+              body: WG(UG.$, bG, [])
             }
           } catch {
-            throw new Error(`${uu} came in a response a page script made`)
+            throw new Error(`${GG} came in a response a page script made`)
           }
-        }(uu, Xu);
-        if (!fu) throw new Error(`Fetching ${uu} failed: HTTP ${Cu}`);
-        su();
-        const cu = au(qu.P, bu, []);
-        eu = cu;
-        const Nu = () => {
-          Vu(cu)
+        }(GG, yG);
+        if (!YG) throw new Error(`Fetching ${GG} failed: HTTP ${VG}`);
+        wG();
+        const fG = WG(UG.N, pG, []);
+        EG = fG;
+        const QG = () => {
+          lG(fG)
         };
-        for ((0, Uu.s)(Mu.decoded, Nu, Nu);;) {
-          let Eu;
+        for ((0, SG.u)(zG.decoded, QG, QG);;) {
+          let bG;
           try {
-            Eu = await au(qu._, cu, [])
-          } catch (du) {
-            throw new Error(`Downloading ${uu} failed: ${(0,lu.d)(du)}`)
+            bG = await WG(UG._, fG, [])
+          } catch (CG) {
+            throw new Error(`Downloading ${GG} failed: ${(0,kG.f)(CG)}`)
           }
-          if (Eu.done) break;
-          su(), Mu.push(Eu.value)
+          if (bG.done) break;
+          wG(), zG.push(bG.value)
         }
-        if (pu = !0, Mu.end(), await Mu.decoded, Zu(), Du !== Eu) throw new Error(`${uu} ended before its module did`)
-      } catch (du) {
-        throw hu(du), Gu(du), du
+        if (XG = !0, zG.end(), await zG.decoded, LG(), JG !== bG) throw new Error(`${GG} ended before its module did`)
+      } catch (CG) {
+        throw dG(CG), oG(CG), CG
       }
-      Mu.terminate();
+      zG.terminate();
       try {
-        au(Ou, bu, [])
+        WG(KG, pG, [])
       } catch {}
-      const wu = await cu;
-      return void 0 !== Xu && await (0, qu.C)(uu, new qu.o(Cu), {
-        sha256: Xu.sha256,
+      const uG = await fG;
+      return void 0 !== yG && await (0, UG.y)(GG, new UG.q(VG), {
+        sha256: yG.sha256,
         onMismatch: () => {}
-      }), wu
+      }), uG
     }
 
-    function Vu(uu) {
+    function lG(GG) {
       try {
-        (0, qu.Y)(uu.cancel())
+        (0, UG.X)(GG.cancel())
       } catch {}
     }
-    const ru = ".zst.bin",
-      Qu = 1e3;
-    let iu = null;
+    const jG = ".zst.bin",
+      PG = 1e3;
+    let MG = null;
 
-    function Wu(uu) {
-      return iu ??= function() {
-        const uu = new Map,
-          Eu = "bloxd_wasm_webgpu:5137010,bloxd_wasm_webgl:5516404,bloxd_wasm_webgl1:4851467,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3712496";
-        for (const ju of Eu?.split(",") ?? []) {
-          const [Eu = "", su] = ju.split(":"), Uu = Number(su);
-          Number.isInteger(Uu) && Uu > 0 && uu.set(Eu, Uu)
+    function AG(GG) {
+      return MG ??= function() {
+        const GG = new Map,
+          bG = "bloxd_wasm_webgpu:5136886,bloxd_wasm_webgl:5516433,bloxd_wasm_webgl1:4851485,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3712496";
+        for (const ZG of bG?.split(",") ?? []) {
+          const [bG = "", wG] = ZG.split(":"), SG = Number(wG);
+          Number.isInteger(SG) && SG > 0 && GG.set(bG, SG)
         }
-        return uu
-      }(), iu.get(uu)
+        return GG
+      }(), MG.get(GG)
     }
-    async function Su(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const su = Wu(uu.name);
-      if (void 0 === su) return Iu(await Fu(uu, Eu, ju), "cold-wasm");
-      const Zu = vu ? new wu : null;
-      let Xu;
+    async function sG(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const wG = AG(GG.name);
+      if (void 0 === wG) return qG(await nG(GG, bG, ZG), "cold-wasm");
+      const LG = aG ? new uG : null;
+      let yG;
       try {
-        if (fu = uu.url(), cu()?.includes(bu(fu)) && await async function(uu) {
-            const Eu = new AbortController;
-            let ju;
-            const su = (0, Uu.i)((uu => {
-              ju = setTimeout((() => {
-                Eu.abort(), uu(null)
-              }), Qu)
+        if (YG = GG.url(), fG()?.includes(pG(YG)) && await async function(GG) {
+            const bG = new AbortController;
+            let ZG;
+            const wG = (0, SG.i)((GG => {
+              ZG = setTimeout((() => {
+                bG.abort(), GG(null)
+              }), PG)
             }));
             try {
-              const ju = fetch(uu.href, {
+              const ZG = fetch(GG.href, {
                   cache: "only-if-cached",
                   mode: "same-origin",
-                  signal: Eu.signal
+                  signal: bG.signal
                 }),
-                Zu = await (0, Uu.o)([ju, su]);
-              return !!Zu?.ok && ((0, qu.Y)(Zu.body.cancel()), !0)
+                LG = await (0, SG.r)([ZG, wG]);
+              return !!LG?.ok && ((0, UG.X)(LG.body.cancel()), !0)
             } catch {
               return !1
             } finally {
-              clearTimeout(ju)
+              clearTimeout(ZG)
             }
-          }(uu.url())) return Zu?.stop(), await async function(uu, Eu, ju, su) {
-          let Uu = !1;
-          const Zu = ju && {
-            sha256: ju.sha256,
+          }(GG.url())) return LG?.stop(), await async function(GG, bG, ZG, wG) {
+          let SG = !1;
+          const LG = ZG && {
+            sha256: ZG.sha256,
             onMismatch: () => {
-              Uu = !0
+              SG = !0
             }
           };
           try {
-            return Iu(await Fu(uu, Zu, su), "warm")
-          } catch (Xu) {
-            const su = await Bu(uu, Eu, ju, null);
-            if (null === su) throw Uu && ju.onMismatch(), Xu;
-            return console.warn(`${uu.url().href} from the HTTP cache failed: ${(0,lu.d)(Xu)}: loaded its copy instead`), Iu(su, Uu ? "warm-refused" : "warm-broken")
+            return qG(await nG(GG, LG, wG), "warm")
+          } catch (yG) {
+            const wG = await gG(GG, bG, ZG, null);
+            if (null === wG) throw SG && ZG.onMismatch(), yG;
+            return console.warn(`${GG.url().href} from the HTTP cache failed: ${(0,kG.f)(yG)}: loaded its copy instead`), qG(wG, SG ? "warm-refused" : "warm-broken")
           }
-        }(uu, su, Eu, ju);
-        Xu = await Bu(uu, su, Eu, Zu)
+        }(GG, wG, bG, ZG);
+        yG = await gG(GG, wG, bG, LG)
       } finally {
-        Zu?.stop()
+        LG?.stop()
       }
-      var fu;
-      return null !== Xu ? Iu(Xu, "cold-worker") : Iu(await Fu(uu, Eu, ju), "cold-wasm")
+      var YG;
+      return null !== yG ? qG(yG, "cold-worker") : qG(await nG(GG, bG, ZG), "cold-wasm")
     }
 
-    function Iu(uu, Eu) {
+    function qG(GG, bG) {
       return {
         __proto__: null,
-        module: uu,
-        path: Eu
+        module: GG,
+        path: bG
       }
     }
 
-    function Fu(uu, Eu, ju) {
-      return void 0 === Wu(uu.name) ? (0, qu.I)(uu.url(), Eu, ju) : (0, qu.I)(uu.url(), Eu, {
-        ...ju,
+    function nG(GG, bG, ZG) {
+      return void 0 === AG(GG.name) ? (0, UG.G)(GG.url(), bG, ZG) : (0, UG.G)(GG.url(), bG, {
+        ...ZG,
         hideThen: !0,
         onDownloaded: () => {
-          ! function(uu) {
-            const Eu = cu();
-            if (null === Eu) return;
-            const ju = bu(uu),
-              su = Eu.filter((uu => uu !== ju));
-            su.push(ju);
+          ! function(GG) {
+            const bG = fG();
+            if (null === bG) return;
+            const ZG = pG(GG),
+              wG = bG.filter((GG => GG !== ZG));
+            wG.push(ZG);
             try {
-              localStorage.setItem(fu, JSON.stringify(su.slice(-Cu)))
-            } catch (Uu) {
-              console.warn(`Bloxd wasm: ${ju} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, Uu)
+              localStorage.setItem(YG, JSON.stringify(wG.slice(-VG)))
+            } catch (SG) {
+              console.warn(`Bloxd wasm: ${ZG} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, SG)
             }
-          }(uu.url()), ju.onDownloaded?.()
+          }(GG.url()), ZG.onDownloaded?.()
         }
       })
     }
-    async function Bu(uu, Eu, ju, su) {
-      if (!vu || !pu()) return null;
-      const Uu = uu.url(),
-        Zu = `${Uu.href}${ru}`;
+    async function gG(GG, bG, ZG, wG) {
+      if (!aG || !XG()) return null;
+      const SG = GG.url(),
+        LG = `${SG.href}${jG}`;
       try {
-        return await (0, qu.eb)(Zu, ((uu, Uu, Xu) => Ku(Zu, Eu, uu, Uu, Xu, ju, su)))
-      } catch (Xu) {
-        return console.warn(`${(0,lu.d)(Xu)}: loading ${Uu.href} instead`), null
+        return await (0, UG.cb)(LG, ((GG, SG, yG) => cG(LG, bG, GG, SG, yG, ZG, wG)))
+      } catch (yG) {
+        return console.warn(`${(0,kG.f)(yG)}: loading ${SG.href} instead`), null
       }
     }
-    let Lu = null,
-      tu = !1;
-    const xu = new Map,
-      Tu = new Map;
+    let eG = null,
+      RG = !1;
+    const TG = new Map,
+      HG = new Map;
 
-    function Hu(uu, Eu, ju) {
-      return null === Lu ? Lu = nu(uu, Eu, ju?.memoryMaximumBytes) : uu !== Lu.build ? console.warn(`Bloxd wasm: ${uu.name} was asked for after ${Lu.build.name} started loading, which this thread keeps`) : Eu.name !== Lu.workers.name && console.warn(`Bloxd wasm: ${Eu.name} was asked for workers after ${Lu.workers.name}, which this thread keeps`), ju?.reloadFailedDownload && !tu && (0, su.$)() && (tu = !0, Lu = nu(Lu.build, Lu.workers, Lu.memoryMaximumBytes)), Lu.loaded
+    function tG(GG, bG, ZG) {
+      return null === eG ? eG = NG(GG, bG, ZG?.memoryMaximumBytes) : GG !== eG.build ? console.warn(`Bloxd wasm: ${GG.name} was asked for after ${eG.build.name} started loading, which this thread keeps`) : bG.name !== eG.workers.name && console.warn(`Bloxd wasm: ${bG.name} was asked for workers after ${eG.workers.name}, which this thread keeps`), ZG?.reloadFailedDownload && !RG && (0, wG.bb)() && (RG = !0, eG = NG(eG.build, eG.workers, eG.memoryMaximumBytes)), eG.loaded
     }
 
-    function Au(uu, Eu) {
-      if (null !== Lu) return (0, Uu.h)([]);
-      const ju = uu.filter((uu => !xu.has(uu.name))).map((uu => {
-        const ju = new AbortController,
-          su = {
-            compiled: Fu(uu, (0, Zu.b)(uu.name), {
-              priority: Eu,
-              Lj: ju.signal,
+    function DG(GG, bG) {
+      if (null !== eG) return (0, SG.e)([]);
+      const ZG = GG.filter((GG => !TG.has(GG.name))).map((GG => {
+        const ZG = new AbortController,
+          wG = {
+            compiled: nG(GG, (0, LG.e)(GG.name), {
+              priority: bG,
+              RZ: ZG.signal,
               onDownloaded: () => {
-                su.downloaded = !0
+                wG.downloaded = !0
               },
               retries: {
                 onRetry: () => {
-                  su.downloaded = !1, null !== Lu && ju.abort()
+                  wG.downloaded = !1, null !== eG && ZG.abort()
                 }
               }
             }),
-            cancel: ju,
+            cancel: ZG,
             downloaded: !1
           };
-        return xu.set(uu.name, su), (0, Uu.i)((Eu => {
-          (0, Uu.s)(su.compiled, (() => {
-            su.downloaded = !0, Eu()
-          }), (su => {
-            ju.signal.aborted || console.warn(`Bloxd wasm: ${uu.name}'s compile ahead of the load failed: the load compiles it afresh`, su), Eu()
+        return TG.set(GG.name, wG), (0, SG.i)((bG => {
+          (0, SG.u)(wG.compiled, (() => {
+            wG.downloaded = !0, bG()
+          }), (wG => {
+            ZG.signal.aborted || console.warn(`Bloxd wasm: ${GG.name}'s compile ahead of the load failed: the load compiles it afresh`, wG), bG()
           }))
         }))
       }));
-      return (0, Uu.h)(ju)
+      return (0, SG.e)(ZG)
     }
 
-    function nu(uu, Eu, ju) {
-      const Zu = (0, su.N)((async () => {
-        (0, Xu.C)(), Tu.clear();
-        const ju = zu(uu),
-          su = Eu.name === uu.name ? ju : zu(Eu);
+    function NG(GG, bG, ZG) {
+      const LG = (0, wG.J)((async () => {
+        (0, yG.C)(), HG.clear();
+        const ZG = xG(GG),
+          wG = bG.name === GG.name ? ZG : xG(bG);
         for (const {
-            cancel: uu
+            cancel: GG
           }
-          of xu.values()) uu.abort();
-        xu.clear(), await (0, Uu.h)([ju, su]);
-        const Zu = await ju,
-          lu = await su;
-        return (0, Xu.C)(), {
-          module: Zu,
-          workerModule: lu
+          of TG.values()) GG.abort();
+        TG.clear(), await (0, SG.e)([ZG, wG]);
+        const LG = await ZG,
+          kG = await wG;
+        return (0, yG.C)(), {
+          module: LG,
+          workerModule: kG
         }
-      }), uu, ju);
+      }), GG, ZG);
       return {
-        build: uu,
-        workers: Eu,
-        memoryMaximumBytes: ju,
-        loaded: Zu
+        build: GG,
+        workers: bG,
+        memoryMaximumBytes: ZG,
+        loaded: LG
       }
     }
 
-    function yu(uu) {
-      return Tu.get(uu)
+    function OG(GG) {
+      return HG.get(GG)
     }
 
-    function zu(uu) {
-      const Eu = performance.now(),
-        ju = xu.get(uu.name);
-      xu.delete(uu.name);
-      const su = !0 === ju?.downloaded ? ju : void 0;
-      return void 0 !== ju && void 0 === su && ju.cancel.abort(), (0, Uu.i)(((ju, Zu) => {
-        const Xu = (su, Uu) => {
-            Tu.set(uu.name, {
-              path: Uu,
-              ms: performance.now() - Eu
-            }), ju(su)
+    function xG(GG) {
+      const bG = performance.now(),
+        ZG = TG.get(GG.name);
+      TG.delete(GG.name);
+      const wG = !0 === ZG?.downloaded ? ZG : void 0;
+      return void 0 !== ZG && void 0 === wG && ZG.cancel.abort(), (0, SG.i)(((ZG, LG) => {
+        const yG = (wG, SG) => {
+            HG.set(GG.name, {
+              path: SG,
+              ms: performance.now() - bG
+            }), ZG(wG)
           },
-          lu = () => {
-            (0, Uu.s)(uE(uu), (uu => {
+          kG = () => {
+            (0, SG.u)(Gb(GG), (GG => {
               let {
-                module: Eu,
-                path: ju
-              } = uu;
-              Xu(Eu, ju)
-            }), Zu)
+                module: bG,
+                path: ZG
+              } = GG;
+              yG(bG, ZG)
+            }), LG)
           };
-        void 0 === su ? lu() : (0, Uu.s)(su.compiled, (uu => {
-          Xu(uu, "ahead")
-        }), lu)
+        void 0 === wG ? kG() : (0, SG.u)(wG.compiled, (GG => {
+          yG(GG, "ahead")
+        }), kG)
       }))
     }
-    async function Ru(uu, Eu) {
+    async function BG(GG, bG) {
       const {
-        module: ju
-      } = await uE(uu, {
-        retries: Eu
+        module: ZG
+      } = await Gb(GG, {
+        retries: bG
       });
-      return ju
+      return ZG
     }
-    async function uE(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await Su(uu, (0, Zu.b)(uu.name), Eu)
+    async function Gb(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return await sG(GG, (0, LG.e)(GG.name), bG)
     }
   },
-  6818: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Xu
+  6617: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => yG
     });
-    var su = ju(3020);
-    const Uu = {
-      bloxd_wasm: () => "2517ea48b70adb2315dde407aac9f7771c8f8fed4679df16a67d4f64e16c0ca4",
-      bloxd_wasm_client: () => "8e3f5c7e0ae9778e8a2bd555c9edea34e1d676dc84c47647f9c7991c78833b4b",
-      bloxd_wasm_workers: () => "d314ffb1d191d7f6e9dac1c5f780237cb88fc08431e4e713d1c31afadf5b76c9",
-      bloxd_wasm_models: () => "42b4348bfb4c39f2510c78f8a28323e13b143f72ae8226764cf2206b470c6fb3",
-      bloxd_wasm_webgpu: () => "c94f0ae845af7c64763dcb834061b20260ad6971d870317f9bca33a9ff0b5ef7",
-      bloxd_wasm_webgl: () => "38da11f9eab49b5d8f0185157a6a5ad6178e22840ff20a445e1f5249ac36cd91",
-      bloxd_wasm_webgl1: () => "ab1532b525d3a2188fd7631f21987906e6be9fdd62b14c0c03f54625410b4948",
-      bloxd_wasm_replay: () => "1c1690d0d143f51a770a1ac88fb427efc12cb7c4ca9f74446ee285cbe1e29b0f",
-      bloxd_wasm_recorder: () => "97298cfd514093207f0c3863193df40fc2a4be3f5101bb93ee5a1dc7efa69233",
-      bloxd_wasm_anim: () => "b0759d22815334552b8854b47c63eec9a03952d38dd1a922a5af613c34fa435b",
-      bloxd_wasm_textures: () => "4f2ee2890c6dcabbc98355370ba732664c4dbb0f4dd616c0ecd33a7f045a54d2",
-      bloxd_wasm_shader_pack: () => "920f59d8c3d7cd8bfe52d0c86bce310b93a17cac0f77c75edad8ee229808259a"
+    var wG = ZG(2872);
+    const SG = {
+      bloxd_wasm: () => "227276669bc81789ae0877e56ad1fa5148b881f36403e765502d7e555a33087b",
+      bloxd_wasm_client: () => "fde6efab397f5d28c36c7f7a90c3f8e1e62ec9f2af8488ddf98fdaa9b2cebcf1",
+      bloxd_wasm_workers: () => "a8f5ca009ba569fbb81d001dc1c9c7b54b8e4226097b17169475b4bb5e1b6f99",
+      bloxd_wasm_models: () => "097716d2f3ac493be1328cd23cfea825beae0b4d004cb4793fdff4648d25e301",
+      bloxd_wasm_webgpu: () => "67fd54aabb1d4d6967e430405453b87c364949978d0f7829b088145aae1e9ce5",
+      bloxd_wasm_webgl: () => "cdb0cf8160692e68dd70a2abf12e1128a08d64229d0469d4cc325cafd535e3d2",
+      bloxd_wasm_webgl1: () => "e8028f55daf732b5703910fe0886408ee732d8fa1e0480d554692849ab6badfa",
+      bloxd_wasm_replay: () => "218045edbe3647b06370037bf62e2cd5b77074e838aa33d42c210d12a23e3077",
+      bloxd_wasm_recorder: () => "8c52d908a7d9cbdccb92ee77564b71599d585f3b620f197e3396dcac8eca4f39",
+      bloxd_wasm_anim: () => "4aa0ad1549e0d5c6e1e816ef89f5c6c760fcacd619ca992ecbfbe1cf2f199e59",
+      bloxd_wasm_textures: () => "e5d65888cff795e87fa902109722e0986a22a654053de444a1b316ec7c6a343f",
+      bloxd_wasm_shader_pack: () => "1379c312c4022055abc387da5e4950082e1556f2bea4656a45cd7e8eb7e7ab66"
     };
-    var Zu = ju(4874);
+    var LG = ZG(4708);
 
-    function Xu(uu) {
-      const Eu = Object.prototype.hasOwnProperty.call(Uu, uu) ? Uu[uu]() : void 0;
-      if (void 0 !== Eu) return {
-        sha256: Eu,
-        onMismatch: Zu.B
+    function yG(GG) {
+      const bG = Object.prototype.hasOwnProperty.call(SG, GG) ? SG[GG]() : void 0;
+      if (void 0 !== bG) return {
+        sha256: bG,
+        onMismatch: LG.y
       };
-      throw new su.j(`${uu} has no release digest, so this build refuses it`)
+      throw new wG.k(`${GG} has no release digest, so this build refuses it`)
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

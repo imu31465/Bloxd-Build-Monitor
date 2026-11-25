@@ -1,2445 +1,2445 @@
 export const id = 187;
 export const ids = [187];
 export const modules = {
-  9393: (uu, Eu) => {
-    Eu.discordURLBuilder = function(uu) {
-      var Eu;
-      const ju = (null === (Eu = null === window || void 0 === window ? void 0 : window.location) || void 0 === Eu ? void 0 : Eu.hostname) || "localhost",
-        su = uu.hostname.split("."),
-        Uu = !uu.hostname.includes("trycloudflare.com") && !uu.hostname.includes("discordsays.com") && su.length > 2 ? `/${su[0]}` : "";
-      return uu.pathname.startsWith("/.proxy") ? `${uu.protocol}//${ju}${Uu}${uu.pathname}${uu.search}` : `${uu.protocol}//${ju}/.proxy/colyseus${Uu}${uu.pathname}${uu.search}`
+  9232: (GG, bG) => {
+    bG.discordURLBuilder = function(GG) {
+      var bG;
+      const ZG = (null === (bG = null === window || void 0 === window ? void 0 : window.location) || void 0 === bG ? void 0 : bG.hostname) || "localhost",
+        wG = GG.hostname.split("."),
+        SG = !GG.hostname.includes("trycloudflare.com") && !GG.hostname.includes("discordsays.com") && wG.length > 2 ? `/${wG[0]}` : "";
+      return GG.pathname.startsWith("/.proxy") ? `${GG.protocol}//${ZG}${SG}${GG.pathname}${GG.search}` : `${GG.protocol}//${ZG}/.proxy/colyseus${SG}${GG.pathname}${GG.search}`
     }
   },
-  9386: (uu, Eu, ju) => {
-    var su, Uu, Zu, Xu, lu = ju(9308),
-      qu = ju(9390),
-      fu = ju(9358);
-    su = new WeakMap, Uu = new WeakMap, Zu = new WeakMap, Xu = new WeakMap, Eu.Auth = class {
-      constructor(uu) {
-        this.http = uu, this.settings = {
+  9225: (GG, bG, ZG) => {
+    var wG, SG, LG, yG, kG = ZG(9136),
+      UG = ZG(9229),
+      YG = ZG(9184);
+    wG = new WeakMap, SG = new WeakMap, LG = new WeakMap, yG = new WeakMap, bG.Auth = class {
+      constructor(GG) {
+        this.http = GG, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, su.set(this, !1), Uu.set(this, void 0), Zu.set(this, void 0), Xu.set(this, fu.createNanoEvents()), qu.getItem(this.settings.key, (uu => this.token = uu))
+        }, wG.set(this, !1), SG.set(this, void 0), LG.set(this, void 0), yG.set(this, YG.createNanoEvents()), UG.getItem(this.settings.key, (GG => this.token = GG))
       }
-      set token(uu) {
-        this.http.authToken = uu
+      set token(GG) {
+        this.http.authToken = GG
       }
       get token() {
         return this.http.authToken
       }
-      onChange(uu) {
-        const Eu = lu.__classPrivateFieldGet(this, Xu, "f").on("change", uu);
-        return lu.__classPrivateFieldGet(this, su, "f") || lu.__classPrivateFieldSet(this, Uu, new Promise(((uu, Eu) => {
-          this.getUserData().then((uu => {
-            this.emitChange(Object.assign(Object.assign({}, uu), {
+      onChange(GG) {
+        const bG = kG.__classPrivateFieldGet(this, yG, "f").on("change", GG);
+        return kG.__classPrivateFieldGet(this, wG, "f") || kG.__classPrivateFieldSet(this, SG, new Promise(((GG, bG) => {
+          this.getUserData().then((GG => {
+            this.emitChange(Object.assign(Object.assign({}, GG), {
               token: this.token
             }))
-          })).catch((uu => {
+          })).catch((GG => {
             this.emitChange({
               user: null,
               token: void 0
             })
           })).finally((() => {
-            uu()
+            GG()
           }))
-        })), "f"), lu.__classPrivateFieldSet(this, su, !0, "f"), Eu
+        })), "f"), kG.__classPrivateFieldSet(this, wG, !0, "f"), bG
       }
       getUserData() {
-        return lu.__awaiter(this, void 0, void 0, (function*() {
+        return kG.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(uu, Eu, ju) {
-        return lu.__awaiter(this, void 0, void 0, (function*() {
-          const su = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(GG, bG, ZG) {
+        return kG.__awaiter(this, void 0, void 0, (function*() {
+          const wG = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
-              email: uu,
-              password: Eu,
-              options: ju
+              email: GG,
+              password: bG,
+              options: ZG
             }
           })).data;
-          return this.emitChange(su), su
+          return this.emitChange(wG), wG
         }))
       }
-      signInWithEmailAndPassword(uu, Eu) {
-        return lu.__awaiter(this, void 0, void 0, (function*() {
-          const ju = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(GG, bG) {
+        return kG.__awaiter(this, void 0, void 0, (function*() {
+          const ZG = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
-              email: uu,
-              password: Eu
+              email: GG,
+              password: bG
             }
           })).data;
-          return this.emitChange(ju), ju
+          return this.emitChange(ZG), ZG
         }))
       }
-      signInAnonymously(uu) {
-        return lu.__awaiter(this, void 0, void 0, (function*() {
-          const Eu = (yield this.http.post(`${this.settings.path}/anonymous`, {
+      signInAnonymously(GG) {
+        return kG.__awaiter(this, void 0, void 0, (function*() {
+          const bG = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
-              options: uu
+              options: GG
             }
           })).data;
-          return this.emitChange(Eu), Eu
+          return this.emitChange(bG), bG
         }))
       }
-      sendPasswordResetEmail(uu) {
-        return lu.__awaiter(this, void 0, void 0, (function*() {
+      sendPasswordResetEmail(GG) {
+        return kG.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
-              email: uu
+              email: GG
             }
           })).data
         }))
       }
-      signInWithProvider(uu) {
-        return lu.__awaiter(this, arguments, void 0, (function*(uu) {
-          let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((ju, su) => {
-            const Uu = Eu.width || 480,
-              Xu = Eu.height || 768,
-              qu = this.token ? `?token=${this.token}` : "",
-              fu = `Login with ${uu[0].toUpperCase()+uu.substring(1)}`,
-              Cu = this.http.client.getHttpEndpoint(`${Eu.prefix||`${this.settings.path}/provider`}/${uu}${qu}`),
-              bu = screen.width / 2 - Uu / 2,
-              cu = screen.height / 2 - Xu / 2;
-            lu.__classPrivateFieldSet(this, Zu, window.open(Cu, fu, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + Uu + ", height=" + Xu + ", top=" + cu + ", left=" + bu), "f");
-            const Nu = uu => {
-                void 0 === uu.data.user && void 0 === uu.data.token || (clearInterval(Ou), lu.__classPrivateFieldGet(this, Zu, "f").close(), lu.__classPrivateFieldSet(this, Zu, void 0, "f"), window.removeEventListener("message", Nu), void 0 !== uu.data.error ? su(uu.data.error) : (ju(uu.data), this.emitChange(uu.data)))
+      signInWithProvider(GG) {
+        return kG.__awaiter(this, arguments, void 0, (function*(GG) {
+          let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((ZG, wG) => {
+            const SG = bG.width || 480,
+              yG = bG.height || 768,
+              UG = this.token ? `?token=${this.token}` : "",
+              YG = `Login with ${GG[0].toUpperCase()+GG.substring(1)}`,
+              VG = this.http.client.getHttpEndpoint(`${bG.prefix||`${this.settings.path}/provider`}/${GG}${UG}`),
+              pG = screen.width / 2 - SG / 2,
+              fG = screen.height / 2 - yG / 2;
+            kG.__classPrivateFieldSet(this, LG, window.open(VG, YG, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + SG + ", height=" + yG + ", top=" + fG + ", left=" + pG), "f");
+            const QG = GG => {
+                void 0 === GG.data.user && void 0 === GG.data.token || (clearInterval(KG), kG.__classPrivateFieldGet(this, LG, "f").close(), kG.__classPrivateFieldSet(this, LG, void 0, "f"), window.removeEventListener("message", QG), void 0 !== GG.data.error ? wG(GG.data.error) : (ZG(GG.data), this.emitChange(GG.data)))
               },
-              Ou = setInterval((() => {
-                lu.__classPrivateFieldGet(this, Zu, "f") && !lu.__classPrivateFieldGet(this, Zu, "f").closed || (lu.__classPrivateFieldSet(this, Zu, void 0, "f"), su("Lj"), window.removeEventListener("message", Nu))
+              KG = setInterval((() => {
+                kG.__classPrivateFieldGet(this, LG, "f") && !kG.__classPrivateFieldGet(this, LG, "f").closed || (kG.__classPrivateFieldSet(this, LG, void 0, "f"), wG("RZ"), window.removeEventListener("message", QG))
               }), 200);
-            window.addEventListener("message", Nu)
+            window.addEventListener("message", QG)
           }))
         }))
       }
       signOut() {
-        return lu.__awaiter(this, void 0, void 0, (function*() {
+        return kG.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
           })
         }))
       }
-      emitChange(uu) {
-        void 0 !== uu.token && (this.token = uu.token, null === uu.token ? qu.removeItem(this.settings.key) : qu.setItem(this.settings.key, uu.token)), lu.__classPrivateFieldGet(this, Xu, "f").emit("change", uu)
+      emitChange(GG) {
+        void 0 !== GG.token && (this.token = GG.token, null === GG.token ? UG.removeItem(this.settings.key) : UG.setItem(this.settings.key, GG.token)), kG.__classPrivateFieldGet(this, yG, "f").emit("change", GG)
       }
     }
   },
-  9305: (uu, Eu, ju) => {
-    var su, Uu = ju(9308),
-      Zu = ju(9313),
-      Xu = ju(9317),
-      lu = ju(9379),
-      qu = ju(9386),
-      fu = ju(9393);
-    class Cu extends Error {
-      constructor(uu, Eu) {
-        super(uu), this.code = Eu, this.name = "MatchMakeError", Object.setPrototypeOf(this, Cu.prototype)
+  9130: (GG, bG, ZG) => {
+    var wG, SG = ZG(9136),
+      LG = ZG(9142),
+      yG = ZG(9151),
+      kG = ZG(9209),
+      UG = ZG(9225),
+      YG = ZG(9232);
+    class VG extends Error {
+      constructor(GG, bG) {
+        super(GG), this.code = bG, this.name = "MatchMakeError", Object.setPrototypeOf(this, VG.prototype)
       }
     }
-    const bu = "undefined" !== typeof window && "undefined" !== typeof(null === (su = null === window || void 0 === window ? void 0 : window.location) || void 0 === su ? void 0 : su.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class cu {
+    const pG = "undefined" !== typeof window && "undefined" !== typeof(null === (wG = null === window || void 0 === window ? void 0 : window.location) || void 0 === wG ? void 0 : wG.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class fG {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : bu,
-          Eu = arguments.length > 1 ? arguments[1] : void 0;
-        var ju, su;
-        if ("string" === typeof uu) {
-          const Eu = uu.startsWith("/") ? new URL(uu, bu) : new URL(uu),
-            ju = "https:" === Eu.protocol || "wss:" === Eu.protocol,
-            su = Number(Eu.port || (ju ? 443 : 80));
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : pG,
+          bG = arguments.length > 1 ? arguments[1] : void 0;
+        var ZG, wG;
+        if ("string" === typeof GG) {
+          const bG = GG.startsWith("/") ? new URL(GG, pG) : new URL(GG),
+            ZG = "https:" === bG.protocol || "wss:" === bG.protocol,
+            wG = Number(bG.port || (ZG ? 443 : 80));
           this.settings = {
-            hostname: Eu.hostname,
-            pathname: Eu.pathname,
-            port: su,
-            secure: ju,
-            searchParams: Eu.searchParams.toString() || void 0
+            hostname: bG.hostname,
+            pathname: bG.pathname,
+            port: wG,
+            secure: ZG,
+            searchParams: bG.searchParams.toString() || void 0
           }
-        } else void 0 === uu.port && (uu.port = uu.secure ? 443 : 80), void 0 === uu.pathname && (uu.pathname = ""), this.settings = uu;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new lu.HTTP(this, (null === Eu || void 0 === Eu ? void 0 : Eu.headers) || {}), this.auth = new qu.Auth(this.http), this.urlBuilder = null === Eu || void 0 === Eu ? void 0 : Eu.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (su = null === (ju = null === window || void 0 === window ? void 0 : window.location) || void 0 === ju ? void 0 : ju.hostname) || void 0 === su ? void 0 : su.includes("discordsays.com")) && (this.urlBuilder = fu.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        } else void 0 === GG.port && (GG.port = GG.secure ? 443 : 80), void 0 === GG.pathname && (GG.pathname = ""), this.settings = GG;
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new kG.HTTP(this, (null === bG || void 0 === bG ? void 0 : bG.headers) || {}), this.auth = new UG.Auth(this.http), this.urlBuilder = null === bG || void 0 === bG ? void 0 : bG.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (wG = null === (ZG = null === window || void 0 === window ? void 0 : window.location) || void 0 === ZG ? void 0 : ZG.hostname) || void 0 === wG ? void 0 : wG.includes("discordsays.com")) && (this.urlBuilder = YG.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
-      joinOrCreate(uu) {
-        return Uu.__awaiter(this, arguments, void 0, (function*(uu) {
-          let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            ju = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", uu, Eu, ju)
+      joinOrCreate(GG) {
+        return SG.__awaiter(this, arguments, void 0, (function*(GG) {
+          let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            ZG = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", GG, bG, ZG)
         }))
       }
-      create(uu) {
-        return Uu.__awaiter(this, arguments, void 0, (function*(uu) {
-          let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            ju = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", uu, Eu, ju)
+      create(GG) {
+        return SG.__awaiter(this, arguments, void 0, (function*(GG) {
+          let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            ZG = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", GG, bG, ZG)
         }))
       }
-      join(uu) {
-        return Uu.__awaiter(this, arguments, void 0, (function*(uu) {
-          let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            ju = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", uu, Eu, ju)
+      join(GG) {
+        return SG.__awaiter(this, arguments, void 0, (function*(GG) {
+          let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            ZG = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", GG, bG, ZG)
         }))
       }
-      joinById(uu) {
-        return Uu.__awaiter(this, arguments, void 0, (function*(uu) {
-          let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            ju = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", uu, Eu, ju)
+      joinById(GG) {
+        return SG.__awaiter(this, arguments, void 0, (function*(GG) {
+          let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            ZG = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", GG, bG, ZG)
         }))
       }
-      reconnect(uu, Eu) {
-        return Uu.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof uu && "string" === typeof Eu) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [ju, su] = uu.split(":");
-          if (!ju || !su) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", ju, {
-            reconnectionToken: su
-          }, Eu)
+      reconnect(GG, bG) {
+        return SG.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof GG && "string" === typeof bG) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [ZG, wG] = GG.split(":");
+          if (!ZG || !wG) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", ZG, {
+            reconnectionToken: wG
+          }, bG)
         }))
       }
-      consumeSeatReservation(uu, Eu, ju) {
-        return Uu.__awaiter(this, void 0, void 0, (function*() {
-          const su = this.createRoom(uu.room.name, Eu);
-          su.roomId = uu.room.roomId, su.sessionId = uu.sessionId;
-          const Xu = {
-            sessionId: su.sessionId
+      consumeSeatReservation(GG, bG, ZG) {
+        return SG.__awaiter(this, void 0, void 0, (function*() {
+          const wG = this.createRoom(GG.room.name, bG);
+          wG.roomId = GG.room.roomId, wG.sessionId = GG.sessionId;
+          const yG = {
+            sessionId: wG.sessionId
           };
-          uu.reconnectionToken && (Xu.reconnectionToken = uu.reconnectionToken);
-          const lu = ju || su;
-          return su.connect(this.buildEndpoint(uu.room, Xu, uu.protocol), uu.devMode && (() => Uu.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${su.roomId}'...`);
-            let ju = 0;
-            const Zu = () => Uu.__awaiter(this, void 0, void 0, (function*() {
-              ju++;
+          GG.reconnectionToken && (yG.reconnectionToken = GG.reconnectionToken);
+          const kG = ZG || wG;
+          return wG.connect(this.buildEndpoint(GG.room, yG, GG.protocol), GG.devMode && (() => SG.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${wG.roomId}'...`);
+            let ZG = 0;
+            const LG = () => SG.__awaiter(this, void 0, void 0, (function*() {
+              ZG++;
               try {
-                yield this.consumeSeatReservation(uu, Eu, lu), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${su.roomId}'`)
-              } catch (Uu) {
-                ju < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${ju} out of 8)`), setTimeout(Zu, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(GG, bG, kG), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${wG.roomId}'`)
+              } catch (SG) {
+                ZG < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${ZG} out of 8)`), setTimeout(LG, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(Zu, 2e3)
-          }))), lu, uu, this.http.headers), new Promise(((uu, Eu) => {
-            const ju = (uu, ju) => Eu(new Zu.ServerError(uu, ju));
-            lu.onError.once(ju), lu.onJoin.once((() => {
-              lu.onError.remove(ju), setTimeout((() => {
+            setTimeout(LG, 2e3)
+          }))), kG, GG, this.http.headers), new Promise(((GG, bG) => {
+            const ZG = (GG, ZG) => bG(new LG.ServerError(GG, ZG));
+            kG.onError.once(ZG), kG.onJoin.once((() => {
+              kG.onError.remove(ZG), setTimeout((() => {
                 try {
-                  const uu = [2, 221, 78, 205, 170, 100, 227, 105, 7, 11, 168, 73, 160, 189, 207, 237, 124, 173, 184, 99];
-                  uu && lu.qm(128, new Uint8Array(uu))
+                  const GG = [2, 221, 78, 205, 170, 100, 227, 105, 7, 11, 168, 73, 160, 189, 207, 237, 124, 173, 184, 99];
+                  GG && kG.Im(128, new Uint8Array(GG))
                 } catch {}
-              }), 3e3), uu(lu)
+              }), 3e3), GG(kG)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(uu, Eu) {
-        return Uu.__awaiter(this, arguments, void 0, (function*(uu, Eu) {
-          let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            su = arguments.length > 3 ? arguments[3] : void 0,
-            Uu = arguments.length > 4 ? arguments[4] : void 0;
-          const Zu = (yield this.http.post(`matchmake/${uu}/${Eu}`, {
+      createMatchMakeRequest(GG, bG) {
+        return SG.__awaiter(this, arguments, void 0, (function*(GG, bG) {
+          let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            wG = arguments.length > 3 ? arguments[3] : void 0,
+            SG = arguments.length > 4 ? arguments[4] : void 0;
+          const LG = (yield this.http.post(`matchmake/${GG}/${bG}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(ju)
+            body: JSON.stringify(ZG)
           })).data;
-          if (Zu.error) throw new Cu(Zu.error, Zu.code);
-          return "reconnect" === uu && (Zu.reconnectionToken = ju.reconnectionToken), yield this.consumeSeatReservation(Zu, su, Uu)
+          if (LG.error) throw new VG(LG.error, LG.code);
+          return "reconnect" === GG && (LG.reconnectionToken = ZG.reconnectionToken), yield this.consumeSeatReservation(LG, wG, SG)
         }))
       }
-      createRoom(uu, Eu) {
-        return new Xu.Fb(uu, Eu)
+      createRoom(GG, bG) {
+        return new yG.Ap(GG, bG)
       }
-      buildEndpoint(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          su = this.settings.searchParams || "";
-        this.http.authToken && (Eu._authToken = this.http.authToken);
-        for (const Xu in Eu) Eu.hasOwnProperty(Xu) && (su += (su ? "&" : "") + `${Xu}=${Eu[Xu]}`);
-        "h3" === ju && (ju = "http");
-        let Uu = this.settings.secure ? `${ju}s://` : `${ju}://`;
-        uu.publicAddress ? Uu += `${uu.publicAddress}` : Uu += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const Zu = `${Uu}/${uu.processId}/${uu.roomId}?${su}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(Zu)) : Zu
+      buildEndpoint(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          wG = this.settings.searchParams || "";
+        this.http.authToken && (bG._authToken = this.http.authToken);
+        for (const yG in bG) bG.hasOwnProperty(yG) && (wG += (wG ? "&" : "") + `${yG}=${bG[yG]}`);
+        "h3" === ZG && (ZG = "http");
+        let SG = this.settings.secure ? `${ZG}s://` : `${ZG}://`;
+        GG.publicAddress ? SG += `${GG.publicAddress}` : SG += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const LG = `${SG}/${GG.processId}/${GG.roomId}?${wG}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(LG)) : LG
       }
       getHttpEndpoint() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const Eu = uu.startsWith("/") ? uu : `/${uu}`;
-        let ju = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${Eu}`;
-        return this.settings.searchParams && (ju += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(ju)) : ju
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+        const bG = GG.startsWith("/") ? GG : `/${GG}`;
+        let ZG = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${bG}`;
+        return this.settings.searchParams && (ZG += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(ZG)) : ZG
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    cu.VERSION = "0.16.22", Eu.Client = cu, Eu.MatchMakeError = Cu
+    fG.VERSION = "0.16.22", bG.Client = fG, bG.MatchMakeError = VG
   },
-  9319: (uu, Eu, ju) => {
-    var su = ju(9321),
-      Uu = ju(9333);
-    Eu.Connection = class {
-      constructor(uu) {
-        if (this.events = {}, "h3" === uu) this.transport = new su.H3TransportTransport(this.events);
-        else this.transport = new Uu.WebSocketTransport(this.events)
+  9153: (GG, bG, ZG) => {
+    var wG = ZG(9155),
+      SG = ZG(9165);
+    bG.Connection = class {
+      constructor(GG) {
+        if (this.events = {}, "h3" === GG) this.transport = new wG.H3TransportTransport(this.events);
+        else this.transport = new SG.WebSocketTransport(this.events)
       }
-      connect(uu, Eu) {
-        this.transport.connect.call(this.transport, uu, Eu)
+      connect(GG, bG) {
+        this.transport.connect.call(this.transport, GG, bG)
       }
-      send(uu) {
-        this.transport.send(uu)
+      send(GG) {
+        this.transport.send(GG)
       }
-      sendUnreliable(uu) {
-        this.transport.sendUnreliable(uu)
+      sendUnreliable(GG) {
+        this.transport.sendUnreliable(GG)
       }
-      close(uu, Eu) {
-        this.transport.close(uu, Eu)
+      close(GG, bG) {
+        this.transport.close(GG, bG)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  9379: (uu, Eu, ju) => {
-    var su = ju(9313);
+  9209: (GG, bG, ZG) => {
+    var wG = ZG(9142);
 
-    function Uu(uu) {
-      var Eu = Object.create(null);
-      return uu && Object.keys(uu).forEach((function(ju) {
-        if ("default" !== ju) {
-          var su = Object.getOwnPropertyDescriptor(uu, ju);
-          Object.defineProperty(Eu, ju, su.get ? su : {
+    function SG(GG) {
+      var bG = Object.create(null);
+      return GG && Object.keys(GG).forEach((function(ZG) {
+        if ("default" !== ZG) {
+          var wG = Object.getOwnPropertyDescriptor(GG, ZG);
+          Object.defineProperty(bG, ZG, wG.get ? wG : {
             enumerable: !0,
             get: function() {
-              return uu[ju]
+              return GG[ZG]
             }
           })
         }
-      })), Eu.default = uu, Object.freeze(Eu)
+      })), bG.default = GG, Object.freeze(bG)
     }
-    var Zu = Uu(ju(9381));
-    Eu.HTTP = class {
-      constructor(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = uu, this.headers = Eu
+    var LG = SG(ZG(9217));
+    bG.HTTP = class {
+      constructor(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = GG, this.headers = bG
       }
-      get(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", uu, Eu)
+      get(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", GG, bG)
       }
-      post(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", uu, Eu)
+      post(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", GG, bG)
       }
-      del(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", uu, Eu)
+      del(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", GG, bG)
       }
-      put(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", uu, Eu)
+      put(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", GG, bG)
       }
-      request(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return Zu[uu](this.client.getHttpEndpoint(Eu), this.getOptions(ju)).catch((uu => {
-          var Eu;
-          if (uu.aborted) throw new su.AbortError("Request aborted");
-          const ju = uu.statusCode,
-            Uu = (null === (Eu = uu.data) || void 0 === Eu ? void 0 : Eu.error) || uu.statusMessage || uu.message;
-          if (!ju && !Uu) throw uu;
-          throw new su.ServerError(ju, Uu)
+      request(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return LG[GG](this.client.getHttpEndpoint(bG), this.getOptions(ZG)).catch((GG => {
+          var bG;
+          if (GG.aborted) throw new wG.AbortError("Request aborted");
+          const ZG = GG.statusCode,
+            SG = (null === (bG = GG.data) || void 0 === bG ? void 0 : bG.error) || GG.statusMessage || GG.message;
+          if (!ZG && !SG) throw GG;
+          throw new wG.ServerError(ZG, SG)
         }))
       }
-      getOptions(uu) {
-        return uu.headers = Object.assign({}, this.headers, uu.headers), this.authToken && (uu.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (uu.withCredentials = !0), uu
+      getOptions(GG) {
+        return GG.headers = Object.assign({}, this.headers, GG.headers), this.authToken && (GG.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (GG.withCredentials = !0), GG
       }
     }
   },
-  9343: (uu, Eu) => {
-    var ju, su;
-    Eu.Protocol = void 0, (ju = Eu.Protocol || (Eu.Protocol = {}))[ju.HANDSHAKE = 9] = "HANDSHAKE", ju[ju.JOIN_ROOM = 10] = "JOIN_ROOM", ju[ju.ERROR = 11] = "ERROR", ju[ju.LEAVE_ROOM = 12] = "LEAVE_ROOM", ju[ju.ROOM_DATA = 13] = "ROOM_DATA", ju[ju.ROOM_STATE = 14] = "ROOM_STATE", ju[ju.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", ju[ju.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", ju[ju.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", Eu.ErrorCode = void 0, (su = Eu.ErrorCode || (Eu.ErrorCode = {}))[su.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", su[su.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", su[su.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", su[su.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", su[su.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", su[su.AUTH_FAILED = 4215] = "AUTH_FAILED", su[su.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  9176: (GG, bG) => {
+    var ZG, wG;
+    bG.Protocol = void 0, (ZG = bG.Protocol || (bG.Protocol = {}))[ZG.HANDSHAKE = 9] = "HANDSHAKE", ZG[ZG.JOIN_ROOM = 10] = "JOIN_ROOM", ZG[ZG.ERROR = 11] = "ERROR", ZG[ZG.LEAVE_ROOM = 12] = "LEAVE_ROOM", ZG[ZG.ROOM_DATA = 13] = "ROOM_DATA", ZG[ZG.ROOM_STATE = 14] = "ROOM_STATE", ZG[ZG.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", ZG[ZG.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", ZG[ZG.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", bG.ErrorCode = void 0, (wG = bG.ErrorCode || (bG.ErrorCode = {}))[wG.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", wG[wG.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", wG[wG.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", wG[wG.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", wG[wG.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", wG[wG.AUTH_FAILED = 4215] = "AUTH_FAILED", wG[wG.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  9317: (uu, Eu, ju) => {
-    var su = ju(9319),
-      Uu = ju(9343),
-      Zu = ju(9351),
-      Xu = ju(9358),
-      lu = ju(9364),
-      qu = ju(9329),
-      fu = ju(9368),
-      Cu = ju(9313),
-      bu = ju(9370);
-    class cu {
-      constructor(uu, Eu) {
-        this.onStateChange = lu.createSignal(), this.onError = lu.createSignal(), this.pM = lu.createSignal(), this.onJoin = lu.createSignal(), this.hasJoined = !1, this.onMessageHandlers = Xu.createNanoEvents(), this.roomId = null, this.name = uu, this.packr = new bu.Packr, this.packr.encode(void 0), Eu && (this.pD = new(Zu.getSerializer("schema")), this.rootSchema = Eu, this.pD.state = new Eu), this.onError(((uu, Eu) => {
-          var ju;
-          return null === (ju = console.warn) || void 0 === ju ? void 0 : ju.call(console, `colyseus.js - onError => (${uu}) ${Eu}`)
-        })), this.pM((() => this.eD()))
+  9151: (GG, bG, ZG) => {
+    var wG = ZG(9153),
+      SG = ZG(9176),
+      LG = ZG(9182),
+      yG = ZG(9184),
+      kG = ZG(9190),
+      UG = ZG(9157),
+      YG = ZG(9198),
+      VG = ZG(9142),
+      pG = ZG(9200);
+    class fG {
+      constructor(GG, bG) {
+        this.onStateChange = kG.createSignal(), this.onError = kG.createSignal(), this.xJ = kG.createSignal(), this.onJoin = kG.createSignal(), this.hasJoined = !1, this.onMessageHandlers = yG.createNanoEvents(), this.roomId = null, this.name = GG, this.packr = new pG.Packr, this.packr.encode(void 0), bG && (this.dJ = new(LG.getSerializer("schema")), this.rootSchema = bG, this.dJ.state = new bG), this.onError(((GG, bG) => {
+          var ZG;
+          return null === (ZG = console.warn) || void 0 === ZG ? void 0 : ZG.call(console, `colyseus.js - onError => (${GG}) ${bG}`)
+        })), this.xJ((() => this.KJ()))
       }
-      connect(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          Uu = arguments.length > 3 ? arguments[3] : void 0,
-          Zu = arguments.length > 4 ? arguments[4] : void 0;
-        const Xu = new su.Connection(Uu.protocol);
-        if (ju.connection = Xu, Xu.events.onmessage = cu.prototype.onMessageCallback.bind(ju), Xu.events.onclose = function(uu) {
-            var su;
-            if (!ju.hasJoined) return null === (su = console.warn) || void 0 === su || su.call(console, `Room connection was closed unexpectedly (${uu.code}): ${uu.reason}`), void ju.onError.invoke(uu.code, uu.reason);
-            uu.code === Cu.CloseCode.DEVMODE_RESTART && Eu ? Eu() : (ju.pM.invoke(uu.code, uu.reason), ju.destroy())
-          }, Xu.events.onerror = function(uu) {
-            var Eu;
-            null === (Eu = console.warn) || void 0 === Eu || Eu.call(console, `Room, onError (${uu.code}): ${uu.reason}`), ju.onError.invoke(uu.code, uu.reason)
-          }, "h3" === Uu.protocol) {
-          const Eu = new URL(uu);
-          Xu.connect(Eu.origin, Uu)
-        } else Xu.connect(uu, Zu)
+      connect(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          SG = arguments.length > 3 ? arguments[3] : void 0,
+          LG = arguments.length > 4 ? arguments[4] : void 0;
+        const yG = new wG.Connection(SG.protocol);
+        if (ZG.connection = yG, yG.events.onmessage = fG.prototype.onMessageCallback.bind(ZG), yG.events.onclose = function(GG) {
+            var wG;
+            if (!ZG.hasJoined) return null === (wG = console.warn) || void 0 === wG || wG.call(console, `Room connection was closed unexpectedly (${GG.code}): ${GG.reason}`), void ZG.onError.invoke(GG.code, GG.reason);
+            GG.code === VG.CloseCode.DEVMODE_RESTART && bG ? bG() : (ZG.xJ.invoke(GG.code, GG.reason), ZG.destroy())
+          }, yG.events.onerror = function(GG) {
+            var bG;
+            null === (bG = console.warn) || void 0 === bG || bG.call(console, `Room, onError (${GG.code}): ${GG.reason}`), ZG.onError.invoke(GG.code, GG.reason)
+          }, "h3" === SG.protocol) {
+          const bG = new URL(GG);
+          yG.connect(bG.origin, SG)
+        } else yG.connect(GG, LG)
       }
       leave() {
-        let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((Eu => {
-          this.pM((uu => Eu(uu))), this.connection ? uu ? (this.packr.buffer[0] = Uu.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.pM.invoke(Cu.CloseCode.CONSENTED)
+        let GG = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return new Promise((bG => {
+          this.xJ((GG => bG(GG))), this.connection ? GG ? (this.packr.buffer[0] = SG.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.xJ.invoke(VG.CloseCode.CONSENTED)
         }))
       }
-      gM(uu, Eu) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(uu), Eu)
+      OJ(GG, bG) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(GG), bG)
       }
-      send(uu, Eu) {
-        const ju = {
+      send(GG, bG) {
+        const ZG = {
           offset: 1
         };
-        this.packr.buffer[0] = Uu.Protocol.ROOM_DATA, "string" === typeof uu ? qu.encode.string(this.packr.buffer, uu, ju) : qu.encode.number(this.packr.buffer, uu, ju), this.packr.position = 0;
-        const su = void 0 !== Eu ? this.packr.pack(Eu, 2048 + ju.offset) : this.packr.buffer.subarray(0, ju.offset);
-        this.connection.send(su)
+        this.packr.buffer[0] = SG.Protocol.ROOM_DATA, "string" === typeof GG ? UG.encode.string(this.packr.buffer, GG, ZG) : UG.encode.number(this.packr.buffer, GG, ZG), this.packr.position = 0;
+        const wG = void 0 !== bG ? this.packr.pack(bG, 2048 + ZG.offset) : this.packr.buffer.subarray(0, ZG.offset);
+        this.connection.send(wG)
       }
-      sendUnreliable(uu, Eu) {
-        const ju = {
+      sendUnreliable(GG, bG) {
+        const ZG = {
           offset: 1
         };
-        this.packr.buffer[0] = Uu.Protocol.ROOM_DATA, "string" === typeof uu ? qu.encode.string(this.packr.buffer, uu, ju) : qu.encode.number(this.packr.buffer, uu, ju), this.packr.position = 0;
-        const su = void 0 !== Eu ? this.packr.pack(Eu, 2048 + ju.offset) : this.packr.buffer.subarray(0, ju.offset);
-        this.connection.sendUnreliable(su)
+        this.packr.buffer[0] = SG.Protocol.ROOM_DATA, "string" === typeof GG ? UG.encode.string(this.packr.buffer, GG, ZG) : UG.encode.number(this.packr.buffer, GG, ZG), this.packr.position = 0;
+        const wG = void 0 !== bG ? this.packr.pack(bG, 2048 + ZG.offset) : this.packr.buffer.subarray(0, ZG.offset);
+        this.connection.sendUnreliable(wG)
       }
-      qm(uu, Eu) {
-        const ju = {
+      Im(GG, bG) {
+        const ZG = {
           offset: 1
         };
-        if (this.packr.buffer[0] = Uu.Protocol.ROOM_DATA_BYTES, "string" === typeof uu ? qu.encode.string(this.packr.buffer, uu, ju) : qu.encode.number(this.packr.buffer, uu, ju), Eu.byteLength + ju.offset > this.packr.buffer.byteLength) {
-          const uu = new Uint8Array(ju.offset + Eu.byteLength);
-          uu.set(this.packr.buffer), this.packr.useBuffer(uu)
+        if (this.packr.buffer[0] = SG.Protocol.ROOM_DATA_BYTES, "string" === typeof GG ? UG.encode.string(this.packr.buffer, GG, ZG) : UG.encode.number(this.packr.buffer, GG, ZG), bG.byteLength + ZG.offset > this.packr.buffer.byteLength) {
+          const GG = new Uint8Array(ZG.offset + bG.byteLength);
+          GG.set(this.packr.buffer), this.packr.useBuffer(GG)
         }
-        this.packr.buffer.set(Eu, ju.offset), this.connection.send(this.packr.buffer.subarray(0, ju.offset + Eu.byteLength))
+        this.packr.buffer.set(bG, ZG.offset), this.connection.send(this.packr.buffer.subarray(0, ZG.offset + bG.byteLength))
       }
       get state() {
-        return this.pD.getState()
+        return this.dJ.getState()
       }
-      eD() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.pM.clear(), this.onMessageHandlers.events = {}, this.pD instanceof fu.rK && (this.pD.zN.root.callbacks = {})
+      KJ() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.xJ.clear(), this.onMessageHandlers.events = {}, this.dJ instanceof YG.YF && (this.dJ.GK.root.callbacks = {})
       }
-      onMessageCallback(uu) {
-        const Eu = new Uint8Array(uu.data),
-          ju = {
+      onMessageCallback(GG) {
+        const bG = new Uint8Array(GG.data),
+          ZG = {
             offset: 1
           },
-          su = Eu[0];
-        if (su === Uu.Protocol.JOIN_ROOM) {
-          const uu = qu.decode.utf8Read(Eu, ju, Eu[ju.offset++]);
-          if (this.serializerId = qu.decode.utf8Read(Eu, ju, Eu[ju.offset++]), !this.pD) {
-            const uu = Zu.getSerializer(this.serializerId);
-            this.pD = new uu
+          wG = bG[0];
+        if (wG === SG.Protocol.JOIN_ROOM) {
+          const GG = UG.decode.utf8Read(bG, ZG, bG[ZG.offset++]);
+          if (this.serializerId = UG.decode.utf8Read(bG, ZG, bG[ZG.offset++]), !this.dJ) {
+            const GG = LG.getSerializer(this.serializerId);
+            this.dJ = new GG
           }
-          Eu.byteLength > ju.offset && this.pD.handshake && this.pD.handshake(Eu, ju), this.reconnectionToken = `${this.roomId}:${uu}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = Uu.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (su === Uu.Protocol.ERROR) {
-          const uu = qu.decode.number(Eu, ju),
-            su = qu.decode.string(Eu, ju);
-          this.onError.invoke(uu, su)
-        } else if (su === Uu.Protocol.LEAVE_ROOM) this.leave();
-        else if (su === Uu.Protocol.ROOM_STATE) this.pD.setState(Eu, ju), this.onStateChange.invoke(this.pD.getState());
-        else if (su === Uu.Protocol.ROOM_STATE_PATCH) this.pD.patch(Eu, ju), this.onStateChange.invoke(this.pD.getState());
-        else if (su === Uu.Protocol.ROOM_DATA) {
-          const uu = qu.decode.stringCheck(Eu, ju) ? qu.decode.string(Eu, ju) : qu.decode.number(Eu, ju),
-            su = Eu.byteLength > ju.offset ? bu.unpack(Eu, {
-              start: ju.offset
+          bG.byteLength > ZG.offset && this.dJ.handshake && this.dJ.handshake(bG, ZG), this.reconnectionToken = `${this.roomId}:${GG}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = SG.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (wG === SG.Protocol.ERROR) {
+          const GG = UG.decode.number(bG, ZG),
+            wG = UG.decode.string(bG, ZG);
+          this.onError.invoke(GG, wG)
+        } else if (wG === SG.Protocol.LEAVE_ROOM) this.leave();
+        else if (wG === SG.Protocol.ROOM_STATE) this.dJ.setState(bG, ZG), this.onStateChange.invoke(this.dJ.getState());
+        else if (wG === SG.Protocol.ROOM_STATE_PATCH) this.dJ.patch(bG, ZG), this.onStateChange.invoke(this.dJ.getState());
+        else if (wG === SG.Protocol.ROOM_DATA) {
+          const GG = UG.decode.stringCheck(bG, ZG) ? UG.decode.string(bG, ZG) : UG.decode.number(bG, ZG),
+            wG = bG.byteLength > ZG.offset ? pG.unpack(bG, {
+              start: ZG.offset
             }) : void 0;
-          this.dispatchMessage(uu, su)
-        } else if (su === Uu.Protocol.ROOM_DATA_BYTES) {
-          const uu = qu.decode.stringCheck(Eu, ju) ? qu.decode.string(Eu, ju) : qu.decode.number(Eu, ju);
-          this.dispatchMessage(uu, Eu.subarray(ju.offset))
+          this.dispatchMessage(GG, wG)
+        } else if (wG === SG.Protocol.ROOM_DATA_BYTES) {
+          const GG = UG.decode.stringCheck(bG, ZG) ? UG.decode.string(bG, ZG) : UG.decode.number(bG, ZG);
+          this.dispatchMessage(GG, bG.subarray(ZG.offset))
         }
       }
-      dispatchMessage(uu, Eu) {
-        var ju;
-        const su = this.getMessageHandlerKey(uu);
-        this.onMessageHandlers.events[su] ? this.onMessageHandlers.emit(su, Eu) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", uu, Eu) : null === (ju = console.warn) || void 0 === ju || ju.call(console, `colyseus.js: onMessage() not registered for type '${uu}'.`)
+      dispatchMessage(GG, bG) {
+        var ZG;
+        const wG = this.getMessageHandlerKey(GG);
+        this.onMessageHandlers.events[wG] ? this.onMessageHandlers.emit(wG, bG) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", GG, bG) : null === (ZG = console.warn) || void 0 === ZG || ZG.call(console, `colyseus.js: onMessage() not registered for type '${GG}'.`)
       }
       destroy() {
-        this.pD && this.pD.teardown()
+        this.dJ && this.dJ.teardown()
       }
-      getMessageHandlerKey(uu) {
-        switch (typeof uu) {
+      getMessageHandlerKey(GG) {
+        switch (typeof GG) {
           case "string":
-            return uu;
+            return GG;
           case "number":
-            return `i${uu}`;
+            return `i${GG}`;
           default:
             throw new Error("invalid message type.")
         }
       }
     }
-    Eu.Fb = cu
+    bG.Ap = fG
   },
-  9390: (uu, Eu, ju) => {
-    var su = ju(9308);
-    let Uu;
+  9229: (GG, bG, ZG) => {
+    var wG = ZG(9136);
+    let SG;
 
-    function Zu() {
-      if (!Uu) try {
-        Uu = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
-      } catch (uu) {}
-      return Uu || "undefined" === typeof globalThis.indexedDB || (Uu = new Xu), Uu || (Uu = {
+    function LG() {
+      if (!SG) try {
+        SG = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+      } catch (GG) {}
+      return SG || "undefined" === typeof globalThis.indexedDB || (SG = new yG), SG || (SG = {
         cache: {},
-        setItem: function(uu, Eu) {
-          this.cache[uu] = Eu
+        setItem: function(GG, bG) {
+          this.cache[GG] = bG
         },
-        getItem: function(uu) {
-          this.cache[uu]
+        getItem: function(GG) {
+          this.cache[GG]
         },
-        removeItem: function(uu) {
-          delete this.cache[uu]
+        removeItem: function(GG) {
+          delete this.cache[GG]
         }
-      }), Uu
+      }), SG
     }
-    class Xu {
+    class yG {
       constructor() {
-        this.dbPromise = new Promise((uu => {
-          const Eu = indexedDB.open("_colyseus_storage", 1);
-          Eu.onupgradeneeded = () => Eu.result.createObjectStore("store"), Eu.onsuccess = () => uu(Eu.result)
+        this.dbPromise = new Promise((GG => {
+          const bG = indexedDB.open("_colyseus_storage", 1);
+          bG.onupgradeneeded = () => bG.result.createObjectStore("store"), bG.onsuccess = () => GG(bG.result)
         }))
       }
-      tx(uu, Eu) {
-        return su.__awaiter(this, void 0, void 0, (function*() {
-          const ju = (yield this.dbPromise).transaction("store", uu).objectStore("store");
-          return Eu(ju)
+      tx(GG, bG) {
+        return wG.__awaiter(this, void 0, void 0, (function*() {
+          const ZG = (yield this.dbPromise).transaction("store", GG).objectStore("store");
+          return bG(ZG)
         }))
       }
-      setItem(uu, Eu) {
-        return this.tx("readwrite", (ju => ju.put(Eu, uu))).then()
+      setItem(GG, bG) {
+        return this.tx("readwrite", (ZG => ZG.put(bG, GG))).then()
       }
-      getItem(uu) {
-        return su.__awaiter(this, void 0, void 0, (function*() {
-          const Eu = yield this.tx("readonly", (Eu => Eu.get(uu)));
-          return new Promise((uu => {
-            Eu.onsuccess = () => uu(Eu.result)
+      getItem(GG) {
+        return wG.__awaiter(this, void 0, void 0, (function*() {
+          const bG = yield this.tx("readonly", (bG => bG.get(GG)));
+          return new Promise((GG => {
+            bG.onsuccess = () => GG(bG.result)
           }))
         }))
       }
-      removeItem(uu) {
-        return this.tx("readwrite", (Eu => Eu.delete(uu))).then()
+      removeItem(GG) {
+        return this.tx("readwrite", (bG => bG.delete(GG))).then()
       }
     }
-    Eu.getItem = function(uu, Eu) {
-      const ju = Zu().getItem(uu);
-      "undefined" !== typeof Promise && ju instanceof Promise ? ju.then((uu => Eu(uu))) : Eu(ju)
-    }, Eu.removeItem = function(uu) {
-      Zu().removeItem(uu)
-    }, Eu.setItem = function(uu, Eu) {
-      Zu().setItem(uu, Eu)
+    bG.getItem = function(GG, bG) {
+      const ZG = LG().getItem(GG);
+      "undefined" !== typeof Promise && ZG instanceof Promise ? ZG.then((GG => bG(GG))) : bG(ZG)
+    }, bG.removeItem = function(GG) {
+      LG().removeItem(GG)
+    }, bG.setItem = function(GG, bG) {
+      LG().setItem(GG, bG)
     }
   },
-  9358: (uu, Eu) => {
-    Eu.createNanoEvents = () => ({
-      emit(uu) {
-        let Eu = this.events[uu] || [];
-        for (var ju = arguments.length, su = new Array(ju > 1 ? ju - 1 : 0), Uu = 1; Uu < ju; Uu++) su[Uu - 1] = arguments[Uu];
-        for (let Zu = 0, Xu = Eu.length; Zu < Xu; Zu++) Eu[Zu](...su)
+  9184: (GG, bG) => {
+    bG.createNanoEvents = () => ({
+      emit(GG) {
+        let bG = this.events[GG] || [];
+        for (var ZG = arguments.length, wG = new Array(ZG > 1 ? ZG - 1 : 0), SG = 1; SG < ZG; SG++) wG[SG - 1] = arguments[SG];
+        for (let LG = 0, yG = bG.length; LG < yG; LG++) bG[LG](...wG)
       },
       events: {},
-      on(uu, Eu) {
-        var ju;
-        return (null === (ju = this.events[uu]) || void 0 === ju ? void 0 : ju.push(Eu)) || (this.events[uu] = [Eu]), () => {
-          var ju;
-          this.events[uu] = null === (ju = this.events[uu]) || void 0 === ju ? void 0 : ju.filter((uu => Eu !== uu))
+      on(GG, bG) {
+        var ZG;
+        return (null === (ZG = this.events[GG]) || void 0 === ZG ? void 0 : ZG.push(bG)) || (this.events[GG] = [bG]), () => {
+          var ZG;
+          this.events[GG] = null === (ZG = this.events[GG]) || void 0 === ZG ? void 0 : ZG.filter((GG => bG !== GG))
         }
       }
     })
   },
-  9364: (uu, Eu) => {
-    class ju {
+  9190: (GG, bG) => {
+    class ZG {
       constructor() {
         this.handlers = []
       }
-      register(uu) {
-        return this.handlers.push(uu), this
+      register(GG) {
+        return this.handlers.push(GG), this
       }
       invoke() {
-        for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
-        this.handlers.forEach((uu => uu.apply(this, Eu)))
+        for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
+        this.handlers.forEach((GG => GG.apply(this, bG)))
       }
       invokeAsync() {
-        for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
-        return Promise.all(this.handlers.map((uu => uu.apply(this, Eu))))
+        for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
+        return Promise.all(this.handlers.map((GG => GG.apply(this, bG))))
       }
-      remove(uu) {
-        const Eu = this.handlers.indexOf(uu);
-        this.handlers[Eu] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+      remove(GG) {
+        const bG = this.handlers.indexOf(GG);
+        this.handlers[bG] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    Eu.EventEmitter = ju, Eu.createSignal = function() {
-      const uu = new ju;
+    bG.EventEmitter = ZG, bG.createSignal = function() {
+      const GG = new ZG;
 
-      function Eu(Eu) {
-        return uu.register(Eu, null === this)
+      function bG(bG) {
+        return GG.register(bG, null === this)
       }
-      return Eu.once = Eu => {
-        const ju = function() {
-          for (var su = arguments.length, Uu = new Array(su), Zu = 0; Zu < su; Zu++) Uu[Zu] = arguments[Zu];
-          Eu.apply(this, Uu), uu.remove(ju)
+      return bG.once = bG => {
+        const ZG = function() {
+          for (var wG = arguments.length, SG = new Array(wG), LG = 0; LG < wG; LG++) SG[LG] = arguments[LG];
+          bG.apply(this, SG), GG.remove(ZG)
         };
-        uu.register(ju)
-      }, Eu.remove = Eu => uu.remove(Eu), Eu.invoke = function() {
-        return uu.invoke(...arguments)
-      }, Eu.invokeAsync = function() {
-        return uu.invokeAsync(...arguments)
-      }, Eu.clear = () => uu.clear(), Eu
+        GG.register(ZG)
+      }, bG.remove = bG => GG.remove(bG), bG.invoke = function() {
+        return GG.invoke(...arguments)
+      }, bG.invokeAsync = function() {
+        return GG.invokeAsync(...arguments)
+      }, bG.clear = () => GG.clear(), bG
     }
   },
-  9313: (uu, Eu) => {
-    var ju;
-    Eu.CloseCode = void 0, (ju = Eu.CloseCode || (Eu.CloseCode = {}))[ju.CONSENTED = 4e3] = "CONSENTED", ju[ju.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class su extends Error {
-      constructor(uu, Eu) {
-        super(Eu), this.name = "ServerError", this.code = uu
+  9142: (GG, bG) => {
+    var ZG;
+    bG.CloseCode = void 0, (ZG = bG.CloseCode || (bG.CloseCode = {}))[ZG.CONSENTED = 4e3] = "CONSENTED", ZG[ZG.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class wG extends Error {
+      constructor(GG, bG) {
+        super(bG), this.name = "ServerError", this.code = GG
       }
     }
-    class Uu extends Error {
-      constructor(uu) {
-        super(uu), this.name = "AbortError"
+    class SG extends Error {
+      constructor(GG) {
+        super(GG), this.name = "AbortError"
       }
     }
-    Eu.AbortError = Uu, Eu.ServerError = su
+    bG.AbortError = SG, bG.ServerError = wG
   },
-  9296: (uu, Eu, ju) => {
-    ju(9300);
-    var su = ju(9305),
-      Uu = ju(9343),
-      Zu = ju(9317),
-      Xu = ju(9386),
-      lu = ju(9313),
-      qu = ju(9368),
-      fu = ju(9401),
-      Cu = ju(9351);
-    Cu.registerSerializer("schema", qu.rK), Cu.registerSerializer("none", fu.NoneSerializer), Eu.Client = su.Client, Eu.MatchMakeError = su.MatchMakeError, Object.defineProperty(Eu, "ErrorCode", {
+  9123: (GG, bG, ZG) => {
+    ZG(9128);
+    var wG = ZG(9130),
+      SG = ZG(9176),
+      LG = ZG(9151),
+      yG = ZG(9225),
+      kG = ZG(9142),
+      UG = ZG(9198),
+      YG = ZG(9241),
+      VG = ZG(9182);
+    VG.registerSerializer("schema", UG.YF), VG.registerSerializer("none", YG.NoneSerializer), bG.Client = wG.Client, bG.MatchMakeError = wG.MatchMakeError, Object.defineProperty(bG, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return Uu.ErrorCode
+        return SG.ErrorCode
       }
-    }), Object.defineProperty(Eu, "Protocol", {
+    }), Object.defineProperty(bG, "Protocol", {
       enumerable: !0,
       get: function() {
-        return Uu.Protocol
+        return SG.Protocol
       }
-    }), Eu.Fb = Zu.Fb, Eu.Auth = Xu.Auth, Eu.ServerError = lu.ServerError, Eu.rK = qu.rK, Eu.getStateCallbacks = qu.getStateCallbacks, Eu.registerSerializer = Cu.registerSerializer
+    }), bG.Ap = LG.Ap, bG.Auth = yG.Auth, bG.ServerError = kG.ServerError, bG.YF = UG.YF, bG.getStateCallbacks = UG.getStateCallbacks, bG.registerSerializer = VG.registerSerializer
   },
-  9300: () => {
-    ArrayBuffer.isView || (ArrayBuffer.isView = uu => null !== uu && "object" === typeof uu && uu.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
+  9128: () => {
+    ArrayBuffer.isView || (ArrayBuffer.isView = GG => null !== GG && "object" === typeof GG && GG.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  9401: (uu, Eu) => {
-    Eu.NoneSerializer = class {
-      setState(uu) {}
+  9241: (GG, bG) => {
+    bG.NoneSerializer = class {
+      setState(GG) {}
       getState() {
         return null
       }
-      patch(uu) {}
+      patch(GG) {}
       teardown() {}
-      handshake(uu) {}
+      handshake(GG) {}
     }
   },
-  9368: (uu, Eu, ju) => {
-    var su = ju(9329);
-    Eu.rK = class {
-      setState(uu, Eu) {
-        this.zN.decode(uu, Eu)
+  9198: (GG, bG, ZG) => {
+    var wG = ZG(9157);
+    bG.YF = class {
+      setState(GG, bG) {
+        this.GK.decode(GG, bG)
       }
       getState() {
         return this.state
       }
-      patch(uu, Eu) {
-        return this.zN.decode(uu, Eu)
+      patch(GG, bG) {
+        return this.GK.decode(GG, bG)
       }
       teardown() {
-        this.zN.root.clearRefs()
+        this.GK.root.clearRefs()
       }
-      handshake(uu, Eu) {
-        this.state ? (su.Reflection.decode(uu, Eu), this.zN = new su.Decoder(this.state)) : (this.zN = su.Reflection.decode(uu, Eu), this.state = this.zN.state)
+      handshake(GG, bG) {
+        this.state ? (wG.Reflection.decode(GG, bG), this.GK = new wG.Decoder(this.state)) : (this.GK = wG.Reflection.decode(GG, bG), this.state = this.GK.state)
       }
-    }, Eu.getStateCallbacks = function(uu) {
+    }, bG.getStateCallbacks = function(GG) {
       try {
-        return su.getDecoderStateCallbacks(uu.pD.zN)
-      } catch (Eu) {
+        return wG.getDecoderStateCallbacks(GG.dJ.GK)
+      } catch (bG) {
         return
       }
     }
   },
-  9351: (uu, Eu) => {
-    const ju = {};
-    Eu.getSerializer = function(uu) {
-      const Eu = ju[uu];
-      if (!Eu) throw new Error("missing serializer: " + uu);
-      return Eu
-    }, Eu.registerSerializer = function(uu, Eu) {
-      ju[uu] = Eu
+  9182: (GG, bG) => {
+    const ZG = {};
+    bG.getSerializer = function(GG) {
+      const bG = ZG[GG];
+      if (!bG) throw new Error("missing serializer: " + GG);
+      return bG
+    }, bG.registerSerializer = function(GG, bG) {
+      ZG[GG] = bG
     }
   },
-  9321: (uu, Eu, ju) => {
-    var su = ju(9308),
-      Uu = ju(9329);
-    Eu.H3TransportTransport = class {
-      constructor(uu) {
-        this.events = uu, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
+  9155: (GG, bG, ZG) => {
+    var wG = ZG(9136),
+      SG = ZG(9157);
+    bG.H3TransportTransport = class {
+      constructor(GG) {
+        this.events = GG, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
-      connect(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const ju = Eu.fingerprint && {
+      connect(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const ZG = bG.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(Eu.fingerprint).buffer
+            value: new Uint8Array(bG.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(uu, ju), this.wt.ready.then((uu => {
-          console.log("WebTransport ready!", uu), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
-          this.wt.incomingBidirectionalStreams.getReader().read().then((uu => {
-            this.reader = uu.value.readable.getReader(), this.writer = uu.value.writable.getWriter(), this.sendSeatReservation(Eu.room.roomId, Eu.sessionId, Eu.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
-          })).catch((uu => {
-            console.error("failed to read incoming stream", uu), console.error("TODO: close the connection")
+        this.wt = new WebTransport(GG, ZG), this.wt.ready.then((GG => {
+          console.log("WebTransport ready!", GG), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
+          this.wt.incomingBidirectionalStreams.getReader().read().then((GG => {
+            this.reader = GG.value.readable.getReader(), this.writer = GG.value.writable.getWriter(), this.sendSeatReservation(bG.room.roomId, bG.sessionId, bG.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+          })).catch((GG => {
+            console.error("failed to read incoming stream", GG), console.error("TODO: close the connection")
           }))
-        })).catch((uu => {
-          console.log("WebTransport not ready!", uu), this._close()
-        })), this.wt.closed.then((uu => {
-          console.log("WebTransport closed w/ success", uu), this.events.onclose({
-            code: uu.closeCode,
-            reason: uu.reason
+        })).catch((GG => {
+          console.log("WebTransport not ready!", GG), this._close()
+        })), this.wt.closed.then((GG => {
+          console.log("WebTransport closed w/ success", GG), this.events.onclose({
+            code: GG.closeCode,
+            reason: GG.reason
           })
-        })).catch((uu => {
-          console.log("WebTransport closed w/ error", uu), this.events.onerror(uu), this.events.onclose({
-            code: uu.closeCode,
-            reason: uu.reason
+        })).catch((GG => {
+          console.log("WebTransport closed w/ error", GG), this.events.onerror(GG), this.events.onclose({
+            code: GG.closeCode,
+            reason: GG.reason
           })
         })).finally((() => {
           this._close()
         }))
       }
-      send(uu) {
-        const Eu = Uu.encode.number(this.lengthPrefixBuffer, uu.length, {
+      send(GG) {
+        const bG = SG.encode.number(this.lengthPrefixBuffer, GG.length, {
             offset: 0
           }),
-          ju = new Uint8Array(Eu + uu.length);
-        ju.set(this.lengthPrefixBuffer.subarray(0, Eu), 0), ju.set(uu, Eu), this.writer.write(ju)
+          ZG = new Uint8Array(bG + GG.length);
+        ZG.set(this.lengthPrefixBuffer.subarray(0, bG), 0), ZG.set(GG, bG), this.writer.write(ZG)
       }
-      sendUnreliable(uu) {
-        const Eu = Uu.encode.number(this.lengthPrefixBuffer, uu.length, {
+      sendUnreliable(GG) {
+        const bG = SG.encode.number(this.lengthPrefixBuffer, GG.length, {
             offset: 0
           }),
-          ju = new Uint8Array(Eu + uu.length);
-        ju.set(this.lengthPrefixBuffer.subarray(0, Eu), 0), ju.set(uu, Eu), this.unreliableWriter.write(ju)
+          ZG = new Uint8Array(bG + GG.length);
+        ZG.set(this.lengthPrefixBuffer.subarray(0, bG), 0), ZG.set(GG, bG), this.unreliableWriter.write(ZG)
       }
-      close(uu, Eu) {
+      close(GG, bG) {
         try {
           this.wt.close({
-            closeCode: uu,
-            reason: Eu
+            closeCode: GG,
+            reason: bG
           })
-        } catch (ju) {
-          console.error(ju)
+        } catch (ZG) {
+          console.error(ZG)
         }
       }
       readIncomingData() {
-        return su.__awaiter(this, void 0, void 0, (function*() {
-          let uu;
+        return wG.__awaiter(this, void 0, void 0, (function*() {
+          let GG;
           for (; this.isOpen;) {
             try {
-              uu = yield this.reader.read();
-              const Eu = uu.value,
-                ju = {
+              GG = yield this.reader.read();
+              const bG = GG.value,
+                ZG = {
                   offset: 0
                 };
               do {
-                const uu = Uu.decode.number(Eu, ju);
+                const GG = SG.decode.number(bG, ZG);
                 this.events.onmessage({
-                  data: Eu.subarray(ju.offset, ju.offset + uu)
-                }), ju.offset += uu
-              } while (ju.offset < Eu.length)
-            } catch (Eu) {
-              -1 === Eu.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Eu);
+                  data: bG.subarray(ZG.offset, ZG.offset + GG)
+                }), ZG.offset += GG
+              } while (ZG.offset < bG.length)
+            } catch (bG) {
+              -1 === bG.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", bG);
               break
             }
-            if (uu.done) break
+            if (GG.done) break
           }
         }))
       }
       readIncomingUnreliableData() {
-        return su.__awaiter(this, void 0, void 0, (function*() {
-          let uu;
+        return wG.__awaiter(this, void 0, void 0, (function*() {
+          let GG;
           for (; this.isOpen;) {
             try {
-              uu = yield this.unreliableReader.read();
-              const Eu = uu.value,
-                ju = {
+              GG = yield this.unreliableReader.read();
+              const bG = GG.value,
+                ZG = {
                   offset: 0
                 };
               do {
-                const uu = Uu.decode.number(Eu, ju);
+                const GG = SG.decode.number(bG, ZG);
                 this.events.onmessage({
-                  data: Eu.subarray(ju.offset, ju.offset + uu)
-                }), ju.offset += uu
-              } while (ju.offset < Eu.length)
-            } catch (Eu) {
-              -1 === Eu.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Eu);
+                  data: bG.subarray(ZG.offset, ZG.offset + GG)
+                }), ZG.offset += GG
+              } while (ZG.offset < bG.length)
+            } catch (bG) {
+              -1 === bG.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", bG);
               break
             }
-            if (uu.done) break
+            if (GG.done) break
           }
         }))
       }
-      sendSeatReservation(uu, Eu, ju) {
-        const su = {
+      sendSeatReservation(GG, bG, ZG) {
+        const wG = {
             offset: 0
           },
-          Zu = [];
-        Uu.encode.string(Zu, uu, su), Uu.encode.string(Zu, Eu, su), ju && Uu.encode.string(Zu, ju, su), this.writer.write(new Uint8Array(Zu).buffer)
+          LG = [];
+        SG.encode.string(LG, GG, wG), SG.encode.string(LG, bG, wG), ZG && SG.encode.string(LG, ZG, wG), this.writer.write(new Uint8Array(LG).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  9333: (uu, Eu, ju) => {
-    var su = ju(9340);
-    const Uu = globalThis.WebSocket || su;
-    Eu.WebSocketTransport = class {
-      constructor(uu) {
-        this.events = uu
+  9165: (GG, bG, ZG) => {
+    var wG = ZG(9171);
+    const SG = globalThis.WebSocket || wG;
+    bG.WebSocketTransport = class {
+      constructor(GG) {
+        this.events = GG
       }
-      send(uu) {
-        this.ws.send(uu)
+      send(GG) {
+        this.ws.send(GG)
       }
-      sendUnreliable(uu) {
+      sendUnreliable(GG) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(uu, Eu) {
+      connect(GG, bG) {
         try {
-          this.ws = new Uu(uu, {
-            headers: Eu,
+          this.ws = new SG(GG, {
+            headers: bG,
             protocols: this.protocols
           })
-        } catch (ju) {
-          this.ws = new Uu(uu, this.protocols)
+        } catch (ZG) {
+          this.ws = new SG(GG, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(uu, Eu) {
-        this.ws.close(uu, Eu)
+      close(GG, bG) {
+        this.ws.close(GG, bG)
       }
       get isOpen() {
-        return this.ws.readyState === Uu.OPEN
+        return this.ws.readyState === SG.OPEN
       }
     }
   },
-  9340: uu => {
-    uu.exports = function() {
+  9171: GG => {
+    GG.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  9381: (uu, Eu, ju) => {
-    function su(uu, Eu) {
-      Eu.headers = uu.headers || {}, Eu.statusMessage = uu.statusText, Eu.statusCode = uu.status, Eu.data = uu.response
+  9217: (GG, bG, ZG) => {
+    function wG(GG, bG) {
+      bG.headers = GG.headers || {}, bG.statusMessage = GG.statusText, bG.statusCode = GG.status, bG.data = GG.response
     }
 
-    function Uu(uu, Eu, ju) {
-      return new Promise((function(Uu, Zu) {
-        ju = ju || {};
-        var Xu, lu, qu, fu = new XMLHttpRequest,
-          Cu = ju.body,
-          bu = ju.headers || {};
-        for (Xu in ju.timeout && (fu.timeout = ju.timeout), fu.ontimeout = fu.onerror = function(uu) {
-            uu.timeout = "timeout" == uu.type, Zu(uu)
-          }, fu.onabort = function(uu) {
-            uu.aborted = !0, Zu(uu)
-          }, fu.open(uu, Eu.href || Eu), fu.onload = function() {
-            for (qu = fu.getAllResponseHeaders().trim().split(/[\r\n]+/), su(fu, fu); lu = qu.shift();) lu = lu.split(": "), fu.headers[lu.shift().toLowerCase()] = lu.join(": ");
-            if ((lu = fu.headers["content-type"]) && ~lu.indexOf("application/json")) try {
-              fu.data = JSON.parse(fu.data, ju.reviver)
-            } catch (uu) {
-              return su(fu, uu), Zu(uu)
-            }(fu.status >= 400 ? Zu : Uu)(fu)
-          }, typeof FormData < "u" && Cu instanceof FormData || Cu && "object" == typeof Cu && (bu["content-type"] = "application/json", Cu = JSON.stringify(Cu)), fu.withCredentials = !!ju.withCredentials, bu) fu.setRequestHeader(Xu, bu[Xu]);
-        fu.send(Cu), ju.signal && ju.signal.addEventListener("abort", (function() {
-          fu.abort()
+    function SG(GG, bG, ZG) {
+      return new Promise((function(SG, LG) {
+        ZG = ZG || {};
+        var yG, kG, UG, YG = new XMLHttpRequest,
+          VG = ZG.body,
+          pG = ZG.headers || {};
+        for (yG in ZG.timeout && (YG.timeout = ZG.timeout), YG.ontimeout = YG.onerror = function(GG) {
+            GG.timeout = "timeout" == GG.type, LG(GG)
+          }, YG.onabort = function(GG) {
+            GG.aborted = !0, LG(GG)
+          }, YG.open(GG, bG.href || bG), YG.onload = function() {
+            for (UG = YG.getAllResponseHeaders().trim().split(/[\r\n]+/), wG(YG, YG); kG = UG.shift();) kG = kG.split(": "), YG.headers[kG.shift().toLowerCase()] = kG.join(": ");
+            if ((kG = YG.headers["content-type"]) && ~kG.indexOf("application/json")) try {
+              YG.data = JSON.parse(YG.data, ZG.reviver)
+            } catch (GG) {
+              return wG(YG, GG), LG(GG)
+            }(YG.status >= 400 ? LG : SG)(YG)
+          }, typeof FormData < "u" && VG instanceof FormData || VG && "object" == typeof VG && (pG["content-type"] = "application/json", VG = JSON.stringify(VG)), YG.withCredentials = !!ZG.withCredentials, pG) YG.setRequestHeader(yG, pG[yG]);
+        YG.send(VG), ZG.signal && ZG.signal.addEventListener("abort", (function() {
+          YG.abort()
         }))
       }))
     }
-    ju.r(Eu), ju.d(Eu, {
-      del: () => qu,
-      get: () => Zu,
-      patch: () => lu,
-      post: () => Xu,
-      put: () => fu,
-      send: () => Uu
+    ZG.r(bG), ZG.d(bG, {
+      del: () => UG,
+      get: () => LG,
+      patch: () => kG,
+      post: () => yG,
+      put: () => YG,
+      send: () => SG
     });
-    var Zu = Uu.bind(Uu, "GET"),
-      Xu = Uu.bind(Uu, "POST"),
-      lu = Uu.bind(Uu, "PATCH"),
-      qu = Uu.bind(Uu, "DELETE"),
-      fu = Uu.bind(Uu, "PUT")
+    var LG = SG.bind(SG, "GET"),
+      yG = SG.bind(SG, "POST"),
+      kG = SG.bind(SG, "PATCH"),
+      UG = SG.bind(SG, "DELETE"),
+      YG = SG.bind(SG, "PUT")
   },
-  9370: (uu, Eu, ju) => {
-    var su, Uu, Zu;
-    ju.r(Eu), ju.d(Eu, {
-      ALWAYS: () => TE,
-      C1: () => Gu,
-      DECIMAL_FIT: () => AE,
-      DECIMAL_ROUND: () => HE,
-      Decoder: () => qE,
-      Encoder: () => tE,
-      FLOAT32_OPTIONS: () => NE,
-      NEVER: () => xE,
-      Packr: () => VE,
-      RESERVE_START_SPACE: () => zE,
-      RESET_BUFFER_MODE: () => yE,
-      REUSE_BUFFER_MODE: () => nE,
-      Unpackr: () => Pu,
-      addExtension: () => SE,
-      clearSource: () => XE,
-      decode: () => cE,
-      decodeIter: () => RE,
-      encode: () => LE,
-      encodeIter: () => uj,
-      isNativeAccelerationEnabled: () => Iu,
-      mapsAsObjects: () => jj,
-      pack: () => BE,
-      roundFloat32: () => ME,
-      unpack: () => CE,
-      unpackMultiple: () => bE,
-      useRecords: () => Ej
+  9200: (GG, bG, ZG) => {
+    var wG, SG, LG;
+    ZG.r(bG), ZG.d(bG, {
+      ALWAYS: () => Hb,
+      C1: () => oG,
+      DECIMAL_FIT: () => Db,
+      DECIMAL_ROUND: () => tb,
+      Decoder: () => Ub,
+      Encoder: () => Rb,
+      FLOAT32_OPTIONS: () => Qb,
+      NEVER: () => Tb,
+      Packr: () => lb,
+      RESERVE_START_SPACE: () => xb,
+      RESET_BUFFER_MODE: () => Ob,
+      REUSE_BUFFER_MODE: () => Nb,
+      Unpackr: () => mG,
+      addExtension: () => sb,
+      clearSource: () => yb,
+      decode: () => fb,
+      decodeIter: () => Bb,
+      encode: () => eb,
+      encodeIter: () => GZ,
+      isNativeAccelerationEnabled: () => qG,
+      mapsAsObjects: () => ZZ,
+      pack: () => gb,
+      roundFloat32: () => zb,
+      unpack: () => Vb,
+      unpackMultiple: () => pb,
+      useRecords: () => bZ
     });
     try {
-      su = new TextDecoder
-    } catch (sj) {}
-    var Xu = 0;
-    const lu = [];
-    var qu, fu, Cu, bu, cu, Nu = lu,
-      Ou = 0,
-      Yu = {},
-      hu = 0,
-      Du = 0,
-      gu = [],
-      Mu = {
+      wG = new TextDecoder
+    } catch (wZ) {}
+    var yG = 0;
+    const kG = [];
+    var UG, YG, VG, pG, fG, QG = kG,
+      KG = 0,
+      hG = {},
+      dG = 0,
+      JG = 0,
+      rG = [],
+      zG = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class eu {}
-    const Gu = new eu;
-    Gu.name = "MessagePack 0xC1";
-    var pu, wu, Ju, du = !1,
-      au = 2;
+    class EG {}
+    const oG = new EG;
+    oG.name = "MessagePack 0xC1";
+    var XG, uG, iG, CG = !1,
+      WG = 2;
     try {
       new Function("")
-    } catch (sj) {
-      au = 1 / 0
+    } catch (wZ) {
+      WG = 1 / 0
     }
-    class Pu {
-      constructor(uu) {
-        uu && (!1 === uu.useRecords && void 0 === uu.mapsAsObjects && (uu.mapsAsObjects = !0), uu.sequential && !1 !== uu.trusted && (uu.trusted = !0, uu.structures || 0 == uu.useRecords || (uu.structures = [], uu.maxSharedStructures || (uu.maxSharedStructures = 0))), uu.structures ? uu.structures.sharedLength = uu.structures.length : uu.getStructures && ((uu.structures = []).uninitialized = !0, uu.structures.sharedLength = 0), uu.int64AsNumber && (uu.int64AsType = "number")), Object.assign(this, uu)
+    class mG {
+      constructor(GG) {
+        GG && (!1 === GG.useRecords && void 0 === GG.mapsAsObjects && (GG.mapsAsObjects = !0), GG.sequential && !1 !== GG.trusted && (GG.trusted = !0, GG.structures || 0 == GG.useRecords || (GG.structures = [], GG.maxSharedStructures || (GG.maxSharedStructures = 0))), GG.structures ? GG.structures.sharedLength = GG.structures.length : GG.getStructures && ((GG.structures = []).uninitialized = !0, GG.structures.sharedLength = 0), GG.int64AsNumber && (GG.int64AsType = "number")), Object.assign(this, GG)
       }
-      unpack(uu, Eu) {
-        if (Uu) return ZE((() => (XE(), this ? this.unpack(uu, Eu) : Pu.prototype.unpack.call(Mu, uu, Eu))));
-        uu.buffer || uu.constructor !== ArrayBuffer || (uu = "undefined" !== typeof Buffer ? Buffer.from(uu) : new Uint8Array(uu)), "object" === typeof Eu ? (Zu = Eu.end || uu.length, Xu = Eu.start || 0) : (Xu = 0, Zu = Eu > -1 ? Eu : uu.length), Ou = 0, Du = 0, fu = null, Nu = lu, Cu = null, Uu = uu;
+      unpack(GG, bG) {
+        if (SG) return Lb((() => (yb(), this ? this.unpack(GG, bG) : mG.prototype.unpack.call(zG, GG, bG))));
+        GG.buffer || GG.constructor !== ArrayBuffer || (GG = "undefined" !== typeof Buffer ? Buffer.from(GG) : new Uint8Array(GG)), "object" === typeof bG ? (LG = bG.end || GG.length, yG = bG.start || 0) : (yG = 0, LG = bG > -1 ? bG : GG.length), KG = 0, JG = 0, YG = null, QG = kG, VG = null, SG = GG;
         try {
-          cu = uu.dataView || (uu.dataView = new DataView(uu.buffer, uu.byteOffset, uu.byteLength))
-        } catch (sj) {
-          if (Uu = null, uu instanceof Uint8Array) throw sj;
-          throw new Error("Source must be a Uint8Array or Buffer but was a " + (uu && "object" == typeof uu ? uu.constructor.name : typeof uu))
+          fG = GG.dataView || (GG.dataView = new DataView(GG.buffer, GG.byteOffset, GG.byteLength))
+        } catch (wZ) {
+          if (SG = null, GG instanceof Uint8Array) throw wZ;
+          throw new Error("Source must be a Uint8Array or Buffer but was a " + (GG && "object" == typeof GG ? GG.constructor.name : typeof GG))
         }
-        if (this instanceof Pu) {
-          if (Yu = this, this.structures) return qu = this.structures, ou(Eu);
-          (!qu || qu.length > 0) && (qu = [])
-        } else Yu = Mu, (!qu || qu.length > 0) && (qu = []);
-        return ou(Eu)
+        if (this instanceof mG) {
+          if (hG = this, this.structures) return UG = this.structures, IG(bG);
+          (!UG || UG.length > 0) && (UG = [])
+        } else hG = zG, (!UG || UG.length > 0) && (UG = []);
+        return IG(bG)
       }
-      unpackMultiple(uu, Eu) {
-        let ju, su = 0;
+      unpackMultiple(GG, bG) {
+        let ZG, wG = 0;
         try {
-          du = !0;
-          let Uu = uu.length,
-            Zu = this ? this.unpack(uu, Uu) : fE.unpack(uu, Uu);
-          if (!Eu) {
-            for (ju = [Zu]; Xu < Uu;) su = Xu, ju.push(ou());
-            return ju
+          CG = !0;
+          let SG = GG.length,
+            LG = this ? this.unpack(GG, SG) : Yb.unpack(GG, SG);
+          if (!bG) {
+            for (ZG = [LG]; yG < SG;) wG = yG, ZG.push(IG());
+            return ZG
           }
-          if (!1 === Eu(Zu, su, Xu)) return;
-          for (; Xu < Uu;)
-            if (su = Xu, !1 === Eu(ou(), su, Xu)) return
-        } catch (sj) {
-          throw sj.lastPosition = su, sj.values = ju, sj
+          if (!1 === bG(LG, wG, yG)) return;
+          for (; yG < SG;)
+            if (wG = yG, !1 === bG(IG(), wG, yG)) return
+        } catch (wZ) {
+          throw wZ.lastPosition = wG, wZ.values = ZG, wZ
         } finally {
-          du = !1, XE()
+          CG = !1, yb()
         }
       }
-      _mergeStructures(uu, Eu) {
-        wu && (uu = wu.call(this, uu)), uu = uu || [], Object.isFrozen(uu) && (uu = uu.map((uu => uu.slice(0))));
-        for (let ju = 0, su = uu.length; ju < su; ju++) {
-          let Eu = uu[ju];
-          Eu && (Eu.isShared = !0, ju >= 32 && (Eu.highByte = ju - 32 >> 5))
+      _mergeStructures(GG, bG) {
+        uG && (GG = uG.call(this, GG)), GG = GG || [], Object.isFrozen(GG) && (GG = GG.map((GG => GG.slice(0))));
+        for (let ZG = 0, wG = GG.length; ZG < wG; ZG++) {
+          let bG = GG[ZG];
+          bG && (bG.isShared = !0, ZG >= 32 && (bG.highByte = ZG - 32 >> 5))
         }
-        uu.sharedLength = uu.length;
-        for (let ju in Eu || [])
-          if (ju >= 0) {
-            let su = uu[ju],
-              Uu = Eu[ju];
-            Uu && (su && ((uu.restoreStructures || (uu.restoreStructures = []))[ju] = su), uu[ju] = Uu)
-          } return this.structures = uu
+        GG.sharedLength = GG.length;
+        for (let ZG in bG || [])
+          if (ZG >= 0) {
+            let wG = GG[ZG],
+              SG = bG[ZG];
+            SG && (wG && ((GG.restoreStructures || (GG.restoreStructures = []))[ZG] = wG), GG[ZG] = SG)
+          } return this.structures = GG
       }
-      decode(uu, Eu) {
-        return this.unpack(uu, Eu)
+      decode(GG, bG) {
+        return this.unpack(GG, bG)
       }
     }
 
-    function ou(uu) {
+    function IG(GG) {
       try {
-        if (!Yu.trusted && !du) {
-          let uu = qu.sharedLength || 0;
-          uu < qu.length && (qu.length = uu)
+        if (!hG.trusted && !CG) {
+          let GG = UG.sharedLength || 0;
+          GG < UG.length && (UG.length = GG)
         }
-        let Eu;
-        if (Yu.randomAccessStructure && Uu[Xu] < 64 && Uu[Xu] >= 32 && pu ? (Eu = pu(Uu, Xu, Zu, Yu), Uu = null, uu && uu.lazy || !Eu || (Eu = Eu.toJSON()), Xu = Zu) : Eu = mu(), Cu && (Xu = Cu.postBundlePosition, Cu = null), du && (qu.restoreStructures = null), Xu == Zu) qu && qu.restoreStructures && ku(), qu = null, Uu = null, bu && (bu = null);
+        let bG;
+        if (hG.randomAccessStructure && SG[yG] < 64 && SG[yG] >= 32 && XG ? (bG = XG(SG, yG, LG, hG), SG = null, GG && GG.lazy || !bG || (bG = bG.toJSON()), yG = LG) : bG = vG(), VG && (yG = VG.postBundlePosition, VG = null), CG && (UG.restoreStructures = null), yG == LG) UG && UG.restoreStructures && FG(), UG = null, SG = null, pG && (pG = null);
         else {
-          if (Xu > Zu) throw new Error("Unexpected end of MessagePack data");
-          if (!du) {
-            let uu;
+          if (yG > LG) throw new Error("Unexpected end of MessagePack data");
+          if (!CG) {
+            let GG;
             try {
-              uu = JSON.stringify(Eu, ((uu, Eu) => "bigint" === typeof Eu ? `${Eu}n` : Eu)).slice(0, 100)
-            } catch (sj) {
-              uu = "(JSON view not available " + sj + ")"
+              GG = JSON.stringify(bG, ((GG, bG) => "bigint" === typeof bG ? `${bG}n` : bG)).slice(0, 100)
+            } catch (wZ) {
+              GG = "(JSON view not available " + wZ + ")"
             }
-            throw new Error("Data read, but end of buffer not reached " + uu)
+            throw new Error("Data read, but end of buffer not reached " + GG)
           }
         }
-        return Eu
-      } catch (sj) {
-        throw qu && qu.restoreStructures && ku(), XE(), (sj instanceof RangeError || sj.message.startsWith("Unexpected end of buffer") || Xu > Zu) && (sj.incomplete = !0), sj
+        return bG
+      } catch (wZ) {
+        throw UG && UG.restoreStructures && FG(), yb(), (wZ instanceof RangeError || wZ.message.startsWith("Unexpected end of buffer") || yG > LG) && (wZ.incomplete = !0), wZ
       }
     }
 
-    function ku() {
-      for (let uu in qu.restoreStructures) qu[uu] = qu.restoreStructures[uu];
-      qu.restoreStructures = null
+    function FG() {
+      for (let GG in UG.restoreStructures) UG[GG] = UG.restoreStructures[GG];
+      UG.restoreStructures = null
     }
 
-    function mu() {
-      let uu = Uu[Xu++];
-      if (uu < 160) {
-        if (uu < 128) {
-          if (uu < 64) return uu;
+    function vG() {
+      let GG = SG[yG++];
+      if (GG < 160) {
+        if (GG < 128) {
+          if (GG < 64) return GG;
           {
-            let Eu = qu[63 & uu] || Yu.getStructures && ru()[63 & uu];
-            return Eu ? (Eu.read || (Eu.read = Ku(Eu, 63 & uu)), Eu.read()) : uu
+            let bG = UG[63 & GG] || hG.getStructures && jG()[63 & GG];
+            return bG ? (bG.read || (bG.read = cG(bG, 63 & GG)), bG.read()) : GG
           }
         }
-        if (uu < 144) {
-          if (uu -= 128, Yu.mapsAsObjects) {
-            let Eu = {};
-            for (let ju = 0; ju < uu; ju++) {
-              let uu = zu();
-              "__proto__" === uu && (uu = "__proto_"), Eu[uu] = mu()
+        if (GG < 144) {
+          if (GG -= 128, hG.mapsAsObjects) {
+            let bG = {};
+            for (let ZG = 0; ZG < GG; ZG++) {
+              let GG = xG();
+              "__proto__" === GG && (GG = "__proto_"), bG[GG] = vG()
             }
-            return Eu
+            return bG
           } {
-            let Eu = new Map;
-            for (let ju = 0; ju < uu; ju++) Eu.set(mu(), mu());
-            return Eu
+            let bG = new Map;
+            for (let ZG = 0; ZG < GG; ZG++) bG.set(vG(), vG());
+            return bG
           }
         } {
-          uu -= 144;
-          let Eu = new Array(uu);
-          for (let ju = 0; ju < uu; ju++) Eu[ju] = mu();
-          return Yu.freezeData ? Object.freeze(Eu) : Eu
+          GG -= 144;
+          let bG = new Array(GG);
+          for (let ZG = 0; ZG < GG; ZG++) bG[ZG] = vG();
+          return hG.freezeData ? Object.freeze(bG) : bG
         }
       }
-      if (uu < 192) {
-        let Eu = uu - 160;
-        if (Du >= Xu) return fu.slice(Xu - hu, (Xu += Eu) - hu);
-        if (0 == Du && Zu < 140) {
-          let uu = Eu < 16 ? Tu(Eu) : xu(Eu);
-          if (null != uu) return uu
+      if (GG < 192) {
+        let bG = GG - 160;
+        if (JG >= yG) return YG.slice(yG - dG, (yG += bG) - dG);
+        if (0 == JG && LG < 140) {
+          let GG = bG < 16 ? HG(bG) : TG(bG);
+          if (null != GG) return GG
         }
-        return Qu(Eu)
+        return PG(bG)
       } {
-        let Eu;
-        switch (uu) {
+        let bG;
+        switch (GG) {
           case 192:
             return null;
           case 193:
-            return Cu ? (Eu = mu(), Eu > 0 ? Cu[1].slice(Cu.position1, Cu.position1 += Eu) : Cu[0].slice(Cu.position0, Cu.position0 -= Eu)) : Gu;
+            return VG ? (bG = vG(), bG > 0 ? VG[1].slice(VG.position1, VG.position1 += bG) : VG[0].slice(VG.position0, VG.position0 -= bG)) : oG;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (Eu = Uu[Xu++], void 0 === Eu) throw new Error("Unexpected end of buffer");
-            return Au(Eu);
+            if (bG = SG[yG++], void 0 === bG) throw new Error("Unexpected end of buffer");
+            return DG(bG);
           case 197:
-            return Eu = cu.getUint16(Xu), Xu += 2, Au(Eu);
+            return bG = fG.getUint16(yG), yG += 2, DG(bG);
           case 198:
-            return Eu = cu.getUint32(Xu), Xu += 4, Au(Eu);
+            return bG = fG.getUint32(yG), yG += 4, DG(bG);
           case 199:
-            return nu(Uu[Xu++]);
+            return NG(SG[yG++]);
           case 200:
-            return Eu = cu.getUint16(Xu), Xu += 2, nu(Eu);
+            return bG = fG.getUint16(yG), yG += 2, NG(bG);
           case 201:
-            return Eu = cu.getUint32(Xu), Xu += 4, nu(Eu);
+            return bG = fG.getUint32(yG), yG += 4, NG(bG);
           case 202:
-            if (Eu = cu.getFloat32(Xu), Yu.useFloat32 > 2) {
-              let uu = lE[(127 & Uu[Xu]) << 1 | Uu[Xu + 1] >> 7];
-              return Xu += 4, (uu * Eu + (Eu > 0 ? .5 : -.5) | 0) / uu
+            if (bG = fG.getFloat32(yG), hG.useFloat32 > 2) {
+              let GG = kb[(127 & SG[yG]) << 1 | SG[yG + 1] >> 7];
+              return yG += 4, (GG * bG + (bG > 0 ? .5 : -.5) | 0) / GG
             }
-            return Xu += 4, Eu;
+            return yG += 4, bG;
           case 203:
-            return Eu = cu.getFloat64(Xu), Xu += 8, Eu;
+            return bG = fG.getFloat64(yG), yG += 8, bG;
           case 204:
-            return Uu[Xu++];
+            return SG[yG++];
           case 205:
-            return Eu = cu.getUint16(Xu), Xu += 2, Eu;
+            return bG = fG.getUint16(yG), yG += 2, bG;
           case 206:
-            return Eu = cu.getUint32(Xu), Xu += 4, Eu;
+            return bG = fG.getUint32(yG), yG += 4, bG;
           case 207:
-            return "number" === Yu.int64AsType ? (Eu = 4294967296 * cu.getUint32(Xu), Eu += cu.getUint32(Xu + 4)) : "string" === Yu.int64AsType ? Eu = cu.getBigUint64(Xu).toString() : "auto" === Yu.int64AsType ? (Eu = cu.getBigUint64(Xu), Eu <= BigInt(2) << BigInt(52) && (Eu = Number(Eu))) : Eu = cu.getBigUint64(Xu), Xu += 8, Eu;
+            return "number" === hG.int64AsType ? (bG = 4294967296 * fG.getUint32(yG), bG += fG.getUint32(yG + 4)) : "string" === hG.int64AsType ? bG = fG.getBigUint64(yG).toString() : "auto" === hG.int64AsType ? (bG = fG.getBigUint64(yG), bG <= BigInt(2) << BigInt(52) && (bG = Number(bG))) : bG = fG.getBigUint64(yG), yG += 8, bG;
           case 208:
-            return cu.getInt8(Xu++);
+            return fG.getInt8(yG++);
           case 209:
-            return Eu = cu.getInt16(Xu), Xu += 2, Eu;
+            return bG = fG.getInt16(yG), yG += 2, bG;
           case 210:
-            return Eu = cu.getInt32(Xu), Xu += 4, Eu;
+            return bG = fG.getInt32(yG), yG += 4, bG;
           case 211:
-            return "number" === Yu.int64AsType ? (Eu = 4294967296 * cu.getInt32(Xu), Eu += cu.getUint32(Xu + 4)) : "string" === Yu.int64AsType ? Eu = cu.getBigInt64(Xu).toString() : "auto" === Yu.int64AsType ? (Eu = cu.getBigInt64(Xu), Eu >= BigInt(-2) << BigInt(52) && Eu <= BigInt(2) << BigInt(52) && (Eu = Number(Eu))) : Eu = cu.getBigInt64(Xu), Xu += 8, Eu;
+            return "number" === hG.int64AsType ? (bG = 4294967296 * fG.getInt32(yG), bG += fG.getUint32(yG + 4)) : "string" === hG.int64AsType ? bG = fG.getBigInt64(yG).toString() : "auto" === hG.int64AsType ? (bG = fG.getBigInt64(yG), bG >= BigInt(-2) << BigInt(52) && bG <= BigInt(2) << BigInt(52) && (bG = Number(bG))) : bG = fG.getBigInt64(yG), yG += 8, bG;
           case 212:
-            if (Eu = Uu[Xu++], 114 == Eu) return uE(63 & Uu[Xu++]);
+            if (bG = SG[yG++], 114 == bG) return Gb(63 & SG[yG++]);
             {
-              let uu = gu[Eu];
-              if (uu) return uu.read ? (Xu++, uu.read(mu())) : uu.noBuffer ? (Xu++, uu()) : uu(Uu.subarray(Xu, ++Xu));
-              throw new Error("Unknown extension " + Eu)
+              let GG = rG[bG];
+              if (GG) return GG.read ? (yG++, GG.read(vG())) : GG.noBuffer ? (yG++, GG()) : GG(SG.subarray(yG, ++yG));
+              throw new Error("Unknown extension " + bG)
             }
           case 213:
-            return Eu = Uu[Xu], 114 == Eu ? (Xu++, uE(63 & Uu[Xu++], Uu[Xu++])) : nu(2);
+            return bG = SG[yG], 114 == bG ? (yG++, Gb(63 & SG[yG++], SG[yG++])) : NG(2);
           case 214:
-            return nu(4);
+            return NG(4);
           case 215:
-            return nu(8);
+            return NG(8);
           case 216:
-            return nu(16);
+            return NG(16);
           case 217:
-            return Eu = Uu[Xu++], Du >= Xu ? fu.slice(Xu - hu, (Xu += Eu) - hu) : iu(Eu);
+            return bG = SG[yG++], JG >= yG ? YG.slice(yG - dG, (yG += bG) - dG) : MG(bG);
           case 218:
-            return Eu = cu.getUint16(Xu), Du >= (Xu += 2) ? fu.slice(Xu - hu, (Xu += Eu) - hu) : Wu(Eu);
+            return bG = fG.getUint16(yG), JG >= (yG += 2) ? YG.slice(yG - dG, (yG += bG) - dG) : AG(bG);
           case 219:
-            return Eu = cu.getUint32(Xu), Du >= (Xu += 4) ? fu.slice(Xu - hu, (Xu += Eu) - hu) : Su(Eu);
+            return bG = fG.getUint32(yG), JG >= (yG += 4) ? YG.slice(yG - dG, (yG += bG) - dG) : sG(bG);
           case 220:
-            return Eu = cu.getUint16(Xu), Xu += 2, Bu(Eu);
+            return bG = fG.getUint16(yG), yG += 2, gG(bG);
           case 221:
-            return Eu = cu.getUint32(Xu), Xu += 4, Bu(Eu);
+            return bG = fG.getUint32(yG), yG += 4, gG(bG);
           case 222:
-            return Eu = cu.getUint16(Xu), Xu += 2, Lu(Eu);
+            return bG = fG.getUint16(yG), yG += 2, eG(bG);
           case 223:
-            return Eu = cu.getUint32(Xu), Xu += 4, Lu(Eu);
+            return bG = fG.getUint32(yG), yG += 4, eG(bG);
           default:
-            if (uu >= 224) return uu - 256;
-            if (void 0 === uu) {
-              let uu = new Error("Unexpected end of MessagePack data");
-              throw uu.incomplete = !0, uu
+            if (GG >= 224) return GG - 256;
+            if (void 0 === GG) {
+              let GG = new Error("Unexpected end of MessagePack data");
+              throw GG.incomplete = !0, GG
             }
-            throw new Error("Unknown MessagePack token " + uu)
+            throw new Error("Unknown MessagePack token " + GG)
         }
       }
     }
-    const vu = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const aG = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function Ku(uu, Eu) {
-      function ju() {
-        if (ju.count++ > au) {
-          let ju = uu.read = new Function("r", "return function(){return " + (Yu.freezeData ? "Object.freeze" : "") + "({" + uu.map((uu => "__proto__" === uu ? "__proto_:r()" : vu.test(uu) ? uu + ":r()" : "[" + JSON.stringify(uu) + "]:r()")).join(",") + "})}")(mu);
-          return 0 === uu.highByte && (uu.read = Vu(Eu, uu.read)), ju()
+    function cG(GG, bG) {
+      function ZG() {
+        if (ZG.count++ > WG) {
+          let ZG = GG.read = new Function("r", "return function(){return " + (hG.freezeData ? "Object.freeze" : "") + "({" + GG.map((GG => "__proto__" === GG ? "__proto_:r()" : aG.test(GG) ? GG + ":r()" : "[" + JSON.stringify(GG) + "]:r()")).join(",") + "})}")(vG);
+          return 0 === GG.highByte && (GG.read = lG(bG, GG.read)), ZG()
         }
-        let su = {};
-        for (let Eu = 0, ju = uu.length; Eu < ju; Eu++) {
-          let ju = uu[Eu];
-          "__proto__" === ju && (ju = "__proto_"), su[ju] = mu()
+        let wG = {};
+        for (let bG = 0, ZG = GG.length; bG < ZG; bG++) {
+          let ZG = GG[bG];
+          "__proto__" === ZG && (ZG = "__proto_"), wG[ZG] = vG()
         }
-        return Yu.freezeData ? Object.freeze(su) : su
+        return hG.freezeData ? Object.freeze(wG) : wG
       }
-      return ju.count = 0, 0 === uu.highByte ? Vu(Eu, ju) : ju
+      return ZG.count = 0, 0 === GG.highByte ? lG(bG, ZG) : ZG
     }
-    const Vu = (uu, Eu) => function() {
-      let ju = Uu[Xu++];
-      if (0 === ju) return Eu();
-      let su = uu < 32 ? -(uu + (ju << 5)) : uu + (ju << 5),
-        Zu = qu[su] || ru()[su];
-      if (!Zu) throw new Error("Record id is not defined for " + su);
-      return Zu.read || (Zu.read = Ku(Zu, uu)), Zu.read()
+    const lG = (GG, bG) => function() {
+      let ZG = SG[yG++];
+      if (0 === ZG) return bG();
+      let wG = GG < 32 ? -(GG + (ZG << 5)) : GG + (ZG << 5),
+        LG = UG[wG] || jG()[wG];
+      if (!LG) throw new Error("Record id is not defined for " + wG);
+      return LG.read || (LG.read = cG(LG, GG)), LG.read()
     };
 
-    function ru() {
-      let uu = ZE((() => (Uu = null, Yu.getStructures())));
-      return qu = Yu._mergeStructures(uu, qu)
+    function jG() {
+      let GG = Lb((() => (SG = null, hG.getStructures())));
+      return UG = hG._mergeStructures(GG, UG)
     }
-    var Qu = Fu,
-      iu = Fu,
-      Wu = Fu,
-      Su = Fu;
-    let Iu = !1;
+    var PG = nG,
+      MG = nG,
+      AG = nG,
+      sG = nG;
+    let qG = !1;
 
-    function Fu(uu) {
-      let Eu;
-      if (uu < 16 && (Eu = Tu(uu))) return Eu;
-      if (uu > 64 && su) return su.decode(Uu.subarray(Xu, Xu += uu));
-      const ju = Xu + uu,
-        Zu = [];
-      for (Eu = ""; Xu < ju;) {
-        const uu = Uu[Xu++];
-        if (0 === (128 & uu)) Zu.push(uu);
-        else if (192 === (224 & uu)) {
-          const Eu = 63 & Uu[Xu++];
-          Zu.push((31 & uu) << 6 | Eu)
-        } else if (224 === (240 & uu)) {
-          const Eu = 63 & Uu[Xu++],
-            ju = 63 & Uu[Xu++];
-          Zu.push((31 & uu) << 12 | Eu << 6 | ju)
-        } else if (240 === (248 & uu)) {
-          let Eu = (7 & uu) << 18 | (63 & Uu[Xu++]) << 12 | (63 & Uu[Xu++]) << 6 | 63 & Uu[Xu++];
-          Eu > 65535 && (Eu -= 65536, Zu.push(Eu >>> 10 & 1023 | 55296), Eu = 56320 | 1023 & Eu), Zu.push(Eu)
-        } else Zu.push(uu);
-        Zu.length >= 4096 && (Eu += tu.apply(String, Zu), Zu.length = 0)
+    function nG(GG) {
+      let bG;
+      if (GG < 16 && (bG = HG(GG))) return bG;
+      if (GG > 64 && wG) return wG.decode(SG.subarray(yG, yG += GG));
+      const ZG = yG + GG,
+        LG = [];
+      for (bG = ""; yG < ZG;) {
+        const GG = SG[yG++];
+        if (0 === (128 & GG)) LG.push(GG);
+        else if (192 === (224 & GG)) {
+          const bG = 63 & SG[yG++];
+          LG.push((31 & GG) << 6 | bG)
+        } else if (224 === (240 & GG)) {
+          const bG = 63 & SG[yG++],
+            ZG = 63 & SG[yG++];
+          LG.push((31 & GG) << 12 | bG << 6 | ZG)
+        } else if (240 === (248 & GG)) {
+          let bG = (7 & GG) << 18 | (63 & SG[yG++]) << 12 | (63 & SG[yG++]) << 6 | 63 & SG[yG++];
+          bG > 65535 && (bG -= 65536, LG.push(bG >>> 10 & 1023 | 55296), bG = 56320 | 1023 & bG), LG.push(bG)
+        } else LG.push(GG);
+        LG.length >= 4096 && (bG += RG.apply(String, LG), LG.length = 0)
       }
-      return Zu.length > 0 && (Eu += tu.apply(String, Zu)), Eu
+      return LG.length > 0 && (bG += RG.apply(String, LG)), bG
     }
 
-    function Bu(uu) {
-      let Eu = new Array(uu);
-      for (let ju = 0; ju < uu; ju++) Eu[ju] = mu();
-      return Yu.freezeData ? Object.freeze(Eu) : Eu
+    function gG(GG) {
+      let bG = new Array(GG);
+      for (let ZG = 0; ZG < GG; ZG++) bG[ZG] = vG();
+      return hG.freezeData ? Object.freeze(bG) : bG
     }
 
-    function Lu(uu) {
-      if (Yu.mapsAsObjects) {
-        let Eu = {};
-        for (let ju = 0; ju < uu; ju++) {
-          let uu = zu();
-          "__proto__" === uu && (uu = "__proto_"), Eu[uu] = mu()
+    function eG(GG) {
+      if (hG.mapsAsObjects) {
+        let bG = {};
+        for (let ZG = 0; ZG < GG; ZG++) {
+          let GG = xG();
+          "__proto__" === GG && (GG = "__proto_"), bG[GG] = vG()
         }
-        return Eu
+        return bG
       } {
-        let Eu = new Map;
-        for (let ju = 0; ju < uu; ju++) Eu.set(mu(), mu());
-        return Eu
+        let bG = new Map;
+        for (let ZG = 0; ZG < GG; ZG++) bG.set(vG(), vG());
+        return bG
       }
     }
-    var tu = String.fromCharCode;
+    var RG = String.fromCharCode;
 
-    function xu(uu) {
-      let Eu = Xu,
-        ju = new Array(uu);
-      for (let su = 0; su < uu; su++) {
-        const uu = Uu[Xu++];
-        if ((128 & uu) > 0) return void(Xu = Eu);
-        ju[su] = uu
+    function TG(GG) {
+      let bG = yG,
+        ZG = new Array(GG);
+      for (let wG = 0; wG < GG; wG++) {
+        const GG = SG[yG++];
+        if ((128 & GG) > 0) return void(yG = bG);
+        ZG[wG] = GG
       }
-      return tu.apply(String, ju)
+      return RG.apply(String, ZG)
     }
 
-    function Tu(uu) {
-      if (uu < 4) {
-        if (uu < 2) {
-          if (0 === uu) return "";
+    function HG(GG) {
+      if (GG < 4) {
+        if (GG < 2) {
+          if (0 === GG) return "";
           {
-            let uu = Uu[Xu++];
-            return (128 & uu) > 1 ? void(Xu -= 1) : tu(uu)
+            let GG = SG[yG++];
+            return (128 & GG) > 1 ? void(yG -= 1) : RG(GG)
           }
         } {
-          let Eu = Uu[Xu++],
-            ju = Uu[Xu++];
-          if ((128 & Eu) > 0 || (128 & ju) > 0) return void(Xu -= 2);
-          if (uu < 3) return tu(Eu, ju);
-          let su = Uu[Xu++];
-          return (128 & su) > 0 ? void(Xu -= 3) : tu(Eu, ju, su)
+          let bG = SG[yG++],
+            ZG = SG[yG++];
+          if ((128 & bG) > 0 || (128 & ZG) > 0) return void(yG -= 2);
+          if (GG < 3) return RG(bG, ZG);
+          let wG = SG[yG++];
+          return (128 & wG) > 0 ? void(yG -= 3) : RG(bG, ZG, wG)
         }
       } {
-        let Eu = Uu[Xu++],
-          ju = Uu[Xu++],
-          su = Uu[Xu++],
-          Zu = Uu[Xu++];
-        if ((128 & Eu) > 0 || (128 & ju) > 0 || (128 & su) > 0 || (128 & Zu) > 0) return void(Xu -= 4);
-        if (uu < 6) {
-          if (4 === uu) return tu(Eu, ju, su, Zu);
+        let bG = SG[yG++],
+          ZG = SG[yG++],
+          wG = SG[yG++],
+          LG = SG[yG++];
+        if ((128 & bG) > 0 || (128 & ZG) > 0 || (128 & wG) > 0 || (128 & LG) > 0) return void(yG -= 4);
+        if (GG < 6) {
+          if (4 === GG) return RG(bG, ZG, wG, LG);
           {
-            let uu = Uu[Xu++];
-            return (128 & uu) > 0 ? void(Xu -= 5) : tu(Eu, ju, su, Zu, uu)
+            let GG = SG[yG++];
+            return (128 & GG) > 0 ? void(yG -= 5) : RG(bG, ZG, wG, LG, GG)
           }
         }
-        if (uu < 8) {
-          let lu = Uu[Xu++],
-            qu = Uu[Xu++];
-          if ((128 & lu) > 0 || (128 & qu) > 0) return void(Xu -= 6);
-          if (uu < 7) return tu(Eu, ju, su, Zu, lu, qu);
-          let fu = Uu[Xu++];
-          return (128 & fu) > 0 ? void(Xu -= 7) : tu(Eu, ju, su, Zu, lu, qu, fu)
+        if (GG < 8) {
+          let kG = SG[yG++],
+            UG = SG[yG++];
+          if ((128 & kG) > 0 || (128 & UG) > 0) return void(yG -= 6);
+          if (GG < 7) return RG(bG, ZG, wG, LG, kG, UG);
+          let YG = SG[yG++];
+          return (128 & YG) > 0 ? void(yG -= 7) : RG(bG, ZG, wG, LG, kG, UG, YG)
         } {
-          let lu = Uu[Xu++],
-            qu = Uu[Xu++],
-            fu = Uu[Xu++],
-            Cu = Uu[Xu++];
-          if ((128 & lu) > 0 || (128 & qu) > 0 || (128 & fu) > 0 || (128 & Cu) > 0) return void(Xu -= 8);
-          if (uu < 10) {
-            if (8 === uu) return tu(Eu, ju, su, Zu, lu, qu, fu, Cu);
+          let kG = SG[yG++],
+            UG = SG[yG++],
+            YG = SG[yG++],
+            VG = SG[yG++];
+          if ((128 & kG) > 0 || (128 & UG) > 0 || (128 & YG) > 0 || (128 & VG) > 0) return void(yG -= 8);
+          if (GG < 10) {
+            if (8 === GG) return RG(bG, ZG, wG, LG, kG, UG, YG, VG);
             {
-              let uu = Uu[Xu++];
-              return (128 & uu) > 0 ? void(Xu -= 9) : tu(Eu, ju, su, Zu, lu, qu, fu, Cu, uu)
+              let GG = SG[yG++];
+              return (128 & GG) > 0 ? void(yG -= 9) : RG(bG, ZG, wG, LG, kG, UG, YG, VG, GG)
             }
           }
-          if (uu < 12) {
-            let bu = Uu[Xu++],
-              cu = Uu[Xu++];
-            if ((128 & bu) > 0 || (128 & cu) > 0) return void(Xu -= 10);
-            if (uu < 11) return tu(Eu, ju, su, Zu, lu, qu, fu, Cu, bu, cu);
-            let Nu = Uu[Xu++];
-            return (128 & Nu) > 0 ? void(Xu -= 11) : tu(Eu, ju, su, Zu, lu, qu, fu, Cu, bu, cu, Nu)
+          if (GG < 12) {
+            let pG = SG[yG++],
+              fG = SG[yG++];
+            if ((128 & pG) > 0 || (128 & fG) > 0) return void(yG -= 10);
+            if (GG < 11) return RG(bG, ZG, wG, LG, kG, UG, YG, VG, pG, fG);
+            let QG = SG[yG++];
+            return (128 & QG) > 0 ? void(yG -= 11) : RG(bG, ZG, wG, LG, kG, UG, YG, VG, pG, fG, QG)
           } {
-            let bu = Uu[Xu++],
-              cu = Uu[Xu++],
-              Nu = Uu[Xu++],
-              Ou = Uu[Xu++];
-            if ((128 & bu) > 0 || (128 & cu) > 0 || (128 & Nu) > 0 || (128 & Ou) > 0) return void(Xu -= 12);
-            if (uu < 14) {
-              if (12 === uu) return tu(Eu, ju, su, Zu, lu, qu, fu, Cu, bu, cu, Nu, Ou);
+            let pG = SG[yG++],
+              fG = SG[yG++],
+              QG = SG[yG++],
+              KG = SG[yG++];
+            if ((128 & pG) > 0 || (128 & fG) > 0 || (128 & QG) > 0 || (128 & KG) > 0) return void(yG -= 12);
+            if (GG < 14) {
+              if (12 === GG) return RG(bG, ZG, wG, LG, kG, UG, YG, VG, pG, fG, QG, KG);
               {
-                let uu = Uu[Xu++];
-                return (128 & uu) > 0 ? void(Xu -= 13) : tu(Eu, ju, su, Zu, lu, qu, fu, Cu, bu, cu, Nu, Ou, uu)
+                let GG = SG[yG++];
+                return (128 & GG) > 0 ? void(yG -= 13) : RG(bG, ZG, wG, LG, kG, UG, YG, VG, pG, fG, QG, KG, GG)
               }
             } {
-              let Yu = Uu[Xu++],
-                hu = Uu[Xu++];
-              if ((128 & Yu) > 0 || (128 & hu) > 0) return void(Xu -= 14);
-              if (uu < 15) return tu(Eu, ju, su, Zu, lu, qu, fu, Cu, bu, cu, Nu, Ou, Yu, hu);
-              let Du = Uu[Xu++];
-              return (128 & Du) > 0 ? void(Xu -= 15) : tu(Eu, ju, su, Zu, lu, qu, fu, Cu, bu, cu, Nu, Ou, Yu, hu, Du)
+              let hG = SG[yG++],
+                dG = SG[yG++];
+              if ((128 & hG) > 0 || (128 & dG) > 0) return void(yG -= 14);
+              if (GG < 15) return RG(bG, ZG, wG, LG, kG, UG, YG, VG, pG, fG, QG, KG, hG, dG);
+              let JG = SG[yG++];
+              return (128 & JG) > 0 ? void(yG -= 15) : RG(bG, ZG, wG, LG, kG, UG, YG, VG, pG, fG, QG, KG, hG, dG, JG)
             }
           }
         }
       }
     }
 
-    function Hu() {
-      let uu, Eu = Uu[Xu++];
-      if (Eu < 192) uu = Eu - 160;
-      else switch (Eu) {
+    function tG() {
+      let GG, bG = SG[yG++];
+      if (bG < 192) GG = bG - 160;
+      else switch (bG) {
         case 217:
-          uu = Uu[Xu++];
+          GG = SG[yG++];
           break;
         case 218:
-          uu = cu.getUint16(Xu), Xu += 2;
+          GG = fG.getUint16(yG), yG += 2;
           break;
         case 219:
-          uu = cu.getUint32(Xu), Xu += 4;
+          GG = fG.getUint32(yG), yG += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return Fu(uu)
+      return nG(GG)
     }
 
-    function Au(uu) {
-      return Yu.copyBuffers ? Uint8Array.prototype.slice.call(Uu, Xu, Xu += uu) : Uu.subarray(Xu, Xu += uu)
+    function DG(GG) {
+      return hG.copyBuffers ? Uint8Array.prototype.slice.call(SG, yG, yG += GG) : SG.subarray(yG, yG += GG)
     }
 
-    function nu(uu) {
-      let Eu = Uu[Xu++];
-      if (gu[Eu]) {
-        let ju;
-        return gu[Eu](Uu.subarray(Xu, ju = Xu += uu), (uu => {
-          Xu = uu;
+    function NG(GG) {
+      let bG = SG[yG++];
+      if (rG[bG]) {
+        let ZG;
+        return rG[bG](SG.subarray(yG, ZG = yG += GG), (GG => {
+          yG = GG;
           try {
-            return mu()
+            return vG()
           } finally {
-            Xu = ju
+            yG = ZG
           }
         }))
       }
-      throw new Error("Unknown extension type " + Eu)
+      throw new Error("Unknown extension type " + bG)
     }
-    var yu = new Array(4096);
+    var OG = new Array(4096);
 
-    function zu() {
-      let uu = Uu[Xu++];
-      if (!(uu >= 160 && uu < 192)) return Xu--, Ru(mu());
-      if (uu -= 160, Du >= Xu) return fu.slice(Xu - hu, (Xu += uu) - hu);
-      if (!(0 == Du && Zu < 180)) return Qu(uu);
-      let Eu, ju = 4095 & (uu << 5 ^ (uu > 1 ? cu.getUint16(Xu) : uu > 0 ? Uu[Xu] : 0)),
-        su = yu[ju],
-        lu = Xu,
-        qu = Xu + uu - 3,
-        Cu = 0;
-      if (su && su.bytes == uu) {
-        for (; lu < qu;) {
-          if (Eu = cu.getUint32(lu), Eu != su[Cu++]) {
-            lu = 1879048192;
+    function xG() {
+      let GG = SG[yG++];
+      if (!(GG >= 160 && GG < 192)) return yG--, BG(vG());
+      if (GG -= 160, JG >= yG) return YG.slice(yG - dG, (yG += GG) - dG);
+      if (!(0 == JG && LG < 180)) return PG(GG);
+      let bG, ZG = 4095 & (GG << 5 ^ (GG > 1 ? fG.getUint16(yG) : GG > 0 ? SG[yG] : 0)),
+        wG = OG[ZG],
+        kG = yG,
+        UG = yG + GG - 3,
+        VG = 0;
+      if (wG && wG.bytes == GG) {
+        for (; kG < UG;) {
+          if (bG = fG.getUint32(kG), bG != wG[VG++]) {
+            kG = 1879048192;
             break
           }
-          lu += 4
+          kG += 4
         }
-        for (qu += 3; lu < qu;)
-          if (Eu = Uu[lu++], Eu != su[Cu++]) {
-            lu = 1879048192;
+        for (UG += 3; kG < UG;)
+          if (bG = SG[kG++], bG != wG[VG++]) {
+            kG = 1879048192;
             break
-          } if (lu === qu) return Xu = lu, su.string;
-        qu -= 3, lu = Xu
+          } if (kG === UG) return yG = kG, wG.string;
+        UG -= 3, kG = yG
       }
-      for (su = [], yu[ju] = su, su.bytes = uu; lu < qu;) Eu = cu.getUint32(lu), su.push(Eu), lu += 4;
-      for (qu += 3; lu < qu;) Eu = Uu[lu++], su.push(Eu);
-      let bu = uu < 16 ? Tu(uu) : xu(uu);
-      return su.string = null != bu ? bu : Qu(uu)
+      for (wG = [], OG[ZG] = wG, wG.bytes = GG; kG < UG;) bG = fG.getUint32(kG), wG.push(bG), kG += 4;
+      for (UG += 3; kG < UG;) bG = SG[kG++], wG.push(bG);
+      let pG = GG < 16 ? HG(GG) : TG(GG);
+      return wG.string = null != pG ? pG : PG(GG)
     }
 
-    function Ru(uu) {
-      if ("string" === typeof uu) return uu;
-      if ("number" === typeof uu || "boolean" === typeof uu || "bigint" === typeof uu) return uu.toString();
-      if (null == uu) return uu + "";
-      if (Yu.allowArraysInMapKeys && Array.isArray(uu) && uu.flat().every((uu => ["string", "number", "boolean", "bigint"].includes(typeof uu)))) return uu.flat().toString();
-      throw new Error("Invalid property type for record: " + typeof uu)
+    function BG(GG) {
+      if ("string" === typeof GG) return GG;
+      if ("number" === typeof GG || "boolean" === typeof GG || "bigint" === typeof GG) return GG.toString();
+      if (null == GG) return GG + "";
+      if (hG.allowArraysInMapKeys && Array.isArray(GG) && GG.flat().every((GG => ["string", "number", "boolean", "bigint"].includes(typeof GG)))) return GG.flat().toString();
+      throw new Error("Invalid property type for record: " + typeof GG)
     }
-    const uE = (uu, Eu) => {
-      let ju = mu().map(Ru),
-        su = uu;
-      void 0 !== Eu && (uu = uu < 32 ? -((Eu << 5) + uu) : (Eu << 5) + uu, ju.highByte = Eu);
-      let Uu = qu[uu];
-      return Uu && (Uu.isShared || du) && ((qu.restoreStructures || (qu.restoreStructures = []))[uu] = Uu), qu[uu] = ju, ju.read = Ku(ju, su), ju.read()
+    const Gb = (GG, bG) => {
+      let ZG = vG().map(BG),
+        wG = GG;
+      void 0 !== bG && (GG = GG < 32 ? -((bG << 5) + GG) : (bG << 5) + GG, ZG.highByte = bG);
+      let SG = UG[GG];
+      return SG && (SG.isShared || CG) && ((UG.restoreStructures || (UG.restoreStructures = []))[GG] = SG), UG[GG] = ZG, ZG.read = cG(ZG, wG), ZG.read()
     };
-    gu[0] = () => {}, gu[0].noBuffer = !0, gu[66] = uu => {
-      let Eu = uu.length,
-        ju = BigInt(128 & uu[0] ? uu[0] - 256 : uu[0]);
-      for (let su = 1; su < Eu; su++) ju <<= BigInt(8), ju += BigInt(uu[su]);
-      return ju
+    rG[0] = () => {}, rG[0].noBuffer = !0, rG[66] = GG => {
+      let bG = GG.length,
+        ZG = BigInt(128 & GG[0] ? GG[0] - 256 : GG[0]);
+      for (let wG = 1; wG < bG; wG++) ZG <<= BigInt(8), ZG += BigInt(GG[wG]);
+      return ZG
     };
-    let EE = {
+    let bb = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    gu[101] = () => {
-      let uu = mu();
-      return (EE[uu[0]] || Error)(uu[1], {
-        cause: uu[2]
+    rG[101] = () => {
+      let GG = vG();
+      return (bb[GG[0]] || Error)(GG[1], {
+        cause: GG[2]
       })
-    }, gu[105] = uu => {
-      if (!1 === Yu.structuredClone) throw new Error("Structured clone extension is disabled");
-      let Eu = cu.getUint32(Xu - 4);
-      bu || (bu = new Map);
-      let ju, su = Uu[Xu];
-      ju = su >= 144 && su < 160 || 220 == su || 221 == su ? [] : {};
-      let Zu = {
-        target: ju
+    }, rG[105] = GG => {
+      if (!1 === hG.structuredClone) throw new Error("Structured clone extension is disabled");
+      let bG = fG.getUint32(yG - 4);
+      pG || (pG = new Map);
+      let ZG, wG = SG[yG];
+      ZG = wG >= 144 && wG < 160 || 220 == wG || 221 == wG ? [] : {};
+      let LG = {
+        target: ZG
       };
-      bu.set(Eu, Zu);
-      let lu = mu();
-      return Zu.used ? Object.assign(ju, lu) : (Zu.target = lu, lu)
-    }, gu[112] = uu => {
-      if (!1 === Yu.structuredClone) throw new Error("Structured clone extension is disabled");
-      let Eu = cu.getUint32(Xu - 4),
-        ju = bu.get(Eu);
-      return ju.used = !0, ju.target
-    }, gu[115] = () => new Set(mu());
-    const jE = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((uu => uu + "Array"));
-    let sE = "object" === typeof globalThis ? globalThis : window;
-    gu[116] = uu => {
-      let Eu = uu[0],
-        ju = jE[Eu];
-      if (!ju) {
-        if (16 === Eu) {
-          let Eu = new ArrayBuffer(uu.length - 1);
-          return new Uint8Array(Eu).set(uu.subarray(1)), Eu
+      pG.set(bG, LG);
+      let kG = vG();
+      return LG.used ? Object.assign(ZG, kG) : (LG.target = kG, kG)
+    }, rG[112] = GG => {
+      if (!1 === hG.structuredClone) throw new Error("Structured clone extension is disabled");
+      let bG = fG.getUint32(yG - 4),
+        ZG = pG.get(bG);
+      return ZG.used = !0, ZG.target
+    }, rG[115] = () => new Set(vG());
+    const Zb = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((GG => GG + "Array"));
+    let wb = "object" === typeof globalThis ? globalThis : window;
+    rG[116] = GG => {
+      let bG = GG[0],
+        ZG = Zb[bG];
+      if (!ZG) {
+        if (16 === bG) {
+          let bG = new ArrayBuffer(GG.length - 1);
+          return new Uint8Array(bG).set(GG.subarray(1)), bG
         }
-        throw new Error("Could not find typed array for code " + Eu)
+        throw new Error("Could not find typed array for code " + bG)
       }
-      return new sE[ju](Uint8Array.prototype.slice.call(uu, 1).buffer)
-    }, gu[120] = () => {
-      let uu = mu();
-      return new RegExp(uu[0], uu[1])
+      return new wb[ZG](Uint8Array.prototype.slice.call(GG, 1).buffer)
+    }, rG[120] = () => {
+      let GG = vG();
+      return new RegExp(GG[0], GG[1])
     };
-    const UE = [];
+    const Sb = [];
 
-    function ZE(uu) {
-      Ju && Ju();
-      let Eu = Zu,
-        ju = Xu,
-        su = Ou,
-        lu = hu,
-        gu = Du,
-        Mu = fu,
-        eu = Nu,
-        Gu = bu,
-        pu = Cu,
-        wu = new Uint8Array(Uu.slice(0, Zu)),
-        au = qu,
-        Pu = qu.slice(0, qu.length),
-        ou = Yu,
-        ku = du,
-        mu = uu();
-      return Zu = Eu, Xu = ju, Ou = su, hu = lu, Du = gu, fu = Mu, Nu = eu, bu = Gu, Cu = pu, Uu = wu, du = ku, (qu = au).splice(0, qu.length, ...Pu), Yu = ou, cu = new DataView(Uu.buffer, Uu.byteOffset, Uu.byteLength), mu
+    function Lb(GG) {
+      iG && iG();
+      let bG = LG,
+        ZG = yG,
+        wG = KG,
+        kG = dG,
+        rG = JG,
+        zG = YG,
+        EG = QG,
+        oG = pG,
+        XG = VG,
+        uG = new Uint8Array(SG.slice(0, LG)),
+        WG = UG,
+        mG = UG.slice(0, UG.length),
+        IG = hG,
+        FG = CG,
+        vG = GG();
+      return LG = bG, yG = ZG, KG = wG, dG = kG, JG = rG, YG = zG, QG = EG, pG = oG, VG = XG, SG = uG, CG = FG, (UG = WG).splice(0, UG.length, ...mG), hG = IG, fG = new DataView(SG.buffer, SG.byteOffset, SG.byteLength), vG
     }
 
-    function XE() {
-      Uu = null, bu = null, qu = null
+    function yb() {
+      SG = null, pG = null, UG = null
     }
-    gu[98] = uu => {
-      let Eu = (uu[0] << 24) + (uu[1] << 16) + (uu[2] << 8) + uu[3],
-        ju = Xu;
-      return Xu += Eu - uu.length, Cu = UE, (Cu = [Hu(), Hu()]).position0 = 0, Cu.position1 = 0, Cu.postBundlePosition = Xu, Xu = ju, mu()
-    }, gu[255] = uu => 4 == uu.length ? new Date(1e3 * (16777216 * uu[0] + (uu[1] << 16) + (uu[2] << 8) + uu[3])) : 8 == uu.length ? new Date(((uu[0] << 22) + (uu[1] << 14) + (uu[2] << 6) + (uu[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & uu[3]) + 16777216 * uu[4] + (uu[5] << 16) + (uu[6] << 8) + uu[7])) : 12 == uu.length ? new Date(((uu[0] << 24) + (uu[1] << 16) + (uu[2] << 8) + uu[3]) / 1e6 + 1e3 * ((128 & uu[4] ? -281474976710656 : 0) + 1099511627776 * uu[6] + 4294967296 * uu[7] + 16777216 * uu[8] + (uu[9] << 16) + (uu[10] << 8) + uu[11])) : new Date("invalid");
-    const lE = new Array(147);
-    for (let Uj = 0; Uj < 256; Uj++) lE[Uj] = +("1e" + Math.floor(45.15 - .30103 * Uj));
-    const qE = Pu;
-    var fE = new Pu({
+    rG[98] = GG => {
+      let bG = (GG[0] << 24) + (GG[1] << 16) + (GG[2] << 8) + GG[3],
+        ZG = yG;
+      return yG += bG - GG.length, VG = Sb, (VG = [tG(), tG()]).position0 = 0, VG.position1 = 0, VG.postBundlePosition = yG, yG = ZG, vG()
+    }, rG[255] = GG => 4 == GG.length ? new Date(1e3 * (16777216 * GG[0] + (GG[1] << 16) + (GG[2] << 8) + GG[3])) : 8 == GG.length ? new Date(((GG[0] << 22) + (GG[1] << 14) + (GG[2] << 6) + (GG[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & GG[3]) + 16777216 * GG[4] + (GG[5] << 16) + (GG[6] << 8) + GG[7])) : 12 == GG.length ? new Date(((GG[0] << 24) + (GG[1] << 16) + (GG[2] << 8) + GG[3]) / 1e6 + 1e3 * ((128 & GG[4] ? -281474976710656 : 0) + 1099511627776 * GG[6] + 4294967296 * GG[7] + 16777216 * GG[8] + (GG[9] << 16) + (GG[10] << 8) + GG[11])) : new Date("invalid");
+    const kb = new Array(147);
+    for (let SZ = 0; SZ < 256; SZ++) kb[SZ] = +("1e" + Math.floor(45.15 - .30103 * SZ));
+    const Ub = mG;
+    var Yb = new mG({
       useRecords: !1
     });
-    const CE = fE.unpack,
-      bE = fE.unpackMultiple,
-      cE = fE.unpack,
-      NE = {
+    const Vb = Yb.unpack,
+      pb = Yb.unpackMultiple,
+      fb = Yb.unpack,
+      Qb = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let OE, YE, hE, DE = new Float32Array(1),
-      gE = new Uint8Array(DE.buffer, 0, 4);
+    let Kb, hb, db, Jb = new Float32Array(1),
+      rb = new Uint8Array(Jb.buffer, 0, 4);
 
-    function ME(uu) {
-      DE[0] = uu;
-      let Eu = lE[(127 & gE[3]) << 1 | gE[2] >> 7];
-      return (Eu * uu + (uu > 0 ? .5 : -.5) | 0) / Eu
+    function zb(GG) {
+      Jb[0] = GG;
+      let bG = kb[(127 & rb[3]) << 1 | rb[2] >> 7];
+      return (bG * GG + (GG > 0 ? .5 : -.5) | 0) / bG
     }
     try {
-      OE = new TextEncoder
-    } catch (sj) {}
-    const eE = "undefined" !== typeof Buffer,
-      GE = eE ? function(uu) {
-        return Buffer.allocUnsafeSlow(uu)
+      Kb = new TextEncoder
+    } catch (wZ) {}
+    const Eb = "undefined" !== typeof Buffer,
+      ob = Eb ? function(GG) {
+        return Buffer.allocUnsafeSlow(GG)
       } : Uint8Array,
-      pE = eE ? Buffer : Uint8Array,
-      wE = eE ? 4294967296 : 2144337920;
-    let JE, dE, aE, PE, oE, kE = 0,
-      mE = null;
-    const vE = /[\u0080-\uFFFF]/,
-      KE = Symbol("record-id");
-    class VE extends Pu {
-      constructor(uu) {
-        let Eu, ju, su, Uu;
-        super(uu), this.offset = 0;
-        let Zu = pE.prototype.utf8Write ? function(uu, Eu) {
-            return JE.utf8Write(uu, Eu, JE.byteLength - Eu)
-          } : !(!OE || !OE.encodeInto) && function(uu, Eu) {
-            return OE.encodeInto(uu, JE.subarray(Eu)).written
+      Xb = Eb ? Buffer : Uint8Array,
+      ub = Eb ? 4294967296 : 2144337920;
+    let ib, Cb, Wb, mb, Ib, Fb = 0,
+      vb = null;
+    const ab = /[\u0080-\uFFFF]/,
+      cb = Symbol("record-id");
+    class lb extends mG {
+      constructor(GG) {
+        let bG, ZG, wG, SG;
+        super(GG), this.offset = 0;
+        let LG = Xb.prototype.utf8Write ? function(GG, bG) {
+            return ib.utf8Write(GG, bG, ib.byteLength - bG)
+          } : !(!Kb || !Kb.encodeInto) && function(GG, bG) {
+            return Kb.encodeInto(GG, ib.subarray(bG)).written
           },
-          Xu = this;
-        uu || (uu = {});
-        let lu = uu && uu.sequential,
-          qu = uu.structures || uu.saveStructures,
-          fu = uu.maxSharedStructures;
-        if (null == fu && (fu = qu ? 32 : 0), fu > 8160) throw new Error("Maximum maxSharedStructure is 8160");
-        uu.structuredClone && void 0 == uu.moreTypes && (this.moreTypes = !0);
-        let Cu = uu.maxOwnStructures;
-        null == Cu && (Cu = qu ? 32 : 64), this.structures || 0 == uu.useRecords || (this.structures = []);
-        let bu = fu > 32 || Cu + fu > 64,
-          cu = fu + 64,
-          Nu = fu + Cu + 64;
-        if (Nu > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let Ou = [],
-          Yu = 0,
-          hu = 0;
-        this.pack = this.encode = function(uu, Zu) {
-          if (JE || (JE = new GE(8192), aE = JE.dataView || (JE.dataView = new DataView(JE.buffer, 0, 8192)), kE = 0), PE = JE.length - 10, PE - kE < 2048 ? (JE = new GE(JE.length), aE = JE.dataView || (JE.dataView = new DataView(JE.buffer, 0, JE.length)), PE = JE.length - 10, kE = 0) : kE = kE + 7 & 2147483640, Eu = kE, Zu & zE && (kE += 255 & Zu), Uu = Xu.structuredClone ? new Map : null, Xu.bundleStrings && "string" !== typeof uu ? (mE = [], mE.size = 1 / 0) : mE = null, su = Xu.structures, su) {
-            su.uninitialized && (su = Xu._mergeStructures(Xu.getStructures()));
-            let uu = su.sharedLength || 0;
-            if (uu > fu) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + su.sharedLength);
-            if (!su.transitions) {
-              su.transitions = Object.create(null);
-              for (let Eu = 0; Eu < uu; Eu++) {
-                let uu = su[Eu];
-                if (!uu) continue;
-                let ju, Uu = su.transitions;
-                for (let Eu = 0, su = uu.length; Eu < su; Eu++) {
-                  let su = uu[Eu];
-                  ju = Uu[su], ju || (ju = Uu[su] = Object.create(null)), Uu = ju
+          yG = this;
+        GG || (GG = {});
+        let kG = GG && GG.sequential,
+          UG = GG.structures || GG.saveStructures,
+          YG = GG.maxSharedStructures;
+        if (null == YG && (YG = UG ? 32 : 0), YG > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        GG.structuredClone && void 0 == GG.moreTypes && (this.moreTypes = !0);
+        let VG = GG.maxOwnStructures;
+        null == VG && (VG = UG ? 32 : 64), this.structures || 0 == GG.useRecords || (this.structures = []);
+        let pG = YG > 32 || VG + YG > 64,
+          fG = YG + 64,
+          QG = YG + VG + 64;
+        if (QG > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let KG = [],
+          hG = 0,
+          dG = 0;
+        this.pack = this.encode = function(GG, LG) {
+          if (ib || (ib = new ob(8192), Wb = ib.dataView || (ib.dataView = new DataView(ib.buffer, 0, 8192)), Fb = 0), mb = ib.length - 10, mb - Fb < 2048 ? (ib = new ob(ib.length), Wb = ib.dataView || (ib.dataView = new DataView(ib.buffer, 0, ib.length)), mb = ib.length - 10, Fb = 0) : Fb = Fb + 7 & 2147483640, bG = Fb, LG & xb && (Fb += 255 & LG), SG = yG.structuredClone ? new Map : null, yG.bundleStrings && "string" !== typeof GG ? (vb = [], vb.size = 1 / 0) : vb = null, wG = yG.structures, wG) {
+            wG.uninitialized && (wG = yG._mergeStructures(yG.getStructures()));
+            let GG = wG.sharedLength || 0;
+            if (GG > YG) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + wG.sharedLength);
+            if (!wG.transitions) {
+              wG.transitions = Object.create(null);
+              for (let bG = 0; bG < GG; bG++) {
+                let GG = wG[bG];
+                if (!GG) continue;
+                let ZG, SG = wG.transitions;
+                for (let bG = 0, wG = GG.length; bG < wG; bG++) {
+                  let wG = GG[bG];
+                  ZG = SG[wG], ZG || (ZG = SG[wG] = Object.create(null)), SG = ZG
                 }
-                Uu[KE] = Eu + 64
+                SG[cb] = bG + 64
               }
-              this.lastNamedStructuresLength = uu
+              this.lastNamedStructuresLength = GG
             }
-            lu || (su.nextId = uu + 64)
+            kG || (wG.nextId = GG + 64)
           }
-          let qu;
-          ju && (ju = !1);
+          let UG;
+          ZG && (ZG = !1);
           try {
-            Xu.randomAccessStructure && uu && uu.constructor && uu.constructor === Object ? Pu(uu) : Mu(uu);
-            let ju = mE;
-            if (mE && WE(Eu, Mu, 0), Uu && Uu.idsToInsert) {
-              let uu = Uu.idsToInsert.sort(((uu, Eu) => uu.offset > Eu.offset ? 1 : -1)),
-                su = uu.length,
-                Zu = -1;
-              for (; ju && su > 0;) {
-                let Uu = uu[--su].offset + Eu;
-                Uu < ju.stringsPosition + Eu && -1 === Zu && (Zu = 0), Uu > ju.position + Eu ? Zu >= 0 && (Zu += 6) : (Zu >= 0 && (aE.setUint32(ju.position + Eu, aE.getUint32(ju.position + Eu) + Zu), Zu = -1), ju = ju.previous, su++)
+            yG.randomAccessStructure && GG && GG.constructor && GG.constructor === Object ? mG(GG) : zG(GG);
+            let ZG = vb;
+            if (vb && Ab(bG, zG, 0), SG && SG.idsToInsert) {
+              let GG = SG.idsToInsert.sort(((GG, bG) => GG.offset > bG.offset ? 1 : -1)),
+                wG = GG.length,
+                LG = -1;
+              for (; ZG && wG > 0;) {
+                let SG = GG[--wG].offset + bG;
+                SG < ZG.stringsPosition + bG && -1 === LG && (LG = 0), SG > ZG.position + bG ? LG >= 0 && (LG += 6) : (LG >= 0 && (Wb.setUint32(ZG.position + bG, Wb.getUint32(ZG.position + bG) + LG), LG = -1), ZG = ZG.previous, wG++)
               }
-              Zu >= 0 && ju && aE.setUint32(ju.position + Eu, aE.getUint32(ju.position + Eu) + Zu), kE += 6 * uu.length, kE > PE && Ju(kE), Xu.offset = kE;
-              let lu = function(uu, Eu) {
-                let ju, su = 6 * Eu.length,
-                  Uu = uu.length - su;
-                for (; ju = Eu.pop();) {
-                  let Eu = ju.offset,
-                    Zu = ju.id;
-                  uu.copyWithin(Eu + su, Eu, Uu), su -= 6;
-                  let Xu = Eu + su;
-                  uu[Xu++] = 214, uu[Xu++] = 105, uu[Xu++] = Zu >> 24, uu[Xu++] = Zu >> 16 & 255, uu[Xu++] = Zu >> 8 & 255, uu[Xu++] = 255 & Zu, Uu = Eu
+              LG >= 0 && ZG && Wb.setUint32(ZG.position + bG, Wb.getUint32(ZG.position + bG) + LG), Fb += 6 * GG.length, Fb > mb && iG(Fb), yG.offset = Fb;
+              let kG = function(GG, bG) {
+                let ZG, wG = 6 * bG.length,
+                  SG = GG.length - wG;
+                for (; ZG = bG.pop();) {
+                  let bG = ZG.offset,
+                    LG = ZG.id;
+                  GG.copyWithin(bG + wG, bG, SG), wG -= 6;
+                  let yG = bG + wG;
+                  GG[yG++] = 214, GG[yG++] = 105, GG[yG++] = LG >> 24, GG[yG++] = LG >> 16 & 255, GG[yG++] = LG >> 8 & 255, GG[yG++] = 255 & LG, SG = bG
                 }
-                return uu
-              }(JE.subarray(Eu, kE), uu);
-              return Uu = null, lu
+                return GG
+              }(ib.subarray(bG, Fb), GG);
+              return SG = null, kG
             }
-            return Xu.offset = kE, Zu & nE ? (JE.start = Eu, JE.end = kE, JE) : JE.subarray(Eu, kE)
-          } catch (sj) {
-            throw qu = sj, sj
+            return yG.offset = Fb, LG & Nb ? (ib.start = bG, ib.end = Fb, ib) : ib.subarray(bG, Fb)
+          } catch (wZ) {
+            throw UG = wZ, wZ
           } finally {
-            if (su && (Du(), ju && Xu.saveStructures)) {
-              let ju = su.sharedLength || 0,
-                Uu = JE.subarray(Eu, kE),
-                lu = IE(su, Xu);
-              if (!qu) return !1 === Xu.saveStructures(lu, lu.isCompatible) ? Xu.pack(uu, Zu) : (Xu.lastNamedStructuresLength = ju, JE.length > 1073741824 && (JE = null), Uu)
+            if (wG && (JG(), ZG && yG.saveStructures)) {
+              let ZG = wG.sharedLength || 0,
+                SG = ib.subarray(bG, Fb),
+                kG = qb(wG, yG);
+              if (!UG) return !1 === yG.saveStructures(kG, kG.isCompatible) ? yG.pack(GG, LG) : (yG.lastNamedStructuresLength = ZG, ib.length > 1073741824 && (ib = null), SG)
             }
-            JE.length > 1073741824 && (JE = null), Zu & yE && (kE = Eu)
+            ib.length > 1073741824 && (ib = null), LG & Ob && (Fb = bG)
           }
         };
-        const Du = () => {
-            hu < 10 && hu++;
-            let uu = su.sharedLength || 0;
-            if (su.length > uu && !lu && (su.length = uu), Yu > 1e4) su.transitions = null, hu = 0, Yu = 0, Ou.length > 0 && (Ou = []);
-            else if (Ou.length > 0 && !lu) {
-              for (let uu = 0, Eu = Ou.length; uu < Eu; uu++) Ou[uu][KE] = 0;
-              Ou = []
+        const JG = () => {
+            dG < 10 && dG++;
+            let GG = wG.sharedLength || 0;
+            if (wG.length > GG && !kG && (wG.length = GG), hG > 1e4) wG.transitions = null, dG = 0, hG = 0, KG.length > 0 && (KG = []);
+            else if (KG.length > 0 && !kG) {
+              for (let GG = 0, bG = KG.length; GG < bG; GG++) KG[GG][cb] = 0;
+              KG = []
             }
           },
-          gu = uu => {
-            var Eu = uu.length;
-            Eu < 16 ? JE[kE++] = 144 | Eu : Eu < 65536 ? (JE[kE++] = 220, JE[kE++] = Eu >> 8, JE[kE++] = 255 & Eu) : (JE[kE++] = 221, aE.setUint32(kE, Eu), kE += 4);
-            for (let ju = 0; ju < Eu; ju++) Mu(uu[ju])
+          rG = GG => {
+            var bG = GG.length;
+            bG < 16 ? ib[Fb++] = 144 | bG : bG < 65536 ? (ib[Fb++] = 220, ib[Fb++] = bG >> 8, ib[Fb++] = 255 & bG) : (ib[Fb++] = 221, Wb.setUint32(Fb, bG), Fb += 4);
+            for (let ZG = 0; ZG < bG; ZG++) zG(GG[ZG])
           },
-          Mu = uu => {
-            kE > PE && (JE = Ju(kE));
-            var ju, su = typeof uu;
-            if ("string" === su) {
-              let su, Uu = uu.length;
-              if (mE && Uu >= 4 && Uu < 4096) {
-                if ((mE.size += Uu) > 21760) {
-                  let uu, ju, su = (mE[0] ? 3 * mE[0].length + mE[1].length : 0) + 10;
-                  kE + su > PE && (JE = Ju(kE + su)), mE.position ? (ju = mE, JE[kE] = 200, kE += 3, JE[kE++] = 98, uu = kE - Eu, kE += 4, WE(Eu, Mu, 0), aE.setUint16(uu + Eu - 3, kE - Eu - uu)) : (JE[kE++] = 214, JE[kE++] = 98, uu = kE - Eu, kE += 4), mE = ["", ""], mE.previous = ju, mE.size = 0, mE.position = uu
+          zG = GG => {
+            Fb > mb && (ib = iG(Fb));
+            var ZG, wG = typeof GG;
+            if ("string" === wG) {
+              let wG, SG = GG.length;
+              if (vb && SG >= 4 && SG < 4096) {
+                if ((vb.size += SG) > 21760) {
+                  let GG, ZG, wG = (vb[0] ? 3 * vb[0].length + vb[1].length : 0) + 10;
+                  Fb + wG > mb && (ib = iG(Fb + wG)), vb.position ? (ZG = vb, ib[Fb] = 200, Fb += 3, ib[Fb++] = 98, GG = Fb - bG, Fb += 4, Ab(bG, zG, 0), Wb.setUint16(GG + bG - 3, Fb - bG - GG)) : (ib[Fb++] = 214, ib[Fb++] = 98, GG = Fb - bG, Fb += 4), vb = ["", ""], vb.previous = ZG, vb.size = 0, vb.position = GG
                 }
-                let ju = vE.test(uu);
-                return mE[ju ? 0 : 1] += uu, JE[kE++] = 193, void Mu(ju ? -Uu : Uu)
+                let ZG = ab.test(GG);
+                return vb[ZG ? 0 : 1] += GG, ib[Fb++] = 193, void zG(ZG ? -SG : SG)
               }
-              su = Uu < 32 ? 1 : Uu < 256 ? 2 : Uu < 65536 ? 3 : 5;
-              let Xu = 3 * Uu;
-              if (kE + Xu > PE && (JE = Ju(kE + Xu)), Uu < 64 || !Zu) {
-                let Eu, Zu, Xu, lu = kE + su;
-                for (Eu = 0; Eu < Uu; Eu++) Zu = uu.charCodeAt(Eu), Zu < 128 ? JE[lu++] = Zu : Zu < 2048 ? (JE[lu++] = Zu >> 6 | 192, JE[lu++] = 63 & Zu | 128) : 55296 === (64512 & Zu) && 56320 === (64512 & (Xu = uu.charCodeAt(Eu + 1))) ? (Zu = 65536 + ((1023 & Zu) << 10) + (1023 & Xu), Eu++, JE[lu++] = Zu >> 18 | 240, JE[lu++] = Zu >> 12 & 63 | 128, JE[lu++] = Zu >> 6 & 63 | 128, JE[lu++] = 63 & Zu | 128) : (JE[lu++] = Zu >> 12 | 224, JE[lu++] = Zu >> 6 & 63 | 128, JE[lu++] = 63 & Zu | 128);
-                ju = lu - kE - su
-              } else ju = Zu(uu, kE + su);
-              ju < 32 ? JE[kE++] = 160 | ju : ju < 256 ? (su < 2 && JE.copyWithin(kE + 2, kE + 1, kE + 1 + ju), JE[kE++] = 217, JE[kE++] = ju) : ju < 65536 ? (su < 3 && JE.copyWithin(kE + 3, kE + 2, kE + 2 + ju), JE[kE++] = 218, JE[kE++] = ju >> 8, JE[kE++] = 255 & ju) : (su < 5 && JE.copyWithin(kE + 5, kE + 3, kE + 3 + ju), JE[kE++] = 219, aE.setUint32(kE, ju), kE += 4), kE += ju
-            } else if ("number" === su)
-              if (uu >>> 0 === uu) uu < 32 || uu < 128 && !1 === this.useRecords || uu < 64 && !this.randomAccessStructure ? JE[kE++] = uu : uu < 256 ? (JE[kE++] = 204, JE[kE++] = uu) : uu < 65536 ? (JE[kE++] = 205, JE[kE++] = uu >> 8, JE[kE++] = 255 & uu) : (JE[kE++] = 206, aE.setUint32(kE, uu), kE += 4);
-              else if ((uu | 0) === uu) uu >= -32 ? JE[kE++] = 256 + uu : uu >= -128 ? (JE[kE++] = 208, JE[kE++] = uu + 256) : uu >= -32768 ? (JE[kE++] = 209, aE.setInt16(kE, uu), kE += 2) : (JE[kE++] = 210, aE.setInt32(kE, uu), kE += 4);
+              wG = SG < 32 ? 1 : SG < 256 ? 2 : SG < 65536 ? 3 : 5;
+              let yG = 3 * SG;
+              if (Fb + yG > mb && (ib = iG(Fb + yG)), SG < 64 || !LG) {
+                let bG, LG, yG, kG = Fb + wG;
+                for (bG = 0; bG < SG; bG++) LG = GG.charCodeAt(bG), LG < 128 ? ib[kG++] = LG : LG < 2048 ? (ib[kG++] = LG >> 6 | 192, ib[kG++] = 63 & LG | 128) : 55296 === (64512 & LG) && 56320 === (64512 & (yG = GG.charCodeAt(bG + 1))) ? (LG = 65536 + ((1023 & LG) << 10) + (1023 & yG), bG++, ib[kG++] = LG >> 18 | 240, ib[kG++] = LG >> 12 & 63 | 128, ib[kG++] = LG >> 6 & 63 | 128, ib[kG++] = 63 & LG | 128) : (ib[kG++] = LG >> 12 | 224, ib[kG++] = LG >> 6 & 63 | 128, ib[kG++] = 63 & LG | 128);
+                ZG = kG - Fb - wG
+              } else ZG = LG(GG, Fb + wG);
+              ZG < 32 ? ib[Fb++] = 160 | ZG : ZG < 256 ? (wG < 2 && ib.copyWithin(Fb + 2, Fb + 1, Fb + 1 + ZG), ib[Fb++] = 217, ib[Fb++] = ZG) : ZG < 65536 ? (wG < 3 && ib.copyWithin(Fb + 3, Fb + 2, Fb + 2 + ZG), ib[Fb++] = 218, ib[Fb++] = ZG >> 8, ib[Fb++] = 255 & ZG) : (wG < 5 && ib.copyWithin(Fb + 5, Fb + 3, Fb + 3 + ZG), ib[Fb++] = 219, Wb.setUint32(Fb, ZG), Fb += 4), Fb += ZG
+            } else if ("number" === wG)
+              if (GG >>> 0 === GG) GG < 32 || GG < 128 && !1 === this.useRecords || GG < 64 && !this.randomAccessStructure ? ib[Fb++] = GG : GG < 256 ? (ib[Fb++] = 204, ib[Fb++] = GG) : GG < 65536 ? (ib[Fb++] = 205, ib[Fb++] = GG >> 8, ib[Fb++] = 255 & GG) : (ib[Fb++] = 206, Wb.setUint32(Fb, GG), Fb += 4);
+              else if ((GG | 0) === GG) GG >= -32 ? ib[Fb++] = 256 + GG : GG >= -128 ? (ib[Fb++] = 208, ib[Fb++] = GG + 256) : GG >= -32768 ? (ib[Fb++] = 209, Wb.setInt16(Fb, GG), Fb += 2) : (ib[Fb++] = 210, Wb.setInt32(Fb, GG), Fb += 4);
             else {
-              let Eu;
-              if ((Eu = this.useFloat32) > 0 && uu < 4294967296 && uu >= -2147483648) {
-                let ju;
-                if (JE[kE++] = 202, aE.setFloat32(kE, uu), Eu < 4 || ((ju = uu * lE[(127 & JE[kE]) << 1 | JE[kE + 1] >> 7]) | 0) === ju) return void(kE += 4);
-                kE--
+              let bG;
+              if ((bG = this.useFloat32) > 0 && GG < 4294967296 && GG >= -2147483648) {
+                let ZG;
+                if (ib[Fb++] = 202, Wb.setFloat32(Fb, GG), bG < 4 || ((ZG = GG * kb[(127 & ib[Fb]) << 1 | ib[Fb + 1] >> 7]) | 0) === ZG) return void(Fb += 4);
+                Fb--
               }
-              JE[kE++] = 203, aE.setFloat64(kE, uu), kE += 8
-            } else if ("object" === su || "function" === su)
-              if (uu) {
-                if (Uu) {
-                  let ju = Uu.get(uu);
-                  if (ju) {
-                    if (!ju.id) {
-                      let uu = Uu.idsToInsert || (Uu.idsToInsert = []);
-                      ju.id = uu.push(ju)
+              ib[Fb++] = 203, Wb.setFloat64(Fb, GG), Fb += 8
+            } else if ("object" === wG || "function" === wG)
+              if (GG) {
+                if (SG) {
+                  let ZG = SG.get(GG);
+                  if (ZG) {
+                    if (!ZG.id) {
+                      let GG = SG.idsToInsert || (SG.idsToInsert = []);
+                      ZG.id = GG.push(ZG)
                     }
-                    return JE[kE++] = 214, JE[kE++] = 112, aE.setUint32(kE, ju.id), void(kE += 4)
+                    return ib[Fb++] = 214, ib[Fb++] = 112, Wb.setUint32(Fb, ZG.id), void(Fb += 4)
                   }
-                  Uu.set(uu, {
-                    offset: kE - Eu
+                  SG.set(GG, {
+                    offset: Fb - bG
                   })
                 }
-                let Zu = uu.constructor;
-                if (Zu === Object) wu(uu);
-                else if (Zu === Array) gu(uu);
-                else if (Zu === Map)
-                  if (this.mapAsEmptyObject) JE[kE++] = 128;
+                let LG = GG.constructor;
+                if (LG === Object) uG(GG);
+                else if (LG === Array) rG(GG);
+                else if (LG === Map)
+                  if (this.mapAsEmptyObject) ib[Fb++] = 128;
                   else {
-                    (ju = uu.size) < 16 ? JE[kE++] = 128 | ju : ju < 65536 ? (JE[kE++] = 222, JE[kE++] = ju >> 8, JE[kE++] = 255 & ju) : (JE[kE++] = 223, aE.setUint32(kE, ju), kE += 4);
-                    for (let [Eu, ju] of uu) Mu(Eu), Mu(ju)
+                    (ZG = GG.size) < 16 ? ib[Fb++] = 128 | ZG : ZG < 65536 ? (ib[Fb++] = 222, ib[Fb++] = ZG >> 8, ib[Fb++] = 255 & ZG) : (ib[Fb++] = 223, Wb.setUint32(Fb, ZG), Fb += 4);
+                    for (let [bG, ZG] of GG) zG(bG), zG(ZG)
                   }
                 else {
-                  for (let Eu = 0, ju = YE.length; Eu < ju; Eu++) {
-                    if (uu instanceof hE[Eu]) {
-                      let ju = YE[Eu];
-                      if (ju.write) {
-                        ju.type && (JE[kE++] = 212, JE[kE++] = ju.type, JE[kE++] = 0);
-                        let Eu = ju.write.call(this, uu);
-                        return void(Eu === uu ? Array.isArray(uu) ? gu(uu) : wu(uu) : Mu(Eu))
+                  for (let bG = 0, ZG = hb.length; bG < ZG; bG++) {
+                    if (GG instanceof db[bG]) {
+                      let ZG = hb[bG];
+                      if (ZG.write) {
+                        ZG.type && (ib[Fb++] = 212, ib[Fb++] = ZG.type, ib[Fb++] = 0);
+                        let bG = ZG.write.call(this, GG);
+                        return void(bG === GG ? Array.isArray(GG) ? rG(GG) : uG(GG) : zG(bG))
                       }
-                      let su, Uu = JE,
-                        Zu = aE,
-                        Xu = kE;
-                      JE = null;
+                      let wG, SG = ib,
+                        LG = Wb,
+                        yG = Fb;
+                      ib = null;
                       try {
-                        su = ju.pack.call(this, uu, (uu => (JE = Uu, Uu = null, kE += uu, kE > PE && Ju(kE), {
-                          target: JE,
-                          targetView: aE,
-                          position: kE - uu
-                        })), Mu)
+                        wG = ZG.pack.call(this, GG, (GG => (ib = SG, SG = null, Fb += GG, Fb > mb && iG(Fb), {
+                          target: ib,
+                          targetView: Wb,
+                          position: Fb - GG
+                        })), zG)
                       } finally {
-                        Uu && (JE = Uu, aE = Zu, kE = Xu, PE = JE.length - 10)
+                        SG && (ib = SG, Wb = LG, Fb = yG, mb = ib.length - 10)
                       }
-                      return void(su && (su.length + kE > PE && Ju(su.length + kE), kE = iE(su, JE, kE, ju.type)))
+                      return void(wG && (wG.length + Fb > mb && iG(wG.length + Fb), Fb = Mb(wG, ib, Fb, ZG.type)))
                     }
                   }
-                  if (Array.isArray(uu)) gu(uu);
+                  if (Array.isArray(GG)) rG(GG);
                   else {
-                    if (uu.toJSON) {
-                      const Eu = uu.toJSON();
-                      if (Eu !== uu) return Mu(Eu)
+                    if (GG.toJSON) {
+                      const bG = GG.toJSON();
+                      if (bG !== GG) return zG(bG)
                     }
-                    if ("function" === su) return Mu(this.writeFunction && this.writeFunction(uu));
-                    wu(uu)
+                    if ("function" === wG) return zG(this.writeFunction && this.writeFunction(GG));
+                    uG(GG)
                   }
                 }
-              } else JE[kE++] = 192;
-            else if ("boolean" === su) JE[kE++] = uu ? 195 : 194;
-            else if ("bigint" === su) {
-              if (uu < BigInt(1) << BigInt(63) && uu >= -(BigInt(1) << BigInt(63))) JE[kE++] = 211, aE.setBigInt64(kE, uu);
-              else if (uu < BigInt(1) << BigInt(64) && uu > 0) JE[kE++] = 207, aE.setBigUint64(kE, uu);
+              } else ib[Fb++] = 192;
+            else if ("boolean" === wG) ib[Fb++] = GG ? 195 : 194;
+            else if ("bigint" === wG) {
+              if (GG < BigInt(1) << BigInt(63) && GG >= -(BigInt(1) << BigInt(63))) ib[Fb++] = 211, Wb.setBigInt64(Fb, GG);
+              else if (GG < BigInt(1) << BigInt(64) && GG > 0) ib[Fb++] = 207, Wb.setBigUint64(Fb, GG);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return Mu(uu.toString());
-                  if (this.useBigIntExtension && uu < BigInt(2) ** BigInt(1023) && uu > -(BigInt(2) ** BigInt(1023))) {
-                    JE[kE++] = 199, kE++, JE[kE++] = 66;
-                    let Eu, ju = [];
+                  if (this.largeBigIntToString) return zG(GG.toString());
+                  if (this.useBigIntExtension && GG < BigInt(2) ** BigInt(1023) && GG > -(BigInt(2) ** BigInt(1023))) {
+                    ib[Fb++] = 199, Fb++, ib[Fb++] = 66;
+                    let bG, ZG = [];
                     do {
-                      let su = uu & BigInt(255);
-                      Eu = (su & BigInt(128)) === (uu < BigInt(0) ? BigInt(128) : BigInt(0)), ju.push(su), uu >>= BigInt(8)
-                    } while (uu !== BigInt(0) && uu !== BigInt(-1) || !Eu);
-                    JE[kE - 2] = ju.length;
-                    for (let uu = ju.length; uu > 0;) JE[kE++] = Number(ju[--uu]);
+                      let wG = GG & BigInt(255);
+                      bG = (wG & BigInt(128)) === (GG < BigInt(0) ? BigInt(128) : BigInt(0)), ZG.push(wG), GG >>= BigInt(8)
+                    } while (GG !== BigInt(0) && GG !== BigInt(-1) || !bG);
+                    ib[Fb - 2] = ZG.length;
+                    for (let GG = ZG.length; GG > 0;) ib[Fb++] = Number(ZG[--GG]);
                     return
                   }
-                  throw new RangeError(uu + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
+                  throw new RangeError(GG + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                JE[kE++] = 203, aE.setFloat64(kE, Number(uu))
+                ib[Fb++] = 203, Wb.setFloat64(Fb, Number(GG))
               }
-              kE += 8
+              Fb += 8
             } else {
-              if ("undefined" !== su) throw new Error("Unknown type: " + su);
-              this.encodeUndefinedAsNil ? JE[kE++] = 192 : (JE[kE++] = 212, JE[kE++] = 0, JE[kE++] = 0)
+              if ("undefined" !== wG) throw new Error("Unknown type: " + wG);
+              this.encodeUndefinedAsNil ? ib[Fb++] = 192 : (ib[Fb++] = 212, ib[Fb++] = 0, ib[Fb++] = 0)
             }
           },
-          eu = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? uu => {
-            let Eu;
+          EG = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? GG => {
+            let bG;
             if (this.skipValues) {
-              Eu = [];
-              for (let ju in uu) "function" === typeof uu.hasOwnProperty && !uu.hasOwnProperty(ju) || this.skipValues.includes(uu[ju]) || Eu.push(ju)
-            } else Eu = Object.keys(uu);
-            let ju, su = Eu.length;
-            if (su < 16 ? JE[kE++] = 128 | su : su < 65536 ? (JE[kE++] = 222, JE[kE++] = su >> 8, JE[kE++] = 255 & su) : (JE[kE++] = 223, aE.setUint32(kE, su), kE += 4), this.coercibleKeyAsNumber)
-              for (let Uu = 0; Uu < su; Uu++) {
-                ju = Eu[Uu];
-                let su = Number(ju);
-                Mu(isNaN(su) ? ju : su), Mu(uu[ju])
+              bG = [];
+              for (let ZG in GG) "function" === typeof GG.hasOwnProperty && !GG.hasOwnProperty(ZG) || this.skipValues.includes(GG[ZG]) || bG.push(ZG)
+            } else bG = Object.keys(GG);
+            let ZG, wG = bG.length;
+            if (wG < 16 ? ib[Fb++] = 128 | wG : wG < 65536 ? (ib[Fb++] = 222, ib[Fb++] = wG >> 8, ib[Fb++] = 255 & wG) : (ib[Fb++] = 223, Wb.setUint32(Fb, wG), Fb += 4), this.coercibleKeyAsNumber)
+              for (let SG = 0; SG < wG; SG++) {
+                ZG = bG[SG];
+                let wG = Number(ZG);
+                zG(isNaN(wG) ? ZG : wG), zG(GG[ZG])
               } else
-                for (let Uu = 0; Uu < su; Uu++) Mu(ju = Eu[Uu]), Mu(uu[ju])
-          } : uu => {
-            JE[kE++] = 222;
-            let ju = kE - Eu;
-            kE += 2;
-            let su = 0;
-            for (let Eu in uu)("function" !== typeof uu.hasOwnProperty || uu.hasOwnProperty(Eu)) && (Mu(Eu), Mu(uu[Eu]), su++);
-            if (su > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            JE[ju++ + Eu] = su >> 8, JE[ju + Eu] = 255 & su
+                for (let SG = 0; SG < wG; SG++) zG(ZG = bG[SG]), zG(GG[ZG])
+          } : GG => {
+            ib[Fb++] = 222;
+            let ZG = Fb - bG;
+            Fb += 2;
+            let wG = 0;
+            for (let bG in GG)("function" !== typeof GG.hasOwnProperty || GG.hasOwnProperty(bG)) && (zG(bG), zG(GG[bG]), wG++);
+            if (wG > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            ib[ZG++ + bG] = wG >> 8, ib[ZG + bG] = 255 & wG
           },
-          Gu = !1 === this.useRecords ? eu : uu.progressiveRecords && !bu ? uu => {
-            let ju, Uu, Zu = su.transitions || (su.transitions = Object.create(null)),
-              Xu = kE++ - Eu;
-            for (let lu in uu)
-              if ("function" !== typeof uu.hasOwnProperty || uu.hasOwnProperty(lu)) {
-                if (ju = Zu[lu], ju) Zu = ju;
+          oG = !1 === this.useRecords ? EG : GG.progressiveRecords && !pG ? GG => {
+            let ZG, SG, LG = wG.transitions || (wG.transitions = Object.create(null)),
+              yG = Fb++ - bG;
+            for (let kG in GG)
+              if ("function" !== typeof GG.hasOwnProperty || GG.hasOwnProperty(kG)) {
+                if (ZG = LG[kG], ZG) LG = ZG;
                 else {
-                  let qu = Object.keys(uu),
-                    fu = Zu;
-                  Zu = su.transitions;
-                  let Cu = 0;
-                  for (let uu = 0, Eu = qu.length; uu < Eu; uu++) {
-                    let Eu = qu[uu];
-                    ju = Zu[Eu], ju || (ju = Zu[Eu] = Object.create(null), Cu++), Zu = ju
+                  let UG = Object.keys(GG),
+                    YG = LG;
+                  LG = wG.transitions;
+                  let VG = 0;
+                  for (let GG = 0, bG = UG.length; GG < bG; GG++) {
+                    let bG = UG[GG];
+                    ZG = LG[bG], ZG || (ZG = LG[bG] = Object.create(null), VG++), LG = ZG
                   }
-                  Xu + Eu + 1 == kE ? (kE--, du(Zu, qu, Cu)) : au(Zu, qu, Xu, Cu), Uu = !0, Zu = fu[lu]
+                  yG + bG + 1 == Fb ? (Fb--, CG(LG, UG, VG)) : WG(LG, UG, yG, VG), SG = !0, LG = YG[kG]
                 }
-                Mu(uu[lu])
-              } if (!Uu) {
-              let ju = Zu[KE];
-              ju ? JE[Xu + Eu] = ju : au(Zu, Object.keys(uu), Xu, 0)
+                zG(GG[kG])
+              } if (!SG) {
+              let ZG = LG[cb];
+              ZG ? ib[yG + bG] = ZG : WG(LG, Object.keys(GG), yG, 0)
             }
-          } : uu => {
-            let Eu, ju = su.transitions || (su.transitions = Object.create(null)),
-              Uu = 0;
-            for (let su in uu)("function" !== typeof uu.hasOwnProperty || uu.hasOwnProperty(su)) && (Eu = ju[su], Eu || (Eu = ju[su] = Object.create(null), Uu++), ju = Eu);
-            let Zu = ju[KE];
-            Zu ? Zu >= 96 && bu ? (JE[kE++] = 96 + (31 & (Zu -= 96)), JE[kE++] = Zu >> 5) : JE[kE++] = Zu : du(ju, ju.__keys__ || Object.keys(uu), Uu);
-            for (let su in uu)("function" !== typeof uu.hasOwnProperty || uu.hasOwnProperty(su)) && Mu(uu[su])
+          } : GG => {
+            let bG, ZG = wG.transitions || (wG.transitions = Object.create(null)),
+              SG = 0;
+            for (let wG in GG)("function" !== typeof GG.hasOwnProperty || GG.hasOwnProperty(wG)) && (bG = ZG[wG], bG || (bG = ZG[wG] = Object.create(null), SG++), ZG = bG);
+            let LG = ZG[cb];
+            LG ? LG >= 96 && pG ? (ib[Fb++] = 96 + (31 & (LG -= 96)), ib[Fb++] = LG >> 5) : ib[Fb++] = LG : CG(ZG, ZG.__keys__ || Object.keys(GG), SG);
+            for (let wG in GG)("function" !== typeof GG.hasOwnProperty || GG.hasOwnProperty(wG)) && zG(GG[wG])
           },
-          pu = "function" == typeof this.useRecords && this.useRecords,
-          wu = pu ? uu => {
-            pu(uu) ? Gu(uu) : eu(uu)
-          } : Gu,
-          Ju = uu => {
-            let ju;
-            if (uu > 16777216) {
-              if (uu - Eu > wE) throw new Error("Packed buffer would be larger than maximum buffer size");
-              ju = Math.min(wE, 4096 * Math.round(Math.max((uu - Eu) * (uu > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else ju = 1 + (Math.max(uu - Eu << 2, JE.length - 1) >> 12) << 12;
-            let su = new GE(ju);
-            return aE = su.dataView || (su.dataView = new DataView(su.buffer, 0, ju)), uu = Math.min(uu, JE.length), JE.copy ? JE.copy(su, 0, Eu, uu) : su.set(JE.slice(Eu, uu)), kE -= Eu, Eu = 0, PE = su.length - 10, JE = su
+          XG = "function" == typeof this.useRecords && this.useRecords,
+          uG = XG ? GG => {
+            XG(GG) ? oG(GG) : EG(GG)
+          } : oG,
+          iG = GG => {
+            let ZG;
+            if (GG > 16777216) {
+              if (GG - bG > ub) throw new Error("Packed buffer would be larger than maximum buffer size");
+              ZG = Math.min(ub, 4096 * Math.round(Math.max((GG - bG) * (GG > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else ZG = 1 + (Math.max(GG - bG << 2, ib.length - 1) >> 12) << 12;
+            let wG = new ob(ZG);
+            return Wb = wG.dataView || (wG.dataView = new DataView(wG.buffer, 0, ZG)), GG = Math.min(GG, ib.length), ib.copy ? ib.copy(wG, 0, bG, GG) : wG.set(ib.slice(bG, GG)), Fb -= bG, bG = 0, mb = wG.length - 10, ib = wG
           },
-          du = (uu, Eu, Uu) => {
-            let Zu = su.nextId;
-            Zu || (Zu = 64), Zu < cu && this.shouldShareStructure && !this.shouldShareStructure(Eu) ? (Zu = su.nextOwnId, Zu < Nu || (Zu = cu), su.nextOwnId = Zu + 1) : (Zu >= Nu && (Zu = cu), su.nextId = Zu + 1);
-            let Xu = Eu.highByte = Zu >= 96 && bu ? Zu - 96 >> 5 : -1;
-            uu[KE] = Zu, uu.__keys__ = Eu, su[Zu - 64] = Eu, Zu < cu ? (Eu.isShared = !0, su.sharedLength = Zu - 63, ju = !0, Xu >= 0 ? (JE[kE++] = 96 + (31 & Zu), JE[kE++] = Xu) : JE[kE++] = Zu) : (Xu >= 0 ? (JE[kE++] = 213, JE[kE++] = 114, JE[kE++] = 96 + (31 & Zu), JE[kE++] = Xu) : (JE[kE++] = 212, JE[kE++] = 114, JE[kE++] = Zu), Uu && (Yu += hu * Uu), Ou.length >= Cu && (Ou.shift()[KE] = 0), Ou.push(uu), Mu(Eu))
+          CG = (GG, bG, SG) => {
+            let LG = wG.nextId;
+            LG || (LG = 64), LG < fG && this.shouldShareStructure && !this.shouldShareStructure(bG) ? (LG = wG.nextOwnId, LG < QG || (LG = fG), wG.nextOwnId = LG + 1) : (LG >= QG && (LG = fG), wG.nextId = LG + 1);
+            let yG = bG.highByte = LG >= 96 && pG ? LG - 96 >> 5 : -1;
+            GG[cb] = LG, GG.__keys__ = bG, wG[LG - 64] = bG, LG < fG ? (bG.isShared = !0, wG.sharedLength = LG - 63, ZG = !0, yG >= 0 ? (ib[Fb++] = 96 + (31 & LG), ib[Fb++] = yG) : ib[Fb++] = LG) : (yG >= 0 ? (ib[Fb++] = 213, ib[Fb++] = 114, ib[Fb++] = 96 + (31 & LG), ib[Fb++] = yG) : (ib[Fb++] = 212, ib[Fb++] = 114, ib[Fb++] = LG), SG && (hG += dG * SG), KG.length >= VG && (KG.shift()[cb] = 0), KG.push(GG), zG(bG))
           },
-          au = (uu, ju, su, Uu) => {
-            let Zu = JE,
-              Xu = kE,
-              lu = PE,
-              qu = Eu;
-            JE = dE, kE = 0, Eu = 0, JE || (dE = JE = new GE(8192)), PE = JE.length - 10, du(uu, ju, Uu), dE = JE;
-            let fu = kE;
-            if (JE = Zu, kE = Xu, PE = lu, Eu = qu, fu > 1) {
-              let uu = kE + fu - 1;
-              uu > PE && Ju(uu);
-              let ju = su + Eu;
-              JE.copyWithin(ju + fu, ju + 1, kE), JE.set(dE.slice(0, fu), ju), kE = uu
-            } else JE[su + Eu] = dE[0]
+          WG = (GG, ZG, wG, SG) => {
+            let LG = ib,
+              yG = Fb,
+              kG = mb,
+              UG = bG;
+            ib = Cb, Fb = 0, bG = 0, ib || (Cb = ib = new ob(8192)), mb = ib.length - 10, CG(GG, ZG, SG), Cb = ib;
+            let YG = Fb;
+            if (ib = LG, Fb = yG, mb = kG, bG = UG, YG > 1) {
+              let GG = Fb + YG - 1;
+              GG > mb && iG(GG);
+              let ZG = wG + bG;
+              ib.copyWithin(ZG + YG, ZG + 1, Fb), ib.set(Cb.slice(0, YG), ZG), Fb = GG
+            } else ib[wG + bG] = Cb[0]
           },
-          Pu = uu => {
-            let Uu = oE(uu, JE, Eu, kE, su, Ju, ((uu, Eu, su) => {
-              if (su) return ju = !0;
-              kE = Eu;
-              let Uu = JE;
-              return Mu(uu), Du(), Uu !== JE ? {
-                position: kE,
-                targetView: aE,
-                target: JE
-              } : kE
+          mG = GG => {
+            let SG = Ib(GG, ib, bG, Fb, wG, iG, ((GG, bG, wG) => {
+              if (wG) return ZG = !0;
+              Fb = bG;
+              let SG = ib;
+              return zG(GG), JG(), SG !== ib ? {
+                position: Fb,
+                targetView: Wb,
+                target: ib
+              } : Fb
             }), this);
-            if (0 === Uu) return wu(uu);
-            kE = Uu
+            if (0 === SG) return uG(GG);
+            Fb = SG
           }
       }
-      useBuffer(uu) {
-        JE = uu, aE = JE.dataView || (JE.dataView = new DataView(JE.buffer, JE.byteOffset, JE.byteLength)), kE = 0
+      useBuffer(GG) {
+        ib = GG, Wb = ib.dataView || (ib.dataView = new DataView(ib.buffer, ib.byteOffset, ib.byteLength)), Fb = 0
       }
-      set position(uu) {
-        kE = uu
+      set position(GG) {
+        Fb = GG
       }
       get position() {
-        return kE
+        return Fb
       }
-      set buffer(uu) {
-        JE = uu
+      set buffer(GG) {
+        ib = GG
       }
       get buffer() {
-        return JE
+        return ib
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function rE(uu, Eu, ju, su) {
-      let Uu = uu.byteLength;
-      if (Uu + 1 < 256) {
+    function jb(GG, bG, ZG, wG) {
+      let SG = GG.byteLength;
+      if (SG + 1 < 256) {
         var {
-          target: Zu,
-          position: Xu
-        } = ju(4 + Uu);
-        Zu[Xu++] = 199, Zu[Xu++] = Uu + 1
-      } else if (Uu + 1 < 65536) {
+          target: LG,
+          position: yG
+        } = ZG(4 + SG);
+        LG[yG++] = 199, LG[yG++] = SG + 1
+      } else if (SG + 1 < 65536) {
         var {
-          target: Zu,
-          position: Xu
-        } = ju(5 + Uu);
-        Zu[Xu++] = 200, Zu[Xu++] = Uu + 1 >> 8, Zu[Xu++] = Uu + 1 & 255
+          target: LG,
+          position: yG
+        } = ZG(5 + SG);
+        LG[yG++] = 200, LG[yG++] = SG + 1 >> 8, LG[yG++] = SG + 1 & 255
       } else {
         var {
-          target: Zu,
-          position: Xu,
-          targetView: lu
-        } = ju(7 + Uu);
-        Zu[Xu++] = 201, lu.setUint32(Xu, Uu + 1), Xu += 4
+          target: LG,
+          position: yG,
+          targetView: kG
+        } = ZG(7 + SG);
+        LG[yG++] = 201, kG.setUint32(yG, SG + 1), yG += 4
       }
-      Zu[Xu++] = 116, Zu[Xu++] = Eu, uu.buffer || (uu = new Uint8Array(uu)), Zu.set(new Uint8Array(uu.buffer, uu.byteOffset, uu.byteLength), Xu)
+      LG[yG++] = 116, LG[yG++] = bG, GG.buffer || (GG = new Uint8Array(GG)), LG.set(new Uint8Array(GG.buffer, GG.byteOffset, GG.byteLength), yG)
     }
 
-    function QE(uu, Eu) {
-      let ju = uu.byteLength;
-      var su, Uu;
-      if (ju < 256) {
+    function Pb(GG, bG) {
+      let ZG = GG.byteLength;
+      var wG, SG;
+      if (ZG < 256) {
         var {
-          target: su,
-          position: Uu
-        } = Eu(ju + 2);
-        su[Uu++] = 196, su[Uu++] = ju
-      } else if (ju < 65536) {
+          target: wG,
+          position: SG
+        } = bG(ZG + 2);
+        wG[SG++] = 196, wG[SG++] = ZG
+      } else if (ZG < 65536) {
         var {
-          target: su,
-          position: Uu
-        } = Eu(ju + 3);
-        su[Uu++] = 197, su[Uu++] = ju >> 8, su[Uu++] = 255 & ju
+          target: wG,
+          position: SG
+        } = bG(ZG + 3);
+        wG[SG++] = 197, wG[SG++] = ZG >> 8, wG[SG++] = 255 & ZG
       } else {
         var {
-          target: su,
-          position: Uu,
-          targetView: Zu
-        } = Eu(ju + 5);
-        su[Uu++] = 198, Zu.setUint32(Uu, ju), Uu += 4
+          target: wG,
+          position: SG,
+          targetView: LG
+        } = bG(ZG + 5);
+        wG[SG++] = 198, LG.setUint32(SG, ZG), SG += 4
       }
-      su.set(uu, Uu)
+      wG.set(GG, SG)
     }
 
-    function iE(uu, Eu, ju, su) {
-      let Uu = uu.length;
-      switch (Uu) {
+    function Mb(GG, bG, ZG, wG) {
+      let SG = GG.length;
+      switch (SG) {
         case 1:
-          Eu[ju++] = 212;
+          bG[ZG++] = 212;
           break;
         case 2:
-          Eu[ju++] = 213;
+          bG[ZG++] = 213;
           break;
         case 4:
-          Eu[ju++] = 214;
+          bG[ZG++] = 214;
           break;
         case 8:
-          Eu[ju++] = 215;
+          bG[ZG++] = 215;
           break;
         case 16:
-          Eu[ju++] = 216;
+          bG[ZG++] = 216;
           break;
         default:
-          Uu < 256 ? (Eu[ju++] = 199, Eu[ju++] = Uu) : Uu < 65536 ? (Eu[ju++] = 200, Eu[ju++] = Uu >> 8, Eu[ju++] = 255 & Uu) : (Eu[ju++] = 201, Eu[ju++] = Uu >> 24, Eu[ju++] = Uu >> 16 & 255, Eu[ju++] = Uu >> 8 & 255, Eu[ju++] = 255 & Uu)
+          SG < 256 ? (bG[ZG++] = 199, bG[ZG++] = SG) : SG < 65536 ? (bG[ZG++] = 200, bG[ZG++] = SG >> 8, bG[ZG++] = 255 & SG) : (bG[ZG++] = 201, bG[ZG++] = SG >> 24, bG[ZG++] = SG >> 16 & 255, bG[ZG++] = SG >> 8 & 255, bG[ZG++] = 255 & SG)
       }
-      return Eu[ju++] = su, Eu.set(uu, ju), ju += Uu
+      return bG[ZG++] = wG, bG.set(GG, ZG), ZG += SG
     }
 
-    function WE(uu, Eu, ju) {
-      if (mE.length > 0) {
-        aE.setUint32(mE.position + uu, kE + ju - mE.position - uu), mE.stringsPosition = kE - uu;
-        let su = mE;
-        mE = null, Eu(su[0]), Eu(su[1])
+    function Ab(GG, bG, ZG) {
+      if (vb.length > 0) {
+        Wb.setUint32(vb.position + GG, Fb + ZG - vb.position - GG), vb.stringsPosition = Fb - GG;
+        let wG = vb;
+        vb = null, bG(wG[0]), bG(wG[1])
       }
     }
 
-    function SE(uu) {
-      if (uu.Class) {
-        if (!uu.pack && !uu.write) throw new Error("Extension has no pack or write function");
-        if (uu.pack && !uu.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        hE.unshift(uu.Class), YE.unshift(uu)
-      }! function(uu) {
-        uu.unpack ? gu[uu.type] = uu.unpack : gu[uu.type] = uu
-      }(uu)
+    function sb(GG) {
+      if (GG.Class) {
+        if (!GG.pack && !GG.write) throw new Error("Extension has no pack or write function");
+        if (GG.pack && !GG.type) throw new Error("Extension has no type (numeric code to identify the extension)");
+        db.unshift(GG.Class), hb.unshift(GG)
+      }! function(GG) {
+        GG.unpack ? rG[GG.type] = GG.unpack : rG[GG.type] = GG
+      }(GG)
     }
 
-    function IE(uu, Eu) {
-      return uu.isCompatible = uu => {
-        let ju = !uu || (Eu.lastNamedStructuresLength || 0) === uu.length;
-        return ju || Eu._mergeStructures(uu), ju
-      }, uu
+    function qb(GG, bG) {
+      return GG.isCompatible = GG => {
+        let ZG = !GG || (bG.lastNamedStructuresLength || 0) === GG.length;
+        return ZG || bG._mergeStructures(GG), ZG
+      }, GG
     }
-    hE = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, eu], YE = [{
-      pack(uu, Eu, ju) {
-        let su = uu.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === uu.getMilliseconds()) && su >= 0 && su < 4294967296) {
+    db = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, EG], hb = [{
+      pack(GG, bG, ZG) {
+        let wG = GG.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === GG.getMilliseconds()) && wG >= 0 && wG < 4294967296) {
           let {
-            target: uu,
-            targetView: ju,
-            position: Uu
-          } = Eu(6);
-          uu[Uu++] = 214, uu[Uu++] = 255, ju.setUint32(Uu, su)
-        } else if (su > 0 && su < 4294967296) {
+            target: GG,
+            targetView: ZG,
+            position: SG
+          } = bG(6);
+          GG[SG++] = 214, GG[SG++] = 255, ZG.setUint32(SG, wG)
+        } else if (wG > 0 && wG < 4294967296) {
           let {
-            target: ju,
-            targetView: Uu,
-            position: Zu
-          } = Eu(10);
-          ju[Zu++] = 215, ju[Zu++] = 255, Uu.setUint32(Zu, 4e6 * uu.getMilliseconds() + (su / 1e3 / 4294967296 | 0)), Uu.setUint32(Zu + 4, su)
-        } else if (isNaN(su)) {
-          if (this.onInvalidDate) return Eu(0), ju(this.onInvalidDate());
+            target: ZG,
+            targetView: SG,
+            position: LG
+          } = bG(10);
+          ZG[LG++] = 215, ZG[LG++] = 255, SG.setUint32(LG, 4e6 * GG.getMilliseconds() + (wG / 1e3 / 4294967296 | 0)), SG.setUint32(LG + 4, wG)
+        } else if (isNaN(wG)) {
+          if (this.onInvalidDate) return bG(0), ZG(this.onInvalidDate());
           let {
-            target: uu,
-            targetView: su,
-            position: Uu
-          } = Eu(3);
-          uu[Uu++] = 212, uu[Uu++] = 255, uu[Uu++] = 255
+            target: GG,
+            targetView: wG,
+            position: SG
+          } = bG(3);
+          GG[SG++] = 212, GG[SG++] = 255, GG[SG++] = 255
         } else {
           let {
-            target: ju,
-            targetView: Uu,
-            position: Zu
-          } = Eu(15);
-          ju[Zu++] = 199, ju[Zu++] = 12, ju[Zu++] = 255, Uu.setUint32(Zu, 1e6 * uu.getMilliseconds()), Uu.setBigInt64(Zu + 4, BigInt(Math.floor(su)))
+            target: ZG,
+            targetView: SG,
+            position: LG
+          } = bG(15);
+          ZG[LG++] = 199, ZG[LG++] = 12, ZG[LG++] = 255, SG.setUint32(LG, 1e6 * GG.getMilliseconds()), SG.setBigInt64(LG + 4, BigInt(Math.floor(wG)))
         }
       }
     }, {
-      pack(uu, Eu, ju) {
-        if (this.setAsEmptyObject) return Eu(0), ju({});
-        let su = Array.from(uu),
+      pack(GG, bG, ZG) {
+        if (this.setAsEmptyObject) return bG(0), ZG({});
+        let wG = Array.from(GG),
           {
-            target: Uu,
-            position: Zu
-          } = Eu(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Uu[Zu++] = 212, Uu[Zu++] = 115, Uu[Zu++] = 0), ju(su)
+            target: SG,
+            position: LG
+          } = bG(this.moreTypes ? 3 : 0);
+        this.moreTypes && (SG[LG++] = 212, SG[LG++] = 115, SG[LG++] = 0), ZG(wG)
       }
     }, {
-      pack(uu, Eu, ju) {
+      pack(GG, bG, ZG) {
         let {
-          target: su,
-          position: Uu
-        } = Eu(this.moreTypes ? 3 : 0);
-        this.moreTypes && (su[Uu++] = 212, su[Uu++] = 101, su[Uu++] = 0), ju([uu.name, uu.message, uu.cause])
+          target: wG,
+          position: SG
+        } = bG(this.moreTypes ? 3 : 0);
+        this.moreTypes && (wG[SG++] = 212, wG[SG++] = 101, wG[SG++] = 0), ZG([GG.name, GG.message, GG.cause])
       }
     }, {
-      pack(uu, Eu, ju) {
+      pack(GG, bG, ZG) {
         let {
-          target: su,
-          position: Uu
-        } = Eu(this.moreTypes ? 3 : 0);
-        this.moreTypes && (su[Uu++] = 212, su[Uu++] = 120, su[Uu++] = 0), ju([uu.source, uu.flags])
+          target: wG,
+          position: SG
+        } = bG(this.moreTypes ? 3 : 0);
+        this.moreTypes && (wG[SG++] = 212, wG[SG++] = 120, wG[SG++] = 0), ZG([GG.source, GG.flags])
       }
     }, {
-      pack(uu, Eu) {
-        this.moreTypes ? rE(uu, 16, Eu) : QE(eE ? Buffer.from(uu) : new Uint8Array(uu), Eu)
+      pack(GG, bG) {
+        this.moreTypes ? jb(GG, 16, bG) : Pb(Eb ? Buffer.from(GG) : new Uint8Array(GG), bG)
       }
     }, {
-      pack(uu, Eu) {
-        let ju = uu.constructor;
-        ju !== pE && this.moreTypes ? rE(uu, jE.indexOf(ju.name), Eu) : QE(uu, Eu)
+      pack(GG, bG) {
+        let ZG = GG.constructor;
+        ZG !== Xb && this.moreTypes ? jb(GG, Zb.indexOf(ZG.name), bG) : Pb(GG, bG)
       }
     }, {
-      pack(uu, Eu) {
+      pack(GG, bG) {
         let {
-          target: ju,
-          position: su
-        } = Eu(1);
-        ju[su] = 193
+          target: ZG,
+          position: wG
+        } = bG(1);
+        ZG[wG] = 193
       }
     }];
-    let FE = new VE({
+    let nb = new lb({
       useRecords: !1
     });
-    const BE = FE.pack,
-      LE = FE.pack,
-      tE = VE,
+    const gb = nb.pack,
+      eb = nb.pack,
+      Rb = lb,
       {
-        NEVER: xE,
-        ALWAYS: TE,
-        DECIMAL_ROUND: HE,
-        DECIMAL_FIT: AE
-      } = NE,
-      nE = 512,
-      yE = 1024,
-      zE = 2048;
-    const RE = function(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!uu || "object" !== typeof uu) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const ju = new Pu(Eu);
-        let su;
-        const Uu = uu => {
-          let Eu;
-          su && (uu = Buffer.concat([su, uu]), su = void 0);
+        NEVER: Tb,
+        ALWAYS: Hb,
+        DECIMAL_ROUND: tb,
+        DECIMAL_FIT: Db
+      } = Qb,
+      Nb = 512,
+      Ob = 1024,
+      xb = 2048;
+    const Bb = function(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!GG || "object" !== typeof GG) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
+        const ZG = new mG(bG);
+        let wG;
+        const SG = GG => {
+          let bG;
+          wG && (GG = Buffer.concat([wG, GG]), wG = void 0);
           try {
-            Eu = ju.unpackMultiple(uu)
-          } catch (Uu) {
-            if (!Uu.incomplete) throw Uu;
-            su = uu.slice(Uu.lastPosition), Eu = Uu.values
+            bG = ZG.unpackMultiple(GG)
+          } catch (SG) {
+            if (!SG.incomplete) throw SG;
+            wG = GG.slice(SG.lastPosition), bG = SG.values
           }
-          return Eu
+          return bG
         };
-        return "function" === typeof uu[Symbol.iterator] ? function*() {
-          for (const Eu of uu) yield* Uu(Eu)
-        }() : "function" === typeof uu[Symbol.asyncIterator] ? async function*() {
-          for await (const Eu of uu) yield* Uu(Eu)
+        return "function" === typeof GG[Symbol.iterator] ? function*() {
+          for (const bG of GG) yield* SG(bG)
+        }() : "function" === typeof GG[Symbol.asyncIterator] ? async function*() {
+          for await (const bG of GG) yield* SG(bG)
         }(): void 0
       },
-      uj = function(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (uu && "object" === typeof uu) {
-          if ("function" === typeof uu[Symbol.iterator]) return function*(uu, Eu) {
-            const ju = new VE(Eu);
-            for (const su of uu) yield ju.pack(su)
-          }(uu, Eu);
-          if ("function" === typeof uu.then || "function" === typeof uu[Symbol.asyncIterator]) return async function*(uu, Eu) {
-            const ju = new VE(Eu);
-            for await (const su of uu) yield ju.pack(su)
-          }(uu, Eu);
+      GZ = function(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (GG && "object" === typeof GG) {
+          if ("function" === typeof GG[Symbol.iterator]) return function*(GG, bG) {
+            const ZG = new lb(bG);
+            for (const wG of GG) yield ZG.pack(wG)
+          }(GG, bG);
+          if ("function" === typeof GG.then || "function" === typeof GG[Symbol.asyncIterator]) return async function*(GG, bG) {
+            const ZG = new lb(bG);
+            for await (const wG of GG) yield ZG.pack(wG)
+          }(GG, bG);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      Ej = !1,
-      jj = !0
+      bZ = !1,
+      ZZ = !0
   },
-  9329: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      $changes: () => Yu,
-      $childType: () => hu,
-      $decoder: () => Cu,
-      $deleteByIndex: () => Nu,
-      $encoder: () => fu,
-      $filter: () => bu,
-      $getByIndex: () => cu,
-      $numFields: () => au,
-      $refId: () => lu,
-      $track: () => qu,
-      $values: () => Gu,
-      ArraySchema: () => ss,
-      Callbacks: () => UU,
-      ChangeTree: () => kj,
-      CollectionSchema: () => Xs,
-      Decoder: () => ns,
-      Encoder: () => xs,
-      FieldBuilder: () => fs,
-      MapSchema: () => Zs,
-      Metadata: () => HE,
-      OPERATION: () => Uu,
-      Reflection: () => uU,
-      ReflectionField: () => zs,
-      ReflectionType: () => Rs,
-      Root: () => Ks,
-      Schema: () => ms,
-      SetSchema: () => ls,
-      StateCallbackStrategy: () => sU,
-      StateView: () => Ws,
-      StreamSchema: () => qs,
-      TypeContext: () => IE,
-      createPool: () => XU,
-      decode: () => ME,
-      decodeKeyValueOperation: () => nj,
-      decodeSchemaOperation: () => Aj,
-      defineCustomTypes: () => wE,
-      defineTypes: () => Ps,
-      deprecated: () => ds,
-      dumpChanges: () => ks,
-      encode: () => EE,
-      encodeArray: () => Wj,
-      encodeIndexedEntry: () => Qj,
-      encodeKeyValueOperation: () => ij,
-      encodeMapEntry: () => rj,
-      encodeSchemaOperation: () => Vj,
-      jO: () => hs,
-      fullStateOnly: () => es,
-      getDecoderStateCallbacks: () => EU,
-      getEncodeDescriptor: () => uj,
-      getRawChangesCallback: () => jU,
-      isBuilder: () => Cs,
-      patchOnly: () => Ms,
-      registerType: () => pE,
-      schema: () => os,
-      t: () => Os,
-      type: () => Gs,
-      unreliable: () => gs,
-      view: () => Ds
+  9157: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      $changes: () => hG,
+      $childType: () => dG,
+      $decoder: () => VG,
+      $deleteByIndex: () => QG,
+      $encoder: () => YG,
+      $filter: () => pG,
+      $getByIndex: () => fG,
+      $numFields: () => WG,
+      $refId: () => kG,
+      $track: () => UG,
+      $values: () => oG,
+      ArraySchema: () => Zw,
+      Callbacks: () => wS,
+      ChangeTree: () => FZ,
+      CollectionSchema: () => Lw,
+      Decoder: () => Dw,
+      Encoder: () => Rw,
+      FieldBuilder: () => Uw,
+      MapSchema: () => Sw,
+      Metadata: () => tb,
+      OPERATION: () => SG,
+      Reflection: () => Bw,
+      ReflectionField: () => Ow,
+      ReflectionType: () => xw,
+      Root: () => vw,
+      Schema: () => Iw,
+      SetSchema: () => yw,
+      StateCallbackStrategy: () => ZS,
+      StateView: () => Mw,
+      StreamSchema: () => kw,
+      TypeContext: () => qb,
+      createPool: () => LS,
+      decode: () => zb,
+      decodeKeyValueOperation: () => NZ,
+      decodeSchemaOperation: () => DZ,
+      defineCustomTypes: () => ub,
+      defineTypes: () => Cw,
+      deprecated: () => uw,
+      dumpChanges: () => mw,
+      encode: () => bb,
+      encodeArray: () => AZ,
+      encodeIndexedEntry: () => PZ,
+      encodeKeyValueOperation: () => MZ,
+      encodeMapEntry: () => jZ,
+      encodeSchemaOperation: () => lZ,
+      SK: () => hw,
+      fullStateOnly: () => zw,
+      getDecoderStateCallbacks: () => GS,
+      getEncodeDescriptor: () => GZ,
+      getRawChangesCallback: () => bS,
+      isBuilder: () => Yw,
+      patchOnly: () => rw,
+      registerType: () => Xb,
+      schema: () => Ww,
+      t: () => Qw,
+      type: () => Ew,
+      unreliable: () => Jw,
+      view: () => dw
     });
-    const su = 255;
-    var Uu;
+    const wG = 255;
+    var SG;
 
-    function Zu(uu) {
-      Object.defineProperty(uu, Symbol.metadata, {
+    function LG(GG) {
+      Object.defineProperty(GG, Symbol.metadata, {
         value: void 0,
         writable: !0,
         configurable: !0,
         enumerable: !1
       })
-    }! function(uu) {
-      uu[uu.ADD = 128] = "ADD", uu[uu.REPLACE = 0] = "REPLACE", uu[uu.DELETE = 64] = "DELETE", uu[uu.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", uu[uu.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", uu[uu.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", uu[uu.CLEAR = 10] = "CLEAR", uu[uu.REVERSE = 15] = "REVERSE", uu[uu.MOVE = 32] = "MOVE", uu[uu.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", uu[uu.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(Uu || (Uu = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const Xu = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }! function(GG) {
+      GG[GG.ADD = 128] = "ADD", GG[GG.REPLACE = 0] = "REPLACE", GG[GG.DELETE = 64] = "DELETE", GG[GG.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", GG[GG.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", GG[GG.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", GG[GG.CLEAR = 10] = "CLEAR", GG[GG.REVERSE = 15] = "REVERSE", GG[GG.MOVE = 32] = "MOVE", GG[GG.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", GG[GG.ADD_BY_REFID = 129] = "ADD_BY_REFID"
+    }(SG || (SG = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const yG = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
-      const uu = "colyseus.symbolRegistry",
-        Eu = Xu[uu] || (Xu[uu] = Object.create(null));
-      Symbol.for = function(uu) {
-        return Eu[uu] || (Eu[uu] = Symbol(uu))
-      }, Symbol.keyFor = function(uu) {
-        for (const ju in Eu)
-          if (Eu[ju] === uu) return ju
+      const GG = "colyseus.symbolRegistry",
+        bG = yG[GG] || (yG[GG] = Object.create(null));
+      Symbol.for = function(GG) {
+        return bG[GG] || (bG[GG] = Symbol(GG))
+      }, Symbol.keyFor = function(GG) {
+        for (const ZG in bG)
+          if (bG[ZG] === GG) return ZG
       }
     }
-    const lu = Symbol.for("$refId"),
-      qu = "~track",
-      fu = "~encoder",
-      Cu = "~decoder",
-      bu = "~filter",
-      cu = "~getByIndex",
-      Nu = "~deleteByIndex",
-      Ou = "~resyncPrune",
-      Yu = Symbol.for("$changes"),
-      hu = Symbol.for("$childType"),
-      Du = Symbol.for("$proxyTarget"),
-      gu = "~onEncodeEnd",
-      Mu = "~reset",
-      eu = "~onDecodeEnd",
-      Gu = Symbol.for("$values"),
-      pu = "~builder",
-      wu = "~descriptors",
-      Ju = "~__encodeDescriptor",
-      du = "~encoders",
-      au = "~__numFields",
-      Pu = "~__refTypeFieldIndexes",
-      ou = "~__viewFieldIndexes",
-      ku = "$__fieldIndexesByViewTag",
-      mu = "~__unreliableFieldIndexes",
-      vu = "~__patchOnlyFieldIndexes",
-      Ku = "~__fullSyncSkipIndexes",
-      Vu = "~__fullStateOnlyFieldIndexes",
-      ru = "~__streamFieldIndexes",
-      Qu = "~__streamPriorities";
-    let iu;
+    const kG = Symbol.for("$refId"),
+      UG = "~track",
+      YG = "~encoder",
+      VG = "~decoder",
+      pG = "~filter",
+      fG = "~getByIndex",
+      QG = "~deleteByIndex",
+      KG = "~resyncPrune",
+      hG = Symbol.for("$changes"),
+      dG = Symbol.for("$childType"),
+      JG = Symbol.for("$proxyTarget"),
+      rG = "~onEncodeEnd",
+      zG = "~reset",
+      EG = "~onDecodeEnd",
+      oG = Symbol.for("$values"),
+      XG = "~builder",
+      uG = "~descriptors",
+      iG = "~__encodeDescriptor",
+      CG = "~encoders",
+      WG = "~__numFields",
+      mG = "~__refTypeFieldIndexes",
+      IG = "~__viewFieldIndexes",
+      FG = "$__fieldIndexesByViewTag",
+      vG = "~__unreliableFieldIndexes",
+      aG = "~__patchOnlyFieldIndexes",
+      cG = "~__fullSyncSkipIndexes",
+      lG = "~__fullStateOnlyFieldIndexes",
+      jG = "~__streamFieldIndexes",
+      PG = "~__streamPriorities";
+    let MG;
     try {
-      iu = new TextEncoder
-    } catch (lU) {}
-    const Wu = new ArrayBuffer(8),
-      Su = new Int32Array(Wu),
-      Iu = new Float32Array(Wu),
-      Fu = new Float64Array(Wu),
-      Bu = new BigInt64Array(Wu),
-      Lu = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(uu, Eu) {
-        for (var ju = 0, su = 0, Uu = 0, Zu = uu.length; Uu < Zu; Uu++)(ju = uu.charCodeAt(Uu)) < 128 ? su += 1 : ju < 2048 ? su += 2 : ju < 55296 || ju >= 57344 ? su += 3 : (Uu++, su += 4);
-        return su
+      MG = new TextEncoder
+    } catch (yS) {}
+    const AG = new ArrayBuffer(8),
+      sG = new Int32Array(AG),
+      qG = new Float32Array(AG),
+      nG = new Float64Array(AG),
+      gG = new BigInt64Array(AG),
+      eG = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(GG, bG) {
+        for (var ZG = 0, wG = 0, SG = 0, LG = GG.length; SG < LG; SG++)(ZG = GG.charCodeAt(SG)) < 128 ? wG += 1 : ZG < 2048 ? wG += 2 : ZG < 55296 || ZG >= 57344 ? wG += 3 : (SG++, wG += 4);
+        return wG
       };
 
-    function tu(uu, Eu, ju) {
-      for (var su = 0, Uu = 0, Zu = Eu.length; Uu < Zu; Uu++)(su = Eu.charCodeAt(Uu)) < 128 ? uu[ju.offset++] = su : su < 2048 ? (uu[ju.offset] = 192 | su >> 6, uu[ju.offset + 1] = 128 | 63 & su, ju.offset += 2) : su < 55296 || su >= 57344 ? (uu[ju.offset] = 224 | su >> 12, uu[ju.offset + 1] = 128 | su >> 6 & 63, uu[ju.offset + 2] = 128 | 63 & su, ju.offset += 3) : (Uu++, su = 65536 + ((1023 & su) << 10 | 1023 & Eu.charCodeAt(Uu)), uu[ju.offset] = 240 | su >> 18, uu[ju.offset + 1] = 128 | su >> 12 & 63, uu[ju.offset + 2] = 128 | su >> 6 & 63, uu[ju.offset + 3] = 128 | 63 & su, ju.offset += 4)
+    function RG(GG, bG, ZG) {
+      for (var wG = 0, SG = 0, LG = bG.length; SG < LG; SG++)(wG = bG.charCodeAt(SG)) < 128 ? GG[ZG.offset++] = wG : wG < 2048 ? (GG[ZG.offset] = 192 | wG >> 6, GG[ZG.offset + 1] = 128 | 63 & wG, ZG.offset += 2) : wG < 55296 || wG >= 57344 ? (GG[ZG.offset] = 224 | wG >> 12, GG[ZG.offset + 1] = 128 | wG >> 6 & 63, GG[ZG.offset + 2] = 128 | 63 & wG, ZG.offset += 3) : (SG++, wG = 65536 + ((1023 & wG) << 10 | 1023 & bG.charCodeAt(SG)), GG[ZG.offset] = 240 | wG >> 18, GG[ZG.offset + 1] = 128 | wG >> 12 & 63, GG[ZG.offset + 2] = 128 | wG >> 6 & 63, GG[ZG.offset + 3] = 128 | 63 & wG, ZG.offset += 4)
     }
 
-    function xu(uu, Eu, ju) {
-      uu[ju.offset++] = 255 & Eu
+    function TG(GG, bG, ZG) {
+      GG[ZG.offset++] = 255 & bG
     }
 
-    function Tu(uu, Eu, ju) {
-      uu[ju.offset++] = 255 & Eu, uu[ju.offset++] = Eu >> 8 & 255
+    function HG(GG, bG, ZG) {
+      GG[ZG.offset++] = 255 & bG, GG[ZG.offset++] = bG >> 8 & 255
     }
 
-    function Hu(uu, Eu, ju) {
-      uu[ju.offset++] = 255 & Eu, uu[ju.offset++] = Eu >> 8 & 255
+    function tG(GG, bG, ZG) {
+      GG[ZG.offset++] = 255 & bG, GG[ZG.offset++] = bG >> 8 & 255
     }
 
-    function Au(uu, Eu, ju) {
-      uu[ju.offset++] = 255 & Eu, uu[ju.offset++] = Eu >> 8 & 255, uu[ju.offset++] = Eu >> 16 & 255, uu[ju.offset++] = Eu >> 24 & 255
+    function DG(GG, bG, ZG) {
+      GG[ZG.offset++] = 255 & bG, GG[ZG.offset++] = bG >> 8 & 255, GG[ZG.offset++] = bG >> 16 & 255, GG[ZG.offset++] = bG >> 24 & 255
     }
 
-    function nu(uu, Eu, ju) {
-      const su = Eu >> 24,
-        Uu = Eu >> 16,
-        Zu = Eu >> 8,
-        Xu = Eu;
-      uu[ju.offset++] = 255 & Xu, uu[ju.offset++] = 255 & Zu, uu[ju.offset++] = 255 & Uu, uu[ju.offset++] = 255 & su
+    function NG(GG, bG, ZG) {
+      const wG = bG >> 24,
+        SG = bG >> 16,
+        LG = bG >> 8,
+        yG = bG;
+      GG[ZG.offset++] = 255 & yG, GG[ZG.offset++] = 255 & LG, GG[ZG.offset++] = 255 & SG, GG[ZG.offset++] = 255 & wG
     }
 
-    function yu(uu, Eu, ju) {
-      const su = Math.floor(Eu / Math.pow(2, 32));
-      nu(uu, Eu >>> 0, ju), nu(uu, su, ju)
+    function OG(GG, bG, ZG) {
+      const wG = Math.floor(bG / Math.pow(2, 32));
+      NG(GG, bG >>> 0, ZG), NG(GG, wG, ZG)
     }
 
-    function zu(uu, Eu, ju) {
-      const su = Eu / Math.pow(2, 32) | 0;
-      nu(uu, Eu >>> 0, ju), nu(uu, su, ju)
+    function xG(GG, bG, ZG) {
+      const wG = bG / Math.pow(2, 32) | 0;
+      NG(GG, bG >>> 0, ZG), NG(GG, wG, ZG)
     }
 
-    function Ru(uu, Eu, ju) {
-      Iu[0] = Eu, Au(uu, Su[0], ju)
+    function BG(GG, bG, ZG) {
+      qG[0] = bG, DG(GG, sG[0], ZG)
     }
 
-    function uE(uu, Eu, ju) {
-      Fu[0] = Eu, Au(uu, Su[0], ju), Au(uu, Su[1], ju)
+    function Gb(GG, bG, ZG) {
+      nG[0] = bG, DG(GG, sG[0], ZG), DG(GG, sG[1], ZG)
     }
-    const EE = {
-        int8: xu,
-        uint8: function(uu, Eu, ju) {
-          uu[ju.offset++] = 255 & Eu
+    const bb = {
+        int8: TG,
+        uint8: function(GG, bG, ZG) {
+          GG[ZG.offset++] = 255 & bG
         },
-        int16: Tu,
-        uint16: Hu,
-        int32: Au,
-        uint32: nu,
-        int64: yu,
-        uint64: zu,
-        bigint64: function(uu, Eu, ju) {
-          Bu[0] = BigInt.asIntN(64, Eu), Au(uu, Su[0], ju), Au(uu, Su[1], ju)
+        int16: HG,
+        uint16: tG,
+        int32: DG,
+        uint32: NG,
+        int64: OG,
+        uint64: xG,
+        bigint64: function(GG, bG, ZG) {
+          gG[0] = BigInt.asIntN(64, bG), DG(GG, sG[0], ZG), DG(GG, sG[1], ZG)
         },
-        biguint64: function(uu, Eu, ju) {
-          Bu[0] = BigInt.asIntN(64, Eu), Au(uu, Su[0], ju), Au(uu, Su[1], ju)
+        biguint64: function(GG, bG, ZG) {
+          gG[0] = BigInt.asIntN(64, bG), DG(GG, sG[0], ZG), DG(GG, sG[1], ZG)
         },
-        float32: Ru,
-        float64: uE,
-        boolean: function(uu, Eu, ju) {
-          uu[ju.offset++] = Eu ? 1 : 0
+        float32: BG,
+        float64: Gb,
+        boolean: function(GG, bG, ZG) {
+          GG[ZG.offset++] = bG ? 1 : 0
         },
-        string: function(uu, Eu, ju) {
-          Eu || (Eu = "");
-          let su = Lu(Eu, "utf8"),
-            Uu = 0;
-          if (su < 32) uu[ju.offset++] = 160 | su, Uu = 1;
-          else if (su < 256) uu[ju.offset++] = 217, uu[ju.offset++] = su, Uu = 2;
-          else if (su < 65536) uu[ju.offset++] = 218, Hu(uu, su, ju), Uu = 3;
+        string: function(GG, bG, ZG) {
+          bG || (bG = "");
+          let wG = eG(bG, "utf8"),
+            SG = 0;
+          if (wG < 32) GG[ZG.offset++] = 160 | wG, SG = 1;
+          else if (wG < 256) GG[ZG.offset++] = 217, GG[ZG.offset++] = wG, SG = 2;
+          else if (wG < 65536) GG[ZG.offset++] = 218, tG(GG, wG, ZG), SG = 3;
           else {
-            if (!(su < 4294967296)) throw new Error("String too long");
-            uu[ju.offset++] = 219, nu(uu, su, ju), Uu = 5
+            if (!(wG < 4294967296)) throw new Error("String too long");
+            GG[ZG.offset++] = 219, NG(GG, wG, ZG), SG = 5
           }
-          return tu(uu, Eu, ju), Uu + su
+          return RG(GG, bG, ZG), SG + wG
         },
-        number: function uu(Eu, ju, su) {
-          return isNaN(ju) ? uu(Eu, 0, su) : isFinite(ju) ? ju !== (0 | ju) ? Math.abs(ju) <= 34028235e31 && (Iu[0] = ju, Math.abs(Math.abs(Iu[0]) - Math.abs(ju)) < 1e-4) ? (Eu[su.offset++] = 202, Ru(Eu, ju, su), 5) : (Eu[su.offset++] = 203, uE(Eu, ju, su), 9) : ju >= 0 ? ju < 128 ? (Eu[su.offset++] = 255 & ju, 1) : ju < 256 ? (Eu[su.offset++] = 204, Eu[su.offset++] = 255 & ju, 2) : ju < 65536 ? (Eu[su.offset++] = 205, Hu(Eu, ju, su), 3) : ju < 4294967296 ? (Eu[su.offset++] = 206, nu(Eu, ju, su), 5) : (Eu[su.offset++] = 207, zu(Eu, ju, su), 9) : ju >= -32 ? (Eu[su.offset++] = 224 | ju + 32, 1) : ju >= -128 ? (Eu[su.offset++] = 208, xu(Eu, ju, su), 2) : ju >= -32768 ? (Eu[su.offset++] = 209, Tu(Eu, ju, su), 3) : ju >= -2147483648 ? (Eu[su.offset++] = 210, Au(Eu, ju, su), 5) : (Eu[su.offset++] = 211, yu(Eu, ju, su), 9) : uu(Eu, ju > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, su)
+        number: function GG(bG, ZG, wG) {
+          return isNaN(ZG) ? GG(bG, 0, wG) : isFinite(ZG) ? ZG !== (0 | ZG) ? Math.abs(ZG) <= 34028235e31 && (qG[0] = ZG, Math.abs(Math.abs(qG[0]) - Math.abs(ZG)) < 1e-4) ? (bG[wG.offset++] = 202, BG(bG, ZG, wG), 5) : (bG[wG.offset++] = 203, Gb(bG, ZG, wG), 9) : ZG >= 0 ? ZG < 128 ? (bG[wG.offset++] = 255 & ZG, 1) : ZG < 256 ? (bG[wG.offset++] = 204, bG[wG.offset++] = 255 & ZG, 2) : ZG < 65536 ? (bG[wG.offset++] = 205, tG(bG, ZG, wG), 3) : ZG < 4294967296 ? (bG[wG.offset++] = 206, NG(bG, ZG, wG), 5) : (bG[wG.offset++] = 207, xG(bG, ZG, wG), 9) : ZG >= -32 ? (bG[wG.offset++] = 224 | ZG + 32, 1) : ZG >= -128 ? (bG[wG.offset++] = 208, TG(bG, ZG, wG), 2) : ZG >= -32768 ? (bG[wG.offset++] = 209, HG(bG, ZG, wG), 3) : ZG >= -2147483648 ? (bG[wG.offset++] = 210, DG(bG, ZG, wG), 5) : (bG[wG.offset++] = 211, OG(bG, ZG, wG), 9) : GG(bG, ZG > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, wG)
         },
-        utf8Write: tu,
-        utf8Length: Lu
+        utf8Write: RG,
+        utf8Length: eG
       },
-      jE = new ArrayBuffer(8),
-      sE = new Int32Array(jE),
-      UE = new Float32Array(jE),
-      ZE = new Float64Array(jE),
-      XE = new BigUint64Array(jE),
-      lE = new BigInt64Array(jE);
+      Zb = new ArrayBuffer(8),
+      wb = new Int32Array(Zb),
+      Sb = new Float32Array(Zb),
+      Lb = new Float64Array(Zb),
+      yb = new BigUint64Array(Zb),
+      kb = new BigInt64Array(Zb);
 
-    function qE(uu, Eu, ju) {
-      ju > uu.length - Eu.offset && (ju = uu.length - Eu.offset);
-      for (var su = "", Uu = 0, Zu = Eu.offset, Xu = Eu.offset + ju; Zu < Xu; Zu++) {
-        var lu = uu[Zu];
-        if (0 !== (128 & lu))
-          if (192 !== (224 & lu))
-            if (224 !== (240 & lu)) {
-              if (240 !== (248 & lu)) {
-                console.error("decode.utf8Read(): Invalid byte " + lu + " at offset " + Zu + ". Skip to end of string: " + (Eu.offset + ju));
+    function Ub(GG, bG, ZG) {
+      ZG > GG.length - bG.offset && (ZG = GG.length - bG.offset);
+      for (var wG = "", SG = 0, LG = bG.offset, yG = bG.offset + ZG; LG < yG; LG++) {
+        var kG = GG[LG];
+        if (0 !== (128 & kG))
+          if (192 !== (224 & kG))
+            if (224 !== (240 & kG)) {
+              if (240 !== (248 & kG)) {
+                console.error("decode.utf8Read(): Invalid byte " + kG + " at offset " + LG + ". Skip to end of string: " + (bG.offset + ZG));
                 break
-              }(Uu = (7 & lu) << 18 | (63 & uu[++Zu]) << 12 | (63 & uu[++Zu]) << 6 | 63 & uu[++Zu]) >= 65536 ? (Uu -= 65536, su += String.fromCharCode(55296 + (Uu >>> 10), 56320 + (1023 & Uu))) : su += String.fromCharCode(Uu)
-            } else su += String.fromCharCode((15 & lu) << 12 | (63 & uu[++Zu]) << 6 | 63 & uu[++Zu]);
-        else su += String.fromCharCode((31 & lu) << 6 | 63 & uu[++Zu]);
-        else su += String.fromCharCode(lu)
+              }(SG = (7 & kG) << 18 | (63 & GG[++LG]) << 12 | (63 & GG[++LG]) << 6 | 63 & GG[++LG]) >= 65536 ? (SG -= 65536, wG += String.fromCharCode(55296 + (SG >>> 10), 56320 + (1023 & SG))) : wG += String.fromCharCode(SG)
+            } else wG += String.fromCharCode((15 & kG) << 12 | (63 & GG[++LG]) << 6 | 63 & GG[++LG]);
+        else wG += String.fromCharCode((31 & kG) << 6 | 63 & GG[++LG]);
+        else wG += String.fromCharCode(kG)
       }
-      return Eu.offset += ju, su
+      return bG.offset += ZG, wG
     }
 
-    function fE(uu, Eu) {
-      return CE(uu, Eu) << 24 >> 24
+    function Yb(GG, bG) {
+      return Vb(GG, bG) << 24 >> 24
     }
 
-    function CE(uu, Eu) {
-      return uu[Eu.offset++]
+    function Vb(GG, bG) {
+      return GG[bG.offset++]
     }
 
-    function bE(uu, Eu) {
-      return cE(uu, Eu) << 16 >> 16
+    function pb(GG, bG) {
+      return fb(GG, bG) << 16 >> 16
     }
 
-    function cE(uu, Eu) {
-      return uu[Eu.offset++] | uu[Eu.offset++] << 8
+    function fb(GG, bG) {
+      return GG[bG.offset++] | GG[bG.offset++] << 8
     }
 
-    function NE(uu, Eu) {
-      return uu[Eu.offset++] | uu[Eu.offset++] << 8 | uu[Eu.offset++] << 16 | uu[Eu.offset++] << 24
+    function Qb(GG, bG) {
+      return GG[bG.offset++] | GG[bG.offset++] << 8 | GG[bG.offset++] << 16 | GG[bG.offset++] << 24
     }
 
-    function OE(uu, Eu) {
-      return NE(uu, Eu) >>> 0
+    function Kb(GG, bG) {
+      return Qb(GG, bG) >>> 0
     }
 
-    function YE(uu, Eu) {
-      return sE[0] = NE(uu, Eu), UE[0]
+    function hb(GG, bG) {
+      return wb[0] = Qb(GG, bG), Sb[0]
     }
 
-    function hE(uu, Eu) {
-      return sE[0] = NE(uu, Eu), sE[1] = NE(uu, Eu), ZE[0]
+    function db(GG, bG) {
+      return wb[0] = Qb(GG, bG), wb[1] = Qb(GG, bG), Lb[0]
     }
 
-    function DE(uu, Eu) {
-      const ju = OE(uu, Eu);
-      return NE(uu, Eu) * Math.pow(2, 32) + ju
+    function Jb(GG, bG) {
+      const ZG = Kb(GG, bG);
+      return Qb(GG, bG) * Math.pow(2, 32) + ZG
     }
 
-    function gE(uu, Eu) {
-      const ju = OE(uu, Eu);
-      return OE(uu, Eu) * Math.pow(2, 32) + ju
+    function rb(GG, bG) {
+      const ZG = Kb(GG, bG);
+      return Kb(GG, bG) * Math.pow(2, 32) + ZG
     }
-    const ME = {
-        utf8Read: qE,
-        int8: fE,
-        uint8: CE,
-        int16: bE,
-        uint16: cE,
-        int32: NE,
-        uint32: OE,
-        float32: YE,
-        float64: hE,
-        int64: DE,
-        uint64: gE,
-        bigint64: function(uu, Eu) {
-          return sE[0] = NE(uu, Eu), sE[1] = NE(uu, Eu), lE[0]
+    const zb = {
+        utf8Read: Ub,
+        int8: Yb,
+        uint8: Vb,
+        int16: pb,
+        uint16: fb,
+        int32: Qb,
+        uint32: Kb,
+        float32: hb,
+        float64: db,
+        int64: Jb,
+        uint64: rb,
+        bigint64: function(GG, bG) {
+          return wb[0] = Qb(GG, bG), wb[1] = Qb(GG, bG), kb[0]
         },
-        biguint64: function(uu, Eu) {
-          return sE[0] = NE(uu, Eu), sE[1] = NE(uu, Eu), XE[0]
+        biguint64: function(GG, bG) {
+          return wb[0] = Qb(GG, bG), wb[1] = Qb(GG, bG), yb[0]
         },
-        boolean: function(uu, Eu) {
-          return CE(uu, Eu) > 0
+        boolean: function(GG, bG) {
+          return Vb(GG, bG) > 0
         },
-        string: function(uu, Eu) {
-          const ju = uu[Eu.offset++];
-          let su;
-          return ju < 192 ? su = 31 & ju : 217 === ju ? su = CE(uu, Eu) : 218 === ju ? su = cE(uu, Eu) : 219 === ju && (su = OE(uu, Eu)), qE(uu, Eu, su)
+        string: function(GG, bG) {
+          const ZG = GG[bG.offset++];
+          let wG;
+          return ZG < 192 ? wG = 31 & ZG : 217 === ZG ? wG = Vb(GG, bG) : 218 === ZG ? wG = fb(GG, bG) : 219 === ZG && (wG = Kb(GG, bG)), Ub(GG, bG, wG)
         },
-        number: function(uu, Eu) {
-          const ju = uu[Eu.offset++];
-          return ju < 128 ? ju : 202 === ju ? YE(uu, Eu) : 203 === ju ? hE(uu, Eu) : 204 === ju ? CE(uu, Eu) : 205 === ju ? cE(uu, Eu) : 206 === ju ? OE(uu, Eu) : 207 === ju ? gE(uu, Eu) : 208 === ju ? fE(uu, Eu) : 209 === ju ? bE(uu, Eu) : 210 === ju ? NE(uu, Eu) : 211 === ju ? DE(uu, Eu) : ju > 223 ? -1 * (255 - ju + 1) : void 0
+        number: function(GG, bG) {
+          const ZG = GG[bG.offset++];
+          return ZG < 128 ? ZG : 202 === ZG ? hb(GG, bG) : 203 === ZG ? db(GG, bG) : 204 === ZG ? Vb(GG, bG) : 205 === ZG ? fb(GG, bG) : 206 === ZG ? Kb(GG, bG) : 207 === ZG ? rb(GG, bG) : 208 === ZG ? Yb(GG, bG) : 209 === ZG ? pb(GG, bG) : 210 === ZG ? Qb(GG, bG) : 211 === ZG ? Jb(GG, bG) : ZG > 223 ? -1 * (255 - ZG + 1) : void 0
         },
-        stringCheck: function(uu, Eu) {
-          const ju = uu[Eu.offset];
-          return ju < 192 && ju > 160 || 217 === ju || 218 === ju || 219 === ju
+        stringCheck: function(GG, bG) {
+          const ZG = GG[bG.offset];
+          return ZG < 192 && ZG > 160 || 217 === ZG || 218 === ZG || 219 === ZG
         }
       },
-      eE = {},
-      GE = new Map;
+      Eb = {},
+      ob = new Map;
 
-    function pE(uu, Eu) {
-      Eu.constructor && (Object.prototype.hasOwnProperty.call(Eu, "constructor") && null == Eu.constructor[Symbol.metadata] && Zu(Eu.constructor), GE.set(Eu.constructor, uu), eE[uu] = Eu), Eu.encode && (EE[uu] = Eu.encode), Eu.decode && (ME[uu] = Eu.decode)
+    function Xb(GG, bG) {
+      bG.constructor && (Object.prototype.hasOwnProperty.call(bG, "constructor") && null == bG.constructor[Symbol.metadata] && LG(bG.constructor), ob.set(bG.constructor, GG), Eb[GG] = bG), bG.encode && (bb[GG] = bG.encode), bG.decode && (zb[GG] = bG.decode)
     }
 
-    function wE(uu) {
-      for (const Eu in uu) pE(Eu, uu[Eu]);
-      return uu => Gs(uu)
+    function ub(GG) {
+      for (const bG in GG) Xb(bG, GG[bG]);
+      return GG => Ew(GG)
     }
-    const JE = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const ib = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function dE() {
+    function Cb() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,160 +2450,160 @@ export const modules = {
       }
     }
 
-    function aE(uu) {
-      return uu._stream ??= dE()
+    function Wb(GG) {
+      return GG._stream ??= Cb()
     }
 
-    function PE(uu, Eu, ju) {
-      0 === Eu.activeViews.size && aE(uu).broadcastPending.add(ju)
+    function mb(GG, bG, ZG) {
+      0 === bG.activeViews.size && Wb(GG).broadcastPending.add(ZG)
     }
 
-    function oE(uu, Eu, ju, su) {
-      const Zu = uu._stream;
-      if (void 0 === Zu) return !0;
-      let Xu = !1;
-      return Zu.broadcastPending.delete(su) ? Xu = !0 : Zu.sentBroadcast.delete(su) && Zu.broadcastDeletes.add(su), Eu.forEachActiveView((uu => {
-        const Eu = Zu.pendingByView.get(uu.id);
-        if (Eu?.has(su)) return Eu.delete(su), void(Xu = !0);
-        const lu = Zu.sentByView.get(uu.id);
-        if (lu?.has(su)) {
-          lu.delete(su);
-          let Eu = uu.changes.get(ju);
-          void 0 === Eu && (Eu = new Map, uu.changes.set(ju, Eu)), Eu.set(su, Uu.DELETE)
+    function Ib(GG, bG, ZG, wG) {
+      const LG = GG._stream;
+      if (void 0 === LG) return !0;
+      let yG = !1;
+      return LG.broadcastPending.delete(wG) ? yG = !0 : LG.sentBroadcast.delete(wG) && LG.broadcastDeletes.add(wG), bG.forEachActiveView((GG => {
+        const bG = LG.pendingByView.get(GG.id);
+        if (bG?.has(wG)) return bG.delete(wG), void(yG = !0);
+        const kG = LG.sentByView.get(GG.id);
+        if (kG?.has(wG)) {
+          kG.delete(wG);
+          let bG = GG.changes.get(ZG);
+          void 0 === bG && (bG = new Map, GG.changes.set(ZG, bG)), bG.set(wG, SG.DELETE)
         }
-      })), Xu
+      })), yG
     }
 
-    function kE(uu, Eu) {
-      const ju = uu._stream?.pendingByView;
-      if (void 0 === ju) return !1;
-      for (const [su, Uu] of ju)
-        if (Uu.size > 0 && void 0 !== Eu.activeViews.get(su)?.deref()) return !0;
+    function Fb(GG, bG) {
+      const ZG = GG._stream?.pendingByView;
+      if (void 0 === ZG) return !1;
+      for (const [wG, SG] of ZG)
+        if (SG.size > 0 && void 0 !== bG.activeViews.get(wG)?.deref()) return !0;
       return !1
     }
 
-    function mE(uu) {
-      const Eu = uu._stream;
-      return void 0 !== Eu && (Eu.broadcastPending.size > 0 || Eu.broadcastDeletes.size > 0)
+    function vb(GG) {
+      const bG = GG._stream;
+      return void 0 !== bG && (bG.broadcastPending.size > 0 || bG.broadcastDeletes.size > 0)
     }
 
-    function vE(uu, Eu, ju) {
-      const su = aE(uu);
-      let Uu = su.pendingByView.get(Eu);
-      void 0 === Uu && (Uu = new Set, su.pendingByView.set(Eu, Uu)), Uu.add(ju)
+    function ab(GG, bG, ZG) {
+      const wG = Wb(GG);
+      let SG = wG.pendingByView.get(bG);
+      void 0 === SG && (SG = new Set, wG.pendingByView.set(bG, SG)), SG.add(ZG)
     }
 
-    function KE(uu, Eu) {
-      const ju = uu._stream;
-      void 0 !== ju && (ju.pendingByView.delete(Eu), ju.sentByView.delete(Eu), ju.priorityByView?.delete(Eu))
+    function cb(GG, bG) {
+      const ZG = GG._stream;
+      void 0 !== ZG && (ZG.pendingByView.delete(bG), ZG.sentByView.delete(bG), ZG.priorityByView?.delete(bG))
     }
-    const VE = {
+    const lb = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function rE(uu) {
-      if (null == uu || "object" !== typeof uu) throw new Error("t.quantized(): options object with { min, max } is required.");
+    function jb(GG) {
+      if (null == GG || "object" !== typeof GG) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: Eu,
-        max: ju
-      } = uu;
-      if ("number" !== typeof Eu || "number" !== typeof ju || !(ju > Eu) || !Number.isFinite(Eu) || !Number.isFinite(ju)) throw new Error(`t.quantized(): require finite min < max (got min=${Eu}, max=${ju}).`);
-      const su = uu.bits ?? 16;
-      if (8 !== su && 16 !== su && 32 !== su) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${su}).`);
-      const Uu = uu.mode ?? "clamp";
-      if ("clamp" !== Uu && "wrap" !== Uu) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(Uu)}).`);
-      const Zu = "wrap" === Uu,
-        Xu = Math.pow(2, su);
+        min: bG,
+        max: ZG
+      } = GG;
+      if ("number" !== typeof bG || "number" !== typeof ZG || !(ZG > bG) || !Number.isFinite(bG) || !Number.isFinite(ZG)) throw new Error(`t.quantized(): require finite min < max (got min=${bG}, max=${ZG}).`);
+      const wG = GG.bits ?? 16;
+      if (8 !== wG && 16 !== wG && 32 !== wG) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${wG}).`);
+      const SG = GG.mode ?? "clamp";
+      if ("clamp" !== SG && "wrap" !== SG) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(SG)}).`);
+      const LG = "wrap" === SG,
+        yG = Math.pow(2, wG);
       return {
-        min: Eu,
-        max: ju,
-        bits: su,
-        wrap: Zu,
-        wire: VE[su],
-        range: ju - Eu,
-        span: Zu ? Xu : Eu === -ju ? Xu - 2 : Xu - 1
+        min: bG,
+        max: ZG,
+        bits: wG,
+        wrap: LG,
+        wire: lb[wG],
+        range: ZG - bG,
+        span: LG ? yG : bG === -ZG ? yG - 2 : yG - 1
       }
     }
 
-    function QE(uu) {
-      return null !== uu && "object" === typeof uu && void 0 !== uu.quantized
+    function Pb(GG) {
+      return null !== GG && "object" === typeof GG && void 0 !== GG.quantized
     }
 
-    function iE(uu, Eu) {
-      if (uu.wrap) {
-        if (!Number.isFinite(Eu)) return 0;
-        const ju = uu.range;
-        let su = (Eu - uu.min) % ju;
-        su < 0 && (su += ju);
-        const Uu = uu.span;
-        return Math.floor(su / ju * Uu + .5) % Uu
+    function Mb(GG, bG) {
+      if (GG.wrap) {
+        if (!Number.isFinite(bG)) return 0;
+        const ZG = GG.range;
+        let wG = (bG - GG.min) % ZG;
+        wG < 0 && (wG += ZG);
+        const SG = GG.span;
+        return Math.floor(wG / ZG * SG + .5) % SG
       }
-      if (Eu !== Eu) return 0;
-      const ju = Eu < uu.min ? uu.min : Eu > uu.max ? uu.max : Eu;
-      return Math.floor((ju - uu.min) / uu.range * uu.span + .5)
+      if (bG !== bG) return 0;
+      const ZG = bG < GG.min ? GG.min : bG > GG.max ? GG.max : bG;
+      return Math.floor((ZG - GG.min) / GG.range * GG.span + .5)
     }
 
-    function WE(uu, Eu) {
-      return uu.min + Eu / uu.span * uu.range
+    function Ab(GG, bG) {
+      return GG.min + bG / GG.span * GG.range
     }
 
-    function SE(uu) {
-      const Eu = EE[uu.wire];
-      return (ju, su, Uu) => Eu(ju, iE(uu, su), Uu)
+    function sb(GG) {
+      const bG = bb[GG.wire];
+      return (ZG, wG, SG) => bG(ZG, Mb(GG, wG), SG)
     }
-    class IE {
+    class qb {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
-      static register(uu) {
-        const Eu = Object.getPrototypeOf(uu);
-        if (Eu !== ms) {
-          let ju = IE.inheritedTypes.get(Eu);
-          ju || (ju = new Set, IE.inheritedTypes.set(Eu, ju)), ju.add(uu)
+      static register(GG) {
+        const bG = Object.getPrototypeOf(GG);
+        if (bG !== Iw) {
+          let ZG = qb.inheritedTypes.get(bG);
+          ZG || (ZG = new Set, qb.inheritedTypes.set(bG, ZG)), ZG.add(GG)
         }
       }
-      static cache(uu) {
-        let Eu = IE.cachedContexts.get(uu);
-        return Eu || (Eu = new IE(uu), IE.cachedContexts.set(uu, Eu)), Eu
+      static cache(GG) {
+        let bG = qb.cachedContexts.get(GG);
+        return bG || (bG = new qb(GG), qb.cachedContexts.set(GG, bG)), bG
       }
-      constructor(uu) {
-        uu && this.discoverTypes(uu)
+      constructor(GG) {
+        GG && this.discoverTypes(GG)
       }
-      has(uu) {
-        return this.schemas.has(uu)
+      has(GG) {
+        return this.schemas.has(GG)
       }
-      get(uu) {
-        return this.types[uu]
+      get(GG) {
+        return this.types[GG]
       }
-      add(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(uu) && (this.types[Eu] = uu, null == uu[Symbol.metadata] && HE.initialize(uu), this.schemas.set(uu, Eu), !0)
+      add(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(GG) && (this.types[bG] = GG, null == GG[Symbol.metadata] && tb.initialize(GG), this.schemas.set(GG, bG), !0)
       }
-      getTypeId(uu) {
-        return this.schemas.get(uu)
+      getTypeId(GG) {
+        return this.schemas.get(GG)
       }
-      discoverTypes(uu) {
-        if (!this.add(uu)) return;
-        IE.inheritedTypes.get(uu)?.forEach((uu => {
-          this.discoverTypes(uu)
+      discoverTypes(GG) {
+        if (!this.add(GG)) return;
+        qb.inheritedTypes.get(GG)?.forEach((GG => {
+          this.discoverTypes(GG)
         }));
-        let Eu = uu;
+        let bG = GG;
         for (;
-          (Eu = Object.getPrototypeOf(Eu)) && Eu !== ms && Eu !== Function.prototype;) this.discoverTypes(Eu);
-        const ju = uu[Symbol.metadata];
-        (ju[ou] || ju[ru]) && (this.hasFilters = !0);
-        for (const su in ju) {
-          const uu = ju[su].type;
-          if ("string" !== typeof uu && !QE(uu))
-            if ("function" === typeof uu) this.discoverTypes(uu);
+          (bG = Object.getPrototypeOf(bG)) && bG !== Iw && bG !== Function.prototype;) this.discoverTypes(bG);
+        const ZG = GG[Symbol.metadata];
+        (ZG[IG] || ZG[jG]) && (this.hasFilters = !0);
+        for (const wG in ZG) {
+          const GG = ZG[wG].type;
+          if ("string" !== typeof GG && !Pb(GG))
+            if ("function" === typeof GG) this.discoverTypes(GG);
             else {
-              const Eu = Object.values(uu)[0];
-              if ("string" === typeof Eu) continue;
-              this.discoverTypes(Eu)
+              const bG = Object.values(GG)[0];
+              if ("string" === typeof bG) continue;
+              this.discoverTypes(bG)
             }
         }
       }
@@ -2612,303 +2612,303 @@ export const modules = {
       }
     }
 
-    function FE(uu) {
-      const Eu = LE(uu);
-      return Eu ? {
-        complexTypeKlass: eE[Eu],
-        childType: uu[Eu]
+    function nb(GG) {
+      const bG = eb(GG);
+      return bG ? {
+        complexTypeKlass: Eb[bG],
+        childType: GG[bG]
       } : {
         complexTypeKlass: !1,
-        childType: uu
+        childType: GG
       }
     }
 
-    function BE(uu, Eu) {
-      const ju = tE(uu),
-        su = LE(ju),
-        Uu = su && LE(ju[su]);
-      if (Uu) throw new Error(`${Eu?`${Eu}: `:""}@colyseus/schema: nested collections are not supported ("${su}" of "${Uu}"). Collections can only hold primitive types or Schema classes, wrap the inner ${Uu} in a Schema class.`);
-      return ju
+    function gb(GG, bG) {
+      const ZG = Rb(GG),
+        wG = eb(ZG),
+        SG = wG && eb(ZG[wG]);
+      if (SG) throw new Error(`${bG?`${bG}: `:""}@colyseus/schema: nested collections are not supported ("${wG}" of "${SG}"). Collections can only hold primitive types or Schema classes, wrap the inner ${SG} in a Schema class.`);
+      return ZG
     }
 
-    function LE(uu) {
-      return "object" === typeof uu && null !== uu ? Object.keys(uu).find((uu => void 0 !== eE[uu])) : void 0
+    function eb(GG) {
+      return "object" === typeof GG && null !== GG ? Object.keys(GG).find((GG => void 0 !== Eb[GG])) : void 0
     }
 
-    function tE(uu) {
-      if ("object" !== typeof uu || null === uu) return uu;
-      if (Array.isArray(uu)) return {
-        array: tE(uu[0])
+    function Rb(GG) {
+      if ("object" !== typeof GG || null === GG) return GG;
+      if (Array.isArray(GG)) return {
+        array: Rb(GG[0])
       };
-      const Eu = function(uu) {
-        const Eu = Object.keys(uu),
-          ju = Eu.filter((uu => /\d+/.test(uu)));
-        if (ju.length > 0 && ju.length === Eu.length / 2 && uu[uu[ju[0]]] == ju[0]) return "number";
-        if (Eu.length > 0 && Eu.every((Eu => uu[Eu] === Eu))) return "string"
-      }(uu);
-      if (Eu) return Eu;
-      if (QE(uu)) return "string" === typeof uu.quantized.wire ? uu : {
-        quantized: rE(uu.quantized)
+      const bG = function(GG) {
+        const bG = Object.keys(GG),
+          ZG = bG.filter((GG => /\d+/.test(GG)));
+        if (ZG.length > 0 && ZG.length === bG.length / 2 && GG[GG[ZG[0]]] == ZG[0]) return "number";
+        if (bG.length > 0 && bG.every((bG => GG[bG] === bG))) return "string"
+      }(GG);
+      if (bG) return bG;
+      if (Pb(GG)) return "string" === typeof GG.quantized.wire ? GG : {
+        quantized: jb(GG.quantized)
       };
-      if (void 0 !== uu.type) return tE(uu.type);
-      const ju = LE(uu);
-      return ju && (uu[ju] = tE(uu[ju])), uu
+      if (void 0 !== GG.type) return Rb(GG.type);
+      const ZG = eb(GG);
+      return ZG && (GG[ZG] = Rb(GG[ZG])), GG
     }
-    const xE = [Pu, mu, vu, Ku, Vu, ru, du];
+    const Tb = [mG, vG, aG, cG, lG, jG, CG];
 
-    function TE(uu, Eu, ju) {
-      uu[Eu] || Object.defineProperty(uu, Eu, {
+    function Hb(GG, bG, ZG) {
+      GG[bG] || Object.defineProperty(GG, bG, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), uu[Eu].push(ju)
+      }), GG[bG].push(ZG)
     }
-    const HE = {
-        addField(uu, Eu, ju, su, Uu) {
-          if (Eu >= 63) throw new Error(`Can't define field '${ju}'.\nSchema instances may only have up to 63 fields.`);
-          uu[Eu] = Object.assign(uu[Eu] || {}, {
-            type: su,
-            index: Eu,
-            name: ju
-          }), Object.defineProperty(uu, wu, {
-            value: uu[wu] || {},
+    const tb = {
+        addField(GG, bG, ZG, wG, SG) {
+          if (bG >= 63) throw new Error(`Can't define field '${ZG}'.\nSchema instances may only have up to 63 fields.`);
+          GG[bG] = Object.assign(GG[bG] || {}, {
+            type: wG,
+            index: bG,
+            name: ZG
+          }), Object.defineProperty(GG, uG, {
+            value: GG[uG] || {},
             enumerable: !1,
             configurable: !0
-          }), uu[wu][ju] = Uu || {
+          }), GG[uG][ZG] = SG || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(uu, au, {
-            value: Eu,
+          }, Object.defineProperty(GG, WG, {
+            value: bG,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(uu, ju, {
-            value: Eu,
+          }), Object.defineProperty(GG, ZG, {
+            value: bG,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof uu[Eu].type || QE(uu[Eu].type) || (void 0 === uu[Pu] && Object.defineProperty(uu, Pu, {
+          }), "string" === typeof GG[bG].type || Pb(GG[bG].type) || (void 0 === GG[mG] && Object.defineProperty(GG, mG, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), uu[Pu].push(Eu));
-          const Zu = uu[Eu].type;
-          if (Zu && "object" === typeof Zu && void 0 !== Zu.stream) {
-            if (void 0 !== Zu.array) throw new Error(JE);
-            uu[Eu].stream = !0, uu[ru] || Object.defineProperty(uu, ru, {
+          }), GG[mG].push(bG));
+          const LG = GG[bG].type;
+          if (LG && "object" === typeof LG && void 0 !== LG.stream) {
+            if (void 0 !== LG.array) throw new Error(ib);
+            GG[bG].stream = !0, GG[jG] || Object.defineProperty(GG, jG, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), uu[ru].includes(Eu) || uu[ru].push(Eu);
-            const Uu = su?.priority;
-            "function" === typeof Uu && HE.setStreamPriority(uu, ju, Uu)
+            }), GG[jG].includes(bG) || GG[jG].push(bG);
+            const SG = wG?.priority;
+            "function" === typeof SG && tb.setStreamPriority(GG, ZG, SG)
           }
         },
-        setTag(uu, Eu, ju) {
-          const su = uu[Eu];
-          if (uu[su].tag = ju, uu[ou] || (Object.defineProperty(uu, ou, {
+        setTag(GG, bG, ZG) {
+          const wG = GG[bG];
+          if (GG[wG].tag = ZG, GG[IG] || (Object.defineProperty(GG, IG, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(uu, ku, {
+            }), Object.defineProperty(GG, FG, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), uu[ou].push(su), ju < 0) uu[ku][ju] || (uu[ku][ju] = []), uu[ku][ju].push(su);
+            })), GG[IG].push(wG), ZG < 0) GG[FG][ZG] || (GG[FG][ZG] = []), GG[FG][ZG].push(wG);
           else
-            for (let Uu = ju; Uu > 0; Uu &= Uu - 1) {
-              const Eu = Uu & -Uu;
-              uu[ku][Eu] || (uu[ku][Eu] = []), uu[ku][Eu].push(su)
+            for (let SG = ZG; SG > 0; SG &= SG - 1) {
+              const bG = SG & -SG;
+              GG[FG][bG] || (GG[FG][bG] = []), GG[FG][bG].push(wG)
             }
         },
-        setUnreliable(uu, Eu) {
-          const ju = uu[Eu];
-          if ("string" !== typeof uu[ju].type) throw new Error(`@unreliable cannot be applied to ref-type field "${Eu}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          uu[ju].unreliable = !0, uu[mu] || Object.defineProperty(uu, mu, {
+        setUnreliable(GG, bG) {
+          const ZG = GG[bG];
+          if ("string" !== typeof GG[ZG].type) throw new Error(`@unreliable cannot be applied to ref-type field "${bG}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          GG[ZG].unreliable = !0, GG[vG] || Object.defineProperty(GG, vG, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), uu[mu].push(ju)
+          }), GG[vG].push(ZG)
         },
-        setPatchOnly(uu, Eu) {
-          const ju = uu[Eu];
-          if (uu[ju].fullStateOnly) throw new Error(`field "${Eu}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          uu[ju].patchOnly = !0, TE(uu, vu, ju), TE(uu, Ku, ju)
+        setPatchOnly(GG, bG) {
+          const ZG = GG[bG];
+          if (GG[ZG].fullStateOnly) throw new Error(`field "${bG}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          GG[ZG].patchOnly = !0, Hb(GG, aG, ZG), Hb(GG, cG, ZG)
         },
-        setDeprecated(uu, Eu) {
-          const ju = uu[Eu];
-          uu[ju].deprecated = !0, TE(uu, Ku, ju), Object.defineProperty(uu, ju, {
-            value: uu[ju],
+        setDeprecated(GG, bG) {
+          const ZG = GG[bG];
+          GG[ZG].deprecated = !0, Hb(GG, cG, ZG), Object.defineProperty(GG, ZG, {
+            value: GG[ZG],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(uu, Eu) {
-          const ju = uu[Eu];
-          if (uu[ju].patchOnly) throw new Error(`field "${Eu}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          uu[ju].fullStateOnly = !0, TE(uu, Vu, ju)
+        setFullStateOnly(GG, bG) {
+          const ZG = GG[bG];
+          if (GG[ZG].patchOnly) throw new Error(`field "${bG}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          GG[ZG].fullStateOnly = !0, Hb(GG, lG, ZG)
         },
-        setStream(uu, Eu) {
-          const ju = uu[Eu];
-          uu[ju].stream = !0, uu[ru] || Object.defineProperty(uu, ru, {
+        setStream(GG, bG) {
+          const ZG = GG[bG];
+          GG[ZG].stream = !0, GG[jG] || Object.defineProperty(GG, jG, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), uu[ru].push(ju)
+          }), GG[jG].push(ZG)
         },
-        setStreamPriority(uu, Eu, ju) {
-          const su = uu[Eu];
-          uu[Qu] || Object.defineProperty(uu, Qu, {
+        setStreamPriority(GG, bG, ZG) {
+          const wG = GG[bG];
+          GG[PG] || Object.defineProperty(GG, PG, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), uu[Qu][su] = ju
+          }), GG[PG][wG] = ZG
         },
-        getStreamPriority: (uu, Eu) => uu?.[Qu]?.[Eu],
-        defineField(uu, Eu, ju, su, Uu) {
-          const Zu = BE(Uu, `${uu.name}.${su}`),
+        getStreamPriority: (GG, bG) => GG?.[PG]?.[bG],
+        defineField(GG, bG, ZG, wG, SG) {
+          const LG = gb(SG, `${GG.name}.${wG}`),
             {
-              complexTypeKlass: Xu,
-              childType: lu
-            } = FE(Zu);
-          HE.addField(Eu, ju, su, Zu, ws(su, ju, lu, Xu)), Eu[wu][su] && Object.defineProperty(uu.prototype, su, Eu[wu][su]), ("string" === typeof Zu || QE(Zu)) && (Eu[du] || Object.defineProperty(Eu, du, {
+              complexTypeKlass: yG,
+              childType: kG
+            } = nb(LG);
+          tb.addField(bG, ZG, wG, LG, Xw(wG, ZG, kG, yG)), bG[uG][wG] && Object.defineProperty(GG.prototype, wG, bG[uG][wG]), ("string" === typeof LG || Pb(LG)) && (bG[CG] || Object.defineProperty(bG, CG, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), Eu[du][ju] = "string" === typeof Zu ? EE[Zu] : SE(Zu.quantized))
+          }), bG[CG][ZG] = "string" === typeof LG ? bb[LG] : sb(LG.quantized))
         },
-        setFields(uu, Eu) {
-          const ju = uu.prototype.constructor;
-          IE.register(ju);
-          const su = Object.getPrototypeOf(ju),
-            Uu = su && su[Symbol.metadata],
-            Zu = HE.initialize(ju);
-          ju[qu] || (ju[qu] = ms[qu]), ju[fu] || (ju[fu] = ms[fu]), ju[Cu] || (ju[Cu] = ms[Cu]), ju.prototype.toJSON || (ju.prototype.toJSON = ms.prototype.toJSON);
-          let Xu = Zu[au] ?? (Uu && Uu[au]) ?? -1;
-          Xu++, Zu[du] || Object.defineProperty(Zu, du, {
-            value: Uu?.[du] ? [...Uu[du]] : [],
+        setFields(GG, bG) {
+          const ZG = GG.prototype.constructor;
+          qb.register(ZG);
+          const wG = Object.getPrototypeOf(ZG),
+            SG = wG && wG[Symbol.metadata],
+            LG = tb.initialize(ZG);
+          ZG[UG] || (ZG[UG] = Iw[UG]), ZG[YG] || (ZG[YG] = Iw[YG]), ZG[VG] || (ZG[VG] = Iw[VG]), ZG.prototype.toJSON || (ZG.prototype.toJSON = Iw.prototype.toJSON);
+          let yG = LG[WG] ?? (SG && SG[WG]) ?? -1;
+          yG++, LG[CG] || Object.defineProperty(LG, CG, {
+            value: SG?.[CG] ? [...SG[CG]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const lu in Eu) {
-            if (void 0 !== Zu[lu]) throw new Error(`@colyseus/schema: Duplicate '${lu}' definition on '${ju.name||"(anonymous)"}'.`);
-            HE.defineField(ju, Zu, Xu, lu, Eu[lu]), Xu++
+          for (const kG in bG) {
+            if (void 0 !== LG[kG]) throw new Error(`@colyseus/schema: Duplicate '${kG}' definition on '${ZG.name||"(anonymous)"}'.`);
+            tb.defineField(ZG, LG, yG, kG, bG[kG]), yG++
           }
-          return uu
+          return GG
         },
-        isDeprecated: (uu, Eu) => !0 === uu[Eu].deprecated,
-        initialize(uu) {
-          const Eu = Object.getPrototypeOf(uu),
-            ju = Eu[Symbol.metadata];
-          let su = uu[Symbol.metadata] ?? Object.create(null);
-          if (Eu !== ms && su === ju && (su = Object.create(null), ju)) {
-            Object.setPrototypeOf(su, ju), Object.defineProperty(su, au, {
-              value: ju[au],
+        isDeprecated: (GG, bG) => !0 === GG[bG].deprecated,
+        initialize(GG) {
+          const bG = Object.getPrototypeOf(GG),
+            ZG = bG[Symbol.metadata];
+          let wG = GG[Symbol.metadata] ?? Object.create(null);
+          if (bG !== Iw && wG === ZG && (wG = Object.create(null), ZG)) {
+            Object.setPrototypeOf(wG, ZG), Object.defineProperty(wG, WG, {
+              value: ZG[WG],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== ju[ou] && (Object.defineProperty(su, ou, {
-              value: [...ju[ou]],
+            }), void 0 !== ZG[IG] && (Object.defineProperty(wG, IG, {
+              value: [...ZG[IG]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(su, ku, {
+            }), Object.defineProperty(wG, FG, {
               value: {
-                ...ju[ku]
+                ...ZG[FG]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const uu of xE) {
-              const Eu = ju[uu];
-              void 0 !== Eu && Object.defineProperty(su, uu, {
-                value: [...Eu],
+            for (const GG of Tb) {
+              const bG = ZG[GG];
+              void 0 !== bG && Object.defineProperty(wG, GG, {
+                value: [...bG],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(su, wu, {
+            Object.defineProperty(wG, uG, {
               value: {
-                ...ju[wu]
+                ...ZG[uG]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             })
           }
-          return Object.defineProperty(uu, Symbol.metadata, {
-            value: su,
+          return Object.defineProperty(GG, Symbol.metadata, {
+            value: wG,
             writable: !1,
             configurable: !0
-          }), su
+          }), wG
         },
-        isValidInstance: uu => uu.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(uu.constructor[Symbol.metadata], au),
-        getFields(uu) {
-          const Eu = uu[Symbol.metadata],
-            ju = {};
-          for (let su = 0; su <= Eu[au]; su++) ju[Eu[su].name] = Eu[su].type;
-          return ju
+        isValidInstance: GG => GG.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(GG.constructor[Symbol.metadata], WG),
+        getFields(GG) {
+          const bG = GG[Symbol.metadata],
+            ZG = {};
+          for (let wG = 0; wG <= bG[WG]; wG++) ZG[bG[wG].name] = bG[wG].type;
+          return ZG
         },
-        hasViewTagAtIndex: (uu, Eu) => uu?.[ou]?.includes(Eu),
-        hasUnreliableAtIndex: (uu, Eu) => uu?.[mu]?.includes(Eu),
-        hasPatchOnlyAtIndex: (uu, Eu) => uu?.[vu]?.includes(Eu),
-        hasFullStateOnlyAtIndex: (uu, Eu) => uu?.[Vu]?.includes(Eu),
-        hasStreamAtIndex: (uu, Eu) => uu?.[ru]?.includes(Eu)
+        hasViewTagAtIndex: (GG, bG) => GG?.[IG]?.includes(bG),
+        hasUnreliableAtIndex: (GG, bG) => GG?.[vG]?.includes(bG),
+        hasPatchOnlyAtIndex: (GG, bG) => GG?.[aG]?.includes(bG),
+        hasFullStateOnlyAtIndex: (GG, bG) => GG?.[lG]?.includes(bG),
+        hasStreamAtIndex: (GG, bG) => GG?.[jG]?.includes(bG)
       },
-      AE = (uu, Eu, ju) => uu(Eu, ju);
-    class nE {
+      Db = (GG, bG, ZG) => GG(bG, ZG);
+    class Nb {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
-      constructor(uu) {
-        this.ops = new Uint8Array(Math.max(uu + 1, 1))
+      constructor(GG) {
+        this.ops = new Uint8Array(Math.max(GG + 1, 1))
       }
-      record(uu, Eu) {
-        const ju = this.ops[uu];
-        0 === ju ? this.ops[uu] = Eu : (ju === Uu.DELETE || ju === Uu.ADD && Eu === Uu.DELETE_AND_ADD) && (this.ops[uu] = Uu.DELETE_AND_ADD), uu < 32 ? this.dirtyLow |= 1 << uu : this.dirtyHigh |= 1 << uu - 32
+      record(GG, bG) {
+        const ZG = this.ops[GG];
+        0 === ZG ? this.ops[GG] = bG : (ZG === SG.DELETE || ZG === SG.ADD && bG === SG.DELETE_AND_ADD) && (this.ops[GG] = SG.DELETE_AND_ADD), GG < 32 ? this.dirtyLow |= 1 << GG : this.dirtyHigh |= 1 << GG - 32
       }
-      recordDelete(uu, Eu) {
-        this.ops[uu] = Eu, uu < 32 ? this.dirtyLow |= 1 << uu : this.dirtyHigh |= 1 << uu - 32
+      recordDelete(GG, bG) {
+        this.ops[GG] = bG, GG < 32 ? this.dirtyLow |= 1 << GG : this.dirtyHigh |= 1 << GG - 32
       }
-      recordRaw(uu, Eu) {
-        this.record(uu, Eu)
+      recordRaw(GG, bG) {
+        this.record(GG, bG)
       }
-      operationAt(uu) {
-        const Eu = this.ops[uu];
-        return 0 === Eu ? void 0 : Eu
+      operationAt(GG) {
+        const bG = this.ops[GG];
+        return 0 === bG ? void 0 : bG
       }
-      setOperationAt(uu, Eu) {
-        this.ops[uu] = Eu
+      setOperationAt(GG, bG) {
+        this.ops[GG] = bG
       }
-      forEach(uu) {
-        this.forEachWithCtx(uu, AE)
+      forEach(GG) {
+        this.forEachWithCtx(GG, Db)
       }
-      forEachWithCtx(uu, Eu) {
-        let ju = this.dirtyLow,
-          su = this.dirtyHigh;
-        const Uu = this.ops;
-        for (; 0 !== ju;) {
-          const su = ju & -ju,
-            Zu = 31 - Math.clz32(su);
-          ju ^= su, Eu(uu, Zu, Uu[Zu])
+      forEachWithCtx(GG, bG) {
+        let ZG = this.dirtyLow,
+          wG = this.dirtyHigh;
+        const SG = this.ops;
+        for (; 0 !== ZG;) {
+          const wG = ZG & -ZG,
+            LG = 31 - Math.clz32(wG);
+          ZG ^= wG, bG(GG, LG, SG[LG])
         }
-        for (; 0 !== su;) {
-          const ju = su & -su,
-            Zu = 31 - Math.clz32(ju) + 32;
-          su ^= ju, Eu(uu, Zu, Uu[Zu])
+        for (; 0 !== wG;) {
+          const ZG = wG & -wG,
+            LG = 31 - Math.clz32(ZG) + 32;
+          wG ^= ZG, bG(GG, LG, SG[LG])
         }
       }
       size() {
-        return zE(this.dirtyLow) + zE(this.dirtyHigh)
+        return xb(this.dirtyLow) + xb(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class yE {
-      mO = new Map;
+    class Ob {
+      cK = new Map;
       pureOps = [];
-      record(uu, Eu) {
-        const ju = this.mO.get(uu);
-        void 0 === ju ? this.mO.set(uu, Eu) : (ju === Uu.DELETE || ju === Uu.ADD && Eu === Uu.DELETE_AND_ADD) && this.mO.set(uu, Uu.DELETE_AND_ADD)
+      record(GG, bG) {
+        const ZG = this.cK.get(GG);
+        void 0 === ZG ? this.cK.set(GG, bG) : (ZG === SG.DELETE || ZG === SG.ADD && bG === SG.DELETE_AND_ADD) && this.cK.set(GG, SG.DELETE_AND_ADD)
       }
-      recordDelete(uu, Eu) {
-        this.mO.set(uu, Eu)
+      recordDelete(GG, bG) {
+        this.cK.set(GG, bG)
       }
-      recordRaw(uu, Eu) {
-        this.mO.set(uu, Eu)
+      recordRaw(GG, bG) {
+        this.cK.set(GG, bG)
       }
-      recordPure(uu) {
-        this.pureOps.push([this.mO.size, uu])
+      recordPure(GG) {
+        this.pureOps.push([this.cK.size, GG])
       }
-      operationAt(uu) {
-        return this.mO.get(uu)
+      operationAt(GG) {
+        return this.cK.get(GG)
       }
-      setOperationAt(uu, Eu) {
-        this.mO.has(uu) && this.mO.set(uu, Eu)
+      setOperationAt(GG, bG) {
+        this.cK.has(GG) && this.cK.set(GG, bG)
       }
-      forEach(uu) {
-        this.forEachWithCtx(uu, AE)
+      forEach(GG) {
+        this.forEachWithCtx(GG, Db)
       }
-      forEachWithCtx(uu, Eu) {
-        const ju = this.pureOps;
-        if (ju.length > 0) {
-          let su = 0,
-            Uu = 0;
-          for (const [Zu, Xu] of this.mO) {
-            for (; su < ju.length && ju[su][0] <= Uu;) {
-              const Uu = ju[su++][1];
-              Eu(uu, -Uu, Uu)
+      forEachWithCtx(GG, bG) {
+        const ZG = this.pureOps;
+        if (ZG.length > 0) {
+          let wG = 0,
+            SG = 0;
+          for (const [LG, yG] of this.cK) {
+            for (; wG < ZG.length && ZG[wG][0] <= SG;) {
+              const SG = ZG[wG++][1];
+              bG(GG, -SG, SG)
             }
-            Eu(uu, Zu, Xu), Uu++
+            bG(GG, LG, yG), SG++
           }
-          for (; su < ju.length;) {
-            const Uu = ju[su++][1];
-            Eu(uu, -Uu, Uu)
+          for (; wG < ZG.length;) {
+            const SG = ZG[wG++][1];
+            bG(GG, -SG, SG)
           }
         } else
-          for (const [su, Uu] of this.mO) Eu(uu, su, Uu)
+          for (const [wG, SG] of this.cK) bG(GG, wG, SG)
       }
       size() {
-        return this.mO.size + this.pureOps.length
+        return this.cK.size + this.pureOps.length
       }
       has() {
-        return this.mO.size > 0 || this.pureOps.length > 0
+        return this.cK.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.mO.clear(), this.pureOps.length = 0
+        this.cK.clear(), this.pureOps.length = 0
       }
-      shift(uu) {
-        const Eu = new Map;
-        for (const [ju, su] of this.mO) Eu.set(ju + uu, su);
-        this.mO = Eu
+      shift(GG) {
+        const bG = new Map;
+        for (const [ZG, wG] of this.cK) bG.set(ZG + GG, wG);
+        this.cK = bG
       }
     }
 
-    function zE(uu) {
-      return 16843009 * ((uu = (858993459 & (uu -= uu >>> 1 & 1431655765)) + (uu >>> 2 & 858993459)) + (uu >>> 4) & 252645135) >>> 24
+    function xb(GG) {
+      return 16843009 * ((GG = (858993459 & (GG -= GG >>> 1 & 1431655765)) + (GG >>> 2 & 858993459)) + (GG >>> 4) & 252645135) >>> 24
     }
 
-    function RE(uu) {
-      if (void 0 === uu) return 0;
-      let Eu = 0;
-      for (let ju = 0, su = uu.length; ju < su; ju++) {
-        const su = uu[ju];
-        su < 32 && (Eu |= 1 << su)
+    function Bb(GG) {
+      if (void 0 === GG) return 0;
+      let bG = 0;
+      for (let ZG = 0, wG = GG.length; ZG < wG; ZG++) {
+        const wG = GG[ZG];
+        wG < 32 && (bG |= 1 << wG)
       }
-      return Eu
+      return bG
     }
 
-    function uj(uu) {
-      const Eu = uu.constructor;
-      if (Object.prototype.hasOwnProperty.call(Eu, Ju)) return Eu[Ju];
-      const ju = Eu[Symbol.metadata],
-        su = HE.isValidInstance(uu),
-        Uu = (ju?.[ou]?.length ?? 0) > 0,
-        Zu = function(uu) {
-          const Eu = [],
-            ju = [],
-            su = [],
-            Uu = [],
-            Zu = uu?.[au];
-          if (void 0 === Zu) return {
-            names: Eu,
-            types: ju,
-            tags: su,
-            encoders: Uu
+    function GZ(GG) {
+      const bG = GG.constructor;
+      if (Object.prototype.hasOwnProperty.call(bG, iG)) return bG[iG];
+      const ZG = bG[Symbol.metadata],
+        wG = tb.isValidInstance(GG),
+        SG = (ZG?.[IG]?.length ?? 0) > 0,
+        LG = function(GG) {
+          const bG = [],
+            ZG = [],
+            wG = [],
+            SG = [],
+            LG = GG?.[WG];
+          if (void 0 === LG) return {
+            names: bG,
+            types: ZG,
+            tags: wG,
+            encoders: SG
           };
-          const Xu = uu[du];
-          for (let lu = 0; lu <= Zu; lu++) {
-            const Zu = uu[lu];
-            void 0 !== Zu ? (Eu[lu] = Zu.name, ju[lu] = Zu.type, su[lu] = Zu.tag, Uu[lu] = Xu?.[lu]) : (Eu[lu] = void 0, ju[lu] = void 0, su[lu] = void 0, Uu[lu] = void 0)
+          const yG = GG[CG];
+          for (let kG = 0; kG <= LG; kG++) {
+            const LG = GG[kG];
+            void 0 !== LG ? (bG[kG] = LG.name, ZG[kG] = LG.type, wG[kG] = LG.tag, SG[kG] = yG?.[kG]) : (bG[kG] = void 0, ZG[kG] = void 0, wG[kG] = void 0, SG[kG] = void 0)
           }
           return {
-            names: Eu,
-            types: ju,
-            tags: su,
-            encoders: Uu
+            names: bG,
+            types: ZG,
+            tags: wG,
+            encoders: SG
           }
-        }(ju),
-        Xu = su && !Uu ? void 0 : Eu[bu],
-        lu = {
-          encoder: Eu[fu],
-          filter: Xu,
-          metadata: ju,
-          isSchema: su,
-          filterBitmask: su ? RE(ju?.[ou]) : 0,
-          hasAnyFullStateOnly: (ju?.[Vu]?.length ?? 0) > 0,
-          hasAnyUnreliable: (ju?.[mu]?.length ?? 0) > 0,
-          hasAnyStream: (ju?.[ru]?.length ?? 0) > 0,
-          hasAnyView: Uu,
-          fullStateOnlyBitmask: RE(ju?.[Vu]),
-          unreliableBitmask: RE(ju?.[mu]),
-          streamBitmask: RE(ju?.[ru]),
-          names: Zu.names,
-          types: Zu.types,
-          tags: Zu.tags,
-          encoders: Zu.encoders
+        }(ZG),
+        yG = wG && !SG ? void 0 : bG[pG],
+        kG = {
+          encoder: bG[YG],
+          filter: yG,
+          metadata: ZG,
+          isSchema: wG,
+          filterBitmask: wG ? Bb(ZG?.[IG]) : 0,
+          hasAnyFullStateOnly: (ZG?.[lG]?.length ?? 0) > 0,
+          hasAnyUnreliable: (ZG?.[vG]?.length ?? 0) > 0,
+          hasAnyStream: (ZG?.[jG]?.length ?? 0) > 0,
+          hasAnyView: SG,
+          fullStateOnlyBitmask: Bb(ZG?.[lG]),
+          unreliableBitmask: Bb(ZG?.[vG]),
+          streamBitmask: Bb(ZG?.[jG]),
+          names: LG.names,
+          types: LG.types,
+          tags: LG.tags,
+          encoders: LG.encoders
         };
-      return Object.defineProperty(Eu, Ju, {
-        value: lu,
+      return Object.defineProperty(bG, iG, {
+        value: kG,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), lu
+      }), kG
     }
 
-    function Ej(uu, Eu) {
-      if (void 0 !== uu.parentRef && Eu(uu.parentRef, uu._parentIndex)) return !0;
-      for (let ju = uu.extraParents; void 0 !== ju; ju = ju.next)
-        if (Eu(ju.ref, ju.index)) return !0;
+    function bZ(GG, bG) {
+      if (void 0 !== GG.parentRef && bG(GG.parentRef, GG._parentIndex)) return !0;
+      for (let ZG = GG.extraParents; void 0 !== ZG; ZG = ZG.next)
+        if (bG(ZG.ref, ZG.index)) return !0;
       return !1
     }
-    const jj = (uu, Eu) => {
-        uu.isFieldUnreliable(Eu) ? uu.ensureUnreliableRecorder().record(Eu, Uu.ADD) : uu.record(Eu, Uu.ADD)
+    const ZZ = (GG, bG) => {
+        GG.isFieldUnreliable(bG) ? GG.ensureUnreliableRecorder().record(bG, SG.ADD) : GG.record(bG, SG.ADD)
       },
-      sj = (uu, Eu) => uu(Eu);
+      wZ = (GG, bG) => GG(bG);
 
-    function Uj(uu, Eu, ju) {
-      const su = uu.refTarget;
-      if (void 0 !== su[hu]) {
-        if (uu.isPatchOnly) return;
-        if (Array.isArray(su.items)) {
-          const uu = su.items;
-          for (let su = 0, Uu = uu.length; su < Uu; su++) void 0 !== uu[su] && ju(Eu, su)
-        } else if (void 0 !== su.journal)
-          for (const [uu, Uu] of su.journal.keyByIndex) su.$items.has(Uu) && ju(Eu, uu);
-        else if (void 0 !== su.$items)
-          for (const uu of su.$items.keys()) ju(Eu, uu)
+    function SZ(GG, bG, ZG) {
+      const wG = GG.refTarget;
+      if (void 0 !== wG[dG]) {
+        if (GG.isPatchOnly) return;
+        if (Array.isArray(wG.items)) {
+          const GG = wG.items;
+          for (let wG = 0, SG = GG.length; wG < SG; wG++) void 0 !== GG[wG] && ZG(bG, wG)
+        } else if (void 0 !== wG.journal)
+          for (const [GG, SG] of wG.journal.keyByIndex) wG.$items.has(SG) && ZG(bG, GG);
+        else if (void 0 !== wG.$items)
+          for (const GG of wG.$items.keys()) ZG(bG, GG)
       } else {
-        const Uu = uu.metadata;
-        if (!Uu) return;
-        const Zu = Uu[au] ?? -1,
-          Xu = Uu[Ku],
-          lu = uu.encDescriptor.names;
-        for (let uu = 0; uu <= Zu; uu++) {
-          const Uu = lu[uu];
-          if (void 0 === Uu) continue;
-          if (Xu && Xu.includes(uu)) continue;
-          const Zu = su[Uu];
-          void 0 !== Zu && null !== Zu && ju(Eu, uu)
+        const SG = GG.metadata;
+        if (!SG) return;
+        const LG = SG[WG] ?? -1,
+          yG = SG[cG],
+          kG = GG.encDescriptor.names;
+        for (let GG = 0; GG <= LG; GG++) {
+          const SG = kG[GG];
+          if (void 0 === SG) continue;
+          if (yG && yG.includes(GG)) continue;
+          const LG = wG[SG];
+          void 0 !== LG && null !== LG && ZG(bG, GG)
         }
       }
     }
 
-    function Zj(uu, Eu, ju, su) {
-      ! function(uu, Eu, ju) {
-        if (!Eu) return;
-        const su = Eu[Yu],
-          Uu = !su._isSchema;
-        let Zu;
-        Uu ? (Eu = su.parent, ju = su.parentIndex, Zu = Eu?.[Yu].metadata) : Zu = su.metadata;
-        const Xu = (Zu?.[vu]?.includes(ju) ? Jj : 0) | (Zu?.[Vu]?.includes(ju) ? dj : 0),
-          lu = su.flags & oj | Xu,
-          qu = uu.flags;
-        uu.flags = qu | lu;
-        lu & ~qu & dj && (uu.reset(), uu.unreliableRecorder?.reset());
-        const fu = uu.root?.types;
-        if (!fu?.hasFilters) return;
-        const Cu = Zu?.[ou]?.includes(ju) ?? !1,
-          bu = Zu?.[ru]?.includes(ju) ?? !1,
-          cu = su.isFiltered || Cu || bu;
-        if (uu.isFiltered = cu, bu && !Uu) {
-          uu.isStreamCollection = !0;
-          const Eu = aE(uu.ref);
-          if (void 0 === Eu.priority) {
-            const uu = HE.getStreamPriority(Zu, ju);
-            void 0 !== uu && (Eu.priority = uu)
+    function LZ(GG, bG, ZG, wG) {
+      ! function(GG, bG, ZG) {
+        if (!bG) return;
+        const wG = bG[hG],
+          SG = !wG._isSchema;
+        let LG;
+        SG ? (bG = wG.parent, ZG = wG.parentIndex, LG = bG?.[hG].metadata) : LG = wG.metadata;
+        const yG = (LG?.[aG]?.includes(ZG) ? iZ : 0) | (LG?.[lG]?.includes(ZG) ? CZ : 0),
+          kG = wG.flags & IZ | yG,
+          UG = GG.flags;
+        GG.flags = UG | kG;
+        kG & ~UG & CZ && (GG.reset(), GG.unreliableRecorder?.reset());
+        const YG = GG.root?.types;
+        if (!YG?.hasFilters) return;
+        const VG = LG?.[IG]?.includes(ZG) ?? !1,
+          pG = LG?.[jG]?.includes(ZG) ?? !1,
+          fG = wG.isFiltered || VG || pG;
+        if (GG.isFiltered = fG, pG && !SG) {
+          GG.isStreamCollection = !0;
+          const bG = Wb(GG.ref);
+          if (void 0 === bG.priority) {
+            const GG = tb.getStreamPriority(LG, ZG);
+            void 0 !== GG && (bG.priority = GG)
           }
-          uu.root?.registerStream(uu.ref)
+          GG.root?.registerStream(GG.ref)
         }
-        if (cu) {
-          const Eu = lj(uu);
-          uu.isVisibilitySharedWithParent = su.isFiltered && Eu && !bu && (!Cu || Uu && Zu[ju].tag !== Ys)
+        if (fG) {
+          const bG = kZ(GG);
+          GG.isVisibilitySharedWithParent = wG.isFiltered && bG && !pG && (!VG || SG && LG[ZG].tag !== Kw)
         }
-      }(uu, Eu, ju), uu.isFullStateOnly || (uu.has() && uu.root?.enqueueChangeTree(uu), uu.unreliableRecorder?.has() && uu.root?.enqueueUnreliable(uu), uu.has() || uu.unreliableRecorder?.has() || uu.root?.enqueueChangeTree(uu))
+      }(GG, bG, ZG), GG.isFullStateOnly || (GG.has() && GG.root?.enqueueChangeTree(GG), GG.unreliableRecorder?.has() && GG.root?.enqueueUnreliable(GG), GG.has() || GG.unreliableRecorder?.has() || GG.root?.enqueueChangeTree(GG))
     }
 
-    function Xj(uu) {
-      const Eu = uu.pendingFilterRefresh;
-      for (let ju = 0; ju < Eu.length; ju++) {
-        const uu = Eu[ju];
-        0 !== (uu.flags & Pj) && qj(uu)
+    function yZ(GG) {
+      const bG = GG.pendingFilterRefresh;
+      for (let ZG = 0; ZG < bG.length; ZG++) {
+        const GG = bG[ZG];
+        0 !== (GG.flags & mZ) && UZ(GG)
       }
-      Eu.length = 0
+      bG.length = 0
     }
 
-    function lj(uu) {
-      return uu._isSchema || "string" !== typeof uu.refTarget[hu]
+    function kZ(GG) {
+      return GG._isSchema || "string" !== typeof GG.refTarget[dG]
     }
 
-    function qj(uu) {
-      uu.flags &= ~Pj;
-      const Eu = uu.root;
-      if (void 0 === Eu || void 0 === uu.parentRef) return;
-      const ju = lj(uu);
-      let su = Nj(uu, uu.parentRef, uu._parentIndex, ju);
-      for (let Zu = uu.extraParents; void 0 !== Zu && su !== cj; Zu = Zu.next) su |= Nj(uu, Zu.ref, Zu.index, ju);
-      if (0 === su) return;
-      uu.isVisibilitySharedWithParent = 0 !== (su & bj);
-      const Uu = 0 === (su & Cj);
-      Uu !== uu.isFiltered && (uu.isFiltered = Uu, Uu || uu.isFullStateOnly || (uu.forEachLiveWithCtx(uu, jj), uu.has() && Eu.enqueueChangeTree(uu), uu.unreliableRecorder?.has() && Eu.enqueueUnreliable(uu)), uu.forEachChildWithCtx(uu, Oj))
+    function UZ(GG) {
+      GG.flags &= ~mZ;
+      const bG = GG.root;
+      if (void 0 === bG || void 0 === GG.parentRef) return;
+      const ZG = kZ(GG);
+      let wG = QZ(GG, GG.parentRef, GG._parentIndex, ZG);
+      for (let LG = GG.extraParents; void 0 !== LG && wG !== fZ; LG = LG.next) wG |= QZ(GG, LG.ref, LG.index, ZG);
+      if (0 === wG) return;
+      GG.isVisibilitySharedWithParent = 0 !== (wG & pZ);
+      const SG = 0 === (wG & VZ);
+      SG !== GG.isFiltered && (GG.isFiltered = SG, SG || GG.isFullStateOnly || (GG.forEachLiveWithCtx(GG, ZZ), GG.has() && bG.enqueueChangeTree(GG), GG.unreliableRecorder?.has() && bG.enqueueUnreliable(GG)), GG.forEachChildWithCtx(GG, KZ))
     }
-    const fj = 1,
-      Cj = 2,
-      bj = 4,
-      cj = fj | Cj | bj;
+    const YZ = 1,
+      VZ = 2,
+      pZ = 4,
+      fZ = YZ | VZ | pZ;
 
-    function Nj(uu, Eu, ju, su) {
-      const Uu = Eu[Yu];
-      if (Uu.root !== uu.root || ! function(uu, Eu, ju) {
-          const su = Eu.refTarget;
-          if (Eu.isArray) {
-            const Eu = su.items,
-              Uu = Eu[ju];
-            if (void 0 !== Uu && Uu[Yu] === uu) return !0;
-            for (let ju = 0, su = Eu.length; ju < su; ju++) {
-              const su = Eu[ju];
-              if (void 0 !== su && su[Yu] === uu) return !0
+    function QZ(GG, bG, ZG, wG) {
+      const SG = bG[hG];
+      if (SG.root !== GG.root || ! function(GG, bG, ZG) {
+          const wG = bG.refTarget;
+          if (bG.isArray) {
+            const bG = wG.items,
+              SG = bG[ZG];
+            if (void 0 !== SG && SG[hG] === GG) return !0;
+            for (let ZG = 0, wG = bG.length; ZG < wG; ZG++) {
+              const wG = bG[ZG];
+              if (void 0 !== wG && wG[hG] === GG) return !0
             }
             return !1
           }
-          const Uu = Eu.getValue(ju);
-          return void 0 !== Uu && Uu[Yu] === uu
-        }(uu, Uu, ju)) return 0;
-      Uu.flags & Pj && qj(Uu);
-      let Zu = fj;
-      if (Uu._isSchema) {
-        void 0 !== Uu.encDescriptor.tags[ju] || Uu.isFieldStream(ju) || (Uu.isFiltered ? su && (Zu |= bj) : Zu |= Cj)
-      } else if (Uu.isFiltered) {
-        if (su && !Uu.isStreamCollection) {
-          const uu = Uu.parent?.[Yu];
-          (uu?._isSchema ? uu.encDescriptor.tags[Uu.parentIndex] : void 0) !== Ys && (Zu |= bj)
+          const SG = bG.getValue(ZG);
+          return void 0 !== SG && SG[hG] === GG
+        }(GG, SG, ZG)) return 0;
+      SG.flags & mZ && UZ(SG);
+      let LG = YZ;
+      if (SG._isSchema) {
+        void 0 !== SG.encDescriptor.tags[ZG] || SG.isFieldStream(ZG) || (SG.isFiltered ? wG && (LG |= pZ) : LG |= VZ)
+      } else if (SG.isFiltered) {
+        if (wG && !SG.isStreamCollection) {
+          const GG = SG.parent?.[hG];
+          (GG?._isSchema ? GG.encDescriptor.tags[SG.parentIndex] : void 0) !== Kw && (LG |= pZ)
         }
-      } else Zu |= Cj;
-      return Zu
+      } else LG |= VZ;
+      return LG
     }
-    const Oj = (uu, Eu, ju) => {
-      qj(Eu)
+    const KZ = (GG, bG, ZG) => {
+      UZ(bG)
     };
 
-    function Yj(uu, Eu, ju, su) {
-      if (uu.addParent(Eu, su), !ju) return;
-      const Uu = ju.add(uu);
-      ju !== uu.root && (uu.root = ju, Zj(uu, Eu, su));
-      const Zu = Eu?.[Yu];
-      if (void 0 !== Zu && void 0 !== Zu.subscribedViews && void 0 !== Eu[hu] && function(uu, Eu, ju, su) {
-          const Uu = uu.subscribedViews;
-          if (void 0 === Uu) return;
-          const Zu = uu.isStreamCollection,
-            Xu = Zu ? uu.ref : void 0,
-            lu = Zu ? void 0 : ju[Yu];
-          for (let qu = 0, fu = Uu.length; qu < fu; qu++) {
-            let uu = Uu[qu];
-            for (; 0 !== uu;) {
-              const ju = uu & -uu;
-              uu ^= ju;
-              const fu = 32 * qu + (31 - Math.clz32(ju)),
-                Cu = su.activeViews.get(fu),
-                bu = Cu?.deref();
-              void 0 !== bu ? Zu ? vE(Xu, fu, Eu) : void 0 !== lu && bu.markVisible(lu) : Uu[qu] &= ~ju
+    function hZ(GG, bG, ZG, wG) {
+      if (GG.addParent(bG, wG), !ZG) return;
+      const SG = ZG.add(GG);
+      ZG !== GG.root && (GG.root = ZG, LZ(GG, bG, wG));
+      const LG = bG?.[hG];
+      if (void 0 !== LG && void 0 !== LG.subscribedViews && void 0 !== bG[dG] && function(GG, bG, ZG, wG) {
+          const SG = GG.subscribedViews;
+          if (void 0 === SG) return;
+          const LG = GG.isStreamCollection,
+            yG = LG ? GG.ref : void 0,
+            kG = LG ? void 0 : ZG[hG];
+          for (let UG = 0, YG = SG.length; UG < YG; UG++) {
+            let GG = SG[UG];
+            for (; 0 !== GG;) {
+              const ZG = GG & -GG;
+              GG ^= ZG;
+              const YG = 32 * UG + (31 - Math.clz32(ZG)),
+                VG = wG.activeViews.get(YG),
+                pG = VG?.deref();
+              void 0 !== pG ? LG ? ab(yG, YG, bG) : void 0 !== kG && pG.markVisible(kG) : SG[UG] &= ~ZG
             }
           }
-        }(Zu, su, uu.ref, ju), Uu) {
-        let Eu = Mj[ej];
-        void 0 === Eu && (Eu = {
+        }(LG, wG, GG.ref, ZG), SG) {
+        let bG = zZ[EZ];
+        void 0 === bG && (bG = {
           parentRef: void 0,
           root: void 0
-        }, Mj[ej] = Eu), Eu.parentRef = uu.ref, Eu.root = ju, ej++, Dj(uu, Eu, Gj), ej--
+        }, zZ[EZ] = bG), bG.parentRef = GG.ref, bG.root = ZG, EZ++, JZ(GG, bG, oZ), EZ--
       }
     }
 
-    function hj(uu, Eu, ju) {
-      uu(Eu, ju)
+    function dZ(GG, bG, ZG) {
+      GG(bG, ZG)
     }
 
-    function Dj(uu, Eu, ju) {
-      const su = uu.refTarget;
-      if (su[hu]) {
-        if ("string" !== typeof su[hu]) {
-          const uu = su.items;
-          if (void 0 !== uu)
-            for (let su = 0, Uu = uu.length; su < Uu; su++) {
-              const Uu = uu[su];
-              Uu && ju(Eu, Uu[Yu], su)
+    function JZ(GG, bG, ZG) {
+      const wG = GG.refTarget;
+      if (wG[dG]) {
+        if ("string" !== typeof wG[dG]) {
+          const GG = wG.items;
+          if (void 0 !== GG)
+            for (let wG = 0, SG = GG.length; wG < SG; wG++) {
+              const SG = GG[wG];
+              SG && ZG(bG, SG[hG], wG)
             } else {
-              const uu = su.$items,
-                Uu = su._collectionIndexes;
-              for (const su of uu.keys()) {
-                const Zu = uu.get(su);
-                Zu && ju(Eu, Zu[Yu], Uu?.[su] ?? su)
+              const GG = wG.$items,
+                SG = wG._collectionIndexes;
+              for (const wG of GG.keys()) {
+                const LG = GG.get(wG);
+                LG && ZG(bG, LG[hG], SG?.[wG] ?? wG)
               }
             }
         }
       } else {
-        const Uu = uu.metadata,
-          Zu = Uu?.[Pu];
-        if (!Zu) return;
-        const Xu = uu.encDescriptor.names;
-        for (let uu = 0, lu = Zu.length; uu < lu; uu++) {
-          const Uu = Zu[uu],
-            lu = su[Xu[Uu]];
-          lu && ju(Eu, lu[Yu], Uu)
+        const SG = GG.metadata,
+          LG = SG?.[mG];
+        if (!LG) return;
+        const yG = GG.encDescriptor.names;
+        for (let GG = 0, kG = LG.length; GG < kG; GG++) {
+          const SG = LG[GG],
+            kG = wG[yG[SG]];
+          kG && ZG(bG, kG[hG], SG)
         }
       }
     }
 
-    function gj(uu, Eu, ju) {
-      Eu.root !== uu ? Eu.setRoot(uu) : uu.add(Eu)
+    function rZ(GG, bG, ZG) {
+      bG.root !== GG ? bG.setRoot(GG) : GG.add(bG)
     }
-    const Mj = [];
-    let ej = 0;
+    const zZ = [];
+    let EZ = 0;
 
-    function Gj(uu, Eu, ju) {
-      if (Eu.root === uu.root) return uu.root.add(Eu), void uu.root.moveNextToParent(Eu);
-      Eu.setParent(uu.parentRef, uu.root, ju)
+    function oZ(GG, bG, ZG) {
+      if (bG.root === GG.root) return GG.root.add(bG), void GG.root.moveNextToParent(bG);
+      bG.setParent(GG.parentRef, GG.root, ZG)
     }
 
-    function pj(uu, Eu, ju) {
-      const su = (3 & ju) << 3;
-      return ju < 4 ? uu >>> su & 255 : Eu >>> su & 255
+    function XZ(GG, bG, ZG) {
+      const wG = (3 & ZG) << 3;
+      return ZG < 4 ? GG >>> wG & 255 : bG >>> wG & 255
     }
-    const wj = (uu, Eu, ju) => uu(Eu, ju);
-    const Jj = 16,
-      dj = 32,
-      aj = 128,
-      Pj = 256,
-      oj = Jj | dj;
-    class kj {
+    const uZ = (GG, bG, ZG) => GG(bG, ZG);
+    const iZ = 16,
+      CZ = 32,
+      WZ = 128,
+      mZ = 256,
+      IZ = iZ | CZ;
+    class FZ {
       ref;
       refTarget;
       get isArray() {
@@ -3302,183 +3302,183 @@ export const modules = {
       get isFiltered() {
         return 0 !== (1 & this.flags)
       }
-      set isFiltered(uu) {
-        this.flags = uu ? 1 | this.flags : -2 & this.flags
+      set isFiltered(GG) {
+        this.flags = GG ? 1 | this.flags : -2 & this.flags
       }
       get isVisibilitySharedWithParent() {
         return 0 !== (2 & this.flags)
       }
-      set isVisibilitySharedWithParent(uu) {
-        this.flags = uu ? 2 | this.flags : -3 & this.flags
+      set isVisibilitySharedWithParent(GG) {
+        this.flags = GG ? 2 | this.flags : -3 & this.flags
       }
       get isNew() {
         return 0 !== (4 & this.flags)
       }
-      set isNew(uu) {
-        this.flags = uu ? 4 | this.flags : -5 & this.flags
+      set isNew(GG) {
+        this.flags = GG ? 4 | this.flags : -5 & this.flags
       }
       get isUnreliable() {
         return 0 !== (8 & this.flags)
       }
-      set isUnreliable(uu) {
-        this.flags = uu ? 8 | this.flags : -9 & this.flags
+      set isUnreliable(GG) {
+        this.flags = GG ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & Jj)
+        return 0 !== (this.flags & iZ)
       }
-      set isPatchOnly(uu) {
-        this.flags = uu ? this.flags | Jj : this.flags & ~Jj
+      set isPatchOnly(GG) {
+        this.flags = GG ? this.flags | iZ : this.flags & ~iZ
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & dj)
+        return 0 !== (this.flags & CZ)
       }
-      set isFullStateOnly(uu) {
-        this.flags = uu ? this.flags | dj : this.flags & ~dj
+      set isFullStateOnly(GG) {
+        this.flags = GG ? this.flags | CZ : this.flags & ~CZ
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
       }
-      set isStreamCollection(uu) {
-        this.flags = uu ? 64 | this.flags : -65 & this.flags
+      set isStreamCollection(GG) {
+        this.flags = GG ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & aj)
+        return 0 !== (this.flags & WZ)
       }
-      set needsRestage(uu) {
-        this.flags = uu ? this.flags | aj : -129 & this.flags
+      set needsRestage(GG) {
+        this.flags = GG ? this.flags | WZ : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new nE(this.metadata?.[au] ?? 0) : new yE), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new Nb(this.metadata?.[WG] ?? 0) : new Ob), this.unreliableRecorder
       }
-      isFieldUnreliable(uu) {
-        const Eu = this.encDescriptor;
-        return !!Eu.hasAnyUnreliable && (uu < 32 ? 0 !== (Eu.unreliableBitmask & 1 << uu) : HE.hasUnreliableAtIndex(this.metadata, uu))
+      isFieldUnreliable(GG) {
+        const bG = this.encDescriptor;
+        return !!bG.hasAnyUnreliable && (GG < 32 ? 0 !== (bG.unreliableBitmask & 1 << GG) : tb.hasUnreliableAtIndex(this.metadata, GG))
       }
-      isFieldFullStateOnly(uu) {
+      isFieldFullStateOnly(GG) {
         if (this.isFullStateOnly) return !0;
-        const Eu = this.encDescriptor;
-        return !!Eu.hasAnyFullStateOnly && (uu < 32 ? 0 !== (Eu.fullStateOnlyBitmask & 1 << uu) : HE.hasFullStateOnlyAtIndex(this.metadata, uu))
+        const bG = this.encDescriptor;
+        return !!bG.hasAnyFullStateOnly && (GG < 32 ? 0 !== (bG.fullStateOnlyBitmask & 1 << GG) : tb.hasFullStateOnlyAtIndex(this.metadata, GG))
       }
-      isFieldStream(uu) {
-        const Eu = this.encDescriptor;
-        return !!Eu.hasAnyStream && (uu < 32 ? 0 !== (Eu.streamBitmask & 1 << uu) : HE.hasStreamAtIndex(this.metadata, uu))
+      isFieldStream(GG) {
+        const bG = this.encDescriptor;
+        return !!bG.hasAnyStream && (GG < 32 ? 0 !== (bG.streamBitmask & 1 << GG) : tb.hasStreamAtIndex(this.metadata, GG))
       }
-      constructor(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu;
-        this.ref = uu, this.refTarget = Eu;
-        const ju = uj(uu);
-        this.encDescriptor = ju, this.metadata = ju.metadata;
-        const su = ju.isSchema;
-        if (this._isSchema = su, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, su) {
-          const uu = this.metadata?.[au] ?? 0;
-          uu > 7 && (this.ops = new Uint8Array(uu + 1))
+      constructor(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : GG;
+        this.ref = GG, this.refTarget = bG;
+        const ZG = GZ(GG);
+        this.encDescriptor = ZG, this.metadata = ZG.metadata;
+        const wG = ZG.isSchema;
+        if (this._isSchema = wG, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, wG) {
+          const GG = this.metadata?.[WG] ?? 0;
+          GG > 7 && (this.ops = new Uint8Array(GG + 1))
         } else this.collDirty = new Map
       }
-      _opAt(uu) {
-        const Eu = this.ops;
-        if (void 0 !== Eu) return Eu[uu];
-        const ju = (3 & uu) << 3;
-        return uu < 4 ? this.opsLow >>> ju & 255 : this.opsHigh >>> ju & 255
+      _opAt(GG) {
+        const bG = this.ops;
+        if (void 0 !== bG) return bG[GG];
+        const ZG = (3 & GG) << 3;
+        return GG < 4 ? this.opsLow >>> ZG & 255 : this.opsHigh >>> ZG & 255
       }
-      _opPut(uu, Eu) {
-        const ju = this.ops;
-        if (void 0 !== ju) return void(ju[uu] = Eu);
-        const su = (3 & uu) << 3,
-          Uu = ~(255 << su);
-        uu < 4 ? this.opsLow = this.opsLow & Uu | Eu << su : this.opsHigh = this.opsHigh & Uu | Eu << su
+      _opPut(GG, bG) {
+        const ZG = this.ops;
+        if (void 0 !== ZG) return void(ZG[GG] = bG);
+        const wG = (3 & GG) << 3,
+          SG = ~(255 << wG);
+        GG < 4 ? this.opsLow = this.opsLow & SG | bG << wG : this.opsHigh = this.opsHigh & SG | bG << wG
       }
-      _markDirty(uu) {
-        uu < 32 ? this.dirtyLow |= 1 << uu : this.dirtyHigh |= 1 << uu - 32
+      _markDirty(GG) {
+        GG < 32 ? this.dirtyLow |= 1 << GG : this.dirtyHigh |= 1 << GG - 32
       }
-      record(uu, Eu) {
+      record(GG, bG) {
         if (this._isSchema) {
-          const ju = this._opAt(uu);
-          0 === ju ? this._opPut(uu, Eu) : (ju === Uu.DELETE || ju === Uu.ADD && Eu === Uu.DELETE_AND_ADD) && this._opPut(uu, Uu.DELETE_AND_ADD), this._markDirty(uu)
+          const ZG = this._opAt(GG);
+          0 === ZG ? this._opPut(GG, bG) : (ZG === SG.DELETE || ZG === SG.ADD && bG === SG.DELETE_AND_ADD) && this._opPut(GG, SG.DELETE_AND_ADD), this._markDirty(GG)
         } else {
-          const ju = this.collDirty,
-            su = ju.get(uu);
-          let Zu;
-          Zu = void 0 === su ? Eu : su === Uu.DELETE || su === Uu.ADD && Eu === Uu.DELETE_AND_ADD ? Uu.DELETE_AND_ADD : su, ju.set(uu, Zu)
+          const ZG = this.collDirty,
+            wG = ZG.get(GG);
+          let LG;
+          LG = void 0 === wG ? bG : wG === SG.DELETE || wG === SG.ADD && bG === SG.DELETE_AND_ADD ? SG.DELETE_AND_ADD : wG, ZG.set(GG, LG)
         }
       }
-      recordDelete(uu, Eu) {
-        this._isSchema ? (this._opPut(uu, Eu), this._markDirty(uu)) : this.collDirty.set(uu, Eu)
+      recordDelete(GG, bG) {
+        this._isSchema ? (this._opPut(GG, bG), this._markDirty(GG)) : this.collDirty.set(GG, bG)
       }
-      recordRaw(uu, Eu) {
-        this._isSchema ? (this._opPut(uu, Eu), this._markDirty(uu)) : this.collDirty.set(uu, Eu)
+      recordRaw(GG, bG) {
+        this._isSchema ? (this._opPut(GG, bG), this._markDirty(GG)) : this.collDirty.set(GG, bG)
       }
-      recordPure(uu) {
+      recordPure(GG) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
-        (this.collPureOps ??= []).push([this.collDirty.size, uu])
+        (this.collPureOps ??= []).push([this.collDirty.size, GG])
       }
-      operationAt(uu) {
+      operationAt(GG) {
         if (this._isSchema) {
-          const Eu = this._opAt(uu);
-          return 0 === Eu ? void 0 : Eu
+          const bG = this._opAt(GG);
+          return 0 === bG ? void 0 : bG
         }
-        return this.collDirty.get(uu)
+        return this.collDirty.get(GG)
       }
-      setOperationAt(uu, Eu) {
-        if (this._isSchema) this._opPut(uu, Eu);
+      setOperationAt(GG, bG) {
+        if (this._isSchema) this._opPut(GG, bG);
         else {
-          const ju = this.collDirty;
-          ju.has(uu) && ju.set(uu, Eu)
+          const ZG = this.collDirty;
+          ZG.has(GG) && ZG.set(GG, bG)
         }
       }
-      forEach(uu) {
-        this.forEachWithCtx(uu, wj)
+      forEach(GG) {
+        this.forEachWithCtx(GG, uZ)
       }
-      forEachWithCtx(uu, Eu) {
+      forEachWithCtx(GG, bG) {
         if (this._isSchema) {
-          let ju = this.dirtyLow,
-            su = this.dirtyHigh;
-          const Uu = this.ops;
-          if (void 0 !== Uu) {
-            for (; 0 !== ju;) {
-              const su = ju & -ju,
-                Zu = 31 - Math.clz32(su);
-              ju ^= su, Eu(uu, Zu, Uu[Zu])
+          let ZG = this.dirtyLow,
+            wG = this.dirtyHigh;
+          const SG = this.ops;
+          if (void 0 !== SG) {
+            for (; 0 !== ZG;) {
+              const wG = ZG & -ZG,
+                LG = 31 - Math.clz32(wG);
+              ZG ^= wG, bG(GG, LG, SG[LG])
             }
-            for (; 0 !== su;) {
-              const ju = su & -su,
-                Zu = 31 - Math.clz32(ju) + 32;
-              su ^= ju, Eu(uu, Zu, Uu[Zu])
+            for (; 0 !== wG;) {
+              const ZG = wG & -wG,
+                LG = 31 - Math.clz32(ZG) + 32;
+              wG ^= ZG, bG(GG, LG, SG[LG])
             }
           } else {
-            const su = this.opsLow,
-              Uu = this.opsHigh;
-            for (; 0 !== ju;) {
-              const Zu = ju & -ju,
-                Xu = 31 - Math.clz32(Zu);
-              ju ^= Zu, Eu(uu, Xu, pj(su, Uu, Xu))
+            const wG = this.opsLow,
+              SG = this.opsHigh;
+            for (; 0 !== ZG;) {
+              const LG = ZG & -ZG,
+                yG = 31 - Math.clz32(LG);
+              ZG ^= LG, bG(GG, yG, XZ(wG, SG, yG))
             }
           }
           return
         }
-        const ju = this.collDirty,
-          su = this.collPureOps;
-        if (void 0 !== su && su.length > 0) {
-          let Uu = 0,
-            Zu = 0;
-          for (const [Xu, lu] of ju) {
-            for (; Uu < su.length && su[Uu][0] <= Zu;) {
-              const ju = su[Uu++][1];
-              Eu(uu, -ju, ju)
+        const ZG = this.collDirty,
+          wG = this.collPureOps;
+        if (void 0 !== wG && wG.length > 0) {
+          let SG = 0,
+            LG = 0;
+          for (const [yG, kG] of ZG) {
+            for (; SG < wG.length && wG[SG][0] <= LG;) {
+              const ZG = wG[SG++][1];
+              bG(GG, -ZG, ZG)
             }
-            Eu(uu, Xu, lu), Zu++
+            bG(GG, yG, kG), LG++
           }
-          for (; Uu < su.length;) {
-            const ju = su[Uu++][1];
-            Eu(uu, -ju, ju)
+          for (; SG < wG.length;) {
+            const ZG = wG[SG++][1];
+            bG(GG, -ZG, ZG)
           }
         } else
-          for (const [Uu, Zu] of ju) Eu(uu, Uu, Zu)
+          for (const [SG, LG] of ZG) bG(GG, SG, LG)
       }
       size() {
-        return this._isSchema ? zE(this.dirtyLow) + zE(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? xb(this.dirtyLow) + xb(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,81 +3491,81 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(uu, Eu) {
+      insertAt(GG, bG) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const ju = this.collDirty,
-          su = new Map,
-          Zu = !this.paused && !this.isFullStateOnly;
-        if (uu > 0)
-          for (const [Uu, Xu] of ju) Uu < uu && su.set(Uu, Xu);
-        if (Zu)
-          for (let Xu = 0; Xu < Eu; Xu++) su.set(uu + Xu, Uu.ADD);
-        for (const [Uu, Xu] of ju) Uu >= uu && su.set(Uu + Eu, Xu);
-        this.collDirty = su, Zu && this.root?.enqueueChangeTree(this)
+        const ZG = this.collDirty,
+          wG = new Map,
+          LG = !this.paused && !this.isFullStateOnly;
+        if (GG > 0)
+          for (const [SG, yG] of ZG) SG < GG && wG.set(SG, yG);
+        if (LG)
+          for (let yG = 0; yG < bG; yG++) wG.set(GG + yG, SG.ADD);
+        for (const [SG, yG] of ZG) SG >= GG && wG.set(SG + bG, yG);
+        this.collDirty = wG, LG && this.root?.enqueueChangeTree(this)
       }
-      removeAt(uu, Eu) {
+      removeAt(GG, bG) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const ju = this.collDirty,
-          su = uu + Eu;
-        let Uu = !1;
-        for (const Xu of ju.keys())
-          if (Xu >= su) {
-            Uu = !0;
+        const ZG = this.collDirty,
+          wG = GG + bG;
+        let SG = !1;
+        for (const yG of ZG.keys())
+          if (yG >= wG) {
+            SG = !0;
             break
-          } if (!Uu) {
-          for (let Eu = uu; Eu < su; Eu++) ju.delete(Eu);
+          } if (!SG) {
+          for (let bG = GG; bG < wG; bG++) ZG.delete(bG);
           return
         }
-        const Zu = new Map;
-        for (const [Xu, lu] of ju) Xu < uu ? Zu.set(Xu, lu) : Xu >= su && Zu.set(Xu - Eu, lu);
-        this.collDirty = Zu
+        const LG = new Map;
+        for (const [yG, kG] of ZG) yG < GG ? LG.set(yG, kG) : yG >= wG && LG.set(yG - bG, kG);
+        this.collDirty = LG
       }
-      unshift(uu) {
-        this.insertAt(0, uu)
+      unshift(GG) {
+        this.insertAt(0, GG)
       }
-      setRoot(uu) {
-        ! function(uu, Eu) {
-          uu.root = Eu;
-          const ju = Eu.add(uu);
-          Zj(uu, uu.parent, uu.parentIndex), ju && Dj(uu, Eu, gj)
-        }(this, uu)
+      setRoot(GG) {
+        ! function(GG, bG) {
+          GG.root = bG;
+          const ZG = bG.add(GG);
+          LZ(GG, GG.parent, GG.parentIndex), ZG && JZ(GG, bG, rZ)
+        }(this, GG)
       }
-      setParent(uu, Eu, ju) {
-        Yj(this, uu, Eu, ju)
+      setParent(GG, bG, ZG) {
+        hZ(this, GG, bG, ZG)
       }
-      forEachChild(uu) {
-        Dj(this, uu, hj)
+      forEachChild(GG) {
+        JZ(this, GG, dZ)
       }
-      forEachChildWithCtx(uu, Eu) {
-        Dj(this, uu, Eu)
+      forEachChildWithCtx(GG, bG) {
+        JZ(this, GG, bG)
       }
-      forEachLive(uu) {
-        Uj(this, uu, sj)
+      forEachLive(GG) {
+        SZ(this, GG, wZ)
       }
-      forEachLiveWithCtx(uu, Eu) {
-        Uj(this, uu, Eu)
+      forEachLiveWithCtx(GG, bG) {
+        SZ(this, GG, bG)
       }
-      operation(uu) {
-        this.paused || this.isFullStateOnly || (this.recordPure(uu), this.root?.enqueueChangeTree(this))
+      operation(GG) {
+        this.paused || this.isFullStateOnly || (this.recordPure(GG), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(uu, Eu, ju) {
-        if (!this.paused && !this.isFieldFullStateOnly(uu)) {
-          if (this.isFieldUnreliable(uu) && !this.isNew) {
-            const su = this.ensureUnreliableRecorder();
-            return ju ? su.recordRaw(uu, Eu) : su.record(uu, Eu), void this.root?.enqueueUnreliable(this)
+      _routeAndRecord(GG, bG, ZG) {
+        if (!this.paused && !this.isFieldFullStateOnly(GG)) {
+          if (this.isFieldUnreliable(GG) && !this.isNew) {
+            const wG = this.ensureUnreliableRecorder();
+            return ZG ? wG.recordRaw(GG, bG) : wG.record(GG, bG), void this.root?.enqueueUnreliable(this)
           }
-          ju ? this.recordRaw(uu, Eu) : this.record(uu, Eu), this.root?.enqueueChangeTree(this)
+          ZG ? this.recordRaw(GG, bG) : this.record(GG, bG), this.root?.enqueueChangeTree(this)
         }
       }
-      change(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Uu.ADD;
-        this._routeAndRecord(uu, Eu, !1)
+      change(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SG.ADD;
+        this._routeAndRecord(GG, bG, !1)
       }
-      indexedOperation(uu, Eu) {
-        this._routeAndRecord(uu, Eu, !0)
+      indexedOperation(GG, bG) {
+        this._routeAndRecord(GG, bG, !0)
       }
-      getChange(uu) {
-        return this.operationAt(uu)
+      getChange(GG) {
+        return this.operationAt(GG)
       }
       pause() {
         this.paused = !0
@@ -3573,60 +3573,60 @@ export const modules = {
       resume() {
         this.paused = !1
       }
-      untracked(uu) {
-        const Eu = this.paused;
+      untracked(GG) {
+        const bG = this.paused;
         this.paused = !0;
         try {
-          return uu()
+          return GG()
         } finally {
-          this.paused = Eu
+          this.paused = bG
         }
       }
-      markDirty(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Uu.ADD;
-        const ju = this.paused;
+      markDirty(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SG.ADD;
+        const ZG = this.paused;
         this.paused = !1;
         try {
-          this.change(uu, Eu)
+          this.change(GG, bG)
         } finally {
-          this.paused = ju
+          this.paused = ZG
         }
       }
-      getValue(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[cu](uu, Eu)
+      getValue(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[fG](GG, bG)
       }
-      delete(uu, Eu) {
-        if (void 0 === uu) {
+      delete(GG, bG) {
+        if (void 0 === GG) {
           try {
-            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${uu}'`)
-          } catch (lU) {
-            console.warn(lU)
+            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${GG}'`)
+          } catch (yS) {
+            console.warn(yS)
           }
           return
         }
-        if (this.paused || this.isFieldFullStateOnly(uu)) return this.getValue(uu);
-        const ju = this.isFieldUnreliable(uu) && !this.isNew;
-        ju ? this.ensureUnreliableRecorder().recordDelete(uu, Eu ?? Uu.DELETE) : this.recordDelete(uu, Eu ?? Uu.DELETE);
-        const su = this.getValue(uu);
-        return su && su[Yu] && this.root?.remove(su[Yu]), ju ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), su
+        if (this.paused || this.isFieldFullStateOnly(GG)) return this.getValue(GG);
+        const ZG = this.isFieldUnreliable(GG) && !this.isNew;
+        ZG ? this.ensureUnreliableRecorder().recordDelete(GG, bG ?? SG.DELETE) : this.recordDelete(GG, bG ?? SG.DELETE);
+        const wG = this.getValue(GG);
+        return wG && wG[hG] && this.root?.remove(wG[hG]), ZG ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), wG
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[gu]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[rG]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[gu]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[rG]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[gu]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[rG]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
-        const uu = uu => {
-          if (uu < 0) return;
-          const Eu = this.getValue(uu);
-          Eu && Eu[Yu] && Eu[Yu].discardAll()
+        const GG = GG => {
+          if (GG < 0) return;
+          const bG = this.getValue(GG);
+          bG && bG[hG] && bG[hG].discardAll()
         };
-        this.forEach(uu), this.unreliableRecorder?.forEach(uu), this.discard()
+        this.forEach(GG), this.unreliableRecorder?.forEach(GG), this.discard()
       }
       get changed() {
         return this.has() || (this.unreliableRecorder?.has() ?? !1)
@@ -3637,89 +3637,89 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(uu, Eu) {
-        ! function(uu, Eu, ju) {
-          if (uu.parentRef) {
-            if (uu.parentRef[Yu] === Eu[Yu]) return void(uu._parentIndex = ju);
-            if (Ej(uu, ((uu, ju) => uu[Yu] === Eu[Yu]))) return void(uu._parentIndex = ju)
+      addParent(GG, bG) {
+        ! function(GG, bG, ZG) {
+          if (GG.parentRef) {
+            if (GG.parentRef[hG] === bG[hG]) return void(GG._parentIndex = ZG);
+            if (bZ(GG, ((GG, ZG) => GG[hG] === bG[hG]))) return void(GG._parentIndex = ZG)
           }
-          void 0 === uu.parentRef ? (uu.parentRef = Eu, uu._parentIndex = ju) : (uu.extraParents = {
-            ref: uu.parentRef,
-            index: uu._parentIndex,
-            next: uu.extraParents
-          }, uu.parentRef = Eu, uu._parentIndex = ju)
-        }(this, uu, Eu)
+          void 0 === GG.parentRef ? (GG.parentRef = bG, GG._parentIndex = ZG) : (GG.extraParents = {
+            ref: GG.parentRef,
+            index: GG._parentIndex,
+            next: GG.extraParents
+          }, GG.parentRef = bG, GG._parentIndex = ZG)
+        }(this, GG, bG)
       }
-      setParentIndex(uu, Eu) {
-        ! function(uu, Eu, ju) {
-          if (void 0 !== uu.extraParents)
-            if (uu.parentRef[Yu] !== Eu[Yu]) {
-              for (let su = uu.extraParents; void 0 !== su; su = su.next)
-                if (su.ref[Yu] === Eu[Yu]) return void(su.index = ju)
-            } else uu._parentIndex = ju;
-          else uu._parentIndex = ju
-        }(this, uu, Eu)
+      setParentIndex(GG, bG) {
+        ! function(GG, bG, ZG) {
+          if (void 0 !== GG.extraParents)
+            if (GG.parentRef[hG] !== bG[hG]) {
+              for (let wG = GG.extraParents; void 0 !== wG; wG = wG.next)
+                if (wG.ref[hG] === bG[hG]) return void(wG.index = ZG)
+            } else GG._parentIndex = ZG;
+          else GG._parentIndex = ZG
+        }(this, GG, bG)
       }
       removeParent() {
-        return function(uu, Eu) {
-          if (uu.parentRef && uu.parentRef[Yu] === Eu[Yu]) return uu.extraParents ? (uu.parentRef = uu.extraParents.ref, uu._parentIndex = uu.extraParents.index, uu.extraParents = uu.extraParents.next) : (uu.parentRef = void 0, uu._parentIndex = void 0), !0;
-          let ju = uu.extraParents,
-            su = null;
-          for (; ju;) {
-            if (ju.ref[Yu] === Eu[Yu]) return su ? su.next = ju.next : uu.extraParents = ju.next, !0;
-            su = ju, ju = ju.next
+        return function(GG, bG) {
+          if (GG.parentRef && GG.parentRef[hG] === bG[hG]) return GG.extraParents ? (GG.parentRef = GG.extraParents.ref, GG._parentIndex = GG.extraParents.index, GG.extraParents = GG.extraParents.next) : (GG.parentRef = void 0, GG._parentIndex = void 0), !0;
+          let ZG = GG.extraParents,
+            wG = null;
+          for (; ZG;) {
+            if (ZG.ref[hG] === bG[hG]) return wG ? wG.next = ZG.next : GG.extraParents = ZG.next, !0;
+            wG = ZG, ZG = ZG.next
           }
-          return void 0 === uu.parentRef
+          return void 0 === GG.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
-      findParent(uu) {
-        return function(uu, Eu) {
-          if (void 0 !== uu.parentRef && Eu(uu.parentRef, uu._parentIndex)) return {
-            ref: uu.parentRef,
-            index: uu._parentIndex
+      findParent(GG) {
+        return function(GG, bG) {
+          if (void 0 !== GG.parentRef && bG(GG.parentRef, GG._parentIndex)) return {
+            ref: GG.parentRef,
+            index: GG._parentIndex
           };
-          for (let ju = uu.extraParents; void 0 !== ju; ju = ju.next)
-            if (Eu(ju.ref, ju.index)) return {
-              ref: ju.ref,
-              index: ju.index
+          for (let ZG = GG.extraParents; void 0 !== ZG; ZG = ZG.next)
+            if (bG(ZG.ref, ZG.index)) return {
+              ref: ZG.ref,
+              index: ZG.index
             }
-        }(this, uu)
+        }(this, GG)
       }
-      hasParent(uu) {
-        return Ej(this, uu)
+      hasParent(GG) {
+        return bZ(this, GG)
       }
-      indexInParent(uu) {
-        return function(uu, Eu) {
-          if (uu.parentRef && uu.parentRef[Yu] === Eu[Yu]) return uu._parentIndex;
-          for (let ju = uu.extraParents; void 0 !== ju; ju = ju.next)
-            if (ju.ref[Yu] === Eu[Yu]) return ju.index
-        }(this, uu)
+      indexInParent(GG) {
+        return function(GG, bG) {
+          if (GG.parentRef && GG.parentRef[hG] === bG[hG]) return GG._parentIndex;
+          for (let ZG = GG.extraParents; void 0 !== ZG; ZG = ZG.next)
+            if (ZG.ref[hG] === bG[hG]) return ZG.index
+        }(this, GG)
       }
       getAllParents() {
-        return function(uu) {
-          const Eu = [];
-          uu.parentRef && Eu.push({
-            ref: uu.parentRef,
-            index: uu._parentIndex
+        return function(GG) {
+          const bG = [];
+          GG.parentRef && bG.push({
+            ref: GG.parentRef,
+            index: GG._parentIndex
           });
-          let ju = uu.extraParents;
-          for (; ju;) Eu.push({
-            ref: ju.ref,
-            index: ju.index
-          }), ju = ju.next;
-          return Eu
+          let ZG = GG.extraParents;
+          for (; ZG;) bG.push({
+            ref: ZG.ref,
+            index: ZG.index
+          }), ZG = ZG.next;
+          return bG
         }(this)
       }
     }
-    class mj {
+    class vZ {
       ref;
       root = void 0;
       parentRef = void 0;
       paused = !1;
       isNew = !1;
       flags = 0;
-      constructor(uu) {
-        this.ref = uu
+      constructor(GG) {
+        this.ref = GG
       }
       change() {}
       delete() {}
@@ -3738,606 +3738,606 @@ export const modules = {
       discardAll() {}
       pause() {}
       resume() {}
-      untracked(uu) {
-        return uu()
+      untracked(GG) {
+        return GG()
       }
       markDirty() {}
-      forEachChild(uu) {
-        const Eu = this.ref;
-        if (Eu[hu]) {
-          if ("string" !== typeof Eu[hu])
-            for (const [ju, su] of Eu.entries()) su && uu(su[Yu], Eu._collectionIndexes?.[ju] ?? ju);
+      forEachChild(GG) {
+        const bG = this.ref;
+        if (bG[dG]) {
+          if ("string" !== typeof bG[dG])
+            for (const [ZG, wG] of bG.entries()) wG && GG(wG[hG], bG._collectionIndexes?.[ZG] ?? ZG);
           return
         }
-        const ju = Eu.constructor,
-          su = ju?.[Symbol.metadata];
-        if (!su) return;
-        const Uu = su[Pu] ?? [];
-        for (let Zu = 0; Zu < Uu.length; Zu++) {
-          const ju = Uu[Zu],
-            Xu = Eu[su[ju].name];
-          Xu && uu(Xu[Yu], ju)
+        const ZG = bG.constructor,
+          wG = ZG?.[Symbol.metadata];
+        if (!wG) return;
+        const SG = wG[mG] ?? [];
+        for (let LG = 0; LG < SG.length; LG++) {
+          const ZG = SG[LG],
+            yG = bG[wG[ZG].name];
+          yG && GG(yG[hG], ZG)
         }
       }
-      forEachChildWithCtx(uu, Eu) {
-        this.forEachChild(((ju, su) => Eu(uu, ju, su)))
+      forEachChildWithCtx(GG, bG) {
+        this.forEachChild(((ZG, wG) => bG(GG, ZG, wG)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function vj(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu;
-      var ju;
-      Object.defineProperty(uu, Yu, {
-        value: (ju = Eu, new mj(ju)),
+    function aZ(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : GG;
+      var ZG;
+      Object.defineProperty(GG, hG, {
+        value: (ZG = bG, new vZ(ZG)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function Kj(uu, Eu, ju, su, Zu, Xu, qu) {
-      void 0 !== qu ? qu(Eu, su, Xu) : "string" === typeof ju ? EE[ju]?.(Eu, su, Xu) : null != ju[Symbol.metadata] ? (EE.number(Eu, su[lu], Xu), (Zu & Uu.ADD) === Uu.ADD && uu.tryEncodeTypeId(Eu, ju, su.constructor, Xu)) : EE.number(Eu, su[lu], Xu)
+    function cZ(GG, bG, ZG, wG, LG, yG, UG) {
+      void 0 !== UG ? UG(bG, wG, yG) : "string" === typeof ZG ? bb[ZG]?.(bG, wG, yG) : null != ZG[Symbol.metadata] ? (bb.number(bG, wG[kG], yG), (LG & SG.ADD) === SG.ADD && GG.tryEncodeTypeId(bG, ZG, wG.constructor, yG)) : bb.number(bG, wG[kG], yG)
     }
-    const Vj = function(uu, Eu, ju, su, Zu, Xu, lu, qu) {
-        if (Eu[Xu.offset++] = 255 & (su | Zu), Zu === Uu.DELETE) return;
-        const fu = ju.encDescriptor,
-          Cu = ju.ref,
-          bu = Cu[Gu][su] ?? Cu[fu.names[su]];
-        Kj(uu, Eu, fu.types[su], bu, Zu, Xu, fu.encoders[su])
+    const lZ = function(GG, bG, ZG, wG, LG, yG, kG, UG) {
+        if (bG[yG.offset++] = 255 & (wG | LG), LG === SG.DELETE) return;
+        const YG = ZG.encDescriptor,
+          VG = ZG.ref,
+          pG = VG[oG][wG] ?? VG[YG.names[wG]];
+        cZ(GG, bG, YG.types[wG], pG, LG, yG, YG.encoders[wG])
       },
-      rj = function(uu, Eu, ju, su, Zu, Xu) {
-        if (Eu[Xu.offset++] = 255 & Zu, EE.number(Eu, su, Xu), Zu === Uu.DELETE) return;
-        const lu = ju.ref;
-        if ((Zu & Uu.ADD) === Uu.ADD) {
-          const uu = lu.$indexes.get(su);
-          EE.string(Eu, uu, Xu)
+      jZ = function(GG, bG, ZG, wG, LG, yG) {
+        if (bG[yG.offset++] = 255 & LG, bb.number(bG, wG, yG), LG === SG.DELETE) return;
+        const kG = ZG.ref;
+        if ((LG & SG.ADD) === SG.ADD) {
+          const GG = kG.$indexes.get(wG);
+          bb.string(bG, GG, yG)
         }
-        Kj(uu, Eu, lu[hu], lu[cu](su), Zu, Xu)
+        cZ(GG, bG, kG[dG], kG[fG](wG), LG, yG)
       },
-      Qj = function(uu, Eu, ju, su, Zu, Xu) {
-        if (Eu[Xu.offset++] = 255 & Zu, EE.number(Eu, su, Xu), Zu === Uu.DELETE) return;
-        const lu = ju.ref;
-        Kj(uu, Eu, lu[hu], lu[cu](su), Zu, Xu)
+      PZ = function(GG, bG, ZG, wG, LG, yG) {
+        if (bG[yG.offset++] = 255 & LG, bb.number(bG, wG, yG), LG === SG.DELETE) return;
+        const kG = ZG.ref;
+        cZ(GG, bG, kG[dG], kG[fG](wG), LG, yG)
       },
-      ij = function(uu, Eu, ju, su, Zu, Xu) {
-        const lu = ju.ref;
-        (Zu & Uu.ADD) === Uu.ADD && "function" === typeof lu.set ? rj(uu, Eu, ju, su, Zu, Xu) : Qj(uu, Eu, ju, su, Zu, Xu)
+      MZ = function(GG, bG, ZG, wG, LG, yG) {
+        const kG = ZG.ref;
+        (LG & SG.ADD) === SG.ADD && "function" === typeof kG.set ? jZ(GG, bG, ZG, wG, LG, yG) : PZ(GG, bG, ZG, wG, LG, yG)
       },
-      Wj = function(uu, Eu, ju, su, Zu, Xu, qu, fu) {
-        const Cu = ju.refTarget,
-          bu = Cu[hu],
-          Nu = "string" !== typeof bu;
-        let Ou;
-        if (fu && ju.isFiltered && Nu) {
-          const uu = Cu.tmpItems[su];
-          if (!uu) return;
-          if (Ou = uu[lu], Zu === Uu.DELETE) Zu = Uu.DELETE_BY_REFID;
-          else if ((Zu & Uu.ADD) === Uu.ADD) Zu = Uu.ADD_BY_REFID;
-          else if ((Zu & Uu.MOVE) === Uu.MOVE) return
-        } else if (Zu === Uu.DELETE && Nu) {
-          const uu = Cu.tmpItems[su];
-          if (!uu) return;
-          Ou = uu[lu], Zu = Uu.DELETE_BY_REFID
-        } else Ou = su;
-        if (Eu[Xu.offset++] = 255 & Zu, EE.number(Eu, Ou, Xu), Zu === Uu.DELETE || Zu === Uu.DELETE_BY_REFID) return;
-        Kj(uu, Eu, bu, Cu[cu](su, qu), Zu, Xu)
+      AZ = function(GG, bG, ZG, wG, LG, yG, UG, YG) {
+        const VG = ZG.refTarget,
+          pG = VG[dG],
+          QG = "string" !== typeof pG;
+        let KG;
+        if (YG && ZG.isFiltered && QG) {
+          const GG = VG.tmpItems[wG];
+          if (!GG) return;
+          if (KG = GG[kG], LG === SG.DELETE) LG = SG.DELETE_BY_REFID;
+          else if ((LG & SG.ADD) === SG.ADD) LG = SG.ADD_BY_REFID;
+          else if ((LG & SG.MOVE) === SG.MOVE) return
+        } else if (LG === SG.DELETE && QG) {
+          const GG = VG.tmpItems[wG];
+          if (!GG) return;
+          KG = GG[kG], LG = SG.DELETE_BY_REFID
+        } else KG = wG;
+        if (bG[yG.offset++] = 255 & LG, bb.number(bG, KG, yG), LG === SG.DELETE || LG === SG.DELETE_BY_REFID) return;
+        cZ(GG, bG, pG, VG[fG](wG, UG), LG, yG)
       };
 
-    function Sj(uu, Eu, ju, su, Zu, Xu, qu) {
-      const fu = uu.resyncVisited;
-      let Cu = fu.get(uu.currentRefId);
-      if (void 0 === Cu && fu.set(uu.currentRefId, Cu = new Set), Cu.add(su), void 0 !== Zu && ju === Uu.ADD && Zu !== Xu) {
-        const ju = Zu[lu];
-        void 0 !== ju && (uu.root.removeRef(ju), qu?.push({
-          ref: Eu,
-          refId: uu.currentRefId,
-          op: Uu.DELETE,
-          dynamicIndex: su,
+    function sZ(GG, bG, ZG, wG, LG, yG, UG) {
+      const YG = GG.resyncVisited;
+      let VG = YG.get(GG.currentRefId);
+      if (void 0 === VG && YG.set(GG.currentRefId, VG = new Set), VG.add(wG), void 0 !== LG && ZG === SG.ADD && LG !== yG) {
+        const ZG = LG[kG];
+        void 0 !== ZG && (GG.root.removeRef(ZG), UG?.push({
+          ref: bG,
+          refId: GG.currentRefId,
+          op: SG.DELETE,
+          dynamicIndex: wG,
           value: void 0,
-          previousValue: Zu
+          previousValue: LG
         }))
       }
     }
 
-    function Ij(uu, Eu, ju, su) {
-      const Uu = Eu[lu];
-      if (void 0 === Uu || ju.has(Uu)) return;
-      ju.add(Uu);
-      const Zu = Eu.constructor[Symbol.metadata],
-        Xu = Zu?.[Pu];
-      if (void 0 === Xu) return;
-      const qu = Zu[vu];
-      for (let lu = 0; lu < Xu.length; lu++) {
-        const Uu = Xu[lu];
-        if (void 0 !== qu && qu.includes(Uu)) continue;
-        const fu = Zu[Uu],
-          Cu = Eu[fu.name];
-        Cu && (ms.is(fu.type) ? Ij(uu, Cu, ju, su) : Fj(uu, Cu, ju, su))
+    function qZ(GG, bG, ZG, wG) {
+      const SG = bG[kG];
+      if (void 0 === SG || ZG.has(SG)) return;
+      ZG.add(SG);
+      const LG = bG.constructor[Symbol.metadata],
+        yG = LG?.[mG];
+      if (void 0 === yG) return;
+      const UG = LG[aG];
+      for (let kG = 0; kG < yG.length; kG++) {
+        const SG = yG[kG];
+        if (void 0 !== UG && UG.includes(SG)) continue;
+        const YG = LG[SG],
+          VG = bG[YG.name];
+        VG && (Iw.is(YG.type) ? qZ(GG, VG, ZG, wG) : nZ(GG, VG, ZG, wG))
       }
     }
 
-    function Fj(uu, Eu, ju, su) {
-      const Zu = Eu[Du] ?? Eu,
-        Xu = Zu[lu];
-      if (void 0 === Xu || ju.has(Xu)) return;
-      ju.add(Xu);
-      const qu = uu.resyncVisited.get(Xu);
-      if (void 0 === qu) return;
-      const fu = uu.root;
-      Zu[Ou](qu, ((uu, ju) => {
-        su?.push({
-          ref: Eu,
-          refId: Xu,
-          op: Uu.DELETE,
-          dynamicIndex: ju,
+    function nZ(GG, bG, ZG, wG) {
+      const LG = bG[JG] ?? bG,
+        yG = LG[kG];
+      if (void 0 === yG || ZG.has(yG)) return;
+      ZG.add(yG);
+      const UG = GG.resyncVisited.get(yG);
+      if (void 0 === UG) return;
+      const YG = GG.root;
+      LG[KG](UG, ((GG, ZG) => {
+        wG?.push({
+          ref: bG,
+          refId: yG,
+          op: SG.DELETE,
+          dynamicIndex: ZG,
           value: void 0,
-          previousValue: uu
+          previousValue: GG
         });
-        const Zu = uu?.[lu];
-        void 0 !== Zu && fu.removeRef(Zu)
-      }), (Eu => {
-        ms.isSchema(Eu) && Ij(uu, Eu, ju, su)
+        const LG = GG?.[kG];
+        void 0 !== LG && YG.removeRef(LG)
+      }), (bG => {
+        Iw.isSchema(bG) && qZ(GG, bG, ZG, wG)
       }))
     }
-    const Bj = 1,
-      Lj = 2,
-      tj = 3,
-      xj = 4,
-      Tj = 5;
+    const gZ = 1,
+      eZ = 2,
+      RZ = 3,
+      TZ = 4,
+      HZ = 5;
 
-    function Hj(uu, Eu, ju, su, Zu, Xu, qu, fu, Cu) {
-      const bu = uu.root;
-      let cu;
-      if ((Eu & Uu.DELETE) === Uu.DELETE) {
-        const uu = Zu?.[lu];
-        void 0 !== uu && bu.removeRef(uu), Eu !== Uu.DELETE_AND_ADD && ju[Nu](su), cu = void 0
+    function tZ(GG, bG, ZG, wG, LG, yG, UG, YG, VG) {
+      const pG = GG.root;
+      let fG;
+      if ((bG & SG.DELETE) === SG.DELETE) {
+        const GG = LG?.[kG];
+        void 0 !== GG && pG.removeRef(GG), bG !== SG.DELETE_AND_ADD && ZG[QG](wG), fG = void 0
       }
-      if (Eu === Uu.DELETE);
-      else if ("string" === typeof Xu) cu = ME[Xu](qu, fu);
-      else if (QE(Xu)) cu = function(uu, Eu, ju) {
-        return WE(uu, (0, ME[uu.wire])(Eu, ju))
-      }(Xu.quantized, qu, fu);
-      else if (ms.is(Xu)) {
-        const ju = ME.number(qu, fu);
-        if (cu = bu.refs.get(ju), (Eu & Uu.ADD) === Uu.ADD) {
-          const su = uu.getInstanceType(qu, fu, Xu);
-          cu || (cu = uu.createInstanceOfType(su)), bu.addRef(ju, cu, cu !== Zu || Eu === Uu.DELETE_AND_ADD && cu === Zu)
+      if (bG === SG.DELETE);
+      else if ("string" === typeof yG) fG = zb[yG](UG, YG);
+      else if (Pb(yG)) fG = function(GG, bG, ZG) {
+        return Ab(GG, (0, zb[GG.wire])(bG, ZG))
+      }(yG.quantized, UG, YG);
+      else if (Iw.is(yG)) {
+        const ZG = zb.number(UG, YG);
+        if (fG = pG.refs.get(ZG), (bG & SG.ADD) === SG.ADD) {
+          const wG = GG.getInstanceType(UG, YG, yG);
+          fG || (fG = GG.createInstanceOfType(wG)), pG.addRef(ZG, fG, fG !== LG || bG === SG.DELETE_AND_ADD && fG === LG)
         }
       } else {
-        const ju = (Ou = Object.keys(Xu)[0], eE[Ou]),
-          su = ME.number(qu, fu);
-        null !== uu.resyncVisited && function(uu, Eu) {
-          const ju = uu.resyncVisited;
-          ju.has(Eu) || ju.set(Eu, new Set)
-        }(uu, su);
-        const Nu = bu.refs.has(su) ? Zu || bu.refs.get(su) : ju.constructor.initializeForDecoder();
-        if (cu = Nu.clone(!0), cu[hu] = Object.values(Xu)[0], Zu) {
-          let uu = Zu[lu];
-          if (void 0 !== uu && su !== uu) {
-            (Eu & Uu.DELETE) !== Uu.DELETE && bu.removeRef(uu);
-            const ju = Zu.entries();
-            let su;
+        const ZG = (KG = Object.keys(yG)[0], Eb[KG]),
+          wG = zb.number(UG, YG);
+        null !== GG.resyncVisited && function(GG, bG) {
+          const ZG = GG.resyncVisited;
+          ZG.has(bG) || ZG.set(bG, new Set)
+        }(GG, wG);
+        const QG = pG.refs.has(wG) ? LG || pG.refs.get(wG) : ZG.constructor.initializeForDecoder();
+        if (fG = QG.clone(!0), fG[dG] = Object.values(yG)[0], LG) {
+          let GG = LG[kG];
+          if (void 0 !== GG && wG !== GG) {
+            (bG & SG.DELETE) !== SG.DELETE && pG.removeRef(GG);
+            const ZG = LG.entries();
+            let wG;
             for (;
-              (su = ju.next()) && !su.done;) {
-              const [Eu, ju] = su.value;
-              "object" === typeof ju && (uu = ju[lu]), Cu?.push({
-                ref: Zu,
-                refId: uu,
-                op: Uu.DELETE,
-                field: Eu,
+              (wG = ZG.next()) && !wG.done;) {
+              const [bG, ZG] = wG.value;
+              "object" === typeof ZG && (GG = ZG[kG]), VG?.push({
+                ref: LG,
+                refId: GG,
+                op: SG.DELETE,
+                field: bG,
                 value: void 0,
-                previousValue: ju
+                previousValue: ZG
               })
             }
           }
         }
-        bu.addRef(su, cu, Nu !== Zu || Eu === Uu.DELETE_AND_ADD && Nu === Zu)
+        pG.addRef(wG, fG, QG !== LG || bG === SG.DELETE_AND_ADD && QG === LG)
       }
-      var Ou;
-      return cu
+      var KG;
+      return fG
     }
-    const Aj = function(uu, Eu, ju, su, Uu) {
-        const Zu = Eu[ju.offset++],
-          Xu = su.constructor[Symbol.metadata],
-          lu = Zu >> 6 << 6,
-          qu = Zu % (lu || 255),
-          fu = Xu[qu];
-        if (void 0 === fu) return console.warn("@colyseus/schema: field not defined at", {
-          index: qu,
-          ref: su.constructor.name,
-          metadata: Xu
+    const DZ = function(GG, bG, ZG, wG, SG) {
+        const LG = bG[ZG.offset++],
+          yG = wG.constructor[Symbol.metadata],
+          kG = LG >> 6 << 6,
+          UG = LG % (kG || 255),
+          YG = yG[UG];
+        if (void 0 === YG) return console.warn("@colyseus/schema: field not defined at", {
+          index: UG,
+          ref: wG.constructor.name,
+          metadata: yG
         }), -1;
-        const Cu = !0 === fu.deprecated,
-          bu = Cu ? void 0 : su[cu](qu),
-          Nu = Hj(uu, lu, su, qu, bu, fu.type, Eu, ju, Uu);
-        Cu || (null !== Nu && void 0 !== Nu && (su[fu.name] = Nu), bu !== Nu && Uu?.push({
-          ref: su,
-          refId: uu.currentRefId,
-          op: lu,
-          field: fu.name,
-          value: Nu,
-          previousValue: bu
+        const VG = !0 === YG.deprecated,
+          pG = VG ? void 0 : wG[fG](UG),
+          QG = tZ(GG, kG, wG, UG, pG, YG.type, bG, ZG, SG);
+        VG || (null !== QG && void 0 !== QG && (wG[YG.name] = QG), pG !== QG && SG?.push({
+          ref: wG,
+          refId: GG.currentRefId,
+          op: kG,
+          field: YG.name,
+          value: QG,
+          previousValue: pG
         }))
       },
-      nj = function(uu, Eu, ju, su, Zu) {
-        const Xu = su[Du] ?? su,
-          lu = Eu[ju.offset++];
-        if (lu === Uu.CLEAR) return uu.removeChildRefs(Xu, Zu), void Xu.clear();
-        const qu = ME.number(Eu, ju),
-          fu = Xu[hu],
-          Cu = Xu.constructor.COLLECTION_KIND;
-        let bu;
-        (lu & Uu.ADD) === Uu.ADD ? Cu === Bj ? (bu = ME.string(Eu, ju), Xu.setIndex(qu, bu)) : bu = qu : bu = Xu.getIndex(qu);
-        const Nu = Xu[cu](qu),
-          Ou = Hj(uu, lu, su, qu, Nu, fu, Eu, ju, Zu);
-        if (null !== uu.resyncVisited && Sj(uu, su, lu, bu, Nu, Ou, Zu), null !== Ou && void 0 !== Ou) switch (Cu) {
-          case Bj:
-            Xu.$items.set(bu, Ou);
+      NZ = function(GG, bG, ZG, wG, LG) {
+        const yG = wG[JG] ?? wG,
+          kG = bG[ZG.offset++];
+        if (kG === SG.CLEAR) return GG.removeChildRefs(yG, LG), void yG.clear();
+        const UG = zb.number(bG, ZG),
+          YG = yG[dG],
+          VG = yG.constructor.COLLECTION_KIND;
+        let pG;
+        (kG & SG.ADD) === SG.ADD ? VG === gZ ? (pG = zb.string(bG, ZG), yG.setIndex(UG, pG)) : pG = UG : pG = yG.getIndex(UG);
+        const QG = yG[fG](UG),
+          KG = tZ(GG, kG, wG, UG, QG, YG, bG, ZG, LG);
+        if (null !== GG.resyncVisited && sZ(GG, wG, kG, pG, QG, KG, LG), null !== KG && void 0 !== KG) switch (VG) {
+          case gZ:
+            yG.$items.set(pG, KG);
             break;
-          case Lj:
-            Xu.$setAt(qu, Ou, null !== uu.resyncVisited && lu === Uu.ADD ? Uu.REPLACE : lu);
+          case eZ:
+            yG.$setAt(UG, KG, null !== GG.resyncVisited && kG === SG.ADD ? SG.REPLACE : kG);
             break;
-          case tj:
-          case xj:
-          case Tj:
-            Xu.$items.has(qu) || (Xu.$items.set(qu, Ou), "number" === typeof Xu.$refId && qu >= Xu.$refId && (Xu.$refId = qu + 1));
+          case RZ:
+          case TZ:
+          case HZ:
+            yG.$items.has(UG) || (yG.$items.set(UG, KG), "number" === typeof yG.$refId && UG >= yG.$refId && (yG.$refId = UG + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${Xu.constructor?.name} \u2014 item at index ${qu} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${yG.constructor?.name} \u2014 item at index ${UG} was not stored.`)
         }
-        Nu !== Ou && Zu?.push({
-          ref: su,
-          refId: uu.currentRefId,
-          op: lu,
-          dynamicIndex: bu,
-          value: Ou,
-          previousValue: Nu
+        QG !== KG && LG?.push({
+          ref: wG,
+          refId: GG.currentRefId,
+          op: kG,
+          dynamicIndex: pG,
+          value: KG,
+          previousValue: QG
         })
       },
-      yj = function(uu, Eu, ju, su, Zu) {
-        const Xu = su[Du] ?? su;
-        let lu, qu = Eu[ju.offset++];
-        if (qu === Uu.CLEAR) return uu.removeChildRefs(Xu, Zu), void Xu.clear();
-        if (qu === Uu.REVERSE) return void Xu.items.reverse();
-        if (qu === Uu.DELETE_BY_REFID) {
-          const qu = ME.number(Eu, ju),
-            fu = uu.root.refs.get(qu);
-          if (void 0 === fu) return;
-          if (uu.root.removeRef(qu), lu = Xu.findIndex((uu => uu === fu)), -1 === lu) return;
-          return Xu[Nu](lu), void Zu?.push({
-            ref: su,
-            refId: uu.currentRefId,
-            op: Uu.DELETE,
-            dynamicIndex: lu,
+      OZ = function(GG, bG, ZG, wG, LG) {
+        const yG = wG[JG] ?? wG;
+        let kG, UG = bG[ZG.offset++];
+        if (UG === SG.CLEAR) return GG.removeChildRefs(yG, LG), void yG.clear();
+        if (UG === SG.REVERSE) return void yG.items.reverse();
+        if (UG === SG.DELETE_BY_REFID) {
+          const UG = zb.number(bG, ZG),
+            YG = GG.root.refs.get(UG);
+          if (void 0 === YG) return;
+          if (GG.root.removeRef(UG), kG = yG.findIndex((GG => GG === YG)), -1 === kG) return;
+          return yG[QG](kG), void LG?.push({
+            ref: wG,
+            refId: GG.currentRefId,
+            op: SG.DELETE,
+            dynamicIndex: kG,
             value: void 0,
-            previousValue: fu
+            previousValue: YG
           })
         }
-        if (qu === Uu.ADD_BY_REFID) {
-          const su = ME.number(Eu, ju),
-            Uu = uu.root.refs.get(su);
-          Uu && (lu = Xu.findIndex((uu => uu === Uu))), -1 !== lu && void 0 !== lu || (lu = Xu.length)
-        } else lu = ME.number(Eu, ju);
-        const fu = Xu[hu];
-        let Cu = lu;
-        const bu = Xu.items[lu],
-          cu = Hj(uu, qu, su, lu, bu, fu, Eu, ju, Zu);
-        null !== uu.resyncVisited && Sj(uu, su, qu, lu, bu, cu, Zu), null !== cu && void 0 !== cu && cu !== bu && Xu.$setAt(lu, cu, null !== uu.resyncVisited && qu === Uu.ADD ? Uu.REPLACE : qu), bu !== cu && Zu?.push({
-          ref: su,
-          refId: uu.currentRefId,
-          op: qu,
-          dynamicIndex: Cu,
-          value: cu,
-          previousValue: bu
+        if (UG === SG.ADD_BY_REFID) {
+          const wG = zb.number(bG, ZG),
+            SG = GG.root.refs.get(wG);
+          SG && (kG = yG.findIndex((GG => GG === SG))), -1 !== kG && void 0 !== kG || (kG = yG.length)
+        } else kG = zb.number(bG, ZG);
+        const YG = yG[dG];
+        let VG = kG;
+        const pG = yG.items[kG],
+          fG = tZ(GG, UG, wG, kG, pG, YG, bG, ZG, LG);
+        null !== GG.resyncVisited && sZ(GG, wG, UG, kG, pG, fG, LG), null !== fG && void 0 !== fG && fG !== pG && yG.$setAt(kG, fG, null !== GG.resyncVisited && UG === SG.ADD ? SG.REPLACE : UG), pG !== fG && LG?.push({
+          ref: wG,
+          refId: GG.currentRefId,
+          op: UG,
+          dynamicIndex: VG,
+          value: fG,
+          previousValue: pG
         })
       };
-    class zj extends Error {}
+    class xZ extends Error {}
 
-    function Rj(uu, Eu, ju, su) {
-      if (!(uu instanceof Eu)) throw new zj(`a '${Eu.name}' was expected, but '${uu&&uu.constructor.name}' was provided in ${ju.constructor.name}#${su}`)
+    function BZ(GG, bG, ZG, wG) {
+      if (!(GG instanceof bG)) throw new xZ(`a '${bG.name}' was expected, but '${GG&&GG.constructor.name}' was provided in ${ZG.constructor.name}#${wG}`)
     }
-    const us = (uu, Eu) => {
-        const ju = uu.toString(),
-          su = Eu.toString();
-        return ju < su ? -1 : ju > su ? 1 : 0
+    const Gw = (GG, bG) => {
+        const ZG = GG.toString(),
+          wG = bG.toString();
+        return ZG < wG ? -1 : ZG > wG ? 1 : 0
       },
-      Es = {
-        get: (uu, Eu) => "symbol" === typeof Eu || isNaN(Eu) ? Reflect.get(uu, Eu) : uu.items[Eu],
-        set: (uu, Eu, ju) => {
-          if ("symbol" !== typeof Eu && !isNaN(Eu)) {
-            if (void 0 === ju || null === ju) uu.$deleteAt(Eu);
+      bw = {
+        get: (GG, bG) => "symbol" === typeof bG || isNaN(bG) ? Reflect.get(GG, bG) : GG.items[bG],
+        set: (GG, bG, ZG) => {
+          if ("symbol" !== typeof bG && !isNaN(bG)) {
+            if (void 0 === ZG || null === ZG) GG.$deleteAt(bG);
             else {
-              let su;
-              if (ju[Yu]) {
-                Rj(ju, uu[hu], uu, Eu);
-                const Zu = uu.items[Eu];
-                uu.isMovingItems ? (su = uu.$wireIndex(Number(Eu)), void 0 !== Zu ? ju[Yu].isNew ? uu[Yu].indexedOperation(su, Uu.MOVE_AND_ADD) : (uu[Yu].getChange(su) & Uu.DELETE) === Uu.DELETE ? uu[Yu].indexedOperation(su, Uu.DELETE_AND_MOVE) : uu[Yu].indexedOperation(su, Uu.MOVE) : ju[Yu].isNew && uu[Yu].indexedOperation(su, Uu.ADD), ju[Yu].setParent(uu, uu[Yu].root, su)) : su = uu.$changeAt(Number(Eu), ju), void 0 !== Zu && Zu[Yu].root?.remove(Zu[Yu])
-              } else su = uu.$changeAt(Number(Eu), ju);
-              uu.items[Eu] = ju, void 0 !== su && (uu.tmpItems[su] = ju)
+              let wG;
+              if (ZG[hG]) {
+                BZ(ZG, GG[dG], GG, bG);
+                const LG = GG.items[bG];
+                GG.isMovingItems ? (wG = GG.$wireIndex(Number(bG)), void 0 !== LG ? ZG[hG].isNew ? GG[hG].indexedOperation(wG, SG.MOVE_AND_ADD) : (GG[hG].getChange(wG) & SG.DELETE) === SG.DELETE ? GG[hG].indexedOperation(wG, SG.DELETE_AND_MOVE) : GG[hG].indexedOperation(wG, SG.MOVE) : ZG[hG].isNew && GG[hG].indexedOperation(wG, SG.ADD), ZG[hG].setParent(GG, GG[hG].root, wG)) : wG = GG.$changeAt(Number(bG), ZG), void 0 !== LG && LG[hG].root?.remove(LG[hG])
+              } else wG = GG.$changeAt(Number(bG), ZG);
+              GG.items[bG] = ZG, void 0 !== wG && (GG.tmpItems[wG] = ZG)
             }
             return !0
           }
-          return Reflect.set(uu, Eu, ju)
+          return Reflect.set(GG, bG, ZG)
         },
-        deleteProperty: (uu, Eu) => ("number" === typeof Eu ? uu.$deleteAt(Eu) : delete uu[Eu], !0),
-        has: (uu, Eu) => "symbol" === typeof Eu || isNaN(Number(Eu)) ? Reflect.has(uu, Eu) : Reflect.has(uu.items, Eu)
+        deleteProperty: (GG, bG) => ("number" === typeof bG ? GG.$deleteAt(bG) : delete GG[bG], !0),
+        has: (GG, bG) => "symbol" === typeof bG || isNaN(Number(bG)) ? Reflect.has(GG, bG) : Reflect.has(GG.items, bG)
       };
-    class ss {
-      [Yu];
-      [lu];
-      [Du];
-      [hu];
+    class Zw {
+      [hG];
+      [kG];
+      [JG];
+      [dG];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[fu] = Wj;
-      static[Cu] = yj;
-      static COLLECTION_KIND = Lj;
-      static[bu](uu, Eu, ju) {
-        if (!ju) return !0;
-        const su = uu[Du] ?? uu;
-        return "string" === typeof su[hu] || ju.isChangeTreeVisible(su.tmpItems[Eu]?.[Yu])
+      static[YG] = AZ;
+      static[VG] = OZ;
+      static COLLECTION_KIND = eZ;
+      static[pG](GG, bG, ZG) {
+        if (!ZG) return !0;
+        const wG = GG[JG] ?? GG;
+        return "string" === typeof wG[dG] || ZG.isChangeTreeVisible(wG.tmpItems[bG]?.[hG])
       }
-      static is(uu) {
-        return Array.isArray(uu) || void 0 !== uu.array
+      static is(GG) {
+        return Array.isArray(GG) || void 0 !== GG.array
       }
-      static from(uu) {
-        return new ss(...Array.from(uu))
+      static from(GG) {
+        return new Zw(...Array.from(GG))
       }
       constructor() {
-        this[hu] = void 0, this[Du] = this;
-        const uu = new Proxy(this, Es);
-        return Object.defineProperty(this, Yu, {
-          value: new kj(uu, this),
+        this[dG] = void 0, this[JG] = this;
+        const GG = new Proxy(this, bw);
+        return Object.defineProperty(this, hG, {
+          value: new FZ(GG, this),
           enumerable: !1,
           writable: !0
-        }), arguments.length > 0 && this.push(...arguments), uu
+        }), arguments.length > 0 && this.push(...arguments), GG
       }
       static initializeForDecoder() {
-        const uu = Object.create(ss.prototype);
-        uu.items = [], uu.isMovingItems = !1, uu._needsCompaction = !1, uu[hu] = void 0, uu[Du] = uu;
-        const Eu = new Proxy(uu, Es);
-        return vj(uu, Eu), Eu
+        const GG = Object.create(Zw.prototype);
+        GG.items = [], GG.isMovingItems = !1, GG._needsCompaction = !1, GG[dG] = void 0, GG[JG] = GG;
+        const bG = new Proxy(GG, bw);
+        return aZ(GG, bG), bG
       }
-      set length(uu) {
-        0 === uu ? this.clear() : uu < this.items.length ? this.splice(uu, this.length - uu) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
+      set length(GG) {
+        0 === GG ? this.clear() : GG < this.items.length ? this.splice(GG, this.length - GG) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
       }
       get length() {
         return this.items.length
       }
       pauseTracking() {
-        this[Yu].pause()
+        this[hG].pause()
       }
       resumeTracking() {
-        this[Yu].resume()
+        this[hG].resume()
       }
-      untracked(uu) {
-        return this[Yu].untracked(uu)
+      untracked(GG) {
+        return this[hG].untracked(GG)
       }
       get isTrackingPaused() {
-        return this[Yu].paused
+        return this[hG].paused
       }
       push() {
-        const uu = this[Du],
-          Eu = uu.items,
-          ju = uu.tmpItems,
-          su = uu[Yu],
-          Zu = uu[hu];
-        let Xu = ju.length;
-        for (let lu = 0, qu = arguments.length; lu < qu; lu++, Xu++) {
-          const qu = lu < 0 || arguments.length <= lu ? void 0 : arguments[lu];
-          if (void 0 === qu || null === qu) return;
-          "object" === typeof qu && Zu && Rj(qu, Zu, uu, lu), su.indexedOperation(Xu, Uu.ADD), Eu.push(qu), ju.push(qu), qu[Yu]?.setParent(this, su.root, Xu)
+        const GG = this[JG],
+          bG = GG.items,
+          ZG = GG.tmpItems,
+          wG = GG[hG],
+          LG = GG[dG];
+        let yG = ZG.length;
+        for (let kG = 0, UG = arguments.length; kG < UG; kG++, yG++) {
+          const UG = kG < 0 || arguments.length <= kG ? void 0 : arguments[kG];
+          if (void 0 === UG || null === UG) return;
+          "object" === typeof UG && LG && BZ(UG, LG, GG, kG), wG.indexedOperation(yG, SG.ADD), bG.push(UG), ZG.push(UG), UG[hG]?.setParent(this, wG.root, yG)
         }
-        return Xu
+        return yG
       }
       pop() {
-        const uu = this[Du],
-          Eu = uu.tmpItems,
-          ju = uu.deletedIndexes;
-        let su = -1;
-        for (let Zu = Eu.length - 1; Zu >= 0; Zu--)
-          if (!0 !== ju[Zu]) {
-            su = Zu;
+        const GG = this[JG],
+          bG = GG.tmpItems,
+          ZG = GG.deletedIndexes;
+        let wG = -1;
+        for (let LG = bG.length - 1; LG >= 0; LG--)
+          if (!0 !== ZG[LG]) {
+            wG = LG;
             break
-          } if (su < 0) return;
-        const Uu = uu.$isUnsentAdd(su);
-        return uu[Yu].delete(su), Uu ? uu.$cancelAdd(su) : ju[su] = !0, uu.items.pop()
+          } if (wG < 0) return;
+        const SG = GG.$isUnsentAdd(wG);
+        return GG[hG].delete(wG), SG ? GG.$cancelAdd(wG) : ZG[wG] = !0, GG.items.pop()
       }
-      at(uu) {
-        return uu < 0 && (uu += this.length), this.items[uu]
+      at(GG) {
+        return GG < 0 && (GG += this.length), this.items[GG]
       }
-      $wireIndex(uu) {
-        const Eu = this.deletedIndexes;
-        if (0 === Eu.length) return uu;
-        const ju = this.tmpItems;
-        let su = 0;
-        for (let Uu = 0; Uu < ju.length; Uu++)
-          if (!0 !== Eu[Uu]) {
-            if (su === uu) return Uu;
-            su++
-          } return ju.length + (uu - su)
+      $wireIndex(GG) {
+        const bG = this.deletedIndexes;
+        if (0 === bG.length) return GG;
+        const ZG = this.tmpItems;
+        let wG = 0;
+        for (let SG = 0; SG < ZG.length; SG++)
+          if (!0 !== bG[SG]) {
+            if (wG === GG) return SG;
+            wG++
+          } return ZG.length + (GG - wG)
       }
-      $isUnsentAdd(uu) {
-        const Eu = this[Yu];
-        return 0 === (576 & Eu.flags) && !Eu.paused && "string" !== typeof this[hu] && Eu.operationAt(uu) === Uu.ADD
+      $isUnsentAdd(GG) {
+        const bG = this[hG];
+        return 0 === (576 & bG.flags) && !bG.paused && "string" !== typeof this[dG] && bG.operationAt(GG) === SG.ADD
       }
-      $cancelAdd(uu) {
-        let Eu = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const ju = this[Yu],
-          su = this.tmpItems[uu];
-        this.tmpItems.splice(uu, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(uu, 1), ju.removeAt(uu, 1);
-        const Uu = su?.[Yu];
-        void 0 !== Uu && void 0 === Uu.root && Uu.removeParent(this), Eu && this.$reindexChildren(uu)
+      $cancelAdd(GG) {
+        let bG = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const ZG = this[hG],
+          wG = this.tmpItems[GG];
+        this.tmpItems.splice(GG, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(GG, 1), ZG.removeAt(GG, 1);
+        const SG = wG?.[hG];
+        void 0 !== SG && void 0 === SG.root && SG.removeParent(this), bG && this.$reindexChildren(GG)
       }
-      $reindexChildren(uu, Eu) {
-        if (!this[Yu].hasFilteredFields) return;
-        if ("string" === typeof this[hu]) return;
-        const ju = this.tmpItems,
-          su = ju.length;
-        if (void 0 !== Eu)
-          for (; uu < su && ju[uu] === Eu[uu];) uu++;
-        for (let Uu = uu; Uu < su; Uu++) ju[Uu]?.[Yu]?.setParentIndex(this, Uu)
+      $reindexChildren(GG, bG) {
+        if (!this[hG].hasFilteredFields) return;
+        if ("string" === typeof this[dG]) return;
+        const ZG = this.tmpItems,
+          wG = ZG.length;
+        if (void 0 !== bG)
+          for (; GG < wG && ZG[GG] === bG[GG];) GG++;
+        for (let SG = GG; SG < wG; SG++) ZG[SG]?.[hG]?.setParentIndex(this, SG)
       }
-      $changeAt(uu, Eu) {
-        if (void 0 === Eu || null === Eu) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[uu] === Eu) return;
-        const ju = void 0 !== this.items[uu] ? "object" === typeof Eu ? Uu.DELETE_AND_ADD : Uu.REPLACE : Uu.ADD,
-          su = this.$wireIndex(uu),
-          Zu = this[Yu];
-        return Zu.change(su, ju), Eu[Yu]?.setParent(this, Zu.root, su), su
+      $changeAt(GG, bG) {
+        if (void 0 === bG || null === bG) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[GG] === bG) return;
+        const ZG = void 0 !== this.items[GG] ? "object" === typeof bG ? SG.DELETE_AND_ADD : SG.REPLACE : SG.ADD,
+          wG = this.$wireIndex(GG),
+          LG = this[hG];
+        return LG.change(wG, ZG), bG[hG]?.setParent(this, LG.root, wG), wG
       }
-      $deleteAt(uu, Eu) {
-        this[Yu].delete(this.$wireIndex(uu), Eu)
+      $deleteAt(GG, bG) {
+        this[hG].delete(this.$wireIndex(GG), bG)
       }
-      $setAt(uu, Eu, ju) {
-        ju === Uu.ADD && void 0 !== this.items[uu] ? this.items.splice(uu, 0, Eu) : ju === Uu.DELETE_AND_MOVE ? (this.items.splice(uu, 1), this.items[uu] = Eu) : (uu > this.items.length && (this._needsCompaction = !0), this.items[uu] = Eu)
+      $setAt(GG, bG, ZG) {
+        ZG === SG.ADD && void 0 !== this.items[GG] ? this.items.splice(GG, 0, bG) : ZG === SG.DELETE_AND_MOVE ? (this.items.splice(GG, 1), this.items[GG] = bG) : (GG > this.items.length && (this._needsCompaction = !0), this.items[GG] = bG)
       }
       clear() {
-        const uu = this[Du];
-        if (0 === uu.items.length) return;
-        const Eu = uu[Yu];
-        Eu.forEachChild(((uu, ju) => {
-          Eu.root?.remove(uu)
-        })), Eu.discard(), Eu.operation(Uu.CLEAR), uu.items.length = 0, uu.tmpItems.length = 0
-      } [Mu]() {
-        const uu = this[Du] ?? this,
-          Eu = uu[Yu];
-        if (Eu.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const ju = uu.items;
-        for (let su = 0; su < ju.length; su++) ju[su]?.[Mu]?.();
-        uu.items.length = 0, uu.tmpItems.length = 0, uu.deletedIndexes.length = 0, Eu.recycle(), uu[lu] = void 0
+        const GG = this[JG];
+        if (0 === GG.items.length) return;
+        const bG = GG[hG];
+        bG.forEachChild(((GG, ZG) => {
+          bG.root?.remove(GG)
+        })), bG.discard(), bG.operation(SG.CLEAR), GG.items.length = 0, GG.tmpItems.length = 0
+      } [zG]() {
+        const GG = this[JG] ?? this,
+          bG = GG[hG];
+        if (bG.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const ZG = GG.items;
+        for (let wG = 0; wG < ZG.length; wG++) ZG[wG]?.[zG]?.();
+        GG.items.length = 0, GG.tmpItems.length = 0, GG.deletedIndexes.length = 0, bG.recycle(), GG[kG] = void 0
       }
       concat() {
-        return new ss(...this.items.concat(...arguments))
+        return new Zw(...this.items.concat(...arguments))
       }
-      join(uu) {
-        return this.items.join(uu)
+      join(GG) {
+        return this.items.join(GG)
       }
       reverse() {
-        const uu = this[Du],
-          Eu = uu[Yu];
-        if (Eu.has() || uu.deletedIndexes.length > 0) {
-          const Eu = uu.items.slice().reverse();
-          return this.clear(), this.push(...Eu), this
+        const GG = this[JG],
+          bG = GG[hG];
+        if (bG.has() || GG.deletedIndexes.length > 0) {
+          const bG = GG.items.slice().reverse();
+          return this.clear(), this.push(...bG), this
         }
-        return Eu.operation(Uu.REVERSE), uu.items.reverse(), uu.tmpItems.reverse(), uu.$reindexChildren(0), this
+        return bG.operation(SG.REVERSE), GG.items.reverse(), GG.tmpItems.reverse(), GG.$reindexChildren(0), this
       }
       shift() {
-        const uu = this[Du],
-          Eu = uu.items;
-        if (0 === Eu.length) return;
-        const ju = uu[Yu],
-          su = uu.deletedIndexes;
-        let Zu = 0;
-        for (; !0 === su[Zu];) Zu++;
-        const Xu = uu.$isUnsentAdd(Zu);
-        return ju.delete(Zu, Uu.DELETE), Xu ? uu.$cancelAdd(Zu) : su[Zu] = !0, Eu.shift()
+        const GG = this[JG],
+          bG = GG.items;
+        if (0 === bG.length) return;
+        const ZG = GG[hG],
+          wG = GG.deletedIndexes;
+        let LG = 0;
+        for (; !0 === wG[LG];) LG++;
+        const yG = GG.$isUnsentAdd(LG);
+        return ZG.delete(LG, SG.DELETE), yG ? GG.$cancelAdd(LG) : wG[LG] = !0, bG.shift()
       }
-      slice(uu, Eu) {
-        const ju = new ss;
-        return ju.push(...this.items.slice(uu, Eu)), ju
+      slice(GG, bG) {
+        const ZG = new Zw;
+        return ZG.push(...this.items.slice(GG, bG)), ZG
       }
       sort() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : us;
-        const Eu = this[Du];
-        Eu.isMovingItems = !0;
-        const ju = Eu[Yu];
-        return Eu.items.sort(uu).forEach(((uu, Eu) => ju.change(Eu, Uu.REPLACE))), Eu.tmpItems.sort(uu), Eu.$reindexChildren(0), Eu.isMovingItems = !1, this
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Gw;
+        const bG = this[JG];
+        bG.isMovingItems = !0;
+        const ZG = bG[hG];
+        return bG.items.sort(GG).forEach(((GG, bG) => ZG.change(bG, SG.REPLACE))), bG.tmpItems.sort(GG), bG.$reindexChildren(0), bG.isMovingItems = !1, this
       }
-      splice(uu, Eu) {
-        const ju = this[Du],
-          su = ju[Yu],
-          Zu = ju.items,
-          Xu = ju.tmpItems,
-          lu = ju.deletedIndexes,
-          qu = Zu.length,
-          fu = Xu.length;
-        for (var Cu = arguments.length, bu = new Array(Cu > 2 ? Cu - 2 : 0), cu = 2; cu < Cu; cu++) bu[cu - 2] = arguments[cu];
-        const Nu = bu.length,
-          Ou = [];
-        for (let Uu = 0; Uu < fu; Uu++) !0 !== lu[Uu] && Ou.push(Uu);
-        let hu;
-        if (qu > uu) {
-          void 0 === Eu && (Eu = qu - uu);
-          for (let Zu = uu; Zu < uu + Eu; Zu++) {
-            const uu = Ou[Zu],
-              Eu = ju.$isUnsentAdd(uu);
-            su.delete(uu, Uu.DELETE), Eu ? (hu ??= []).push(uu) : lu[uu] = !0
+      splice(GG, bG) {
+        const ZG = this[JG],
+          wG = ZG[hG],
+          LG = ZG.items,
+          yG = ZG.tmpItems,
+          kG = ZG.deletedIndexes,
+          UG = LG.length,
+          YG = yG.length;
+        for (var VG = arguments.length, pG = new Array(VG > 2 ? VG - 2 : 0), fG = 2; fG < VG; fG++) pG[fG - 2] = arguments[fG];
+        const QG = pG.length,
+          KG = [];
+        for (let SG = 0; SG < YG; SG++) !0 !== kG[SG] && KG.push(SG);
+        let dG;
+        if (UG > GG) {
+          void 0 === bG && (bG = UG - GG);
+          for (let LG = GG; LG < GG + bG; LG++) {
+            const GG = KG[LG],
+              bG = ZG.$isUnsentAdd(GG);
+            wG.delete(GG, SG.DELETE), bG ? (dG ??= []).push(GG) : kG[GG] = !0
           }
-        } else Eu = 0;
-        if (Nu > 0) {
-          const Zu = Ou[uu] ?? qu,
-            fu = Math.min(Nu, Eu);
-          for (let uu = 0; uu < fu; uu++) {
-            const Eu = Zu + uu;
-            let ju;
-            const qu = void 0 !== hu ? hu.indexOf(Eu) : -1; - 1 !== qu ? (hu.splice(qu, 1), ju = Uu.ADD) : ju = lu[Eu] ? Uu.DELETE_AND_ADD : Uu.ADD, su.indexedOperation(Eu, ju), Xu[Eu] = bu[uu], lu[Eu] = !1, bu[uu][Yu]?.setParent(this, su.root, Eu)
+        } else bG = 0;
+        if (QG > 0) {
+          const LG = KG[GG] ?? UG,
+            YG = Math.min(QG, bG);
+          for (let GG = 0; GG < YG; GG++) {
+            const bG = LG + GG;
+            let ZG;
+            const UG = void 0 !== dG ? dG.indexOf(bG) : -1; - 1 !== UG ? (dG.splice(UG, 1), ZG = SG.ADD) : ZG = kG[bG] ? SG.DELETE_AND_ADD : SG.ADD, wG.indexedOperation(bG, ZG), yG[bG] = pG[GG], kG[bG] = !1, pG[GG][hG]?.setParent(this, wG.root, bG)
           }
-          const Cu = Nu - fu;
-          if (Cu > 0) {
-            const uu = Zu + fu;
-            su.insertAt(uu, Cu);
-            for (let Eu = 0; Eu < Cu; Eu++) bu[fu + Eu][Yu]?.setParent(this, su.root, uu + Eu);
-            lu.length > 0 && lu.splice(uu, 0, ...new Array(Cu).fill(!1)), Xu.splice(uu, 0, ...bu.slice(fu)), ju.$reindexChildren(uu + Cu)
+          const VG = QG - YG;
+          if (VG > 0) {
+            const GG = LG + YG;
+            wG.insertAt(GG, VG);
+            for (let bG = 0; bG < VG; bG++) pG[YG + bG][hG]?.setParent(this, wG.root, GG + bG);
+            kG.length > 0 && kG.splice(GG, 0, ...new Array(VG).fill(!1)), yG.splice(GG, 0, ...pG.slice(YG)), ZG.$reindexChildren(GG + VG)
           }
         }
-        if (void 0 !== hu && hu.length > 0) {
-          for (let uu = hu.length - 1; uu >= 0; uu--) ju.$cancelAdd(hu[uu], !1);
-          ju.$reindexChildren(hu[0])
+        if (void 0 !== dG && dG.length > 0) {
+          for (let GG = dG.length - 1; GG >= 0; GG--) ZG.$cancelAdd(dG[GG], !1);
+          ZG.$reindexChildren(dG[0])
         }
-        return su.root?.enqueueChangeTree(su), Zu.splice(uu, Eu, ...bu)
+        return wG.root?.enqueueChangeTree(wG), LG.splice(GG, bG, ...pG)
       }
       unshift() {
-        const uu = this[Du],
-          Eu = uu[Yu];
-        Eu.unshift(arguments.length);
-        for (let su = 0; su < arguments.length; su++)(su < 0 || arguments.length <= su ? void 0 : arguments[su])?.[Yu]?.setParent(this, Eu.root, su);
-        const ju = uu.deletedIndexes;
-        return ju.length > 0 && ju.unshift(...new Array(arguments.length).fill(!1)), uu.tmpItems.unshift(...arguments), uu.$reindexChildren(arguments.length), uu.items.unshift(...arguments)
+        const GG = this[JG],
+          bG = GG[hG];
+        bG.unshift(arguments.length);
+        for (let wG = 0; wG < arguments.length; wG++)(wG < 0 || arguments.length <= wG ? void 0 : arguments[wG])?.[hG]?.setParent(this, bG.root, wG);
+        const ZG = GG.deletedIndexes;
+        return ZG.length > 0 && ZG.unshift(...new Array(arguments.length).fill(!1)), GG.tmpItems.unshift(...arguments), GG.$reindexChildren(arguments.length), GG.items.unshift(...arguments)
       }
-      indexOf(uu, Eu) {
-        return this.items.indexOf(uu, Eu)
+      indexOf(GG, bG) {
+        return this.items.indexOf(GG, bG)
       }
-      lastIndexOf(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(uu, Eu)
+      lastIndexOf(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(GG, bG)
       }
-      every(uu, Eu) {
-        return this.items.every(uu, Eu)
+      every(GG, bG) {
+        return this.items.every(GG, bG)
       }
-      some(uu, Eu) {
-        return this.items.some(uu, Eu)
+      some(GG, bG) {
+        return this.items.some(GG, bG)
       }
-      forEach(uu, Eu) {
-        return this.items.forEach(uu, Eu)
+      forEach(GG, bG) {
+        return this.items.forEach(GG, bG)
       }
-      map(uu, Eu) {
-        return this.items.map(uu, Eu)
+      map(GG, bG) {
+        return this.items.map(GG, bG)
       }
-      filter(uu, Eu) {
-        return this.items.filter(uu, Eu)
+      filter(GG, bG) {
+        return this.items.filter(GG, bG)
       }
-      reduce(uu, Eu) {
+      reduce(GG, bG) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(uu, Eu) {
+      reduceRight(GG, bG) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(uu, Eu) {
-        return this.items.find(uu, Eu)
+      find(GG, bG) {
+        return this.items.find(GG, bG)
       }
-      findIndex(uu, Eu) {
-        return this.items.findIndex(uu, Eu)
+      findIndex(GG, bG) {
+        return this.items.findIndex(GG, bG)
       }
-      fill(uu, Eu, ju) {
+      fill(GG, bG, ZG) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(uu, Eu, ju) {
+      copyWithin(GG, bG, ZG) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return ss
+        return Zw
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,118 +4360,118 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(uu, Eu) {
-        return this.items.includes(uu, Eu)
+      includes(GG, bG) {
+        return this.items.includes(GG, bG)
       }
-      flatMap(uu, Eu) {
+      flatMap(GG, bG) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
-      flat(uu) {
+      flat(GG) {
         throw new Error("ArraySchema#flat() is not supported.")
       }
       findLast() {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
+        for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(uu, Eu) {
-        const ju = this.items.slice();
-        return uu < 0 && (uu += this.length), ju[uu] = Eu, new ss(...ju)
+      with(GG, bG) {
+        const ZG = this.items.slice();
+        return GG < 0 && (GG += this.length), ZG[GG] = bG, new Zw(...ZG)
       }
       toReversed() {
         return this.items.slice().reverse()
       }
-      toSorted(uu) {
-        return this.items.slice().sort(uu)
+      toSorted(GG) {
+        return this.items.slice().sort(GG)
       }
-      toSpliced(uu, Eu) {
-        for (var ju = arguments.length, su = new Array(ju > 2 ? ju - 2 : 0), Uu = 2; Uu < ju; Uu++) su[Uu - 2] = arguments[Uu];
-        const Zu = this.items.slice();
-        return Zu.splice.apply(Zu, arguments), Zu
+      toSpliced(GG, bG) {
+        for (var ZG = arguments.length, wG = new Array(ZG > 2 ? ZG - 2 : 0), SG = 2; SG < ZG; SG++) wG[SG - 2] = arguments[SG];
+        const LG = this.items.slice();
+        return LG.splice.apply(LG, arguments), LG
       }
       shuffle() {
-        return this.move((uu => {
-          let Eu = this.items.length;
-          for (; 0 != Eu;) {
-            let uu = Math.floor(Math.random() * Eu);
-            Eu--, [this[Eu], this[uu]] = [this[uu], this[Eu]]
+        return this.move((GG => {
+          let bG = this.items.length;
+          for (; 0 != bG;) {
+            let GG = Math.floor(Math.random() * bG);
+            bG--, [this[bG], this[GG]] = [this[GG], this[bG]]
           }
         }))
       }
-      move(uu) {
-        return this.isMovingItems = !0, uu(this), this.isMovingItems = !1, this
-      } [cu](uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const ju = this[Du] ?? this;
-        return Eu || ju.deletedIndexes[uu] ? ju.items[uu] : ju.tmpItems[uu] || ju.items[uu]
-      } [Nu](uu) {
-        const Eu = this[Du] ?? this;
-        Eu.items[uu] = void 0, Eu._needsCompaction = !0
-      } [gu]() {
-        const uu = this.tmpItems;
-        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, uu), this.deletedIndexes.length = 0)
-      } [eu]() {
-        const uu = this[Du] ?? this;
-        uu._needsCompaction && (uu._needsCompaction = !1, uu.items = uu.items.filter((uu => void 0 !== uu)))
-      } [Ou](uu, Eu, ju) {
-        const su = this[Du] ?? this,
-          Uu = su.items;
-        let Zu = !1;
-        for (let Xu = 0; Xu < Uu.length; Xu++) {
-          const lu = Uu[Xu];
-          uu.has(Xu) ? ju(lu) : (Zu = !0, Eu(lu, Xu), su[Nu](Xu))
+      move(GG) {
+        return this.isMovingItems = !0, GG(this), this.isMovingItems = !1, this
+      } [fG](GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const ZG = this[JG] ?? this;
+        return bG || ZG.deletedIndexes[GG] ? ZG.items[GG] : ZG.tmpItems[GG] || ZG.items[GG]
+      } [QG](GG) {
+        const bG = this[JG] ?? this;
+        bG.items[GG] = void 0, bG._needsCompaction = !0
+      } [rG]() {
+        const GG = this.tmpItems;
+        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, GG), this.deletedIndexes.length = 0)
+      } [EG]() {
+        const GG = this[JG] ?? this;
+        GG._needsCompaction && (GG._needsCompaction = !1, GG.items = GG.items.filter((GG => void 0 !== GG)))
+      } [KG](GG, bG, ZG) {
+        const wG = this[JG] ?? this,
+          SG = wG.items;
+        let LG = !1;
+        for (let yG = 0; yG < SG.length; yG++) {
+          const kG = SG[yG];
+          GG.has(yG) ? ZG(kG) : (LG = !0, bG(kG, yG), wG[QG](yG))
         }
-        Zu && su[eu]()
+        LG && wG[EG]()
       }
       toArray() {
         return this.items.slice(0)
       }
       toJSON() {
-        return this.toArray().map((uu => "function" === typeof uu.toJSON ? uu.toJSON() : uu))
+        return this.toArray().map((GG => "function" === typeof GG.toJSON ? GG.toJSON() : GG))
       }
-      clone(uu) {
-        let Eu;
-        return uu ? (Eu = new ss, Eu.push(...this.items)) : Eu = new ss(...this.map((uu => uu[Yu] ? uu.clone() : uu))), Eu
+      clone(GG) {
+        let bG;
+        return GG ? (bG = new Zw, bG.push(...this.items)) : bG = new Zw(...this.map((GG => GG[hG] ? GG.clone() : GG))), bG
       }
     }
-    pE("array", {
-      constructor: ss
+    Xb("array", {
+      constructor: Zw
     });
-    class Us {
+    class ww {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
-      indexOf(uu) {
-        const Eu = this.indexByKey[uu];
-        return void 0 === Eu ? void 0 : Eu
+      indexOf(GG) {
+        const bG = this.indexByKey[GG];
+        return void 0 === bG ? void 0 : bG
       }
-      assign(uu) {
-        const Eu = this.nextIndex++;
-        return this.indexByKey[uu] = Eu, this.keyByIndex.set(Eu, uu), Eu
+      assign(GG) {
+        const bG = this.nextIndex++;
+        return this.indexByKey[GG] = bG, this.keyByIndex.set(bG, GG), bG
       }
-      snapshot(uu, Eu) {
-        (this.snapshots ??= new Map).set(uu, Eu)
+      snapshot(GG, bG) {
+        (this.snapshots ??= new Map).set(GG, bG)
       }
-      forgetSnapshot(uu) {
-        this.snapshots?.delete(uu)
+      forgetSnapshot(GG) {
+        this.snapshots?.delete(GG)
       }
-      snapshotAt(uu) {
-        return this.snapshots?.get(uu)
+      snapshotAt(GG) {
+        return this.snapshots?.get(GG)
       }
-      setIndex(uu, Eu) {
-        this.keyByIndex.set(uu, Eu), this.indexByKey[Eu] = uu
+      setIndex(GG, bG) {
+        this.keyByIndex.set(GG, bG), this.indexByKey[bG] = GG
       }
-      keyOf(uu) {
-        return this.keyByIndex.get(uu)
+      keyOf(GG) {
+        return this.keyByIndex.get(GG)
       }
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
-          for (const [uu] of this.snapshots) {
-            const Eu = this.keyByIndex.get(uu);
-            void 0 !== Eu && (delete this.indexByKey[Eu], this.keyByIndex.delete(uu))
+          for (const [GG] of this.snapshots) {
+            const bG = this.keyByIndex.get(GG);
+            void 0 !== bG && (delete this.indexByKey[bG], this.keyByIndex.delete(GG))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class Zs {
-      [Yu];
-      [lu];
+    class Sw {
+      [hG];
+      [kG];
       childType;
-      [hu];
+      [dG];
       $items = new Map;
-      journal = new Us;
+      journal = new ww;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(uu) {
-        (this._stream ??= dE()).maxPerTick = uu
+      set maxPerTick(GG) {
+        (this._stream ??= Cb()).maxPerTick = GG
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(uu) {
-        (this._stream ??= dE()).priority = uu
+      set priority(GG) {
+        (this._stream ??= Cb()).priority = GG
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[fu] = rj;
-      static[Cu] = nj;
-      static COLLECTION_KIND = Bj;
-      static[bu](uu, Eu, ju) {
-        if (!ju || "string" === typeof uu[hu]) return !0;
-        const su = uu[cu](Eu) ?? uu.journal.snapshotAt(Eu);
-        return ju.isChangeTreeVisible(su[Yu])
+      static[YG] = jZ;
+      static[VG] = NZ;
+      static COLLECTION_KIND = gZ;
+      static[pG](GG, bG, ZG) {
+        if (!ZG || "string" === typeof GG[dG]) return !0;
+        const wG = GG[fG](bG) ?? GG.journal.snapshotAt(bG);
+        return ZG.isChangeTreeVisible(wG[hG])
       }
-      static is(uu) {
-        return void 0 !== uu.map
+      static is(GG) {
+        return void 0 !== GG.map
       }
-      constructor(uu) {
-        if (Object.defineProperty(this, Yu, {
-            value: new kj(this),
+      constructor(GG) {
+        if (Object.defineProperty(this, hG, {
+            value: new FZ(this),
             enumerable: !1,
             writable: !0
-          }), this[hu] = void 0, uu)
-          if (uu instanceof Map || uu instanceof Zs) uu.forEach(((uu, Eu) => this.set(Eu, uu)));
+          }), this[dG] = void 0, GG)
+          if (GG instanceof Map || GG instanceof Sw) GG.forEach(((GG, bG) => this.set(bG, GG)));
           else
-            for (const Eu in uu) this.set(Eu, uu[Eu])
+            for (const bG in GG) this.set(bG, GG[bG])
       }
       static initializeForDecoder() {
-        const uu = Object.create(Zs.prototype);
-        return uu.$items = new Map, uu.journal = new Us, uu[hu] = void 0, vj(uu), uu
+        const GG = Object.create(Sw.prototype);
+        return GG.$items = new Map, GG.journal = new ww, GG[dG] = void 0, aZ(GG), GG
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,61 +4537,61 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return Zs
+        return Sw
       }
-      set(uu, Eu) {
-        if (void 0 === Eu || null === Eu) throw new Error(`MapSchema#set('${uu}', ${Eu}): trying to set ${Eu} value on '${uu}'.`);
-        "object" === typeof Eu && this[hu] && Rj(Eu, this[hu], this, uu), uu = uu.toString();
-        const ju = this[Yu],
-          su = void 0 !== Eu[Yu],
-          Zu = this.journal;
-        let Xu, lu = Zu.indexOf(uu);
-        if (void 0 !== lu) {
-          Xu = Uu.REPLACE;
-          const ju = this.$items.get(uu);
-          if (ju === Eu) return;
-          su && (Xu = Uu.DELETE_AND_ADD, void 0 !== ju && ju[Yu].root?.remove(ju[Yu])), void 0 !== Zu.snapshotAt(lu) && Zu.forgetSnapshot(lu)
-        } else lu = Zu.assign(uu), Xu = Uu.ADD;
-        return this.$items.set(uu, Eu), Xu === Uu.ADD && ju.isStreamCollection ? void 0 !== ju.root && PE(this, ju.root, lu) : ju.change(lu, Xu), su && Eu[Yu].setParent(this, ju.root, lu), this
+      set(GG, bG) {
+        if (void 0 === bG || null === bG) throw new Error(`MapSchema#set('${GG}', ${bG}): trying to set ${bG} value on '${GG}'.`);
+        "object" === typeof bG && this[dG] && BZ(bG, this[dG], this, GG), GG = GG.toString();
+        const ZG = this[hG],
+          wG = void 0 !== bG[hG],
+          LG = this.journal;
+        let yG, kG = LG.indexOf(GG);
+        if (void 0 !== kG) {
+          yG = SG.REPLACE;
+          const ZG = this.$items.get(GG);
+          if (ZG === bG) return;
+          wG && (yG = SG.DELETE_AND_ADD, void 0 !== ZG && ZG[hG].root?.remove(ZG[hG])), void 0 !== LG.snapshotAt(kG) && LG.forgetSnapshot(kG)
+        } else kG = LG.assign(GG), yG = SG.ADD;
+        return this.$items.set(GG, bG), yG === SG.ADD && ZG.isStreamCollection ? void 0 !== ZG.root && mb(this, ZG.root, kG) : ZG.change(kG, yG), wG && bG[hG].setParent(this, ZG.root, kG), this
       }
-      get(uu) {
-        return this.$items.get(uu)
+      get(GG) {
+        return this.$items.get(GG)
       }
-      getOrInsert(uu, Eu) {
-        return this.$items.has(uu) ? this.$items.get(uu) : (this.set(uu, Eu), Eu)
+      getOrInsert(GG, bG) {
+        return this.$items.has(GG) ? this.$items.get(GG) : (this.set(GG, bG), bG)
       }
-      getOrInsertComputed(uu, Eu) {
-        if (this.$items.has(uu)) return this.$items.get(uu);
-        const ju = Eu(uu);
-        return this.set(uu, ju), ju
+      getOrInsertComputed(GG, bG) {
+        if (this.$items.has(GG)) return this.$items.get(GG);
+        const ZG = bG(GG);
+        return this.set(GG, ZG), ZG
       }
-      delete(uu) {
-        if (!this.$items.has(uu)) return !1;
-        const Eu = this.journal.indexOf(uu),
-          ju = this.$items.get(uu),
-          su = this[Yu];
-        if (su.isStreamCollection) {
-          const Uu = su.root;
-          let Zu = !1;
-          return void 0 !== Uu && (Zu = oE(this, Uu, this[lu], Eu)), void 0 !== ju?.[Yu] && Uu?.remove(ju[Yu]), this.$items.delete(uu), Zu || this.journal.snapshot(Eu, ju), !0
+      delete(GG) {
+        if (!this.$items.has(GG)) return !1;
+        const bG = this.journal.indexOf(GG),
+          ZG = this.$items.get(GG),
+          wG = this[hG];
+        if (wG.isStreamCollection) {
+          const SG = wG.root;
+          let LG = !1;
+          return void 0 !== SG && (LG = Ib(this, SG, this[kG], bG)), void 0 !== ZG?.[hG] && SG?.remove(ZG[hG]), this.$items.delete(GG), LG || this.journal.snapshot(bG, ZG), !0
         }
-        return this.journal.snapshot(Eu, ju), su.delete(Eu), this.$items.delete(uu)
+        return this.journal.snapshot(bG, ZG), wG.delete(bG), this.$items.delete(GG)
       }
       clear() {
-        const uu = this[Yu];
-        uu.discard(), uu.forEachChild(((Eu, ju) => {
-          uu.root?.remove(Eu)
-        })), this.journal.reset(), this.$items.clear(), uu.operation(Uu.CLEAR)
-      } [Mu]() {
-        const uu = this[Yu];
-        if (uu.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((uu => uu?.[Mu]?.())), this.$items.clear(), this.journal.reset(), uu.recycle(), this[lu] = void 0
+        const GG = this[hG];
+        GG.discard(), GG.forEachChild(((bG, ZG) => {
+          GG.root?.remove(bG)
+        })), this.journal.reset(), this.$items.clear(), GG.operation(SG.CLEAR)
+      } [zG]() {
+        const GG = this[hG];
+        if (GG.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
+        this.$items.forEach((GG => GG?.[zG]?.())), this.$items.clear(), this.journal.reset(), GG.recycle(), this[kG] = void 0
       }
-      has(uu) {
-        return this.$items.has(uu)
+      has(GG) {
+        return this.$items.has(GG)
       }
-      forEach(uu) {
-        this.$items.forEach(uu)
+      forEach(GG) {
+        this.$items.forEach(GG)
       }
       entries() {
         return this.$items.entries()
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[Yu].pause()
+        this[hG].pause()
       }
       resumeTracking() {
-        this[Yu].resume()
+        this[hG].resume()
       }
-      untracked(uu) {
-        return this[Yu].untracked(uu)
+      untracked(GG) {
+        return this[hG].untracked(GG)
       }
       get isTrackingPaused() {
-        return this[Yu].paused
+        return this[hG].paused
       }
-      setIndex(uu, Eu) {
-        this.journal.setIndex(uu, Eu)
+      setIndex(GG, bG) {
+        this.journal.setIndex(GG, bG)
       }
-      getIndex(uu) {
-        return this.journal.keyOf(uu)
-      } [cu](uu) {
-        const Eu = this.journal.keyOf(uu);
-        return void 0 !== Eu ? this.$items.get(Eu) : void 0
-      } [Nu](uu) {
-        const Eu = this.journal.keyOf(uu);
-        void 0 !== Eu && (this.$items.delete(Eu), this.journal.keyByIndex.delete(uu))
-      } [Ou](uu, Eu, ju) {
-        let su = null;
-        if (this.$items.forEach(((Uu, Zu) => {
-            uu.has(Zu) ? ju(Uu) : ((su ??= new Set).add(Zu), Eu(Uu, Zu))
-          })), null !== su) {
-          su.forEach((uu => {
-            this.$items.delete(uu), delete this.journal.indexByKey[uu]
+      getIndex(GG) {
+        return this.journal.keyOf(GG)
+      } [fG](GG) {
+        const bG = this.journal.keyOf(GG);
+        return void 0 !== bG ? this.$items.get(bG) : void 0
+      } [QG](GG) {
+        const bG = this.journal.keyOf(GG);
+        void 0 !== bG && (this.$items.delete(bG), this.journal.keyByIndex.delete(GG))
+      } [KG](GG, bG, ZG) {
+        let wG = null;
+        if (this.$items.forEach(((SG, LG) => {
+            GG.has(LG) ? ZG(SG) : ((wG ??= new Set).add(LG), bG(SG, LG))
+          })), null !== wG) {
+          wG.forEach((GG => {
+            this.$items.delete(GG), delete this.journal.indexByKey[GG]
           }));
-          const uu = [];
-          this.journal.keyByIndex.forEach(((Eu, ju) => {
-            su.has(Eu) && uu.push(ju)
+          const GG = [];
+          this.journal.keyByIndex.forEach(((bG, ZG) => {
+            wG.has(bG) && GG.push(ZG)
           }));
-          for (let Eu = 0; Eu < uu.length; Eu++) this.journal.keyByIndex.delete(uu[Eu])
+          for (let bG = 0; bG < GG.length; bG++) this.journal.keyByIndex.delete(GG[bG])
         }
-      } [gu]() {
+      } [rG]() {
         this.journal.cleanupAfterEncode()
       }
-      _dropView(uu) {
-        KE(this, uu)
+      _dropView(GG) {
+        cb(this, GG)
       }
       _unregister() {}
       toJSON() {
-        return Object.fromEntries(Array.from(this, (uu => {
-          let [Eu, ju] = uu;
-          return [Eu, "function" === typeof ju.toJSON ? ju.toJSON() : ju]
+        return Object.fromEntries(Array.from(this, (GG => {
+          let [bG, ZG] = GG;
+          return [bG, "function" === typeof ZG.toJSON ? ZG.toJSON() : ZG]
         })))
       }
-      clone(uu) {
-        let Eu;
-        return uu ? Eu = Object.assign(new Zs, this) : (Eu = new Zs, this.forEach(((uu, ju) => {
-          uu[Yu] ? Eu.set(ju, uu.clone()) : Eu.set(ju, uu)
-        }))), Eu
+      clone(GG) {
+        let bG;
+        return GG ? bG = Object.assign(new Sw, this) : (bG = new Sw, this.forEach(((GG, ZG) => {
+          GG[hG] ? bG.set(ZG, GG.clone()) : bG.set(ZG, GG)
+        }))), bG
       }
     }
-    pE("map", {
-      constructor: Zs
+    Xb("map", {
+      constructor: Sw
     });
-    class Xs {
-      [Yu];
-      [lu];
-      [hu];
+    class Lw {
+      [hG];
+      [kG];
+      [dG];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4676,79 +4676,79 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(uu) {
-        (this._stream ??= dE()).maxPerTick = uu
+      set maxPerTick(GG) {
+        (this._stream ??= Cb()).maxPerTick = GG
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(uu) {
-        (this._stream ??= dE()).priority = uu
+      set priority(GG) {
+        (this._stream ??= Cb()).priority = GG
       }
-      static[fu] = Qj;
-      static[Cu] = nj;
-      static COLLECTION_KIND = xj;
-      static[bu](uu, Eu, ju) {
-        return !ju || "string" === typeof uu[hu] || ju.isChangeTreeVisible((uu[cu](Eu) ?? uu.deletedItems[Eu])[Yu])
+      static[YG] = PZ;
+      static[VG] = NZ;
+      static COLLECTION_KIND = TZ;
+      static[pG](GG, bG, ZG) {
+        return !ZG || "string" === typeof GG[dG] || ZG.isChangeTreeVisible((GG[fG](bG) ?? GG.deletedItems[bG])[hG])
       }
-      static is(uu) {
-        return void 0 !== uu.collection
+      static is(GG) {
+        return void 0 !== GG.collection
       }
-      constructor(uu) {
-        Object.defineProperty(this, Yu, {
-          value: new kj(this),
+      constructor(GG) {
+        Object.defineProperty(this, hG, {
+          value: new FZ(this),
           enumerable: !1,
           writable: !0
-        }), this[hu] = void 0, uu && uu.forEach((uu => this.add(uu)))
+        }), this[dG] = void 0, GG && GG.forEach((GG => this.add(GG)))
       }
       static initializeForDecoder() {
-        const uu = Object.create(Xs.prototype);
-        return uu.$items = new Map, uu.deletedItems = {}, uu.$refId = 0, uu[hu] = void 0, vj(uu), uu
+        const GG = Object.create(Lw.prototype);
+        return GG.$items = new Map, GG.deletedItems = {}, GG.$refId = 0, GG[dG] = void 0, aZ(GG), GG
       }
-      add(uu) {
-        const Eu = this.$refId++,
-          ju = this[Yu];
-        return this.$items.set(Eu, uu), ju.isStreamCollection ? void 0 !== ju.root && PE(this, ju.root, Eu) : ju.change(Eu), void 0 !== uu[Yu] && uu[Yu].setParent(this, ju.root, Eu), Eu
+      add(GG) {
+        const bG = this.$refId++,
+          ZG = this[hG];
+        return this.$items.set(bG, GG), ZG.isStreamCollection ? void 0 !== ZG.root && mb(this, ZG.root, bG) : ZG.change(bG), void 0 !== GG[hG] && GG[hG].setParent(this, ZG.root, bG), bG
       }
-      at(uu) {
-        const Eu = Array.from(this.$items.keys())[uu];
-        return this.$items.get(Eu)
+      at(GG) {
+        const bG = Array.from(this.$items.keys())[GG];
+        return this.$items.get(bG)
       }
       entries() {
         return this.$items.entries()
       }
-      delete(uu) {
-        const Eu = this.$items.entries();
-        let ju, su;
+      delete(GG) {
+        const bG = this.$items.entries();
+        let ZG, wG;
         for (;
-          (su = Eu.next()) && !su.done;)
-          if (uu === su.value[1]) {
-            ju = su.value[0];
+          (wG = bG.next()) && !wG.done;)
+          if (GG === wG.value[1]) {
+            ZG = wG.value[0];
             break
-          } if (void 0 === ju) return !1;
-        const Uu = this[Yu];
-        if (Uu.isStreamCollection) {
-          const uu = Uu.root,
-            Eu = this.$items.get(ju);
-          return void 0 !== uu && oE(this, uu, this[lu], ju), void 0 !== Eu?.[Yu] && uu?.remove(Eu[Yu]), this.deletedItems[ju] = Eu, this.$items.delete(ju)
+          } if (void 0 === ZG) return !1;
+        const SG = this[hG];
+        if (SG.isStreamCollection) {
+          const GG = SG.root,
+            bG = this.$items.get(ZG);
+          return void 0 !== GG && Ib(this, GG, this[kG], ZG), void 0 !== bG?.[hG] && GG?.remove(bG[hG]), this.deletedItems[ZG] = bG, this.$items.delete(ZG)
         }
-        return this.deletedItems[ju] = Uu.delete(ju), this.$items.delete(ju)
+        return this.deletedItems[ZG] = SG.delete(ZG), this.$items.delete(ZG)
       }
       clear() {
-        const uu = this[Yu];
-        uu.discard(), uu.forEachChild(((Eu, ju) => {
-          uu.root?.remove(Eu)
-        })), this.$items.clear(), uu.operation(Uu.CLEAR)
-      } [Mu]() {
-        const uu = this[Yu];
-        if (uu.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((uu => uu?.[Mu]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, uu.recycle(), this[lu] = void 0
+        const GG = this[hG];
+        GG.discard(), GG.forEachChild(((bG, ZG) => {
+          GG.root?.remove(bG)
+        })), this.$items.clear(), GG.operation(SG.CLEAR)
+      } [zG]() {
+        const GG = this[hG];
+        if (GG.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
+        this.$items.forEach((GG => GG?.[zG]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, GG.recycle(), this[kG] = void 0
       }
-      has(uu) {
-        return Array.from(this.$items.values()).some((Eu => Eu === uu))
+      has(GG) {
+        return Array.from(this.$items.values()).some((bG => bG === GG))
       }
-      forEach(uu) {
-        this.$items.forEach(((Eu, ju, su) => uu(Eu, ju, this)))
+      forEach(GG) {
+        this.$items.forEach(((bG, ZG, wG) => GG(bG, ZG, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,62 +4757,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[Yu].pause()
+        this[hG].pause()
       }
       resumeTracking() {
-        this[Yu].resume()
+        this[hG].resume()
       }
-      untracked(uu) {
-        return this[Yu].untracked(uu)
+      untracked(GG) {
+        return this[hG].untracked(GG)
       }
       get isTrackingPaused() {
-        return this[Yu].paused
+        return this[hG].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(uu, Eu) {}
-      getIndex(uu) {
-        return uu
-      } [cu](uu) {
-        return this.$items.get(uu)
-      } [Nu](uu) {
-        this.$items.delete(uu)
-      } [Ou](uu, Eu, ju) {
-        let su = null;
-        if (this.$items.forEach(((Uu, Zu) => {
-            uu.has(Zu) ? ju(Uu) : ((su ??= []).push(Zu), Eu(Uu, Zu))
-          })), null !== su)
-          for (let Uu = 0; Uu < su.length; Uu++) this[Nu](su[Uu])
-      } [gu]() {
-        for (const uu in this.deletedItems) delete this.deletedItems[uu]
+      setIndex(GG, bG) {}
+      getIndex(GG) {
+        return GG
+      } [fG](GG) {
+        return this.$items.get(GG)
+      } [QG](GG) {
+        this.$items.delete(GG)
+      } [KG](GG, bG, ZG) {
+        let wG = null;
+        if (this.$items.forEach(((SG, LG) => {
+            GG.has(LG) ? ZG(SG) : ((wG ??= []).push(LG), bG(SG, LG))
+          })), null !== wG)
+          for (let SG = 0; SG < wG.length; SG++) this[QG](wG[SG])
+      } [rG]() {
+        for (const GG in this.deletedItems) delete this.deletedItems[GG]
       }
-      _dropView(uu) {
-        KE(this, uu)
+      _dropView(GG) {
+        cb(this, GG)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const uu = [];
-        return this.forEach(((Eu, ju) => {
-          uu.push("function" === typeof Eu.toJSON ? Eu.toJSON() : Eu)
-        })), uu
+        const GG = [];
+        return this.forEach(((bG, ZG) => {
+          GG.push("function" === typeof bG.toJSON ? bG.toJSON() : bG)
+        })), GG
       }
-      clone(uu) {
-        let Eu;
-        return uu ? Eu = Object.assign(new Xs, this) : (Eu = new Xs, this.forEach((uu => {
-          uu[Yu] ? Eu.add(uu.clone()) : Eu.add(uu)
-        }))), Eu
+      clone(GG) {
+        let bG;
+        return GG ? bG = Object.assign(new Lw, this) : (bG = new Lw, this.forEach((GG => {
+          GG[hG] ? bG.add(GG.clone()) : bG.add(GG)
+        }))), bG
       }
     }
-    pE("collection", {
-      constructor: Xs
+    Xb("collection", {
+      constructor: Lw
     });
-    class ls {
-      [Yu];
-      [lu];
-      [hu];
+    class yw {
+      [hG];
+      [kG];
+      [dG];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4820,81 +4820,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(uu) {
-        (this._stream ??= dE()).maxPerTick = uu
+      set maxPerTick(GG) {
+        (this._stream ??= Cb()).maxPerTick = GG
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(uu) {
-        (this._stream ??= dE()).priority = uu
+      set priority(GG) {
+        (this._stream ??= Cb()).priority = GG
       }
-      static[fu] = Qj;
-      static[Cu] = nj;
-      static COLLECTION_KIND = tj;
-      static[bu](uu, Eu, ju) {
-        return !ju || "string" === typeof uu[hu] || ju.isVisible((uu[cu](Eu) ?? uu.deletedItems[Eu])[Yu])
+      static[YG] = PZ;
+      static[VG] = NZ;
+      static COLLECTION_KIND = RZ;
+      static[pG](GG, bG, ZG) {
+        return !ZG || "string" === typeof GG[dG] || ZG.isVisible((GG[fG](bG) ?? GG.deletedItems[bG])[hG])
       }
-      static is(uu) {
-        return void 0 !== uu.set
+      static is(GG) {
+        return void 0 !== GG.set
       }
-      constructor(uu) {
-        Object.defineProperty(this, Yu, {
-          value: new kj(this),
+      constructor(GG) {
+        Object.defineProperty(this, hG, {
+          value: new FZ(this),
           enumerable: !1,
           writable: !0
-        }), this[hu] = void 0, uu && uu.forEach((uu => this.add(uu)))
+        }), this[dG] = void 0, GG && GG.forEach((GG => this.add(GG)))
       }
       static initializeForDecoder() {
-        const uu = Object.create(ls.prototype);
-        return uu.$items = new Map, uu.deletedItems = {}, uu.$refId = 0, uu[hu] = void 0, vj(uu), uu
+        const GG = Object.create(yw.prototype);
+        return GG.$items = new Map, GG.deletedItems = {}, GG.$refId = 0, GG[dG] = void 0, aZ(GG), GG
       }
-      add(uu) {
-        if (this.has(uu)) return !1;
-        const Eu = this.$refId++,
-          ju = this[Yu];
-        return this.$items.set(Eu, uu), ju.isStreamCollection ? void 0 !== ju.root && PE(this, ju.root, Eu) : ju.change(Eu, Uu.ADD), void 0 !== uu[Yu] && uu[Yu].setParent(this, ju.root, Eu), Eu
+      add(GG) {
+        if (this.has(GG)) return !1;
+        const bG = this.$refId++,
+          ZG = this[hG];
+        return this.$items.set(bG, GG), ZG.isStreamCollection ? void 0 !== ZG.root && mb(this, ZG.root, bG) : ZG.change(bG, SG.ADD), void 0 !== GG[hG] && GG[hG].setParent(this, ZG.root, bG), bG
       }
       entries() {
         return this.$items.entries()
       }
-      delete(uu) {
-        const Eu = this.$items.entries();
-        let ju, su;
+      delete(GG) {
+        const bG = this.$items.entries();
+        let ZG, wG;
         for (;
-          (su = Eu.next()) && !su.done;)
-          if (uu === su.value[1]) {
-            ju = su.value[0];
+          (wG = bG.next()) && !wG.done;)
+          if (GG === wG.value[1]) {
+            ZG = wG.value[0];
             break
-          } if (void 0 === ju) return !1;
-        const Uu = this[Yu];
-        if (Uu.isStreamCollection) {
-          const uu = Uu.root,
-            Eu = this.$items.get(ju);
-          return void 0 !== uu && oE(this, uu, this[lu], ju), void 0 !== Eu?.[Yu] && uu?.remove(Eu[Yu]), this.deletedItems[ju] = Eu, this.$items.delete(ju)
+          } if (void 0 === ZG) return !1;
+        const SG = this[hG];
+        if (SG.isStreamCollection) {
+          const GG = SG.root,
+            bG = this.$items.get(ZG);
+          return void 0 !== GG && Ib(this, GG, this[kG], ZG), void 0 !== bG?.[hG] && GG?.remove(bG[hG]), this.deletedItems[ZG] = bG, this.$items.delete(ZG)
         }
-        return this.deletedItems[ju] = Uu.delete(ju), this.$items.delete(ju)
+        return this.deletedItems[ZG] = SG.delete(ZG), this.$items.delete(ZG)
       }
       clear() {
-        const uu = this[Yu];
-        uu.discard(), this.$items.clear(), uu.operation(Uu.CLEAR)
-      } [Mu]() {
-        const uu = this[Yu];
-        if (uu.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((uu => uu?.[Mu]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, uu.recycle(), this[lu] = void 0
+        const GG = this[hG];
+        GG.discard(), this.$items.clear(), GG.operation(SG.CLEAR)
+      } [zG]() {
+        const GG = this[hG];
+        if (GG.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
+        this.$items.forEach((GG => GG?.[zG]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, GG.recycle(), this[kG] = void 0
       }
-      has(uu) {
-        const Eu = this.$items.values();
-        let ju, su = !1;
+      has(GG) {
+        const bG = this.$items.values();
+        let ZG, wG = !1;
         for (;
-          (ju = Eu.next()) && !ju.done;)
-          if (uu === ju.value) {
-            su = !0;
+          (ZG = bG.next()) && !ZG.done;)
+          if (GG === ZG.value) {
+            wG = !0;
             break
-          } return su
+          } return wG
       }
-      forEach(uu) {
-        this.$items.forEach(((Eu, ju, su) => uu(Eu, ju, this)))
+      forEach(GG) {
+        this.$items.forEach(((bG, ZG, wG) => GG(bG, ZG, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,62 +4903,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[Yu].pause()
+        this[hG].pause()
       }
       resumeTracking() {
-        this[Yu].resume()
+        this[hG].resume()
       }
-      untracked(uu) {
-        return this[Yu].untracked(uu)
+      untracked(GG) {
+        return this[hG].untracked(GG)
       }
       get isTrackingPaused() {
-        return this[Yu].paused
+        return this[hG].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(uu, Eu) {}
-      getIndex(uu) {
-        return uu
-      } [cu](uu) {
-        return this.$items.get(uu)
-      } [Nu](uu) {
-        this.$items.delete(uu)
-      } [Ou](uu, Eu, ju) {
-        let su = null;
-        if (this.$items.forEach(((Uu, Zu) => {
-            uu.has(Zu) ? ju(Uu) : ((su ??= []).push(Zu), Eu(Uu, Zu))
-          })), null !== su)
-          for (let Uu = 0; Uu < su.length; Uu++) this[Nu](su[Uu])
-      } [gu]() {
-        for (const uu in this.deletedItems) delete this.deletedItems[uu]
+      setIndex(GG, bG) {}
+      getIndex(GG) {
+        return GG
+      } [fG](GG) {
+        return this.$items.get(GG)
+      } [QG](GG) {
+        this.$items.delete(GG)
+      } [KG](GG, bG, ZG) {
+        let wG = null;
+        if (this.$items.forEach(((SG, LG) => {
+            GG.has(LG) ? ZG(SG) : ((wG ??= []).push(LG), bG(SG, LG))
+          })), null !== wG)
+          for (let SG = 0; SG < wG.length; SG++) this[QG](wG[SG])
+      } [rG]() {
+        for (const GG in this.deletedItems) delete this.deletedItems[GG]
       }
-      _dropView(uu) {
-        KE(this, uu)
+      _dropView(GG) {
+        cb(this, GG)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const uu = [];
-        return this.forEach(((Eu, ju) => {
-          uu.push("function" === typeof Eu.toJSON ? Eu.toJSON() : Eu)
-        })), uu
+        const GG = [];
+        return this.forEach(((bG, ZG) => {
+          GG.push("function" === typeof bG.toJSON ? bG.toJSON() : bG)
+        })), GG
       }
-      clone(uu) {
-        let Eu;
-        return uu ? Eu = Object.assign(new ls, this) : (Eu = new ls, this.forEach((uu => {
-          uu[Yu] ? Eu.add(uu.clone()) : Eu.add(uu)
-        }))), Eu
+      clone(GG) {
+        let bG;
+        return GG ? bG = Object.assign(new yw, this) : (bG = new yw, this.forEach((GG => {
+          GG[hG] ? bG.add(GG.clone()) : bG.add(GG)
+        }))), bG
       }
     }
-    pE("set", {
-      constructor: ls
+    Xb("set", {
+      constructor: yw
     });
-    class qs {
-      [Yu];
-      [lu];
-      [hu];
+    class kw {
+      [hG];
+      [kG];
+      [dG];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4966,81 +4966,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(uu) {
-        (this._stream ??= dE()).maxPerTick = uu
+      set maxPerTick(GG) {
+        (this._stream ??= Cb()).maxPerTick = GG
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(uu) {
-        (this._stream ??= dE()).priority = uu
+      set priority(GG) {
+        (this._stream ??= Cb()).priority = GG
       }
       static $isStream = !0;
-      static[fu] = Qj;
-      static[Cu] = nj;
-      static COLLECTION_KIND = Tj;
-      static[bu](uu, Eu, ju) {
-        if (!ju) return !0;
-        const su = uu[cu](Eu);
-        return void 0 !== su && ju.isVisible(su[Yu])
+      static[YG] = PZ;
+      static[VG] = NZ;
+      static COLLECTION_KIND = HZ;
+      static[pG](GG, bG, ZG) {
+        if (!ZG) return !0;
+        const wG = GG[fG](bG);
+        return void 0 !== wG && ZG.isVisible(wG[hG])
       }
-      static is(uu) {
-        return uu && void 0 !== uu.stream
+      static is(GG) {
+        return GG && void 0 !== GG.stream
       }
       constructor() {
-        Object.defineProperty(this, Yu, {
-          value: new kj(this),
+        Object.defineProperty(this, hG, {
+          value: new FZ(this),
           enumerable: !1,
           writable: !0
-        }), this[hu] = void 0
+        }), this[dG] = void 0
       }
       static initializeForDecoder() {
-        const uu = Object.create(qs.prototype);
-        return uu.$items = new Map, uu.$nextPosition = 0, uu._itemIndex = new Map, uu[hu] = void 0, vj(uu), uu
+        const GG = Object.create(kw.prototype);
+        return GG.$items = new Map, GG.$nextPosition = 0, GG._itemIndex = new Map, GG[dG] = void 0, aZ(GG), GG
       }
-      add(uu) {
-        if (this._itemIndex.has(uu)) return -1;
-        const Eu = this.$nextPosition++;
-        this.$items.set(Eu, uu), this._itemIndex.set(uu, Eu);
-        const ju = this[Yu].root;
-        return void 0 !== uu[Yu] && uu[Yu].setParent(this, ju, Eu), void 0 !== ju && PE(this, ju, Eu), Eu
+      add(GG) {
+        if (this._itemIndex.has(GG)) return -1;
+        const bG = this.$nextPosition++;
+        this.$items.set(bG, GG), this._itemIndex.set(GG, bG);
+        const ZG = this[hG].root;
+        return void 0 !== GG[hG] && GG[hG].setParent(this, ZG, bG), void 0 !== ZG && mb(this, ZG, bG), bG
       }
-      remove(uu) {
-        const Eu = this._itemIndex.get(uu);
-        if (void 0 === Eu) return !1;
-        this._itemIndex.delete(uu), this.$items.delete(Eu);
-        const ju = this[Yu].root;
-        return void 0 !== ju && (oE(this, ju, this[lu], Eu), void 0 !== uu[Yu] && ju.remove(uu[Yu])), !0
+      remove(GG) {
+        const bG = this._itemIndex.get(GG);
+        if (void 0 === bG) return !1;
+        this._itemIndex.delete(GG), this.$items.delete(bG);
+        const ZG = this[hG].root;
+        return void 0 !== ZG && (Ib(this, ZG, this[kG], bG), void 0 !== GG[hG] && ZG.remove(GG[hG])), !0
       }
-      has(uu) {
-        return this._itemIndex.has(uu)
+      has(GG) {
+        return this._itemIndex.has(GG)
       }
       clear() {
-        const uu = this[Yu].root;
-        if (void 0 !== uu) {
-          ! function(uu, Eu, ju) {
-            const su = uu._stream;
-            if (void 0 !== su) {
-              su.broadcastPending.clear();
-              for (const uu of su.sentBroadcast) su.broadcastDeletes.add(uu);
-              su.sentBroadcast.clear(), Eu.forEachActiveView((uu => {
-                su.pendingByView.get(uu.id)?.clear();
-                const Eu = su.sentByView.get(uu.id);
-                if (void 0 !== Eu && Eu.size > 0) {
-                  let su = uu.changes.get(ju);
-                  void 0 === su && (su = new Map, uu.changes.set(ju, su));
-                  for (const uu of Eu) su.set(uu, Uu.DELETE);
-                  Eu.clear()
+        const GG = this[hG].root;
+        if (void 0 !== GG) {
+          ! function(GG, bG, ZG) {
+            const wG = GG._stream;
+            if (void 0 !== wG) {
+              wG.broadcastPending.clear();
+              for (const GG of wG.sentBroadcast) wG.broadcastDeletes.add(GG);
+              wG.sentBroadcast.clear(), bG.forEachActiveView((GG => {
+                wG.pendingByView.get(GG.id)?.clear();
+                const bG = wG.sentByView.get(GG.id);
+                if (void 0 !== bG && bG.size > 0) {
+                  let wG = GG.changes.get(ZG);
+                  void 0 === wG && (wG = new Map, GG.changes.set(ZG, wG));
+                  for (const GG of bG) wG.set(GG, SG.DELETE);
+                  bG.clear()
                 }
               }))
             }
-          }(this, uu, this[lu]);
-          for (const Eu of this.$items.values()) void 0 !== Eu[Yu] && uu.remove(Eu[Yu])
+          }(this, GG, this[kG]);
+          for (const bG of this.$items.values()) void 0 !== bG[hG] && GG.remove(bG[hG])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
-      forEach(uu) {
-        for (const [Eu, ju] of this.$items) uu(ju, Eu, this)
+      forEach(GG) {
+        for (const [bG, ZG] of this.$items) GG(ZG, bG, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(uu, Eu) {}
-      getIndex(uu) {
-        return uu
-      } [cu](uu) {
-        return this.$items.get(uu)
-      } [Nu](uu) {
-        const Eu = this.$items.get(uu);
-        void 0 !== Eu && (this._itemIndex.delete(Eu), this.$items.delete(uu))
-      } [Ou]() {} [gu]() {}
+      setIndex(GG, bG) {}
+      getIndex(GG) {
+        return GG
+      } [fG](GG) {
+        return this.$items.get(GG)
+      } [QG](GG) {
+        const bG = this.$items.get(GG);
+        void 0 !== bG && (this._itemIndex.delete(bG), this.$items.delete(GG))
+      } [KG]() {} [rG]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const uu = [];
-        return this.forEach((Eu => {
-          uu.push("function" === typeof Eu?.toJSON ? Eu.toJSON() : Eu)
-        })), uu
+        const GG = [];
+        return this.forEach((bG => {
+          GG.push("function" === typeof bG?.toJSON ? bG.toJSON() : bG)
+        })), GG
       }
-      clone(uu) {
-        if (uu) {
-          return Object.assign(new qs, this)
+      clone(GG) {
+        if (GG) {
+          return Object.assign(new kw, this)
         }
-        const Eu = new qs;
-        return Eu.maxPerTick = this.maxPerTick, this.forEach((uu => {
-          Eu.add("function" === typeof uu?.clone ? uu.clone() : uu)
-        })), Eu
+        const bG = new kw;
+        return bG.maxPerTick = this.maxPerTick, this.forEach((GG => {
+          bG.add("function" === typeof GG?.clone ? GG.clone() : GG)
+        })), bG
       }
-      _dropView(uu) {
-        KE(this, uu)
+      _dropView(GG) {
+        cb(this, GG)
       }
       _unregister() {}
     }
-    pE("stream", {
-      constructor: qs
+    Xb("stream", {
+      constructor: kw
     });
-    class fs {
-      [pu] = !0;
+    class Uw {
+      [XG] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5106,14 +5106,14 @@ export const modules = {
       _optional = !1;
       _noSync = !1;
       _streamPriority = void 0;
-      constructor(uu) {
-        this._type = uu
+      constructor(GG) {
+        this._type = GG
       }
-      default (uu) {
-        return this._default = uu, this._hasDefault = !0, this
+      default (GG) {
+        return this._default = GG, this._hasDefault = !0, this
       }
-      view(uu) {
-        return this._view = uu ?? -1, this
+      view(GG) {
+        return this._view = GG ?? -1, this
       }
       unreliable() {
         return this._unreliable = !0, this
@@ -5128,16 +5128,16 @@ export const modules = {
         return this._noSync = !0, this
       }
       stream() {
-        const uu = this._type;
-        if (uu && "object" === typeof uu && void 0 !== uu.array) throw new Error(JE);
+        const GG = this._type;
+        if (GG && "object" === typeof GG && void 0 !== GG.array) throw new Error(ib);
         return this._stream = !0, this
       }
-      priority(uu) {
-        return this._streamPriority = uu, this
+      priority(GG) {
+        return this._streamPriority = GG, this
       }
       deprecated() {
-        let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._deprecated = !0, this._deprecatedThrows = uu, this
+        let GG = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._deprecated = !0, this._deprecatedThrows = GG, this
       }
       optional() {
         return this._optional = !0, this
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function Cs(uu) {
-      return null != uu && !0 === uu[pu]
+    function Yw(GG) {
+      return null != GG && !0 === GG[XG]
     }
 
-    function bs(uu) {
-      return () => new fs(uu)
+    function Vw(GG) {
+      return () => new Uw(GG)
     }
 
-    function cs(uu) {
-      if (Cs(uu)) {
-        const Eu = uu._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof Eu?`use the type name instead: t.array("${Eu}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function pw(GG) {
+      if (Yw(GG)) {
+        const bG = GG._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof bG?`use the type name instead: t.array("${bG}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
-      return uu
+      return GG
     }
 
-    function Ns(uu) {
-      return new fs({
-        quantized: rE(uu)
+    function fw(GG) {
+      return new Uw({
+        quantized: jb(GG)
       })
     }
-    const Os = Object.freeze({
-        string: bs("string"),
-        number: bs("number"),
-        boolean: bs("boolean"),
-        int8: bs("int8"),
-        uint8: bs("uint8"),
-        int16: bs("int16"),
-        uint16: bs("uint16"),
-        int32: bs("int32"),
-        uint32: bs("uint32"),
-        int64: bs("int64"),
-        uint64: bs("uint64"),
-        float32: bs("float32"),
-        float64: bs("float64"),
-        bigint64: bs("bigint64"),
-        biguint64: bs("biguint64"),
-        ref: uu => new fs(uu),
-        array: uu => new fs({
-          array: cs(uu)
+    const Qw = Object.freeze({
+        string: Vw("string"),
+        number: Vw("number"),
+        boolean: Vw("boolean"),
+        int8: Vw("int8"),
+        uint8: Vw("uint8"),
+        int16: Vw("int16"),
+        uint16: Vw("uint16"),
+        int32: Vw("int32"),
+        uint32: Vw("uint32"),
+        int64: Vw("int64"),
+        uint64: Vw("uint64"),
+        float32: Vw("float32"),
+        float64: Vw("float64"),
+        bigint64: Vw("bigint64"),
+        biguint64: Vw("biguint64"),
+        ref: GG => new Uw(GG),
+        array: GG => new Uw({
+          array: pw(GG)
         }),
-        map: uu => new fs({
-          map: cs(uu)
+        map: GG => new Uw({
+          map: pw(GG)
         }),
-        set: uu => new fs({
-          set: cs(uu)
+        set: GG => new Uw({
+          set: pw(GG)
         }),
-        collection: uu => new fs({
-          collection: cs(uu)
+        collection: GG => new Uw({
+          collection: pw(GG)
         }),
-        stream: uu => {
-          const Eu = new fs({
-            stream: cs(uu)
+        stream: GG => {
+          const bG = new Uw({
+            stream: pw(GG)
           });
-          return Eu._stream = !0, Eu
+          return bG._stream = !0, bG
         },
-        quantized: Ns,
-        angle: uu => Ns({
+        quantized: fw,
+        angle: GG => fw({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
-          bits: uu?.bits ?? 16
+          bits: GG?.bits ?? 16
         })
       }),
-      Ys = -1;
+      Kw = -1;
 
-    function hs(uu) {
-      return IE.register(uu), uu
+    function hw(GG) {
+      return qb.register(GG), GG
     }
 
-    function Ds() {
-      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Ys;
-      return function(Eu, ju) {
-        const su = HE.initialize(Eu.constructor);
-        HE.setTag(su, ju, uu)
+    function dw() {
+      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Kw;
+      return function(bG, ZG) {
+        const wG = tb.initialize(bG.constructor);
+        tb.setTag(wG, ZG, GG)
       }
     }
 
-    function gs(uu, Eu) {
-      const ju = HE.initialize(uu.constructor);
-      HE.setUnreliable(ju, Eu)
+    function Jw(GG, bG) {
+      const ZG = tb.initialize(GG.constructor);
+      tb.setUnreliable(ZG, bG)
     }
 
-    function Ms(uu, Eu) {
-      const ju = HE.initialize(uu.constructor);
-      HE.setPatchOnly(ju, Eu)
+    function rw(GG, bG) {
+      const ZG = tb.initialize(GG.constructor);
+      tb.setPatchOnly(ZG, bG)
     }
 
-    function es(uu, Eu) {
-      const ju = HE.initialize(uu.constructor);
-      HE.setFullStateOnly(ju, Eu)
+    function zw(GG, bG) {
+      const ZG = tb.initialize(GG.constructor);
+      tb.setFullStateOnly(ZG, bG)
     }
 
-    function Gs(uu, Eu) {
-      return function(ju, su) {
-        const Uu = ju.constructor;
-        if (!uu) throw new Error(`${Uu.name}: @type() reference provided for "${su}" is undefined. Make sure you don't have any circular dependencies.`);
-        uu = BE(uu, `${Uu.name}.${su}`), IE.register(Uu);
-        const Zu = Object.getPrototypeOf(Uu)[Symbol.metadata],
-          Xu = HE.initialize(Uu);
-        let lu = Xu[su];
-        if (void 0 !== Xu[lu]) {
-          if (Xu[lu].deprecated) return;
-          if (void 0 !== Xu[lu].type) {
-            const uu = new Error(`@colyseus/schema: Duplicate '${su}' definition on '${Uu.name}'.\nCheck @type() annotation`);
-            throw new Error(`${uu.message} ${uu.stack.split("\n")[4].trim()}`)
+    function Ew(GG, bG) {
+      return function(ZG, wG) {
+        const SG = ZG.constructor;
+        if (!GG) throw new Error(`${SG.name}: @type() reference provided for "${wG}" is undefined. Make sure you don't have any circular dependencies.`);
+        GG = gb(GG, `${SG.name}.${wG}`), qb.register(SG);
+        const LG = Object.getPrototypeOf(SG)[Symbol.metadata],
+          yG = tb.initialize(SG);
+        let kG = yG[wG];
+        if (void 0 !== yG[kG]) {
+          if (yG[kG].deprecated) return;
+          if (void 0 !== yG[kG].type) {
+            const GG = new Error(`@colyseus/schema: Duplicate '${wG}' definition on '${SG.name}'.\nCheck @type() annotation`);
+            throw new Error(`${GG.message} ${GG.stack.split("\n")[4].trim()}`)
           }
-        } else lu = Xu[au] ?? (Zu && Zu[au]) ?? -1, lu++;
-        if (Eu && Eu.manual) HE.addField(Xu, lu, su, uu, {
+        } else kG = yG[WG] ?? (LG && LG[WG]) ?? -1, kG++;
+        if (bG && bG.manual) tb.addField(yG, kG, wG, GG, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: Eu,
-            childType: ju
-          } = FE(uu);
-          HE.addField(Xu, lu, su, uu, ws(su, lu, ju, Eu))
+            complexTypeKlass: bG,
+            childType: ZG
+          } = nb(GG);
+          tb.addField(yG, kG, wG, GG, Xw(wG, kG, ZG, bG))
         }
-        Xu[wu][su] && Object.defineProperty(ju, su, Xu[wu][su]), ("string" === typeof uu || QE(uu)) && (Xu[du] || Object.defineProperty(Xu, du, {
+        yG[uG][wG] && Object.defineProperty(ZG, wG, yG[uG][wG]), ("string" === typeof GG || Pb(GG)) && (yG[CG] || Object.defineProperty(yG, CG, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), Xu[du][lu] = "string" === typeof uu ? EE[uu] : SE(uu.quantized))
+        }), yG[CG][kG] = "string" === typeof GG ? bb[GG] : sb(GG.quantized))
       }
     }
-    const ps = {
+    const ow = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,432 +5307,432 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function ws(uu, Eu, ju, su) {
-      let Zu;
-      return Zu = su ? function(uu, Eu, ju, su) {
-        const Zu = su.constructor === ss,
-          Xu = su.constructor === Zs;
-        return function(uu) {
-          const su = this[Gu],
-            lu = su[Eu];
-          if (uu !== lu) {
-            if (void 0 !== uu && null !== uu) {
-              if (!Zu || uu instanceof ss)
-                if (!Xu || uu instanceof Zs) uu[hu] = ju;
+    function Xw(GG, bG, ZG, wG) {
+      let LG;
+      return LG = wG ? function(GG, bG, ZG, wG) {
+        const LG = wG.constructor === Zw,
+          yG = wG.constructor === Sw;
+        return function(GG) {
+          const wG = this[oG],
+            kG = wG[bG];
+          if (GG !== kG) {
+            if (void 0 !== GG && null !== GG) {
+              if (!LG || GG instanceof Zw)
+                if (!yG || GG instanceof Sw) GG[dG] = ZG;
                 else {
-                  const Eu = new Zs;
-                  if (Eu[hu] = ju, uu instanceof Map) uu.forEach(((uu, ju) => Eu.set(ju, uu)));
+                  const bG = new Sw;
+                  if (bG[dG] = ZG, GG instanceof Map) GG.forEach(((GG, ZG) => bG.set(ZG, GG)));
                   else
-                    for (const ju in uu) Eu.set(ju, uu[ju]);
-                  uu = Eu
+                    for (const ZG in GG) bG.set(ZG, GG[ZG]);
+                  GG = bG
                 }
               else {
-                const Eu = new ss;
-                Eu[hu] = ju, Eu.push(...uu), uu = Eu
+                const bG = new Zw;
+                bG[dG] = ZG, bG.push(...GG), GG = bG
               }
-              const su = this[Yu],
-                fu = this.constructor;
-              void 0 !== lu && null !== lu && lu[Yu] ? (su.root?.remove(lu[Yu]), fu[qu](su, Eu, Uu.DELETE_AND_ADD)) : fu[qu](su, Eu, Uu.ADD), uu[Yu]?.setParent(this, su.root, Eu)
-            } else void 0 !== lu && null !== lu && this[Yu].delete(Eu);
-            su[Eu] = uu
+              const wG = this[hG],
+                YG = this.constructor;
+              void 0 !== kG && null !== kG && kG[hG] ? (wG.root?.remove(kG[hG]), YG[UG](wG, bG, SG.DELETE_AND_ADD)) : YG[UG](wG, bG, SG.ADD), GG[hG]?.setParent(this, wG.root, bG)
+            } else void 0 !== kG && null !== kG && this[hG].delete(bG);
+            wG[bG] = GG
           }
         }
-      }(0, Eu, ju, su) : "string" === typeof ju ? function(uu, Eu, ju) {
-        const su = ps[ju],
-          Zu = "string" === ju,
-          Xu = "boolean" === ju;
-        return function(ju) {
-          const lu = this[Gu],
-            fu = lu[Eu];
-          if (ju !== fu) {
-            if (void 0 !== ju && null !== ju) {
-              if (!Xu && void 0 !== su && typeof ju !== su && (!Zu || null !== ju)) {
-                const Eu = ju && ju.constructor ? ` (${ju.constructor.name})` : "";
-                throw new zj(`a '${su}' was expected, but '${JSON.stringify(ju)}'${Eu} was provided in ${this.constructor.name}#${uu}`)
+      }(0, bG, ZG, wG) : "string" === typeof ZG ? function(GG, bG, ZG) {
+        const wG = ow[ZG],
+          LG = "string" === ZG,
+          yG = "boolean" === ZG;
+        return function(ZG) {
+          const kG = this[oG],
+            YG = kG[bG];
+          if (ZG !== YG) {
+            if (void 0 !== ZG && null !== ZG) {
+              if (!yG && void 0 !== wG && typeof ZG !== wG && (!LG || null !== ZG)) {
+                const bG = ZG && ZG.constructor ? ` (${ZG.constructor.name})` : "";
+                throw new xZ(`a '${wG}' was expected, but '${JSON.stringify(ZG)}'${bG} was provided in ${this.constructor.name}#${GG}`)
               }
-              this.constructor[qu](this[Yu], Eu, Uu.ADD)
-            } else void 0 !== fu && null !== fu && this[Yu].delete(Eu);
-            lu[Eu] = ju
+              this.constructor[UG](this[hG], bG, SG.ADD)
+            } else void 0 !== YG && null !== YG && this[hG].delete(bG);
+            kG[bG] = ZG
           }
         }
-      }(uu, Eu, ju) : QE(ju) ? function(uu, Eu, ju) {
-        return function(su) {
-          const Zu = this[Gu],
-            Xu = Zu[Eu];
-          if (void 0 !== su && null !== su) {
-            if ("number" !== typeof su) throw new zj(`a 'number' was expected, but '${JSON.stringify(su)}' was provided in ${this.constructor.name}#${uu}`);
-            if ((su = WE(ju, iE(ju, su))) === Xu) return;
-            this.constructor[qu](this[Yu], Eu, Uu.ADD)
+      }(GG, bG, ZG) : Pb(ZG) ? function(GG, bG, ZG) {
+        return function(wG) {
+          const LG = this[oG],
+            yG = LG[bG];
+          if (void 0 !== wG && null !== wG) {
+            if ("number" !== typeof wG) throw new xZ(`a 'number' was expected, but '${JSON.stringify(wG)}' was provided in ${this.constructor.name}#${GG}`);
+            if ((wG = Ab(ZG, Mb(ZG, wG))) === yG) return;
+            this.constructor[UG](this[hG], bG, SG.ADD)
           } else {
-            if (su === Xu) return;
-            void 0 !== Xu && null !== Xu && this[Yu].delete(Eu)
+            if (wG === yG) return;
+            void 0 !== yG && null !== yG && this[hG].delete(bG)
           }
-          Zu[Eu] = su
+          LG[bG] = wG
         }
-      }(uu, Eu, ju.quantized) : function(uu, Eu, ju) {
-        return function(su) {
-          const Zu = this[Gu],
-            Xu = Zu[Eu];
-          if (su !== Xu) {
-            if (void 0 !== su && null !== su) {
-              Rj(su, ju, this, uu);
-              const Zu = this[Yu],
-                lu = this.constructor;
-              void 0 !== Xu && null !== Xu && Xu[Yu] ? (Zu.root?.remove(Xu[Yu]), lu[qu](Zu, Eu, Uu.DELETE_AND_ADD)) : lu[qu](Zu, Eu, Uu.ADD), su[Yu]?.setParent(this, Zu.root, Eu)
-            } else void 0 !== Xu && null !== Xu && this[Yu].delete(Eu);
-            Zu[Eu] = su
+      }(GG, bG, ZG.quantized) : function(GG, bG, ZG) {
+        return function(wG) {
+          const LG = this[oG],
+            yG = LG[bG];
+          if (wG !== yG) {
+            if (void 0 !== wG && null !== wG) {
+              BZ(wG, ZG, this, GG);
+              const LG = this[hG],
+                kG = this.constructor;
+              void 0 !== yG && null !== yG && yG[hG] ? (LG.root?.remove(yG[hG]), kG[UG](LG, bG, SG.DELETE_AND_ADD)) : kG[UG](LG, bG, SG.ADD), wG[hG]?.setParent(this, LG.root, bG)
+            } else void 0 !== yG && null !== yG && this[hG].delete(bG);
+            LG[bG] = wG
           }
         }
-      }(uu, Eu, ju), {
+      }(GG, bG, ZG), {
         get: function() {
-          return this[Gu][Eu]
+          return this[oG][bG]
         },
-        set: Zu,
+        set: LG,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function ds() {
-      let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(Eu, ju) {
-        const su = HE.initialize(Eu.constructor);
-        HE.setDeprecated(su, ju), uu && (su[wu] ??= {}, su[wu][ju] = {
+    function uw() {
+      let GG = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return function(bG, ZG) {
+        const wG = tb.initialize(bG.constructor);
+        tb.setDeprecated(wG, ZG), GG && (wG[uG] ??= {}, wG[uG][ZG] = {
           get: function() {
-            throw new Error(`${ju} is deprecated.`)
+            throw new Error(`${ZG} is deprecated.`)
           },
-          set: function(uu) {},
+          set: function(GG) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(Eu, ju, su[wu][ju]))
+        }, Object.defineProperty(bG, ZG, wG[uG][ZG]))
       }
     }
-    let as = !1;
+    let iw = !1;
 
-    function Ps(uu, Eu, ju) {
-      as || (as = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let su in Eu) Gs(Eu[su], ju)(uu.prototype, su);
-      return uu
+    function Cw(GG, bG, ZG) {
+      iw || (iw = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let wG in bG) Ew(bG[wG], ZG)(GG.prototype, wG);
+      return GG
     }
 
-    function os(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ms;
-      if (null == uu || "object" !== typeof uu) throw new Error(`schema(): first argument must be a fields object (got ${typeof uu}).`);
-      const su = {},
-        Uu = {},
-        Zu = {},
-        Xu = {},
-        lu = (uu, Eu) => {
-          if (Eu.hasDefault)((uu, Eu) => {
-            "function" === typeof Eu ? Xu[uu] = Eu : Eu && "function" === typeof Eu.clone ? Xu[uu] = () => Eu.clone() : Zu[uu] = Eu
-          })(uu, Eu.default);
-          else if (!Eu.optional) {
-            const ju = function(uu) {
-              if (uu && "object" === typeof uu) {
-                if (void 0 !== uu.array) return () => new ss;
-                if (void 0 !== uu.map) return () => new Zs;
-                if (void 0 !== uu.set) return () => new ls;
-                if (void 0 !== uu.collection) return () => new Xs;
-                if (void 0 !== uu.stream) return () => new qs
-              } else if ("function" === typeof uu && ms.is(uu) && (!uu.prototype.initialize || 0 === uu.prototype.initialize.length)) return () => new uu
-            }(Eu.type);
-            ju && (Xu[uu] = ju)
+    function Ww(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Iw;
+      if (null == GG || "object" !== typeof GG) throw new Error(`schema(): first argument must be a fields object (got ${typeof GG}).`);
+      const wG = {},
+        SG = {},
+        LG = {},
+        yG = {},
+        kG = (GG, bG) => {
+          if (bG.hasDefault)((GG, bG) => {
+            "function" === typeof bG ? yG[GG] = bG : bG && "function" === typeof bG.clone ? yG[GG] = () => bG.clone() : LG[GG] = bG
+          })(GG, bG.default);
+          else if (!bG.optional) {
+            const ZG = function(GG) {
+              if (GG && "object" === typeof GG) {
+                if (void 0 !== GG.array) return () => new Zw;
+                if (void 0 !== GG.map) return () => new Sw;
+                if (void 0 !== GG.set) return () => new yw;
+                if (void 0 !== GG.collection) return () => new Lw;
+                if (void 0 !== GG.stream) return () => new kw
+              } else if ("function" === typeof GG && Iw.is(GG) && (!GG.prototype.initialize || 0 === GG.prototype.initialize.length)) return () => new GG
+            }(bG.type);
+            ZG && (yG[GG] = ZG)
           }
         },
-        qu = {},
-        fu = [],
-        Cu = [],
-        bu = {},
-        cu = [],
-        Nu = [],
-        Ou = {},
-        Yu = [];
-      for (const Gu in uu) {
-        const ju = uu[Gu],
-          Zu = `schema(${Eu?`'${Eu}'`:""}): field '${Gu}'`;
-        if (Cs(ju)) {
-          const uu = ju.toDefinition();
-          if (uu.noSync) {
-            if (void 0 !== uu.view || uu.unreliable || uu.patchOnly || uu.fullStateOnly || uu.stream) throw new Error(`${Zu} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            lu(Gu, uu);
+        UG = {},
+        YG = [],
+        VG = [],
+        pG = {},
+        fG = [],
+        QG = [],
+        KG = {},
+        hG = [];
+      for (const oG in GG) {
+        const ZG = GG[oG],
+          LG = `schema(${bG?`'${bG}'`:""}): field '${oG}'`;
+        if (Yw(ZG)) {
+          const GG = ZG.toDefinition();
+          if (GG.noSync) {
+            if (void 0 !== GG.view || GG.unreliable || GG.patchOnly || GG.fullStateOnly || GG.stream) throw new Error(`${LG} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            kG(oG, GG);
             continue
           }
-          if (uu.patchOnly && uu.fullStateOnly) throw new Error(`${Zu} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const Eu = BE(uu.type, Zu);
-          if ("function" === typeof Eu && !ms.is(Eu)) throw new Error(`${Zu} is a synced ref to non-Schema class '${Eu.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          su[Gu] = Eu, void 0 !== uu.view && (qu[Gu] = uu.view), uu.unreliable && fu.push(Gu), uu.patchOnly && Cu.push(Gu), uu.deprecated && (bu[Gu] = uu.deprecatedThrows), uu.fullStateOnly && cu.push(Gu), uu.stream && Nu.push(Gu), void 0 !== uu.streamPriority && (Ou[Gu] = uu.streamPriority), uu.optional && Yu.push(Gu), lu(Gu, uu)
+          if (GG.patchOnly && GG.fullStateOnly) throw new Error(`${LG} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const bG = gb(GG.type, LG);
+          if ("function" === typeof bG && !Iw.is(bG)) throw new Error(`${LG} is a synced ref to non-Schema class '${bG.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          wG[oG] = bG, void 0 !== GG.view && (UG[oG] = GG.view), GG.unreliable && YG.push(oG), GG.patchOnly && VG.push(oG), GG.deprecated && (pG[oG] = GG.deprecatedThrows), GG.fullStateOnly && fG.push(oG), GG.stream && QG.push(oG), void 0 !== GG.streamPriority && (KG[oG] = GG.streamPriority), GG.optional && hG.push(oG), kG(oG, GG)
         } else {
-          if ("function" !== typeof ju) throw new Error(`${Zu} must be a t.* builder, Schema subclass, or method (got ${typeof ju}).`);
-          ms.is(ju) ? (su[Gu] = ju, ju.prototype.initialize && 0 !== ju.prototype.initialize.length || (Xu[Gu] = () => new ju)) : Uu[Gu] = ju
+          if ("function" !== typeof ZG) throw new Error(`${LG} must be a t.* builder, Schema subclass, or method (got ${typeof ZG}).`);
+          Iw.is(ZG) ? (wG[oG] = ZG, ZG.prototype.initialize && 0 !== ZG.prototype.initialize.length || (yG[oG] = () => new ZG)) : SG[oG] = ZG
         }
       }
-      const hu = uu => {
-          for (const Eu in Zu) uu[Eu] = Zu[Eu];
-          for (const Eu in Xu) uu[Eu] = Xu[Eu]()
+      const dG = GG => {
+          for (const bG in LG) GG[bG] = LG[bG];
+          for (const bG in yG) GG[bG] = yG[bG]()
         },
-        Du = () => {
-          const uu = {};
-          return hu(uu), uu
+        JG = () => {
+          const GG = {};
+          return dG(GG), GG
         },
-        gu = "function" === typeof Uu.initialize,
-        Mu = Uu.initialize ?? ju._initialize,
-        eu = class extends ju {
+        rG = "function" === typeof SG.initialize,
+        zG = SG.initialize ?? ZG._initialize,
+        EG = class extends ZG {
           constructor() {
-            for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
-            const Uu = Eu[0];
-            void 0 === Uu ? (super(), hu(this)) : super(Object.assign(Du(), gu ? (uu => {
-              const Eu = Object.keys(su),
-                ju = {};
-              for (const su in uu) Eu.includes(su) || (ju[su] = uu[su]);
-              return ju
-            })(Uu) : Uu)), Mu && new.target === eu && Mu.apply(this, Eu)
+            for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
+            const SG = bG[0];
+            void 0 === SG ? (super(), dG(this)) : super(Object.assign(JG(), rG ? (GG => {
+              const bG = Object.keys(wG),
+                ZG = {};
+              for (const wG in GG) bG.includes(wG) || (ZG[wG] = GG[wG]);
+              return ZG
+            })(SG) : SG)), zG && new.target === EG && zG.apply(this, bG)
           }
         };
-      Eu && Object.defineProperty(eu, "name", {
-        value: Eu
-      }), HE.setFields(eu, su), eu._getDefaultValues = Du, eu._initialize = Mu, Object.assign(eu.prototype, Uu);
-      for (const Gu in qu) Ds(qu[Gu])(eu.prototype, Gu);
-      for (const Gu of fu) gs(eu.prototype, Gu);
-      for (const Gu of Cu) Ms(eu.prototype, Gu);
-      for (const Gu in bu) ds(bu[Gu])(eu.prototype, Gu);
-      if (cu.length > 0 || Nu.length > 0) {
-        const uu = eu[Symbol.metadata];
-        for (const Eu of cu) HE.setFullStateOnly(uu, Eu);
-        for (const Eu of Nu) HE.setStream(uu, Eu);
-        for (const Eu in Ou) HE.setStreamPriority(uu, Eu, Ou[Eu])
+      bG && Object.defineProperty(EG, "name", {
+        value: bG
+      }), tb.setFields(EG, wG), EG._getDefaultValues = JG, EG._initialize = zG, Object.assign(EG.prototype, SG);
+      for (const oG in UG) dw(UG[oG])(EG.prototype, oG);
+      for (const oG of YG) Jw(EG.prototype, oG);
+      for (const oG of VG) rw(EG.prototype, oG);
+      for (const oG in pG) uw(pG[oG])(EG.prototype, oG);
+      if (fG.length > 0 || QG.length > 0) {
+        const GG = EG[Symbol.metadata];
+        for (const bG of fG) tb.setFullStateOnly(GG, bG);
+        for (const bG of QG) tb.setStream(GG, bG);
+        for (const bG in KG) tb.setStreamPriority(GG, bG, KG[bG])
       }
-      if (Yu.length > 0) {
-        const uu = eu[Symbol.metadata];
-        for (const Eu of Yu) uu[uu[Eu]].optional = !0
+      if (hG.length > 0) {
+        const GG = EG[Symbol.metadata];
+        for (const bG of hG) GG[GG[bG]].optional = !0
       }
-      return eu.extend = (uu, Eu) => os(uu, Eu, eu), eu
+      return EG.extend = (GG, bG) => Ww(GG, bG, EG), EG
     }
 
-    function ks(uu) {
-      const Eu = uu[Yu].root,
-        ju = {
+    function mw(GG) {
+      const bG = GG[hG].root,
+        ZG = {
           ops: {},
           refs: []
         };
-      let su = Eu.changes.next;
-      for (; su;) {
-        const uu = su.changeTree;
-        void 0 !== uu ? (ju.refs.push(`refId#${uu.ref[lu]}`), uu.forEach(((uu, Eu) => {
-          if (uu < 0 || !Eu) return;
-          const su = Uu[Eu];
-          ju.ops[su] || (ju.ops[su] = 0), ju.ops[su]++
-        })), su = su.next) : su = su.next
+      let wG = bG.changes.next;
+      for (; wG;) {
+        const GG = wG.changeTree;
+        void 0 !== GG ? (ZG.refs.push(`refId#${GG.ref[kG]}`), GG.forEach(((GG, bG) => {
+          if (GG < 0 || !bG) return;
+          const wG = SG[bG];
+          ZG.ops[wG] || (ZG.ops[wG] = 0), ZG.ops[wG]++
+        })), wG = wG.next) : wG = wG.next
       }
-      return ju
+      return ZG
     }
-    class ms {
-      static[fu] = Vj;
-      static[Cu] = Aj;
-      [lu];
-      [Gu];
-      static initialize(uu) {
-        Object.defineProperty(uu, Yu, {
-          value: new kj(uu),
+    class Iw {
+      static[YG] = lZ;
+      static[VG] = DZ;
+      [kG];
+      [oG];
+      static initialize(GG) {
+        Object.defineProperty(GG, hG, {
+          value: new FZ(GG),
           enumerable: !1,
           writable: !0
-        }), uu[Gu] = []
+        }), GG[oG] = []
       }
       static initializeForDecoder() {
-        const uu = Object.create(this.prototype);
-        return vj(uu), uu[Gu] = [], uu
+        const GG = Object.create(this.prototype);
+        return aZ(GG), GG[oG] = [], GG
       }
-      static reset(uu) {
-        const Eu = uu?.[Yu];
-        if (void 0 === Eu || "function" !== typeof Eu.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== Eu.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${uu.constructor.name}) with multiple parents.`);
-        uu[Mu]()
-      } [Mu]() {
-        const uu = this.constructor[Symbol.metadata],
-          Eu = uu?.[Pu] ?? [],
-          ju = this[Gu];
-        for (let su = 0; su < Eu.length; su++) {
-          const uu = ju[Eu[su]];
-          uu?.[Mu]?.()
+      static reset(GG) {
+        const bG = GG?.[hG];
+        if (void 0 === bG || "function" !== typeof bG.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== bG.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${GG.constructor.name}) with multiple parents.`);
+        GG[zG]()
+      } [zG]() {
+        const GG = this.constructor[Symbol.metadata],
+          bG = GG?.[mG] ?? [],
+          ZG = this[oG];
+        for (let wG = 0; wG < bG.length; wG++) {
+          const GG = ZG[bG[wG]];
+          GG?.[zG]?.()
         }
-        this[Yu].recycle(), this[lu] = void 0
+        this[hG].recycle(), this[kG] = void 0
       }
-      static is(uu) {
-        const Eu = uu[Symbol.metadata];
-        return "object" === typeof Eu && null !== Eu
+      static is(GG) {
+        const bG = GG[Symbol.metadata];
+        return "object" === typeof bG && null !== bG
       }
-      static isSchema(uu) {
-        return "function" === typeof uu?.assign
+      static isSchema(GG) {
+        return "function" === typeof GG?.assign
       }
-      static[qu](uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Uu.ADD;
-        uu.change(Eu, ju)
+      static[UG](GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : SG.ADD;
+        GG.change(bG, ZG)
       }
-      static[bu](uu, Eu, ju) {
-        const su = uu.constructor[Symbol.metadata],
-          Uu = su[Eu]?.tag;
-        return void 0 === ju ? void 0 === Uu : void 0 === Uu || (Uu === Ys ? ju.isChangeTreeVisible(uu[Yu]) : ju.hasTagOnTree(uu[Yu], Uu))
+      static[pG](GG, bG, ZG) {
+        const wG = GG.constructor[Symbol.metadata],
+          SG = wG[bG]?.tag;
+        return void 0 === ZG ? void 0 === SG : void 0 === SG || (SG === Kw ? ZG.isChangeTreeVisible(GG[hG]) : ZG.hasTagOnTree(GG[hG], SG))
       }
-      constructor(uu) {
-        ms.initialize(this), uu && ms.assignProps(this, uu)
+      constructor(GG) {
+        Iw.initialize(this), GG && Iw.assignProps(this, GG)
       }
-      assign(uu) {
-        return ms.assignProps(this, uu), this
+      assign(GG) {
+        return Iw.assignProps(this, GG), this
       }
-      static assignProps(uu, Eu) {
-        const ju = uu.constructor[Symbol.metadata];
-        if (ju && void 0 !== ju[au])
-          for (let Uu = 0; Uu <= ju[au]; Uu++) {
-            const su = ju[Uu];
-            if (!su) continue;
-            const Zu = Eu[su.name];
-            void 0 !== Zu && (uu[su.name] = Zu)
+      static assignProps(GG, bG) {
+        const ZG = GG.constructor[Symbol.metadata];
+        if (ZG && void 0 !== ZG[WG])
+          for (let SG = 0; SG <= ZG[WG]; SG++) {
+            const wG = ZG[SG];
+            if (!wG) continue;
+            const LG = bG[wG.name];
+            void 0 !== LG && (GG[wG.name] = LG)
           }
-        const su = Object.keys(Eu);
-        for (let Uu = 0; Uu < su.length; Uu++) {
-          const Zu = su[Uu];
-          ju && void 0 !== ju[Zu] || (uu[Zu] = Eu[Zu])
+        const wG = Object.keys(bG);
+        for (let SG = 0; SG < wG.length; SG++) {
+          const LG = wG[SG];
+          ZG && void 0 !== ZG[LG] || (GG[LG] = bG[LG])
         }
       }
-      restore(uu) {
-        const Eu = this.constructor[Symbol.metadata];
-        for (const ju in Eu) {
-          const su = Eu[ju],
-            Uu = su.name,
-            Zu = su.type,
-            Xu = uu[Uu];
-          if (void 0 !== Xu && null !== Xu)
-            if ("string" === typeof Zu) this[Uu] = Xu;
-            else if (ms.is(Zu)) {
-            const uu = new Zu;
-            uu.restore(Xu), this[Uu] = uu
-          } else if ("object" === typeof Zu) {
-            const uu = Object.keys(Zu)[0],
-              Eu = Zu[uu];
-            if ("map" === uu) {
-              const uu = this[Uu];
-              for (const ju in Xu)
-                if (ms.is(Eu)) {
-                  const su = new Eu;
-                  su.restore(Xu[ju]), uu.set(ju, su)
-                } else uu.set(ju, Xu[ju])
-            } else if ("array" === uu) {
-              const uu = this[Uu];
-              for (let ju = 0; ju < Xu.length; ju++)
-                if (ms.is(Eu)) {
-                  const su = new Eu;
-                  su.restore(Xu[ju]), uu.push(su)
-                } else uu.push(Xu[ju])
+      restore(GG) {
+        const bG = this.constructor[Symbol.metadata];
+        for (const ZG in bG) {
+          const wG = bG[ZG],
+            SG = wG.name,
+            LG = wG.type,
+            yG = GG[SG];
+          if (void 0 !== yG && null !== yG)
+            if ("string" === typeof LG) this[SG] = yG;
+            else if (Iw.is(LG)) {
+            const GG = new LG;
+            GG.restore(yG), this[SG] = GG
+          } else if ("object" === typeof LG) {
+            const GG = Object.keys(LG)[0],
+              bG = LG[GG];
+            if ("map" === GG) {
+              const GG = this[SG];
+              for (const ZG in yG)
+                if (Iw.is(bG)) {
+                  const wG = new bG;
+                  wG.restore(yG[ZG]), GG.set(ZG, wG)
+                } else GG.set(ZG, yG[ZG])
+            } else if ("array" === GG) {
+              const GG = this[SG];
+              for (let ZG = 0; ZG < yG.length; ZG++)
+                if (Iw.is(bG)) {
+                  const wG = new bG;
+                  wG.restore(yG[ZG]), GG.push(wG)
+                } else GG.push(yG[ZG])
             }
           }
         }
         return this
       }
-      setDirty(uu, Eu) {
-        const ju = this.constructor[Symbol.metadata];
-        this[Yu].change(ju[ju[uu]].index, Eu)
+      setDirty(GG, bG) {
+        const ZG = this.constructor[Symbol.metadata];
+        this[hG].change(ZG[ZG[GG]].index, bG)
       }
       pauseTracking() {
-        this[Yu].pause()
+        this[hG].pause()
       }
       resumeTracking() {
-        this[Yu].resume()
+        this[hG].resume()
       }
-      untracked(uu) {
-        return this[Yu].untracked(uu)
+      untracked(GG) {
+        return this[hG].untracked(GG)
       }
       get isTrackingPaused() {
-        return this[Yu].paused
+        return this[hG].paused
       }
       clone() {
-        const uu = Object.create(this.constructor.prototype);
-        ms.initialize(uu);
-        const Eu = this.constructor[Symbol.metadata];
-        for (const ju in Eu) {
-          const su = Eu[ju].name;
-          "object" === typeof this[su] && "function" === typeof this[su]?.clone ? uu[su] = this[su].clone() : uu[su] = this[su]
+        const GG = Object.create(this.constructor.prototype);
+        Iw.initialize(GG);
+        const bG = this.constructor[Symbol.metadata];
+        for (const ZG in bG) {
+          const wG = bG[ZG].name;
+          "object" === typeof this[wG] && "function" === typeof this[wG]?.clone ? GG[wG] = this[wG].clone() : GG[wG] = this[wG]
         }
-        return uu
+        return GG
       }
       toJSON() {
-        const uu = {},
-          Eu = this.constructor[Symbol.metadata];
-        for (const ju in Eu) {
-          const su = Eu[ju],
-            Uu = su.name;
-          su.deprecated || null === this[Uu] || "undefined" === typeof this[Uu] || (uu[Uu] = "function" === typeof this[Uu].toJSON ? this[Uu].toJSON() : this[Uu])
+        const GG = {},
+          bG = this.constructor[Symbol.metadata];
+        for (const ZG in bG) {
+          const wG = bG[ZG],
+            SG = wG.name;
+          wG.deprecated || null === this[SG] || "undefined" === typeof this[SG] || (GG[SG] = "function" === typeof this[SG].toJSON ? this[SG].toJSON() : this[SG])
         }
-        return uu
+        return GG
       }
       discardAllChanges() {
-        this[Yu].discardAll()
-      } [cu](uu) {
-        return this[this.constructor[Symbol.metadata][uu].name]
-      } [Nu](uu) {
-        this[this.constructor[Symbol.metadata][uu].name] = void 0
+        this[hG].discardAll()
+      } [fG](GG) {
+        return this[this.constructor[Symbol.metadata][GG].name]
+      } [QG](GG) {
+        this[this.constructor[Symbol.metadata][GG].name] = void 0
       }
-      static debugRefIds(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          su = arguments.length > 3 ? arguments[3] : void 0,
-          Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const Zu = Eu ? ` - ${JSON.stringify(uu.toJSON())}` : "",
-          Xu = uu[Yu],
-          qu = uu[lu],
-          fu = su ? su.root.refCount[qu] : Xu.refCount,
-          Cu = fu > 1 ? ` [\xd7${fu}]` : "";
-        let bu = `${function(uu){return new Array(uu).fill(0).map(((Eu,ju)=>ju===uu-1?"\u2514\u2500 ":"   ")).join("")}(ju)}${Uu}${uu.constructor.name} (refId: ${qu})${Cu}${Zu}\n`;
-        return Xu.forEachChild(((Uu, Zu) => {
-          let Xu = Zu;
-          "number" === typeof Zu && uu.$indexes && (Xu = uu.$indexes.get(Zu) ?? Zu);
-          const lu = void 0 !== uu.forEach && void 0 !== Xu ? `["${Xu}"]: ` : "";
-          bu += this.debugRefIds(Uu.ref, Eu, ju + 1, su, lu)
-        })), bu
+      static debugRefIds(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          wG = arguments.length > 3 ? arguments[3] : void 0,
+          SG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const LG = bG ? ` - ${JSON.stringify(GG.toJSON())}` : "",
+          yG = GG[hG],
+          UG = GG[kG],
+          YG = wG ? wG.root.refCount[UG] : yG.refCount,
+          VG = YG > 1 ? ` [\xd7${YG}]` : "";
+        let pG = `${function(GG){return new Array(GG).fill(0).map(((bG,ZG)=>ZG===GG-1?"\u2514\u2500 ":"   ")).join("")}(ZG)}${SG}${GG.constructor.name} (refId: ${UG})${VG}${LG}\n`;
+        return yG.forEachChild(((SG, LG) => {
+          let yG = LG;
+          "number" === typeof LG && GG.$indexes && (yG = GG.$indexes.get(LG) ?? LG);
+          const kG = void 0 !== GG.forEach && void 0 !== yG ? `["${yG}"]: ` : "";
+          pG += this.debugRefIds(SG.ref, bG, ZG + 1, wG, kG)
+        })), pG
       }
-      static debugRefIdEncodingOrder(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const ju = [],
-          su = uu[Yu];
-        if ("changes" === Eu) {
-          let uu = su.root.changes?.next;
-          for (; uu;) uu.changeTree && ju.push(uu.changeTree.ref[lu]), uu = uu.next;
-          return ju
+      static debugRefIdEncodingOrder(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const ZG = [],
+          wG = GG[hG];
+        if ("changes" === bG) {
+          let GG = wG.root.changes?.next;
+          for (; GG;) GG.changeTree && ZG.push(GG.changeTree.ref[kG]), GG = GG.next;
+          return ZG
         }
-        const Uu = "allFilteredChanges" === Eu,
-          Zu = new Set,
-          Xu = uu => {
-            Zu.has(uu) || (Zu.add(uu), uu.isFiltered === Uu && ju.push(uu.ref[lu]), uu.forEachChild(((uu, Eu) => Xu(uu))))
+        const SG = "allFilteredChanges" === bG,
+          LG = new Set,
+          yG = GG => {
+            LG.has(GG) || (LG.add(GG), GG.isFiltered === SG && ZG.push(GG.ref[kG]), GG.forEachChild(((GG, bG) => yG(GG))))
           };
-        return Xu(su), ju
+        return yG(wG), ZG
       }
-      static debugRefIdsFromDecoder(uu) {
-        return this.debugRefIds(uu.state, !1, 0, uu)
+      static debugRefIdsFromDecoder(GG) {
+        return this.debugRefIds(GG.state, !1, 0, GG)
       }
-      static debugChanges(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const ju = uu[Yu],
-          su = Eu ? "allChanges" : "changes";
-        let Zu = `${uu.constructor.name} (${uu[lu]}) -> .${su}:\n`;
-        return Eu ? ju.forEachLive((uu => {
-          Zu += `- [${uu}]: ADD (${JSON.stringify(ju.getValue(Number(uu),!0))})\n`
-        })) : ju.forEach(((uu, Eu) => {
-          uu < 0 || !Eu || (Zu += `- [${uu}]: ${Uu[Eu]} (${JSON.stringify(ju.getValue(Number(uu),!1))})\n`)
-        })), Zu
+      static debugChanges(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const ZG = GG[hG],
+          wG = bG ? "allChanges" : "changes";
+        let LG = `${GG.constructor.name} (${GG[kG]}) -> .${wG}:\n`;
+        return bG ? ZG.forEachLive((GG => {
+          LG += `- [${GG}]: ADD (${JSON.stringify(ZG.getValue(Number(GG),!0))})\n`
+        })) : ZG.forEach(((GG, bG) => {
+          GG < 0 || !bG || (LG += `- [${GG}]: ${SG[bG]} (${JSON.stringify(ZG.getValue(Number(GG),!1))})\n`)
+        })), LG
       }
     }
-    Zu(ms);
-    const vs = {
+    LG(Iw);
+    const Fw = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class Ks {
+    class vw {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
-        const uu = {};
-        for (const Eu in this.changeTrees) uu[Eu] = this.changeTrees[Eu].refCount;
-        return uu
+        const GG = {};
+        for (const bG in this.changeTrees) GG[bG] = this.changeTrees[bG].refCount;
+        return GG
       }
       changes = {
         next: void 0,
@@ -5745,8 +5745,8 @@ export const modules = {
         nextPosition: 0
       };
       pendingFilterRefresh = [];
-      enqueueFilterRefresh(uu) {
-        this.types.hasFilters && (uu.flags & Pj || (uu.flags |= Pj, this.pendingFilterRefresh.push(uu)))
+      enqueueFilterRefresh(GG) {
+        this.types.hasFilters && (GG.flags & mZ || (GG.flags |= mZ, this.pendingFilterRefresh.push(GG)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5754,144 +5754,144 @@ export const modules = {
       acquireViewId() {
         return this._freeViewIds.length > 0 ? this._freeViewIds.pop() : this._nextViewId++
       }
-      releaseViewId(uu) {
-        this._freeViewIds.push(uu)
+      releaseViewId(GG) {
+        this._freeViewIds.push(GG)
       }
       activeViews = new Map;
       streamTrees = new Set;
-      registerView(uu) {
-        this.activeViews.set(uu.id, new WeakRef(uu))
+      registerView(GG) {
+        this.activeViews.set(GG.id, new WeakRef(GG))
       }
-      unregisterView(uu) {
-        this.activeViews.delete(uu.id);
-        const Eu = uu.id;
-        for (const ju of this.streamTrees) ju._dropView(Eu)
+      unregisterView(GG) {
+        this.activeViews.delete(GG.id);
+        const bG = GG.id;
+        for (const ZG of this.streamTrees) ZG._dropView(bG)
       }
-      forEachActiveView(uu) {
-        for (const [Eu, ju] of this.activeViews) {
-          const su = ju.deref();
-          if (void 0 !== su) uu(su);
+      forEachActiveView(GG) {
+        for (const [bG, ZG] of this.activeViews) {
+          const wG = ZG.deref();
+          if (void 0 !== wG) GG(wG);
           else {
-            this.activeViews.delete(Eu);
-            for (const uu of this.streamTrees) uu._dropView(Eu)
+            this.activeViews.delete(bG);
+            for (const GG of this.streamTrees) GG._dropView(bG)
           }
         }
       }
-      registerStream(uu) {
-        this.streamTrees.add(uu)
+      registerStream(GG) {
+        this.streamTrees.add(GG)
       }
-      unregisterStream(uu) {
-        this.streamTrees.delete(uu)
+      unregisterStream(GG) {
+        this.streamTrees.delete(GG)
       }
-      constructor(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = uu, this.nextUniqueId = Eu
+      constructor(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = GG, this.nextUniqueId = bG
       }
-      add(uu) {
-        const Eu = uu.ref;
-        void 0 === Eu[lu] && (vs.value = this.nextUniqueId++, Object.defineProperty(Eu, lu, vs));
-        const ju = Eu[lu],
-          su = void 0 === this.changeTrees[ju];
-        su && (this.changeTrees[ju] = uu), uu.needsRestage && (uu.needsRestage = !1, uu.forEachLiveWithCtx(uu, jj));
-        const Uu = su ? 0 : uu.refCount;
-        return uu.refCount = Uu + 1, Uu > 0 && this.enqueueFilterRefresh(uu), su
+      add(GG) {
+        const bG = GG.ref;
+        void 0 === bG[kG] && (Fw.value = this.nextUniqueId++, Object.defineProperty(bG, kG, Fw));
+        const ZG = bG[kG],
+          wG = void 0 === this.changeTrees[ZG];
+        wG && (this.changeTrees[ZG] = GG), GG.needsRestage && (GG.needsRestage = !1, GG.forEachLiveWithCtx(GG, ZZ));
+        const SG = wG ? 0 : GG.refCount;
+        return GG.refCount = SG + 1, SG > 0 && this.enqueueFilterRefresh(GG), wG
       }
-      remove(uu) {
-        const Eu = uu.refCount - 1;
-        if (Eu <= 0) {
-          if (uu.root = void 0, delete this.changeTrees[uu.ref[lu]], uu.isStreamCollection) {
-            const Eu = uu.ref;
-            Eu._unregister?.(), this.unregisterStream(Eu)
+      remove(GG) {
+        const bG = GG.refCount - 1;
+        if (bG <= 0) {
+          if (GG.root = void 0, delete this.changeTrees[GG.ref[kG]], GG.isStreamCollection) {
+            const bG = GG.ref;
+            bG._unregister?.(), this.unregisterStream(bG)
           }
-          this.removeFromQueue(uu), this.removeFromUnreliableQueue(uu), uu.refCount = 0, uu.needsRestage = !0, uu.forEachChild(((Eu, ju) => {
-            Eu.removeParent(uu.ref) && (void 0 === Eu.parentRef || Eu.refCount > 0 ? this.remove(Eu) : this.moveNextToParent(Eu))
+          this.removeFromQueue(GG), this.removeFromUnreliableQueue(GG), GG.refCount = 0, GG.needsRestage = !0, GG.forEachChild(((bG, ZG) => {
+            bG.removeParent(GG.ref) && (void 0 === bG.parentRef || bG.refCount > 0 ? this.remove(bG) : this.moveNextToParent(bG))
           }))
-        } else uu.refCount = Eu, this.enqueueFilterRefresh(uu), this.recursivelyMoveNextToParent(uu);
-        return Eu
+        } else GG.refCount = bG, this.enqueueFilterRefresh(GG), this.recursivelyMoveNextToParent(GG);
+        return bG
       }
-      recursivelyMoveNextToParent(uu) {
-        this.moveNextToParent(uu), uu.forEachChild(((uu, Eu) => this.recursivelyMoveNextToParent(uu)))
+      recursivelyMoveNextToParent(GG) {
+        this.moveNextToParent(GG), GG.forEachChild(((GG, bG) => this.recursivelyMoveNextToParent(GG)))
       }
-      moveNextToParent(uu) {
-        uu.changesNode && this._moveNextToParentInList(this.changes, uu, uu.changesNode, "changesNode"), uu.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, uu, uu.unreliableChangesNode, "unreliableChangesNode")
+      moveNextToParent(GG) {
+        GG.changesNode && this._moveNextToParentInList(this.changes, GG, GG.changesNode, "changesNode"), GG.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, GG, GG.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(uu, Eu, ju, su) {
-        const Uu = Eu.parent;
-        if (!Uu || !Uu[Yu]) return;
-        const Zu = Uu[Yu][su];
-        Zu && Zu !== ju && (ju.position > Zu.position || (ju.prev ? ju.prev.next = ju.next : uu.next = ju.next, ju.next ? ju.next.prev = ju.prev : uu.tail = ju.prev, ju.prev = uu.tail, ju.next = void 0, uu.tail.next = ju, uu.tail = ju, ju.position = uu.nextPosition++))
+      _moveNextToParentInList(GG, bG, ZG, wG) {
+        const SG = bG.parent;
+        if (!SG || !SG[hG]) return;
+        const LG = SG[hG][wG];
+        LG && LG !== ZG && (ZG.position > LG.position || (ZG.prev ? ZG.prev.next = ZG.next : GG.next = ZG.next, ZG.next ? ZG.next.prev = ZG.prev : GG.tail = ZG.prev, ZG.prev = GG.tail, ZG.next = void 0, GG.tail.next = ZG, GG.tail = ZG, ZG.position = GG.nextPosition++))
       }
-      enqueueChangeTree(uu) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu.changesNode) || (uu.changesNode = this._appendToList(this.changes, uu))
+      enqueueChangeTree(GG) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : GG.changesNode) || (GG.changesNode = this._appendToList(this.changes, GG))
       }
-      enqueueUnreliable(uu) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu.unreliableChangesNode) || (uu.unreliableChangesNode = this._appendToList(this.unreliableChanges, uu))
+      enqueueUnreliable(GG) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : GG.unreliableChangesNode) || (GG.unreliableChangesNode = this._appendToList(this.unreliableChanges, GG))
       }
-      _appendToList(uu, Eu) {
-        const ju = this._nodePool;
-        let su;
-        return ju.length > 0 ? (su = ju.pop(), su.changeTree = Eu, su.next = void 0, su.prev = void 0) : su = {
-          changeTree: Eu,
+      _appendToList(GG, bG) {
+        const ZG = this._nodePool;
+        let wG;
+        return ZG.length > 0 ? (wG = ZG.pop(), wG.changeTree = bG, wG.next = void 0, wG.prev = void 0) : wG = {
+          changeTree: bG,
           next: void 0,
           prev: void 0,
           position: 0
-        }, uu.next ? (su.prev = uu.tail, uu.tail.next = su, uu.tail = su) : (uu.nextPosition = 0, uu.next = su, uu.tail = su), su.position = uu.nextPosition++, su
+        }, GG.next ? (wG.prev = GG.tail, GG.tail.next = wG, GG.tail = wG) : (GG.nextPosition = 0, GG.next = wG, GG.tail = wG), wG.position = GG.nextPosition++, wG
       }
-      releaseNode(uu) {
-        uu.changeTree = void 0, uu.prev = void 0, uu.next = void 0, this._nodePool.push(uu)
+      releaseNode(GG) {
+        GG.changeTree = void 0, GG.prev = void 0, GG.next = void 0, this._nodePool.push(GG)
       }
-      removeFromQueue(uu) {
-        return this._removeNode(this.changes, uu, uu.changesNode, "changesNode")
+      removeFromQueue(GG) {
+        return this._removeNode(this.changes, GG, GG.changesNode, "changesNode")
       }
-      removeFromUnreliableQueue(uu) {
-        return this._removeNode(this.unreliableChanges, uu, uu.unreliableChangesNode, "unreliableChangesNode")
+      removeFromUnreliableQueue(GG) {
+        return this._removeNode(this.unreliableChanges, GG, GG.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(uu, Eu, ju, su) {
-        return !(!ju || ju.changeTree !== Eu) && (ju.prev ? ju.prev.next = ju.next : uu.next = ju.next, ju.next ? ju.next.prev = ju.prev : uu.tail = ju.prev, Eu[su] = void 0, this.releaseNode(ju), !0)
+      _removeNode(GG, bG, ZG, wG) {
+        return !(!ZG || ZG.changeTree !== bG) && (ZG.prev ? ZG.prev.next = ZG.next : GG.next = ZG.next, ZG.next ? ZG.next.prev = ZG.prev : GG.tail = ZG.prev, bG[wG] = void 0, this.releaseNode(ZG), !0)
       }
     }
 
-    function Vs(uu, Eu) {
-      if (-1 === Eu || Eu >= uu.length) return !1;
-      const ju = uu.length - 1;
-      for (let su = Eu; su < ju; su++) uu[su] = uu[su + 1];
-      return uu.length = ju, !0
+    function aw(GG, bG) {
+      if (-1 === bG || bG >= GG.length) return !1;
+      const ZG = GG.length - 1;
+      for (let wG = bG; wG < ZG; wG++) GG[wG] = GG[wG + 1];
+      return GG.length = ZG, !0
     }
 
-    function rs(uu, Eu, ju) {
-      const su = ~ju,
-        Uu = uu.changeTrees;
-      for (const Zu in Uu) {
-        const uu = Uu[Zu],
-          ju = uu.visibleViews;
-        void 0 !== ju && Eu < ju.length && (ju[Eu] &= su);
-        const Xu = uu.subscribedViews;
-        void 0 !== Xu && Eu < Xu.length && (Xu[Eu] &= su);
-        const lu = uu.tagViews;
-        void 0 !== lu && lu.forEach((uu => {
-          Eu < uu.length && (uu[Eu] &= su)
+    function lw(GG, bG, ZG) {
+      const wG = ~ZG,
+        SG = GG.changeTrees;
+      for (const LG in SG) {
+        const GG = SG[LG],
+          ZG = GG.visibleViews;
+        void 0 !== ZG && bG < ZG.length && (ZG[bG] &= wG);
+        const yG = GG.subscribedViews;
+        void 0 !== yG && bG < yG.length && (yG[bG] &= wG);
+        const kG = GG.tagViews;
+        void 0 !== kG && kG.forEach((GG => {
+          bG < GG.length && (GG[bG] &= wG)
         }))
       }
     }
-    const Qs = new FinalizationRegistry((uu => {
+    const jw = new FinalizationRegistry((GG => {
       let {
-        root: Eu,
-        id: ju,
-        slot: su,
-        bit: Uu
-      } = uu;
-      rs(Eu, su, Uu), Eu.activeViews.delete(ju);
-      for (const Zu of Eu.streamTrees) Zu._dropView(ju);
-      Eu.releaseViewId(ju)
+        root: bG,
+        id: ZG,
+        slot: wG,
+        bit: SG
+      } = GG;
+      lw(bG, wG, SG), bG.activeViews.delete(ZG);
+      for (const LG of bG.streamTrees) LG._dropView(ZG);
+      bG.releaseViewId(ZG)
     }));
 
-    function is(uu) {
-      if (void 0 === uu) return "undefined";
-      if (null === uu) return "null";
-      const Eu = typeof uu;
-      return "string" === Eu ? JSON.stringify(uu.length > 30 ? `${uu.slice(0,30)}\u2026` : uu) : "object" !== Eu && "function" !== Eu ? `${Eu} ${String(uu)}` : Array.isArray(uu) ? `Array(${uu.length})` : uu.constructor?.name ?? "Object"
+    function Pw(GG) {
+      if (void 0 === GG) return "undefined";
+      if (null === GG) return "null";
+      const bG = typeof GG;
+      return "string" === bG ? JSON.stringify(GG.length > 30 ? `${GG.slice(0,30)}\u2026` : GG) : "object" !== bG && "function" !== bG ? `${bG} ${String(GG)}` : Array.isArray(GG) ? `Array(${GG.length})` : GG.constructor?.name ?? "Object"
     }
-    class Ws {
+    class Mw {
       iterable;
       items;
       id = -1;
@@ -5900,385 +5900,385 @@ export const modules = {
       _bit = 0;
       changes = new Map;
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.iterable = uu, uu && (this.items = [])
+        let GG = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.iterable = GG, GG && (this.items = [])
       }
-      _bindRoot(uu) {
-        void 0 === this._root && (this._root = uu, this.id = uu.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), uu.registerView(this), Qs.register(this, {
-          root: uu,
+      _bindRoot(GG) {
+        void 0 === this._root && (this._root = GG, this.id = GG.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), GG.registerView(this), jw.register(this, {
+          root: GG,
           id: this.id,
           slot: this._slot,
           bit: this._bit
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), rs(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), Qs.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), lw(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), jw.unregister(this), this._root = void 0, this.id = -1)
       }
-      isVisible(uu) {
-        const Eu = uu.visibleViews,
-          ju = this._slot;
-        return void 0 !== Eu && ju < Eu.length && 0 !== (Eu[ju] & this._bit)
+      isVisible(GG) {
+        const bG = GG.visibleViews,
+          ZG = this._slot;
+        return void 0 !== bG && ZG < bG.length && 0 !== (bG[ZG] & this._bit)
       }
-      markVisible(uu) {
-        const Eu = this._slot;
-        let ju = uu.visibleViews;
-        for (void 0 === ju && (ju = uu.visibleViews = []); ju.length <= Eu;) ju.push(0);
-        ju[Eu] |= this._bit
+      markVisible(GG) {
+        const bG = this._slot;
+        let ZG = GG.visibleViews;
+        for (void 0 === ZG && (ZG = GG.visibleViews = []); ZG.length <= bG;) ZG.push(0);
+        ZG[bG] |= this._bit
       }
-      unmarkVisible(uu) {
-        const Eu = uu.visibleViews;
-        if (void 0 === Eu) return;
-        const ju = this._slot;
-        ju < Eu.length && (Eu[ju] &= ~this._bit)
+      unmarkVisible(GG) {
+        const bG = GG.visibleViews;
+        if (void 0 === bG) return;
+        const ZG = this._slot;
+        ZG < bG.length && (bG[ZG] &= ~this._bit)
       }
-      isSubscribed(uu) {
-        const Eu = uu.subscribedViews,
-          ju = this._slot;
-        return void 0 !== Eu && ju < Eu.length && 0 !== (Eu[ju] & this._bit)
+      isSubscribed(GG) {
+        const bG = GG.subscribedViews,
+          ZG = this._slot;
+        return void 0 !== bG && ZG < bG.length && 0 !== (bG[ZG] & this._bit)
       }
-      _setSubscribed(uu) {
-        const Eu = this._slot;
-        let ju = uu.subscribedViews;
-        for (void 0 === ju && (ju = uu.subscribedViews = []); ju.length <= Eu;) ju.push(0);
-        ju[Eu] |= this._bit
+      _setSubscribed(GG) {
+        const bG = this._slot;
+        let ZG = GG.subscribedViews;
+        for (void 0 === ZG && (ZG = GG.subscribedViews = []); ZG.length <= bG;) ZG.push(0);
+        ZG[bG] |= this._bit
       }
-      _clearSubscribed(uu) {
-        const Eu = uu.subscribedViews;
-        if (void 0 === Eu) return;
-        const ju = this._slot;
-        ju < Eu.length && (Eu[ju] &= ~this._bit)
+      _clearSubscribed(GG) {
+        const bG = GG.subscribedViews;
+        if (void 0 === bG) return;
+        const ZG = this._slot;
+        ZG < bG.length && (bG[ZG] &= ~this._bit)
       }
-      hasTagOnTree(uu, Eu) {
-        const ju = uu.tagViews;
-        if (void 0 === ju) return !1;
-        const su = this._slot,
-          Uu = this._bit;
-        for (let Zu = Eu; 0 !== Zu; Zu &= Zu - 1) {
-          const uu = ju.get(Zu & -Zu);
-          if (void 0 !== uu && su < uu.length && 0 !== (uu[su] & Uu)) return !0
+      hasTagOnTree(GG, bG) {
+        const ZG = GG.tagViews;
+        if (void 0 === ZG) return !1;
+        const wG = this._slot,
+          SG = this._bit;
+        for (let LG = bG; 0 !== LG; LG &= LG - 1) {
+          const GG = ZG.get(LG & -LG);
+          if (void 0 !== GG && wG < GG.length && 0 !== (GG[wG] & SG)) return !0
         }
         return !1
       }
-      addTag(uu, Eu) {
-        if (Eu === Ys) return;
-        let ju = uu.tagViews;
-        void 0 === ju && (ju = uu.tagViews = new Map);
-        const su = this._slot,
-          Uu = this._bit;
-        for (let Zu = Eu; Zu > 0; Zu &= Zu - 1) {
-          const uu = Zu & -Zu;
-          let Eu = ju.get(uu);
-          for (void 0 === Eu && (Eu = [], ju.set(uu, Eu)); Eu.length <= su;) Eu.push(0);
-          Eu[su] |= Uu
+      addTag(GG, bG) {
+        if (bG === Kw) return;
+        let ZG = GG.tagViews;
+        void 0 === ZG && (ZG = GG.tagViews = new Map);
+        const wG = this._slot,
+          SG = this._bit;
+        for (let LG = bG; LG > 0; LG &= LG - 1) {
+          const GG = LG & -LG;
+          let bG = ZG.get(GG);
+          for (void 0 === bG && (bG = [], ZG.set(GG, bG)); bG.length <= wG;) bG.push(0);
+          bG[wG] |= SG
         }
       }
-      removeTag(uu, Eu) {
-        if (Eu === Ys) return;
-        const ju = uu.tagViews;
-        if (void 0 === ju) return;
-        const su = this._slot,
-          Uu = ~this._bit;
-        for (let Zu = Eu; Zu > 0; Zu &= Zu - 1) {
-          const uu = ju.get(Zu & -Zu);
-          void 0 !== uu && su < uu.length && (uu[su] &= Uu)
+      removeTag(GG, bG) {
+        if (bG === Kw) return;
+        const ZG = GG.tagViews;
+        if (void 0 === ZG) return;
+        const wG = this._slot,
+          SG = ~this._bit;
+        for (let LG = bG; LG > 0; LG &= LG - 1) {
+          const GG = ZG.get(LG & -LG);
+          void 0 !== GG && wG < GG.length && (GG[wG] &= SG)
         }
       }
-      removeAllTagsOnTree(uu) {
-        const Eu = uu.tagViews;
-        if (void 0 === Eu) return;
-        const ju = this._slot,
-          su = ~this._bit;
-        Eu.forEach((uu => {
-          ju < uu.length && (uu[ju] &= su)
+      removeAllTagsOnTree(GG) {
+        const bG = GG.tagViews;
+        if (void 0 === bG) return;
+        const ZG = this._slot,
+          wG = ~this._bit;
+        bG.forEach((GG => {
+          ZG < GG.length && (GG[ZG] &= wG)
         }))
       }
-      add(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ys,
-          ju = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(uu, Eu, ju, !1)
+      add(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Kw,
+          ZG = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(GG, bG, ZG, !1)
       }
-      _addImmediate(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ys;
-        this._add(uu, Eu, !0, !0)
+      _addImmediate(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Kw;
+        this._add(GG, bG, !0, !0)
       }
-      _add(uu, Eu, ju, su) {
-        const Zu = uu?.[Yu];
-        if (!Zu) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${is(uu)}`), !1;
-        const Xu = Zu.parent;
-        if (!Xu && 0 !== uu[lu]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${Zu.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== Zu.root && this._bindRoot(Zu.root);
-        const qu = Xu?.[Yu];
-        if (!su && qu?.isStreamCollection) return vE(Xu, this.id, Zu.parentIndex), !0;
-        const fu = uu.constructor[Symbol.metadata],
-          Cu = this.isVisible(Zu);
-        if (!this.iterable || !ju || Cu && -1 !== this.items.indexOf(uu) || this.items.push(uu), this.markVisible(Zu), ju && Xu && this.addParentOf(Zu, Eu), !su && Zu.isStreamCollection) return !0;
-        if (Eu === Ys && Zu.isNew) return this._markSubtreeVisible(Zu, Eu), !1;
-        let bu = this.changes.get(uu[lu]);
-        void 0 === bu && (bu = new Map, this.changes.set(uu[lu], bu));
-        let cu = !1;
-        const Nu = Zu.encDescriptor.tags;
-        if (Zu.forEachChild(((uu, ju) => {
-            const su = Nu[ju];
-            if (void 0 !== su) {
-              if (!(su === Ys || Eu !== Ys && 0 !== (su & Eu))) return
+      _add(GG, bG, ZG, wG) {
+        const LG = GG?.[hG];
+        if (!LG) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${Pw(GG)}`), !1;
+        const yG = LG.parent;
+        if (!yG && 0 !== GG[kG]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${LG.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== LG.root && this._bindRoot(LG.root);
+        const UG = yG?.[hG];
+        if (!wG && UG?.isStreamCollection) return ab(yG, this.id, LG.parentIndex), !0;
+        const YG = GG.constructor[Symbol.metadata],
+          VG = this.isVisible(LG);
+        if (!this.iterable || !ZG || VG && -1 !== this.items.indexOf(GG) || this.items.push(GG), this.markVisible(LG), ZG && yG && this.addParentOf(LG, bG), !wG && LG.isStreamCollection) return !0;
+        if (bG === Kw && LG.isNew) return this._markSubtreeVisible(LG, bG), !1;
+        let pG = this.changes.get(GG[kG]);
+        void 0 === pG && (pG = new Map, this.changes.set(GG[kG], pG));
+        let fG = !1;
+        const QG = LG.encDescriptor.tags;
+        if (LG.forEachChild(((GG, ZG) => {
+            const wG = QG[ZG];
+            if (void 0 !== wG) {
+              if (!(wG === Kw || bG !== Kw && 0 !== (wG & bG))) return
             }
-            this.add(uu.ref, Eu, !1) && (cu = !0)
-          })), Eu !== Ys) {
-          this.addTag(Zu, Eu);
-          const uu = fu?.[ku];
-          if (void 0 !== uu)
-            for (let ju = Eu; ju > 0; ju &= ju - 1) uu[ju & -ju]?.forEach((uu => {
-              Zu.getChange(uu) !== Uu.DELETE && bu.set(uu, Uu.ADD)
+            this.add(GG.ref, bG, !1) && (fG = !0)
+          })), bG !== Kw) {
+          this.addTag(LG, bG);
+          const GG = YG?.[FG];
+          if (void 0 !== GG)
+            for (let ZG = bG; ZG > 0; ZG &= ZG - 1) GG[ZG & -ZG]?.forEach((GG => {
+              LG.getChange(GG) !== SG.DELETE && pG.set(GG, SG.ADD)
             }))
         }
-        if ((Eu === Ys || !Cu) && (!Zu.isNew || cu))
-          if (Zu.isArray && "string" !== typeof Zu.refTarget[hu]) Zu.refTarget.items.length > 0 && (bu.set(-1, Uu.ADD), cu = !0);
+        if ((bG === Kw || !VG) && (!LG.isNew || fG))
+          if (LG.isArray && "string" !== typeof LG.refTarget[dG]) LG.refTarget.items.length > 0 && (pG.set(-1, SG.ADD), fG = !0);
           else {
-            const uu = Zu.encDescriptor.tags;
-            Zu.forEachLive((ju => {
-              const su = uu[ju];
-              (void 0 === su || su === Ys || Eu !== Ys && 0 !== (su & Eu)) && (bu.set(ju, Uu.ADD), cu = !0)
+            const GG = LG.encDescriptor.tags;
+            LG.forEachLive((ZG => {
+              const wG = GG[ZG];
+              (void 0 === wG || wG === Kw || bG !== Kw && 0 !== (wG & bG)) && (pG.set(ZG, SG.ADD), fG = !0)
             }))
-          } return cu
+          } return fG
       }
-      _markSubtreeVisible(uu, Eu) {
-        const ju = uu.encDescriptor.tags;
-        uu.forEachChild(((uu, su) => {
-          const Uu = ju[su];
-          if (void 0 !== Uu) {
-            if (!(Uu === Ys || Eu !== Ys && 0 !== (Uu & Eu))) return
+      _markSubtreeVisible(GG, bG) {
+        const ZG = GG.encDescriptor.tags;
+        GG.forEachChild(((GG, wG) => {
+          const SG = ZG[wG];
+          if (void 0 !== SG) {
+            if (!(SG === Kw || bG !== Kw && 0 !== (SG & bG))) return
           }
-          uu.isNew ? (this.markVisible(uu), this._markSubtreeVisible(uu, Eu)) : this._add(uu.ref, Eu, !1, !1)
+          GG.isNew ? (this.markVisible(GG), this._markSubtreeVisible(GG, bG)) : this._add(GG.ref, bG, !1, !1)
         }))
       }
-      addParentOf(uu, Eu) {
-        const ju = uu.parent[Yu],
-          su = uu.parentIndex;
-        this.isVisible(ju) || this.markVisible(ju);
-        const Zu = ju.parent?.[Yu];
-        if (Zu && this.addParentOf(ju, Eu), ju.hasFilteredFields && ju.getChange(su) !== Uu.DELETE) {
-          let Zu = this.changes.get(ju.ref[lu]);
-          void 0 === Zu && (Zu = new Map, this.changes.set(ju.ref[lu], Zu));
-          const Xu = ju.encDescriptor.tags[su];
-          void 0 !== Xu && Xu !== Ys && 0 !== (Xu & Eu) && this.addTag(ju, Eu), Zu.set(ju.isArray ? uu : su, Uu.ADD)
+      addParentOf(GG, bG) {
+        const ZG = GG.parent[hG],
+          wG = GG.parentIndex;
+        this.isVisible(ZG) || this.markVisible(ZG);
+        const LG = ZG.parent?.[hG];
+        if (LG && this.addParentOf(ZG, bG), ZG.hasFilteredFields && ZG.getChange(wG) !== SG.DELETE) {
+          let LG = this.changes.get(ZG.ref[kG]);
+          void 0 === LG && (LG = new Map, this.changes.set(ZG.ref[kG], LG));
+          const yG = ZG.encDescriptor.tags[wG];
+          void 0 !== yG && yG !== Kw && 0 !== (yG & bG) && this.addTag(ZG, bG), LG.set(ZG.isArray ? GG : wG, SG.ADD)
         }
       }
-      _touchAncestorsOf(uu) {
-        let Eu = uu.parent?.[Yu];
-        if (void 0 === Eu) return;
-        const ju = [];
-        for (; void 0 !== Eu;) {
-          if (Eu.hasFilteredFields) {
-            const uu = Eu.ref[lu];
-            if (this.changes.has(uu)) break;
-            ju.push(Eu)
+      _touchAncestorsOf(GG) {
+        let bG = GG.parent?.[hG];
+        if (void 0 === bG) return;
+        const ZG = [];
+        for (; void 0 !== bG;) {
+          if (bG.hasFilteredFields) {
+            const GG = bG.ref[kG];
+            if (this.changes.has(GG)) break;
+            ZG.push(bG)
           }
-          Eu = Eu.parent?.[Yu]
+          bG = bG.parent?.[hG]
         }
-        for (let su = ju.length - 1; su >= 0; su--) this.changes.set(ju[su].ref[lu], new Map)
+        for (let wG = ZG.length - 1; wG >= 0; wG--) this.changes.set(ZG[wG].ref[kG], new Map)
       }
-      remove(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ys,
-          ju = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const su = uu?.[Yu];
-        if (!su) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${is(uu)}`), this;
-        const Zu = su.parent?.[Yu];
-        if (Zu?.isStreamCollection) return this.unmarkVisible(su), this.iterable && !ju && Vs(this.items, this.items.indexOf(uu)),
-          function(uu, Eu, ju, su, Zu) {
-            const Xu = uu._stream;
-            if (void 0 === Xu) return !1;
-            const lu = Xu.pendingByView.get(Eu);
-            if (lu?.has(su)) return lu.delete(su), !1;
-            const qu = Xu.sentByView.get(Eu);
-            if (qu?.has(su)) {
-              qu.delete(su);
-              let uu = Zu.get(ju);
-              return void 0 === uu && (uu = new Map, Zu.set(ju, uu)), uu.set(su, Uu.DELETE), !0
+      remove(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Kw,
+          ZG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const wG = GG?.[hG];
+        if (!wG) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${Pw(GG)}`), this;
+        const LG = wG.parent?.[hG];
+        if (LG?.isStreamCollection) return this.unmarkVisible(wG), this.iterable && !ZG && aw(this.items, this.items.indexOf(GG)),
+          function(GG, bG, ZG, wG, LG) {
+            const yG = GG._stream;
+            if (void 0 === yG) return !1;
+            const kG = yG.pendingByView.get(bG);
+            if (kG?.has(wG)) return kG.delete(wG), !1;
+            const UG = yG.sentByView.get(bG);
+            if (UG?.has(wG)) {
+              UG.delete(wG);
+              let GG = LG.get(ZG);
+              return void 0 === GG && (GG = new Map, LG.set(ZG, GG)), GG.set(wG, SG.DELETE), !0
             }
-          }(su.parent, this.id, su.parent[lu], su.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(su), this;
-        if (su.isStreamCollection) {
-          this.unmarkVisible(su), this.iterable && !ju && Vs(this.items, this.items.indexOf(uu));
-          const Eu = su.ref,
-            Zu = Eu._stream;
-          if (void 0 !== Zu) {
-            Zu.pendingByView.get(this.id)?.clear();
-            const uu = Zu.sentByView.get(this.id);
-            if (void 0 !== uu && uu.size > 0) {
-              const ju = Eu[lu];
-              let su = this.changes.get(ju);
-              void 0 === su && (su = new Map, this.changes.set(ju, su));
-              for (const Eu of uu) su.set(Eu, Uu.DELETE);
-              uu.clear()
+          }(wG.parent, this.id, wG.parent[kG], wG.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(wG), this;
+        if (wG.isStreamCollection) {
+          this.unmarkVisible(wG), this.iterable && !ZG && aw(this.items, this.items.indexOf(GG));
+          const bG = wG.ref,
+            LG = bG._stream;
+          if (void 0 !== LG) {
+            LG.pendingByView.get(this.id)?.clear();
+            const GG = LG.sentByView.get(this.id);
+            if (void 0 !== GG && GG.size > 0) {
+              const ZG = bG[kG];
+              let wG = this.changes.get(ZG);
+              void 0 === wG && (wG = new Map, this.changes.set(ZG, wG));
+              for (const bG of GG) wG.set(bG, SG.DELETE);
+              GG.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(su), this.iterable && !ju && Vs(this.items, this.items.indexOf(uu));
-        const Xu = su.ref,
-          qu = Xu.constructor[Symbol.metadata],
-          fu = Xu[lu];
-        this._touchAncestorsOf(su);
-        let Cu = this.changes.get(fu);
-        if (void 0 === Cu && (Cu = new Map, this.changes.set(fu, Cu)), Eu === Ys) {
-          const uu = su.parent;
-          if (uu && !HE.isValidInstance(uu) && su.isFiltered) {
-            const Eu = Zu.isArray ? su : su.parentIndex,
-              ju = uu[lu];
-            let Xu = this.changes.get(ju);
-            void 0 === Xu ? (Xu = new Map, this.changes.set(ju, Xu)) : Xu.get(Eu) === Uu.ADD && this._dropPendingEntries(su), Xu.set(Eu, Uu.DELETE), this._recursiveDeleteVisibleChangeTree(su)
-          } else qu?.[ou]?.forEach((uu => this._removeViewField(su, Cu, uu)))
+        this.unmarkVisible(wG), this.iterable && !ZG && aw(this.items, this.items.indexOf(GG));
+        const yG = wG.ref,
+          UG = yG.constructor[Symbol.metadata],
+          YG = yG[kG];
+        this._touchAncestorsOf(wG);
+        let VG = this.changes.get(YG);
+        if (void 0 === VG && (VG = new Map, this.changes.set(YG, VG)), bG === Kw) {
+          const GG = wG.parent;
+          if (GG && !tb.isValidInstance(GG) && wG.isFiltered) {
+            const bG = LG.isArray ? wG : wG.parentIndex,
+              ZG = GG[kG];
+            let yG = this.changes.get(ZG);
+            void 0 === yG ? (yG = new Map, this.changes.set(ZG, yG)) : yG.get(bG) === SG.ADD && this._dropPendingEntries(wG), yG.set(bG, SG.DELETE), this._recursiveDeleteVisibleChangeTree(wG)
+          } else UG?.[IG]?.forEach((GG => this._removeViewField(wG, VG, GG)))
         } else {
-          const uu = qu?.[ku];
-          if (void 0 !== uu)
-            for (let ju = Eu; ju > 0; ju &= ju - 1) uu[ju & -ju]?.forEach((uu => this._removeViewField(su, Cu, uu)))
+          const GG = UG?.[FG];
+          if (void 0 !== GG)
+            for (let ZG = bG; ZG > 0; ZG &= ZG - 1) GG[ZG & -ZG]?.forEach((GG => this._removeViewField(wG, VG, GG)))
         }
-        return void 0 === Eu ? this.removeAllTagsOnTree(su) : this.removeTag(su, Eu), this
+        return void 0 === bG ? this.removeAllTagsOnTree(wG) : this.removeTag(wG, bG), this
       }
-      has(uu) {
-        return this.isVisible(uu[Yu])
+      has(GG) {
+        return this.isVisible(GG[hG])
       }
-      hasTag(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ys;
-        return this.hasTagOnTree(uu[Yu], Eu)
+      hasTag(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Kw;
+        return this.hasTagOnTree(GG[hG], bG)
       }
-      subscribe(uu, Eu) {
-        const ju = uu?.[Yu];
-        if (!ju) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${is(uu)}`), this;
-        if (void 0 === this._root && void 0 !== ju.root && this._bindRoot(ju.root), void 0 !== Eu)
-          if (ju.isStreamCollection) {
-            const ju = aE(uu);
-            null === Eu ? ju.priorityByView?.delete(this.id) : (ju.priorityByView ??= new Map).set(this.id, Eu)
+      subscribe(GG, bG) {
+        const ZG = GG?.[hG];
+        if (!ZG) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${Pw(GG)}`), this;
+        if (void 0 === this._root && void 0 !== ZG.root && this._bindRoot(ZG.root), void 0 !== bG)
+          if (ZG.isStreamCollection) {
+            const ZG = Wb(GG);
+            null === bG ? ZG.priorityByView?.delete(this.id) : (ZG.priorityByView ??= new Map).set(this.id, bG)
           } else {
-            const Eu = uu?.constructor?.name ?? "collection",
-              su = ju.parent;
-            if (void 0 === su) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${Eu} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const bG = GG?.constructor?.name ?? "collection",
+              wG = ZG.parent;
+            if (void 0 === wG) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${bG} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const uu = su?.constructor?.[Symbol.metadata]?.[ju.parentIndex]?.name,
-                Uu = uu ? `${su.constructor.name}#${uu}` : Eu;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${Uu} is a ${Eu}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const GG = wG?.constructor?.[Symbol.metadata]?.[ZG.parentIndex]?.name,
+                SG = GG ? `${wG.constructor.name}#${GG}` : bG;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${SG} is a ${bG}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(ju)) return this;
-        const su = void 0 !== ju.parent && !this.isVisible(ju);
-        if (su ? (this.addParentOf(ju, Ys), this._add(uu, Ys, !1, !1)) : this.markVisible(ju), this._setSubscribed(ju), ju.isStreamCollection) {
-          const Eu = uu;
-          ju.forEachChild(((uu, ju) => {
-            vE(Eu, this.id, ju)
+          } if (this.isSubscribed(ZG)) return this;
+        const wG = void 0 !== ZG.parent && !this.isVisible(ZG);
+        if (wG ? (this.addParentOf(ZG, Kw), this._add(GG, Kw, !1, !1)) : this.markVisible(ZG), this._setSubscribed(ZG), ZG.isStreamCollection) {
+          const bG = GG;
+          ZG.forEachChild(((GG, ZG) => {
+            ab(bG, this.id, ZG)
           }))
-        } else su || ju.forEachChild((uu => {
-          this.markVisible(uu)
+        } else wG || ZG.forEachChild((GG => {
+          this.markVisible(GG)
         }));
         return this
       }
-      unsubscribe(uu) {
-        const Eu = uu?.[Yu];
-        if (!Eu) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${is(uu)}`), this;
-        if (!this.isSubscribed(Eu)) return this;
-        this._clearSubscribed(Eu);
-        const ju = Eu.ref[lu];
-        if (Eu.isStreamCollection) {
-          const Eu = uu._stream;
-          if (void 0 !== Eu) {
-            Eu.pendingByView.get(this.id)?.clear();
-            const uu = Eu.sentByView.get(this.id);
-            if (void 0 !== uu && uu.size > 0) {
-              let Eu = this.changes.get(ju);
-              void 0 === Eu && (Eu = new Map, this.changes.set(ju, Eu));
-              for (const ju of uu) Eu.set(ju, Uu.DELETE);
-              uu.clear()
+      unsubscribe(GG) {
+        const bG = GG?.[hG];
+        if (!bG) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${Pw(GG)}`), this;
+        if (!this.isSubscribed(bG)) return this;
+        this._clearSubscribed(bG);
+        const ZG = bG.ref[kG];
+        if (bG.isStreamCollection) {
+          const bG = GG._stream;
+          if (void 0 !== bG) {
+            bG.pendingByView.get(this.id)?.clear();
+            const GG = bG.sentByView.get(this.id);
+            if (void 0 !== GG && GG.size > 0) {
+              let bG = this.changes.get(ZG);
+              void 0 === bG && (bG = new Map, this.changes.set(ZG, bG));
+              for (const ZG of GG) bG.set(ZG, SG.DELETE);
+              GG.clear()
             }
           }
         } else {
-          const uu = Eu.isArray;
-          let su = this.changes.get(ju);
-          Eu.forEachChild(((Eu, Zu) => {
-            void 0 === su && (su = new Map, this.changes.set(ju, su)), su.set(uu ? Eu : Zu, Uu.DELETE), this.unmarkVisible(Eu)
+          const GG = bG.isArray;
+          let wG = this.changes.get(ZG);
+          bG.forEachChild(((bG, LG) => {
+            void 0 === wG && (wG = new Map, this.changes.set(ZG, wG)), wG.set(GG ? bG : LG, SG.DELETE), this.unmarkVisible(bG)
           }))
         }
-        return this.unmarkVisible(Eu), this
+        return this.unmarkVisible(bG), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let uu = 0, Eu = this.items.length; uu < Eu; uu++) this.remove(this.items[uu], Ys, !0);
+        for (let GG = 0, bG = this.items.length; GG < bG; GG++) this.remove(this.items[GG], Kw, !0);
         this.items.length = 0
       }
-      isChangeTreeVisible(uu) {
-        let Eu = this.isVisible(uu);
-        if (!Eu && uu.isVisibilitySharedWithParent)
-          if (this.isVisible(uu.parent[Yu])) this.markVisible(uu), Eu = !0;
+      isChangeTreeVisible(GG) {
+        let bG = this.isVisible(GG);
+        if (!bG && GG.isVisibilitySharedWithParent)
+          if (this.isVisible(GG.parent[hG])) this.markVisible(GG), bG = !0;
           else
-            for (let ju = uu.extraParents; void 0 !== ju; ju = ju.next) {
-              const su = ju.ref[Yu];
-              if (su.isFiltered && this.isVisible(su)) {
-                this.markVisible(uu), Eu = !0;
+            for (let ZG = GG.extraParents; void 0 !== ZG; ZG = ZG.next) {
+              const wG = ZG.ref[hG];
+              if (wG.isFiltered && this.isVisible(wG)) {
+                this.markVisible(GG), bG = !0;
                 break
               }
             }
-        return Eu
+        return bG
       }
-      _recursiveDeleteVisibleChangeTree(uu) {
-        uu.forEachChild((uu => {
-          this.unmarkVisible(uu), this._recursiveDeleteVisibleChangeTree(uu)
+      _recursiveDeleteVisibleChangeTree(GG) {
+        GG.forEachChild((GG => {
+          this.unmarkVisible(GG), this._recursiveDeleteVisibleChangeTree(GG)
         }))
       }
-      _dropPendingEntries(uu) {
-        this.changes.delete(uu.ref[lu]), uu.forEachChild((uu => this._dropPendingEntries(uu)))
+      _dropPendingEntries(GG) {
+        this.changes.delete(GG.ref[kG]), GG.forEachChild((GG => this._dropPendingEntries(GG)))
       }
-      _removeViewField(uu, Eu, ju) {
-        const su = Eu.get(ju) === Uu.ADD;
-        Eu.set(ju, Uu.DELETE);
-        const Zu = uu.ref[uu.encDescriptor.names[ju]],
-          Xu = Zu?.[Yu];
-        Xu && (this.unmarkVisible(Xu), this._recursiveDeleteVisibleChangeTree(Xu), su && this._dropPendingEntries(Xu))
+      _removeViewField(GG, bG, ZG) {
+        const wG = bG.get(ZG) === SG.ADD;
+        bG.set(ZG, SG.DELETE);
+        const LG = GG.ref[GG.encDescriptor.names[ZG]],
+          yG = LG?.[hG];
+        yG && (this.unmarkVisible(yG), this._recursiveDeleteVisibleChangeTree(yG), wG && this._dropPendingEntries(yG))
       }
     }
 
-    function Ss(uu) {
-      uu.structSwitchEmitted || (uu.shouldEmitSwitch && (uu.buffer[uu.it.offset++] = 255, EE.number(uu.buffer, uu.ref[lu], uu.it)), uu.structSwitchEmitted = !0)
+    function Aw(GG) {
+      GG.structSwitchEmitted || (GG.shouldEmitSwitch && (GG.buffer[GG.it.offset++] = 255, bb.number(GG.buffer, GG.ref[kG], GG.it)), GG.structSwitchEmitted = !0)
     }
 
-    function Is(uu, Eu) {
-      Ls(uu, Eu, Uu.ADD)
+    function sw(GG, bG) {
+      gw(GG, bG, SG.ADD)
     }
 
-    function Fs(uu, Eu) {
-      if (Eu._fullSyncGen === uu.gen) return;
-      Eu._fullSyncGen = uu.gen;
-      if (!uu.hasView || uu.view.isChangeTreeVisible(Eu)) {
-        const ju = Eu.encDescriptor;
-        uu.changeTree = Eu, uu.ref = Eu.ref, uu.encoder = ju.encoder, uu.filter = ju.filter, uu.metadata = ju.metadata, uu.treeIsFiltered = Eu.isFiltered, uu.isSchema = ju.isSchema, uu.filterBitmask = ju.filterBitmask, uu.tags = ju.tags, uu.structSwitchEmitted = !1, uu.shouldEmitSwitch = uu.hasView || uu.it.offset > uu.initialOffset || Eu !== uu.rootChangeTree, Eu.isArray && Eu.collDirty.size > 0 && (Eu.flags |= 512), Uj(Eu, uu, Is)
+    function qw(GG, bG) {
+      if (bG._fullSyncGen === GG.gen) return;
+      bG._fullSyncGen = GG.gen;
+      if (!GG.hasView || GG.view.isChangeTreeVisible(bG)) {
+        const ZG = bG.encDescriptor;
+        GG.changeTree = bG, GG.ref = bG.ref, GG.encoder = ZG.encoder, GG.filter = ZG.filter, GG.metadata = ZG.metadata, GG.treeIsFiltered = bG.isFiltered, GG.isSchema = ZG.isSchema, GG.filterBitmask = ZG.filterBitmask, GG.tags = ZG.tags, GG.structSwitchEmitted = !1, GG.shouldEmitSwitch = GG.hasView || GG.it.offset > GG.initialOffset || bG !== GG.rootChangeTree, bG.isArray && bG.collDirty.size > 0 && (bG.flags |= 512), SZ(bG, GG, sw)
       }
-      Dj(Eu, uu, Bs)
+      JZ(bG, GG, nw)
     }
 
-    function Bs(uu, Eu, ju) {
-      Fs(uu, Eu)
+    function nw(GG, bG, ZG) {
+      qw(GG, bG)
     }
 
-    function Ls(uu, Eu, ju) {
-      if (Eu < 0) {
-        if (uu.treeIsFiltered !== uu.emitFiltered) return;
-        return Ss(uu), void(uu.buffer[uu.it.offset++] = 255 & Math.abs(Eu))
+    function gw(GG, bG, ZG) {
+      if (bG < 0) {
+        if (GG.treeIsFiltered !== GG.emitFiltered) return;
+        return Aw(GG), void(GG.buffer[GG.it.offset++] = 255 & Math.abs(bG))
       }
-      if ((uu.isSchema ? uu.treeIsFiltered || (Eu < 32 ? 0 !== (uu.filterBitmask & 1 << Eu) : void 0 !== uu.tags[Eu]) : uu.treeIsFiltered) !== uu.emitFiltered) return;
-      const su = uu.isEncodeAll ? Uu.ADD : ju;
-      void 0 !== su && (void 0 === uu.filter || uu.filter(uu.ref, Eu, uu.view)) && (Ss(uu), uu.encoder(uu.self, uu.buffer, uu.changeTree, Eu, su, uu.it, uu.isEncodeAll, uu.hasView, uu.metadata))
+      if ((GG.isSchema ? GG.treeIsFiltered || (bG < 32 ? 0 !== (GG.filterBitmask & 1 << bG) : void 0 !== GG.tags[bG]) : GG.treeIsFiltered) !== GG.emitFiltered) return;
+      const wG = GG.isEncodeAll ? SG.ADD : ZG;
+      void 0 !== wG && (void 0 === GG.filter || GG.filter(GG.ref, bG, GG.view)) && (Aw(GG), GG.encoder(GG.self, GG.buffer, GG.changeTree, bG, wG, GG.it, GG.isEncodeAll, GG.hasView, GG.metadata))
     }
 
-    function ts(uu, Eu) {
-      const ju = new Uint8Array(uu.length + Eu.length);
-      return ju.set(uu, 0), ju.set(Eu, uu.length), ju
+    function ew(GG, bG) {
+      const ZG = new Uint8Array(GG.length + bG.length);
+      return ZG.set(GG, 0), ZG.set(bG, GG.length), ZG
     }
-    class xs {
+    class Rw {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(xs.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(Rw.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(uu, Eu) {
-        this.context = IE.cache(uu.constructor), this.root = Eu ?? new Ks(this.context), this.setState(uu)
+      constructor(GG, bG) {
+        this.context = qb.cache(GG.constructor), this.root = bG ?? new vw(this.context), this.setState(GG)
       }
-      setState(uu) {
-        this.state = uu, this.state[Yu].setRoot(this.root)
+      setState(GG) {
+        this.state = GG, this.state[hG].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6306,271 +6306,271 @@ export const modules = {
       };
       _fullSyncGen = 0;
       encode() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          Eu = arguments.length > 1 ? arguments[1] : void 0,
-          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uu.offset;
-        return this._encodeChannel(uu, Eu, ju, su, !1)
+          bG = arguments.length > 1 ? arguments[1] : void 0,
+          ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : GG.offset;
+        return this._encodeChannel(GG, bG, ZG, wG, !1)
       }
       encodeUnreliable() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          Eu = arguments.length > 1 ? arguments[1] : void 0,
-          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uu.offset;
-        return this._encodeChannel(uu, Eu, ju, su, !0)
+          bG = arguments.length > 1 ? arguments[1] : void 0,
+          ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : GG.offset;
+        return this._encodeChannel(GG, bG, ZG, wG, !0)
       }
-      _encodeChannel(uu, Eu, ju, su, Uu) {
-        this.root.pendingFilterRefresh.length > 0 && Xj(this.root);
-        const Zu = void 0 !== Eu,
-          Xu = this.state[Yu],
-          lu = this._encodeCtx;
-        lu.self = this, lu.buffer = ju, lu.it = uu, lu.view = Eu, lu.isEncodeAll = !1, lu.hasView = Zu, lu.emitFiltered = Zu;
-        let qu = Uu ? this.root.unreliableChanges : this.root.changes;
-        for (; qu = qu.next;) {
-          const ju = qu.changeTree;
-          if (Zu && !Eu.isChangeTreeVisible(ju)) continue;
-          const fu = Uu ? ju.unreliableRecorder : ju;
-          if (!fu || !fu.has()) continue;
-          const Cu = ju.encDescriptor;
-          lu.changeTree = ju, lu.ref = ju.ref, lu.encoder = Cu.encoder, lu.filter = Cu.filter, lu.metadata = Cu.metadata, lu.treeIsFiltered = ju.isFiltered, lu.isSchema = Cu.isSchema, lu.filterBitmask = Cu.filterBitmask, lu.tags = Cu.tags, lu.structSwitchEmitted = !1, lu.isRootTree = ju === Xu, lu.shouldEmitSwitch = Zu || uu.offset > su || !lu.isRootTree, fu.forEachWithCtx(lu, Ls)
+      _encodeChannel(GG, bG, ZG, wG, SG) {
+        this.root.pendingFilterRefresh.length > 0 && yZ(this.root);
+        const LG = void 0 !== bG,
+          yG = this.state[hG],
+          kG = this._encodeCtx;
+        kG.self = this, kG.buffer = ZG, kG.it = GG, kG.view = bG, kG.isEncodeAll = !1, kG.hasView = LG, kG.emitFiltered = LG;
+        let UG = SG ? this.root.unreliableChanges : this.root.changes;
+        for (; UG = UG.next;) {
+          const ZG = UG.changeTree;
+          if (LG && !bG.isChangeTreeVisible(ZG)) continue;
+          const YG = SG ? ZG.unreliableRecorder : ZG;
+          if (!YG || !YG.has()) continue;
+          const VG = ZG.encDescriptor;
+          kG.changeTree = ZG, kG.ref = ZG.ref, kG.encoder = VG.encoder, kG.filter = VG.filter, kG.metadata = VG.metadata, kG.treeIsFiltered = ZG.isFiltered, kG.isSchema = VG.isSchema, kG.filterBitmask = VG.filterBitmask, kG.tags = VG.tags, kG.structSwitchEmitted = !1, kG.isRootTree = ZG === yG, kG.shouldEmitSwitch = LG || GG.offset > wG || !kG.isRootTree, YG.forEachWithCtx(kG, gw)
         }
-        return Uu || Zu || !this._isStreamBroadcastMode || this._emitStreamBroadcast(ju, uu), uu.offset > ju.byteLength ? (ju = this._resizeBuffer(ju, uu.offset), uu.offset = su, this._encodeChannel(uu, Eu, ju, su, Uu)) : ju.subarray(0, uu.offset)
+        return SG || LG || !this._isStreamBroadcastMode || this._emitStreamBroadcast(ZG, GG), GG.offset > ZG.byteLength ? (ZG = this._resizeBuffer(ZG, GG.offset), GG.offset = wG, this._encodeChannel(GG, bG, ZG, wG, SG)) : ZG.subarray(0, GG.offset)
       }
-      encodeFullSync(uu, Eu, ju, su) {
-        let Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : uu.offset;
-        this.root.pendingFilterRefresh.length > 0 && Xj(this.root);
-        const Zu = void 0 !== su,
-          Xu = this.state[Yu],
-          lu = this._encodeCtx;
-        return lu.self = this, lu.buffer = Eu, lu.it = uu, lu.view = su, lu.isEncodeAll = !0, lu.hasView = Zu, lu.emitFiltered = ju, lu.gen = ++this._fullSyncGen, lu.initialOffset = Uu, lu.rootChangeTree = Xu, Fs(lu, Xu), uu.offset > Eu.byteLength ? (Eu = this._resizeBuffer(Eu, uu.offset), uu.offset = Uu, this.encodeFullSync(uu, Eu, ju, su, Uu)) : Eu.subarray(0, uu.offset)
+      encodeFullSync(GG, bG, ZG, wG) {
+        let SG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : GG.offset;
+        this.root.pendingFilterRefresh.length > 0 && yZ(this.root);
+        const LG = void 0 !== wG,
+          yG = this.state[hG],
+          kG = this._encodeCtx;
+        return kG.self = this, kG.buffer = bG, kG.it = GG, kG.view = wG, kG.isEncodeAll = !0, kG.hasView = LG, kG.emitFiltered = ZG, kG.gen = ++this._fullSyncGen, kG.initialOffset = SG, kG.rootChangeTree = yG, qw(kG, yG), GG.offset > bG.byteLength ? (bG = this._resizeBuffer(bG, GG.offset), GG.offset = SG, this.encodeFullSync(GG, bG, ZG, wG, SG)) : bG.subarray(0, GG.offset)
       }
-      _resizeBuffer(uu, Eu) {
-        const ju = Math.ceil(Eu / xs.BUFFER_SIZE) * xs.BUFFER_SIZE,
-          su = new Uint8Array(ju);
-        return su.set(uu), uu === this.sharedBuffer && (this.sharedBuffer = su), su
+      _resizeBuffer(GG, bG) {
+        const ZG = Math.ceil(bG / Rw.BUFFER_SIZE) * Rw.BUFFER_SIZE,
+          wG = new Uint8Array(ZG);
+        return wG.set(GG), GG === this.sharedBuffer && (this.sharedBuffer = wG), wG
       }
       encodeAll() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(uu, Eu, !1)
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(GG, bG, !1)
       }
-      encodeAllView(uu, Eu, ju) {
-        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const Uu = ju.offset;
-        return su = this.encodeFullSync(ju, su, !0, uu, Uu), ts(su.subarray(0, Eu), su.subarray(Uu, ju.offset))
+      encodeAllView(GG, bG, ZG) {
+        let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const SG = ZG.offset;
+        return wG = this.encodeFullSync(ZG, wG, !0, GG, SG), ew(wG.subarray(0, bG), wG.subarray(SG, ZG.offset))
       }
-      ensureCapacity(uu, Eu) {
-        if (Eu + xs.BUFFER_SIZE <= uu.byteLength) return uu;
-        const ju = Math.ceil((Eu + xs.BUFFER_SIZE) / xs.BUFFER_SIZE) * xs.BUFFER_SIZE,
-          su = new Uint8Array(ju);
-        return su.set(uu.subarray(0, Eu)), uu === this.sharedBuffer && (this.sharedBuffer = su), su
+      ensureCapacity(GG, bG) {
+        if (bG + Rw.BUFFER_SIZE <= GG.byteLength) return GG;
+        const ZG = Math.ceil((bG + Rw.BUFFER_SIZE) / Rw.BUFFER_SIZE) * Rw.BUFFER_SIZE,
+          wG = new Uint8Array(ZG);
+        return wG.set(GG.subarray(0, bG)), GG === this.sharedBuffer && (this.sharedBuffer = wG), wG
       }
-      encodeView(uu, Eu, ju) {
-        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          Zu = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const Xu = ju.offset;
-        this._emitStreamPriority(uu);
-        for (const qu of uu.changes.keys()) {
-          const Eu = uu.changes.get(qu),
-            Zu = this.root.changeTrees[qu];
-          if (void 0 === Zu) {
-            uu.changes.delete(qu);
+      encodeView(GG, bG, ZG) {
+        let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          LG = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const yG = ZG.offset;
+        this._emitStreamPriority(GG);
+        for (const UG of GG.changes.keys()) {
+          const bG = GG.changes.get(UG),
+            LG = this.root.changeTrees[UG];
+          if (void 0 === LG) {
+            GG.changes.delete(UG);
             continue
           }
-          if (0 === Eu.size) continue;
-          const Xu = Zu.encDescriptor,
-            fu = Xu.encoder,
-            Cu = Xu.metadata,
-            bu = Zu.ref,
-            Nu = Zu.refTarget;
-          su = this.ensureCapacity(su, ju.offset), su[ju.offset++] = 255, EE.number(su, bu[lu], ju);
-          for (const [qu, Ou] of Eu) {
-            let Eu;
-            if (-1 === qu) {
-              const uu = Nu.tmpItems,
-                Eu = Nu.deletedIndexes;
-              for (let Xu = 0; Xu < uu.length; Xu++) void 0 !== uu[Xu] && !0 !== Eu[Xu] && fu(this, su, Zu, Xu, Uu.ADD, ju, !1, !0, Cu);
+          if (0 === bG.size) continue;
+          const yG = LG.encDescriptor,
+            YG = yG.encoder,
+            VG = yG.metadata,
+            pG = LG.ref,
+            QG = LG.refTarget;
+          wG = this.ensureCapacity(wG, ZG.offset), wG[ZG.offset++] = 255, bb.number(wG, pG[kG], ZG);
+          for (const [UG, KG] of bG) {
+            let bG;
+            if (-1 === UG) {
+              const GG = QG.tmpItems,
+                bG = QG.deletedIndexes;
+              for (let yG = 0; yG < GG.length; yG++) void 0 !== GG[yG] && !0 !== bG[yG] && YG(this, wG, LG, yG, SG.ADD, ZG, !1, !0, VG);
               continue
             }
-            if ("number" === typeof qu) Eu = qu;
+            if ("number" === typeof UG) bG = UG;
             else {
-              const ju = qu.indexInParent(bu);
-              if (void 0 === ju) continue;
-              if (Eu = ju, Ou === Uu.ADD && Zu.getChange(Eu) === Uu.DELETE) {
-                uu.changes.delete(qu.ref[lu]);
+              const ZG = UG.indexInParent(pG);
+              if (void 0 === ZG) continue;
+              if (bG = ZG, KG === SG.ADD && LG.getChange(bG) === SG.DELETE) {
+                GG.changes.delete(UG.ref[kG]);
                 continue
               }
             }
-            fu(this, su, Zu, Eu, void 0 !== Nu[cu](Eu) && Ou || Uu.DELETE, ju, !1, !0, Cu)
+            YG(this, wG, LG, bG, void 0 !== QG[fG](bG) && KG || SG.DELETE, ZG, !1, !0, VG)
           }
         }
-        return uu.changes.clear(), su = this.encode(ju, uu, su), Zu ? ts(su.subarray(0, Eu), su.subarray(Xu, ju.offset)) : su.subarray(Xu, ju.offset)
+        return GG.changes.clear(), wG = this.encode(ZG, GG, wG), LG ? ew(wG.subarray(0, bG), wG.subarray(yG, ZG.offset)) : wG.subarray(yG, ZG.offset)
       }
-      encodeUnreliableView(uu, Eu, ju) {
-        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const Uu = ju.offset;
-        return su = this.encodeUnreliable(ju, uu, su, Uu), ts(su.subarray(0, Eu), su.subarray(Uu, ju.offset))
+      encodeUnreliableView(GG, bG, ZG) {
+        let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const SG = ZG.offset;
+        return wG = this.encodeUnreliable(ZG, GG, wG, SG), ew(wG.subarray(0, bG), wG.subarray(SG, ZG.offset))
       }
-      _emitStreamBroadcast(uu, Eu) {
-        const ju = this.root.streamTrees;
-        for (const su of ju) {
-          const ju = su,
-            Zu = ju[Yu],
-            Xu = ju[lu];
-          if (void 0 === Xu) continue;
-          const qu = ju._stream,
-            fu = qu.broadcastDeletes,
-            Cu = qu.broadcastPending,
-            bu = qu.sentBroadcast,
-            Nu = fu.size > 0,
-            Ou = Cu.size > 0,
-            hu = Zu.encDescriptor,
-            Du = hu.encoder,
-            gu = hu.metadata;
-          if (Nu || Ou) {
-            if (uu[Eu.offset++] = 255, EE.number(uu, Xu, Eu), Nu) {
-              for (const ju of fu) Du(this, uu, Zu, ju, Uu.DELETE, Eu, !1, !1, gu);
-              fu.clear()
+      _emitStreamBroadcast(GG, bG) {
+        const ZG = this.root.streamTrees;
+        for (const wG of ZG) {
+          const ZG = wG,
+            LG = ZG[hG],
+            yG = ZG[kG];
+          if (void 0 === yG) continue;
+          const UG = ZG._stream,
+            YG = UG.broadcastDeletes,
+            VG = UG.broadcastPending,
+            pG = UG.sentBroadcast,
+            QG = YG.size > 0,
+            KG = VG.size > 0,
+            dG = LG.encDescriptor,
+            JG = dG.encoder,
+            rG = dG.metadata;
+          if (QG || KG) {
+            if (GG[bG.offset++] = 255, bb.number(GG, yG, bG), QG) {
+              for (const ZG of YG) JG(this, GG, LG, ZG, SG.DELETE, bG, !1, !1, rG);
+              YG.clear()
             }
-            const su = qu.maxPerTick,
-              Ou = [];
-            let hu = 0;
-            const Mu = [];
-            for (const Xu of Cu) {
-              if (hu >= su) break;
-              const lu = ju[cu](Xu);
-              void 0 !== lu ? (Du(this, uu, Zu, Xu, Uu.ADD, Eu, !1, !1, gu), bu.add(Xu), Ou.push(lu), Mu.push(Xu), hu++) : Mu.push(Xu)
+            const wG = UG.maxPerTick,
+              KG = [];
+            let dG = 0;
+            const zG = [];
+            for (const yG of VG) {
+              if (dG >= wG) break;
+              const kG = ZG[fG](yG);
+              void 0 !== kG ? (JG(this, GG, LG, yG, SG.ADD, bG, !1, !1, rG), pG.add(yG), KG.push(kG), zG.push(yG), dG++) : zG.push(yG)
             }
-            for (const uu of Mu) Cu.delete(uu);
-            for (const ju of Ou) {
-              const su = ju[Yu];
-              if (void 0 === su) continue;
-              const Zu = ju[lu];
-              if (void 0 === Zu) continue;
-              uu[Eu.offset++] = 255, EE.number(uu, Zu, Eu);
-              const Xu = su.encDescriptor,
-                qu = Xu.encoder,
-                fu = Xu.metadata;
-              su.forEachLive((ju => {
-                HE.hasUnreliableAtIndex(fu, ju) || qu(this, uu, su, ju, Uu.ADD, Eu, !1, !1, fu)
+            for (const GG of zG) VG.delete(GG);
+            for (const ZG of KG) {
+              const wG = ZG[hG];
+              if (void 0 === wG) continue;
+              const LG = ZG[kG];
+              if (void 0 === LG) continue;
+              GG[bG.offset++] = 255, bb.number(GG, LG, bG);
+              const yG = wG.encDescriptor,
+                UG = yG.encoder,
+                YG = yG.metadata;
+              wG.forEachLive((ZG => {
+                tb.hasUnreliableAtIndex(YG, ZG) || UG(this, GG, wG, ZG, SG.ADD, bG, !1, !1, YG)
               }))
             }
           }
-          for (const su of bu) {
-            const Uu = ju[cu](su);
-            if (void 0 === Uu) continue;
-            const Zu = Uu[Yu];
-            if (void 0 === Zu || !Zu.has()) continue;
-            const Xu = Uu[lu];
-            if (void 0 === Xu) continue;
-            uu[Eu.offset++] = 255, EE.number(uu, Xu, Eu);
-            const qu = Zu.encDescriptor,
-              fu = qu.encoder,
-              Cu = qu.metadata;
-            Zu.forEach(((ju, su) => {
-              ju < 0 || HE.hasUnreliableAtIndex(Cu, ju) || fu(this, uu, Zu, ju, su, Eu, !1, !1, Cu)
+          for (const wG of pG) {
+            const SG = ZG[fG](wG);
+            if (void 0 === SG) continue;
+            const LG = SG[hG];
+            if (void 0 === LG || !LG.has()) continue;
+            const yG = SG[kG];
+            if (void 0 === yG) continue;
+            GG[bG.offset++] = 255, bb.number(GG, yG, bG);
+            const UG = LG.encDescriptor,
+              YG = UG.encoder,
+              VG = UG.metadata;
+            LG.forEach(((ZG, wG) => {
+              ZG < 0 || tb.hasUnreliableAtIndex(VG, ZG) || YG(this, GG, LG, ZG, wG, bG, !1, !1, VG)
             }))
           }
         }
       }
-      _emitStreamPriority(uu) {
-        const Eu = this.root.streamTrees;
-        if (0 === Eu.size) return;
-        const ju = uu.id;
-        for (const su of Eu) {
-          const Eu = su,
-            Zu = Eu._stream,
-            Xu = Zu.pendingByView.get(ju);
-          if (void 0 === Xu || 0 === Xu.size) continue;
-          const qu = Zu.priorityByView?.get(ju),
-            fu = void 0 !== qu,
-            Cu = Zu.priority,
-            bu = Zu.maxPerTick,
-            Nu = [],
-            Ou = [];
-          if (fu || void 0 !== Cu) {
-            const ju = [],
-              su = [];
-            let Uu = 0;
-            for (const Zu of Xu) {
-              const Xu = Eu[cu](Zu);
-              if (void 0 === Xu) {
-                Ou.push(Zu);
+      _emitStreamPriority(GG) {
+        const bG = this.root.streamTrees;
+        if (0 === bG.size) return;
+        const ZG = GG.id;
+        for (const wG of bG) {
+          const bG = wG,
+            LG = bG._stream,
+            yG = LG.pendingByView.get(ZG);
+          if (void 0 === yG || 0 === yG.size) continue;
+          const UG = LG.priorityByView?.get(ZG),
+            YG = void 0 !== UG,
+            VG = LG.priority,
+            pG = LG.maxPerTick,
+            QG = [],
+            KG = [];
+          if (YG || void 0 !== VG) {
+            const ZG = [],
+              wG = [];
+            let SG = 0;
+            for (const LG of yG) {
+              const yG = bG[fG](LG);
+              if (void 0 === yG) {
+                KG.push(LG);
                 continue
               }
-              const lu = fu ? qu(Xu) : Cu(uu, Xu);
-              if (Uu < bu) {
-                let uu = Uu++;
-                for (; uu > 0 && su[uu - 1] < lu;) su[uu] = su[uu - 1], ju[uu] = ju[uu - 1], uu--;
-                su[uu] = lu, ju[uu] = Zu
-              } else if (lu > su[bu - 1]) {
-                let uu = bu - 1;
-                for (; uu > 0 && su[uu - 1] < lu;) su[uu] = su[uu - 1], ju[uu] = ju[uu - 1], uu--;
-                su[uu] = lu, ju[uu] = Zu
+              const kG = YG ? UG(yG) : VG(GG, yG);
+              if (SG < pG) {
+                let GG = SG++;
+                for (; GG > 0 && wG[GG - 1] < kG;) wG[GG] = wG[GG - 1], ZG[GG] = ZG[GG - 1], GG--;
+                wG[GG] = kG, ZG[GG] = LG
+              } else if (kG > wG[pG - 1]) {
+                let GG = pG - 1;
+                for (; GG > 0 && wG[GG - 1] < kG;) wG[GG] = wG[GG - 1], ZG[GG] = ZG[GG - 1], GG--;
+                wG[GG] = kG, ZG[GG] = LG
               }
             }
-            for (let uu = 0; uu < Uu; uu++) Nu.push(ju[uu])
+            for (let GG = 0; GG < SG; GG++) QG.push(ZG[GG])
           } else
-            for (const uu of Xu) {
-              if (Nu.length >= bu) break;
-              Nu.push(uu)
+            for (const GG of yG) {
+              if (QG.length >= pG) break;
+              QG.push(GG)
             }
-          for (const uu of Ou) Xu.delete(uu);
-          const hu = Nu.length;
-          let Du = Zu.sentByView.get(ju);
-          void 0 === Du && (Du = new Set, Zu.sentByView.set(ju, Du));
-          for (let ju = 0; ju < hu; ju++) {
-            const su = Nu[ju],
-              Zu = Eu[cu](su);
-            if (void 0 === Zu) {
-              Xu.delete(su);
+          for (const GG of KG) yG.delete(GG);
+          const dG = QG.length;
+          let JG = LG.sentByView.get(ZG);
+          void 0 === JG && (JG = new Set, LG.sentByView.set(ZG, JG));
+          for (let ZG = 0; ZG < dG; ZG++) {
+            const wG = QG[ZG],
+              LG = bG[fG](wG);
+            if (void 0 === LG) {
+              yG.delete(wG);
               continue
             }
-            uu._addImmediate(Zu);
-            const qu = Zu[Yu];
-            if (void 0 !== qu) {
-              const Eu = Zu[lu];
-              let ju = uu.changes.get(Eu);
-              void 0 === ju && (ju = new Map, uu.changes.set(Eu, ju));
-              const su = qu.metadata;
-              qu.forEachLive((uu => {
-                HE.hasUnreliableAtIndex(su, uu) || ju.set(uu, Uu.ADD)
+            GG._addImmediate(LG);
+            const UG = LG[hG];
+            if (void 0 !== UG) {
+              const bG = LG[kG];
+              let ZG = GG.changes.get(bG);
+              void 0 === ZG && (ZG = new Map, GG.changes.set(bG, ZG));
+              const wG = UG.metadata;
+              UG.forEachLive((GG => {
+                tb.hasUnreliableAtIndex(wG, GG) || ZG.set(GG, SG.ADD)
               }))
             }
-            Xu.delete(su), Du.add(su)
+            yG.delete(wG), JG.add(wG)
           }
         }
       }
       discardChanges() {
-        const uu = this.root.changes;
-        let Eu = uu.next;
-        const ju = this.root;
-        for (; Eu;) {
-          const uu = Eu.next;
-          Eu.changeTree.endEncode(), ju.releaseNode(Eu), Eu = uu
+        const GG = this.root.changes;
+        let bG = GG.next;
+        const ZG = this.root;
+        for (; bG;) {
+          const GG = bG.next;
+          bG.changeTree.endEncode(), ZG.releaseNode(bG), bG = GG
         }
-        uu.next = void 0, uu.tail = void 0
+        GG.next = void 0, GG.tail = void 0
       }
       discardUnreliableChanges() {
-        const uu = this.root.unreliableChanges;
-        let Eu = uu.next;
-        const ju = this.root;
-        for (; Eu;) {
-          const uu = Eu.next;
-          Eu.changeTree.endEncodeUnreliable(), ju.releaseNode(Eu), Eu = uu
+        const GG = this.root.unreliableChanges;
+        let bG = GG.next;
+        const ZG = this.root;
+        for (; bG;) {
+          const GG = bG.next;
+          bG.changeTree.endEncodeUnreliable(), ZG.releaseNode(bG), bG = GG
         }
-        uu.next = void 0, uu.tail = void 0
+        GG.next = void 0, GG.tail = void 0
       }
-      tryEncodeTypeId(uu, Eu, ju, su) {
-        const Uu = this.context.getTypeId(Eu),
-          Zu = this.context.getTypeId(ju);
-        void 0 !== Zu ? Uu !== Zu && (uu[su.offset++] = 213, EE.number(uu, Zu, su)) : console.warn(`@colyseus/schema WARNING: Class "${ju.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(GG, bG, ZG, wG) {
+        const SG = this.context.getTypeId(bG),
+          LG = this.context.getTypeId(ZG);
+        void 0 !== LG ? SG !== LG && (GG[wG.offset++] = 213, bb.number(GG, LG, wG)) : console.warn(`@colyseus/schema WARNING: Class "${ZG.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6579,28 +6579,28 @@ export const modules = {
         return 0 === this.root.activeViews.size && this.root.streamTrees.size > 0
       }
       _hasStreamBacklog() {
-        const uu = this.root;
-        if (0 === uu.streamTrees.size) return !1;
-        const Eu = 0 === uu.activeViews.size;
-        for (const ju of uu.streamTrees)
-          if (Eu ? mE(ju) : kE(ju, uu)) return !0;
+        const GG = this.root;
+        if (0 === GG.streamTrees.size) return !1;
+        const bG = 0 === GG.activeViews.size;
+        for (const ZG of GG.streamTrees)
+          if (bG ? vb(ZG) : Fb(ZG, GG)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class Ts extends Error {
-      constructor(uu) {
-        super(uu), this.name = "DecodingWarning"
+    class Tw extends Error {
+      constructor(GG) {
+        super(GG), this.name = "DecodingWarning"
       }
     }
-    const Hs = {
+    const Hw = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class As {
+    class tw {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,1181 +6609,1181 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(uu, Eu) {
-        let ju = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(uu, Eu), void 0 === Eu[lu] ? (Hs.value = uu, Object.defineProperty(Eu, lu, Hs)) : Eu[lu] !== uu && (Eu[lu] = uu), ju && (this.refCount[uu] = (this.refCount[uu] || 0) + 1), this.deletedRefs.has(uu) && this.deletedRefs.delete(uu)
+      addRef(GG, bG) {
+        let ZG = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(GG, bG), void 0 === bG[kG] ? (Hw.value = GG, Object.defineProperty(bG, kG, Hw)) : bG[kG] !== GG && (bG[kG] = GG), ZG && (this.refCount[GG] = (this.refCount[GG] || 0) + 1), this.deletedRefs.has(GG) && this.deletedRefs.delete(GG)
       }
-      removeRef(uu) {
-        const Eu = this.refCount[uu];
-        if (void 0 !== Eu)
-          if (0 !== Eu)(this.refCount[uu] = Eu - 1) <= 0 && this.deletedRefs.add(uu);
+      removeRef(GG) {
+        const bG = this.refCount[GG];
+        if (void 0 !== bG)
+          if (0 !== bG)(this.refCount[GG] = bG - 1) <= 0 && this.deletedRefs.add(GG);
           else try {
-            const Eu = this.refs.get(uu);
-            throw new Ts(`trying to remove refId '${uu}' with 0 refCount (${Eu.constructor.name}: ${JSON.stringify(Eu)})`)
-          } catch (lU) {
-            console.warn(lU)
+            const bG = this.refs.get(GG);
+            throw new Tw(`trying to remove refId '${GG}' with 0 refCount (${bG.constructor.name}: ${JSON.stringify(bG)})`)
+          } catch (yS) {
+            console.warn(yS)
           } else try {
-            throw new Ts("trying to remove refId that doesn't exist: " + uu)
-          } catch (lU) {
-            console.warn(lU)
+            throw new Tw("trying to remove refId that doesn't exist: " + GG)
+          } catch (yS) {
+            console.warn(yS)
           }
       }
       clearRefs() {
         this.refs.clear(), this.deletedRefs.clear(), this.callbacks = {}, this.refCount = {}
       }
       garbageCollectDeletedRefs() {
-        this.deletedRefs.forEach((uu => {
-          if (this.refCount[uu] > 0) return;
-          const Eu = this.refs.get(uu),
-            ju = Eu.constructor[Symbol.metadata];
-          if (null != ju)
-            for (const su in ju) {
-              const uu = Eu[ju[su].name];
-              if ("object" === typeof uu && uu) {
-                const Eu = uu[lu];
-                void 0 === Eu || this.deletedRefs.has(Eu) || this.removeRef(Eu)
+        this.deletedRefs.forEach((GG => {
+          if (this.refCount[GG] > 0) return;
+          const bG = this.refs.get(GG),
+            ZG = bG.constructor[Symbol.metadata];
+          if (null != ZG)
+            for (const wG in ZG) {
+              const GG = bG[ZG[wG].name];
+              if ("object" === typeof GG && GG) {
+                const bG = GG[kG];
+                void 0 === bG || this.deletedRefs.has(bG) || this.removeRef(bG)
               }
-            } else "function" === typeof Eu[hu] && Array.from(Eu.values()).forEach((uu => {
-              const Eu = uu[lu];
-              void 0 === Eu || this.deletedRefs.has(Eu) || this.removeRef(Eu)
+            } else "function" === typeof bG[dG] && Array.from(bG.values()).forEach((GG => {
+              const bG = GG[kG];
+              void 0 === bG || this.deletedRefs.has(bG) || this.removeRef(bG)
             }));
-          this.refs.delete(uu), delete this.refCount[uu], delete this.callbacks[uu]
+          this.refs.delete(GG), delete this.refCount[GG], delete this.callbacks[GG]
         })), this.deletedRefs.clear()
       }
-      addCallback(uu, Eu, ju) {
-        if (void 0 === uu) {
-          const uu = "number" === typeof Eu ? Uu[Eu] : Eu;
-          throw new Error(`Can't addCallback on '${uu}' (refId is undefined)`)
+      addCallback(GG, bG, ZG) {
+        if (void 0 === GG) {
+          const GG = "number" === typeof bG ? SG[bG] : bG;
+          throw new Error(`Can't addCallback on '${GG}' (refId is undefined)`)
         }
-        return this.callbacks[uu] || (this.callbacks[uu] = {}), this.callbacks[uu][Eu] || (this.callbacks[uu][Eu] = []), this.callbacks[uu][Eu].push(ju), () => this.removeCallback(uu, Eu, ju)
+        return this.callbacks[GG] || (this.callbacks[GG] = {}), this.callbacks[GG][bG] || (this.callbacks[GG][bG] = []), this.callbacks[GG][bG].push(ZG), () => this.removeCallback(GG, bG, ZG)
       }
-      removeCallback(uu, Eu, ju) {
-        const su = this.callbacks?.[uu]?.[Eu]?.indexOf(ju);
-        void 0 !== su && -1 !== su && Vs(this.callbacks[uu][Eu], su)
+      removeCallback(GG, bG, ZG) {
+        const wG = this.callbacks?.[GG]?.[bG]?.indexOf(ZG);
+        void 0 !== wG && -1 !== wG && aw(this.callbacks[GG][bG], wG)
       }
     }
-    class ns {
+    class Dw {
       context;
       state;
       root;
       currentRefId = 0;
-      iK;
+      KF;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(uu, Eu) {
-        this.setState(uu), this.context = Eu || new IE(uu.constructor)
+      constructor(GG, bG) {
+        this.setState(GG), this.context = bG || new qb(GG.constructor)
       }
-      setState(uu) {
-        this.state = uu, this.root = new As, this.root.addRef(0, uu)
+      setState(GG) {
+        this.state = GG, this.root = new tw, this.root.addRef(0, GG)
       }
-      decode(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decode(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const Uu = void 0 !== this.iK ? [] : null,
-          Zu = this.root,
-          Xu = uu.byteLength;
-        let lu = ju.constructor[Cu];
-        for (this.currentRefId = 0; Eu.offset < Xu;) {
-          if (uu[Eu.offset] == su) {
-            Eu.offset++, ju[eu]?.();
-            const su = ME.number(uu, Eu),
-              Uu = Zu.refs.get(su);
-            Uu ? (ju = Uu, lu = ju.constructor[Cu], this.currentRefId = su) : (console.error(`"refId" not found: ${su}`, {
-              previousRef: ju,
+          ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const SG = void 0 !== this.KF ? [] : null,
+          LG = this.root,
+          yG = GG.byteLength;
+        let kG = ZG.constructor[VG];
+        for (this.currentRefId = 0; bG.offset < yG;) {
+          if (GG[bG.offset] == wG) {
+            bG.offset++, ZG[EG]?.();
+            const wG = zb.number(GG, bG),
+              SG = LG.refs.get(wG);
+            SG ? (ZG = SG, kG = ZG.constructor[VG], this.currentRefId = wG) : (console.error(`"refId" not found: ${wG}`, {
+              previousRef: ZG,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(uu, Eu, Xu));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(GG, bG, yG));
             continue
-          } - 1 !== lu(this, uu, Eu, ju, Uu) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(uu, Eu, Xu))
+          } - 1 !== kG(this, GG, bG, ZG, SG) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(GG, bG, yG))
         }
-        return ju[eu]?.(), null !== this.resyncVisited && function(uu, Eu) {
-          uu.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : Ij(uu, uu.state, new Set, Eu)
-        }(this, Uu), null !== Uu && this.iK?.(Uu), Zu.garbageCollectDeletedRefs(), Uu
+        return ZG[EG]?.(), null !== this.resyncVisited && function(GG, bG) {
+          GG.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : qZ(GG, GG.state, new Set, bG)
+        }(this, SG), null !== SG && this.KF?.(SG), LG.garbageCollectDeletedRefs(), SG
       }
-      decodeResync(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decodeResync(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(uu, Eu)
+          return this.decode(GG, bG)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(uu, Eu, ju) {
+      skipCurrentStructure(GG, bG, ZG) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const Uu = {
-          offset: Eu.offset
+        const SG = {
+          offset: bG.offset
         };
-        for (; Eu.offset < ju && (uu[Eu.offset] !== su || (Uu.offset = Eu.offset + 1, !this.root.refs.has(ME.number(uu, Uu))));) Eu.offset++
+        for (; bG.offset < ZG && (GG[bG.offset] !== wG || (SG.offset = bG.offset + 1, !this.root.refs.has(zb.number(GG, SG))));) bG.offset++
       }
-      getInstanceType(uu, Eu, ju) {
-        let su;
-        if (213 === uu[Eu.offset]) {
-          Eu.offset++;
-          const ju = ME.number(uu, Eu);
-          su = this.context.get(ju)
+      getInstanceType(GG, bG, ZG) {
+        let wG;
+        if (213 === GG[bG.offset]) {
+          bG.offset++;
+          const ZG = zb.number(GG, bG);
+          wG = this.context.get(ZG)
         }
-        return su || ju
+        return wG || ZG
       }
-      createInstanceOfType(uu) {
-        return uu.initializeForDecoder()
+      createInstanceOfType(GG) {
+        return GG.initializeForDecoder()
       }
-      removeChildRefs(uu, Eu) {
-        const ju = "string" !== typeof uu[hu],
-          su = uu[lu];
-        uu.forEach(((Zu, Xu) => {
-          Eu?.push({
-            ref: uu,
-            refId: su,
-            op: Uu.DELETE,
-            field: Xu,
+      removeChildRefs(GG, bG) {
+        const ZG = "string" !== typeof GG[dG],
+          wG = GG[kG];
+        GG.forEach(((LG, yG) => {
+          bG?.push({
+            ref: GG,
+            refId: wG,
+            op: SG.DELETE,
+            field: yG,
             value: void 0,
-            previousValue: Zu
-          }), ju && this.root.removeRef(Zu[lu])
+            previousValue: LG
+          }), ZG && this.root.removeRef(LG[kG])
         }))
       }
     }
-    const ys = os({
-        min: Os.float64(),
-        max: Os.float64(),
-        bits: Os.uint8(),
-        mode: Os.uint8()
+    const Nw = Ww({
+        min: Qw.float64(),
+        max: Qw.float64(),
+        bits: Qw.uint8(),
+        mode: Qw.uint8()
       }, "QuantizedDescriptor"),
-      zs = os({
-        name: Os.string(),
-        type: Os.string(),
-        referencedType: Os.number(),
-        childPrimitive: Os.string(),
-        quantized: Os.ref(ys).optional()
+      Ow = Ww({
+        name: Qw.string(),
+        type: Qw.string(),
+        referencedType: Qw.number(),
+        childPrimitive: Qw.string(),
+        quantized: Qw.ref(Nw).optional()
       }, "ReflectionField"),
-      Rs = os({
-        id: Os.number(),
-        extendsId: Os.number(),
-        fields: Os.array(zs)
+      xw = Ww({
+        id: Qw.number(),
+        extendsId: Qw.number(),
+        fields: Qw.array(Ow)
       }, "ReflectionType"),
-      uU = os({
-        types: Os.array(Rs),
-        rootType: Os.number()
+      Bw = Ww({
+        types: Qw.array(xw),
+        rootType: Qw.number()
       }, "Reflection");
 
-    function EU(uu) {
-      const Eu = uu.root,
-        ju = Eu.callbacks,
-        su = new WeakMap;
-      let Zu;
+    function GS(GG) {
+      const bG = GG.root,
+        ZG = bG.callbacks,
+        wG = new WeakMap;
+      let LG;
 
-      function Xu(uu, ju) {
-        let fu = ju.instance?.constructor[Symbol.metadata] || uu,
-          Cu = ju.instance && "function" === typeof ju.instance.forEach || uu && !ms.is(uu);
-        if (fu && !Cu) {
-          const uu = function(uu, Uu, Xu, qu) {
-            return qu && void 0 !== ju.instance[Uu] && !su.has(Zu) && Xu(ju.instance[Uu], void 0), Eu.addCallback(uu[lu], Uu, Xu)
+      function yG(GG, ZG) {
+        let YG = ZG.instance?.constructor[Symbol.metadata] || GG,
+          VG = ZG.instance && "function" === typeof ZG.instance.forEach || GG && !Iw.is(GG);
+        if (YG && !VG) {
+          const GG = function(GG, SG, yG, UG) {
+            return UG && void 0 !== ZG.instance[SG] && !wG.has(LG) && yG(ZG.instance[SG], void 0), bG.addCallback(GG[kG], SG, yG)
           };
           return new Proxy({
-            listen: function(Eu, Uu) {
-              let Xu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (ju.instance) return uu(ju.instance, Eu, Uu, Xu);
+            listen: function(bG, SG) {
+              let yG = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (ZG.instance) return GG(ZG.instance, bG, SG, yG);
               {
-                let lu = () => {};
-                return ju.onInstanceAvailable(((ju, qu) => {
-                  lu = uu(ju, Eu, Uu, Xu && qu && !su.has(Zu))
-                })), () => lu()
+                let kG = () => {};
+                return ZG.onInstanceAvailable(((ZG, UG) => {
+                  kG = GG(ZG, bG, SG, yG && UG && !wG.has(LG))
+                })), () => kG()
               }
             },
-            onChange: function(uu) {
-              return Eu.addCallback(ju.instance[lu], Uu.REPLACE, uu)
+            onChange: function(GG) {
+              return bG.addCallback(ZG.instance[kG], SG.REPLACE, GG)
             },
-            bindTo: function(uu, su) {
-              return su || (su = Object.keys(fu).map((uu => fu[uu].name))), Eu.addCallback(ju.instance[lu], Uu.REPLACE, (() => {
-                su.forEach((Eu => uu[Eu] = ju.instance[Eu]))
+            bindTo: function(GG, wG) {
+              return wG || (wG = Object.keys(YG).map((GG => YG[GG].name))), bG.addCallback(ZG.instance[kG], SG.REPLACE, (() => {
+                wG.forEach((bG => GG[bG] = ZG.instance[bG]))
               }))
             }
           }, {
-            get(uu, Eu) {
-              const su = fu[fu[Eu]];
-              if (su) {
-                const uu = ju.instance?.[Eu],
-                  Uu = su => {
-                    const Uu = qu(ju.instance).listen(Eu, ((uu, Eu) => {
-                      su(uu, !1), Uu?.()
+            get(GG, bG) {
+              const wG = YG[YG[bG]];
+              if (wG) {
+                const GG = ZG.instance?.[bG],
+                  SG = wG => {
+                    const SG = UG(ZG.instance).listen(bG, ((GG, bG) => {
+                      wG(GG, !1), SG?.()
                     }), !1);
-                    void 0 !== uu?.[lu] && su(uu, !0)
+                    void 0 !== GG?.[kG] && wG(GG, !0)
                   };
-                return Xu(su.type, {
-                  instance: void 0 !== uu?.[lu] && uu,
-                  parentInstance: ju.instance,
-                  onInstanceAvailable: Uu
+                return yG(wG.type, {
+                  instance: void 0 !== GG?.[kG] && GG,
+                  parentInstance: ZG.instance,
+                  onInstanceAvailable: SG
                 })
               }
-              return uu[Eu]
+              return GG[bG]
             },
-            has: (uu, Eu) => void 0 !== fu[Eu],
-            set(uu, Eu, ju) {
+            has: (GG, bG) => void 0 !== YG[bG],
+            set(GG, bG, ZG) {
               throw new Error("not allowed")
             },
-            deleteProperty(uu, Eu) {
+            deleteProperty(GG, bG) {
               throw new Error("not allowed")
             }
           })
         } {
-          const uu = function(uu, ju, Xu) {
-              return Xu && uu.forEach(((uu, Eu) => ju(uu, Eu))), Eu.addCallback(uu[lu], Uu.ADD, ((uu, Eu) => {
-                su.set(ju, !0), Zu = ju, ju(uu, Eu), su.delete(ju), Zu = void 0
+          const GG = function(GG, ZG, yG) {
+              return yG && GG.forEach(((GG, bG) => ZG(GG, bG))), bG.addCallback(GG[kG], SG.ADD, ((GG, bG) => {
+                wG.set(ZG, !0), LG = ZG, ZG(GG, bG), wG.delete(ZG), LG = void 0
               }))
             },
-            Xu = function(uu, ju) {
-              return Eu.addCallback(uu[lu], Uu.DELETE, ju)
+            yG = function(GG, ZG) {
+              return bG.addCallback(GG[kG], SG.DELETE, ZG)
             },
-            qu = function(uu, ju) {
-              return Eu.addCallback(uu[lu], Uu.REPLACE, ju)
+            UG = function(GG, ZG) {
+              return bG.addCallback(GG[kG], SG.REPLACE, ZG)
             };
           return new Proxy({
-            lG: function(Eu) {
-              let Uu = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (ju.instance) return uu(ju.instance, Eu, Uu && !su.has(Zu));
-              if (ju.onInstanceAvailable) {
-                let Xu = () => {};
-                return ju.onInstanceAvailable(((ju, lu) => {
-                  Xu = uu(ju, Eu, Uu && lu && !su.has(Zu))
-                })), () => Xu()
+            Kr: function(bG) {
+              let SG = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (ZG.instance) return GG(ZG.instance, bG, SG && !wG.has(LG));
+              if (ZG.onInstanceAvailable) {
+                let yG = () => {};
+                return ZG.onInstanceAvailable(((ZG, kG) => {
+                  yG = GG(ZG, bG, SG && kG && !wG.has(LG))
+                })), () => yG()
               }
             },
-            jK: function(uu) {
-              if (ju.instance) return Xu(ju.instance, uu);
-              if (ju.onInstanceAvailable) {
-                let Eu = () => {};
-                return ju.onInstanceAvailable((ju => {
-                  Eu = Xu(ju, uu)
-                })), () => Eu()
+            MI: function(GG) {
+              if (ZG.instance) return yG(ZG.instance, GG);
+              if (ZG.onInstanceAvailable) {
+                let bG = () => {};
+                return ZG.onInstanceAvailable((ZG => {
+                  bG = yG(ZG, GG)
+                })), () => bG()
               }
             },
-            onChange: function(uu) {
-              if (ju.instance) return qu(ju.instance, uu);
-              if (ju.onInstanceAvailable) {
-                let Eu = () => {};
-                return ju.onInstanceAvailable((ju => {
-                  Eu = qu(ju, uu)
-                })), () => Eu()
+            onChange: function(GG) {
+              if (ZG.instance) return UG(ZG.instance, GG);
+              if (ZG.onInstanceAvailable) {
+                let bG = () => {};
+                return ZG.onInstanceAvailable((ZG => {
+                  bG = UG(ZG, GG)
+                })), () => bG()
               }
             }
           }, {
-            get(uu, Eu) {
-              if (!uu[Eu]) throw new Error(`Can't access '${Eu}' through callback proxy. access the instance directly.`);
-              return uu[Eu]
+            get(GG, bG) {
+              if (!GG[bG]) throw new Error(`Can't access '${bG}' through callback proxy. access the instance directly.`);
+              return GG[bG]
             },
-            has: (uu, Eu) => void 0 !== uu[Eu],
-            set(uu, Eu, ju) {
+            has: (GG, bG) => void 0 !== GG[bG],
+            set(GG, bG, ZG) {
               throw new Error("not allowed")
             },
-            deleteProperty(uu, Eu) {
+            deleteProperty(GG, bG) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function qu(uu) {
-        return Xu(void 0, {
-          instance: uu
+      function UG(GG) {
+        return yG(void 0, {
+          instance: GG
         })
       }
-      return uu.iK = function(uu) {
-        const Eu = new Set;
-        for (let su = 0, Zu = uu.length; su < Zu; su++) {
-          const Zu = uu[su],
-            Xu = Zu.refId,
-            qu = Zu.ref,
-            fu = ju[Xu];
-          if (fu) {
-            if ((Zu.op & Uu.DELETE) === Uu.DELETE && ms.isSchema(Zu.previousValue)) {
-              const uu = ju[Zu.previousValue[lu]]?.[Uu.DELETE];
-              for (let Eu = uu?.length - 1; Eu >= 0; Eu--) uu[Eu]()
+      return GG.KF = function(GG) {
+        const bG = new Set;
+        for (let wG = 0, LG = GG.length; wG < LG; wG++) {
+          const LG = GG[wG],
+            yG = LG.refId,
+            UG = LG.ref,
+            YG = ZG[yG];
+          if (YG) {
+            if ((LG.op & SG.DELETE) === SG.DELETE && Iw.isSchema(LG.previousValue)) {
+              const GG = ZG[LG.previousValue[kG]]?.[SG.DELETE];
+              for (let bG = GG?.length - 1; bG >= 0; bG--) GG[bG]()
             }
-            if (ms.isSchema(qu)) {
-              if (!Eu.has(Xu)) {
-                const uu = fu?.[Uu.REPLACE];
-                for (let Eu = uu?.length - 1; Eu >= 0; Eu--) uu[Eu]()
+            if (Iw.isSchema(UG)) {
+              if (!bG.has(yG)) {
+                const GG = YG?.[SG.REPLACE];
+                for (let bG = GG?.length - 1; bG >= 0; bG--) GG[bG]()
               }
-              if (fu.hasOwnProperty(Zu.field)) {
-                const uu = fu[Zu.field];
-                for (let Eu = uu?.length - 1; Eu >= 0; Eu--) uu[Eu](Zu.value, Zu.previousValue)
+              if (YG.hasOwnProperty(LG.field)) {
+                const GG = YG[LG.field];
+                for (let bG = GG?.length - 1; bG >= 0; bG--) GG[bG](LG.value, LG.previousValue)
               }
             } else {
-              if ((Zu.op & Uu.DELETE) === Uu.DELETE) {
-                if (void 0 !== Zu.previousValue) {
-                  const uu = fu[Uu.DELETE];
-                  for (let Eu = uu?.length - 1; Eu >= 0; Eu--) uu[Eu](Zu.previousValue, Zu.dynamicIndex ?? Zu.field)
+              if ((LG.op & SG.DELETE) === SG.DELETE) {
+                if (void 0 !== LG.previousValue) {
+                  const GG = YG[SG.DELETE];
+                  for (let bG = GG?.length - 1; bG >= 0; bG--) GG[bG](LG.previousValue, LG.dynamicIndex ?? LG.field)
                 }
-                if ((Zu.op & Uu.ADD) === Uu.ADD) {
-                  const uu = fu[Uu.ADD];
-                  for (let Eu = uu?.length - 1; Eu >= 0; Eu--) uu[Eu](Zu.value, Zu.dynamicIndex ?? Zu.field)
+                if ((LG.op & SG.ADD) === SG.ADD) {
+                  const GG = YG[SG.ADD];
+                  for (let bG = GG?.length - 1; bG >= 0; bG--) GG[bG](LG.value, LG.dynamicIndex ?? LG.field)
                 }
-              } else if ((Zu.op & Uu.ADD) === Uu.ADD && Zu.previousValue !== Zu.value) {
-                const uu = fu[Uu.ADD];
-                for (let Eu = uu?.length - 1; Eu >= 0; Eu--) uu[Eu](Zu.value, Zu.dynamicIndex ?? Zu.field)
+              } else if ((LG.op & SG.ADD) === SG.ADD && LG.previousValue !== LG.value) {
+                const GG = YG[SG.ADD];
+                for (let bG = GG?.length - 1; bG >= 0; bG--) GG[bG](LG.value, LG.dynamicIndex ?? LG.field)
               }
-              if (Zu.value !== Zu.previousValue && (void 0 !== Zu.value || void 0 !== Zu.previousValue)) {
-                const uu = fu[Uu.REPLACE];
-                for (let Eu = uu?.length - 1; Eu >= 0; Eu--) uu[Eu](Zu.value, Zu.dynamicIndex ?? Zu.field)
+              if (LG.value !== LG.previousValue && (void 0 !== LG.value || void 0 !== LG.previousValue)) {
+                const GG = YG[SG.REPLACE];
+                for (let bG = GG?.length - 1; bG >= 0; bG--) GG[bG](LG.value, LG.dynamicIndex ?? LG.field)
               }
             }
-            Eu.add(Xu)
+            bG.add(yG)
           }
         }
-      }, qu
+      }, UG
     }
 
-    function jU(uu, Eu) {
-      uu.iK = Eu
+    function bS(GG, bG) {
+      GG.KF = bG
     }
-    uU.encode = function(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    Bw.encode = function(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const ju = uu.context,
-        su = new uU,
-        Uu = new xs(su),
-        Zu = ju.schemas.get(uu.state.constructor);
-      Zu > 0 && (su.rootType = Zu);
-      const Xu = new Set,
-        lu = {},
-        qu = uu => {
-          if (void 0 === uu.extendsId || Xu.has(uu.extendsId)) {
-            Xu.add(uu.id), su.types.push(uu);
-            const Eu = lu[uu.id];
-            void 0 !== Eu && (delete lu[uu.id], Eu.forEach((uu => qu(uu))))
-          } else void 0 === lu[uu.extendsId] && (lu[uu.extendsId] = []), lu[uu.extendsId].push(uu)
+      const ZG = GG.context,
+        wG = new Bw,
+        SG = new Rw(wG),
+        LG = ZG.schemas.get(GG.state.constructor);
+      LG > 0 && (wG.rootType = LG);
+      const yG = new Set,
+        kG = {},
+        UG = GG => {
+          if (void 0 === GG.extendsId || yG.has(GG.extendsId)) {
+            yG.add(GG.id), wG.types.push(GG);
+            const bG = kG[GG.id];
+            void 0 !== bG && (delete kG[GG.id], bG.forEach((GG => UG(GG))))
+          } else void 0 === kG[GG.extendsId] && (kG[GG.extendsId] = []), kG[GG.extendsId].push(GG)
         };
-      ju.schemas.forEach(((uu, Eu) => {
-        const su = new Rs;
-        su.id = Number(uu);
-        const Uu = Object.getPrototypeOf(Eu);
-        Uu !== ms && (su.extendsId = ju.schemas.get(Uu));
-        const Zu = Eu[Symbol.metadata];
-        if (Zu !== Uu[Symbol.metadata]) {
-          const uu = Zu[au] ?? -1;
-          for (let Eu = 0; Eu <= uu; Eu++) {
-            const uu = Zu[Eu];
-            if (void 0 === uu) continue;
-            const Uu = uu.name;
-            if (!Object.prototype.hasOwnProperty.call(Zu, Uu)) continue;
-            const Xu = new zs;
-            let lu;
-            if (Xu.name = Uu, "string" === typeof uu.type) lu = uu.type;
-            else if (QE(uu.type)) {
-              const Eu = uu.type.quantized;
-              lu = "quantized";
-              const ju = new ys;
-              ju.min = Eu.min, ju.max = Eu.max, ju.bits = Eu.bits, ju.mode = Eu.wrap ? 1 : 0, Xu.quantized = ju
+      ZG.schemas.forEach(((GG, bG) => {
+        const wG = new xw;
+        wG.id = Number(GG);
+        const SG = Object.getPrototypeOf(bG);
+        SG !== Iw && (wG.extendsId = ZG.schemas.get(SG));
+        const LG = bG[Symbol.metadata];
+        if (LG !== SG[Symbol.metadata]) {
+          const GG = LG[WG] ?? -1;
+          for (let bG = 0; bG <= GG; bG++) {
+            const GG = LG[bG];
+            if (void 0 === GG) continue;
+            const SG = GG.name;
+            if (!Object.prototype.hasOwnProperty.call(LG, SG)) continue;
+            const yG = new Ow;
+            let kG;
+            if (yG.name = SG, "string" === typeof GG.type) kG = GG.type;
+            else if (Pb(GG.type)) {
+              const bG = GG.type.quantized;
+              kG = "quantized";
+              const ZG = new Nw;
+              ZG.min = bG.min, ZG.max = bG.max, ZG.bits = bG.bits, ZG.mode = bG.wrap ? 1 : 0, yG.quantized = ZG
             } else {
-              let Eu;
-              ms.is(uu.type) ? (lu = "ref", Eu = uu.type) : (lu = Object.keys(uu.type)[0], "string" === typeof uu.type[lu] ? Xu.childPrimitive = uu.type[lu] : Eu = uu.type[lu]), Xu.referencedType = Eu ? ju.getTypeId(Eu) : -1
+              let bG;
+              Iw.is(GG.type) ? (kG = "ref", bG = GG.type) : (kG = Object.keys(GG.type)[0], "string" === typeof GG.type[kG] ? yG.childPrimitive = GG.type[kG] : bG = GG.type[kG]), yG.referencedType = bG ? ZG.getTypeId(bG) : -1
             }
-            Xu.type = lu, su.fields.push(Xu)
+            yG.type = kG, wG.fields.push(yG)
           }
         }
-        qu(su)
+        UG(wG)
       }));
-      for (const fu in lu) lu[fu].forEach((uu => su.types.push(uu)));
-      return Uu.encodeAll(Eu).slice(0, Eu.offset)
-    }, uU.decode = function(uu, Eu) {
-      const ju = new uU;
-      new ns(ju).decode(uu, Eu);
-      const su = new IE;
-      ju.types.forEach((uu => {
-        const Eu = su.get(uu.extendsId) ?? ms,
-          ju = class extends Eu {};
-        IE.register(ju), su.add(ju, uu.id)
+      for (const YG in kG) kG[YG].forEach((GG => wG.types.push(GG)));
+      return SG.encodeAll(bG).slice(0, bG.offset)
+    }, Bw.decode = function(GG, bG) {
+      const ZG = new Bw;
+      new Dw(ZG).decode(GG, bG);
+      const wG = new qb;
+      ZG.types.forEach((GG => {
+        const bG = wG.get(GG.extendsId) ?? Iw,
+          ZG = class extends bG {};
+        qb.register(ZG), wG.add(ZG, GG.id)
       }), {});
-      ju.types.forEach((uu => {
-        const Eu = su.get(uu.id),
-          Uu = HE.initialize(Eu),
-          Zu = [];
-        let Xu = uu;
+      ZG.types.forEach((GG => {
+        const bG = wG.get(GG.id),
+          SG = tb.initialize(bG),
+          LG = [];
+        let yG = GG;
         do {
-          Zu.push(Xu), Xu = ju.types.find((uu => uu.id === Xu.extendsId))
-        } while (Xu);
-        let lu = 0;
-        Zu.reverse().forEach((uu => {
-          ((uu, Eu, ju) => {
-            Eu.fields.forEach(((Eu, Uu) => {
-              const Zu = ju + Uu;
-              if (void 0 !== Eu.quantized) {
-                const ju = Eu.quantized;
-                HE.addField(uu, Zu, Eu.name, {
-                  quantized: rE({
-                    min: ju.min,
-                    max: ju.max,
-                    bits: ju.bits,
-                    mode: 1 === ju.mode ? "wrap" : "clamp"
+          LG.push(yG), yG = ZG.types.find((GG => GG.id === yG.extendsId))
+        } while (yG);
+        let kG = 0;
+        LG.reverse().forEach((GG => {
+          ((GG, bG, ZG) => {
+            bG.fields.forEach(((bG, SG) => {
+              const LG = ZG + SG;
+              if (void 0 !== bG.quantized) {
+                const ZG = bG.quantized;
+                tb.addField(GG, LG, bG.name, {
+                  quantized: jb({
+                    min: ZG.min,
+                    max: ZG.max,
+                    bits: ZG.bits,
+                    mode: 1 === ZG.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== Eu.referencedType) {
-                const ju = Eu.type,
-                  Uu = su.get(Eu.referencedType) ?? Eu.childPrimitive;
-                "ref" === ju ? HE.addField(uu, Zu, Eu.name, Uu) : HE.addField(uu, Zu, Eu.name, {
-                  [ju]: Uu
+              } else if (void 0 !== bG.referencedType) {
+                const ZG = bG.type,
+                  SG = wG.get(bG.referencedType) ?? bG.childPrimitive;
+                "ref" === ZG ? tb.addField(GG, LG, bG.name, SG) : tb.addField(GG, LG, bG.name, {
+                  [ZG]: SG
                 })
-              } else HE.addField(uu, Zu, Eu.name, Eu.type)
+              } else tb.addField(GG, LG, bG.name, bG.type)
             }))
-          })(Uu, uu, lu), lu += uu.fields.length
+          })(SG, GG, kG), kG += GG.fields.length
         }))
       }));
-      const Uu = new(su.get(ju.rootType || 0));
-      return new ns(Uu, su)
-    }, uU.makeEncodable = function(uu) {
-      const Eu = uu[Symbol.metadata];
-      if (!Eu) return uu;
-      const ju = Eu[au];
-      if (void 0 === ju) return uu;
-      for (let su = 0; su <= ju; su++) {
-        const ju = Eu[su];
-        ju && HE.defineField(uu, Eu, su, ju.name, ju.type)
+      const SG = new(wG.get(ZG.rootType || 0));
+      return new Dw(SG, wG)
+    }, Bw.makeEncodable = function(GG) {
+      const bG = GG[Symbol.metadata];
+      if (!bG) return GG;
+      const ZG = bG[WG];
+      if (void 0 === ZG) return GG;
+      for (let wG = 0; wG <= ZG; wG++) {
+        const ZG = bG[wG];
+        ZG && tb.defineField(GG, bG, wG, ZG.name, ZG.type)
       }
-      return Object.prototype.hasOwnProperty.call(uu, Ju) && delete uu[Ju], uu
+      return Object.prototype.hasOwnProperty.call(GG, iG) && delete GG[iG], GG
     };
-    class sU {
-      zN;
+    class ZS {
+      GK;
       uniqueRefIds = new Set;
       isTriggering = !1;
-      constructor(uu) {
-        this.zN = uu, this.zN.iK = this.iK.bind(this)
+      constructor(GG) {
+        this.GK = GG, this.GK.KF = this.KF.bind(this)
       }
       get callbacks() {
-        return this.zN.root.callbacks
+        return this.GK.root.callbacks
       }
       get state() {
-        return this.zN.state
+        return this.GK.state
       }
-      addCallback(uu, Eu, ju) {
-        return this.zN.root.addCallback(uu, Eu, ju)
+      addCallback(GG, bG, ZG) {
+        return this.GK.root.addCallback(GG, bG, ZG)
       }
-      addCallbackOrWaitCollectionAvailable(uu, Eu, ju, su) {
-        let Zu = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          Xu = () => {};
-        const qu = () => Xu(),
-          fu = uu[Eu];
-        if (fu && void 0 !== fu[lu]) return Zu = Zu && !1 === this.isTriggering, ju === Uu.ADD && Zu && fu.forEach(((uu, Eu) => {
-          su(uu, Eu)
-        })), this.addCallback(fu[lu], ju, su);
+      addCallbackOrWaitCollectionAvailable(GG, bG, ZG, wG) {
+        let LG = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          yG = () => {};
+        const UG = () => yG(),
+          YG = GG[bG];
+        if (YG && void 0 !== YG[kG]) return LG = LG && !1 === this.isTriggering, ZG === SG.ADD && LG && YG.forEach(((GG, bG) => {
+          wG(GG, bG)
+        })), this.addCallback(YG[kG], ZG, wG);
         {
-          let Uu;
-          return Uu = this.addCallback(uu[lu], Eu, ((uu, Eu) => {
-            null !== uu && void 0 !== uu && (Uu(), Xu = this.addCallback(uu[lu], ju, su))
-          })), Xu = Uu, qu
+          let SG;
+          return SG = this.addCallback(GG[kG], bG, ((GG, bG) => {
+            null !== GG && void 0 !== GG && (SG(), yG = this.addCallback(GG[kG], ZG, wG))
+          })), yG = SG, UG
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(uu, Eu, ju) {
-        let su = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        su = su && !1 === this.isTriggering;
-        const Uu = uu[Eu];
-        return su && null !== Uu && void 0 !== Uu && ju(Uu, void 0), this.addCallback(uu[lu], Eu, ju)
+      listenInstance(GG, bG, ZG) {
+        let wG = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        wG = wG && !1 === this.isTriggering;
+        const SG = GG[bG];
+        return wG && null !== SG && void 0 !== SG && ZG(SG, void 0), this.addCallback(GG[kG], bG, ZG)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
-          const uu = arguments.length <= 0 ? void 0 : arguments[0],
-            Eu = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(uu[lu], Uu.REPLACE, Eu)
+          const GG = arguments.length <= 0 ? void 0 : arguments[0],
+            bG = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(GG[kG], SG.REPLACE, bG)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Uu.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Uu.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], SG.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], SG.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      lG() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Uu.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Uu.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      Kr() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], SG.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], SG.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      jK() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Uu.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Uu.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      MI() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], SG.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], SG.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(uu, Eu, ju) {
-        let su = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const Zu = uu.constructor[Symbol.metadata];
-        ju || (ju = Object.keys(Zu).filter((uu => !isNaN(Number(uu)))).map((uu => Zu[uu].name)));
-        const Xu = () => {
-          for (const su of ju) {
-            const ju = uu[su];
-            void 0 !== ju && (Eu[su] = ju)
+      bindTo(GG, bG, ZG) {
+        let wG = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const LG = GG.constructor[Symbol.metadata];
+        ZG || (ZG = Object.keys(LG).filter((GG => !isNaN(Number(GG)))).map((GG => LG[GG].name)));
+        const yG = () => {
+          for (const wG of ZG) {
+            const ZG = GG[wG];
+            void 0 !== ZG && (bG[wG] = ZG)
           }
         };
-        return su && Xu(), this.addCallback(uu[lu], Uu.REPLACE, Xu)
+        return wG && yG(), this.addCallback(GG[kG], SG.REPLACE, yG)
       }
-      iK(uu) {
+      KF(GG) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let Eu = 0, ju = uu.length; Eu < ju; Eu++) {
-          const ju = uu[Eu],
-            su = ju.refId,
-            Zu = ju.ref,
-            Xu = this.callbacks[su];
-          if (Xu) {
-            if ((ju.op & Uu.DELETE) === Uu.DELETE && ms.isSchema(ju.previousValue)) {
-              const uu = ju.previousValue[lu],
-                Eu = this.callbacks[uu]?.[Uu.DELETE];
-              if (Eu)
-                for (let ju = Eu.length - 1; ju >= 0; ju--) try {
-                  Eu[ju]()
-                } catch (lU) {
-                  console.error(lU)
+        for (let bG = 0, ZG = GG.length; bG < ZG; bG++) {
+          const ZG = GG[bG],
+            wG = ZG.refId,
+            LG = ZG.ref,
+            yG = this.callbacks[wG];
+          if (yG) {
+            if ((ZG.op & SG.DELETE) === SG.DELETE && Iw.isSchema(ZG.previousValue)) {
+              const GG = ZG.previousValue[kG],
+                bG = this.callbacks[GG]?.[SG.DELETE];
+              if (bG)
+                for (let ZG = bG.length - 1; ZG >= 0; ZG--) try {
+                  bG[ZG]()
+                } catch (yS) {
+                  console.error(yS)
                 }
             }
-            if (ms.isSchema(Zu)) {
-              if (!this.uniqueRefIds.has(su)) {
-                const uu = Xu[Uu.REPLACE];
-                if (uu)
-                  for (let Eu = uu.length - 1; Eu >= 0; Eu--) try {
-                    uu[Eu]()
-                  } catch (lU) {
-                    console.error(lU)
+            if (Iw.isSchema(LG)) {
+              if (!this.uniqueRefIds.has(wG)) {
+                const GG = yG[SG.REPLACE];
+                if (GG)
+                  for (let bG = GG.length - 1; bG >= 0; bG--) try {
+                    GG[bG]()
+                  } catch (yS) {
+                    console.error(yS)
                   }
               }
-              const uu = Xu[ju.field];
-              if (uu)
-                for (let Eu = uu.length - 1; Eu >= 0; Eu--) try {
-                  uu[Eu](ju.value, ju.previousValue)
-                } catch (lU) {
-                  console.error(lU)
+              const GG = yG[ZG.field];
+              if (GG)
+                for (let bG = GG.length - 1; bG >= 0; bG--) try {
+                  GG[bG](ZG.value, ZG.previousValue)
+                } catch (yS) {
+                  console.error(yS)
                 }
             } else {
-              const uu = ju.dynamicIndex ?? ju.field;
-              if ((ju.op & Uu.DELETE) === Uu.DELETE) {
-                if (void 0 !== ju.previousValue) {
-                  const Eu = Xu[Uu.DELETE];
-                  if (Eu)
-                    for (let su = Eu.length - 1; su >= 0; su--) try {
-                      Eu[su](ju.previousValue, uu)
-                    } catch (lU) {
-                      console.error(lU)
+              const GG = ZG.dynamicIndex ?? ZG.field;
+              if ((ZG.op & SG.DELETE) === SG.DELETE) {
+                if (void 0 !== ZG.previousValue) {
+                  const bG = yG[SG.DELETE];
+                  if (bG)
+                    for (let wG = bG.length - 1; wG >= 0; wG--) try {
+                      bG[wG](ZG.previousValue, GG)
+                    } catch (yS) {
+                      console.error(yS)
                     }
                 }
-                if ((ju.op & Uu.ADD) === Uu.ADD) {
-                  const Eu = Xu[Uu.ADD];
-                  if (Eu)
-                    for (let su = Eu.length - 1; su >= 0; su--) try {
-                      Eu[su](ju.value, uu)
-                    } catch (lU) {
-                      console.error(lU)
+                if ((ZG.op & SG.ADD) === SG.ADD) {
+                  const bG = yG[SG.ADD];
+                  if (bG)
+                    for (let wG = bG.length - 1; wG >= 0; wG--) try {
+                      bG[wG](ZG.value, GG)
+                    } catch (yS) {
+                      console.error(yS)
                     }
                 }
-              } else if ((ju.op & Uu.ADD) === Uu.ADD && ju.previousValue !== ju.value) {
-                const Eu = Xu[Uu.ADD];
-                if (Eu)
-                  for (let su = Eu.length - 1; su >= 0; su--) try {
-                    Eu[su](ju.value, uu)
-                  } catch (lU) {
-                    console.error(lU)
+              } else if ((ZG.op & SG.ADD) === SG.ADD && ZG.previousValue !== ZG.value) {
+                const bG = yG[SG.ADD];
+                if (bG)
+                  for (let wG = bG.length - 1; wG >= 0; wG--) try {
+                    bG[wG](ZG.value, GG)
+                  } catch (yS) {
+                    console.error(yS)
                   }
               }
-              if (ju.value !== ju.previousValue) {
-                const Eu = Xu[Uu.REPLACE];
-                if (Eu)
-                  for (let su = Eu.length - 1; su >= 0; su--) try {
-                    Eu[su](uu, ju.value)
-                  } catch (lU) {
-                    console.error(lU)
+              if (ZG.value !== ZG.previousValue) {
+                const bG = yG[SG.REPLACE];
+                if (bG)
+                  for (let wG = bG.length - 1; wG >= 0; wG--) try {
+                    bG[wG](GG, ZG.value)
+                  } catch (yS) {
+                    console.error(yS)
                   }
               }
             }
-            this.uniqueRefIds.add(su)
+            this.uniqueRefIds.add(wG)
           }
         }
         this.isTriggering = !1
       }
     }
-    const UU = {
-      get(uu) {
-        if (uu instanceof ns) return new sU(uu);
-        if ("zN" in uu.pD) return new sU(uu.pD.zN);
+    const wS = {
+      get(GG) {
+        if (GG instanceof Dw) return new ZS(GG);
+        if ("GK" in GG.dJ) return new ZS(GG.dJ.GK);
         throw new Error("Invalid room or decoder")
       },
-      getLegacy(uu) {
-        if (uu instanceof ns) return EU(uu);
-        if ("zN" in uu.pD) return EU(uu.pD.zN);
+      getLegacy(GG) {
+        if (GG instanceof Dw) return GS(GG);
+        if ("GK" in GG.dJ) return GS(GG.dJ.GK);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (uu, Eu) => jU(uu, Eu)
+      getRawChanges: (GG, bG) => bS(GG, bG)
     };
-    class ZU {
+    class SS {
       _free = [];
       _factory;
       _maxSize;
-      constructor(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = uu, this._maxSize = Eu.maxSize ?? 1 / 0;
-        const ju = Eu.preallocate ?? 0;
-        for (let su = 0; su < ju; su++) this._free.push(uu())
+      constructor(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = GG, this._maxSize = bG.maxSize ?? 1 / 0;
+        const ZG = bG.preallocate ?? 0;
+        for (let wG = 0; wG < ZG; wG++) this._free.push(GG())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
-      release(uu) {
-        ms.reset(uu), this._free.length < this._maxSize && this._free.push(uu)
+      release(GG) {
+        Iw.reset(GG), this._free.length < this._maxSize && this._free.push(GG)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function XU(uu) {
-      return new ZU((() => new uu), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function LS(GG) {
+      return new SS((() => new GG), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    pE("map", {
-      constructor: Zs
-    }), pE("array", {
-      constructor: ss
-    }), pE("set", {
-      constructor: ls
-    }), pE("collection", {
-      constructor: Xs
+    Xb("map", {
+      constructor: Sw
+    }), Xb("array", {
+      constructor: Zw
+    }), Xb("set", {
+      constructor: yw
+    }), Xb("collection", {
+      constructor: Lw
     })
   },
-  9308: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      __addDisposableResource: () => Qu,
-      __assign: () => Zu,
-      __asyncDelegator: () => du,
-      __asyncGenerator: () => Ju,
-      __asyncValues: () => au,
-      __await: () => wu,
-      __awaiter: () => Ou,
-      __classPrivateFieldGet: () => Ku,
-      __classPrivateFieldIn: () => ru,
-      __classPrivateFieldSet: () => Vu,
-      __createBinding: () => hu,
-      __decorate: () => lu,
-      __disposeResources: () => Wu,
-      __esDecorate: () => fu,
-      __exportStar: () => Du,
-      __extends: () => Uu,
-      __generator: () => Yu,
-      __importDefault: () => vu,
-      __importStar: () => mu,
-      __makeTemplateObject: () => Pu,
-      __metadata: () => Nu,
-      __param: () => qu,
-      __propKey: () => bu,
-      __read: () => Mu,
-      __rest: () => Xu,
-      __rewriteRelativeImportExtension: () => Su,
-      __runInitializers: () => Cu,
-      __setFunctionName: () => cu,
-      __spread: () => eu,
-      __spreadArray: () => pu,
-      __spreadArrays: () => Gu,
-      __values: () => gu,
-      default: () => Iu
+  9136: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      __addDisposableResource: () => PG,
+      __assign: () => LG,
+      __asyncDelegator: () => CG,
+      __asyncGenerator: () => iG,
+      __asyncValues: () => WG,
+      __await: () => uG,
+      __awaiter: () => KG,
+      __classPrivateFieldGet: () => cG,
+      __classPrivateFieldIn: () => jG,
+      __classPrivateFieldSet: () => lG,
+      __createBinding: () => dG,
+      __decorate: () => kG,
+      __disposeResources: () => AG,
+      __esDecorate: () => YG,
+      __exportStar: () => JG,
+      __extends: () => SG,
+      __generator: () => hG,
+      __importDefault: () => aG,
+      __importStar: () => vG,
+      __makeTemplateObject: () => mG,
+      __metadata: () => QG,
+      __param: () => UG,
+      __propKey: () => pG,
+      __read: () => zG,
+      __rest: () => yG,
+      __rewriteRelativeImportExtension: () => sG,
+      __runInitializers: () => VG,
+      __setFunctionName: () => fG,
+      __spread: () => EG,
+      __spreadArray: () => XG,
+      __spreadArrays: () => oG,
+      __values: () => rG,
+      default: () => qG
     });
-    var su = function(uu, Eu) {
-      return su = Object.setPrototypeOf || {
+    var wG = function(GG, bG) {
+      return wG = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(uu, Eu) {
-        uu.__proto__ = Eu
-      } || function(uu, Eu) {
-        for (var ju in Eu) Object.prototype.hasOwnProperty.call(Eu, ju) && (uu[ju] = Eu[ju])
-      }, su(uu, Eu)
+      instanceof Array && function(GG, bG) {
+        GG.__proto__ = bG
+      } || function(GG, bG) {
+        for (var ZG in bG) Object.prototype.hasOwnProperty.call(bG, ZG) && (GG[ZG] = bG[ZG])
+      }, wG(GG, bG)
     };
 
-    function Uu(uu, Eu) {
-      if ("function" !== typeof Eu && null !== Eu) throw new TypeError("Class extends value " + String(Eu) + " is not a constructor or null");
+    function SG(GG, bG) {
+      if ("function" !== typeof bG && null !== bG) throw new TypeError("Class extends value " + String(bG) + " is not a constructor or null");
 
-      function ju() {
-        this.constructor = uu
+      function ZG() {
+        this.constructor = GG
       }
-      su(uu, Eu), uu.prototype = null === Eu ? Object.create(Eu) : (ju.prototype = Eu.prototype, new ju)
+      wG(GG, bG), GG.prototype = null === bG ? Object.create(bG) : (ZG.prototype = bG.prototype, new ZG)
     }
-    var Zu = function() {
-      return Zu = Object.assign || function(uu) {
-        for (var Eu, ju = 1, su = arguments.length; ju < su; ju++)
-          for (var Uu in Eu = arguments[ju]) Object.prototype.hasOwnProperty.call(Eu, Uu) && (uu[Uu] = Eu[Uu]);
-        return uu
-      }, Zu.apply(this, arguments)
+    var LG = function() {
+      return LG = Object.assign || function(GG) {
+        for (var bG, ZG = 1, wG = arguments.length; ZG < wG; ZG++)
+          for (var SG in bG = arguments[ZG]) Object.prototype.hasOwnProperty.call(bG, SG) && (GG[SG] = bG[SG]);
+        return GG
+      }, LG.apply(this, arguments)
     };
 
-    function Xu(uu, Eu) {
-      var ju = {};
-      for (var su in uu) Object.prototype.hasOwnProperty.call(uu, su) && Eu.indexOf(su) < 0 && (ju[su] = uu[su]);
-      if (null != uu && "function" === typeof Object.getOwnPropertySymbols) {
-        var Uu = 0;
-        for (su = Object.getOwnPropertySymbols(uu); Uu < su.length; Uu++) Eu.indexOf(su[Uu]) < 0 && Object.prototype.propertyIsEnumerable.call(uu, su[Uu]) && (ju[su[Uu]] = uu[su[Uu]])
+    function yG(GG, bG) {
+      var ZG = {};
+      for (var wG in GG) Object.prototype.hasOwnProperty.call(GG, wG) && bG.indexOf(wG) < 0 && (ZG[wG] = GG[wG]);
+      if (null != GG && "function" === typeof Object.getOwnPropertySymbols) {
+        var SG = 0;
+        for (wG = Object.getOwnPropertySymbols(GG); SG < wG.length; SG++) bG.indexOf(wG[SG]) < 0 && Object.prototype.propertyIsEnumerable.call(GG, wG[SG]) && (ZG[wG[SG]] = GG[wG[SG]])
       }
-      return ju
+      return ZG
     }
 
-    function lu(uu, Eu, ju, su) {
-      var Uu, Zu = arguments.length,
-        Xu = Zu < 3 ? Eu : null === su ? su = Object.getOwnPropertyDescriptor(Eu, ju) : su;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) Xu = Reflect.decorate(uu, Eu, ju, su);
+    function kG(GG, bG, ZG, wG) {
+      var SG, LG = arguments.length,
+        yG = LG < 3 ? bG : null === wG ? wG = Object.getOwnPropertyDescriptor(bG, ZG) : wG;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) yG = Reflect.decorate(GG, bG, ZG, wG);
       else
-        for (var lu = uu.length - 1; lu >= 0; lu--)(Uu = uu[lu]) && (Xu = (Zu < 3 ? Uu(Xu) : Zu > 3 ? Uu(Eu, ju, Xu) : Uu(Eu, ju)) || Xu);
-      return Zu > 3 && Xu && Object.defineProperty(Eu, ju, Xu), Xu
+        for (var kG = GG.length - 1; kG >= 0; kG--)(SG = GG[kG]) && (yG = (LG < 3 ? SG(yG) : LG > 3 ? SG(bG, ZG, yG) : SG(bG, ZG)) || yG);
+      return LG > 3 && yG && Object.defineProperty(bG, ZG, yG), yG
     }
 
-    function qu(uu, Eu) {
-      return function(ju, su) {
-        Eu(ju, su, uu)
+    function UG(GG, bG) {
+      return function(ZG, wG) {
+        bG(ZG, wG, GG)
       }
     }
 
-    function fu(uu, Eu, ju, su, Uu, Zu) {
-      function Xu(uu) {
-        if (void 0 !== uu && "function" !== typeof uu) throw new TypeError("Function expected");
-        return uu
+    function YG(GG, bG, ZG, wG, SG, LG) {
+      function yG(GG) {
+        if (void 0 !== GG && "function" !== typeof GG) throw new TypeError("Function expected");
+        return GG
       }
-      for (var lu, qu = su.kind, fu = "getter" === qu ? "get" : "setter" === qu ? "set" : "value", Cu = !Eu && uu ? su.static ? uu : uu.prototype : null, bu = Eu || (Cu ? Object.getOwnPropertyDescriptor(Cu, su.name) : {}), cu = !1, Nu = ju.length - 1; Nu >= 0; Nu--) {
-        var Ou = {};
-        for (var Yu in su) Ou[Yu] = "access" === Yu ? {} : su[Yu];
-        for (var Yu in su.access) Ou.access[Yu] = su.access[Yu];
-        Ou.addInitializer = function(uu) {
-          if (cu) throw new TypeError("Cannot add initializers after decoration has completed");
-          Zu.push(Xu(uu || null))
+      for (var kG, UG = wG.kind, YG = "getter" === UG ? "get" : "setter" === UG ? "set" : "value", VG = !bG && GG ? wG.static ? GG : GG.prototype : null, pG = bG || (VG ? Object.getOwnPropertyDescriptor(VG, wG.name) : {}), fG = !1, QG = ZG.length - 1; QG >= 0; QG--) {
+        var KG = {};
+        for (var hG in wG) KG[hG] = "access" === hG ? {} : wG[hG];
+        for (var hG in wG.access) KG.access[hG] = wG.access[hG];
+        KG.addInitializer = function(GG) {
+          if (fG) throw new TypeError("Cannot add initializers after decoration has completed");
+          LG.push(yG(GG || null))
         };
-        var hu = (0, ju[Nu])("accessor" === qu ? {
-          get: bu.get,
-          set: bu.set
-        } : bu[fu], Ou);
-        if ("accessor" === qu) {
-          if (void 0 === hu) continue;
-          if (null === hu || "object" !== typeof hu) throw new TypeError("Object expected");
-          (lu = Xu(hu.get)) && (bu.get = lu), (lu = Xu(hu.set)) && (bu.set = lu), (lu = Xu(hu.init)) && Uu.unshift(lu)
-        } else(lu = Xu(hu)) && ("field" === qu ? Uu.unshift(lu) : bu[fu] = lu)
+        var dG = (0, ZG[QG])("accessor" === UG ? {
+          get: pG.get,
+          set: pG.set
+        } : pG[YG], KG);
+        if ("accessor" === UG) {
+          if (void 0 === dG) continue;
+          if (null === dG || "object" !== typeof dG) throw new TypeError("Object expected");
+          (kG = yG(dG.get)) && (pG.get = kG), (kG = yG(dG.set)) && (pG.set = kG), (kG = yG(dG.init)) && SG.unshift(kG)
+        } else(kG = yG(dG)) && ("field" === UG ? SG.unshift(kG) : pG[YG] = kG)
       }
-      Cu && Object.defineProperty(Cu, su.name, bu), cu = !0
+      VG && Object.defineProperty(VG, wG.name, pG), fG = !0
     }
 
-    function Cu(uu, Eu, ju) {
-      for (var su = arguments.length > 2, Uu = 0; Uu < Eu.length; Uu++) ju = su ? Eu[Uu].call(uu, ju) : Eu[Uu].call(uu);
-      return su ? ju : void 0
+    function VG(GG, bG, ZG) {
+      for (var wG = arguments.length > 2, SG = 0; SG < bG.length; SG++) ZG = wG ? bG[SG].call(GG, ZG) : bG[SG].call(GG);
+      return wG ? ZG : void 0
     }
 
-    function bu(uu) {
-      return "symbol" === typeof uu ? uu : "".concat(uu)
+    function pG(GG) {
+      return "symbol" === typeof GG ? GG : "".concat(GG)
     }
 
-    function cu(uu, Eu, ju) {
-      return "symbol" === typeof Eu && (Eu = Eu.description ? "[".concat(Eu.description, "]") : ""), Object.defineProperty(uu, "name", {
+    function fG(GG, bG, ZG) {
+      return "symbol" === typeof bG && (bG = bG.description ? "[".concat(bG.description, "]") : ""), Object.defineProperty(GG, "name", {
         configurable: !0,
-        value: ju ? "".concat(ju, " ", Eu) : Eu
+        value: ZG ? "".concat(ZG, " ", bG) : bG
       })
     }
 
-    function Nu(uu, Eu) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(uu, Eu)
+    function QG(GG, bG) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(GG, bG)
     }
 
-    function Ou(uu, Eu, ju, su) {
-      return new(ju || (ju = Promise))((function(Uu, Zu) {
-        function Xu(uu) {
+    function KG(GG, bG, ZG, wG) {
+      return new(ZG || (ZG = Promise))((function(SG, LG) {
+        function yG(GG) {
           try {
-            qu(su.next(uu))
-          } catch (Eu) {
-            Zu(Eu)
+            UG(wG.next(GG))
+          } catch (bG) {
+            LG(bG)
           }
         }
 
-        function lu(uu) {
+        function kG(GG) {
           try {
-            qu(su.throw(uu))
-          } catch (Eu) {
-            Zu(Eu)
+            UG(wG.throw(GG))
+          } catch (bG) {
+            LG(bG)
           }
         }
 
-        function qu(uu) {
-          var Eu;
-          uu.done ? Uu(uu.value) : (Eu = uu.value, Eu instanceof ju ? Eu : new ju((function(uu) {
-            uu(Eu)
-          }))).then(Xu, lu)
+        function UG(GG) {
+          var bG;
+          GG.done ? SG(GG.value) : (bG = GG.value, bG instanceof ZG ? bG : new ZG((function(GG) {
+            GG(bG)
+          }))).then(yG, kG)
         }
-        qu((su = su.apply(uu, Eu || [])).next())
+        UG((wG = wG.apply(GG, bG || [])).next())
       }))
     }
 
-    function Yu(uu, Eu) {
-      var ju, su, Uu, Zu = {
+    function hG(GG, bG) {
+      var ZG, wG, SG, LG = {
           label: 0,
           sent: function() {
-            if (1 & Uu[0]) throw Uu[1];
-            return Uu[1]
+            if (1 & SG[0]) throw SG[1];
+            return SG[1]
           },
           trys: [],
           ops: []
         },
-        Xu = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return Xu.next = lu(0), Xu.throw = lu(1), Xu.return = lu(2), "function" === typeof Symbol && (Xu[Symbol.iterator] = function() {
+        yG = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return yG.next = kG(0), yG.throw = kG(1), yG.return = kG(2), "function" === typeof Symbol && (yG[Symbol.iterator] = function() {
         return this
-      }), Xu;
+      }), yG;
 
-      function lu(lu) {
-        return function(qu) {
-          return function(lu) {
-            if (ju) throw new TypeError("Generator is already executing.");
-            for (; Xu && (Xu = 0, lu[0] && (Zu = 0)), Zu;) try {
-              if (ju = 1, su && (Uu = 2 & lu[0] ? su.return : lu[0] ? su.throw || ((Uu = su.return) && Uu.call(su), 0) : su.next) && !(Uu = Uu.call(su, lu[1])).done) return Uu;
-              switch (su = 0, Uu && (lu = [2 & lu[0], Uu.value]), lu[0]) {
+      function kG(kG) {
+        return function(UG) {
+          return function(kG) {
+            if (ZG) throw new TypeError("Generator is already executing.");
+            for (; yG && (yG = 0, kG[0] && (LG = 0)), LG;) try {
+              if (ZG = 1, wG && (SG = 2 & kG[0] ? wG.return : kG[0] ? wG.throw || ((SG = wG.return) && SG.call(wG), 0) : wG.next) && !(SG = SG.call(wG, kG[1])).done) return SG;
+              switch (wG = 0, SG && (kG = [2 & kG[0], SG.value]), kG[0]) {
                 case 0:
                 case 1:
-                  Uu = lu;
+                  SG = kG;
                   break;
                 case 4:
-                  return Zu.label++, {
-                    value: lu[1],
+                  return LG.label++, {
+                    value: kG[1],
                     done: !1
                   };
                 case 5:
-                  Zu.label++, su = lu[1], lu = [0];
+                  LG.label++, wG = kG[1], kG = [0];
                   continue;
                 case 7:
-                  lu = Zu.ops.pop(), Zu.trys.pop();
+                  kG = LG.ops.pop(), LG.trys.pop();
                   continue;
                 default:
-                  if (!(Uu = (Uu = Zu.trys).length > 0 && Uu[Uu.length - 1]) && (6 === lu[0] || 2 === lu[0])) {
-                    Zu = 0;
+                  if (!(SG = (SG = LG.trys).length > 0 && SG[SG.length - 1]) && (6 === kG[0] || 2 === kG[0])) {
+                    LG = 0;
                     continue
                   }
-                  if (3 === lu[0] && (!Uu || lu[1] > Uu[0] && lu[1] < Uu[3])) {
-                    Zu.label = lu[1];
+                  if (3 === kG[0] && (!SG || kG[1] > SG[0] && kG[1] < SG[3])) {
+                    LG.label = kG[1];
                     break
                   }
-                  if (6 === lu[0] && Zu.label < Uu[1]) {
-                    Zu.label = Uu[1], Uu = lu;
+                  if (6 === kG[0] && LG.label < SG[1]) {
+                    LG.label = SG[1], SG = kG;
                     break
                   }
-                  if (Uu && Zu.label < Uu[2]) {
-                    Zu.label = Uu[2], Zu.ops.push(lu);
+                  if (SG && LG.label < SG[2]) {
+                    LG.label = SG[2], LG.ops.push(kG);
                     break
                   }
-                  Uu[2] && Zu.ops.pop(), Zu.trys.pop();
+                  SG[2] && LG.ops.pop(), LG.trys.pop();
                   continue
               }
-              lu = Eu.call(uu, Zu)
-            } catch (qu) {
-              lu = [6, qu], su = 0
+              kG = bG.call(GG, LG)
+            } catch (UG) {
+              kG = [6, UG], wG = 0
             } finally {
-              ju = Uu = 0
+              ZG = SG = 0
             }
-            if (5 & lu[0]) throw lu[1];
+            if (5 & kG[0]) throw kG[1];
             return {
-              value: lu[0] ? lu[1] : void 0,
+              value: kG[0] ? kG[1] : void 0,
               done: !0
             }
-          }([lu, qu])
+          }([kG, UG])
         }
       }
     }
-    var hu = Object.create ? function(uu, Eu, ju, su) {
-      void 0 === su && (su = ju);
-      var Uu = Object.getOwnPropertyDescriptor(Eu, ju);
-      Uu && !("get" in Uu ? !Eu.__esModule : Uu.writable || Uu.configurable) || (Uu = {
+    var dG = Object.create ? function(GG, bG, ZG, wG) {
+      void 0 === wG && (wG = ZG);
+      var SG = Object.getOwnPropertyDescriptor(bG, ZG);
+      SG && !("get" in SG ? !bG.__esModule : SG.writable || SG.configurable) || (SG = {
         enumerable: !0,
         get: function() {
-          return Eu[ju]
+          return bG[ZG]
         }
-      }), Object.defineProperty(uu, su, Uu)
-    } : function(uu, Eu, ju, su) {
-      void 0 === su && (su = ju), uu[su] = Eu[ju]
+      }), Object.defineProperty(GG, wG, SG)
+    } : function(GG, bG, ZG, wG) {
+      void 0 === wG && (wG = ZG), GG[wG] = bG[ZG]
     };
 
-    function Du(uu, Eu) {
-      for (var ju in uu) "default" === ju || Object.prototype.hasOwnProperty.call(Eu, ju) || hu(Eu, uu, ju)
+    function JG(GG, bG) {
+      for (var ZG in GG) "default" === ZG || Object.prototype.hasOwnProperty.call(bG, ZG) || dG(bG, GG, ZG)
     }
 
-    function gu(uu) {
-      var Eu = "function" === typeof Symbol && Symbol.iterator,
-        ju = Eu && uu[Eu],
-        su = 0;
-      if (ju) return ju.call(uu);
-      if (uu && "number" === typeof uu.length) return {
+    function rG(GG) {
+      var bG = "function" === typeof Symbol && Symbol.iterator,
+        ZG = bG && GG[bG],
+        wG = 0;
+      if (ZG) return ZG.call(GG);
+      if (GG && "number" === typeof GG.length) return {
         next: function() {
-          return uu && su >= uu.length && (uu = void 0), {
-            value: uu && uu[su++],
-            done: !uu
+          return GG && wG >= GG.length && (GG = void 0), {
+            value: GG && GG[wG++],
+            done: !GG
           }
         }
       };
-      throw new TypeError(Eu ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(bG ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function Mu(uu, Eu) {
-      var ju = "function" === typeof Symbol && uu[Symbol.iterator];
-      if (!ju) return uu;
-      var su, Uu, Zu = ju.call(uu),
-        Xu = [];
+    function zG(GG, bG) {
+      var ZG = "function" === typeof Symbol && GG[Symbol.iterator];
+      if (!ZG) return GG;
+      var wG, SG, LG = ZG.call(GG),
+        yG = [];
       try {
         for (;
-          (void 0 === Eu || Eu-- > 0) && !(su = Zu.next()).done;) Xu.push(su.value)
-      } catch (lu) {
-        Uu = {
-          error: lu
+          (void 0 === bG || bG-- > 0) && !(wG = LG.next()).done;) yG.push(wG.value)
+      } catch (kG) {
+        SG = {
+          error: kG
         }
       } finally {
         try {
-          su && !su.done && (ju = Zu.return) && ju.call(Zu)
+          wG && !wG.done && (ZG = LG.return) && ZG.call(LG)
         } finally {
-          if (Uu) throw Uu.error
+          if (SG) throw SG.error
         }
       }
-      return Xu
+      return yG
     }
 
-    function eu() {
-      for (var uu = [], Eu = 0; Eu < arguments.length; Eu++) uu = uu.concat(Mu(arguments[Eu]));
-      return uu
+    function EG() {
+      for (var GG = [], bG = 0; bG < arguments.length; bG++) GG = GG.concat(zG(arguments[bG]));
+      return GG
     }
 
-    function Gu() {
-      for (var uu = 0, Eu = 0, ju = arguments.length; Eu < ju; Eu++) uu += arguments[Eu].length;
-      var su = Array(uu),
-        Uu = 0;
-      for (Eu = 0; Eu < ju; Eu++)
-        for (var Zu = arguments[Eu], Xu = 0, lu = Zu.length; Xu < lu; Xu++, Uu++) su[Uu] = Zu[Xu];
-      return su
+    function oG() {
+      for (var GG = 0, bG = 0, ZG = arguments.length; bG < ZG; bG++) GG += arguments[bG].length;
+      var wG = Array(GG),
+        SG = 0;
+      for (bG = 0; bG < ZG; bG++)
+        for (var LG = arguments[bG], yG = 0, kG = LG.length; yG < kG; yG++, SG++) wG[SG] = LG[yG];
+      return wG
     }
 
-    function pu(uu, Eu, ju) {
-      if (ju || 2 === arguments.length)
-        for (var su, Uu = 0, Zu = Eu.length; Uu < Zu; Uu++) !su && Uu in Eu || (su || (su = Array.prototype.slice.call(Eu, 0, Uu)), su[Uu] = Eu[Uu]);
-      return uu.concat(su || Array.prototype.slice.call(Eu))
+    function XG(GG, bG, ZG) {
+      if (ZG || 2 === arguments.length)
+        for (var wG, SG = 0, LG = bG.length; SG < LG; SG++) !wG && SG in bG || (wG || (wG = Array.prototype.slice.call(bG, 0, SG)), wG[SG] = bG[SG]);
+      return GG.concat(wG || Array.prototype.slice.call(bG))
     }
 
-    function wu(uu) {
-      return this instanceof wu ? (this.v = uu, this) : new wu(uu)
+    function uG(GG) {
+      return this instanceof uG ? (this.v = GG, this) : new uG(GG)
     }
 
-    function Ju(uu, Eu, ju) {
+    function iG(GG, bG, ZG) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var su, Uu = ju.apply(uu, Eu || []),
-        Zu = [];
-      return su = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), Xu("next"), Xu("throw"), Xu("return", (function(uu) {
-        return function(Eu) {
-          return Promise.resolve(Eu).then(uu, fu)
+      var wG, SG = ZG.apply(GG, bG || []),
+        LG = [];
+      return wG = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), yG("next"), yG("throw"), yG("return", (function(GG) {
+        return function(bG) {
+          return Promise.resolve(bG).then(GG, YG)
         }
-      })), su[Symbol.asyncIterator] = function() {
+      })), wG[Symbol.asyncIterator] = function() {
         return this
-      }, su;
+      }, wG;
 
-      function Xu(uu, Eu) {
-        Uu[uu] && (su[uu] = function(Eu) {
-          return new Promise((function(ju, su) {
-            Zu.push([uu, Eu, ju, su]) > 1 || lu(uu, Eu)
+      function yG(GG, bG) {
+        SG[GG] && (wG[GG] = function(bG) {
+          return new Promise((function(ZG, wG) {
+            LG.push([GG, bG, ZG, wG]) > 1 || kG(GG, bG)
           }))
-        }, Eu && (su[uu] = Eu(su[uu])))
+        }, bG && (wG[GG] = bG(wG[GG])))
       }
 
-      function lu(uu, Eu) {
+      function kG(GG, bG) {
         try {
-          (ju = Uu[uu](Eu)).value instanceof wu ? Promise.resolve(ju.value.v).then(qu, fu) : Cu(Zu[0][2], ju)
-        } catch (su) {
-          Cu(Zu[0][3], su)
+          (ZG = SG[GG](bG)).value instanceof uG ? Promise.resolve(ZG.value.v).then(UG, YG) : VG(LG[0][2], ZG)
+        } catch (wG) {
+          VG(LG[0][3], wG)
         }
-        var ju
+        var ZG
       }
 
-      function qu(uu) {
-        lu("next", uu)
+      function UG(GG) {
+        kG("next", GG)
       }
 
-      function fu(uu) {
-        lu("throw", uu)
+      function YG(GG) {
+        kG("throw", GG)
       }
 
-      function Cu(uu, Eu) {
-        uu(Eu), Zu.shift(), Zu.length && lu(Zu[0][0], Zu[0][1])
+      function VG(GG, bG) {
+        GG(bG), LG.shift(), LG.length && kG(LG[0][0], LG[0][1])
       }
     }
 
-    function du(uu) {
-      var Eu, ju;
-      return Eu = {}, su("next"), su("throw", (function(uu) {
-        throw uu
-      })), su("return"), Eu[Symbol.iterator] = function() {
+    function CG(GG) {
+      var bG, ZG;
+      return bG = {}, wG("next"), wG("throw", (function(GG) {
+        throw GG
+      })), wG("return"), bG[Symbol.iterator] = function() {
         return this
-      }, Eu;
+      }, bG;
 
-      function su(su, Uu) {
-        Eu[su] = uu[su] ? function(Eu) {
-          return (ju = !ju) ? {
-            value: wu(uu[su](Eu)),
+      function wG(wG, SG) {
+        bG[wG] = GG[wG] ? function(bG) {
+          return (ZG = !ZG) ? {
+            value: uG(GG[wG](bG)),
             done: !1
-          } : Uu ? Uu(Eu) : Eu
-        } : Uu
+          } : SG ? SG(bG) : bG
+        } : SG
       }
     }
 
-    function au(uu) {
+    function WG(GG) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var Eu, ju = uu[Symbol.asyncIterator];
-      return ju ? ju.call(uu) : (uu = gu(uu), Eu = {}, su("next"), su("throw"), su("return"), Eu[Symbol.asyncIterator] = function() {
+      var bG, ZG = GG[Symbol.asyncIterator];
+      return ZG ? ZG.call(GG) : (GG = rG(GG), bG = {}, wG("next"), wG("throw"), wG("return"), bG[Symbol.asyncIterator] = function() {
         return this
-      }, Eu);
+      }, bG);
 
-      function su(ju) {
-        Eu[ju] = uu[ju] && function(Eu) {
-          return new Promise((function(su, Uu) {
-            (function(uu, Eu, ju, su) {
-              Promise.resolve(su).then((function(Eu) {
-                uu({
-                  value: Eu,
-                  done: ju
+      function wG(ZG) {
+        bG[ZG] = GG[ZG] && function(bG) {
+          return new Promise((function(wG, SG) {
+            (function(GG, bG, ZG, wG) {
+              Promise.resolve(wG).then((function(bG) {
+                GG({
+                  value: bG,
+                  done: ZG
                 })
-              }), Eu)
-            })(su, Uu, (Eu = uu[ju](Eu)).done, Eu.value)
+              }), bG)
+            })(wG, SG, (bG = GG[ZG](bG)).done, bG.value)
           }))
         }
       }
     }
 
-    function Pu(uu, Eu) {
-      return Object.defineProperty ? Object.defineProperty(uu, "raw", {
-        value: Eu
-      }) : uu.raw = Eu, uu
+    function mG(GG, bG) {
+      return Object.defineProperty ? Object.defineProperty(GG, "raw", {
+        value: bG
+      }) : GG.raw = bG, GG
     }
-    var ou = Object.create ? function(uu, Eu) {
-        Object.defineProperty(uu, "default", {
+    var IG = Object.create ? function(GG, bG) {
+        Object.defineProperty(GG, "default", {
           enumerable: !0,
-          value: Eu
+          value: bG
         })
-      } : function(uu, Eu) {
-        uu.default = Eu
+      } : function(GG, bG) {
+        GG.default = bG
       },
-      ku = function(uu) {
-        return ku = Object.getOwnPropertyNames || function(uu) {
-          var Eu = [];
-          for (var ju in uu) Object.prototype.hasOwnProperty.call(uu, ju) && (Eu[Eu.length] = ju);
-          return Eu
-        }, ku(uu)
+      FG = function(GG) {
+        return FG = Object.getOwnPropertyNames || function(GG) {
+          var bG = [];
+          for (var ZG in GG) Object.prototype.hasOwnProperty.call(GG, ZG) && (bG[bG.length] = ZG);
+          return bG
+        }, FG(GG)
       };
 
-    function mu(uu) {
-      if (uu && uu.__esModule) return uu;
-      var Eu = {};
-      if (null != uu)
-        for (var ju = ku(uu), su = 0; su < ju.length; su++) "default" !== ju[su] && hu(Eu, uu, ju[su]);
-      return ou(Eu, uu), Eu
+    function vG(GG) {
+      if (GG && GG.__esModule) return GG;
+      var bG = {};
+      if (null != GG)
+        for (var ZG = FG(GG), wG = 0; wG < ZG.length; wG++) "default" !== ZG[wG] && dG(bG, GG, ZG[wG]);
+      return IG(bG, GG), bG
     }
 
-    function vu(uu) {
-      return uu && uu.__esModule ? uu : {
-        default: uu
+    function aG(GG) {
+      return GG && GG.__esModule ? GG : {
+        default: GG
       }
     }
 
-    function Ku(uu, Eu, ju, su) {
-      if ("a" === ju && !su) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof Eu ? uu !== Eu || !su : !Eu.has(uu)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === ju ? su : "a" === ju ? su.call(uu) : su ? su.value : Eu.get(uu)
+    function cG(GG, bG, ZG, wG) {
+      if ("a" === ZG && !wG) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof bG ? GG !== bG || !wG : !bG.has(GG)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === ZG ? wG : "a" === ZG ? wG.call(GG) : wG ? wG.value : bG.get(GG)
     }
 
-    function Vu(uu, Eu, ju, su, Uu) {
-      if ("m" === su) throw new TypeError("Private method is not writable");
-      if ("a" === su && !Uu) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof Eu ? uu !== Eu || !Uu : !Eu.has(uu)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === su ? Uu.call(uu, ju) : Uu ? Uu.value = ju : Eu.set(uu, ju), ju
+    function lG(GG, bG, ZG, wG, SG) {
+      if ("m" === wG) throw new TypeError("Private method is not writable");
+      if ("a" === wG && !SG) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof bG ? GG !== bG || !SG : !bG.has(GG)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === wG ? SG.call(GG, ZG) : SG ? SG.value = ZG : bG.set(GG, ZG), ZG
     }
 
-    function ru(uu, Eu) {
-      if (null === Eu || "object" !== typeof Eu && "function" !== typeof Eu) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof uu ? Eu === uu : uu.has(Eu)
+    function jG(GG, bG) {
+      if (null === bG || "object" !== typeof bG && "function" !== typeof bG) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof GG ? bG === GG : GG.has(bG)
     }
 
-    function Qu(uu, Eu, ju) {
-      if (null !== Eu && void 0 !== Eu) {
-        if ("object" !== typeof Eu && "function" !== typeof Eu) throw new TypeError("Object expected.");
-        var su, Uu;
-        if (ju) {
+    function PG(GG, bG, ZG) {
+      if (null !== bG && void 0 !== bG) {
+        if ("object" !== typeof bG && "function" !== typeof bG) throw new TypeError("Object expected.");
+        var wG, SG;
+        if (ZG) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          su = Eu[Symbol.asyncDispose]
+          wG = bG[Symbol.asyncDispose]
         }
-        if (void 0 === su) {
+        if (void 0 === wG) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          su = Eu[Symbol.dispose], ju && (Uu = su)
+          wG = bG[Symbol.dispose], ZG && (SG = wG)
         }
-        if ("function" !== typeof su) throw new TypeError("Object not disposable.");
-        Uu && (su = function() {
+        if ("function" !== typeof wG) throw new TypeError("Object not disposable.");
+        SG && (wG = function() {
           try {
-            Uu.call(this)
-          } catch (uu) {
-            return Promise.reject(uu)
+            SG.call(this)
+          } catch (GG) {
+            return Promise.reject(GG)
           }
-        }), uu.stack.push({
-          value: Eu,
-          dispose: su,
-          async: ju
+        }), GG.stack.push({
+          value: bG,
+          dispose: wG,
+          async: ZG
         })
-      } else ju && uu.stack.push({
+      } else ZG && GG.stack.push({
         async: !0
       });
-      return Eu
+      return bG
     }
-    var iu = "function" === typeof SuppressedError ? SuppressedError : function(uu, Eu, ju) {
-      var su = new Error(ju);
-      return su.name = "SuppressedError", su.error = uu, su.suppressed = Eu, su
+    var MG = "function" === typeof SuppressedError ? SuppressedError : function(GG, bG, ZG) {
+      var wG = new Error(ZG);
+      return wG.name = "SuppressedError", wG.error = GG, wG.suppressed = bG, wG
     };
 
-    function Wu(uu) {
-      function Eu(Eu) {
-        uu.error = uu.hasError ? new iu(Eu, uu.error, "An error was suppressed during disposal.") : Eu, uu.hasError = !0
+    function AG(GG) {
+      function bG(bG) {
+        GG.error = GG.hasError ? new MG(bG, GG.error, "An error was suppressed during disposal.") : bG, GG.hasError = !0
       }
-      var ju, su = 0;
-      return function Uu() {
-        for (; ju = uu.stack.pop();) try {
-          if (!ju.async && 1 === su) return su = 0, uu.stack.push(ju), Promise.resolve().then(Uu);
-          if (ju.dispose) {
-            var Zu = ju.dispose.call(ju.value);
-            if (ju.async) return su |= 2, Promise.resolve(Zu).then(Uu, (function(uu) {
-              return Eu(uu), Uu()
+      var ZG, wG = 0;
+      return function SG() {
+        for (; ZG = GG.stack.pop();) try {
+          if (!ZG.async && 1 === wG) return wG = 0, GG.stack.push(ZG), Promise.resolve().then(SG);
+          if (ZG.dispose) {
+            var LG = ZG.dispose.call(ZG.value);
+            if (ZG.async) return wG |= 2, Promise.resolve(LG).then(SG, (function(GG) {
+              return bG(GG), SG()
             }))
-          } else su |= 1
-        } catch (Xu) {
-          Eu(Xu)
+          } else wG |= 1
+        } catch (yG) {
+          bG(yG)
         }
-        if (1 === su) return uu.hasError ? Promise.reject(uu.error) : Promise.resolve();
-        if (uu.hasError) throw uu.error
+        if (1 === wG) return GG.hasError ? Promise.reject(GG.error) : Promise.resolve();
+        if (GG.hasError) throw GG.error
       }()
     }
 
-    function Su(uu, Eu) {
-      return "string" === typeof uu && /^\.\.?\//.test(uu) ? uu.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(uu, ju, su, Uu, Zu) {
-        return ju ? Eu ? ".jsx" : ".js" : !su || Uu && Zu ? su + Uu + "." + Zu.toLowerCase() + "js" : uu
-      })) : uu
+    function sG(GG, bG) {
+      return "string" === typeof GG && /^\.\.?\//.test(GG) ? GG.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(GG, ZG, wG, SG, LG) {
+        return ZG ? bG ? ".jsx" : ".js" : !wG || SG && LG ? wG + SG + "." + LG.toLowerCase() + "js" : GG
+      })) : GG
     }
-    const Iu = {
-      __extends: Uu,
-      __assign: Zu,
-      __rest: Xu,
-      __decorate: lu,
-      __param: qu,
-      __esDecorate: fu,
-      __runInitializers: Cu,
-      __propKey: bu,
-      __setFunctionName: cu,
-      __metadata: Nu,
-      __awaiter: Ou,
-      __generator: Yu,
-      __createBinding: hu,
-      __exportStar: Du,
-      __values: gu,
-      __read: Mu,
-      __spread: eu,
-      __spreadArrays: Gu,
-      __spreadArray: pu,
-      __await: wu,
-      __asyncGenerator: Ju,
-      __asyncDelegator: du,
-      __asyncValues: au,
-      __makeTemplateObject: Pu,
-      __importStar: mu,
-      __importDefault: vu,
-      __classPrivateFieldGet: Ku,
-      __classPrivateFieldSet: Vu,
-      __classPrivateFieldIn: ru,
-      __addDisposableResource: Qu,
-      __disposeResources: Wu,
-      __rewriteRelativeImportExtension: Su
+    const qG = {
+      __extends: SG,
+      __assign: LG,
+      __rest: yG,
+      __decorate: kG,
+      __param: UG,
+      __esDecorate: YG,
+      __runInitializers: VG,
+      __propKey: pG,
+      __setFunctionName: fG,
+      __metadata: QG,
+      __awaiter: KG,
+      __generator: hG,
+      __createBinding: dG,
+      __exportStar: JG,
+      __values: rG,
+      __read: zG,
+      __spread: EG,
+      __spreadArrays: oG,
+      __spreadArray: XG,
+      __await: uG,
+      __asyncGenerator: iG,
+      __asyncDelegator: CG,
+      __asyncValues: WG,
+      __makeTemplateObject: mG,
+      __importStar: vG,
+      __importDefault: aG,
+      __classPrivateFieldGet: cG,
+      __classPrivateFieldSet: lG,
+      __classPrivateFieldIn: jG,
+      __addDisposableResource: PG,
+      __disposeResources: AG,
+      __rewriteRelativeImportExtension: sG
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

@@ -1,80 +1,80 @@
 export const id = 306;
 export const ids = [306];
 export const modules = {
-  41756: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      ensureLocalBloxdTypes: () => Du
+  41904: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      ensureLocalBloxdTypes: () => JG
     });
-    var su = ju(4942),
-      Uu = ju(41619),
-      Zu = ju(41617),
-      Xu = ju(37248),
-      lu = ju(37257),
-      qu = ju(37271);
-    const fu = JSON.stringify({
+    var wG = ZG(4779),
+      SG = ZG(41801),
+      LG = ZG(41795),
+      yG = ZG(37197),
+      kG = ZG(37200),
+      UG = ZG(37212);
+    const YG = JSON.stringify({
       name: "@bloxd",
       types: "index.d.ts"
     }, null, "\t") + "\n";
 
-    function Cu(uu) {
-      return uu.replace(/^\//, "")
+    function VG(GG) {
+      return GG.replace(/^\//, "")
     }
 
-    function bu(uu) {
-      return Cu((0, lu.x)(uu.name, "")).replace(/\/$/, "")
+    function pG(GG) {
+      return VG((0, kG.t)(GG.name, "")).replace(/\/$/, "")
     }
 
-    function cu(uu) {
-      return uu.typesVfsPath.slice(uu.typesVfsPath.lastIndexOf("/") + 1)
+    function fG(GG) {
+      return GG.typesVfsPath.slice(GG.typesVfsPath.lastIndexOf("/") + 1)
     }
 
-    function Nu(uu) {
+    function QG(GG) {
       return JSON.stringify({
-        name: uu.specifier,
-        types: cu(uu)
+        name: GG.specifier,
+        types: fG(GG)
       }, null, "\t") + "\n"
     }
-    async function Ou(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-      const ju = [];
-      for await (const [su, Uu] of uu.entries()) {
-        const uu = Eu ? `${Eu}/${su}` : su;
-        "directory" !== Uu.kind ? ju.push(uu) : ju.push(...await Ou(Uu, uu))
+    async function KG(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+      const ZG = [];
+      for await (const [wG, SG] of GG.entries()) {
+        const GG = bG ? `${bG}/${wG}` : wG;
+        "directory" !== SG.kind ? ZG.push(GG) : ZG.push(...await KG(SG, GG))
       }
-      return ju
+      return ZG
     }
-    async function Yu(uu, Eu, ju) {
-      const su = bu(Eu),
-        Uu = await (0, qu.h)(uu, su);
-      if (!Uu) return;
-      const Zu = new Set([cu(Eu), "package.json"]);
-      if (ju)
-        for (const qu of Object.keys(Eu.files)) Zu.add(qu);
-      const Xu = await Ou(Uu),
-        lu = new Set;
-      for (const bu of Xu) {
-        if (Zu.has(bu)) continue;
-        await (0, qu.y)(uu, `${su}/${bu}`);
-        const Eu = bu.split("/");
-        for (let uu = 1; uu < Eu.length; uu++) lu.add(Eu.slice(0, uu).join("/"))
+    async function hG(GG, bG, ZG) {
+      const wG = pG(bG),
+        SG = await (0, UG.o)(GG, wG);
+      if (!SG) return;
+      const LG = new Set([fG(bG), "package.json"]);
+      if (ZG)
+        for (const UG of Object.keys(bG.files)) LG.add(UG);
+      const yG = await KG(SG),
+        kG = new Set;
+      for (const pG of yG) {
+        if (LG.has(pG)) continue;
+        await (0, UG.K)(GG, `${wG}/${pG}`);
+        const bG = pG.split("/");
+        for (let GG = 1; GG < bG.length; GG++) kG.add(bG.slice(0, GG).join("/"))
       }
-      const fu = [...lu].sort(((uu, Eu) => Eu.split("/").length - uu.split("/").length));
-      for (const bu of fu) try {
-        await (0, qu.y)(uu, `${su}/${bu}`)
-      } catch (Cu) {
-        if (Cu instanceof DOMException && "InvalidModificationError" === Cu.name) continue;
-        throw Cu
+      const YG = [...kG].sort(((GG, bG) => bG.split("/").length - GG.split("/").length));
+      for (const pG of YG) try {
+        await (0, UG.K)(GG, `${wG}/${pG}`)
+      } catch (VG) {
+        if (VG instanceof DOMException && "InvalidModificationError" === VG.name) continue;
+        throw VG
       }
     }
 
-    function hu(uu) {
-      const Eu = {
+    function dG(GG) {
+      const bG = {
         "@bloxd": ["./node_modules/@bloxd/index.d.ts"]
       };
-      for (const su of Object.values(Xu.h)) Eu[su.specifier] = [`.${su.typesVfsPath}`];
-      const ju = [];
-      for (const su of uu)
-        for (const uu of Object.keys(su.files)) ju.push(Cu((0, lu.x)(su.name, uu)));
+      for (const wG of Object.values(yG.h)) bG[wG.specifier] = [`.${wG.typesVfsPath}`];
+      const ZG = [];
+      for (const wG of GG)
+        for (const GG of Object.keys(wG.files)) ZG.push(VG((0, kG.t)(wG.name, GG)));
       return JSON.stringify({
         compilerOptions: {
           allowJs: !0,
@@ -87,26 +87,26 @@ export const modules = {
           noLib: !0,
           skipLibCheck: !0,
           baseUrl: ".",
-          paths: Eu
+          paths: bG
         },
         include: ["./**/*.ts", "./**/*.js", "./**/*.d.ts"],
-        files: ["node_modules/@bloxd/globals.d.ts", "node_modules/@bloxd/lib.d.ts", ...ju]
+        files: ["node_modules/@bloxd/globals.d.ts", "node_modules/@bloxd/lib.d.ts", ...ZG]
       }, null, "\t") + "\n"
     }
-    async function Du(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-      const ju = new Set(Eu.map((uu => uu.name))),
-        cu = Object.values(Xu.h).flatMap((Eu => {
-          const su = Cu(Eu.typesVfsPath),
-            Uu = `${bu(Eu)}/package.json`;
-          return [...ju.has(Eu.name) ? Object.entries(Eu.files).map((ju => {
-            let [su, Uu] = ju;
-            return (0, qu.F)(uu, Cu((0, lu.x)(Eu.name, su)), Uu)
-          })) : [], (0, qu.F)(uu, su, Eu.types), (0, qu.F)(uu, Uu, Nu(Eu))]
+    async function JG(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+      const ZG = new Set(bG.map((GG => GG.name))),
+        fG = Object.values(yG.h).flatMap((bG => {
+          const wG = VG(bG.typesVfsPath),
+            SG = `${pG(bG)}/package.json`;
+          return [...ZG.has(bG.name) ? Object.entries(bG.files).map((ZG => {
+            let [wG, SG] = ZG;
+            return (0, UG.S)(GG, VG((0, kG.t)(bG.name, wG)), SG)
+          })) : [], (0, UG.S)(GG, wG, bG.types), (0, UG.S)(GG, SG, QG(bG))]
         }));
-      await Promise.all([(0, qu.F)(uu, "node_modules/@bloxd/index.d.ts", su.default), (0, qu.F)(uu, "node_modules/@bloxd/globals.d.ts", Zu.d), (0, qu.F)(uu, "node_modules/@bloxd/lib.d.ts", Uu.c), (0, qu.F)(uu, "node_modules/@bloxd/package.json", fu), (0, qu.F)(uu, "tsconfig.json", hu(Eu)), ...cu]), await Promise.all(Object.values(Xu.h).map((Eu => Yu(uu, Eu, ju.has(Eu.name)))))
+      await Promise.all([(0, UG.S)(GG, "node_modules/@bloxd/index.d.ts", wG.default), (0, UG.S)(GG, "node_modules/@bloxd/globals.d.ts", LG.d), (0, UG.S)(GG, "node_modules/@bloxd/lib.d.ts", SG.e), (0, UG.S)(GG, "node_modules/@bloxd/package.json", YG), (0, UG.S)(GG, "tsconfig.json", dG(bG)), ...fG]), await Promise.all(Object.values(yG.h).map((bG => hG(GG, bG, ZG.has(bG.name)))))
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

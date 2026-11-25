@@ -1,22 +1,22 @@
 export const id = 10;
 export const ids = [10];
 export const modules = {
-  39577: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      default: () => su
+  39699: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      default: () => wG
     });
-    const su = function(uu, Eu, ju) {
-      let su;
+    const wG = function(GG, bG, ZG) {
+      let wG;
       return {
-        onCreate: uu => {
-          su = uu
+        onCreate: GG => {
+          wG = GG
         },
-        onPlayerAltAction: (uu, Eu, ju, Uu, Zu, Xu) => {
-          Xu && "Mesh" === su.getEntityType(Xu) && ("Permanent Upgrades" === su.getEntityName(Xu) ? su.openShop(uu, !1, "Upgrades") : "Items" === su.getEntityName(Xu) ? su.openShop(uu, !1, "Items") : "Prestige" === su.getEntityName(Xu) && su.openShop(uu, !1, "Prestige"))
+        onPlayerAltAction: (GG, bG, ZG, SG, LG, yG) => {
+          yG && "Mesh" === wG.getEntityType(yG) && ("Permanent Upgrades" === wG.getEntityName(yG) ? wG.openShop(GG, !1, "Upgrades") : "Items" === wG.getEntityName(yG) ? wG.openShop(GG, !1, "Items") : "Prestige" === wG.getEntityName(yG) && wG.openShop(GG, !1, "Prestige"))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

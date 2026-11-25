@@ -1,72 +1,72 @@
 export const id = 56;
 export const ids = [56];
 export const modules = {
-  34594: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      announceStoredTexturePack: () => Uu.e,
-      takeOneShotTexturePack: () => su.h
+  34534: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      announceStoredTexturePack: () => SG.d,
+      takeOneShotTexturePack: () => wG.i
     });
-    var su = ju(34599),
-      Uu = ju(34606)
+    var wG = ZG(34539),
+      SG = ZG(34543)
   },
-  34606: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Uu,
-      f: () => Zu
+  34543: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => SG,
+      g: () => LG
     });
-    var su = ju(3427);
+    var wG = ZG(3230);
 
-    function Uu() {
+    function SG() {
       if ("undefined" === typeof BroadcastChannel) return null;
-      const uu = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      const GG = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
       try {
-        const Eu = new BroadcastChannel(su.i);
-        Eu.postMessage({
-          stored: uu
-        }), Eu.close()
+        const bG = new BroadcastChannel(wG.l);
+        bG.postMessage({
+          stored: GG
+        }), bG.close()
       } catch {
         return null
       }
-      return uu
+      return GG
     }
 
-    function Zu(uu) {
-      const Eu = "object" === typeof uu && null !== uu ? uu.stored : null;
-      return "string" === typeof Eu ? Eu : null
+    function LG(GG) {
+      const bG = "object" === typeof GG && null !== GG ? GG.stored : null;
+      return "string" === typeof bG ? bG : null
     }
   },
-  34599: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Xu,
-      f: () => Uu,
-      h: () => Zu
+  34539: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => yG,
+      f: () => SG,
+      i: () => LG
     });
-    var su = ju(3427);
-    async function Uu(uu, Eu, ju) {
-      let Uu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const Zu = Xu(await uu.getItem(su.d, Eu));
-      if (null === Zu || Uu()) return null;
-      const lu = await uu.getItem(su.g, Eu);
-      return Uu() ? null : (await async function(uu) {
-        await Promise.all([uu.removeItem(su.d), uu.removeItem(su.g)])
-      }(uu).catch(ju), {
-        pack: Zu,
-        source: "string" === typeof lu ? lu : null
+    var wG = ZG(3230);
+    async function SG(GG, bG, ZG) {
+      let SG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const LG = yG(await GG.getItem(wG.h, bG));
+      if (null === LG || SG()) return null;
+      const kG = await GG.getItem(wG.i, bG);
+      return SG() ? null : (await async function(GG) {
+        await Promise.all([GG.removeItem(wG.h), GG.removeItem(wG.i)])
+      }(GG).catch(ZG), {
+        pack: LG,
+        source: "string" === typeof kG ? kG : null
       })
     }
 
-    function Zu(uu) {
-      return (0, su.t)() ? Promise.resolve(null) : Uu(uu, !1, (uu => {
-        console.error("Error removing temporary texture pack: ", uu)
-      }), su.t)
+    function LG(GG) {
+      return (0, wG.t)() ? Promise.resolve(null) : SG(GG, !1, (GG => {
+        console.error("Error removing temporary texture pack: ", GG)
+      }), wG.t)
     }
 
-    function Xu(uu) {
-      if ("object" !== typeof uu || null === uu) return null;
-      const Eu = uu.metaData;
-      return "object" !== typeof Eu || null === Eu || "string" !== typeof Eu.id ? null : uu
+    function yG(GG) {
+      if ("object" !== typeof GG || null === GG) return null;
+      const bG = GG.metaData;
+      return "object" !== typeof bG || null === bG || "string" !== typeof bG.id ? null : GG
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

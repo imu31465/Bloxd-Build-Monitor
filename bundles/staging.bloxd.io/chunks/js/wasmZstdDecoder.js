@@ -1,477 +1,477 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var uu = __webpack_require__.u,
-        Eu = __webpack_require__.e,
-        ju = {},
-        su = {};
-      __webpack_require__.u = function(Eu) {
-        return uu(Eu) + (ju.hasOwnProperty(Eu) ? "?" + ju[Eu] : "")
-      }, __webpack_require__.e = function(Uu) {
-        return Eu(Uu).catch((function(Eu) {
-          var Zu = su.hasOwnProperty(Uu) ? su[Uu] : 4;
-          if (Zu < 1) {
-            var Xu = uu(Uu);
-            if (Eu.message = "Loading chunk " + Uu + " failed after 4 retries.\n(" + Xu + ")", Eu.request = Xu, ju[Uu] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete su[Uu]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === Eu.code) {
-              var lu = __webpack_require__.miniCssF(Uu);
-              Eu.message = Eu.message.replace("Loading chunk", "Loading CSS chunk").replace(Xu, lu), Eu.request = lu
+      var GG = __webpack_require__.u,
+        bG = __webpack_require__.e,
+        ZG = {},
+        wG = {};
+      __webpack_require__.u = function(bG) {
+        return GG(bG) + (ZG.hasOwnProperty(bG) ? "?" + ZG[bG] : "")
+      }, __webpack_require__.e = function(SG) {
+        return bG(SG).catch((function(bG) {
+          var LG = wG.hasOwnProperty(SG) ? wG[SG] : 4;
+          if (LG < 1) {
+            var yG = GG(SG);
+            if (bG.message = "Loading chunk " + SG + " failed after 4 retries.\n(" + yG + ")", bG.request = yG, ZG[SG] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete wG[SG]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === bG.code) {
+              var kG = __webpack_require__.miniCssF(SG);
+              bG.message = bG.message.replace("Loading chunk", "Loading CSS chunk").replace(yG, kG), bG.request = kG
             }
-            throw Eu
+            throw bG
           }
-          return new Promise((function(uu) {
-            var Eu = 4 - Zu + 1;
+          return new Promise((function(GG) {
+            var bG = 4 - LG + 1;
             setTimeout((function() {
-              var Eu = "cache-bust=" + Date.now();
-              ju[Uu] = Eu, su[Uu] = Zu - 1, uu(__webpack_require__.e(Uu))
-            }), function(uu) {
-              return 500 * Math.pow(2, uu)
-            }(Eu))
+              var bG = "cache-bust=" + Date.now();
+              ZG[SG] = bG, wG[SG] = LG - 1, GG(__webpack_require__.e(SG))
+            }), function(GG) {
+              return 500 * Math.pow(2, GG)
+            }(bG))
           }))
         }))
       }
     }
   })();
 
-  function uu(uu) {
-    return uu instanceof Error ? uu.message : String(uu)
+  function GG(GG) {
+    return GG instanceof Error ? GG.message : String(GG)
   }
-  const Eu = ArrayBuffer,
-    ju = Uint8Array,
-    su = Uint16Array,
-    Uu = Int16Array,
-    Zu = Int32Array,
-    Xu = (uu, Eu, su) => {
-      if (ju.prototype.slice) return ju.prototype.slice.call(uu, Eu, su);
-      (null == Eu || Eu < 0) && (Eu = 0), (null == su || su > uu.length) && (su = uu.length);
-      const Uu = new ju(su - Eu);
-      return Uu.set(uu.subarray(Eu, su)), Uu
+  const bG = ArrayBuffer,
+    ZG = Uint8Array,
+    wG = Uint16Array,
+    SG = Int16Array,
+    LG = Int32Array,
+    yG = (GG, bG, wG) => {
+      if (ZG.prototype.slice) return ZG.prototype.slice.call(GG, bG, wG);
+      (null == bG || bG < 0) && (bG = 0), (null == wG || wG > GG.length) && (wG = GG.length);
+      const SG = new ZG(wG - bG);
+      return SG.set(GG.subarray(bG, wG)), SG
     },
-    lu = (uu, Eu, su, Uu) => {
-      if (ju.prototype.fill) return ju.prototype.fill.call(uu, Eu, su, Uu);
-      for ((null == su || su < 0) && (su = 0), (null == Uu || Uu > uu.length) && (Uu = uu.length); su < Uu; ++su) uu[su] = Eu;
-      return uu
+    kG = (GG, bG, wG, SG) => {
+      if (ZG.prototype.fill) return ZG.prototype.fill.call(GG, bG, wG, SG);
+      for ((null == wG || wG < 0) && (wG = 0), (null == SG || SG > GG.length) && (SG = GG.length); wG < SG; ++wG) GG[wG] = bG;
+      return GG
     },
-    qu = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-    fu = (uu, Eu, ju) => {
-      const su = new Error(Eu || qu[uu]);
-      if (su.code = uu, Error.captureStackTrace && Error.captureStackTrace(su, fu), !ju) throw su;
-      return su
+    UG = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+    YG = (GG, bG, ZG) => {
+      const wG = new Error(bG || UG[GG]);
+      if (wG.code = GG, Error.captureStackTrace && Error.captureStackTrace(wG, YG), !ZG) throw wG;
+      return wG
     },
-    Cu = (uu, Eu, ju) => {
-      let su = 0,
-        Uu = 0;
-      for (; su < ju; ++su) Uu |= uu[Eu++] << (su << 3);
-      return Uu
+    VG = (GG, bG, ZG) => {
+      let wG = 0,
+        SG = 0;
+      for (; wG < ZG; ++wG) SG |= GG[bG++] << (wG << 3);
+      return SG
     },
-    bu = (uu, Eu) => {
-      const su = uu[0] | uu[1] << 8 | uu[2] << 16;
-      if (3126568 == su && 253 == uu[3]) {
-        const su = uu[4],
-          Uu = su >> 5 & 1,
-          Xu = su >> 2 & 1,
-          lu = 3 & su,
-          qu = su >> 6;
-        8 & su && fu(0);
-        let bu = 6 - Uu;
-        const cu = 3 == lu ? 4 : lu,
-          Nu = Cu(uu, bu, cu);
-        bu += cu;
-        const Ou = qu ? 1 << qu : Uu,
-          Yu = Cu(uu, bu, Ou) + (1 == qu && 256);
-        let hu = Yu;
-        if (!Uu) {
-          const Eu = 1 << 10 + (uu[5] >> 3);
-          hu = Eu + (Eu >> 3) * (7 & uu[5])
+    pG = (GG, bG) => {
+      const wG = GG[0] | GG[1] << 8 | GG[2] << 16;
+      if (3126568 == wG && 253 == GG[3]) {
+        const wG = GG[4],
+          SG = wG >> 5 & 1,
+          yG = wG >> 2 & 1,
+          kG = 3 & wG,
+          UG = wG >> 6;
+        8 & wG && YG(0);
+        let pG = 6 - SG;
+        const fG = 3 == kG ? 4 : kG,
+          QG = VG(GG, pG, fG);
+        pG += fG;
+        const KG = UG ? 1 << UG : SG,
+          hG = VG(GG, pG, KG) + (1 == UG && 256);
+        let dG = hG;
+        if (!SG) {
+          const bG = 1 << 10 + (GG[5] >> 3);
+          dG = bG + (bG >> 3) * (7 & GG[5])
         }
-        hu > 2145386496 && fu(1);
-        const Du = new ju((1 == Eu ? Yu || hu : Eu ? 0 : hu) + 12);
-        return Du[0] = 1, Du[4] = 4, Du[8] = 8, {
-          b: bu + Ou,
+        dG > 2145386496 && YG(1);
+        const JG = new ZG((1 == bG ? hG || dG : bG ? 0 : dG) + 12);
+        return JG[0] = 1, JG[4] = 4, JG[8] = 8, {
+          b: pG + KG,
           y: 0,
           l: 0,
-          d: Nu,
-          w: Eu && 1 != Eu ? Eu : Du.subarray(12),
-          e: hu,
-          o: new Zu(Du.buffer, 0, 3),
-          u: Yu,
-          c: Xu,
-          m: Math.min(131072, hu)
+          d: QG,
+          w: bG && 1 != bG ? bG : JG.subarray(12),
+          e: dG,
+          o: new LG(JG.buffer, 0, 3),
+          u: hG,
+          c: yG,
+          m: Math.min(131072, dG)
         }
       }
-      if (25481893 == (su >> 4 | uu[3] << 20)) return 8 + (((Uu = uu)[Xu = 4] | Uu[Xu + 1] << 8 | Uu[Xu + 2] << 16 | Uu[Xu + 3] << 24) >>> 0);
-      var Uu, Xu;
-      fu(0)
+      if (25481893 == (wG >> 4 | GG[3] << 20)) return 8 + (((SG = GG)[yG = 4] | SG[yG + 1] << 8 | SG[yG + 2] << 16 | SG[yG + 3] << 24) >>> 0);
+      var SG, yG;
+      YG(0)
     },
-    cu = uu => {
-      let Eu = 0;
-      for (; 1 << Eu <= uu; ++Eu);
-      return Eu - 1
+    fG = GG => {
+      let bG = 0;
+      for (; 1 << bG <= GG; ++bG);
+      return bG - 1
     },
-    Nu = (uu, Zu, Xu) => {
-      let lu = 4 + (Zu << 3);
-      const qu = 5 + (15 & uu[Zu]);
-      qu > Xu && fu(3);
-      const Cu = 1 << qu;
-      let bu = Cu,
-        Nu = -1,
-        Ou = -1,
-        Yu = -1,
-        hu = Cu;
-      const Du = new Eu(512 + (Cu << 2)),
-        gu = new Uu(Du, 0, 256),
-        Mu = new su(Du, 0, 256),
-        eu = new su(Du, 512, Cu),
-        Gu = 512 + (Cu << 1),
-        pu = new ju(Du, Gu, Cu),
-        wu = new ju(Du, Gu + Cu);
-      for (; Nu < 255 && bu > 0;) {
-        const Eu = cu(bu + 1),
-          ju = lu >> 3,
-          su = (1 << Eu + 1) - 1;
-        let Uu = (uu[ju] | uu[ju + 1] << 8 | uu[ju + 2] << 16) >> (7 & lu) & su;
-        const Zu = (1 << Eu) - 1,
-          Xu = su - bu - 1,
-          qu = Uu & Zu;
-        if (qu < Xu ? (lu += Eu, Uu = qu) : (lu += Eu + 1, Uu > Zu && (Uu -= Xu)), gu[++Nu] = --Uu, -1 == Uu ? (bu += Uu, pu[--hu] = Nu) : bu -= Uu, !Uu)
+    QG = (GG, LG, yG) => {
+      let kG = 4 + (LG << 3);
+      const UG = 5 + (15 & GG[LG]);
+      UG > yG && YG(3);
+      const VG = 1 << UG;
+      let pG = VG,
+        QG = -1,
+        KG = -1,
+        hG = -1,
+        dG = VG;
+      const JG = new bG(512 + (VG << 2)),
+        rG = new SG(JG, 0, 256),
+        zG = new wG(JG, 0, 256),
+        EG = new wG(JG, 512, VG),
+        oG = 512 + (VG << 1),
+        XG = new ZG(JG, oG, VG),
+        uG = new ZG(JG, oG + VG);
+      for (; QG < 255 && pG > 0;) {
+        const bG = fG(pG + 1),
+          ZG = kG >> 3,
+          wG = (1 << bG + 1) - 1;
+        let SG = (GG[ZG] | GG[ZG + 1] << 8 | GG[ZG + 2] << 16) >> (7 & kG) & wG;
+        const LG = (1 << bG) - 1,
+          yG = wG - pG - 1,
+          UG = SG & LG;
+        if (UG < yG ? (kG += bG, SG = UG) : (kG += bG + 1, SG > LG && (SG -= yG)), rG[++QG] = --SG, -1 == SG ? (pG += SG, XG[--dG] = QG) : pG -= SG, !SG)
           do {
-            const Eu = lu >> 3;
-            Ou = (uu[Eu] | uu[Eu + 1] << 8) >> (7 & lu) & 3, lu += 2, Nu += Ou
-          } while (3 == Ou)
-      }(Nu > 255 || bu) && fu(0);
-      let Ju = 0;
-      const du = (Cu >> 1) + (Cu >> 3) + 3,
-        au = Cu - 1;
-      for (let Eu = 0; Eu <= Nu; ++Eu) {
-        const uu = gu[Eu];
-        if (uu < 1) Mu[Eu] = -uu;
+            const bG = kG >> 3;
+            KG = (GG[bG] | GG[bG + 1] << 8) >> (7 & kG) & 3, kG += 2, QG += KG
+          } while (3 == KG)
+      }(QG > 255 || pG) && YG(0);
+      let iG = 0;
+      const CG = (VG >> 1) + (VG >> 3) + 3,
+        WG = VG - 1;
+      for (let bG = 0; bG <= QG; ++bG) {
+        const GG = rG[bG];
+        if (GG < 1) zG[bG] = -GG;
         else
-          for (Yu = 0; Yu < uu; ++Yu) {
-            pu[Ju] = Eu;
+          for (hG = 0; hG < GG; ++hG) {
+            XG[iG] = bG;
             do {
-              Ju = Ju + du & au
-            } while (Ju >= hu)
+              iG = iG + CG & WG
+            } while (iG >= dG)
           }
       }
-      for (Ju && fu(0), Yu = 0; Yu < Cu; ++Yu) {
-        const uu = Mu[pu[Yu]]++,
-          Eu = wu[Yu] = qu - cu(uu);
-        eu[Yu] = (uu << Eu) - Cu
+      for (iG && YG(0), hG = 0; hG < VG; ++hG) {
+        const GG = zG[XG[hG]]++,
+          bG = uG[hG] = UG - fG(GG);
+        EG[hG] = (GG << bG) - VG
       }
-      return [lu + 7 >> 3, {
-        b: qu,
-        s: pu,
-        n: wu,
-        t: eu
+      return [kG + 7 >> 3, {
+        b: UG,
+        s: XG,
+        n: uG,
+        t: EG
       }]
     },
-    Ou = Nu(new ju([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-    Yu = Nu(new ju([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-    hu = Nu(new ju([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-    Du = (uu, Eu) => {
-      const ju = uu.length,
-        su = new Zu(ju);
-      for (let Uu = 0; Uu < ju; ++Uu) su[Uu] = Eu, Eu += 1 << uu[Uu];
-      return su
+    KG = QG(new ZG([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+    hG = QG(new ZG([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+    dG = QG(new ZG([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+    JG = (GG, bG) => {
+      const ZG = GG.length,
+        wG = new LG(ZG);
+      for (let SG = 0; SG < ZG; ++SG) wG[SG] = bG, bG += 1 << GG[SG];
+      return wG
     },
-    gu = new ju(new Zu([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-    Mu = Du(gu, 0),
-    eu = new ju(new Zu([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-    Gu = Du(eu, 3),
-    pu = (uu, Eu, ju) => {
-      const su = uu.length,
-        Uu = Eu.length,
-        Zu = uu[su - 1],
-        Xu = (1 << ju.b) - 1,
-        lu = -ju.b;
-      Zu || fu(0);
-      let qu = 0,
-        Cu = ju.b,
-        bu = (su << 3) - 8 + cu(Zu) - Cu,
-        Nu = -1;
-      for (; bu > lu && Nu < Uu;) {
-        const su = bu >> 3;
-        qu = (qu << Cu | (uu[su] | uu[su + 1] << 8 | uu[su + 2] << 16) >> (7 & bu)) & Xu, Eu[++Nu] = ju.s[qu], bu -= Cu = ju.n[qu]
+    rG = new ZG(new LG([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+    zG = JG(rG, 0),
+    EG = new ZG(new LG([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+    oG = JG(EG, 3),
+    XG = (GG, bG, ZG) => {
+      const wG = GG.length,
+        SG = bG.length,
+        LG = GG[wG - 1],
+        yG = (1 << ZG.b) - 1,
+        kG = -ZG.b;
+      LG || YG(0);
+      let UG = 0,
+        VG = ZG.b,
+        pG = (wG << 3) - 8 + fG(LG) - VG,
+        QG = -1;
+      for (; pG > kG && QG < SG;) {
+        const wG = pG >> 3;
+        UG = (UG << VG | (GG[wG] | GG[wG + 1] << 8 | GG[wG + 2] << 16) >> (7 & pG)) & yG, bG[++QG] = ZG.s[UG], pG -= VG = ZG.n[UG]
       }
-      bu == lu && Nu + 1 == Uu || fu(0)
+      pG == kG && QG + 1 == SG || YG(0)
     },
-    wu = (uu, Eu, ju) => {
-      let su = 6;
-      const Uu = Eu.length + 3 >> 2,
-        Zu = Uu << 1,
-        Xu = Uu + Zu;
-      pu(uu.subarray(su, su += uu[0] | uu[1] << 8), Eu.subarray(0, Uu), ju), pu(uu.subarray(su, su += uu[2] | uu[3] << 8), Eu.subarray(Uu, Zu), ju), pu(uu.subarray(su, su += uu[4] | uu[5] << 8), Eu.subarray(Zu, Xu), ju), pu(uu.subarray(su), Eu.subarray(Xu), ju)
+    uG = (GG, bG, ZG) => {
+      let wG = 6;
+      const SG = bG.length + 3 >> 2,
+        LG = SG << 1,
+        yG = SG + LG;
+      XG(GG.subarray(wG, wG += GG[0] | GG[1] << 8), bG.subarray(0, SG), ZG), XG(GG.subarray(wG, wG += GG[2] | GG[3] << 8), bG.subarray(SG, LG), ZG), XG(GG.subarray(wG, wG += GG[4] | GG[5] << 8), bG.subarray(LG, yG), ZG), XG(GG.subarray(wG), bG.subarray(yG), ZG)
     },
-    Ju = (uu, Eu, Uu) => {
-      let Zu = Eu.b;
-      const qu = uu[Zu],
-        Cu = qu >> 1 & 3;
-      Eu.l = 1 & qu;
-      const bu = qu >> 3 | uu[Zu + 1] << 5 | uu[Zu + 2] << 13,
-        Du = (Zu += 3) + bu;
-      if (1 == Cu) {
-        if (Zu >= uu.length) return;
-        return Eu.b = Zu + 1, Uu ? (lu(Uu, uu[Zu], Eu.y, Eu.y += bu), Uu) : lu(new ju(bu), uu[Zu])
+    iG = (GG, bG, SG) => {
+      let LG = bG.b;
+      const UG = GG[LG],
+        VG = UG >> 1 & 3;
+      bG.l = 1 & UG;
+      const pG = UG >> 3 | GG[LG + 1] << 5 | GG[LG + 2] << 13,
+        JG = (LG += 3) + pG;
+      if (1 == VG) {
+        if (LG >= GG.length) return;
+        return bG.b = LG + 1, SG ? (kG(SG, GG[LG], bG.y, bG.y += pG), SG) : kG(new ZG(pG), GG[LG])
       }
-      if (!(Du > uu.length)) {
-        if (0 == Cu) return Eu.b = Du, Uu ? (Uu.set(uu.subarray(Zu, Du), Eu.y), Eu.y += bu, Uu) : Xu(uu, Zu, Du);
-        if (2 == Cu) {
-          const qu = uu[Zu],
-            Cu = 3 & qu,
-            bu = qu >> 2 & 3;
-          let Ju = qu >> 4,
-            du = 0,
-            au = 0;
-          Cu < 2 ? 1 & bu ? Ju |= uu[++Zu] << 4 | (2 & bu && uu[++Zu] << 12) : Ju = qu >> 3 : (au = bu, bu < 2 ? (Ju |= (63 & uu[++Zu]) << 4, du = uu[Zu] >> 6 | uu[++Zu] << 2) : 2 == bu ? (Ju |= uu[++Zu] << 4 | (3 & uu[++Zu]) << 12, du = uu[Zu] >> 2 | uu[++Zu] << 6) : (Ju |= uu[++Zu] << 4 | (63 & uu[++Zu]) << 12, du = uu[Zu] >> 6 | uu[++Zu] << 2 | uu[++Zu] << 10)), ++Zu;
-          let Pu = Uu ? Uu.subarray(Eu.y, Eu.y + Eu.m) : new ju(Eu.m),
-            ou = Pu.length - Ju;
-          if (ou < 0 && fu(0), 0 == Cu) Pu.set(uu.subarray(Zu, Zu += Ju), ou);
-          else if (1 == Cu) lu(Pu, uu[Zu++], ou);
+      if (!(JG > GG.length)) {
+        if (0 == VG) return bG.b = JG, SG ? (SG.set(GG.subarray(LG, JG), bG.y), bG.y += pG, SG) : yG(GG, LG, JG);
+        if (2 == VG) {
+          const UG = GG[LG],
+            VG = 3 & UG,
+            pG = UG >> 2 & 3;
+          let iG = UG >> 4,
+            CG = 0,
+            WG = 0;
+          VG < 2 ? 1 & pG ? iG |= GG[++LG] << 4 | (2 & pG && GG[++LG] << 12) : iG = UG >> 3 : (WG = pG, pG < 2 ? (iG |= (63 & GG[++LG]) << 4, CG = GG[LG] >> 6 | GG[++LG] << 2) : 2 == pG ? (iG |= GG[++LG] << 4 | (3 & GG[++LG]) << 12, CG = GG[LG] >> 2 | GG[++LG] << 6) : (iG |= GG[++LG] << 4 | (63 & GG[++LG]) << 12, CG = GG[LG] >> 6 | GG[++LG] << 2 | GG[++LG] << 10)), ++LG;
+          let mG = SG ? SG.subarray(bG.y, bG.y + bG.m) : new ZG(bG.m),
+            IG = mG.length - iG;
+          if (IG < 0 && YG(0), 0 == VG) mG.set(GG.subarray(LG, LG += iG), IG);
+          else if (1 == VG) kG(mG, GG[LG++], IG);
           else {
-            let Uu = Eu.h;
-            if (2 == Cu) {
-              const Xu = ((uu, Eu) => {
-                let Uu = 0,
-                  Zu = -1;
-                const Xu = new ju(292),
-                  qu = uu[Eu],
-                  Cu = Xu.subarray(0, 256),
-                  bu = Xu.subarray(256, 268),
-                  Ou = new su(Xu.buffer, 268);
-                if (qu < 128) {
-                  const [ju, su] = Nu(uu, Eu + 1, 6), Uu = ju << 3, Xu = uu[Eu += qu];
-                  Xu || fu(0);
-                  let lu = 0,
-                    bu = 0,
-                    Ou = su.b,
-                    Yu = Ou,
-                    hu = (++Eu << 3) - 8 + cu(Xu);
-                  for (; Zu > 254 && fu(0), hu -= Ou, !(hu < Uu);) {
-                    let Eu = hu >> 3;
-                    if (lu += (uu[Eu] | uu[Eu + 1] << 8) >> (7 & hu) & (1 << Ou) - 1, Cu[++Zu] = su.s[lu], hu -= Yu, hu < Uu) break;
-                    Eu = hu >> 3, bu += (uu[Eu] | uu[Eu + 1] << 8) >> (7 & hu) & (1 << Yu) - 1, Cu[++Zu] = su.s[bu], Ou = su.n[lu], lu = su.t[lu], Yu = su.n[bu], bu = su.t[bu]
-                  }++Zu > 255 && fu(0)
+            let SG = bG.h;
+            if (2 == VG) {
+              const yG = ((GG, bG) => {
+                let SG = 0,
+                  LG = -1;
+                const yG = new ZG(292),
+                  UG = GG[bG],
+                  VG = yG.subarray(0, 256),
+                  pG = yG.subarray(256, 268),
+                  KG = new wG(yG.buffer, 268);
+                if (UG < 128) {
+                  const [ZG, wG] = QG(GG, bG + 1, 6), SG = ZG << 3, yG = GG[bG += UG];
+                  yG || YG(0);
+                  let kG = 0,
+                    pG = 0,
+                    KG = wG.b,
+                    hG = KG,
+                    dG = (++bG << 3) - 8 + fG(yG);
+                  for (; LG > 254 && YG(0), dG -= KG, !(dG < SG);) {
+                    let bG = dG >> 3;
+                    if (kG += (GG[bG] | GG[bG + 1] << 8) >> (7 & dG) & (1 << KG) - 1, VG[++LG] = wG.s[kG], dG -= hG, dG < SG) break;
+                    bG = dG >> 3, pG += (GG[bG] | GG[bG + 1] << 8) >> (7 & dG) & (1 << hG) - 1, VG[++LG] = wG.s[pG], KG = wG.n[kG], kG = wG.t[kG], hG = wG.n[pG], pG = wG.t[pG]
+                  }++LG > 255 && YG(0)
                 } else {
-                  for (Zu = qu - 127; Uu < Zu; Uu += 2) {
-                    const ju = uu[++Eu];
-                    Cu[Uu] = ju >> 4, Cu[Uu + 1] = 15 & ju
-                  }++Eu
+                  for (LG = UG - 127; SG < LG; SG += 2) {
+                    const ZG = GG[++bG];
+                    VG[SG] = ZG >> 4, VG[SG + 1] = 15 & ZG
+                  }++bG
                 }
-                let Yu = 0;
-                for (Uu = 0; Uu < Zu; ++Uu) {
-                  const uu = Cu[Uu];
-                  uu > 11 && fu(0), Yu += uu && 1 << uu - 1
+                let hG = 0;
+                for (SG = 0; SG < LG; ++SG) {
+                  const GG = VG[SG];
+                  GG > 11 && YG(0), hG += GG && 1 << GG - 1
                 }
-                const hu = cu(Yu) + 1,
-                  Du = 1 << hu,
-                  gu = Du - Yu;
-                for (gu & gu - 1 && fu(0), Cu[Zu++] = cu(gu) + 1, Uu = 0; Uu < Zu; ++Uu) {
-                  const uu = Cu[Uu];
-                  ++bu[Cu[Uu] = uu && hu + 1 - uu]
+                const dG = fG(hG) + 1,
+                  JG = 1 << dG,
+                  rG = JG - hG;
+                for (rG & rG - 1 && YG(0), VG[LG++] = fG(rG) + 1, SG = 0; SG < LG; ++SG) {
+                  const GG = VG[SG];
+                  ++pG[VG[SG] = GG && dG + 1 - GG]
                 }
-                const Mu = new ju(Du << 1),
-                  eu = Mu.subarray(0, Du),
-                  Gu = Mu.subarray(Du);
-                for (Ou[hu] = 0, Uu = hu; Uu > 0; --Uu) {
-                  const uu = Ou[Uu];
-                  lu(Gu, Uu, uu, Ou[Uu - 1] = uu + bu[Uu] * (1 << hu - Uu))
+                const zG = new ZG(JG << 1),
+                  EG = zG.subarray(0, JG),
+                  oG = zG.subarray(JG);
+                for (KG[dG] = 0, SG = dG; SG > 0; --SG) {
+                  const GG = KG[SG];
+                  kG(oG, SG, GG, KG[SG - 1] = GG + pG[SG] * (1 << dG - SG))
                 }
-                for (Ou[0] != Du && fu(0), Uu = 0; Uu < Zu; ++Uu) {
-                  const uu = Cu[Uu];
-                  if (uu) {
-                    const Eu = Ou[uu];
-                    lu(eu, Uu, Eu, Ou[uu] = Eu + (1 << hu - uu))
+                for (KG[0] != JG && YG(0), SG = 0; SG < LG; ++SG) {
+                  const GG = VG[SG];
+                  if (GG) {
+                    const bG = KG[GG];
+                    kG(EG, SG, bG, KG[GG] = bG + (1 << dG - GG))
                   }
                 }
-                return [Eu, {
-                  n: Gu,
-                  b: hu,
-                  s: eu
+                return [bG, {
+                  n: oG,
+                  b: dG,
+                  s: EG
                 }]
-              })(uu, Zu);
-              du += Zu - (Zu = Xu[0]), Eu.h = Uu = Xu[1]
-            } else Uu || fu(0);
-            (au ? wu : pu)(uu.subarray(Zu, Zu += du), Pu.subarray(ou), Uu)
+              })(GG, LG);
+              CG += LG - (LG = yG[0]), bG.h = SG = yG[1]
+            } else SG || YG(0);
+            (WG ? uG : XG)(GG.subarray(LG, LG += CG), mG.subarray(IG), SG)
           }
-          let ku = uu[Zu++];
-          if (ku) {
-            255 == ku ? ku = 32512 + (uu[Zu++] | uu[Zu++] << 8) : ku > 127 && (ku = ku - 128 << 8 | uu[Zu++]);
-            const lu = uu[Zu++];
-            3 & lu && fu(0);
-            const qu = [Yu, hu, Ou];
-            for (let Uu = 2; Uu > -1; --Uu) {
-              const Xu = lu >> 2 + (Uu << 1) & 3;
-              if (1 == Xu) {
-                const Eu = new ju([0, 0, uu[Zu++]]);
-                qu[Uu] = {
-                  s: Eu.subarray(2, 3),
-                  n: Eu.subarray(0, 1),
-                  t: new su(Eu.buffer, 0, 1),
+          let FG = GG[LG++];
+          if (FG) {
+            255 == FG ? FG = 32512 + (GG[LG++] | GG[LG++] << 8) : FG > 127 && (FG = FG - 128 << 8 | GG[LG++]);
+            const kG = GG[LG++];
+            3 & kG && YG(0);
+            const UG = [hG, dG, KG];
+            for (let SG = 2; SG > -1; --SG) {
+              const yG = kG >> 2 + (SG << 1) & 3;
+              if (1 == yG) {
+                const bG = new ZG([0, 0, GG[LG++]]);
+                UG[SG] = {
+                  s: bG.subarray(2, 3),
+                  n: bG.subarray(0, 1),
+                  t: new wG(bG.buffer, 0, 1),
                   b: 0
                 }
-              } else 2 == Xu ? [Zu, qu[Uu]] = Nu(uu, Zu, 9 - (1 & Uu)) : 3 == Xu && (Eu.t || fu(0), qu[Uu] = Eu.t[Uu])
+              } else 2 == yG ? [LG, UG[SG]] = QG(GG, LG, 9 - (1 & SG)) : 3 == yG && (bG.t || YG(0), UG[SG] = bG.t[SG])
             }
-            const [Cu, bu, pu] = Eu.t = qu, wu = uu[Du - 1];
-            wu || fu(0);
-            let Ju = (Du << 3) - 8 + cu(wu) - pu.b,
-              du = Ju >> 3,
-              au = 0,
-              mu = (uu[du] | uu[du + 1] << 8) >> (7 & Ju) & (1 << pu.b) - 1;
-            du = (Ju -= bu.b) >> 3;
-            let vu = (uu[du] | uu[du + 1] << 8) >> (7 & Ju) & (1 << bu.b) - 1;
-            du = (Ju -= Cu.b) >> 3;
-            let Ku = (uu[du] | uu[du + 1] << 8) >> (7 & Ju) & (1 << Cu.b) - 1;
-            for (++ku; --ku;) {
-              const ju = pu.s[mu],
-                su = pu.n[mu],
-                Uu = Cu.s[Ku],
-                Zu = Cu.n[Ku],
-                Xu = bu.s[vu],
-                lu = bu.n[vu];
-              du = (Ju -= Xu) >> 3;
-              const qu = 1 << Xu;
-              let cu = qu + ((uu[du] | uu[du + 1] << 8 | uu[du + 2] << 16 | uu[du + 3] << 24) >>> (7 & Ju) & qu - 1);
-              du = (Ju -= eu[Uu]) >> 3;
-              let Nu = Gu[Uu] + ((uu[du] | uu[du + 1] << 8 | uu[du + 2] << 16) >> (7 & Ju) & (1 << eu[Uu]) - 1);
-              du = (Ju -= gu[ju]) >> 3;
-              const Ou = Mu[ju] + ((uu[du] | uu[du + 1] << 8 | uu[du + 2] << 16) >> (7 & Ju) & (1 << gu[ju]) - 1);
-              if ((Ju < 0 || ou + Ou > Pu.length || au + Ou + Nu > Pu.length) && fu(0), du = (Ju -= su) >> 3, mu = pu.t[mu] + ((uu[du] | uu[du + 1] << 8) >> (7 & Ju) & (1 << su) - 1), du = (Ju -= Zu) >> 3, Ku = Cu.t[Ku] + ((uu[du] | uu[du + 1] << 8) >> (7 & Ju) & (1 << Zu) - 1), du = (Ju -= lu) >> 3, vu = bu.t[vu] + ((uu[du] | uu[du + 1] << 8) >> (7 & Ju) & (1 << lu) - 1), cu > 3) Eu.o[2] = Eu.o[1], Eu.o[1] = Eu.o[0], Eu.o[0] = cu -= 3;
+            const [VG, pG, XG] = bG.t = UG, uG = GG[JG - 1];
+            uG || YG(0);
+            let iG = (JG << 3) - 8 + fG(uG) - XG.b,
+              CG = iG >> 3,
+              WG = 0,
+              vG = (GG[CG] | GG[CG + 1] << 8) >> (7 & iG) & (1 << XG.b) - 1;
+            CG = (iG -= pG.b) >> 3;
+            let aG = (GG[CG] | GG[CG + 1] << 8) >> (7 & iG) & (1 << pG.b) - 1;
+            CG = (iG -= VG.b) >> 3;
+            let cG = (GG[CG] | GG[CG + 1] << 8) >> (7 & iG) & (1 << VG.b) - 1;
+            for (++FG; --FG;) {
+              const ZG = XG.s[vG],
+                wG = XG.n[vG],
+                SG = VG.s[cG],
+                LG = VG.n[cG],
+                yG = pG.s[aG],
+                kG = pG.n[aG];
+              CG = (iG -= yG) >> 3;
+              const UG = 1 << yG;
+              let fG = UG + ((GG[CG] | GG[CG + 1] << 8 | GG[CG + 2] << 16 | GG[CG + 3] << 24) >>> (7 & iG) & UG - 1);
+              CG = (iG -= EG[SG]) >> 3;
+              let QG = oG[SG] + ((GG[CG] | GG[CG + 1] << 8 | GG[CG + 2] << 16) >> (7 & iG) & (1 << EG[SG]) - 1);
+              CG = (iG -= rG[ZG]) >> 3;
+              const KG = zG[ZG] + ((GG[CG] | GG[CG + 1] << 8 | GG[CG + 2] << 16) >> (7 & iG) & (1 << rG[ZG]) - 1);
+              if ((iG < 0 || IG + KG > mG.length || WG + KG + QG > mG.length) && YG(0), CG = (iG -= wG) >> 3, vG = XG.t[vG] + ((GG[CG] | GG[CG + 1] << 8) >> (7 & iG) & (1 << wG) - 1), CG = (iG -= LG) >> 3, cG = VG.t[cG] + ((GG[CG] | GG[CG + 1] << 8) >> (7 & iG) & (1 << LG) - 1), CG = (iG -= kG) >> 3, aG = pG.t[aG] + ((GG[CG] | GG[CG + 1] << 8) >> (7 & iG) & (1 << kG) - 1), fG > 3) bG.o[2] = bG.o[1], bG.o[1] = bG.o[0], bG.o[0] = fG -= 3;
               else {
-                const uu = cu - (0 != Ou);
-                uu ? (cu = 3 == uu ? Eu.o[0] - 1 : Eu.o[uu], uu > 1 && (Eu.o[2] = Eu.o[1]), Eu.o[1] = Eu.o[0], Eu.o[0] = cu) : cu = Eu.o[0]
+                const GG = fG - (0 != KG);
+                GG ? (fG = 3 == GG ? bG.o[0] - 1 : bG.o[GG], GG > 1 && (bG.o[2] = bG.o[1]), bG.o[1] = bG.o[0], bG.o[0] = fG) : fG = bG.o[0]
               }
-              for (let uu = 0; uu < Ou; ++uu) Pu[au + uu] = Pu[ou + uu];
-              au += Ou, ou += Ou;
-              let Yu = au - cu;
-              if (Yu < 0) {
-                let uu = -Yu;
-                const ju = Eu.e + Yu;
-                ju < 0 && fu(4), uu > Nu && (uu = Nu);
-                for (let su = 0; su < uu; ++su) Pu[au + su] = Eu.w[ju + su];
-                au += uu, Nu -= uu, Yu = 0
+              for (let GG = 0; GG < KG; ++GG) mG[WG + GG] = mG[IG + GG];
+              WG += KG, IG += KG;
+              let hG = WG - fG;
+              if (hG < 0) {
+                let GG = -hG;
+                const ZG = bG.e + hG;
+                ZG < 0 && YG(4), GG > QG && (GG = QG);
+                for (let wG = 0; wG < GG; ++wG) mG[WG + wG] = bG.w[ZG + wG];
+                WG += GG, QG -= GG, hG = 0
               }
-              for (let uu = 0; uu < Nu; ++uu) Pu[au + uu] = Pu[Yu + uu];
-              au += Nu
+              for (let GG = 0; GG < QG; ++GG) mG[WG + GG] = mG[hG + GG];
+              WG += QG
             }
-            if (au != ou)
-              for (; ou < Pu.length;) Pu[au++] = Pu[ou++];
-            else au = Pu.length;
-            Uu ? Eu.y += au : Pu = Xu(Pu, 0, au)
-          } else if (Uu) {
-            if (Eu.y += Ju, ou)
-              for (let uu = 0; uu < Ju; ++uu) Pu[uu] = Pu[ou + uu]
-          } else ou && (Pu = Xu(Pu, ou));
-          return Eu.b = Du, Pu
+            if (WG != IG)
+              for (; IG < mG.length;) mG[WG++] = mG[IG++];
+            else WG = mG.length;
+            SG ? bG.y += WG : mG = yG(mG, 0, WG)
+          } else if (SG) {
+            if (bG.y += iG, IG)
+              for (let GG = 0; GG < iG; ++GG) mG[GG] = mG[IG + GG]
+          } else IG && (mG = yG(mG, IG));
+          return bG.b = JG, mG
         }
-        fu(2)
+        YG(2)
       }
     };
-  class du {
+  class CG {
     output = null;
     decoded = 0;
     done = !1;
     st = null;
     parts = [];
-    dl = 0;
+    Ik = 0;
     needed = 18;
     size;
-    constructor(uu) {
-      this.size = uu
+    constructor(GG) {
+      this.size = GG
     }
-    push(uu) {
+    push(GG) {
       if (this.done) return;
-      if (this.parts.push(uu), this.dl += uu.length, this.dl < this.needed) return;
-      const Eu = ((uu, Eu) => {
-        if (1 == uu.length) return uu[0];
-        const su = new ju(Eu);
-        for (let ju = 0, Uu = 0; ju < uu.length; ++ju) {
-          const Eu = uu[ju];
-          su.set(Eu, Uu), Uu += Eu.length
+      if (this.parts.push(GG), this.Ik += GG.length, this.Ik < this.needed) return;
+      const bG = ((GG, bG) => {
+        if (1 == GG.length) return GG[0];
+        const wG = new ZG(bG);
+        for (let ZG = 0, SG = 0; ZG < GG.length; ++ZG) {
+          const bG = GG[ZG];
+          wG.set(bG, SG), SG += bG.length
         }
-        return su
-      })(this.parts, this.dl);
-      let su = this.st;
-      if (!su) {
-        const uu = bu(Eu, new ju(0));
-        "number" != typeof uu && uu.u === this.size || fu(0, `not a zstd frame of ${this.size} bytes`), su = this.st = bu(Eu, 1), su.e = 0, this.output = su.w
+        return wG
+      })(this.parts, this.Ik);
+      let wG = this.st;
+      if (!wG) {
+        const GG = pG(bG, new ZG(0));
+        "number" != typeof GG && GG.u === this.size || YG(0, `not a zstd frame of ${this.size} bytes`), wG = this.st = pG(bG, 1), wG.e = 0, this.output = wG.w
       }
       for (;;) {
-        const uu = Eu.length - su.b;
-        if (uu < 3) {
+        const GG = bG.length - wG.b;
+        if (GG < 3) {
           this.needed = 3;
           break
         }
-        const ju = Eu[su.b],
-          Uu = ju >> 1 & 3;
-        3 == Uu && fu(2);
-        const Zu = ju >> 3 | Eu[su.b + 1] << 5 | Eu[su.b + 2] << 13;
-        Zu > su.m && fu(0), 0 == Uu && su.y + Zu > su.u && fu(0);
-        const Xu = 1 == Uu ? 4 : 3 + Zu;
-        if (uu < Xu) {
-          this.needed = Xu;
+        const ZG = bG[wG.b],
+          SG = ZG >> 1 & 3;
+        3 == SG && YG(2);
+        const LG = ZG >> 3 | bG[wG.b + 1] << 5 | bG[wG.b + 2] << 13;
+        LG > wG.m && YG(0), 0 == SG && wG.y + LG > wG.u && YG(0);
+        const yG = 1 == SG ? 4 : 3 + LG;
+        if (GG < yG) {
+          this.needed = yG;
           break
         }
-        if (Ju(Eu, su, su.w) || fu(5), su.e = su.y, (su.y > su.u || su.l && su.y != su.u) && fu(0), su.l) {
+        if (iG(bG, wG, wG.w) || YG(5), wG.e = wG.y, (wG.y > wG.u || wG.l && wG.y != wG.u) && YG(0), wG.l) {
           this.done = !0;
           break
         }
       }
-      this.decoded = su.y;
-      const Uu = Eu.subarray(su.b);
-      this.parts = Uu.length ? [Uu] : [], this.dl = Uu.length, su.b = 0
+      this.decoded = wG.y;
+      const SG = bG.subarray(wG.b);
+      this.parts = SG.length ? [SG] : [], this.Ik = SG.length, wG.b = 0
     }
   }
-  class au {
+  class WG {
     post;
     href = "";
-    zN = null;
+    GK = null;
     given = 0;
     stopped = !1;
-    constructor(uu) {
-      this.post = uu
+    constructor(GG) {
+      this.post = GG
     }
-    take(Eu) {
+    take(bG) {
       if (!this.stopped) try {
-        this.answer(Eu)
-      } catch (ju) {
-        this.stop(ju instanceof RangeError ? `out of memory decoding ${this.href}: ${uu(ju)}` : `${this.href} did not decode: ${uu(ju)}`)
+        this.answer(bG)
+      } catch (ZG) {
+        this.stop(ZG instanceof RangeError ? `out of memory decoding ${this.href}: ${GG(ZG)}` : `${this.href} did not decode: ${GG(ZG)}`)
       }
     }
-    answer(uu) {
-      if (null === this.zN) {
-        const [Eu, ju] = uu;
-        return this.href = Eu, void(this.zN = new du(ju))
+    answer(GG) {
+      if (null === this.GK) {
+        const [bG, ZG] = GG;
+        return this.href = bG, void(this.GK = new CG(ZG))
       }
-      if (null === uu) return void this.stop(`${this.href} ended before its module did`);
-      const Eu = this.zN;
-      Eu.push(uu);
+      if (null === GG) return void this.stop(`${this.href} ended before its module did`);
+      const bG = this.GK;
+      bG.push(GG);
       const {
-        output: ju,
-        decoded: su
-      } = Eu;
-      if (null !== ju && su > this.given) {
-        const uu = ju.slice(this.given, su).buffer;
-        this.given = su, this.post(uu, [uu])
+        output: ZG,
+        decoded: wG
+      } = bG;
+      if (null !== ZG && wG > this.given) {
+        const GG = ZG.slice(this.given, wG).buffer;
+        this.given = wG, this.post(GG, [GG])
       }
-      Eu.done && this.stop(!0)
+      bG.done && this.stop(!0)
     }
-    stop(uu) {
-      this.stopped = !0, this.post(uu)
+    stop(GG) {
+      this.stopped = !0, this.post(GG)
     }
   }
-  const Pu = globalThis.WorkerGlobalScope;
-  if (void 0 !== Pu && globalThis instanceof Pu) {
-    const uu = globalThis,
-      Eu = new au((function(Eu) {
-        let ju = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        uu.postMessage(Eu, ju)
+  const mG = globalThis.WorkerGlobalScope;
+  if (void 0 !== mG && globalThis instanceof mG) {
+    const GG = globalThis,
+      bG = new WG((function(bG) {
+        let ZG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        GG.postMessage(bG, ZG)
       }));
-    uu.addEventListener("message", (uu => {
+    GG.addEventListener("message", (GG => {
       let {
-        data: ju
-      } = uu;
-      Eu.take(ju)
+        data: ZG
+      } = GG;
+      bG.take(ZG)
     }))
   }
 })();

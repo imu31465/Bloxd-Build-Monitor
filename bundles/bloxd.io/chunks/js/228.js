@@ -1,327 +1,327 @@
 export const id = 228;
 export const ids = [228];
 export const modules = {
-  39933: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => su,
-      f: () => Uu
+  40021: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => wG,
+      i: () => SG
     });
-    const su = "The world isn't loaded, so no blocks can be seen.",
-      Uu = "The world isn't loaded, so nothing in it can be seen."
+    const wG = "The world isn't loaded, so no blocks can be seen.",
+      SG = "The world isn't loaded, so nothing in it can be seen."
   },
-  39416: (uu, Eu, ju) => {
-    function su(uu) {
-      return !(!uu.lobbyLeaderboardInfo && !uu.lobbyManage)
+  39519: (GG, bG, ZG) => {
+    function wG(GG) {
+      return !(!GG.lobbyLeaderboardInfo && !GG.lobbyManage)
     }
-    ju.d(Eu, {
-      c: () => su
+    ZG.d(bG, {
+      b: () => wG
     })
   },
-  37208: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Zu,
-      e: () => Uu
+  37167: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => LG,
+      c: () => SG
     });
-    let su = () => null;
+    let wG = () => null;
 
-    function Uu(uu) {
-      su = uu
+    function SG(GG) {
+      wG = GG
     }
 
-    function Zu(uu, Eu) {
-      return su(uu, Eu)
+    function LG(GG, bG) {
+      return wG(GG, bG)
     }
   },
-  40856: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Yu,
-      h: () => Mu,
-      k: () => gu,
-      m: () => hu
+  40984: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => hG,
+      d: () => zG,
+      e: () => rG,
+      g: () => dG
     });
-    var su = ju(24),
-      Uu = ju(40860),
-      Zu = ju(40847),
-      Xu = ju(40864),
-      lu = ju(40854),
-      qu = ju(40873),
-      fu = ju(40889);
+    var wG = ZG(19),
+      SG = ZG(40986),
+      LG = ZG(40971),
+      yG = ZG(40989),
+      kG = ZG(40976),
+      UG = ZG(40993),
+      YG = ZG(41012);
 
-    function Cu(uu) {
-      var Eu, ju;
-      const su = (0, Zu.l)();
-      return su ? null === (Eu = (0, Uu.d)(su.api, uu[0], uu[1], uu[2])) || void 0 === Eu || null === (ju = Eu.persisted) || void 0 === ju ? void 0 : ju.shared : void 0
+    function VG(GG) {
+      var bG, ZG;
+      const wG = (0, LG.f)();
+      return wG ? null === (bG = (0, SG.d)(wG.api, GG[0], GG[1], GG[2])) || void 0 === bG || null === (ZG = bG.persisted) || void 0 === ZG ? void 0 : ZG.shared : void 0
     }
 
-    function bu(uu) {
-      return `${uu[0]},${uu[1]},${uu[2]}`
+    function pG(GG) {
+      return `${GG[0]},${GG[1]},${GG[2]}`
     }
-    const cu = new Map;
-    let Nu = null,
-      Ou = 0;
+    const fG = new Map;
+    let QG = null,
+      KG = 0;
 
-    function Yu() {
-      return Ou
+    function hG() {
+      return KG
     }
 
-    function hu(uu) {
-      const Eu = null !== Nu && Nu.key === bu(uu.pos) ? Nu.type : null;
-      if (null === Eu) return uu;
-      let ju = null;
-      if ("Iron" === Eu) {
+    function dG(GG) {
+      const bG = null !== QG && QG.key === pG(GG.pos) ? QG.type : null;
+      if (null === bG) return GG;
+      let ZG = null;
+      if ("Iron" === bG) {
         const {
-          cachedPasskey: Eu,
-          ...su
-        } = Du(uu.pos);
-        ju = {
-          wl: null !== Eu && void 0 !== Eu ? Eu : [0, 0, 0, 0],
-          ...su
+          cachedPasskey: bG,
+          ...wG
+        } = JG(GG.pos);
+        ZG = {
+          Wk: null !== bG && void 0 !== bG ? bG : [0, 0, 0, 0],
+          ...wG
         }
       }
       return {
-        ...uu,
-        type: Eu,
-        ironChest: ju
+        ...GG,
+        type: bG,
+        ironChest: ZG
       }
     }
 
-    function Du(uu) {
-      const Eu = Cu(uu),
-        ju = null === Eu || void 0 === Eu ? void 0 : Eu.ownerDbId,
-        su = function(uu) {
-          var Eu;
-          let ju = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Cu(uu);
-          const su = bu(uu),
-            Uu = cu.get(su);
-          return Uu ? Uu.lastOpened < (null !== (Eu = null === ju || void 0 === ju ? void 0 : ju.passkeyLastUpdated) && void 0 !== Eu ? Eu : 0) ? (cu.delete(su), null) : [...Uu.wl] : null
-        }(uu, Eu);
-      return void 0 === ju ? {
-        cachedPasskey: su
+    function JG(GG) {
+      const bG = VG(GG),
+        ZG = null === bG || void 0 === bG ? void 0 : bG.ownerDbId,
+        wG = function(GG) {
+          var bG;
+          let ZG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VG(GG);
+          const wG = pG(GG),
+            SG = fG.get(wG);
+          return SG ? SG.lastOpened < (null !== (bG = null === ZG || void 0 === ZG ? void 0 : ZG.passkeyLastUpdated) && void 0 !== bG ? bG : 0) ? (fG.delete(wG), null) : [...SG.Wk] : null
+        }(GG, bG);
+      return void 0 === ZG ? {
+        cachedPasskey: wG
       } : {
-        ownerDbId: ju,
-        cachedPasskey: su
+        ownerDbId: ZG,
+        cachedPasskey: wG
       }
-    }(0, fu.n)(Xu.b, (uu => {
-      const Eu = (0, qu.g)(Xu.b, uu);
-      if (!(0, qu.e)(Eu) || Eu.EZ) return;
-      if (Ou++, !Eu.nU || null === Eu.RU) return void(Nu = null);
-      const ju = bu(Eu.RU);
-      Nu = {
-        key: ju,
-        type: Eu.zU
-      }, null !== Eu.uZ && cu.set(ju, {
-        wl: [...Eu.uZ],
+    }(0, YG.l)(yG.c, (GG => {
+      const bG = (0, UG.f)(yG.c, GG);
+      if (!(0, UG.d)(bG) || bG.HS) return;
+      if (KG++, !bG.qS || null === bG.eS) return void(QG = null);
+      const ZG = pG(bG.eS);
+      QG = {
+        key: ZG,
+        type: bG.gS
+      }, null !== bG.RS && fG.set(ZG, {
+        Wk: [...bG.RS],
         lastOpened: Date.now()
       })
-    })), (0, fu.i)((() => {
-      cu.clear(), Nu = null, Ou++
-    })), (0, fu.k)((() => {
-      null !== Nu && (Nu = null, Ou++, su.h.TY("chestToggleFromServer", !1, !0))
+    })), (0, YG.f)((() => {
+      fG.clear(), QG = null, KG++
+    })), (0, YG.j)((() => {
+      null !== QG && (QG = null, KG++, wG.l.xh("chestToggleFromServer", !1, !0))
     }));
-    const gu = {
+    const rG = {
         boardEditRequested: {
-          watch: uu => (0, su.l)("EditBoard", (Eu => {
+          watch: GG => (0, wG.p)("EditBoard", (bG => {
             let {
-              pos: ju
-            } = Eu;
-            if (null === ju) return void uu(null);
-            const su = (0, Zu.l)(),
-              Uu = (0, Zu.w)();
-            su && Uu && uu(Uu.readBoardToEdit(su.api, su.chunks, ju))
+              pos: ZG
+            } = bG;
+            if (null === ZG) return void GG(null);
+            const wG = (0, LG.f)(),
+              SG = (0, LG.q)();
+            wG && SG && GG(SG.readBoardToEdit(wG.api, wG.chunks, ZG))
           }))
         },
         ironChestOpenRequested: {
-          watch: uu => (0, su.l)("OpenIronChest", (Eu => {
+          watch: GG => (0, wG.p)("OpenIronChest", (bG => {
             let {
-              pos: ju
-            } = Eu;
-            uu(function(uu) {
+              pos: ZG
+            } = bG;
+            GG(function(GG) {
               return {
-                pos: uu,
-                ...Du(uu)
+                pos: GG,
+                ...JG(GG)
               }
-            }(ju))
+            }(ZG))
           }))
         }
       },
-      Mu = {
-        writeOnBoard(uu) {
-          var Eu;
+      zG = {
+        writeOnBoard(GG) {
+          var bG;
           let {
-            pos: ju,
-            text: su,
-            textSize: Uu
-          } = uu;
-          null === (Eu = (0, Zu.l)()) || void 0 === Eu || Eu.send(lu.c.UpdateBoard, (0, lu.X)({
-            eq: ju,
-            Gq: su,
-            pq: Uu
+            pos: ZG,
+            text: wG,
+            textSize: SG
+          } = GG;
+          null === (bG = (0, LG.f)()) || void 0 === bG || bG.send(kG.b.UpdateBoard, (0, kG.cb)({
+            uU: ZG,
+            iU: wG,
+            CU: SG
           }))
         },
-        writeBook(uu) {
-          var Eu;
+        writeBook(GG) {
+          var bG;
           let {
-            pages: ju,
-            title: su,
-            published: Uu
-          } = uu;
-          null === (Eu = (0, Zu.l)()) || void 0 === Eu || Eu.send(lu.c.UpdateBook, (0, lu._)({
-            AX: ju,
-            yX: su,
-            zX: Uu
+            pages: ZG,
+            title: wG,
+            published: SG
+          } = GG;
+          null === (bG = (0, LG.f)()) || void 0 === bG || bG.send(kG.b.UpdateBook, (0, kG.db)({
+            Dy: ZG,
+            Ny: wG,
+            Oy: SG
           }))
         },
-        writeNameTag(uu) {
-          var Eu;
-          null === (Eu = (0, Zu.l)()) || void 0 === Eu || Eu.send(lu.c.UpdateNameTag, uu)
+        writeNameTag(GG) {
+          var bG;
+          null === (bG = (0, LG.f)()) || void 0 === bG || bG.send(kG.b.UpdateNameTag, GG)
         },
-        setCustomLobbyBlock(uu) {
+        setCustomLobbyBlock(GG) {
           let {
-            pos: Eu,
-            blockName: ju
-          } = uu;
-          const su = (0, Zu.w)(),
-            Uu = (0, Zu.l)();
-          su && Uu && Uu.send(lu.c.SetCustomLobbyBlock, (0, lu.H)({
-            ul: su.blockIdOf(ju),
-            RX: Eu
+            pos: bG,
+            blockName: ZG
+          } = GG;
+          const wG = (0, LG.q)(),
+            SG = (0, LG.f)();
+          wG && SG && SG.send(kG.b.SetCustomLobbyBlock, (0, kG.P)({
+            Gk: wG.blockIdOf(ZG),
+            xy: bG
           }))
         }
       }
   },
-  40904: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => qu,
-      e: () => Xu,
-      g: () => lu
+  41027: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => UG,
+      i: () => yG,
+      l: () => kG
     });
-    var su = ju(40833),
-      Uu = ju(4962),
-      Zu = ju(40847);
+    var wG = ZG(40954),
+      SG = ZG(4800),
+      LG = ZG(40971);
 
-    function Xu() {
-      var uu;
-      const Eu = null === (uu = (0, Zu.l)()) || void 0 === uu ? void 0 : uu.api.localId;
-      return void 0 === Eu || Eu === su.Pc ? null : String(Eu)
+    function yG() {
+      var GG;
+      const bG = null === (GG = (0, LG.f)()) || void 0 === GG ? void 0 : GG.api.localId;
+      return void 0 === bG || bG === wG.Wc ? null : String(bG)
     }
 
-    function lu(uu) {
-      const Eu = (0, Zu.l)();
-      if (null !== Eu) return uu(Eu);
-      let ju = null;
-      const su = (0, Uu.t)((() => {
-        const Eu = (0, Zu.l)();
-        null !== Eu && null === ju && (su(), ju = uu(Eu))
+    function kG(GG) {
+      const bG = (0, LG.f)();
+      if (null !== bG) return GG(bG);
+      let ZG = null;
+      const wG = (0, SG.r)((() => {
+        const bG = (0, LG.f)();
+        null !== bG && null === ZG && (wG(), ZG = GG(bG))
       }));
       return () => {
-        var uu;
-        su(), null === (uu = ju) || void 0 === uu || uu()
+        var GG;
+        wG(), null === (GG = ZG) || void 0 === GG || GG()
       }
     }
 
-    function qu(uu, Eu, ju) {
+    function UG(GG, bG, ZG) {
       return {
         current: () => {
-          const ju = (0, Zu.l)();
-          return null === ju ? Eu : uu(ju)()
+          const ZG = (0, LG.f)();
+          return null === ZG ? bG : GG(ZG)()
         },
-        watch: Eu => lu((su => {
-          const Uu = uu(su);
-          let Zu = Uu();
-          return Eu(Zu), ju((() => {
-            const uu = Uu();
-            uu !== Zu && (Zu = uu, Eu(uu))
+        watch: bG => kG((wG => {
+          const SG = GG(wG);
+          let LG = SG();
+          return bG(LG), ZG((() => {
+            const GG = SG();
+            GG !== LG && (LG = GG, bG(GG))
           }))
         }))
       }
     }
   },
-  40901: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => fu
+  41020: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => YG
     });
-    var su = ju(40847),
-      Uu = ju(40904),
-      Zu = ju(40912);
+    var wG = ZG(40971),
+      SG = ZG(41027),
+      LG = ZG(41031);
 
-    function Xu() {
-      var uu, Eu;
-      return null !== (uu = null === (Eu = (0, su.l)()) || void 0 === Eu ? void 0 : Eu.itemBridgeSources) && void 0 !== uu ? uu : Zu.d
+    function yG() {
+      var GG, bG;
+      return null !== (GG = null === (bG = (0, wG.f)()) || void 0 === bG ? void 0 : bG.itemBridgeSources) && void 0 !== GG ? GG : LG.d
     }
 
-    function lu(uu) {
+    function kG(GG) {
       return {
-        current: () => Xu().states[uu].current(),
-        watch: Eu => (0, Uu.g)((ju => {
-          const su = ju.itemBridgeSources.states[uu];
-          return Eu(su.current()), su.watch(Eu)
+        current: () => yG().states[GG].current(),
+        watch: bG => (0, SG.l)((ZG => {
+          const wG = ZG.itemBridgeSources.states[GG];
+          return bG(wG.current()), wG.watch(bG)
         }))
       }
     }
 
-    function qu(uu) {
+    function UG(GG) {
       return {
-        watch: Eu => (0, Uu.g)((ju => ju.itemBridgeSources.events[uu].watch(Eu)))
+        watch: bG => (0, SG.l)((ZG => ZG.itemBridgeSources.events[GG].watch(bG)))
       }
     }
-    const fu = {
+    const YG = {
       states: {
-        inventory: lu("inventory"),
-        hotbar: lu("hotbar"),
-        crafting: lu("crafting"),
-        heldItemAim: lu("heldItemAim")
+        inventory: kG("inventory"),
+        hotbar: kG("hotbar"),
+        crafting: kG("crafting"),
+        heldItemAim: kG("heldItemAim")
       },
       events: {
-        hotbarSlotRequested: qu("hotbarSlotRequested"),
-        hotbarScrolled: qu("hotbarScrolled"),
-        numberKeyPressed: qu("numberKeyPressed"),
-        inventoryDropRequested: qu("inventoryDropRequested"),
-        chestToggled: qu("chestToggled"),
-        chestRefreshed: qu("chestRefreshed"),
-        inventorySynced: qu("inventorySynced"),
-        enchantingTableOpened: qu("enchantingTableOpened")
+        hotbarSlotRequested: UG("hotbarSlotRequested"),
+        hotbarScrolled: UG("hotbarScrolled"),
+        numberKeyPressed: UG("numberKeyPressed"),
+        inventoryDropRequested: UG("inventoryDropRequested"),
+        chestToggled: UG("chestToggled"),
+        chestRefreshed: UG("chestRefreshed"),
+        inventorySynced: UG("inventorySynced"),
+        enchantingTableOpened: UG("enchantingTableOpened")
       },
       commands: {
-        selectHotbarSlot: uu => Xu().commands.selectHotbarSlot(uu),
-        removeInventoryItem: uu => Xu().commands.removeInventoryItem(uu),
-        swapInventorySlots: uu => Xu().commands.swapInventorySlots(uu),
-        moveInventoryItem: uu => Xu().commands.moveInventoryItem(uu),
-        quickMoveInventoryItem: uu => Xu().commands.quickMoveInventoryItem(uu),
-        closeChest: uu => Xu().commands.closeChest(uu),
-        focusCrafting: uu => Xu().commands.focusCrafting(uu),
-        craftRecipe: uu => Xu().commands.craftRecipe(uu),
-        salvageItem: uu => Xu().commands.salvageItem(uu),
-        enchantItem: uu => Xu().commands.enchantItem(uu)
+        selectHotbarSlot: GG => yG().commands.selectHotbarSlot(GG),
+        removeInventoryItem: GG => yG().commands.removeInventoryItem(GG),
+        swapInventorySlots: GG => yG().commands.swapInventorySlots(GG),
+        moveInventoryItem: GG => yG().commands.moveInventoryItem(GG),
+        quickMoveInventoryItem: GG => yG().commands.quickMoveInventoryItem(GG),
+        closeChest: GG => yG().commands.closeChest(GG),
+        focusCrafting: GG => yG().commands.focusCrafting(GG),
+        craftRecipe: GG => yG().commands.craftRecipe(GG),
+        salvageItem: GG => yG().commands.salvageItem(GG),
+        enchantItem: GG => yG().commands.enchantItem(GG)
       },
       queries: {
-        enchantingOffer: uu => Xu().queries.enchantingOffer(uu)
+        enchantingOffer: GG => yG().queries.enchantingOffer(GG)
       }
     }
   },
-  40912: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => lu
+  41031: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => kG
     });
-    var su = ju(39933);
+    var wG = ZG(40021);
 
-    function Uu(uu) {
+    function SG(GG) {
       return {
-        current: () => uu,
+        current: () => GG,
         watch: () => () => {}
       }
     }
 
-    function Zu() {}
-    const Xu = Object.freeze([0, 0, 0]),
-      lu = {
+    function LG() {}
+    const yG = Object.freeze([0, 0, 0]),
+      kG = {
         states: {
-          health: Uu({
+          health: SG({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: Uu({
+          inventory: SG({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -329,63 +329,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: Uu({
+          hotbar: SG({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: Uu({
+          stationItems: SG({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: Uu({}),
-          creativeVisibility: Uu({
+          itemInfo: SG({}),
+          creativeVisibility: SG({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: Uu(null),
-          heldItemAim: Uu({
+          aura: SG(null),
+          heldItemAim: SG({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: Uu(!1),
-          gliderBoostFuel: Uu(0),
-          flight: Uu({
+          crouching: SG(!1),
+          gliderBoostFuel: SG(0),
+          flight: SG({
             canFly: !1,
             flying: !1
           }),
-          crafting: Uu({
+          crafting: SG({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: Uu({
+          players: SG({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: Uu({}),
-          fullInventory: Uu(!1),
-          crosshairTarget: Uu({
+          lobbyLeaderboardRows: SG({}),
+          fullInventory: SG(!1),
+          crosshairTarget: SG({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: Uu(!0),
-          freeCamera: Uu({
+          localPlayerAlive: SG(!0),
+          freeCamera: SG({
             allowed: !1,
             movesFly: !1
           }),
-          replay: Uu(null),
-          replayEdits: Uu(null),
-          replayRecorder: Uu({
+          replay: SG(null),
+          replayEdits: SG(null),
+          replayRecorder: SG({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: Uu(!1)
+          replayVideoExporting: SG(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -447,87 +447,87 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: Zu,
+          selectHotbarSlot: LG,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: Zu,
-          setInventoryOpen: Zu,
-          changeIronChestPasskey: Zu,
-          dragReplayCamera: Zu,
-          applyTemporaryThirdPerson: Zu,
-          holdEmoteWheel: Zu,
-          recordFlyingMiddleText: Zu,
-          focusCrafting: Zu,
+          closeChest: LG,
+          setInventoryOpen: LG,
+          changeIronChestPasskey: LG,
+          dragReplayCamera: LG,
+          applyTemporaryThirdPerson: LG,
+          holdEmoteWheel: LG,
+          recordFlyingMiddleText: LG,
+          focusCrafting: LG,
           craftRecipe: () => ({
-            aC: 0,
-            yl: null,
+            uV: 0,
+            ZU: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: Zu,
-          setShopOpen: Zu,
-          buyShopItem: Zu,
-          lobbyManage: Zu,
-          sendChatMessage: Zu,
-          ignorePlayer: Zu,
-          reportPlayer: Zu,
-          reportWorldCodeChat: Zu,
-          requestDiscordReportKey: Zu,
-          reportLobbyOrGame: Zu,
-          playEmote: Zu,
-          updateMyCosmetic: Zu,
-          writeOnBoard: Zu,
-          writeBook: Zu,
-          writeNameTag: Zu,
-          setCustomLobbyBlock: Zu,
-          openIronChest: Zu,
-          sendCodeCollab: Zu,
-          clickCodeBlock: Zu,
-          bindCustomButtonKeys: Zu,
-          pressCustomButton: Zu,
-          moveReplayFreecam: Zu,
-          holdReplayFreecamVertical: Zu,
-          respawn: Zu,
-          wakeUp: Zu,
-          requestLeaderboard: Zu,
-          completeTask: Zu,
-          setServerCookie: Zu,
-          answerUiRequest: Zu,
-          chooseRewardedAd: Zu,
-          setCameraZoom: Zu,
-          setFreeCameraMovesFly: Zu,
-          setBlockHighlight: Zu,
-          setCrosshairInteractPrompt: Zu,
-          setLookSensitivity: Zu,
-          replayAction: Zu,
-          setReplayPlaying: Zu,
-          seekReplay: Zu,
-          setReplayCameraMode: Zu,
-          syncReplayCameraMode: Zu,
-          setReplayCameraKeyframe: Zu,
-          moveReplayCameraKeyframe: Zu,
-          deleteReplayCameraKeyframes: Zu,
-          setReplayPlaybackMark: Zu,
+          enchantItem: LG,
+          setShopOpen: LG,
+          buyShopItem: LG,
+          lobbyManage: LG,
+          sendChatMessage: LG,
+          ignorePlayer: LG,
+          reportPlayer: LG,
+          reportWorldCodeChat: LG,
+          requestDiscordReportKey: LG,
+          reportLobbyOrGame: LG,
+          playEmote: LG,
+          updateMyCosmetic: LG,
+          writeOnBoard: LG,
+          writeBook: LG,
+          writeNameTag: LG,
+          setCustomLobbyBlock: LG,
+          openIronChest: LG,
+          sendCodeCollab: LG,
+          clickCodeBlock: LG,
+          bindCustomButtonKeys: LG,
+          pressCustomButton: LG,
+          moveReplayFreecam: LG,
+          holdReplayFreecamVertical: LG,
+          respawn: LG,
+          wakeUp: LG,
+          requestLeaderboard: LG,
+          completeTask: LG,
+          setServerCookie: LG,
+          answerUiRequest: LG,
+          chooseRewardedAd: LG,
+          setCameraZoom: LG,
+          setFreeCameraMovesFly: LG,
+          setBlockHighlight: LG,
+          setCrosshairInteractPrompt: LG,
+          setLookSensitivity: LG,
+          replayAction: LG,
+          setReplayPlaying: LG,
+          seekReplay: LG,
+          setReplayCameraMode: LG,
+          syncReplayCameraMode: LG,
+          setReplayCameraKeyframe: LG,
+          moveReplayCameraKeyframe: LG,
+          deleteReplayCameraKeyframes: LG,
+          setReplayPlaybackMark: LG,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: Zu,
-          exportReplayVideo: Zu,
-          toggleRecording: Zu,
-          saveClip: Zu,
-          setRecorderPrefs: Zu,
-          setReplayViewerOpen: Zu
+          holdReplayForShaderPackFailure: LG,
+          exportReplayVideo: LG,
+          toggleRecording: LG,
+          saveClip: LG,
+          setRecorderPrefs: LG,
+          setReplayViewerOpen: LG
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => su.e,
-          worldCodeAiGameState: () => su.f
+          worldCodeAiChunk: () => wG.e,
+          worldCodeAiGameState: () => wG.i
         },
         lookups: {
-          localPos: () => Xu,
+          localPos: () => yG,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -545,316 +545,316 @@ export const modules = {
         }
       }
   },
-  40840: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => du,
-      i: () => Ju,
-      j: () => au,
-      l: () => wu,
-      p: () => Gu
+  40963: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => CG,
+      g: () => iG,
+      i: () => WG,
+      l: () => uG,
+      n: () => oG
     });
-    var su = ju(39547),
-      Uu = ju(1278),
-      Zu = ju(2011),
-      Xu = ju(2019),
-      lu = ju(3475),
-      qu = ju(37208),
-      fu = ju(1369),
-      Cu = ju(40847),
-      bu = ju(4986),
-      cu = ju(2516),
-      Nu = ju(40854),
-      Ou = ju(40856),
-      Yu = ju(40901);
-    let hu = null;
+    var wG = ZG(39657),
+      SG = ZG(1177),
+      LG = ZG(1923),
+      yG = ZG(1939),
+      kG = ZG(3267),
+      UG = ZG(37167),
+      YG = ZG(1287),
+      VG = ZG(40971),
+      pG = ZG(4842),
+      fG = ZG(2380),
+      QG = ZG(40976),
+      KG = ZG(40984),
+      hG = ZG(41020);
+    let dG = null;
 
-    function Du(uu) {
-      const Eu = new Map,
-        ju = ju => {
-          if ("string" !== typeof ju) return;
-          let su = Eu.get(ju);
-          return void 0 === su && (su = uu(ju), void 0 !== su && Eu.set(ju, su)), su
+    function JG(GG) {
+      const bG = new Map,
+        ZG = ZG => {
+          if ("string" !== typeof ZG) return;
+          let wG = bG.get(ZG);
+          return void 0 === wG && (wG = GG(ZG), void 0 !== wG && bG.set(ZG, wG)), wG
         };
       return new Proxy({}, {
-        get: (uu, Eu) => ju(Eu),
-        has: (uu, Eu) => void 0 !== ju(Eu)
+        get: (GG, bG) => ZG(bG),
+        has: (GG, bG) => void 0 !== ZG(bG)
       })
     }
 
-    function gu(uu) {
-      const Eu = (0, lu.b)(uu);
-      return void 0 !== Eu && (0, lu.c)(Eu) === uu
+    function rG(GG) {
+      const bG = (0, kG.c)(GG);
+      return void 0 !== bG && (0, kG.f)(bG) === GG
     }
 
-    function Mu(uu) {
-      var Eu;
-      const ju = null === (Eu = (0, Cu.l)()) || void 0 === Eu ? void 0 : Eu.tables;
-      if (void 0 === ju || !gu(uu)) return;
-      const su = {
-          displayName: ju.getDisplayName(uu)
+    function zG(GG) {
+      var bG;
+      const ZG = null === (bG = (0, VG.f)()) || void 0 === bG ? void 0 : bG.tables;
+      if (void 0 === ZG || !rG(GG)) return;
+      const wG = {
+          displayName: ZG.getDisplayName(GG)
         },
-        Uu = ju.getItemStat(uu, "description");
-      void 0 !== Uu && null !== Uu && (su.description = Uu);
+        SG = ZG.getItemStat(GG, "description");
+      void 0 !== SG && null !== SG && (wG.description = SG);
       const {
-        rootName: Zu
-      } = ju.getMetaInfo(uu);
-      Zu !== uu && (su.rootName = Zu);
-      const Xu = ju.getItemStat(uu, "armourReduction");
-      return void 0 !== Xu && null !== Xu && (su.armourReduction = Xu), su
-    }(0, Cu.A)((uu => {
-      hu = uu
+        rootName: LG
+      } = ZG.getMetaInfo(GG);
+      LG !== GG && (wG.rootName = LG);
+      const yG = ZG.getItemStat(GG, "armourReduction");
+      return void 0 !== yG && null !== yG && (wG.armourReduction = yG), wG
+    }(0, VG.r)((GG => {
+      dG = GG
     }));
-    const eu = (0, Xu.i)("DisplayName", "Description");
+    const EG = (0, yG.h)("DisplayName", "Description");
 
-    function Gu() {
-      return Boolean(Zu.e.get("useInventory") && Zu.e.get("useFullInventory"))
+    function oG() {
+      return Boolean(LG.c.get("useInventory") && LG.c.get("useFullInventory"))
     }
-    let pu = null;
-    const wu = {
+    let XG = null;
+    const uG = {
         inventory: function() {
-          const uu = Yu.c.states.inventory;
-          let Eu = null;
-          const ju = uu => {
-            var ju;
-            return null === uu.chest ? uu : ((null === (ju = Eu) || void 0 === ju ? void 0 : ju.from) === uu && Eu.chestVersion === (0, Ou.e)() || (Eu = {
-              from: uu,
-              chestVersion: (0, Ou.e)(),
+          const GG = hG.c.states.inventory;
+          let bG = null;
+          const ZG = GG => {
+            var ZG;
+            return null === GG.chest ? GG : ((null === (ZG = bG) || void 0 === ZG ? void 0 : ZG.from) === GG && bG.chestVersion === (0, KG.c)() || (bG = {
+              from: GG,
+              chestVersion: (0, KG.c)(),
               view: {
-                ...uu,
-                chest: (0, Ou.m)(uu.chest)
+                ...GG,
+                chest: (0, KG.g)(GG.chest)
               }
-            }), Eu.view)
+            }), bG.view)
           };
           return {
-            current: () => ju(uu.current()),
-            watch: Eu => uu.watch((uu => {
-              Eu(ju(uu))
+            current: () => ZG(GG.current()),
+            watch: bG => GG.watch((GG => {
+              bG(ZG(GG))
             }))
           }
         }(),
-        crafting: Yu.c.states.crafting,
+        crafting: hG.c.states.crafting,
         stationItems: {
           current() {
-            var uu;
-            return (null === (uu = pu) || void 0 === uu ? void 0 : uu.namesVersion) !== (0, lu.g)() && (pu = {
-              namesVersion: (0, lu.g)(),
+            var GG;
+            return (null === (GG = XG) || void 0 === GG ? void 0 : GG.namesVersion) !== (0, kG.j)() && (XG = {
+              namesVersion: (0, kG.j)(),
               items: {
-                enchantable: Du((uu => {
-                  const Eu = (0, lu.b)(uu);
-                  return void 0 !== Eu && null !== hu && hu.enchantmentPerksOf(Eu).length > 0 || void 0
+                enchantable: JG((GG => {
+                  const bG = (0, kG.c)(GG);
+                  return void 0 !== bG && null !== dG && dG.enchantmentPerksOf(bG).length > 0 || void 0
                 })),
-                salvageable: Du((uu => !(!gu(uu) || null === (0, qu.d)(uu)) || void 0))
+                salvageable: JG((GG => !(!rG(GG) || null === (0, UG.b)(GG)) || void 0))
               }
-            }), pu.items
+            }), XG.items
           },
           watch: () => () => {}
         },
         itemInfo: function() {
-          let uu = null;
-          const Eu = () => {
-            var Eu;
-            return (null === (Eu = uu) || void 0 === Eu ? void 0 : Eu.namesVersion) !== (0, lu.g)() && (uu = {
-              namesVersion: (0, lu.g)(),
-              infos: Du(Mu)
-            }), uu.infos
+          let GG = null;
+          const bG = () => {
+            var bG;
+            return (null === (bG = GG) || void 0 === bG ? void 0 : bG.namesVersion) !== (0, kG.j)() && (GG = {
+              namesVersion: (0, kG.j)(),
+              infos: JG(zG)
+            }), GG.infos
           };
           return {
-            current: Eu,
-            watch: ju => (0, Xu.q)((su => {
-              su.some(eu) && (uu = null, ju(Eu()))
+            current: bG,
+            watch: ZG => (0, yG.q)((wG => {
+              wG.some(EG) && (GG = null, ZG(bG()))
             }))
           }
         }(),
-        creativeVisibility: (0, Xu.l)((function() {
-          const uu = {};
-          for (const Uu of null !== (Eu = null === (ju = hu) || void 0 === ju ? void 0 : ju.creativeItemIds()) && void 0 !== Eu ? Eu : []) {
-            var Eu, ju, Xu, qu;
-            const fu = (0, lu.c)(Uu);
-            if (void 0 === fu) continue;
-            const Cu = null !== (Xu = Zu.e.get((0, su.g)(fu, "showInCreativeInven"))) && void 0 !== Xu ? Xu : null === (qu = hu) || void 0 === qu ? void 0 : qu.showInCreativeInvenOf(Uu);
-            "boolean" === typeof Cu && (uu[fu] = Cu)
+        creativeVisibility: (0, yG.l)((function() {
+          const GG = {};
+          for (const SG of null !== (bG = null === (ZG = dG) || void 0 === ZG ? void 0 : ZG.creativeItemIds()) && void 0 !== bG ? bG : []) {
+            var bG, ZG, yG, UG;
+            const YG = (0, kG.f)(SG);
+            if (void 0 === YG) continue;
+            const VG = null !== (yG = LG.c.get((0, wG.i)(YG, "showInCreativeInven"))) && void 0 !== yG ? yG : null === (UG = dG) || void 0 === UG ? void 0 : UG.showInCreativeInvenOf(SG);
+            "boolean" === typeof VG && (GG[YG] = VG)
           }
           return {
-            publicLobby: (0, Uu.N)((0, fu.b)().lobbyName),
-            shownInGame: uu
+            publicLobby: (0, SG.K)((0, YG.d)().lobbyName),
+            shownInGame: GG
           }
-        }), ["connectedGameChanged"], (0, Xu.i)("ShowInCreativeInven")),
-        fullInventory: (0, Xu.l)(Gu, [], (0, Xu.k)("useInventory", "useFullInventory"))
+        }), ["connectedGameChanged"], (0, yG.h)("ShowInCreativeInven")),
+        fullInventory: (0, yG.l)(oG, [], (0, yG.i)("useInventory", "useFullInventory"))
       },
-      Ju = {
-        inventoryDropRequested: Yu.c.events.inventoryDropRequested,
-        chestToggled: Yu.c.events.chestToggled,
-        chestRefreshed: Yu.c.events.chestRefreshed,
-        inventorySynced: Yu.c.events.inventorySynced,
-        enchantingTableOpened: Yu.c.events.enchantingTableOpened
+      iG = {
+        inventoryDropRequested: hG.c.events.inventoryDropRequested,
+        chestToggled: hG.c.events.chestToggled,
+        chestRefreshed: hG.c.events.chestRefreshed,
+        inventorySynced: hG.c.events.inventorySynced,
+        enchantingTableOpened: hG.c.events.enchantingTableOpened
       },
-      du = {
-        removeInventoryItem: Yu.c.commands.removeInventoryItem,
-        swapInventorySlots: Yu.c.commands.swapInventorySlots,
-        moveInventoryItem: Yu.c.commands.moveInventoryItem,
-        quickMoveInventoryItem: Yu.c.commands.quickMoveInventoryItem,
-        closeChest: Yu.c.commands.closeChest,
-        setInventoryOpen(uu) {
-          (0, bu.g)(cu.x.InventoryOpen, uu ? cu.x.InventoryOpen : 0)
+      CG = {
+        removeInventoryItem: hG.c.commands.removeInventoryItem,
+        swapInventorySlots: hG.c.commands.swapInventorySlots,
+        moveInventoryItem: hG.c.commands.moveInventoryItem,
+        quickMoveInventoryItem: hG.c.commands.quickMoveInventoryItem,
+        closeChest: hG.c.commands.closeChest,
+        setInventoryOpen(GG) {
+          (0, pG.j)(fG.t.InventoryOpen, GG ? fG.t.InventoryOpen : 0)
         },
-        focusCrafting: Yu.c.commands.focusCrafting,
-        craftRecipe: Yu.c.commands.craftRecipe,
-        salvageItem: Yu.c.commands.salvageItem,
-        enchantItem: Yu.c.commands.enchantItem,
-        changeIronChestPasskey(uu) {
-          var Eu;
+        focusCrafting: hG.c.commands.focusCrafting,
+        craftRecipe: hG.c.commands.craftRecipe,
+        salvageItem: hG.c.commands.salvageItem,
+        enchantItem: hG.c.commands.enchantItem,
+        changeIronChestPasskey(GG) {
+          var bG;
           let {
-            pos: ju,
-            wl: su
-          } = uu;
-          null === (Eu = (0, Cu.l)()) || void 0 === Eu || Eu.send(Nu.c.ChangeIronChestPasskey, (0, Nu.k)({
-            RU: ju,
-            wl: su
+            pos: ZG,
+            Wk: wG
+          } = GG;
+          null === (bG = (0, VG.f)()) || void 0 === bG || bG.send(QG.b.ChangeIronChestPasskey, (0, QG.i)({
+            eS: ZG,
+            Wk: wG
           }))
         },
-        openIronChest(uu) {
-          var Eu;
+        openIronChest(GG) {
+          var bG;
           let {
-            pos: ju,
-            wl: su
-          } = uu;
-          null === (Eu = (0, Cu.l)()) || void 0 === Eu || Eu.send(Nu.c.OpenIronChest, (0, Nu.B)({
-            RU: ju,
-            wl: su
+            pos: ZG,
+            Wk: wG
+          } = GG;
+          null === (bG = (0, VG.f)()) || void 0 === bG || bG.send(QG.b.OpenIronChest, (0, QG.E)({
+            eS: ZG,
+            Wk: wG
           }))
         }
       },
-      au = {
-        enchantingOffer: Yu.c.queries.enchantingOffer
+      WG = {
+        enchantingOffer: hG.c.queries.enchantingOffer
       }
   },
-  40897: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => su,
-      h: () => Cu,
-      k: () => Xu,
-      l: () => Uu,
-      p: () => lu,
-      r: () => fu
+  41018: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => wG,
+      e: () => VG,
+      h: () => yG,
+      j: () => SG,
+      n: () => kG,
+      o: () => YG
     });
-    class su extends Error {
+    class wG extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function Uu(uu) {
-      return uu instanceof RangeError && /call stack/i.test(uu.message) || uu instanceof Error && "InternalError" === uu.name && /recursion/i.test(uu.message)
+    function SG(GG) {
+      return GG instanceof RangeError && /call stack/i.test(GG.message) || GG instanceof Error && "InternalError" === GG.name && /recursion/i.test(GG.message)
     }
-    const Zu = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const LG = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function Xu(uu) {
-      var Eu;
-      return uu instanceof WebAssembly.RuntimeError || uu instanceof su || Uu(uu) && Zu.test(null !== (Eu = uu.stack) && void 0 !== Eu ? Eu : "")
-    }
-
-    function lu(uu, Eu) {
-      if (Xu(uu)) throw uu;
-      console.error(Eu, uu)
+    function yG(GG) {
+      var bG;
+      return GG instanceof WebAssembly.RuntimeError || GG instanceof wG || SG(GG) && LG.test(null !== (bG = GG.stack) && void 0 !== bG ? bG : "")
     }
 
-    function qu(uu, Eu, ju, Uu, Zu) {
-      if (Eu % Uu !== 0 || Eu + ju > uu.byteLength) throw new su(`${Zu}: ${ju} bytes at ${Eu}, ${Uu}-aligned, outside ${uu.byteLength} bytes of memory`)
+    function kG(GG, bG) {
+      if (yG(GG)) throw GG;
+      console.error(bG, GG)
     }
 
-    function fu(uu, Eu, ju, su, Uu) {
-      return 0 === ju ? null : (qu(Eu, ju, su * uu.BYTES_PER_ELEMENT, uu.BYTES_PER_ELEMENT, Uu), new uu(Eu, ju, su))
+    function UG(GG, bG, ZG, SG, LG) {
+      if (bG % SG !== 0 || bG + ZG > GG.byteLength) throw new wG(`${LG}: ${ZG} bytes at ${bG}, ${SG}-aligned, outside ${GG.byteLength} bytes of memory`)
     }
 
-    function Cu(uu, Eu, ju, su, Uu) {
-      return 0 === Eu ? null : (qu(uu, Eu, ju, su, Uu), new DataView(uu, Eu, ju))
+    function YG(GG, bG, ZG, wG, SG) {
+      return 0 === ZG ? null : (UG(bG, ZG, wG * GG.BYTES_PER_ELEMENT, GG.BYTES_PER_ELEMENT, SG), new GG(bG, ZG, wG))
+    }
+
+    function VG(GG, bG, ZG, wG, SG) {
+      return 0 === bG ? null : (UG(GG, bG, ZG, wG, SG), new DataView(GG, bG, ZG))
     }
   },
-  40847: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      A: () => bu,
-      B: () => Ou,
-      e: () => su,
-      i: () => Du,
-      l: () => Yu,
-      m: () => hu,
-      p: () => cu,
-      s: () => Nu,
-      w: () => Cu
+  40971: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => wG,
+      e: () => JG,
+      f: () => hG,
+      g: () => dG,
+      k: () => fG,
+      o: () => QG,
+      q: () => VG,
+      r: () => pG,
+      v: () => KG
     });
-    class su extends Error {
-      constructor(uu) {
-        super(`the join's code did not load: ${uu instanceof Error?uu.message:String(uu)}`, {
-          cause: uu
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === uu || void 0 === uu ? void 0 : uu.request
+    class wG extends Error {
+      constructor(GG) {
+        super(`the join's code did not load: ${GG instanceof Error?GG.message:String(GG)}`, {
+          cause: GG
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === GG || void 0 === GG ? void 0 : GG.request
       }
     }
-    let Uu = null,
-      Zu = null,
-      Xu = null;
-    const lu = [];
-    let qu = null;
+    let SG = null,
+      LG = null,
+      yG = null;
+    const kG = [];
+    let UG = null;
 
-    function fu(uu, Eu) {
+    function YG(GG, bG) {
       try {
-        uu(Eu)
-      } catch (ju) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", ju)
+        GG(bG)
+      } catch (ZG) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", ZG)
       }
     }
 
-    function Cu() {
-      return qu
+    function VG() {
+      return UG
     }
 
-    function bu(uu) {
-      lu.push(uu), null !== qu && fu(uu, qu)
+    function pG(GG) {
+      kG.push(GG), null !== UG && YG(GG, UG)
     }
 
-    function cu(uu) {
-      return Uu ??= Promise.all([ju.e(73), ju.e(98), ju.e(226), ju.e(78), ju.e(227), ju.e(201), ju.e(97), ju.e(246), ju.e(273), ju.e(199), ju.e(214), ju.e(191), ju.e(198), ju.e(193), ju.e(144), ju.e(88), ju.e(122), ju.e(252), ju.e(57)]).then((() => ju(42862))).then((Eu => {
-        Eu.loadAudio(uu), qu = Eu;
-        for (const uu of lu) fu(uu, Eu);
-        return Eu
-      })).catch((uu => {
-        throw Uu = null, uu
-      })), Uu
+    function fG(GG) {
+      return SG ??= Promise.all([ZG.e(73), ZG.e(98), ZG.e(226), ZG.e(78), ZG.e(227), ZG.e(201), ZG.e(97), ZG.e(246), ZG.e(273), ZG.e(199), ZG.e(214), ZG.e(191), ZG.e(198), ZG.e(193), ZG.e(144), ZG.e(88), ZG.e(122), ZG.e(252), ZG.e(57)]).then((() => ZG(43025))).then((bG => {
+        bG.loadAudio(GG), UG = bG;
+        for (const GG of kG) YG(GG, bG);
+        return bG
+      })).catch((GG => {
+        throw SG = null, GG
+      })), SG
     }
-    async function Nu(uu, Eu) {
+    async function QG(GG, bG) {
       try {
-        const ju = await cu(uu);
-        await ju.loadClientGame(Eu)
-      } catch (ju) {
-        throw new su(ju)
+        const ZG = await fG(GG);
+        await ZG.loadClientGame(bG)
+      } catch (ZG) {
+        throw new wG(ZG)
       }
     }
 
-    function Ou(uu, Eu) {
-      Zu = {
-        running: uu,
-        shell: Eu
+    function KG(GG, bG) {
+      LG = {
+        running: GG,
+        shell: bG
       }
     }
 
-    function Yu() {
-      return Xu
+    function hG() {
+      return yG
     }
-    async function hu(uu) {
-      const Eu = Zu;
-      if ((null === Eu || void 0 === Eu ? void 0 : Eu.running) !== uu) throw new Error("the core's session has ended");
-      const ju = await cu(Eu.shell.audio).catch((uu => {
-        throw new su(uu)
+    async function dG(GG) {
+      const bG = LG;
+      if ((null === bG || void 0 === bG ? void 0 : bG.running) !== GG) throw new Error("the core's session has ended");
+      const ZG = await fG(bG.shell.audio).catch((GG => {
+        throw new wG(GG)
       }));
-      if (null !== Xu) return Xu;
-      if (Zu !== Eu || uu.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (Xu = ju.startGameHost(uu, Eu.shell), null === Xu) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return Xu
+      if (null !== yG) return yG;
+      if (LG !== bG || GG.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (yG = ZG.startGameHost(GG, bG.shell), null === yG) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return yG
     }
 
-    function Du() {
-      null !== Xu && (null !== qu ? qu.endGameHost(Xu) : Xu.closeGame()), Xu = null, Zu = null
+    function JG() {
+      null !== yG && (null !== UG ? UG.endGameHost(yG) : yG.closeGame()), yG = null, LG = null
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

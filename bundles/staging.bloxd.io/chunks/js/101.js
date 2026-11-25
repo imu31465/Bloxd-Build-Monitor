@@ -1,391 +1,391 @@
 export const id = 101;
 export const ids = [101];
 export const modules = {
-  34439: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      EverythingMenu: () => tl
+  34359: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      EverythingMenu: () => Rk
     });
-    var su = ju(58),
-      Uu = ju(1105),
-      Zu = ju.n(Uu),
-      Xu = ju(1244),
-      lu = ju(1116),
-      qu = ju(2130),
-      fu = ju(1506),
-      Cu = ju(1170),
-      bu = ju(1154);
+    var wG = ZG(51),
+      SG = ZG(1006),
+      LG = ZG.n(SG),
+      yG = ZG(1151),
+      kG = ZG(1016),
+      UG = ZG(2053),
+      YG = ZG(1393),
+      VG = ZG(1081),
+      pG = ZG(1067);
 
-    function cu(uu) {
+    function fG(GG) {
       let {
-        items: Eu,
-        link: ju,
-        onClick: su,
-        selectedItemId: Uu,
-        className: cu,
-        padStartsOnTab: Nu = !0
-      } = uu;
+        items: bG,
+        link: ZG,
+        onClick: wG,
+        selectedItemId: SG,
+        className: fG,
+        padStartsOnTab: QG = !0
+      } = GG;
       const {
-        t: Ou
-      } = (0, Xu.A)(), Yu = (0, Cu.l)(), hu = [];
-      for (const Zu of Eu) {
-        var Du;
-        const uu = hu[hu.length - 1];
-        var gu;
-        if (uu && uu.title === (null !== (Du = Zu.section) && void 0 !== Du ? Du : null)) uu.items.push(Zu);
-        else hu.push({
-          title: null !== (gu = Zu.section) && void 0 !== gu ? gu : null,
-          items: [Zu]
+        t: KG
+      } = (0, yG.w)(), hG = (0, VG.g)(), dG = [];
+      for (const LG of bG) {
+        var JG;
+        const GG = dG[dG.length - 1];
+        var rG;
+        if (GG && GG.title === (null !== (JG = LG.section) && void 0 !== JG ? JG : null)) GG.items.push(LG);
+        else dG.push({
+          title: null !== (rG = LG.section) && void 0 !== rG ? rG : null,
+          items: [LG]
         })
       }
-      return (0, bu.jsxs)("div", {
-        className: Zu()("MenuSideBarBody", cu),
+      return (0, pG.jsxs)("div", {
+        className: LG()("MenuSideBarBody", fG),
         "data-pad-tabs": "2",
-        children: [hu.map(((uu, Eu) => {
-          var ju;
-          return (0, bu.jsxs)("div", {
+        children: [dG.map(((GG, bG) => {
+          var ZG;
+          return (0, pG.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [uu.title && (0, bu.jsx)("div", {
+            children: [GG.title && (0, pG.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: Ou(uu.title)
-            }), uu.items.map((uu => {
-              var Eu;
-              const ju = !!uu.iconElement || !!uu.faIcon;
-              return (0, bu.jsxs)("div", {
+              children: KG(GG.title)
+            }), GG.items.map((GG => {
+              var bG;
+              const ZG = !!GG.iconElement || !!GG.faIcon;
+              return (0, pG.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": Uu === uu.id ? "true" : void 0,
-                "data-pad-default-focus": Nu && Uu === uu.id || void 0,
-                className: Zu()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: Uu === uu.id
+                "data-pad-selected": SG === GG.id ? "true" : void 0,
+                "data-pad-default-focus": QG && SG === GG.id || void 0,
+                className: LG()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: SG === GG.id
                 }),
                 onClick: () => {
-                  su(uu.id)
+                  wG(GG.id)
                 },
-                children: [ju && (0, bu.jsx)("div", {
+                children: [ZG && (0, pG.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (Eu = uu.iconElement) && void 0 !== Eu ? Eu : (0, bu.jsx)(lu.e, {
-                    name: uu.faIcon
+                  children: null !== (bG = GG.iconElement) && void 0 !== bG ? bG : (0, pG.jsx)(kG.c, {
+                    name: GG.faIcon
                   })
-                }), (!Yu || !ju) && (0, bu.jsx)("div", {
-                  children: Ou(uu.title)
-                }), uu.redDot && (0, bu.jsx)(qu.d, {
+                }), (!hG || !ZG) && (0, pG.jsx)("div", {
+                  children: KG(GG.title)
+                }), GG.redDot && (0, pG.jsx)(UG.e, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, uu.id)
+              }, GG.id)
             }))]
-          }, null !== (ju = uu.title) && void 0 !== ju ? ju : Eu)
-        })), ju && (0, bu.jsxs)("div", {
-          ...(0, fu.ib)(),
+          }, null !== (ZG = GG.title) && void 0 !== ZG ? ZG : bG)
+        })), ZG && (0, pG.jsxs)("div", {
+          ...(0, YG.P)(),
           "data-pad-destructive": !0,
           className: "MenuSideBarBodyTab MenuSideBarLink",
-          onClick: ju.onClick,
-          children: [(0, bu.jsx)("div", {
+          onClick: ZG.onClick,
+          children: [(0, pG.jsx)("div", {
             className: "MenuSideBarBodyTabIcon",
-            children: (0, bu.jsx)(lu.e, {
-              name: ju.faIcon
+            children: (0, pG.jsx)(kG.c, {
+              name: ZG.faIcon
             })
-          }), (0, bu.jsx)("div", {
-            children: Ou(ju.title)
-          }), (0, bu.jsx)(lu.e, {
+          }), (0, pG.jsx)("div", {
+            children: KG(ZG.title)
+          }), (0, pG.jsx)(kG.c, {
             name: "arrow-right",
             className: "MenuSideBarLinkArrow"
           })]
         })]
       })
     }
-    var Nu = ju(3179),
-      Ou = ju(1178),
-      Yu = ju(2543),
-      hu = ju(3285),
-      Du = ju(91),
-      gu = ju(1986),
-      Mu = ju(2362),
-      eu = ju(2365),
-      Gu = ju(1723),
-      pu = ju(1393),
-      wu = ju(5155),
-      Ju = ju(22),
-      du = ju(34444);
+    var QG = ZG(3004),
+      KG = ZG(1092),
+      hG = ZG(2409),
+      dG = ZG(3100),
+      JG = ZG(80),
+      rG = ZG(1895),
+      zG = ZG(2249),
+      EG = ZG(2256),
+      oG = ZG(1621),
+      XG = ZG(1302),
+      uG = ZG(5019),
+      iG = ZG(17),
+      CG = ZG(34362);
 
-    function au(uu) {
+    function WG(GG) {
       let {
-        setApplySettingsCallback: Eu
-      } = uu;
+        setApplySettingsCallback: bG
+      } = GG;
       const {
-        clientEscMenuOptions: ju
-      } = (0, Ju.l)(["clientEscMenuOptions"]), [Uu, Zu] = (0, su.useState)(!1), [Xu, lu] = (0, su.useState)(!1), [qu, Cu] = (0, su.useState)(6400), [cu, Nu] = (0, su.useState)(3600), [Ou, Yu] = (0, su.useState)(!1), [hu, Du] = (0, su.useState)(!1);
+        clientEscMenuOptions: ZG
+      } = (0, iG.o)(["clientEscMenuOptions"]), [SG, LG] = (0, wG.useState)(!1), [yG, kG] = (0, wG.useState)(!1), [UG, VG] = (0, wG.useState)(6400), [fG, QG] = (0, wG.useState)(3600), [KG, hG] = (0, wG.useState)(!1), [dG, JG] = (0, wG.useState)(!1);
 
-      function gu(uu) {
-        const Eu = "screenshot" === uu ? lu : Zu;
-        Eu(!0);
-        const ju = Ou ? "normals" : hu ? "depth" : null;
-        du.devTools.downloadScene(uu, {
-          width: qu,
-          height: cu,
-          colouring: ju
-        }).catch((uu => {
-          console.error("Couldn't download the scene", uu)
+      function rG(GG) {
+        const bG = "screenshot" === GG ? kG : LG;
+        bG(!0);
+        const ZG = KG ? "normals" : dG ? "depth" : null;
+        CG.devTools.downloadScene(GG, {
+          width: UG,
+          height: fG,
+          colouring: ZG
+        }).catch((GG => {
+          console.error("Couldn't download the scene", GG)
         })).finally((() => {
-          Eu(!1)
+          bG(!1)
         }))
       }
-      return (0, bu.jsxs)("div", {
+      return (0, pG.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, bu.jsx)(wu.b, {
+        children: [(0, pG.jsx)(uG.c, {
           label: "Disable Ambient Occlusion",
-          checked: ju.disableAmbientOcclusion,
-          onClick: uu => {
-            Ju.d.setClientEscMenuOptions({
-              disableAmbientOcclusion: uu
-            }), Eu((() => wu.l))
+          checked: ZG.disableAmbientOcclusion,
+          onClick: GG => {
+            iG.e.setClientEscMenuOptions({
+              disableAmbientOcclusion: GG
+            }), bG((() => uG.g))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), du.devTools.supports("ambientLight") && (0, bu.jsx)(wu.h, {
+        }), CG.devTools.supports("ambientLight") && (0, pG.jsx)(uG.f, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: ju.ambientLightIntensity,
-          onChange: uu => {
-            du.devTools.setAmbientLightIntensity(uu).then((() => {
-              Ju.d.setClientEscMenuOptions({
-                ambientLightIntensity: uu
+          initValue: ZG.ambientLightIntensity,
+          onChange: GG => {
+            CG.devTools.setAmbientLightIntensity(GG).then((() => {
+              iG.e.setClientEscMenuOptions({
+                ambientLightIntensity: GG
               })
-            })).catch((uu => {
-              console.error("Couldn't set the ambient light", uu)
+            })).catch((GG => {
+              console.error("Couldn't set the ambient light", GG)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), du.devTools.supports("weaponRaycasts") && (0, bu.jsx)(wu.b, {
+        }), CG.devTools.supports("weaponRaycasts") && (0, pG.jsx)(uG.c, {
           label: "Show Weapon Raycasts",
-          checked: ju.showWeaponRaycasts,
-          onClick: uu => {
-            Ju.d.setClientEscMenuOptions({
-              showWeaponRaycasts: uu
+          checked: ZG.showWeaponRaycasts,
+          onClick: GG => {
+            iG.e.setClientEscMenuOptions({
+              showWeaponRaycasts: GG
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), du.devTools.supports("sceneDownload") && (0, bu.jsxs)("div", {
+        }), CG.devTools.supports("sceneDownload") && (0, pG.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, bu.jsxs)("div", {
+          children: [(0, pG.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, bu.jsx)(wu.b, {
+            children: [(0, pG.jsx)(uG.c, {
               label: "Apply normal-based coloring",
-              checked: Ou,
-              onClick: uu => {
-                Yu(uu), uu && Du(!1)
+              checked: KG,
+              onClick: GG => {
+                hG(GG), GG && JG(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, bu.jsx)(wu.b, {
+            }), (0, pG.jsx)(uG.c, {
               label: "Apply depth-based coloring",
-              checked: hu,
-              onClick: uu => {
-                Du(uu), uu && Yu(!1)
+              checked: dG,
+              onClick: GG => {
+                JG(GG), GG && hG(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, bu.jsxs)("div", {
+            }), (0, pG.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, bu.jsx)("div", {
+              children: [(0, pG.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, bu.jsx)(Gu.d, {
+              }), (0, pG.jsx)(oG.b, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (uu, Eu) => {
-                  const ju = parseInt(uu) || 6400;
-                  Cu(ju)
+                onValueChange: (GG, bG) => {
+                  const ZG = parseInt(GG) || 6400;
+                  VG(ZG)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: qu.toString()
-              }), (0, bu.jsx)("span", {
+                defaultValue: UG.toString()
+              }), (0, pG.jsx)("span", {
                 children: "X"
-              }), (0, bu.jsx)(Gu.d, {
+              }), (0, pG.jsx)(oG.b, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (uu, Eu) => {
-                  const ju = parseInt(uu) || 3600;
-                  Nu(ju)
+                onValueChange: (GG, bG) => {
+                  const ZG = parseInt(GG) || 3600;
+                  QG(ZG)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: cu.toString()
+                defaultValue: fG.toString()
               })]
-            }), (0, bu.jsxs)("div", {
+            }), (0, pG.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, bu.jsxs)(fu.f, {
+              children: [(0, pG.jsxs)(YG.d, {
                 onClick: () => {
-                  gu("screenshot")
+                  rG("screenshot")
                 },
-                disabled: Xu,
-                children: [Xu && (0, bu.jsx)(pu.b, {}), "Download Screenshot"]
-              }), (0, bu.jsxs)(fu.f, {
+                disabled: yG,
+                children: [yG && (0, pG.jsx)(XG.b, {}), "Download Screenshot"]
+              }), (0, pG.jsxs)(YG.d, {
                 onClick: () => {
-                  gu("glb")
+                  rG("glb")
                 },
-                disabled: Uu,
-                children: [Uu && (0, bu.jsx)(pu.b, {}), "Download GLB"]
+                disabled: SG,
+                children: [SG && (0, pG.jsx)(XG.b, {}), "Download GLB"]
               })]
             })]
-          }), (0, bu.jsx)("div", {
+          }), (0, pG.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var Pu = ju(131),
-      ou = ju(1183),
-      ku = ju(34452),
-      mu = ju(3186),
-      vu = ju(1570),
-      Ku = ju(1320),
-      Vu = ju(1293),
-      ru = ju(3253),
-      Qu = ju(2098),
-      iu = ju(1559),
-      Wu = ju(349),
-      Su = ju(2374),
-      Iu = ju(2380),
-      Fu = ju(3204),
-      Bu = ju(2820),
-      Lu = ju(1693),
-      tu = ju(3221),
-      xu = ju(3258),
-      Tu = ju(207);
-    var Hu = ju(1843),
-      Au = ju(3201);
-    async function nu() {
+    var mG = ZG(116),
+      IG = ZG(1096),
+      FG = ZG(34370),
+      vG = ZG(3011),
+      aG = ZG(1444),
+      cG = ZG(1230),
+      lG = ZG(1192),
+      jG = ZG(3078),
+      PG = ZG(2015),
+      MG = ZG(1431),
+      AG = ZG(352),
+      sG = ZG(2264),
+      qG = ZG(2266),
+      nG = ZG(3033),
+      gG = ZG(2671),
+      eG = ZG(1583),
+      RG = ZG(3055),
+      TG = ZG(3080),
+      HG = ZG(200);
+    var tG = ZG(1775),
+      DG = ZG(3026);
+    async function NG() {
       try {
-        return function(uu) {
-          const Eu = new Map;
+        return function(GG) {
+          const bG = new Map;
           for (const {
-              store: ju,
-              status: su,
-              autoRenewStatus: Uu,
-              managementUrl: Zu
+              store: ZG,
+              status: wG,
+              autoRenewStatus: SG,
+              managementUrl: LG
             }
-            of Object.values(uu.subscriptions)) !(0, Fu.j)(ju) || (0, Fu.n)(su) || "willNotRenew" === Uu || Eu.has(ju) || Eu.set(ju, null !== Zu && void 0 !== Zu ? Zu : Fu.q[ju]);
-          return Array.from(Eu, (uu => {
-            let [Eu, ju] = uu;
+            of Object.values(GG.subscriptions)) !(0, nG.e)(ZG) || (0, nG.f)(wG) || "willNotRenew" === SG || bG.has(ZG) || bG.set(ZG, null !== LG && void 0 !== LG ? LG : nG.j[ZG]);
+          return Array.from(bG, (GG => {
+            let [bG, ZG] = GG;
             return {
-              store: Eu,
-              managementUrl: ju
+              store: bG,
+              managementUrl: ZG
             }
           }))
-        }(await (0, Hu.i)((0, Au.getBillingClient)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
-      } catch (uu) {
-        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", uu), null
+        }(await (0, tG.n)((0, DG.getBillingClient)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
+      } catch (GG) {
+        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", GG), null
       }
     }
 
-    function yu(uu) {
+    function OG(GG) {
       const {
-        t: Eu,
-        selectedLanguage: ju
-      } = (0, Xu.A)(), {
-        userContext: Uu
-      } = (0, Ou.c)(), {
-        superRankInfo: Zu
-      } = Uu, lu = (0, Iu.usePurchasesAllowed)(), qu = uu && ((0, Wu.Ec)(Zu) || Uu.ranksMayChange) && lu, {
-        accountId: fu,
-        data: Cu
-      } = (0, Bu.e)(tu.b, qu);
-      if ((0, su.useEffect)((() => {
-          if (qu) return tu.b.watchAccount(), Lu.b.addRefetchListener("billing", (uu => {
-            "reconnected" === uu ? tu.b.refreshAfterReconnect() : tu.b.refresh()
+        t: bG,
+        selectedLanguage: ZG
+      } = (0, yG.w)(), {
+        userContext: SG
+      } = (0, KG.e)(), {
+        superRankInfo: LG
+      } = SG, kG = (0, qG.usePurchasesAllowed)(), UG = GG && ((0, AG.Jc)(LG) || SG.ranksMayChange) && kG, {
+        accountId: YG,
+        data: VG
+      } = (0, gG.i)(RG.e, UG);
+      if ((0, wG.useEffect)((() => {
+          if (UG) return RG.e.watchAccount(), eG.b.addRefetchListener("billing", (GG => {
+            "reconnected" === GG ? RG.e.refreshAfterReconnect() : RG.e.refresh()
           }))
-        }), [qu]), !qu || !(0, Wu.Ec)(Zu) || null === Cu || fu !== Uu.whamm) return null;
-      const bu = function(uu, Eu, ju) {
-        const su = xu.i[(0, xu.e)(xu.i, Eu)],
-          Uu = void 0 === su ? void 0 : (0, Tu.c)(uu.entitlements, su.entitlementId);
-        return void 0 === Uu || null === Uu.expiresAt || (0, Fu.g)(Uu) <= ju ? null : Uu.willRenew && null === Uu.billingIssueDetectedAt ? {
+        }), [UG]), !UG || !(0, AG.Jc)(LG) || null === VG || YG !== SG.whamm) return null;
+      const pG = function(GG, bG, ZG) {
+        const wG = TG.g[(0, TG.e)(TG.g, bG)],
+          SG = void 0 === wG ? void 0 : (0, HG.c)(GG.entitlements, wG.entitlementId);
+        return void 0 === SG || null === SG.expiresAt || (0, nG.c)(SG) <= ZG ? null : SG.willRenew && null === SG.billingIssueDetectedAt ? {
           renews: !0,
-          at: Math.max(Uu.expiresAt, ju)
+          at: Math.max(SG.expiresAt, ZG)
         } : {
           renews: !1,
-          at: (0, Fu.g)(Uu)
+          at: (0, nG.c)(SG)
         }
-      }(Cu, Zu.tier, Date.now());
-      if (null === bu) return null;
-      const cu = bu.renews ? "store:renewsOn" : "store:endsOn",
-        Nu = new Date(bu.at).toLocaleDateString((0, Xu.n)(ju.code, cu), {
+      }(VG, LG.tier, Date.now());
+      if (null === pG) return null;
+      const fG = pG.renews ? "store:renewsOn" : "store:endsOn",
+        QG = new Date(pG.at).toLocaleDateString((0, yG.j)(ZG.code, fG), {
           year: "numeric",
           month: "short",
           day: "numeric"
         }),
-        Yu = (0, Iu.getBillingStore)(),
-        hu = null !== Yu && (0, Fu.j)(Yu) ? function(uu, Eu) {
-          var ju;
-          const su = Object.values(uu.subscriptions).find((uu => uu.store === Eu && !(0, Fu.n)(uu.status)));
-          return void 0 === su ? null : null !== (ju = su.managementUrl) && void 0 !== ju ? ju : Fu.q[Eu]
-        }(Cu, Yu) : null;
+        hG = (0, qG.getBillingStore)(),
+        dG = null !== hG && (0, nG.e)(hG) ? function(GG, bG) {
+          var ZG;
+          const wG = Object.values(GG.subscriptions).find((GG => GG.store === bG && !(0, nG.f)(GG.status)));
+          return void 0 === wG ? null : null !== (ZG = wG.managementUrl) && void 0 !== ZG ? ZG : nG.j[bG]
+        }(VG, hG) : null;
       return {
-        text: Eu(cu, {
-          date: Nu
+        text: bG(fG, {
+          date: QG
         }),
-        manageUrl: hu
+        manageUrl: dG
       }
     }
-    var zu = ju(1419),
-      Ru = ju(1268),
-      uE = ju(5052),
-      EE = ju(1533),
-      jE = ju(3854),
-      sE = ju(2351);
+    var xG = ZG(1320),
+      BG = ZG(1173),
+      Gb = ZG(4911),
+      bb = ZG(1415),
+      Zb = ZG(3651),
+      wb = ZG(2239);
 
-    function UE(uu) {
+    function Sb(GG) {
       let {
-        showing: Eu
-      } = uu;
+        showing: bG
+      } = GG;
       const {
-        t: ju
-      } = (0, Xu.A)(), {
-        data: su,
-        failed: Uu
-      } = (0, Bu.e)(jE.d, Eu);
-      return 0 === (null === su || void 0 === su ? void 0 : su.length) || null === su && !Uu ? null : (0, bu.jsxs)("div", {
+        t: ZG
+      } = (0, yG.w)(), {
+        data: wG,
+        failed: SG
+      } = (0, gG.i)(Zb.f, bG);
+      return 0 === (null === wG || void 0 === wG ? void 0 : wG.length) || null === wG && !SG ? null : (0, pG.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, bu.jsx)("div", {
+        children: [(0, pG.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: ju("paymentHistory:title")
-        }), null === su && Uu && (0, bu.jsx)("div", {
+          children: ZG("paymentHistory:title")
+        }), null === wG && SG && (0, pG.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: ju("paymentHistory:loadFailed")
-        }), null !== su && (0, bu.jsx)("ul", {
+          children: ZG("paymentHistory:loadFailed")
+        }), null !== wG && (0, pG.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: su.map((uu => (0, bu.jsxs)("li", {
+          children: wG.map((GG => (0, pG.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, bu.jsx)(sE.b, {
-              entry: uu
-            }), (0, bu.jsxs)("div", {
+            children: [(0, pG.jsx)(wb.b, {
+              entry: GG
+            }), (0, pG.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, bu.jsx)("div", {
-                children: (0, sE.i)(ju, uu)
-              }), (0, bu.jsxs)("div", {
+              children: [(0, pG.jsx)("div", {
+                children: (0, wb.f)(ZG, GG)
+              }), (0, pG.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(uu.at).toLocaleDateString(), "number" === typeof uu.orderId && ` \xb7 ${ju("paymentHistory:order",{orderId:uu.orderId})}`]
+                children: [new Date(GG.at).toLocaleDateString(), "number" === typeof GG.orderId && ` \xb7 ${ZG("paymentHistory:order",{orderId:GG.orderId})}`]
               })]
             })]
-          }, (0, jE.c)(uu))))
+          }, (0, Zb.d)(GG))))
         })]
       })
     }
-    var ZE = ju(3209),
-      XE = ju(2386),
-      lE = ju(2209);
+    var Lb = ZG(3037),
+      yb = ZG(2273),
+      kb = ZG(2123);
 
-    function qE() {
-      (0, lE.d)({
+    function Ub() {
+      (0, kb.c)({
         titleKey: "payments:logInToRestore"
       })
     }
 
-    function fE(uu) {
+    function Yb(GG) {
       let {
-        status: Eu
-      } = uu;
-      switch (Eu) {
+        status: bG
+      } = GG;
+      switch (bG) {
         case "restored":
-          return (0, tu.f)(), {
+          return (0, RG.g)(), {
             key: "payments:purchasesRestored",
             failed: !1
           };
@@ -398,113 +398,113 @@ export const modules = {
       }
     }
 
-    function CE() {
-      const uu = (0, Au.usePageBillingClient)(),
+    function Vb() {
+      const GG = (0, DG.usePageBillingClient)(),
         {
-          userContext: Eu
-        } = (0, Ou.c)(),
-        [ju, Uu] = (0, su.useState)(!1),
-        [Zu, Xu] = (0, su.useState)(null);
+          userContext: bG
+        } = (0, KG.e)(),
+        [ZG, SG] = (0, wG.useState)(!1),
+        [LG, yG] = (0, wG.useState)(null);
       return {
-        restoring: ju,
-        notice: Zu,
+        restoring: ZG,
+        notice: LG,
         restore: () => {
-          Eu.isLoggedIn() ? (Uu(!0), Xu(null), uu.restorePurchases().then(fE, (uu => uu instanceof ZE.d && "loginRequired" === uu.code ? (qE(), null) : function(uu) {
-            return uu instanceof ZE.d && "storeBusy" === uu.code ? {
+          bG.isLoggedIn() ? (SG(!0), yG(null), GG.restorePurchases().then(Yb, (GG => GG instanceof Lb.e && "loginRequired" === GG.code ? (Ub(), null) : function(GG) {
+            return GG instanceof Lb.e && "storeBusy" === GG.code ? {
               key: "payments:storeBusy",
               failed: !0
-            } : (console.error("Billing: restoring purchases failed:", uu), (0, tu.f)(), {
+            } : (console.error("Billing: restoring purchases failed:", GG), (0, RG.g)(), {
               key: "payments:restoreFailed",
               failed: !0
             })
-          }(uu))).then(Xu).finally((() => {
-            Uu(!1)
-          }))) : qE()
+          }(GG))).then(yG).finally((() => {
+            SG(!1)
+          }))) : Ub()
         }
       }
     }
 
-    function bE(uu) {
+    function pb(GG) {
       let {
-        restoring: Eu,
-        notice: ju,
-        restore: Uu
-      } = uu;
+        restoring: bG,
+        notice: ZG,
+        restore: SG
+      } = GG;
       const {
-        t: lu
-      } = (0, Xu.A)(), qu = (0, Iu.usePurchasesAllowed)(), Cu = (0, Iu.getBillingStore)(), cu = (0, su.useRef)(null);
-      return (0, su.useEffect)((() => {
-        var uu;
-        null === (uu = cu.current) || void 0 === uu || uu.scrollIntoView({
+        t: kG
+      } = (0, yG.w)(), UG = (0, qG.usePurchasesAllowed)(), VG = (0, qG.getBillingStore)(), fG = (0, wG.useRef)(null);
+      return (0, wG.useEffect)((() => {
+        var GG;
+        null === (GG = fG.current) || void 0 === GG || GG.scrollIntoView({
           block: "nearest"
         })
-      }), [ju]), qu && (0, XE.b)(Cu) ? (0, bu.jsxs)("div", {
+      }), [ZG]), UG && (0, yb.b)(VG) ? (0, pG.jsxs)("div", {
         className: "AccountSettingsRestorePurchases",
-        children: [(0, bu.jsx)(fu.i, {
+        children: [(0, pG.jsx)(YG.h, {
           className: "AccountSettingsRestorePurchasesButton",
-          loading: Eu,
-          onClick: Uu,
-          children: lu("payments:restorePurchases")
-        }), null !== ju && (0, bu.jsx)("div", {
-          ref: cu,
-          className: Zu()("AccountSettingsRestorePurchasesNotice SmallTextBold", {
-            AccountSettingsRestorePurchasesFailed: ju.failed
+          loading: bG,
+          onClick: SG,
+          children: kG("payments:restorePurchases")
+        }), null !== ZG && (0, pG.jsx)("div", {
+          ref: fG,
+          className: LG()("AccountSettingsRestorePurchasesNotice SmallTextBold", {
+            AccountSettingsRestorePurchasesFailed: ZG.failed
           }),
-          children: lu(ju.key)
+          children: kG(ZG.key)
         })]
       }) : null
     }
-    var cE = ju(1947),
-      NE = ju(1301),
-      OE = ju(1405),
-      YE = ju(1255),
-      hE = ju(1362),
-      DE = ju(337),
-      gE = ju(2628);
-    const ME = {
+    var fb = ZG(1868),
+      Qb = ZG(1202),
+      Kb = ZG(1311),
+      hb = ZG(1163),
+      db = ZG(1275),
+      Jb = ZG(333),
+      rb = ZG(2472);
+    const zb = {
       appStore: {
         name: "App Store",
-        ...DE.Ub.appStore
+        ...Jb.mc.appStore
       },
       googlePlay: {
         name: "Google Play",
-        ...DE.Ub.googlePlay
+        ...Jb.mc.googlePlay
       },
       discord: {
         name: "Discord",
-        ...DE.Ub.discord
+        ...Jb.mc.discord
       }
     };
 
-    function eE(uu) {
+    function Eb(GG) {
       let {
-        warning: Eu,
-        subscriptions: ju
-      } = uu;
+        warning: bG,
+        subscriptions: ZG
+      } = GG;
       const {
-        t: su
-      } = (0, Xu.A)();
-      return null !== ju && 0 === ju.length ? (0, bu.jsx)(bu.Fragment, {
-        children: su(Eu)
-      }) : (0, bu.jsxs)("div", {
+        t: wG
+      } = (0, yG.w)();
+      return null !== ZG && 0 === ZG.length ? (0, pG.jsx)(pG.Fragment, {
+        children: wG(bG)
+      }) : (0, pG.jsxs)("div", {
         className: "DeleteAccountSubtitle",
-        children: [su(Eu), null === ju && (0, bu.jsx)("div", {
+        children: [wG(bG), null === ZG && (0, pG.jsx)("div", {
           className: "DeleteAccountSubtitleNote",
-          children: su("auth:deleteAccountSubscriptionsLoadFailed")
-        }), null !== ju && (0, bu.jsxs)(bu.Fragment, {
-          children: [(0, bu.jsx)("div", {
+          children: wG("auth:deleteAccountSubscriptionsLoadFailed")
+        }), null !== ZG && (0, pG.jsxs)(pG.Fragment, {
+          children: [(0, pG.jsx)("div", {
             className: "DeleteAccountSubtitleNote",
-            children: su("auth:deleteAccountStoreSubscriptions")
-          }), (0, bu.jsx)(gE.e, {
+            children: wG("auth:deleteAccountStoreSubscriptions")
+          }), (0, pG.jsx)(rb.b, {
             className: "DeleteAccountSubtitleLinks",
-            links: ju.map((uu => {
+            links: ZG.map((GG => {
               let {
-                store: Eu,
-                managementUrl: ju
-              } = uu;
+                store: bG,
+                managementUrl: ZG
+              } = GG;
               return {
-                ...ME[Eu],
-                url: ju
+                ...zb[bG],
+                url: ZG
               }
             }))
           })]
@@ -512,726 +512,726 @@ export const modules = {
       })
     }
 
-    function GE(uu) {
+    function ob(GG) {
       let {
-        showing: Eu
-      } = uu;
+        showing: bG
+      } = GG;
       const {
-        userContext: ju,
-        isUserContextUpdating: Uu
-      } = (0, Ou.c)(), {
-        t: Zu
-      } = (0, Xu.A)(), [lu, qu] = (0, su.useState)(!1), [Cu, cu] = (0, su.useState)(null), Nu = (0, su.useRef)(Eu);
-      (0, su.useEffect)((() => (Nu.current = Eu, () => {
-        Nu.current = !1
-      })), [Eu]);
-      const Yu = Uu || lu;
-      return (0, bu.jsxs)("div", {
+        userContext: ZG,
+        isUserContextUpdating: SG
+      } = (0, KG.e)(), {
+        t: LG
+      } = (0, yG.w)(), [kG, UG] = (0, wG.useState)(!1), [VG, fG] = (0, wG.useState)(null), QG = (0, wG.useRef)(bG);
+      (0, wG.useEffect)((() => (QG.current = bG, () => {
+        QG.current = !1
+      })), [bG]);
+      const hG = SG || kG;
+      return (0, pG.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, bu.jsxs)(fu.R, {
+        children: [(0, pG.jsxs)(YG.C, {
           onClick: async function() {
-            if (!lu) {
-              qu(!0);
+            if (!kG) {
+              UG(!0);
               try {
-                const uu = await async function() {
-                  const [uu, Eu] = await Promise.all([(0, cE.c)(ju.availableUserContextTypes) ? nu() : [], wE(ju)]);
-                  if (!Nu.current) return NE.c.ok();
-                  const su = (0, Ku.e)(ju.getPlayerName(), !Du.featureFlags.canSeeRealPlayerNames);
-                  if (!0 !== await OE.NotificationProvider.showPromptPopup({
+                const GG = await async function() {
+                  const [GG, bG] = await Promise.all([(0, fb.b)(ZG.availableUserContextTypes) ? NG() : [], ub(ZG)]);
+                  if (!QG.current) return Qb.d.ok();
+                  const wG = (0, cG.b)(ZG.getPlayerName(), !JG.featureFlags.canSeeRealPlayerNames);
+                  if (!0 !== await Kb.NotificationProvider.showPromptPopup({
                       title: "auth:deleteAccountPopupTitleNamed",
                       textOpts: {
                         title: {
-                          playerName: su
+                          playerName: wG
                         }
                       },
-                      subtitle: (0, bu.jsx)(eE, {
-                        warning: pE(ju.isLoggedIn(), Eu),
-                        subscriptions: uu
+                      subtitle: (0, pG.jsx)(Eb, {
+                        warning: Xb(ZG.isLoggedIn(), bG),
+                        subscriptions: GG
                       }),
                       confirmText: "auth:deleteAccount",
                       destructive: !0,
-                      typedConfirm: Eu ? Zu("auth:deleteAccountTypedConfirm", {
-                        playerName: su
+                      typedConfirm: bG ? LG("auth:deleteAccountTypedConfirm", {
+                        playerName: wG
                       }) : void 0,
                       confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
                       cancelText: "general:cancel",
                       cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-                    }).getResult()) return NE.c.ok();
-                  const Uu = await (0, ou.postJsonWithMetricsCookiesAndJsonResponse)(`${YE.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-                    gameState: Ju.d.get("gameState")
+                    }).getResult()) return Qb.d.ok();
+                  const SG = await (0, IG.postJsonWithMetricsCookiesAndJsonResponse)(`${hb.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+                    gameState: iG.e.get("gameState")
                   }, {
                     retries: 3
-                  }, ju.getMetricsCookies());
-                  if (Uu.error) return NE.c.error(Uu.error);
-                  (0, Pu.isDiscordClient)() && (await hE.g.discordActivity()).exit("User deleted their account");
-                  return (0, ou.forgetStoredGuestAccount)(ju.whamm), (0, ou.forceGlobalSignOut)(!0), NE.c.ok()
-                }(), Eu = uu.isError() ? uu.asError().message : null;
-                cu(Eu)
-              } catch (uu) {
-                console.error("Failed to delete account:", uu), cu(Zu("auth:genericDeleteAccountError"))
+                  }, ZG.getMetricsCookies());
+                  if (SG.error) return Qb.d.error(SG.error);
+                  (0, mG.isDiscordClient)() && (await db.l.discordActivity()).exit("User deleted their account");
+                  return (0, IG.forgetStoredGuestAccount)(ZG.whamm), (0, IG.forceGlobalSignOut)(!0), Qb.d.ok()
+                }(), bG = GG.isError() ? GG.asError().message : null;
+                fG(bG)
+              } catch (GG) {
+                console.error("Failed to delete account:", GG), fG(LG("auth:genericDeleteAccountError"))
               }
-              qu(!1)
+              UG(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: Yu,
-          children: [Yu && (0, bu.jsx)("div", {
+          disabled: hG,
+          children: [hG && (0, pG.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, bu.jsx)(pu.b, {})
-          }), Zu("auth:deleteAccount")]
-        }), Cu && (0, bu.jsx)("div", {
+            children: (0, pG.jsx)(XG.b, {})
+          }), LG("auth:deleteAccount")]
+        }), VG && (0, pG.jsx)("div", {
           className: "DeleteAccountError",
-          children: Cu
+          children: VG
         })]
       })
     }
 
-    function pE(uu, Eu) {
-      return (0, Pu.isDiscordClient)() ? "auth:discordActivityDeleteAccountLossWarning" : uu ? "auth:deleteAccountLossWarning" : Eu ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
+    function Xb(GG, bG) {
+      return (0, mG.isDiscordClient)() ? "auth:discordActivityDeleteAccountLossWarning" : GG ? "auth:deleteAccountLossWarning" : bG ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
     }
-    async function wE(uu) {
+    async function ub(GG) {
       try {
         const {
-          accountCreatedAt: Eu
-        } = await (0, Hu.i)(iu.b.getPlayerProfile(uu, {
-          lowerCaseName: uu.getPlayerName().toLowerCase()
+          accountCreatedAt: bG
+        } = await (0, tG.n)(MG.d.getPlayerProfile(GG, {
+          lowerCaseName: GG.getPlayerName().toLowerCase()
         }), 5e3, "The player's profile got no answer in 5 s");
-        return null !== Eu && Date.now() - Eu >= 7 * Wu.h
-      } catch (Eu) {
-        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", Eu), !0
+        return null !== bG && Date.now() - bG >= 7 * AG.j
+      } catch (bG) {
+        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", bG), !0
       }
     }
-    var JE = ju(3787),
-      dE = ju(3802),
-      aE = ju(3799);
+    var ib = ZG(3574),
+      Cb = ZG(3590),
+      Wb = ZG(3585);
 
-    function PE(uu) {
+    function mb(GG) {
       let {
-        showing: Eu
-      } = uu;
+        showing: bG
+      } = GG;
       const {
-        t: ju
-      } = (0, Xu.A)(), {
-        data: su,
-        failed: Uu
-      } = (0, Bu.e)(JE.d, Eu), Zu = null === su ? null : (0, JE.h)(su);
-      return (0, bu.jsxs)("div", {
+        t: ZG
+      } = (0, yG.w)(), {
+        data: wG,
+        failed: SG
+      } = (0, gG.i)(ib.e, bG), LG = null === wG ? null : (0, ib.f)(wG);
+      return (0, pG.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, bu.jsx)("div", {
+        children: [(0, pG.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: ju("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === Zu && !Uu && (0, bu.jsx)(pu.b, {}), null === Zu && Uu && (0, bu.jsxs)("div", {
+          children: ZG("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === LG && !SG && (0, pG.jsx)(XG.b, {}), null === LG && SG && (0, pG.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [ju("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, bu.jsx)(fu.f, {
+          children: [ZG("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, pG.jsx)(YG.d, {
             className: "SmallTextLight",
             onClick: () => {
-              JE.d.refresh()
+              ib.e.refresh()
             },
-            children: ju("general:tryAgain")
+            children: ZG("general:tryAgain")
           })]
-        }), 0 === (null === Zu || void 0 === Zu ? void 0 : Zu.length) && (0, bu.jsx)("div", {
+        }), 0 === (null === LG || void 0 === LG ? void 0 : LG.length) && (0, pG.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: ju("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== Zu && Zu.length > 0 && (0, bu.jsx)("ul", {
+          children: ZG("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== LG && LG.length > 0 && (0, pG.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: Zu.map((uu => {
+          children: LG.map((GG => {
             let {
-              name: Eu,
-              exclusion: su
-            } = uu;
-            const Uu = aE.e[su];
-            return (0, bu.jsxs)("li", {
+              name: bG,
+              exclusion: wG
+            } = GG;
+            const SG = Wb.d[wG];
+            return (0, pG.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, bu.jsx)("div", {
+              children: [(0, pG.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: Eu
-              }), (0, bu.jsx)(fu.i, {
+                children: bG
+              }), (0, pG.jsx)(YG.h, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, dE.f)(Uu, Eu, {
+                  (0, Cb.f)(SG, bG, {
                     chatMessage: null
                   })
                 },
-                children: ju(aE.g[Uu].text)
+                children: ZG(Wb.f[SG].text)
               })]
-            }, Eu)
+            }, bG)
           }))
         })]
       })
     }
-    const oE = (0, su.memo)((function(uu) {
-      var Eu, ju;
+    const Ib = (0, wG.memo)((function(GG) {
+      var bG, ZG;
       let {
-        showing: Uu,
-        inGame: qu
-      } = uu;
+        showing: SG,
+        inGame: UG
+      } = GG;
       const {
-        t: Cu,
-        selectedLanguage: cu
-      } = (0, Xu.A)(), {
-        hideSocialLocationFrom: Yu
-      } = (0, Ju.l)(["hideSocialLocationFrom"]), hu = (0, Iu.usePurchasesAllowed)(), gu = CE(), Mu = (0, Nu.b)(), {
-        userContext: eu,
-        isUserContextUpdating: du
-      } = (0, Ou.c)(), [au, Fu] = (0, su.useState)(null !== (Eu = eu.getPlayerName()) && void 0 !== Eu ? Eu : ""), [Bu, Lu] = (0, su.useState)(null), {
-        purchasing: tu,
-        outcome: xu,
-        purchase: Tu
-      } = (0, mu.b)("/super-rank-welcome"), Hu = (0, Wu.hc)((0, Xu.n)(cu.code, "general:timeLeft"), eu.superRankInfo), Au = null === (ju = yu(Uu)) || void 0 === ju ? void 0 : ju.text, nu = Hu ? Cu("general:timeLeft", {
-        time: Hu
-      }) : Au, [jE, sE] = (0, su.useState)(!1), [ZE, XE] = (0, su.useState)(!1), lE = (0, su.useRef)(null), qE = (0, su.useRef)(null), fE = (0, Qu.h)({
+        t: VG,
+        selectedLanguage: fG
+      } = (0, yG.w)(), {
+        hideSocialLocationFrom: hG
+      } = (0, iG.o)(["hideSocialLocationFrom"]), dG = (0, qG.usePurchasesAllowed)(), rG = Vb(), zG = (0, QG.d)(), {
+        userContext: EG,
+        isUserContextUpdating: CG
+      } = (0, KG.e)(), [WG, nG] = (0, wG.useState)(null !== (bG = EG.getPlayerName()) && void 0 !== bG ? bG : ""), [gG, eG] = (0, wG.useState)(null), {
+        purchasing: RG,
+        outcome: TG,
+        purchase: HG
+      } = (0, vG.d)("/super-rank-welcome"), tG = (0, AG.mc)((0, yG.j)(fG.code, "general:timeLeft"), EG.superRankInfo), DG = null === (ZG = OG(SG)) || void 0 === ZG ? void 0 : ZG.text, NG = tG ? VG("general:timeLeft", {
+        time: tG
+      }) : DG, [Zb, wb] = (0, wG.useState)(!1), [Lb, yb] = (0, wG.useState)(!1), kb = (0, wG.useRef)(null), Ub = (0, wG.useRef)(null), Yb = (0, PG.f)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), cE = null === fE, NE = null !== fE && void 0 !== fE ? fE : [], OE = eu !== ou.NULL_USER_CONTEXT && !eu.isLoggedIn(), YE = OE && 0 !== (null === fE || void 0 === fE ? void 0 : fE.length), [hE, DE] = (0, su.useState)([]), [gE, ME] = (0, su.useState)(!1), eE = eu.playerHasRank("youtuber"), pE = (0, su.useCallback)((() => iu.b.getPlayerProfile(eu, {
-        lowerCaseName: eu.getPlayerName().toLowerCase()
-      }).then((uu => {
-        DE(uu.socialLinks)
-      })).catch((uu => {
-        console.error("Failed to refresh social links", uu)
-      }))), [eu]);
+      }), fb = null === Yb, Qb = null !== Yb && void 0 !== Yb ? Yb : [], Kb = EG !== IG.NULL_USER_CONTEXT && !EG.isLoggedIn(), hb = Kb && 0 !== (null === Yb || void 0 === Yb ? void 0 : Yb.length), [db, Jb] = (0, wG.useState)([]), [rb, zb] = (0, wG.useState)(!1), Eb = EG.playerHasRank("youtuber"), Xb = (0, wG.useCallback)((() => MG.d.getPlayerProfile(EG, {
+        lowerCaseName: EG.getPlayerName().toLowerCase()
+      }).then((GG => {
+        Jb(GG.socialLinks)
+      })).catch((GG => {
+        console.error("Failed to refresh social links", GG)
+      }))), [EG]);
 
-      function wE(uu) {
-        uu !== au && ((0, Ku.l)(uu) ? (uu = (0, Ku.m)(uu), Lu(Cu("homePage:nameCharacters"))) : Lu(null), lE.current && (lE.current.value = uu), Fu(uu))
+      function ub(GG) {
+        GG !== WG && ((0, cG.l)(GG) ? (GG = (0, cG.n)(GG), eG(VG("homePage:nameCharacters"))) : eG(null), kb.current && (kb.current.value = GG), nG(GG))
       }
-      return (0, su.useEffect)((() => (!0 === Uu ? (clearInterval(qE.current), qE.current = setInterval(Mu, 1e3)) : clearInterval(qE.current), () => {
-        clearInterval(qE.current)
-      })), [Uu, Mu]), (0, su.useEffect)((() => {
-        var uu;
-        Fu(null !== (uu = eu.getPlayerName()) && void 0 !== uu ? uu : "")
-      }), [eu]), (0, su.useEffect)((() => {
-        if (!Uu || !eE || du) return;
-        let uu = !1;
-        return ME(!0), DE([]), iu.b.getPlayerProfile(eu, {
-          lowerCaseName: eu.getPlayerName().toLowerCase()
-        }).then((Eu => {
-          uu || DE(Eu.socialLinks)
-        })).catch((uu => {
-          console.error("Failed to load social links", uu)
+      return (0, wG.useEffect)((() => (!0 === SG ? (clearInterval(Ub.current), Ub.current = setInterval(zG, 1e3)) : clearInterval(Ub.current), () => {
+        clearInterval(Ub.current)
+      })), [SG, zG]), (0, wG.useEffect)((() => {
+        var GG;
+        nG(null !== (GG = EG.getPlayerName()) && void 0 !== GG ? GG : "")
+      }), [EG]), (0, wG.useEffect)((() => {
+        if (!SG || !Eb || CG) return;
+        let GG = !1;
+        return zb(!0), Jb([]), MG.d.getPlayerProfile(EG, {
+          lowerCaseName: EG.getPlayerName().toLowerCase()
+        }).then((bG => {
+          GG || Jb(bG.socialLinks)
+        })).catch((GG => {
+          console.error("Failed to load social links", GG)
         })).finally((() => {
-          uu || ME(!1)
+          GG || zb(!1)
         })), () => {
-          uu = !0
+          GG = !0
         }
-      }), [Uu, eE, du, eu]), (0, bu.jsxs)("div", {
-        className: Zu()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: qu
+      }), [SG, Eb, CG, EG]), (0, pG.jsxs)("div", {
+        className: LG()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: UG
         }),
-        children: [qu && (0, bu.jsx)("div", {
+        children: [UG && (0, pG.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: Cu("settingsMenu:accountSettingsInGameWarning")
-        }), (0, bu.jsxs)("div", {
+          children: VG("settingsMenu:accountSettingsInGameWarning")
+        }), (0, pG.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, bu.jsxs)("div", {
+          children: [(0, pG.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [Cu("homePage:discordNamePopupTitle"), (0, bu.jsxs)(vu.LinkPreserveSearch, {
+            children: [VG("homePage:discordNamePopupTitle"), (0, pG.jsxs)(aG.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, Vu.i)({
-                name: eu.getPlayerName()
+              to: (0, lG.k)({
+                name: EG.getPlayerName()
               }),
               onClick: () => {
-                Ju.d.set({
+                iG.e.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, bu.jsx)(lu.e, {
+              children: [(0, pG.jsx)(kG.c, {
                 name: "arrow-up-right-from-square"
-              }), " ", Cu("profileCard:viewProfile")]
+              }), " ", VG("profileCard:viewProfile")]
             })]
-          }), (0, bu.jsxs)("div", {
+          }), (0, pG.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, bu.jsxs)("div", {
+            children: [(0, pG.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [Du.featureFlags.canChangeName && (0, bu.jsx)(Gu.d, {
+              children: [JG.featureFlags.canChangeName && (0, pG.jsx)(oG.b, {
                 className: "EnterName",
-                placeholderText: Cu("homePage:enterName"),
-                maxLength: Ku.g,
-                defaultValue: au,
-                onValueChange: uu => {
-                  wE(uu)
+                placeholderText: VG("homePage:enterName"),
+                maxLength: cG.g,
+                defaultValue: WG,
+                onValueChange: GG => {
+                  ub(GG)
                 },
-                forcedText: jE || !Du.featureFlags.canChangeName ? au : null,
+                forcedText: Zb || !JG.featureFlags.canChangeName ? WG : null,
                 blurOnEnter: !0,
-                domRef: lE
-              }), (0, bu.jsx)(fu.f, {
+                domRef: kb
+              }), (0, pG.jsx)(YG.d, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  wE((0, Ku.f)())
+                  ub((0, cG.f)())
                 },
-                children: (0, bu.jsx)(lu.e, {
+                children: (0, pG.jsx)(kG.c, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !Du.featureFlags.canChangeName && (0, bu.jsx)("div", {
+              }), !JG.featureFlags.canChangeName && (0, pG.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, Ku.e)(au, !Du.featureFlags.canSeeRealPlayerNames)
+                children: (0, cG.b)(WG, !JG.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, bu.jsx)(fu.f, {
+            }), (0, pG.jsx)(YG.d, {
               className: "ChooseNameButton",
-              disabled: jE || au === eu.getPlayerName(),
+              disabled: Zb || WG === EG.getPlayerName(),
               onClick: () => {
-                au.length < Ku.j ? Lu(Cu("homePage:changeNameMinLengthError", {
-                  length: Ku.j
-                })) : au.length > Ku.g ? Lu(Cu("homePage:changeNameMaxLengthError", {
-                  length: Ku.g
-                })) : (sE(!0), Lu(null), (0, ku.e)(eu, au).then((uu => {
-                  sE(!1), "taken" === uu.outcome ? Lu(Cu("homePage:nameTaken")) : "refused" === uu.outcome ? Lu(uu.message) : "failed" === uu.outcome && Lu(Cu((0, ku.d)(uu.failure)))
+                WG.length < cG.k ? eG(VG("homePage:changeNameMinLengthError", {
+                  length: cG.k
+                })) : WG.length > cG.g ? eG(VG("homePage:changeNameMaxLengthError", {
+                  length: cG.g
+                })) : (wb(!0), eG(null), (0, FG.h)(EG, WG).then((GG => {
+                  wb(!1), "taken" === GG.outcome ? eG(VG("homePage:nameTaken")) : "refused" === GG.outcome ? eG(GG.message) : "failed" === GG.outcome && eG(VG((0, FG.g)(GG.failure)))
                 })))
               },
-              children: Cu("general:choose")
+              children: VG("general:choose")
             })]
-          }), Bu && (0, bu.jsx)("div", {
+          }), gG && (0, pG.jsx)("div", {
             className: "ChooseAccNameError",
-            children: Bu
+            children: gG
           })]
-        }), (0, bu.jsx)(wu.b, {
+        }), (0, pG.jsx)(uG.c, {
           label: (() => {
-            if ((0, Ru.m)(Yu)) {
-              const uu = (0, Xu.n)(cu.code, "general:timeLeft"),
-                Eu = (0, Wu._)(uu, Date.now(), Yu + Ru.l);
-              return `${Cu("settingsMenu:hideSocialLocation")} (${Cu("general:timeLeft",{time:Eu})})`
+            if ((0, BG.j)(hG)) {
+              const GG = (0, yG.j)(fG.code, "general:timeLeft"),
+                bG = (0, AG.lb)(GG, Date.now(), hG + BG.i);
+              return `${VG("settingsMenu:hideSocialLocation")} (${VG("general:timeLeft",{time:bG})})`
             }
-            return Cu("settingsMenu:hideSocialLocation")
+            return VG("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const uu = !(0, Ru.m)(Yu);
-            (0, EE.reportAnalyticsClick)({
+            const GG = !(0, BG.j)(hG);
+            (0, bb.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: uu ? "on" : "off"
-            }), XE(!0), iu.b.setHideSocialLocation(eu, uu).then((() => {
-              Ju.d.set({
-                hideSocialLocationFrom: uu ? Date.now() : null
+              value: GG ? "on" : "off"
+            }), yb(!0), MG.d.setHideSocialLocation(EG, GG).then((() => {
+              iG.e.set({
+                hideSocialLocationFrom: GG ? Date.now() : null
               })
             })).finally((() => {
-              XE(!1)
+              yb(!1)
             }))
           },
-          checked: (0, Ru.m)(Yu),
-          disabled: ZE
-        }), eE && (0, bu.jsxs)("div", {
+          checked: (0, BG.j)(hG),
+          disabled: Lb
+        }), Eb && (0, pG.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, bu.jsx)("div", {
+          children: [(0, pG.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: Cu("settingsMenu:socialLinks")
-          }), gE && (0, bu.jsx)(pu.b, {}), !gE && (0, bu.jsx)(uE.e, {
-            socialLinks: hE,
+            children: VG("settingsMenu:socialLinks")
+          }), rb && (0, pG.jsx)(XG.b, {}), !rb && (0, pG.jsx)(Gb.b, {
+            socialLinks: db,
             editable: !0,
-            userContext: eu,
-            onLinksUpdated: pE
+            userContext: EG,
+            onLinksUpdated: Xb
           })]
-        }), (0, bu.jsxs)("div", {
+        }), (0, pG.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, bu.jsx)("div", {
+          children: [(0, pG.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: Cu(YE ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), cE && (0, bu.jsx)(pu.b, {}), !cE && 0 === NE.length && (0, bu.jsx)("div", {
+            children: VG(hb ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), fb && (0, pG.jsx)(XG.b, {}), !fb && 0 === Qb.length && (0, pG.jsx)("div", {
             className: "NoLoginOptions",
-            children: Cu("auth:noLoginOptions")
-          }), !cE && NE.length > 0 && "crazygames" !== Pu.siteUsed && (0, bu.jsx)("div", {
+            children: VG("auth:noLoginOptions")
+          }), !fb && Qb.length > 0 && "crazygames" !== mG.siteUsed && (0, pG.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: NE
-          }), !cE && NE.length > 0 && "crazygames" === Pu.siteUsed && (0, bu.jsxs)("div", {
+            children: Qb
+          }), !fb && Qb.length > 0 && "crazygames" === mG.siteUsed && (0, pG.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [NE[0], NE.length > 1 && (0, bu.jsxs)(bu.Fragment, {
-              children: [(0, bu.jsxs)("div", {
+            children: [Qb[0], Qb.length > 1 && (0, pG.jsxs)(pG.Fragment, {
+              children: [(0, pG.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, bu.jsx)("span", {
+                children: [(0, pG.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: Cu("auth:legacyLoginOptions")
-                }), (0, bu.jsx)(zu.c, {
+                  children: VG("auth:legacyLoginOptions")
+                }), (0, pG.jsx)(xG.d, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: Cu("auth:legacyLoginOptionsInfo")
+                  hoverInfo: VG("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, bu.jsx)("div", {
+              }), (0, pG.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: NE.slice(1)
+                children: Qb.slice(1)
               })]
             })]
-          }), Du.featureFlags.useLogin && (null !== eu.loggedInInfo || eu.isLoggedIn()) && (0, bu.jsxs)(bu.Fragment, {
-            children: [(0, bu.jsx)("div", {
+          }), JG.featureFlags.useLogin && (null !== EG.loggedInInfo || EG.isLoggedIn()) && (0, pG.jsxs)(pG.Fragment, {
+            children: [(0, pG.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, bu.jsxs)(fu.R, {
+            }), (0, pG.jsxs)(YG.C, {
               onClick: () => {
-                (0, ou.forceGlobalSignOut)()
+                (0, IG.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, bu.jsx)(lu.e, {
+              children: [(0, pG.jsx)(kG.c, {
                 name: "right-from-bracket"
-              }), Cu("auth:signOut")]
+              }), VG("auth:signOut")]
             })]
           })]
-        }), !eu.playerHasRank("super") && hu && (0, bu.jsxs)("div", {
+        }), !EG.playerHasRank("super") && dG && (0, pG.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, bu.jsxs)("div", {
+          children: [(0, pG.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, bu.jsx)(lu.e, {
+            children: [(0, pG.jsx)(kG.c, {
               name: "bolt"
-            }), Cu("homePage:superRank")]
-          }), (0, bu.jsxs)("div", {
+            }), VG("homePage:superRank")]
+          }), (0, pG.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, bu.jsxs)(fu.p, {
+            children: [(0, pG.jsxs)(YG.k, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, Su.m)({
+                (0, sG.n)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, bu.jsx)(lu.e, {
+              children: [(0, pG.jsx)(kG.c, {
                 name: "bolt"
-              }), Cu("homePage:getSuperRank")]
-            }), (0, bu.jsxs)(fu.p, {
+              }), VG("homePage:getSuperRank")]
+            }), (0, pG.jsxs)(YG.k, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, Su.m)({
+                (0, sG.n)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, bu.jsx)(lu.e, {
+              children: [(0, pG.jsx)(kG.c, {
                 name: "bolt"
-              }), Cu("homePage:giftSuperRank")]
+              }), VG("homePage:giftSuperRank")]
             })]
-          }), (0, bu.jsx)(bE, {
-            ...gu
+          }), (0, pG.jsx)(pb, {
+            ...rG
           })]
-        }), eu.playerHasRank("super") && (0, bu.jsxs)("div", {
+        }), EG.playerHasRank("super") && (0, pG.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, bu.jsxs)("div", {
+          children: [(0, pG.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, bu.jsx)(lu.e, {
+            children: [(0, pG.jsx)(kG.c, {
               name: "bolt"
-            }), Cu("homePage:superRank"), nu && (0, bu.jsxs)("div", {
+            }), VG("homePage:superRank"), NG && (0, pG.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", nu, ")"]
+              children: ["(", NG, ")"]
             })]
-          }), hu && (0, bu.jsxs)("div", {
+          }), dG && (0, pG.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [!(0, Wu.Ec)(eu.superRankInfo) && (0, bu.jsxs)(fu.p, {
+            children: [!(0, AG.Jc)(EG.superRankInfo) && (0, pG.jsxs)(YG.k, {
               className: "AccountSettingsSuperRankProlong",
-              loading: tu,
+              loading: RG,
               onClick: () => {
-                Tu(ru.g.id, null)
+                HG(jG.j.id, null)
               },
-              children: [(0, bu.jsx)(lu.e, {
+              children: [(0, pG.jsx)(kG.c, {
                 name: "bolt"
-              }), Cu("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: ru.g.product.days,
-                price: ru.g.price
+              }), VG("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: jG.j.product.days,
+                price: jG.j.price
               })]
-            }), (0, bu.jsxs)(fu.p, {
+            }), (0, pG.jsxs)(YG.k, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, Su.m)({
+                (0, sG.n)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, bu.jsx)(lu.e, {
+              children: [(0, pG.jsx)(kG.c, {
                 name: "bolt"
-              }), Cu("homePage:giftSuperRank")]
+              }), VG("homePage:giftSuperRank")]
             })]
-          }), xu && (0, bu.jsx)("div", {
+          }), TG && (0, pG.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: Cu(xu.translationKey)
-          }), (0, bu.jsx)(bE, {
-            ...gu
+            children: VG(TG.translationKey)
+          }), (0, pG.jsx)(pb, {
+            ...rG
           })]
-        }), (0, bu.jsx)(UE, {
-          showing: Uu
-        }), Du.featureFlags.useSocialFeatures && (0, bu.jsx)(PE, {
-          showing: Uu
-        }), (0, bu.jsxs)("div", {
+        }), (0, pG.jsx)(Sb, {
+          showing: SG
+        }), JG.featureFlags.useSocialFeatures && (0, pG.jsx)(mb, {
+          showing: SG
+        }), (0, pG.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, bu.jsxs)("div", {
+          children: [(0, pG.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, bu.jsx)("div", {
+            children: [(0, pG.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: Cu(kE(OE, YE))
-            }), (0, Pu.isDiscordClient)() && (0, bu.jsx)("div", {
+              children: VG(Fb(Kb, hb))
+            }), (0, mG.isDiscordClient)() && (0, pG.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: Cu("auth:discordActivityKickWarning")
-            }), (0, bu.jsx)(GE, {
-              showing: Uu
+              children: VG("auth:discordActivityKickWarning")
+            }), (0, pG.jsx)(ob, {
+              showing: SG
             })]
-          }), (0, bu.jsx)("div", {
+          }), (0, pG.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: Cu(OE ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
+            children: VG(Kb ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
           })]
         })]
       })
     }));
 
-    function kE(uu, Eu) {
-      return uu ? Eu ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function Fb(GG, bG) {
+      return GG ? bG ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var mE = ju(34457),
-      vE = ju(3309),
-      KE = ju(1303),
-      VE = ju(1487),
-      rE = ju(2027),
-      QE = ju(9100),
-      iE = ju(34464);
+    var vb = ZG(34376),
+      ab = ZG(3113),
+      cb = ZG(1204),
+      lb = ZG(1385),
+      jb = ZG(1945),
+      Pb = ZG(8933),
+      Mb = ZG(34384);
 
-    function WE() {
+    function Ab() {
       const {
-        t: uu
-      } = (0, Xu.A)();
-      return (0, rE.f)("localPlayerAlive") ? (0, bu.jsx)(QE.e, {
+        t: GG
+      } = (0, yG.w)();
+      return (0, jb.f)("localPlayerAlive") ? (0, pG.jsx)(Pb.e, {
         icon: "camera-alt",
-        title: uu("screenshotMode:title"),
-        sub: uu("screenshotMode:entrySub"),
-        onClick: iE.e
+        title: GG("screenshotMode:title"),
+        sub: GG("screenshotMode:entrySub"),
+        onClick: Mb.c
       }) : null
     }
-    var SE = ju(34476);
-    const IE = (0, su.memo)((function(uu) {
+    var sb = ZG(34393);
+    const qb = (0, wG.memo)((function(GG) {
         let {
-          inGame: Eu
-        } = uu;
+          inGame: bG
+        } = GG;
         const {
-          t: ju,
-          selectedLanguage: su
-        } = (0, Xu.A)(), {
-          clientEscMenuOptions: Uu,
-          showDebugOverlay: Zu,
-          isTouchScreen: lu
-        } = (0, Ju.l)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), qu = (0, Yu.h)("hideCoordinates");
-        let fu = "settingsMenu:showCoordinates",
-          Cu = "settingsMenu:showChunkCoordinates";
+          t: ZG,
+          selectedLanguage: wG
+        } = (0, yG.w)(), {
+          clientEscMenuOptions: SG,
+          showDebugOverlay: LG,
+          isTouchScreen: kG
+        } = (0, iG.o)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), UG = (0, hG.i)("hideCoordinates");
+        let YG = "settingsMenu:showCoordinates",
+          VG = "settingsMenu:showChunkCoordinates";
 
-        function cu(uu) {
-          const Eu = new Intl.DisplayNames([uu], {
+        function fG(GG) {
+          const bG = new Intl.DisplayNames([GG], {
             type: "language"
-          }).of(uu);
-          return Eu.charAt(0).toUpperCase() + Eu.slice(1)
+          }).of(GG);
+          return bG.charAt(0).toUpperCase() + bG.slice(1)
         }
-        return qu && (fu = "settingsMenu:showCoordinatesHidden", Cu = "settingsMenu:showChunkCoordinatesHidden"), (0, bu.jsxs)("div", {
+        return UG && (YG = "settingsMenu:showCoordinatesHidden", VG = "settingsMenu:showChunkCoordinatesHidden"), (0, pG.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [Eu && Du.featureFlags.canUseInviteLinks && (0, bu.jsxs)("div", {
+          children: [bG && JG.featureFlags.canUseInviteLinks && (0, pG.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, bu.jsx)("div", {
+            children: [(0, pG.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: ju("settingsMenu:inviteLink")
-            }), (0, bu.jsx)(mE.h, {})]
-          }), (0, bu.jsxs)("div", {
+              children: ZG("settingsMenu:inviteLink")
+            }), (0, pG.jsx)(vb.g, {})]
+          }), (0, pG.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, bu.jsx)("div", {
+            children: [(0, pG.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: ju("settingsMenu:language")
-            }), (0, bu.jsx)(vE.c, {
-              options: Object.entries(Xu.i).map((uu => {
-                let [Eu, ju] = uu;
+              children: ZG("settingsMenu:language")
+            }), (0, pG.jsx)(ab.b, {
+              options: Object.entries(yG.g).map((GG => {
+                let [bG, ZG] = GG;
                 return {
-                  label: (0, bu.jsxs)("div", {
+                  label: (0, pG.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, bu.jsx)("img", {
-                      src: ju.flagImg,
+                    children: [(0, pG.jsx)("img", {
+                      src: ZG.flagImg,
                       alt: "flag"
-                    }), (0, bu.jsxs)("span", {
-                      children: [cu(Eu), " ", (0, bu.jsxs)("span", {
+                    }), (0, pG.jsxs)("span", {
+                      children: [fG(bG), " ", (0, pG.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", Eu, ")"]
+                        children: ["(", bG, ")"]
                       })]
                     })]
                   }),
-                  value: Eu
+                  value: bG
                 }
               })),
-              value: su.code,
-              onChange: uu => {
-                KE.h.get().setCurrentLanguage(uu.value)
+              value: wG.code,
+              onChange: GG => {
+                cb.d.get().setCurrentLanguage(GG.value)
               }
             })]
-          }), Eu && lu && (0, SE.b)() && (0, bu.jsx)(WE, {}), !(0, Du.isMobileApp)() && (0, VE.i)() && Du.featureFlags.useForceRotateForceFullscreenOverlay && (0, bu.jsx)(wu.b, {
-            label: ju("settingsMenu:disableFullscreenMode"),
-            checked: Uu.disableFullscreen,
-            onClick: uu => {
-              Ju.d.setClientEscMenuOptions({
-                disableFullscreen: uu
+          }), bG && kG && (0, sb.d)() && (0, pG.jsx)(Ab, {}), !(0, JG.isMobileApp)() && (0, lb.j)() && JG.featureFlags.useForceRotateForceFullscreenOverlay && (0, pG.jsx)(uG.c, {
+            label: ZG("settingsMenu:disableFullscreenMode"),
+            checked: SG.disableFullscreen,
+            onClick: GG => {
+              iG.e.setClientEscMenuOptions({
+                disableFullscreen: GG
               })
             }
-          }), (0, bu.jsx)(wu.b, {
-            label: ju(fu),
-            checked: Uu.showCoordinates,
-            onClick: uu => {
-              Ju.d.setClientEscMenuOptions({
-                showCoordinates: uu
+          }), (0, pG.jsx)(uG.c, {
+            label: ZG(YG),
+            checked: SG.showCoordinates,
+            onClick: GG => {
+              iG.e.setClientEscMenuOptions({
+                showCoordinates: GG
               })
             },
-            disabled: qu
-          }), (0, bu.jsx)(wu.b, {
-            label: ju(Cu),
-            checked: Uu.showChunkCoordinates,
-            onClick: uu => {
-              Ju.d.setClientEscMenuOptions({
-                showChunkCoordinates: uu
+            disabled: UG
+          }), (0, pG.jsx)(uG.c, {
+            label: ZG(VG),
+            checked: SG.showChunkCoordinates,
+            onClick: GG => {
+              iG.e.setClientEscMenuOptions({
+                showChunkCoordinates: GG
               })
             },
-            disabled: qu
-          }), (0, bu.jsx)(wu.b, {
-            label: ju("settingsMenu:showFps"),
-            checked: Uu.showFPS,
-            onClick: uu => {
-              Ju.d.setClientEscMenuOptions({
-                showFPS: uu
+            disabled: UG
+          }), (0, pG.jsx)(uG.c, {
+            label: ZG("settingsMenu:showFps"),
+            checked: SG.showFPS,
+            onClick: GG => {
+              iG.e.setClientEscMenuOptions({
+                showFPS: GG
               })
             }
-          }), (0, bu.jsx)(wu.b, {
-            label: ju("settingsMenu:disableBunnyHopping"),
-            checked: Uu.disableBunnyHopping,
-            onClick: uu => {
-              Ju.d.setClientEscMenuOptions({
-                disableBunnyHopping: uu
+          }), (0, pG.jsx)(uG.c, {
+            label: ZG("settingsMenu:disableBunnyHopping"),
+            checked: SG.disableBunnyHopping,
+            onClick: GG => {
+              iG.e.setClientEscMenuOptions({
+                disableBunnyHopping: GG
               })
             }
-          }), (0, hE.s)() && (0, bu.jsx)(wu.b, {
-            label: ju("settingsMenu:showChat"),
-            checked: Uu.showChat,
-            onClick: uu => {
-              Ju.d.setClientEscMenuOptions({
-                showChat: uu
+          }), (0, db.y)() && (0, pG.jsx)(uG.c, {
+            label: ZG("settingsMenu:showChat"),
+            checked: SG.showChat,
+            onClick: GG => {
+              iG.e.setClientEscMenuOptions({
+                showChat: GG
               })
             }
-          }), (0, bu.jsx)(wu.b, {
-            label: ju("settingsMenu:showDebugOverlay"),
-            checked: Zu,
-            onClick: uu => {
-              Ju.d.set({
-                showDebugOverlay: uu
+          }), (0, pG.jsx)(uG.c, {
+            label: ZG("settingsMenu:showDebugOverlay"),
+            checked: LG,
+            onClick: GG => {
+              iG.e.set({
+                showDebugOverlay: GG
               })
             }
-          }), Du.featureFlags.useSocialFeatures && (0, bu.jsx)(wu.b, {
-            label: ju("settingsMenu:showFriendOnlineToasts"),
-            checked: Uu.showFriendOnlineToasts,
-            onClick: uu => {
-              Ju.d.setClientEscMenuOptions({
-                showFriendOnlineToasts: uu
+          }), JG.featureFlags.useSocialFeatures && (0, pG.jsx)(uG.c, {
+            label: ZG("settingsMenu:showFriendOnlineToasts"),
+            checked: SG.showFriendOnlineToasts,
+            onClick: GG => {
+              iG.e.setClientEscMenuOptions({
+                showFriendOnlineToasts: GG
               })
             }
-          }), (0, bu.jsx)(wu.b, {
-            label: ju("settingsMenu:showNewItemIndicator"),
-            checked: Uu.showNewItemIndicator,
-            onClick: uu => {
-              Ju.d.setClientEscMenuOptions({
-                showNewItemIndicator: uu
+          }), (0, pG.jsx)(uG.c, {
+            label: ZG("settingsMenu:showNewItemIndicator"),
+            checked: SG.showNewItemIndicator,
+            onClick: GG => {
+              iG.e.setClientEscMenuOptions({
+                showNewItemIndicator: GG
               })
             }
           })]
         })
       })),
-      FE = (0, su.memo)((function() {
+      nb = (0, wG.memo)((function() {
         const {
-          t: uu
-        } = (0, Xu.A)(), {
-          soundVolume: Eu,
-          musicVolume: ju
-        } = (0, Ju.l)(["soundVolume", "musicVolume"]);
-        return (0, bu.jsxs)("div", {
+          t: GG
+        } = (0, yG.w)(), {
+          soundVolume: bG,
+          musicVolume: ZG
+        } = (0, iG.o)(["soundVolume", "musicVolume"]);
+        return (0, pG.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, bu.jsx)(wu.h, {
-            name: uu("settingsMenu:musicVolume"),
+          children: [(0, pG.jsx)(uG.f, {
+            name: GG("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: ju,
-            onChange: uu => {
-              Ju.d.set({
-                musicVolume: Math.round(100 * uu) / 100
+            initValue: ZG,
+            onChange: GG => {
+              iG.e.set({
+                musicVolume: Math.round(100 * GG) / 100
               })
             },
-            format: uu => uu.toFixed(2)
-          }), (0, bu.jsx)(wu.h, {
-            name: uu("settingsMenu:soundEffectsVolume"),
+            format: GG => GG.toFixed(2)
+          }), (0, pG.jsx)(uG.f, {
+            name: GG("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: Eu,
-            onChange: uu => {
-              Ju.d.set({
-                soundVolume: Math.round(100 * uu) / 100
+            initValue: bG,
+            onChange: GG => {
+              iG.e.set({
+                soundVolume: Math.round(100 * GG) / 100
               })
             },
-            format: uu => uu.toFixed(2)
+            format: GG => GG.toFixed(2)
           })]
         })
       }));
-    var BE = ju(753),
-      LE = ju(1499),
-      tE = ju(3863),
-      xE = ju(34481),
-      TE = ju(3678);
-    const HE = {
+    var gb = ZG(693),
+      eb = ZG(1389),
+      Rb = ZG(3662),
+      Tb = ZG(34400),
+      Hb = ZG(3465);
+    const tb = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function AE() {
+    function Db() {
       const {
-        t: uu
-      } = (0, Xu.A)(), Eu = (0, TE.c)(), {
-        mobilePushNotificationsCanAsk: ju
-      } = (0, Ju.l)(["mobilePushNotificationsCanAsk"]), [Uu, Zu] = (0, su.useState)(null), [lu, qu] = (0, su.useState)(!1), [Cu, cu] = (0, su.useState)(null), [Nu, Ou] = (0, su.useState)(!1), Yu = (0, su.useCallback)((() => {
-        (0, tE.b)().then((uu => {
-          Eu.current && (Zu(uu), qu(!1))
-        })).catch((uu => {
-          console.error("Failed to load push notification targets:", uu), Eu.current && qu(!0)
+        t: GG
+      } = (0, yG.w)(), bG = (0, Hb.c)(), {
+        mobilePushNotificationsCanAsk: ZG
+      } = (0, iG.o)(["mobilePushNotificationsCanAsk"]), [SG, LG] = (0, wG.useState)(null), [kG, UG] = (0, wG.useState)(!1), [VG, fG] = (0, wG.useState)(null), [QG, KG] = (0, wG.useState)(!1), hG = (0, wG.useCallback)((() => {
+        (0, Rb.c)().then((GG => {
+          bG.current && (LG(GG), UG(!1))
+        })).catch((GG => {
+          console.error("Failed to load push notification targets:", GG), bG.current && UG(!0)
         }))
-      }), [Eu]), hu = (0, su.useCallback)((() => {
-        (0, xE.h)().then((uu => {
-          Eu.current && cu((() => uu))
+      }), [bG]), dG = (0, wG.useCallback)((() => {
+        (0, Tb.e)().then((GG => {
+          bG.current && fG((() => GG))
         }))
-      }), [Eu]);
-      (0, su.useEffect)((() => {
-        Yu()
-      }), [Yu]), (0, su.useEffect)((() => {
-        hu()
-      }), [hu, ju]), (0, LE.f)(tE.h, Yu);
-      const Du = null === Uu ? [] : Object.keys(HE).filter((uu => Uu[uu] > 0));
-      return (0, bu.jsxs)("div", {
+      }), [bG]);
+      (0, wG.useEffect)((() => {
+        hG()
+      }), [hG]), (0, wG.useEffect)((() => {
+        dG()
+      }), [dG, ZG]), (0, eb.g)(Rb.h, hG);
+      const JG = null === SG ? [] : Object.keys(tb).filter((GG => SG[GG] > 0));
+      return (0, pG.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, bu.jsx)("div", {
+        children: [(0, pG.jsx)("div", {
           className: "SliderText",
-          children: uu("notificationSettings:pushNotifications")
-        }), null === Uu && lu && (0, bu.jsx)("div", {
+          children: GG("notificationSettings:pushNotifications")
+        }), null === SG && kG && (0, pG.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: uu("notificationSettings:pushTargetsLoadFailed")
-        }), null !== Uu && 0 === Du.length && (0, bu.jsx)("div", {
+          children: GG("notificationSettings:pushTargetsLoadFailed")
+        }), null !== SG && 0 === JG.length && (0, pG.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: uu("notificationSettings:pushTargetsNone")
-        }), Du.length > 0 && (0, bu.jsx)("ul", {
+          children: GG("notificationSettings:pushTargetsNone")
+        }), JG.length > 0 && (0, pG.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: Du.map((Eu => {
-            var ju;
-            return (0, bu.jsx)("li", {
-              children: uu(HE[Eu], {
-                count: null !== (ju = null === Uu || void 0 === Uu ? void 0 : Uu[Eu]) && void 0 !== ju ? ju : 0
+          children: JG.map((bG => {
+            var ZG;
+            return (0, pG.jsx)("li", {
+              children: GG(tb[bG], {
+                count: null !== (ZG = null === SG || void 0 === SG ? void 0 : SG[bG]) && void 0 !== ZG ? ZG : 0
               })
-            }, Eu)
+            }, bG)
           }))
-        }), null !== Cu && (0, bu.jsx)(fu.f, {
+        }), null !== VG && (0, pG.jsx)(YG.d, {
           className: "PushNotificationSettingsButton",
-          loading: Nu,
+          loading: QG,
           onClick: () => {
-            Ou(!0), Cu().catch((uu => {
-              console.error("Failed to turn on push notifications:", uu)
+            KG(!0), VG().catch((GG => {
+              console.error("Failed to turn on push notifications:", GG)
             })).finally((() => {
-              Eu.current && (Ou(!1), hu())
+              bG.current && (KG(!1), dG())
             }))
           },
-          children: uu("notificationSettings:pushTurnOn")
+          children: GG("notificationSettings:pushTurnOn")
         })]
       })
     }
-    var nE = ju(2682);
-    const yE = {
+    var Nb = ZG(2516);
+    const Ob = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -1245,7 +1245,7 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      zE = {
+      xb = {
         remindersOn: {
           label: "dailyDrop:settingReminders",
           reportAs: "reminders"
@@ -1256,387 +1256,387 @@ export const modules = {
         }
       };
 
-    function RE(uu) {
+    function Bb(GG) {
       let {
-        setting: Eu,
-        value: ju
-      } = uu;
+        setting: bG,
+        value: ZG
+      } = GG;
       const {
-        t: Uu
-      } = (0, Xu.A)(), lu = (0, TE.c)(), [qu, fu] = (0, su.useState)(null), [Cu, cu] = (0, su.useState)(!1), [Nu, Ou] = (0, su.useState)(null);
-      return (0, su.useEffect)((() => {
-        "remindersOn" === Eu && (0, xE.h)().then((uu => {
-          lu.current && Ou((() => uu))
-        }), (uu => {
-          console.error("Couldn't tell whether this device can take push notifications:", uu)
+        t: SG
+      } = (0, yG.w)(), kG = (0, Hb.c)(), [UG, YG] = (0, wG.useState)(null), [VG, fG] = (0, wG.useState)(!1), [QG, KG] = (0, wG.useState)(null);
+      return (0, wG.useEffect)((() => {
+        "remindersOn" === bG && (0, Tb.e)().then((GG => {
+          kG.current && KG((() => GG))
+        }), (GG => {
+          console.error("Couldn't tell whether this device can take push notifications:", GG)
         }))
-      }), [Eu, lu]), (0, bu.jsx)(wu.b, {
-        className: Zu()({
-          DailyDropSettingFailed: Cu
+      }), [bG, kG]), (0, pG.jsx)(uG.c, {
+        className: LG()({
+          DailyDropSettingFailed: VG
         }),
-        label: Uu(zE[Eu].label),
-        checked: null !== qu && void 0 !== qu ? qu : ju,
-        note: Cu ? Uu("dailyDrop:settingFailed") : void 0,
-        onClick: uu => {
-          null === qu && (fu(uu), cu(!1), uu && null !== Nu && Nu().catch((uu => {
-            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", uu)
-          })), (0, nE.s)("daily_drop.setting", `${zE[Eu].reportAs}_${uu?"on":"off"}`), (0, nE.t)("hidden" === Eu ? {
-            hidden: uu
+        label: SG(xb[bG].label),
+        checked: null !== UG && void 0 !== UG ? UG : ZG,
+        note: VG ? SG("dailyDrop:settingFailed") : void 0,
+        onClick: GG => {
+          null === UG && (YG(GG), fG(!1), GG && null !== QG && QG().catch((GG => {
+            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", GG)
+          })), (0, Nb.t)("daily_drop.setting", `${xb[bG].reportAs}_${GG?"on":"off"}`), (0, Nb.u)("hidden" === bG ? {
+            hidden: GG
           } : {
-            remindersOn: uu
-          }).catch((uu => {
-            console.error(`Failed to save the Lucky Skin Block's ${Eu} setting:`, uu), lu.current && cu(!0)
+            remindersOn: GG
+          }).catch((GG => {
+            console.error(`Failed to save the Lucky Skin Block's ${bG} setting:`, GG), kG.current && fG(!0)
           })).finally((() => {
-            lu.current && fu(null)
+            kG.current && YG(null)
           })))
         }
       })
     }
-    const uj = (0, su.memo)((function() {
+    const GZ = (0, wG.memo)((function() {
       const {
-        t: uu
-      } = (0, Xu.A)(), {
-        clientEscMenuOptions: Eu
-      } = (0, Ju.l)(["clientEscMenuOptions"]), {
-        userContext: ju
-      } = (0, Ou.c)(), su = ju.dailyDrop;
-      return (0, bu.jsxs)("div", {
+        t: GG
+      } = (0, yG.w)(), {
+        clientEscMenuOptions: bG
+      } = (0, iG.o)(["clientEscMenuOptions"]), {
+        userContext: ZG
+      } = (0, KG.e)(), wG = ZG.dailyDrop;
+      return (0, pG.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [Du.featureFlags.useSocialFeatures && (0, bu.jsx)(wu.f, {
-          label: uu("notificationSettings:friendRequests"),
-          options: BE.c.map((Eu => ({
-            value: Eu,
-            label: uu(yE[Eu].label)
+        children: [JG.featureFlags.useSocialFeatures && (0, pG.jsx)(uG.e, {
+          label: GG("notificationSettings:friendRequests"),
+          options: gb.b.map((bG => ({
+            value: bG,
+            label: GG(Ob[bG].label)
           }))),
-          value: Eu.friendRequestNotifications,
-          onChange: uu => {
-            Ju.d.setClientEscMenuOptions({
-              friendRequestNotifications: uu
+          value: bG.friendRequestNotifications,
+          onChange: GG => {
+            iG.e.setClientEscMenuOptions({
+              friendRequestNotifications: GG
             })
           },
-          circleInfoText: (0, bu.jsx)("div", {
+          circleInfoText: (0, pG.jsx)("div", {
             className: "NotificationSettingLevelsInfo",
-            children: BE.c.map((Eu => (0, bu.jsxs)("div", {
-              children: [(0, bu.jsx)("b", {
-                children: uu(yE[Eu].label)
-              }), ": ", uu(yE[Eu].info)]
-            }, Eu)))
+            children: gb.b.map((bG => (0, pG.jsxs)("div", {
+              children: [(0, pG.jsx)("b", {
+                children: GG(Ob[bG].label)
+              }), ": ", GG(Ob[bG].info)]
+            }, bG)))
           })
-        }), null !== su && (0, bu.jsxs)(bu.Fragment, {
-          children: [(0, bu.jsx)(RE, {
+        }), null !== wG && (0, pG.jsxs)(pG.Fragment, {
+          children: [(0, pG.jsx)(Bb, {
             setting: "remindersOn",
-            value: su.remindersOn
-          }), (0, bu.jsx)(RE, {
+            value: wG.remindersOn
+          }), (0, pG.jsx)(Bb, {
             setting: "hidden",
-            value: su.hidden
+            value: wG.hidden
           })]
-        }), (0, bu.jsx)(AE, {})]
+        }), (0, pG.jsx)(Db, {})]
       })
     }));
-    var Ej = ju(4691),
-      jj = ju(202),
-      sj = ju(326),
-      Uj = ju(6854),
-      Zj = ju(3651),
-      Xj = ju(34483),
-      lj = ju(649),
-      qj = ju(24);
-    var fj = ju(680),
-      Cj = ju(31),
-      bj = ju(4531);
-    const cj = new Map([
+    var bZ = ZG(4518),
+      ZZ = ZG(188),
+      wZ = ZG(318),
+      SZ = ZG(6661),
+      LZ = ZG(3441),
+      yZ = ZG(34405),
+      kZ = ZG(604),
+      UZ = ZG(19);
+    var YZ = ZG(631),
+      VZ = ZG(29),
+      pZ = ZG(4398);
+    const fZ = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function Nj(uu) {
-      return cj.has(uu) ? gu.gameBridge.lookup("rM", null) : null
+    function QZ(GG) {
+      return fZ.has(GG) ? rG.gameBridge.lookup("Vr", null) : null
     }
 
-    function Oj(uu) {
-      if (!(0, lj.H)(Ju.d.get("clientEscMenuOptions")[uu])) return Ju.d.get("clientEscMenuOptions")[uu];
-      const Eu = Nj(uu);
-      return null !== Eu ? Eu[cj.get(uu)] : Cj.k.getItem(uu)
+    function KZ(GG) {
+      if (!(0, kZ.L)(iG.e.get("clientEscMenuOptions")[GG])) return iG.e.get("clientEscMenuOptions")[GG];
+      const bG = QZ(GG);
+      return null !== bG ? bG[fZ.get(GG)] : VZ.h.getItem(GG)
     }
 
-    function Yj(uu, Eu) {
-      if ("useTouchControls" === uu) return void(0, bj.b)(Eu);
-      uu in Ju.d.get("clientEscMenuOptions") && Ju.d.setClientEscMenuOptions({
-        [uu]: Eu
+    function hZ(GG, bG) {
+      if ("useTouchControls" === GG) return void(0, pZ.b)(bG);
+      GG in iG.e.get("clientEscMenuOptions") && iG.e.setClientEscMenuOptions({
+        [GG]: bG
       });
-      const ju = Nj(uu);
-      null !== ju && gu.gameBridge.send("setChunkAddDistance", {
-        ...ju,
-        [cj.get(uu)]: Eu
-      }), Cj.k.setItem(uu, Eu)
+      const ZG = QZ(GG);
+      null !== ZG && rG.gameBridge.send("setChunkAddDistance", {
+        ...ZG,
+        [fZ.get(GG)]: bG
+      }), VZ.h.setItem(GG, bG)
     }
-    var hj = ju(4602),
-      Dj = ju(34486),
-      gj = ju(34490),
-      Mj = ju(4688),
-      ej = ju(34505);
+    var dZ = ZG(4437),
+      JZ = ZG(34411),
+      rZ = ZG(34414),
+      zZ = ZG(4514),
+      EZ = ZG(34429);
 
-    function Gj(uu) {
-      var Eu, Uu, lu, qu;
+    function oZ(GG) {
+      var bG, SG, kG, UG;
       let {
-        minChunkAddDist: fu,
-        getValue: Cu,
-        onChange: cu,
-        setApplySettingsCallback: Nu
-      } = uu;
+        minChunkAddDist: YG,
+        getValue: VG,
+        onChange: fG,
+        setApplySettingsCallback: QG
+      } = GG;
       const {
-        t: Ou
-      } = (0, Xu.A)(), {
-        clientEscMenuOptions: hu
-      } = (0, Ju.l)(["clientEscMenuOptions", "showDistantNametags"]), gu = (0, su.useRef)(Cu("showFog")), Mu = (0, su.useRef)(hu.antiAliasing), eu = (0, su.useRef)(hu.useWebGpu), [Gu, pu] = (0, su.useState)(null), [au, Pu] = (0, su.useState)(!1), [ou, ku] = (0, su.useState)((() => (0, Zj.d)(Du.featureFlags.settings.canUseShaderPacks))), [mu] = (0, su.useState)((() => Ju.d.isWebGpuDefaultOff())), [vu] = (0, su.useState)(sj.g), [Ku] = (0, su.useState)((() => !0 === Cj.k.getItem(DE.jc))), [Vu] = (0, su.useState)((() => Ju.d.isWebGpuOnStored()));
-      (0, su.useEffect)((() => {
-        let uu = !1;
-        return (0, Du.hasUsableWebGpuAdapter)().then((async Eu => {
-          const ju = Ku || Vu,
-            su = !Eu && fj.y && await (0, ej.g)(ju);
-          uu || (pu(Eu || su), Pu(su))
-        })), (0, Zj.i)(Du.featureFlags.settings.canUseShaderPacks) && (0, Uj.e)().then((async Eu => {
-          const su = null !== Eu && await async function(uu) {
+        t: KG
+      } = (0, yG.w)(), {
+        clientEscMenuOptions: dG
+      } = (0, iG.o)(["clientEscMenuOptions", "showDistantNametags"]), rG = (0, wG.useRef)(VG("showFog")), zG = (0, wG.useRef)(dG.antiAliasing), EG = (0, wG.useRef)(dG.useWebGpu), [oG, XG] = (0, wG.useState)(null), [WG, mG] = (0, wG.useState)(!1), [IG, FG] = (0, wG.useState)((() => (0, LZ.e)(JG.featureFlags.settings.canUseShaderPacks))), [vG] = (0, wG.useState)((() => iG.e.isWebGpuDefaultOff())), [aG] = (0, wG.useState)(wZ.k), [cG] = (0, wG.useState)((() => !0 === VZ.h.getItem(Jb.Cc))), [lG] = (0, wG.useState)((() => iG.e.isWebGpuOnStored()));
+      (0, wG.useEffect)((() => {
+        let GG = !1;
+        return (0, JG.hasUsableWebGpuAdapter)().then((async bG => {
+          const ZG = cG || lG,
+            wG = !bG && YZ.B && await (0, EZ.f)(ZG);
+          GG || (XG(bG || wG), mG(wG))
+        })), (0, LZ.j)(JG.featureFlags.settings.canUseShaderPacks) && (0, SZ.e)().then((async bG => {
+          const wG = null !== bG && await async function(GG) {
             const [{
-              isShaderPackActive: Eu
+              isShaderPackActive: bG
             }, {
-              loadPageShaderPackCompiler: su
-            }] = await Promise.all([ju.e(139).then((() => ju(6851))), Promise.all([ju.e(78), ju.e(136), ju.e(138)]).then((() => ju(6810)))]);
-            return Eu(uu, await su())
-          }(Eu);
-          uu || ku(su)
+              loadPageShaderPackCompiler: wG
+            }] = await Promise.all([ZG.e(139).then((() => ZG(6653))), Promise.all([ZG.e(78), ZG.e(136), ZG.e(138)]).then((() => ZG(6608)))]);
+            return bG(GG, await wG())
+          }(bG);
+          GG || FG(wG)
         })), () => {
-          uu = !0
+          GG = !0
         }
-      }), [Ku, Vu]);
-      const ru = (!(ou && !Ku) || !au) && Gu,
-        Qu = function(uu, Eu, ju, su, Uu) {
-          return (0, Xj.c)(ju, su) && !0 === Eu ? {
+      }), [cG, lG]);
+      const jG = (!(IG && !cG) || !WG) && oG,
+        PG = function(GG, bG, ZG, wG, SG) {
+          return (0, yZ.b)(ZG, wG) && !0 === bG ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== Eu ? "settingsMenu:newWebGpu" : Uu ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: uu && !1 !== Eu,
-            disabled: !0 !== Eu
+            translationKey: !1 !== bG ? "settingsMenu:newWebGpu" : SG ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: GG && !1 !== bG,
+            disabled: !0 !== bG
           }
-        }(hu.useWebGpu, ru, ou, mu, vu),
-        iu = (hu.useWebGpu || (0, Xj.c)(ou, mu)) && ou && !0 === ru,
-        Wu = (0, Yu.h)("lightingOverride"),
-        Su = !(0, lj.H)(Wu);
-      let Iu = "settingsMenu:enableLighting";
-      Su && (Iu = Wu ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const Fu = uu => {
-          var Eu, ju, su;
-          const Uu = null !== (Eu = uu.showFog) && void 0 !== Eu ? Eu : Cu("showFog"),
-            Zu = null !== (ju = uu.antiAliasing) && void 0 !== ju ? ju : hu.antiAliasing,
-            Xu = null !== (su = uu.useWebGpu) && void 0 !== su ? su : hu.useWebGpu,
-            lu = !fj.y && Uu !== gu.current || Zu !== Mu.current || Xu !== eu.current;
-          Nu(lu ? () => wu.l : null)
+        }(dG.useWebGpu, jG, IG, vG, aG),
+        MG = (dG.useWebGpu || (0, yZ.b)(IG, vG)) && IG && !0 === jG,
+        AG = (0, hG.i)("lightingOverride"),
+        sG = !(0, kZ.L)(AG);
+      let qG = "settingsMenu:enableLighting";
+      sG && (qG = AG ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const nG = GG => {
+          var bG, ZG, wG;
+          const SG = null !== (bG = GG.showFog) && void 0 !== bG ? bG : VG("showFog"),
+            LG = null !== (ZG = GG.antiAliasing) && void 0 !== ZG ? ZG : dG.antiAliasing,
+            yG = null !== (wG = GG.useWebGpu) && void 0 !== wG ? wG : dG.useWebGpu,
+            kG = !YZ.B && SG !== rG.current || LG !== zG.current || yG !== EG.current;
+          QG(kG ? () => uG.g : null)
         },
-        Bu = (0, Yu.h)("fogChunkDistanceOverride"),
-        Lu = (0, Yu.h)("fogBlockDistanceOverride"),
-        tu = !(0, lj.H)(Bu) || !(0, lj.H)(Lu),
-        xu = tu ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [Tu, Hu] = (0, Ej.f)(fu),
-        [Au, nu] = (0, Mj.i)(fu),
-        yu = Ou("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        zu = Au < Tu,
-        Ru = Math.min(null !== (Eu = Cu("chunkHorizAddDist")) && void 0 !== Eu ? Eu : fu[0], Au),
-        uE = !tu && function(uu, Eu) {
-          return !0 === uu.showFog && uu.fogChunkDistance > Eu
-        }(hu, Ru);
-      return (0, bu.jsxs)("div", {
+        gG = (0, hG.i)("fogChunkDistanceOverride"),
+        eG = (0, hG.i)("fogBlockDistanceOverride"),
+        RG = !(0, kZ.L)(gG) || !(0, kZ.L)(eG),
+        TG = RG ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [HG, tG] = (0, bZ.i)(YG),
+        [DG, NG] = (0, zZ.e)(YG),
+        OG = KG("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        xG = DG < HG,
+        BG = Math.min(null !== (bG = VG("chunkHorizAddDist")) && void 0 !== bG ? bG : YG[0], DG),
+        Gb = !RG && function(GG, bG) {
+          return !0 === GG.showFog && GG.fogChunkDistance > bG
+        }(dG, BG);
+      return (0, pG.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, bu.jsx)(wu.h, {
-          name: Ou("settingsMenu:horizontalChunkLoadDistance"),
-          min: fu[0],
-          max: Tu,
-          selectableMax: Au,
-          cappedNote: yu,
+        children: [(0, pG.jsx)(uG.f, {
+          name: KG("settingsMenu:horizontalChunkLoadDistance"),
+          min: YG[0],
+          max: HG,
+          selectableMax: DG,
+          cappedNote: OG,
           step: 1,
-          initValue: Ru,
-          onChange: uu => {
-            !0 === Cu("showFog") && uu < Cu("fogChunkDistance") && cu("fogChunkDistance", uu), cu("chunkHorizAddDist", uu), qj.h.TY("updatedChunkLoadDist")
+          initValue: BG,
+          onChange: GG => {
+            !0 === VG("showFog") && GG < VG("fogChunkDistance") && fG("fogChunkDistance", GG), fG("chunkHorizAddDist", GG), UZ.l.xh("updatedChunkLoadDist")
           },
-          circleInfoText: Ou("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, bu.jsx)(wu.h, {
-          name: Ou("settingsMenu:verticalChunkLoadDistance"),
-          min: fu[1],
-          max: Hu,
-          selectableMax: nu,
-          cappedNote: zu ? void 0 : yu,
+          circleInfoText: KG("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, pG.jsx)(uG.f, {
+          name: KG("settingsMenu:verticalChunkLoadDistance"),
+          min: YG[1],
+          max: tG,
+          selectableMax: NG,
+          cappedNote: xG ? void 0 : OG,
           step: 1,
-          initValue: Math.min(null !== (Uu = Cu("chunkVertAddDist")) && void 0 !== Uu ? Uu : fu[1], nu),
-          onChange: uu => {
-            cu("chunkVertAddDist", uu), qj.h.TY("updatedChunkLoadDist")
+          initValue: Math.min(null !== (SG = VG("chunkVertAddDist")) && void 0 !== SG ? SG : YG[1], NG),
+          onChange: GG => {
+            fG("chunkVertAddDist", GG), UZ.l.xh("updatedChunkLoadDist")
           },
-          circleInfoText: Ou("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: KG("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, bu.jsx)(wu.b, {
-          label: Ou("settingsMenu:chunkFadeIn"),
-          checked: hu.chunkFadeIn,
-          onClick: uu => {
-            Ju.d.setClientEscMenuOptions({
-              chunkFadeIn: uu
+        }), (0, pG.jsx)(uG.c, {
+          label: KG("settingsMenu:chunkFadeIn"),
+          checked: dG.chunkFadeIn,
+          onClick: GG => {
+            iG.e.setClientEscMenuOptions({
+              chunkFadeIn: GG
             })
           },
-          circleInfoText: Ou("settingsMenu:chunkFadeInInfo")
-        }), du.devTools.supports("chunkBorders") && (0, bu.jsx)(wu.b, {
-          label: Ou("settingsMenu:showChunkBorders"),
-          checked: hu.showChunkBorders,
-          onClick: uu => {
-            Ju.d.setClientEscMenuOptions({
-              showChunkBorders: uu
+          circleInfoText: KG("settingsMenu:chunkFadeInInfo")
+        }), CG.devTools.supports("chunkBorders") && (0, pG.jsx)(uG.c, {
+          label: KG("settingsMenu:showChunkBorders"),
+          checked: dG.showChunkBorders,
+          onClick: GG => {
+            iG.e.setClientEscMenuOptions({
+              showChunkBorders: GG
             })
           },
-          circleInfoText: Ou("settingsMenu:showChunkBordersInfo")
-        }), (0, bu.jsx)(wu.b, {
-          label: Ou(Iu),
-          checked: hu.enableLighting,
-          onClick: uu => {
-            Ju.d.setClientEscMenuOptions({
-              enableLighting: uu
+          circleInfoText: KG("settingsMenu:showChunkBordersInfo")
+        }), (0, pG.jsx)(uG.c, {
+          label: KG(qG),
+          checked: dG.enableLighting,
+          onClick: GG => {
+            iG.e.setClientEscMenuOptions({
+              enableLighting: GG
             })
           },
-          disabled: Su
-        }), (0, bu.jsxs)("div", {
+          disabled: sG
+        }), (0, pG.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, bu.jsx)(wu.b, {
-            label: Ou(xu),
-            checked: hu.showFog,
-            onClick: uu => {
-              Fu({
-                showFog: uu
-              }), Ju.d.setClientEscMenuOptions({
-                showFog: uu
+          children: [(0, pG.jsx)(uG.c, {
+            label: KG(TG),
+            checked: dG.showFog,
+            onClick: GG => {
+              nG({
+                showFog: GG
+              }), iG.e.setClientEscMenuOptions({
+                showFog: GG
               })
             },
-            disabled: tu,
-            className: Zu()({
-              SettingBoxWarning: uE
+            disabled: RG,
+            className: LG()({
+              SettingBoxWarning: Gb
             })
-          }), (0, bu.jsx)(wu.h, {
-            name: Ou("settingsMenu:fogChunkDistance"),
-            min: fu[0],
-            max: jj.e.maxChunkHorizAddDistance,
+          }), (0, pG.jsx)(uG.f, {
+            name: KG("settingsMenu:fogChunkDistance"),
+            min: YG[0],
+            max: ZZ.d.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (lu = hu.fogChunkDistance) && void 0 !== lu ? lu : fu[0],
-            onChange: uu => {
-              Ju.d.setClientEscMenuOptions({
-                fogChunkDistance: uu
-              }), qj.h.TY("fogChunkDistanceChanged", uu)
+            initValue: null !== (kG = dG.fogChunkDistance) && void 0 !== kG ? kG : YG[0],
+            onChange: GG => {
+              iG.e.setClientEscMenuOptions({
+                fogChunkDistance: GG
+              }), UZ.l.xh("fogChunkDistanceChanged", GG)
             },
-            circleInfoText: Ou("settingsMenu:fogChunkDistanceInfo"),
-            disabled: tu || !1 === Cu("showFog"),
-            className: Zu()({
-              SettingBoxWarning: uE
+            circleInfoText: KG("settingsMenu:fogChunkDistanceInfo"),
+            disabled: RG || !1 === VG("showFog"),
+            className: LG()({
+              SettingBoxWarning: Gb
             })
-          }), uE && (0, bu.jsx)("div", {
+          }), Gb && (0, pG.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: Ou("settingsMenu:fogChunkDistanceInfo")
+            children: KG("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !fj.y && (0, bu.jsx)(wu.b, {
-          label: Ou(iu ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !iu && hu.disableTexAtlas,
-          onClick: uu => {
-            Ju.d.setClientEscMenuOptions({
-              disableTexAtlas: uu
+        }), !YZ.B && (0, pG.jsx)(uG.c, {
+          label: KG(MG ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !MG && dG.disableTexAtlas,
+          onClick: GG => {
+            iG.e.setClientEscMenuOptions({
+              disableTexAtlas: GG
             })
           },
-          circleInfoText: Ou("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: iu
-        }), (0, bu.jsx)(wu.h, {
-          name: Ou("settingsMenu:fieldOfView"),
+          circleInfoText: KG("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: MG
+        }), (0, pG.jsx)(uG.f, {
+          name: KG("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: hu.cameraFOV,
-          onChange: uu => {
-            Ju.d.setClientEscMenuOptions({
-              cameraFOV: uu
+          initValue: dG.cameraFOV,
+          onChange: GG => {
+            iG.e.setClientEscMenuOptions({
+              cameraFOV: GG
             })
           }
-        }), (0, bu.jsx)(wu.b, {
-          label: Ou("settingsMenu:disableViewBobbing"),
-          checked: hu.disableBobbing,
-          onClick: uu => {
-            Ju.d.setClientEscMenuOptions({
-              disableBobbing: uu
+        }), (0, pG.jsx)(uG.c, {
+          label: KG("settingsMenu:disableViewBobbing"),
+          checked: dG.disableBobbing,
+          onClick: GG => {
+            iG.e.setClientEscMenuOptions({
+              disableBobbing: GG
             })
           },
-          circleInfoText: Ou("settingsMenu:disableViewBobbingInfo")
-        }), (0, bu.jsx)(wu.b, {
-          label: Ou("settingsMenu:antiAliasing"),
-          checked: hu.antiAliasing,
-          onClick: uu => {
-            Fu({
-              antiAliasing: uu
-            }), (0, hj.f)("antiAliasing"), Ju.d.setClientEscMenuOptions({
-              antiAliasing: uu
+          circleInfoText: KG("settingsMenu:disableViewBobbingInfo")
+        }), (0, pG.jsx)(uG.c, {
+          label: KG("settingsMenu:antiAliasing"),
+          checked: dG.antiAliasing,
+          onClick: GG => {
+            nG({
+              antiAliasing: GG
+            }), (0, dZ.e)("antiAliasing"), iG.e.setClientEscMenuOptions({
+              antiAliasing: GG
             })
           },
-          circleInfoText: Ou("settingsMenu:antiAliasingInfo")
-        }), (0, bu.jsx)(wu.h, {
-          name: Ou("settingsMenu:pixelScale"),
+          circleInfoText: KG("settingsMenu:antiAliasingInfo")
+        }), (0, pG.jsx)(uG.f, {
+          name: KG("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (qu = hu.pixelScale) && void 0 !== qu ? qu : 1,
-          onChange: uu => {
-            (uu !== Ju.d.get("clientEscMenuOptions").pixelScale || (0, gj.p)()) && (0, hj.f)("pixelScale"), Ju.d.setClientEscMenuOptions({
-              pixelScale: uu
+          initValue: null !== (UG = dG.pixelScale) && void 0 !== UG ? UG : 1,
+          onChange: GG => {
+            (GG !== iG.e.get("clientEscMenuOptions").pixelScale || (0, rZ.p)()) && (0, dZ.e)("pixelScale"), iG.e.setClientEscMenuOptions({
+              pixelScale: GG
             })
           },
-          circleInfoText: Ou("settingsMenu:pixelScaleInfo"),
-          format: uu => `${uu}x`
-        }), (0, bu.jsx)(wu.b, {
-          label: Ou("settingsMenu:pixelSmoothing"),
-          checked: hu.pixelSmoothing,
-          onClick: uu => {
-            Ju.d.setClientEscMenuOptions({
-              pixelSmoothing: uu
+          circleInfoText: KG("settingsMenu:pixelScaleInfo"),
+          format: GG => `${GG}x`
+        }), (0, pG.jsx)(uG.c, {
+          label: KG("settingsMenu:pixelSmoothing"),
+          checked: dG.pixelSmoothing,
+          onClick: GG => {
+            iG.e.setClientEscMenuOptions({
+              pixelSmoothing: GG
             })
           },
-          circleInfoText: Ou("settingsMenu:pixelSmoothingInfo")
-        }), fj.y && (0, bu.jsx)(wu.b, {
-          label: Ou("settingsMenu:distantNametags"),
-          checked: (0, Dj.d)(),
-          onClick: uu => {
-            Ju.d.set({
-              showDistantNametags: uu
+          circleInfoText: KG("settingsMenu:pixelSmoothingInfo")
+        }), YZ.B && (0, pG.jsx)(uG.c, {
+          label: KG("settingsMenu:distantNametags"),
+          checked: (0, JZ.d)(),
+          onClick: GG => {
+            iG.e.set({
+              showDistantNametags: GG
             })
           },
-          circleInfoText: Ou("settingsMenu:distantNametagsInfo")
-        }), (0, bu.jsx)(wu.b, {
-          label: Ou(Qu.translationKey),
-          checked: Qu.checked,
-          onClick: uu => {
-            Fu({
-              useWebGpu: uu
-            }), Ju.d.setClientEscMenuOptions({
-              useWebGpu: uu
+          circleInfoText: KG("settingsMenu:distantNametagsInfo")
+        }), (0, pG.jsx)(uG.c, {
+          label: KG(PG.translationKey),
+          checked: PG.checked,
+          onClick: GG => {
+            nG({
+              useWebGpu: GG
+            }), iG.e.setClientEscMenuOptions({
+              useWebGpu: GG
             })
           },
-          circleInfoText: Ou("settingsMenu:newWebGpuInfo"),
-          disabled: Qu.disabled
+          circleInfoText: KG("settingsMenu:newWebGpuInfo"),
+          disabled: PG.disabled
         })]
       })
     }
-    var pj = ju(4600),
-      wj = ju(9067),
-      Jj = ju(34512),
-      dj = ju(9082),
-      aj = ju(34521);
-    const Pj = {
+    var XZ = ZG(4434),
+      uZ = ZG(8900),
+      iZ = ZG(34432),
+      CZ = ZG(8917),
+      WZ = ZG(34439);
+    const mZ = {
         color: 16777215,
         name: "white"
       },
-      oj = {
+      IZ = {
         color: 0,
         name: "black"
       },
-      kj = [Pj, {
+      FZ = [mZ, {
         color: 5046092,
         name: "green"
       }, {
@@ -1651,73 +1651,73 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, oj],
-      mj = [oj, Pj];
+      }, IZ],
+      vZ = [IZ, mZ];
 
-    function vj(uu) {
-      return `${uu} px`
+    function aZ(GG) {
+      return `${GG} px`
     }
 
-    function Kj(uu) {
-      return `${uu}%`
+    function cZ(GG) {
+      return `${GG}%`
     }
 
-    function Vj(uu) {
+    function lZ(GG) {
       let {
-        label: Eu,
-        value: ju,
-        swatches: su,
-        onChange: Uu
-      } = uu;
+        label: bG,
+        value: ZG,
+        swatches: wG,
+        onChange: SG
+      } = GG;
       const {
-        t: lu
-      } = (0, Xu.A)(), qu = !su.some((uu => uu.color === ju));
-      return (0, bu.jsxs)("div", {
+        t: kG
+      } = (0, yG.w)(), UG = !wG.some((GG => GG.color === ZG));
+      return (0, pG.jsxs)("div", {
         className: "SettingBox CrosshairColorRow",
-        children: [(0, bu.jsx)("div", {
+        children: [(0, pG.jsx)("div", {
           className: "SliderText",
-          children: Eu
-        }), (0, bu.jsxs)("div", {
+          children: bG
+        }), (0, pG.jsxs)("div", {
           className: "CrosshairSwatches",
           role: "radiogroup",
-          "aria-label": Eu,
-          children: [su.map((uu => {
+          "aria-label": bG,
+          children: [wG.map((GG => {
             let {
-              color: Eu,
-              name: su
-            } = uu;
-            return (0, bu.jsx)("button", {
+              color: bG,
+              name: wG
+            } = GG;
+            return (0, pG.jsx)("button", {
               type: "button",
               role: "radio",
-              "aria-checked": Eu === ju,
-              "aria-label": lu(`crosshairSettings:color_${su}`),
+              "aria-checked": bG === ZG,
+              "aria-label": kG(`crosshairSettings:color_${wG}`),
               "data-pad-focusable": !0,
-              className: Zu()("CrosshairSwatch", {
-                Selected: Eu === ju
+              className: LG()("CrosshairSwatch", {
+                Selected: bG === ZG
               }),
               style: {
-                background: (0, aj.i)(Eu)
+                background: (0, WZ.k)(bG)
               },
               onClick: () => {
-                Uu(Eu)
+                SG(bG)
               }
-            }, Eu)
-          })), (0, bu.jsx)("label", {
-            className: Zu()("CrosshairSwatch CrosshairSwatchCustom", {
-              Selected: qu
+            }, bG)
+          })), (0, pG.jsx)("label", {
+            className: LG()("CrosshairSwatch CrosshairSwatchCustom", {
+              Selected: UG
             }),
-            style: qu ? {
-              background: (0, aj.i)(ju)
+            style: UG ? {
+              background: (0, WZ.k)(ZG)
             } : void 0,
-            title: lu("crosshairSettings:customColor"),
+            title: kG("crosshairSettings:customColor"),
             "data-pad-focusable": !0,
-            children: (0, bu.jsx)("input", {
+            children: (0, pG.jsx)("input", {
               type: "color",
-              "aria-label": lu("crosshairSettings:customColor"),
-              value: (0, aj.i)(ju),
-              onChange: uu => {
-                const Eu = (0, aj.n)(uu.target.value);
-                null !== Eu && Uu(Eu)
+              "aria-label": kG("crosshairSettings:customColor"),
+              value: (0, WZ.k)(ZG),
+              onChange: GG => {
+                const bG = (0, WZ.m)(GG.target.value);
+                null !== bG && SG(bG)
               }
             })
           })]
@@ -1725,119 +1725,119 @@ export const modules = {
       })
     }
 
-    function rj(uu) {
+    function jZ(GG) {
       let {
-        settings: Eu,
-        onChange: ju
-      } = uu;
+        settings: bG,
+        onChange: ZG
+      } = GG;
       const {
-        t: su
-      } = (0, Xu.A)(), Uu = (uu, su) => {
-        ju((0, aj.q)(Eu, uu, su))
-      }, Zu = function(uu, ju) {
-        let su = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : vj;
+        t: wG
+      } = (0, yG.w)(), SG = (GG, wG) => {
+        ZG((0, WZ.o)(bG, GG, wG))
+      }, LG = function(GG, ZG) {
+        let wG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : aZ;
         const {
-          min: Zu,
-          max: Xu,
-          step: lu
-        } = aj.d[uu];
-        return (0, bu.jsx)(wu.h, {
-          name: ju,
-          min: Zu,
-          max: Xu,
-          step: lu,
-          initValue: Eu[uu],
-          format: su,
-          onChange: Eu => {
-            Uu(uu, Eu)
+          min: LG,
+          max: yG,
+          step: kG
+        } = WZ.b[GG];
+        return (0, pG.jsx)(uG.f, {
+          name: ZG,
+          min: LG,
+          max: yG,
+          step: kG,
+          initValue: bG[GG],
+          format: wG,
+          onChange: bG => {
+            SG(GG, bG)
           }
-        }, uu)
-      }, lu = ["lines", "dot", "circle"].filter((uu => Eu[uu])), qu = (uu, ju, su) => (0, bu.jsx)(wu.b, {
-        label: ju,
-        checked: Eu[uu],
-        disabled: 1 === lu.length && lu[0] === uu,
-        circleInfoText: su,
-        onClick: Eu => {
-          Uu(uu, Eu)
+        }, GG)
+      }, kG = ["lines", "dot", "circle"].filter((GG => bG[GG])), UG = (GG, ZG, wG) => (0, pG.jsx)(uG.c, {
+        label: ZG,
+        checked: bG[GG],
+        disabled: 1 === kG.length && kG[0] === GG,
+        circleInfoText: wG,
+        onClick: bG => {
+          SG(GG, bG)
         }
-      }, uu), fu = "shapes" === Eu.style;
-      return (0, bu.jsxs)(bu.Fragment, {
-        children: [(0, bu.jsx)(wu.f, {
-          label: su("crosshairSettings:style"),
+      }, GG), YG = "shapes" === bG.style;
+      return (0, pG.jsxs)(pG.Fragment, {
+        children: [(0, pG.jsx)(uG.e, {
+          label: wG("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: su("crosshairSettings:styleClassic")
+            label: wG("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: su("crosshairSettings:styleShapes")
+            label: wG("crosshairSettings:styleShapes")
           }],
-          value: Eu.style,
-          onChange: uu => {
-            Uu("style", uu)
+          value: bG.style,
+          onChange: GG => {
+            SG("style", GG)
           }
-        }), (0, bu.jsx)(Vj, {
-          label: su("crosshairSettings:color"),
-          value: Eu.color,
-          swatches: kj,
-          onChange: uu => {
-            Uu("color", uu)
+        }), (0, pG.jsx)(lZ, {
+          label: wG("crosshairSettings:color"),
+          value: bG.color,
+          swatches: FZ,
+          onChange: GG => {
+            SG("color", GG)
           }
-        }), Zu("opacity", su("crosshairSettings:opacity"), Kj), !fu && Zu("size", su("crosshairSettings:size"), Kj), fu && (0, bu.jsxs)("div", {
+        }), LG("opacity", wG("crosshairSettings:opacity"), cZ), !YG && LG("size", wG("crosshairSettings:size"), cZ), YG && (0, pG.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [qu("lines", su("crosshairSettings:lines")), Eu.lines && Zu("lineLength", su("crosshairSettings:lineLength")), Eu.lines && Zu("lineThickness", su("crosshairSettings:lineThickness")), Eu.lines && Zu("gap", su("crosshairSettings:gap")), Eu.lines && qu("tStyle", su("crosshairSettings:tStyle"))]
-        }), fu && (0, bu.jsxs)("div", {
+          children: [UG("lines", wG("crosshairSettings:lines")), bG.lines && LG("lineLength", wG("crosshairSettings:lineLength")), bG.lines && LG("lineThickness", wG("crosshairSettings:lineThickness")), bG.lines && LG("gap", wG("crosshairSettings:gap")), bG.lines && UG("tStyle", wG("crosshairSettings:tStyle"))]
+        }), YG && (0, pG.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [qu("dot", su("crosshairSettings:dot")), Eu.dot && Zu("dotSize", su("crosshairSettings:dotSize"))]
-        }), fu && (0, bu.jsxs)("div", {
+          children: [UG("dot", wG("crosshairSettings:dot")), bG.dot && LG("dotSize", wG("crosshairSettings:dotSize"))]
+        }), YG && (0, pG.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [qu("circle", su("crosshairSettings:circle")), Eu.circle && Zu("circleRadius", su("crosshairSettings:circleRadius")), Eu.circle && Zu("circleThickness", su("crosshairSettings:circleThickness"))]
-        }), (0, bu.jsxs)("div", {
+          children: [UG("circle", wG("crosshairSettings:circle")), bG.circle && LG("circleRadius", wG("crosshairSettings:circleRadius")), bG.circle && LG("circleThickness", wG("crosshairSettings:circleThickness"))]
+        }), (0, pG.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [Zu("outline", su("crosshairSettings:outline"), (uu => uu > 0 ? vj(uu) : su("crosshairSettings:off"))), Eu.outline > 0 && (0, bu.jsx)(Vj, {
-            label: su("crosshairSettings:outlineColor"),
-            value: Eu.outlineColor,
-            swatches: mj,
-            onChange: uu => {
-              Uu("outlineColor", uu)
+          children: [LG("outline", wG("crosshairSettings:outline"), (GG => GG > 0 ? aZ(GG) : wG("crosshairSettings:off"))), bG.outline > 0 && (0, pG.jsx)(lZ, {
+            label: wG("crosshairSettings:outlineColor"),
+            value: bG.outlineColor,
+            swatches: vZ,
+            onChange: GG => {
+              SG("outlineColor", GG)
             }
           })]
-        }), qu("growOnClick", su("crosshairSettings:growOnClick")), fu && qu("forGuns", su("crosshairSettings:forGuns"), su("crosshairSettings:forGunsInfo"))]
+        }), UG("growOnClick", wG("crosshairSettings:growOnClick")), YG && UG("forGuns", wG("crosshairSettings:forGuns"), wG("crosshairSettings:forGunsInfo"))]
       })
     }
-    var Qj = ju(65),
-      ij = ju(1330),
-      Wj = ju(12943),
-      Sj = ju(14127),
-      Ij = ju(15536),
-      Fj = ju(16030);
-    const Bj = ["sky", "grass", "stone", "sand", "snow", "night"],
-      Lj = "4rem";
+    var PZ = ZG(59),
+      MZ = ZG(1239),
+      AZ = ZG(12875),
+      sZ = ZG(14030),
+      qZ = ZG(15464),
+      nZ = ZG(15973);
+    const gZ = ["sky", "grass", "stone", "sand", "snow", "night"],
+      eZ = "4rem";
 
-    function tj(uu) {
+    function RZ(GG) {
       return {
-        backgroundImage: `url(${uu})`,
-        backgroundSize: `${Lj} ${Lj}`,
+        backgroundImage: `url(${GG})`,
+        backgroundSize: `${eZ} ${eZ}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function xj(uu) {
+    function TZ(GG) {
       return {
         ...(() => {
-          switch (uu) {
+          switch (GG) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return tj(Wj);
+              return RZ(AZ);
             case "stone":
-              return tj(Sj);
+              return RZ(sZ);
             case "sand":
-              return tj(Ij);
+              return RZ(qZ);
             case "snow":
-              return tj(Fj);
+              return RZ(nZ);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -1848,21 +1848,21 @@ export const modules = {
       }
     }
 
-    function Tj(uu) {
+    function HZ(GG) {
       return Object.freeze({
-        ...aj.f,
+        ...WZ.f,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...uu
+        ...GG
       })
     }
-    const Hj = [{
+    const tZ = [{
         id: "default",
-        settings: aj.f
+        settings: WZ.f
       }, {
         id: "cross",
-        settings: Tj({
+        settings: HZ({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -1871,7 +1871,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: Tj({
+        settings: HZ({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -1882,13 +1882,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: Tj({
+        settings: HZ({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: Tj({
+        settings: HZ({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -1897,7 +1897,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: Tj({
+        settings: HZ({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -1907,7 +1907,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: Tj({
+        settings: HZ({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -1916,7 +1916,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: Tj({
+        settings: HZ({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -1924,570 +1924,570 @@ export const modules = {
           outline: 1.5
         })
       }],
-      Aj = ["growOnClick", "forGuns"];
-    var nj = ju(34525);
+      DZ = ["growOnClick", "forGuns"];
+    var NZ = ZG(34446);
 
-    function yj(uu) {
+    function OZ(GG) {
       let {
-        label: Eu,
-        selected: ju,
-        onClick: su,
-        className: Uu,
-        style: Xu,
-        children: lu
-      } = uu;
-      return (0, bu.jsx)("button", {
+        label: bG,
+        selected: ZG,
+        onClick: wG,
+        className: SG,
+        style: yG,
+        children: kG
+      } = GG;
+      return (0, pG.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": ju,
-        title: Eu,
-        "aria-label": Eu,
+        "aria-checked": ZG,
+        title: bG,
+        "aria-label": bG,
         "data-pad-focusable": !0,
-        className: Zu()("CrosshairBackdropSwatch", Uu, {
-          Selected: ju
+        className: LG()("CrosshairBackdropSwatch", SG, {
+          Selected: ZG
         }),
-        style: Xu,
-        onClick: su,
-        children: lu
+        style: yG,
+        onClick: wG,
+        children: kG
       })
     }
 
-    function zj(uu) {
+    function xZ(GG) {
       let {
-        backdrop: Eu,
-        onChange: ju,
-        game: su
-      } = uu;
+        backdrop: bG,
+        onChange: ZG,
+        game: wG
+      } = GG;
       const {
-        t: Uu
-      } = (0, Xu.A)();
-      return (0, bu.jsxs)("div", {
+        t: SG
+      } = (0, yG.w)();
+      return (0, pG.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": Uu("crosshairSettings:background"),
-        children: [su && (0, bu.jsx)(yj, {
-          label: Uu("crosshairSettings:bg_game"),
-          selected: su.selected,
-          onClick: su.onSelect,
+        "aria-label": SG("crosshairSettings:background"),
+        children: [wG && (0, pG.jsx)(OZ, {
+          label: SG("crosshairSettings:bg_game"),
+          selected: wG.selected,
+          onClick: wG.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, bu.jsx)(lu.e, {
+          children: (0, pG.jsx)(kG.c, {
             name: "cube"
           })
-        }), Bj.map((uu => (0, bu.jsx)(yj, {
-          label: Uu(`crosshairSettings:bg_${uu}`),
-          selected: !(null !== su && void 0 !== su && su.selected) && uu === Eu,
-          style: xj(uu),
+        }), gZ.map((GG => (0, pG.jsx)(OZ, {
+          label: SG(`crosshairSettings:bg_${GG}`),
+          selected: !(null !== wG && void 0 !== wG && wG.selected) && GG === bG,
+          style: TZ(GG),
           onClick: () => {
-            ju(uu)
+            ZG(GG)
           }
-        }, uu)))]
+        }, GG)))]
       })
     }
 
-    function Rj(uu) {
+    function BZ(GG) {
       let {
-        settings: Eu,
-        touch: ju,
-        backdrop: su,
-        onChange: Uu
-      } = uu;
+        settings: bG,
+        touch: ZG,
+        backdrop: wG,
+        onChange: SG
+      } = GG;
       const {
-        t: lu
-      } = (0, Xu.A)(), qu = function(uu) {
-        var Eu;
-        return null !== (Eu = Hj.find((Eu => (0, aj.o)(Eu.settings, uu, Aj)))) && void 0 !== Eu ? Eu : null
-      }(Eu);
-      return (0, bu.jsx)("div", {
+        t: kG
+      } = (0, yG.w)(), UG = function(GG) {
+        var bG;
+        return null !== (bG = tZ.find((bG => (0, WZ.n)(bG.settings, GG, DZ)))) && void 0 !== bG ? bG : null
+      }(bG);
+      return (0, pG.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": lu("crosshairSettings:presets"),
-        children: Hj.map((uu => {
-          const Xu = (null === qu || void 0 === qu ? void 0 : qu.id) === uu.id;
-          return (0, bu.jsxs)("button", {
+        "aria-label": kG("crosshairSettings:presets"),
+        children: tZ.map((GG => {
+          const yG = (null === UG || void 0 === UG ? void 0 : UG.id) === GG.id;
+          return (0, pG.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": Xu,
+            "aria-checked": yG,
             "data-pad-focusable": !0,
-            className: Zu()("CrosshairPreset", {
-              Selected: Xu
+            className: LG()("CrosshairPreset", {
+              Selected: yG
             }),
             onClick: () => {
-              Uu(function(uu, Eu) {
+              SG(function(GG, bG) {
                 return {
-                  ...Eu.settings,
-                  growOnClick: uu.growOnClick,
-                  forGuns: uu.forGuns
+                  ...bG.settings,
+                  growOnClick: GG.growOnClick,
+                  forGuns: GG.forGuns
                 }
-              }(Eu, uu))
+              }(bG, GG))
             },
-            children: [(0, bu.jsx)("div", {
+            children: [(0, pG.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: xj(su),
-              children: (0, bu.jsx)(nj.c, {
-                settings: uu.settings,
-                touch: ju,
+              style: TZ(wG),
+              children: (0, pG.jsx)(NZ.d, {
+                settings: GG.settings,
+                touch: ZG,
                 inPreview: !0
               })
-            }), (0, bu.jsx)("div", {
+            }), (0, pG.jsx)("div", {
               className: "CrosshairPresetName",
-              children: lu(`crosshairSettings:preset_${uu.id}`)
+              children: kG(`crosshairSettings:preset_${GG.id}`)
             })]
-          }, uu.id)
+          }, GG.id)
         }))
       })
     }
-    var us = ju(1717);
+    var Gw = ZG(1614);
 
-    function Es(uu, Eu) {
-      const [ju, Uu] = (0, su.useState)(!1), Zu = () => {
-        Uu(!1)
-      }, [Xu, lu] = (0, su.useState)(!1), qu = (0, su.useRef)({
-        growOnClick: uu.growOnClick,
-        forGuns: uu.forGuns
+    function bw(GG, bG) {
+      const [ZG, SG] = (0, wG.useState)(!1), LG = () => {
+        SG(!1)
+      }, [yG, kG] = (0, wG.useState)(!1), UG = (0, wG.useRef)({
+        growOnClick: GG.growOnClick,
+        forGuns: GG.forGuns
       });
-      (0, su.useEffect)((() => {
-        const Eu = qu.current;
-        qu.current = {
-          growOnClick: uu.growOnClick,
-          forGuns: uu.forGuns
-        }, (uu.growOnClick && !Eu.growOnClick || uu.forGuns && !Eu.forGuns) && lu(!0)
-      }), [uu.growOnClick, uu.forGuns]), (0, su.useEffect)((() => {
-        if (!Xu) return;
-        const uu = setTimeout((() => {
-          lu(!1)
+      (0, wG.useEffect)((() => {
+        const bG = UG.current;
+        UG.current = {
+          growOnClick: GG.growOnClick,
+          forGuns: GG.forGuns
+        }, (GG.growOnClick && !bG.growOnClick || GG.forGuns && !bG.forGuns) && kG(!0)
+      }), [GG.growOnClick, GG.forGuns]), (0, wG.useEffect)((() => {
+        if (!yG) return;
+        const GG = setTimeout((() => {
+          kG(!1)
         }), 600);
         return () => {
-          clearTimeout(uu)
+          clearTimeout(GG)
         }
-      }), [Xu]);
-      const fu = ju || Xu;
+      }), [yG]);
+      const YG = ZG || yG;
       return {
         view: {
-          pressed: fu,
-          spread: fu && uu.forGuns && !uu.growOnClick ? 6 : 0
+          pressed: YG,
+          spread: YG && GG.forGuns && !GG.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: uu => {
-            !uu.target.closest(Eu) && (0, us.e)(uu.currentTarget, uu.pointerId) && Uu(!0)
+          onPointerDown: GG => {
+            !GG.target.closest(bG) && (0, Gw.b)(GG.currentTarget, GG.pointerId) && SG(!0)
           },
-          onPointerUp: Zu,
-          onPointerCancel: Zu,
-          onLostPointerCapture: Zu
+          onPointerUp: LG,
+          onPointerCancel: LG,
+          onLostPointerCapture: LG
         }
       }
     }
 
-    function ss(uu) {
+    function Zw(GG) {
       let {
-        settings: Eu,
-        touch: ju,
-        backdrop: su,
-        className: Uu,
-        children: Xu,
-        label: lu
-      } = uu;
-      const qu = Es(Eu, ".CrosshairStageControls");
-      return (0, bu.jsxs)("div", {
-        className: Zu()("CrosshairStage", Uu),
-        style: xj(su),
-        ...qu.handlers,
-        children: [(0, bu.jsx)("div", {
+        settings: bG,
+        touch: ZG,
+        backdrop: wG,
+        className: SG,
+        children: yG,
+        label: kG
+      } = GG;
+      const UG = bw(bG, ".CrosshairStageControls");
+      return (0, pG.jsxs)("div", {
+        className: LG()("CrosshairStage", SG),
+        style: TZ(wG),
+        ...UG.handlers,
+        children: [(0, pG.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": lu,
-          children: (0, bu.jsx)(nj.c, {
-            settings: Eu,
-            touch: ju,
+          "aria-label": kG,
+          children: (0, pG.jsx)(NZ.d, {
+            settings: bG,
+            touch: ZG,
             inPreview: !0,
-            ...qu.view
+            ...UG.view
           })
-        }), Xu]
+        }), yG]
       })
     }
-    const Us = "crosshairFullScreen";
+    const ww = "crosshairFullScreen";
 
-    function Zs(uu) {
+    function Sw(GG) {
       let {
-        settings: Eu,
-        touch: ju,
-        backdrop: Uu,
-        onBackdrop: qu,
-        inGame: Cu,
-        onChange: cu,
-        onClose: Nu
-      } = uu;
+        settings: bG,
+        touch: ZG,
+        backdrop: SG,
+        onBackdrop: UG,
+        inGame: VG,
+        onChange: fG,
+        onClose: QG
+      } = GG;
       const {
-        t: Ou
-      } = (0, Xu.A)(), Yu = (0, su.useRef)(null);
-      (0, ij.w)("popup", Yu, Nu),
-      function(uu) {
-        const Eu = (0, su.useRef)(uu);
-        Eu.current = uu, (0, su.useEffect)((() => {
+        t: KG
+      } = (0, yG.w)(), hG = (0, wG.useRef)(null);
+      (0, MZ.w)("popup", hG, QG),
+      function(GG) {
+        const bG = (0, wG.useRef)(GG);
+        bG.current = GG, (0, wG.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [Us]: !0
+            [ww]: !0
           }, "");
-          let uu = !1;
-          const ju = () => {
-            uu = !0, Eu.current()
+          let GG = !1;
+          const ZG = () => {
+            GG = !0, bG.current()
           };
-          return window.addEventListener("popstate", ju), () => {
-            var Eu;
-            window.removeEventListener("popstate", ju), !uu && null !== (Eu = window.history.state) && void 0 !== Eu && Eu[Us] && window.history.back()
+          return window.addEventListener("popstate", ZG), () => {
+            var bG;
+            window.removeEventListener("popstate", ZG), !GG && null !== (bG = window.history.state) && void 0 !== bG && bG[ww] && window.history.back()
           }
         }), [])
-      }(Nu);
-      const hu = (0, su.useRef)(Nu);
-      hu.current = Nu, (0, su.useEffect)((() => {
-        function uu(uu) {
-          "Escape" === uu.key && (uu.stopPropagation(), hu.current())
+      }(QG);
+      const dG = (0, wG.useRef)(QG);
+      dG.current = QG, (0, wG.useEffect)((() => {
+        function GG(GG) {
+          "Escape" === GG.key && (GG.stopPropagation(), dG.current())
         }
-        return window.addEventListener("keydown", uu, !0), () => {
-          window.removeEventListener("keydown", uu, !0)
+        return window.addEventListener("keydown", GG, !0), () => {
+          window.removeEventListener("keydown", GG, !0)
         }
       }), []);
-      const Du = Es(Eu, ".CrosshairFullScreenPanel"),
-        [gu, Mu] = (0, su.useState)(!0),
-        eu = gu && Cu;
-      (0, su.useEffect)((() => {
-        if (eu) return Ju.d.set({
+      const JG = bw(bG, ".CrosshairFullScreenPanel"),
+        [rG, zG] = (0, wG.useState)(!0),
+        EG = rG && VG;
+      (0, wG.useEffect)((() => {
+        if (EG) return iG.e.set({
           crosshairGameView: !0
         }), () => {
-          Ju.d.set({
+          iG.e.set({
             crosshairGameView: !1
           })
         }
-      }), [eu]);
-      const [Gu, pu] = (0, su.useState)(!0);
-      return (0, Qj.createPortal)((0, bu.jsxs)("div", {
-        ref: Yu,
+      }), [EG]);
+      const [oG, XG] = (0, wG.useState)(!0);
+      return (0, PZ.createPortal)((0, pG.jsxs)("div", {
+        ref: hG,
         className: "CrosshairFullScreen",
-        style: eu ? void 0 : xj(Uu),
-        ...Du.handlers,
-        children: [(0, bu.jsx)(nj.c, {
-          settings: Eu,
-          touch: ju,
+        style: EG ? void 0 : TZ(SG),
+        ...JG.handlers,
+        children: [(0, pG.jsx)(NZ.d, {
+          settings: bG,
+          touch: ZG,
           inEditor: !0,
-          ...Du.view
-        }), (0, bu.jsxs)("div", {
-          className: Zu()("CrosshairFullScreenPanel", {
-            Collapsed: !Gu
+          ...JG.view
+        }), (0, pG.jsxs)("div", {
+          className: LG()("CrosshairFullScreenPanel", {
+            Collapsed: !oG
           }),
-          children: [(0, bu.jsxs)("div", {
+          children: [(0, pG.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, bu.jsx)(zj, {
-              backdrop: Uu,
-              onChange: uu => {
-                Mu(!1), qu(uu)
+            children: [(0, pG.jsx)(xZ, {
+              backdrop: SG,
+              onChange: GG => {
+                zG(!1), UG(GG)
               },
-              game: Cu ? {
-                selected: eu,
+              game: VG ? {
+                selected: EG,
                 onSelect: () => {
-                  Mu(!0)
+                  zG(!0)
                 }
               } : void 0
-            }), (0, bu.jsx)(fu.$, {
+            }), (0, pG.jsx)(YG.K, {
               className: "CrosshairPanelToggle",
-              ariaLabel: Ou(Gu ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: KG(oG ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                pu(!Gu)
+                XG(!oG)
               },
-              children: (0, bu.jsx)(lu.e, {
-                name: Gu ? "caret-up" : "pen"
+              children: (0, pG.jsx)(kG.c, {
+                name: oG ? "caret-up" : "pen"
               })
-            }), (0, bu.jsx)(fu.f, {
+            }), (0, pG.jsx)(YG.d, {
               className: "CrosshairFullScreenDone",
-              onClick: Nu,
+              onClick: QG,
               padDefaultFocus: !0,
-              children: Ou("crosshairSettings:done")
+              children: KG("crosshairSettings:done")
             })]
-          }), Gu && (0, bu.jsxs)("div", {
+          }), oG && (0, pG.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, bu.jsx)(Rj, {
-              settings: Eu,
-              touch: ju,
-              backdrop: Uu,
-              onChange: cu
-            }), (0, bu.jsx)(rj, {
-              settings: Eu,
-              onChange: cu
+            children: [(0, pG.jsx)(BZ, {
+              settings: bG,
+              touch: ZG,
+              backdrop: SG,
+              onChange: fG
+            }), (0, pG.jsx)(jZ, {
+              settings: bG,
+              onChange: fG
             })]
           })]
         })]
       }), document.body)
     }
-    var Xs = ju(2806),
-      ls = ju(34532);
+    var Lw = ZG(2657),
+      yw = ZG(34461);
 
-    function qs(uu) {
+    function kw(GG) {
       let {
-        settings: Eu,
-        onChange: ju
-      } = uu;
+        settings: bG,
+        onChange: ZG
+      } = GG;
       const {
-        t: Uu
-      } = (0, Xu.A)(), qu = (0, ls.j)(Eu), [Cu, cu] = (0, Xs.f)(), [Nu, Ou] = (0, su.useState)(!1), Yu = (0, su.useRef)(null), [hu, Du] = (0, Xs.f)(), [gu, Mu] = (0, su.useState)(!1);
-      return (0, bu.jsxs)("div", {
+        t: SG
+      } = (0, yG.w)(), UG = (0, yw.j)(bG), [VG, fG] = (0, Lw.j)(), [QG, KG] = (0, wG.useState)(!1), hG = (0, wG.useRef)(null), [dG, JG] = (0, Lw.j)(), [rG, zG] = (0, wG.useState)(!1);
+      return (0, pG.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, bu.jsxs)("div", {
+        children: [(0, pG.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, bu.jsxs)(fu.$, {
-            className: Zu()("CrosshairCopy", {
-              ActiveSecondaryButton: Cu
+          children: [(0, pG.jsxs)(YG.K, {
+            className: LG()("CrosshairCopy", {
+              ActiveSecondaryButton: VG
             }),
             onClick: () => {
-              (0, Xs.d)(qu, {
+              (0, Lw.h)(UG, {
                 useShareSheet: !1,
-                onOutcome: uu => {
-                  Ou("failed" === uu), "copied" === uu && cu()
+                onOutcome: GG => {
+                  KG("failed" === GG), "copied" === GG && fG()
                 }
               })
             },
-            children: [(0, bu.jsx)(lu.e, {
-              name: Cu ? "check" : "copy"
-            }), " ", Uu(Cu ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, bu.jsx)(Gu.d, {
+            children: [(0, pG.jsx)(kG.c, {
+              name: VG ? "check" : "copy"
+            }), " ", SG(VG ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, pG.jsx)(oG.b, {
             className: "CrosshairPaste",
-            domRef: Yu,
-            ariaLabel: Uu("crosshairSettings:paste"),
-            placeholderText: Uu("crosshairSettings:paste"),
-            onValueChange: uu => {
-              const Eu = (0, ls.f)(uu);
-              Mu(!Eu && uu.trim().length >= ls.e), Eu && (ju(Eu), Yu.current.value = "", Du())
+            domRef: hG,
+            ariaLabel: SG("crosshairSettings:paste"),
+            placeholderText: SG("crosshairSettings:paste"),
+            onValueChange: GG => {
+              const bG = (0, yw.g)(GG);
+              zG(!bG && GG.trim().length >= yw.e), bG && (ZG(bG), hG.current.value = "", JG())
             }
           })]
-        }), Nu && (0, bu.jsx)("input", {
+        }), QG && (0, pG.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: qu,
-          "aria-label": Uu("crosshairSettings:copy"),
-          onFocus: uu => {
-            uu.currentTarget.select()
+          value: UG,
+          "aria-label": SG("crosshairSettings:copy"),
+          onFocus: GG => {
+            GG.currentTarget.select()
           }
-        }), (0, bu.jsxs)("div", {
+        }), (0, pG.jsxs)("div", {
           "aria-live": "polite",
-          children: [gu && (0, bu.jsx)("div", {
+          children: [rG && (0, pG.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: Uu("crosshairSettings:pasteInvalid")
-          }), hu && !gu && (0, bu.jsx)("div", {
+            children: SG("crosshairSettings:pasteInvalid")
+          }), dG && !rG && (0, pG.jsx)("div", {
             className: "CrosshairShareNote",
-            children: Uu("crosshairSettings:applied")
+            children: SG("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var fs = ju(34535);
-    let Cs = "sky";
+    var Uw = ZG(34463);
+    let Yw = "sky";
 
-    function bs(uu) {
+    function Vw(GG) {
       let {
-        showing: Eu
-      } = uu;
+        showing: bG
+      } = GG;
       const {
-        t: ju
-      } = (0, Xu.A)(), {
-        isTouchScreen: Uu,
-        gameState: Zu,
-        clientEscMenuOptions: qu
-      } = (0, Ju.l)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), Cu = (0, fs.e)(), [cu, Nu] = (0, su.useState)(Cs), Ou = uu => {
-        Cs = uu, Nu(uu)
-      }, [Yu, hu] = (0, su.useState)(!1);
-      return (0, su.useEffect)((() => {
-        Eu || hu(!1)
-      }), [Eu]), (0, bu.jsxs)("div", {
+        t: ZG
+      } = (0, yG.w)(), {
+        isTouchScreen: SG,
+        gameState: LG,
+        clientEscMenuOptions: UG
+      } = (0, iG.o)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), VG = (0, Uw.h)(), [fG, QG] = (0, wG.useState)(Yw), KG = GG => {
+        Yw = GG, QG(GG)
+      }, [hG, dG] = (0, wG.useState)(!1);
+      return (0, wG.useEffect)((() => {
+        bG || dG(!1)
+      }), [bG]), (0, pG.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, bu.jsx)("div", {
+        children: [(0, pG.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, bu.jsx)(ss, {
+          children: (0, pG.jsx)(Zw, {
             className: "CrosshairPreviewStage",
-            settings: Cu,
-            touch: Uu,
-            backdrop: cu,
-            label: ju("crosshairSettings:preview"),
-            children: (0, bu.jsxs)("div", {
+            settings: VG,
+            touch: SG,
+            backdrop: fG,
+            label: ZG("crosshairSettings:preview"),
+            children: (0, pG.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, bu.jsx)(zj, {
-                backdrop: cu,
-                onChange: Ou
-              }), (0, bu.jsxs)(fu.$, {
+              children: [(0, pG.jsx)(xZ, {
+                backdrop: fG,
+                onChange: KG
+              }), (0, pG.jsxs)(YG.K, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  hu(!0)
+                  dG(!0)
                 },
-                children: [(0, bu.jsx)(lu.e, {
+                children: [(0, pG.jsx)(kG.c, {
                   name: "expand"
-                }), " ", ju("crosshairSettings:fullScreen")]
+                }), " ", ZG("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, bu.jsx)("div", {
+        }), (0, pG.jsx)("div", {
           className: "SettingBox",
-          children: (0, bu.jsx)(Rj, {
-            settings: Cu,
-            touch: Uu,
-            backdrop: cu,
-            onChange: fs.b
+          children: (0, pG.jsx)(BZ, {
+            settings: VG,
+            touch: SG,
+            backdrop: fG,
+            onChange: Uw.e
           })
-        }), (0, bu.jsx)(qs, {
-          settings: Cu,
-          onChange: fs.b
-        }), Uu && (0, bu.jsx)(dj.d, {
-          note: (0, Jj.d)(Uu, qu.touchActionButtons) ? ju("crosshairSettings:touchNote") : void 0
-        }), (0, bu.jsx)(rj, {
-          settings: Cu,
-          onChange: fs.b
-        }), Yu && (0, bu.jsx)(Zs, {
-          settings: Cu,
-          touch: Uu,
-          backdrop: cu,
-          onBackdrop: Ou,
-          inGame: "inGame" === Zu,
-          onChange: fs.b,
+        }), (0, pG.jsx)(kw, {
+          settings: VG,
+          onChange: Uw.e
+        }), SG && (0, pG.jsx)(CZ.b, {
+          note: (0, iZ.f)(SG, UG.touchActionButtons) ? ZG("crosshairSettings:touchNote") : void 0
+        }), (0, pG.jsx)(jZ, {
+          settings: VG,
+          onChange: Uw.e
+        }), hG && (0, pG.jsx)(Sw, {
+          settings: VG,
+          touch: SG,
+          backdrop: fG,
+          onBackdrop: KG,
+          inGame: "inGame" === LG,
+          onChange: Uw.e,
           onClose: () => {
-            hu(!1)
+            dG(!1)
           }
         })]
       })
     }
-    var cs = ju(9074),
-      Ns = ju(1453),
-      Os = ju(5151),
-      Ys = ju(34538),
-      hs = ju(4452),
-      Ds = ju(2031),
-      gs = ju(762);
-    const Ms = (0, su.memo)((function() {
+    var pw = ZG(8909),
+      fw = ZG(1357),
+      Qw = ZG(5012),
+      Kw = ZG(34466),
+      hw = ZG(4293),
+      dw = ZG(1953),
+      Jw = ZG(701);
+    const rw = (0, wG.memo)((function() {
       const {
-        clientEscMenuOptions: uu
-      } = (0, Ju.l)(["clientEscMenuOptions"]), {
-        recording: Eu,
-        clipping: ju,
-        hasClipBuffer: Uu
-      } = (0, rE.f)("replayRecorder"), Xu = (0, rE.d)("connectedGame", (uu => uu.replay)), lu = (0, hs.k)(), qu = !1 === (0, Yu.h)("canRecordReplays");
-      (0, su.useEffect)((() => {
-        gu.gameBridge.send("setRecorderPrefs", {
-          clipping: uu.enableClipping,
-          clipSeconds: uu.clipDurationSeconds
+        clientEscMenuOptions: GG
+      } = (0, iG.o)(["clientEscMenuOptions"]), {
+        recording: bG,
+        clipping: ZG,
+        hasClipBuffer: SG
+      } = (0, jb.f)("replayRecorder"), yG = (0, jb.c)("connectedGame", (GG => GG.replay)), kG = (0, hw.j)(), UG = !1 === (0, hG.i)("canRecordReplays");
+      (0, wG.useEffect)((() => {
+        rG.gameBridge.send("setRecorderPrefs", {
+          clipping: GG.enableClipping,
+          clipSeconds: GG.clipDurationSeconds
         })
-      }), [uu.enableClipping, uu.clipDurationSeconds]);
-      const Cu = lu || Xu,
-        cu = !Cu && !qu,
-        Nu = Eu || cu,
-        Ou = cu,
-        hu = Ou && ju && !Eu;
+      }), [GG.enableClipping, GG.clipDurationSeconds]);
+      const VG = kG || yG,
+        fG = !VG && !UG,
+        QG = bG || fG,
+        KG = fG,
+        dG = KG && ZG && !bG;
 
-      function Du() {
-        Nu && gu.gameBridge.send("toggleRecording", null)
+      function JG() {
+        QG && rG.gameBridge.send("toggleRecording", null)
       }
-      return (0, bu.jsxs)("div", {
+      return (0, pG.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, bu.jsxs)("div", {
+        children: [(0, pG.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, bu.jsx)("div", {
+          children: [(0, pG.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: Eu ? (0, bu.jsxs)(bu.Fragment, {
-              children: [(0, bu.jsxs)(fu.R, {
+            children: bG ? (0, pG.jsxs)(pG.Fragment, {
+              children: [(0, pG.jsxs)(YG.C, {
                 className: "ReplayViewerCategoryButton",
-                onClick: Du,
-                disabled: !Nu,
-                children: [(0, bu.jsx)("span", {
+                onClick: JG,
+                disabled: !QG,
+                children: [(0, pG.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, bu.jsx)(Ds.b, {
+                }), (0, pG.jsx)(dw.e, {
                   noaAction: "recordGame"
                 })]
-              }), (0, bu.jsx)(Ys.d, {
+              }), (0, pG.jsx)(Kw.d, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, bu.jsxs)(fu.f, {
+            }) : (0, pG.jsxs)(YG.d, {
               className: "ReplayViewerCategoryButton",
-              onClick: Du,
-              disabled: !Nu,
-              children: [(0, bu.jsx)("span", {
+              onClick: JG,
+              disabled: !QG,
+              children: [(0, pG.jsx)("span", {
                 children: "Start Recording"
-              }), (0, bu.jsx)(Ds.b, {
+              }), (0, pG.jsx)(dw.e, {
                 noaAction: "recordGame"
               })]
             })
-          }), qu && (0, bu.jsx)("div", {
+          }), UG && (0, pG.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), Cu && !Eu && (0, bu.jsx)("div", {
+          }), VG && !bG && (0, pG.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, bu.jsxs)("div", {
+        }), (0, pG.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, bu.jsx)(wu.b, {
+          children: [(0, pG.jsx)(uG.c, {
             label: "Enable clipping",
-            checked: uu.enableClipping,
-            disabled: !Ou,
-            onClick: function(uu) {
-              Ou && Ju.d.setClientEscMenuOptions({
-                enableClipping: uu
+            checked: GG.enableClipping,
+            disabled: !KG,
+            onClick: function(GG) {
+              KG && iG.e.setClientEscMenuOptions({
+                enableClipping: GG
               })
             },
-            className: Zu()({
-              SettingBoxDisabled: !Ou
+            className: LG()({
+              SettingBoxDisabled: !KG
             })
-          }), (0, bu.jsx)(wu.h, {
+          }), (0, pG.jsx)(uG.f, {
             name: "Clip duration (seconds)",
-            min: gs.k,
-            max: gs.i,
-            step: gs.e,
-            initValue: uu.clipDurationSeconds,
-            onChange: function(uu) {
-              Ju.d.setClientEscMenuOptions({
-                clipDurationSeconds: uu
+            min: Jw.j,
+            max: Jw.f,
+            step: Jw.c,
+            initValue: GG.clipDurationSeconds,
+            onChange: function(GG) {
+              iG.e.setClientEscMenuOptions({
+                clipDurationSeconds: GG
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !Ou || !uu.enableClipping
+            disabled: !KG || !GG.enableClipping
           })]
-        }), (0, bu.jsxs)("div", {
+        }), (0, pG.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, bu.jsxs)(fu.f, {
+          children: [(0, pG.jsxs)(YG.d, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              hu && gu.gameBridge.send("saveClip", null)
+              dG && rG.gameBridge.send("saveClip", null)
             },
-            disabled: !hu,
-            children: [(0, bu.jsx)("span", {
+            disabled: !dG,
+            children: [(0, pG.jsx)("span", {
               children: "Record clip"
-            }), (0, bu.jsx)(Ds.b, {
+            }), (0, pG.jsx)(dw.e, {
               noaAction: "recordClip"
             })]
-          }), uu.enableClipping && !Uu && Ou && !Eu && (0, bu.jsx)("div", {
+          }), GG.enableClipping && !SG && KG && !bG && (0, pG.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), Eu && (0, bu.jsx)("div", {
+          }), bG && (0, pG.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, bu.jsxs)("div", {
+        }), (0, pG.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, bu.jsxs)(fu.f, {
+          children: [(0, pG.jsxs)(YG.d, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, hs.h)(!0), Ju.d.set({
+              (0, hw.g)(!0), iG.e.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: lu,
-            children: [(0, bu.jsx)("span", {
+            disabled: kG,
+            children: [(0, pG.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, bu.jsx)(Ds.b, {
+            }), (0, pG.jsx)(dw.e, {
               noaAction: "replayViewerOpen"
             })]
-          }), lu && (0, bu.jsx)("div", {
+          }), kG && (0, pG.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, bu.jsxs)("div", {
+        }), (0, pG.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, bu.jsx)("div", {
+          children: [(0, pG.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, bu.jsx)("iframe", {
+          }), (0, pG.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2498,8 +2498,8 @@ export const modules = {
         })]
       })
     }));
-    var es = ju(1955);
-    const Gs = {
+    var zw = ZG(1873);
+    const Ew = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2521,11 +2521,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, bu.jsx)("svg", {
+        icon: () => (0, pG.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, bu.jsx)("path", {
+          children: (0, pG.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2544,7 +2544,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      AN: {
+      OQ: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2570,291 +2570,291 @@ export const modules = {
       }
     };
 
-    function ps() {
-      return Promise.all([ju.e(78), ju.e(136), ju.e(135), ju.e(131)]).then((() => ju(41292))).then((uu => ({
-        default: uu.ShaderPackCategory
-      })), (uu => (console.error("Failed to load the shader pack settings", uu), {
-        default: ws
+    function ow() {
+      return Promise.all([ZG.e(78), ZG.e(136), ZG.e(135), ZG.e(131)]).then((() => ZG(41462))).then((GG => ({
+        default: GG.ShaderPackCategory
+      })), (GG => (console.error("Failed to load the shader pack settings", GG), {
+        default: Xw
       })))
     }
 
-    function ws() {
+    function Xw() {
       const {
-        t: uu
-      } = (0, Xu.A)();
-      return (0, bu.jsx)("div", {
+        t: GG
+      } = (0, yG.w)();
+      return (0, pG.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: uu("shaderPack:tabLoadFailed")
+        children: GG("shaderPack:tabLoadFailed")
       })
     }
-    var ds = ju(1443);
-    const as = (0, su.lazy)((() => ju.e(278).then((() => ju(41283))).then((uu => ({
-        default: uu.BloxdInformation
+    var uw = ZG(1343);
+    const iw = (0, wG.lazy)((() => ZG.e(278).then((() => ZG(41449))).then((GG => ({
+        default: GG.BloxdInformation
       }))))),
-      Ps = (0, su.lazy)(ps);
+      Cw = (0, wG.lazy)(ow);
 
-    function os(uu) {
-      return uu ? "general" : "account"
+    function Ww(GG) {
+      return GG ? "general" : "account"
     }
-    const ks = new Map,
-      ms = (0, su.memo)((function(uu) {
+    const mw = new Map,
+      Iw = (0, wG.memo)((function(GG) {
         let {
-          show: Eu,
-          setBeforeResumeCallback: ju
-        } = uu;
-        (0, hu.d)();
+          show: bG,
+          setBeforeResumeCallback: ZG
+        } = GG;
+        (0, dG.b)();
         const {
-          gameState: Uu,
-          openSettingsCategory: Zu
-        } = (0, Ju.l)(["gameState", "openSettingsCategory"]), {
-          userContext: qu
-        } = (0, Ou.c)(), {
-          t: Cu
-        } = (0, Xu.A)(), Gu = (0, Nu.b)(), pu = (0, Yu.h)("minChunkAddDist"), wu = "inGame" === Uu, [du, ou] = (0, su.useState)(os(wu)), [ku, mu] = (0, su.useState)(null), [vu, Ku] = (0, su.useState)([]), Vu = (0, su.useRef)(function() {
-          const uu = new Date,
-            Eu = 6 * (uu.getMonth() + uu.getDate()) % DE.x.length;
-          return [...DE.x, ...DE.x].slice(Eu, Eu + 6)
-        }()), ru = (0, su.useRef)(null), Qu = (0, LE.g)(Ns.f, (0, Ns.b)()), iu = Object.keys(Gs).filter((uu => {
-          switch (uu) {
+          gameState: SG,
+          openSettingsCategory: LG
+        } = (0, iG.o)(["gameState", "openSettingsCategory"]), {
+          userContext: UG
+        } = (0, KG.e)(), {
+          t: VG
+        } = (0, yG.w)(), oG = (0, QG.d)(), XG = (0, hG.i)("minChunkAddDist"), uG = "inGame" === SG, [CG, IG] = (0, wG.useState)(Ww(uG)), [FG, vG] = (0, wG.useState)(null), [aG, cG] = (0, wG.useState)([]), lG = (0, wG.useRef)(function() {
+          const GG = new Date,
+            bG = 6 * (GG.getMonth() + GG.getDate()) % Jb.F.length;
+          return [...Jb.F, ...Jb.F].slice(bG, bG + 6)
+        }()), jG = (0, wG.useRef)(null), PG = (0, eb.j)(fw.f, (0, fw.b)()), MG = Object.keys(Ew).filter((GG => {
+          switch (GG) {
             case "replayViewer":
-              return wu;
+              return uG;
             case "developerTools":
-              return qu.playerHasRank("developer") || !1;
+              return UG.playerHasRank("developer") || !1;
             case "texturePack":
-              return Du.featureFlags.settings.canChangeTexturePack;
-            case "AN":
-              return Du.featureFlags.settings.canUseShaderPacks;
+              return JG.featureFlags.settings.canChangeTexturePack;
+            case "OQ":
+              return JG.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return Du.featureFlags.useSocialFeatures || null !== qu.dailyDrop;
+              return JG.featureFlags.useSocialFeatures || null !== UG.dailyDrop;
             case "alternativeDomains":
-              return "crazygames" !== Pu.siteUsed;
+              return "crazygames" !== mG.siteUsed;
             case "controller":
-              return Du.featureFlags.useControllerSupport && (Qu || "controller" === du);
+              return JG.featureFlags.useControllerSupport && (PG || "controller" === CG);
             default:
               return !0
           }
         }));
-        (0, LE.f)("toggleFullCoordinateOverlay", (() => {
-          const uu = Oj("showCoordinates") && Oj("showChunkCoordinates") && Oj("showFPS");
-          Yj("showCoordinates", !uu), Yj("showChunkCoordinates", !uu), Yj("showFPS", !uu), Gu()
-        })), (0, LE.f)("updatedChunkLoadDist", (() => {
-          Gu()
-        })), (0, su.useEffect)((() => {
-          if (mu(null), null === Ju.d.get("openSettingsCategory")) {
-            const uu = (0, ds.g)() ? ks.get(wu) : void 0;
-            ou(uu && iu.includes(uu) ? uu : os(wu))
+        (0, eb.g)("toggleFullCoordinateOverlay", (() => {
+          const GG = KZ("showCoordinates") && KZ("showChunkCoordinates") && KZ("showFPS");
+          hZ("showCoordinates", !GG), hZ("showChunkCoordinates", !GG), hZ("showFPS", !GG), oG()
+        })), (0, eb.g)("updatedChunkLoadDist", (() => {
+          oG()
+        })), (0, wG.useEffect)((() => {
+          if (vG(null), null === iG.e.get("openSettingsCategory")) {
+            const GG = (0, uw.k)() ? mw.get(uG) : void 0;
+            IG(GG && MG.includes(GG) ? GG : Ww(uG))
           }
-        }), [Eu]), (0, su.useEffect)((() => {
-          null !== Zu && (ou(Zu), ks.set(wu, Zu), Ju.d.set({
+        }), [bG]), (0, wG.useEffect)((() => {
+          null !== LG && (IG(LG), mw.set(uG, LG), iG.e.set({
             openSettingsCategory: null
           }))
-        }), [Zu, wu]), (0, su.useLayoutEffect)((() => {
-          ru.current && (ru.current.scrollTop = 0)
-        }), [du, Eu]), (0, su.useEffect)((() => {
-          "updateLog" === du && (0, eu.d)().then(Ku)
-        }), [du]), (0, su.useEffect)((() => {
-          if ((0, lj.H)(pu)) return;
-          const [uu, Eu] = (0, pj.h)(), [ju, su] = (0, Ej.f)(pu), Uu = (0, es.c)(pu[0], uu, ju), Zu = (0, es.c)(pu[1], Eu, su);
-          gu.gameBridge.send("setChunkAddDistance", {
-            horizontal: Uu,
-            vertical: Zu
+        }), [LG, uG]), (0, wG.useLayoutEffect)((() => {
+          jG.current && (jG.current.scrollTop = 0)
+        }), [CG, bG]), (0, wG.useEffect)((() => {
+          "updateLog" === CG && (0, EG.e)().then(cG)
+        }), [CG]), (0, wG.useEffect)((() => {
+          if ((0, kZ.L)(XG)) return;
+          const [GG, bG] = (0, XZ.f)(), [ZG, wG] = (0, bZ.i)(XG), SG = (0, zw.d)(XG[0], GG, ZG), LG = (0, zw.d)(XG[1], bG, wG);
+          rG.gameBridge.send("setChunkAddDistance", {
+            horizontal: SG,
+            vertical: LG
           })
-        }), [pu]);
-        const Wu = (0, su.useCallback)((async () => {
-          ku && (await ku(), mu(null))
-        }), [ku]);
+        }), [XG]);
+        const AG = (0, wG.useCallback)((async () => {
+          FG && (await FG(), vG(null))
+        }), [FG]);
 
-        function Su() {
-          Ju.d.set({
+        function sG() {
+          iG.e.set({
             openEverythingMenuName: null
           })
         }
-        return (0, su.useEffect)((() => {
-          ju((() => Wu))
-        }), [Wu, ju]), (0, bu.jsxs)("div", {
+        return (0, wG.useEffect)((() => {
+          ZG((() => AG))
+        }), [AG, ZG]), (0, pG.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: Eu ? {} : {
+          style: bG ? {} : {
             display: "none"
           },
-          children: [(0, bu.jsx)("div", {
+          children: [(0, pG.jsx)("div", {
             className: "MenuSideBar",
-            children: (0, bu.jsx)("div", {
+            children: (0, pG.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, bu.jsx)(cu, {
-                items: iu.map((uu => {
-                  const Eu = Gs[uu].icon;
+              children: (0, pG.jsx)(fG, {
+                items: MG.map((GG => {
+                  const bG = Ew[GG].icon;
                   return {
-                    id: uu,
-                    faIcon: "string" === typeof Eu ? Eu : void 0,
-                    iconElement: "string" === typeof Eu ? void 0 : (0, bu.jsx)(Eu, {}),
-                    title: Cu(Gs[uu].displayName),
+                    id: GG,
+                    faIcon: "string" === typeof bG ? bG : void 0,
+                    iconElement: "string" === typeof bG ? void 0 : (0, pG.jsx)(bG, {}),
+                    title: VG(Ew[GG].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: du,
-                onClick: uu => {
-                  !async function(uu) {
-                    await Wu(), ou(uu), ks.set(wu, uu)
-                  }(uu)
+                selectedItemId: CG,
+                onClick: GG => {
+                  !async function(GG) {
+                    await AG(), IG(GG), mw.set(uG, GG)
+                  }(GG)
                 }
               })
             })
-          }), (0, bu.jsxs)("div", {
-            ref: ru,
+          }), (0, pG.jsxs)("div", {
+            ref: jG,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === du && (0, bu.jsx)(oE, {
-              showing: Eu,
-              inGame: wu
-            }), "general" === du && (0, bu.jsx)(IE, {
-              inGame: wu
-            }), "audio" === du && (0, bu.jsx)(FE, {}), "notifications" === du && (0, bu.jsx)(uj, {}), "graphics" === du && (0, bu.jsx)(Gj, {
-              minChunkAddDist: null !== pu && void 0 !== pu ? pu : [2, 2],
-              getValue: Oj,
-              onChange: Yj,
-              setApplySettingsCallback: mu
-            }), "controls" === du && (0, bu.jsx)(wj.e, {}), "crosshair" === du && (0, bu.jsx)(bs, {
-              showing: Eu
-            }), "controller" === du && Du.featureFlags.useControllerSupport && (0, bu.jsx)(cs.b, {}), Du.featureFlags.settings.canChangeTexturePack && "texturePack" === du && (0, bu.jsx)(Os.c, {
-              setApplySettingsCallback: mu
-            }), Du.featureFlags.settings.canUseShaderPacks && "AN" === du && (0, bu.jsx)(su.Suspense, {
+            children: ["account" === CG && (0, pG.jsx)(Ib, {
+              showing: bG,
+              inGame: uG
+            }), "general" === CG && (0, pG.jsx)(qb, {
+              inGame: uG
+            }), "audio" === CG && (0, pG.jsx)(nb, {}), "notifications" === CG && (0, pG.jsx)(GZ, {}), "graphics" === CG && (0, pG.jsx)(oZ, {
+              minChunkAddDist: null !== XG && void 0 !== XG ? XG : [2, 2],
+              getValue: KZ,
+              onChange: hZ,
+              setApplySettingsCallback: vG
+            }), "controls" === CG && (0, pG.jsx)(uZ.e, {}), "crosshair" === CG && (0, pG.jsx)(Vw, {
+              showing: bG
+            }), "controller" === CG && JG.featureFlags.useControllerSupport && (0, pG.jsx)(pw.c, {}), JG.featureFlags.settings.canChangeTexturePack && "texturePack" === CG && (0, pG.jsx)(Qw.d, {
+              setApplySettingsCallback: vG
+            }), JG.featureFlags.settings.canUseShaderPacks && "OQ" === CG && (0, pG.jsx)(wG.Suspense, {
               fallback: null,
-              children: (0, bu.jsx)(Ps, {
-                setApplySettingsCallback: mu
+              children: (0, pG.jsx)(Cw, {
+                setApplySettingsCallback: vG
               })
-            }), "updateLog" === du && (0, bu.jsx)("div", {
+            }), "updateLog" === CG && (0, pG.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, bu.jsx)("div", {
+              children: (0, pG.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: vu.map(((uu, Eu) => (0, bu.jsx)(Mu.d, {
-                  updateLog: uu,
-                  index: Eu,
-                  close: Su
-                }, Eu)))
+                children: aG.map(((GG, bG) => (0, pG.jsx)(zG.d, {
+                  updateLog: GG,
+                  index: bG,
+                  close: sG
+                }, bG)))
               })
-            }), "information" === du && (0, bu.jsx)("div", {
+            }), "information" === CG && (0, pG.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, bu.jsx)(su.Suspense, {
+              children: (0, pG.jsx)(wG.Suspense, {
                 fallback: null,
-                children: (0, bu.jsx)(as, {})
+                children: (0, pG.jsx)(iw, {})
               })
-            }), "alternativeDomains" === du && (0, bu.jsxs)("div", {
+            }), "alternativeDomains" === CG && (0, pG.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, bu.jsx)("div", {
+              children: [(0, pG.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: Cu("settingsMenu:unblockedDomainsDescription")
-              }), (0, bu.jsx)("div", {
+                children: VG("settingsMenu:unblockedDomainsDescription")
+              }), (0, pG.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: Vu.current.map((uu => (0, bu.jsxs)(fu.f, {
+                children: lG.current.map((GG => (0, pG.jsxs)(YG.d, {
                   onClick: () => {
-                    window.open(`https://${uu}`)
+                    window.open(`https://${GG}`)
                   },
-                  children: [(0, bu.jsx)(lu.e, {
+                  children: [(0, pG.jsx)(kG.c, {
                     name: "arrow-up-right-from-square"
-                  }), " ", uu]
-                }, uu)))
+                  }), " ", GG]
+                }, GG)))
               })]
-            }), "replayViewer" === du && (0, bu.jsx)(Ms, {}), "developerTools" === du && (0, bu.jsx)("div", {
+            }), "replayViewer" === CG && (0, pG.jsx)(rw, {}), "developerTools" === CG && (0, pG.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, bu.jsx)(au, {
-                setApplySettingsCallback: mu
+              children: (0, pG.jsx)(WG, {
+                setApplySettingsCallback: vG
               })
-            }), null !== ku && (0, bu.jsx)("div", {
+            }), null !== FG && (0, pG.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, bu.jsx)(fu.f, {
+              children: (0, pG.jsx)(YG.d, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: Wu,
-                children: Cu("general:apply")
+                onClick: AG,
+                children: VG("general:apply")
               })
             })]
           })]
         })
       }));
-    var vs = ju(2742);
-    const Ks = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
-      Vs = (0, su.lazy)((() => Promise.resolve().then((() => ju(4842))).then((uu => {
-        uu.needGameClientAfterPaint();
-        const Eu = uu.matchmakingLibrariesPromise.then((uu => (0, vs.d)(uu.loadCharacterCustomisationUI(), (uu => uu.CharacterCustomisationUI))));
-        return Promise.all([uu.ensureGameSetup(), Eu]).then((uu => {
-          let [, Eu] = uu;
-          return Eu
+    var Fw = ZG(2602);
+    const vw = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
+      aw = (0, wG.lazy)((() => Promise.resolve().then((() => ZG(4678))).then((GG => {
+        GG.needGameClientAfterPaint();
+        const bG = GG.matchmakingLibrariesPromise.then((GG => (0, Fw.e)(GG.loadCharacterCustomisationUI(), (GG => GG.CharacterCustomisationUI))));
+        return Promise.all([GG.ensureGameSetup(), bG]).then((GG => {
+          let [, bG] = GG;
+          return bG
         }))
       })))),
-      rs = "openCustomisationTab";
+      lw = "openCustomisationTab";
 
-    function Qs(uu) {
-      var Eu, ju, Uu;
+    function jw(GG) {
+      var bG, ZG, SG;
       let {
-        show: Zu
-      } = uu;
+        show: LG
+      } = GG;
       const {
-        userContext: Xu
-      } = (0, Ou.c)(), lu = (0, Iu.usePurchasesAllowed)(), qu = (0, su.useRef)(null);
-      var fu, Cu;
-      Xu !== ou.NULL_USER_CONTEXT && (null === (Eu = qu.current) || void 0 === Eu ? void 0 : Eu.whamm) !== Xu.whamm && (qu.current = {
-        whamm: Xu.whamm,
-        mountKey: (null !== (fu = null === (Cu = qu.current) || void 0 === Cu ? void 0 : Cu.mountKey) && void 0 !== fu ? fu : -1) + 1
+        userContext: yG
+      } = (0, KG.e)(), kG = (0, qG.usePurchasesAllowed)(), UG = (0, wG.useRef)(null);
+      var YG, VG;
+      yG !== IG.NULL_USER_CONTEXT && (null === (bG = UG.current) || void 0 === bG ? void 0 : bG.whamm) !== yG.whamm && (UG.current = {
+        whamm: yG.whamm,
+        mountKey: (null !== (YG = null === (VG = UG.current) || void 0 === VG ? void 0 : VG.mountKey) && void 0 !== YG ? YG : -1) + 1
       });
-      const [Nu, Yu] = (0, su.useState)("characters");
-      if ((0, LE.f)(rs, Yu), !Zu) return null;
-      const hu = Ks.filter((uu => "cape" !== uu && "nameColour" !== uu || Xu.getPlayerRanks().includes("super") || lu)).map((uu => ({
-        id: uu,
-        faIcon: DE.F[uu],
-        title: DE.I[uu],
+      const [QG, hG] = (0, wG.useState)("characters");
+      if ((0, eb.g)(lw, hG), !LG) return null;
+      const dG = vw.filter((GG => "cape" !== GG && "nameColour" !== GG || yG.getPlayerRanks().includes("super") || kG)).map((GG => ({
+        id: GG,
+        faIcon: Jb.P[GG],
+        title: Jb.R[GG],
         redDot: !1
       })));
-      return (0, bu.jsxs)("div", {
+      return (0, pG.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, bu.jsx)("div", {
+        children: [(0, pG.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, bu.jsx)(cu, {
-            items: hu,
-            selectedItemId: Nu,
-            onClick: uu => {
-              Yu(uu)
+          children: (0, pG.jsx)(fG, {
+            items: dG,
+            selectedItemId: QG,
+            onClick: GG => {
+              hG(GG)
             }
           })
-        }), (0, bu.jsx)("div", {
+        }), (0, pG.jsx)("div", {
           className: "MenuBody",
-          children: (0, bu.jsx)(su.Suspense, {
-            fallback: (0, bu.jsx)("div", {
+          children: (0, pG.jsx)(wG.Suspense, {
+            fallback: (0, pG.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, bu.jsx)(pu.b, {})
+              children: (0, pG.jsx)(XG.b, {})
             }),
-            children: (0, bu.jsx)(Vs, {
-              selectedTab: Nu
-            }, null !== (ju = null === (Uu = qu.current) || void 0 === Uu ? void 0 : Uu.mountKey) && void 0 !== ju ? ju : 0)
+            children: (0, pG.jsx)(aw, {
+              selectedTab: QG
+            }, null !== (ZG = null === (SG = UG.current) || void 0 === SG ? void 0 : SG.mountKey) && void 0 !== ZG ? ZG : 0)
           })
         })]
       })
     }
-    var is = ju(1520),
-      Ws = ju(1524),
-      Ss = ju(34547),
-      Is = ju(4719),
-      Fs = ju(3613),
-      Bs = ju(3660),
-      Ls = ju(34571),
-      ts = ju(8995),
-      xs = ju(34555),
-      Ts = ju(34559),
-      Hs = ju(1971),
-      As = ju(1964),
-      ns = ju(5077),
-      ys = ju(1314),
-      zs = ju(1278),
-      Rs = ju(1710),
-      uU = ju(9047),
-      EU = ju(2552),
-      jU = ju(2560);
+    var Pw = ZG(1405),
+      Mw = ZG(1409),
+      Aw = ZG(34472),
+      sw = ZG(4549),
+      qw = ZG(3404),
+      nw = ZG(3449),
+      gw = ZG(34499),
+      ew = ZG(8830),
+      Rw = ZG(34481),
+      Tw = ZG(34489),
+      Hw = ZG(1889),
+      tw = ZG(1876),
+      Dw = ZG(4933),
+      Nw = ZG(1222),
+      Ow = ZG(1177),
+      xw = ZG(1606),
+      Bw = ZG(8882),
+      GS = ZG(2421),
+      bS = ZG(2428);
 
-    function sU(uu) {
-      return uu ? Object.keys(uu).sort(((Eu, ju) => {
-        var su, Uu, Zu, Xu;
-        const lu = (null !== (su = null === (Uu = uu[ju]) || void 0 === Uu ? void 0 : Uu.sortPriority) && void 0 !== su ? su : 0) - (null !== (Zu = null === (Xu = uu[Eu]) || void 0 === Xu ? void 0 : Xu.sortPriority) && void 0 !== Zu ? Zu : 0);
-        return 0 !== lu ? lu : Eu.localeCompare(ju)
+    function ZS(GG) {
+      return GG ? Object.keys(GG).sort(((bG, ZG) => {
+        var wG, SG, LG, yG;
+        const kG = (null !== (wG = null === (SG = GG[ZG]) || void 0 === SG ? void 0 : SG.sortPriority) && void 0 !== wG ? wG : 0) - (null !== (LG = null === (yG = GG[bG]) || void 0 === yG ? void 0 : yG.sortPriority) && void 0 !== LG ? LG : 0);
+        return 0 !== kG ? kG : bG.localeCompare(ZG)
       })) : []
     }
-    const UU = [{
+    const wS = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -2868,241 +2868,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function ZU(uu) {
+    function SS(GG) {
       for (const {
-          threshold: Eu,
-          suffix: ju
+          threshold: bG,
+          suffix: ZG
         }
-        of UU)
-        if (uu >= Eu) {
-          const su = uu / Eu;
-          return su >= 100 ? `${Math.floor(su)}${ju}` : su >= 10 ? `${su.toFixed(1).replace(/\.0$/,"")}${ju}` : `${su.toFixed(2).replace(/\.?0+$/,"")}${ju}`
-        } return String(uu)
+        of wS)
+        if (GG >= bG) {
+          const wG = GG / bG;
+          return wG >= 100 ? `${Math.floor(wG)}${ZG}` : wG >= 10 ? `${wG.toFixed(1).replace(/\.0$/,"")}${ZG}` : `${wG.toFixed(2).replace(/\.?0+$/,"")}${ZG}`
+        } return String(GG)
     }
-    var XU = ju(5179);
-    const lU = {
+    var LS = ZG(5039);
+    const yS = {
         normal: "0.8em",
         big: "1em"
       },
-      qU = (0, su.memo)((function(uu) {
+      kS = (0, wG.memo)((function(GG) {
         let {
-          item: Eu,
-          amount: ju = 0,
-          size: su = "normal",
-          tier: Uu = null
-        } = uu;
-        return (0, bu.jsx)("div", {
-          className: Zu()("SmpSlot", `SmpSlot-${su}`),
-          children: Eu && (0, bu.jsx)(Hs.d, {
-            itemName: Eu,
-            amount: ju > 1 ? ju : 0,
-            amountFontSize: lU[su],
-            enchantmentTier: Uu
+          item: bG,
+          amount: ZG = 0,
+          size: wG = "normal",
+          tier: SG = null
+        } = GG;
+        return (0, pG.jsx)("div", {
+          className: LG()("SmpSlot", `SmpSlot-${wG}`),
+          children: bG && (0, pG.jsx)(Hw.b, {
+            itemName: bG,
+            amount: ZG > 1 ? ZG : 0,
+            amountFontSize: yS[wG],
+            enchantmentTier: SG
           })
         })
       }));
 
-    function fU(uu) {
+    function US(GG) {
       let {
-        amount: Eu,
-        exact: ju = !1,
-        className: su
-      } = uu;
-      return (0, bu.jsxs)("span", {
-        className: Zu()("SmpGold", su),
-        children: [(0, bu.jsx)("span", {
+        amount: bG,
+        exact: ZG = !1,
+        className: wG
+      } = GG;
+      return (0, pG.jsxs)("span", {
+        className: LG()("SmpGold", wG),
+        children: [(0, pG.jsx)("span", {
           className: "SmpCoin",
-          children: (0, bu.jsx)(Hs.d, {
+          children: (0, pG.jsx)(Hw.b, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), ju ? Eu.toLocaleString("en-US") : ZU(Eu)]
+        }), ZG ? bG.toLocaleString("en-US") : SS(bG)]
       })
     }
 
-    function CU(uu) {
+    function YS(GG) {
       let {
-        count: Eu = 5,
-        grid: ju = !1
-      } = uu;
-      return (0, bu.jsx)("div", {
-        className: ju ? "SmpCardGrid" : "SmpList",
+        count: bG = 5,
+        grid: ZG = !1
+      } = GG;
+      return (0, pG.jsx)("div", {
+        className: ZG ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: Eu
-        }, ((uu, Eu) => (0, bu.jsxs)("div", {
-          className: Zu()(ju ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, bu.jsx)("div", {
-            className: Zu()("SmpSlot", ju ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, bu.jsxs)("div", {
+          length: bG
+        }, ((GG, bG) => (0, pG.jsxs)("div", {
+          className: LG()(ZG ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, pG.jsx)("div", {
+            className: LG()("SmpSlot", ZG ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, pG.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, bu.jsx)("b", {}), (0, bu.jsx)("small", {})]
-          }), (0, bu.jsx)("div", {
+            children: [(0, pG.jsx)("b", {}), (0, pG.jsx)("small", {})]
+          }), (0, pG.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, Eu)))
+        }, bG)))
       })
     }
 
-    function bU(uu) {
+    function VS(GG) {
       let {
-        title: Eu,
-        children: ju
-      } = uu;
-      return (0, bu.jsxs)("div", {
+        title: bG,
+        children: ZG
+      } = GG;
+      return (0, pG.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, bu.jsx)("b", {
-          children: Eu
-        }), ju && (0, bu.jsx)("small", {
-          children: ju
+        children: [(0, pG.jsx)("b", {
+          children: bG
+        }), ZG && (0, pG.jsx)("small", {
+          children: ZG
         })]
       })
     }
 
-    function cU(uu) {
+    function pS(GG) {
       let {
-        entry: Eu
-      } = uu;
-      return (0, bu.jsx)(bU, {
-        title: (0, bu.jsx)(As.d, {
-          text: Eu.item.customTitle
+        entry: bG
+      } = GG;
+      return (0, pG.jsx)(VS, {
+        title: (0, pG.jsx)(tw.c, {
+          text: bG.item.customTitle
         }),
-        children: (0, bu.jsx)(As.d, {
-          text: Eu.item.description
+        children: (0, pG.jsx)(tw.c, {
+          text: bG.item.description
         })
       })
     }
 
-    function NU(uu) {
-      return (0, bu.jsx)(XU.c, {
-        ...uu,
-        className: Zu()("SmpChoice", uu.className),
+    function fS(GG) {
+      return (0, pG.jsx)(LS.c, {
+        ...GG,
+        className: LG()("SmpChoice", GG.className),
         reselectable: !0
       })
     }
 
-    function OU() {
-      return (0, bu.jsx)("span", {
+    function QS() {
+      return (0, pG.jsx)("span", {
         className: "SmpLoader",
-        children: (0, bu.jsx)(pu.b, {})
+        children: (0, pG.jsx)(XG.b, {})
       })
     }
 
-    function YU(uu) {
+    function KS(GG) {
       let {
-        value: Eu,
-        onChange: ju,
-        min: Uu = 1,
-        max: Zu,
-        step: Xu = 1,
-        label: lu
-      } = uu;
-      const qu = (0, su.useRef)(null),
-        fu = (0, su.useRef)(Eu);
-      fu.current = Eu;
-      const [Cu, cu] = (0, su.useState)(null), Nu = uu => Math.max(Uu, Math.min(Zu, Math.floor(uu))), Ou = uu => {
-        const Eu = fu.current,
-          su = "function" === typeof Xu ? Xu(Eu, uu) : Xu,
-          Uu = Nu(Eu + su * uu);
-        fu.current = Uu, ju(Uu)
+        value: bG,
+        onChange: ZG,
+        min: SG = 1,
+        max: LG,
+        step: yG = 1,
+        label: kG
+      } = GG;
+      const UG = (0, wG.useRef)(null),
+        YG = (0, wG.useRef)(bG);
+      YG.current = bG;
+      const [VG, fG] = (0, wG.useState)(null), QG = GG => Math.max(SG, Math.min(LG, Math.floor(GG))), KG = GG => {
+        const bG = YG.current,
+          wG = "function" === typeof yG ? yG(bG, GG) : yG,
+          SG = QG(bG + wG * GG);
+        YG.current = SG, ZG(SG)
       };
-      (0, su.useEffect)((() => {
-        if (null === Cu) return;
-        let uu;
-        const Eu = () => {
-            cu(null)
+      (0, wG.useEffect)((() => {
+        if (null === VG) return;
+        let GG;
+        const bG = () => {
+            fG(null)
           },
-          ju = setTimeout((() => {
-            uu = setInterval((() => {
-              Ou(Cu);
-              const uu = fu.current;
-              (Cu > 0 ? uu >= Zu : uu <= Uu) && Eu()
+          ZG = setTimeout((() => {
+            GG = setInterval((() => {
+              KG(VG);
+              const GG = YG.current;
+              (VG > 0 ? GG >= LG : GG <= SG) && bG()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", Eu), window.addEventListener("pointercancel", Eu), window.addEventListener("blur", Eu), () => {
-          clearTimeout(ju), clearInterval(uu), window.removeEventListener("pointerup", Eu), window.removeEventListener("pointercancel", Eu), window.removeEventListener("blur", Eu)
+        return window.addEventListener("pointerup", bG), window.addEventListener("pointercancel", bG), window.addEventListener("blur", bG), () => {
+          clearTimeout(ZG), clearInterval(GG), window.removeEventListener("pointerup", bG), window.removeEventListener("pointercancel", bG), window.removeEventListener("blur", bG)
         }
-      }), [Cu]), (0, su.useEffect)((() => {
-        const uu = qu.current;
-        uu && document.activeElement !== uu && uu.value !== String(Eu) && (uu.value = String(Eu))
-      }), [Eu]), (0, su.useEffect)((() => {
-        const uu = qu.current;
-        if (!uu) return;
-        const Eu = () => {
-          uu.value = String(fu.current)
+      }), [VG]), (0, wG.useEffect)((() => {
+        const GG = UG.current;
+        GG && document.activeElement !== GG && GG.value !== String(bG) && (GG.value = String(bG))
+      }), [bG]), (0, wG.useEffect)((() => {
+        const GG = UG.current;
+        if (!GG) return;
+        const bG = () => {
+          GG.value = String(YG.current)
         };
-        return uu.addEventListener("blur", Eu), () => {
-          uu.removeEventListener("blur", Eu)
+        return GG.addEventListener("blur", bG), () => {
+          GG.removeEventListener("blur", bG)
         }
       }), []);
-      const Yu = uu => (0, bu.jsx)("button", {
+      const hG = GG => (0, pG.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${uu>0?"More":"Less"} ${lu}`,
-        disabled: uu > 0 ? Eu >= Zu : Eu <= Uu,
-        onPointerDown: Eu => {
-          0 === Eu.button && (Ou(uu), cu(uu))
+        "aria-label": `${GG>0?"More":"Less"} ${kG}`,
+        disabled: GG > 0 ? bG >= LG : bG <= SG,
+        onPointerDown: bG => {
+          0 === bG.button && (KG(GG), fG(GG))
         },
-        onKeyDown: Eu => {
-          "Enter" !== Eu.key && " " !== Eu.key || Ou(uu)
+        onKeyDown: bG => {
+          "Enter" !== bG.key && " " !== bG.key || KG(GG)
         },
-        onContextMenu: uu => {
-          uu.preventDefault()
+        onContextMenu: GG => {
+          GG.preventDefault()
         },
-        children: uu > 0 ? "+" : "\u2212"
+        children: GG > 0 ? "+" : "\u2212"
       });
-      return (0, bu.jsxs)("div", {
+      return (0, pG.jsxs)("div", {
         className: "SmpStepper",
-        children: [Yu(-1), (0, bu.jsx)(Gu.d, {
+        children: [hG(-1), (0, pG.jsx)(oG.b, {
           className: "SmpStepperInput",
-          domRef: qu,
-          defaultValue: String(Eu),
-          ariaLabel: lu,
+          domRef: UG,
+          defaultValue: String(bG),
+          ariaLabel: kG,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: uu => {
-            const Eu = uu.replace(/[^\d]/g, "");
-            qu.current && Eu !== uu && (qu.current.value = Eu), "" !== Eu && ju(Nu(Number(Eu)))
+          onValueChange: GG => {
+            const bG = GG.replace(/[^\d]/g, "");
+            UG.current && bG !== GG && (UG.current.value = bG), "" !== bG && ZG(QG(Number(bG)))
           }
-        }), Yu(1)]
+        }), hG(1)]
       })
     }
 
-    function hU(uu) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, uu))) - 1))
+    function hS(GG) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, GG))) - 1))
     }
-    var DU = ju(34565),
-      gU = ju(1298);
-    const MU = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    gU.w, Wu.Lc.length;
+    var dS = ZG(34492),
+      JS = ZG(1198);
+    const rS = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    JS.z, AG.Sc.length;
     new Map;
-    var eU = ju(3475);
+    var zS = ZG(3267);
 
-    function GU(uu, Eu) {
-      var ju;
-      return Eu && (null === (ju = uu[Eu]) || void 0 === ju ? void 0 : ju.smp) || null
+    function ES(GG, bG) {
+      var ZG;
+      return bG && (null === (ZG = GG[bG]) || void 0 === ZG ? void 0 : ZG.smp) || null
     }
 
-    function pU(uu, Eu) {
-      const ju = [];
-      for (const Uu of sU(uu)) {
-        var su;
-        const Zu = uu[Uu];
-        (null === (su = Zu.smp) || void 0 === su ? void 0 : su.kind) === Eu && ju.push({
-          key: Uu,
-          item: Zu,
-          meta: Zu.smp
+    function oS(GG, bG) {
+      const ZG = [];
+      for (const SG of ZS(GG)) {
+        var wG;
+        const LG = GG[SG];
+        (null === (wG = LG.smp) || void 0 === wG ? void 0 : wG.kind) === bG && ZG.push({
+          key: SG,
+          item: LG,
+          meta: LG.smp
         })
       }
-      return ju
+      return ZG
     }
 
-    function wU(uu, Eu) {
-      var ju;
-      return null !== (ju = pU(uu, Eu)[0]) && void 0 !== ju ? ju : null
+    function XS(GG, bG) {
+      var ZG;
+      return null !== (ZG = oS(GG, bG)[0]) && void 0 !== ZG ? ZG : null
     }
-    const JU = "50% 0% 50% 0%",
-      dU = [{
+    const uS = "50% 0% 50% 0%",
+      iS = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -3116,746 +3116,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function aU(uu) {
-      const Eu = uu - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function CS(GG) {
+      const bG = GG - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: ju,
-          suffix: su
+          divisor: ZG,
+          suffix: wG
         }
-        of dU)
-        if (Eu >= ju) return `${Math.floor(Eu/ju)}${su}`;
+        of iS)
+        if (bG >= ZG) return `${Math.floor(bG/ZG)}${wG}`;
       return "<1s"
     }
 
-    function PU(uu) {
-      const Eu = uu.map(ts.g),
-        ju = [];
-      return Eu.forEach(((uu, su) => {
-        const Uu = function(uu) {
-            const Eu = uu.match(/\d+/);
-            return Eu ? Number(Eu[0]) : 0
-          }(uu),
-          Zu = su === Eu.length - 1;
-        (Zu || 1 === Uu || 10 === Uu || 100 === Uu) && ju.push({
-          label: uu,
-          quantity: Uu,
-          isAll: Zu
+    function WS(GG) {
+      const bG = GG.map(ew.h),
+        ZG = [];
+      return bG.forEach(((GG, wG) => {
+        const SG = function(GG) {
+            const bG = GG.match(/\d+/);
+            return bG ? Number(bG[0]) : 0
+          }(GG),
+          LG = wG === bG.length - 1;
+        (LG || 1 === SG || 10 === SG || 100 === SG) && ZG.push({
+          label: GG,
+          quantity: SG,
+          isAll: LG
         })
-      })), ju
+      })), ZG
     }
-    let oU = null;
+    let mS = null;
 
-    function kU(uu, Eu) {
-      const ju = Eu.trim().toLowerCase();
-      if (!ju) return [];
-      const su = uu => {
-          if (uu === ju) return 0;
-          if (uu.startsWith(ju)) return 1;
-          const Eu = uu.indexOf(ju);
-          return -1 === Eu ? -1 : 2 + Eu
+    function IS(GG, bG) {
+      const ZG = bG.trim().toLowerCase();
+      if (!ZG) return [];
+      const wG = GG => {
+          if (GG === ZG) return 0;
+          if (GG.startsWith(ZG)) return 1;
+          const bG = GG.indexOf(ZG);
+          return -1 === bG ? -1 : 2 + bG
         },
-        Uu = [];
-      for (const lu of uu) {
-        const uu = [su(lu.lowerLabel), su(lu.lowerName)].filter((uu => -1 !== uu));
-        uu.length && Uu.push({
-          item: lu,
-          rank: Math.min(...uu)
+        SG = [];
+      for (const kG of GG) {
+        const GG = [wG(kG.lowerLabel), wG(kG.lowerName)].filter((GG => -1 !== GG));
+        GG.length && SG.push({
+          item: kG,
+          rank: Math.min(...GG)
         })
       }
-      if (Uu.length > 0) return Uu.sort(((uu, Eu) => uu.rank - Eu.rank)).map((uu => uu.item));
-      const Zu = [...ju],
-        Xu = uu => {
-          let Eu = 0;
-          for (const ju of Zu) {
-            if (Eu = uu.indexOf(ju, Eu), -1 === Eu) return !1;
-            Eu++
+      if (SG.length > 0) return SG.sort(((GG, bG) => GG.rank - bG.rank)).map((GG => GG.item));
+      const LG = [...ZG],
+        yG = GG => {
+          let bG = 0;
+          for (const ZG of LG) {
+            if (bG = GG.indexOf(ZG, bG), -1 === bG) return !1;
+            bG++
           }
           return !0
         };
-      return uu.filter((uu => Xu(uu.lowerLabel) || Xu(uu.lowerName)))
+      return GG.filter((GG => yG(GG.lowerLabel) || yG(GG.lowerName)))
     }
 
-    function mU(uu, Eu) {
-      var ju;
-      return null !== (ju = null === uu || void 0 === uu ? void 0 : uu[Eu]) && void 0 !== ju ? ju : Eu
+    function FS(GG, bG) {
+      var ZG;
+      return null !== (ZG = null === GG || void 0 === GG ? void 0 : GG[bG]) && void 0 !== ZG ? ZG : bG
     }
 
-    function vU(uu, Eu) {
-      const ju = uu.userInput;
-      return void 0 !== Eu && "dropdown" === (null === ju || void 0 === ju ? void 0 : ju.type) && ju.dropdownOptions.map(ts.g).includes(Eu) ? Eu : function(uu) {
-        const Eu = uu.userInput;
-        if ("dropdown" !== (null === Eu || void 0 === Eu ? void 0 : Eu.type) || 0 === Eu.dropdownOptions.length) return null;
-        const ju = Eu.dropdownOptions.map(ts.g);
-        return Eu.initialValue && ju.includes(Eu.initialValue) ? Eu.initialValue : ju[ju.length - 1]
-      }(uu)
+    function vS(GG, bG) {
+      const ZG = GG.userInput;
+      return void 0 !== bG && "dropdown" === (null === ZG || void 0 === ZG ? void 0 : ZG.type) && ZG.dropdownOptions.map(ew.h).includes(bG) ? bG : function(GG) {
+        const bG = GG.userInput;
+        if ("dropdown" !== (null === bG || void 0 === bG ? void 0 : bG.type) || 0 === bG.dropdownOptions.length) return null;
+        const ZG = bG.dropdownOptions.map(ew.h);
+        return bG.initialValue && ZG.includes(bG.initialValue) ? bG.initialValue : ZG[ZG.length - 1]
+      }(GG)
     }
 
-    function KU(uu) {
-      return void 0 === uu ? "" : JSON.stringify(uu)
+    function aS(GG) {
+      return void 0 === GG ? "" : JSON.stringify(GG)
     }
-    const VU = (0, su.createContext)(null);
+    const cS = (0, wG.createContext)(null);
 
-    function rU() {
-      return (0, su.useContext)(VU)
+    function lS() {
+      return (0, wG.useContext)(cS)
     }
-    var QU = ju(2831);
-    const iU = (0, su.memo)((function(uu) {
+    var jS = ZG(2684);
+    const PS = (0, wG.memo)((function(GG) {
         let {
-          name: Eu,
-          label: ju,
-          onPick: su
-        } = uu;
-        return (0, bu.jsxs)("button", {
+          name: bG,
+          label: ZG,
+          onPick: wG
+        } = GG;
+        return (0, pG.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: ju,
+          title: ZG,
           onClick: () => {
-            su(Eu)
+            wG(bG)
           },
-          children: [(0, bu.jsx)(qU, {
-            item: Eu,
+          children: [(0, pG.jsx)(kS, {
+            item: bG,
             size: "big"
-          }), (0, bu.jsx)("span", {
-            children: ju
+          }), (0, pG.jsx)("span", {
+            children: ZG
           })]
         })
       })),
-      WU = (0, su.memo)((function(uu) {
+      MS = (0, wG.memo)((function(GG) {
         let {
-          items: Eu,
-          query: ju,
-          onPick: Uu
-        } = uu;
+          items: bG,
+          query: ZG,
+          onPick: SG
+        } = GG;
         const {
-          t: Zu
-        } = (0, Xu.A)(), [lu, qu] = (0, su.useState)(new Set), fu = (0, su.useMemo)((() => function(uu) {
-          const Eu = new Map;
-          for (const ju of uu) {
-            let uu = Eu.get(ju.category);
-            uu || (uu = [], Eu.set(ju.category, uu)), uu.push(ju)
+          t: LG
+        } = (0, yG.w)(), [kG, UG] = (0, wG.useState)(new Set), YG = (0, wG.useMemo)((() => function(GG) {
+          const bG = new Map;
+          for (const ZG of GG) {
+            let GG = bG.get(ZG.category);
+            GG || (GG = [], bG.set(ZG.category, GG)), GG.push(ZG)
           }
-          return [...MU, "other"].filter((uu => Eu.has(uu))).map((uu => ({
-            category: uu,
-            items: Eu.get(uu)
+          return [...rS, "other"].filter((GG => bG.has(GG))).map((GG => ({
+            category: GG,
+            items: bG.get(GG)
           })))
-        }(Eu)), [Eu]), Cu = (0, su.useMemo)((() => kU(Eu, ju).slice(0, 60)), [Eu, ju]);
-        return ju.trim() ? 0 === Cu.length ? (0, bu.jsx)(bU, {
-          title: Zu("smpShop:noItemsFound", {
-            query: ju.trim()
+        }(bG)), [bG]), VG = (0, wG.useMemo)((() => IS(bG, ZG).slice(0, 60)), [bG, ZG]);
+        return ZG.trim() ? 0 === VG.length ? (0, pG.jsx)(VS, {
+          title: LG("smpShop:noItemsFound", {
+            query: ZG.trim()
           }),
-          children: Zu("smpShop:tryShorterName")
-        }) : (0, bu.jsx)(QU.e, {
+          children: LG("smpShop:tryShorterName")
+        }) : (0, pG.jsx)(jS.d, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: JU,
-          observerUpdateDeps: [ju],
-          children: Cu.map((uu => (0, bu.jsx)(iU, {
-            name: uu.name,
-            label: uu.label,
-            onPick: Uu
-          }, uu.name)))
-        }) : (0, bu.jsx)(bu.Fragment, {
-          children: fu.map((uu => {
+          rootMargin: uS,
+          observerUpdateDeps: [ZG],
+          children: VG.map((GG => (0, pG.jsx)(PS, {
+            name: GG.name,
+            label: GG.label,
+            onPick: SG
+          }, GG.name)))
+        }) : (0, pG.jsx)(pG.Fragment, {
+          children: YG.map((GG => {
             let {
-              category: Eu,
-              items: ju
-            } = uu;
-            const su = lu.has(Eu) || ju.length <= 48,
-              Xu = su ? ju : ju.slice(0, 48);
-            return (0, bu.jsxs)("section", {
+              category: bG,
+              items: ZG
+            } = GG;
+            const wG = kG.has(bG) || ZG.length <= 48,
+              yG = wG ? ZG : ZG.slice(0, 48);
+            return (0, pG.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, bu.jsxs)("h4", {
-                children: [Zu("other" === Eu ? "smpShop:otherItems" : `creativeInventory:${Eu}`), !su && (0, bu.jsx)("button", {
+              children: [(0, pG.jsxs)("h4", {
+                children: [LG("other" === bG ? "smpShop:otherItems" : `creativeInventory:${bG}`), !wG && (0, pG.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    qu(new Set([...lu, Eu]))
+                    UG(new Set([...kG, bG]))
                   },
-                  children: Zu("smpShop:showAll", {
-                    count: ju.length
+                  children: LG("smpShop:showAll", {
+                    count: ZG.length
                   })
                 })]
-              }), (0, bu.jsx)(QU.e, {
+              }), (0, pG.jsx)(jS.d, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: JU,
-                observerUpdateDeps: [su],
-                children: Xu.map((uu => (0, bu.jsx)(iU, {
-                  name: uu.name,
-                  label: uu.label,
-                  onPick: Uu
-                }, uu.name)))
+                rootMargin: uS,
+                observerUpdateDeps: [wG],
+                children: yG.map((GG => (0, pG.jsx)(PS, {
+                  name: GG.name,
+                  label: GG.label,
+                  onPick: SG
+                }, GG.name)))
               })]
-            }, Eu)
+            }, bG)
           }))
         })
       }));
 
-    function SU(uu, Eu) {
+    function AS(GG, bG) {
       const {
-        searched: ju,
-        shown: Uu,
-        searchFor: Zu,
-        loading: Xu
-      } = function(uu, Eu) {
-        var ju;
-        const Uu = rU(),
-          [Zu, Xu] = (0, su.useState)(void 0),
-          lu = (0, su.useRef)(void 0),
-          qu = (0, su.useRef)(0),
-          fu = (0, su.useRef)(void 0),
-          Cu = null !== (ju = null === uu || void 0 === uu ? void 0 : uu.meta.item) && void 0 !== ju ? ju : null,
-          bu = !!uu && Uu.isPending(uu.key);
-        (0, su.useEffect)((() => {
-          if (!uu || bu || !Eu || void 0 === Zu || Zu === Cu) return;
-          const ju = Zu === lu.current && Uu.gaveUpAt(uu.key) > qu.current && fu.current !== Zu;
-          (Zu !== lu.current || ju) && Uu.act(uu.key, null !== Zu && void 0 !== Zu ? Zu : "*", ju) && (ju && (fu.current = Zu), lu.current = Zu, qu.current = Date.now())
-        }), [uu, bu, Eu, Zu, Cu, Uu]);
-        const cu = (0, su.useCallback)((uu => {
-            lu.current = void 0, fu.current = void 0, Xu(uu)
+        searched: ZG,
+        shown: SG,
+        searchFor: LG,
+        loading: yG
+      } = function(GG, bG) {
+        var ZG;
+        const SG = lS(),
+          [LG, yG] = (0, wG.useState)(void 0),
+          kG = (0, wG.useRef)(void 0),
+          UG = (0, wG.useRef)(0),
+          YG = (0, wG.useRef)(void 0),
+          VG = null !== (ZG = null === GG || void 0 === GG ? void 0 : GG.meta.item) && void 0 !== ZG ? ZG : null,
+          pG = !!GG && SG.isPending(GG.key);
+        (0, wG.useEffect)((() => {
+          if (!GG || pG || !bG || void 0 === LG || LG === VG) return;
+          const ZG = LG === kG.current && SG.gaveUpAt(GG.key) > UG.current && YG.current !== LG;
+          (LG !== kG.current || ZG) && SG.act(GG.key, null !== LG && void 0 !== LG ? LG : "*", ZG) && (ZG && (YG.current = LG), kG.current = LG, UG.current = Date.now())
+        }), [GG, pG, bG, LG, VG, SG]);
+        const fG = (0, wG.useCallback)((GG => {
+            kG.current = void 0, YG.current = void 0, yG(GG)
           }), []),
-          Nu = void 0 !== Zu && Zu !== Cu && (bu || lu.current !== Zu);
+          QG = void 0 !== LG && LG !== VG && (pG || kG.current !== LG);
         return {
-          searched: Cu,
-          shown: Nu ? Zu : Cu,
-          searchFor: cu,
-          loading: Nu || bu || null !== Cu && !Eu
+          searched: VG,
+          shown: QG ? LG : VG,
+          searchFor: fG,
+          loading: QG || pG || null !== VG && !bG
         }
-      }(uu, Eu), lu = (0, su.useMemo)((() => function() {
-        var uu;
-        let Eu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          ju = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          su = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Uu = `${(0,eU.g)()}\x1f${Eu.join("\x1e")}\x1f${ju.join("\x1e")}\x1f${JSON.stringify(su)}`;
-        if ((null === (uu = oU) || void 0 === uu ? void 0 : uu.key) === Uu) return oU.items;
-        const Zu = new Set(ju),
-          Xu = new Set,
-          lu = [],
-          qu = (uu, Eu) => {
-            var ju;
-            if (!uu || Xu.has(uu) || Zu.has(uu)) return;
-            Xu.add(uu);
-            const Uu = null !== (ju = su[uu]) && void 0 !== ju ? ju : uu;
-            lu.push({
-              name: uu,
-              label: Uu,
-              lowerLabel: Uu.toLowerCase(),
-              lowerName: uu.toLowerCase(),
-              category: Eu
+      }(GG, bG), kG = (0, wG.useMemo)((() => function() {
+        var GG;
+        let bG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          ZG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          wG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const SG = `${(0,zS.j)()}\x1f${bG.join("\x1e")}\x1f${ZG.join("\x1e")}\x1f${JSON.stringify(wG)}`;
+        if ((null === (GG = mS) || void 0 === GG ? void 0 : GG.key) === SG) return mS.items;
+        const LG = new Set(ZG),
+          yG = new Set,
+          kG = [],
+          UG = (GG, bG) => {
+            var ZG;
+            if (!GG || yG.has(GG) || LG.has(GG)) return;
+            yG.add(GG);
+            const SG = null !== (ZG = wG[GG]) && void 0 !== ZG ? ZG : GG;
+            kG.push({
+              name: GG,
+              label: SG,
+              lowerLabel: SG.toLowerCase(),
+              lowerName: GG.toLowerCase(),
+              category: bG
             })
           };
-        for (const Cu of (0, DU.creativeItemIds)()) {
-          var fu;
-          (0, DU.itemIsDisabled)(Cu, !0, !0, !1) || (0, DU.showOnlyInCreativeSearch)(Cu) || qu((0, eU.c)(Cu), null !== (fu = (0, DU.creativeCategoryOf)(Cu)) && void 0 !== fu ? fu : "other")
+        for (const VG of (0, dS.creativeItemIds)()) {
+          var YG;
+          (0, dS.itemIsDisabled)(VG, !0, !0, !1) || (0, dS.showOnlyInCreativeSearch)(VG) || UG((0, zS.f)(VG), null !== (YG = (0, dS.creativeCategoryOf)(VG)) && void 0 !== YG ? YG : "other")
         }
-        for (const Cu of Eu) qu(Cu, "other");
-        return oU = {
-          key: Uu,
-          items: lu
-        }, lu
-      }(null === uu || void 0 === uu ? void 0 : uu.meta.extra, null === uu || void 0 === uu ? void 0 : uu.meta.excluded, null === uu || void 0 === uu ? void 0 : uu.meta.names)), [null === uu || void 0 === uu ? void 0 : uu.meta.extra, null === uu || void 0 === uu ? void 0 : uu.meta.excluded, null === uu || void 0 === uu ? void 0 : uu.meta.names]), [qu, fu] = (0, su.useState)(""), [Cu, bu] = (0, su.useState)(0), [cu, Nu] = (0, su.useState)("recent"), Ou = (0, su.useCallback)((uu => {
-        fu(""), bu((uu => uu + 1)), Zu(uu)
-      }), [Zu]), Yu = "browse" === cu || "" !== qu.trim();
+        for (const VG of bG) UG(VG, "other");
+        return mS = {
+          key: SG,
+          items: kG
+        }, kG
+      }(null === GG || void 0 === GG ? void 0 : GG.meta.extra, null === GG || void 0 === GG ? void 0 : GG.meta.excluded, null === GG || void 0 === GG ? void 0 : GG.meta.names)), [null === GG || void 0 === GG ? void 0 : GG.meta.extra, null === GG || void 0 === GG ? void 0 : GG.meta.excluded, null === GG || void 0 === GG ? void 0 : GG.meta.names]), [UG, YG] = (0, wG.useState)(""), [VG, pG] = (0, wG.useState)(0), [fG, QG] = (0, wG.useState)("recent"), KG = (0, wG.useCallback)((GG => {
+        YG(""), pG((GG => GG + 1)), LG(GG)
+      }), [LG]), hG = "browse" === fG || "" !== UG.trim();
       return {
-        searched: ju,
-        shown: Uu,
-        searchFor: Zu,
-        loading: Xu,
-        catalogue: lu,
-        names: null === uu || void 0 === uu ? void 0 : uu.meta.names,
-        query: qu,
-        setQuery: fu,
-        searchBoxKey: Cu,
-        pickItem: Ou,
-        setView: Nu,
-        browsing: Yu
+        searched: ZG,
+        shown: SG,
+        searchFor: LG,
+        loading: yG,
+        catalogue: kG,
+        names: null === GG || void 0 === GG ? void 0 : GG.meta.names,
+        query: UG,
+        setQuery: YG,
+        searchBoxKey: VG,
+        pickItem: KG,
+        setView: QG,
+        browsing: hG
       }
     }
 
-    function IU(uu) {
+    function sS(GG) {
       let {
-        browser: Eu,
-        children: ju
-      } = uu;
+        browser: bG,
+        children: ZG
+      } = GG;
       const {
-        t: su
-      } = (0, Xu.A)(), Uu = rU();
-      return (0, bu.jsxs)("div", {
+        t: wG
+      } = (0, yG.w)(), SG = lS();
+      return (0, pG.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, bu.jsx)("div", {
+        children: [(0, pG.jsx)("div", {
           className: "SmpSearch",
-          children: (0, bu.jsx)(Gu.d, {
+          children: (0, pG.jsx)(oG.b, {
             className: "SmpSearchInput",
-            placeholderText: su("smpShop:searchPlaceholder"),
-            defaultValue: Eu.query,
-            onValueChange: uu => {
-              Eu.setQuery(uu), Eu.searched && uu.trim() && Eu.searchFor(null)
+            placeholderText: wG("smpShop:searchPlaceholder"),
+            defaultValue: bG.query,
+            onValueChange: GG => {
+              bG.setQuery(GG), bG.searched && GG.trim() && bG.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const uu = kU(Eu.catalogue, Eu.query)[0];
-              uu ? Eu.pickItem(uu.name) : Eu.query.trim() && Uu.notify(su("smpShop:noItemsFound", {
-                query: Eu.query.trim()
+              const GG = IS(bG.catalogue, bG.query)[0];
+              GG ? bG.pickItem(GG.name) : bG.query.trim() && SG.notify(wG("smpShop:noItemsFound", {
+                query: bG.query.trim()
               }))
             }
-          }, Eu.searchBoxKey)
-        }), ju]
+          }, bG.searchBoxKey)
+        }), ZG]
       })
     }
 
-    function FU(uu) {
+    function qS(GG) {
       let {
-        browser: Eu,
-        recentLabel: ju,
-        children: su
-      } = uu;
+        browser: bG,
+        recentLabel: ZG,
+        children: wG
+      } = GG;
       const {
-        t: Uu
-      } = (0, Xu.A)();
-      return (0, bu.jsxs)("div", {
+        t: SG
+      } = (0, yG.w)();
+      return (0, pG.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, bu.jsx)(NU, {
+        children: [(0, pG.jsx)(fS, {
           options: [{
             value: "recent",
-            label: ju
+            label: ZG
           }, {
             value: "browse",
-            label: Uu("smpShop:browseItems")
+            label: SG("smpShop:browseItems")
           }],
-          value: Eu.browsing ? "browse" : "recent",
-          onChange: Eu.setView,
-          ariaLabel: Uu("smpShop:show")
-        }), !Eu.browsing && su]
+          value: bG.browsing ? "browse" : "recent",
+          onChange: bG.setView,
+          ariaLabel: SG("smpShop:show")
+        }), !bG.browsing && wG]
       })
     }
 
-    function BU(uu) {
+    function nS(GG) {
       let {
-        item: Eu,
-        names: ju,
-        summary: su,
-        onBack: Uu,
-        children: Zu
-      } = uu;
+        item: bG,
+        names: ZG,
+        summary: wG,
+        onBack: SG,
+        children: LG
+      } = GG;
       const {
-        t: lu
-      } = (0, Xu.A)();
-      return (0, bu.jsxs)("div", {
+        t: kG
+      } = (0, yG.w)();
+      return (0, pG.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, bu.jsx)(fu.d, {
+        children: [(0, pG.jsx)(YG.b, {
           className: "SmpBackButton",
-          onClick: Uu,
-          children: lu("general:back")
-        }), (0, bu.jsx)(qU, {
-          item: Eu,
+          onClick: SG,
+          children: kG("general:back")
+        }), (0, pG.jsx)(kS, {
+          item: bG,
           size: "big"
-        }), (0, bu.jsxs)("div", {
+        }), (0, pG.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, bu.jsx)("b", {
-            children: mU(ju, Eu)
-          }), su && (0, bu.jsx)("small", {
-            children: su
+          children: [(0, pG.jsx)("b", {
+            children: FS(ZG, bG)
+          }), wG && (0, pG.jsx)("small", {
+            children: wG
           })]
-        }), Zu]
+        }), LG]
       })
     }
 
-    function LU(uu) {
+    function gS(GG) {
       let {
-        browser: Eu,
-        className: ju,
-        action: su,
-        above: Uu,
-        list: Xu,
-        summary: lu,
-        recentLabel: qu,
-        listControls: fu,
-        onBack: Cu
-      } = uu;
-      return (0, bu.jsxs)("div", {
-        className: Zu()("SmpScreen", ju),
-        children: [(0, bu.jsx)(IU, {
-          browser: Eu,
-          children: su
-        }), Eu.shown && (0, bu.jsx)(BU, {
-          item: Eu.shown,
-          names: Eu.names,
-          summary: !Eu.loading && lu,
+        browser: bG,
+        className: ZG,
+        action: wG,
+        above: SG,
+        list: yG,
+        summary: kG,
+        recentLabel: UG,
+        listControls: YG,
+        onBack: VG
+      } = GG;
+      return (0, pG.jsxs)("div", {
+        className: LG()("SmpScreen", ZG),
+        children: [(0, pG.jsx)(sS, {
+          browser: bG,
+          children: wG
+        }), bG.shown && (0, pG.jsx)(nS, {
+          item: bG.shown,
+          names: bG.names,
+          summary: !bG.loading && kG,
           onBack: () => {
-            null === Cu || void 0 === Cu || Cu(), Eu.searchFor(null)
+            null === VG || void 0 === VG || VG(), bG.searchFor(null)
           },
-          children: fu
-        }), Uu, Eu.shown ? Xu : (0, bu.jsxs)(bu.Fragment, {
-          children: [(0, bu.jsx)(FU, {
-            browser: Eu,
-            recentLabel: qu,
-            children: fu
-          }), Eu.browsing ? (0, bu.jsx)(WU, {
-            items: Eu.catalogue,
-            query: Eu.query,
-            onPick: Eu.pickItem
-          }) : Xu]
+          children: YG
+        }), SG, bG.shown ? yG : (0, pG.jsxs)(pG.Fragment, {
+          children: [(0, pG.jsx)(qS, {
+            browser: bG,
+            recentLabel: UG,
+            children: YG
+          }), bG.browsing ? (0, pG.jsx)(MS, {
+            items: bG.catalogue,
+            query: bG.query,
+            onPick: bG.pickItem
+          }) : yG]
         })]
       })
     }
 
-    function tU(uu, Eu) {
-      const ju = uu.map((uu => {
+    function eS(GG, bG) {
+      const ZG = GG.map((GG => {
         let {
-          meta: Eu
-        } = uu;
-        return Eu.pricePerItem
+          meta: bG
+        } = GG;
+        return bG.pricePerItem
       }));
-      return "min" === Eu ? Math.min(...ju) : Math.max(...ju)
+      return "min" === bG ? Math.min(...ZG) : Math.max(...ZG)
     }
-    var xU = ju(6777);
-    const TU = (0, su.memo)((function(uu) {
-      var Eu;
+    var RS = ZG(6580);
+    const TS = (0, wG.memo)((function(GG) {
+      var bG;
       const {
-        t: ju
-      } = (0, Xu.A)(), su = null === uu.seller, Uu = uu.quantity * uu.pricePerItem;
-      return (0, bu.jsxs)("div", {
-        className: uu.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, bu.jsx)(qU, {
-          item: uu.item,
-          amount: uu.quantity,
-          size: uu.grid ? "big" : "normal",
-          tier: uu.tier
-        }), (0, bu.jsxs)("div", {
+        t: ZG
+      } = (0, yG.w)(), wG = null === GG.seller, SG = GG.quantity * GG.pricePerItem;
+      return (0, pG.jsxs)("div", {
+        className: GG.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, pG.jsx)(kS, {
+          item: GG.item,
+          amount: GG.quantity,
+          size: GG.grid ? "big" : "normal",
+          tier: GG.tier
+        }), (0, pG.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, bu.jsx)("b", {
-            children: (0, bu.jsx)(As.d, {
-              text: null !== (Eu = uu.title) && void 0 !== Eu ? Eu : `${uu.quantity}x ${uu.item}`
+          children: [(0, pG.jsx)("b", {
+            children: (0, pG.jsx)(tw.c, {
+              text: null !== (bG = GG.title) && void 0 !== bG ? bG : `${GG.quantity}x ${GG.item}`
             })
-          }), (0, bu.jsxs)("small", {
+          }), (0, pG.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, bu.jsx)("span", {
-              children: su ? ju("smpShop:you") : (0, bu.jsx)(As.d, {
+            children: [(0, pG.jsx)("span", {
+              children: wG ? ZG("smpShop:you") : (0, pG.jsx)(tw.c, {
                 text: [{
-                  entityName: uu.seller
+                  entityName: GG.seller
                 }]
               })
-            }), (0, bu.jsx)("span", {
-              children: ju("smpShop:timeLeft", {
-                time: aU(uu.expiresAt)
+            }), (0, pG.jsx)("span", {
+              children: ZG("smpShop:timeLeft", {
+                time: CS(GG.expiresAt)
               })
             })]
           })]
-        }), (0, bu.jsxs)("div", {
+        }), (0, pG.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, bu.jsx)(fU, {
-            amount: uu.pricePerItem
-          }), (0, bu.jsx)("small", {
-            children: ju("smpShop:each")
+          children: [(0, pG.jsx)(US, {
+            amount: GG.pricePerItem
+          }), (0, pG.jsx)("small", {
+            children: ZG("smpShop:each")
           })]
-        }), (0, bu.jsx)(fu.f, {
+        }), (0, pG.jsx)(YG.d, {
           className: "SmpBuyButton",
-          disabled: su || !uu.canAfford && !uu.busy,
-          loading: uu.busy,
+          disabled: wG || !GG.canAfford && !GG.busy,
+          loading: GG.busy,
           onClick: () => {
-            uu.onBuy(uu.itemKey)
+            GG.onBuy(GG.itemKey)
           },
-          children: su ? ju("smpShop:yours") : (0, bu.jsx)(fU, {
-            amount: Uu
+          children: wG ? ZG("smpShop:yours") : (0, pG.jsx)(US, {
+            amount: SG
           })
         })]
       })
     }));
 
-    function HU(uu) {
+    function HS(GG) {
       let {
-        view: Eu,
-        onChange: ju
-      } = uu;
+        view: bG,
+        onChange: ZG
+      } = GG;
       const {
-        t: su
-      } = (0, Xu.A)();
-      return (0, bu.jsx)(XU.c, {
+        t: wG
+      } = (0, yG.w)();
+      return (0, pG.jsx)(LS.c, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: su("smpShop:layout"),
+        ariaLabel: wG("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, bu.jsx)(lu.e, {
+          label: (0, pG.jsx)(kG.c, {
             name: "list"
           }),
-          ariaLabel: su("smpShop:listView")
+          ariaLabel: wG("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, bu.jsx)(lu.e, {
+          label: (0, pG.jsx)(kG.c, {
             name: "grid-2"
           }),
-          ariaLabel: su("smpShop:gridView")
+          ariaLabel: wG("smpShop:gridView")
         }],
-        value: Eu,
-        onChange: ju
+        value: bG,
+        onChange: ZG
       })
     }
 
-    function AU(uu) {
+    function tS(GG) {
       let {
-        entries: Eu,
-        view: ju
-      } = uu;
+        entries: bG,
+        view: ZG
+      } = GG;
       const {
-        t: su
-      } = (0, Xu.A)(), Uu = rU(), Zu = "grid" === ju;
-      return (0, bu.jsxs)(bu.Fragment, {
-        children: [!Zu && (0, bu.jsxs)("div", {
+        t: wG
+      } = (0, yG.w)(), SG = lS(), LG = "grid" === ZG;
+      return (0, pG.jsxs)(pG.Fragment, {
+        children: [!LG && (0, pG.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, bu.jsx)("span", {}), (0, bu.jsx)("span", {
-            children: su("smpShop:columnItem")
-          }), (0, bu.jsx)("span", {
-            children: su("smpShop:columnPriceEach")
-          }), (0, bu.jsx)("span", {
-            children: su("smpShop:columnTotal")
+          children: [(0, pG.jsx)("span", {}), (0, pG.jsx)("span", {
+            children: wG("smpShop:columnItem")
+          }), (0, pG.jsx)("span", {
+            children: wG("smpShop:columnPriceEach")
+          }), (0, pG.jsx)("span", {
+            children: wG("smpShop:columnTotal")
           })]
-        }), (0, bu.jsx)(QU.e, {
-          lazyLoadedClassName: Zu ? "SmpCardGrid" : "SmpList",
+        }), (0, pG.jsx)(jS.d, {
+          lazyLoadedClassName: LG ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: JU,
-          observerUpdateDeps: [Eu.length],
-          children: Eu.map((uu => {
-            var Eu, ju;
+          rootMargin: uS,
+          observerUpdateDeps: [bG.length],
+          children: bG.map((GG => {
+            var bG, ZG;
             let {
-              key: su,
-              item: Xu,
-              meta: lu
-            } = uu;
-            const qu = lu.quantity * lu.pricePerItem;
-            return (0, bu.jsx)(TU, {
-              itemKey: su,
-              item: lu.item,
-              title: Xu.customTitle,
-              quantity: lu.quantity,
-              pricePerItem: lu.pricePerItem,
-              seller: lu.seller,
-              expiresAt: lu.expiresAt,
-              tier: null !== (Eu = null === (ju = Xu.enchant) || void 0 === ju ? void 0 : ju.tier) && void 0 !== Eu ? Eu : null,
-              busy: Uu.isPending(su) || null !== lu.seller && !1 === Xu.canBuy,
-              canAfford: Uu.canAfford(Xu, qu),
-              grid: Zu,
-              onBuy: Uu.act
-            }, su)
+              key: wG,
+              item: yG,
+              meta: kG
+            } = GG;
+            const UG = kG.quantity * kG.pricePerItem;
+            return (0, pG.jsx)(TS, {
+              itemKey: wG,
+              item: kG.item,
+              title: yG.customTitle,
+              quantity: kG.quantity,
+              pricePerItem: kG.pricePerItem,
+              seller: kG.seller,
+              expiresAt: kG.expiresAt,
+              tier: null !== (bG = null === (ZG = yG.enchant) || void 0 === ZG ? void 0 : ZG.tier) && void 0 !== bG ? bG : null,
+              busy: SG.isPending(wG) || null !== kG.seller && !1 === yG.canBuy,
+              canAfford: SG.canAfford(yG, UG),
+              grid: LG,
+              onBuy: SG.act
+            }, wG)
           }))
-        }, ju)]
+        }, ZG)]
       })
     }
-    const nU = [1, 10, 100],
-      yU = [1, 10, 100, 999];
+    const DS = [1, 10, 100],
+      NS = [1, 10, 100, 999];
 
-    function zU(uu) {
-      var Eu, ju, Uu, qu, Cu, cu, Nu, Ou, Yu, hu;
+    function OS(GG) {
+      var bG, ZG, SG, UG, VG, fG, QG, KG, hG, dG;
       const {
-        t: Du
-      } = (0, Xu.A)(), gu = rU(), {
-        creator: Mu,
-        mode: eu
-      } = uu, [pu, wu] = (0, su.useState)(null !== (Eu = null === Mu || void 0 === Mu ? void 0 : Mu.meta.item) && void 0 !== Eu ? Eu : null), [Ju, du] = (0, su.useState)(1), [au, Pu] = (0, su.useState)(0), [ou, ku] = (0, su.useState)(""), [mu, vu] = (0, su.useState)(0), Ku = (0, su.useRef)(pu), Vu = (0, su.useRef)(!1), [ru, Qu] = (0, su.useState)(!1), iu = null !== (ju = null === Mu || void 0 === Mu ? void 0 : Mu.meta.item) && void 0 !== ju ? ju : null, Wu = null !== (Uu = null === Mu || void 0 === Mu ? void 0 : Mu.meta.owned) && void 0 !== Uu ? Uu : 0;
-      (0, su.useEffect)((() => {
-        uu.searching || null === iu || iu === Ku.current || (Ku.current = iu, Vu.current = !1, wu(iu), Pu(0), du("list" === eu ? Math.max(1, Wu) : 1))
-      }), [iu, uu.searching]);
-      const Su = !!Mu && !!pu && Mu.meta.item === pu,
-        Iu = Su ? Mu.meta.owned : null !== (qu = null === (Cu = uu.inventory) || void 0 === Cu || null === (cu = Cu.find((uu => uu.item === pu))) || void 0 === cu ? void 0 : cu.quantity) && void 0 !== qu ? qu : 0,
-        Fu = "list" === eu ? Math.max(1, Iu) : 45954,
-        Bu = null !== (Nu = uu.prices[0]) && void 0 !== Nu ? Nu : null,
-        Lu = uu.prices.length ? Math.round(uu.prices.reduce(((uu, Eu) => uu + Eu), 0) / uu.prices.length) : null,
-        tu = null === (Ou = uu.inventory) || void 0 === Ou || null === (Yu = Ou.find((uu => uu.item === pu))) || void 0 === Yu ? void 0 : Yu.sellPrice;
-      (0, su.useEffect)((() => {
-        var uu;
-        Su && (du((uu => "list" === eu ? Math.min(Math.max(1, uu), Math.max(1, Iu)) : uu)), Vu.current || Pu(null !== (uu = null !== Bu && void 0 !== Bu ? Bu : Lu) && void 0 !== uu ? uu : Math.max(1, null !== tu && void 0 !== tu ? tu : 1)))
-      }), [Su, Iu, pu, Bu, Lu]);
-      const xu = uu => {
-          Vu.current = !0, Pu(uu)
+        t: JG
+      } = (0, yG.w)(), rG = lS(), {
+        creator: zG,
+        mode: EG
+      } = GG, [XG, uG] = (0, wG.useState)(null !== (bG = null === zG || void 0 === zG ? void 0 : zG.meta.item) && void 0 !== bG ? bG : null), [iG, CG] = (0, wG.useState)(1), [WG, mG] = (0, wG.useState)(0), [IG, FG] = (0, wG.useState)(""), [vG, aG] = (0, wG.useState)(0), cG = (0, wG.useRef)(XG), lG = (0, wG.useRef)(!1), [jG, PG] = (0, wG.useState)(!1), MG = null !== (ZG = null === zG || void 0 === zG ? void 0 : zG.meta.item) && void 0 !== ZG ? ZG : null, AG = null !== (SG = null === zG || void 0 === zG ? void 0 : zG.meta.owned) && void 0 !== SG ? SG : 0;
+      (0, wG.useEffect)((() => {
+        GG.searching || null === MG || MG === cG.current || (cG.current = MG, lG.current = !1, uG(MG), mG(0), CG("list" === EG ? Math.max(1, AG) : 1))
+      }), [MG, GG.searching]);
+      const sG = !!zG && !!XG && zG.meta.item === XG,
+        qG = sG ? zG.meta.owned : null !== (UG = null === (VG = GG.inventory) || void 0 === VG || null === (fG = VG.find((GG => GG.item === XG))) || void 0 === fG ? void 0 : fG.quantity) && void 0 !== UG ? UG : 0,
+        nG = "list" === EG ? Math.max(1, qG) : 45954,
+        gG = null !== (QG = GG.prices[0]) && void 0 !== QG ? QG : null,
+        eG = GG.prices.length ? Math.round(GG.prices.reduce(((GG, bG) => GG + bG), 0) / GG.prices.length) : null,
+        RG = null === (KG = GG.inventory) || void 0 === KG || null === (hG = KG.find((GG => GG.item === XG))) || void 0 === hG ? void 0 : hG.sellPrice;
+      (0, wG.useEffect)((() => {
+        var GG;
+        sG && (CG((GG => "list" === EG ? Math.min(Math.max(1, GG), Math.max(1, qG)) : GG)), lG.current || mG(null !== (GG = null !== gG && void 0 !== gG ? gG : eG) && void 0 !== GG ? GG : Math.max(1, null !== RG && void 0 !== RG ? RG : 1)))
+      }), [sG, qG, XG, gG, eG]);
+      const TG = GG => {
+          lG.current = !0, mG(GG)
         },
-        Tu = Eu => {
-          var ju, su, Uu;
-          Ku.current = Eu, Vu.current = !1, Qu(!1), ku(""), vu((uu => uu + 1)), wu(Eu), Pu(0), du("list" === eu && null !== (ju = null === (su = uu.inventory) || void 0 === su || null === (Uu = su.find((uu => uu.item === Eu))) || void 0 === Uu ? void 0 : Uu.quantity) && void 0 !== ju ? ju : 1), (null === Mu || void 0 === Mu ? void 0 : Mu.meta.item) !== Eu && uu.onPickItem(Eu)
+        HG = bG => {
+          var ZG, wG, SG;
+          cG.current = bG, lG.current = !1, PG(!1), FG(""), aG((GG => GG + 1)), uG(bG), mG(0), CG("list" === EG && null !== (ZG = null === (wG = GG.inventory) || void 0 === wG || null === (SG = wG.find((GG => GG.item === bG))) || void 0 === SG ? void 0 : SG.quantity) && void 0 !== ZG ? ZG : 1), (null === zG || void 0 === zG ? void 0 : zG.meta.item) !== bG && GG.onPickItem(bG)
         },
-        Hu = Ju * au,
-        Au = "list" === eu && null !== Mu && void 0 !== Mu && Mu.meta.fee ? function(uu, Eu) {
-          const ju = Math.max(0, Eu - uu.taxFreeAllowance);
-          return Math.ceil(Math.round(ju * uu.rate * 1e6) / 1e6)
-        }(Mu.meta.fee, Hu) : 0,
-        nu = !!Mu && gu.isPending(Mu.key),
-        yu = Su && !uu.searching && Ju >= 1 && au >= 1 && ("order" === eu || Iu >= Ju) && !nu,
-        zu = !!pu && !Su && !uu.searching && Ju >= 1 && au >= 1,
-        Ru = () => {
-          yu ? gu.act(Mu.key, `${Ju}|${au}`) : zu && (uu.onPickItem(pu), Qu(!0))
+        tG = iG * WG,
+        DG = "list" === EG && null !== zG && void 0 !== zG && zG.meta.fee ? function(GG, bG) {
+          const ZG = Math.max(0, bG - GG.taxFreeAllowance);
+          return Math.ceil(Math.round(ZG * GG.rate * 1e6) / 1e6)
+        }(zG.meta.fee, tG) : 0,
+        NG = !!zG && rG.isPending(zG.key),
+        OG = sG && !GG.searching && iG >= 1 && WG >= 1 && ("order" === EG || qG >= iG) && !NG,
+        xG = !!XG && !sG && !GG.searching && iG >= 1 && WG >= 1,
+        BG = () => {
+          OG ? rG.act(zG.key, `${iG}|${WG}`) : xG && (GG.onPickItem(XG), PG(!0))
         };
-      (0, su.useEffect)((() => {
-        ru && Su && !uu.searching && (Qu(!1), Ru())
-      }), [ru, Su, uu.searching]);
-      const uE = !!pu && !Su && (uu.searching || ru),
-        EE = pu ? mU(uu.names, pu) : "",
-        jE = (0, su.useMemo)((() => kU(uu.catalogue, ou).slice(0, 8)), [uu.catalogue, ou]),
-        sE = ("list" === eu ? nU.filter((uu => uu < Iu)) : yU).map((uu => ({
-          value: uu,
-          label: String(uu)
+      (0, wG.useEffect)((() => {
+        jG && sG && !GG.searching && (PG(!1), BG())
+      }), [jG, sG, GG.searching]);
+      const Gb = !!XG && !sG && (GG.searching || jG),
+        bb = XG ? FS(GG.names, XG) : "",
+        Zb = (0, wG.useMemo)((() => IS(GG.catalogue, IG).slice(0, 8)), [GG.catalogue, IG]),
+        wb = ("list" === EG ? DS.filter((GG => GG < qG)) : NS).map((GG => ({
+          value: GG,
+          label: String(GG)
         })));
-      "list" === eu && Iu > 0 && sE.push({
-        value: Iu,
-        label: Du("smpShop:all", {
-          count: Iu
+      "list" === EG && qG > 0 && wb.push({
+        value: qG,
+        label: JG("smpShop:all", {
+          count: qG
         })
       });
-      const UE = [];
-      return null !== Bu && (Bu > 1 && UE.push({
-        value: Bu - 1,
-        label: Du("smpShop:undercut", {
-          price: ZU(Bu - 1)
+      const Sb = [];
+      return null !== gG && (gG > 1 && Sb.push({
+        value: gG - 1,
+        label: JG("smpShop:undercut", {
+          price: SS(gG - 1)
         })
-      }), UE.push({
-        value: Bu,
-        label: Du("smpShop:lowest", {
-          price: ZU(Bu)
+      }), Sb.push({
+        value: gG,
+        label: JG("smpShop:lowest", {
+          price: SS(gG)
         })
-      })), null !== Lu && Lu !== Bu && UE.push({
-        value: Lu,
-        label: Du("smpShop:average", {
-          price: ZU(Lu)
+      })), null !== eG && eG !== gG && Sb.push({
+        value: eG,
+        label: JG("smpShop:average", {
+          price: SS(eG)
         })
-      }), (0, bu.jsxs)("div", {
+      }), (0, pG.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, bu.jsxs)("div", {
+        children: [(0, pG.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, bu.jsx)("b", {
-            children: Du("list" === eu ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, bu.jsx)("button", {
+          children: [(0, pG.jsx)("b", {
+            children: JG("list" === EG ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, pG.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": Du("smpShop:close"),
-            onClick: uu.onClose,
-            children: (0, bu.jsx)(lu.e, {
+            "aria-label": JG("smpShop:close"),
+            onClick: GG.onClose,
+            children: (0, pG.jsx)(kG.c, {
               name: "xmark"
             })
           })]
-        }), "list" === eu && (0, bu.jsx)("div", {
+        }), "list" === EG && (0, pG.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (hu = uu.inventory) && void 0 !== hu && hu.length ? uu.inventory.map((uu => {
+          children: null !== (dG = GG.inventory) && void 0 !== dG && dG.length ? GG.inventory.map((GG => {
             let {
-              item: Eu,
-              quantity: ju
-            } = uu;
-            return (0, bu.jsx)("button", {
+              item: bG,
+              quantity: ZG
+            } = GG;
+            return (0, pG.jsx)("button", {
               type: "button",
-              title: Eu,
-              className: Zu()("SmpPickerSlot", {
-                SmpPickerSlotOn: Eu === pu
+              title: bG,
+              className: LG()("SmpPickerSlot", {
+                SmpPickerSlotOn: bG === XG
               }),
               onClick: () => {
-                Tu(Eu)
+                HG(bG)
               },
-              children: (0, bu.jsx)(qU, {
-                item: Eu,
-                amount: ju
+              children: (0, pG.jsx)(kS, {
+                item: bG,
+                amount: ZG
               })
-            }, Eu)
-          })) : (0, bu.jsx)("span", {
+            }, bG)
+          })) : (0, pG.jsx)("span", {
             className: "SmpMuted",
-            children: Du("smpShop:nothingToList")
+            children: JG("smpShop:nothingToList")
           })
-        }), ("list" === eu || !pu) && (0, bu.jsxs)("div", {
+        }), ("list" === EG || !XG) && (0, pG.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, bu.jsx)(Gu.d, {
+          children: [(0, pG.jsx)(oG.b, {
             className: "SmpSearchInput",
-            placeholderText: Du("list" === eu ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: ou,
-            onValueChange: ku,
+            placeholderText: JG("list" === EG ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: IG,
+            onValueChange: FG,
             blurOnEnter: !0,
             onEnter: () => {
-              jE[0] && Tu(jE[0].name)
+              Zb[0] && HG(Zb[0].name)
             }
-          }, mu), jE.length > 0 && (0, bu.jsx)("div", {
+          }, vG), Zb.length > 0 && (0, pG.jsx)("div", {
             className: "SmpPicker",
-            children: jE.map((uu => {
+            children: Zb.map((GG => {
               let {
-                name: Eu
-              } = uu;
-              return (0, bu.jsx)("button", {
+                name: bG
+              } = GG;
+              return (0, pG.jsx)("button", {
                 type: "button",
-                title: Eu,
-                className: Zu()("SmpPickerSlot", {
-                  SmpPickerSlotOn: Eu === pu
+                title: bG,
+                className: LG()("SmpPickerSlot", {
+                  SmpPickerSlotOn: bG === XG
                 }),
                 onClick: () => {
-                  Tu(Eu)
+                  HG(bG)
                 },
-                children: (0, bu.jsx)(qU, {
-                  item: Eu
+                children: (0, pG.jsx)(kS, {
+                  item: bG
                 })
-              }, Eu)
+              }, bG)
             }))
           })]
-        }), pu && (0, bu.jsxs)(bu.Fragment, {
-          children: [(0, bu.jsxs)("div", {
+        }), XG && (0, pG.jsxs)(pG.Fragment, {
+          children: [(0, pG.jsxs)("div", {
             className: "SmpPickedName",
-            children: [EE, uE && (0, bu.jsx)(OU, {})]
-          }), (0, bu.jsxs)("div", {
+            children: [bb, Gb && (0, pG.jsx)(QS, {})]
+          }), (0, pG.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, bu.jsxs)("div", {
+            children: [(0, pG.jsxs)("div", {
               className: "SmpField",
-              children: [(0, bu.jsxs)("span", {
-                children: [Du("smpShop:quantity"), "list" === eu && Su && (0, bu.jsx)("small", {
-                  children: Du("smpShop:youHave", {
-                    count: Iu
+              children: [(0, pG.jsxs)("span", {
+                children: [JG("smpShop:quantity"), "list" === EG && sG && (0, pG.jsx)("small", {
+                  children: JG("smpShop:youHave", {
+                    count: qG
                   })
                 })]
-              }), (0, bu.jsx)(YU, {
-                value: Ju,
-                onChange: du,
-                max: Fu,
-                label: Du("smpShop:quantity")
-              }), (0, bu.jsx)(NU, {
-                options: sE,
-                value: Ju,
-                onChange: du,
-                ariaLabel: Du("smpShop:quantity")
+              }), (0, pG.jsx)(KS, {
+                value: iG,
+                onChange: CG,
+                max: nG,
+                label: JG("smpShop:quantity")
+              }), (0, pG.jsx)(fS, {
+                options: wb,
+                value: iG,
+                onChange: CG,
+                ariaLabel: JG("smpShop:quantity")
               })]
-            }), (0, bu.jsxs)("div", {
+            }), (0, pG.jsxs)("div", {
               className: "SmpField",
-              children: [(0, bu.jsx)("span", {
-                children: Du("smpShop:pricePerItem")
-              }), (0, bu.jsx)(YU, {
-                value: Math.max(1, au),
-                onChange: xu,
+              children: [(0, pG.jsx)("span", {
+                children: JG("smpShop:pricePerItem")
+              }), (0, pG.jsx)(KS, {
+                value: Math.max(1, WG),
+                onChange: TG,
                 max: 9999999,
-                step: hU,
-                label: Du("smpShop:pricePerItem")
-              }), (0, bu.jsx)(NU, {
-                options: UE,
-                value: au,
-                onChange: xu,
-                ariaLabel: Du("smpShop:pricePerItem")
+                step: hS,
+                label: JG("smpShop:pricePerItem")
+              }), (0, pG.jsx)(fS, {
+                options: Sb,
+                value: WG,
+                onChange: TG,
+                ariaLabel: JG("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === eu && (0, bu.jsxs)("div", {
+          }), "list" === EG && (0, pG.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, bu.jsxs)("span", {
-              children: [Du("smpShop:youGet"), " ", (0, bu.jsx)(fU, {
-                amount: Math.max(0, Hu - Au),
+            children: [(0, pG.jsxs)("span", {
+              children: [JG("smpShop:youGet"), " ", (0, pG.jsx)(US, {
+                amount: Math.max(0, tG - DG),
                 exact: !0
               })]
-            }), (0, bu.jsx)("small", {
-              children: Au > 0 ? Du("smpShop:listingFee", {
-                fee: Au.toLocaleString("en-US")
-              }) : Du("smpShop:listingRules")
+            }), (0, pG.jsx)("small", {
+              children: DG > 0 ? JG("smpShop:listingFee", {
+                fee: DG.toLocaleString("en-US")
+              }) : JG("smpShop:listingRules")
             })]
-          }), (0, bu.jsx)(fu.x, {
+          }), (0, pG.jsx)(YG.n, {
             className: "SmpSubmit",
-            disabled: !yu && !zu && !nu,
-            loading: nu || uE || Su && uu.searching,
-            onClick: Ru,
-            children: "list" === eu ? Du("smpShop:listButton", {
-              count: Ju,
-              item: EE
-            }) : (0, bu.jsxs)(bu.Fragment, {
-              children: [Du("smpShop:orderButton", {
-                count: Ju,
-                item: EE
-              }), " ", au >= 1 && (0, bu.jsx)(fU, {
-                amount: Hu
+            disabled: !OG && !xG && !NG,
+            loading: NG || Gb || sG && GG.searching,
+            onClick: BG,
+            children: "list" === EG ? JG("smpShop:listButton", {
+              count: iG,
+              item: bb
+            }) : (0, pG.jsxs)(pG.Fragment, {
+              children: [JG("smpShop:orderButton", {
+                count: iG,
+                item: bb
+              }), " ", WG >= 1 && (0, pG.jsx)(US, {
+                amount: tG
               })]
             })
           })]
@@ -3863,627 +3863,627 @@ export const modules = {
       })
     }
 
-    function RU() {
-      var uu;
+    function xS() {
+      var GG;
       const {
-        t: Eu
-      } = (0, Xu.A)(), ju = rU(), Uu = null === (uu = ju.shopInfo[ju.categoryKey]) || void 0 === uu ? void 0 : uu.items, Zu = wU(Uu, "search"), lu = wU(Uu, "creator"), qu = pU(Uu, "enchantedCreator"), Cu = pU(Uu, "listing"), cu = wU(Uu, "empty"), Nu = SU(Zu, Cu.length > 0 || null !== cu), {
-        searched: Ou,
-        shown: Yu,
-        loading: hu
-      } = Nu, [Du, gu] = (0, su.useState)(!1), [Mu, eu] = function() {
-        const [uu, Eu] = (0, xU.c)("smpMarketView", "list");
-        return ["grid" === uu ? "grid" : "list", Eu]
-      }(), Gu = "grid" === Mu, pu = (0, su.useMemo)((() => Cu.filter((uu => {
+        t: bG
+      } = (0, yG.w)(), ZG = lS(), SG = null === (GG = ZG.shopInfo[ZG.categoryKey]) || void 0 === GG ? void 0 : GG.items, LG = XS(SG, "search"), kG = XS(SG, "creator"), UG = oS(SG, "enchantedCreator"), VG = oS(SG, "listing"), fG = XS(SG, "empty"), QG = AS(LG, VG.length > 0 || null !== fG), {
+        searched: KG,
+        shown: hG,
+        loading: dG
+      } = QG, [JG, rG] = (0, wG.useState)(!1), [zG, EG] = function() {
+        const [GG, bG] = (0, RS.b)("smpMarketView", "list");
+        return ["grid" === GG ? "grid" : "list", bG]
+      }(), oG = "grid" === zG, XG = (0, wG.useMemo)((() => VG.filter((GG => {
         let {
-          meta: Eu
-        } = uu;
-        return null !== Eu.seller && Eu.item === Ou
-      })).map((uu => {
+          meta: bG
+        } = GG;
+        return null !== bG.seller && bG.item === KG
+      })).map((GG => {
         let {
-          meta: Eu
-        } = uu;
-        return Eu.pricePerItem
-      })).sort(((uu, Eu) => uu - Eu))), [Cu, Ou]), wu = (0, su.useMemo)((() => {
-        const uu = new Set(Nu.catalogue.map((uu => {
+          meta: bG
+        } = GG;
+        return bG.pricePerItem
+      })).sort(((GG, bG) => GG - bG))), [VG, KG]), uG = (0, wG.useMemo)((() => {
+        const GG = new Set(QG.catalogue.map((GG => {
           let {
-            name: Eu
-          } = uu;
-          return Eu
+            name: bG
+          } = GG;
+          return bG
         })));
-        return function(uu) {
-          for (const Eu in uu)
-            if ("sell" === uu[Eu].smp) return pU(uu[Eu].items, "sell").filter((uu => {
+        return function(GG) {
+          for (const bG in GG)
+            if ("sell" === GG[bG].smp) return oS(GG[bG].items, "sell").filter((GG => {
               let {
-                item: Eu
-              } = uu;
-              return !Eu.enchant
-            })).map((uu => {
+                item: bG
+              } = GG;
+              return !bG.enchant
+            })).map((GG => {
               let {
-                meta: Eu
-              } = uu;
+                meta: bG
+              } = GG;
               return {
-                item: Eu.item,
-                quantity: Eu.quantity,
-                sellPrice: Eu.pricePerItem
+                item: bG.item,
+                quantity: bG.quantity,
+                sellPrice: bG.pricePerItem
               }
             }));
           return []
-        }(ju.shopInfo).filter((Eu => {
+        }(ZG.shopInfo).filter((bG => {
           let {
-            item: ju
-          } = Eu;
-          return uu.has(ju)
+            item: ZG
+          } = bG;
+          return GG.has(ZG)
         }))
-      }), [ju.shopInfo, Nu.catalogue]);
-      return (0, bu.jsx)(LU, {
-        browser: Nu,
+      }), [ZG.shopInfo, QG.catalogue]);
+      return (0, pG.jsx)(gS, {
+        browser: QG,
         className: "SmpMarketTab",
-        recentLabel: Eu("smpShop:recentlyListed"),
-        action: (0, bu.jsx)(fu.x, {
+        recentLabel: bG("smpShop:recentlyListed"),
+        action: (0, pG.jsx)(YG.n, {
           className: "SmpSellButton",
           onClick: () => {
-            gu((uu => !uu))
+            rG((GG => !GG))
           },
-          children: Eu("smpShop:sell")
+          children: bG("smpShop:sell")
         }),
-        above: Du && (0, bu.jsxs)(bu.Fragment, {
-          children: [(0, bu.jsx)(zU, {
+        above: JG && (0, pG.jsxs)(pG.Fragment, {
+          children: [(0, pG.jsx)(OS, {
             mode: "list",
-            creator: lu,
-            inventory: wu,
-            catalogue: Nu.catalogue,
-            names: Nu.names,
-            searching: hu,
-            prices: pu,
-            onPickItem: Nu.searchFor,
+            creator: kG,
+            inventory: uG,
+            catalogue: QG.catalogue,
+            names: QG.names,
+            searching: dG,
+            prices: XG,
+            onPickItem: QG.searchFor,
             onClose: () => {
-              gu(!1)
+              rG(!1)
             }
-          }), qu.length > 0 && (0, bu.jsx)(uZ, {
-            entries: qu
+          }), UG.length > 0 && (0, pG.jsx)(BS, {
+            entries: UG
           })]
         }),
-        listControls: (0, bu.jsx)(HU, {
-          view: Mu,
-          onChange: eu
+        listControls: (0, pG.jsx)(HS, {
+          view: zG,
+          onChange: EG
         }),
-        summary: Yu && (Cu.length > 0 ? Eu(1 === Cu.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: Cu.length,
-          price: ZU(tU(Cu, "min"))
-        }) : Eu("smpShop:noOneSelling", {
-          item: mU(Nu.names, Yu)
+        summary: hG && (VG.length > 0 ? bG(1 === VG.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: VG.length,
+          price: SS(eS(VG, "min"))
+        }) : bG("smpShop:noOneSelling", {
+          item: FS(QG.names, hG)
         })),
-        list: hu ? (0, bu.jsx)(CU, {
-          grid: Gu
-        }) : Cu.length > 0 ? (0, bu.jsx)(AU, {
-          entries: Cu,
-          view: Mu
-        }) : cu ? (0, bu.jsx)(cU, {
-          entry: cu
-        }) : (0, bu.jsx)(CU, {
+        list: dG ? (0, pG.jsx)(YS, {
+          grid: oG
+        }) : VG.length > 0 ? (0, pG.jsx)(tS, {
+          entries: VG,
+          view: zG
+        }) : fG ? (0, pG.jsx)(pS, {
+          entry: fG
+        }) : (0, pG.jsx)(YS, {
           count: 3,
-          grid: Gu
+          grid: oG
         })
       })
     }
 
-    function uZ(uu) {
+    function BS(GG) {
       let {
-        entries: Eu
-      } = uu;
+        entries: bG
+      } = GG;
       const {
-        t: ju
-      } = (0, Xu.A)(), Uu = rU(), [Zu, lu] = (0, su.useState)({});
-      return (0, bu.jsx)("div", {
+        t: ZG
+      } = (0, yG.w)(), SG = lS(), [LG, kG] = (0, wG.useState)({});
+      return (0, pG.jsx)("div", {
         className: "SmpList",
-        children: Eu.map((uu => {
-          var Eu, su, Xu;
+        children: bG.map((GG => {
+          var bG, wG, yG;
           let {
-            key: qu,
-            item: Cu,
-            meta: cu
-          } = uu;
-          const Nu = null !== (Eu = Zu[qu]) && void 0 !== Eu ? Eu : 1;
-          return (0, bu.jsxs)("div", {
+            key: UG,
+            item: VG,
+            meta: fG
+          } = GG;
+          const QG = null !== (bG = LG[UG]) && void 0 !== bG ? bG : 1;
+          return (0, pG.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, bu.jsx)(qU, {
-              item: cu.item,
-              amount: cu.quantity,
-              tier: null !== (su = null === (Xu = Cu.enchant) || void 0 === Xu ? void 0 : Xu.tier) && void 0 !== su ? su : null
-            }), (0, bu.jsxs)("div", {
+            children: [(0, pG.jsx)(kS, {
+              item: fG.item,
+              amount: fG.quantity,
+              tier: null !== (wG = null === (yG = VG.enchant) || void 0 === yG ? void 0 : yG.tier) && void 0 !== wG ? wG : null
+            }), (0, pG.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, bu.jsx)("b", {
-                children: (0, bu.jsx)(As.d, {
-                  text: Cu.customTitle
+              children: [(0, pG.jsx)("b", {
+                children: (0, pG.jsx)(tw.c, {
+                  text: VG.customTitle
                 })
-              }), (0, bu.jsx)("small", {
-                children: ju("smpShop:enchantedListing")
+              }), (0, pG.jsx)("small", {
+                children: ZG("smpShop:enchantedListing")
               })]
-            }), (0, bu.jsx)(YU, {
-              value: Nu,
-              onChange: uu => {
-                lu({
-                  ...Zu,
-                  [qu]: uu
+            }), (0, pG.jsx)(KS, {
+              value: QG,
+              onChange: GG => {
+                kG({
+                  ...LG,
+                  [UG]: GG
                 })
               },
               max: 9999999,
-              step: hU,
-              label: ju("smpShop:pricePerItem")
-            }), (0, bu.jsxs)(fu.x, {
-              loading: Uu.isPending(qu),
+              step: hS,
+              label: ZG("smpShop:pricePerItem")
+            }), (0, pG.jsxs)(YG.n, {
+              loading: SG.isPending(UG),
               onClick: () => {
-                Uu.act(qu, String(Nu))
+                SG.act(UG, String(QG))
               },
-              children: [ju("smpShop:list"), " ", (0, bu.jsx)(fU, {
-                amount: Nu
+              children: [ZG("smpShop:list"), " ", (0, pG.jsx)(US, {
+                amount: QG
               })]
             })]
-          }, qu)
+          }, UG)
         }))
       })
     }
-    const EZ = (0, su.memo)((function(uu) {
+    const GL = (0, wG.memo)((function(GG) {
       let {
-        itemKey: Eu,
-        item: ju,
-        quantity: su,
-        pricePerItem: Uu,
-        tier: Xu,
-        selected: lu,
-        onSelect: qu
-      } = uu;
-      return (0, bu.jsxs)("button", {
+        itemKey: bG,
+        item: ZG,
+        quantity: wG,
+        pricePerItem: SG,
+        tier: yG,
+        selected: kG,
+        onSelect: UG
+      } = GG;
+      return (0, pG.jsxs)("button", {
         type: "button",
-        className: Zu()("SmpInventorySlot", {
-          SmpInventorySlotOn: lu
+        className: LG()("SmpInventorySlot", {
+          SmpInventorySlotOn: kG
         }),
-        title: ju,
+        title: ZG,
         onClick: () => {
-          qu(Eu)
+          UG(bG)
         },
-        children: [(0, bu.jsx)(qU, {
-          item: ju,
-          amount: su,
-          tier: Xu
-        }), (0, bu.jsx)(fU, {
-          amount: Uu
+        children: [(0, pG.jsx)(kS, {
+          item: ZG,
+          amount: wG,
+          tier: yG
+        }), (0, pG.jsx)(US, {
+          amount: SG
         })]
       })
     }));
 
-    function jZ() {
-      var uu;
+    function bL() {
+      var GG;
       const {
-        t: Eu
-      } = (0, Xu.A)(), ju = rU(), Uu = null === (uu = ju.shopInfo[ju.categoryKey]) || void 0 === uu ? void 0 : uu.items, lu = pU(Uu, "sell"), qu = wU(Uu, "empty"), [fu, Cu] = (0, su.useState)(null), [cu, Nu] = (0, su.useState)({}), Ou = lu.find((uu => {
+        t: bG
+      } = (0, yG.w)(), ZG = lS(), SG = null === (GG = ZG.shopInfo[ZG.categoryKey]) || void 0 === GG ? void 0 : GG.items, kG = oS(SG, "sell"), UG = XS(SG, "empty"), [YG, VG] = (0, wG.useState)(null), [fG, QG] = (0, wG.useState)({}), KG = kG.find((GG => {
         let {
-          key: Eu
-        } = uu;
-        return Eu === fu
+          key: bG
+        } = GG;
+        return bG === YG
       }));
-      return 0 === lu.length ? (0, bu.jsx)("div", {
+      return 0 === kG.length ? (0, pG.jsx)("div", {
         className: "SmpScreen",
-        children: (0, bu.jsx)(bU, {
-          title: qu ? (0, bu.jsx)(As.d, {
-            text: qu.item.customTitle
-          }) : Eu("smpShop:nothingToSell"),
-          children: qu && (0, bu.jsx)(As.d, {
-            text: qu.item.description
+        children: (0, pG.jsx)(VS, {
+          title: UG ? (0, pG.jsx)(tw.c, {
+            text: UG.item.customTitle
+          }) : bG("smpShop:nothingToSell"),
+          children: UG && (0, pG.jsx)(tw.c, {
+            text: UG.item.description
           })
         })
-      }) : (0, bu.jsxs)("div", {
+      }) : (0, pG.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, bu.jsx)("div", {
+        children: [(0, pG.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: lu.map((uu => {
-            var Eu, ju;
+          children: kG.map((GG => {
+            var bG, ZG;
             let {
-              key: su,
-              item: Uu,
-              meta: Zu
-            } = uu;
-            return (0, bu.jsx)(EZ, {
-              itemKey: su,
-              item: Zu.item,
-              quantity: Zu.quantity,
-              pricePerItem: Zu.pricePerItem,
-              tier: null !== (Eu = null === (ju = Uu.enchant) || void 0 === ju ? void 0 : ju.tier) && void 0 !== Eu ? Eu : null,
-              selected: su === fu,
-              onSelect: Cu
-            }, su)
+              key: wG,
+              item: SG,
+              meta: LG
+            } = GG;
+            return (0, pG.jsx)(GL, {
+              itemKey: wG,
+              item: LG.item,
+              quantity: LG.quantity,
+              pricePerItem: LG.pricePerItem,
+              tier: null !== (bG = null === (ZG = SG.enchant) || void 0 === ZG ? void 0 : ZG.tier) && void 0 !== bG ? bG : null,
+              selected: wG === YG,
+              onSelect: VG
+            }, wG)
           }))
-        }), (0, bu.jsx)("div", {
-          className: Zu()("SmpSellBar", {
-            SmpSellBarIdle: !Ou
+        }), (0, pG.jsx)("div", {
+          className: LG()("SmpSellBar", {
+            SmpSellBarIdle: !KG
           }),
-          children: Ou ? (0, bu.jsx)(sZ, {
-            entry: Ou,
-            choice: vU(Ou.item, cu[Ou.key]),
-            onChoose: uu => {
-              Nu({
-                ...cu,
-                [Ou.key]: uu
+          children: KG ? (0, pG.jsx)(ZL, {
+            entry: KG,
+            choice: vS(KG.item, fG[KG.key]),
+            onChoose: GG => {
+              QG({
+                ...fG,
+                [KG.key]: GG
               })
             }
-          }) : (0, bu.jsx)("span", {
+          }) : (0, pG.jsx)("span", {
             className: "SmpMuted",
-            children: Eu("smpShop:tapToSell")
+            children: bG("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function sZ(uu) {
-      var Eu, ju, su, Uu;
+    function ZL(GG) {
+      var bG, ZG, wG, SG;
       let {
-        entry: Zu,
-        choice: lu,
-        onChoose: qu
-      } = uu;
+        entry: LG,
+        choice: kG,
+        onChoose: UG
+      } = GG;
       const {
-        t: Cu
-      } = (0, Xu.A)(), cu = rU(), {
-        key: Nu,
-        item: Ou,
-        meta: Yu
-      } = Zu, hu = PU("dropdown" === (null === (Eu = Ou.userInput) || void 0 === Eu ? void 0 : Eu.type) ? Ou.userInput.dropdownOptions : []), Du = null === lu ? 0 : -(0, ts.d)(Ou, lu);
-      return (0, bu.jsxs)(bu.Fragment, {
-        children: [(0, bu.jsx)(qU, {
-          item: Yu.item,
-          amount: Yu.quantity,
-          tier: null !== (ju = null === (su = Ou.enchant) || void 0 === su ? void 0 : su.tier) && void 0 !== ju ? ju : null
-        }), (0, bu.jsxs)("div", {
+        t: VG
+      } = (0, yG.w)(), fG = lS(), {
+        key: QG,
+        item: KG,
+        meta: hG
+      } = LG, dG = WS("dropdown" === (null === (bG = KG.userInput) || void 0 === bG ? void 0 : bG.type) ? KG.userInput.dropdownOptions : []), JG = null === kG ? 0 : -(0, ew.d)(KG, kG);
+      return (0, pG.jsxs)(pG.Fragment, {
+        children: [(0, pG.jsx)(kS, {
+          item: hG.item,
+          amount: hG.quantity,
+          tier: null !== (ZG = null === (wG = KG.enchant) || void 0 === wG ? void 0 : wG.tier) && void 0 !== ZG ? ZG : null
+        }), (0, pG.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, bu.jsx)("b", {
-            children: (0, bu.jsx)(As.d, {
-              text: null !== (Uu = Ou.customTitle) && void 0 !== Uu ? Uu : Yu.item
+          children: [(0, pG.jsx)("b", {
+            children: (0, pG.jsx)(tw.c, {
+              text: null !== (SG = KG.customTitle) && void 0 !== SG ? SG : hG.item
             })
-          }), (0, bu.jsx)("small", {
-            children: Cu("smpShop:sellEach", {
-              count: Yu.quantity
+          }), (0, pG.jsx)("small", {
+            children: VG("smpShop:sellEach", {
+              count: hG.quantity
             })
           })]
-        }), (0, bu.jsx)(NU, {
-          options: hu.map((uu => {
+        }), (0, pG.jsx)(fS, {
+          options: dG.map((GG => {
             let {
-              label: Eu,
-              quantity: ju,
-              isAll: su
-            } = uu;
+              label: bG,
+              quantity: ZG,
+              isAll: wG
+            } = GG;
             return {
-              value: Eu,
-              label: su ? Cu("smpShop:all", {
-                count: ju
-              }) : String(ju)
+              value: bG,
+              label: wG ? VG("smpShop:all", {
+                count: ZG
+              }) : String(ZG)
             }
           })),
-          value: lu,
-          onChange: qu,
-          ariaLabel: Cu("smpShop:quantity")
-        }), (0, bu.jsxs)(fu.x, {
-          loading: cu.isPending(Nu),
-          disabled: null === lu,
+          value: kG,
+          onChange: UG,
+          ariaLabel: VG("smpShop:quantity")
+        }), (0, pG.jsxs)(YG.n, {
+          loading: fG.isPending(QG),
+          disabled: null === kG,
           onClick: () => {
-            cu.act(Nu, lu)
+            fG.act(QG, kG)
           },
-          children: [Cu("smpShop:sellButton"), " ", (0, bu.jsx)(fU, {
-            amount: Du
+          children: [VG("smpShop:sellButton"), " ", (0, pG.jsx)(US, {
+            amount: JG
           })]
         })]
       })
     }
 
-    function UZ() {
-      var uu;
+    function wL() {
+      var GG;
       const {
-        t: Eu
-      } = (0, Xu.A)(), ju = rU(), su = null === (uu = ju.shopInfo[ju.categoryKey]) || void 0 === uu ? void 0 : uu.items, Uu = pU(su, "collect"), Zu = pU(su, "myListing"), lu = (uu, Eu) => ju.isPending(uu) || !1 === Eu.canBuy;
-      return (0, bu.jsxs)("div", {
+        t: bG
+      } = (0, yG.w)(), ZG = lS(), wG = null === (GG = ZG.shopInfo[ZG.categoryKey]) || void 0 === GG ? void 0 : GG.items, SG = oS(wG, "collect"), LG = oS(wG, "myListing"), kG = (GG, bG) => ZG.isPending(GG) || !1 === bG.canBuy;
+      return (0, pG.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, bu.jsx)("h3", {
+        children: [(0, pG.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: Eu("smpShop:readyToCollect")
-        }), Uu.length > 0 ? (0, bu.jsx)("div", {
+          children: bG("smpShop:readyToCollect")
+        }), SG.length > 0 ? (0, pG.jsx)("div", {
           className: "SmpList",
-          children: Uu.map((uu => {
-            var su, Uu;
+          children: SG.map((GG => {
+            var wG, SG;
             let {
-              key: Zu,
-              item: Xu,
-              meta: qu
-            } = uu;
-            return (0, bu.jsxs)("div", {
+              key: LG,
+              item: yG,
+              meta: UG
+            } = GG;
+            return (0, pG.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, bu.jsx)(qU, {
-                item: "sold" === qu.type ? "Gold Coin" : qu.item,
-                amount: "sold" === qu.type ? 0 : qu.quantity,
-                tier: null !== (su = null === (Uu = Xu.enchant) || void 0 === Uu ? void 0 : Uu.tier) && void 0 !== su ? su : null
-              }), (0, bu.jsxs)("div", {
+              children: [(0, pG.jsx)(kS, {
+                item: "sold" === UG.type ? "Gold Coin" : UG.item,
+                amount: "sold" === UG.type ? 0 : UG.quantity,
+                tier: null !== (wG = null === (SG = yG.enchant) || void 0 === SG ? void 0 : SG.tier) && void 0 !== wG ? wG : null
+              }), (0, pG.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, bu.jsx)("b", {
-                  children: (0, bu.jsx)(As.d, {
-                    text: Xu.customTitle
+                children: [(0, pG.jsx)("b", {
+                  children: (0, pG.jsx)(tw.c, {
+                    text: yG.customTitle
                   })
-                }), (0, bu.jsx)("small", {
-                  children: (0, bu.jsx)(As.d, {
-                    text: Xu.description
+                }), (0, pG.jsx)("small", {
+                  children: (0, pG.jsx)(tw.c, {
+                    text: yG.description
                   })
                 })]
-              }), (0, bu.jsx)(fu.p, {
-                loading: lu(Zu, Xu),
+              }), (0, pG.jsx)(YG.k, {
+                loading: kG(LG, yG),
                 onClick: () => {
-                  ju.act(Zu)
+                  ZG.act(LG)
                 },
-                children: Eu("smpShop:collect")
+                children: bG("smpShop:collect")
               })]
-            }, Zu)
+            }, LG)
           }))
-        }) : (0, bu.jsx)(bU, {
-          title: Eu("smpShop:nothingToCollect"),
-          children: Eu("smpShop:nothingToCollectHint")
-        }), (0, bu.jsx)("h3", {
+        }) : (0, pG.jsx)(VS, {
+          title: bG("smpShop:nothingToCollect"),
+          children: bG("smpShop:nothingToCollectHint")
+        }), (0, pG.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: Eu("smpShop:activeListings", {
-            count: Zu.length
+          children: bG("smpShop:activeListings", {
+            count: LG.length
           })
-        }), Zu.length > 0 ? (0, bu.jsx)("div", {
+        }), LG.length > 0 ? (0, pG.jsx)("div", {
           className: "SmpList",
-          children: Zu.map((uu => {
-            var su, Uu;
+          children: LG.map((GG => {
+            var wG, SG;
             let {
-              key: Zu,
-              item: Xu,
-              meta: qu
-            } = uu;
-            return (0, bu.jsxs)("div", {
+              key: LG,
+              item: yG,
+              meta: UG
+            } = GG;
+            return (0, pG.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, bu.jsx)(qU, {
-                item: qu.item,
-                amount: qu.quantity,
-                tier: null !== (su = null === (Uu = Xu.enchant) || void 0 === Uu ? void 0 : Uu.tier) && void 0 !== su ? su : null
-              }), (0, bu.jsxs)("div", {
+              children: [(0, pG.jsx)(kS, {
+                item: UG.item,
+                amount: UG.quantity,
+                tier: null !== (wG = null === (SG = yG.enchant) || void 0 === SG ? void 0 : SG.tier) && void 0 !== wG ? wG : null
+              }), (0, pG.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, bu.jsx)("b", {
-                  children: (0, bu.jsx)(As.d, {
-                    text: Xu.customTitle
+                children: [(0, pG.jsx)("b", {
+                  children: (0, pG.jsx)(tw.c, {
+                    text: yG.customTitle
                   })
-                }), (0, bu.jsx)("small", {
-                  children: Eu("smpShop:timeLeft", {
-                    time: aU(qu.expiresAt)
+                }), (0, pG.jsx)("small", {
+                  children: bG("smpShop:timeLeft", {
+                    time: CS(UG.expiresAt)
                   })
                 })]
-              }), (0, bu.jsxs)("div", {
+              }), (0, pG.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, bu.jsx)(fU, {
-                  amount: qu.pricePerItem
-                }), (0, bu.jsx)("small", {
-                  children: Eu("smpShop:each")
+                children: [(0, pG.jsx)(US, {
+                  amount: UG.pricePerItem
+                }), (0, pG.jsx)("small", {
+                  children: bG("smpShop:each")
                 })]
-              }), (0, bu.jsx)(fu.R, {
-                loading: lu(Zu, Xu),
+              }), (0, pG.jsx)(YG.C, {
+                loading: kG(LG, yG),
                 onClick: () => {
-                  ju.act(Zu)
+                  ZG.act(LG)
                 },
-                children: Eu("smpShop:cancel")
+                children: bG("smpShop:cancel")
               })]
-            }, Zu)
+            }, LG)
           }))
-        }) : (0, bu.jsx)(bU, {
-          title: Eu("smpShop:noActiveListings"),
-          children: Eu("smpShop:noActiveListingsHint")
+        }) : (0, pG.jsx)(VS, {
+          title: bG("smpShop:noActiveListings"),
+          children: bG("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function ZZ(uu) {
+    function SL(GG) {
       let {
-        done: Eu,
-        of: ju
-      } = uu;
-      return (0, bu.jsx)("span", {
+        done: bG,
+        of: ZG
+      } = GG;
+      return (0, pG.jsx)("span", {
         className: "SmpProgress",
-        children: (0, bu.jsx)("i", {
+        children: (0, pG.jsx)("i", {
           style: {
-            width: `${Math.min(100,Eu/Math.max(1,ju)*100)}%`
+            width: `${Math.min(100,bG/Math.max(1,ZG)*100)}%`
           }
         })
       })
     }
 
-    function XZ(uu) {
-      var Eu, ju, su;
+    function LL(GG) {
+      var bG, ZG, wG;
       let {
-        entry: Uu,
-        choice: Zu,
-        onChoose: lu
-      } = uu;
+        entry: SG,
+        choice: LG,
+        onChoose: kG
+      } = GG;
       const {
-        t: qu
-      } = (0, Xu.A)(), Cu = rU(), {
-        key: cu,
-        item: Nu,
-        meta: Ou
-      } = Uu, Yu = "dropdown" === (null === (Eu = Nu.userInput) || void 0 === Eu ? void 0 : Eu.type) ? Nu.userInput.dropdownOptions : [], hu = !0 === Ou.processing, Du = null !== Ou.creator && (Ou.owned > 0 || hu), gu = Du && Ou.owned > 0 ? PU(Yu) : [], Mu = null === Zu ? 0 : null !== (ju = null === (su = gu.find((uu => uu.label === Zu))) || void 0 === su ? void 0 : su.quantity) && void 0 !== ju ? ju : 0;
-      return (0, bu.jsxs)("div", {
+        t: UG
+      } = (0, yG.w)(), VG = lS(), {
+        key: fG,
+        item: QG,
+        meta: KG
+      } = SG, hG = "dropdown" === (null === (bG = QG.userInput) || void 0 === bG ? void 0 : bG.type) ? QG.userInput.dropdownOptions : [], dG = !0 === KG.processing, JG = null !== KG.creator && (KG.owned > 0 || dG), rG = JG && KG.owned > 0 ? WS(hG) : [], zG = null === LG ? 0 : null !== (ZG = null === (wG = rG.find((GG => GG.label === LG))) || void 0 === wG ? void 0 : wG.quantity) && void 0 !== ZG ? ZG : 0;
+      return (0, pG.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, bu.jsx)(qU, {
-          item: Ou.item
-        }), (0, bu.jsxs)("div", {
+        children: [(0, pG.jsx)(kS, {
+          item: KG.item
+        }), (0, pG.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, bu.jsx)("b", {
-            children: (0, bu.jsx)(As.d, {
-              text: Nu.customTitle
+          children: [(0, pG.jsx)("b", {
+            children: (0, pG.jsx)(tw.c, {
+              text: QG.customTitle
             })
-          }), (0, bu.jsxs)("small", {
-            children: [(0, bu.jsx)(fU, {
-              amount: Ou.pricePerItem
-            }), " ", qu("smpShop:each"), " \xb7", " ", null === Ou.creator ? qu("smpShop:you") : (0, bu.jsx)(As.d, {
+          }), (0, pG.jsxs)("small", {
+            children: [(0, pG.jsx)(US, {
+              amount: KG.pricePerItem
+            }), " ", UG("smpShop:each"), " \xb7", " ", null === KG.creator ? UG("smpShop:you") : (0, pG.jsx)(tw.c, {
               text: [{
-                entityName: Ou.creator
+                entityName: KG.creator
               }]
             })]
-          }), (0, bu.jsx)(ZZ, {
-            done: Ou.delivered,
-            of: Ou.wanted
+          }), (0, pG.jsx)(SL, {
+            done: KG.delivered,
+            of: KG.wanted
           })]
-        }), Du ? (0, bu.jsxs)(bu.Fragment, {
-          children: [(0, bu.jsx)(NU, {
-            options: gu.map((uu => {
+        }), JG ? (0, pG.jsxs)(pG.Fragment, {
+          children: [(0, pG.jsx)(fS, {
+            options: rG.map((GG => {
               let {
-                label: Eu,
-                quantity: ju,
-                isAll: su
-              } = uu;
+                label: bG,
+                quantity: ZG,
+                isAll: wG
+              } = GG;
               return {
-                value: Eu,
-                label: su ? qu("smpShop:max", {
-                  count: ju
-                }) : String(ju)
+                value: bG,
+                label: wG ? UG("smpShop:max", {
+                  count: ZG
+                }) : String(ZG)
               }
             })),
-            value: Zu,
-            onChange: lu,
-            ariaLabel: qu("smpShop:quantity")
-          }), (0, bu.jsxs)(fu.x, {
-            loading: Cu.isPending(cu) || hu,
-            disabled: null === Zu,
+            value: LG,
+            onChange: kG,
+            ariaLabel: UG("smpShop:quantity")
+          }), (0, pG.jsxs)(YG.n, {
+            loading: VG.isPending(fG) || dG,
+            disabled: null === LG,
             onClick: () => {
-              Cu.act(cu, Zu)
+              VG.act(fG, LG)
             },
-            children: [qu("smpShop:deliver"), " ", (0, bu.jsx)(fU, {
-              amount: Mu * Ou.pricePerItem
+            children: [UG("smpShop:deliver"), " ", (0, pG.jsx)(US, {
+              amount: zG * KG.pricePerItem
             })]
           })]
-        }) : (0, bu.jsx)("span", {
+        }) : (0, pG.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === Ou.creator ? qu("smpShop:yourOrder") : qu("smpShop:youHave", {
+          children: null === KG.creator ? UG("smpShop:yourOrder") : UG("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function lZ() {
-      var uu;
+    function yL() {
+      var GG;
       const {
-        t: Eu
-      } = (0, Xu.A)(), ju = rU(), Uu = null === (uu = ju.shopInfo[ju.categoryKey]) || void 0 === uu ? void 0 : uu.items, Zu = wU(Uu, "search"), lu = wU(Uu, "creator"), qu = pU(Uu, "order"), Cu = wU(Uu, "empty"), cu = SU(Zu, qu.length > 0 || null !== Cu), [Nu, Ou] = (0, su.useState)(!1), [Yu, hu] = (0, su.useState)({});
-      return (0, bu.jsx)(LU, {
-        browser: cu,
-        recentLabel: Eu("smpShop:recentOrders"),
-        action: (0, bu.jsx)(fu.x, {
+        t: bG
+      } = (0, yG.w)(), ZG = lS(), SG = null === (GG = ZG.shopInfo[ZG.categoryKey]) || void 0 === GG ? void 0 : GG.items, LG = XS(SG, "search"), kG = XS(SG, "creator"), UG = oS(SG, "order"), VG = XS(SG, "empty"), fG = AS(LG, UG.length > 0 || null !== VG), [QG, KG] = (0, wG.useState)(!1), [hG, dG] = (0, wG.useState)({});
+      return (0, pG.jsx)(gS, {
+        browser: fG,
+        recentLabel: bG("smpShop:recentOrders"),
+        action: (0, pG.jsx)(YG.n, {
           onClick: () => {
-            Ou((uu => !uu))
+            KG((GG => !GG))
           },
-          children: Eu("smpShop:createOrder")
+          children: bG("smpShop:createOrder")
         }),
-        above: Nu && (0, bu.jsx)(zU, {
+        above: QG && (0, pG.jsx)(OS, {
           mode: "order",
-          creator: lu,
-          catalogue: cu.catalogue,
-          names: cu.names,
-          searching: cu.loading,
+          creator: kG,
+          catalogue: fG.catalogue,
+          names: fG.names,
+          searching: fG.loading,
           prices: [],
-          onPickItem: cu.searchFor,
+          onPickItem: fG.searchFor,
           onClose: () => {
-            Ou(!1)
+            KG(!1)
           }
         }),
         onBack: () => {
-          Ou(!1)
+          KG(!1)
         },
-        summary: qu.length > 0 && Eu(1 === qu.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: qu.length,
-          price: ZU(tU(qu, "max"))
+        summary: UG.length > 0 && bG(1 === UG.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: UG.length,
+          price: SS(eS(UG, "max"))
         }),
-        list: cu.loading ? (0, bu.jsx)(CU, {}) : qu.length > 0 ? (0, bu.jsx)(QU.e, {
+        list: fG.loading ? (0, pG.jsx)(YS, {}) : UG.length > 0 ? (0, pG.jsx)(jS.d, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: JU,
-          observerUpdateDeps: [qu.length],
-          children: qu.map((uu => (0, bu.jsx)(XZ, {
-            entry: uu,
-            choice: vU(uu.item, Yu[uu.key]),
-            onChoose: Eu => {
-              hu({
-                ...Yu,
-                [uu.key]: Eu
+          rootMargin: uS,
+          observerUpdateDeps: [UG.length],
+          children: UG.map((GG => (0, pG.jsx)(LL, {
+            entry: GG,
+            choice: vS(GG.item, hG[GG.key]),
+            onChoose: bG => {
+              dG({
+                ...hG,
+                [GG.key]: bG
               })
             }
-          }, uu.key)))
-        }) : Cu ? (0, bu.jsx)(cU, {
-          entry: Cu
-        }) : (0, bu.jsx)(CU, {
+          }, GG.key)))
+        }) : VG ? (0, pG.jsx)(pS, {
+          entry: VG
+        }) : (0, pG.jsx)(YS, {
           count: 3
         })
       })
     }
 
-    function qZ() {
-      var uu;
+    function kL() {
+      var GG;
       const {
-        t: Eu
-      } = (0, Xu.A)(), ju = rU(), su = pU(null === (uu = ju.shopInfo[ju.categoryKey]) || void 0 === uu ? void 0 : uu.items, "myOrder");
-      return 0 === su.length ? (0, bu.jsx)("div", {
+        t: bG
+      } = (0, yG.w)(), ZG = lS(), wG = oS(null === (GG = ZG.shopInfo[ZG.categoryKey]) || void 0 === GG ? void 0 : GG.items, "myOrder");
+      return 0 === wG.length ? (0, pG.jsx)("div", {
         className: "SmpScreen",
-        children: (0, bu.jsx)(bU, {
-          title: Eu("smpShop:noOrders"),
-          children: Eu("smpShop:noOrdersHint")
+        children: (0, pG.jsx)(VS, {
+          title: bG("smpShop:noOrders"),
+          children: bG("smpShop:noOrdersHint")
         })
-      }) : (0, bu.jsx)("div", {
+      }) : (0, pG.jsx)("div", {
         className: "SmpScreen",
-        children: (0, bu.jsx)("div", {
+        children: (0, pG.jsx)("div", {
           className: "SmpList",
-          children: su.map((uu => {
+          children: wG.map((GG => {
             let {
-              key: su,
-              item: Uu,
-              meta: Zu
-            } = uu;
-            const Xu = ju.isPending(su) || !1 === Uu.canBuy;
-            return (0, bu.jsxs)("div", {
+              key: wG,
+              item: SG,
+              meta: LG
+            } = GG;
+            const yG = ZG.isPending(wG) || !1 === SG.canBuy;
+            return (0, pG.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, bu.jsx)(qU, {
-                item: Zu.item,
-                amount: Zu.collectable
-              }), (0, bu.jsxs)("div", {
+              children: [(0, pG.jsx)(kS, {
+                item: LG.item,
+                amount: LG.collectable
+              }), (0, pG.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, bu.jsx)("b", {
-                  children: (0, bu.jsx)(As.d, {
-                    text: Uu.customTitle
+                children: [(0, pG.jsx)("b", {
+                  children: (0, pG.jsx)(tw.c, {
+                    text: SG.customTitle
                   })
-                }), (0, bu.jsxs)("small", {
-                  children: [(0, bu.jsx)(fU, {
-                    amount: Zu.pricePerItem
-                  }), " ", Eu("smpShop:each"), Zu.collectable > 0 && ` \xb7 ${Eu("smpShop:readyCount",{count:Zu.collectable})}`]
-                }), (0, bu.jsx)(ZZ, {
-                  done: Zu.delivered,
-                  of: Zu.wanted
+                }), (0, pG.jsxs)("small", {
+                  children: [(0, pG.jsx)(US, {
+                    amount: LG.pricePerItem
+                  }), " ", bG("smpShop:each"), LG.collectable > 0 && ` \xb7 ${bG("smpShop:readyCount",{count:LG.collectable})}`]
+                }), (0, pG.jsx)(SL, {
+                  done: LG.delivered,
+                  of: LG.wanted
                 })]
-              }), Zu.collectable > 0 ? (0, bu.jsx)(fu.p, {
-                loading: Xu,
+              }), LG.collectable > 0 ? (0, pG.jsx)(YG.k, {
+                loading: yG,
                 onClick: () => {
-                  ju.act(su)
+                  ZG.act(wG)
                 },
-                children: Eu("smpShop:collectCount", {
-                  count: Zu.collectable
+                children: bG("smpShop:collectCount", {
+                  count: LG.collectable
                 })
-              }) : (0, bu.jsx)(fu.R, {
-                loading: Xu,
+              }) : (0, pG.jsx)(YG.C, {
+                loading: yG,
                 onClick: () => {
-                  ju.act(su)
+                  ZG.act(wG)
                 },
-                children: Eu("smpShop:cancel")
+                children: bG("smpShop:cancel")
               })]
-            }, su)
+            }, wG)
           }))
         })
       })
     }
-    const fZ = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      CZ = {
+    const UL = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      YL = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4491,775 +4491,775 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function bZ(uu, Eu) {
-      let ju = !1;
-      const su = {};
-      for (const Uu in uu) Eu(Uu, uu[Uu]) ? su[Uu] = uu[Uu] : ju = !0;
-      return ju ? su : uu
+    function VL(GG, bG) {
+      let ZG = !1;
+      const wG = {};
+      for (const SG in GG) bG(SG, GG[SG]) ? wG[SG] = GG[SG] : ZG = !0;
+      return ZG ? wG : GG
     }
 
-    function cZ(uu) {
-      var Eu, ju, Uu, qu;
+    function pL(GG) {
+      var bG, ZG, SG, UG;
       const {
-        show: fu,
-        shopInfo: Cu,
-        selectedCategoryKey: cu
-      } = uu, {
-        t: Nu
-      } = (0, Xu.A)(), Ou = null !== cu && void 0 !== cu ? cu : "", Yu = GU(Cu, Ou), hu = null === (Eu = Cu[Ou]) || void 0 === Eu ? void 0 : Eu.items, Du = null !== Yu, [gu, Mu] = (0, su.useState)({}), [eu, Gu] = (0, su.useState)([]), [pu, wu] = (0, su.useState)(!1), [Ju, du] = (0, su.useState)(null), [, au] = (0, su.useState)(0), Pu = (0, su.useRef)(0), ou = (0, su.useRef)({}), ku = (0, su.useRef)({
-        items: hu,
-        pending: gu,
-        shopInfo: Cu,
-        active: Du,
-        canAfford: uu.canAfford,
-        buy: uu.buy
+        show: YG,
+        shopInfo: VG,
+        selectedCategoryKey: fG
+      } = GG, {
+        t: QG
+      } = (0, yG.w)(), KG = null !== fG && void 0 !== fG ? fG : "", hG = ES(VG, KG), dG = null === (bG = VG[KG]) || void 0 === bG ? void 0 : bG.items, JG = null !== hG, [rG, zG] = (0, wG.useState)({}), [EG, oG] = (0, wG.useState)([]), [XG, uG] = (0, wG.useState)(!1), [iG, CG] = (0, wG.useState)(null), [, WG] = (0, wG.useState)(0), mG = (0, wG.useRef)(0), IG = (0, wG.useRef)({}), FG = (0, wG.useRef)({
+        items: dG,
+        pending: rG,
+        shopInfo: VG,
+        active: JG,
+        canAfford: GG.canAfford,
+        buy: GG.buy
       });
-      ku.current = {
-        items: hu,
-        pending: gu,
-        shopInfo: Cu,
-        active: Du,
-        canAfford: uu.canAfford,
-        buy: uu.buy
+      FG.current = {
+        items: dG,
+        pending: rG,
+        shopInfo: VG,
+        active: JG,
+        canAfford: GG.canAfford,
+        buy: GG.buy
       };
-      const mu = (0, su.useCallback)((uu => {
-        Pu.current++;
-        const Eu = Pu.current;
-        Gu((ju => [{
-          id: Eu,
-          text: uu
-        }, ...ju].slice(0, 8))), du(Eu)
+      const vG = (0, wG.useCallback)((GG => {
+        mG.current++;
+        const bG = mG.current;
+        oG((ZG => [{
+          id: bG,
+          text: GG
+        }, ...ZG].slice(0, 8))), CG(bG)
       }), []);
-      (0, su.useEffect)((() => {
-        if (null === Ju) return;
-        const uu = setTimeout((() => {
-          du(null)
+      (0, wG.useEffect)((() => {
+        if (null === iG) return;
+        const GG = setTimeout((() => {
+          CG(null)
         }), 3e3);
         return () => {
-          clearTimeout(uu)
+          clearTimeout(GG)
         }
-      }), [Ju]), (0, su.useEffect)((() => {
-        const Eu = uu.message;
-        if (!Eu) return;
+      }), [iG]), (0, wG.useEffect)((() => {
+        const bG = GG.message;
+        if (!bG) return;
         const {
-          shopInfo: ju,
-          active: su,
-          items: Uu
-        } = ku.current, Zu = null !== Eu.categoryKey ? null !== GU(ju, Eu.categoryKey) : su;
-        (Zu || su) && mu(Eu.text), Zu && Mu((uu => bZ(uu, (uu => {
-          var Eu, ju;
-          return !fZ.has(null === Uu || void 0 === Uu || null === (Eu = Uu[uu]) || void 0 === Eu || null === (ju = Eu.smp) || void 0 === ju ? void 0 : ju.kind)
+          shopInfo: ZG,
+          active: wG,
+          items: SG
+        } = FG.current, LG = null !== bG.categoryKey ? null !== ES(ZG, bG.categoryKey) : wG;
+        (LG || wG) && vG(bG.text), LG && zG((GG => VL(GG, (GG => {
+          var bG, ZG;
+          return !UL.has(null === SG || void 0 === SG || null === (bG = SG[GG]) || void 0 === bG || null === (ZG = bG.smp) || void 0 === ZG ? void 0 : ZG.kind)
         }))))
-      }), [uu.message, mu]), (0, su.useEffect)((() => {
-        Mu((uu => bZ(uu, ((uu, Eu) => KU(null === hu || void 0 === hu ? void 0 : hu[uu]) === Eu.snapshot))))
-      }), [Cu, hu]);
-      const vu = Object.keys(gu).length > 0;
-      (0, su.useEffect)((() => {
-        if (!vu) return;
-        const uu = setInterval((() => {
-          au((uu => uu + 1));
-          const uu = Date.now(),
+      }), [GG.message, vG]), (0, wG.useEffect)((() => {
+        zG((GG => VL(GG, ((GG, bG) => aS(null === dG || void 0 === dG ? void 0 : dG[GG]) === bG.snapshot))))
+      }), [VG, dG]);
+      const aG = Object.keys(rG).length > 0;
+      (0, wG.useEffect)((() => {
+        if (!aG) return;
+        const GG = setInterval((() => {
+          WG((GG => GG + 1));
+          const GG = Date.now(),
             {
-              pending: Eu,
-              items: ju
-            } = ku.current,
-            su = Object.keys(Eu).filter((ju => uu - Eu[ju].at >= 12e3));
-          if (0 === su.length) return;
-          const Uu = su.some((uu => {
-            var su, Uu;
-            return "search" !== (null === ju || void 0 === ju || null === (su = ju[uu]) || void 0 === su || null === (Uu = su.smp) || void 0 === Uu ? void 0 : Uu.kind) || Eu[uu].resend
+              pending: bG,
+              items: ZG
+            } = FG.current,
+            wG = Object.keys(bG).filter((ZG => GG - bG[ZG].at >= 12e3));
+          if (0 === wG.length) return;
+          const SG = wG.some((GG => {
+            var wG, SG;
+            return "search" !== (null === ZG || void 0 === ZG || null === (wG = ZG[GG]) || void 0 === wG || null === (SG = wG.smp) || void 0 === SG ? void 0 : SG.kind) || bG[GG].resend
           }));
-          for (const Zu of su) ou.current[Zu] = uu;
-          Mu((uu => bZ(uu, (uu => !su.includes(uu))))), Uu && mu(Nu("smpShop:noAnswer"))
+          for (const LG of wG) IG.current[LG] = GG;
+          zG((GG => VL(GG, (GG => !wG.includes(GG))))), SG && vG(QG("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(uu)
+          clearInterval(GG)
         }
-      }), [vu]), (0, su.useEffect)((() => {
-        Mu({})
-      }), [Ou]), (0, su.useEffect)((() => {
-        fu || wu(!1)
-      }), [fu]);
-      const Ku = (0, su.useCallback)((function(uu, Eu) {
-          let ju = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [aG]), (0, wG.useEffect)((() => {
+        zG({})
+      }), [KG]), (0, wG.useEffect)((() => {
+        YG || uG(!1)
+      }), [YG]);
+      const cG = (0, wG.useCallback)((function(GG, bG) {
+          let ZG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: su,
-            pending: Uu,
-            canAfford: Zu,
-            buy: Xu
-          } = ku.current, lu = null === su || void 0 === su ? void 0 : su[uu];
-          if (!lu || uu in Uu || !1 === lu.canBuy) return !1;
-          if (!Zu(lu, (0, ts.d)(lu, Eu))) return !1;
-          Xu(uu, lu, Eu);
-          const qu = {
-            snapshot: KU(lu),
+            items: wG,
+            pending: SG,
+            canAfford: LG,
+            buy: yG
+          } = FG.current, kG = null === wG || void 0 === wG ? void 0 : wG[GG];
+          if (!kG || GG in SG || !1 === kG.canBuy) return !1;
+          if (!LG(kG, (0, ew.d)(kG, bG))) return !1;
+          yG(GG, kG, bG);
+          const UG = {
+            snapshot: aS(kG),
             at: Date.now(),
-            resend: ju
+            resend: ZG
           };
-          return ku.current.pending = {
-            ...ku.current.pending,
-            [uu]: qu
-          }, Mu((Eu => ({
-            ...Eu,
-            [uu]: qu
+          return FG.current.pending = {
+            ...FG.current.pending,
+            [GG]: UG
+          }, zG((bG => ({
+            ...bG,
+            [GG]: UG
           }))), !0
         }), []),
-        Vu = (0, su.useMemo)((() => ({
-          shopInfo: Cu,
-          categoryKey: Ou,
-          canAfford: uu.canAfford,
-          isPending: uu => uu in gu,
-          gaveUpAt: uu => {
-            var Eu;
-            return null !== (Eu = ou.current[uu]) && void 0 !== Eu ? Eu : 0
+        lG = (0, wG.useMemo)((() => ({
+          shopInfo: VG,
+          categoryKey: KG,
+          canAfford: GG.canAfford,
+          isPending: GG => GG in rG,
+          gaveUpAt: GG => {
+            var bG;
+            return null !== (bG = IG.current[GG]) && void 0 !== bG ? bG : 0
           },
-          act: Ku,
-          notify: mu
-        })), [Cu, Ou, uu.canAfford, gu, Ku, mu]),
-        ru = Math.min(...Object.values(gu).map((uu => uu.at))),
-        Qu = vu && Date.now() - ru > 1500,
-        iu = eu.length > 1,
-        Wu = null !== (ju = null === (Uu = Cu[Ou]) || void 0 === Uu ? void 0 : Uu.customTitle) && void 0 !== ju ? ju : Ou,
-        Su = null === (qu = Cu[Ou]) || void 0 === qu ? void 0 : qu.description;
-      let Iu = null;
-      return "market" === Yu ? Iu = (0, bu.jsx)(RU, {}) : "sell" === Yu ? Iu = (0, bu.jsx)(jZ, {}) : "collect" === Yu ? Iu = (0, bu.jsx)(UZ, {}) : "orders" === Yu ? Iu = (0, bu.jsx)(lZ, {}) : "myOrders" === Yu && (Iu = (0, bu.jsx)(qZ, {})), (0, bu.jsx)(VU.Provider, {
-        value: Vu,
-        children: (0, bu.jsx)("div", {
+          act: cG,
+          notify: vG
+        })), [VG, KG, GG.canAfford, rG, cG, vG]),
+        jG = Math.min(...Object.values(rG).map((GG => GG.at))),
+        PG = aG && Date.now() - jG > 1500,
+        MG = EG.length > 1,
+        AG = null !== (ZG = null === (SG = VG[KG]) || void 0 === SG ? void 0 : SG.customTitle) && void 0 !== ZG ? ZG : KG,
+        sG = null === (UG = VG[KG]) || void 0 === UG ? void 0 : UG.description;
+      let qG = null;
+      return "market" === hG ? qG = (0, pG.jsx)(xS, {}) : "sell" === hG ? qG = (0, pG.jsx)(bL, {}) : "collect" === hG ? qG = (0, pG.jsx)(wL, {}) : "orders" === hG ? qG = (0, pG.jsx)(yL, {}) : "myOrders" === hG && (qG = (0, pG.jsx)(kL, {})), (0, pG.jsx)(cS.Provider, {
+        value: lG,
+        children: (0, pG.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !Du,
-          children: (0, bu.jsxs)("div", {
+          hidden: !JG,
+          children: (0, pG.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, bu.jsx)("header", {
+            children: [(0, pG.jsx)("header", {
               className: "SmpHeader",
-              children: (0, bu.jsxs)("div", {
+              children: (0, pG.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, bu.jsxs)("h2", {
-                  children: [Yu && (0, bu.jsx)(lu.e, {
-                    name: CZ[Yu]
-                  }), Nu(Wu)]
-                }), Su && (0, bu.jsx)("p", {
-                  children: (0, bu.jsx)(As.d, {
-                    text: Su
+                children: [(0, pG.jsxs)("h2", {
+                  children: [hG && (0, pG.jsx)(kG.c, {
+                    name: YL[hG]
+                  }), QG(AG)]
+                }), sG && (0, pG.jsx)("p", {
+                  children: (0, pG.jsx)(tw.c, {
+                    text: sG
                   })
                 })]
               })
-            }), (0, bu.jsx)("main", {
+            }), (0, pG.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: fu && Iu
-            }), (0, bu.jsxs)("button", {
+              children: YG && qG
+            }), (0, pG.jsxs)("button", {
               type: "button",
-              className: Zu()("SmpStatus", {
-                SmpStatusWaiting: vu,
-                SmpStatusFresh: !vu && null !== Ju,
-                SmpStatusHasHistory: iu
+              className: LG()("SmpStatus", {
+                SmpStatusWaiting: aG,
+                SmpStatusFresh: !aG && null !== iG,
+                SmpStatusHasHistory: MG
               }),
               "aria-live": "polite",
-              "aria-expanded": iu ? pu : void 0,
+              "aria-expanded": MG ? XG : void 0,
               onClick: () => {
-                iu && wu((uu => !uu))
+                MG && uG((GG => !GG))
               },
-              children: [vu ? (0, bu.jsxs)("span", {
+              children: [aG ? (0, pG.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, bu.jsx)(OU, {}), Nu(Qu ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : eu[0] ? (0, bu.jsx)("span", {
+                children: [(0, pG.jsx)(QS, {}), QG(PG ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : EG[0] ? (0, pG.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, bu.jsx)(As.d, {
-                  text: eu[0].text
+                children: (0, pG.jsx)(tw.c, {
+                  text: EG[0].text
                 })
-              }, eu[0].id) : (0, bu.jsx)("span", {
+              }, EG[0].id) : (0, pG.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: Nu("smpShop:ready")
-              }), iu && (0, bu.jsx)("small", {
-                children: Nu("smpShop:recentMessages", {
-                  count: eu.length
+                children: QG("smpShop:ready")
+              }), MG && (0, pG.jsx)("small", {
+                children: QG("smpShop:recentMessages", {
+                  count: EG.length
                 })
               })]
-            }), pu && iu && (0, bu.jsx)("div", {
+            }), XG && MG && (0, pG.jsx)("div", {
               className: "SmpStatusHistory",
-              children: eu.map((uu => (0, bu.jsx)("div", {
-                children: (0, bu.jsx)(As.d, {
-                  text: uu.text
+              children: EG.map((GG => (0, pG.jsx)("div", {
+                children: (0, pG.jsx)(tw.c, {
+                  text: GG.text
                 })
-              }, uu.id)))
+              }, GG.id)))
             })]
           })
         })
       })
     }
-    class NZ {
-      constructor(uu) {
-        this.info = uu
+    class fL {
+      constructor(GG) {
+        this.info = GG
       }
-      static fromShopInfo(uu) {
-        const Eu = {};
-        for (const ju in uu) {
-          const su = !0 === uu[ju].redDot && !0 !== uu[ju].forceRemoveRedDot;
-          Eu[ju] = {
-            redDot: su,
+      static fromShopInfo(GG) {
+        const bG = {};
+        for (const ZG in GG) {
+          const wG = !0 === GG[ZG].redDot && !0 !== GG[ZG].forceRemoveRedDot;
+          bG[ZG] = {
+            redDot: wG,
             items: {}
           };
-          for (const Uu in uu[ju].items) {
-            const su = uu[ju].items[Uu],
-              Zu = !0 === su.redDot && !0 !== su.forceRemoveRedDot;
-            Eu[ju].items[Uu] = {
-              redDot: Zu
+          for (const SG in GG[ZG].items) {
+            const wG = GG[ZG].items[SG],
+              LG = !0 === wG.redDot && !0 !== wG.forceRemoveRedDot;
+            bG[ZG].items[SG] = {
+              redDot: LG
             }
           }
         }
-        return new NZ(Eu)
+        return new fL(bG)
       }
       anyCategoryHasRedDots() {
-        for (const uu in this.info)
-          if (this.categoryHasRedDot(uu)) return !0;
+        for (const GG in this.info)
+          if (this.categoryHasRedDot(GG)) return !0;
         return !1
       }
-      doesCategoryExist(uu) {
-        return !(0, lj.H)(this.info[uu])
+      doesCategoryExist(GG) {
+        return !(0, kZ.L)(this.info[GG])
       }
-      categoryHasRedDot(uu) {
-        return !0 === this.info[uu].redDot
+      categoryHasRedDot(GG) {
+        return !0 === this.info[GG].redDot
       }
-      updateCategoryRedDot(uu, Eu) {
-        this.info[uu].redDot = Eu
+      updateCategoryRedDot(GG, bG) {
+        this.info[GG].redDot = bG
       }
-      doesItemExist(uu, Eu) {
-        return this.doesCategoryExist(uu) && !(0, lj.H)(this.info[uu].items[Eu])
+      doesItemExist(GG, bG) {
+        return this.doesCategoryExist(GG) && !(0, kZ.L)(this.info[GG].items[bG])
       }
-      itemHasRedDot(uu, Eu) {
-        return !0 === this.info[uu].items[Eu].redDot
+      itemHasRedDot(GG, bG) {
+        return !0 === this.info[GG].items[bG].redDot
       }
-      updateItemRedDot(uu, Eu, ju) {
-        this.info[uu].items[Eu].redDot = ju
+      updateItemRedDot(GG, bG, ZG) {
+        this.info[GG].items[bG].redDot = ZG
       }
       shallowCopy() {
-        return new NZ(this.info)
+        return new fL(this.info)
       }
     }
 
-    function OZ(uu, Eu) {
-      return `${uu}\x1f${Eu}`
+    function QL(GG, bG) {
+      return `${GG}\x1f${bG}`
     }
 
-    function YZ(uu, Eu) {
-      return !(0, lj.H)(Eu) && !(0, lj.H)(uu) && Eu in uu
+    function KL(GG, bG) {
+      return !(0, kZ.L)(bG) && !(0, kZ.L)(GG) && bG in GG
     }
-    const hZ = (0, su.memo)((function(uu) {
-      var Eu, ju;
+    const hL = (0, wG.memo)((function(GG) {
+      var bG, ZG;
       let {
-        show: Uu
-      } = uu;
-      const Xu = (0, rE.d)("players", pZ),
-        lu = (0, rE.d)("players", wZ),
-        Cu = (0, EU.b)(),
-        [Nu, Ou] = (0, su.useState)({
+        show: SG
+      } = GG;
+      const yG = (0, jb.c)("players", oL),
+        kG = (0, jb.c)("players", XL),
+        VG = (0, GS.c)(),
+        [QG, KG] = (0, wG.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: NZ.fromShopInfo({}),
+          redDotInfo: fL.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        hu = (0, su.useRef)(""),
-        Du = (0, su.useRef)(null),
-        Mu = (0, su.useRef)(null),
-        eu = (0, su.useRef)(0),
-        Gu = (0, su.useRef)(void 0),
-        pu = (0, su.useRef)(null),
-        wu = (0, su.useRef)(Nu),
-        du = Nu.redDotInfo.anyCategoryHasRedDots(),
-        [au, ou] = (0, su.useState)(null),
-        ku = (0, su.useRef)(!1);
-      let mu = !1,
-        vu = 0,
-        Ku = 0;
-      if (Nu.currencyAmounts) {
-        for (const uu in Nu.currencyAmounts) {
-          var Vu;
-          const Eu = Nu.currencyAmounts[uu];
-          Eu.hidden || (vu++, (null === (Vu = Eu.subtext) || void 0 === Vu ? void 0 : Vu.length) > 0 && Ku++)
+        dG = (0, wG.useRef)(""),
+        JG = (0, wG.useRef)(null),
+        zG = (0, wG.useRef)(null),
+        EG = (0, wG.useRef)(0),
+        oG = (0, wG.useRef)(void 0),
+        XG = (0, wG.useRef)(null),
+        uG = (0, wG.useRef)(QG),
+        CG = QG.redDotInfo.anyCategoryHasRedDots(),
+        [WG, IG] = (0, wG.useState)(null),
+        FG = (0, wG.useRef)(!1);
+      let vG = !1,
+        aG = 0,
+        cG = 0;
+      if (QG.currencyAmounts) {
+        for (const GG in QG.currencyAmounts) {
+          var lG;
+          const bG = QG.currencyAmounts[GG];
+          bG.hidden || (aG++, (null === (lG = bG.subtext) || void 0 === lG ? void 0 : lG.length) > 0 && cG++)
         }
-        mu = vu + Ku > 4
-      }(0, su.useEffect)((() => {
-        qj.h.TY("showShopIconRedDot", du, !0)
-      }), [du]), (0, su.useEffect)((() => {
-        gu.gameBridge.send("setShopOpen", Uu), Uu || (clearTimeout(Gu.current), Ou((uu => uu.awaitingPurchase ? {
-          ...uu,
+        vG = aG + cG > 4
+      }(0, wG.useEffect)((() => {
+        UZ.l.xh("showShopIconRedDot", CG, !0)
+      }), [CG]), (0, wG.useEffect)((() => {
+        rG.gameBridge.send("setShopOpen", SG), SG || (clearTimeout(oG.current), KG((GG => GG.awaitingPurchase ? {
+          ...GG,
           awaitingPurchase: !1
-        } : uu)))
-      }), [Uu]), (0, su.useEffect)((() => () => {
-        gu.gameBridge.send("setShopOpen", !1), clearTimeout(Gu.current)
-      }), []), (0, su.useEffect)((() => {
-        wu.current = Nu
-      }), [Nu]), (0, su.useEffect)((() => {
-        if (null === au) return;
-        return (0, Rs.b)("pointerdown", (uu => {
-          const Eu = uu.target;
-          null !== Eu && void 0 !== Eu && Eu.closest(".ShopItem") || ou(null)
+        } : GG)))
+      }), [SG]), (0, wG.useEffect)((() => () => {
+        rG.gameBridge.send("setShopOpen", !1), clearTimeout(oG.current)
+      }), []), (0, wG.useEffect)((() => {
+        uG.current = QG
+      }), [QG]), (0, wG.useEffect)((() => {
+        if (null === WG) return;
+        return (0, xw.d)("pointerdown", (GG => {
+          const bG = GG.target;
+          null !== bG && void 0 !== bG && bG.closest(".ShopItem") || IG(null)
         }))
-      }), [au]);
-      const ru = uu => {
-          Ou((Eu => ({
-            ...Eu,
-            ...uu
+      }), [WG]);
+      const jG = GG => {
+          KG((bG => ({
+            ...bG,
+            ...GG
           })))
         },
-        Qu = uu => {
-          var Eu;
-          clearTimeout(null === (Eu = Nu.onBoughtInfo) || void 0 === Eu ? void 0 : Eu.timeout);
-          const ju = setTimeout((() => {
-            ru({
+        PG = GG => {
+          var bG;
+          clearTimeout(null === (bG = QG.onBoughtInfo) || void 0 === bG ? void 0 : bG.timeout);
+          const ZG = setTimeout((() => {
+            jG({
               onBoughtInfo: null
             })
           }), 3e3);
-          hu.current = uu, ru({
+          dG.current = GG, jG({
             onBoughtInfo: {
-              text: uu,
-              timeout: ju,
-              categoryKey: Du.current
+              text: GG,
+              timeout: ZG,
+              categoryKey: JG.current
             }
           })
         },
-        iu = uu => {
+        MG = GG => {
           const {
-            shopInfo: Eu,
-            userInputsPerItem: ju,
-            redDotInfo: su,
-            autoSelectCategory: Zu
-          } = function(uu, Eu, ju, su, Uu, Zu) {
-            if ((0, lj.H)(uu) || 0 === Object.keys(uu).length) return {
+            shopInfo: bG,
+            userInputsPerItem: ZG,
+            redDotInfo: wG,
+            autoSelectCategory: LG
+          } = function(GG, bG, ZG, wG, SG, LG) {
+            if ((0, kZ.L)(GG) || 0 === Object.keys(GG).length) return {
               shopInfo: {},
               userInputsPerItem: {},
-              redDotInfo: NZ.fromShopInfo({}),
+              redDotInfo: fL.fromShopInfo({}),
               autoSelectCategory: null
             };
-            const Xu = Pu.siteUsedData[Pu.siteUsed].adConfig.showRewardedAds,
-              lu = {};
-            let qu = null;
-            for (const hu in uu) {
-              const Eu = uu[hu],
-                ju = {};
-              let su = !1;
-              for (const uu in Eu.items) {
-                const Uu = Eu.items[uu];
-                (0, ts.l)(Uu, Xu) && (ju[uu] = Uu, su = !0)
+            const yG = mG.siteUsedData[mG.siteUsed].adConfig.showRewardedAds,
+              kG = {};
+            let UG = null;
+            for (const dG in GG) {
+              const bG = GG[dG],
+                ZG = {};
+              let wG = !1;
+              for (const GG in bG.items) {
+                const SG = bG.items[GG];
+                (0, ew.m)(SG, yG) && (ZG[GG] = SG, wG = !0)
               }
-              su && (lu[hu] = {
-                ...Eu,
-                items: ju
-              }, !0 === Eu.autoSelectCategory && (qu = hu))
+              wG && (kG[dG] = {
+                ...bG,
+                items: ZG
+              }, !0 === bG.autoSelectCategory && (UG = dG))
             }
-            const fu = {},
-              Cu = (uu, Eu, su, Xu) => {
-                var lu, qu;
-                const Cu = OZ(uu, Eu),
-                  bu = null !== (lu = ju[Cu]) && void 0 !== lu ? lu : ju[Eu];
-                if (null !== (qu = Xu.userInput) && void 0 !== qu && qu.type) switch (Xu.userInput.type) {
+            const YG = {},
+              VG = (GG, bG, wG, yG) => {
+                var kG, UG;
+                const VG = QL(GG, bG),
+                  pG = null !== (kG = ZG[VG]) && void 0 !== kG ? kG : ZG[bG];
+                if (null !== (UG = yG.userInput) && void 0 !== UG && UG.type) switch (yG.userInput.type) {
                   case "dropdown": {
-                    var cu;
-                    const uu = !bu || !Xu.userInput.dropdownOptions.some((uu => (0, ts.g)(uu) === bu)),
-                      Eu = Xu.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === su || void 0 === su || null === (cu = su.userInput) || void 0 === cu ? void 0 : cu.type) || JSON.stringify(su.userInput.dropdownOptions) !== JSON.stringify(Xu.userInput.dropdownOptions)),
-                      ju = Xu.userInput,
-                      Uu = !(0, lj.H)(ju.initialValue) && ju.dropdownOptions.some((uu => (0, ts.g)(uu) === ju.initialValue));
-                    var Nu;
-                    return void(uu || Eu ? Uu ? fu[Cu] = null !== (Nu = Xu.userInput.initialValue) && void 0 !== Nu ? Nu : null : Xu.userInput.dropdownOptions.length > 0 ? fu[Cu] = (0, ts.g)(Xu.userInput.dropdownOptions[0]) : fu[Cu] = null : fu[Cu] = bu)
+                    var fG;
+                    const GG = !pG || !yG.userInput.dropdownOptions.some((GG => (0, ew.h)(GG) === pG)),
+                      bG = yG.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === wG || void 0 === wG || null === (fG = wG.userInput) || void 0 === fG ? void 0 : fG.type) || JSON.stringify(wG.userInput.dropdownOptions) !== JSON.stringify(yG.userInput.dropdownOptions)),
+                      ZG = yG.userInput,
+                      SG = !(0, kZ.L)(ZG.initialValue) && ZG.dropdownOptions.some((GG => (0, ew.h)(GG) === ZG.initialValue));
+                    var QG;
+                    return void(GG || bG ? SG ? YG[VG] = null !== (QG = yG.userInput.initialValue) && void 0 !== QG ? QG : null : yG.userInput.dropdownOptions.length > 0 ? YG[VG] = (0, ew.h)(yG.userInput.dropdownOptions[0]) : YG[VG] = null : YG[VG] = pG)
                   }
                   case "text":
                   case "number":
-                    var Ou, Yu, hu;
-                    return void((null === su || void 0 === su ? void 0 : su.userInput) !== Xu.userInput ? fu[Cu] = null !== (Ou = null !== (Yu = Xu.userInput.initialValue) && void 0 !== Yu ? Yu : bu) && void 0 !== Ou ? Ou : "" : fu[Cu] = null !== (hu = null !== bu && void 0 !== bu ? bu : Xu.userInput.initialValue) && void 0 !== hu ? hu : "");
+                    var KG, hG, dG;
+                    return void((null === wG || void 0 === wG ? void 0 : wG.userInput) !== yG.userInput ? YG[VG] = null !== (KG = null !== (hG = yG.userInput.initialValue) && void 0 !== hG ? hG : pG) && void 0 !== KG ? KG : "" : YG[VG] = null !== (dG = null !== pG && void 0 !== pG ? pG : yG.userInput.initialValue) && void 0 !== dG ? dG : "");
                   case "color":
-                    var Du, gu, Mu;
-                    return void((null === su || void 0 === su ? void 0 : su.userInput) !== Xu.userInput ? fu[Cu] = null !== (Du = null !== (gu = Xu.userInput.initialValue) && void 0 !== gu ? gu : bu) && void 0 !== Du ? Du : "#000000" : fu[Cu] = null !== (Mu = null !== bu && void 0 !== bu ? bu : Xu.userInput.initialValue) && void 0 !== Mu ? Mu : "#000000");
+                    var JG, rG, zG;
+                    return void((null === wG || void 0 === wG ? void 0 : wG.userInput) !== yG.userInput ? YG[VG] = null !== (JG = null !== (rG = yG.userInput.initialValue) && void 0 !== rG ? rG : pG) && void 0 !== JG ? JG : "#000000" : YG[VG] = null !== (zG = null !== pG && void 0 !== pG ? pG : yG.userInput.initialValue) && void 0 !== zG ? zG : "#000000");
                   case "player": {
-                    const uu = (0, ts.j)(Uu, Zu, Xu.userInput);
-                    return void(bu && uu.includes(bu) ? fu[Cu] = bu : fu[Cu] = uu.length > 0 ? uu[0] : null)
+                    const GG = (0, ew.k)(SG, LG, yG.userInput);
+                    return void(pG && GG.includes(pG) ? YG[VG] = pG : YG[VG] = GG.length > 0 ? GG[0] : null)
                   }
                 }
               };
-            for (const hu in lu)
-              for (const uu in lu[hu].items) {
-                var bu;
-                const ju = lu[hu].items[uu];
-                Cu(hu, uu, null === (bu = Eu[hu]) || void 0 === bu ? void 0 : bu.items[uu], ju)
+            for (const dG in kG)
+              for (const GG in kG[dG].items) {
+                var pG;
+                const ZG = kG[dG].items[GG];
+                VG(dG, GG, null === (pG = bG[dG]) || void 0 === pG ? void 0 : pG.items[GG], ZG)
               }
-            const cu = NZ.fromShopInfo(lu);
-            for (const hu in lu) {
-              var Nu;
-              if (su.doesCategoryExist(hu)) {
-                (null === (Nu = Eu[hu]) || void 0 === Nu ? void 0 : Nu.redDot) === lu[hu].redDot && cu.updateCategoryRedDot(hu, su.categoryHasRedDot(hu));
-                for (const uu in lu[hu].items) {
-                  var Ou, Yu;
-                  su.doesItemExist(hu, uu) && (null === (Ou = Eu[hu]) || void 0 === Ou || null === (Yu = Ou.items[uu]) || void 0 === Yu ? void 0 : Yu.redDot) === lu[hu].items[uu].redDot && cu.updateItemRedDot(hu, uu, su.itemHasRedDot(hu, uu))
+            const fG = fL.fromShopInfo(kG);
+            for (const dG in kG) {
+              var QG;
+              if (wG.doesCategoryExist(dG)) {
+                (null === (QG = bG[dG]) || void 0 === QG ? void 0 : QG.redDot) === kG[dG].redDot && fG.updateCategoryRedDot(dG, wG.categoryHasRedDot(dG));
+                for (const GG in kG[dG].items) {
+                  var KG, hG;
+                  wG.doesItemExist(dG, GG) && (null === (KG = bG[dG]) || void 0 === KG || null === (hG = KG.items[GG]) || void 0 === hG ? void 0 : hG.redDot) === kG[dG].items[GG].redDot && fG.updateItemRedDot(dG, GG, wG.itemHasRedDot(dG, GG))
                 }
               }
             }
             return {
-              shopInfo: lu,
-              userInputsPerItem: fu,
-              redDotInfo: cu,
-              autoSelectCategory: qu
+              shopInfo: kG,
+              userInputsPerItem: YG,
+              redDotInfo: fG,
+              autoSelectCategory: UG
             }
-          }(uu, Nu.shopInfo, Nu.userInputsPerItem, Nu.redDotInfo, Xu, lu), qu = {
-            shopInfo: Eu,
-            userInputsPerItem: ju,
-            redDotInfo: su
+          }(GG, QG.shopInfo, QG.userInputsPerItem, QG.redDotInfo, yG, kG), UG = {
+            shopInfo: bG,
+            userInputsPerItem: ZG,
+            redDotInfo: wG
           };
-          if (null === Zu || Uu)
-            if (Eu[Nu.selectedCategoryKey]) qu.selectedCategoryKey = Nu.selectedCategoryKey;
+          if (null === LG || SG)
+            if (bG[QG.selectedCategoryKey]) UG.selectedCategoryKey = QG.selectedCategoryKey;
             else {
-              const uu = sU(Eu);
-              qu.selectedCategoryKey = uu.length > 0 ? uu[0] : null
+              const GG = ZS(bG);
+              UG.selectedCategoryKey = GG.length > 0 ? GG[0] : null
             }
-          else qu.selectedCategoryKey = Zu;
-          return 0 === Object.keys(Eu).length && Uu && Ju.d.set({
+          else UG.selectedCategoryKey = LG;
+          return 0 === Object.keys(bG).length && SG && iG.e.set({
             openEverythingMenuName: null
-          }), qu
+          }), UG
         },
-        Su = (uu, Eu, ju) => {
-          const su = Nu.selectedCategoryKey,
-            Uu = OZ(su, uu),
-            Zu = null !== ju && void 0 !== ju ? ju : Nu.userInputsPerItem[Uu],
-            Xu = {
-              categoryKey: su,
-              itemKey: uu,
-              userInput: Zu
+        sG = (GG, bG, ZG) => {
+          const wG = QG.selectedCategoryKey,
+            SG = QL(wG, GG),
+            LG = null !== ZG && void 0 !== ZG ? ZG : QG.userInputsPerItem[SG],
+            yG = {
+              categoryKey: wG,
+              itemKey: GG,
+              userInput: LG
             };
-          if (Du.current = su, Eu.isRewardedAd) {
-            if (Date.now() - eu.current < 5e3) return;
-            (0, hE.O)((() => {
-              var ju, su, Zu;
+          if (JG.current = wG, bG.isRewardedAd) {
+            if (Date.now() - EG.current < 5e3) return;
+            (0, db.bb)((() => {
+              var ZG, wG, LG;
               console.log("bought rewarded ad");
-              const lu = Xu.categoryKey ? null === (ju = wu.current.shopInfo[Xu.categoryKey]) || void 0 === ju ? void 0 : ju.items[uu] : null;
-              if (!lu || !lu.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              (null === (su = Eu.userInput) || void 0 === su ? void 0 : su.type) === (null === lu || void 0 === lu || null === (Zu = lu.userInput) || void 0 === Zu ? void 0 : Zu.type) ? (Xu.userInput = wu.current.userInputsPerItem[Uu], gu.gameBridge.send("buyShopItem", Xu), Eu.onBoughtMessage && Qu(Eu.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
-            })), eu.current = Date.now()
+              const kG = yG.categoryKey ? null === (ZG = uG.current.shopInfo[yG.categoryKey]) || void 0 === ZG ? void 0 : ZG.items[GG] : null;
+              if (!kG || !kG.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              (null === (wG = bG.userInput) || void 0 === wG ? void 0 : wG.type) === (null === kG || void 0 === kG || null === (LG = kG.userInput) || void 0 === LG ? void 0 : LG.type) ? (yG.userInput = uG.current.userInputsPerItem[SG], rG.gameBridge.send("buyShopItem", yG), bG.onBoughtMessage && PG(bG.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
+            })), EG.current = Date.now()
           } else {
-            gu.gameBridge.send("buyShopItem", Xu), ru({
+            rG.gameBridge.send("buyShopItem", yG), jG({
               awaitingPurchase: !0
-            }), clearTimeout(Gu.current), Gu.current = setTimeout((() => {
-              pu.current = null, ru({
+            }), clearTimeout(oG.current), oG.current = setTimeout((() => {
+              XG.current = null, jG({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const uu = (0, ts.d)(Eu, Zu);
-            if (pu.current = null, !isNaN(uu) && YZ(Nu.currencyAmounts, Eu.currency)) {
-              0 !== uu && (pu.current = {
-                currency: Eu.currency,
-                amountBefore: Nu.currencyAmounts[Eu.currency].amount
+            const GG = (0, ew.d)(bG, LG);
+            if (XG.current = null, !isNaN(GG) && KL(QG.currencyAmounts, bG.currency)) {
+              0 !== GG && (XG.current = {
+                currency: bG.currency,
+                amountBefore: QG.currencyAmounts[bG.currency].amount
               });
-              const ju = {
-                ...Nu.currencyAmounts
+              const ZG = {
+                ...QG.currencyAmounts
               };
-              ju[Eu.currency].amount -= uu, ru({
-                currencyAmounts: ju
+              ZG[bG.currency].amount -= GG, jG({
+                currencyAmounts: ZG
               })
             }
-            Eu.onBoughtMessage && Qu(Eu.onBoughtMessage)
+            bG.onBoughtMessage && PG(bG.onBoughtMessage)
           }
         },
-        Iu = (uu, Eu) => {
-          if (null === Eu || !uu.shopInfo[Eu]) return uu;
-          let ju = uu.redDotInfo;
-          return ju.categoryHasRedDot(Eu) && (ju.updateCategoryRedDot(Eu, !1), ju = ju.shallowCopy()), {
-            ...uu,
-            selectedCategoryKey: Eu,
-            redDotInfo: ju
+        qG = (GG, bG) => {
+          if (null === bG || !GG.shopInfo[bG]) return GG;
+          let ZG = GG.redDotInfo;
+          return ZG.categoryHasRedDot(bG) && (ZG.updateCategoryRedDot(bG, !1), ZG = ZG.shallowCopy()), {
+            ...GG,
+            selectedCategoryKey: bG,
+            redDotInfo: ZG
           }
         },
-        Fu = uu => {
-          Ou((Eu => Iu(Eu, uu)))
+        nG = GG => {
+          KG((bG => qG(bG, GG)))
         };
-      (0, LE.f)(uU.k, (() => {
-        Ou((uu => {
-          const Eu = (0, uU.m)(sU(uu.shopInfo), uu.selectedCategoryKey, (Eu => (0, uU.i)(uu.shopInfo[Eu].items)));
-          return Eu === uu.selectedCategoryKey ? uu : Iu(uu, Eu)
+      (0, eb.g)(Bw.m, (() => {
+        KG((GG => {
+          const bG = (0, Bw.n)(ZS(GG.shopInfo), GG.selectedCategoryKey, (bG => (0, Bw.j)(GG.shopInfo[bG].items)));
+          return bG === GG.selectedCategoryKey ? GG : qG(GG, bG)
         }))
-      })), (0, LE.f)("showShopFromServer", (uu => {
+      })), (0, eb.g)("showShopFromServer", (GG => {
         let {
-          toggle: Eu,
-          fu: ju
-        } = uu;
-        ju && Fu(ju), 0 === Object.keys(Nu.shopInfo).length || Eu && Uu ? Ju.d.set({
+          toggle: bG,
+          UG: ZG
+        } = GG;
+        ZG && nG(ZG), 0 === Object.keys(QG.shopInfo).length || bG && SG ? iG.e.set({
           openEverythingMenuName: null
-        }) : Ju.d.set({
-          openEverythingMenuName: DE.o.SHOP
+        }) : iG.e.set({
+          openEverythingMenuName: Jb.u.SHOP
         })
-      })), (0, LE.f)("closeShopOnDamaged", (() => {
-        Uu && Ju.d.set({
+      })), (0, eb.g)("closeShopOnDamaged", (() => {
+        SG && iG.e.set({
           openEverythingMenuName: null
         })
-      })), (0, LE.f)("overShopInfo", (uu => {
-        Qu(uu)
-      })), (0, Yu.e)("currencyAmounts", (uu => {
-        var Eu;
-        const ju = pu.current;
-        ju && (null === uu || void 0 === uu || null === (Eu = uu[ju.currency]) || void 0 === Eu ? void 0 : Eu.amount) === ju.amountBefore ? ru({
-          currencyAmounts: uu
-        }) : (pu.current = null, ru({
-          currencyAmounts: uu,
+      })), (0, eb.g)("overShopInfo", (GG => {
+        PG(GG)
+      })), (0, hG.h)("currencyAmounts", (GG => {
+        var bG;
+        const ZG = XG.current;
+        ZG && (null === GG || void 0 === GG || null === (bG = GG[ZG.currency]) || void 0 === bG ? void 0 : bG.amount) === ZG.amountBefore ? jG({
+          currencyAmounts: GG
+        }) : (XG.current = null, jG({
+          currencyAmounts: GG,
           awaitingPurchase: !1
         }))
-      })), (0, Yu.e)("shopInfo", (uu => {
-        ru({
-          ...iu(uu),
+      })), (0, hG.h)("shopInfo", (GG => {
+        jG({
+          ...MG(GG),
           awaitingPurchase: !1
         })
       }));
-      const Bu = (0, su.useRef)({
-        playerIds: Xu,
-        localPlayerId: lu
+      const gG = (0, wG.useRef)({
+        playerIds: yG,
+        localPlayerId: kG
       });
-      (0, su.useEffect)((() => {
-        Bu.current.playerIds === Xu && Bu.current.localPlayerId === lu || (Bu.current = {
-          playerIds: Xu,
-          localPlayerId: lu
-        }, Ou((uu => {
-          const Eu = iu(uu.shopInfo);
+      (0, wG.useEffect)((() => {
+        gG.current.playerIds === yG && gG.current.localPlayerId === kG || (gG.current = {
+          playerIds: yG,
+          localPlayerId: kG
+        }, KG((GG => {
+          const bG = MG(GG.shopInfo);
           return {
-            ...uu,
-            ...Eu
+            ...GG,
+            ...bG
           }
         })))
-      }), [Xu, lu]);
-      const Lu = Nu.selectedCategoryKey,
-        tu = (uu, Eu) => {
-          var ju, su;
-          return (isNaN(Eu) || (0, lj.H)(uu.currency) || YZ(Nu.currencyAmounts, uu.currency) && Eu <= Nu.currencyAmounts[uu.currency].amount) && (null === (ju = uu.canBuy) || void 0 === ju || ju) && !(null !== (su = uu.hidden) && void 0 !== su && su)
+      }), [yG, kG]);
+      const eG = QG.selectedCategoryKey,
+        RG = (GG, bG) => {
+          var ZG, wG;
+          return (isNaN(bG) || (0, kZ.L)(GG.currency) || KL(QG.currencyAmounts, GG.currency) && bG <= QG.currencyAmounts[GG.currency].amount) && (null === (ZG = GG.canBuy) || void 0 === ZG || ZG) && !(null !== (wG = GG.hidden) && void 0 !== wG && wG)
         },
-        xu = (uu, Eu) => {
-          var ju, su, Uu;
-          const Xu = OZ(Lu, uu),
-            lu = Nu.shopInfo[Lu].items[uu],
-            Cu = Nu.userInputsPerItem[Xu],
-            cu = (0, ts.d)(lu, Cu),
-            Ou = tu(lu, cu),
-            Yu = lu.enchant,
-            hu = Yu ? (0, Wu.qb)(null !== (ju = lu.customTitle) && void 0 !== ju ? ju : uu, {
-              colour: Wu.jb[Yu.tier]
-            }) : null !== (su = lu.customTitle) && void 0 !== su ? su : uu,
-            Du = Eu => {
-              const ju = null !== Eu && void 0 !== Eu ? Eu : Cu,
-                su = void 0 !== Eu ? (0, ts.d)(lu, Eu) : cu;
-              tu(lu, su) && null !== ju && Su(uu, lu, Eu);
-              let Uu = Nu.redDotInfo;
-              Uu.itemHasRedDot(Lu, uu) && (Uu.updateItemRedDot(Lu, uu, !1), Uu = Uu.shallowCopy()), ru({
-                redDotInfo: Uu
+        TG = (GG, bG) => {
+          var ZG, wG, SG;
+          const yG = QL(eG, GG),
+            kG = QG.shopInfo[eG].items[GG],
+            VG = QG.userInputsPerItem[yG],
+            fG = (0, ew.d)(kG, VG),
+            KG = RG(kG, fG),
+            hG = kG.enchant,
+            dG = hG ? (0, AG.Bb)(null !== (ZG = kG.customTitle) && void 0 !== ZG ? ZG : GG, {
+              colour: AG.wb[hG.tier]
+            }) : null !== (wG = kG.customTitle) && void 0 !== wG ? wG : GG,
+            JG = bG => {
+              const ZG = null !== bG && void 0 !== bG ? bG : VG,
+                wG = void 0 !== bG ? (0, ew.d)(kG, bG) : fG;
+              RG(kG, wG) && null !== ZG && sG(GG, kG, bG);
+              let SG = QG.redDotInfo;
+              SG.itemHasRedDot(eG, GG) && (SG.updateItemRedDot(eG, GG, !1), SG = SG.shallowCopy()), jG({
+                redDotInfo: SG
               })
             };
-          return (0, bu.jsxs)("div", {
-            className: Zu()("ShopItem", {
-              ShopItemNoInput: !lu.userInput,
-              ShopItemNoInputCanBuy: !lu.userInput && Ou,
-              ShopItemNoInputSelected: lu.isSelected,
-              ShopItemEnchant: !!Yu
+          return (0, pG.jsxs)("div", {
+            className: LG()("ShopItem", {
+              ShopItemNoInput: !kG.userInput,
+              ShopItemNoInputCanBuy: !kG.userInput && KG,
+              ShopItemNoInputSelected: kG.isSelected,
+              ShopItemEnchant: !!hG
             }),
-            "data-pad-focusable": !lu.userInput || void 0,
-            "data-pad-unavailable": !lu.userInput && !Ou || void 0,
-            "data-pad-repeat": null !== (Uu = (0, uU.c)(lu)) && void 0 !== Uu ? Uu : void 0,
-            "data-pad-repeat-wait": Nu.awaitingPurchase || void 0,
+            "data-pad-focusable": !kG.userInput || void 0,
+            "data-pad-unavailable": !kG.userInput && !KG || void 0,
+            "data-pad-repeat": null !== (SG = (0, Bw.d)(kG)) && void 0 !== SG ? SG : void 0,
+            "data-pad-repeat-wait": QG.awaitingPurchase || void 0,
             onClick: () => {
-              if (Yu && ku.current) {
-                if (au !== Xu) return void ou(Xu);
-                ou(null)
+              if (hG && FG.current) {
+                if (WG !== yG) return void IG(yG);
+                IG(null)
               }
-              lu.userInput || Du()
+              kG.userInput || JG()
             },
-            onPointerDown: uu => {
-              Yu && (ku.current = (0, Ts.r)(uu))
+            onPointerDown: GG => {
+              hG && (FG.current = (0, Tw.t)(GG))
             },
-            onPointerEnter: uu => {
-              Yu && !(0, Ts.r)(uu) && ou(Xu)
+            onPointerEnter: GG => {
+              hG && !(0, Tw.t)(GG) && IG(yG)
             },
-            onPointerLeave: uu => {
-              Yu && !(0, Ts.r)(uu) && ou((uu => uu === Xu ? null : uu))
+            onPointerLeave: GG => {
+              hG && !(0, Tw.t)(GG) && IG((GG => GG === yG ? null : GG))
             },
             style: {
-              zIndex: Object.keys(Nu.shopInfo[Lu].items).length - Eu
+              zIndex: Object.keys(QG.shopInfo[eG].items).length - bG
             },
-            children: [Nu.redDotInfo.itemHasRedDot(Lu, uu) && (0, bu.jsx)(qu.d, {
+            children: [QG.redDotInfo.itemHasRedDot(eG, GG) && (0, pG.jsx)(UG.e, {
               top: "-6px",
               right: "-6px"
-            }), lu.badge && (0, bu.jsx)("div", {
+            }), kG.badge && (0, pG.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, bu.jsx)("div", {
-                className: Zu()("ShopBadgeMain", lu.badge.type),
-                children: (0, bu.jsx)(As.d, {
-                  text: lu.badge.text
+              children: (0, pG.jsx)("div", {
+                className: LG()("ShopBadgeMain", kG.badge.type),
+                children: (0, pG.jsx)(tw.c, {
+                  text: kG.badge.text
                 })
               })
-            }), (0, bu.jsx)("div", {
+            }), (0, pG.jsx)("div", {
               className: "ShopItemLeft",
-              children: lu.image && (0, bu.jsx)(DZ, {
-                item: lu,
+              children: kG.image && (0, pG.jsx)(dL, {
+                item: kG,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, bu.jsxs)("div", {
+            }), (0, pG.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, bu.jsxs)("div", {
+              children: [(0, pG.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, bu.jsx)("div", {
+                children: [(0, pG.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, bu.jsx)(As.d, {
-                    text: hu
+                  children: (0, pG.jsx)(tw.c, {
+                    text: dG
                   })
-                }), (0, bu.jsx)("div", {
+                }), (0, pG.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, bu.jsx)(As.d, {
-                    text: lu.description
+                  children: (0, pG.jsx)(tw.c, {
+                    text: kG.description
                   })
                 })]
-              }), lu.userInput && (0, bu.jsxs)("div", {
+              }), kG.userInput && (0, pG.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: uu => {
-                  uu.stopPropagation()
+                onClick: GG => {
+                  GG.stopPropagation()
                 },
-                children: [(0, bu.jsx)(eZ, {
-                  item: lu,
-                  currInput: Cu,
-                  updateInput: Eu => {
-                    ((uu, Eu, ju) => {
-                      const su = OZ(uu, Eu),
-                        Uu = {
-                          ...Nu.userInputsPerItem
+                children: [(0, pG.jsx)(zL, {
+                  item: kG,
+                  currInput: VG,
+                  updateInput: bG => {
+                    ((GG, bG, ZG) => {
+                      const wG = QL(GG, bG),
+                        SG = {
+                          ...QG.userInputsPerItem
                         };
-                      Uu[su] = ju, ru({
-                        userInputsPerItem: Uu
+                      SG[wG] = ZG, jG({
+                        userInputsPerItem: SG
                       })
-                    })(Lu, uu, Eu)
+                    })(eG, GG, bG)
                   },
-                  onSubmit: uu => {
-                    Du(uu)
+                  onSubmit: GG => {
+                    JG(GG)
                   }
-                }), ("dropdown" !== lu.userInput.type || !lu.userInput.autoSubmit) && (0, bu.jsx)(fu.f, {
+                }), ("dropdown" !== kG.userInput.type || !kG.userInput.autoSubmit) && (0, pG.jsx)(YG.d, {
                   className: "ItemCostButton",
-                  disabled: !Ou && null !== Cu,
+                  disabled: !KG && null !== VG,
                   onClick: () => {
-                    Du()
+                    JG()
                   },
-                  children: (0, bu.jsx)(MZ, {
-                    item: lu,
-                    cost: cu,
-                    currencyAmounts: Nu.currencyAmounts
+                  children: (0, pG.jsx)(rL, {
+                    item: kG,
+                    cost: fG,
+                    currencyAmounts: QG.currencyAmounts
                   })
                 })]
               })]
-            }), !lu.userInput && (0, bu.jsx)("div", {
+            }), !kG.userInput && (0, pG.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, bu.jsx)(MZ, {
-                item: lu,
-                cost: cu,
-                currencyAmounts: Nu.currencyAmounts
+              children: (0, pG.jsx)(rL, {
+                item: kG,
+                cost: fG,
+                currencyAmounts: QG.currencyAmounts
               })
-            }), Yu && au === Xu && (0, bu.jsxs)("div", {
+            }), hG && WG === yG && (0, pG.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, bu.jsx)(As.d, {
-                text: hu
-              }), (0, bu.jsx)("div", {
+              children: [(0, pG.jsx)(tw.c, {
+                text: dG
+              }), (0, pG.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, bu.jsx)(As.d, {
-                  text: (0, xs.d)("", Yu.enchantments, Yu.enchantmentData)
+                children: (0, pG.jsx)(tw.c, {
+                  text: (0, Rw.c)("", hG.enchantments, hG.enchantmentData)
                 })
               })]
             })]
-          }, Xu)
+          }, yG)
         },
-        Tu = function(uu) {
-          for (const Eu in uu)
-            if (uu[Eu].smp) return !0;
+        HG = function(GG) {
+          for (const bG in GG)
+            if (GG[bG].smp) return !0;
           return !1
-        }(Nu.shopInfo),
-        Hu = GU(Nu.shopInfo, Lu);
-      return (0, bu.jsx)(Fs.b, {
+        }(QG.shopInfo),
+        tG = ES(QG.shopInfo, eG);
+      return (0, pG.jsx)(qw.d, {
         className: "Menu ShopBody",
-        show: Uu,
-        children: 0 !== Object.keys(Nu.shopInfo).length && (0, bu.jsxs)(bu.Fragment, {
-          children: [(0, bu.jsxs)("div", {
+        show: SG,
+        children: 0 !== Object.keys(QG.shopInfo).length && (0, pG.jsxs)(pG.Fragment, {
+          children: [(0, pG.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, bu.jsx)(cu, {
-              items: sU(Nu.shopInfo).map((uu => {
-                var Eu;
+            children: [(0, pG.jsx)(fG, {
+              items: ZS(QG.shopInfo).map((GG => {
+                var bG;
                 return {
-                  id: uu,
-                  title: null !== (Eu = Nu.shopInfo[uu].customTitle) && void 0 !== Eu ? Eu : uu,
-                  redDot: Nu.redDotInfo.categoryHasRedDot(uu)
+                  id: GG,
+                  title: null !== (bG = QG.shopInfo[GG].customTitle) && void 0 !== bG ? bG : GG,
+                  redDot: QG.redDotInfo.categoryHasRedDot(GG)
                 }
               })),
-              link: Cu ? {
+              link: VG ? {
                 faIcon: "users-gear",
                 title: "lobbyManageEntry:manageLobby",
                 onClick: () => {
-                  (0, jU.f)({
-                    page: (0, jU.d)(),
+                  (0, bS.e)({
+                    page: (0, bS.b)(),
                     source: "shop"
                   })
                 }
               } : void 0,
-              selectedItemId: Lu,
-              onClick: Fu,
-              padStartsOnTab: (0, uU.g)(Lu)
-            }), (0, bu.jsx)("div", {
+              selectedItemId: eG,
+              onClick: nG,
+              padStartsOnTab: (0, Bw.h)(eG)
+            }), (0, pG.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: Nu.currencyAmounts && Object.keys(Nu.currencyAmounts).map((uu => {
-                var Eu;
-                const ju = Nu.currencyAmounts[uu];
-                return ju.hidden ? null : (0, bu.jsxs)("div", {
-                  className: "ShopCurrencyDiv " + (mu ? "SmallText" : ""),
-                  children: [(0, bu.jsxs)("div", {
+              children: QG.currencyAmounts && Object.keys(QG.currencyAmounts).map((GG => {
+                var bG;
+                const ZG = QG.currencyAmounts[GG];
+                return ZG.hidden ? null : (0, pG.jsxs)("div", {
+                  className: "ShopCurrencyDiv " + (vG ? "SmallText" : ""),
+                  children: [(0, pG.jsxs)("div", {
                     className: "ShopCurrencyDetails",
-                    children: [(0, bu.jsx)("div", {
+                    children: [(0, pG.jsx)("div", {
                       className: "ShopCurrencyAmtIcon",
                       style: {
-                        color: ju.iconColour
+                        color: ZG.iconColour
                       },
-                      children: (0, bu.jsx)(JZ, {
-                        iconName: ju.icon
+                      children: (0, pG.jsx)(uL, {
+                        iconName: ZG.icon
                       })
-                    }), "\xa0", (0, Ls.b)(ju.amount, 6)]
-                  }), (null === (Eu = ju.subtext) || void 0 === Eu ? void 0 : Eu.length) > 0 && (0, bu.jsx)("div", {
+                    }), "\xa0", (0, gw.c)(ZG.amount, 6)]
+                  }), (null === (bG = ZG.subtext) || void 0 === bG ? void 0 : bG.length) > 0 && (0, pG.jsx)("div", {
                     className: "ShopCurrencySubtext",
-                    children: (0, bu.jsx)(As.d, {
-                      text: ju.subtext
+                    children: (0, pG.jsx)(tw.c, {
+                      text: ZG.subtext
                     })
                   })]
-                }, uu)
+                }, GG)
               }))
             })]
-          }), (0, bu.jsxs)("div", {
+          }), (0, pG.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [Tu && (0, bu.jsx)(cZ, {
-              show: Uu,
-              shopInfo: Nu.shopInfo,
-              selectedCategoryKey: Lu,
-              buy: (uu, Eu, ju) => {
-                Su(uu, Eu, ju)
+            children: [HG && (0, pG.jsx)(pL, {
+              show: SG,
+              shopInfo: QG.shopInfo,
+              selectedCategoryKey: eG,
+              buy: (GG, bG, ZG) => {
+                sG(GG, bG, ZG)
               },
-              canAfford: tu,
-              message: Nu.onBoughtInfo
-            }), null === Hu && (0, bu.jsxs)(bu.Fragment, {
-              children: [(0, bu.jsx)("div", {
-                className: Zu()("ShopOnBoughtInfo", {
-                  ShopOnBoughtInfoShow: null !== Nu.onBoughtInfo
+              canAfford: RG,
+              message: QG.onBoughtInfo
+            }), null === tG && (0, pG.jsxs)(pG.Fragment, {
+              children: [(0, pG.jsx)("div", {
+                className: LG()("ShopOnBoughtInfo", {
+                  ShopOnBoughtInfoShow: null !== QG.onBoughtInfo
                 }),
-                children: (0, bu.jsx)(As.d, {
-                  text: hu.current
+                children: (0, pG.jsx)(tw.c, {
+                  text: dG.current
                 })
-              }), (0, bu.jsx)("div", {
+              }), (0, pG.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, bu.jsxs)("div", {
+                children: (0, pG.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (Eu = Nu.shopInfo[Lu]) || void 0 === Eu ? void 0 : Eu.description) && (0, bu.jsx)("div", {
+                  children: [(null === (bG = QG.shopInfo[eG]) || void 0 === bG ? void 0 : bG.description) && (0, pG.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, bu.jsx)(As.d, {
-                      text: Nu.shopInfo[Lu].description
+                    children: (0, pG.jsx)(tw.c, {
+                      text: QG.shopInfo[eG].description
                     })
-                  }), Uu && (0, bu.jsx)("div", {
+                  }), SG && (0, pG.jsx)("div", {
                     className: "ShopItems",
-                    ref: Mu,
+                    ref: zG,
                     "data-pad-initial-area": !0,
-                    children: sU(null === (ju = Nu.shopInfo[Lu]) || void 0 === ju ? void 0 : ju.items).map(((uu, Eu) => xu(uu, Eu)))
+                    children: ZS(null === (ZG = QG.shopInfo[eG]) || void 0 === ZG ? void 0 : ZG.items).map(((GG, bG) => TG(GG, bG)))
                   })]
                 })
               })]
@@ -5269,784 +5269,784 @@ export const modules = {
       })
     }));
 
-    function DZ(uu) {
+    function dL(GG) {
       let {
-        item: Eu,
-        minWidth: ju,
-        minHeight: su
-      } = uu;
+        item: bG,
+        minWidth: ZG,
+        minHeight: wG
+      } = GG;
       const {
-        image: Uu,
-        schematicId: Zu,
-        imageColour: Xu
-      } = Eu;
-      if (Zu) return (0, bu.jsx)("div", {
+        image: SG,
+        schematicId: LG,
+        imageColour: yG
+      } = bG;
+      if (LG) return (0, pG.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${ju}rem`,
-          height: `${su}rem`
+          width: `${ZG}rem`,
+          height: `${wG}rem`
         },
-        children: (0, bu.jsx)(ns.b, {
+        children: (0, pG.jsx)(Dw.e, {
           game: {
-            schematicId: Zu
+            schematicId: LG
           }
         })
       });
-      var qu, fu;
-      if ((0, Hs.h)(Uu)) return (0, bu.jsx)("div", {
+      var UG, YG;
+      if ((0, Hw.e)(SG)) return (0, pG.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${ju}rem`,
+          minWidth: `${ZG}rem`,
           height: "0",
-          minHeight: `${su}rem`
+          minHeight: `${wG}rem`
         },
-        children: (0, bu.jsx)(Hs.d, {
-          itemName: Uu,
-          amount: null !== (qu = Eu.amount) && void 0 !== qu ? qu : 0,
-          amountFontSize: su / 4 + "rem",
-          enchantmentTier: null === (fu = Eu.enchant) || void 0 === fu ? void 0 : fu.tier
+        children: (0, pG.jsx)(Hw.b, {
+          itemName: SG,
+          amount: null !== (UG = bG.amount) && void 0 !== UG ? UG : 0,
+          amountFontSize: wG / 4 + "rem",
+          enchantmentTier: null === (YG = bG.enchant) || void 0 === YG ? void 0 : YG.tier
         })
       });
-      const Cu = Uu.slice(-4);
-      return ".jpg" === Cu || ".png" === Cu ? (0, bu.jsx)(gZ, {
-        image: Uu,
-        minWidth: ju
-      }) : (0, bu.jsx)(lu.e, {
-        name: Uu,
+      const VG = SG.slice(-4);
+      return ".jpg" === VG || ".png" === VG ? (0, pG.jsx)(JL, {
+        image: SG,
+        minWidth: ZG
+      }) : (0, pG.jsx)(kG.c, {
+        name: SG,
         className: "SelectedItemImage",
         style: {
-          color: Xu
+          color: yG
         }
       })
     }
 
-    function gZ(uu) {
+    function JL(GG) {
       let {
-        image: Eu,
-        minWidth: ju
-      } = uu;
+        image: bG,
+        minWidth: ZG
+      } = GG;
       const {
-        gameNameWithVariation: su
-      } = (0, rE.f)("connectedGame"), Uu = Eu.endsWith(".jpg");
-      return (0, bu.jsx)("img", {
-        className: Zu()({
-          ShopPixelImage: !Uu
+        gameNameWithVariation: wG
+      } = (0, jb.f)("connectedGame"), SG = bG.endsWith(".jpg");
+      return (0, pG.jsx)("img", {
+        className: LG()({
+          ShopPixelImage: !SG
         }),
         style: {
-          width: `${Uu?1.6*ju:ju}rem`,
+          width: `${SG?1.6*ZG:ZG}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,Wu.Vb)(su)}/${Eu}`,
-        alt: Eu,
+        src: `/textures/games/${(0,AG.Yb)(wG)}/${bG}`,
+        alt: bG,
         draggable: !1
       })
     }
 
-    function MZ(uu) {
+    function rL(GG) {
       let {
-        item: Eu,
-        cost: ju,
-        currencyAmounts: su
-      } = uu;
-      const Uu = !isNaN(ju) && 0 !== ju && YZ(su, Eu.currency);
-      let Zu = null;
-      return Eu.buyButtonText ? Zu = Eu.buyButtonText : Uu ? (Zu = ju, Eu.sell && (Zu = -1 * ju), Zu = Zu.toString()) : 0 === ju ? Zu = "Free" : Eu.isRewardedAd && (Zu = "Watch ad"), (0, lj.H)(Zu) || " " === Zu ? null : (0, bu.jsxs)("div", {
+        item: bG,
+        cost: ZG,
+        currencyAmounts: wG
+      } = GG;
+      const SG = !isNaN(ZG) && 0 !== ZG && KL(wG, bG.currency);
+      let LG = null;
+      return bG.buyButtonText ? LG = bG.buyButtonText : SG ? (LG = ZG, bG.sell && (LG = -1 * ZG), LG = LG.toString()) : 0 === ZG ? LG = "Free" : bG.isRewardedAd && (LG = "Watch ad"), (0, kZ.L)(LG) || " " === LG ? null : (0, pG.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [Uu && (0, bu.jsx)("div", {
+        children: [SG && (0, pG.jsx)("div", {
           style: {
-            color: su[Eu.currency].iconColour
+            color: wG[bG.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, bu.jsx)(JZ, {
-            iconName: su[Eu.currency].icon
+          children: (0, pG.jsx)(uL, {
+            iconName: wG[bG.currency].icon
           })
-        }), (0, bu.jsx)("div", {
+        }), (0, pG.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, bu.jsx)(As.d, {
-            text: Zu
+          children: (0, pG.jsx)(tw.c, {
+            text: LG
           })
         })]
       })
     }
 
-    function eZ(uu) {
+    function zL(GG) {
       let {
-        item: Eu,
-        currInput: ju,
-        updateInput: Uu,
-        onSubmit: Zu
-      } = uu;
+        item: bG,
+        currInput: ZG,
+        updateInput: SG,
+        onSubmit: LG
+      } = GG;
       const {
-        t: lu
-      } = (0, Xu.A)(), qu = (0, su.useRef)(null);
-      if ((0, su.useEffect)((() => {
-          const uu = qu.current;
-          uu && uu.value !== ju && document.activeElement !== uu && (uu.value = null !== ju && void 0 !== ju ? ju : "")
-        }), [ju]), !Eu.userInput) return null;
-      let fu = Eu.userInput;
-      if (Du.featureFlags.sanitizeShopInput && "text" === Eu.userInput.type && (fu = {
+        t: kG
+      } = (0, yG.w)(), UG = (0, wG.useRef)(null);
+      if ((0, wG.useEffect)((() => {
+          const GG = UG.current;
+          GG && GG.value !== ZG && document.activeElement !== GG && (GG.value = null !== ZG && void 0 !== ZG ? ZG : "")
+        }), [ZG]), !bG.userInput) return null;
+      let YG = bG.userInput;
+      if (JG.featureFlags.sanitizeShopInput && "text" === bG.userInput.type && (YG = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === fu.type || "number" === fu.type) {
-        var Cu, cu;
-        console.assert(void 0 !== ju, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Eu)}`);
-        const uu = "text" === fu.type && fu.wordCharsOnly;
-        return (0, bu.jsx)("div", {
+        }), "text" === YG.type || "number" === YG.type) {
+        var VG, fG;
+        console.assert(void 0 !== ZG, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(bG)}`);
+        const GG = "text" === YG.type && YG.wordCharsOnly;
+        return (0, pG.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, bu.jsx)(Gu.d, {
+          children: (0, pG.jsx)(oG.b, {
             className: "ShopItemUserInputText",
-            placeholderText: lu(fu.placeholderText),
-            defaultValue: ju,
-            domRef: qu,
-            onValueChange: (Eu, ju) => {
-              !0 === uu && (Eu = (0, zs.lb)(Eu)), qu.current.value = Eu, Uu(Eu)
+            placeholderText: kG(YG.placeholderText),
+            defaultValue: ZG,
+            domRef: UG,
+            onValueChange: (bG, ZG) => {
+              !0 === GG && (bG = (0, Ow.ib)(bG)), UG.current.value = bG, SG(bG)
             },
-            onEnter: Zu,
-            type: fu.type
-          }, (null !== (Cu = fu.initialValue) && void 0 !== Cu ? Cu : "") + (null !== (cu = fu.placeholderText) && void 0 !== cu ? cu : ""))
+            onEnter: LG,
+            type: YG.type
+          }, (null !== (VG = YG.initialValue) && void 0 !== VG ? VG : "") + (null !== (fG = YG.placeholderText) && void 0 !== fG ? fG : ""))
         })
       }
-      if ("dropdown" === fu.type) {
-        console.assert(void 0 !== ju, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Eu)}`);
-        const uu = fu.autoSubmit;
-        return (0, bu.jsx)("div", {
+      if ("dropdown" === YG.type) {
+        console.assert(void 0 !== ZG, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(bG)}`);
+        const GG = YG.autoSubmit;
+        return (0, pG.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, bu.jsx)(vE.c, {
-            options: fu.dropdownOptions.map((uu => (0, ts.g)(uu))),
-            value: ju,
-            onChange: Eu => {
+          children: (0, pG.jsx)(ab.b, {
+            options: YG.dropdownOptions.map((GG => (0, ew.h)(GG))),
+            value: ZG,
+            onChange: bG => {
               let {
-                value: ju
-              } = Eu;
-              Uu(ju), uu && Zu(ju)
+                value: ZG
+              } = bG;
+              SG(ZG), GG && LG(ZG)
             }
           })
         })
       }
-      return "player" === fu.type ? (0, bu.jsx)(GZ, {
-        userInput: fu,
-        currInput: ju,
-        updateInput: Uu
-      }) : "color" === fu.type ? (0, bu.jsx)("div", {
+      return "player" === YG.type ? (0, pG.jsx)(EL, {
+        userInput: YG,
+        currInput: ZG,
+        updateInput: SG
+      }) : "color" === YG.type ? (0, pG.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, bu.jsx)("input", {
+        children: (0, pG.jsx)("input", {
           type: "color",
-          value: ju,
-          onChange: uu => {
-            Uu(uu.target.value)
+          value: ZG,
+          onChange: GG => {
+            SG(GG.target.value)
           }
         })
       }) : null
     }
 
-    function GZ(uu) {
+    function EL(GG) {
       let {
-        userInput: Eu,
-        currInput: ju,
-        updateInput: su
-      } = uu;
-      const Uu = (0, rE.f)("players"),
-        Zu = (0, rE.f)("hiddenPlayerNames"),
-        Xu = (0, ts.j)(Uu.ids, Uu.localId, Eu);
-      return (0, bu.jsx)("div", {
+        userInput: bG,
+        currInput: ZG,
+        updateInput: wG
+      } = GG;
+      const SG = (0, jb.f)("players"),
+        LG = (0, jb.f)("hiddenPlayerNames"),
+        yG = (0, ew.k)(SG.ids, SG.localId, bG);
+      return (0, pG.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, bu.jsx)(vE.c, {
-          options: Xu.map((uu => {
+        children: (0, pG.jsx)(ab.b, {
+          options: yG.map((GG => {
             const {
-              name: Eu
-            } = Uu.byId[uu];
+              name: bG
+            } = SG.byId[GG];
             return {
-              value: uu,
-              label: null === Eu ? "" : (0, ys.e)(Eu, Zu)
+              value: GG,
+              label: null === bG ? "" : (0, Nw.g)(bG, LG)
             }
           })),
-          value: ju,
-          onChange: uu => {
+          value: ZG,
+          onChange: GG => {
             let {
-              value: Eu
-            } = uu;
-            su(Eu)
+              value: bG
+            } = GG;
+            wG(bG)
           }
         })
       })
     }
 
-    function pZ(uu) {
+    function oL(GG) {
       let {
-        ids: Eu
-      } = uu;
-      return Eu
+        ids: bG
+      } = GG;
+      return bG
     }
 
-    function wZ(uu) {
+    function XL(GG) {
       let {
-        localId: Eu
-      } = uu;
-      return Eu
+        localId: bG
+      } = GG;
+      return bG
     }
 
-    function JZ(uu) {
+    function uL(GG) {
       let {
-        iconName: Eu
-      } = uu;
-      return gu.gameBridge.lookup("isItemName", Eu) ? (0, bu.jsx)(Hs.d, {
-        itemName: Eu,
+        iconName: bG
+      } = GG;
+      return rG.gameBridge.lookup("isItemName", bG) ? (0, pG.jsx)(Hw.b, {
+        itemName: bG,
         amount: 1
-      }) : (0, bu.jsx)(lu.e, {
-        name: Eu,
+      }) : (0, pG.jsx)(kG.c, {
+        name: bG,
         className: "2x"
       })
     }
-    var dZ = ju(1687);
-    const aZ = (0, ju(1461).i)((uu => uu.PadLobbyShortcuts)),
-      PZ = (0, su.lazy)((() => Promise.resolve().then((() => ju(4842))).then((uu => ({
-        default: uu.Lobbyleaderboard
+    var iL = ZG(1579);
+    const CL = (0, ZG(1359).i)((GG => GG.PadLobbyShortcuts)),
+      WL = (0, wG.lazy)((() => Promise.resolve().then((() => ZG(4678))).then((GG => ({
+        default: GG.Lobbyleaderboard
       }))))),
-      oZ = (0, su.lazy)((() => ju.e(223).then((() => ju(41300))).then((uu => ({
-        default: uu.LobbyManageView
+      mL = (0, wG.lazy)((() => ZG.e(223).then((() => ZG(41470))).then((GG => ({
+        default: GG.LobbyManageView
       })))));
 
-    function kZ(uu) {
+    function IL(GG) {
       let {
-        show: Eu
-      } = uu;
-      return Eu ? (0, bu.jsx)(mZ, {}) : null
+        show: bG
+      } = GG;
+      return bG ? (0, pG.jsx)(FL, {}) : null
     }
 
-    function mZ() {
-      const uu = (0, EU.b)();
-      return (0, bu.jsxs)(bu.Fragment, {
-        children: [(0, bu.jsx)(aZ, {}), (0, bu.jsxs)(su.Suspense, {
-          fallback: (0, bu.jsx)("div", {
+    function FL() {
+      const GG = (0, GS.c)();
+      return (0, pG.jsxs)(pG.Fragment, {
+        children: [(0, pG.jsx)(CL, {}), (0, pG.jsxs)(wG.Suspense, {
+          fallback: (0, pG.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, bu.jsx)(pu.b, {})
+            children: (0, pG.jsx)(XG.b, {})
           }),
-          children: [uu && (0, bu.jsx)(oZ, {
-            leaderboard: (0, bu.jsx)(PZ, {})
-          }), !uu && (0, bu.jsx)(PZ, {})]
+          children: [GG && (0, pG.jsx)(mL, {
+            leaderboard: (0, pG.jsx)(WL, {})
+          }), !GG && (0, pG.jsx)(WL, {})]
         })]
       })
     }
-    var vZ = ju(1611),
-      KZ = ju(3195),
-      VZ = ju(1779),
-      rZ = ju(3231),
-      QZ = ju(2817),
-      iZ = ju(1555),
-      WZ = ju(1510),
-      SZ = ju(3175),
-      IZ = ju(3188),
-      FZ = ju(2454);
-    const BZ = "storeRecentGiftRecipients",
-      LZ = new Map;
+    var vL = ZG(1501),
+      aL = ZG(3022),
+      cL = ZG(1702),
+      lL = ZG(3067),
+      jL = ZG(2667),
+      PL = ZG(1428),
+      ML = ZG(1396),
+      AL = ZG(2999),
+      sL = ZG(3013),
+      qL = ZG(2328);
+    const nL = "storeRecentGiftRecipients",
+      gL = new Map;
 
-    function tZ() {
+    function eL() {
       try {
-        const uu = Cj.k.getItem(BZ);
-        return Array.isArray(uu) ? uu.filter((uu => "string" === typeof(null === uu || void 0 === uu ? void 0 : uu.name) && uu.name.length > 0)).map((uu => ({
-          name: uu.name,
-          cosmetics: uu.cosmetics && "object" === typeof uu.cosmetics ? uu.cosmetics : null
+        const GG = VZ.h.getItem(nL);
+        return Array.isArray(GG) ? GG.filter((GG => "string" === typeof(null === GG || void 0 === GG ? void 0 : GG.name) && GG.name.length > 0)).map((GG => ({
+          name: GG.name,
+          cosmetics: GG.cosmetics && "object" === typeof GG.cosmetics ? GG.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function xZ(uu) {
-      var Eu;
-      const [ju, Uu] = (0, su.useState)(""), [Zu, Xu] = (0, su.useState)("search"), [lu, qu] = (0, su.useState)(null), [fu, Cu] = (0, su.useState)(null), bu = (0, su.useRef)(null), cu = (0, su.useRef)(null);
-      (0, su.useEffect)((() => () => {
-        bu.current && clearTimeout(bu.current)
+    function RL(GG) {
+      var bG;
+      const [ZG, SG] = (0, wG.useState)(""), [LG, yG] = (0, wG.useState)("search"), [kG, UG] = (0, wG.useState)(null), [YG, VG] = (0, wG.useState)(null), pG = (0, wG.useRef)(null), fG = (0, wG.useRef)(null);
+      (0, wG.useEffect)((() => () => {
+        pG.current && clearTimeout(pG.current)
       }), []);
-      const Nu = null !== (Eu = null === lu || void 0 === lu ? void 0 : lu.name) && void 0 !== Eu ? Eu : null;
+      const QG = null !== (bG = null === kG || void 0 === kG ? void 0 : kG.name) && void 0 !== bG ? bG : null;
 
-      function Ou() {
-        bu.current && (clearTimeout(bu.current), bu.current = null)
-      }(0, su.useEffect)((() => {
-        if (null === Nu || uu === ou.NULL_USER_CONTEXT) return;
-        const Eu = Nu.toLowerCase();
-        if (Eu === uu.getPlayerName().toLowerCase()) return void Cu({
-          name: Nu,
+      function KG() {
+        pG.current && (clearTimeout(pG.current), pG.current = null)
+      }(0, wG.useEffect)((() => {
+        if (null === QG || GG === IG.NULL_USER_CONTEXT) return;
+        const bG = QG.toLowerCase();
+        if (bG === GG.getPlayerName().toLowerCase()) return void VG({
+          name: QG,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const ju = LZ.get(Eu);
-        if (ju) return void Cu({
-          name: Nu,
-          result: ju
+        const ZG = gL.get(bG);
+        if (ZG) return void VG({
+          name: QG,
+          result: ZG
         });
-        let su = !1;
-        return async function(uu, Eu) {
+        let wG = !1;
+        return async function(GG, bG) {
           try {
-            const ju = await (0, ou.postJsonWithMetricsCookiesAndJsonResponse)(`${YE.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: Eu
+            const ZG = await (0, IG.postJsonWithMetricsCookiesAndJsonResponse)(`${hb.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: bG
             }, {
               retries: 1
-            }, uu.getMetricsCookies());
-            if ("boolean" !== typeof(null === ju || void 0 === ju ? void 0 : ju.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(ju)}`);
-            return ju
-          } catch (ju) {
-            return console.error("Failed to look up gift recipient:", ju), {
+            }, GG.getMetricsCookies());
+            if ("boolean" !== typeof(null === ZG || void 0 === ZG ? void 0 : ZG.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(ZG)}`);
+            return ZG
+          } catch (ZG) {
+            return console.error("Failed to look up gift recipient:", ZG), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(uu, Nu).catch((uu => (console.error("Gift recipient lookup failed:", uu), {
+        }(GG, QG).catch((GG => (console.error("Gift recipient lookup failed:", GG), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((uu => {
-          !0 !== uu.giftRecipientFound && "store:giftRecipientLookupFailed" === uu.giftRecipientError || LZ.set(Eu, uu), su || Cu({
-            name: Nu,
-            result: uu
+        }))).then((GG => {
+          !0 !== GG.giftRecipientFound && "store:giftRecipientLookupFailed" === GG.giftRecipientError || gL.set(bG, GG), wG || VG({
+            name: QG,
+            result: GG
           })
         })), () => {
-          su = !0
+          wG = !0
         }
-      }), [Nu, uu]);
-      const Yu = (0, su.useMemo)((() => {
-        const uu = ju.trim();
-        if (!uu) return {
+      }), [QG, GG]);
+      const hG = (0, wG.useMemo)((() => {
+        const GG = ZG.trim();
+        if (!GG) return {
           status: "none"
         };
-        if (!lu || lu.name !== uu || (null === fu || void 0 === fu ? void 0 : fu.name) !== lu.name) return {
+        if (!kG || kG.name !== GG || (null === YG || void 0 === YG ? void 0 : YG.name) !== kG.name) return {
           status: "pending",
-          name: uu
+          name: GG
         };
-        const Eu = fu.result;
-        return !1 === Eu.giftRecipientFound ? {
+        const bG = YG.result;
+        return !1 === bG.giftRecipientFound ? {
           status: "error",
-          name: lu.name,
-          error: Eu.giftRecipientError
+          name: kG.name,
+          error: bG.giftRecipientError
         } : {
           status: "found",
-          name: Eu.giftRecipientName,
-          ownedPacks: Eu.giftRecipientOwnedPacks,
-          hasSuperRank: Eu.giftRecipientHasSuperRank,
-          isSubscriber: Eu.giftRecipientIsSubscriber
+          name: bG.giftRecipientName,
+          ownedPacks: bG.giftRecipientOwnedPacks,
+          hasSuperRank: bG.giftRecipientHasSuperRank,
+          isSubscriber: bG.giftRecipientIsSubscriber
         }
-      }), [ju, lu, fu]);
-      (0, su.useEffect)((() => {
-        "found" === Yu.status && "typed" === (null === lu || void 0 === lu ? void 0 : lu.source) && cu.current !== Yu.name && (cu.current = Yu.name, (0, EE.reportAnalyticsClick)({
+      }), [ZG, kG, YG]);
+      (0, wG.useEffect)((() => {
+        "found" === hG.status && "typed" === (null === kG || void 0 === kG ? void 0 : kG.source) && fG.current !== hG.name && (fG.current = hG.name, (0, bb.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [Yu, lu]);
-      const hu = (null === fu || void 0 === fu ? void 0 : fu.name) === (null === lu || void 0 === lu ? void 0 : lu.name) ? null === fu || void 0 === fu ? void 0 : fu.result : null,
-        Du = !0 === (null === hu || void 0 === hu ? void 0 : hu.giftRecipientFound) ? hu.giftRecipientCosmetics : null;
+      }), [hG, kG]);
+      const dG = (null === YG || void 0 === YG ? void 0 : YG.name) === (null === kG || void 0 === kG ? void 0 : kG.name) ? null === YG || void 0 === YG ? void 0 : YG.result : null,
+        JG = !0 === (null === dG || void 0 === dG ? void 0 : dG.giftRecipientFound) ? dG.giftRecipientCosmetics : null;
       return {
-        query: ju,
-        via: Zu,
-        recipient: Yu,
-        recipientCosmetics: Du,
-        type: function(uu) {
-          Uu(uu), Xu("search"), Ou();
-          const Eu = uu.trim();
-          Eu ? bu.current = setTimeout((() => {
-            qu({
-              name: Eu,
+        query: ZG,
+        via: LG,
+        recipient: hG,
+        recipientCosmetics: JG,
+        type: function(GG) {
+          SG(GG), yG("search"), KG();
+          const bG = GG.trim();
+          bG ? pG.current = setTimeout((() => {
+            UG({
+              name: bG,
               source: "typed"
             })
-          }), 400) : qu(null)
+          }), 400) : UG(null)
         },
-        choose: function(uu, Eu) {
-          Ou(), Uu(uu), Xu("typed" === Eu ? "search" : "prefilled" === Eu ? "prefilled" : "suggestion"), qu({
-            name: uu,
-            source: Eu
-          }), "typed" !== Eu && "prefilled" !== Eu && (0, EE.reportAnalyticsClick)({
+        choose: function(GG, bG) {
+          KG(), SG(GG), yG("typed" === bG ? "search" : "prefilled" === bG ? "prefilled" : "suggestion"), UG({
+            name: GG,
+            source: bG
+          }), "typed" !== bG && "prefilled" !== bG && (0, bb.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: Eu
+            value: bG
           })
         },
         clear: function() {
-          Ou(), Uu(""), Xu("search"), qu(null)
+          KG(), SG(""), yG("search"), UG(null)
         },
-        recordGift: function(uu, Eu) {
-          ! function(uu) {
-            LZ.delete(uu.toLowerCase())
-          }(uu), Cu((ju => {
-            if (!ju || ju.name.toLowerCase() !== uu.toLowerCase() || !0 !== ju.result.giftRecipientFound || "superRank" === Eu) return ju;
-            const su = ju.result.giftRecipientOwnedPacks;
+        recordGift: function(GG, bG) {
+          ! function(GG) {
+            gL.delete(GG.toLowerCase())
+          }(GG), VG((ZG => {
+            if (!ZG || ZG.name.toLowerCase() !== GG.toLowerCase() || !0 !== ZG.result.giftRecipientFound || "superRank" === bG) return ZG;
+            const wG = ZG.result.giftRecipientOwnedPacks;
             return {
-              ...ju,
+              ...ZG,
               result: {
-                ...ju.result,
-                giftRecipientOwnedPacks: su.includes(Eu) ? su : [...su, Eu]
+                ...ZG.result,
+                giftRecipientOwnedPacks: wG.includes(bG) ? wG : [...wG, bG]
               }
             }
           }))
         }
       }
     }
-    var TZ = ju(2447),
-      HZ = ju(4844),
-      AZ = ju(257),
-      nZ = ju(3290);
-    const yZ = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var zZ = ju(2393),
-      RZ = ju(628),
-      uX = ju(2479),
-      EX = ju(2716);
+    var TL = ZG(2322),
+      HL = ZG(4683),
+      tL = ZG(252),
+      DL = ZG(3104);
+    const NL = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var OL = ZG(2281),
+      xL = ZG(580),
+      BL = ZG(2359),
+      Gy = ZG(2575);
 
-    function jX(uu) {
+    function by(GG) {
       let {
-        cosmetics: Eu
-      } = uu;
-      return (0, bu.jsx)("span", {
+        cosmetics: bG
+      } = GG;
+      return (0, pG.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, bu.jsx)(uX.d, {
-          cosmetics: Eu
+        children: (0, pG.jsx)(BL.c, {
+          cosmetics: bG
         })
       })
     }
 
-    function sX(uu, Eu) {
-      var ju, su;
-      const Uu = null !== (ju = uu.friend) && void 0 !== ju ? ju : {
+    function Zy(GG, bG) {
+      var ZG, wG;
+      const SG = null !== (ZG = GG.friend) && void 0 !== ZG ? ZG : {
         isError: !1,
-        name: uu.name,
+        name: GG.name,
         ranks: [],
-        cosmetics: null !== (su = uu.cosmetics) && void 0 !== su ? su : {},
-        nameColour: RZ.e,
+        cosmetics: null !== (wG = GG.cosmetics) && void 0 !== wG ? wG : {},
+        nameColour: xL.d,
         location: {
           status: "noGamePlayed"
         }
       };
-      return Eu ? {
-        ...Uu,
-        cosmetics: Eu
-      } : Uu
+      return bG ? {
+        ...SG,
+        cosmetics: bG
+      } : SG
     }
 
-    function UX(uu) {
+    function wy(GG) {
       let {
-        pending: Eu
-      } = uu;
-      return (0, bu.jsx)("span", {
+        pending: bG
+      } = GG;
+      return (0, pG.jsx)("span", {
         className: "StoreRecipientLoader",
-        children: Eu && (0, bu.jsx)(pu.b, {})
+        children: bG && (0, pG.jsx)(XG.b, {})
       })
     }
 
-    function ZX(uu) {
-      var Eu;
+    function Sy(GG) {
+      var bG;
       let {
-        selfName: ju,
-        giftRecipient: Uu,
-        suggestionsVersion: qu,
-        pulseSignal: Cu,
-        disabled: cu
-      } = uu;
+        selfName: ZG,
+        giftRecipient: SG,
+        suggestionsVersion: UG,
+        pulseSignal: VG,
+        disabled: fG
+      } = GG;
       const {
-        t: Nu
-      } = (0, Xu.A)(), Ou = (0, Lu.m)(), Yu = (0, su.useRef)(null), hu = (0, su.useRef)(null), {
-        query: gu,
-        via: Mu,
-        recipient: eu,
-        recipientCosmetics: pu
-      } = Uu, wu = (0, FZ.n)(gu), Ju = (0, su.useMemo)((() => {
-        const uu = Du.featureFlags.useSocialFeatures ? Ou.friends.filter((uu => !uu.isError)) : [];
-        return (0, FZ.i)({
-          onlineFriends: (0, Lu.f)(uu),
-          recentRecipients: tZ(),
-          friends: uu,
-          selfName: ju,
+        t: QG
+      } = (0, yG.w)(), KG = (0, eG.k)(), hG = (0, wG.useRef)(null), dG = (0, wG.useRef)(null), {
+        query: rG,
+        via: zG,
+        recipient: EG,
+        recipientCosmetics: XG
+      } = SG, uG = (0, qL.o)(rG), iG = (0, wG.useMemo)((() => {
+        const GG = JG.featureFlags.useSocialFeatures ? KG.friends.filter((GG => !GG.isError)) : [];
+        return (0, qL.g)({
+          onlineFriends: (0, eG.e)(GG),
+          recentRecipients: eL(),
+          friends: GG,
+          selfName: ZG,
           max: 8
         })
-      }), [Ou.friends, ju, qu]), du = gu.trim().toLowerCase(), au = "search" !== Mu && du ? Ju.find((uu => uu.name.toLowerCase() === du)) : void 0, Pu = au && "prefilled" === Mu ? [au, ...Ju.filter((uu => uu !== au))] : Ju, ou = "" !== du && !au, ku = ou ? gu : "", mu = Pu.length > 0;
-      (0, su.useEffect)((() => {
-        Yu.current && Yu.current.value !== ku && (Yu.current.value = ku)
-      }), [ku]), (0, su.useEffect)((() => {
-        Yu.current && (Yu.current.disabled = cu)
-      }), [cu, Cu]);
-      const vu = (0, su.useRef)(0);
+      }), [KG.friends, ZG, UG]), CG = rG.trim().toLowerCase(), WG = "search" !== zG && CG ? iG.find((GG => GG.name.toLowerCase() === CG)) : void 0, mG = WG && "prefilled" === zG ? [WG, ...iG.filter((GG => GG !== WG))] : iG, IG = "" !== CG && !WG, FG = IG ? rG : "", vG = mG.length > 0;
+      (0, wG.useEffect)((() => {
+        hG.current && hG.current.value !== FG && (hG.current.value = FG)
+      }), [FG]), (0, wG.useEffect)((() => {
+        hG.current && (hG.current.disabled = fG)
+      }), [fG, VG]);
+      const aG = (0, wG.useRef)(0);
 
-      function Vu() {
-        "self" !== wu && (0, EE.reportAnalyticsClick)({
+      function lG() {
+        "self" !== uG && (0, bb.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), Uu.clear()
+        }), SG.clear()
       }
 
-      function ru(uu) {
-        var Eu, ju;
-        if (cu) return;
-        if (" " === uu.key || "Enter" === uu.key) return uu.preventDefault(), void uu.currentTarget.click();
-        const su = Array.from(null !== (Eu = null === (ju = hu.current) || void 0 === ju ? void 0 : ju.querySelectorAll("[role=radio]")) && void 0 !== Eu ? Eu : []),
-          Uu = su.indexOf(uu.currentTarget);
-        let Zu;
-        "ArrowRight" === uu.key || "ArrowDown" === uu.key ? Zu = su[(Uu + 1) % su.length] : "ArrowLeft" === uu.key || "ArrowUp" === uu.key ? Zu = su[(Uu - 1 + su.length) % su.length] : "Home" === uu.key ? Zu = su[0] : "End" === uu.key && (Zu = su[su.length - 1]), Zu && (uu.preventDefault(), Zu.focus(), Zu.click())
-      }(0, su.useEffect)((() => {
-        var uu;
-        Cu > vu.current && !cu && (vu.current = Cu, null === (uu = Yu.current) || void 0 === uu || uu.focus())
-      }), [Cu, cu]);
-      const Qu = "self" === wu,
-        iu = null !== (Eu = null === au || void 0 === au ? void 0 : au.name) && void 0 !== Eu ? Eu : null,
-        Wu = "error" === eu.status ? eu.error : null,
-        Su = "store:giftRecipientLookupFailed" === Wu;
-      return (0, bu.jsxs)("div", {
-        className: Zu()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: cu,
-          StoreRecipientStripNoChips: !mu
+      function jG(GG) {
+        var bG, ZG;
+        if (fG) return;
+        if (" " === GG.key || "Enter" === GG.key) return GG.preventDefault(), void GG.currentTarget.click();
+        const wG = Array.from(null !== (bG = null === (ZG = dG.current) || void 0 === ZG ? void 0 : ZG.querySelectorAll("[role=radio]")) && void 0 !== bG ? bG : []),
+          SG = wG.indexOf(GG.currentTarget);
+        let LG;
+        "ArrowRight" === GG.key || "ArrowDown" === GG.key ? LG = wG[(SG + 1) % wG.length] : "ArrowLeft" === GG.key || "ArrowUp" === GG.key ? LG = wG[(SG - 1 + wG.length) % wG.length] : "Home" === GG.key ? LG = wG[0] : "End" === GG.key && (LG = wG[wG.length - 1]), LG && (GG.preventDefault(), LG.focus(), LG.click())
+      }(0, wG.useEffect)((() => {
+        var GG;
+        VG > aG.current && !fG && (aG.current = VG, null === (GG = hG.current) || void 0 === GG || GG.focus())
+      }), [VG, fG]);
+      const PG = "self" === uG,
+        MG = null !== (bG = null === WG || void 0 === WG ? void 0 : WG.name) && void 0 !== bG ? bG : null,
+        AG = "error" === EG.status ? EG.error : null,
+        sG = "store:giftRecipientLookupFailed" === AG;
+      return (0, pG.jsxs)("div", {
+        className: LG()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: fG,
+          StoreRecipientStripNoChips: !vG
         }),
-        children: [(0, bu.jsx)("span", {
+        children: [(0, pG.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: Nu("store:buyingFor")
-        }), (0, bu.jsxs)("div", {
-          ref: hu,
+          children: QG("store:buyingFor")
+        }), (0, pG.jsxs)("div", {
+          ref: dG,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": Nu("store:whoIsItFor"),
-          children: [(0, bu.jsxs)("div", {
+          "aria-label": QG("store:whoIsItFor"),
+          children: [(0, pG.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": Qu,
-            tabIndex: cu || !Qu && null !== iu ? -1 : 0,
-            className: Zu()("StoreRecipientMe", {
-              StoreRecipientChecked: Qu
+            "aria-checked": PG,
+            tabIndex: fG || !PG && null !== MG ? -1 : 0,
+            className: LG()("StoreRecipientMe", {
+              StoreRecipientChecked: PG
             }),
             onClick: () => {
-              cu || Vu()
+              fG || lG()
             },
-            onKeyDown: ru,
-            children: [(0, bu.jsx)(lu.e, {
+            onKeyDown: jG,
+            children: [(0, pG.jsx)(kG.c, {
               name: "user"
-            }), " ", Nu("store:me")]
-          }), mu && (0, bu.jsx)("div", {
+            }), " ", QG("store:me")]
+          }), vG && (0, pG.jsx)("div", {
             className: "StoreRecipientChips",
-            children: Pu.map((uu => {
-              const Eu = uu === au;
-              return (0, bu.jsx)("div", {
+            children: mG.map((GG => {
+              const bG = GG === WG;
+              return (0, pG.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": Eu,
-                tabIndex: !cu && Eu ? 0 : -1,
-                title: uu.name,
-                className: Zu()("StoreRecipientChip", {
-                  StoreRecipientChecked: Eu
+                "aria-checked": bG,
+                tabIndex: !fG && bG ? 0 : -1,
+                title: GG.name,
+                className: LG()("StoreRecipientChip", {
+                  StoreRecipientChecked: bG
                 }),
                 onClick: () => {
-                  cu || function(uu) {
-                    "gift" !== wu && (0, EE.reportAnalyticsClick)({
+                  fG || function(GG) {
+                    "gift" !== uG && (0, bb.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), Uu.choose(uu.name, uu.kind)
-                  }(uu)
+                    }), SG.choose(GG.name, GG.kind)
+                  }(GG)
                 },
-                onKeyDown: ru,
-                children: (0, bu.jsx)(EX.f, {
-                  playerSocialPreview: sX(uu, Eu ? pu : null),
+                onKeyDown: jG,
+                children: (0, pG.jsx)(Gy.h, {
+                  playerSocialPreview: Zy(GG, bG ? XG : null),
                   opensProfileCard: !1,
-                  isFriend: null !== uu.friend,
+                  isFriend: null !== GG.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== uu.friend,
-                  status: null === uu.friend ? null : void 0,
-                  trailing: Eu ? (0, bu.jsx)(UX, {
-                    pending: "pending" === eu.status
+                  showLocation: null !== GG.friend,
+                  status: null === GG.friend ? null : void 0,
+                  trailing: bG ? (0, pG.jsx)(wy, {
+                    pending: "pending" === EG.status
                   }) : void 0
                 })
-              }, uu.name)
+              }, GG.name)
             }))
           })]
-        }), (0, bu.jsxs)("div", {
-          className: Zu()("StoreRecipientSearch", {
-            StoreRecipientChecked: ou,
-            StoreRecipientSearchPulse: Cu > 0 && !ou,
-            StoreRecipientSearchError: null !== Wu && !Su
+        }), (0, pG.jsxs)("div", {
+          className: LG()("StoreRecipientSearch", {
+            StoreRecipientChecked: IG,
+            StoreRecipientSearchPulse: VG > 0 && !IG,
+            StoreRecipientSearchError: null !== AG && !sG
           }),
           onClick: () => {
-            var uu;
-            null === (uu = Yu.current) || void 0 === uu || uu.focus()
+            var GG;
+            null === (GG = hG.current) || void 0 === GG || GG.focus()
           },
-          children: [ou && "found" === eu.status && pu && (0, bu.jsx)(jX, {
-            cosmetics: pu
-          }), !(ou && "found" === eu.status && pu) && (0, bu.jsx)(lu.e, {
+          children: [IG && "found" === EG.status && XG && (0, pG.jsx)(by, {
+            cosmetics: XG
+          }), !(IG && "found" === EG.status && XG) && (0, pG.jsx)(kG.c, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, bu.jsx)(Gu.d, {
+          }), (0, pG.jsx)(oG.b, {
             className: "StoreRecipientSearchInput",
-            domRef: Yu,
-            placeholderText: Nu("store:searchName"),
-            defaultValue: ku,
-            maxLength: Ku.g,
-            onValueChange: function(uu) {
-              "gift" !== wu && uu.trim() && (0, EE.reportAnalyticsClick)({
+            domRef: hG,
+            placeholderText: QG("store:searchName"),
+            defaultValue: FG,
+            maxLength: cG.g,
+            onValueChange: function(GG) {
+              "gift" !== uG && GG.trim() && (0, bb.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), Uu.type(uu)
+              }), SG.type(GG)
             },
             onEnter: () => {
-              var uu;
-              const Eu = null === (uu = Yu.current) || void 0 === uu ? void 0 : uu.value.trim();
-              Eu && Uu.choose(Eu, "typed")
+              var GG;
+              const bG = null === (GG = hG.current) || void 0 === GG ? void 0 : GG.value.trim();
+              bG && SG.choose(bG, "typed")
             },
             blurOnEnter: !0
-          }), ou && (0, bu.jsx)(UX, {
-            pending: "pending" === eu.status
-          }), ou && (0, bu.jsx)("div", {
-            ...(0, fu.ib)({
-              disabled: cu
+          }), IG && (0, pG.jsx)(wy, {
+            pending: "pending" === EG.status
+          }), IG && (0, pG.jsx)("div", {
+            ...(0, YG.P)({
+              disabled: fG
             }),
-            "aria-label": Nu("store:clearRecipient"),
-            title: Nu("store:clearRecipient"),
+            "aria-label": QG("store:clearRecipient"),
+            title: QG("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: uu => {
-              uu.stopPropagation(), cu || Vu()
+            onClick: GG => {
+              GG.stopPropagation(), fG || lG()
             },
-            children: (0, bu.jsx)(lu.e, {
+            children: (0, pG.jsx)(kG.c, {
               name: "xmark"
             })
           })]
-        }, Cu), Wu && (0, bu.jsx)("div", {
-          className: Zu()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: Su
+        }, VG), AG && (0, pG.jsx)("div", {
+          className: LG()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: sG
           }),
           role: "status",
-          children: Nu(Wu)
+          children: QG(AG)
         })]
       })
     }
-    var XX = ju(2440),
-      lX = ju(2357),
-      qX = ju(3779),
-      fX = ju(3298),
-      CX = ju(2401);
-    const bX = ju.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    var Ly = ZG(2320),
+      yy = ZG(2247),
+      ky = ZG(3566),
+      Uy = ZG(3107),
+      Yy = ZG(2290);
+    const Vy = ZG.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function cX() {
-      (0, CX.i)(bX, {
+    function py() {
+      (0, Yy.i)(Vy, {
         lowPriority: !1
       })
     }
 
-    function NX(uu) {
+    function fy(GG) {
       let {
-        onBack: Eu,
-        cta: ju,
-        recipient: Uu,
-        afterCta: Zu
-      } = uu;
+        onBack: bG,
+        cta: ZG,
+        recipient: SG,
+        afterCta: LG
+      } = GG;
       const {
-        t: qu
-      } = (0, Xu.A)(), [Cu, cu] = (0, su.useState)("starting"), Nu = (0, su.useRef)(null), Ou = (0, TE.c)(), Yu = (0, su.useRef)(null), hu = (0, su.useCallback)((() => {
-        const uu = Nu.current;
-        null !== uu.error && uu.load();
-        const Eu = uu.play();
-        Yu.current = Eu, Eu.catch((uu => {
-          (0, qX.d)("Failed to play Super Rank video", uu), Ou.current && Yu.current === Eu && cu("failed")
+        t: UG
+      } = (0, yG.w)(), [VG, fG] = (0, wG.useState)("starting"), QG = (0, wG.useRef)(null), KG = (0, Hb.c)(), hG = (0, wG.useRef)(null), dG = (0, wG.useCallback)((() => {
+        const GG = QG.current;
+        null !== GG.error && GG.load();
+        const bG = GG.play();
+        hG.current = bG, bG.catch((GG => {
+          (0, ky.d)("Failed to play Super Rank video", GG), KG.current && hG.current === bG && fG("failed")
         }))
-      }), [Ou]);
-      return (0, su.useEffect)((() => {
-        const uu = Nu.current;
-        let Eu;
+      }), [KG]);
+      return (0, wG.useEffect)((() => {
+        const GG = QG.current;
+        let bG;
 
-        function ju() {
-          clearTimeout(Eu), Eu = setTimeout(hu, 3e3)
+        function ZG() {
+          clearTimeout(bG), bG = setTimeout(dG, 3e3)
         }
-        return hu(), uu.addEventListener("ended", ju), () => {
-          clearTimeout(Eu), uu.removeEventListener("ended", ju)
+        return dG(), GG.addEventListener("ended", ZG), () => {
+          clearTimeout(bG), GG.removeEventListener("ended", ZG)
         }
-      }), [hu]), (0, bu.jsxs)("div", {
+      }), [dG]), (0, pG.jsxs)("div", {
         className: "StoreSuperRankDetail",
-        children: [(0, bu.jsxs)("div", {
+        children: [(0, pG.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, bu.jsx)(fu.d, {
+          children: [(0, pG.jsx)(YG.b, {
             className: "StoreDetailBackButton",
-            onClick: Eu,
+            onClick: bG,
             padBack: !0,
-            children: qu("general:back")
-          }), (0, bu.jsxs)("div", {
+            children: UG("general:back")
+          }), (0, pG.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, bu.jsx)(lu.e, {
+            children: [(0, pG.jsx)(kG.c, {
               name: "bolt"
-            }), " ", qu("homePage:superRank")]
-          }), Uu]
-        }), (0, bu.jsxs)("div", {
+            }), " ", UG("homePage:superRank")]
+          }), SG]
+        }), (0, pG.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [(0, bu.jsxs)("div", {
+          children: [(0, pG.jsxs)("div", {
             className: "StoreSuperRankVideo",
-            children: [(0, bu.jsx)("video", {
-              ref: Nu,
-              src: `${YE.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-              poster: bX,
+            children: [(0, pG.jsx)("video", {
+              ref: QG,
+              src: `${hb.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+              poster: Vy,
               muted: !0,
               playsInline: !0,
-              controls: "playing" === Cu,
+              controls: "playing" === VG,
               onPlaying: () => {
-                cu("playing")
+                fG("playing")
               },
               onError: () => {
-                cu("failed")
+                fG("failed")
               }
-            }), ("failed" === Cu || "loading" === Cu) && (0, bu.jsx)("div", {
+            }), ("failed" === VG || "loading" === VG) && (0, pG.jsx)("div", {
               className: "StoreSuperRankPlay",
-              children: (0, bu.jsx)(fu.f, {
-                ariaLabel: qu("general:play"),
-                loading: "loading" === Cu,
+              children: (0, pG.jsx)(YG.d, {
+                ariaLabel: UG("general:play"),
+                loading: "loading" === VG,
                 onClick: () => {
-                  cu("loading"), hu()
+                  fG("loading"), dG()
                 },
                 touchPressOn: "pointerup",
-                children: (0, bu.jsx)(lu.e, {
+                children: (0, pG.jsx)(kG.c, {
                   name: "play"
                 })
               })
             })]
-          }), (0, bu.jsxs)("div", {
+          }), (0, pG.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [(0, bu.jsx)("div", {
+            children: [(0, pG.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, bu.jsx)(fX.b, {})
-            }), (0, bu.jsxs)("div", {
+              children: (0, pG.jsx)(Uy.e, {})
+            }), (0, pG.jsxs)("div", {
               className: "StoreTileActions",
-              children: [ju, Zu]
+              children: [ZG, LG]
             })]
           })]
         })]
       })
     }
-    var OX = ju(2738),
-      YX = ju(3733),
-      hX = ju(3269),
-      DX = ju(3276);
-    const gX = [RZ.s.yellow, RZ.s.green, RZ.s.aqua, RZ.s.blue, RZ.s.purple, RZ.s.red];
+    var Qy = ZG(2595),
+      Ky = ZG(3507),
+      hy = ZG(3087),
+      dy = ZG(3096);
+    const Jy = [xL.o.yellow, xL.o.green, xL.o.aqua, xL.o.blue, xL.o.purple, xL.o.red];
 
-    function MX(uu) {
-      return "needsRecipient" === uu || "lookingUp" === uu || "gift" === uu || "recipientOwns" === uu || "recipientSharesOwned" === uu || "recipientSubscribed" === uu
+    function ry(GG) {
+      return "needsRecipient" === GG || "lookingUp" === GG || "gift" === GG || "recipientOwns" === GG || "recipientSharesOwned" === GG || "recipientSubscribed" === GG
     }
 
-    function eX(uu) {
+    function zy(GG) {
       const {
-        onKeyDown: Eu,
-        ...ju
-      } = (0, fu.ib)();
+        onKeyDown: bG,
+        ...ZG
+      } = (0, YG.P)();
       return {
-        ...ju,
-        "aria-label": uu,
-        onKeyDown: uu => {
-          uu.target === uu.currentTarget && (null === Eu || void 0 === Eu || Eu(uu))
+        ...ZG,
+        "aria-label": GG,
+        onKeyDown: GG => {
+          GG.target === GG.currentTarget && (null === bG || void 0 === bG || bG(GG))
         }
       }
     }
 
-    function GX(uu) {
+    function Ey(GG) {
       let {
-        text: Eu
-      } = uu;
-      return (0, bu.jsx)("span", {
+        text: bG
+      } = GG;
+      return (0, pG.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(Eu).map(((uu, Eu) => (0, bu.jsx)("span", {
+        children: Array.from(bG).map(((GG, bG) => (0, pG.jsx)("span", {
           style: {
-            color: gX[Eu % gX.length]
+            color: Jy[bG % Jy.length]
           },
-          children: uu
-        }, Eu)))
+          children: GG
+        }, bG)))
       })
     }
-    const pX = {
+    const oy = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned",
@@ -6054,82 +6054,82 @@ export const modules = {
       recipientSubscribed: "store:recipientSubscribed"
     };
 
-    function wX(uu) {
+    function Xy(GG) {
       let {
-        state: Eu,
-        item: ju,
-        price: su,
-        busy: Uu,
-        highlight: qu = !1,
-        onAct: Cu,
-        onNeedRecipient: cu,
-        onLogin: Nu
-      } = uu;
+        state: bG,
+        item: ZG,
+        price: wG,
+        busy: SG,
+        highlight: UG = !1,
+        onAct: VG,
+        onNeedRecipient: fG,
+        onLogin: QG
+      } = GG;
       const {
-        t: Ou
-      } = (0, Xu.A)(), Yu = "superRank" === ju ? ru.g.product.days : null, hu = uu => null === Yu ? Ou(uu ? "general:gift" : "general:buy") : Ou(uu ? "store:giftDays" : "store:buyDays", {
-        days: Yu
-      }), Du = (uu, Eu) => {
-        const ju = (0, bu.jsxs)(bu.Fragment, {
-          children: [null === uu && (0, bu.jsx)("span", {
+        t: KG
+      } = (0, yG.w)(), hG = "superRank" === ZG ? jG.j.product.days : null, dG = GG => null === hG ? KG(GG ? "general:gift" : "general:buy") : KG(GG ? "store:giftDays" : "store:buyDays", {
+        days: hG
+      }), JG = (GG, bG) => {
+        const ZG = (0, pG.jsxs)(pG.Fragment, {
+          children: [null === GG && (0, pG.jsx)("span", {
             className: "StoreCtaLabel StoreCtaLabelPending"
-          }), null !== uu && (0, bu.jsx)("span", {
+          }), null !== GG && (0, pG.jsx)("span", {
             className: "StoreCtaLabel",
-            title: uu,
-            children: uu
+            title: GG,
+            children: GG
           })]
         });
-        return null !== Yu ? (0, bu.jsxs)(bu.Fragment, {
-          children: [Eu && (0, bu.jsx)("span", {
+        return null !== hG ? (0, pG.jsxs)(pG.Fragment, {
+          children: [bG && (0, pG.jsx)("span", {
             className: "StoreCtaIcon",
-            children: Eu
-          }), ju, (0, bu.jsxs)("span", {
+            children: bG
+          }), ZG, (0, pG.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: ["\xb7", (0, bu.jsx)(lX.d, {
-              amount: su
+            children: ["\xb7", (0, pG.jsx)(yy.c, {
+              amount: wG
             })]
           })]
-        }) : (0, bu.jsxs)(bu.Fragment, {
-          children: [(0, bu.jsxs)("span", {
+        }) : (0, pG.jsxs)(pG.Fragment, {
+          children: [(0, pG.jsxs)("span", {
             className: "StoreCtaLead",
-            children: [ju, "\xb7"]
-          }), (0, bu.jsxs)("span", {
+            children: [ZG, "\xb7"]
+          }), (0, pG.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: [Eu, (0, bu.jsx)(lX.d, {
-              amount: su
+            children: [bG, (0, pG.jsx)(yy.c, {
+              amount: wG
             })]
           })]
         })
       };
-      let gu;
-      switch (Eu) {
+      let rG;
+      switch (bG) {
         case "pending":
-          gu = (0, bu.jsx)(fu.p, {
+          rG = (0, pG.jsx)(YG.k, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: Du(null)
+            children: JG(null)
           });
           break;
         case "login":
-          gu = (0, bu.jsx)(fu.p, {
+          rG = (0, pG.jsx)(YG.k, {
             className: "StoreCtaButton",
-            onClick: Nu,
-            children: Du(hu(!1))
+            onClick: QG,
+            children: JG(dG(!1))
           });
           break;
         case "owned":
-          gu = (0, bu.jsx)(fu.i, {
+          rG = (0, pG.jsx)(YG.h, {
             className: "StoreCtaButton",
             onClick: () => {
-              Ju.d.set({
-                openEverythingMenuName: DE.o.CUSTOMISATION
+              iG.e.set({
+                openEverythingMenuName: Jb.u.CUSTOMISATION
               })
             },
-            children: (0, bu.jsxs)("span", {
+            children: (0, pG.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, bu.jsx)(lu.e, {
+              children: [(0, pG.jsx)(kG.c, {
                 name: "shirt"
-              }), " ", Ou("store:equip")]
+              }), " ", KG("store:equip")]
             })
           });
           break;
@@ -6138,207 +6138,207 @@ export const modules = {
         case "recipientSharesOwned":
         case "subscribed":
         case "recipientSubscribed":
-          gu = (0, bu.jsx)(fu.p, {
+          rG = (0, pG.jsx)(YG.k, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, bu.jsx)("span", {
+            children: (0, pG.jsx)("span", {
               className: "StoreCtaLabel",
-              children: Ou(pX[Eu])
+              children: KG(oy[bG])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          gu = (0, bu.jsx)(fu.p, {
+          rG = (0, pG.jsx)(YG.k, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === Eu || null === su,
-            loading: "lookingUp" === Eu || Uu,
-            onClick: Cu,
+            disabled: "needsRecipient" === bG || null === wG,
+            loading: "lookingUp" === bG || SG,
+            onClick: VG,
             analyticsClick: {
               id: "store.gift",
-              value: ju
+              value: ZG
             },
-            children: Du(hu(!0), FZ.d)
+            children: JG(dG(!0), qL.b)
           });
           break;
         case "buy":
         case "recharge":
-          gu = (0, bu.jsx)(fu.p, {
+          rG = (0, pG.jsx)(YG.k, {
             className: "StoreCtaButton",
-            loading: Uu,
-            disabled: null === su,
-            onClick: Cu,
+            loading: SG,
+            disabled: null === wG,
+            onClick: VG,
             analyticsClick: {
               id: "store.buy",
-              value: ju
+              value: ZG
             },
-            children: Du(hu(!1))
+            children: JG(dG(!1))
           })
       }
-      return (0, bu.jsx)("div", {
-        className: Zu()("StoreCta", {
-          StoreCtaHighlight: qu,
-          StoreCtaLabelFirst: null !== Yu
+      return (0, pG.jsx)("div", {
+        className: LG()("StoreCta", {
+          StoreCtaHighlight: UG,
+          StoreCtaLabelFirst: null !== hG
         }),
-        onClick: uu => {
-          uu.stopPropagation(), "needsRecipient" === Eu && cu()
+        onClick: GG => {
+          GG.stopPropagation(), "needsRecipient" === bG && fG()
         },
-        children: gu
+        children: rG
       })
     }
 
-    function JX() {
+    function uy() {
       const {
-        t: uu
-      } = (0, Xu.A)();
-      return (0, bu.jsxs)("ul", {
+        t: GG
+      } = (0, yG.w)();
+      return (0, pG.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, bu.jsxs)("li", {
-          children: [(0, bu.jsx)(lu.e, {
+        children: [(0, pG.jsxs)("li", {
+          children: [(0, pG.jsx)(kG.c, {
             name: "check"
-          }), (0, bu.jsx)(GX, {
-            text: uu("store:colourfulNames")
+          }), (0, pG.jsx)(Ey, {
+            text: GG("store:colourfulNames")
           })]
-        }), (0, bu.jsxs)("li", {
-          children: [(0, bu.jsx)(lu.e, {
+        }), (0, pG.jsxs)("li", {
+          children: [(0, pG.jsx)(kG.c, {
             name: "check"
-          }), uu("store:perkCapes")]
-        }), (0, bu.jsxs)("li", {
-          children: [(0, bu.jsx)(lu.e, {
+          }), GG("store:perkCapes")]
+        }), (0, pG.jsxs)("li", {
+          children: [(0, pG.jsx)(kG.c, {
             name: "check"
-          }), uu("store:perkNoAdverts")]
-        }), (0, bu.jsxs)("li", {
-          children: [(0, bu.jsx)(lu.e, {
+          }), GG("store:perkNoAdverts")]
+        }), (0, pG.jsxs)("li", {
+          children: [(0, pG.jsx)(kG.c, {
             name: "check"
-          }), uu("store:perkFriends", {
-            count: (0, Ru.d)(["super"])
+          }), GG("store:perkFriends", {
+            count: (0, BG.c)(["super"])
           })]
         })]
       })
     }
 
-    function dX(uu) {
+    function iy(GG) {
       let {
-        daysLeft: Eu,
-        totalDays: ju,
-        urgent: su
-      } = uu;
+        daysLeft: bG,
+        totalDays: ZG,
+        urgent: wG
+      } = GG;
       const {
-        t: Uu
-      } = (0, Xu.A)(), lu = ju > 0 ? Math.min(1, Math.max(.03, Eu / ju)) : 1;
-      return (0, bu.jsxs)("div", {
-        className: Zu()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: su
+        t: SG
+      } = (0, yG.w)(), kG = ZG > 0 ? Math.min(1, Math.max(.03, bG / ZG)) : 1;
+      return (0, pG.jsxs)("div", {
+        className: LG()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: wG
         }),
-        children: [(0, bu.jsx)("span", {
+        children: [(0, pG.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: 1 === Eu ? Uu("store:oneDayLeft") : Uu("store:daysLeft", {
-            days: Eu
+          children: 1 === bG ? SG("store:oneDayLeft") : SG("store:daysLeft", {
+            days: bG
           })
-        }), (0, bu.jsx)("div", {
+        }), (0, pG.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, bu.jsx)("i", {
+          children: (0, pG.jsx)("i", {
             style: {
-              width: 100 * lu + "%"
+              width: 100 * kG + "%"
             }
           })
         })]
       })
     }
 
-    function aX(uu) {
-      var Eu;
+    function Cy(GG) {
+      var bG;
       let {
-        state: ju,
-        urgent: su,
-        daysLeft: Uu,
-        totalDays: qu,
-        recipientHasSuperRank: fu,
-        busy: Cu,
-        highlight: cu,
-        onOpen: Nu,
-        onAct: Ou,
-        onNeedRecipient: Yu,
-        onLogin: hu
-      } = uu;
+        state: ZG,
+        urgent: wG,
+        daysLeft: SG,
+        totalDays: UG,
+        recipientHasSuperRank: YG,
+        busy: VG,
+        highlight: fG,
+        onOpen: QG,
+        onAct: KG,
+        onNeedRecipient: hG,
+        onLogin: dG
+      } = GG;
       const {
-        t: Du
-      } = (0, Xu.A)(), gu = MX(ju), {
-        days: Mu
-      } = ru.g.product, eu = Du("store:recipientHasSuperRank", {
-        giftDays: Mu
-      }), Gu = null === (Eu = yu("subscribed" === ju)) || void 0 === Eu ? void 0 : Eu.text;
-      return (0, bu.jsxs)("div", {
-        className: Zu()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: gu,
-          StoreSuperRankTileUrgent: "recharge" === ju && su,
-          StoreSuperRankTileWithChip: fu,
-          StoreSuperRankTileGiftReady: "gift" === ju
+        t: JG
+      } = (0, yG.w)(), rG = ry(ZG), {
+        days: zG
+      } = jG.j.product, EG = JG("store:recipientHasSuperRank", {
+        giftDays: zG
+      }), oG = null === (bG = OG("subscribed" === ZG)) || void 0 === bG ? void 0 : bG.text;
+      return (0, pG.jsxs)("div", {
+        className: LG()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: rG,
+          StoreSuperRankTileUrgent: "recharge" === ZG && wG,
+          StoreSuperRankTileWithChip: YG,
+          StoreSuperRankTileGiftReady: "gift" === ZG
         }),
-        ...eX(Du("homePage:superRank")),
+        ...zy(JG("homePage:superRank")),
         "data-store-item": "superRank",
-        onPointerEnter: cX,
-        onFocus: cX,
-        onClick: Nu,
-        children: [(0, bu.jsx)("div", {
+        onPointerEnter: py,
+        onFocus: py,
+        onClick: QG,
+        children: [(0, pG.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${zZ.f})`
+            backgroundImage: `url(${OL.c})`
           }
-        }), gu && (0, bu.jsx)("div", {
+        }), rG && (0, pG.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, bu.jsxs)("div", {
+        }), (0, pG.jsxs)("div", {
           className: "StoreTileContent",
-          children: [fu && (0, bu.jsx)("span", {
+          children: [YG && (0, pG.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: eu,
-            children: eu
-          }), (0, bu.jsxs)("div", {
+            title: EG,
+            children: EG
+          }), (0, pG.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, bu.jsx)(lu.e, {
+            children: [(0, pG.jsx)(kG.c, {
               name: "bolt"
-            }), " ", Du("homePage:superRank")]
-          }), gu && (0, bu.jsx)("div", {
+            }), " ", JG("homePage:superRank")]
+          }), rG && (0, pG.jsx)("div", {
             className: "StoreTilePitch",
-            children: Du("store:giftPitch", {
-              days: Mu
+            children: JG("store:giftPitch", {
+              days: zG
             })
-          }), "recharge" === ju && (0, bu.jsx)(dX, {
-            daysLeft: Uu,
-            totalDays: qu,
-            urgent: su
-          }), Gu && (0, bu.jsx)("div", {
+          }), "recharge" === ZG && (0, pG.jsx)(iy, {
+            daysLeft: SG,
+            totalDays: UG,
+            urgent: wG
+          }), oG && (0, pG.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, bu.jsx)("span", {
+            children: (0, pG.jsx)("span", {
               className: "StoreSuperRankDaysLeft",
-              children: Gu
+              children: oG
             })
-          }), (0, bu.jsx)(JX, {}), (0, bu.jsxs)("div", {
+          }), (0, pG.jsx)(uy, {}), (0, pG.jsxs)("div", {
             className: "StoreTileActions",
-            children: [(0, bu.jsx)(wX, {
-              state: ju,
+            children: [(0, pG.jsx)(Xy, {
+              state: ZG,
               item: "superRank",
-              price: ru.g.price,
-              busy: Cu,
-              highlight: cu,
-              onAct: Ou,
-              onNeedRecipient: Yu,
-              onLogin: hu
-            }), "needsRecipient" === ju && (0, bu.jsx)("span", {
+              price: jG.j.price,
+              busy: VG,
+              highlight: fG,
+              onAct: KG,
+              onNeedRecipient: hG,
+              onLogin: dG
+            }), "needsRecipient" === ZG && (0, pG.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: Du("store:pickRecipientFirst")
-            }), "recharge" === ju && su && (0, bu.jsx)("span", {
+              children: JG("store:pickRecipientFirst")
+            }), "recharge" === ZG && wG && (0, pG.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === Uu ? Du("store:endsInOneDay") : Du("store:endsInDays", {
-                days: Uu
+              children: 1 === SG ? JG("store:endsInOneDay") : JG("store:endsInDays", {
+                days: SG
               })
             })]
           })]
         })]
       })
     }
-    const PX = {
+    const Wy = {
       common: "StorePackTileCommon",
       rare: "StorePackTileRare",
       epic: "StorePackTileEpic",
@@ -6346,405 +6346,405 @@ export const modules = {
       mythic: "StorePackTileMythic"
     };
 
-    function oX(uu) {
-      var Eu;
+    function my(GG) {
+      var bG;
       let {
-        pack: ju,
-        state: Uu,
-        busy: qu,
-        onOpen: fu,
-        onAct: Cu,
-        onNeedRecipient: cu,
-        onLogin: Nu
-      } = uu;
+        pack: ZG,
+        state: SG,
+        busy: UG,
+        onOpen: YG,
+        onAct: VG,
+        onNeedRecipient: fG,
+        onLogin: QG
+      } = GG;
       const {
-        t: Ou
-      } = (0, Xu.A)(), Yu = vZ.e[ju], hu = SZ.k[ju], Du = (0, zZ.l)(ju), gu = (0, su.useRef)(null);
-      (0, hX.k)(ju, gu);
-      const Mu = MX(Uu),
-        eu = null !== (Eu = Yu.displayName) && void 0 !== Eu ? Eu : ju,
-        Gu = (0, YX.b)((() => {
-          (0, OX.f)();
-          const uu = (0, hX.e)(ju);
-          void 0 !== uu && (0, CX.i)((0, hX.c)(uu))
+        t: KG
+      } = (0, yG.w)(), hG = vL.c[ZG], dG = AL.h[ZG], JG = (0, OL.i)(ZG), rG = (0, wG.useRef)(null);
+      (0, hy.m)(ZG, rG);
+      const zG = ry(SG),
+        EG = null !== (bG = hG.displayName) && void 0 !== bG ? bG : ZG,
+        oG = (0, Ky.d)((() => {
+          (0, Qy.c)();
+          const GG = (0, hy.g)(ZG);
+          void 0 !== GG && (0, Yy.i)((0, hy.d)(GG))
         })),
-        [pu] = (0, su.useState)(nZ.h);
-      return (0, bu.jsxs)("div", {
-        className: Zu()("StoreTile StorePackTile", PX[Yu.tier], {
-          StorePackTileOwned: "owned" === Uu,
-          StorePackTileRecipientOwns: "recipientOwns" === Uu,
-          StoreTileGift: Mu
+        [XG] = (0, wG.useState)(DL.j);
+      return (0, pG.jsxs)("div", {
+        className: LG()("StoreTile StorePackTile", Wy[hG.tier], {
+          StorePackTileOwned: "owned" === SG,
+          StorePackTileRecipientOwns: "recipientOwns" === SG,
+          StoreTileGift: zG
         }),
-        ...eX(eu),
-        ref: gu,
-        "data-store-item": ju,
-        onClick: fu,
-        onPointerMove: uu => {
-          "mouse" !== uu.pointerType || 0 === uu.movementX && 0 === uu.movementY || pu || Gu.start()
+        ...zy(EG),
+        ref: rG,
+        "data-store-item": ZG,
+        onClick: YG,
+        onPointerMove: GG => {
+          "mouse" !== GG.pointerType || 0 === GG.movementX && 0 === GG.movementY || XG || oG.start()
         },
-        onPointerLeave: Gu.cancel,
-        children: [hu && (0, bu.jsx)(hu, {}), (0, bu.jsx)("div", {
+        onPointerLeave: oG.cancel,
+        children: [dG && (0, pG.jsx)(dG, {}), (0, pG.jsx)("div", {
           className: "StorePackCharacters",
-          children: Du.map((uu => (0, bu.jsx)("div", {
+          children: JG.map((GG => (0, pG.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,zZ.g)(uu)})`
+              backgroundImage: `url(${(0,OL.g)(GG)})`
             }
-          }, uu)))
-        }), (0, bu.jsx)("div", {
+          }, GG)))
+        }), (0, pG.jsx)("div", {
           className: "StoreTileScrim"
-        }), Mu && (0, bu.jsx)("div", {
+        }), zG && (0, pG.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, bu.jsxs)("div", {
+        }), (0, pG.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, bu.jsx)("div", {
+          children: [(0, pG.jsx)("div", {
             className: "StoreTileTitle",
-            children: eu
-          }), (0, bu.jsxs)("div", {
+            children: EG
+          }), (0, pG.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [(0, bu.jsx)(DX.b, {
-              tier: Yu.tier
-            }), " \xb7 ", Ou("store:itemCount", {
-              count: (0, XX.c)(ju)
-            }), "owned" === Uu && (0, bu.jsxs)("span", {
+            children: [(0, pG.jsx)(dy.e, {
+              tier: hG.tier
+            }), " \xb7 ", KG("store:itemCount", {
+              count: (0, Ly.h)(ZG)
+            }), "owned" === SG && (0, pG.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, bu.jsx)(lu.e, {
+              children: [" \xb7 ", (0, pG.jsx)(kG.c, {
                 name: "check"
-              }), " ", Ou("general:owned")]
+              }), " ", KG("general:owned")]
             })]
-          }), (0, bu.jsx)(wX, {
-            state: Uu,
-            item: ju,
-            price: (0, ru.d)(ju),
-            busy: qu,
-            onAct: Cu,
-            onNeedRecipient: cu,
-            onLogin: Nu
+          }), (0, pG.jsx)(Xy, {
+            state: SG,
+            item: ZG,
+            price: (0, jG.e)(ZG),
+            busy: UG,
+            onAct: VG,
+            onNeedRecipient: fG,
+            onLogin: QG
           })]
         })]
       })
     }
-    var kX = ju(3239),
-      mX = ju(1608),
-      vX = ju(1517),
-      KX = ju(3761);
+    var Iy = ZG(3071),
+      Fy = ZG(1493),
+      vy = ZG(1398),
+      ay = ZG(3543);
 
-    function VX() {
-      return (0, bu.jsx)("span", {
+    function cy() {
+      return (0, pG.jsx)("span", {
         className: "NewBadge",
         children: "NEW"
       })
     }
-    var rX = ju(1398),
-      QX = ju(1614),
-      iX = ju(34583);
+    var ly = ZG(1304),
+      jy = ZG(1509),
+      Py = ZG(34515);
 
-    function WX(uu) {
+    function My(GG) {
       let {
-        character: Eu,
-        drawn: ju,
-        onDrawn: Uu
-      } = uu;
-      const Xu = (0, su.useRef)(null),
-        lu = (0, iX.g)(Eu);
-      return (0, bu.jsx)("div", {
-        className: Zu()("StoreCharacterLive", {
-          StoreCharacterLiveDrawn: ju
+        character: bG,
+        drawn: ZG,
+        onDrawn: SG
+      } = GG;
+      const yG = (0, wG.useRef)(null),
+        kG = (0, Py.c)(bG);
+      return (0, pG.jsx)("div", {
+        className: LG()("StoreCharacterLive", {
+          StoreCharacterLiveDrawn: ZG
         }),
-        children: (0, bu.jsx)(su.Suspense, {
+        children: (0, pG.jsx)(wG.Suspense, {
           fallback: null,
-          children: (0, bu.jsx)(OX.c, {
-            ref: Xu,
+          children: (0, pG.jsx)(Qy.b, {
+            ref: yG,
             framing: "store",
-            turntableFromYaw: ju ? lu.yaw : null,
+            turntableFromYaw: ZG ? kG.yaw : null,
             onReady: () => {
-              var uu, ju;
-              null === (uu = Xu.current) || void 0 === uu || uu.setOrbit(lu), null === (ju = Xu.current) || void 0 === ju || ju.setAllCosmetics(QX.d[Eu].cosmetics)
+              var GG, ZG;
+              null === (GG = yG.current) || void 0 === GG || GG.setOrbit(kG), null === (ZG = yG.current) || void 0 === ZG || ZG.setAllCosmetics(jy.d[bG].cosmetics)
             },
-            onDrawn: Uu
+            onDrawn: SG
           })
         })
       })
     }
-    const SX = {
+    const Ay = {
         common: "StoreCharacterCardCommon",
         rare: "StoreCharacterCardRare",
         epic: "StoreCharacterCardEpic",
         legendary: "StoreCharacterCardLegendary",
         mythic: "StoreCharacterCardMythic"
       },
-      IX = new Set(["wildSpirits"]);
+      sy = new Set(["wildSpirits"]);
 
-    function FX(uu) {
-      var Eu;
+    function qy(GG) {
+      var bG;
       let {
-        tile: ju,
-        design: Uu,
-        canGoLive: qu,
-        live: fu,
-        busy: Cu,
-        highlight: cu,
-        onLiveStart: Nu,
-        onLiveEnd: Ou,
-        onOpen: Yu,
-        onAct: hu,
-        onNeedRecipient: Du,
-        onLogin: gu
-      } = uu;
+        tile: ZG,
+        design: SG,
+        canGoLive: UG,
+        live: YG,
+        busy: VG,
+        highlight: fG,
+        onLiveStart: QG,
+        onLiveEnd: KG,
+        onOpen: hG,
+        onAct: dG,
+        onNeedRecipient: JG,
+        onLogin: rG
+      } = GG;
       const {
-        t: Mu
-      } = (0, Xu.A)(), {
-        pack: eu,
-        state: Gu
-      } = ju, pu = vZ.e[eu], wu = (0, vZ.i)(eu), Ju = (0, zZ.j)(eu), du = SZ.k[Ju], au = IX.has(Ju), {
-        tier: Pu
-      } = pu, ou = "legendary" === Pu || "mythic" === Pu, ku = (0, su.useRef)(null);
-      (0, rX.d)(ku, "epic" === Pu || ou || au);
-      const [mu, Ku] = (0, su.useState)(!1);
-      return !fu && mu && Ku(!1), (0, bu.jsxs)("div", {
-        ref: ku,
-        className: Zu()("StoreCharacterCard", `StoreCharacterCard${Uu}`, SX[Pu], {
-          StoreCharacterCardOwned: "owned" === Gu || "recipientOwns" === Gu,
-          StoreCharacterCardGift: MX(Gu),
-          StoreCharacterCardItem: void 0 === wu
+        t: zG
+      } = (0, yG.w)(), {
+        pack: EG,
+        state: oG
+      } = ZG, XG = vL.c[EG], uG = (0, vL.d)(EG), iG = (0, OL.h)(EG), CG = AL.h[iG], WG = sy.has(iG), {
+        tier: mG
+      } = XG, IG = "legendary" === mG || "mythic" === mG, FG = (0, wG.useRef)(null);
+      (0, ly.e)(FG, "epic" === mG || IG || WG);
+      const [vG, cG] = (0, wG.useState)(!1);
+      return !YG && vG && cG(!1), (0, pG.jsxs)("div", {
+        ref: FG,
+        className: LG()("StoreCharacterCard", `StoreCharacterCard${SG}`, Ay[mG], {
+          StoreCharacterCardOwned: "owned" === oG || "recipientOwns" === oG,
+          StoreCharacterCardGift: ry(oG),
+          StoreCharacterCardItem: void 0 === uG
         }),
-        onPointerMove: uu => {
-          "mouse" !== uu.pointerType || 0 === uu.movementX && 0 === uu.movementY || !qu || fu || void 0 === wu || Nu()
+        onPointerMove: GG => {
+          "mouse" !== GG.pointerType || 0 === GG.movementX && 0 === GG.movementY || !UG || YG || void 0 === uG || QG()
         },
-        onPointerLeave: Ou,
-        children: [(0, bu.jsx)("div", {
+        onPointerLeave: KG,
+        children: [(0, pG.jsx)("div", {
           className: "StoreCharacterBackdrop",
-          children: du && (0, bu.jsx)(du, {
+          children: CG && (0, pG.jsx)(CG, {
             simple: !0
           })
-        }), ou && (0, bu.jsx)("div", {
+        }), IG && (0, pG.jsx)("div", {
           className: "StoreCharacterRays"
-        }), (0, bu.jsxs)(vu.LinkPreserveSearch, {
+        }), (0, pG.jsxs)(aG.LinkPreserveSearch, {
           className: "StoreCharacterLink",
-          to: (0, mX.f)({
+          to: (0, Fy.d)({
             kind: "pack",
-            pack: eu
+            pack: EG
           }),
-          "data-store-item": eu,
-          onClick: uu => {
-            (0, vX.b)(uu) && (uu.preventDefault(), Yu())
+          "data-store-item": EG,
+          onClick: GG => {
+            (0, vy.d)(GG) && (GG.preventDefault(), hG())
           },
-          children: [(0, bu.jsxs)("div", {
+          children: [(0, pG.jsxs)("div", {
             className: "StoreCharacterStage",
-            children: [(0, bu.jsx)("div", {
+            children: [(0, pG.jsx)("div", {
               className: "StoreCharacterHalo"
-            }), (0, bu.jsx)("div", {
-              className: Zu()("StoreCharacterFigure", {
-                StoreCharacterFigureCovered: mu
+            }), (0, pG.jsx)("div", {
+              className: LG()("StoreCharacterFigure", {
+                StoreCharacterFigureCovered: vG
               }),
               style: {
-                backgroundImage: `url(${(0,zZ.t)(eu)})`
+                backgroundImage: `url(${(0,OL.p)(EG)})`
               }
-            }), fu && void 0 !== wu && (0, bu.jsx)(WX, {
-              character: wu,
-              drawn: mu,
+            }), YG && void 0 !== uG && (0, pG.jsx)(My, {
+              character: uG,
+              drawn: vG,
               onDrawn: () => {
-                Ku(!0)
+                cG(!0)
               }
             })]
-          }), (0, bu.jsx)("div", {
+          }), (0, pG.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (Eu = pu.displayName) && void 0 !== Eu ? Eu : eu
-          }), (0, bu.jsx)(DX.b, {
-            tier: Pu,
+            children: null !== (bG = XG.displayName) && void 0 !== bG ? bG : EG
+          }), (0, pG.jsx)(dy.e, {
+            tier: mG,
             className: "StoreCharacterTier"
           })]
-        }), (0, bu.jsx)("div", {
+        }), (0, pG.jsx)("div", {
           className: "StoreCharacterScrim"
-        }), au && (0, bu.jsx)("span", {
+        }), WG && (0, pG.jsx)("span", {
           className: "StoreCharacterNew",
-          children: (0, bu.jsx)(VX, {})
-        }), "owned" === Gu && (0, bu.jsx)("span", {
+          children: (0, pG.jsx)(cy, {})
+        }), "owned" === oG && (0, pG.jsx)("span", {
           className: "StoreCharacterOwned",
-          title: Mu("general:owned"),
-          "aria-label": Mu("general:owned"),
-          children: (0, bu.jsx)(lu.e, {
+          title: zG("general:owned"),
+          "aria-label": zG("general:owned"),
+          children: (0, pG.jsx)(kG.c, {
             name: "check"
           })
-        }), (0, bu.jsx)("div", {
+        }), (0, pG.jsx)("div", {
           className: "StoreCharacterPlate",
-          children: (0, bu.jsx)(wX, {
-            state: Gu,
-            item: eu,
-            price: (0, ru.d)(eu),
-            busy: Cu,
-            highlight: cu,
-            onAct: hu,
-            onNeedRecipient: Du,
-            onLogin: gu
+          children: (0, pG.jsx)(Xy, {
+            state: oG,
+            item: EG,
+            price: (0, jG.e)(EG),
+            busy: VG,
+            highlight: fG,
+            onAct: dG,
+            onNeedRecipient: JG,
+            onLogin: rG
           })
         })]
       })
     }
 
-    function BX(uu) {
+    function ny(GG) {
       let {
-        tiles: Eu,
-        busy: ju,
-        highlightItem: Uu,
-        onOpen: Zu,
-        onAct: Xu,
-        onNeedRecipient: lu,
-        onLogin: qu
-      } = uu;
-      const fu = (0, KX.u)("storeCharacterCardFoil"),
-        Cu = (0, KX.u)("storeCharacterCardSpotlight"),
-        cu = fu ? "Foil" : Cu ? "Spotlight" : "Showcase",
-        [Nu] = (0, su.useState)(nZ.h),
-        [Ou, Yu] = (0, su.useState)(null);
-      return (0, bu.jsx)("div", {
+        tiles: bG,
+        busy: ZG,
+        highlightItem: SG,
+        onOpen: LG,
+        onAct: yG,
+        onNeedRecipient: kG,
+        onLogin: UG
+      } = GG;
+      const YG = (0, ay.o)("storeCharacterCardFoil"),
+        VG = (0, ay.o)("storeCharacterCardSpotlight"),
+        fG = YG ? "Foil" : VG ? "Spotlight" : "Showcase",
+        [QG] = (0, wG.useState)(DL.j),
+        [KG, hG] = (0, wG.useState)(null);
+      return (0, pG.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: Eu.map((uu => (0, bu.jsx)(FX, {
-          tile: uu,
-          design: cu,
-          canGoLive: !Nu,
-          live: Ou === uu.pack,
-          busy: ju,
-          highlight: Uu === uu.pack,
+        children: bG.map((GG => (0, pG.jsx)(qy, {
+          tile: GG,
+          design: fG,
+          canGoLive: !QG,
+          live: KG === GG.pack,
+          busy: ZG,
+          highlight: SG === GG.pack,
           onLiveStart: () => {
-            Yu(uu.pack)
+            hG(GG.pack)
           },
           onLiveEnd: () => {
-            Yu((Eu => Eu === uu.pack ? null : Eu))
+            hG((bG => bG === GG.pack ? null : bG))
           },
           onOpen: () => {
-            Zu(uu.pack)
+            LG(GG.pack)
           },
           onAct: () => {
-            Xu(uu.pack)
+            yG(GG.pack)
           },
-          onNeedRecipient: lu,
+          onNeedRecipient: kG,
           onLogin: () => {
-            qu(uu.pack)
+            UG(GG.pack)
           }
-        }, uu.pack)))
+        }, GG.pack)))
       })
     }
-    var LX = ju(34590);
+    var gy = ZG(34528);
 
-    function tX(uu) {
+    function ey(GG) {
       let {
-        title: Eu
-      } = uu;
-      return (0, bu.jsx)("h2", {
+        title: bG
+      } = GG;
+      return (0, pG.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, bu.jsx)("span", {
+        children: (0, pG.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: Eu
+          children: bG
         })
       })
     }
 
-    function xX(uu) {
+    function Ry(GG) {
       let {
-        mountAtOnce: Eu,
-        children: ju
-      } = uu;
-      const Uu = (0, su.useRef)(null),
-        [Zu, Xu] = (0, su.useState)(Eu),
-        lu = (0, LX.b)();
-      return (0, su.useLayoutEffect)((() => {
-        const uu = Uu.current;
-        uu && uu.getBoundingClientRect().top < uu.parentElement.getBoundingClientRect().bottom && Xu(!0)
-      }), []), Zu || lu ? (0, bu.jsx)(bu.Fragment, {
-        children: ju
-      }) : (0, bu.jsx)("div", {
-        ref: Uu
+        mountAtOnce: bG,
+        children: ZG
+      } = GG;
+      const SG = (0, wG.useRef)(null),
+        [LG, yG] = (0, wG.useState)(bG),
+        kG = (0, gy.b)();
+      return (0, wG.useLayoutEffect)((() => {
+        const GG = SG.current;
+        GG && GG.getBoundingClientRect().top < GG.parentElement.getBoundingClientRect().bottom && yG(!0)
+      }), []), LG || kG ? (0, pG.jsx)(pG.Fragment, {
+        children: ZG
+      }) : (0, pG.jsx)("div", {
+        ref: SG
       })
     }
 
-    function TX(uu) {
+    function Ty(GG) {
       let {
-        layout: Eu,
-        mountAtOnce: ju,
-        bundleGift: su,
-        superRankTotalDays: Uu,
-        busy: Zu,
-        highlightItem: lu,
-        onOpen: qu,
-        onAct: fu,
-        onNeedRecipient: Cu,
-        onLogin: cu,
-        dailyDropTile: Nu
-      } = uu;
+        layout: bG,
+        mountAtOnce: ZG,
+        bundleGift: wG,
+        superRankTotalDays: SG,
+        busy: LG,
+        highlightItem: kG,
+        onOpen: UG,
+        onAct: YG,
+        onNeedRecipient: VG,
+        onLogin: fG,
+        dailyDropTile: QG
+      } = GG;
       const {
-        t: Ou
-      } = (0, Xu.A)(), Yu = Eu.packs.filter((uu => void 0 === (0, vZ.i)(uu.pack) && !(0, vZ.o)(uu.pack))), hu = Eu.packs.filter((uu => void 0 !== (0, vZ.i)(uu.pack))), Du = Eu.packs.filter((uu => (0, vZ.o)(uu.pack)));
-      return (0, bu.jsxs)(bu.Fragment, {
-        children: [(0, bu.jsx)(kX.e, {
+        t: KG
+      } = (0, yG.w)(), hG = bG.packs.filter((GG => void 0 === (0, vL.d)(GG.pack) && !(0, vL.g)(GG.pack))), dG = bG.packs.filter((GG => void 0 !== (0, vL.d)(GG.pack))), JG = bG.packs.filter((GG => (0, vL.g)(GG.pack)));
+      return (0, pG.jsxs)(pG.Fragment, {
+        children: [(0, pG.jsx)(Iy.b, {
           className: "StoreSuperGems",
-          gift: su,
-          highlightSku: lu,
-          leadingTile: Nu
-        }), (0, bu.jsx)(tX, {
-          title: Ou("store:rank")
-        }), (0, bu.jsx)(aX, {
-          state: Eu.superRank.state,
-          urgent: Eu.superRank.urgent,
-          daysLeft: Eu.superRankDaysLeft,
-          totalDays: Uu,
-          recipientHasSuperRank: Eu.recipientHasSuperRank,
-          busy: Zu,
-          highlight: "superRank" === lu,
+          gift: wG,
+          highlightSku: kG,
+          leadingTile: QG
+        }), (0, pG.jsx)(ey, {
+          title: KG("store:rank")
+        }), (0, pG.jsx)(Cy, {
+          state: bG.superRank.state,
+          urgent: bG.superRank.urgent,
+          daysLeft: bG.superRankDaysLeft,
+          totalDays: SG,
+          recipientHasSuperRank: bG.recipientHasSuperRank,
+          busy: LG,
+          highlight: "superRank" === kG,
           onOpen: () => {
-            qu("superRank")
+            UG("superRank")
           },
           onAct: () => {
-            fu("superRank")
+            YG("superRank")
           },
-          onNeedRecipient: Cu,
+          onNeedRecipient: VG,
           onLogin: () => {
-            cu("superRank")
+            fG("superRank")
           }
-        }), (0, bu.jsxs)(xX, {
-          mountAtOnce: ju,
-          children: [(0, bu.jsx)(tX, {
-            title: Ou("store:bundles")
-          }), (0, bu.jsx)("div", {
+        }), (0, pG.jsxs)(Ry, {
+          mountAtOnce: ZG,
+          children: [(0, pG.jsx)(ey, {
+            title: KG("store:bundles")
+          }), (0, pG.jsx)("div", {
             className: "StorePackGrid",
-            children: Yu.map((uu => (0, bu.jsx)(oX, {
-              pack: uu.pack,
-              state: uu.state,
-              busy: Zu,
+            children: hG.map((GG => (0, pG.jsx)(my, {
+              pack: GG.pack,
+              state: GG.state,
+              busy: LG,
               onOpen: () => {
-                qu(uu.pack)
+                UG(GG.pack)
               },
               onAct: () => {
-                fu(uu.pack)
+                YG(GG.pack)
               },
-              onNeedRecipient: Cu,
+              onNeedRecipient: VG,
               onLogin: () => {
-                cu(uu.pack)
+                fG(GG.pack)
               }
-            }, uu.pack)))
-          }), (0, bu.jsxs)(xX, {
-            mountAtOnce: ju,
-            children: [(0, bu.jsx)(tX, {
-              title: Ou("store:characters")
-            }), (0, bu.jsx)(BX, {
-              tiles: hu,
-              busy: Zu,
-              highlightItem: lu,
-              onOpen: qu,
-              onAct: fu,
-              onNeedRecipient: Cu,
-              onLogin: cu
-            }), Du.length > 0 && (0, bu.jsxs)(bu.Fragment, {
-              children: [(0, bu.jsx)(tX, {
-                title: Ou("store:premiumItems")
-              }), (0, bu.jsx)(BX, {
-                tiles: Du,
-                busy: Zu,
-                highlightItem: lu,
-                onOpen: qu,
-                onAct: fu,
-                onNeedRecipient: Cu,
-                onLogin: cu
+            }, GG.pack)))
+          }), (0, pG.jsxs)(Ry, {
+            mountAtOnce: ZG,
+            children: [(0, pG.jsx)(ey, {
+              title: KG("store:characters")
+            }), (0, pG.jsx)(ny, {
+              tiles: dG,
+              busy: LG,
+              highlightItem: kG,
+              onOpen: UG,
+              onAct: YG,
+              onNeedRecipient: VG,
+              onLogin: fG
+            }), JG.length > 0 && (0, pG.jsxs)(pG.Fragment, {
+              children: [(0, pG.jsx)(ey, {
+                title: KG("store:premiumItems")
+              }), (0, pG.jsx)(ny, {
+                tiles: JG,
+                busy: LG,
+                highlightItem: kG,
+                onOpen: UG,
+                onAct: YG,
+                onNeedRecipient: VG,
+                onLogin: fG
               })]
             })]
           })]
@@ -6752,463 +6752,463 @@ export const modules = {
       })
     }
 
-    function HX(uu) {
+    function Hy(GG) {
       let {
-        state: Eu,
-        mode: ju,
-        giftName: su,
-        busy: Uu,
-        highlight: Zu,
-        purchaseError: lu,
-        onBack: qu,
-        onChooseRecipient: Cu,
-        onAct: cu,
-        onLogin: Nu
-      } = uu;
+        state: bG,
+        mode: ZG,
+        giftName: wG,
+        busy: SG,
+        highlight: LG,
+        purchaseError: kG,
+        onBack: UG,
+        onChooseRecipient: VG,
+        onAct: fG,
+        onLogin: QG
+      } = GG;
       const {
-        t: Ou
-      } = (0, Xu.A)(), Yu = yu("gift" !== ju);
-      return (0, bu.jsx)(NX, {
-        onBack: qu,
-        recipient: "gift" === ju && (0, bu.jsxs)(bu.Fragment, {
-          children: [su && (0, bu.jsxs)("span", {
+        t: KG
+      } = (0, yG.w)(), hG = OG("gift" !== ZG);
+      return (0, pG.jsx)(fy, {
+        onBack: UG,
+        recipient: "gift" === ZG && (0, pG.jsxs)(pG.Fragment, {
+          children: [wG && (0, pG.jsxs)("span", {
             className: "StoreDetailRecipient",
-            title: Ou("store:giftFor", {
-              name: su
+            title: KG("store:giftFor", {
+              name: wG
             }),
-            children: [FZ.d, " ", Ou("store:giftFor", {
-              name: su
+            children: [qL.b, " ", KG("store:giftFor", {
+              name: wG
             })]
-          }), !su && (0, bu.jsxs)("div", {
-            ...(0, fu.ib)(),
+          }), !wG && (0, pG.jsxs)("div", {
+            ...(0, YG.P)(),
             className: "StoreDetailRecipient StoreDetailRecipientChoose",
-            onClick: Cu,
-            children: [FZ.d, " ", Ou("store:chooseRecipient")]
+            onClick: VG,
+            children: [qL.b, " ", KG("store:chooseRecipient")]
           })]
         }),
-        cta: (0, bu.jsx)(wX, {
-          state: Eu,
+        cta: (0, pG.jsx)(Xy, {
+          state: bG,
           item: "superRank",
-          price: ru.g.price,
-          busy: Uu,
-          highlight: Zu,
-          onAct: cu,
-          onNeedRecipient: Cu,
-          onLogin: Nu
+          price: jG.j.price,
+          busy: SG,
+          highlight: LG,
+          onAct: fG,
+          onNeedRecipient: VG,
+          onLogin: QG
         }),
-        afterCta: (0, bu.jsxs)(bu.Fragment, {
-          children: [Yu && (0, bu.jsx)("span", {
+        afterCta: (0, pG.jsxs)(pG.Fragment, {
+          children: [hG && (0, pG.jsx)("span", {
             className: "StoreTileNote",
-            children: Yu.text
-          }), (null === Yu || void 0 === Yu ? void 0 : Yu.manageUrl) && (0, bu.jsx)("a", {
+            children: hG.text
+          }), (null === hG || void 0 === hG ? void 0 : hG.manageUrl) && (0, pG.jsx)("a", {
             className: "StoreTileNote StoreManageSubscription",
-            href: Yu.manageUrl,
+            href: hG.manageUrl,
             target: "_blank",
             rel: "noreferrer",
-            children: Ou("payments:manageSubscription")
-          }), lu && (0, bu.jsx)("span", {
+            children: KG("payments:manageSubscription")
+          }), kG && (0, pG.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: Ou(lu)
+            children: KG(kG)
           })]
         })
       })
     }
-    var AX = ju(141);
-    const nX = AX.p("kind", [AX.H({
-      kind: AX.v("refused"),
-      heldTierId: AX.W(),
-      until: AX.G()
-    }), AX.H({
-      kind: AX.v("refund"),
-      tierId: AX.W(),
-      refundedMs: AX.G(),
-      forfeitedMs: AX.G(),
-      premiumCurrency: AX.G()
-    }), AX.H({
-      kind: AX.v("none")
+    var ty = ZG(126);
+    const Dy = ty.k("kind", [ty.B({
+      kind: ty.o("refused"),
+      heldTierId: ty.R(),
+      until: ty.y()
+    }), ty.B({
+      kind: ty.o("refund"),
+      tierId: ty.R(),
+      refundedMs: ty.y(),
+      forfeitedMs: ty.y(),
+      premiumCurrency: ty.y()
+    }), ty.B({
+      kind: ty.o("none")
     })]);
-    async function yX(uu) {
-      const Eu = await (0, ou.postJsonWithMetricsCookiesAndJsonResponse)(`${YE.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
-        productId: uu
+    async function Ny(GG) {
+      const bG = await (0, IG.postJsonWithMetricsCookiesAndJsonResponse)(`${hb.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
+        productId: GG
       }, {
         retries: 1
       });
-      return nX.parse(Eu)
+      return Dy.parse(bG)
     }
-    var zX = ju(3213),
-      RX = ju(3245);
+    var Oy = ZG(3040),
+      xy = ZG(3075);
 
-    function ul(uu, Eu) {
-      const ju = Math.max(1, Math.round(Eu / Wu.h));
-      return [1 === ju ? `${uu}OneDay` : uu, {
-        days: ju.toLocaleString()
+    function By(GG, bG) {
+      const ZG = Math.max(1, Math.round(bG / AG.j));
+      return [1 === ZG ? `${GG}OneDay` : GG, {
+        days: ZG.toLocaleString()
       }]
     }
 
-    function El(uu) {
+    function Gk(GG) {
       let {
-        price: Eu
-      } = uu;
+        price: bG
+      } = GG;
       const {
-        t: ju
-      } = (0, Xu.A)();
-      return (0, bu.jsxs)("div", {
+        t: ZG
+      } = (0, yG.w)();
+      return (0, pG.jsxs)("div", {
         className: "StoreSubscriptionTerms",
-        children: [(0, bu.jsx)(JX, {}), (0, bu.jsx)("div", {
+        children: [(0, pG.jsx)(uy, {}), (0, pG.jsx)("div", {
           className: "SmallTextLight",
-          children: ju("payments:subscriptionRenewsMonthly", {
-            price: Eu
+          children: ZG("payments:subscriptionRenewsMonthly", {
+            price: bG
           })
-        }), (0, bu.jsxs)("div", {
+        }), (0, pG.jsxs)("div", {
           className: "StoreSubscriptionTermsLinks SmallTextLight",
-          children: [(0, bu.jsx)("a", {
+          children: [(0, pG.jsx)("a", {
             href: "/terms-of-service",
             target: "_blank",
             rel: "noreferrer",
-            children: ju("homePage:termsOfService")
-          }), (0, bu.jsx)("a", {
+            children: ZG("homePage:termsOfService")
+          }), (0, pG.jsx)("a", {
             href: "/privacy-policy",
             target: "_blank",
             rel: "noreferrer",
-            children: ju("homePage:privacyPolicy")
+            children: ZG("homePage:privacyPolicy")
           })]
         })]
       })
     }
 
-    function jl() {
-      const uu = (0, Iu.usePurchasesAllowed)();
-      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && uu && (0, Iu.subscriptionsSold)() ? (0, bu.jsx)(sl, {}) : null
+    function bk() {
+      const GG = (0, qG.usePurchasesAllowed)();
+      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && GG && (0, qG.subscriptionsSold)() ? (0, pG.jsx)(Zk, {}) : null
     }
 
-    function sl() {
+    function Zk() {
       const {
-        t: uu
-      } = (0, Xu.A)(), {
-        userContext: Eu
-      } = (0, Ou.c)(), {
-        purchaseUnderWay: ju,
-        notice: Uu,
-        subscribe: Zu
-      } = (0, zX.d)(), [lu, qu] = (0, su.useState)(null), [Cu, cu] = (0, su.useState)(0), [Nu, Yu] = (0, su.useState)(!1), hu = (0, su.useRef)(!0), gu = Eu !== ou.NULL_USER_CONTEXT, Mu = null !== lu && lu.loadedFor === Eu ? lu.offer : null, eu = null === Uu || void 0 === Uu ? void 0 : Uu.pendingIntentId, Gu = (0, su.useRef)(eu);
+        t: GG
+      } = (0, yG.w)(), {
+        userContext: bG
+      } = (0, KG.e)(), {
+        purchaseUnderWay: ZG,
+        notice: SG,
+        subscribe: LG
+      } = (0, Oy.c)(), [kG, UG] = (0, wG.useState)(null), [VG, fG] = (0, wG.useState)(0), [QG, hG] = (0, wG.useState)(!1), dG = (0, wG.useRef)(!0), rG = bG !== IG.NULL_USER_CONTEXT, zG = null !== kG && kG.loadedFor === bG ? kG.offer : null, EG = null === SG || void 0 === SG ? void 0 : SG.pendingIntentId, oG = (0, wG.useRef)(EG);
 
-      function pu() {
-        cu((uu => uu + 1))
+      function XG() {
+        fG((GG => GG + 1))
       }
-      async function wu(uu) {
-        Yu(!1), await Zu(uu), hu.current && pu()
+      async function uG(GG) {
+        hG(!1), await LG(GG), dG.current && XG()
       }
-      if ((0, su.useEffect)((() => (hu.current = !0, () => {
-          hu.current = !1
-        })), []), (0, su.useEffect)((() => {
-          void 0 !== Gu.current && void 0 === eu && pu(), Gu.current = eu
-        }), [eu]), (0, su.useEffect)((() => {
-          if (!gu) return;
-          let uu = !1;
-          return Yu(!1), async function() {
+      if ((0, wG.useEffect)((() => (dG.current = !0, () => {
+          dG.current = !1
+        })), []), (0, wG.useEffect)((() => {
+          void 0 !== oG.current && void 0 === EG && XG(), oG.current = EG
+        }), [EG]), (0, wG.useEffect)((() => {
+          if (!rG) return;
+          let GG = !1;
+          return hG(!1), async function() {
             const {
-              offering: uu
-            } = await (0, Au.getBillingClient)().getOfferings("superRankPage"), Eu = null === uu || void 0 === uu ? void 0 : uu.packages.find(KZ.isPricedPackage);
-            return void 0 === Eu ? {
+              offering: GG
+            } = await (0, DG.getBillingClient)().getOfferings("superRankPage"), bG = null === GG || void 0 === GG ? void 0 : GG.packages.find(aL.isPricedPackage);
+            return void 0 === bG ? {
               kind: "unavailable"
             } : {
               kind: "loaded",
-              pkg: Eu,
-              preview: await yX(Eu.productId)
+              pkg: bG,
+              preview: await Ny(bG.productId)
             }
-          }().catch((uu => (console.error("Billing: loading the Super Rank subscription or its preview failed:", uu), {
+          }().catch((GG => (console.error("Billing: loading the Super Rank subscription or its preview failed:", GG), {
             kind: "loadFailed"
-          }))).then((ju => {
-            uu || qu((uu => "loadFailed" === ju.kind && (null === uu || void 0 === uu ? void 0 : uu.loadedFor) === Eu ? uu : {
-              loadedFor: Eu,
-              offer: ju
+          }))).then((ZG => {
+            GG || UG((GG => "loadFailed" === ZG.kind && (null === GG || void 0 === GG ? void 0 : GG.loadedFor) === bG ? GG : {
+              loadedFor: bG,
+              offer: ZG
             }))
           })), () => {
-            uu = !0
+            GG = !0
           }
-        }), [Eu, gu, Cu]), null === Mu) return null;
-      if ("loaded" !== Mu.kind) return (0, bu.jsx)(RX.i, {
+        }), [bG, rG, VG]), null === zG) return null;
+      if ("loaded" !== zG.kind) return (0, pG.jsx)(xy.i, {
         notice: {
           kind: "error",
-          key: "unavailable" === Mu.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
+          key: "unavailable" === zG.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
       const {
-        pkg: Ju,
-        preview: du
-      } = Mu;
-      if ("refused" === du.kind) return (0, bu.jsx)(RX.i, {
+        pkg: iG,
+        preview: CG
+      } = zG;
+      if ("refused" === CG.kind) return (0, pG.jsx)(xy.i, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(du.until).toLocaleDateString()
+            date: new Date(CG.until).toLocaleDateString()
           }
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
-      const au = (0, kX.i)(Ju),
-        Pu = (0, Du.isMobileApp)() && (0, bu.jsx)(El, {
-          price: au
+      const WG = (0, Iy.f)(iG),
+        mG = (0, JG.isMobileApp)() && (0, pG.jsx)(Gk, {
+          price: WG
         });
-      if (Nu && "refund" === du.kind) {
+      if (QG && "refund" === CG.kind) {
         const {
-          refundedMs: Eu,
-          forfeitedMs: su,
-          premiumCurrency: Uu
-        } = du, Zu = su + (0 === Uu ? Eu : 0), [Xu, lu] = ul("payments:subscribeRefundsGemRank", Eu), [qu, Cu] = ul("payments:subscribeForfeitsGemRank", Zu);
-        return (0, bu.jsxs)("div", {
+          refundedMs: bG,
+          forfeitedMs: wG,
+          premiumCurrency: SG
+        } = CG, LG = wG + (0 === SG ? bG : 0), [yG, kG] = By("payments:subscribeRefundsGemRank", bG), [UG, VG] = By("payments:subscribeForfeitsGemRank", LG);
+        return (0, pG.jsxs)("div", {
           className: "StoreTempSubscribe SmallTextBold",
-          children: [(0, bu.jsx)("div", {
-            children: uu("payments:subscribeEndsGemRank")
-          }), Uu > 0 && (0, bu.jsx)("div", {
-            children: uu(Xu, {
-              ...lu,
-              amount: Uu.toLocaleString()
+          children: [(0, pG.jsx)("div", {
+            children: GG("payments:subscribeEndsGemRank")
+          }), SG > 0 && (0, pG.jsx)("div", {
+            children: GG(yG, {
+              ...kG,
+              amount: SG.toLocaleString()
             })
-          }), Zu > 0 && (0, bu.jsx)("div", {
-            children: uu(qu, Cu)
-          }), (0, bu.jsxs)("div", {
+          }), LG > 0 && (0, pG.jsx)("div", {
+            children: GG(UG, VG)
+          }), (0, pG.jsxs)("div", {
             className: "StoreTempSubscribeButtons",
-            children: [(0, bu.jsx)(fu.i, {
+            children: [(0, pG.jsx)(YG.h, {
               onClick: () => {
-                Yu(!1)
+                hG(!1)
               },
-              children: uu("general:cancel")
-            }), (0, bu.jsx)(fu.p, {
+              children: GG("general:cancel")
+            }), (0, pG.jsx)(YG.k, {
               onClick: () => {
-                wu(Ju)
+                uG(iG)
               },
-              loading: ju,
-              children: uu("payments:subscribeContinue", {
-                price: au
+              loading: ZG,
+              children: GG("payments:subscribeContinue", {
+                price: WG
               })
             })]
-          }), Pu]
+          }), mG]
         })
       }
-      return (0, bu.jsxs)("div", {
+      return (0, pG.jsxs)("div", {
         className: "StoreTempSubscribe",
-        children: [(0, bu.jsx)(RX.i, {
-          notice: Uu,
+        children: [(0, pG.jsx)(xy.i, {
+          notice: SG,
           className: "SmallTextBold"
-        }), (0, bu.jsx)(RX.e, {
+        }), (0, pG.jsx)(xy.d, {
           className: "SmallTextBold"
-        }), (0, bu.jsx)(fu.p, {
+        }), (0, pG.jsx)(YG.k, {
           onClick: () => {
-            "refund" === du.kind ? Yu(!0) : wu(Ju)
+            "refund" === CG.kind ? hG(!0) : uG(iG)
           },
-          disabled: void 0 !== eu,
-          loading: ju,
-          children: uu("payments:subscribeToSuperRank", {
-            price: au
+          disabled: void 0 !== EG,
+          loading: ZG,
+          children: GG("payments:subscribeToSuperRank", {
+            price: WG
           })
-        }), Pu]
+        }), mG]
       })
     }
-    var Ul = ju(2693);
+    var wk = ZG(2541);
 
-    function Zl(uu) {
+    function Sk(GG) {
       let {
-        state: Eu,
-        view: ju,
-        claiming: Uu,
-        onOpen: lu
-      } = uu;
+        state: bG,
+        view: ZG,
+        claiming: SG,
+        onOpen: kG
+      } = GG;
       const {
-        t: Cu
-      } = (0, Xu.A)(), cu = (0, su.useRef)(null), Nu = "ready" === ju.kind;
-      (0, rX.d)(cu, Nu);
-      const Ou = (0, nE.k)(Eu);
-      return (0, bu.jsxs)("div", {
-        ref: cu,
-        className: Zu()("DailyDropTile", {
-          DailyDropTileReady: Nu
+        t: VG
+      } = (0, yG.w)(), fG = (0, wG.useRef)(null), QG = "ready" === ZG.kind;
+      (0, ly.e)(fG, QG);
+      const KG = (0, Nb.h)(bG);
+      return (0, pG.jsxs)("div", {
+        ref: fG,
+        className: LG()("DailyDropTile", {
+          DailyDropTileReady: QG
         }),
-        children: [Nu && (0, bu.jsx)(qu.d, {
+        children: [QG && (0, pG.jsx)(UG.e, {
           top: "0.25rem",
           right: "0.25rem"
-        }), (0, bu.jsx)("div", {
+        }), (0, pG.jsx)("div", {
           className: "DailyDropTileTitle",
-          children: Cu("dailyDrop:name")
-        }), (0, bu.jsxs)("div", {
+          children: VG("dailyDrop:name")
+        }), (0, pG.jsxs)("div", {
           className: "DailyDropTileArt",
-          children: [(0, bu.jsx)(Ul.e, {
+          children: [(0, pG.jsx)(wk.e, {
             className: "DailyDropTileBlock"
-          }), (0, bu.jsxs)("div", {
+          }), (0, pG.jsxs)("div", {
             className: "DailyDropTileInfo SmallTextLight",
-            children: [(0, bu.jsx)("span", {
-              children: Cu("dailyDrop:collected", {
-                count: Eu.collected.length,
-                total: Eu.total
+            children: [(0, pG.jsx)("span", {
+              children: VG("dailyDrop:collected", {
+                count: bG.collected.length,
+                total: bG.total
               })
-            }), null !== Ou && (0, bu.jsx)("span", {
+            }), null !== KG && (0, pG.jsx)("span", {
               className: "DailyDropTileOdds",
-              children: Cu("dailyDrop:odds", {
-                percent: Ou.toLocaleString(void 0, {
+              children: VG("dailyDrop:odds", {
+                percent: KG.toLocaleString(void 0, {
                   maximumFractionDigits: 1
                 })
               })
             })]
           })]
-        }), "ready" === ju.kind && (0, bu.jsx)(fu.p, {
+        }), "ready" === ZG.kind && (0, pG.jsx)(YG.k, {
           className: "DailyDropTileOpen",
-          onClick: lu,
-          loading: Uu,
-          children: Cu("dailyDrop:open")
-        }), "waiting" === ju.kind && (0, bu.jsx)("div", {
+          onClick: kG,
+          loading: SG,
+          children: VG("dailyDrop:open")
+        }), "waiting" === ZG.kind && (0, pG.jsx)("div", {
           className: "DailyDropTileWait SmallTextBold",
-          children: Cu("dailyDrop:nextIn", {
-            count: ju.hours
+          children: VG("dailyDrop:nextIn", {
+            count: ZG.hours
           })
         })]
       })
     }
-    var Xl = ju(2329);
-    const ll = 32;
+    var Lk = ZG(2222);
+    const yk = 32;
 
-    function ql(uu) {
+    function kk(GG) {
       let {
-        worn: Eu,
-        iZ: ju,
-        WZ: Uu,
-        className: qu
-      } = uu;
+        worn: bG,
+        FL: ZG,
+        vL: SG,
+        className: UG
+      } = GG;
       const {
-        t: fu
-      } = (0, Xu.A)(), Cu = (0, su.useRef)(null), [cu, Nu] = (0, su.useState)(null), [Ou, Yu] = (0, su.useState)(!1);
-      async function hu() {
-        var uu;
-        const Eu = Cu.current;
-        if (!Eu) return;
-        const su = null === (uu = Eu.getDevTools()) || void 0 === uu ? void 0 : uu.canvas();
-        let Zu = null;
+        t: YG
+      } = (0, yG.w)(), VG = (0, wG.useRef)(null), [fG, QG] = (0, wG.useState)(null), [KG, hG] = (0, wG.useState)(!1);
+      async function dG() {
+        var GG;
+        const bG = VG.current;
+        if (!bG) return;
+        const wG = null === (GG = bG.getDevTools()) || void 0 === GG ? void 0 : GG.canvas();
+        let LG = null;
         try {
-          Zu = su ? function(uu) {
-            if (0 === uu.width || 0 === uu.height) return null;
-            const Eu = document.createElement("canvas");
-            Eu.width = ll, Eu.height = ll;
-            const ju = Eu.getContext("2d", {
+          LG = wG ? function(GG) {
+            if (0 === GG.width || 0 === GG.height) return null;
+            const bG = document.createElement("canvas");
+            bG.width = yk, bG.height = yk;
+            const ZG = bG.getContext("2d", {
               willReadFrequently: !0
             });
-            if (!ju) return null;
-            ju.drawImage(uu, 0, 0, ll, ll);
+            if (!ZG) return null;
+            ZG.drawImage(GG, 0, 0, yk, yk);
             const {
-              data: su
-            } = ju.getImageData(0, 0, ll, ll);
-            for (let Uu = 3; Uu < su.length; Uu += 4)
-              if (su[Uu] > 0) return uu.toDataURL("image/png");
+              data: wG
+            } = ZG.getImageData(0, 0, yk, yk);
+            for (let SG = 3; SG < wG.length; SG += 4)
+              if (wG[SG] > 0) return GG.toDataURL("image/png");
             return null
-          }(su) : null
-        } catch (lu) {
-          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", lu)
+          }(wG) : null
+        } catch (kG) {
+          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", kG)
         }
-        null === Zu && console.warn("The character preview read back blank: the Lucky Skin Block's Before shows the head"), Nu(null === Zu ? {
+        null === LG && console.warn("The character preview read back blank: the Lucky Skin Block's Before shows the head"), QG(null === LG ? {
           kind: "head"
         } : {
           kind: "still",
-          src: Zu
-        }), Eu.updateCosmetic(ju, Uu);
-        const Xu = new Promise((uu => {
-          setTimeout(uu, 1e4)
+          src: LG
+        }), bG.updateCosmetic(ZG, SG);
+        const yG = new Promise((GG => {
+          setTimeout(GG, 1e4)
         }));
-        await Promise.race([Eu.ensureReadyForCapture(ju), Xu]).catch((uu => {
-          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", uu)
-        })), Cu.current === Eu && Yu(!0)
+        await Promise.race([bG.ensureReadyForCapture(ZG), yG]).catch((GG => {
+          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", GG)
+        })), VG.current === bG && hG(!0)
       }
-      return (0, bu.jsxs)("div", {
-        className: Zu()("DailyDropRevealFigures", qu),
-        children: [(0, bu.jsxs)("div", {
+      return (0, pG.jsxs)("div", {
+        className: LG()("DailyDropRevealFigures", UG),
+        children: [(0, pG.jsxs)("div", {
           className: "DailyDropRevealFigure",
-          children: [(0, bu.jsxs)("div", {
+          children: [(0, pG.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            children: ["still" === (null === cu || void 0 === cu ? void 0 : cu.kind) && (0, bu.jsx)("img", {
+            children: ["still" === (null === fG || void 0 === fG ? void 0 : fG.kind) && (0, pG.jsx)("img", {
               className: "DailyDropRevealBeforeStill",
-              src: cu.src,
+              src: fG.src,
               alt: "",
               draggable: !1
-            }), "head" === (null === cu || void 0 === cu ? void 0 : cu.kind) && (0, bu.jsx)("div", {
+            }), "head" === (null === fG || void 0 === fG ? void 0 : fG.kind) && (0, pG.jsx)("div", {
               className: "DailyDropRevealBeforeHead",
-              children: (0, bu.jsx)(uX.d, {
-                cosmetics: Eu
+              children: (0, pG.jsx)(BL.c, {
+                cosmetics: bG
               })
-            }), null === cu && (0, bu.jsx)(pu.b, {})]
-          }), (0, bu.jsx)("span", {
+            }), null === fG && (0, pG.jsx)(XG.b, {})]
+          }), (0, pG.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: fu("dailyDrop:before")
+            children: YG("dailyDrop:before")
           })]
-        }), (0, bu.jsx)(lu.e, {
+        }), (0, pG.jsx)(kG.c, {
           name: "arrow-right",
           className: "DailyDropRevealArrow"
-        }), (0, bu.jsxs)("div", {
+        }), (0, pG.jsxs)("div", {
           className: "DailyDropRevealFigure DailyDropRevealAfter",
-          children: [(0, bu.jsxs)("div", {
+          children: [(0, pG.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            children: [(0, bu.jsx)("div", {
-              className: Zu()("DailyDropRevealLive", {
-                DailyDropRevealLiveDrawn: Ou
+            children: [(0, pG.jsx)("div", {
+              className: LG()("DailyDropRevealLive", {
+                DailyDropRevealLiveDrawn: KG
               }),
-              children: (0, bu.jsx)(su.Suspense, {
+              children: (0, pG.jsx)(wG.Suspense, {
                 fallback: null,
-                children: (0, bu.jsx)(OX.c, {
-                  ref: Cu,
+                children: (0, pG.jsx)(Qy.b, {
+                  ref: VG,
                   onReady: () => {
-                    var uu, ju;
-                    null === (uu = Cu.current) || void 0 === uu || uu.resetCamera(), null === (ju = Cu.current) || void 0 === ju || ju.setAllCosmetics(Eu)
+                    var GG, ZG;
+                    null === (GG = VG.current) || void 0 === GG || GG.resetCamera(), null === (ZG = VG.current) || void 0 === ZG || ZG.setAllCosmetics(bG)
                   },
                   onDrawn: () => {
                     requestAnimationFrame((() => {
-                      hu()
+                      dG()
                     }))
                   }
                 })
               })
-            }), !Ou && (0, bu.jsx)(pu.b, {})]
-          }), (0, bu.jsx)("span", {
+            }), !KG && (0, pG.jsx)(XG.b, {})]
+          }), (0, pG.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: fu("dailyDrop:after")
+            children: YG("dailyDrop:after")
           })]
         })]
       })
     }
-    var fl = ju(1906);
-    const Cl = "dailyDropReminderAsked_";
+    var Uk = ZG(1827);
+    const Yk = "dailyDropReminderAsked_";
 
-    function bl(uu) {
-      return async function(uu) {
-        if (uu.remindersOn || (0, Ju.h)(Ju.d.get("gameState"))) return null;
-        const Eu = await ou.userContextManager.getCurrentUserContext(),
-          ju = Cl + Eu.whamm;
-        if (null !== Cj.k.getItem(ju)) return null;
-        const [su, Uu] = await Promise.all([(0, xE.h)().catch((uu => (console.error("Couldn't tell whether this device can take push notifications:", uu), null))), Nl()]);
-        if (null === su && !Uu) return null;
+    function Vk(GG) {
+      return async function(GG) {
+        if (GG.remindersOn || (0, iG.i)(iG.e.get("gameState"))) return null;
+        const bG = await IG.userContextManager.getCurrentUserContext(),
+          ZG = Yk + bG.whamm;
+        if (null !== VZ.h.getItem(ZG)) return null;
+        const [wG, SG] = await Promise.all([(0, Tb.e)().catch((GG => (console.error("Couldn't tell whether this device can take push notifications:", GG), null))), fk()]);
+        if (null === wG && !SG) return null;
         return {
-          askedKey: ju,
-          requester: su
+          askedKey: ZG,
+          requester: wG
         }
-      }(uu).catch((uu => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", uu), null)))
+      }(GG).catch((GG => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", GG), null)))
     }
 
-    function cl(uu, Eu) {
-      Cj.k.setItem(uu.askedKey, !0), (0, nE.s)("daily_drop.remind", Eu ? "yes" : "no"), Eu && async function(uu) {
-        const Eu = (0, nE.t)({
+    function pk(GG, bG) {
+      VZ.h.setItem(GG.askedKey, !0), (0, Nb.t)("daily_drop.remind", bG ? "yes" : "no"), bG && async function(GG) {
+        const bG = (0, Nb.u)({
             remindersOn: !0
           }),
-          ju = null === uu ? Promise.resolve() : uu(),
-          [su, Uu] = await Promise.allSettled([Eu, ju]);
-        "rejected" === su.status && console.error("Failed to turn on Lucky Skin Block reminders:", su.reason);
-        "rejected" === Uu.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", Uu.reason);
-        "rejected" !== su.status && "rejected" !== Uu.status || fl.f.showMessage({
+          ZG = null === GG ? Promise.resolve() : GG(),
+          [wG, SG] = await Promise.allSettled([bG, ZG]);
+        "rejected" === wG.status && console.error("Failed to turn on Lucky Skin Block reminders:", wG.reason);
+        "rejected" === SG.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", SG.reason);
+        "rejected" !== wG.status && "rejected" !== SG.status || Uk.g.showMessage({
           translationKey: "dailyDrop:remindFailed"
         })
-      }(uu.requester)
+      }(GG.requester)
     }
 
-    function Nl() {
-      return (0, tE.b)().then((uu => uu.app + uu.browser + uu.msnPlay > 0), (uu => (console.error("Couldn't tell where push notifications reach this account:", uu), !0)))
+    function fk() {
+      return (0, Rb.c)().then((GG => GG.app + GG.browser + GG.msnPlay > 0), (GG => (console.error("Couldn't tell where push notifications reach this account:", GG), !0)))
     }
-    const Ol = {
+    const Qk = {
         closed: "opening",
         opening: "revealed",
         revealed: "shrinking",
@@ -7216,187 +7216,187 @@ export const modules = {
         equip: "equip",
         remind: "remind"
       },
-      Yl = {
+      Kk = {
         opening: 900,
         shrinking: 700
       };
 
-    function hl(uu) {
+    function hk(GG) {
       let {
-        drop: Eu,
-        onClose: ju
-      } = uu;
+        drop: bG,
+        onClose: ZG
+      } = GG;
       const {
-        t: Uu
-      } = (0, Xu.A)(), {
-        userContext: qu
-      } = (0, Ou.c)(), {
-        state: Cu,
-        view: cu
-      } = (0, nE.x)(), [Nu, Yu] = (0, su.useState)("closed"), [hu] = (0, su.useState)((() => ({
-        ...qu.getPlayerCosmetics()
-      }))), [Du] = (0, su.useState)((() => (0, nE.m)(Eu, hu))), [gu, Mu] = (0, su.useState)(!1), [eu, Gu] = (0, su.useState)(!1), [pu] = (0, su.useState)((() => null === Cu ? Promise.resolve(null) : bl(Cu))), [wu, du] = (0, su.useState)(null), au = (0, TE.c)(), {
-        gameState: Pu
-      } = (0, Ju.l)(["gameState"]);
-      async function ou() {
-        const uu = await pu;
-        au.current && (null === uu ? ju() : (du(uu), Yu("remind")))
+        t: SG
+      } = (0, yG.w)(), {
+        userContext: UG
+      } = (0, KG.e)(), {
+        state: VG,
+        view: fG
+      } = (0, Nb.w)(), [QG, hG] = (0, wG.useState)("closed"), [dG] = (0, wG.useState)((() => ({
+        ...UG.getPlayerCosmetics()
+      }))), [JG] = (0, wG.useState)((() => (0, Nb.k)(bG, dG))), [rG, zG] = (0, wG.useState)(!1), [EG, oG] = (0, wG.useState)(!1), [XG] = (0, wG.useState)((() => null === VG ? Promise.resolve(null) : Vk(VG))), [uG, CG] = (0, wG.useState)(null), WG = (0, Hb.c)(), {
+        gameState: mG
+      } = (0, iG.o)(["gameState"]);
+      async function IG() {
+        const GG = await XG;
+        WG.current && (null === GG ? ZG() : (CG(GG), hG("remind")))
       }
 
-      function ku(uu) {
-        null !== wu && cl(wu, uu), ju()
-      }(0, su.useEffect)((() => {
-        const uu = Yl[Nu];
-        if (void 0 === uu) return;
-        const Eu = setTimeout((() => {
-          Yu(Ol[Nu])
-        }), uu);
+      function FG(GG) {
+        null !== uG && pk(uG, GG), ZG()
+      }(0, wG.useEffect)((() => {
+        const GG = Kk[QG];
+        if (void 0 === GG) return;
+        const bG = setTimeout((() => {
+          hG(Qk[QG])
+        }), GG);
         return () => {
-          clearTimeout(Eu)
+          clearTimeout(bG)
         }
-      }), [Nu]);
-      const mu = Uu(`dailyDrop:kind_${Du.iZ}`),
-        vu = Cu && Uu("dailyDrop:collected", {
-          count: Cu.collected.length,
-          total: Cu.total
+      }), [QG]);
+      const vG = SG(`dailyDrop:kind_${JG.FL}`),
+        aG = VG && SG("dailyDrop:collected", {
+          count: VG.collected.length,
+          total: VG.total
         }),
-        Ku = "revealed" === Nu || "shrinking" === Nu,
-        Vu = "equip" !== Nu && "remind" !== Nu;
-      return (0, bu.jsx)(Is.c, {
+        cG = "revealed" === QG || "shrinking" === QG,
+        lG = "equip" !== QG && "remind" !== QG;
+      return (0, pG.jsx)(sw.b, {
         className: "DailyDropRevealScreen",
-        close: "remind" === Nu ? () => {
-          ku(!1)
-        } : ju,
+        close: "remind" === QG ? () => {
+          FG(!1)
+        } : ZG,
         togglePointerLock: !1,
         closeOnPressBackground: !1,
-        children: (0, bu.jsxs)("div", {
-          className: Zu()("DailyDropReveal", {
-            DailyDropRevealOpening: "opening" === Nu,
-            DailyDropRevealShrinking: "shrinking" === Nu,
-            DailyDropRevealFiguresShown: "shrinking" === Nu || "equip" === Nu || "remind" === Nu
+        children: (0, pG.jsxs)("div", {
+          className: LG()("DailyDropReveal", {
+            DailyDropRevealOpening: "opening" === QG,
+            DailyDropRevealShrinking: "shrinking" === QG,
+            DailyDropRevealFiguresShown: "shrinking" === QG || "equip" === QG || "remind" === QG
           }),
-          children: [(0, bu.jsxs)("div", {
+          children: [(0, pG.jsxs)("div", {
             className: "DailyDropRevealStage",
-            children: [(0, bu.jsx)(ql, {
+            children: [(0, pG.jsx)(kk, {
               className: "DailyDropRevealStageFigures",
-              worn: hu,
-              iZ: Du.iZ,
-              WZ: Du.WZ
-            }), ("closed" === Nu || "opening" === Nu) && (0, bu.jsx)(Ul.e, {
+              worn: dG,
+              FL: JG.FL,
+              vL: JG.vL
+            }), ("closed" === QG || "opening" === QG) && (0, pG.jsx)(wk.e, {
               className: "DailyDropRevealBlock",
-              open: "opening" === Nu
-            }), Ku && (0, bu.jsx)("div", {
+              open: "opening" === QG
+            }), cG && (0, pG.jsx)("div", {
               className: "DailyDropRevealPiece",
-              children: (0, bu.jsx)("img", {
-                src: `/textures/charSkins/previews/${(0,Xl.m)(Du.iZ,Du.WZ).previewTex}.png`,
-                alt: mu,
+              children: (0, pG.jsx)("img", {
+                src: `/textures/charSkins/previews/${(0,Lk.k)(JG.FL,JG.vL).previewTex}.png`,
+                alt: vG,
                 draggable: !1
               })
             })]
-          }), Vu && (0, bu.jsxs)(bu.Fragment, {
-            children: [(0, bu.jsxs)("div", {
+          }), lG && (0, pG.jsxs)(pG.Fragment, {
+            children: [(0, pG.jsxs)("div", {
               className: "DailyDropRevealCaption",
-              children: [(0, bu.jsx)("div", {
+              children: [(0, pG.jsx)("div", {
                 className: "DailyDropRevealTitle SmallTextBold",
-                children: Ku ? mu : Uu("dailyDrop:name")
-              }), "closed" === Nu && (0, bu.jsx)("div", {
+                children: cG ? vG : SG("dailyDrop:name")
+              }), "closed" === QG && (0, pG.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: Uu("dailyDrop:tapToOpen")
-              }), "revealed" === Nu && (0, bu.jsx)("div", {
+                children: SG("dailyDrop:tapToOpen")
+              }), "revealed" === QG && (0, pG.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: Uu("dailyDrop:tapToContinue")
+                children: SG("dailyDrop:tapToContinue")
               })]
-            }), (0, bu.jsx)("button", {
+            }), (0, pG.jsx)("button", {
               type: "button",
               className: "DailyDropRevealTap",
               "data-pad-default-focus": !0,
-              "aria-label": Uu("closed" === Nu ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
+              "aria-label": SG("closed" === QG ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
               onClick: () => {
-                Yu(Ol[Nu])
+                hG(Qk[QG])
               }
             })]
-          }), "equip" === Nu && (0, bu.jsxs)("div", {
+          }), "equip" === QG && (0, pG.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, bu.jsx)("div", {
+            children: [(0, pG.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: mu
-            }), (0, bu.jsx)("div", {
+              children: vG
+            }), (0, pG.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: Uu("dailyDrop:equipQuestion")
-            }), (0, bu.jsxs)("div", {
+              children: SG("dailyDrop:equipQuestion")
+            }), (0, pG.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, bu.jsx)(fu.f, {
+              children: [(0, pG.jsx)(YG.d, {
                 className: "DailyDropRevealButton",
-                disabled: gu,
+                disabled: rG,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  (0, nE.s)("daily_drop.not_now", Eu), ou()
+                  (0, Nb.t)("daily_drop.not_now", bG), IG()
                 },
-                children: Uu("dailyDrop:notNow")
-              }), (0, bu.jsx)(fu.f, {
+                children: SG("dailyDrop:notNow")
+              }), (0, pG.jsx)(YG.d, {
                 className: "DailyDropRevealButton",
-                loading: gu,
+                loading: rG,
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
                   !async function() {
-                    (0, nE.s)("daily_drop.equip", Eu), Mu(!0), Gu(!1);
+                    (0, Nb.t)("daily_drop.equip", bG), zG(!0), oG(!1);
                     try {
-                      await (0, nE.g)(qu, Du.iZ, Du.WZ)
-                    } catch (uu) {
-                      return console.error("Failed to equip the Lucky Skin Block's piece", uu), Mu(!1), void Gu(!0)
+                      await (0, Nb.g)(UG, JG.FL, JG.vL)
+                    } catch (GG) {
+                      return console.error("Failed to equip the Lucky Skin Block's piece", GG), zG(!1), void oG(!0)
                     }
-                    await ou()
+                    await IG()
                   }()
                 },
-                children: Uu("dailyDrop:equip")
+                children: SG("dailyDrop:equip")
               })]
-            }), eu && (0, bu.jsx)("div", {
+            }), EG && (0, pG.jsx)("div", {
               className: "DailyDropRevealError SmallTextBold",
-              children: Uu("dailyDrop:equipFailed")
-            }), !(0, Ju.h)(Pu) && (0, bu.jsxs)("button", {
+              children: SG("dailyDrop:equipFailed")
+            }), !(0, iG.i)(mG) && (0, pG.jsxs)("button", {
               type: "button",
               className: "DailyDropRevealCustomise",
-              disabled: gu,
+              disabled: rG,
               onClick: () => {
-                var uu;
-                (0, nE.s)("daily_drop.customise", Eu), uu = Du.iZ, qj.h.TY(rs, uu), Ju.d.set({
-                  openEverythingMenuName: DE.o.CUSTOMISATION
-                }), ju()
+                var GG;
+                (0, Nb.t)("daily_drop.customise", bG), GG = JG.FL, UZ.l.xh(lw, GG), iG.e.set({
+                  openEverythingMenuName: Jb.u.CUSTOMISATION
+                }), ZG()
               },
-              children: [Uu("dailyDrop:customise"), " ", (0, bu.jsx)(lu.e, {
+              children: [SG("dailyDrop:customise"), " ", (0, pG.jsx)(kG.c, {
                 name: "arrow-right",
                 className: "DailyDropRevealCustomiseArrow"
               })]
-            }), vu && (0, bu.jsxs)("div", {
+            }), aG && (0, pG.jsxs)("div", {
               className: "DailyDropRevealProgress SmallTextLight",
-              children: [vu, "waiting" === (null === cu || void 0 === cu ? void 0 : cu.kind) && ` \xb7 ${Uu("dailyDrop:nextInInline",{count:cu.hours})}`]
+              children: [aG, "waiting" === (null === fG || void 0 === fG ? void 0 : fG.kind) && ` \xb7 ${SG("dailyDrop:nextInInline",{count:fG.hours})}`]
             })]
-          }), "remind" === Nu && (0, bu.jsxs)("div", {
+          }), "remind" === QG && (0, pG.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, bu.jsx)("div", {
+            children: [(0, pG.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: Uu("dailyDrop:remindTitle")
-            }), (0, bu.jsx)("div", {
+              children: SG("dailyDrop:remindTitle")
+            }), (0, pG.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: Uu("dailyDrop:remindSubtitle")
-            }), (0, bu.jsxs)("div", {
+              children: SG("dailyDrop:remindSubtitle")
+            }), (0, pG.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, bu.jsx)(fu.f, {
+              children: [(0, pG.jsx)(YG.d, {
                 className: "DailyDropRevealButton",
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  ku(!1)
+                  FG(!1)
                 },
-                children: Uu("dailyDrop:remindNo")
-              }), (0, bu.jsx)(fu.f, {
+                children: SG("dailyDrop:remindNo")
+              }), (0, pG.jsx)(YG.d, {
                 className: "DailyDropRevealButton",
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  ku(!0)
+                  FG(!0)
                 },
-                children: Uu("dailyDrop:remindYes")
+                children: SG("dailyDrop:remindYes")
               })]
             })]
           })]
@@ -7404,669 +7404,669 @@ export const modules = {
       })
     }
 
-    function Dl(uu, Eu) {
+    function dk(GG, bG) {
       const {
-        t: ju
-      } = (0, Xu.A)(), Uu = function(uu, Eu) {
+        t: ZG
+      } = (0, yG.w)(), SG = function(GG, bG) {
         const {
-          state: ju,
-          view: Uu
-        } = (0, nE.x)(), [Zu, Xu] = (0, su.useState)(!1), [lu, qu] = (0, su.useState)(!1), [fu, Cu] = (0, su.useState)(null), bu = (0, su.useRef)(null), cu = (0, su.useRef)(!1), Nu = Eu && "ready" === (null === Uu || void 0 === Uu ? void 0 : Uu.kind);
-        (0, su.useEffect)((() => {
-          uu ? Nu && !cu.current && (cu.current = !0, (0, nE.s)("daily_drop.shown", "tile")) : cu.current = !1
-        }), [uu, Nu]), (0, su.useEffect)((() => {
-          uu || (Du(), qu(!1))
-        }), [uu]);
-        const Ou = uu && null === fu && !(0, nE.q)(Uu);
-        (0, su.useEffect)((() => {
-          Ou && Ju.d.set({
-            openEverythingMenuName: DE.o.CUSTOMISATION
+          state: ZG,
+          view: SG
+        } = (0, Nb.w)(), [LG, yG] = (0, wG.useState)(!1), [kG, UG] = (0, wG.useState)(!1), [YG, VG] = (0, wG.useState)(null), pG = (0, wG.useRef)(null), fG = (0, wG.useRef)(!1), QG = bG && "ready" === (null === SG || void 0 === SG ? void 0 : SG.kind);
+        (0, wG.useEffect)((() => {
+          GG ? QG && !fG.current && (fG.current = !0, (0, Nb.t)("daily_drop.shown", "tile")) : fG.current = !1
+        }), [GG, QG]), (0, wG.useEffect)((() => {
+          GG || (JG(), UG(!1))
+        }), [GG]);
+        const KG = GG && null === YG && !(0, Nb.q)(SG);
+        (0, wG.useEffect)((() => {
+          KG && iG.e.set({
+            openEverythingMenuName: Jb.u.CUSTOMISATION
           })
-        }), [Ou]);
-        const Yu = (0, su.useRef)(!1),
-          hu = (0, su.useRef)(uu);
+        }), [KG]);
+        const hG = (0, wG.useRef)(!1),
+          dG = (0, wG.useRef)(GG);
 
-        function Du() {
-          null !== bu.current && (bu.current = null, Cu(null))
+        function JG() {
+          null !== pG.current && (pG.current = null, VG(null))
         }
-        return hu.current = uu, {
-          state: ju,
-          view: Uu,
-          claiming: Zu,
-          claimFailed: lu,
-          reveal: fu,
+        return dG.current = GG, {
+          state: ZG,
+          view: SG,
+          claiming: LG,
+          claimFailed: kG,
+          reveal: YG,
           open: async function() {
-            if (!Yu.current) {
-              Yu.current = !0, Xu(!0), qu(!1);
+            if (!hG.current) {
+              hG.current = !0, yG(!0), UG(!1);
               try {
                 const {
-                  state: uu,
-                  drop: Eu
-                } = await (0, nE.e)();
-                if (null === uu || null === Eu) return;
-                if (!hu.current) return;
-                (0, nE.s)("daily_drop.open", Eu), bu.current = {
-                  state: uu,
-                  drop: Eu
-                }, Cu(bu.current)
-              } catch (uu) {
-                console.error("Failed to claim the Lucky Skin Block", uu), hu.current && qu(!0)
+                  state: GG,
+                  drop: bG
+                } = await (0, Nb.d)();
+                if (null === GG || null === bG) return;
+                if (!dG.current) return;
+                (0, Nb.t)("daily_drop.open", bG), pG.current = {
+                  state: GG,
+                  drop: bG
+                }, VG(pG.current)
+              } catch (GG) {
+                console.error("Failed to claim the Lucky Skin Block", GG), dG.current && UG(!0)
               } finally {
-                Yu.current = !1, Xu(!1)
+                hG.current = !1, yG(!1)
               }
             }
           },
-          closeReveal: Du
+          closeReveal: JG
         }
-      }(uu, Eu);
+      }(GG, bG);
       return {
-        shown: (0, nE.q)(Uu.view) || null !== Uu.reveal,
-        tile: Uu.state && Uu.view && (0, bu.jsx)(Zl, {
-          state: Uu.state,
-          view: Uu.view,
-          claiming: Uu.claiming,
-          onOpen: Uu.open
+        shown: (0, Nb.q)(SG.view) || null !== SG.reveal,
+        tile: SG.state && SG.view && (0, pG.jsx)(Sk, {
+          state: SG.state,
+          view: SG.view,
+          claiming: SG.claiming,
+          onOpen: SG.open
         }),
-        claimFailed: Uu.claimFailed && (0, bu.jsx)("div", {
+        claimFailed: SG.claimFailed && (0, pG.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: ju("dailyDrop:claimFailed")
+          children: ZG("dailyDrop:claimFailed")
         }),
-        reveal: Uu.reveal && (0, bu.jsx)(hl, {
-          drop: Uu.reveal.drop,
-          onClose: Uu.closeReveal
+        reveal: SG.reveal && (0, pG.jsx)(hk, {
+          drop: SG.reveal.drop,
+          onClose: SG.closeReveal
         })
       }
     }
 
-    function gl(uu) {
+    function Jk(GG) {
       let {
-        show: Eu
-      } = uu;
-      const ju = Dl(Eu, Eu);
-      return Eu && ju.shown ? (0, bu.jsxs)("div", {
+        show: bG
+      } = GG;
+      const ZG = dk(bG, bG);
+      return bG && ZG.shown ? (0, pG.jsxs)("div", {
         className: "Store StoreDailyDropOnly",
-        children: [ju.claimFailed, ju.tile && (0, bu.jsx)("div", {
+        children: [ZG.claimFailed, ZG.tile && (0, pG.jsx)("div", {
           className: "StoreDailyDropOnlyTile",
-          children: ju.tile
-        }), ju.reveal]
+          children: ZG.tile
+        }), ZG.reveal]
       }) : null
     }
-    const Ml = {
+    const rk = {
       kind: "board"
     };
-    let el = !1;
+    let zk = !1;
 
-    function Gl(uu) {
-      return "found" === uu.status || "error" === uu.status && "store:giftRecipientLookupFailed" === uu.error ? uu.name : null
-    }(0, Su.s)(KZ.prefetchBillingOfferings);
-    const pl = (0, su.memo)((function(uu) {
-      var Eu;
+    function Ek(GG) {
+      return "found" === GG.status || "error" === GG.status && "store:giftRecipientLookupFailed" === GG.error ? GG.name : null
+    }(0, sG.s)(aL.prefetchBillingOfferings);
+    const Xk = (0, wG.memo)((function(GG) {
+      var bG;
       let {
-        show: Uu
-      } = uu;
+        show: SG
+      } = GG;
       const {
-        t: lu
-      } = (0, Xu.A)(), {
-        userContext: qu
-      } = (0, Ou.c)(), fu = (0, Iu.usePurchasesAllowed)(), Cu = qu !== ou.NULL_USER_CONTEXT, cu = xZ(qu), [Nu, Yu] = (0, hu.d)(), {
-        page: Du,
-        urlMode: gu,
-        goTo: Mu
-      } = (0, TZ.g)(), eu = function(uu) {
-        return "superRank" === uu.kind ? "superRank" : "pack" === uu.kind ? uu.pack : null
-      }(Du), {
-        openEverythingMenuName: Gu,
-        gameState: pu
-      } = (0, Ju.l)(["openEverythingMenuName", "gameState"]), wu = null !== Gu;
-      ! function(uu, Eu) {
-        const [Uu] = (0, su.useState)(nZ.h), [Zu, Xu] = (0, su.useState)(!1);
-        Uu && Eu && !Zu && Xu(!0);
-        const lu = (0, ds.t)(),
-          qu = Uu && Zu && uu && !lu;
-        (0, su.useEffect)((() => {
-          if (!qu) return;
-          let uu = null,
-            Eu = null,
-            su = null;
-          const Uu = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, Au.getBillingClient)().purchaseUnderWay,
-            Zu = () => {
-              var ju;
-              null === (ju = su) || void 0 === ju || ju(), su = null, null !== uu && (clearTimeout(uu), uu = null), null !== Eu && (clearTimeout(Eu), Eu = null)
+        t: kG
+      } = (0, yG.w)(), {
+        userContext: UG
+      } = (0, KG.e)(), YG = (0, qG.usePurchasesAllowed)(), VG = UG !== IG.NULL_USER_CONTEXT, fG = RL(UG), [QG, hG] = (0, dG.b)(), {
+        page: JG,
+        urlMode: rG,
+        goTo: zG
+      } = (0, TL.g)(), EG = function(GG) {
+        return "superRank" === GG.kind ? "superRank" : "pack" === GG.kind ? GG.pack : null
+      }(JG), {
+        openEverythingMenuName: oG,
+        gameState: XG
+      } = (0, iG.o)(["openEverythingMenuName", "gameState"]), uG = null !== oG;
+      ! function(GG, bG) {
+        const [SG] = (0, wG.useState)(DL.j), [LG, yG] = (0, wG.useState)(!1);
+        SG && bG && !LG && yG(!0);
+        const kG = (0, uw.w)(),
+          UG = SG && LG && GG && !kG;
+        (0, wG.useEffect)((() => {
+          if (!UG) return;
+          let GG = null,
+            bG = null,
+            wG = null;
+          const SG = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, DG.getBillingClient)().purchaseUnderWay,
+            LG = () => {
+              var ZG;
+              null === (ZG = wG) || void 0 === ZG || ZG(), wG = null, null !== GG && (clearTimeout(GG), GG = null), null !== bG && (clearTimeout(bG), bG = null)
             },
-            Xu = () => {
-              (0, HZ.n)(!1), (0, HZ.l)(!1), Zu(), uu = setTimeout((() => {
-                uu = null, su = (0, AZ.b)((() => {
-                  su = null, Uu() ? Xu() : ((0, HZ.n)(!0), Eu = setTimeout((() => {
-                    Eu = null, su = (0, AZ.b)((() => {
-                      su = null, Uu() ? Xu() : (0, HZ.l)(!0)
+            yG = () => {
+              (0, HL.r)(!1), (0, HL.o)(!1), LG(), GG = setTimeout((() => {
+                GG = null, wG = (0, tL.b)((() => {
+                  wG = null, SG() ? yG() : ((0, HL.r)(!0), bG = setTimeout((() => {
+                    bG = null, wG = (0, tL.b)((() => {
+                      wG = null, SG() ? yG() : (0, HL.o)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => ju(4842))).then((uu => {
-                    uu.startBackgroundGameSetup()
-                  }), (uu => {
-                    console.warn("Background game setup: its chunk failed to load", uu)
+                  }), 3e3), Promise.resolve().then((() => ZG(4678))).then((GG => {
+                    GG.startBackgroundGameSetup()
+                  }), (GG => {
+                    console.warn("Background game setup: its chunk failed to load", GG)
                   })))
                 }))
               }), 2e3)
             };
-          for (const ju of yZ) window.addEventListener(ju, Xu, {
+          for (const ZG of NL) window.addEventListener(ZG, yG, {
             capture: !0,
             passive: !0
           });
-          return Xu(), () => {
-            for (const uu of yZ) window.removeEventListener(uu, Xu, {
+          return yG(), () => {
+            for (const GG of NL) window.removeEventListener(GG, yG, {
               capture: !0
             });
-            Zu(), (0, HZ.n)(!1), (0, HZ.l)(!1)
+            LG(), (0, HL.r)(!1), (0, HL.o)(!1)
           }
-        }), [qu])
-      }(Uu && wu, "pack" === Du.kind);
-      const du = "landingPage" === pu;
-      (0, su.useEffect)((() => {
-        wu && (0, KZ.prefetchBillingOfferings)()
-      }), [wu]), (0, su.useEffect)((() => {
-        wu && !Uu && du && (0, zZ.w)()
-      }), [wu, Uu, du]);
-      const [au, Pu] = (0, su.useState)(0), [ku, mu] = (0, su.useState)(null), [vu, Ku] = (0, su.useState)(null), [Vu, Qu] = (0, su.useState)(null), [iu, Wu] = (0, su.useState)(null), Fu = (0, su.useRef)(null), Bu = (0, su.useRef)(null), Lu = (0, su.useRef)(null), tu = (0, su.useRef)(!1), xu = (0, Su.z)(), Tu = (0, su.useRef)(0), Hu = (0, su.useRef)(!1);
+        }), [UG])
+      }(SG && uG, "pack" === JG.kind);
+      const CG = "landingPage" === XG;
+      (0, wG.useEffect)((() => {
+        uG && (0, aL.prefetchBillingOfferings)()
+      }), [uG]), (0, wG.useEffect)((() => {
+        uG && !SG && CG && (0, OL.r)()
+      }), [uG, SG, CG]);
+      const [WG, mG] = (0, wG.useState)(0), [FG, vG] = (0, wG.useState)(null), [aG, cG] = (0, wG.useState)(null), [lG, PG] = (0, wG.useState)(null), [MG, AG] = (0, wG.useState)(null), nG = (0, wG.useRef)(null), gG = (0, wG.useRef)(null), eG = (0, wG.useRef)(null), RG = (0, wG.useRef)(!1), TG = (0, sG.C)(), HG = (0, wG.useRef)(0), tG = (0, wG.useRef)(!1);
 
-      function nu() {
-        Pu((uu => uu + 1))
-      }(0, su.useEffect)((() => {
-        if (Uu) {
-          if (el = !0, (0, Su.i)(), xu && xu.seq !== Tu.current) {
-            var uu;
-            Tu.current = xu.seq, "loginResume" !== xu.source && (0, Su.x)();
-            const Eu = (0, Su.d)(xu);
-            gu || Mu(Eu), Wu(null !== (uu = xu.highlight) && void 0 !== uu ? uu : null), Ku(null), "gift" === xu.mode && xu.giftRecipientName ? cu.choose(xu.giftRecipientName, "prefilled") : "current" !== xu.mode && cu.clear(), "gift" !== xu.mode || xu.giftRecipientName || nu(), (0, EE.reportAnalyticsClick)({
+      function NG() {
+        mG((GG => GG + 1))
+      }(0, wG.useEffect)((() => {
+        if (SG) {
+          if (zk = !0, (0, sG.k)(), TG && TG.seq !== HG.current) {
+            var GG;
+            HG.current = TG.seq, "loginResume" !== TG.source && (0, sG.y)();
+            const bG = (0, sG.e)(TG);
+            rG || zG(bG), AG(null !== (GG = TG.highlight) && void 0 !== GG ? GG : null), cG(null), "gift" === TG.mode && TG.giftRecipientName ? fG.choose(TG.giftRecipientName, "prefilled") : "current" !== TG.mode && fG.clear(), "gift" !== TG.mode || TG.giftRecipientName || NG(), (0, bb.reportAnalyticsClick)({
               id: "store.open",
-              value: xu.source
+              value: TG.source
             })
-          } else Hu.current || (0, EE.reportAnalyticsClick)({
+          } else tG.current || (0, bb.reportAnalyticsClick)({
             id: "store.open",
             value: "menuTab"
           });
-          Hu.current = !0
-        } else Hu.current = !1
-      }), [Uu, xu]), (0, su.useEffect)((() => {
-        if (!iu) return;
-        const uu = setTimeout((() => {
-          Wu(null)
+          tG.current = !0
+        } else tG.current = !1
+      }), [SG, TG]), (0, wG.useEffect)((() => {
+        if (!MG) return;
+        const GG = setTimeout((() => {
+          AG(null)
         }), 4e3);
         return () => {
-          clearTimeout(uu)
+          clearTimeout(GG)
         }
-      }), [iu]), (0, su.useLayoutEffect)((() => {
-        const uu = Fu.current;
-        if (!Uu || !uu) return Bu.current = null, void(Lu.current = null);
-        var Eu;
-        if (eu) Bu.current = eu, null === (Eu = uu.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === Eu || Eu.focus();
-        else if (Bu.current) {
-          const Eu = Lu.current;
-          null !== Eu && (uu.scrollTop = Eu);
-          const ju = uu.querySelector(`[data-store-item="${Bu.current}"]`);
-          if (ju) {
-            const su = ju.getBoundingClientRect(),
-              Uu = uu.getBoundingClientRect();
-            ju.focus({
-              preventScroll: null !== Eu && su.bottom > Uu.top && su.top < Uu.bottom
+      }), [MG]), (0, wG.useLayoutEffect)((() => {
+        const GG = nG.current;
+        if (!SG || !GG) return gG.current = null, void(eG.current = null);
+        var bG;
+        if (EG) gG.current = EG, null === (bG = GG.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === bG || bG.focus();
+        else if (gG.current) {
+          const bG = eG.current;
+          null !== bG && (GG.scrollTop = bG);
+          const ZG = GG.querySelector(`[data-store-item="${gG.current}"]`);
+          if (ZG) {
+            const wG = ZG.getBoundingClientRect(),
+              SG = GG.getBoundingClientRect();
+            ZG.focus({
+              preventScroll: null !== bG && wG.bottom > SG.top && wG.top < SG.bottom
             })
           }
-          Bu.current = null
+          gG.current = null
         }
-      }), [eu, Uu]), (0, su.useEffect)((() => {
-        Ku(null)
-      }), [cu.query]), (0, su.useEffect)((() => {
-        if (!Vu) return;
-        const uu = setTimeout((() => {
-          Qu(null)
+      }), [EG, SG]), (0, wG.useEffect)((() => {
+        cG(null)
+      }), [fG.query]), (0, wG.useEffect)((() => {
+        if (!lG) return;
+        const GG = setTimeout((() => {
+          PG(null)
         }), 8e3);
         return () => {
-          clearTimeout(uu)
+          clearTimeout(GG)
         }
-      }), [Vu]);
-      const yu = qu.superRankInfo,
-        zu = qu.isLoggedIn() || (0, Iu.guestsMayBuy)(),
-        Ru = qu.getOwnedCosmeticPacks(),
-        uE = (0, FZ.n)(cu.query),
-        jE = (0, FZ.g)({
-          mode: uE,
-          loggedIn: Cu ? zu : null,
-          superRankInfo: yu,
+      }), [lG]);
+      const OG = UG.superRankInfo,
+        xG = UG.isLoggedIn() || (0, qG.guestsMayBuy)(),
+        BG = UG.getOwnedCosmeticPacks(),
+        Gb = (0, qL.o)(fG.query),
+        Zb = (0, qL.f)({
+          mode: Gb,
+          loggedIn: VG ? xG : null,
+          superRankInfo: OG,
           now: Date.now(),
-          ownedPacks: Ru,
-          packs: vZ.x,
-          recipient: cu.recipient
+          ownedPacks: BG,
+          packs: vL.q,
+          recipient: fG.recipient
         });
-      (0, su.useEffect)((() => {
-        if (!zu || !Uu) return;
-        const uu = (0, Su.x)(),
-          Eu = uu && (0, FZ.l)(uu, vZ.x);
-        uu && Eu && ((0, EE.reportAnalyticsClick)({
+      (0, wG.useEffect)((() => {
+        if (!xG || !SG) return;
+        const GG = (0, sG.y)(),
+          bG = GG && (0, qL.k)(GG, vL.q);
+        GG && bG && ((0, bb.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: uu.item
-        }), (0, Su.m)(Eu))
-      }), [zu, Uu]);
-      const sE = (0, FZ.p)({
-        superRankDaysLeft: jE.superRankDaysLeft,
-        openedThisSession: el || Uu,
-        seenNewItems: (0, Su.h)()
+          value: GG.item
+        }), (0, sG.n)(bG))
+      }), [xG, SG]);
+      const wb = (0, qL.r)({
+        superRankDaysLeft: Zb.superRankDaysLeft,
+        openedThisSession: zk || SG,
+        seenNewItems: (0, sG.j)()
       });
-      (0, su.useEffect)((() => {
-        (0, Su.t)(sE)
-      }), [sE]);
-      const UE = "self" === uE,
-        ZE = Dl(Uu, Uu && UE && "board" === Du.kind);
-      if (!Uu || !fu) return null;
-      const XE = Yu > Nu && Nu <= 700,
-        lE = !XE && Yu <= 420,
-        qE = "gift" === uE ? Gl(cu.recipient) : null,
-        fE = null !== ku;
+      (0, wG.useEffect)((() => {
+        (0, sG.v)(wb)
+      }), [wb]);
+      const Sb = "self" === Gb,
+        Lb = dk(SG, SG && Sb && "board" === JG.kind);
+      if (!SG || !YG) return null;
+      const yb = hG > QG && QG <= 700,
+        kb = !yb && hG <= 420,
+        Ub = "gift" === Gb ? Ek(fG.recipient) : null,
+        Yb = null !== FG;
 
-      function CE(uu) {
-        (0, rZ.e)(uu, "gift" === uE ? cu.query.trim() : null)
+      function Vb(GG) {
+        (0, lL.b)(GG, "gift" === Gb ? fG.query.trim() : null)
       }
 
-      function bE(uu, Eu) {
-        (0, EE.reportAnalyticsClick)({
+      function pb(GG, bG) {
+        (0, bb.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${Eu?"gift":"self"}:${uu}`
-        }), Eu && (cu.recordGift(Eu.name, uu), cE(Eu))
+          value: `${bG?"gift":"self"}:${GG}`
+        }), bG && (fG.recordGift(bG.name, GG), fb(bG))
       }
 
-      function cE(uu) {
-        ! function(uu) {
+      function fb(GG) {
+        ! function(GG) {
           try {
-            Cj.k.setItem(BZ, (0, FZ.w)(tZ(), uu))
+            VZ.h.setItem(nL, (0, qL.A)(eL(), GG))
           } catch {}
         }({
-          name: uu.name,
-          cosmetics: uu.cosmetics
-        }), Mu(Ml), Qu((Eu => {
-          var ju;
+          name: GG.name,
+          cosmetics: GG.cosmetics
+        }), zG(rk), PG((bG => {
+          var ZG;
           return {
-            name: uu.name,
-            seq: (null !== (ju = null === Eu || void 0 === Eu ? void 0 : Eu.seq) && void 0 !== ju ? ju : 0) + 1
+            name: GG.name,
+            seq: (null !== (ZG = null === bG || void 0 === bG ? void 0 : bG.seq) && void 0 !== ZG ? ZG : 0) + 1
           }
         }))
       }
-      async function NE(uu) {
-        var Eu, ju;
-        if (tu.current) return;
-        if (!zu) return void CE(uu);
-        Ku(null), Wu(null);
-        const su = "gift" === uE ? {
-          name: Gl(cu.recipient),
-          cosmetics: cu.recipientCosmetics
+      async function Qb(GG) {
+        var bG, ZG;
+        if (RG.current) return;
+        if (!xG) return void Vb(GG);
+        cG(null), AG(null);
+        const wG = "gift" === Gb ? {
+          name: Ek(fG.recipient),
+          cosmetics: fG.recipientCosmetics
         } : null;
-        if (su && !su.name) return void nu();
-        const Uu = "superRank" === uu ? ru.g.id : (0, ru.b)(uu);
-        tu.current = !0;
-        const Zu = await (0, IZ.c)(Uu, null !== (Eu = null === su || void 0 === su ? void 0 : su.name) && void 0 !== Eu ? Eu : null);
-        if (tu.current = !1, !Zu) return;
-        mu(uu);
-        const Xu = await QZ.b.purchase(Uu, null !== (ju = null === su || void 0 === su ? void 0 : su.name) && void 0 !== ju ? ju : null);
-        mu(null), Xu ? Ku(Xu) : (bE(uu, su), su || (await (0, iZ.flushClientAnalyticsEvents)(), (0, VZ.refreshWithoutConfirmation)("superRank" === uu ? "/super-rank-welcome" : `/pack-welcome/${uu}`)))
+        if (wG && !wG.name) return void NG();
+        const SG = "superRank" === GG ? jG.j.id : (0, jG.b)(GG);
+        RG.current = !0;
+        const LG = await (0, sL.e)(SG, null !== (bG = null === wG || void 0 === wG ? void 0 : wG.name) && void 0 !== bG ? bG : null);
+        if (RG.current = !1, !LG) return;
+        vG(GG);
+        const yG = await jL.e.purchase(SG, null !== (ZG = null === wG || void 0 === wG ? void 0 : wG.name) && void 0 !== ZG ? ZG : null);
+        vG(null), yG ? cG(yG) : (pb(GG, wG), wG || (await (0, PL.flushClientAnalyticsEvents)(), (0, cL.refreshWithoutConfirmation)("superRank" === GG ? "/super-rank-welcome" : `/pack-welcome/${GG}`)))
       }
-      const OE = Zu()("Store", {
-        StoreGift: "gift" === uE,
-        StorePortrait: XE,
-        StoreCompact: lE
+      const Kb = LG()("Store", {
+        StoreGift: "gift" === Gb,
+        StorePortrait: yb,
+        StoreCompact: kb
       });
-      if ("pack" === Du.kind) {
-        const uu = Du.pack,
-          Eu = jE.packs.find((Eu => Eu.pack === uu));
-        return (0, bu.jsx)("div", {
-          ref: Fu,
+      if ("pack" === JG.kind) {
+        const GG = JG.pack,
+          bG = Zb.packs.find((bG => bG.pack === GG));
+        return (0, pG.jsx)("div", {
+          ref: nG,
           className: "CosmeticShopContainer",
-          children: (0, bu.jsx)(SZ.e, {
-            pack: uu,
+          children: (0, pG.jsx)(AL.e, {
+            pack: GG,
             onBack: () => {
-              Mu(Ml)
+              zG(rk)
             },
-            onPurchased: Eu => {
-              bE(uu, Eu ? {
-                name: Eu,
+            onPurchased: bG => {
+              pb(GG, bG ? {
+                name: bG,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === uE && qE && Eu && (0, bu.jsxs)(bu.Fragment, {
-              children: [(0, bu.jsx)(wX, {
-                state: Eu.state,
-                item: uu,
-                price: (YE = uu, "superRank" === YE ? ru.g.price : (0, ru.d)(YE)),
-                busy: fE,
+            giftCta: "gift" === Gb && Ub && bG && (0, pG.jsxs)(pG.Fragment, {
+              children: [(0, pG.jsx)(Xy, {
+                state: bG.state,
+                item: GG,
+                price: (hb = GG, "superRank" === hb ? jG.j.price : (0, jG.e)(hb)),
+                busy: Yb,
                 onAct: () => {
-                  NE(uu)
+                  Qb(GG)
                 },
                 onNeedRecipient: () => {
-                  Mu(Ml), nu()
+                  zG(rk), NG()
                 },
                 onLogin: () => {
-                  CE(uu)
+                  Vb(GG)
                 },
-                highlight: iu === uu
-              }), vu && (0, bu.jsx)("span", {
+                highlight: MG === GG
+              }), aG && (0, pG.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: lu(vu)
+                children: kG(aG)
               })]
             }),
-            ownedPacks: Ru,
-            startAsGift: "gift" === uE,
-            initialGiftRecipient: "gift" === uE ? null !== qE && void 0 !== qE ? qE : cu.query.trim() : "",
-            highlightCta: iu === uu
-          }, uu)
+            ownedPacks: BG,
+            startAsGift: "gift" === Gb,
+            initialGiftRecipient: "gift" === Gb ? null !== Ub && void 0 !== Ub ? Ub : fG.query.trim() : "",
+            highlightCta: MG === GG
+          }, GG)
         })
       }
-      var YE;
-      return "superRank" === Du.kind ? (0, bu.jsx)("div", {
-        ref: Fu,
-        className: Zu()(OE, "StoreDetailView"),
-        children: (0, bu.jsx)(HX, {
-          state: jE.superRank.state,
-          mode: uE,
-          giftName: qE,
-          busy: fE,
-          highlight: "superRank" === iu,
-          purchaseError: vu,
+      var hb;
+      return "superRank" === JG.kind ? (0, pG.jsx)("div", {
+        ref: nG,
+        className: LG()(Kb, "StoreDetailView"),
+        children: (0, pG.jsx)(Hy, {
+          state: Zb.superRank.state,
+          mode: Gb,
+          giftName: Ub,
+          busy: Yb,
+          highlight: "superRank" === MG,
+          purchaseError: aG,
           onBack: () => {
-            Mu(Ml)
+            zG(rk)
           },
           onChooseRecipient: () => {
-            Mu(Ml), nu()
+            zG(rk), NG()
           },
           onAct: () => {
-            NE("superRank")
+            Qb("superRank")
           },
           onLogin: () => {
-            CE("superRank")
+            Vb("superRank")
           }
         })
-      }) : (0, bu.jsxs)("div", {
-        ref: Fu,
-        className: OE,
-        onScroll: uu => {
-          Lu.current = uu.currentTarget.scrollTop
+      }) : (0, pG.jsxs)("div", {
+        ref: nG,
+        className: Kb,
+        onScroll: GG => {
+          eG.current = GG.currentTarget.scrollTop
         },
-        children: [(0, bu.jsx)("div", {
+        children: [(0, pG.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, bu.jsx)(ZX, {
-            selfName: Cu ? qu.getPlayerName() : "",
-            giftRecipient: cu,
-            suggestionsVersion: null !== (Eu = null === Vu || void 0 === Vu ? void 0 : Vu.seq) && void 0 !== Eu ? Eu : 0,
-            pulseSignal: au,
-            disabled: fE || !Cu
+          children: (0, pG.jsx)(Sy, {
+            selfName: VG ? UG.getPlayerName() : "",
+            giftRecipient: fG,
+            suggestionsVersion: null !== (bG = null === lG || void 0 === lG ? void 0 : lG.seq) && void 0 !== bG ? bG : 0,
+            pulseSignal: WG,
+            disabled: Yb || !VG
           })
-        }), Vu && (0, bu.jsxs)("div", {
+        }), lG && (0, pG.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            Qu(null)
+            PG(null)
           },
-          children: [(0, bu.jsx)(WZ.c, {
-            showSignal: Vu.seq
-          }), FZ.d, " ", lu("store:giftSent", {
-            name: Vu.name
+          children: [(0, pG.jsx)(ML.d, {
+            showSignal: lG.seq
+          }), qL.b, " ", kG("store:giftSent", {
+            name: lG.name
           })]
-        }, Vu.seq), !Vu && vu && (0, bu.jsx)("div", {
+        }, lG.seq), !lG && aG && (0, pG.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: lu(vu)
-        }), UE && ZE.claimFailed, (0, bu.jsx)(TX, {
-          layout: jE,
-          mountAtOnce: null !== Bu.current,
-          bundleGift: "gift" === uE ? {
-            recipientName: qE,
-            lookingUp: "pending" === cu.recipient.status,
-            busy: fE,
-            onNeedRecipient: nu,
-            onSent: uu => {
-              (0, EE.reportAnalyticsClick)({
+          children: kG(aG)
+        }), Sb && Lb.claimFailed, (0, pG.jsx)(Ty, {
+          layout: Zb,
+          mountAtOnce: null !== gG.current,
+          bundleGift: "gift" === Gb ? {
+            recipientName: Ub,
+            lookingUp: "pending" === fG.recipient.status,
+            busy: Yb,
+            onNeedRecipient: NG,
+            onSent: GG => {
+              (0, bb.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), cE({
-                name: uu,
-                cosmetics: cu.recipientCosmetics
+              }), fb({
+                name: GG,
+                cosmetics: fG.recipientCosmetics
               })
             }
           } : null,
-          superRankTotalDays: (0, FZ.s)(yu),
-          busy: fE,
-          highlightItem: iu,
-          onOpen: function(uu) {
-            (0, EE.reportAnalyticsClick)({
+          superRankTotalDays: (0, qL.t)(OG),
+          busy: Yb,
+          highlightItem: MG,
+          onOpen: function(GG) {
+            (0, bb.reportAnalyticsClick)({
               id: "store.item_open",
-              value: uu
-            }), Mu((0, Su.g)(uu))
+              value: GG
+            }), zG((0, sG.f)(GG))
           },
-          onAct: NE,
-          onNeedRecipient: nu,
-          onLogin: CE,
-          dailyDropTile: UE && ZE.tile
-        }), "gift" !== uE && (0, bu.jsx)(jl, {}), ZE.reveal]
+          onAct: Qb,
+          onNeedRecipient: NG,
+          onLogin: Vb,
+          dailyDropTile: Sb && Lb.tile
+        }), "gift" !== Gb && (0, pG.jsx)(bk, {}), Lb.reveal]
       })
     }));
-    var wl = ju(2811),
-      Jl = ju(9043),
-      dl = ju(8889),
-      al = ju(2871),
-      Pl = ju(2709),
-      ol = ju(2760),
-      kl = ju(2774),
-      ml = ju(2777),
-      vl = ju(2861),
-      Kl = ju(2848),
-      Vl = ju(2468),
-      rl = ju(2504),
-      Ql = ju(2488),
-      il = ju(2091),
-      Wl = ju(2786),
-      Sl = ju(2512);
+    var uk = ZG(2659),
+      ik = ZG(8878),
+      Ck = ZG(8715),
+      Wk = ZG(2724),
+      mk = ZG(2557),
+      Ik = ZG(2619),
+      Fk = ZG(2630),
+      vk = ZG(2632),
+      ak = ZG(2719),
+      ck = ZG(2693),
+      lk = ZG(2342),
+      jk = ZG(2369),
+      Pk = ZG(2362),
+      Mk = ZG(2013),
+      Ak = ZG(2639),
+      sk = ZG(2375);
 
-    function Il(uu) {
+    function qk(GG) {
       let {
-        show: Eu
-      } = uu;
-      return Eu ? (0, bu.jsx)(Fl, {}) : null
+        show: bG
+      } = GG;
+      return bG ? (0, pG.jsx)(nk, {}) : null
     }
 
-    function Fl() {
+    function nk() {
       const {
-        t: uu
-      } = (0, Xu.A)(), {
-        followsLeader: Eu
-      } = (0, Pl.g)(), {
-        loading: ju,
-        friends: Uu,
-        requests: qu,
-        invites: Cu
-      } = (0, Lu.m)(), {
-        userContext: cu
-      } = (0, Ou.c)(), [Nu, Yu] = (0, su.useState)(Sl.e);
-      (0, su.useEffect)((() => {
-        (0, Sl.b)()
+        t: GG
+      } = (0, yG.w)(), {
+        followsLeader: bG
+      } = (0, mk.i)(), {
+        loading: ZG,
+        friends: SG,
+        requests: UG,
+        invites: VG
+      } = (0, eG.k)(), {
+        userContext: fG
+      } = (0, KG.e)(), [QG, hG] = (0, wG.useState)(sk.l);
+      (0, wG.useEffect)((() => {
+        (0, sk.e)()
       }), []);
-      const hu = qu.map((uu => uu.name)),
+      const dG = UG.map((GG => GG.name)),
         {
-          state: Du,
-          recentRequesters: gu
-        } = (0, Kl.n)(),
-        Mu = new Map([...("loaded" === Du.status ? Du.recentPlayers : []).map((uu => [uu.preview.name, uu])), ...gu.map((uu => [uu.name, uu]))]),
-        eu = (0, su.useRef)(null),
-        [wu, Ju] = (0, su.useState)(""),
-        [du, au] = (0, su.useState)("Enter"),
-        [Pu, ou] = (0, su.useState)(null);
+          state: JG,
+          recentRequesters: rG
+        } = (0, ck.k)(),
+        zG = new Map([...("loaded" === JG.status ? JG.recentPlayers : []).map((GG => [GG.preview.name, GG])), ...rG.map((GG => [GG.name, GG]))]),
+        EG = (0, wG.useRef)(null),
+        [uG, iG] = (0, wG.useState)(""),
+        [CG, WG] = (0, wG.useState)("Enter"),
+        [mG, IG] = (0, wG.useState)(null);
 
-      function ku() {
-        wu && (au("Loading"), (0, Ql.j)(wu, "social_menu").then((uu => {
-          if (eu.current) switch (uu.kind) {
+      function FG() {
+        uG && (WG("Loading"), (0, Pk.j)(uG, "social_menu").then((GG => {
+          if (EG.current) switch (GG.kind) {
             case "sent":
-              au("Success");
+              WG("Success");
               break;
             case "becameFriends":
-              au("BecameFriends");
+              WG("BecameFriends");
               break;
             case "failed":
-              ou(uu.message), au("Error")
+              IG(GG.message), WG("Error")
           }
         })))
       }
-      return (0, su.useEffect)((() => {
-        if ("Enter" === du || "Loading" === du) return;
-        const uu = setTimeout((() => {
-          eu.current.value = "", Ju(""), au("Enter")
-        }), "Success" === du ? 1e3 : 4e3);
+      return (0, wG.useEffect)((() => {
+        if ("Enter" === CG || "Loading" === CG) return;
+        const GG = setTimeout((() => {
+          EG.current.value = "", iG(""), WG("Enter")
+        }), "Success" === CG ? 1e3 : 4e3);
         return () => {
-          clearTimeout(uu)
+          clearTimeout(GG)
         }
-      }), [du]), (0, bu.jsx)("div", {
+      }), [CG]), (0, pG.jsx)("div", {
         className: "SocialMenu",
-        children: (0, bu.jsxs)("div", {
+        children: (0, pG.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, bu.jsxs)("div", {
+          children: [(0, pG.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, bu.jsxs)("div", {
+            children: [(0, pG.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, bu.jsx)(ml.b, {
-                label: uu("socialBar:addFriend")
-              }), (0, bu.jsxs)("div", {
+              children: [(0, pG.jsx)(vk.e, {
+                label: GG("socialBar:addFriend")
+              }), (0, pG.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, bu.jsxs)("div", {
-                  className: Zu()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${du}`]: !0
+                children: [(0, pG.jsxs)("div", {
+                  className: LG()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${CG}`]: !0
                   }),
-                  children: ["Loading" === du && (0, bu.jsx)(pu.b, {}), "Success" === du && (0, bu.jsx)(lu.e, {
+                  children: ["Loading" === CG && (0, pG.jsx)(XG.b, {}), "Success" === CG && (0, pG.jsx)(kG.c, {
                     name: "check"
-                  }), "BecameFriends" === du && (0, bu.jsx)(bu.Fragment, {
-                    children: uu("socialBar:nowFriends", {
-                      playerName: wu
+                  }), "BecameFriends" === CG && (0, pG.jsx)(pG.Fragment, {
+                    children: GG("socialBar:nowFriends", {
+                      playerName: uG
                     })
-                  }), "Error" === du && Pu && (0, bu.jsx)(bu.Fragment, {
-                    children: uu(Pu.translationKey, Pu.params)
+                  }), "Error" === CG && mG && (0, pG.jsx)(pG.Fragment, {
+                    children: GG(mG.translationKey, mG.params)
                   })]
-                }), (0, bu.jsxs)("div", {
+                }), (0, pG.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, bu.jsx)(Gu.d, {
+                  children: [(0, pG.jsx)(oG.b, {
                     className: "PlayerSearchInput",
-                    placeholderText: uu("socialBar:enterPlayerName"),
-                    domRef: eu,
-                    onValueChange: uu => {
-                      Ju((0, Ku.m)(uu)), eu.current.value = (0, Ku.m)(uu)
+                    placeholderText: GG("socialBar:enterPlayerName"),
+                    domRef: EG,
+                    onValueChange: GG => {
+                      iG((0, cG.n)(GG)), EG.current.value = (0, cG.n)(GG)
                     },
                     onEnter: () => {
-                      wu && (0, EE.reportAnalyticsClick)({
+                      uG && (0, bb.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), ku()
+                      }), FG()
                     }
-                  }), (0, bu.jsxs)(fu.f, {
+                  }), (0, pG.jsxs)(YG.d, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      ku()
+                      FG()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, bu.jsx)(lu.e, {
+                    children: [(0, pG.jsx)(kG.c, {
                       name: "user-plus"
-                    }), " ", uu("socialBar:sendRequest")]
+                    }), " ", GG("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, bu.jsx)(Wl.c, {
+              }), (0, pG.jsx)(Ak.d, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), Cu.length > 0 && (0, bu.jsxs)("div", {
+            }), VG.length > 0 && (0, pG.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, bu.jsx)(ml.b, {
-                label: uu("socialBar:invites"),
-                meta: Cu.length
-              }), Cu.map((Eu => (0, bu.jsxs)("div", {
+              children: [(0, pG.jsx)(vk.e, {
+                label: GG("socialBar:invites"),
+                meta: VG.length
+              }), VG.map((bG => (0, pG.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, bu.jsx)("div", {
+                children: [(0, pG.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, bu.jsx)(Vl.b, {
-                    invite: Eu
+                  children: (0, pG.jsx)(lk.c, {
+                    invite: bG
                   })
-                }), (0, bu.jsx)("div", {
+                }), (0, pG.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, bu.jsx)(Vl.f, {
-                    invite: Eu
+                  children: (0, pG.jsx)(lk.d, {
+                    invite: bG
                   })
-                }), (0, bu.jsx)(fu.p, {
+                }), (0, pG.jsx)(YG.k, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, rl.f)(Eu)
+                    (0, jk.i)(bG)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${Eu.destination.kind}`
+                    value: `social_menu:${bG.destination.kind}`
                   },
-                  children: uu("general:join")
-                }), (0, bu.jsx)(zu.e, {
-                  tooltipInner: (0, bu.jsx)(bu.Fragment, {
-                    children: uu("general:decline")
+                  children: GG("general:join")
+                }), (0, pG.jsx)(xG.h, {
+                  tooltipInner: (0, pG.jsx)(pG.Fragment, {
+                    children: GG("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, bu.jsx)(fu.i, {
+                  children: (0, pG.jsx)(YG.h, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === Nu || void 0 === Nu ? void 0 : Nu.kind) && Nu.inviteId === Eu.id,
+                    padDefaultFocus: "invite" === (null === QG || void 0 === QG ? void 0 : QG.kind) && QG.inviteId === bG.id,
                     onClick: () => {
-                      Lu.b.declineInvite(Eu.id)
+                      eG.b.declineInvite(bG.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${Eu.destination.kind}`
+                      value: `social_menu:${bG.destination.kind}`
                     },
-                    children: (0, bu.jsx)(lu.e, {
+                    children: (0, pG.jsx)(kG.c, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, Eu.id)))]
-            }), (0, bu.jsxs)("div", {
-              className: Zu()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !ju && 0 === qu.length
+              }, bG.id)))]
+            }), (0, pG.jsxs)("div", {
+              className: LG()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !ZG && 0 === UG.length
               }),
-              children: [(0, bu.jsx)(ml.b, {
-                label: (0, bu.jsxs)(bu.Fragment, {
-                  children: [(0, bu.jsx)(lu.e, {
-                    name: il.f
-                  }), " ", uu("socialBar:requests")]
+              children: [(0, pG.jsx)(vk.e, {
+                label: (0, pG.jsxs)(pG.Fragment, {
+                  children: [(0, pG.jsx)(kG.c, {
+                    name: Mk.d
+                  }), " ", GG("socialBar:requests")]
                 }),
-                meta: (0, bu.jsxs)(bu.Fragment, {
-                  children: [qu.length, qu.length === Ru.q && (0, bu.jsx)("span", {
+                meta: (0, pG.jsxs)(pG.Fragment, {
+                  children: [UG.length, UG.length === BG.k && (0, pG.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: uu("socialBar:limitReached")
+                    children: GG("socialBar:limitReached")
                   })]
                 })
-              }), ju && (0, bu.jsx)("div", {
+              }), ZG && (0, pG.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, bu.jsx)(pu.b, {})
-              }), !ju && 0 === qu.length && (0, bu.jsx)("div", {
+                children: (0, pG.jsx)(XG.b, {})
+              }), !ZG && 0 === UG.length && (0, pG.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: uu("socialBar:noFriendRequests")
-              }), !ju && qu.length > 0 && (0, bu.jsx)("div", {
+                children: GG("socialBar:noFriendRequests")
+              }), !ZG && UG.length > 0 && (0, pG.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, bu.jsx)(QU.e, {
+                children: (0, pG.jsx)(jS.d, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [qu],
-                  children: qu.map(((Eu, ju) => {
-                    const su = Mu.get(Eu.name);
-                    return (0, bu.jsxs)(kl.g, {
-                      playerSocialPreview: Eu,
-                      zIndex: qu.length - ju,
-                      padDefaultFocus: (0, Sl.d)(Nu, Eu.name, ju),
-                      status: su && (0, bu.jsx)(vl.c, {
-                        gameNameWithVariation: su.gameNameWithVariation,
-                        isPrivateLobby: su.isPrivateLobby
+                  observerUpdateDeps: [UG],
+                  children: UG.map(((bG, ZG) => {
+                    const wG = zG.get(bG.name);
+                    return (0, pG.jsxs)(Fk.h, {
+                      playerSocialPreview: bG,
+                      zIndex: UG.length - ZG,
+                      padDefaultFocus: (0, sk.h)(QG, bG.name, ZG),
+                      status: wG && (0, pG.jsx)(ak.d, {
+                        gameNameWithVariation: wG.gameNameWithVariation,
+                        isPrivateLobby: wG.isPrivateLobby
                       }),
-                      children: [(0, bu.jsx)(zu.e, {
-                        tooltipInner: (0, bu.jsx)(bu.Fragment, {
-                          children: uu("general:accept")
+                      children: [(0, pG.jsx)(xG.h, {
+                        tooltipInner: (0, pG.jsx)(pG.Fragment, {
+                          children: GG("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, bu.jsx)(fu.f, {
+                        children: (0, pG.jsx)(YG.d, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            Yu((0, Sl.c)(hu, ju)), (0, Ql.f)(Eu.name, !0, {
+                            hG((0, sk.g)(dG, ZG)), (0, Pk.f)(bG.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -8075,19 +8075,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, bu.jsx)(lu.e, {
+                          children: (0, pG.jsx)(kG.c, {
                             name: "check"
                           })
                         })
-                      }), (0, bu.jsx)(zu.e, {
-                        tooltipInner: (0, bu.jsx)(bu.Fragment, {
-                          children: uu("general:decline")
+                      }), (0, pG.jsx)(xG.h, {
+                        tooltipInner: (0, pG.jsx)(pG.Fragment, {
+                          children: GG("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, bu.jsx)(fu.i, {
+                        children: (0, pG.jsx)(YG.h, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            Yu((0, Sl.c)(hu, ju)), (0, Ql.f)(Eu.name, !1, {
+                            hG((0, sk.g)(dG, ZG)), (0, Pk.f)(bG.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -8095,62 +8095,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, bu.jsx)(lu.e, {
+                          children: (0, pG.jsx)(kG.c, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${Eu.name}_${Eu.isError}`)
+                    }, `${bG.name}_${bG.isError}`)
                   }))
                 })
               })]
-            }), (0, bu.jsx)(vl.h, {})]
-          }), (0, bu.jsxs)("div", {
+            }), (0, pG.jsx)(ak.j, {})]
+          }), (0, pG.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, bu.jsxs)("div", {
+            children: [(0, pG.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, bu.jsx)(ml.b, {
-                label: uu("socialBar:party")
-              }), (0, bu.jsx)(ol.e, {})]
-            }), (0, bu.jsxs)("div", {
+              children: [(0, pG.jsx)(vk.e, {
+                label: GG("socialBar:party")
+              }), (0, pG.jsx)(Ik.d, {})]
+            }), (0, pG.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, bu.jsx)(ml.b, {
-                label: (0, bu.jsxs)(bu.Fragment, {
-                  children: [(0, bu.jsx)(lu.e, {
-                    name: il.c
-                  }), " ", uu("socialBar:friends")]
+              children: [(0, pG.jsx)(vk.e, {
+                label: (0, pG.jsxs)(pG.Fragment, {
+                  children: [(0, pG.jsx)(kG.c, {
+                    name: Mk.c
+                  }), " ", GG("socialBar:friends")]
                 }),
-                meta: (0, bu.jsxs)(bu.Fragment, {
-                  children: [Uu.length, Uu.length >= (0, Ru.d)(cu.getPlayerRanks()) && (0, bu.jsx)("span", {
+                meta: (0, pG.jsxs)(pG.Fragment, {
+                  children: [SG.length, SG.length >= (0, BG.c)(fG.getPlayerRanks()) && (0, pG.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: uu("socialBar:limitReached")
+                    children: GG("socialBar:limitReached")
                   })]
                 })
-              }), ju && (0, bu.jsx)("div", {
+              }), ZG && (0, pG.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, bu.jsx)(pu.b, {})
-              }), !ju && 0 === Uu.length && (0, bu.jsx)("div", {
+                children: (0, pG.jsx)(XG.b, {})
+              }), !ZG && 0 === SG.length && (0, pG.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: uu("socialBar:noFriends")
-              }), !ju && Uu.length > 0 && (0, bu.jsx)("div", {
+                children: GG("socialBar:noFriends")
+              }), !ZG && SG.length > 0 && (0, pG.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, bu.jsx)(QU.e, {
+                children: (0, pG.jsx)(jS.d, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [Uu],
-                  children: Uu.map(((uu, ju) => (0, bu.jsx)(kl.g, {
-                    playerSocialPreview: uu,
+                  observerUpdateDeps: [SG],
+                  children: SG.map(((GG, ZG) => (0, pG.jsx)(Fk.h, {
+                    playerSocialPreview: GG,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: uu => {
-                      Lu.b.removeFriendFromState(uu)
+                    onFriendRemoved: GG => {
+                      eG.b.removeFriendFromState(GG)
                     },
-                    zIndex: Uu.length - ju,
-                    children: (0, bu.jsx)(kl.e, {
-                      friend: uu,
-                      followsLeader: Eu,
+                    zIndex: SG.length - ZG,
+                    children: (0, pG.jsx)(Fk.d, {
+                      friend: GG,
+                      followsLeader: bG,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${uu.name}_${uu.isError}`)))
+                  }, `${GG.name}_${GG.isError}`)))
                 })
               })]
             })]
@@ -8158,228 +8158,228 @@ export const modules = {
         })
       })
     }
-    var Bl = ju(2664);
-    const Ll = uu => {
+    var gk = ZG(2505);
+    const ek = GG => {
         let {
-          action: Eu,
-          padAction: ju
-        } = uu;
+          action: bG,
+          padAction: ZG
+        } = GG;
         const {
-          isTouchScreen: su
-        } = (0, Ju.l)(["isTouchScreen"]), Uu = (0, ds.t)();
-        return su && !Uu ? null : (0, bu.jsx)(Ds.b, {
+          isTouchScreen: wG
+        } = (0, iG.o)(["isTouchScreen"]), SG = (0, uw.w)();
+        return wG && !SG ? null : (0, pG.jsx)(dw.e, {
           className: "EverythingMenuTabKey",
-          noaAction: Eu,
+          noaAction: bG,
           padHidesKey: !0,
-          padMenuShortcut: ju
+          padMenuShortcut: ZG
         })
       },
-      tl = (0, su.memo)((function() {
+      Rk = (0, wG.memo)((function() {
         const {
-          t: uu
-        } = (0, Xu.A)(), {
-          gameState: Eu,
-          openEverythingMenuName: ju,
-          crosshairGameView: Uu
-        } = (0, Ju.l)(["gameState", "openEverythingMenuName", "crosshairGameView"]), {
-          userContext: lu
-        } = (0, Ou.c)(), qu = (0, Iu.usePurchasesAllowed)(), Cu = (0, Su.D)(), {
-          view: cu
-        } = (0, nE.x)(), Nu = "dot" === Cu || null === Cu && "ready" === (null === cu || void 0 === cu ? void 0 : cu.kind), Yu = (uu, Eu) => (0, bu.jsx)(Ll, {
-          action: uu,
-          padAction: Eu
-        }), [hu, gu] = (0, su.useState)(null), Mu = (0, su.useRef)(null), eu = {
-          ..."inGame" === Eu ? {} : (0, fu.ib)({
+          t: GG
+        } = (0, yG.w)(), {
+          gameState: bG,
+          openEverythingMenuName: ZG,
+          crosshairGameView: SG
+        } = (0, iG.o)(["gameState", "openEverythingMenuName", "crosshairGameView"]), {
+          userContext: kG
+        } = (0, KG.e)(), UG = (0, qG.usePurchasesAllowed)(), VG = (0, sG.E)(), {
+          view: fG
+        } = (0, Nb.w)(), QG = "dot" === VG || null === VG && "ready" === (null === fG || void 0 === fG ? void 0 : fG.kind), hG = (GG, bG) => (0, pG.jsx)(ek, {
+          action: GG,
+          padAction: bG
+        }), [dG, rG] = (0, wG.useState)(null), zG = (0, wG.useRef)(null), EG = {
+          ..."inGame" === bG ? {} : (0, YG.P)({
             focusOnClick: !1
           }),
-          ...is.e
-        }, Gu = uu => {
-          const Eu = (0, Ws.g)((Eu => {
-            (0, fu.fb)(Eu.currentTarget), Ju.d.set({
-              openEverythingMenuName: uu
+          ...Pw.d
+        }, oG = GG => {
+          const bG = (0, Mw.h)((bG => {
+            (0, YG.O)(bG.currentTarget), iG.e.set({
+              openEverythingMenuName: GG
             })
           }), "pointerup");
           return {
-            ...eu,
-            onPointerDown: uu => {
-              eu.onPointerDown(uu), Eu.onPointerDown(uu)
+            ...EG,
+            onPointerDown: GG => {
+              EG.onPointerDown(GG), bG.onPointerDown(GG)
             },
-            onPointerUp: uu => {
-              eu.onPointerUp(uu), Eu.onPointerUp(uu)
+            onPointerUp: GG => {
+              EG.onPointerUp(GG), bG.onPointerUp(GG)
             },
-            onClick: Eu.onClick
+            onClick: bG.onClick
           }
-        }, pu = null !== ju, wu = ju !== DE.o.COSMETIC_SHOP && !Uu;
-        async function du() {
+        }, XG = null !== ZG, uG = ZG !== Jb.u.COSMETIC_SHOP && !SG;
+        async function CG() {
           await async function() {
-            if (!hu) return;
-            await hu(), gu(null)
-          }(), Ju.d.set({
+            if (!dG) return;
+            await dG(), rG(null)
+          }(), iG.e.set({
             openEverythingMenuName: null
           })
         }
-        const au = (0, su.useRef)(null),
-          ou = (0, su.useCallback)((() => null !== au.current && (0, dl.c)(au.current)), []);
+        const WG = (0, wG.useRef)(null),
+          IG = (0, wG.useCallback)((() => null !== WG.current && (0, Ck.f)(WG.current)), []);
 
-        function ku() {
-          ou() || du()
-        }(0, su.useEffect)((() => (0, dZ.v)(ou)), [ou]);
-        const mu = (0, su.useMemo)((() => "inGame" === Eu ? {
-          text: uu("settingsMenu:exitGame"),
+        function FG() {
+          IG() || CG()
+        }(0, wG.useEffect)((() => (0, iL.v)(IG)), [IG]);
+        const vG = (0, wG.useMemo)((() => "inGame" === bG ? {
+          text: GG("settingsMenu:exitGame"),
           onClick: () => {
-            (0, Jl.e)()
+            (0, ik.b)()
           }
-        } : (0, Pu.isDiscordClient)() ? {
-          text: uu("settingsMenu:exitGame"),
+        } : (0, mG.isDiscordClient)() ? {
+          text: GG("settingsMenu:exitGame"),
           onClick: () => {
-            hE.g.discordActivity().then((uu => {
-              uu.exit("User exited the game")
+            db.l.discordActivity().then((GG => {
+              GG.exit("User exited the game")
             }))
           }
-        } : null), [Eu, uu]);
-        const vu = (0, bu.jsx)("div", {
+        } : null), [bG, GG]);
+        const aG = (0, pG.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
-          onClick: ku,
-          children: (0, bu.jsx)(fu.l, {
+          onClick: FG,
+          children: (0, pG.jsx)(YG.j, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, bu.jsx)(Ss.b, {
-          showing: pu,
+        return (0, pG.jsx)(Aw.b, {
+          showing: XG,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: ju === DE.o.SHOP,
-          doGameplayStartStopOnShow: "inGame" === Eu,
-          children: (0, bu.jsx)(Fs.b, {
+          keepsMovement: ZG === Jb.u.SHOP,
+          doGameplayStartStopOnShow: "inGame" === bG,
+          children: (0, pG.jsx)(qw.d, {
             className: "EverythingMenuContainer",
-            show: pu && !Uu,
-            children: (0, bu.jsx)(Is.c, {
-              close: ku,
+            show: XG && !SG,
+            children: (0, pG.jsx)(sw.b, {
+              close: FG,
               togglePointerLock: !1,
-              children: (0, bu.jsxs)("div", {
+              children: (0, pG.jsxs)("div", {
                 className: "EverythingMenu",
-                children: [!(0, dZ.l)(ju) && (0, bu.jsxs)("div", {
+                children: [!(0, iL.m)(ZG) && (0, pG.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, bu.jsxs)("div", {
+                  children: [(0, pG.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [mu && (0, bu.jsx)(fu.d, {
+                    children: [vG && (0, pG.jsx)(YG.b, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        mu.onClick()
+                        vG.onClick()
                       },
-                      children: mu.text
-                    }), pu && qu && (0, bu.jsx)("div", {
-                      ...eu,
+                      children: vG.text
+                    }), XG && UG && (0, pG.jsx)("div", {
+                      ...EG,
                       className: "EverythingMenuWallet",
-                      title: uu("homePage:getPremiumCurrency"),
+                      title: GG("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, Su.m)({
+                        (0, sG.n)({
                           mode: "current",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, bu.jsx)(wl.f, {})
+                      children: (0, pG.jsx)(uk.f, {})
                     })]
-                  }), (0, bu.jsxs)("div", {
+                  }), (0, pG.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
                     "data-pad-tabs": "1",
-                    children: [(0, bu.jsxs)("div", {
-                      ...Gu(DE.o.SETTINGS),
+                    children: [(0, pG.jsxs)("div", {
+                      ...oG(Jb.u.SETTINGS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": ju === DE.o.SETTINGS ? "true" : void 0,
-                      className: Zu()("EverythingMenuTab", {
-                        EverythingMenuTabActive: ju === DE.o.SETTINGS
+                      "data-pad-selected": ZG === Jb.u.SETTINGS ? "true" : void 0,
+                      className: LG()("EverythingMenuTab", {
+                        EverythingMenuTabActive: ZG === Jb.u.SETTINGS
                       }),
-                      children: [uu("general:settings"), Yu("OpenSettings", "pause")]
-                    }), (0, bu.jsxs)("div", {
-                      ...Gu(DE.o.CUSTOMISATION),
+                      children: [GG("general:settings"), hG("OpenSettings", "pause")]
+                    }), (0, pG.jsxs)("div", {
+                      ...oG(Jb.u.CUSTOMISATION),
                       "data-pad-tab": !0,
-                      "data-pad-selected": ju === DE.o.CUSTOMISATION ? "true" : void 0,
-                      className: Zu()("EverythingMenuTab", {
-                        EverythingMenuTabActive: ju === DE.o.CUSTOMISATION
+                      "data-pad-selected": ZG === Jb.u.CUSTOMISATION ? "true" : void 0,
+                      className: LG()("EverythingMenuTab", {
+                        EverythingMenuTabActive: ZG === Jb.u.CUSTOMISATION
                       }),
-                      children: [uu("general:player"), Yu("OpenCharacterCustomization")]
-                    }), Du.featureFlags.useSocialFeatures && (0, bu.jsxs)("div", {
-                      ...Gu(DE.o.SOCIAL),
+                      children: [GG("general:player"), hG("OpenCharacterCustomization")]
+                    }), JG.featureFlags.useSocialFeatures && (0, pG.jsxs)("div", {
+                      ...oG(Jb.u.SOCIAL),
                       "data-pad-tab": !0,
-                      "data-pad-selected": ju === DE.o.SOCIAL ? "true" : void 0,
-                      className: Zu()("EverythingMenuTab", {
-                        EverythingMenuTabActive: ju === DE.o.SOCIAL
+                      "data-pad-selected": ZG === Jb.u.SOCIAL ? "true" : void 0,
+                      className: LG()("EverythingMenuTab", {
+                        EverythingMenuTabActive: ZG === Jb.u.SOCIAL
                       }),
-                      ...(0, EE.getAnalyticsClickAttributes)({
+                      ...(0, bb.getAnalyticsClickAttributes)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, ju === DE.o.SOCIAL),
-                      children: [uu("socialBar:social"), (0, bu.jsx)(Bl.d, {})]
-                    }), (0, nE.q)(cu) && (0, bu.jsxs)("div", {
-                      ...Gu(DE.o.COSMETIC_SHOP),
+                      }, ZG === Jb.u.SOCIAL),
+                      children: [GG("socialBar:social"), (0, pG.jsx)(gk.e, {})]
+                    }), (0, Nb.q)(fG) && (0, pG.jsxs)("div", {
+                      ...oG(Jb.u.COSMETIC_SHOP),
                       "data-pad-tab": !0,
-                      "data-pad-selected": ju === DE.o.COSMETIC_SHOP ? "true" : void 0,
-                      className: Zu()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: ju === DE.o.COSMETIC_SHOP
+                      "data-pad-selected": ZG === Jb.u.COSMETIC_SHOP ? "true" : void 0,
+                      className: LG()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: ZG === Jb.u.COSMETIC_SHOP
                       }),
-                      children: [(0, bu.jsx)("span", {
+                      children: [(0, pG.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: uu("store:title")
-                      }), "new" === Cu && (0, bu.jsx)(VX, {}), Nu && (0, bu.jsx)("span", {
+                        children: GG("store:title")
+                      }), "new" === VG && (0, pG.jsx)(cy, {}), QG && (0, pG.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === Eu && (0, bu.jsxs)("div", {
-                      ...Gu(DE.o.LOBBY_LEADERBOARD),
+                    }), "inGame" === bG && (0, pG.jsxs)("div", {
+                      ...oG(Jb.u.LOBBY_LEADERBOARD),
                       "data-pad-tab": !0,
-                      "data-pad-selected": ju === DE.o.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: Zu()("EverythingMenuTab", {
-                        EverythingMenuTabActive: ju === DE.o.LOBBY_LEADERBOARD
+                      "data-pad-selected": ZG === Jb.u.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: LG()("EverythingMenuTab", {
+                        EverythingMenuTabActive: ZG === Jb.u.LOBBY_LEADERBOARD
                       }),
-                      children: [uu("general:lobby"), Yu("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [GG("general:lobby"), hG("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, bu.jsx)("div", {
+                  }), (0, pG.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: vu
+                    children: aG
                   })]
-                }), (0, dZ.l)(ju) && vu, (0, bu.jsxs)("div", {
-                  ref: au,
+                }), (0, iL.m)(ZG) && aG, (0, pG.jsxs)("div", {
+                  ref: WG,
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": "inGame" === Eu ? "0.85" : "1"
+                    "--everythingMenuBodyBackgroundOpacity": "inGame" === bG ? "0.85" : "1"
                   },
-                  children: [(0, bu.jsx)(ms, {
-                    show: ju === DE.o.SETTINGS,
-                    setBeforeResumeCallback: gu
-                  }), (0, bu.jsx)(Qs, {
-                    show: ju === DE.o.CUSTOMISATION
-                  }), (0, bu.jsx)(su.Suspense, {
+                  children: [(0, pG.jsx)(Iw, {
+                    show: ZG === Jb.u.SETTINGS,
+                    setBeforeResumeCallback: rG
+                  }), (0, pG.jsx)(jw, {
+                    show: ZG === Jb.u.CUSTOMISATION
+                  }), (0, pG.jsx)(wG.Suspense, {
                     fallback: null,
-                    children: (0, bu.jsx)(hZ, {
-                      show: ju === DE.o.SHOP
+                    children: (0, pG.jsx)(hL, {
+                      show: ZG === Jb.u.SHOP
                     })
-                  }), (0, bu.jsx)(kZ, {
-                    show: ju === DE.o.LOBBY_LEADERBOARD
-                  }), qu && (0, bu.jsx)(pl, {
-                    show: ju === DE.o.COSMETIC_SHOP
-                  }), !qu && (0, bu.jsx)(gl, {
-                    show: ju === DE.o.COSMETIC_SHOP
-                  }), (0, bu.jsx)(Il, {
-                    show: ju === DE.o.SOCIAL
+                  }), (0, pG.jsx)(IL, {
+                    show: ZG === Jb.u.LOBBY_LEADERBOARD
+                  }), UG && (0, pG.jsx)(Xk, {
+                    show: ZG === Jb.u.COSMETIC_SHOP
+                  }), !UG && (0, pG.jsx)(Jk, {
+                    show: ZG === Jb.u.COSMETIC_SHOP
+                  }), (0, pG.jsx)(qk, {
+                    show: ZG === Jb.u.SOCIAL
                   })]
-                }), !(0, Du.isMobileApp)() && (0, Bs.f)(lu.getPlayerRanks()) && (0, bu.jsx)(Fs.b, {
-                  ref: Mu,
+                }), !(0, JG.isMobileApp)() && (0, nw.h)(kG.getPlayerRanks()) && (0, pG.jsx)(qw.d, {
+                  ref: zG,
                   className: "EverythingMenuBannerDiv",
-                  show: wu,
+                  show: uG,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, bu.jsx)(al.e, {
+                  children: (0, pG.jsx)(Wk.e, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: Mu
+                      parentRef: zG
                     },
-                    showing: pu && wu,
+                    showing: XG && uG,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -8391,21 +8391,21 @@ export const modules = {
         })
       }))
   },
-  5052: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => hu
+  4911: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => dG
     });
-    var su = ju(1105),
-      Uu = ju.n(su),
-      Zu = ju(4821),
-      Xu = ju(1244),
-      lu = ju(1116),
-      qu = ju(1506),
-      fu = ju(1559),
-      Cu = ju(1405),
-      bu = ju(2637),
-      cu = ju(1154);
-    const Nu = {
+    var wG = ZG(1006),
+      SG = ZG.n(wG),
+      LG = ZG(4664),
+      yG = ZG(1151),
+      kG = ZG(1016),
+      UG = ZG(1393),
+      YG = ZG(1431),
+      VG = ZG(1311),
+      pG = ZG(2477),
+      fG = ZG(1067);
+    const QG = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -8433,406 +8433,406 @@ export const modules = {
       }
     };
 
-    function Ou(uu) {
+    function KG(GG) {
       let {
-        platform: Eu
-      } = uu;
-      const ju = "youtube" === Eu;
-      return (0, cu.jsxs)("span", {
-        className: Uu()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: ju
+        platform: bG
+      } = GG;
+      const ZG = "youtube" === bG;
+      return (0, fG.jsxs)("span", {
+        className: SG()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: ZG
         }),
-        children: [ju && (0, cu.jsx)(bu.b, {
+        children: [ZG && (0, fG.jsx)(pG.b, {
           variant: "white"
-        }), !ju && (0, cu.jsx)(lu.e, {
-          name: Nu[Eu].icon,
+        }), !ZG && (0, fG.jsx)(kG.c, {
+          name: QG[bG].icon,
           kit: "brands"
         })]
       })
     }
 
-    function Yu(uu) {
+    function hG(GG) {
       let {
-        platform: Eu,
-        link: ju,
-        editable: su,
-        userContext: Uu,
-        onLinksUpdated: bu
-      } = uu;
+        platform: bG,
+        link: ZG,
+        editable: wG,
+        userContext: SG,
+        onLinksUpdated: pG
+      } = GG;
       const {
-        t: Yu
-      } = (0, Xu.A)(), hu = Nu[Eu];
-      if (!ju && !su) return null;
+        t: hG
+      } = (0, yG.w)(), dG = QG[bG];
+      if (!ZG && !wG) return null;
 
-      function Du() {
-        var uu;
-        if (!Uu || !bu) return;
-        Cu.NotificationProvider.showInputPopup({
+      function JG() {
+        var GG;
+        if (!SG || !pG) return;
+        VG.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: hu.name
+              platform: dG.name
             }
           },
-          prefixText: Zu.v[Eu],
+          prefixText: LG.t[bG],
           placeholderText: "playBloxd",
-          initialValue: null !== (uu = null === ju || void 0 === ju ? void 0 : ju.handle) && void 0 !== uu ? uu : "",
+          initialValue: null !== (GG = null === ZG || void 0 === ZG ? void 0 : ZG.handle) && void 0 !== GG ? GG : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: ju ? "general:remove" : void 0
-        }).getResult().then((async uu => {
-          if ("notificationTornDown" !== uu && null !== uu) try {
-            "submit" === uu.type ? await fu.b.setSocialLink(Uu, Eu, uu.value) : await fu.b.clearSocialLink(Uu, Eu), bu()
-          } catch (ju) {
-            console.error("Failed to update social link", ju), Cu.NotificationProvider.showAlertPopup({
-              title: ju.errorMessageForUser,
+          secondaryButtonText: ZG ? "general:remove" : void 0
+        }).getResult().then((async GG => {
+          if ("notificationTornDown" !== GG && null !== GG) try {
+            "submit" === GG.type ? await YG.d.setSocialLink(SG, bG, GG.value) : await YG.d.clearSocialLink(SG, bG), pG()
+          } catch (ZG) {
+            console.error("Failed to update social link", ZG), VG.NotificationProvider.showAlertPopup({
+              title: ZG.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (ju) {
-        const uu = `@${ju.handle}`;
-        return (0, cu.jsxs)("a", {
+      if (ZG) {
+        const GG = `@${ZG.handle}`;
+        return (0, fG.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: hu.color
+            background: dG.color
           },
-          href: ju.profileUrl,
+          href: ZG.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, cu.jsxs)("div", {
+          children: [(0, fG.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, cu.jsx)(Ou, {
-              platform: Eu
-            }), (0, cu.jsx)("span", {
+            children: [(0, fG.jsx)(KG, {
+              platform: bG
+            }), (0, fG.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, cu.jsx)("span", {
+              children: (0, fG.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: uu
+                children: GG
               })
             })]
-          }), su && (0, cu.jsx)("button", {
+          }), wG && (0, fG.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, qu.ib)({
+            ...(0, UG.P)({
               stopPropagation: !0
             }),
-            onClick: uu => {
-              uu.stopPropagation(), uu.preventDefault(), Du()
+            onClick: GG => {
+              GG.stopPropagation(), GG.preventDefault(), JG()
             },
-            children: (0, cu.jsx)(lu.e, {
+            children: (0, fG.jsx)(kG.c, {
               name: "pen-to-square"
             })
-          }), !su && (0, cu.jsx)("span", {
+          }), !wG && (0, fG.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, cu.jsx)(lu.e, {
+            children: (0, fG.jsx)(kG.c, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, cu.jsxs)("button", {
+      return (0, fG.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: hu.color
+          background: dG.color
         },
-        ...(0, qu.ib)(),
+        ...(0, UG.P)(),
         onClick: () => {
-          Du()
+          JG()
         },
-        children: [(0, cu.jsx)(Ou, {
-          platform: Eu
-        }), (0, cu.jsxs)("span", {
+        children: [(0, fG.jsx)(KG, {
+          platform: bG
+        }), (0, fG.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, cu.jsx)("span", {
+          children: [(0, fG.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: hu.name
-          }), (0, cu.jsx)("span", {
+            children: dG.name
+          }), (0, fG.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: Yu("homePage:profileSocialLinkAdd")
+            children: hG("homePage:profileSocialLinkAdd")
           })]
-        }), (0, cu.jsx)("span", {
+        }), (0, fG.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, cu.jsx)(lu.e, {
+          children: (0, fG.jsx)(kG.c, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function hu(uu) {
+    function dG(GG) {
       let {
-        socialLinks: Eu,
-        editable: ju = !1,
-        userContext: su,
-        onLinksUpdated: Uu
-      } = uu;
-      if (!ju && 0 === Eu.length) return null;
-      const Xu = new Map(Eu.map((uu => [uu.platform, uu]))),
-        lu = ju ? Zu.r : Eu.map((uu => uu.platform));
-      return (0, cu.jsx)("div", {
+        socialLinks: bG,
+        editable: ZG = !1,
+        userContext: wG,
+        onLinksUpdated: SG
+      } = GG;
+      if (!ZG && 0 === bG.length) return null;
+      const yG = new Map(bG.map((GG => [GG.platform, GG]))),
+        kG = ZG ? LG.s : bG.map((GG => GG.platform));
+      return (0, fG.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, cu.jsx)("div", {
+        children: (0, fG.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: lu.map((uu => (0, cu.jsx)(Yu, {
-            platform: uu,
-            link: Xu.get(uu),
-            editable: ju,
-            userContext: su,
-            onLinksUpdated: Uu
-          }, uu)))
+          children: kG.map((GG => (0, fG.jsx)(hG, {
+            platform: GG,
+            link: yG.get(GG),
+            editable: ZG,
+            userContext: wG,
+            onLinksUpdated: SG
+          }, GG)))
         })
       })
     }
   },
-  34590: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Zu
+  34528: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => LG
     });
-    var su = ju(58),
-      Uu = ju(3634);
+    var wG = ZG(51),
+      SG = ZG(3423);
 
-    function Zu() {
-      const [uu, Eu] = (0, su.useState)(!1);
-      return (0, su.useLayoutEffect)((() => {
-        let uu = !0;
-        return (0, Uu.e)().then((() => {
-          uu && Eu(!0)
+    function LG() {
+      const [GG, bG] = (0, wG.useState)(!1);
+      return (0, wG.useLayoutEffect)((() => {
+        let GG = !0;
+        return (0, SG.e)().then((() => {
+          GG && bG(!0)
         })), () => {
-          uu = !1
+          GG = !1
         }
-      }), []), uu
+      }), []), GG
     }
   },
-  34525: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Yu,
-      g: () => Ou
+  34446: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => hG,
+      f: () => KG
     });
-    ju(34528);
-    var su = ju(1105),
-      Uu = ju.n(su),
-      Zu = ju(58),
-      Xu = ju(34521);
+    ZG(34454);
+    var wG = ZG(1006),
+      SG = ZG.n(wG),
+      LG = ZG(51),
+      yG = ZG(34439);
 
-    function lu(uu, Eu) {
-      return Math.max(1, Math.round(uu * Eu))
+    function kG(GG, bG) {
+      return Math.max(1, Math.round(GG * bG))
     }
 
-    function qu(uu, Eu) {
-      const ju = Eu * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        su = function(uu, Eu) {
-          if (uu.lines) return lu(uu.lineThickness, Eu) % 2;
-          if (uu.dot) return lu(uu.dotSize, Eu) % 2;
-          return fu(uu, Eu) % 2
-        }(uu, Eu),
-        Uu = Cu(uu.lineThickness * ju, su),
-        Zu = lu(uu.lineLength, ju),
-        Xu = Math.round(uu.gap * ju),
-        qu = uu.outline > 0 ? lu(uu.outline, ju) : 0,
-        cu = [];
-      if (uu.lines && (cu.push({
-          x: Uu + Xu,
+    function UG(GG, bG) {
+      const ZG = bG * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        wG = function(GG, bG) {
+          if (GG.lines) return kG(GG.lineThickness, bG) % 2;
+          if (GG.dot) return kG(GG.dotSize, bG) % 2;
+          return YG(GG, bG) % 2
+        }(GG, bG),
+        SG = VG(GG.lineThickness * ZG, wG),
+        LG = kG(GG.lineLength, ZG),
+        yG = Math.round(GG.gap * ZG),
+        UG = GG.outline > 0 ? kG(GG.outline, ZG) : 0,
+        fG = [];
+      if (GG.lines && (fG.push({
+          x: SG + yG,
           y: 0,
-          w: Zu,
-          h: Uu,
+          w: LG,
+          h: SG,
           arm: "right"
-        }), cu.push({
-          x: -Xu - Zu,
+        }), fG.push({
+          x: -yG - LG,
           y: 0,
-          w: Zu,
-          h: Uu,
+          w: LG,
+          h: SG,
           arm: "left"
-        }), cu.push({
+        }), fG.push({
           x: 0,
-          y: Uu + Xu,
-          w: Uu,
-          h: Zu,
+          y: SG + yG,
+          w: SG,
+          h: LG,
           arm: "down"
-        }), uu.tStyle || cu.push({
+        }), GG.tStyle || fG.push({
           x: 0,
-          y: -Xu - Zu,
-          w: Uu,
-          h: Zu,
+          y: -yG - LG,
+          w: SG,
+          h: LG,
           arm: "up"
-        }), 0 === Xu && cu.push({
+        }), 0 === yG && fG.push({
           x: 0,
           y: 0,
-          w: Uu,
-          h: Uu
-        })), uu.dot) {
-        const Eu = Cu(uu.dotSize * ju, su),
-          Zu = uu.lines && 0 === Xu && uu.dotSize > uu.lineThickness ? Math.max(Eu, Uu + 2) : Eu,
-          lu = (Uu - Zu) / 2;
-        cu.push({
-          x: lu,
-          y: lu,
-          w: Zu,
-          h: Zu
+          w: SG,
+          h: SG
+        })), GG.dot) {
+        const bG = VG(GG.dotSize * ZG, wG),
+          LG = GG.lines && 0 === yG && GG.dotSize > GG.lineThickness ? Math.max(bG, SG + 2) : bG,
+          kG = (SG - LG) / 2;
+        fG.push({
+          x: kG,
+          y: kG,
+          w: LG,
+          h: LG
         })
       }
-      const Nu = cu.map((uu => ({
-        ...uu,
-        x: uu.x - qu,
-        y: uu.y - qu,
-        w: uu.w + 2 * qu,
-        h: uu.h + 2 * qu
+      const QG = fG.map((GG => ({
+        ...GG,
+        x: GG.x - UG,
+        y: GG.y - UG,
+        w: GG.w + 2 * UG,
+        h: GG.h + 2 * UG
       })));
-      let Ou = null,
-        Yu = null;
-      if (uu.circle) {
-        const Eu = lu(uu.circleThickness, ju),
-          Zu = function(uu, Eu) {
-            return uu + (uu % 2 === Eu ? 0 : 1)
-          }(fu(uu, ju), su),
-          Xu = (Uu - Zu) / 2;
-        Ou = bu(Xu, Zu, Eu), qu > 0 && (Yu = bu(Xu - qu, Zu + 2 * qu, Eu + 2 * qu))
+      let KG = null,
+        hG = null;
+      if (GG.circle) {
+        const bG = kG(GG.circleThickness, ZG),
+          LG = function(GG, bG) {
+            return GG + (GG % 2 === bG ? 0 : 1)
+          }(YG(GG, ZG), wG),
+          yG = (SG - LG) / 2;
+        KG = pG(yG, LG, bG), UG > 0 && (hG = pG(yG - UG, LG + 2 * UG, bG + 2 * UG))
       }
       return {
-        cell: Uu,
-        fills: cu,
-        outlines: qu > 0 ? Nu : [],
-        ring: Ou,
-        ringOutline: Yu
+        cell: SG,
+        fills: fG,
+        outlines: UG > 0 ? QG : [],
+        ring: KG,
+        ringOutline: hG
       }
     }
 
-    function fu(uu, Eu) {
-      return Math.round(uu.circleRadius * Eu * 2 + lu(uu.circleThickness, Eu))
+    function YG(GG, bG) {
+      return Math.round(GG.circleRadius * bG * 2 + kG(GG.circleThickness, bG))
     }
 
-    function Cu(uu, Eu) {
-      return Math.max(2 - Eu, 2 * Math.round((uu - Eu) / 2) + Eu)
+    function VG(GG, bG) {
+      return Math.max(2 - bG, 2 * Math.round((GG - bG) / 2) + bG)
     }
 
-    function bu(uu, Eu, ju) {
-      const su = 2 * ju >= Eu - 1;
+    function pG(GG, bG, ZG) {
+      const wG = 2 * ZG >= bG - 1;
       return {
-        x: uu,
-        y: uu,
-        size: Eu,
-        border: Math.min(ju, Math.floor(Eu / 2)),
-        filled: su
+        x: GG,
+        y: GG,
+        size: bG,
+        border: Math.min(ZG, Math.floor(bG / 2)),
+        filled: wG
       }
     }
-    var cu = ju(1154);
-    const Nu = 1.4;
+    var fG = ZG(1067);
+    const QG = 1.4;
 
-    function Ou(uu, Eu) {
-      return uu && Eu ? `scale(${Nu})` : "scale(1)"
+    function KG(GG, bG) {
+      return GG && bG ? `scale(${QG})` : "scale(1)"
     }
 
-    function Yu(uu) {
-      return "classic" === uu.settings.style ? (0, cu.jsx)(gu, {
-        ...uu
-      }) : (0, cu.jsx)(du, {
-        ...uu
+    function hG(GG) {
+      return "classic" === GG.settings.style ? (0, fG.jsx)(rG, {
+        ...GG
+      }) : (0, fG.jsx)(CG, {
+        ...GG
       })
     }
-    const hu = .125;
+    const dG = .125;
 
-    function Du(uu, Eu) {
-      const ju = {};
-      if (uu.color !== Xu.f.color && (ju.color = (0, Xu.i)(uu.color)), uu.opacity !== Xu.f.opacity && (ju.opacity = uu.opacity / 100), uu.outline !== Xu.f.outline || uu.outlineColor !== Xu.f.outlineColor) {
-        const Eu = uu.outline,
-          su = (0, Xu.i)(uu.outlineColor);
-        ju.textShadow = Eu > 0 ? `-${Eu}px 0 ${su}, 0 ${Eu}px ${su}, ${Eu}px 0 ${su}, 0 -${Eu}px ${su}` : "none"
+    function JG(GG, bG) {
+      const ZG = {};
+      if (GG.color !== yG.f.color && (ZG.color = (0, yG.k)(GG.color)), GG.opacity !== yG.f.opacity && (ZG.opacity = GG.opacity / 100), GG.outline !== yG.f.outline || GG.outlineColor !== yG.f.outlineColor) {
+        const bG = GG.outline,
+          wG = (0, yG.k)(GG.outlineColor);
+        ZG.textShadow = bG > 0 ? `-${bG}px 0 ${wG}, 0 ${bG}px ${wG}, ${bG}px 0 ${wG}, 0 -${bG}px ${wG}` : "none"
       }
-      if (uu.size !== Xu.f.size) {
-        const su = uu.size / 100;
-        ju.fontSize = Eu ? `calc(max(1.3rem, 18px) * ${su})` : `calc(1.3rem * ${su})`, ju.marginTop = `-${hu}em`, ju.transformOrigin = `50% calc(50% + ${hu}em)`
+      if (GG.size !== yG.f.size) {
+        const wG = GG.size / 100;
+        ZG.fontSize = bG ? `calc(max(1.3rem, 18px) * ${wG})` : `calc(1.3rem * ${wG})`, ZG.marginTop = `-${dG}em`, ZG.transformOrigin = `50% calc(50% + ${dG}em)`
       }
-      return ju
+      return ZG
     }
 
-    function gu(uu) {
+    function rG(GG) {
       let {
-        settings: Eu,
-        touch: ju,
-        inPreview: su,
-        inEditor: Zu,
-        pressed: Xu = !1,
-        pressRef: lu
-      } = uu;
-      return (0, cu.jsx)("div", {
-        className: Uu()("Crosshair", {
-          Touch: ju,
-          CrosshairInPreview: su,
-          CrosshairInEditor: Zu || su
+        settings: bG,
+        touch: ZG,
+        inPreview: wG,
+        inEditor: LG,
+        pressed: yG = !1,
+        pressRef: kG
+      } = GG;
+      return (0, fG.jsx)("div", {
+        className: SG()("Crosshair", {
+          Touch: ZG,
+          CrosshairInPreview: wG,
+          CrosshairInEditor: LG || wG
         }),
-        ref: lu,
+        ref: kG,
         style: {
-          transform: Ou(Xu, Eu.growOnClick),
-          ...Du(Eu, ju)
+          transform: KG(yG, bG.growOnClick),
+          ...JG(bG, ZG)
         },
         children: "+"
       })
     }
 
-    function Mu(uu, Eu) {
-      return uu / Eu + "px"
+    function zG(GG, bG) {
+      return GG / bG + "px"
     }
 
-    function eu(uu, Eu, ju, su) {
+    function EG(GG, bG, ZG, wG) {
       return {
-        ...wu(uu, Eu, ju),
-        width: Mu(uu.w, ju),
-        height: Mu(uu.h, ju),
-        background: su
+        ...uG(GG, bG, ZG),
+        width: zG(GG.w, ZG),
+        height: zG(GG.h, ZG),
+        background: wG
       }
     }
 
-    function Gu(uu, Eu, ju) {
+    function oG(GG, bG, ZG) {
       return {
-        left: Mu(uu.x, Eu),
-        top: Mu(uu.y, Eu),
-        width: Mu(uu.size, Eu),
-        height: Mu(uu.size, Eu),
-        borderWidth: Mu(uu.border, Eu),
-        borderColor: ju,
-        background: uu.filled ? ju : void 0
+        left: zG(GG.x, bG),
+        top: zG(GG.y, bG),
+        width: zG(GG.size, bG),
+        height: zG(GG.size, bG),
+        borderWidth: zG(GG.border, bG),
+        borderColor: ZG,
+        background: GG.filled ? ZG : void 0
       }
     }
-    const pu = {
+    const XG = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function wu(uu, Eu, ju) {
-      const [su, Uu] = uu.arm ? pu[uu.arm] : [0, 0], Zu = Math.round(Eu * ju);
+    function uG(GG, bG, ZG) {
+      const [wG, SG] = GG.arm ? XG[GG.arm] : [0, 0], LG = Math.round(bG * ZG);
       return {
-        left: Mu(uu.x + su * Zu, ju),
-        top: Mu(uu.y + Uu * Zu, ju)
+        left: zG(GG.x + wG * LG, ZG),
+        top: zG(GG.y + SG * LG, ZG)
       }
     }
 
-    function Ju(uu) {
-      return uu.arm ? {
-        "data-arm": uu.arm,
-        "data-x": uu.x,
-        "data-y": uu.y
+    function iG(GG) {
+      return GG.arm ? {
+        "data-arm": GG.arm,
+        "data-x": GG.x,
+        "data-y": GG.y
       } : {}
     }
 
-    function du(uu) {
+    function CG(GG) {
       let {
-        settings: Eu,
-        inPreview: ju,
-        inEditor: su,
-        pressed: lu = !1,
-        spread: fu,
-        spreadRef: Cu
-      } = uu;
-      const bu = (0, Zu.useRef)(null),
+        settings: bG,
+        inPreview: ZG,
+        inEditor: wG,
+        pressed: kG = !1,
+        spread: YG,
+        spreadRef: VG
+      } = GG;
+      const pG = (0, LG.useRef)(null),
         {
-          box: Ou,
-          dpr: Yu
-        } = function(uu) {
-          const [Eu, ju] = (0, Zu.useState)({
+          box: KG,
+          dpr: hG
+        } = function(GG) {
+          const [bG, ZG] = (0, LG.useState)({
             box: {
               left: 0,
               top: 0,
@@ -8841,200 +8841,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, Zu.useLayoutEffect)((() => {
-            const Eu = uu.current;
-            if (!Eu) return;
-            const su = () => {
-              const uu = Eu.getBoundingClientRect(),
-                su = window.devicePixelRatio || 1;
-              ju((Eu => Eu.dpr === su && Eu.box.left === uu.left && Eu.box.top === uu.top && Eu.box.width === uu.width && Eu.box.height === uu.height ? Eu : {
+          return (0, LG.useLayoutEffect)((() => {
+            const bG = GG.current;
+            if (!bG) return;
+            const wG = () => {
+              const GG = bG.getBoundingClientRect(),
+                wG = window.devicePixelRatio || 1;
+              ZG((bG => bG.dpr === wG && bG.box.left === GG.left && bG.box.top === GG.top && bG.box.width === GG.width && bG.box.height === GG.height ? bG : {
                 box: {
-                  left: uu.left,
-                  top: uu.top,
-                  width: uu.width,
-                  height: uu.height
+                  left: GG.left,
+                  top: GG.top,
+                  width: GG.width,
+                  height: GG.height
                 },
-                dpr: su
+                dpr: wG
               }))
             };
-            su();
-            const Uu = new ResizeObserver(su);
-            return Uu.observe(Eu), window.addEventListener("resize", su), window.addEventListener("scroll", su, !0), () => {
-              Uu.disconnect(), window.removeEventListener("resize", su), window.removeEventListener("scroll", su, !0)
+            wG();
+            const SG = new ResizeObserver(wG);
+            return SG.observe(bG), window.addEventListener("resize", wG), window.addEventListener("scroll", wG, !0), () => {
+              SG.disconnect(), window.removeEventListener("resize", wG), window.removeEventListener("scroll", wG, !0)
             }
-          }), [uu]), Eu
-        }(bu),
-        hu = (0, Zu.useRef)(Yu);
-      hu.current = Yu;
-      const Du = qu(Eu, Yu, lu && Eu.growOnClick ? Nu : 1),
-        gu = function(uu, Eu, ju) {
-          const su = Math.round((uu.left + uu.width / 2) * ju - Eu / 2),
-            Uu = Math.round((uu.top + uu.height / 2) * ju - Eu / 2);
+          }), [GG]), bG
+        }(pG),
+        dG = (0, LG.useRef)(hG);
+      dG.current = hG;
+      const JG = UG(bG, hG, kG && bG.growOnClick ? QG : 1),
+        rG = function(GG, bG, ZG) {
+          const wG = Math.round((GG.left + GG.width / 2) * ZG - bG / 2),
+            SG = Math.round((GG.top + GG.height / 2) * ZG - bG / 2);
           return {
-            x: su / ju - uu.left,
-            y: Uu / ju - uu.top
+            x: wG / ZG - GG.left,
+            y: SG / ZG - GG.top
           }
-        }(Ou, Du.cell, Yu),
-        Mu = (0, Xu.i)(Eu.color),
-        pu = (0, Xu.i)(Eu.outlineColor),
-        du = (0, Zu.useRef)(0);
-      (0, Zu.useLayoutEffect)((() => {
-        if (Cu) return Cu.current = uu => {
-          var Eu;
-          du.current = uu, null === (Eu = bu.current) || void 0 === Eu || Eu.querySelectorAll("[data-arm]").forEach((Eu => {
-            Object.assign(Eu.style, wu(function(uu) {
+        }(KG, JG.cell, hG),
+        zG = (0, yG.k)(bG.color),
+        XG = (0, yG.k)(bG.outlineColor),
+        CG = (0, LG.useRef)(0);
+      (0, LG.useLayoutEffect)((() => {
+        if (VG) return VG.current = GG => {
+          var bG;
+          CG.current = GG, null === (bG = pG.current) || void 0 === bG || bG.querySelectorAll("[data-arm]").forEach((bG => {
+            Object.assign(bG.style, uG(function(GG) {
               return {
-                x: Number(uu.dataset.x),
-                y: Number(uu.dataset.y),
-                arm: uu.dataset.arm
+                x: Number(GG.dataset.x),
+                y: Number(GG.dataset.y),
+                arm: GG.dataset.arm
               }
-            }(Eu), uu, hu.current))
+            }(bG), GG, dG.current))
           }))
         }, () => {
-          Cu.current = null
+          VG.current = null
         }
-      }), [Cu]);
-      const au = null !== fu && void 0 !== fu ? fu : du.current;
-      return (0, cu.jsx)("div", {
-        ref: bu,
-        className: Uu()("CrosshairShapes", {
-          CrosshairInPreview: ju,
-          CrosshairInEditor: su || ju,
-          CrosshairSpreads: void 0 !== Cu
+      }), [VG]);
+      const WG = null !== YG && void 0 !== YG ? YG : CG.current;
+      return (0, fG.jsx)("div", {
+        ref: pG,
+        className: SG()("CrosshairShapes", {
+          CrosshairInPreview: ZG,
+          CrosshairInEditor: wG || ZG,
+          CrosshairSpreads: void 0 !== VG
         }),
-        children: (0, cu.jsx)("div", {
+        children: (0, fG.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: gu.x,
-            top: gu.y,
-            opacity: Eu.opacity / 100
+            left: rG.x,
+            top: rG.y,
+            opacity: bG.opacity / 100
           },
-          children: (0, cu.jsxs)("div", {
+          children: (0, fG.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [Du.ringOutline && (0, cu.jsx)("div", {
+            children: [JG.ringOutline && (0, fG.jsx)("div", {
               className: "CrosshairRing",
-              style: Gu(Du.ringOutline, Yu, pu)
-            }), Du.outlines.map(((uu, Eu) => (0, cu.jsx)("div", {
+              style: oG(JG.ringOutline, hG, XG)
+            }), JG.outlines.map(((GG, bG) => (0, fG.jsx)("div", {
               className: "CrosshairPart",
-              ...Ju(uu),
-              style: eu(uu, au, Yu, pu)
-            }, `o${Eu}`))), Du.ring && (0, cu.jsx)("div", {
+              ...iG(GG),
+              style: EG(GG, WG, hG, XG)
+            }, `o${bG}`))), JG.ring && (0, fG.jsx)("div", {
               className: "CrosshairRing",
-              style: Gu(Du.ring, Yu, Mu)
-            }), Du.fills.map(((uu, Eu) => (0, cu.jsx)("div", {
+              style: oG(JG.ring, hG, zG)
+            }), JG.fills.map(((GG, bG) => (0, fG.jsx)("div", {
               className: "CrosshairPart",
-              ...Ju(uu),
-              style: eu(uu, au, Yu, Mu)
-            }, `f${Eu}`)))]
+              ...iG(GG),
+              style: EG(GG, WG, hG, zG)
+            }, `f${bG}`)))]
           })
         })
       })
     }
   },
-  34532: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Cu,
-      f: () => hu,
-      j: () => Yu
+  34461: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => VG,
+      g: () => dG,
+      j: () => hG
     });
-    var su = ju(34521);
-    const Uu = "XH1-",
-      Zu = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      Xu = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      lu = ["color", "outlineColor"],
-      qu = 1 + 3 * lu.length + Xu.length + 1,
-      fu = Math.ceil(8 * qu / Math.log2(62)),
-      Cu = Uu.length + fu;
+    var wG = ZG(34439);
+    const SG = "XH1-",
+      LG = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      yG = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      kG = ["color", "outlineColor"],
+      UG = 1 + 3 * kG.length + yG.length + 1,
+      YG = Math.ceil(8 * UG / Math.log2(62)),
+      VG = SG.length + YG;
 
-    function bu(uu) {
-      let Eu = 90;
-      for (const ju of uu) Eu = 31 * Eu + ju & 255;
-      return Eu
+    function pG(GG) {
+      let bG = 90;
+      for (const ZG of GG) bG = 31 * bG + ZG & 255;
+      return bG
     }
-    const cu = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      Nu = BigInt(cu.length);
+    const fG = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      QG = BigInt(fG.length);
 
-    function Ou(uu, Eu) {
-      let ju = 0n;
-      for (const Uu of uu) {
-        const uu = cu.indexOf(Uu);
-        if (uu < 0) return null;
-        ju = ju * Nu + BigInt(uu)
+    function KG(GG, bG) {
+      let ZG = 0n;
+      for (const SG of GG) {
+        const GG = fG.indexOf(SG);
+        if (GG < 0) return null;
+        ZG = ZG * QG + BigInt(GG)
       }
-      if (ju >> BigInt(8 * Eu) !== 0n) return null;
-      const su = [];
-      for (let Uu = 0; Uu < Eu; Uu++) su.unshift(Number(0xffn & ju)), ju >>= 8n;
-      return su
+      if (ZG >> BigInt(8 * bG) !== 0n) return null;
+      const wG = [];
+      for (let SG = 0; SG < bG; SG++) wG.unshift(Number(0xffn & ZG)), ZG >>= 8n;
+      return wG
     }
 
-    function Yu(uu) {
-      let Eu = "shapes" === uu.style ? 1 : 0;
-      Zu.forEach(((ju, su) => {
-        uu[ju] && (Eu |= 1 << su + 1)
+    function hG(GG) {
+      let bG = "shapes" === GG.style ? 1 : 0;
+      LG.forEach(((ZG, wG) => {
+        GG[ZG] && (bG |= 1 << wG + 1)
       }));
-      const ju = [Eu];
-      for (const Uu of lu) {
-        const Eu = (0, su.g)(Uu, uu[Uu]);
-        ju.push(Eu >> 16 & 255, Eu >> 8 & 255, 255 & Eu)
+      const ZG = [bG];
+      for (const SG of kG) {
+        const bG = (0, wG.g)(SG, GG[SG]);
+        ZG.push(bG >> 16 & 255, bG >> 8 & 255, 255 & bG)
       }
-      for (const Uu of Xu) {
+      for (const SG of yG) {
         const {
-          min: Eu,
-          step: Zu
-        } = su.d[Uu];
-        ju.push(Math.round(((0, su.g)(Uu, uu[Uu]) - Eu) / Zu))
+          min: bG,
+          step: LG
+        } = wG.b[SG];
+        ZG.push(Math.round(((0, wG.g)(SG, GG[SG]) - bG) / LG))
       }
-      return ju.push(bu(ju)), Uu + function(uu, Eu) {
-        let ju = 0n;
-        for (const Uu of uu) ju = ju << 8n | BigInt(Uu);
-        let su = "";
-        for (let Uu = 0; Uu < Eu; Uu++) su = cu[Number(ju % Nu)] + su, ju /= Nu;
-        return su
-      }(ju, fu)
+      return ZG.push(pG(ZG)), SG + function(GG, bG) {
+        let ZG = 0n;
+        for (const SG of GG) ZG = ZG << 8n | BigInt(SG);
+        let wG = "";
+        for (let SG = 0; SG < bG; SG++) wG = fG[Number(ZG % QG)] + wG, ZG /= QG;
+        return wG
+      }(ZG, YG)
     }
 
-    function hu(uu) {
-      for (const Eu of uu.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${fu}})`, "gi"))) {
-        const uu = Du(Ou(Eu[1], qu));
-        if (uu) return uu
+    function dG(GG) {
+      for (const bG of GG.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${YG}})`, "gi"))) {
+        const GG = JG(KG(bG[1], UG));
+        if (GG) return GG
       }
       return null
     }
 
-    function Du(uu) {
-      if (!uu || uu.length !== qu || bu(uu.slice(0, -1)) !== uu[uu.length - 1]) return null;
-      const Eu = uu[0],
-        ju = {
-          ...su.f,
-          style: 1 & Eu ? "shapes" : "classic"
+    function JG(GG) {
+      if (!GG || GG.length !== UG || pG(GG.slice(0, -1)) !== GG[GG.length - 1]) return null;
+      const bG = GG[0],
+        ZG = {
+          ...wG.f,
+          style: 1 & bG ? "shapes" : "classic"
         };
-      Zu.forEach(((uu, su) => {
-        ju[uu] = 0 !== (Eu & 1 << su + 1)
+      LG.forEach(((GG, wG) => {
+        ZG[GG] = 0 !== (bG & 1 << wG + 1)
       }));
-      let Uu = 1;
-      for (const su of lu) ju[su] = uu[Uu] << 16 | uu[Uu + 1] << 8 | uu[Uu + 2], Uu += 3;
-      for (const Zu of Xu) {
+      let SG = 1;
+      for (const wG of kG) ZG[wG] = GG[SG] << 16 | GG[SG + 1] << 8 | GG[SG + 2], SG += 3;
+      for (const LG of yG) {
         const {
-          min: Eu,
-          step: Xu
-        } = su.d[Zu];
-        ju[Zu] = (0, su.g)(Zu, Eu + uu[Uu] * Xu), Uu++
+          min: bG,
+          step: yG
+        } = wG.b[LG];
+        ZG[LG] = (0, wG.g)(LG, bG + GG[SG] * yG), SG++
       }
-      return ju
+      return ZG
     }
   },
-  34521: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => su,
-      f: () => Uu,
-      g: () => Zu,
-      i: () => fu,
-      m: () => qu,
-      n: () => Cu,
-      o: () => lu,
-      q: () => Xu
+  34439: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => wG,
+      f: () => SG,
+      g: () => LG,
+      k: () => YG,
+      l: () => UG,
+      m: () => VG,
+      n: () => kG,
+      o: () => yG
     });
-    const su = {
+    const wG = {
         opacity: {
           min: 5,
           max: 100,
@@ -9091,7 +9091,7 @@ export const modules = {
           step: 1
         }
       },
-      Uu = Object.freeze({
+      SG = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -9112,130 +9112,130 @@ export const modules = {
         forGuns: !1
       });
 
-    function Zu(uu, Eu) {
-      var ju;
+    function LG(GG, bG) {
+      var ZG;
       const {
-        min: Zu,
-        max: Xu,
-        step: lu
-      } = su[uu];
-      if (!Number.isFinite(Eu)) return Uu[uu];
-      const qu = (null !== (ju = String(lu).split(".")[1]) && void 0 !== ju ? ju : "").length,
-        fu = Number((Math.round(Eu / lu) * lu).toFixed(qu));
-      return Math.min(Xu, Math.max(Zu, fu))
+        min: LG,
+        max: yG,
+        step: kG
+      } = wG[GG];
+      if (!Number.isFinite(bG)) return SG[GG];
+      const UG = (null !== (ZG = String(kG).split(".")[1]) && void 0 !== ZG ? ZG : "").length,
+        YG = Number((Math.round(bG / kG) * kG).toFixed(UG));
+      return Math.min(yG, Math.max(LG, YG))
     }
 
-    function Xu(uu, Eu, ju) {
-      const su = "number" === typeof ju ? Zu(Eu, ju) : ju;
+    function yG(GG, bG, ZG) {
+      const wG = "number" === typeof ZG ? LG(bG, ZG) : ZG;
       return {
-        ...uu,
-        [Eu]: su
+        ...GG,
+        [bG]: wG
       }
     }
 
-    function lu(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(Uu).every((su => ju.includes(su) || uu[su] === Eu[su]))
+    function kG(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(SG).every((wG => ZG.includes(wG) || GG[wG] === bG[wG]))
     }
 
-    function qu(uu) {
-      return lu(uu, Uu)
+    function UG(GG) {
+      return kG(GG, SG)
     }
 
-    function fu(uu) {
-      return `#${uu.toString(16).padStart(6,"0")}`
+    function YG(GG) {
+      return `#${GG.toString(16).padStart(6,"0")}`
     }
 
-    function Cu(uu) {
-      const Eu = /^#?([0-9a-f]{6})$/i.exec(uu.trim());
-      return Eu ? parseInt(Eu[1], 16) : null
+    function VG(GG) {
+      const bG = /^#?([0-9a-f]{6})$/i.exec(GG.trim());
+      return bG ? parseInt(bG[1], 16) : null
     }
   },
-  34535: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => bu,
-      e: () => cu
+  34463: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => pG,
+      h: () => fG
     });
-    var su = ju(58),
-      Uu = ju(31),
-      Zu = ju(34532),
-      Xu = ju(34521);
-    const lu = "crosshairCode";
-    let qu = null;
-    const fu = new Set;
+    var wG = ZG(51),
+      SG = ZG(29),
+      LG = ZG(34461),
+      yG = ZG(34439);
+    const kG = "crosshairCode";
+    let UG = null;
+    const YG = new Set;
 
-    function Cu() {
-      if (null === qu) {
-        var uu;
-        const Eu = Uu.k.getItem(lu);
-        qu = null !== (uu = "string" === typeof Eu ? (0, Zu.f)(Eu) : null) && void 0 !== uu ? uu : Xu.f
+    function VG() {
+      if (null === UG) {
+        var GG;
+        const bG = SG.h.getItem(kG);
+        UG = null !== (GG = "string" === typeof bG ? (0, LG.g)(bG) : null) && void 0 !== GG ? GG : yG.f
       }
-      return qu
+      return UG
     }
 
-    function bu(uu) {
-      qu = uu, (0, Xu.m)(uu) ? Uu.k.removeItem(lu) : Uu.k.setItem(lu, (0, Zu.j)(uu));
-      for (const Eu of fu) Eu()
+    function pG(GG) {
+      UG = GG, (0, yG.l)(GG) ? SG.h.removeItem(kG) : SG.h.setItem(kG, (0, LG.j)(GG));
+      for (const bG of YG) bG()
     }
 
-    function cu() {
-      const [uu, Eu] = (0, su.useState)(Cu);
-      return (0, su.useEffect)((() => {
-        const uu = () => {
-          Eu(Cu())
+    function fG() {
+      const [GG, bG] = (0, wG.useState)(VG);
+      return (0, wG.useEffect)((() => {
+        const GG = () => {
+          bG(VG())
         };
-        return uu(), ju = uu, fu.add(ju), () => {
-          fu.delete(ju)
+        return GG(), ZG = GG, YG.add(ZG), () => {
+          YG.delete(ZG)
         };
-        var ju
-      }), []), uu
+        var ZG
+      }), []), GG
     }
   },
-  34512: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Zu,
-      d: () => Uu
+  34432: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => LG,
+      f: () => SG
     });
-    var su = ju(22);
+    var wG = ZG(17);
 
-    function Uu(uu, Eu) {
-      return uu && !Eu
+    function SG(GG, bG) {
+      return GG && !bG
     }
 
-    function Zu() {
-      return Uu(su.d.get("isTouchScreen"), su.d.get("clientEscMenuOptions").touchActionButtons)
+    function LG() {
+      return SG(wG.e.get("isTouchScreen"), wG.e.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  34483: (uu, Eu, ju) => {
-    function su(uu, Eu) {
-      return uu && !Eu
+  34405: (GG, bG, ZG) => {
+    function wG(GG, bG) {
+      return GG && !bG
     }
-    ju.d(Eu, {
-      c: () => su
+    ZG.d(bG, {
+      b: () => wG
     })
   },
-  34501: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Zu
+  34425: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => LG
     });
-    var su = ju(1128);
+    var wG = ZG(1032);
 
-    function Uu() {
-      var uu, Eu;
-      return null !== (uu = null === (Eu = screen.orientation) || void 0 === Eu ? void 0 : Eu.type) && void 0 !== uu ? uu : innerWidth > innerHeight ? "landscape" : "portrait"
+    function SG() {
+      var GG, bG;
+      return null !== (GG = null === (bG = screen.orientation) || void 0 === bG ? void 0 : bG.type) && void 0 !== GG ? GG : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const Zu = new class {
+    const LG = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && Uu() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && SG() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = Uu(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, su.YY)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = SG(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, wG.rh)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -9243,178 +9243,178 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const uu of this.resizers) uu()
+            for (const GG of this.resizers) GG()
           }
         }), 1e3)
       }
-      heldSizer(uu) {
-        let Eu = !1;
+      heldSizer(GG) {
+        let bG = !1;
         return () => {
-          if (Eu && this.isHeld()) return null;
-          const ju = uu();
-          return Eu ||= null !== ju, ju
+          if (bG && this.isHeld()) return null;
+          const ZG = GG();
+          return bG ||= null !== ZG, ZG
         }
       }
-      onRelease(uu) {
-        return this.resizers.add(uu), () => {
-          this.resizers.delete(uu)
+      onRelease(GG) {
+        return this.resizers.add(GG), () => {
+          this.resizers.delete(GG)
         }
       }
     }
   },
-  34452: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => gu,
-      d: () => fu,
-      e: () => Yu,
-      g: () => Ou
+  34370: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => rG,
+      g: () => YG,
+      h: () => hG,
+      j: () => KG
     });
-    var su = ju(166),
-      Uu = ju(1320),
-      Zu = ju(1255),
-      Xu = ju(1183),
-      lu = ju(1776);
-    const qu = {
+    var wG = ZG(140),
+      SG = ZG(1230),
+      LG = ZG(1163),
+      yG = ZG(1096),
+      kG = ZG(1694);
+    const UG = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function fu(uu) {
-      return qu[uu]
+    function YG(GG) {
+      return UG[GG]
     }
 
-    function Cu(uu) {
-      return (0, lu.b)(uu) ? "outdated" : uu instanceof su.b ? 429 === uu.httpCode ? "busy" : "server" : "offline"
+    function VG(GG) {
+      return (0, kG.d)(GG) ? "outdated" : GG instanceof wG.b ? 429 === GG.httpCode ? "busy" : "server" : "offline"
     }
 
-    function bu(uu, Eu, ju) {
-      return (0, Xu.postJsonWithMetricsCookiesAndJsonResponse)(`${Zu.clientSideServerUrls.indexUrl}${Eu}`, ju, {
+    function pG(GG, bG, ZG) {
+      return (0, yG.postJsonWithMetricsCookiesAndJsonResponse)(`${LG.clientSideServerUrls.indexUrl}${bG}`, ZG, {
         retries: 3
-      }, uu.getMetricsCookies()).catch((uu => (console.error("Bad response from the server when trying to change name:", Eu, uu), {
+      }, GG.getMetricsCookies()).catch((GG => (console.error("Bad response from the server when trying to change name:", bG, GG), {
         outcome: "failed",
-        failure: Cu(uu)
+        failure: VG(GG)
       })))
     }
 
-    function cu(uu) {
-      return "outcome" in uu && "failed" === uu.outcome
+    function fG(GG) {
+      return "outcome" in GG && "failed" === GG.outcome
     }
 
-    function Nu(uu) {
-      return console.error("Error when trying to get with new name from DB", uu), {
+    function QG(GG) {
+      return console.error("Error when trying to get with new name from DB", GG), {
         outcome: "refused",
-        message: uu
+        message: GG
       }
     }
-    async function Ou(uu) {
-      const Eu = await bu(uu, "/index/name/random", {});
-      return cu(Eu) ? Eu : "err" in Eu ? Nu(Eu.err) : (uu.setPlayerName(Eu.name), {
+    async function KG(GG) {
+      const bG = await pG(GG, "/index/name/random", {});
+      return fG(bG) ? bG : "err" in bG ? QG(bG.err) : (GG.setPlayerName(bG.name), {
         outcome: "changed",
-        name: Eu.name
+        name: bG.name
       })
     }
-    async function Yu(uu, Eu) {
-      const ju = await bu(uu, "/index/name/update", {
-        name: Eu
+    async function hG(GG, bG) {
+      const ZG = await pG(GG, "/index/name/update", {
+        name: bG
       });
-      return cu(ju) ? ju : "err" in ju ? Nu(ju.err) : ju.nameExists ? {
+      return fG(ZG) ? ZG : "err" in ZG ? QG(ZG.err) : ZG.nameExists ? {
         outcome: "taken"
-      } : (uu.setPlayerName(Eu), {
+      } : (GG.setPlayerName(bG), {
         outcome: "changed",
-        name: Eu
+        name: bG
       })
     }
 
-    function hu(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const su = 1 === Eu ? 1 : 10 ** (Eu - 1),
-        Zu = String(su + Math.floor(ju() * (10 ** Eu - su)));
-      return `${uu.slice(0,Uu.g-Eu)}${Zu}`
+    function dG(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const wG = 1 === bG ? 1 : 10 ** (bG - 1),
+        LG = String(wG + Math.floor(ZG() * (10 ** bG - wG)));
+      return `${GG.slice(0,SG.g-bG)}${LG}`
     }
-    const Du = [1, 2, 3, 4];
-    async function gu(uu, Eu) {
-      const ju = await Yu(uu, Eu);
-      if ("taken" !== ju.outcome) return ju;
-      for (const su of Du) {
-        const ju = hu(Eu, su),
-          Uu = await Yu(uu, ju);
-        if ("taken" !== Uu.outcome) return Uu
+    const JG = [1, 2, 3, 4];
+    async function rG(GG, bG) {
+      const ZG = await hG(GG, bG);
+      if ("taken" !== ZG.outcome) return ZG;
+      for (const wG of JG) {
+        const ZG = dG(bG, wG),
+          SG = await hG(GG, ZG);
+        if ("taken" !== SG.outcome) return SG
       }
       return {
         outcome: "taken"
       }
     }
   },
-  34486: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => lu,
-      e: () => qu
+  34411: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => kG,
+      g: () => UG
     });
-    var su = ju(22);
-    const Uu = 24,
-      Zu = "farNametags",
-      Xu = 1e5;
+    var wG = ZG(17);
+    const SG = 24,
+      LG = "farNametags",
+      yG = 1e5;
 
-    function lu() {
-      var uu;
-      return null === (uu = su.d.get("showDistantNametags")) || void 0 === uu || uu
+    function kG() {
+      var GG;
+      return null === (GG = wG.e.get("showDistantNametags")) || void 0 === GG || GG
     }
 
-    function qu() {
-      var uu;
-      return null !== (uu = function() {
-        const uu = new URLSearchParams(window.location.search).get(Zu),
-          Eu = null === uu || "" === uu ? NaN : Number(uu);
-        return Number.isFinite(Eu) && Eu >= 0 ? Math.min(Eu, Xu) : null
-      }()) && void 0 !== uu ? uu : lu() ? 0 : Uu
+    function UG() {
+      var GG;
+      return null !== (GG = function() {
+        const GG = new URLSearchParams(window.location.search).get(LG),
+          bG = null === GG || "" === GG ? NaN : Number(GG);
+        return Number.isFinite(bG) && bG >= 0 ? Math.min(bG, yG) : null
+      }()) && void 0 !== GG ? GG : kG() ? 0 : SG
     }
   },
-  34505: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => fu,
-      g: () => bu,
-      j: () => Cu
+  34429: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => YG,
+      f: () => pG,
+      j: () => VG
     });
-    var su = ju(274),
-      Uu = ju(91),
-      Zu = ju(124),
-      Xu = ju(117),
-      lu = ju(676);
-    const qu = new Set(["mali_bifrost"]);
+    var wG = ZG(273),
+      SG = ZG(80),
+      LG = ZG(111),
+      yG = ZG(105),
+      kG = ZG(626);
+    const UG = new Set(["mali_bifrost"]);
 
-    function fu() {
-      if ("android" !== (0, Uu.pageOperatingSystem)() || lu.d || (0, lu.c)("webgl_default")) return;
-      const uu = (0, Zu.o)(),
-        Eu = null === uu ? (0, su.o)() : (0, su.h)(uu.vendor, uu.renderer);
-      return null !== Eu && qu.has(Eu) ? uu => (0, su.l)((0, Xu.d)(uu).vendor, Eu) : void 0
+    function YG() {
+      if ("android" !== (0, SG.pageOperatingSystem)() || kG.i || (0, kG.e)("webgl_default")) return;
+      const GG = (0, LG.l)(),
+        bG = null === GG ? (0, wG.q)() : (0, wG.h)(GG.vendor, GG.renderer);
+      return null !== bG && UG.has(bG) ? GG => (0, wG.m)((0, yG.c)(GG).vendor, bG) : void 0
     }
 
-    function Cu(uu, Eu) {
-      return uu ? () => !0 : Eu()
+    function VG(GG, bG) {
+      return GG ? () => !0 : bG()
     }
-    async function bu(uu) {
+    async function pG(GG) {
       try {
-        const Eu = Cu(uu, fu),
-          ju = navigator.gpu;
-        if (void 0 === Eu || void 0 === ju) return !1;
-        const su = await (0, Xu.o)(ju, {
+        const bG = VG(GG, YG),
+          ZG = navigator.gpu;
+        if (void 0 === bG || void 0 === ZG) return !1;
+        const wG = await (0, yG.l)(ZG, {
           seed: !1,
-          compatibility: Eu
+          compatibility: bG
         });
-        return "string" !== typeof su && su.compatibility && !(0, Xu.j)(su.adapter)
-      } catch (Eu) {
-        return console.error("WebGPU compatibility-mode adapter request failed.", Eu), !1
+        return "string" !== typeof wG && wG.compatibility && !(0, yG.g)(wG.adapter)
+      } catch (bG) {
+        return console.error("WebGPU compatibility-mode adapter request failed.", bG), !1
       }
     }
   },
-  34571: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Uu,
-      c: () => Xu
+  34499: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => SG,
+      e: () => yG
     });
-    const su = [{
+    const wG = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -9596,79 +9596,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function Uu(uu) {
-      let Eu, ju = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof uu) {
-        if (!Number.isFinite(uu)) return "0";
-        if (Math.abs(uu) < 100) {
-          const Eu = uu < 0 ? "-" : "",
-            ju = Math.abs(uu);
-          return ju >= 10 ? `${Eu}${ju.toFixed(1).replace(/\.0$/,"")}` : `${Eu}${ju.toFixed(2).replace(/\.?0+$/,"")}`
+    function SG(GG) {
+      let bG, ZG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof GG) {
+        if (!Number.isFinite(GG)) return "0";
+        if (Math.abs(GG) < 100) {
+          const bG = GG < 0 ? "-" : "",
+            ZG = Math.abs(GG);
+          return ZG >= 10 ? `${bG}${ZG.toFixed(1).replace(/\.0$/,"")}` : `${bG}${ZG.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        Eu = BigInt(Math.floor(uu))
-      } else Eu = uu;
-      const Uu = Eu < 0n ? -Eu : Eu,
-        Zu = Eu < 0n ? "-" : "",
-        Xu = Uu.toString();
-      if (Xu.length <= ju) return `${Zu}${Xu}`;
-      const lu = 3 * Math.floor((Xu.length - 1) / 3);
-      if (lu < 3) return `${Zu}${Xu}`;
-      if (lu > 3 * su.length) {
-        const uu = Xu[0],
-          Eu = Xu.slice(1, 3).replace(/0+$/, "");
-        return `${Zu}${Eu?`${uu}.${Eu}`:uu}e${Xu.length-1}`
+        bG = BigInt(Math.floor(GG))
+      } else bG = GG;
+      const SG = bG < 0n ? -bG : bG,
+        LG = bG < 0n ? "-" : "",
+        yG = SG.toString();
+      if (yG.length <= ZG) return `${LG}${yG}`;
+      const kG = 3 * Math.floor((yG.length - 1) / 3);
+      if (kG < 3) return `${LG}${yG}`;
+      if (kG > 3 * wG.length) {
+        const GG = yG[0],
+          bG = yG.slice(1, 3).replace(/0+$/, "");
+        return `${LG}${bG?`${GG}.${bG}`:GG}e${yG.length-1}`
       }
       const {
-        threshold: qu,
-        suffix: fu
-      } = su[su.length - lu / 3], Cu = Uu / qu, bu = Number(1000n * (Uu % qu) / qu), cu = Number(Cu) + bu / 1e3;
-      let Nu;
-      return Nu = cu >= 100 ? Math.floor(cu).toString() : cu >= 10 ? cu.toFixed(1).replace(/\.0$/, "") : cu.toFixed(2).replace(/\.?0+$/, ""), `${Zu}${Nu}${fu}`
+        threshold: UG,
+        suffix: YG
+      } = wG[wG.length - kG / 3], VG = SG / UG, pG = Number(1000n * (SG % UG) / UG), fG = Number(VG) + pG / 1e3;
+      let QG;
+      return QG = fG >= 100 ? Math.floor(fG).toString() : fG >= 10 ? fG.toFixed(1).replace(/\.0$/, "") : fG.toFixed(2).replace(/\.?0+$/, ""), `${LG}${QG}${YG}`
     }
-    const Zu = su.map((uu => {
+    const LG = wG.map((GG => {
       let {
-        threshold: Eu,
-        suffix: ju
-      } = uu;
+        threshold: bG,
+        suffix: ZG
+      } = GG;
       return {
-        threshold: Number(Eu),
-        suffix: ju
+        threshold: Number(bG),
+        suffix: ZG
       }
-    })).filter((uu => {
+    })).filter((GG => {
       let {
-        threshold: Eu
-      } = uu;
-      return Number.isFinite(Eu)
+        threshold: bG
+      } = GG;
+      return Number.isFinite(bG)
     }));
 
-    function Xu(uu) {
-      const Eu = Math.abs(uu),
-        ju = uu < 0 ? "-" : "";
+    function yG(GG) {
+      const bG = Math.abs(GG),
+        ZG = GG < 0 ? "-" : "";
       for (const {
-          threshold: su,
-          suffix: Uu
+          threshold: wG,
+          suffix: SG
         }
-        of Zu)
-        if (Eu >= su) {
-          const uu = Eu / su;
-          if (uu >= 1e3) return `${ju}${Eu.toExponential(2).replace("e+","e")}`;
-          let Zu;
-          return Zu = uu >= 100 ? Math.floor(uu).toString() : uu >= 10 ? uu.toFixed(1).replace(/\.0$/, "") : uu.toFixed(2).replace(/\.?0+$/, ""), `${ju}${Zu}${Uu}`
-        } return `${ju}${Eu}`
+        of LG)
+        if (bG >= wG) {
+          const GG = bG / wG;
+          if (GG >= 1e3) return `${ZG}${bG.toExponential(2).replace("e+","e")}`;
+          let LG;
+          return LG = GG >= 100 ? Math.floor(GG).toString() : GG >= 10 ? GG.toFixed(1).replace(/\.0$/, "") : GG.toFixed(2).replace(/\.?0+$/, ""), `${ZG}${LG}${SG}`
+        } return `${ZG}${bG}`
     }
   },
-  34557: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Cu,
-      f: () => cu,
-      h: () => bu,
-      k: () => Xu,
-      o: () => fu,
-      q: () => qu
+  34483: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => VG,
+      g: () => fG,
+      h: () => pG,
+      l: () => yG,
+      m: () => YG,
+      o: () => UG
     });
-    var su = ju(349);
-    const Uu = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      Zu = {
+    var wG = ZG(352);
+    const SG = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      LG = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -9743,13 +9743,13 @@ export const modules = {
         }
       };
 
-    function Xu(uu) {
-      var Eu;
-      return null !== (Eu = Zu[uu]) && void 0 !== Eu ? Eu : {
+    function yG(GG) {
+      var bG;
+      return null !== (bG = LG[GG]) && void 0 !== bG ? bG : {
         translationKey: ""
       }
     }
-    const lu = {
+    const kG = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -9802,76 +9802,76 @@ export const modules = {
       }]
     };
 
-    function qu(uu) {
-      return Uu.includes(uu)
+    function UG(GG) {
+      return SG.includes(GG)
     }
 
-    function fu(uu) {
-      var Eu;
-      return !0 === (null === uu || void 0 === uu || null === (Eu = uu.customAttributes) || void 0 === Eu ? void 0 : Eu.cannotEnchant)
+    function YG(GG) {
+      var bG;
+      return !0 === (null === GG || void 0 === GG || null === (bG = GG.customAttributes) || void 0 === bG ? void 0 : bG.cannotEnchant)
     }
 
-    function Cu(uu, Eu) {
+    function VG(GG, bG) {
       const {
-        max: ju
-      } = lu[uu].at(-1);
-      return Eu <= ju
+        max: ZG
+      } = kG[GG].at(-1);
+      return bG <= ZG
     }
 
-    function bu(uu) {
-      const Eu = Math.sin(uu / 80),
-        ju = uu => {
-          if (uu <= 0) return 0;
-          if (uu > 1) return 1;
-          let Eu = 0;
-          const ju = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let su = 0; su < ju.length; su++) {
-            Eu += (su % 2 === 0 ? 1 : -1) * ju[su] * Math.pow(uu, 2 + su) / (2 + su)
+    function pG(GG) {
+      const bG = Math.sin(GG / 80),
+        ZG = GG => {
+          if (GG <= 0) return 0;
+          if (GG > 1) return 1;
+          let bG = 0;
+          const ZG = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let wG = 0; wG < ZG.length; wG++) {
+            bG += (wG % 2 === 0 ? 1 : -1) * ZG[wG] * Math.pow(GG, 2 + wG) / (2 + wG)
           }
-          return 72 * Eu
+          return 72 * bG
         },
-        su = .3 - .78 * Eu,
-        Uu = .5 - .78 * Eu,
-        Zu = .6 - .7 * Eu,
-        Xu = .8 - .6 * Eu;
-      let lu = ju(su),
-        qu = ju(Uu) - lu,
-        fu = ju(Zu) - qu - lu,
-        Cu = ju(Xu) - fu - qu - lu;
-      su < .041 && (qu /= 1 - lu, fu /= 1 - lu, Cu /= 1 - lu, lu = 0), Uu < .041 && (lu /= 1 - qu, fu /= 1 - qu, Cu /= 1 - qu, qu = 0), Zu < .041 && (lu /= 1 - fu, qu /= 1 - fu, Cu /= 1 - fu, fu = 0), Xu < .041 && (lu /= 1 - Cu, qu /= 1 - Cu, fu /= 1 - Cu, Cu = 0);
+        wG = .3 - .78 * bG,
+        SG = .5 - .78 * bG,
+        LG = .6 - .7 * bG,
+        yG = .8 - .6 * bG;
+      let kG = ZG(wG),
+        UG = ZG(SG) - kG,
+        YG = ZG(LG) - UG - kG,
+        VG = ZG(yG) - YG - UG - kG;
+      wG < .041 && (UG /= 1 - kG, YG /= 1 - kG, VG /= 1 - kG, kG = 0), SG < .041 && (kG /= 1 - UG, YG /= 1 - UG, VG /= 1 - UG, UG = 0), LG < .041 && (kG /= 1 - YG, UG /= 1 - YG, VG /= 1 - YG, YG = 0), yG < .041 && (kG /= 1 - VG, UG /= 1 - VG, YG /= 1 - VG, VG = 0);
       return {
-        commonProb: lu,
-        uncommonProb: qu,
-        rareProb: fu,
-        epicProb: Cu,
-        legendaryProb: 1 - (Cu + fu + qu + lu)
+        commonProb: kG,
+        uncommonProb: UG,
+        rareProb: YG,
+        epicProb: VG,
+        legendaryProb: 1 - (VG + YG + UG + kG)
       }
     }
 
-    function cu(uu, Eu) {
+    function fG(GG, bG) {
       const {
-        min: ju,
-        max: Uu
-      } = lu[uu][Eu], Zu = su.b.sampleUniformIntDistribution(ju, Uu, "includeMax");
+        min: ZG,
+        max: SG
+      } = kG[GG][bG], LG = wG.c.sampleUniformIntDistribution(ZG, SG, "includeMax");
       return {
-        ...bu(Zu),
-        level: Zu
+        ...pG(LG),
+        level: LG
       }
     }
   },
-  34528: () => {},
-  12943: uu => {
-    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  34454: () => {},
+  12875: GG => {
+    GG.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  14127: uu => {
-    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  14030: GG => {
+    GG.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  15536: uu => {
-    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  15464: GG => {
+    GG.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  16030: uu => {
-    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  15973: GG => {
+    GG.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

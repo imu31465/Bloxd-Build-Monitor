@@ -1,511 +1,511 @@
 export const id = 97;
 export const ids = [95, 96, 97];
 export const modules = {
-  37007: (uu, Eu, ju) => {
-    function su(uu, Eu, ju, su) {
-      return !(ju && !uu.aimable) && (!Eu || uu.gun && "head" !== su)
+  36965: (GG, bG, ZG) => {
+    function wG(GG, bG, ZG, wG) {
+      return !(ZG && !GG.aimable) && (!bG || GG.gun && "head" !== wG)
     }
 
-    function Uu(uu) {
-      return Math.max(.1 * uu, 1)
+    function SG(GG) {
+      return Math.max(.1 * GG, 1)
     }
 
-    function Zu(uu, Eu) {
-      return !uu && Eu
+    function LG(GG, bG) {
+      return !GG && bG
     }
-    ju.d(Eu, {
-      d: () => Zu,
-      e: () => Uu,
-      i: () => su
+    ZG.d(bG, {
+      d: () => LG,
+      g: () => SG,
+      h: () => wG
     })
   },
-  37011: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => lu,
-      d: () => Xu
+  36973: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => kG,
+      c: () => yG
     });
-    let su = null;
-    const Uu = {
+    let wG = null;
+    const SG = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      Zu = {
-        crosshairAccuracy: uu => {
-          const Eu = Uu.crosshairAccuracy.at(-1);
-          Eu ? Eu.hook(uu) : su = uu
+      LG = {
+        crosshairAccuracy: GG => {
+          const bG = SG.crosshairAccuracy.at(-1);
+          bG ? bG.hook(GG) : wG = GG
         },
-        turnDamageIndicators: uu => {
-          var Eu;
-          null === (Eu = Uu.turnDamageIndicators.at(-1)) || void 0 === Eu || Eu.hook(uu)
+        turnDamageIndicators: GG => {
+          var bG;
+          null === (bG = SG.turnDamageIndicators.at(-1)) || void 0 === bG || bG.hook(GG)
         }
       };
 
-    function Xu(uu, Eu) {
-      const ju = {
-          hook: Eu
+    function yG(GG, bG) {
+      const ZG = {
+          hook: bG
         },
-        Xu = Uu[uu];
-      if (Xu.push(ju), "crosshairAccuracy" === uu && null !== su) {
-        const uu = su;
-        su = null, Zu.crosshairAccuracy(uu)
+        yG = SG[GG];
+      if (yG.push(ZG), "crosshairAccuracy" === GG && null !== wG) {
+        const GG = wG;
+        wG = null, LG.crosshairAccuracy(GG)
       }
       return () => {
-        const uu = Xu.indexOf(ju); - 1 !== uu && Xu.splice(uu, 1)
+        const GG = yG.indexOf(ZG); - 1 !== GG && yG.splice(GG, 1)
       }
     }
 
-    function lu() {
-      return Zu
+    function kG() {
+      return LG
     }
   },
-  36823: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      countDecodesAs: () => bu,
-      decodedAudio: () => cu
+  36778: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      countDecodesAs: () => pG,
+      decodedAudio: () => fG
     });
-    var su = ju(3432),
-      Uu = ju(5026);
-    const Zu = Uu.Howler,
-      Xu = new Map;
-    let lu = 0;
-    const qu = {
+    var wG = ZG(3238),
+      SG = ZG(4883);
+    const LG = SG.Howler,
+      yG = new Map;
+    let kG = 0;
+    const UG = {
         song: 0,
         sheet: 0
       },
-      fu = new WeakMap,
-      Cu = new WeakSet;
+      YG = new WeakMap,
+      VG = new WeakSet;
 
-    function bu(uu, Eu) {
-      return fu.set(uu, Eu), uu
+    function pG(GG, bG) {
+      return YG.set(GG, bG), GG
     }
 
-    function cu() {
+    function fG() {
       return {
-        bytes: lu,
-        songsDecoded: qu.song,
-        sheetsDecoded: qu.sheet
+        bytes: kG,
+        songsDecoded: UG.song,
+        sheetsDecoded: UG.sheet
       }
     }
 
-    function Nu(uu) {
-      if (Cu.has(uu)) return;
-      Cu.add(uu);
-      const Eu = 1 === uu.decodeAudioData.length,
-        ju = uu.decodeAudioData.bind(uu);
-      uu.decodeAudioData = (uu, su, Uu) => {
-        const Cu = uu => {
-          const Eu = Zu._howls.filter((uu => "loaded" !== uu._state));
+    function QG(GG) {
+      if (VG.has(GG)) return;
+      VG.add(GG);
+      const bG = 1 === GG.decodeAudioData.length,
+        ZG = GG.decodeAudioData.bind(GG);
+      GG.decodeAudioData = (GG, wG, SG) => {
+        const VG = GG => {
+          const bG = LG._howls.filter((GG => "loaded" !== GG._state));
           try {
-            null === su || void 0 === su || su(uu)
+            null === wG || void 0 === wG || wG(GG)
           } finally {
-            const ju = Eu.find((uu => "loaded" === uu._state));
-            void 0 !== ju && "string" === typeof ju._src && function(uu, Eu, ju) {
-              var su;
-              lu += ju - (null !== (su = Xu.get(Eu)) && void 0 !== su ? su : 0), Xu.set(Eu, ju);
-              const Uu = fu.get(uu);
-              void 0 !== Uu && qu[Uu]++
-            }(ju, ju._src, uu.length * uu.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
+            const ZG = bG.find((GG => "loaded" === GG._state));
+            void 0 !== ZG && "string" === typeof ZG._src && function(GG, bG, ZG) {
+              var wG;
+              kG += ZG - (null !== (wG = yG.get(bG)) && void 0 !== wG ? wG : 0), yG.set(bG, ZG);
+              const SG = YG.get(GG);
+              void 0 !== SG && UG[SG]++
+            }(ZG, ZG._src, GG.length * GG.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-          return uu
+          return GG
         };
-        if (!Eu) return ju(uu, Cu, Uu);
-        const bu = ju(uu).then(Cu);
-        return bu.catch((uu => {
-          null === Uu || void 0 === Uu || Uu(uu)
-        })), bu
+        if (!bG) return ZG(GG, VG, SG);
+        const pG = ZG(GG).then(VG);
+        return pG.catch((GG => {
+          null === SG || void 0 === SG || SG(GG)
+        })), pG
       }
-    }(0, su.f)(cu);
-    const Ou = Uu.Howl.prototype,
-      Yu = Ou.init;
-    Ou.init = function(uu) {
-      return Uu.Howler.volume(), Zu.ctx && Nu(Zu.ctx), Yu.call(this, uu)
+    }(0, wG.h)(fG);
+    const KG = SG.Howl.prototype,
+      hG = KG.init;
+    KG.init = function(GG) {
+      return SG.Howler.volume(), LG.ctx && QG(LG.ctx), hG.call(this, GG)
     };
-    const hu = Ou.unload;
-    Ou.unload = function() {
-      const uu = this._src,
-        Eu = hu.call(this);
-      if ("string" !== typeof uu) return Eu;
-      const ju = Xu.get(uu);
-      return void 0 !== ju && function(uu) {
-        return !Zu._howls.some((Eu => Eu._src === uu || "string" === typeof Eu._src && uu.indexOf(Eu._src) >= 0))
-      }(uu) && (Xu.delete(uu), lu -= ju), Eu
+    const dG = KG.unload;
+    KG.unload = function() {
+      const GG = this._src,
+        bG = dG.call(this);
+      if ("string" !== typeof GG) return bG;
+      const ZG = yG.get(GG);
+      return void 0 !== ZG && function(GG) {
+        return !LG._howls.some((bG => bG._src === GG || "string" === typeof bG._src && GG.indexOf(bG._src) >= 0))
+      }(GG) && (yG.delete(GG), kG -= ZG), bG
     }
   },
-  37181: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => qu
+  37134: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => UG
     });
-    var su = ju(22),
-      Uu = ju(37151),
-      Zu = ju(4504),
-      Xu = ju(37183),
-      lu = ju(5026);
-    const qu = function(uu) {
-      const Eu = new Set;
-      return ju => {
-        var su;
-        const Zu = null === (su = [...Uu.c].find((uu => {
-          let [, Eu] = uu;
-          return Eu.includes(ju)
-        }))) || void 0 === su ? void 0 : su[0];
-        if (void 0 === Zu || Eu.has(Zu)) return;
-        Eu.add(Zu);
-        ! function(uu, Eu) {
+    var wG = ZG(17),
+      SG = ZG(37105),
+      LG = ZG(4355),
+      yG = ZG(37137),
+      kG = ZG(4883);
+    const UG = function(GG) {
+      const bG = new Set;
+      return ZG => {
+        var wG;
+        const LG = null === (wG = [...SG.e].find((GG => {
+          let [, bG] = GG;
+          return bG.includes(ZG)
+        }))) || void 0 === wG ? void 0 : wG[0];
+        if (void 0 === LG || bG.has(LG)) return;
+        bG.add(LG);
+        ! function(GG, bG) {
           let {
-            afterJoin: ju,
-            joining: su,
-            idle: Uu,
-            fetchFile: Zu
-          } = Eu;
-          const Xu = Eu => {
-            Eu >= uu.length || ju((() => {
-              Uu((() => {
-                su() ? Xu(Eu) : Zu(uu[Eu]).catch((() => {})).finally((() => {
-                  Xu(Eu + 1)
+            afterJoin: ZG,
+            joining: wG,
+            idle: SG,
+            fetchFile: LG
+          } = bG;
+          const yG = bG => {
+            bG >= GG.length || ZG((() => {
+              SG((() => {
+                wG() ? yG(bG) : LG(GG[bG]).catch((() => {})).finally((() => {
+                  yG(bG + 1)
                 }))
               }))
             }))
           };
-          Xu(0)
-        }(Uu.c.get(Zu).filter((uu => uu !== ju)).flatMap((Eu => {
-          const ju = (su = (0, Uu.g)(Eu).src, Zu = uu.canPlay, su.find((uu => {
-            var Eu;
-            const ju = null === (Eu = /\.([^.]+)$/.exec(uu.split("?", 1)[0])) || void 0 === Eu ? void 0 : Eu[1];
-            return void 0 !== ju && Zu(ju.toLowerCase())
+          yG(0)
+        }(SG.e.get(LG).filter((GG => GG !== ZG)).flatMap((bG => {
+          const ZG = (wG = (0, SG.i)(bG).src, LG = GG.canPlay, wG.find((GG => {
+            var bG;
+            const ZG = null === (bG = /\.([^.]+)$/.exec(GG.split("?", 1)[0])) || void 0 === bG ? void 0 : bG[1];
+            return void 0 !== ZG && LG(ZG.toLowerCase())
           })));
-          var su, Zu;
-          return void 0 === ju ? [] : [ju]
-        })), uu)
+          var wG, LG;
+          return void 0 === ZG ? [] : [ZG]
+        })), GG)
       }
     }({
-      afterJoin: uu => {
-        (0, Zu.e)(su.d.get("gameState"), uu)
+      afterJoin: GG => {
+        (0, LG.e)(wG.e.get("gameState"), GG)
       },
-      joining: () => (0, Zu.g)(su.d.get("gameState")),
-      idle: ju(257).b,
-      fetchFile: Xu.e,
-      canPlay: uu => !!lu.Howler.codecs(uu)
+      joining: () => (0, LG.f)(wG.e.get("gameState")),
+      idle: ZG(252).b,
+      fetchFile: yG.b,
+      canPlay: GG => !!kG.Howler.codecs(GG)
     })
   },
-  37183: (uu, Eu, ju) => {
-    async function su(uu) {
-      const Eu = await fetch(uu, {
+  37137: (GG, bG, ZG) => {
+    async function wG(GG) {
+      const bG = await fetch(GG, {
         priority: "low"
       });
-      if (!Eu.ok) throw new Error(`Fetching ${uu} failed: HTTP ${Eu.status}`);
-      const ju = Eu.body.getReader();
-      for (; !(await ju.read()).done;);
+      if (!bG.ok) throw new Error(`Fetching ${GG} failed: HTTP ${bG.status}`);
+      const ZG = bG.body.getReader();
+      for (; !(await ZG.read()).done;);
     }
-    ju.d(Eu, {
-      e: () => su
+    ZG.d(bG, {
+      b: () => wG
     })
   },
-  37159: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Uu
+  37114: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => SG
     });
-    const su = ["end", "stop", "playerror"];
+    const wG = ["end", "stop", "playerror"];
 
-    function Uu(uu, Eu) {
-      const ju = () => {
-        if (function(uu) {
-            return "loaded" === uu.state() && !uu.playing() && !uu._playLock
-          }(uu)) {
-          for (const Eu of su) uu.off(Eu, ju);
-          uu.unload(), Eu()
+    function SG(GG, bG) {
+      const ZG = () => {
+        if (function(GG) {
+            return "loaded" === GG.state() && !GG.playing() && !GG._playLock
+          }(GG)) {
+          for (const bG of wG) GG.off(bG, ZG);
+          GG.unload(), bG()
         }
       };
-      for (const Uu of su) uu.on(Uu, ju);
-      ju()
+      for (const SG of wG) GG.on(SG, ZG);
+      ZG()
     }
   },
-  5026: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      Howl: () => Uu.Howl,
-      Howler: () => Uu.Howler,
-      musicOutput: () => hu,
-      readyAudioContext: () => Du
+  4883: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      Howl: () => SG.Howl,
+      Howler: () => SG.Howler,
+      musicOutput: () => dG,
+      readyAudioContext: () => JG
     });
-    var su, Uu = ju(5032),
-      Zu = ju(3634),
-      Xu = ju(4834);
-    const lu = Uu.Howler;
+    var wG, SG = ZG(4889),
+      LG = ZG(3423),
+      yG = ZG(4672);
+    const kG = SG.Howler;
 
-    function qu() {
-      var uu, Eu;
-      if (lu.ctx || !lu.usingWebAudio || "undefined" === typeof AudioContext || !(0, Xu.j)()) return;
-      const ju = navigator.audioSession;
-      let su;
-      "auto" === (null === ju || void 0 === ju ? void 0 : ju.type) && (ju.type = "ambient");
+    function UG() {
+      var GG, bG;
+      if (kG.ctx || !kG.usingWebAudio || "undefined" === typeof AudioContext || !(0, yG.h)()) return;
+      const ZG = navigator.audioSession;
+      let wG;
+      "auto" === (null === ZG || void 0 === ZG ? void 0 : ZG.type) && (ZG.type = "ambient");
       try {
-        su = new AudioContext({
+        wG = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const Uu = su.createGain();
-      Uu.gain.setValueAtTime(lu._muted ? 0 : null !== (uu = lu._volume) && void 0 !== uu ? uu : 1, su.currentTime), Uu.connect(su.destination), lu.ctx = su, lu.masterGain = Uu, null === (Eu = lu._setup) || void 0 === Eu || Eu.call(lu)
+      const SG = wG.createGain();
+      SG.gain.setValueAtTime(kG._muted ? 0 : null !== (GG = kG._volume) && void 0 !== GG ? GG : 1, wG.currentTime), SG.connect(wG.destination), kG.ctx = wG, kG.masterGain = SG, null === (bG = kG._setup) || void 0 === bG || bG.call(kG)
     }
-    lu._mobileUnloaded = !0;
-    const fu = lu.volume.bind(Uu.Howler);
-    lu.volume = function() {
-      return qu(), fu(...arguments)
+    kG._mobileUnloaded = !0;
+    const YG = kG.volume.bind(SG.Howler);
+    kG.volume = function() {
+      return UG(), YG(...arguments)
     };
-    const Cu = lu.mute.bind(Uu.Howler);
-    lu.mute = uu => (qu(), Cu(uu));
-    const bu = Uu.Howl.prototype,
-      cu = bu.init;
+    const VG = kG.mute.bind(SG.Howler);
+    kG.mute = GG => (UG(), VG(GG));
+    const pG = SG.Howl.prototype,
+      fG = pG.init;
 
-    function Nu() {
-      for (; lu._html5AudioPool.length < lu.html5PoolSize;) {
-        const uu = new Audio;
-        uu._unlocked = !0, lu._releaseHtml5Audio(uu)
+    function QG() {
+      for (; kG._html5AudioPool.length < kG.html5PoolSize;) {
+        const GG = new Audio;
+        GG._unlocked = !0, kG._releaseHtml5Audio(GG)
       }
-      for (const Eu of lu._howls)
-        if (!Eu._webAudio)
-          for (const ju of Eu._getSoundIds()) {
-            var uu;
-            const su = null === (uu = Eu._soundById(ju)) || void 0 === uu ? void 0 : uu._node;
-            su && !su._unlocked && (su._unlocked = !0, su.load())
+      for (const bG of kG._howls)
+        if (!bG._webAudio)
+          for (const ZG of bG._getSoundIds()) {
+            var GG;
+            const wG = null === (GG = bG._soundById(ZG)) || void 0 === GG ? void 0 : GG._node;
+            wG && !wG._unlocked && (wG._unlocked = !0, wG.load())
           }
     }
-    bu.init = function(uu) {
-      return qu(), cu.call(this, uu)
-    }, (0, Xu.j)() && (lu._unlockAudio = () => {
-      const uu = lu.ctx;
-      if (lu._audioUnlocked || !uu) return;
-      lu.autoUnlock = !1;
-      const Eu = uu.createBuffer(1, 1, 22050);
-      lu._scratchBuffer = Eu;
-      const ju = new AbortController;
-      let su = "afterPaint";
-      const Uu = () => {
-          var su;
-          if (lu._audioUnlocked) return;
-          null === (su = lu._autoResume) || void 0 === su || su.call(lu);
-          const Uu = uu.createBufferSource();
-          Uu.buffer = Eu, Uu.connect(uu.destination), Uu.start(0), uu.resume().catch((() => {})), Uu.onended = () => {
-            Uu.disconnect(0), lu._audioUnlocked = !0, ju.abort();
-            for (const uu of lu._howls) uu._emit("unlock")
+    pG.init = function(GG) {
+      return UG(), fG.call(this, GG)
+    }, (0, yG.h)() && (kG._unlockAudio = () => {
+      const GG = kG.ctx;
+      if (kG._audioUnlocked || !GG) return;
+      kG.autoUnlock = !1;
+      const bG = GG.createBuffer(1, 1, 22050);
+      kG._scratchBuffer = bG;
+      const ZG = new AbortController;
+      let wG = "afterPaint";
+      const SG = () => {
+          var wG;
+          if (kG._audioUnlocked) return;
+          null === (wG = kG._autoResume) || void 0 === wG || wG.call(kG);
+          const SG = GG.createBufferSource();
+          SG.buffer = bG, SG.connect(GG.destination), SG.start(0), GG.resume().catch((() => {})), SG.onended = () => {
+            SG.disconnect(0), kG._audioUnlocked = !0, ZG.abort();
+            for (const GG of kG._howls) GG._emit("unlock")
           }
         },
-        qu = () => {
-          Nu(), Uu()
+        UG = () => {
+          QG(), SG()
         },
-        fu = Eu => {
-          if (Nu(), "inTap" === su) {
-            if ("running" === uu.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Uu()
-          } else "afterPaint" === su && (su = "queued", (0, Zu.d)(Eu.timeStamp, (() => {
-            su = "inTap", Uu()
+        YG = bG => {
+          if (QG(), "inTap" === wG) {
+            if ("running" === GG.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), SG()
+          } else "afterPaint" === wG && (wG = "queued", (0, LG.d)(bG.timeStamp, (() => {
+            wG = "inTap", SG()
           })))
         };
-      for (const Zu of ["touchstart", "touchend"]) document.addEventListener(Zu, qu, {
+      for (const LG of ["touchstart", "touchend"]) document.addEventListener(LG, UG, {
         capture: !0,
-        signal: ju.signal
+        signal: ZG.signal
       });
-      for (const Zu of Xu.c) document.addEventListener(Zu, fu, {
+      for (const LG of yG.d) document.addEventListener(LG, YG, {
         capture: !0,
-        signal: ju.signal
+        signal: ZG.signal
       })
     });
-    let Ou = 0;
-    const Yu = null === (su = lu._autoSuspend) || void 0 === su ? void 0 : su.bind(Uu.Howler);
+    let KG = 0;
+    const hG = null === (wG = kG._autoSuspend) || void 0 === wG ? void 0 : wG.bind(SG.Howler);
 
-    function hu() {
-      Du();
+    function dG() {
+      JG();
       const {
-        ctx: uu,
-        masterGain: Eu
-      } = lu;
-      return uu && Eu ? {
-        ctx: uu,
-        destination: Eu,
-        holdAwake: uu => {
-          var Eu, ju;
-          (Ou += uu ? 1 : -1, uu) ? null === (Eu = lu._autoResume) || void 0 === Eu || Eu.call(lu): null === (ju = lu._autoSuspend) || void 0 === ju || ju.call(lu)
+        ctx: GG,
+        masterGain: bG
+      } = kG;
+      return GG && bG ? {
+        ctx: GG,
+        destination: bG,
+        holdAwake: GG => {
+          var bG, ZG;
+          (KG += GG ? 1 : -1, GG) ? null === (bG = kG._autoResume) || void 0 === bG || bG.call(kG): null === (ZG = kG._autoSuspend) || void 0 === ZG || ZG.call(kG)
         },
         wake: () => {
-          var Eu;
-          "running" !== uu.state && (null === (Eu = lu._autoResume) || void 0 === Eu || Eu.call(lu), uu.resume().catch((() => {})))
+          var bG;
+          "running" !== GG.state && (null === (bG = kG._autoResume) || void 0 === bG || bG.call(kG), GG.resume().catch((() => {})))
         }
       } : null
     }
 
-    function Du() {
-      var uu;
-      (lu.volume(), lu.ctx && lu.autoUnlock) && (null === (uu = lu._unlockAudio) || void 0 === uu || uu.call(lu))
+    function JG() {
+      var GG;
+      (kG.volume(), kG.ctx && kG.autoUnlock) && (null === (GG = kG._unlockAudio) || void 0 === GG || GG.call(kG))
     }
-    Yu && (lu._autoSuspend = () => Ou > 0 ? Uu.Howler : Yu())
+    hG && (kG._autoSuspend = () => KG > 0 ? SG.Howler : hG())
   },
-  37172: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => su
+  37132: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => wG
     });
-    const su = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
+    const wG = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
   },
-  37170: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Xu,
-      g: () => Uu,
-      i: () => su
+  37125: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => yG,
+      f: () => SG,
+      i: () => wG
     });
 
-    function su(uu) {
-      return uu.replace(/[_\-\s]*\d+$/, "") || uu
+    function wG(GG) {
+      return GG.replace(/[_\-\s]*\d+$/, "") || GG
     }
 
-    function Uu(uu, Eu, ju) {
-      return ju <= 0 ? 0 : uu * ju / Math.max(Eu, ju)
+    function SG(GG, bG, ZG) {
+      return ZG <= 0 ? 0 : GG * ZG / Math.max(bG, ZG)
     }
 
-    function Zu(uu, Eu) {
-      const ju = uu.getDurationMs();
-      return ju > 0 ? uu.loudness * Math.max(0, 1 - (Eu - uu.startMs) / ju) : 0
+    function LG(GG, bG) {
+      const ZG = GG.getDurationMs();
+      return ZG > 0 ? GG.loudness * Math.max(0, 1 - (bG - GG.startMs) / ZG) : 0
     }
-    class Xu {
+    class yG {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = uu, this.maxPerGroup = Eu, this.voices = []
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = GG, this.maxPerGroup = bG, this.voices = []
       }
-      admit(uu) {
-        if (this.voices = this.voices.filter((uu => uu.isAlive())), null !== uu.group) {
-          const Eu = this.voices.filter((Eu => Eu.group === uu.group));
-          if (Eu.length >= this.maxPerGroup && !this.dropLeastWorth(Eu, uu)) return !1
+      admit(GG) {
+        if (this.voices = this.voices.filter((GG => GG.isAlive())), null !== GG.group) {
+          const bG = this.voices.filter((bG => bG.group === GG.group));
+          if (bG.length >= this.maxPerGroup && !this.dropLeastWorth(bG, GG)) return !1
         }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, uu)) && (this.voices.push(uu), !0)
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, GG)) && (this.voices.push(GG), !0)
       }
-      dropLeastWorth(uu, Eu) {
-        let ju = null,
-          su = 1 / 0;
-        for (const Uu of uu) {
-          if (!Uu.canStop()) continue;
-          const uu = Zu(Uu, Eu.startMs);
-          uu < su && (ju = Uu, su = uu)
+      dropLeastWorth(GG, bG) {
+        let ZG = null,
+          wG = 1 / 0;
+        for (const SG of GG) {
+          if (!SG.canStop()) continue;
+          const GG = LG(SG, bG.startMs);
+          GG < wG && (ZG = SG, wG = GG)
         }
-        return !(!ju || Eu.loudness < su) && (this.voices.splice(this.voices.indexOf(ju), 1), ju.stop(), !0)
+        return !(!ZG || bG.loudness < wG) && (this.voices.splice(this.voices.indexOf(ZG), 1), ZG.stop(), !0)
       }
     }
   },
-  36988: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Uu,
-      i: () => Xu,
-      j: () => lu
+  36940: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => SG,
+      f: () => yG,
+      h: () => kG
     });
-    var su = ju(24);
-    const Uu = "touchSprintChanged";
-    let Zu = !0;
+    var wG = ZG(19);
+    const SG = "touchSprintChanged";
+    let LG = !0;
 
-    function Xu() {
-      return Zu
+    function yG() {
+      return LG
     }
 
-    function lu(uu) {
-      uu !== Zu && (Zu = uu, su.h.TY(Uu, uu))
+    function kG(GG) {
+      GG !== LG && (LG = GG, wG.l.xh(SG, GG))
     }
   },
-  37194: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Zu,
-      f: () => Xu,
-      i: () => su
+  37154: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => LG,
+      g: () => yG,
+      i: () => wG
     });
-    class su {
-      constructor(uu) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = uu
+    class wG {
+      constructor(GG) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = GG
       }
-      setMultiplierType(uu, Eu) {
-        var ju;
-        this.multipliers[uu] = Eu, null === (ju = this._onUpdate) || void 0 === ju || ju.call(this)
+      setMultiplierType(GG, bG) {
+        var ZG;
+        this.multipliers[GG] = bG, null === (ZG = this._onUpdate) || void 0 === ZG || ZG.call(this)
       }
-      removeMultiplier(uu) {
-        var Eu;
-        delete this.multipliers[uu], null === (Eu = this._onUpdate) || void 0 === Eu || Eu.call(this)
+      removeMultiplier(GG) {
+        var bG;
+        delete this.multipliers[GG], null === (bG = this._onUpdate) || void 0 === bG || bG.call(this)
       }
-      getMultiplierType(uu) {
-        return this.multipliers[uu]
+      getMultiplierType(GG) {
+        return this.multipliers[GG]
       }
       getTotalMultipliedVal() {
-        let uu = 1;
-        for (const Eu in this.multipliers) uu *= this.multipliers[Eu];
-        return uu
+        let GG = 1;
+        for (const bG in this.multipliers) GG *= this.multipliers[bG];
+        return GG
       }
     }
-    class Uu {
+    class SG {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = uu
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = GG
       }
-      setBooleanType(uu, Eu) {
-        const ju = this._getTotalBooleanVal();
-        this.booleans[uu] = !!Eu;
-        const su = this.getTotalBooleanVal();
-        var Uu;
-        su !== ju && (null === (Uu = this._onUpdate) || void 0 === Uu || Uu.call(this, su, this.booleans));
-        return su
+      setBooleanType(GG, bG) {
+        const ZG = this._getTotalBooleanVal();
+        this.booleans[GG] = !!bG;
+        const wG = this.getTotalBooleanVal();
+        var SG;
+        wG !== ZG && (null === (SG = this._onUpdate) || void 0 === SG || SG.call(this, wG, this.booleans));
+        return wG
       }
-      removeBoolean(uu) {
-        const Eu = this._getTotalBooleanVal();
-        delete this.booleans[uu];
-        const ju = this._getTotalBooleanVal();
-        var su;
-        null !== ju && ju !== Eu && (null === (su = this._onUpdate) || void 0 === su || su.call(this, ju, this.booleans));
-        return null !== ju && void 0 !== ju && ju
+      removeBoolean(GG) {
+        const bG = this._getTotalBooleanVal();
+        delete this.booleans[GG];
+        const ZG = this._getTotalBooleanVal();
+        var wG;
+        null !== ZG && ZG !== bG && (null === (wG = this._onUpdate) || void 0 === wG || wG.call(this, ZG, this.booleans));
+        return null !== ZG && void 0 !== ZG && ZG
       }
-      getBooleanType(uu) {
-        return this.booleans[uu]
+      getBooleanType(GG) {
+        return this.booleans[GG]
       }
       getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
       forceUpdate() {
-        var uu;
-        null === (uu = this._onUpdate) || void 0 === uu || uu.call(this, this.getTotalBooleanVal(), this.booleans)
+        var GG;
+        null === (GG = this._onUpdate) || void 0 === GG || GG.call(this, this.getTotalBooleanVal(), this.booleans)
       }
       _getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class Zu extends Uu {
+    class LG extends SG {
       getTotalBooleanVal() {
-        const uu = this._getTotalBooleanVal();
-        if (null === uu) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return uu
+        const GG = this._getTotalBooleanVal();
+        if (null === GG) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return GG
       }
       _getTotalBooleanVal() {
-        let uu = !1,
-          Eu = !0;
-        for (const ju in this.booleans) uu = !0, Eu &&= this.booleans[ju];
-        return uu ? Eu : null
+        let GG = !1,
+          bG = !0;
+        for (const ZG in this.booleans) GG = !0, bG &&= this.booleans[ZG];
+        return GG ? bG : null
       }
     }
-    class Xu extends Uu {
+    class yG extends SG {
       getTotalBooleanVal() {
-        const uu = this._getTotalBooleanVal();
-        if (null === uu) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return uu
+        const GG = this._getTotalBooleanVal();
+        if (null === GG) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return GG
       }
       _getTotalBooleanVal() {
-        let uu = !1,
-          Eu = !1;
-        for (const ju in this.booleans) uu = !0, Eu ||= this.booleans[ju];
-        return uu ? Eu : null
+        let GG = !1,
+          bG = !1;
+        for (const ZG in this.booleans) GG = !0, bG ||= this.booleans[ZG];
+        return GG ? bG : null
       }
     }
   },
-  37185: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Zu,
-      h: () => su,
-      j: () => Uu
+  37146: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => LG,
+      i: () => wG,
+      l: () => SG
     });
-    const su = 15,
-      Uu = 3,
-      Zu = 30
+    const wG = 15,
+      SG = 3,
+      LG = 30
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

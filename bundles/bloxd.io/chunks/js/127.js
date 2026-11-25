@@ -1,70 +1,70 @@
 export const id = 127;
 export const ids = [127];
 export const modules = {
-  6743: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      default: () => Ou
+  6540: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      default: () => KG
     });
-    var su = ju(1580),
-      Uu = ju(1611),
-      Zu = ju(3175),
-      Xu = ju(2393),
-      lu = ju(1506),
-      qu = ju(1570),
-      fu = ju(1178),
-      Cu = ju(1114),
-      bu = ju(1244),
-      cu = ju(1116),
-      Nu = ju(1154);
+    var wG = ZG(1457),
+      SG = ZG(1501),
+      LG = ZG(2999),
+      yG = ZG(2281),
+      kG = ZG(1393),
+      UG = ZG(1444),
+      YG = ZG(1092),
+      VG = ZG(1012),
+      pG = ZG(1151),
+      fG = ZG(1016),
+      QG = ZG(1067);
 
-    function Ou() {
-      var uu;
+    function KG() {
+      var GG;
       const {
-        t: Eu
-      } = (0, bu.A)(), {
-        pack: ju
-      } = (0, su.B)(), {
-        userContext: Ou
-      } = (0, fu.c)();
-      if (ju) {
-        const uu = Uu.e[ju];
-        if (null === uu || void 0 === uu || !uu.purchasable) return (0, Nu.jsx)(qu.NavigatePreserveSearch, {
+        t: bG
+      } = (0, pG.w)(), {
+        pack: ZG
+      } = (0, wG.v)(), {
+        userContext: KG
+      } = (0, YG.e)();
+      if (ZG) {
+        const GG = SG.c[ZG];
+        if (null === GG || void 0 === GG || !GG.purchasable) return (0, QG.jsx)(UG.NavigatePreserveSearch, {
           to: "/"
         })
       }
-      const Yu = ju ? Uu.e[ju] : null,
-        hu = ju ? Zu.k[(0, Xu.j)(ju)] : null,
-        Du = void 0 !== (null === Yu || void 0 === Yu ? void 0 : Yu.characterSet) || null !== Yu && void 0 !== Yu && Yu.singleItem ? Yu.displayName : `${null!==(uu=null===Yu||void 0===Yu?void 0:Yu.displayName)&&void 0!==uu?uu:ju} Pack`,
-        gu = Yu ? `Your ${Du} is Ready!` : "Welcome To Super Rank!",
-        Mu = Yu ? "Equip your new cosmetics in the character customisation menu!" : "You can change you name color and cape in the customization menu in game!",
-        eu = Yu ? !Ou.getOwnedCosmeticPacks().includes(ju) : !Ou.playerHasRank("super"),
-        Gu = Yu ? "You should get your cosmetics instantly, but it could take up to an hour to apply. If you don't have them after an hour, contact help@bloxd.io." : "You should get Super Rank instantly, but it could take up to an hour to apply. If you don't have Super Rank after an hour, contact help@bloxd.io.";
-      return (0, Nu.jsxs)("div", {
+      const hG = ZG ? SG.c[ZG] : null,
+        dG = ZG ? LG.h[(0, yG.h)(ZG)] : null,
+        JG = void 0 !== (null === hG || void 0 === hG ? void 0 : hG.characterSet) || null !== hG && void 0 !== hG && hG.singleItem ? hG.displayName : `${null!==(GG=null===hG||void 0===hG?void 0:hG.displayName)&&void 0!==GG?GG:ZG} Pack`,
+        rG = hG ? `Your ${JG} is Ready!` : "Welcome To Super Rank!",
+        zG = hG ? "Equip your new cosmetics in the character customisation menu!" : "You can change you name color and cape in the customization menu in game!",
+        EG = hG ? !KG.getOwnedCosmeticPacks().includes(ZG) : !KG.playerHasRank("super"),
+        oG = hG ? "You should get your cosmetics instantly, but it could take up to an hour to apply. If you don't have them after an hour, contact help@bloxd.io." : "You should get Super Rank instantly, but it could take up to an hour to apply. If you don't have Super Rank after an hour, contact help@bloxd.io.";
+      return (0, QG.jsxs)("div", {
         className: "PurchaseWelcome AnimFadeInScaleUp",
-        children: [hu && (0, Nu.jsx)(hu, {}), !Yu && (0, Nu.jsx)(Cu.c, {
+        children: [dG && (0, QG.jsx)(dG, {}), !hG && (0, QG.jsx)(VG.d, {
           iconName: "bolt",
           iconCountPerGroup: 10,
           animation: "Fall",
           midShowerStart: !0,
           customClass: "SuperRankWelcomeIconShower"
-        }), (0, Nu.jsx)("div", {
+        }), (0, QG.jsx)("div", {
           className: "PurchaseWelcomeTitle FullyFancyText",
-          children: gu
-        }), (0, Nu.jsx)("div", {
+          children: rG
+        }), (0, QG.jsx)("div", {
           className: "PurchaseWelcomeText",
-          children: Mu
-        }), eu && (0, Nu.jsxs)("div", {
+          children: zG
+        }), EG && (0, QG.jsxs)("div", {
           className: "PurchaseWelcomeWarning",
-          children: [(0, Nu.jsx)(cu.e, {
+          children: [(0, QG.jsx)(fG.c, {
             name: "circle-info"
-          }), (0, Nu.jsx)("div", {
-            children: Gu
+          }), (0, QG.jsx)("div", {
+            children: oG
           })]
-        }), (0, Nu.jsx)(qu.LinkPreserveSearch, {
+        }), (0, QG.jsx)(UG.LinkPreserveSearch, {
           to: "/",
-          children: (0, Nu.jsx)(lu.p, {
+          children: (0, QG.jsx)(kG.k, {
             className: "PurchaseWelcomeContinue",
-            children: Eu("general:continue")
+            children: bG("general:continue")
           })
         })]
       })
@@ -72,4 +72,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

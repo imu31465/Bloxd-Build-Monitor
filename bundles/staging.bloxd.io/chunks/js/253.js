@@ -1,80 +1,80 @@
 export const id = 253;
 export const ids = [253];
 export const modules = {
-  40076: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      playDocsSound: () => lu
+  40183: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      playDocsSound: () => kG
     });
-    var su = ju(5026),
-      Uu = ju(37151),
-      Zu = ju(1255);
-    const Xu = new Map;
+    var wG = ZG(4883),
+      SG = ZG(37105),
+      LG = ZG(1163);
+    const yG = new Map;
 
-    function lu(uu, Eu, ju, lu, qu) {
-      let fu, Cu = null,
-        bu = 0,
-        cu = 0;
-      if (Eu) fu = new su.Howl({
-        src: [`${Zu.clientSideServerUrls.staticUrl}/sounds/music/${uu}.mp3`],
+    function kG(GG, bG, ZG, kG, UG) {
+      let YG, VG = null,
+        pG = 0,
+        fG = 0;
+      if (bG) YG = new wG.Howl({
+        src: [`${LG.clientSideServerUrls.staticUrl}/sounds/music/${GG}.mp3`],
         html5: !0,
-        volume: ju
+        volume: ZG
       });
       else {
-        var Nu;
-        Cu = (0, Uu.j)(uu);
-        const Eu = (0, Uu.g)(Cu),
-          ju = null !== (Nu = Eu.sprite[uu]) && void 0 !== Nu ? Nu : null;
-        if (!ju) throw new Error(`Docs sound ${uu} is not in sprite sheet ${Cu}`);
-        bu = ju[0] / 1e3, cu = ju[1] / 1e3, fu = Xu.get(Cu), fu || (fu = new su.Howl({
-          ...Eu,
+        var QG;
+        VG = (0, SG.j)(GG);
+        const bG = (0, SG.i)(VG),
+          ZG = null !== (QG = bG.sprite[GG]) && void 0 !== QG ? QG : null;
+        if (!ZG) throw new Error(`Docs sound ${GG} is not in sprite sheet ${VG}`);
+        pG = ZG[0] / 1e3, fG = ZG[1] / 1e3, YG = yG.get(VG), YG || (YG = new wG.Howl({
+          ...bG,
           volume: 1
-        }), Xu.set(Cu, fu))
+        }), yG.set(VG, YG))
       }
-      const Ou = Eu ? fu.play() : fu.play(uu);
-      fu.volume(ju, Ou), lu > 0 && fu.seek(bu + lu, Ou);
-      const Yu = () => Eu ? fu.duration() : cu;
-      let hu = !1;
-      const Du = uu => {
-          hu || (hu = !0, fu.off("play", gu, Ou), fu.off("end", Mu, Ou), fu.off("loaderror", Gu), fu.off("playerror", eu, Ou), Eu && fu.unload(), qu.onEnd(uu))
+      const KG = bG ? YG.play() : YG.play(GG);
+      YG.volume(ZG, KG), kG > 0 && YG.seek(pG + kG, KG);
+      const hG = () => bG ? YG.duration() : fG;
+      let dG = !1;
+      const JG = GG => {
+          dG || (dG = !0, YG.off("play", rG, KG), YG.off("end", zG, KG), YG.off("loaderror", oG), YG.off("playerror", EG, KG), bG && YG.unload(), UG.onEnd(GG))
         },
-        gu = () => {
-          qu.onPlay(Yu())
+        rG = () => {
+          UG.onPlay(hG())
         },
-        Mu = () => {
-          Du(!1)
+        zG = () => {
+          JG(!1)
         },
-        eu = (Eu, ju) => {
-          console.error(`Could not play docs sound ${uu}`, ju), Du(!0)
+        EG = (bG, ZG) => {
+          console.error(`Could not play docs sound ${GG}`, ZG), JG(!0)
         },
-        Gu = (uu, Eu) => {
-          null !== Cu && Xu.get(Cu) === fu && (Xu.delete(Cu), fu.unload()), eu(uu, Eu)
+        oG = (GG, bG) => {
+          null !== VG && yG.get(VG) === YG && (yG.delete(VG), YG.unload()), EG(GG, bG)
         };
-      return fu.on("play", gu, Ou), fu.once("end", Mu, Ou), fu.once("loaderror", Gu), fu.once("playerror", eu, Ou), {
+      return YG.on("play", rG, KG), YG.once("end", zG, KG), YG.once("loaderror", oG), YG.once("playerror", EG, KG), {
         pause: () => {
-          fu.pause(Ou)
+          YG.pause(KG)
         },
         resume: () => {
-          fu.play(Ou)
+          YG.play(KG)
         },
-        seek: uu => {
-          const Eu = Yu(),
-            ju = Math.max(uu, 0);
-          fu.seek(bu + (Eu > 0 ? Math.min(ju, Eu) : ju), Ou)
+        seek: GG => {
+          const bG = hG(),
+            ZG = Math.max(GG, 0);
+          YG.seek(pG + (bG > 0 ? Math.min(ZG, bG) : ZG), KG)
         },
-        bM: () => {
-          const uu = fu.seek(Ou);
-          return "number" === typeof uu ? Math.max(0, uu - bu) : 0
+        HJ: () => {
+          const GG = YG.seek(KG);
+          return "number" === typeof GG ? Math.max(0, GG - pG) : 0
         },
-        getDuration: Yu,
-        setVolume: uu => {
-          fu.volume(uu, Ou)
+        getDuration: hG,
+        setVolume: GG => {
+          YG.volume(GG, KG)
         },
         stop: () => {
-          hu || (fu.stop(Ou), Du(!1))
+          dG || (YG.stop(KG), JG(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

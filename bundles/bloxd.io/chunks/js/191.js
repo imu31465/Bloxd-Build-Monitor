@@ -1,156 +1,156 @@
 export const id = 191;
 export const ids = [191];
 export const modules = {
-  40873: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => qu,
-      g: () => lu,
-      i: () => Xu
+  40993: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => UG,
+      f: () => kG,
+      j: () => yG
     });
-    var su = ju(40877),
-      Uu = ju(4970),
-      Zu = ju(40883);
+    var wG = ZG(40999),
+      SG = ZG(4810),
+      LG = ZG(41007);
 
-    function Xu(uu) {
-      return uu.payloadKind === Uu.ic.Msgpack ? (0, su.d)(uu.payload) : void 0
+    function yG(GG) {
+      return GG.payloadKind === SG.jc.Msgpack ? (0, wG.e)(GG.payload) : void 0
     }
 
-    function lu(uu, Eu) {
-      if (Eu.payloadKind === Uu.ic.Bytes || Eu.payloadKind === Uu.ic.MsgpackBin) return (0, Zu.c)(uu, Eu.payload)
+    function kG(GG, bG) {
+      if (bG.payloadKind === SG.jc.Bytes || bG.payloadKind === SG.jc.MsgpackBin) return (0, LG.e)(GG, bG.payload)
     }
 
-    function qu(uu) {
-      return null !== uu && "object" === typeof uu
+    function UG(GG) {
+      return null !== GG && "object" === typeof GG
     }
   },
-  40889: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => bu,
-      i: () => cu,
-      k: () => Nu,
-      n: () => Cu,
-      q: () => hu
+  41012: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => pG,
+      f: () => fG,
+      j: () => QG,
+      l: () => VG,
+      n: () => dG
     });
-    var su = ju(4970),
-      Uu = ju(40897);
-    const Zu = new Map,
-      Xu = new Set,
-      lu = new Set;
-    let qu = 0,
-      fu = 0;
+    var wG = ZG(4810),
+      SG = ZG(41018);
+    const LG = new Map,
+      yG = new Set,
+      kG = new Set;
+    let UG = 0,
+      YG = 0;
 
-    function Cu(uu, Eu) {
-      let ju = Zu.get(uu);
-      return ju || (ju = new Set, Zu.set(uu, ju)), ju.add(Eu), () => {
-        ju.delete(Eu)
+    function VG(GG, bG) {
+      let ZG = LG.get(GG);
+      return ZG || (ZG = new Set, LG.set(GG, ZG)), ZG.add(bG), () => {
+        ZG.delete(bG)
       }
     }
 
-    function bu() {
-      return 0 !== qu
+    function pG() {
+      return 0 !== UG
     }
 
-    function cu(uu) {
-      return Xu.add(uu), () => {
-        Xu.delete(uu)
+    function fG(GG) {
+      return yG.add(GG), () => {
+        yG.delete(GG)
       }
     }
 
-    function Nu(uu) {
-      return lu.add(uu), () => {
-        lu.delete(uu)
+    function QG(GG) {
+      return kG.add(GG), () => {
+        kG.delete(GG)
       }
     }
-    const Ou = "A raw message listener threw";
+    const KG = "A raw message listener threw";
 
-    function Yu(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Xu;
-      for (const su of Eu) try {
-        su()
-      } catch (ju) {
-        uu ? (0, Uu.p)(ju, Ou) : console.error(Ou, ju)
+    function hG(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yG;
+      for (const wG of bG) try {
+        wG()
+      } catch (ZG) {
+        GG ? (0, SG.n)(ZG, KG) : console.error(KG, ZG)
       }
     }
-    const hu = {
-      fire: function(uu) {
-        if ("connection" === uu.type) {
-          const Eu = uu.phase === su.z.Activated && uu.conn !== qu && uu.conn > fu,
-            ju = (uu.phase === su.z.Left || uu.phase === su.z.Closed) && uu.conn === qu;
-          return void(Eu || ju ? (qu = Eu ? uu.conn : 0, Yu(!0)) : uu.phase === su.z.Resumed && 0 !== qu && uu.conn > fu && (qu = uu.conn, Yu(!0, lu)))
+    const dG = {
+      fire: function(GG) {
+        if ("connection" === GG.type) {
+          const bG = GG.phase === wG.M.Activated && GG.conn !== UG && GG.conn > YG,
+            ZG = (GG.phase === wG.M.Left || GG.phase === wG.M.Closed) && GG.conn === UG;
+          return void(bG || ZG ? (UG = bG ? GG.conn : 0, hG(!0)) : GG.phase === wG.M.Resumed && 0 !== UG && GG.conn > YG && (UG = GG.conn, hG(!0, kG)))
         }
-        const Eu = Zu.get(uu.VC);
-        if (Eu && uu.conn === qu && 0 !== qu)
-          for (const su of Eu) try {
-            su(uu)
-          } catch (ju) {
-            (0, Uu.p)(ju, Ou)
+        const bG = LG.get(GG.vV);
+        if (bG && GG.conn === UG && 0 !== UG)
+          for (const wG of bG) try {
+            wG(GG)
+          } catch (ZG) {
+            (0, SG.n)(ZG, KG)
           }
       },
-      close: function(uu) {
-        fu = Math.max(fu, uu, qu), 0 !== qu && (qu = 0, Yu(!1))
+      close: function(GG) {
+        YG = Math.max(YG, GG, UG), 0 !== UG && (UG = 0, hG(!1))
       }
     }
   },
-  40860: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => fu,
-      e: () => qu,
-      h: () => lu
+  40986: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => YG,
+      f: () => UG,
+      i: () => kG
     });
-    var su = ju(1320),
-      Uu = ju(40833);
-    const Zu = new TextDecoder,
-      Xu = new TextEncoder;
+    var wG = ZG(1230),
+      SG = ZG(40954);
+    const LG = new TextDecoder,
+      yG = new TextEncoder;
 
-    function lu(uu, Eu) {
-      const ju = uu.queries.entityName(Eu);
-      if (ju === Uu.yc) return;
-      const Xu = uu.memoryData(uu.scratch(), 4 + ju, 4, "entity_name's answer");
-      if (!Xu) return;
-      const lu = Xu.getUint32(0, !0),
-        qu = Zu.decode(new Uint8Array(Xu.buffer, Xu.byteOffset + 4, ju));
-      return (0, su.e)(qu, !1, lu === Uu.Hd ? null : lu)
+    function kG(GG, bG) {
+      const ZG = GG.queries.entityName(bG);
+      if (ZG === SG.Fc) return;
+      const yG = GG.memoryData(GG.scratch(), 4 + ZG, 4, "entity_name's answer");
+      if (!yG) return;
+      const kG = yG.getUint32(0, !0),
+        UG = LG.decode(new Uint8Array(yG.buffer, yG.byteOffset + 4, ZG));
+      return (0, wG.b)(UG, !1, kG === SG.Td ? null : kG)
     }
 
-    function qu(uu, Eu, ju) {
-      const su = Xu.encode(ju);
-      if (su.length > Uu.yb) return !1;
-      const Zu = uu.memoryView(Uint8Array, uu.scratch(), su.length, "has_effect's name");
-      return !!Zu && (Zu.set(su), 1 === uu.queries.hasEffect(Eu, su.length))
+    function UG(GG, bG, ZG) {
+      const wG = yG.encode(ZG);
+      if (wG.length > SG.Fb) return !1;
+      const LG = GG.memoryView(Uint8Array, GG.scratch(), wG.length, "has_effect's name");
+      return !!LG && (LG.set(wG), 1 === GG.queries.hasEffect(bG, wG.length))
     }
 
-    function fu(uu, Eu, ju, su) {
-      const Xu = uu.queries.blockData(Eu, ju, su);
-      if (Xu === Uu.yc) return;
-      const lu = uu.memoryView(Uint8Array, uu.scratch(), Xu, "block_data's answer");
-      return lu ? JSON.parse(Zu.decode(lu)) : void 0
+    function YG(GG, bG, ZG, wG) {
+      const yG = GG.queries.blockData(bG, ZG, wG);
+      if (yG === SG.Fc) return;
+      const kG = GG.memoryView(Uint8Array, GG.scratch(), yG, "block_data's answer");
+      return kG ? JSON.parse(LG.decode(kG)) : void 0
     }
   },
-  40877: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Uu,
-      f: () => Cu
+  40999: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => SG,
+      g: () => VG
     });
-    const su = new TextDecoder;
+    const wG = new TextDecoder;
 
-    function Uu(uu) {
-      const Eu = new Zu(uu),
-        ju = Eu.value();
-      if (Eu.at !== uu.length) throw new Error(`msgpack: ${uu.length-Eu.at} bytes after the value`);
-      return ju
+    function SG(GG) {
+      const bG = new LG(GG),
+        ZG = bG.value();
+      if (bG.at !== GG.length) throw new Error(`msgpack: ${GG.length-bG.at} bytes after the value`);
+      return ZG
     }
-    class Zu {
-      constructor(uu) {
-        this.bytes = uu, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(uu.buffer, uu.byteOffset, uu.byteLength)
+    class LG {
+      constructor(GG) {
+        this.bytes = GG, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(GG.buffer, GG.byteOffset, GG.byteLength)
       }
       value() {
-        const uu = this.u8();
-        if (uu <= 127) return uu;
-        if (uu >= 224) return uu - 256;
-        if (uu >= 128 && uu <= 143) return this.map(15 & uu);
-        if (uu >= 144 && uu <= 159) return this.array(15 & uu);
-        if (uu >= 160 && uu <= 191) return this.str(31 & uu);
-        switch (uu) {
+        const GG = this.u8();
+        if (GG <= 127) return GG;
+        if (GG >= 224) return GG - 256;
+        if (GG >= 128 && GG <= 143) return this.map(15 & GG);
+        if (GG >= 144 && GG <= 159) return this.array(15 & GG);
+        if (GG >= 160 && GG <= 191) return this.str(31 & GG);
+        switch (GG) {
           case 192:
             return null;
           case 194:
@@ -214,13 +214,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${uu.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${GG.toString(16)} at ${this.at-1}`)
         }
       }
-      take(uu) {
-        const Eu = this.at;
-        if (Eu + uu > this.bytes.length) throw new Error(`msgpack: ${uu} bytes past the end at ${Eu}`);
-        return this.at = Eu + uu, Eu
+      take(GG) {
+        const bG = this.at;
+        if (bG + GG > this.bytes.length) throw new Error(`msgpack: ${GG} bytes past the end at ${bG}`);
+        return this.at = bG + GG, bG
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -231,958 +231,958 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(uu) {
-        const Eu = this.take(8);
-        return uu ? this.view.getBigInt64(Eu, !1) : this.view.getBigUint64(Eu, !1)
+      int64(GG) {
+        const bG = this.take(8);
+        return GG ? this.view.getBigInt64(bG, !1) : this.view.getBigUint64(bG, !1)
       }
-      str(uu) {
-        const Eu = this.take(uu),
-          ju = this.bytes;
-        if (uu < 16) {
-          let Uu = "";
-          for (let Zu = Eu; Zu < Eu + uu; Zu++) {
-            const Xu = ju[Zu];
-            if (Xu >= 128) return su.decode(ju.subarray(Eu, Eu + uu));
-            Uu += String.fromCharCode(Xu)
+      str(GG) {
+        const bG = this.take(GG),
+          ZG = this.bytes;
+        if (GG < 16) {
+          let SG = "";
+          for (let LG = bG; LG < bG + GG; LG++) {
+            const yG = ZG[LG];
+            if (yG >= 128) return wG.decode(ZG.subarray(bG, bG + GG));
+            SG += String.fromCharCode(yG)
           }
-          return Uu
+          return SG
         }
-        return su.decode(ju.subarray(Eu, Eu + uu))
+        return wG.decode(ZG.subarray(bG, bG + GG))
       }
-      bin(uu) {
-        const Eu = this.take(uu);
-        return this.bytes.subarray(Eu, Eu + uu)
+      bin(GG) {
+        const bG = this.take(GG);
+        return this.bytes.subarray(bG, bG + GG)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(uu) {
+      array(GG) {
         this.enter();
-        const Eu = [];
-        for (let ju = 0; ju < uu; ju++) Eu.push(this.value());
-        return this.depth--, Eu
+        const bG = [];
+        for (let ZG = 0; ZG < GG; ZG++) bG.push(this.value());
+        return this.depth--, bG
       }
-      map(uu) {
+      map(GG) {
         this.enter();
-        const Eu = {};
-        for (let ju = 0; ju < uu; ju++) {
-          const uu = this.value(),
-            ju = this.value();
-          Eu["__proto__" === uu ? "__proto_" : String(uu)] = ju
+        const bG = {};
+        for (let ZG = 0; ZG < GG; ZG++) {
+          const GG = this.value(),
+            ZG = this.value();
+          bG["__proto__" === GG ? "__proto_" : String(GG)] = ZG
         }
-        return this.depth--, Eu
+        return this.depth--, bG
       }
-      ext(uu) {
-        const Eu = this.view.getInt8(this.take(1)),
-          ju = this.take(uu);
-        if (0 !== Eu) {
-          if (-1 === Eu) {
-            if (1 === uu) return new Date(NaN);
-            if (4 === uu) return new Date(1e3 * this.view.getUint32(ju, !1));
-            if (8 === uu) {
-              const uu = this.view.getUint32(ju, !1),
-                Eu = uu >>> 2,
-                su = 4294967296 * (3 & uu) + this.view.getUint32(ju + 4, !1);
-              return new Date(1e3 * su + Eu / 1e6)
+      ext(GG) {
+        const bG = this.view.getInt8(this.take(1)),
+          ZG = this.take(GG);
+        if (0 !== bG) {
+          if (-1 === bG) {
+            if (1 === GG) return new Date(NaN);
+            if (4 === GG) return new Date(1e3 * this.view.getUint32(ZG, !1));
+            if (8 === GG) {
+              const GG = this.view.getUint32(ZG, !1),
+                bG = GG >>> 2,
+                wG = 4294967296 * (3 & GG) + this.view.getUint32(ZG + 4, !1);
+              return new Date(1e3 * wG + bG / 1e6)
             }
-            if (12 === uu) {
-              const uu = this.view.getUint32(ju, !1),
-                Eu = 4294967296 * this.view.getInt32(ju + 4, !1) + this.view.getUint32(ju + 8, !1);
-              return new Date(1e3 * Eu + uu / 1e6)
+            if (12 === GG) {
+              const GG = this.view.getUint32(ZG, !1),
+                bG = 4294967296 * this.view.getInt32(ZG + 4, !1) + this.view.getUint32(ZG + 8, !1);
+              return new Date(1e3 * bG + GG / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${Eu} of ${uu} bytes`)
+          throw new Error(`msgpack: ext type ${bG} of ${GG} bytes`)
         }
       }
     }
-    const Xu = new TextEncoder,
-      lu = -(2n ** 63n),
-      qu = 2n ** 63n - 1n,
-      fu = 2n ** 64n - 1n;
+    const yG = new TextEncoder,
+      kG = -(2n ** 63n),
+      UG = 2n ** 63n - 1n,
+      YG = 2n ** 64n - 1n;
 
-    function Cu(uu) {
-      const Eu = new bu;
-      return Eu.value(uu, 0), Eu.bytes()
+    function VG(GG) {
+      const bG = new pG;
+      return bG.value(GG, 0), bG.bytes()
     }
-    class bu {
+    class pG {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(uu, Eu) {
-        if (Eu > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof uu) {
+      value(GG, bG) {
+        if (bG > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof GG) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(uu ? 195 : 194);
+            return void this.u8(GG ? 195 : 194);
           case "number":
-            return void this.number(uu);
+            return void this.number(GG);
           case "bigint":
-            return void this.bigint(uu);
+            return void this.bigint(GG);
           case "string":
-            return void this.string(uu);
+            return void this.string(GG);
           case "object":
-            if (null === uu) this.u8(192);
-            else if (uu instanceof Uint8Array) this.head(uu.length, 196, -1, 197, 198), this.room(uu.length), this.buf.set(uu, this.at), this.at += uu.length;
-            else if (Array.isArray(uu)) {
-              this.head(uu.length, 220, 144, 220, 221);
-              for (const ju of uu) this.value(ju, Eu + 1)
+            if (null === GG) this.u8(192);
+            else if (GG instanceof Uint8Array) this.head(GG.length, 196, -1, 197, 198), this.room(GG.length), this.buf.set(GG, this.at), this.at += GG.length;
+            else if (Array.isArray(GG)) {
+              this.head(GG.length, 220, 144, 220, 221);
+              for (const ZG of GG) this.value(ZG, bG + 1)
             } else {
-              var ju, su;
-              if (Object.getPrototypeOf(uu) !== Object.prototype && null !== Object.getPrototypeOf(uu)) throw new Error(`msgpack: can't encode a ${null!==(ju=null===(su=uu.constructor)||void 0===su?void 0:su.name)&&void 0!==ju?ju:"object"}`);
+              var ZG, wG;
+              if (Object.getPrototypeOf(GG) !== Object.prototype && null !== Object.getPrototypeOf(GG)) throw new Error(`msgpack: can't encode a ${null!==(ZG=null===(wG=GG.constructor)||void 0===wG?void 0:wG.name)&&void 0!==ZG?ZG:"object"}`);
               {
-                const ju = Object.keys(uu);
-                this.head(ju.length, 222, 128, 222, 223);
-                for (const su of ju) this.string(su), this.value(uu[su], Eu + 1)
+                const ZG = Object.keys(GG);
+                this.head(ZG.length, 222, 128, 222, 223);
+                for (const wG of ZG) this.string(wG), this.value(GG[wG], bG + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof uu)
+            throw new Error("msgpack: can't encode a " + typeof GG)
         }
       }
-      number(uu) {
-        Number.isInteger(uu) && uu >= -2147483648 && uu <= 4294967295 ? uu >= 0 ? uu < 128 ? this.u8(uu) : uu < 256 ? (this.u8(204), this.u8(uu)) : uu < 65536 ? (this.u8(205), this.u16(uu)) : (this.u8(206), this.u32(uu)) : uu >= -32 ? this.u8(uu + 256) : uu >= -128 ? (this.u8(208), this.u8(uu + 256)) : uu >= -32768 ? (this.u8(209), this.u16(uu + 65536)) : (this.u8(210), this.u32(uu >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, uu, !1), this.at += 8)
+      number(GG) {
+        Number.isInteger(GG) && GG >= -2147483648 && GG <= 4294967295 ? GG >= 0 ? GG < 128 ? this.u8(GG) : GG < 256 ? (this.u8(204), this.u8(GG)) : GG < 65536 ? (this.u8(205), this.u16(GG)) : (this.u8(206), this.u32(GG)) : GG >= -32 ? this.u8(GG + 256) : GG >= -128 ? (this.u8(208), this.u8(GG + 256)) : GG >= -32768 ? (this.u8(209), this.u16(GG + 65536)) : (this.u8(210), this.u32(GG >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, GG, !1), this.at += 8)
       }
-      bigint(uu) {
-        const Eu = uu >= lu && uu <= qu;
-        if (!Eu && (uu < 0n || uu > fu)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(Eu ? 211 : 207), this.room(8), Eu ? this.view.setBigInt64(this.at, uu, !1) : this.view.setBigUint64(this.at, uu, !1), this.at += 8
+      bigint(GG) {
+        const bG = GG >= kG && GG <= UG;
+        if (!bG && (GG < 0n || GG > YG)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(bG ? 211 : 207), this.room(8), bG ? this.view.setBigInt64(this.at, GG, !1) : this.view.setBigUint64(this.at, GG, !1), this.at += 8
       }
-      string(uu) {
-        const Eu = Xu.encode(uu);
-        this.head(Eu.length, 217, 160, 218, 219), this.room(Eu.length), this.buf.set(Eu, this.at), this.at += Eu.length
+      string(GG) {
+        const bG = yG.encode(GG);
+        this.head(bG.length, 217, 160, 218, 219), this.room(bG.length), this.buf.set(bG, this.at), this.at += bG.length
       }
-      head(uu, Eu, ju, su, Uu) {
-        ju >= 0 && uu < (160 === ju ? 32 : 16) ? this.u8(ju | uu) : Eu !== su && uu < 256 ? (this.u8(Eu), this.u8(uu)) : uu < 65536 ? (this.u8(su), this.u16(uu)) : (this.u8(Uu), this.u32(uu))
+      head(GG, bG, ZG, wG, SG) {
+        ZG >= 0 && GG < (160 === ZG ? 32 : 16) ? this.u8(ZG | GG) : bG !== wG && GG < 256 ? (this.u8(bG), this.u8(GG)) : GG < 65536 ? (this.u8(wG), this.u16(GG)) : (this.u8(SG), this.u32(GG))
       }
-      room(uu) {
-        if (this.at + uu <= this.buf.length) return;
-        let Eu = 2 * this.buf.length;
-        for (; Eu < this.at + uu;) Eu *= 2;
-        const ju = new Uint8Array(Eu);
-        ju.set(this.buf.subarray(0, this.at)), this.buf = ju, this.view = new DataView(ju.buffer)
+      room(GG) {
+        if (this.at + GG <= this.buf.length) return;
+        let bG = 2 * this.buf.length;
+        for (; bG < this.at + GG;) bG *= 2;
+        const ZG = new Uint8Array(bG);
+        ZG.set(this.buf.subarray(0, this.at)), this.buf = ZG, this.view = new DataView(ZG.buffer)
       }
-      u8(uu) {
-        this.room(1), this.buf[this.at++] = uu
+      u8(GG) {
+        this.room(1), this.buf[this.at++] = GG
       }
-      u16(uu) {
-        this.room(2), this.view.setUint16(this.at, uu, !1), this.at += 2
+      u16(GG) {
+        this.room(2), this.view.setUint16(this.at, GG, !1), this.at += 2
       }
-      u32(uu) {
-        this.room(4), this.view.setUint32(this.at, uu, !1), this.at += 4
+      u32(GG) {
+        this.room(4), this.view.setUint32(this.at, GG, !1), this.at += 4
       }
     }
   },
-  40883: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Xu
+  41007: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => yG
     });
-    var su = ju(40864);
-    const Uu = new TextDecoder("utf-8", {
+    var wG = ZG(40989);
+    const SG = new TextDecoder("utf-8", {
       ignoreBOM: !0
     });
-    class Zu {
-      constructor(uu) {
-        this.buf = uu, this.at = 0, this.view = null
+    class LG {
+      constructor(GG) {
+        this.buf = GG, this.at = 0, this.view = null
       }
       bool() {
         return 0 !== this.u8()
       }
       long() {
-        let uu = this.u8(),
-          Eu = 127 & uu,
-          ju = 128;
-        for (; 128 & uu;) {
-          if (ju > 2 ** 63) throw new RangeError("avro: varint too long");
-          uu = this.u8(), Eu += (127 & uu) * ju, ju *= 128
+        let GG = this.u8(),
+          bG = 127 & GG,
+          ZG = 128;
+        for (; 128 & GG;) {
+          if (ZG > 2 ** 63) throw new RangeError("avro: varint too long");
+          GG = this.u8(), bG += (127 & GG) * ZG, ZG *= 128
         }
-        return Eu % 2 === 1 ? -(Eu + 1) / 2 : Eu / 2
+        return bG % 2 === 1 ? -(bG + 1) / 2 : bG / 2
       }
       float() {
-        const uu = this.take(4);
-        return this.floats().getFloat32(uu, !0)
+        const GG = this.take(4);
+        return this.floats().getFloat32(GG, !0)
       }
       double() {
-        const uu = this.take(8);
-        return this.floats().getFloat64(uu, !0)
+        const GG = this.take(8);
+        return this.floats().getFloat64(GG, !0)
       }
       str() {
-        const uu = this.size(),
-          Eu = this.take(uu),
-          ju = Eu + uu;
-        if (uu <= 32) {
-          let uu = "";
-          for (let su = Eu; su < ju; su++) {
-            const Zu = this.buf[su];
-            if (Zu >= 128) return Uu.decode(this.buf.subarray(Eu, ju));
-            uu += String.fromCharCode(Zu)
+        const GG = this.size(),
+          bG = this.take(GG),
+          ZG = bG + GG;
+        if (GG <= 32) {
+          let GG = "";
+          for (let wG = bG; wG < ZG; wG++) {
+            const LG = this.buf[wG];
+            if (LG >= 128) return SG.decode(this.buf.subarray(bG, ZG));
+            GG += String.fromCharCode(LG)
           }
-          return uu
+          return GG
         }
-        return Uu.decode(this.buf.subarray(Eu, ju))
+        return SG.decode(this.buf.subarray(bG, ZG))
       }
       bytes() {
         return this.fixed(this.size())
       }
-      fixed(uu) {
-        const Eu = this.take(uu);
-        return this.buf.slice(Eu, Eu + uu)
+      fixed(GG) {
+        const bG = this.take(GG);
+        return this.buf.slice(bG, bG + GG)
       }
-      index(uu) {
-        const Eu = this.long();
-        if (!(Eu >= 0 && Eu < uu)) throw new RangeError(`avro: index ${Eu} of ${uu}`);
-        return Eu
+      index(GG) {
+        const bG = this.long();
+        if (!(bG >= 0 && bG < GG)) throw new RangeError(`avro: index ${bG} of ${GG}`);
+        return bG
       }
-      CO(uu) {
-        const Eu = [];
-        for (let ju = this.long(); 0 !== ju; ju = this.long()) {
-          ju = this.block(ju);
-          for (let su = 0; su < ju; su++) Eu.push(uu(this))
+      fK(GG) {
+        const bG = [];
+        for (let ZG = this.long(); 0 !== ZG; ZG = this.long()) {
+          ZG = this.block(ZG);
+          for (let wG = 0; wG < ZG; wG++) bG.push(GG(this))
         }
-        return Eu
+        return bG
       }
-      map(uu) {
-        const Eu = {};
-        for (let ju = this.long(); 0 !== ju; ju = this.long()) {
-          ju = this.block(ju);
-          for (let su = 0; su < ju; su++) {
-            Eu[this.str()] = uu(this)
+      map(GG) {
+        const bG = {};
+        for (let ZG = this.long(); 0 !== ZG; ZG = this.long()) {
+          ZG = this.block(ZG);
+          for (let wG = 0; wG < ZG; wG++) {
+            bG[this.str()] = GG(this)
           }
         }
-        return Eu
+        return bG
       }
       end() {
         if (this.at !== this.buf.length) throw new RangeError(`avro: ${this.buf.length-this.at} bytes after the value`)
       }
-      block(uu) {
-        let Eu = uu;
-        if (Eu < 0 && (Eu = -Eu, this.long()), Eu > this.buf.length - this.at) throw new RangeError(`avro: block of ${Eu} items in ${this.buf.length-this.at} bytes`);
-        return Eu
+      block(GG) {
+        let bG = GG;
+        if (bG < 0 && (bG = -bG, this.long()), bG > this.buf.length - this.at) throw new RangeError(`avro: block of ${bG} items in ${this.buf.length-this.at} bytes`);
+        return bG
       }
       floats() {
         return this.view ??= new DataView(this.buf.buffer, this.buf.byteOffset, this.buf.byteLength), this.view
       }
       size() {
-        const uu = this.long();
-        if (uu < 0) throw new RangeError(`avro: length ${uu}`);
-        return uu
+        const GG = this.long();
+        if (GG < 0) throw new RangeError(`avro: length ${GG}`);
+        return GG
       }
       u8() {
-        const uu = this.buf[this.at];
-        if (void 0 === uu) throw new RangeError("avro: truncated");
-        return this.at++, uu
+        const GG = this.buf[this.at];
+        if (void 0 === GG) throw new RangeError("avro: truncated");
+        return this.at++, GG
       }
-      take(uu) {
-        const Eu = this.at;
-        if (uu > this.buf.length - Eu) throw new RangeError("avro: truncated");
-        return this.at = Eu + uu, Eu
+      take(GG) {
+        const bG = this.at;
+        if (GG > this.buf.length - bG) throw new RangeError("avro: truncated");
+        return this.at = bG + GG, bG
       }
     }
 
-    function Xu(uu, Eu) {
-      const ju = new Zu(Eu),
-        Uu = (0, su.ub)(uu, ju);
-      return ju.end(), Uu
+    function yG(GG, bG) {
+      const ZG = new LG(bG),
+        SG = (0, wG.nb)(GG, ZG);
+      return ZG.end(), SG
     }
   },
-  40864: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      C: () => Xu,
-      G: () => Pu,
-      J: () => Uu,
-      L: () => lu,
-      P: () => Nu,
-      R: () => du,
-      V: () => Ju,
-      W: () => pu,
-      _: () => Cu,
-      ab: () => bu,
-      b: () => Gu,
-      d: () => hu,
-      db: () => au,
-      h: () => Du,
-      hb: () => Ou,
-      i: () => gu,
-      k: () => wu,
-      kb: () => Mu,
-      o: () => su,
-      ob: () => Yu,
-      qb: () => qu,
-      s: () => Zu,
-      u: () => eu,
-      ub: () => ou,
-      w: () => cu,
-      z: () => fu
+  40989: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      $: () => WG,
+      A: () => yG,
+      E: () => mG,
+      I: () => SG,
+      L: () => kG,
+      P: () => QG,
+      T: () => CG,
+      U: () => iG,
+      V: () => XG,
+      Y: () => VG,
+      Z: () => pG,
+      c: () => oG,
+      d: () => dG,
+      db: () => KG,
+      f: () => JG,
+      hb: () => zG,
+      i: () => rG,
+      ib: () => hG,
+      j: () => uG,
+      m: () => wG,
+      mb: () => UG,
+      nb: () => IG,
+      q: () => LG,
+      r: () => EG,
+      v: () => fG,
+      z: () => YG
     });
-    const su = 2,
-      Uu = 12,
-      Zu = 27,
-      Xu = 40,
-      lu = 52,
-      qu = 59,
-      fu = 63,
-      Cu = 83,
-      bu = 84,
-      cu = 89,
-      Nu = 91,
-      Ou = 93,
-      Yu = 94,
-      hu = 95,
-      Du = 97,
-      gu = 101,
-      Mu = 102,
-      eu = 73,
-      Gu = 16,
-      pu = 86,
-      wu = 60,
-      Ju = 17,
-      du = 56,
-      au = 100,
-      Pu = 81;
+    const wG = 2,
+      SG = 12,
+      LG = 27,
+      yG = 40,
+      kG = 52,
+      UG = 59,
+      YG = 63,
+      VG = 83,
+      pG = 84,
+      fG = 89,
+      QG = 91,
+      KG = 93,
+      hG = 94,
+      dG = 95,
+      JG = 97,
+      rG = 101,
+      zG = 102,
+      EG = 73,
+      oG = 16,
+      XG = 86,
+      uG = 60,
+      iG = 17,
+      CG = 56,
+      WG = 100,
+      mG = 81;
 
-    function ou(uu, Eu) {
-      switch (uu) {
-        case su:
-          return function(uu) {
+    function IG(GG, bG) {
+      switch (GG) {
+        case wG:
+          return function(GG) {
             return {
-              SZ: Au(uu),
-              IZ: uu.float(),
-              FZ: uu.long()
+              aL: DG(GG),
+              cL: GG.float(),
+              lL: GG.long()
             }
-          }(Eu);
-        case Uu:
-          return function(uu) {
+          }(bG);
+        case SG:
+          return function(GG) {
             return {
-              HU: Vu(uu),
-              AU: Vu(uu)
+              AS: lG(GG),
+              sS: lG(GG)
             }
-          }(Eu);
-        case Zu:
-          return function(uu) {
+          }(bG);
+        case LG:
+          return function(GG) {
             return {
-              qu: uu.bool(),
-              fu: Vu(uu)
+              kG: GG.bool(),
+              UG: lG(GG)
             }
-          }(Eu);
-        case Xu:
-          return Eu.str();
-        case lu:
-          return function(uu) {
+          }(bG);
+        case yG:
+          return bG.str();
+        case kG:
+          return function(GG) {
             return {
-              id: uu.long(),
-              Hu: XE(uu)
+              id: GG.long(),
+              TG: yb(GG)
             }
-          }(Eu);
-        case qu:
-          return function(uu) {
+          }(bG);
+        case UG:
+          return function(GG) {
             return {
-              UX: Vu(uu),
-              ZX: qE(uu)
+              NL: lG(GG),
+              OL: Ub(GG)
             }
-          }(Eu);
-        case fu:
-          return Eu.str();
-        case Cu:
-        case bu:
-          return Eu.long();
-        case cu:
-          return function(uu) {
+          }(bG);
+        case YG:
+          return bG.str();
+        case VG:
+        case pG:
+          return bG.long();
+        case fG:
+          return function(GG) {
             return {
-              BU: uu.long(),
-              LU: uu.bool(),
-              tU: uu.float()
+              cS: GG.long(),
+              lS: GG.bool(),
+              jS: GG.float()
             }
-          }(Eu);
-        case Nu:
-          return Eu.long();
-        case Ou:
-          return function(uu) {
+          }(bG);
+        case QG:
+          return bG.long();
+        case KG:
+          return function(GG) {
             return {
-              FE: uu.bool(),
-              ku: bE(uu)
+              eb: GG.bool(),
+              WG: pb(GG)
             }
-          }(Eu);
-        case Yu:
-          return function(uu) {
+          }(bG);
+        case hG:
+          return function(GG) {
             return {
-              id: uu.str(),
-              position: CE(uu),
-              KE: cE(uu),
-              style: Iu(uu),
-              rE: uu.bool()
+              id: GG.str(),
+              position: Vb(GG),
+              jb: fb(GG),
+              style: qG(GG),
+              Mb: GG.bool()
             }
-          }(Eu);
-        case hu:
-          return function(uu) {
+          }(bG);
+        case dG:
+          return function(GG) {
             return {
-              id: Vu(uu)
+              id: lG(GG)
             }
-          }(Eu);
-        case Du:
-          return function(uu) {
+          }(bG);
+        case JG:
+          return function(GG) {
             return {
-              lZ: uu.long(),
-              qZ: uu.str(),
-              fZ: UE(uu),
-              CZ: UE(uu),
-              bZ: Vu(uu),
-              cZ: Vu(uu),
-              NZ: Vu(uu),
-              OZ: Vu(uu),
-              YZ: Vu(uu),
-              hZ: UE(uu),
-              DZ: UE(uu),
-              gZ: Vu(uu),
-              MZ: Vu(uu),
-              eZ: Vu(uu)
+              BS: GG.long(),
+              bL: GG.str(),
+              ZL: Sb(GG),
+              wL: Sb(GG),
+              SL: lG(GG),
+              LL: lG(GG),
+              yL: lG(GG),
+              kL: lG(GG),
+              UL: lG(GG),
+              YL: Sb(GG),
+              VL: Sb(GG),
+              pL: lG(GG),
+              fL: lG(GG),
+              QL: lG(GG)
             }
-          }(Eu);
-        case gu:
-          return Eu.str();
-        case Mu:
-          return Eu.long();
-        case eu:
-          return function(uu) {
+          }(bG);
+        case rG:
+          return bG.str();
+        case zG:
+          return bG.long();
+        case EG:
+          return function(GG) {
             return {
-              hj: uu.long(),
-              Dj: uu.str(),
-              gj: uu.float()
+              JZ: GG.long(),
+              rZ: GG.str(),
+              zZ: GG.float()
             }
-          }(Eu);
-        case Gu:
-          return function(uu) {
+          }(bG);
+        case oG:
+          return function(GG) {
             return {
-              nU: uu.bool(),
-              yU: Vu(uu),
-              zU: uu.str(),
-              RU: OE(uu),
-              uZ: OE(uu),
-              EZ: uu.bool(),
-              jZ: uu.long(),
-              sZ: YE(uu)
+              qS: GG.bool(),
+              nS: lG(GG),
+              gS: GG.str(),
+              eS: Kb(GG),
+              RS: Kb(GG),
+              HS: GG.bool(),
+              tS: GG.long(),
+              DS: hb(GG)
             }
-          }(Eu);
-        case pu:
-          return function(uu) {
+          }(bG);
+        case XG:
+          return function(GG) {
             return {
-              FU: Vu(uu)
+              aS: lG(GG)
             }
-          }(Eu);
-        case wu:
-          return function(uu) {
+          }(bG);
+        case uG:
+          return function(GG) {
             return {
-              Qu: uu.str(),
-              iu: uu.str(),
-              Wu: hE(uu),
-              BE: uu.str(),
-              LE: zu(uu),
-              tE: uu.float()
+              cG: GG.str(),
+              lG: GG.str(),
+              jG: db(GG),
+              Rb: GG.str(),
+              Tb: xG(GG),
+              Hb: GG.float()
             }
-          }(Eu);
-        case Ju:
-          return function(uu) {
+          }(bG);
+        case iG:
+          return function(GG) {
             return {
-              Qu: uu.str(),
-              iu: uu.str(),
-              Wu: hE(uu)
+              cG: GG.str(),
+              lG: GG.str(),
+              jG: db(GG)
             }
-          }(Eu);
-        case du:
-          return function(uu) {
-            return uu.CO(DE)
-          }(Eu);
-        case au:
-          return function(uu) {
+          }(bG);
+        case CG:
+          return function(GG) {
+            return GG.fK(Jb)
+          }(bG);
+        case WG:
+          return function(GG) {
             return {
-              Su: ME(uu),
-              tu: Lu(uu)
+              PG: zb(GG),
+              nG: eG(GG)
             }
-          }(Eu);
-        case Pu:
-          return function(uu) {
+          }(bG);
+        case mG:
+          return function(GG) {
             return {
-              Hj: uu.bool(),
-              Aj: Vu(uu),
-              nj: GE(uu),
-              zj: iE(uu)
+              DZ: GG.bool(),
+              NZ: lG(GG),
+              OZ: ob(GG),
+              BZ: Mb(GG)
             }
-          }(Eu);
+          }(bG);
         default:
-          throw new Error(`no reader for to-client message ${uu}`)
+          throw new Error(`no reader for to-client message ${GG}`)
       }
     }
 
-    function ku(uu) {
+    function FG(GG) {
       return {
-        entityName: uu.str()
+        entityName: GG.str()
       }
     }
 
-    function mu(uu) {
-      const Eu = uu.index(4);
-      return 0 === Eu ? uu.str() : 1 === Eu ? uu.long() : 2 === Eu ? uu.bool() : ku(uu)
+    function vG(GG) {
+      const bG = GG.index(4);
+      return 0 === bG ? GG.str() : 1 === bG ? GG.long() : 2 === bG ? GG.bool() : FG(GG)
     }
 
-    function vu(uu) {
-      return 0 === uu.index(2) ? null : function(uu) {
-        return uu.map(mu)
-      }(uu)
+    function aG(GG) {
+      return 0 === GG.index(2) ? null : function(GG) {
+        return GG.map(vG)
+      }(GG)
     }
 
-    function Ku(uu) {
+    function cG(GG) {
       return {
-        translationKey: uu.str(),
-        params: vu(uu)
+        translationKey: GG.str(),
+        params: aG(GG)
       }
     }
 
-    function Vu(uu) {
-      return 0 === uu.index(2) ? null : uu.str()
+    function lG(GG) {
+      return 0 === GG.index(2) ? null : GG.str()
     }
 
-    function ru(uu) {
-      return 0 === uu.index(2) ? null : function(uu) {
+    function jG(GG) {
+      return 0 === GG.index(2) ? null : function(GG) {
         return {
-          color: Vu(uu),
-          colour: Vu(uu),
-          fontSize: Vu(uu)
+          color: lG(GG),
+          colour: lG(GG),
+          fontSize: lG(GG)
         }
-      }(uu)
+      }(GG)
     }
 
-    function Qu(uu) {
+    function PG(GG) {
       return {
-        icon: uu.str(),
-        style: ru(uu)
+        icon: GG.str(),
+        style: jG(GG)
       }
     }
 
-    function iu(uu) {
-      const Eu = uu.index(3);
-      return 0 === Eu ? {
-        string: uu.str()
-      } : 1 === Eu ? {
-        styledEntityName: ku(uu)
+    function MG(GG) {
+      const bG = GG.index(3);
+      return 0 === bG ? {
+        string: GG.str()
+      } : 1 === bG ? {
+        styledEntityName: FG(GG)
       } : {
-        styledTranslatedText: Ku(uu)
+        styledTranslatedText: cG(GG)
       }
     }
 
-    function Wu(uu) {
-      const Eu = uu.index(3);
-      return 0 === Eu ? null : 1 === Eu ? uu.str() : uu.long()
+    function AG(GG) {
+      const bG = GG.index(3);
+      return 0 === bG ? null : 1 === bG ? GG.str() : GG.long()
     }
 
-    function Su(uu) {
-      return 0 === uu.index(2) ? null : uu.float()
+    function sG(GG) {
+      return 0 === GG.index(2) ? null : GG.float()
     }
 
-    function Iu(uu) {
-      return 0 === uu.index(2) ? null : function(uu) {
+    function qG(GG) {
+      return 0 === GG.index(2) ? null : function(GG) {
         return {
-          color: Vu(uu),
-          colour: Vu(uu),
-          fontWeight: Wu(uu),
-          fontStyle: Vu(uu),
-          fontSize: Vu(uu),
-          opacity: Su(uu)
+          color: lG(GG),
+          colour: lG(GG),
+          fontWeight: AG(GG),
+          fontStyle: lG(GG),
+          fontSize: lG(GG),
+          opacity: sG(GG)
         }
-      }(uu)
+      }(GG)
     }
 
-    function Fu(uu) {
+    function nG(GG) {
       return {
-        str: iu(uu),
-        style: Iu(uu),
-        clickableUrl: Vu(uu)
+        str: MG(GG),
+        style: qG(GG),
+        clickableUrl: lG(GG)
       }
     }
 
-    function Bu(uu) {
-      return uu.str()
+    function gG(GG) {
+      return GG.str()
     }
 
-    function Lu(uu) {
-      return uu.CO(Bu)
+    function eG(GG) {
+      return GG.fK(gG)
     }
 
-    function tu(uu) {
-      return 0 === uu.index(2) ? null : Lu(uu)
+    function RG(GG) {
+      return 0 === GG.index(2) ? null : eG(GG)
     }
 
-    function xu(uu) {
+    function TG(GG) {
       return {
-        type: uu.str(),
-        progress: uu.float(),
-        width: Vu(uu),
-        height: Vu(uu),
-        colours: tu(uu),
-        backgroundColour: Vu(uu)
+        type: GG.str(),
+        progress: GG.float(),
+        width: lG(GG),
+        height: lG(GG),
+        colours: RG(GG),
+        backgroundColour: lG(GG)
       }
     }
 
-    function Tu(uu) {
+    function HG(GG) {
       return {
-        type: uu.str(),
-        action: uu.str(),
-        style: Iu(uu)
+        type: GG.str(),
+        action: GG.str(),
+        style: qG(GG)
       }
     }
 
-    function Hu(uu) {
-      const Eu = uu.index(7);
-      return 0 === Eu ? {
-        string: uu.str()
-      } : 1 === Eu ? {
-        entityName: ku(uu)
-      } : 2 === Eu ? {
-        translatedText: Ku(uu)
-      } : 3 === Eu ? {
-        styledIcon: Qu(uu)
-      } : 4 === Eu ? {
-        jE: Fu(uu)
-      } : 5 === Eu ? {
-        styledProgressBar: xu(uu)
+    function tG(GG) {
+      const bG = GG.index(7);
+      return 0 === bG ? {
+        string: GG.str()
+      } : 1 === bG ? {
+        entityName: FG(GG)
+      } : 2 === bG ? {
+        translatedText: cG(GG)
+      } : 3 === bG ? {
+        styledIcon: PG(GG)
+      } : 4 === bG ? {
+        Gb: nG(GG)
+      } : 5 === bG ? {
+        styledProgressBar: TG(GG)
       } : {
-        styledKeyBinding: Tu(uu)
+        styledKeyBinding: HG(GG)
       }
     }
 
-    function Au(uu) {
-      return uu.CO(Hu)
+    function DG(GG) {
+      return GG.fK(tG)
     }
-    const nu = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
+    const NG = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
 
-    function yu(uu) {
-      return nu[uu.index(5)]
-    }
-
-    function zu(uu) {
-      return 0 === uu.index(2) ? null : uu.double()
+    function OG(GG) {
+      return NG[GG.index(5)]
     }
 
-    function Ru(uu) {
-      return 0 === uu.index(2) ? null : function(uu) {
+    function xG(GG) {
+      return 0 === GG.index(2) ? null : GG.double()
+    }
+
+    function BG(GG) {
+      return 0 === GG.index(2) ? null : function(GG) {
         return {
-          zu: zu(uu),
-          Ru: uu.double(),
-          uE: uu.double(),
-          EE: uu.bool(),
-          description: Au(uu),
-          UE: uu.str(),
-          scale: zu(uu),
-          rotation: zu(uu)
+          NG: xG(GG),
+          OG: GG.double(),
+          xG: GG.double(),
+          BG: GG.bool(),
+          description: DG(GG),
+          Zb: GG.str(),
+          scale: xG(GG),
+          rotation: xG(GG)
         }
-      }(uu)
+      }(GG)
     }
 
-    function uE(uu) {
-      return 0 === uu.index(2) ? null : uu.bool()
+    function Gb(GG) {
+      return 0 === GG.index(2) ? null : GG.bool()
     }
 
-    function EE(uu) {
-      return 0 === uu.index(2) ? null : function(uu) {
+    function bb(GG) {
+      return 0 === GG.index(2) ? null : function(GG) {
         return {
-          XE: uu.double(),
-          icon: uu.str(),
-          label: Au(uu),
-          lE: uu.bool(),
-          scale: zu(uu),
-          rotation: zu(uu),
-          qE: uE(uu)
+          Lb: GG.double(),
+          icon: GG.str(),
+          label: DG(GG),
+          yb: GG.bool(),
+          scale: xG(GG),
+          rotation: xG(GG),
+          kb: Gb(GG)
         }
-      }(uu)
+      }(GG)
     }
 
-    function jE(uu) {
-      return 0 === uu.index(2) ? null : function(uu) {
+    function Zb(GG) {
+      return 0 === GG.index(2) ? null : function(GG) {
         return {
-          zu: zu(uu),
-          CE: uu.double(),
-          bE: uu.double(),
-          cE: uu.double(),
-          gravity: uu.double(),
-          NE: uu.double(),
-          OE: uu.double(),
-          YE: uu.double(),
-          EE: uu.bool(),
-          description: Au(uu),
-          icon: Vu(uu)
+          NG: xG(GG),
+          Yb: GG.double(),
+          Vb: GG.double(),
+          pb: GG.double(),
+          gravity: GG.double(),
+          fb: GG.double(),
+          Qb: GG.double(),
+          Kb: GG.double(),
+          BG: GG.bool(),
+          description: DG(GG),
+          icon: lG(GG)
         }
-      }(uu)
+      }(GG)
     }
 
-    function sE(uu) {
-      return 0 === uu.index(2) ? null : function(uu) {
+    function wb(GG) {
+      return 0 === GG.index(2) ? null : function(GG) {
         return {
-          speed: uu.double(),
-          DE: uu.double(),
-          label: Au(uu),
-          icon: Vu(uu),
-          scale: zu(uu),
-          rotation: zu(uu)
+          speed: GG.double(),
+          Jb: GG.double(),
+          label: DG(GG),
+          icon: lG(GG),
+          scale: xG(GG),
+          rotation: xG(GG)
         }
-      }(uu)
+      }(GG)
     }
 
-    function UE(uu) {
-      return 0 === uu.index(2) ? null : uu.long()
+    function Sb(GG) {
+      return 0 === GG.index(2) ? null : GG.long()
     }
 
-    function ZE(uu) {
-      return 0 === uu.index(2) ? null : function(uu) {
+    function Lb(GG) {
+      return 0 === GG.index(2) ? null : function(GG) {
         return {
-          ME: uu.long(),
-          eE: uu.double(),
-          GE: uu.double(),
-          pE: UE(uu),
-          label: Au(uu),
-          icon: Vu(uu)
+          zb: GG.long(),
+          Eb: GG.double(),
+          ob: GG.double(),
+          Xb: Sb(GG),
+          label: DG(GG),
+          icon: lG(GG)
         }
-      }(uu)
+      }(GG)
     }
 
-    function XE(uu) {
+    function yb(GG) {
       return {
-        type: yu(uu),
-        progressBar: Ru(uu),
-        timedClick: EE(uu),
-        gravityBar: jE(uu),
-        precisionBar: sE(uu),
-        rhythmClick: ZE(uu)
+        type: OG(GG),
+        progressBar: BG(GG),
+        timedClick: bb(GG),
+        gravityBar: Zb(GG),
+        precisionBar: wb(GG),
+        rhythmClick: Lb(GG)
       }
     }
-    const lE = ["playerGone", "rateLimited"];
+    const kb = ["playerGone", "rateLimited"];
 
-    function qE(uu) {
-      return 0 === uu.index(2) ? null : function(uu) {
-        return lE[uu.index(2)]
-      }(uu)
+    function Ub(GG) {
+      return 0 === GG.index(2) ? null : function(GG) {
+        return kb[GG.index(2)]
+      }(GG)
     }
 
-    function fE(uu) {
-      return uu.float()
+    function Yb(GG) {
+      return GG.float()
     }
 
-    function CE(uu) {
-      return uu.CO(fE)
+    function Vb(GG) {
+      return GG.fK(Yb)
     }
 
-    function bE(uu) {
-      return 0 === uu.index(2) ? null : CE(uu)
+    function pb(GG) {
+      return 0 === GG.index(2) ? null : Vb(GG)
     }
 
-    function cE(uu) {
-      return 0 === uu.index(2) ? null : Au(uu)
+    function fb(GG) {
+      return 0 === GG.index(2) ? null : DG(GG)
     }
 
-    function NE(uu) {
-      return uu.long()
+    function Qb(GG) {
+      return GG.long()
     }
 
-    function OE(uu) {
-      return 0 === uu.index(2) ? null : function(uu) {
-        return uu.CO(NE)
-      }(uu)
+    function Kb(GG) {
+      return 0 === GG.index(2) ? null : function(GG) {
+        return GG.fK(Qb)
+      }(GG)
     }
 
-    function YE(uu) {
-      return 0 === uu.index(2) ? null : function(uu) {
+    function hb(GG) {
+      return 0 === GG.index(2) ? null : function(GG) {
         return {
-          ZZ: uu.str(),
-          XZ: uu.long()
+          OS: GG.str(),
+          xS: GG.long()
         }
-      }(uu)
+      }(GG)
     }
 
-    function hE(uu) {
-      const Eu = uu.index(3);
-      return 0 === Eu ? null : 1 === Eu ? uu.str() : Ku(uu)
+    function db(GG) {
+      const bG = GG.index(3);
+      return 0 === bG ? null : 1 === bG ? GG.str() : cG(GG)
     }
 
-    function DE(uu) {
+    function Jb(GG) {
       return {
-        QZ: uu.str(),
-        iZ: uu.str(),
-        WZ: uu.str()
+        IL: GG.str(),
+        FL: GG.str(),
+        vL: GG.str()
       }
     }
 
-    function gE(uu) {
+    function rb(GG) {
       return {
-        Iu: uu.str(),
-        Fu: Vu(uu),
-        Bu: Vu(uu),
-        Lu: Lu(uu)
+        MG: GG.str(),
+        AG: lG(GG),
+        sG: lG(GG),
+        qG: eG(GG)
       }
     }
 
-    function ME(uu) {
-      return uu.CO(gE)
+    function zb(GG) {
+      return GG.fK(rb)
     }
 
-    function eE(uu) {
+    function Eb(GG) {
       return {
-        yj: uu.str(),
-        x: uu.long(),
-        y: uu.long(),
-        z: uu.long()
+        xZ: GG.str(),
+        x: GG.long(),
+        y: GG.long(),
+        z: GG.long()
       }
     }
 
-    function GE(uu) {
-      return uu.CO(eE)
+    function ob(GG) {
+      return GG.fK(Eb)
     }
 
-    function pE(uu) {
-      return 0 === uu.index(2) ? null : function(uu) {
+    function Xb(GG) {
+      return 0 === GG.index(2) ? null : function(GG) {
         return {
-          Gs: uu.float(),
-          ws: uu.long(),
-          ds: uu.long()
+          zw: GG.float(),
+          Ew: GG.long(),
+          ow: GG.long()
         }
-      }(uu)
+      }(GG)
     }
 
-    function wE(uu) {
+    function ub(GG) {
       return {
-        blockName: uu.str(),
-        Ns: uu.bool(),
-        Os: uu.bool(),
-        Ys: uu.bool(),
-        hs: uu.float(),
-        Ds: uu.float(),
-        gs: uu.long(),
-        Ms: pE(uu)
+        blockName: GG.str(),
+        pw: GG.bool(),
+        fw: GG.bool(),
+        Qw: GG.bool(),
+        Kw: GG.float(),
+        hw: GG.float(),
+        dw: GG.long(),
+        Jw: Xb(GG)
       }
     }
 
-    function JE(uu) {
-      return 0 === uu.index(2) ? null : function(uu) {
-        return uu.CO(wE)
-      }(uu)
+    function ib(GG) {
+      return 0 === GG.index(2) ? null : function(GG) {
+        return GG.fK(ub)
+      }(GG)
     }
 
-    function dE(uu) {
+    function Cb(GG) {
       return {
-        fs: uu.str(),
-        Cs: JE(uu)
+        Uw: GG.str(),
+        Yw: ib(GG)
       }
     }
 
-    function aE(uu) {
+    function Wb(GG) {
       return {
-        blockName: uu.str(),
-        frequency: uu.float()
+        blockName: GG.str(),
+        frequency: GG.float()
       }
     }
 
-    function PE(uu) {
-      return uu.CO(aE)
+    function mb(GG) {
+      return GG.fK(Wb)
     }
 
-    function oE(uu) {
+    function Ib(GG) {
       return {
-        Ks: uu.str(),
-        Vs: uu.str(),
-        frequency: uu.float(),
-        Qs: PE(uu)
+        iw: GG.str(),
+        Cw: GG.str(),
+        frequency: GG.float(),
+        Ww: mb(GG)
       }
     }
 
-    function kE(uu) {
-      return uu.CO(oE)
+    function Fb(GG) {
+      return GG.fK(Ib)
     }
 
-    function mE(uu) {
+    function vb(GG) {
       return {
-        blockName: uu.str(),
-        radius: uu.long(),
-        Fs: uu.long(),
-        ss: uu.long(),
-        Us: uu.long(),
-        Bs: uu.float()
+        blockName: GG.str(),
+        radius: GG.long(),
+        aw: GG.long(),
+        Zw: GG.long(),
+        ww: GG.long(),
+        lw: GG.float()
       }
     }
 
-    function vE(uu) {
-      return uu.CO(mE)
+    function ab(GG) {
+      return GG.fK(vb)
     }
 
-    function KE(uu) {
+    function cb(GG) {
       return {
-        ss: uu.long(),
-        Us: uu.long(),
-        Zs: uu.long(),
-        Xs: uu.bool(),
-        ls: dE(uu),
-        Ps: kE(uu),
-        Ss: vE(uu)
+        Zw: GG.long(),
+        ww: GG.long(),
+        Sw: GG.long(),
+        Lw: GG.bool(),
+        yw: Cb(GG),
+        Xw: Fb(GG),
+        Iw: ab(GG)
       }
     }
 
-    function VE(uu) {
-      return uu.CO(KE)
+    function lb(GG) {
+      return GG.fK(cb)
     }
 
-    function rE(uu) {
-      return 0 === uu.index(2) ? null : function(uu) {
+    function jb(GG) {
+      return 0 === GG.index(2) ? null : function(GG) {
         return {
-          name: uu.str(),
-          Hs: Vu(uu)
+          name: GG.str(),
+          Aw: lG(GG)
         }
-      }(uu)
+      }(GG)
     }
 
-    function QE(uu) {
-      return 0 === uu.index(2) ? null : function(uu) {
+    function Pb(GG) {
+      return 0 === GG.index(2) ? null : function(GG) {
         return {
-          terrain: rE(uu),
-          ns: vE(uu)
+          terrain: jb(GG),
+          sw: ab(GG)
         }
-      }(uu)
+      }(GG)
     }
 
-    function iE(uu) {
-      return 0 === uu.index(2) ? null : function(uu) {
+    function Mb(GG) {
+      return 0 === GG.index(2) ? null : function(GG) {
         return {
-          layers: VE(uu),
-          Ls: QE(uu)
+          layers: lb(GG),
+          jw: Pb(GG)
         }
-      }(uu)
+      }(GG)
     }
   },
-  40854: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      A: () => wu,
-      B: () => ku,
-      C: () => eu,
-      E: () => Gu,
-      H: () => hu,
-      K: () => au,
-      O: () => vu,
-      S: () => Ou,
-      U: () => Vu,
-      X: () => gu,
-      _: () => Du,
-      c: () => Uu,
-      cb: () => Mu,
-      g: () => Ku,
-      gb: () => pu,
-      k: () => mu,
-      m: () => Nu,
-      n: () => Yu,
-      r: () => ou,
-      s: () => Ju,
-      w: () => Pu,
-      y: () => du
+  40976: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      $: () => lG,
+      A: () => uG,
+      E: () => FG,
+      I: () => EG,
+      L: () => oG,
+      P: () => dG,
+      T: () => WG,
+      W: () => aG,
+      Z: () => KG,
+      b: () => SG,
+      cb: () => rG,
+      db: () => JG,
+      e: () => cG,
+      gb: () => zG,
+      i: () => vG,
+      jb: () => XG,
+      m: () => QG,
+      p: () => hG,
+      t: () => IG,
+      v: () => iG,
+      x: () => mG,
+      y: () => CG
     });
-    var su = ju(3165);
-    const Uu = {
+    var wG = ZG(2984);
+    const SG = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -1211,160 +1211,160 @@ export const modules = {
       LobbyManage: 96
     };
 
-    function Zu(uu, Eu) {
-      return !ArrayBuffer.isView(uu) || uu instanceof DataView ? Array.isArray(uu) ? uu.map((uu => Eu(uu))) : uu : Array.from(uu, (uu => Eu(uu)))
+    function LG(GG, bG) {
+      return !ArrayBuffer.isView(GG) || GG instanceof DataView ? Array.isArray(GG) ? GG.map((GG => bG(GG))) : GG : Array.from(GG, (GG => bG(GG)))
     }
 
-    function Xu(uu) {
-      if ("string" !== typeof uu) return uu;
-      for (let Eu = 0; Eu < uu.length; Eu++) {
-        const ju = uu.charCodeAt(Eu);
-        if (ju >= 55296 && ju <= 57343) return qu.decode(lu.encode(uu))
+    function yG(GG) {
+      if ("string" !== typeof GG) return GG;
+      for (let bG = 0; bG < GG.length; bG++) {
+        const ZG = GG.charCodeAt(bG);
+        if (ZG >= 55296 && ZG <= 57343) return UG.decode(kG.encode(GG))
       }
-      return uu
+      return GG
     }
-    const lu = new TextEncoder,
-      qu = new TextDecoder;
+    const kG = new TextEncoder,
+      UG = new TextDecoder;
 
-    function fu(uu) {
-      return uu
+    function YG(GG) {
+      return GG
     }
-    let Cu;
+    let VG;
 
-    function bu(uu) {
-      return null === uu || "object" !== typeof uu ? uu : [Xu(uu.ql), Xu(uu.fl)]
-    }
-
-    function cu(uu) {
-      return null === uu || "object" !== typeof uu ? uu : [Zu(uu.RU, fu), Zu(uu.wl, fu)]
+    function pG(GG) {
+      return null === GG || "object" !== typeof GG ? GG : [yG(GG.Uk), yG(GG.Yk)]
     }
 
-    function Nu(uu) {
-      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Xu(Eu.VC), Xu(Eu.rC)];
-      var Eu
+    function fG(GG) {
+      return null === GG || "object" !== typeof GG ? GG : [LG(GG.eS, YG), LG(GG.Wk, YG)]
     }
 
-    function Ou(uu) {
-      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Eu.id, Eu.eC];
-      var Eu
+    function QG(GG) {
+      return null === (bG = GG) || "object" !== typeof bG ? bG : [yG(bG.vV), yG(bG.aV)];
+      var bG
     }
 
-    function Yu(uu) {
-      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Eu.lZ, Xu(Eu.qZ), Eu.fZ, Xu(Eu.cZ), Eu.hZ, Eu.DZ, Eu.mC, Xu(Eu.vC), Xu(Eu.KC)];
-      var Eu
+    function KG(GG) {
+      return null === (bG = GG) || "object" !== typeof bG ? bG : [bG.id, bG.rV];
+      var bG
     }
 
-    function hu(uu) {
-      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Zu(Eu.RX, fu), Eu.ul];
-      var Eu
+    function hG(GG) {
+      return null === (bG = GG) || "object" !== typeof bG ? bG : [bG.BS, yG(bG.bL), bG.ZL, yG(bG.LL), bG.YL, bG.VL, bG.mV, yG(bG.IV), yG(bG.FV)];
+      var bG
     }
 
-    function Du(uu) {
-      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Zu(Eu.AX, (uu => Xu(uu))), Xu(Eu.yX), Eu.zX];
-      var Eu
+    function dG(GG) {
+      return null === (bG = GG) || "object" !== typeof bG ? bG : [LG(bG.xy, YG), bG.Gk];
+      var bG
     }
 
-    function gu(uu) {
-      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Zu(Eu.eq, fu), Xu(Eu.Gq), Eu.pq];
-      var Eu
+    function JG(GG) {
+      return null === (bG = GG) || "object" !== typeof bG ? bG : [LG(bG.Dy, (GG => yG(GG))), yG(bG.Ny), bG.Oy];
+      var bG
     }
 
-    function Mu(uu) {
-      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Xu(Eu.iZ), Xu(Eu.WZ)];
-      var Eu
+    function rG(GG) {
+      return null === (bG = GG) || "object" !== typeof bG ? bG : [LG(bG.uU, YG), yG(bG.iU), bG.CU];
+      var bG
     }
 
-    function eu(uu) {
-      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Xu(Eu.Vl)];
-      var Eu
+    function zG(GG) {
+      return null === (bG = GG) || "object" !== typeof bG ? bG : [yG(bG.FL), yG(bG.vL)];
+      var bG
     }
 
-    function Gu(uu) {
-      return Xu(uu)
+    function EG(GG) {
+      return null === (bG = GG) || "object" !== typeof bG ? bG : [yG(bG.Ak)];
+      var bG
     }
 
-    function pu(uu) {
-      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Xu(Eu.DC), Xu(Eu.gC), Xu(Eu.ql), Xu(Eu.fl)];
-      var Eu
+    function oG(GG) {
+      return yG(GG)
     }
 
-    function wu(uu) {
-      return bu(uu)
+    function XG(GG) {
+      return null === (bG = GG) || "object" !== typeof bG ? bG : [yG(bG.hV), yG(bG.dV), yG(bG.Uk), yG(bG.Yk)];
+      var bG
     }
 
-    function Ju(uu) {
-      return bu(uu)
+    function uG(GG) {
+      return pG(GG)
     }
 
-    function du(uu) {
-      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Xu(Eu.bq)];
-      var Eu
+    function iG(GG) {
+      return pG(GG)
     }
 
-    function au(uu) {
-      return uu
+    function CG(GG) {
+      return null === (bG = GG) || "object" !== typeof bG ? bG : [yG(bG.hU)];
+      var bG
     }
 
-    function Pu(uu) {
-      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Xu(Eu.Xl), Xu(Eu.ll)];
-      var Eu
+    function WG(GG) {
+      return GG
     }
 
-    function ou(uu) {
-      return Xu(uu)
+    function mG(GG) {
+      return null === (bG = GG) || "object" !== typeof bG ? bG : [yG(bG.yk), yG(bG.kk)];
+      var bG
     }
 
-    function ku(uu) {
-      return cu(uu)
+    function IG(GG) {
+      return yG(GG)
     }
 
-    function mu(uu) {
-      return cu(uu)
+    function FG(GG) {
+      return fG(GG)
     }
 
-    function vu(uu) {
-      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Xu(Eu.wq)];
-      var Eu
+    function vG(GG) {
+      return fG(GG)
     }
 
-    function Ku(uu) {
-      return (Cu ??= (0, su.d)().map((uu => uu.name)), Cu).map((Eu => {
-        return "string" === typeof(ju = uu[Eu]) ? Xu(ju) : Zu(ju, fu);
-        var ju
+    function aG(GG) {
+      return null === (bG = GG) || "object" !== typeof bG ? bG : [yG(bG.WU)];
+      var bG
+    }
+
+    function cG(GG) {
+      return (VG ??= (0, wG.c)().map((GG => GG.name)), VG).map((bG => {
+        return "string" === typeof(ZG = GG[bG]) ? yG(ZG) : LG(ZG, YG);
+        var ZG
       }))
     }
 
-    function Vu(uu) {
-      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Eu.qq, Eu.fq, Eu.Cq];
-      var Eu
+    function lG(GG) {
+      return null === (bG = GG) || "object" !== typeof bG ? bG : [bG.fU, bG.QU, bG.KU];
+      var bG
     }
   },
-  9505: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Uu,
-      g: () => Zu
+  9356: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => SG,
+      f: () => LG
     });
-    var su = ju(9456);
-    const Uu = "Air",
-      Zu = Object.freeze(new su.h(Uu, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var wG = ZG(9303);
+    const SG = "Air",
+      LG = Object.freeze(new wG.h(SG, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  39547: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Zu,
-      g: () => lu
+  39657: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => LG,
+      i: () => kG
     });
-    var su = ju(349),
-      Uu = ju(4643);
-    const Zu = new Set(Uu.q),
-      Xu = new Map;
+    var wG = ZG(352),
+      SG = ZG(4479);
+    const LG = new Set(SG.o),
+      yG = new Map;
 
-    function lu(uu, Eu) {
-      let ju = Xu.get(Eu);
-      void 0 === ju && (ju = new Map, Xu.set(Eu, ju));
-      let Uu = ju.get(uu);
-      return void 0 === Uu && (Uu = `${uu}${(0,su.t)(Eu)}`, ju.set(uu, Uu)), Uu
+    function kG(GG, bG) {
+      let ZG = yG.get(bG);
+      void 0 === ZG && (ZG = new Map, yG.set(bG, ZG));
+      let SG = ZG.get(GG);
+      return void 0 === SG && (SG = `${GG}${(0,wG.B)(bG)}`, ZG.set(GG, SG)), SG
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

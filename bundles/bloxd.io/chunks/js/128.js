@@ -1,40 +1,40 @@
 export const id = 128;
 export const ids = [128];
 export const modules = {
-  6747: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      default: () => cu
+  6547: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      default: () => fG
     });
-    var su = ju(1393),
-      Uu = ju(58),
-      Zu = ju(103),
-      Xu = ju(1580),
-      lu = ju(1285),
-      qu = ju(337),
-      fu = ju(680);
-    const Cu = new URL(lu.o[qu.d.PRODUCTION]).origin;
-    var bu = ju(1154);
+    var wG = ZG(1302),
+      SG = ZG(51),
+      LG = ZG(86),
+      yG = ZG(1457),
+      kG = ZG(1185),
+      UG = ZG(333),
+      YG = ZG(631);
+    const VG = new URL(kG.m[UG.e.PRODUCTION]).origin;
+    var pG = ZG(1067);
 
-    function cu() {
-      const uu = (0, Xu.B)();
-      return (0, Uu.useEffect)((() => {
-        const Eu = Zu.currentUrl.getSearchParam("code");
-        Zu.currentUrl.removeSearchParam("code"), null === Eu && (console.error("No authorization code found in the URL"), window.close());
-        const ju = {
-          type: `oauth_authentication_${uu.providerName}`,
-          code: Eu
+    function fG() {
+      const GG = (0, yG.v)();
+      return (0, SG.useEffect)((() => {
+        const bG = LG.currentUrl.getSearchParam("code");
+        LG.currentUrl.removeSearchParam("code"), null === bG && (console.error("No authorization code found in the URL"), window.close());
+        const ZG = {
+          type: `oauth_authentication_${GG.providerName}`,
+          code: bG
         };
-        for (const uu of (Uu = window.location.origin) === Cu ? [Uu, `https://${fu.d}`] : [Uu]) {
-          var su;
-          null === (su = window.opener) || void 0 === su || su.postMessage(ju, uu)
+        for (const GG of (SG = window.location.origin) === VG ? [SG, `https://${YG.d}`] : [SG]) {
+          var wG;
+          null === (wG = window.opener) || void 0 === wG || wG.postMessage(ZG, GG)
         }
-        var Uu;
+        var SG;
         setTimeout((() => {
           window.close()
         }), 1e3)
-      })), (0, bu.jsx)("div", {
+      })), (0, pG.jsx)("div", {
         className: "AuthCallback",
-        children: (0, bu.jsx)(su.b, {
+        children: (0, pG.jsx)(wG.b, {
           showFace: !0,
           loading: !0
         })
@@ -43,4 +43,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

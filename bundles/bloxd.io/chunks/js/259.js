@@ -1,583 +1,583 @@
 export const id = 259;
 export const ids = [259];
 export const modules = {
-  40358: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Zu
+  40480: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => LG
     });
-    var su = ju(39032),
-      Uu = ju(37532);
-    class Zu {
-      static Instantiate(uu) {
-        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[uu]) return this.RegisteredExternalClasses[uu];
-        const Eu = (0, Uu.d)(uu);
-        if (Eu) return Eu;
-        su.b.Warn(uu + " not found, you may have missed an import.");
-        const ju = uu.split(".");
-        let Zu = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
-        for (let su = 0, Uu = ju.length; su < Uu; su++) Zu = Zu[ju[su]];
-        return "function" !== typeof Zu ? null : Zu
+    var wG = ZG(39093),
+      SG = ZG(37484);
+    class LG {
+      static Instantiate(GG) {
+        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[GG]) return this.RegisteredExternalClasses[GG];
+        const bG = (0, SG.e)(GG);
+        if (bG) return bG;
+        wG.c.Warn(GG + " not found, you may have missed an import.");
+        const ZG = GG.split(".");
+        let LG = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
+        for (let wG = 0, SG = ZG.length; wG < SG; wG++) LG = LG[ZG[wG]];
+        return "function" !== typeof LG ? null : LG
       }
     }
-    Zu.RegisteredExternalClasses = {}
+    LG.RegisteredExternalClasses = {}
   },
-  40170: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Uu
+  40285: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => SG
     });
-    var su = ju(40138);
-    class Uu {
+    var wG = ZG(40241);
+    class SG {
       static get Now() {
-        return (0, su.m)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
+        return (0, wG.k)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
       }
     }
   },
-  40192: (uu, Eu, ju) => {
-    function su(uu) {
-      let Eu = 1;
+  40319: (GG, bG, ZG) => {
+    function wG(GG) {
+      let bG = 1;
       do {
-        Eu *= 2
-      } while (Eu < uu);
-      return Eu === uu
+        bG *= 2
+      } while (bG < GG);
+      return bG === GG
     }
 
-    function Uu(uu, Eu, ju) {
-      return uu * (1 - ju) + Eu * ju
+    function SG(GG, bG, ZG) {
+      return GG * (1 - ZG) + bG * ZG
     }
 
-    function Zu(uu) {
-      const Eu = Xu(uu),
-        ju = lu(uu);
-      return Eu - uu > uu - ju ? ju : Eu
+    function LG(GG) {
+      const bG = yG(GG),
+        ZG = kG(GG);
+      return bG - GG > GG - ZG ? ZG : bG
     }
 
-    function Xu(uu) {
-      return uu--, uu |= uu >> 1, uu |= uu >> 2, uu |= uu >> 4, uu |= uu >> 8, uu |= uu >> 16, ++uu
+    function yG(GG) {
+      return GG--, GG |= GG >> 1, GG |= GG >> 2, GG |= GG >> 4, GG |= GG >> 8, GG |= GG >> 16, ++GG
     }
 
-    function lu(uu) {
-      return uu |= uu >> 1, uu |= uu >> 2, uu |= uu >> 4, uu |= uu >> 8, (uu |= uu >> 16) - (uu >> 1)
+    function kG(GG) {
+      return GG |= GG >> 1, GG |= GG >> 2, GG |= GG >> 4, GG |= GG >> 8, (GG |= GG >> 16) - (GG >> 1)
     }
 
-    function qu(uu, Eu) {
-      let ju;
+    function UG(GG, bG) {
+      let ZG;
       switch (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2) {
         case 1:
-          ju = lu(uu);
+          ZG = kG(GG);
           break;
         case 2:
-          ju = Zu(uu);
+          ZG = LG(GG);
           break;
         default:
-          ju = Xu(uu)
+          ZG = yG(GG)
       }
-      return Math.min(ju, Eu)
+      return Math.min(ZG, bG)
     }
-    ju.d(Eu, {
-      e: () => lu,
-      g: () => qu,
-      k: () => su,
-      n: () => Uu,
-      r: () => Zu
+    ZG.d(bG, {
+      e: () => kG,
+      h: () => UG,
+      k: () => wG,
+      o: () => SG,
+      r: () => LG
     })
   },
-  40356: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Mu,
-      f: () => Gu,
-      h: () => Du,
-      k: () => gu
+  40477: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => zG,
+      d: () => oG,
+      f: () => JG,
+      h: () => rG
     });
-    var su, Uu = ju(37514),
-      Zu = ju(40138),
-      Xu = ju(39032),
-      lu = ju(39030),
-      qu = ju(40170),
-      fu = ju(40153),
-      Cu = ju(40302),
-      bu = ju(37506),
-      cu = ju(40294),
-      Nu = ju(40164),
-      Ou = ju(40358),
-      Yu = ju(38303),
-      hu = ju(40192);
-    class Du {
+    var wG, SG = ZG(37465),
+      LG = ZG(40241),
+      yG = ZG(39093),
+      kG = ZG(39086),
+      UG = ZG(40285),
+      YG = ZG(40258),
+      VG = ZG(40432),
+      pG = ZG(37463),
+      fG = ZG(40430),
+      QG = ZG(40271),
+      KG = ZG(40480),
+      hG = ZG(38311),
+      dG = ZG(40319);
+    class JG {
       static get BaseUrl() {
-        return cu.g.BaseUrl
+        return fG.f.BaseUrl
       }
-      static set BaseUrl(uu) {
-        cu.g.BaseUrl = uu
+      static set BaseUrl(GG) {
+        fG.f.BaseUrl = GG
       }
       static get CleanUrl() {
-        return cu.g.CleanUrl
+        return fG.f.CleanUrl
       }
-      static set CleanUrl(uu) {
-        cu.g.CleanUrl = uu
+      static set CleanUrl(GG) {
+        fG.f.CleanUrl = GG
       }
-      static IsAbsoluteUrl(uu) {
-        return 0 === uu.indexOf("//") || -1 !== uu.indexOf("://") && (-1 !== uu.indexOf(".") && (-1 !== uu.indexOf("/") && (!(uu.indexOf(":") > uu.indexOf("/")) && (uu.indexOf("://") < uu.indexOf(".") || (0 === uu.indexOf("data:") || 0 === uu.indexOf("blob:"))))))
+      static IsAbsoluteUrl(GG) {
+        return 0 === GG.indexOf("//") || -1 !== GG.indexOf("://") && (-1 !== GG.indexOf(".") && (-1 !== GG.indexOf("/") && (!(GG.indexOf(":") > GG.indexOf("/")) && (GG.indexOf("://") < GG.indexOf(".") || (0 === GG.indexOf("data:") || 0 === GG.indexOf("blob:"))))))
       }
-      static set ScriptBaseUrl(uu) {
-        cu.g.ScriptBaseUrl = uu
+      static set ScriptBaseUrl(GG) {
+        fG.f.ScriptBaseUrl = GG
       }
       static get ScriptBaseUrl() {
-        return cu.g.ScriptBaseUrl
+        return fG.f.ScriptBaseUrl
       }
-      static set CDNBaseUrl(uu) {
-        su.ScriptBaseUrl = uu, su.AssetBaseUrl = uu
+      static set CDNBaseUrl(GG) {
+        wG.ScriptBaseUrl = GG, wG.AssetBaseUrl = GG
       }
-      static set ScriptPreprocessUrl(uu) {
-        cu.g.ScriptPreprocessUrl = uu
+      static set ScriptPreprocessUrl(GG) {
+        fG.f.ScriptPreprocessUrl = GG
       }
       static get ScriptPreprocessUrl() {
-        return cu.g.ScriptPreprocessUrl
+        return fG.f.ScriptPreprocessUrl
       }
       static get DefaultRetryStrategy() {
-        return cu.g.DefaultRetryStrategy
+        return fG.f.DefaultRetryStrategy
       }
-      static set DefaultRetryStrategy(uu) {
-        cu.g.DefaultRetryStrategy = uu
+      static set DefaultRetryStrategy(GG) {
+        fG.f.DefaultRetryStrategy = GG
       }
       static get CorsBehavior() {
-        return cu.g.CorsBehavior
+        return fG.f.CorsBehavior
       }
-      static set CorsBehavior(uu) {
-        cu.g.CorsBehavior = uu
+      static set CorsBehavior(GG) {
+        fG.f.CorsBehavior = GG
       }
       static get UseFallbackTexture() {
-        return bu.b.UseFallbackTexture
+        return pG.c.UseFallbackTexture
       }
-      static set UseFallbackTexture(uu) {
-        bu.b.UseFallbackTexture = uu
+      static set UseFallbackTexture(GG) {
+        pG.c.UseFallbackTexture = GG
       }
       static get RegisteredExternalClasses() {
-        return Ou.d.RegisteredExternalClasses
+        return KG.c.RegisteredExternalClasses
       }
-      static set RegisteredExternalClasses(uu) {
-        Ou.d.RegisteredExternalClasses = uu
+      static set RegisteredExternalClasses(GG) {
+        KG.c.RegisteredExternalClasses = GG
       }
       static get fallbackTexture() {
-        return bu.b.FallbackTexture
+        return pG.c.FallbackTexture
       }
-      static set fallbackTexture(uu) {
-        bu.b.FallbackTexture = uu
+      static set fallbackTexture(GG) {
+        pG.c.FallbackTexture = GG
       }
-      static FetchToRef(uu, Eu, ju, su, Uu, Zu) {
-        const Xu = 4 * ((Math.abs(uu) * ju % ju | 0) + (Math.abs(Eu) * su % su | 0) * ju);
-        Zu.r = Uu[Xu] / 255, Zu.g = Uu[Xu + 1] / 255, Zu.b = Uu[Xu + 2] / 255, Zu.a = Uu[Xu + 3] / 255
+      static FetchToRef(GG, bG, ZG, wG, SG, LG) {
+        const yG = 4 * ((Math.abs(GG) * ZG % ZG | 0) + (Math.abs(bG) * wG % wG | 0) * ZG);
+        LG.r = SG[yG] / 255, LG.g = SG[yG + 1] / 255, LG.b = SG[yG + 2] / 255, LG.a = SG[yG + 3] / 255
       }
-      static Mix(uu, Eu, ju) {
+      static Mix(GG, bG, ZG) {
         return 0
       }
-      static Instantiate(uu) {
-        return Ou.d.Instantiate(uu)
+      static Instantiate(GG) {
+        return KG.c.Instantiate(GG)
       }
-      static SetImmediate(uu) {
-        Nu.c.SetImmediate(uu)
+      static SetImmediate(GG) {
+        QG.b.SetImmediate(GG)
       }
-      static IsExponentOfTwo(uu) {
+      static IsExponentOfTwo(GG) {
         return !0
       }
-      static FloatRound(uu) {
-        return Math.fround(uu)
+      static FloatRound(GG) {
+        return Math.fround(GG)
       }
-      static GetFilename(uu) {
-        const Eu = uu.lastIndexOf("/");
-        return Eu < 0 ? uu : uu.substring(Eu + 1)
+      static GetFilename(GG) {
+        const bG = GG.lastIndexOf("/");
+        return bG < 0 ? GG : GG.substring(bG + 1)
       }
-      static GetFolderPath(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const ju = uu.lastIndexOf("/");
-        return ju < 0 ? Eu ? uu : "" : uu.substring(0, ju + 1)
+      static GetFolderPath(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const ZG = GG.lastIndexOf("/");
+        return ZG < 0 ? bG ? GG : "" : GG.substring(0, ZG + 1)
       }
-      static ToDegrees(uu) {
-        return 180 * uu / Math.PI
+      static ToDegrees(GG) {
+        return 180 * GG / Math.PI
       }
-      static ToRadians(uu) {
-        return uu * Math.PI / 180
+      static ToRadians(GG) {
+        return GG * Math.PI / 180
       }
-      static SmoothAngleChange(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
-        const su = this.ToRadians(uu),
-          Uu = this.ToRadians(Eu);
-        return this.ToDegrees(Math.atan2((1 - ju) * Math.sin(Uu) + ju * Math.sin(su), (1 - ju) * Math.cos(Uu) + ju * Math.cos(su)))
+      static SmoothAngleChange(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
+        const wG = this.ToRadians(GG),
+          SG = this.ToRadians(bG);
+        return this.ToDegrees(Math.atan2((1 - ZG) * Math.sin(SG) + ZG * Math.sin(wG), (1 - ZG) * Math.cos(SG) + ZG * Math.cos(wG)))
       }
-      static MakeArray(uu, Eu) {
-        return !0 === Eu || void 0 !== uu && null != uu ? Array.isArray(uu) ? uu : [uu] : null
+      static MakeArray(GG, bG) {
+        return !0 === bG || void 0 !== GG && null != GG ? Array.isArray(GG) ? GG : [GG] : null
       }
-      static GetPointerPrefix(uu) {
-        return (0, Zu.m)() && !window.PointerEvent ? "mouse" : "pointer"
+      static GetPointerPrefix(GG) {
+        return (0, LG.k)() && !window.PointerEvent ? "mouse" : "pointer"
       }
-      static SetCorsBehavior(uu, Eu) {
-        (0, cu.z)(uu, Eu)
+      static SetCorsBehavior(GG, bG) {
+        (0, fG.A)(GG, bG)
       }
-      static SetReferrerPolicyBehavior(uu, Eu) {
-        Eu.referrerPolicy = uu
+      static SetReferrerPolicyBehavior(GG, bG) {
+        bG.referrerPolicy = GG
       }
       static get PreprocessUrl() {
-        return cu.g.PreprocessUrl
+        return fG.f.PreprocessUrl
       }
-      static set PreprocessUrl(uu) {
-        cu.g.PreprocessUrl = uu
+      static set PreprocessUrl(GG) {
+        fG.f.PreprocessUrl = GG
       }
-      static LoadImage(uu, Eu, ju, su, Uu, Zu) {
-        return (0, cu.q)(uu, Eu, ju, su, Uu, Zu)
+      static LoadImage(GG, bG, ZG, wG, SG, LG) {
+        return (0, fG.q)(GG, bG, ZG, wG, SG, LG)
       }
-      static LoadFile(uu, Eu, ju, su, Uu, Zu) {
-        return (0, cu.m)(uu, Eu, ju, su, Uu, Zu)
+      static LoadFile(GG, bG, ZG, wG, SG, LG) {
+        return (0, fG.o)(GG, bG, ZG, wG, SG, LG)
       }
-      static async LoadFileAsync(uu) {
-        let Eu = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return await new Promise(((ju, su) => {
-          (0, cu.m)(uu, (uu => {
-            ju(uu)
-          }), void 0, void 0, Eu, ((uu, Eu) => {
-            su(Eu)
+      static async LoadFileAsync(GG) {
+        let bG = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return await new Promise(((ZG, wG) => {
+          (0, fG.o)(GG, (GG => {
+            ZG(GG)
+          }), void 0, void 0, bG, ((GG, bG) => {
+            wG(bG)
           }))
         }))
       }
-      static GetAssetUrl(uu) {
-        if (!uu) return "";
-        if (su.AssetBaseUrl && uu.startsWith(su._DefaultAssetsUrl)) {
-          const Eu = su.AssetBaseUrl.endsWith("/") ? su.AssetBaseUrl.slice(0, -1) : su.AssetBaseUrl;
-          return uu.replace(su._DefaultAssetsUrl, Eu)
+      static GetAssetUrl(GG) {
+        if (!GG) return "";
+        if (wG.AssetBaseUrl && GG.startsWith(wG._DefaultAssetsUrl)) {
+          const bG = wG.AssetBaseUrl.endsWith("/") ? wG.AssetBaseUrl.slice(0, -1) : wG.AssetBaseUrl;
+          return GG.replace(wG._DefaultAssetsUrl, bG)
         }
-        return uu
+        return GG
       }
-      static GetBabylonScriptURL(uu, Eu) {
-        if (!uu) return "";
-        if (uu.startsWith(su._DefaultCdnUrl))
-          if (su.ScriptBaseUrl) {
-            const Eu = su.ScriptBaseUrl.endsWith("/") ? su.ScriptBaseUrl.slice(0, -1) : su.ScriptBaseUrl;
-            uu = uu.replace(su._DefaultCdnUrl, Eu)
-          } else if (su._CdnVersion) {
-          const Eu = `${su._DefaultCdnUrl}/v${su._CdnVersion}`;
-          uu.startsWith(Eu) || (uu = uu.replace(su._DefaultCdnUrl, Eu))
+      static GetBabylonScriptURL(GG, bG) {
+        if (!GG) return "";
+        if (GG.startsWith(wG._DefaultCdnUrl))
+          if (wG.ScriptBaseUrl) {
+            const bG = wG.ScriptBaseUrl.endsWith("/") ? wG.ScriptBaseUrl.slice(0, -1) : wG.ScriptBaseUrl;
+            GG = GG.replace(wG._DefaultCdnUrl, bG)
+          } else if (wG._CdnVersion) {
+          const bG = `${wG._DefaultCdnUrl}/v${wG._CdnVersion}`;
+          GG.startsWith(bG) || (GG = GG.replace(wG._DefaultCdnUrl, bG))
         }
-        return uu = su.ScriptPreprocessUrl(uu), Eu && !su.IsAbsoluteUrl(uu) && (uu = su.GetAbsoluteUrl(uu)), uu
+        return GG = wG.ScriptPreprocessUrl(GG), bG && !wG.IsAbsoluteUrl(GG) && (GG = wG.GetAbsoluteUrl(GG)), GG
       }
-      static LoadBabylonScript(uu, Eu, ju, Uu) {
-        uu = su.GetBabylonScriptURL(uu), su.LoadScript(uu, Eu, ju)
+      static LoadBabylonScript(GG, bG, ZG, SG) {
+        GG = wG.GetBabylonScriptURL(GG), wG.LoadScript(GG, bG, ZG)
       }
-      static async LoadBabylonScriptAsync(uu) {
-        return uu = su.GetBabylonScriptURL(uu), await su.LoadScriptAsync(uu)
+      static async LoadBabylonScriptAsync(GG) {
+        return GG = wG.GetBabylonScriptURL(GG), await wG.LoadScriptAsync(GG)
       }
-      static _LoadScriptNative(uu, Eu, ju, Uu) {
+      static _LoadScriptNative(GG, bG, ZG, SG) {
         if (_native) {
           if (arguments.length > 4 && void 0 !== arguments[4] && arguments[4]) {
-            const uu = "Loading a script as an ES module is not supported in Babylon Native";
-            return void ju?.(uu, new Error(uu))
+            const GG = "Loading a script as an ES module is not supported in Babylon Native";
+            return void ZG?.(GG, new Error(GG))
           }
-          su.LoadFile(uu, (uu => {
+          wG.LoadFile(GG, (GG => {
             try {
-              Function(uu).apply(null), Eu && Eu()
-            } catch (su) {
-              ju && ju("LoadScript Error", su)
+              Function(GG).apply(null), bG && bG()
+            } catch (wG) {
+              ZG && ZG("LoadScript Error", wG)
             }
-          }), void 0, void 0, !1, ((uu, Eu) => {
-            ju && ju("LoadScript Error", Eu)
+          }), void 0, void 0, !1, ((GG, bG) => {
+            ZG && ZG("LoadScript Error", bG)
           }))
         }
       }
-      static _LoadScriptWeb(uu, Eu, ju, su) {
-        let Uu = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      static _LoadScriptWeb(GG, bG, ZG, wG) {
+        let SG = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         if ("function" === typeof importScripts) {
           try {
-            importScripts(uu), Eu && Eu()
-          } catch (qu) {
-            ju?.(`Unable to load script '${uu}' in worker`, qu)
+            importScripts(GG), bG && bG()
+          } catch (UG) {
+            ZG?.(`Unable to load script '${GG}' in worker`, UG)
           }
           return
         }
-        if (!(0, Zu.m)()) return void ju?.(`Cannot load script '${uu}' outside of a window or a worker`);
-        const Xu = document.getElementsByTagName("head")[0],
-          lu = document.createElement("script");
-        Uu ? (lu.setAttribute("type", "module"), lu.innerText = uu) : (lu.setAttribute("type", "text/javascript"), lu.setAttribute("src", uu)), su && (lu.id = su), lu.onload = () => {
-          Eu && Eu()
-        }, lu.onerror = Eu => {
-          ju && ju(`Unable to load script '${uu}'`, Eu)
-        }, Xu.appendChild(lu)
+        if (!(0, LG.k)()) return void ZG?.(`Cannot load script '${GG}' outside of a window or a worker`);
+        const yG = document.getElementsByTagName("head")[0],
+          kG = document.createElement("script");
+        SG ? (kG.setAttribute("type", "module"), kG.innerText = GG) : (kG.setAttribute("type", "text/javascript"), kG.setAttribute("src", GG)), wG && (kG.id = wG), kG.onload = () => {
+          bG && bG()
+        }, kG.onerror = bG => {
+          ZG && ZG(`Unable to load script '${GG}'`, bG)
+        }, yG.appendChild(kG)
       }
-      static async LoadScriptAsync(uu, Eu) {
-        return await new Promise(((ju, su) => {
-          this.LoadScript(uu, (() => {
-            ju()
-          }), ((uu, Eu) => {
-            su(Eu || new Error(uu))
-          }), Eu)
+      static async LoadScriptAsync(GG, bG) {
+        return await new Promise(((ZG, wG) => {
+          this.LoadScript(GG, (() => {
+            ZG()
+          }), ((GG, bG) => {
+            wG(bG || new Error(GG))
+          }), bG)
         }))
       }
-      static ReadFileAsDataURL(uu, Eu, ju) {
-        const su = new FileReader,
-          Zu = {
-            onCompleteObservable: new Uu.d,
-            abort: () => su.abort()
+      static ReadFileAsDataURL(GG, bG, ZG) {
+        const wG = new FileReader,
+          LG = {
+            onCompleteObservable: new SG.c,
+            abort: () => wG.abort()
           };
-        return su.onloadend = () => {
-          Zu.onCompleteObservable.notifyObservers(Zu)
-        }, su.onload = uu => {
-          Eu(uu.target.result)
-        }, su.onprogress = ju, su.readAsDataURL(uu), Zu
+        return wG.onloadend = () => {
+          LG.onCompleteObservable.notifyObservers(LG)
+        }, wG.onload = GG => {
+          bG(GG.target.result)
+        }, wG.onprogress = ZG, wG.readAsDataURL(GG), LG
       }
-      static ReadFile(uu, Eu, ju, su, Uu) {
-        return (0, cu.r)(uu, Eu, ju, su, Uu)
+      static ReadFile(GG, bG, ZG, wG, SG) {
+        return (0, fG.s)(GG, bG, ZG, wG, SG)
       }
-      static FileAsURL(uu) {
-        const Eu = new Blob([uu]);
-        return window.URL.createObjectURL(Eu)
+      static FileAsURL(GG) {
+        const bG = new Blob([GG]);
+        return window.URL.createObjectURL(bG)
       }
-      static Format(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-        return uu.toFixed(Eu)
+      static Format(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+        return GG.toFixed(bG)
       }
-      static DeepCopy(uu, Eu, ju, su) {
-        lu.d.DeepCopy(uu, Eu, ju, su)
+      static DeepCopy(GG, bG, ZG, wG) {
+        kG.e.DeepCopy(GG, bG, ZG, wG)
       }
-      static IsEmpty(uu) {
-        for (const Eu in uu)
-          if (Object.prototype.hasOwnProperty.call(uu, Eu)) return !1;
+      static IsEmpty(GG) {
+        for (const bG in GG)
+          if (Object.prototype.hasOwnProperty.call(GG, bG)) return !1;
         return !0
       }
-      static RegisterTopRootEvents(uu, Eu) {
-        for (let su = 0; su < Eu.length; su++) {
-          const Uu = Eu[su];
-          uu.addEventListener(Uu.name, Uu.handler, !1);
+      static RegisterTopRootEvents(GG, bG) {
+        for (let wG = 0; wG < bG.length; wG++) {
+          const SG = bG[wG];
+          GG.addEventListener(SG.name, SG.handler, !1);
           try {
-            window.parent && window.parent.addEventListener(Uu.name, Uu.handler, !1)
-          } catch (ju) {}
+            window.parent && window.parent.addEventListener(SG.name, SG.handler, !1)
+          } catch (ZG) {}
         }
       }
-      static UnregisterTopRootEvents(uu, Eu) {
-        for (let su = 0; su < Eu.length; su++) {
-          const Uu = Eu[su];
-          uu.removeEventListener(Uu.name, Uu.handler);
+      static UnregisterTopRootEvents(GG, bG) {
+        for (let wG = 0; wG < bG.length; wG++) {
+          const SG = bG[wG];
+          GG.removeEventListener(SG.name, SG.handler);
           try {
-            uu.parent && uu.parent.removeEventListener(Uu.name, Uu.handler)
-          } catch (ju) {}
+            GG.parent && GG.parent.removeEventListener(SG.name, SG.handler)
+          } catch (ZG) {}
         }
       }
-      static async DumpFramebuffer(uu, Eu, ju, su) {
-        throw (0, fu.h)("DumpTools")
+      static async DumpFramebuffer(GG, bG, ZG, wG) {
+        throw (0, YG.i)("DumpTools")
       }
-      static DumpData(uu, Eu, ju, su) {
-        throw (0, fu.h)("DumpTools")
+      static DumpData(GG, bG, ZG, wG) {
+        throw (0, YG.i)("DumpTools")
       }
-      static async DumpDataAsync(uu, Eu, ju) {
-        throw (0, fu.h)("DumpTools")
+      static async DumpDataAsync(GG, bG, ZG) {
+        throw (0, YG.i)("DumpTools")
       }
-      static _IsOffScreenCanvas(uu) {
-        return void 0 !== uu.convertToBlob
+      static _IsOffScreenCanvas(GG) {
+        return void 0 !== GG.convertToBlob
       }
-      static ToBlob(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
-          Uu = arguments.length > 3 ? arguments[3] : void 0;
-        su._IsOffScreenCanvas(uu) || uu.toBlob || (uu.toBlob = function(uu, Eu, ju) {
+      static ToBlob(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          SG = arguments.length > 3 ? arguments[3] : void 0;
+        wG._IsOffScreenCanvas(GG) || GG.toBlob || (GG.toBlob = function(GG, bG, ZG) {
           setTimeout((() => {
-            const su = atob(this.toDataURL(Eu, ju).split(",")[1]),
-              Uu = su.length,
-              Zu = new Uint8Array(Uu);
-            for (let uu = 0; uu < Uu; uu++) Zu[uu] = su.charCodeAt(uu);
-            uu(new Blob([Zu]))
+            const wG = atob(this.toDataURL(bG, ZG).split(",")[1]),
+              SG = wG.length,
+              LG = new Uint8Array(SG);
+            for (let GG = 0; GG < SG; GG++) LG[GG] = wG.charCodeAt(GG);
+            GG(new Blob([LG]))
           }))
-        }), su._IsOffScreenCanvas(uu) ? uu.convertToBlob({
-          type: ju,
-          quality: Uu
-        }).then((uu => Eu(uu))) : uu.toBlob((function(uu) {
-          Eu(uu)
-        }), ju, Uu)
+        }), wG._IsOffScreenCanvas(GG) ? GG.convertToBlob({
+          type: ZG,
+          quality: SG
+        }).then((GG => bG(GG))) : GG.toBlob((function(GG) {
+          bG(GG)
+        }), ZG, SG)
       }
-      static DownloadBlob(uu, Eu) {
+      static DownloadBlob(GG, bG) {
         if ("download" in document.createElement("a")) {
-          if (!Eu) {
-            const uu = new Date;
-            Eu = "screenshot_" + ((uu.getFullYear() + "-" + (uu.getMonth() + 1)).slice(2) + "-" + uu.getDate() + "_" + uu.getHours() + "-" + ("0" + uu.getMinutes()).slice(-2)) + ".png"
+          if (!bG) {
+            const GG = new Date;
+            bG = "screenshot_" + ((GG.getFullYear() + "-" + (GG.getMonth() + 1)).slice(2) + "-" + GG.getDate() + "_" + GG.getHours() + "-" + ("0" + GG.getMinutes()).slice(-2)) + ".png"
           }
-          su.Download(uu, Eu)
-        } else if (uu && "undefined" !== typeof URL) {
-          const Eu = URL.createObjectURL(uu),
-            ju = window.open("");
-          if (!ju) return;
-          const su = ju.document.createElement("img");
-          su.onload = function() {
-            URL.revokeObjectURL(Eu)
-          }, su.src = Eu, ju.document.body.appendChild(su)
+          wG.Download(GG, bG)
+        } else if (GG && "undefined" !== typeof URL) {
+          const bG = URL.createObjectURL(GG),
+            ZG = window.open("");
+          if (!ZG) return;
+          const wG = ZG.document.createElement("img");
+          wG.onload = function() {
+            URL.revokeObjectURL(bG)
+          }, wG.src = bG, ZG.document.body.appendChild(wG)
         }
       }
-      static EncodeScreenshotCanvasData(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
-          Uu = arguments.length > 3 ? arguments[3] : void 0,
-          Zu = arguments.length > 4 ? arguments[4] : void 0;
-        if ("string" !== typeof Uu && Eu) {
-          if (Eu) {
-            if (su._IsOffScreenCanvas(uu)) return void uu.convertToBlob({
-              type: ju,
-              quality: Zu
-            }).then((uu => {
-              const ju = new FileReader;
-              ju.readAsDataURL(uu), ju.onloadend = () => {
-                const uu = ju.result;
-                Eu(uu)
+      static EncodeScreenshotCanvasData(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          SG = arguments.length > 3 ? arguments[3] : void 0,
+          LG = arguments.length > 4 ? arguments[4] : void 0;
+        if ("string" !== typeof SG && bG) {
+          if (bG) {
+            if (wG._IsOffScreenCanvas(GG)) return void GG.convertToBlob({
+              type: ZG,
+              quality: LG
+            }).then((GG => {
+              const ZG = new FileReader;
+              ZG.readAsDataURL(GG), ZG.onloadend = () => {
+                const GG = ZG.result;
+                bG(GG)
               }
             }));
-            const Uu = uu.toDataURL(ju, Zu);
-            Eu(Uu)
+            const SG = GG.toDataURL(ZG, LG);
+            bG(SG)
           }
-        } else this.ToBlob(uu, (function(uu) {
-          uu && su.DownloadBlob(uu, Uu), Eu && Eu("")
-        }), ju, Zu)
+        } else this.ToBlob(GG, (function(GG) {
+          GG && wG.DownloadBlob(GG, SG), bG && bG("")
+        }), ZG, LG)
       }
-      static Download(uu, Eu) {
+      static Download(GG, bG) {
         if ("undefined" === typeof URL) return;
-        const ju = window.URL.createObjectURL(uu),
-          su = document.createElement("a");
-        document.body.appendChild(su), su.style.display = "none", su.href = ju, su.download = Eu, su.addEventListener("click", (() => {
-          su.parentElement && su.parentElement.removeChild(su)
-        })), su.click(), window.URL.revokeObjectURL(ju)
+        const ZG = window.URL.createObjectURL(GG),
+          wG = document.createElement("a");
+        document.body.appendChild(wG), wG.style.display = "none", wG.href = ZG, wG.download = bG, wG.addEventListener("click", (() => {
+          wG.parentElement && wG.parentElement.removeChild(wG)
+        })), wG.click(), window.URL.revokeObjectURL(ZG)
       }
-      static BackCompatCameraNoPreventDefault(uu) {
-        return "boolean" === typeof uu[0] ? uu[0] : "boolean" === typeof uu[1] && uu[1]
+      static BackCompatCameraNoPreventDefault(GG) {
+        return "boolean" === typeof GG[0] ? GG[0] : "boolean" === typeof GG[1] && GG[1]
       }
-      static CreateScreenshot(uu, Eu, ju, su) {
-        throw (0, fu.h)("ScreenshotTools")
+      static CreateScreenshot(GG, bG, ZG, wG) {
+        throw (0, YG.i)("ScreenshotTools")
       }
-      static async CreateScreenshotAsync(uu, Eu, ju) {
-        throw (0, fu.h)("ScreenshotTools")
+      static async CreateScreenshotAsync(GG, bG, ZG) {
+        throw (0, YG.i)("ScreenshotTools")
       }
-      static CreateScreenshotUsingRenderTarget(uu, Eu, ju, su) {
-        throw (0, fu.h)("ScreenshotTools")
+      static CreateScreenshotUsingRenderTarget(GG, bG, ZG, wG) {
+        throw (0, YG.i)("ScreenshotTools")
       }
-      static async CreateScreenshotUsingRenderTargetAsync(uu, Eu, ju) {
-        throw (0, fu.h)("ScreenshotTools")
+      static async CreateScreenshotUsingRenderTargetAsync(GG, bG, ZG) {
+        throw (0, YG.i)("ScreenshotTools")
       }
       static RandomId() {
-        return (0, Yu.e)()
+        return (0, hG.e)()
       }
-      static IsBase64(uu) {
-        return (0, cu.l)(uu)
+      static IsBase64(GG) {
+        return (0, fG.k)(GG)
       }
-      static DecodeBase64(uu) {
-        return (0, cu.d)(uu)
+      static DecodeBase64(GG) {
+        return (0, fG.c)(GG)
       }
       static get errorsCount() {
-        return Xu.b.errorsCount
+        return yG.c.errorsCount
       }
-      static Log(uu) {
-        Xu.b.Log(uu)
+      static Log(GG) {
+        yG.c.Log(GG)
       }
-      static Warn(uu) {
-        Xu.b.Warn(uu)
+      static Warn(GG) {
+        yG.c.Warn(GG)
       }
-      static Error(uu) {
-        Xu.b.Error(uu)
+      static Error(GG) {
+        yG.c.Error(GG)
       }
       static get LogCache() {
-        return Xu.b.LogCache
+        return yG.c.LogCache
       }
       static ClearLogCache() {
-        Xu.b.ClearLogCache()
+        yG.c.ClearLogCache()
       }
-      static set LogLevels(uu) {
-        Xu.b.LogLevels = uu
+      static set LogLevels(GG) {
+        yG.c.LogLevels = GG
       }
-      static set PerformanceLogLevel(uu) {
-        (uu & su.PerformanceUserMarkLogLevel) !== su.PerformanceUserMarkLogLevel ? (uu & su.PerformanceConsoleLogLevel) !== su.PerformanceConsoleLogLevel ? (su.StartPerformanceCounter = su._StartPerformanceCounterDisabled, su.EndPerformanceCounter = su._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), su.StartPerformanceCounter = su._StartMarkNative, su.EndPerformanceCounter = su._EndMarkNative) : (su.StartPerformanceCounter = su._StartPerformanceConsole, su.EndPerformanceCounter = su._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), su.StartPerformanceCounter = su._StartMarkNative, su.EndPerformanceCounter = su._EndMarkNative) : (su.StartPerformanceCounter = su._StartUserMark, su.EndPerformanceCounter = su._EndUserMark)
+      static set PerformanceLogLevel(GG) {
+        (GG & wG.PerformanceUserMarkLogLevel) !== wG.PerformanceUserMarkLogLevel ? (GG & wG.PerformanceConsoleLogLevel) !== wG.PerformanceConsoleLogLevel ? (wG.StartPerformanceCounter = wG._StartPerformanceCounterDisabled, wG.EndPerformanceCounter = wG._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), wG.StartPerformanceCounter = wG._StartMarkNative, wG.EndPerformanceCounter = wG._EndMarkNative) : (wG.StartPerformanceCounter = wG._StartPerformanceConsole, wG.EndPerformanceCounter = wG._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), wG.StartPerformanceCounter = wG._StartMarkNative, wG.EndPerformanceCounter = wG._EndMarkNative) : (wG.StartPerformanceCounter = wG._StartUserMark, wG.EndPerformanceCounter = wG._EndUserMark)
       }
-      static _StartPerformanceCounterDisabled(uu, Eu) {}
-      static _EndPerformanceCounterDisabled(uu, Eu) {}
-      static _StartUserMark(uu) {
-        let Eu = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!su._Performance) {
-          if (!(0, Zu.m)()) return;
-          su._Performance = window.performance
+      static _StartPerformanceCounterDisabled(GG, bG) {}
+      static _EndPerformanceCounterDisabled(GG, bG) {}
+      static _StartUserMark(GG) {
+        let bG = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!wG._Performance) {
+          if (!(0, LG.k)()) return;
+          wG._Performance = window.performance
         }
-        Eu && su._Performance.mark && su._Performance.mark(uu + "-Begin")
+        bG && wG._Performance.mark && wG._Performance.mark(GG + "-Begin")
       }
-      static _EndUserMark(uu) {
-        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && su._Performance.mark && (su._Performance.mark(uu + "-End"), su._Performance.measure(uu, uu + "-Begin", uu + "-End"))
+      static _EndUserMark(GG) {
+        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && wG._Performance.mark && (wG._Performance.mark(GG + "-End"), wG._Performance.measure(GG, GG + "-Begin", GG + "-End"))
       }
-      static _StartPerformanceConsole(uu) {
-        let Eu = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        Eu && (su._StartUserMark(uu, Eu), console.time && console.time(uu))
+      static _StartPerformanceConsole(GG) {
+        let bG = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        bG && (wG._StartUserMark(GG, bG), console.time && console.time(GG))
       }
-      static _EndPerformanceConsole(uu) {
-        let Eu = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        Eu && (su._EndUserMark(uu, Eu), console.timeEnd(uu))
+      static _EndPerformanceConsole(GG) {
+        let bG = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        bG && (wG._EndUserMark(GG, bG), console.timeEnd(GG))
       }
-      static _StartMarkNative(uu) {
+      static _StartMarkNative(GG) {
         if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.startPerformanceCounter)
-          if (su._NativePerformanceCounterHandles.has(uu)) su.Warn(`Performance counter with name ${uu} is already started.`);
+          if (wG._NativePerformanceCounterHandles.has(GG)) wG.Warn(`Performance counter with name ${GG} is already started.`);
           else {
-            const Eu = _native.startPerformanceCounter(uu);
-            su._NativePerformanceCounterHandles.set(uu, Eu)
+            const bG = _native.startPerformanceCounter(GG);
+            wG._NativePerformanceCounterHandles.set(GG, bG)
           }
       }
-      static _EndMarkNative(uu) {
+      static _EndMarkNative(GG) {
         if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.endPerformanceCounter) {
-          const Eu = su._NativePerformanceCounterHandles.get(uu);
-          Eu ? (_native.endPerformanceCounter(Eu), su._NativePerformanceCounterHandles.delete(uu)) : su.Warn(`Performance counter with name ${uu} was not started.`)
+          const bG = wG._NativePerformanceCounterHandles.get(GG);
+          bG ? (_native.endPerformanceCounter(bG), wG._NativePerformanceCounterHandles.delete(GG)) : wG.Warn(`Performance counter with name ${GG} was not started.`)
         }
       }
       static get Now() {
-        return qu.c.Now
+        return UG.c.Now
       }
-      static GetClassName(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ju = null;
-        if (!Eu && uu.getClassName) ju = uu.getClassName();
+      static GetClassName(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ZG = null;
+        if (!bG && GG.getClassName) ZG = GG.getClassName();
         else {
-          if (uu instanceof Object) {
-            ju = (Eu ? uu : Object.getPrototypeOf(uu)).constructor.__bjsclassName__
+          if (GG instanceof Object) {
+            ZG = (bG ? GG : Object.getPrototypeOf(GG)).constructor.__bjsclassName__
           }
-          ju || (ju = typeof uu)
+          ZG || (ZG = typeof GG)
         }
-        return ju
+        return ZG
       }
-      static First(uu, Eu) {
-        for (const ju of uu)
-          if (Eu(ju)) return ju;
+      static First(GG, bG) {
+        for (const ZG of GG)
+          if (bG(ZG)) return ZG;
         return null
       }
-      static getFullClassName(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ju = null,
-          su = null;
-        if (!Eu && uu.getClassName) ju = uu.getClassName();
+      static getFullClassName(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ZG = null,
+          wG = null;
+        if (!bG && GG.getClassName) ZG = GG.getClassName();
         else {
-          if (uu instanceof Object) {
-            const Uu = Eu ? uu : Object.getPrototypeOf(uu);
-            ju = Uu.constructor.__bjsclassName__, su = Uu.constructor.__bjsmoduleName__
+          if (GG instanceof Object) {
+            const SG = bG ? GG : Object.getPrototypeOf(GG);
+            ZG = SG.constructor.__bjsclassName__, wG = SG.constructor.__bjsmoduleName__
           }
-          ju || (ju = typeof uu)
+          ZG || (ZG = typeof GG)
         }
-        return ju ? (null != su ? su + "." : "") + ju : null
+        return ZG ? (null != wG ? wG + "." : "") + ZG : null
       }
-      static async DelayAsync(uu) {
-        await new Promise((Eu => {
+      static async DelayAsync(GG) {
+        await new Promise((bG => {
           setTimeout((() => {
-            Eu()
-          }), uu)
+            bG()
+          }), GG)
         }))
       }
       static IsSafari() {
-        return !!(0, Zu.i)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+        return !!(0, LG.g)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
       }
     }
 
-    function gu(uu, Eu) {
-      return ju => {
-        ju.__bjsclassName__ = uu, ju.__bjsmoduleName__ = null != Eu ? Eu : null
+    function rG(GG, bG) {
+      return ZG => {
+        ZG.__bjsclassName__ = GG, ZG.__bjsmoduleName__ = null != bG ? bG : null
       }
     }
-    su = Du, Du.AssetBaseUrl = "", Du.UseCustomRequestHeaders = !1, Du.CustomRequestHeaders = Cu.b.CustomRequestHeaders, Du.GetDOMTextContent = Zu.d, Du._DefaultCdnUrl = "https://cdn.babylonjs.com", Du._CdnVersion = "9.28.0", Du._DefaultAssetsUrl = "https://assets.babylonjs.com/core", Du.LoadScript = "undefined" === typeof _native ? su._LoadScriptWeb : su._LoadScriptNative, Du.GetAbsoluteUrl = "object" === typeof document ? uu => {
-      const Eu = document.createElement("a");
-      return Eu.href = uu, Eu.href
-    } : "function" === typeof URL && "object" === typeof location ? uu => new URL(uu, location.origin).href : () => {
+    wG = JG, JG.AssetBaseUrl = "", JG.UseCustomRequestHeaders = !1, JG.CustomRequestHeaders = VG.b.CustomRequestHeaders, JG.GetDOMTextContent = LG.b, JG._DefaultCdnUrl = "https://cdn.babylonjs.com", JG._CdnVersion = "9.28.0", JG._DefaultAssetsUrl = "https://assets.babylonjs.com/core", JG.LoadScript = "undefined" === typeof _native ? wG._LoadScriptWeb : wG._LoadScriptNative, JG.GetAbsoluteUrl = "object" === typeof document ? GG => {
+      const bG = document.createElement("a");
+      return bG.href = GG, bG.href
+    } : "function" === typeof URL && "object" === typeof location ? GG => new URL(GG, location.origin).href : () => {
       throw new Error("Unable to get absolute URL. Override BABYLON.Tools.GetAbsoluteUrl to a custom implementation for the current context.")
-    }, Du.NoneLogLevel = Xu.b.NoneLogLevel, Du.MessageLogLevel = Xu.b.MessageLogLevel, Du.WarningLogLevel = Xu.b.WarningLogLevel, Du.ErrorLogLevel = Xu.b.ErrorLogLevel, Du.AllLogLevel = Xu.b.AllLogLevel, Du.IsWindowObjectExist = Zu.m, Du.PerformanceNoneLogLevel = 0, Du.PerformanceUserMarkLogLevel = 1, Du.PerformanceConsoleLogLevel = 2, Du._NativePerformanceCounterHandles = new Map, Du.StartPerformanceCounter = su._StartPerformanceCounterDisabled, Du.EndPerformanceCounter = su._EndPerformanceCounterDisabled;
-    class Mu {
-      constructor(uu, Eu, ju) {
-        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.iterations = uu, this.index = su - 1, this._done = !1, this._fn = Eu, this._successCallback = ju
+    }, JG.NoneLogLevel = yG.c.NoneLogLevel, JG.MessageLogLevel = yG.c.MessageLogLevel, JG.WarningLogLevel = yG.c.WarningLogLevel, JG.ErrorLogLevel = yG.c.ErrorLogLevel, JG.AllLogLevel = yG.c.AllLogLevel, JG.IsWindowObjectExist = LG.k, JG.PerformanceNoneLogLevel = 0, JG.PerformanceUserMarkLogLevel = 1, JG.PerformanceConsoleLogLevel = 2, JG._NativePerformanceCounterHandles = new Map, JG.StartPerformanceCounter = wG._StartPerformanceCounterDisabled, JG.EndPerformanceCounter = wG._EndPerformanceCounterDisabled;
+    class zG {
+      constructor(GG, bG, ZG) {
+        let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.iterations = GG, this.index = wG - 1, this._done = !1, this._fn = bG, this._successCallback = ZG
       }
       executeNext() {
         this._done || (this.index + 1 < this.iterations ? (++this.index, this._fn(this)) : this.breakLoop())
@@ -585,33 +585,33 @@ export const modules = {
       breakLoop() {
         this._done = !0, this._successCallback()
       }
-      static Run(uu, Eu, ju) {
-        const su = new Mu(uu, Eu, ju, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
-        return su.executeNext(), su
+      static Run(GG, bG, ZG) {
+        const wG = new zG(GG, bG, ZG, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
+        return wG.executeNext(), wG
       }
-      static SyncAsyncForLoop(uu, Eu, ju, su, Uu) {
-        let Zu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        return Mu.Run(Math.ceil(uu / Eu), (su => {
-          Uu && Uu() ? su.breakLoop() : setTimeout((() => {
-            for (let Zu = 0; Zu < Eu; ++Zu) {
-              const Xu = su.index * Eu + Zu;
-              if (Xu >= uu) break;
-              if (ju(Xu), Uu && Uu()) {
-                su.breakLoop();
+      static SyncAsyncForLoop(GG, bG, ZG, wG, SG) {
+        let LG = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        return zG.Run(Math.ceil(GG / bG), (wG => {
+          SG && SG() ? wG.breakLoop() : setTimeout((() => {
+            for (let LG = 0; LG < bG; ++LG) {
+              const yG = wG.index * bG + LG;
+              if (yG >= GG) break;
+              if (ZG(yG), SG && SG()) {
+                wG.breakLoop();
                 break
               }
             }
-            su.executeNext()
-          }), Zu)
-        }), su)
+            wG.executeNext()
+          }), LG)
+        }), wG)
       }
     }
-    let eu = !1;
+    let EG = !1;
 
-    function Gu() {
-      eu || (eu = !0, Du.Mix = hu.n, Du.IsExponentOfTwo = hu.k, bu.b.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
+    function oG() {
+      EG || (EG = !0, JG.Mix = dG.o, JG.IsExponentOfTwo = dG.k, pG.c.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

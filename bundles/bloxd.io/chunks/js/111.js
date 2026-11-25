@@ -1,89 +1,89 @@
 export const id = 111;
 export const ids = [111, 402];
 export const modules = {
-  5131: (uu, Eu, ju) => {
-    var su = ju(5135);
+  4993: (GG, bG, ZG) => {
+    var wG = ZG(4997);
 
-    function Uu() {}
+    function SG() {}
 
-    function Zu() {}
-    Zu.resetWarningCache = Uu, uu.exports = function() {
-      function uu(uu, Eu, ju, Uu, Zu, Xu) {
-        if (Xu !== su) {
-          var lu = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw lu.name = "Invariant Violation", lu
+    function LG() {}
+    LG.resetWarningCache = SG, GG.exports = function() {
+      function GG(GG, bG, ZG, SG, LG, yG) {
+        if (yG !== wG) {
+          var kG = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw kG.name = "Invariant Violation", kG
         }
       }
 
-      function Eu() {
-        return uu
+      function bG() {
+        return GG
       }
-      uu.isRequired = uu;
-      var ju = {
-        array: uu,
-        bigint: uu,
-        bool: uu,
-        func: uu,
-        number: uu,
-        object: uu,
-        string: uu,
-        symbol: uu,
-        any: uu,
-        arrayOf: Eu,
-        element: uu,
-        elementType: uu,
-        instanceOf: Eu,
-        node: uu,
-        objectOf: Eu,
-        oneOf: Eu,
-        oneOfType: Eu,
-        shape: Eu,
-        exact: Eu,
-        checkPropTypes: Zu,
-        resetWarningCache: Uu
+      GG.isRequired = GG;
+      var ZG = {
+        array: GG,
+        bigint: GG,
+        bool: GG,
+        func: GG,
+        number: GG,
+        object: GG,
+        string: GG,
+        symbol: GG,
+        any: GG,
+        arrayOf: bG,
+        element: GG,
+        elementType: GG,
+        instanceOf: bG,
+        node: GG,
+        objectOf: bG,
+        oneOf: bG,
+        oneOfType: bG,
+        shape: bG,
+        exact: bG,
+        checkPropTypes: LG,
+        resetWarningCache: SG
       };
-      return ju.PropTypes = ju, ju
+      return ZG.PropTypes = ZG, ZG
     }
   },
-  5128: (uu, Eu, ju) => {
-    uu.exports = ju(5131)()
+  4985: (GG, bG, ZG) => {
+    GG.exports = ZG(4993)()
   },
-  5135: uu => {
-    uu.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  4997: GG => {
+    GG.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  6787: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      default: () => Cu
+  6588: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      default: () => VG
     });
-    var su = ju(1570),
-      Uu = ju(1506),
-      Zu = ju(1244),
-      Xu = ju(6796),
-      lu = ju(6771),
-      qu = ju(6761),
-      fu = ju(1154);
+    var wG = ZG(1444),
+      SG = ZG(1393),
+      LG = ZG(1151),
+      yG = ZG(6591),
+      kG = ZG(6576),
+      UG = ZG(6559),
+      YG = ZG(1067);
 
-    function Cu() {
+    function VG() {
       const {
-        t: uu
-      } = (0, Zu.A)(), Eu = (0, su.useNavigatePreserveSearch)();
-      return (0, lu.b)(), (0, fu.jsxs)("div", {
+        t: GG
+      } = (0, LG.w)(), bG = (0, wG.useNavigatePreserveSearch)();
+      return (0, kG.d)(), (0, YG.jsxs)("div", {
         className: "ShaderPackPublishPage AnimFadeIn",
-        children: [(0, fu.jsx)("div", {
+        children: [(0, YG.jsx)("div", {
           className: "ShaderPackPublishBack",
-          children: (0, fu.jsx)(Uu.d, {
+          children: (0, YG.jsx)(SG.b, {
             onClick: () => {
-              Eu(qu.R)
+              bG(UG.X)
             },
-            children: uu("shaderPackListing:backToPacks")
+            children: GG("shaderPackListing:backToPacks")
           })
-        }), (0, fu.jsx)("h1", {
+        }), (0, YG.jsx)("h1", {
           className: "ShaderPackPublishTitle",
-          children: uu("shaderPackListing:publishTitle")
-        }), (0, fu.jsx)(Xu.ShaderPackPublishForm, {
+          children: GG("shaderPackListing:publishTitle")
+        }), (0, YG.jsx)(yG.ShaderPackPublishForm, {
           existing: null,
-          onPublished: uu => {
-            Eu((0, qu.U)(uu.packId), {
+          onPublished: GG => {
+            bG((0, UG.bb)(GG.packId), {
               replace: !0
             })
           }
@@ -91,131 +91,131 @@ export const modules = {
       })
     }
   },
-  6771: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => cu,
-      c: () => Nu,
-      f: () => bu,
-      g: () => Ou
+  6576: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => fG,
+      e: () => QG,
+      i: () => pG,
+      k: () => KG
     });
-    var su = ju(58),
-      Uu = ju(6764),
-      Zu = ju(1559),
-      Xu = ju(6761),
-      lu = ju(6777),
-      qu = ju(1178);
-    const fu = "shaderPackListingView",
-      Cu = "shaderPackListingFilterOpen";
+    var wG = ZG(51),
+      SG = ZG(6561),
+      LG = ZG(1431),
+      yG = ZG(6559),
+      kG = ZG(6580),
+      UG = ZG(1092);
+    const YG = "shaderPackListingView",
+      VG = "shaderPackListingFilterOpen";
 
-    function bu() {
-      var uu;
-      const [Eu, ju] = (0, lu.c)(fu, Uu.M[0]);
-      return [null !== (uu = Uu.M.find((uu => uu === Eu))) && void 0 !== uu ? uu : Uu.M[0], ju]
+    function pG() {
+      var GG;
+      const [bG, ZG] = (0, kG.b)(YG, SG.F[0]);
+      return [null !== (GG = SG.F.find((GG => GG === bG))) && void 0 !== GG ? GG : SG.F[0], ZG]
     }
 
-    function cu() {
-      (0, su.useEffect)((() => () => {
-        window.location.pathname.startsWith(Xu.R) || (0, Xu.l)()
+    function fG() {
+      (0, wG.useEffect)((() => () => {
+        window.location.pathname.startsWith(yG.X) || (0, yG.k)()
       }), [])
     }
 
-    function Nu() {
-      return (0, lu.c)(Cu, !1)
+    function QG() {
+      return (0, kG.b)(VG, !1)
     }
 
-    function Ou() {
+    function KG() {
       const {
-        userContext: uu,
-        isUserContextUpdating: Eu
-      } = (0, qu.c)(), [ju, Uu] = (0, su.useState)(null), Xu = (0, su.useRef)(new Set);
+        userContext: GG,
+        isUserContextUpdating: bG
+      } = (0, UG.e)(), [ZG, SG] = (0, wG.useState)(null), yG = (0, wG.useRef)(new Set);
 
-      function lu(uu, Eu) {
-        Uu((ju => {
-          const su = new Set(ju);
-          return Eu ? su.add(uu) : su.delete(uu), su
+      function kG(GG, bG) {
+        SG((ZG => {
+          const wG = new Set(ZG);
+          return bG ? wG.add(GG) : wG.delete(GG), wG
         }))
       }
-      return (0, su.useEffect)((() => {
-        if (Eu) return;
-        let ju = !1;
-        return Zu.b.getFavouriteShaderPacks(uu).then((uu => {
-          ju || Uu(new Set(uu))
-        })).catch((uu => {
-          console.error("Failed to get favourite shader packs", uu), ju || Uu(new Set)
+      return (0, wG.useEffect)((() => {
+        if (bG) return;
+        let ZG = !1;
+        return LG.d.getFavouriteShaderPacks(GG).then((GG => {
+          ZG || SG(new Set(GG))
+        })).catch((GG => {
+          console.error("Failed to get favourite shader packs", GG), ZG || SG(new Set)
         })), () => {
-          ju = !0
+          ZG = !0
         }
-      }), [uu, Eu]), {
-        isFavourite: uu => null === ju ? null : ju.has(uu),
-        toggle: function(Eu) {
-          if (null === ju || Xu.current.has(Eu)) return;
-          Xu.current.add(Eu);
-          const su = !ju.has(Eu);
-          lu(Eu, su), (su ? Zu.b.favouriteShaderPack(uu, Eu) : Zu.b.unfavouriteShaderPack(uu, Eu)).catch((uu => {
-            console.error("Failed to change a favourite shader pack", uu), lu(Eu, !su)
+      }), [GG, bG]), {
+        isFavourite: GG => null === ZG ? null : ZG.has(GG),
+        toggle: function(bG) {
+          if (null === ZG || yG.current.has(bG)) return;
+          yG.current.add(bG);
+          const wG = !ZG.has(bG);
+          kG(bG, wG), (wG ? LG.d.favouriteShaderPack(GG, bG) : LG.d.unfavouriteShaderPack(GG, bG)).catch((GG => {
+            console.error("Failed to change a favourite shader pack", GG), kG(bG, !wG)
           })).finally((() => {
-            Xu.current.delete(Eu)
+            yG.current.delete(bG)
           }))
         }
       }
     }
   },
-  6761: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      A: () => Du,
-      B: () => Pu,
-      F: () => Cu,
-      H: () => ku,
-      I: () => Yu,
-      M: () => Wu,
-      N: () => Qu,
-      R: () => Xu,
-      T: () => iu,
-      U: () => qu,
-      V: () => lu,
-      Y: () => Vu,
-      ab: () => ru,
-      d: () => gu,
-      eb: () => Mu,
-      gb: () => ou,
-      h: () => du,
-      k: () => hu,
-      l: () => cu,
-      o: () => bu,
-      r: () => mu,
-      s: () => Nu,
-      w: () => vu,
-      x: () => Su,
-      y: () => Ou
+  6559: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      D: () => KG,
+      G: () => JG,
+      K: () => mG,
+      N: () => VG,
+      R: () => FG,
+      S: () => hG,
+      V: () => AG,
+      W: () => PG,
+      X: () => yG,
+      Z: () => MG,
+      bb: () => UG,
+      c: () => rG,
+      eb: () => kG,
+      f: () => CG,
+      g: () => dG,
+      hb: () => lG,
+      jb: () => jG,
+      k: () => fG,
+      mb: () => zG,
+      n: () => pG,
+      q: () => vG,
+      qb: () => IG,
+      s: () => QG,
+      v: () => aG,
+      z: () => sG
     });
-    var su = ju(6764),
-      Uu = ju(166),
-      Zu = ju(4740);
-    const Xu = "/shader-packs",
-      lu = `${Xu}/publish`;
+    var wG = ZG(6561),
+      SG = ZG(140),
+      LG = ZG(4575);
+    const yG = "/shader-packs",
+      kG = `${yG}/publish`;
 
-    function qu(uu) {
-      return `${Xu}/${encodeURIComponent(uu)}`
+    function UG(GG) {
+      return `${yG}/${encodeURIComponent(GG)}`
     }
-    let fu = null;
+    let YG = null;
 
-    function Cu(uu) {
-      fu = uu
-    }
-
-    function bu() {
-      return fu
+    function VG(GG) {
+      YG = GG
     }
 
-    function cu() {
-      fu = null
+    function pG() {
+      return YG
     }
 
-    function Nu(uu) {
-      return uu.playerHasRank("developer") || uu.playerHasRank("admin")
+    function fG() {
+      YG = null
     }
-    const Ou = ["terrain", "water", "models", "sunShadows", "strict"],
-      Yu = {
+
+    function QG(GG) {
+      return GG.playerHasRank("developer") || GG.playerHasRank("admin")
+    }
+    const KG = ["terrain", "water", "models", "sunShadows", "strict"],
+      hG = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -223,89 +223,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function hu(uu, Eu) {
-      return uu.withFeatures.includes(Eu) ? "with" : uu.withoutFeatures.includes(Eu) ? "without" : null
+    function dG(GG, bG) {
+      return GG.withFeatures.includes(bG) ? "with" : GG.withoutFeatures.includes(bG) ? "without" : null
     }
 
-    function Du(uu) {
-      return null === uu ? "with" : "with" === uu ? "without" : null
+    function JG(GG) {
+      return null === GG ? "with" : "with" === GG ? "without" : null
     }
 
-    function gu(uu) {
-      return "with" === uu ? "only" : null === uu ? "include" : void 0
+    function rG(GG) {
+      return "with" === GG ? "only" : null === GG ? "include" : void 0
     }
 
-    function Mu(uu, Eu) {
-      const ju = hu(uu, Eu),
-        su = uu => uu.filter((uu => uu !== Eu));
+    function zG(GG, bG) {
+      const ZG = dG(GG, bG),
+        wG = GG => GG.filter((GG => GG !== bG));
       return {
-        withFeatures: null === ju ? [...uu.withFeatures, Eu] : su(uu.withFeatures),
-        withoutFeatures: "with" === ju ? [...uu.withoutFeatures, Eu] : su(uu.withoutFeatures)
+        withFeatures: null === ZG ? [...GG.withFeatures, bG] : wG(GG.withFeatures),
+        withoutFeatures: "with" === ZG ? [...GG.withoutFeatures, bG] : wG(GG.withoutFeatures)
       }
     }
-    const eu = "section",
-      Gu = "sort",
-      pu = "filters",
-      wu = "q",
-      Ju = "banned",
-      du = "popular",
-      au = "strict";
+    const EG = "section",
+      oG = "sort",
+      XG = "filters",
+      uG = "q",
+      iG = "banned",
+      CG = "popular",
+      WG = "strict";
 
-    function Pu(uu) {
-      var Eu, ju, Uu;
-      const Xu = uu.get(eu),
-        lu = (null !== (Eu = uu.get(pu)) && void 0 !== Eu ? Eu : au).split(","),
-        qu = uu.get(Ju);
+    function mG(GG) {
+      var bG, ZG, SG;
+      const yG = GG.get(EG),
+        kG = (null !== (bG = GG.get(XG)) && void 0 !== bG ? bG : WG).split(","),
+        UG = GG.get(iG);
       return {
-        section: "favourites" === Xu || "mine" === Xu ? Xu : "explore",
-        sort: null !== (ju = su.E.find((Eu => Eu === uu.get(Gu)))) && void 0 !== ju ? ju : du,
-        withFeatures: Ou.filter((uu => lu.includes(uu) && !lu.includes(`-${uu}`))),
-        withoutFeatures: Ou.filter((uu => lu.includes(`-${uu}`))),
-        searchQuery: (null === (Uu = uu.get(wu)) || void 0 === Uu ? void 0 : Uu.slice(0, su.R)) || null,
-        pageNumber: (0, Zu.c)(uu.get(Zu.b)),
-        banned: "only" === qu ? "with" : "include" === qu ? null : "without"
+        section: "favourites" === yG || "mine" === yG ? yG : "explore",
+        sort: null !== (ZG = wG.z.find((bG => bG === GG.get(oG)))) && void 0 !== ZG ? ZG : CG,
+        withFeatures: KG.filter((GG => kG.includes(GG) && !kG.includes(`-${GG}`))),
+        withoutFeatures: KG.filter((GG => kG.includes(`-${GG}`))),
+        searchQuery: (null === (SG = GG.get(uG)) || void 0 === SG ? void 0 : SG.slice(0, wG.K)) || null,
+        pageNumber: (0, LG.d)(GG.get(LG.c)),
+        banned: "only" === UG ? "with" : "include" === UG ? null : "without"
       }
     }
 
-    function ou(uu, Eu) {
-      var ju;
-      const su = Ku(Eu);
-      (0, Zu.f)(uu, eu, "explore" === Eu.section ? null : Eu.section), (0, Zu.f)(uu, Gu, Eu.sort === du ? null : Eu.sort), (0, Zu.f)(uu, pu, su === au ? null : su), (0, Zu.f)(uu, wu, Eu.searchQuery), (0, Zu.f)(uu, Ju, null !== (ju = gu(Eu.banned)) && void 0 !== ju ? ju : null), (0, Zu.i)(uu, Eu.pageNumber)
+    function IG(GG, bG) {
+      var ZG;
+      const wG = cG(bG);
+      (0, LG.g)(GG, EG, "explore" === bG.section ? null : bG.section), (0, LG.g)(GG, oG, bG.sort === CG ? null : bG.sort), (0, LG.g)(GG, XG, wG === WG ? null : wG), (0, LG.g)(GG, uG, bG.searchQuery), (0, LG.g)(GG, iG, null !== (ZG = rG(bG.banned)) && void 0 !== ZG ? ZG : null), (0, LG.k)(GG, bG.pageNumber)
     }
 
-    function ku(uu) {
-      const Eu = new URLSearchParams;
-      return ou(Eu, {
+    function FG(GG) {
+      const bG = new URLSearchParams;
+      return IG(bG, {
         section: "explore",
-        sort: du,
-        withFeatures: "strict" === uu ? [uu] : [uu, "strict"],
+        sort: CG,
+        withFeatures: "strict" === GG ? [GG] : [GG, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${Xu}?${Eu.toString()}`
+      }), `${yG}?${bG.toString()}`
     }
 
-    function mu(uu) {
-      return Ku(uu) === au
+    function vG(GG) {
+      return cG(GG) === WG
     }
 
-    function vu(uu) {
-      return null !== uu.searchQuery || "with" === uu.banned || Ku(uu) !== au
+    function aG(GG) {
+      return null !== GG.searchQuery || "with" === GG.banned || cG(GG) !== WG
     }
 
-    function Ku(uu) {
-      return Ou.flatMap((Eu => {
-        const ju = hu(uu, Eu);
-        return "with" === ju ? [Eu] : "without" === ju ? [`-${Eu}`] : []
+    function cG(GG) {
+      return KG.flatMap((bG => {
+        const ZG = dG(GG, bG);
+        return "with" === ZG ? [bG] : "without" === ZG ? [`-${bG}`] : []
       })).join(",")
     }
-    const Vu = {
+    const lG = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      ru = {
+      jG = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -313,107 +313,107 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function Qu(uu) {
-      return Math.round(100 * Math.max(0, 1 - 1 / uu))
+    function PG(GG) {
+      return Math.round(100 * Math.max(0, 1 - 1 / GG))
     }
 
-    function iu(uu, Eu, ju, Uu) {
-      const Zu = [];
-      uu.isBanned && Zu.push({
+    function MG(GG, bG, ZG, SG) {
+      const LG = [];
+      GG.isBanned && LG.push({
         tone: "warning",
-        text: Uu("shaderPackListing:ownerBanned"),
+        text: SG("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: Xu
-      } = uu;
-      if (null === uu.brokenError || Xu && !Xu.error || Zu.push({
+        pending: yG
+      } = GG;
+      if (null === GG.brokenError || yG && !yG.error || LG.push({
           tone: "warning",
-          text: Uu("shaderPackListing:ownerBroken"),
-          detail: uu.brokenError
-        }), null !== Xu && void 0 !== Xu && Xu.error) Zu.push({
+          text: SG("shaderPackListing:ownerBroken"),
+          detail: GG.brokenError
+        }), null !== yG && void 0 !== yG && yG.error) LG.push({
         tone: "warning",
-        text: Uu(Eu ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, su.r)(Xu.error) ? null : Xu.error
+        text: SG(bG ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, wG.l)(yG.error) ? null : yG.error
       });
-      else if (Xu) {
-        const uu = null === Xu.renderNotBefore ? 0 : Xu.renderNotBefore - ju,
-          su = String(Math.ceil(uu / 6e4)),
-          lu = Uu(Eu ? uu > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : uu > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: su
+      else if (yG) {
+        const GG = null === yG.renderNotBefore ? 0 : yG.renderNotBefore - ZG,
+          wG = String(Math.ceil(GG / 6e4)),
+          kG = SG(bG ? GG > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : GG > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: wG
           });
-        Zu.push({
+        LG.push({
           tone: "info",
-          text: lu,
+          text: kG,
           detail: null
         })
       }
-      return uu.listed || Zu.push({
+      return GG.listed || LG.push({
         tone: "info",
-        text: Uu("shaderPackListing:ownerUnlisted"),
+        text: SG("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), Zu
+      }), LG
     }
 
-    function Wu(uu) {
-      return Math.max(1, Math.round(uu / 1024))
+    function AG(GG) {
+      return Math.max(1, Math.round(GG / 1024))
     }
 
-    function Su(uu, Eu, ju) {
-      return uu instanceof Uu.b && uu.errorMessageForUser ? uu.errorMessageForUser : Eu(ju)
+    function sG(GG, bG, ZG) {
+      return GG instanceof SG.b && GG.errorMessageForUser ? GG.errorMessageForUser : bG(ZG)
     }
   },
-  6777: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Zu
+  6580: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => LG
     });
-    var su = ju(58),
-      Uu = ju(31);
+    var wG = ZG(51),
+      SG = ZG(29);
 
-    function Zu(uu, Eu) {
-      var ju;
-      const [Zu, Xu] = (0, su.useState)(null !== (ju = Uu.k.getItem(uu)) && void 0 !== ju ? ju : Eu);
-      return [Zu, Eu => {
-        Uu.k.setItem(uu, Eu), Xu(Eu)
+    function LG(GG, bG) {
+      var ZG;
+      const [LG, yG] = (0, wG.useState)(null !== (ZG = SG.h.getItem(GG)) && void 0 !== ZG ? ZG : bG);
+      return [LG, bG => {
+        SG.h.setItem(GG, bG), yG(bG)
       }]
     }
   },
-  6854: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Uu,
-      e: () => Zu
+  6661: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => SG,
+      e: () => LG
     });
-    var su = ju(31);
-    const Uu = "shaderPack";
-    async function Zu() {
-      var uu;
-      let Eu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (uu = await su.h.getItem(Uu, Eu)) && void 0 !== uu ? uu : null
+    var wG = ZG(29);
+    const SG = "shaderPack";
+    async function LG() {
+      var GG;
+      let bG = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (GG = await wG.e.getItem(SG, bG)) && void 0 !== GG ? GG : null
     }
   },
-  6764: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      C: () => Gu,
-      E: () => Zu,
-      F: () => lu,
-      I: () => Xu,
-      M: () => su,
-      Q: () => cu,
-      R: () => Cu,
-      U: () => eu,
-      X: () => bu,
-      _: () => fu,
-      c: () => Ou,
-      f: () => hu,
-      j: () => Yu,
-      n: () => Nu,
-      r: () => Mu,
-      t: () => pu,
-      x: () => qu,
-      z: () => Uu
+  6561: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      B: () => kG,
+      C: () => yG,
+      F: () => wG,
+      G: () => fG,
+      K: () => VG,
+      O: () => EG,
+      S: () => pG,
+      T: () => YG,
+      b: () => KG,
+      c: () => dG,
+      e: () => hG,
+      h: () => QG,
+      l: () => zG,
+      n: () => XG,
+      q: () => UG,
+      u: () => SG,
+      v: () => oG,
+      z: () => LG
     });
-    const su = ["forest", "desert", "water", "night", "cave"];
-    const Uu = {
+    const wG = ["forest", "desert", "water", "night", "cave"];
+    const SG = {
         full: {
           width: 3840,
           height: 2160
@@ -427,49 +427,49 @@ export const modules = {
           height: 360
         }
       },
-      Zu = ["popular", "updated", "newest"],
-      Xu = 3,
-      lu = 32,
-      qu = 300;
+      LG = ["popular", "updated", "newest"],
+      yG = 3,
+      kG = 32,
+      UG = 300;
 
-    function fu(uu, Eu) {
-      return uu.slice(0, Eu).replace(/[\uD800-\uDBFF]$/, "")
+    function YG(GG, bG) {
+      return GG.slice(0, bG).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const Cu = 64,
-      bu = 512,
-      cu = 18e5;
+    const VG = 64,
+      pG = 512,
+      fG = 18e5;
 
-    function Nu(uu) {
-      const Eu = uu,
-        ju = null === Eu || void 0 === Eu ? void 0 : Eu.files;
-      return "number" === typeof(null === Eu || void 0 === Eu ? void 0 : Eu.apiVersion) && "string" === typeof Eu.name && (null === Eu.author || "string" === typeof Eu.author) && (void 0 === Eu.keepCircleShadows || "boolean" === typeof Eu.keepCircleShadows) && "object" === typeof ju && null !== ju && Object.values(ju).every((uu => "string" === typeof uu))
+    function QG(GG) {
+      const bG = GG,
+        ZG = null === bG || void 0 === bG ? void 0 : bG.files;
+      return "number" === typeof(null === bG || void 0 === bG ? void 0 : bG.apiVersion) && "string" === typeof bG.name && (null === bG.author || "string" === typeof bG.author) && (void 0 === bG.keepCircleShadows || "boolean" === typeof bG.keepCircleShadows) && "object" === typeof ZG && null !== ZG && Object.values(ZG).every((GG => "string" === typeof GG))
     }
-    const Ou = "Bloxdhub",
-      Yu = "https://bloxdhub.com/shaders";
+    const KG = "Bloxdhub",
+      hG = "https://bloxdhub.com/shaders";
 
-    function hu(uu) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(uu)}`
+    function dG(GG) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(GG)}`
     }
-    const Du = "Screenshot generation failed.",
-      gu = "Its screenshots couldn't be generated:";
+    const JG = "Screenshot generation failed.",
+      rG = "Its screenshots couldn't be generated:";
 
-    function Mu(uu) {
-      var Eu;
-      return uu === Du || null !== (Eu = null === uu || void 0 === uu ? void 0 : uu.startsWith(gu)) && void 0 !== Eu && Eu
-    }
-
-    function eu(uu, Eu) {
-      return `shaderPacks/${uu}/${Eu}.json`
+    function zG(GG) {
+      var bG;
+      return GG === JG || null !== (bG = null === GG || void 0 === GG ? void 0 : GG.startsWith(rG)) && void 0 !== bG && bG
     }
 
-    function Gu(uu, Eu, ju, su) {
-      return null === Eu.renderId ? pu(uu, Eu.baselineVersion, ju, su) : `${uu}/${function(uu,Eu,ju,su){return`shaderPacks/${uu}/${Eu}/${ju}-${su}.webp`}(Eu.packId,Eu.renderId,ju,su)}`
+    function EG(GG, bG) {
+      return `shaderPacks/${GG}/${bG}.json`
     }
 
-    function pu(uu, Eu, ju, su) {
-      return `${uu}/${function(uu,Eu,ju){return`shaderPacks/baseline/${uu}/${Eu}-${ju}.webp`}(Eu,ju,su)}`
+    function oG(GG, bG, ZG, wG) {
+      return null === bG.renderId ? XG(GG, bG.baselineVersion, ZG, wG) : `${GG}/${function(GG,bG,ZG,wG){return`shaderPacks/${GG}/${bG}/${ZG}-${wG}.webp`}(bG.packId,bG.renderId,ZG,wG)}`
+    }
+
+    function XG(GG, bG, ZG, wG) {
+      return `${GG}/${function(GG,bG,ZG){return`shaderPacks/baseline/${GG}/${bG}-${ZG}.webp`}(bG,ZG,wG)}`
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

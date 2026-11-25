@@ -1,44 +1,44 @@
-/*! For license information please see dz8ef.120.2d47e03f.chunk.js.LICENSE.txt */
+/*! For license information please see wp3j0a.120.f099002a.chunk.js.LICENSE.txt */
 export const id = 120;
 export const ids = [120];
 export const modules = {
-  6642: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      Graph: () => Iu,
-      debug: () => kj,
-      default: () => vj,
-      graphlib: () => Zu,
-      layout: () => Nj,
-      util: () => mj,
-      version: () => ZE
+  6445: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      Graph: () => qG,
+      debug: () => FZ,
+      default: () => aZ,
+      graphlib: () => LG,
+      layout: () => QZ,
+      util: () => vZ,
+      version: () => Lb
     });
-    var su = Object.defineProperty,
-      Uu = (uu, Eu, ju) => ((uu, Eu, ju) => Eu in uu ? su(uu, Eu, {
+    var wG = Object.defineProperty,
+      SG = (GG, bG, ZG) => ((GG, bG, ZG) => bG in GG ? wG(GG, bG, {
         enumerable: !0,
         configurable: !0,
         writable: !0,
-        value: ju
-      }) : uu[Eu] = ju)(uu, "symbol" != typeof Eu ? Eu + "" : Eu, ju),
-      Zu = {};
-    ((uu, Eu) => {
-      for (var ju in Eu) su(uu, ju, {
-        get: Eu[ju],
+        value: ZG
+      }) : GG[bG] = ZG)(GG, "symbol" != typeof bG ? bG + "" : bG, ZG),
+      LG = {};
+    ((GG, bG) => {
+      for (var ZG in bG) wG(GG, ZG, {
+        get: bG[ZG],
         enumerable: !0
       })
-    })(Zu, {
-      Graph: () => Iu,
-      alg: () => Du
+    })(LG, {
+      Graph: () => qG,
+      alg: () => JG
     });
-    var Xu = Object.defineProperty,
-      lu = (uu, Eu) => {
-        for (var ju in Eu) Xu(uu, ju, {
-          get: Eu[ju],
+    var yG = Object.defineProperty,
+      kG = (GG, bG) => {
+        for (var ZG in bG) yG(GG, ZG, {
+          get: bG[ZG],
           enumerable: !0
         })
       },
-      qu = class {
-        constructor(uu) {
-          this._isDirected = !0, this._isMultigraph = !1, this._isCompound = !1, this._nodes = {}, this._in = {}, this._preds = {}, this._out = {}, this._sucs = {}, this._edgeObjs = {}, this._edgeLabels = {}, this._nodeCount = 0, this._edgeCount = 0, this._defaultNodeLabelFn = () => {}, this._defaultEdgeLabelFn = () => {}, uu && (this._isDirected = !("directed" in uu) || uu.directed, this._isMultigraph = "multigraph" in uu && uu.multigraph, this._isCompound = "compound" in uu && uu.compound), this._isCompound && (this._parent = {}, this._children = {}, this._children["\0"] = {})
+      UG = class {
+        constructor(GG) {
+          this._isDirected = !0, this._isMultigraph = !1, this._isCompound = !1, this._nodes = {}, this._in = {}, this._preds = {}, this._out = {}, this._sucs = {}, this._edgeObjs = {}, this._edgeLabels = {}, this._nodeCount = 0, this._edgeCount = 0, this._defaultNodeLabelFn = () => {}, this._defaultEdgeLabelFn = () => {}, GG && (this._isDirected = !("directed" in GG) || GG.directed, this._isMultigraph = "multigraph" in GG && GG.multigraph, this._isCompound = "compound" in GG && GG.compound), this._isCompound && (this._parent = {}, this._children = {}, this._children["\0"] = {})
         }
         isDirected() {
           return this._isDirected
@@ -49,14 +49,14 @@ export const modules = {
         isCompound() {
           return this._isCompound
         }
-        setGraph(uu) {
-          return this._label = uu, this
+        setGraph(GG) {
+          return this._label = GG, this
         }
         graph() {
           return this._label
         }
-        setDefaultNodeLabel(uu) {
-          return this._defaultNodeLabelFn = "function" != typeof uu ? () => uu : uu, this
+        setDefaultNodeLabel(GG) {
+          return this._defaultNodeLabelFn = "function" != typeof GG ? () => GG : GG, this
         }
         nodeCount() {
           return this._nodeCount
@@ -65,105 +65,105 @@ export const modules = {
           return Object.keys(this._nodes)
         }
         sources() {
-          return this.nodes().filter((uu => 0 === Object.keys(this._in[uu]).length))
+          return this.nodes().filter((GG => 0 === Object.keys(this._in[GG]).length))
         }
         sinks() {
-          return this.nodes().filter((uu => 0 === Object.keys(this._out[uu]).length))
+          return this.nodes().filter((GG => 0 === Object.keys(this._out[GG]).length))
         }
-        setNodes(uu, Eu) {
-          return uu.forEach((uu => {
-            void 0 !== Eu ? this.setNode(uu, Eu) : this.setNode(uu)
+        setNodes(GG, bG) {
+          return GG.forEach((GG => {
+            void 0 !== bG ? this.setNode(GG, bG) : this.setNode(GG)
           })), this
         }
-        setNode(uu, Eu) {
-          return uu in this._nodes ? (arguments.length > 1 && (this._nodes[uu] = Eu), this) : (this._nodes[uu] = arguments.length > 1 ? Eu : this._defaultNodeLabelFn(uu), this._isCompound && (this._parent[uu] = "\0", this._children[uu] = {}, this._children["\0"][uu] = !0), this._in[uu] = {}, this._preds[uu] = {}, this._out[uu] = {}, this._sucs[uu] = {}, ++this._nodeCount, this)
+        setNode(GG, bG) {
+          return GG in this._nodes ? (arguments.length > 1 && (this._nodes[GG] = bG), this) : (this._nodes[GG] = arguments.length > 1 ? bG : this._defaultNodeLabelFn(GG), this._isCompound && (this._parent[GG] = "\0", this._children[GG] = {}, this._children["\0"][GG] = !0), this._in[GG] = {}, this._preds[GG] = {}, this._out[GG] = {}, this._sucs[GG] = {}, ++this._nodeCount, this)
         }
-        node(uu) {
-          return this._nodes[uu]
+        node(GG) {
+          return this._nodes[GG]
         }
-        hasNode(uu) {
-          return uu in this._nodes
+        hasNode(GG) {
+          return GG in this._nodes
         }
-        removeNode(uu) {
-          if (uu in this._nodes) {
-            let Eu = uu => this.removeEdge(this._edgeObjs[uu]);
-            delete this._nodes[uu], this._isCompound && (this._removeFromParentsChildList(uu), delete this._parent[uu], this.children(uu).forEach((uu => {
-              this.setParent(uu)
-            })), delete this._children[uu]), Object.keys(this._in[uu]).forEach(Eu), delete this._in[uu], delete this._preds[uu], Object.keys(this._out[uu]).forEach(Eu), delete this._out[uu], delete this._sucs[uu], --this._nodeCount
+        removeNode(GG) {
+          if (GG in this._nodes) {
+            let bG = GG => this.removeEdge(this._edgeObjs[GG]);
+            delete this._nodes[GG], this._isCompound && (this._removeFromParentsChildList(GG), delete this._parent[GG], this.children(GG).forEach((GG => {
+              this.setParent(GG)
+            })), delete this._children[GG]), Object.keys(this._in[GG]).forEach(bG), delete this._in[GG], delete this._preds[GG], Object.keys(this._out[GG]).forEach(bG), delete this._out[GG], delete this._sucs[GG], --this._nodeCount
           }
           return this
         }
-        setParent(uu, Eu) {
+        setParent(GG, bG) {
           if (!this._isCompound) throw new Error("Cannot set parent in a non-compound graph");
-          if (void 0 === Eu) Eu = "\0";
+          if (void 0 === bG) bG = "\0";
           else {
-            for (let ju = Eu += ""; void 0 !== ju; ju = this.parent(ju))
-              if (ju === uu) throw new Error("Setting " + Eu + " as parent of " + uu + " would create a cycle");
-            this.setNode(Eu)
+            for (let ZG = bG += ""; void 0 !== ZG; ZG = this.parent(ZG))
+              if (ZG === GG) throw new Error("Setting " + bG + " as parent of " + GG + " would create a cycle");
+            this.setNode(bG)
           }
-          return this.setNode(uu), this._removeFromParentsChildList(uu), this._parent[uu] = Eu, this._children[Eu][uu] = !0, this
+          return this.setNode(GG), this._removeFromParentsChildList(GG), this._parent[GG] = bG, this._children[bG][GG] = !0, this
         }
-        parent(uu) {
+        parent(GG) {
           if (this._isCompound) {
-            let Eu = this._parent[uu];
-            if ("\0" !== Eu) return Eu
+            let bG = this._parent[GG];
+            if ("\0" !== bG) return bG
           }
         }
         children() {
-          let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "\0";
+          let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "\0";
           if (this._isCompound) {
-            let Eu = this._children[uu];
-            if (Eu) return Object.keys(Eu)
+            let bG = this._children[GG];
+            if (bG) return Object.keys(bG)
           } else {
-            if ("\0" === uu) return this.nodes();
-            if (this.hasNode(uu)) return []
+            if ("\0" === GG) return this.nodes();
+            if (this.hasNode(GG)) return []
           }
           return []
         }
-        predecessors(uu) {
-          let Eu = this._preds[uu];
-          if (Eu) return Object.keys(Eu)
+        predecessors(GG) {
+          let bG = this._preds[GG];
+          if (bG) return Object.keys(bG)
         }
-        successors(uu) {
-          let Eu = this._sucs[uu];
-          if (Eu) return Object.keys(Eu)
+        successors(GG) {
+          let bG = this._sucs[GG];
+          if (bG) return Object.keys(bG)
         }
-        neighbors(uu) {
-          let Eu = this.predecessors(uu);
-          if (Eu) {
-            let ju = new Set(Eu),
-              su = this.successors(uu);
-            if (su)
-              for (let uu of su) ju.add(uu);
-            return Array.from(ju.values())
+        neighbors(GG) {
+          let bG = this.predecessors(GG);
+          if (bG) {
+            let ZG = new Set(bG),
+              wG = this.successors(GG);
+            if (wG)
+              for (let GG of wG) ZG.add(GG);
+            return Array.from(ZG.values())
           }
         }
-        isLeaf(uu) {
-          var Eu;
-          let ju;
-          return ju = this.isDirected() ? this.successors(uu) : this.neighbors(uu), 0 === (null != (Eu = null == ju ? void 0 : ju.length) ? Eu : 0)
+        isLeaf(GG) {
+          var bG;
+          let ZG;
+          return ZG = this.isDirected() ? this.successors(GG) : this.neighbors(GG), 0 === (null != (bG = null == ZG ? void 0 : ZG.length) ? bG : 0)
         }
-        filterNodes(uu) {
-          let Eu = new this.constructor({
+        filterNodes(GG) {
+          let bG = new this.constructor({
             directed: this._isDirected,
             multigraph: this._isMultigraph,
             compound: this._isCompound
           });
-          Eu.setGraph(this.graph()), Object.entries(this._nodes).forEach((ju => {
-            let [su, Uu] = ju;
-            uu(su) && Eu.setNode(su, Uu)
-          })), Object.values(this._edgeObjs).forEach((uu => {
-            Eu.hasNode(uu.v) && Eu.hasNode(uu.w) && Eu.setEdge(uu, this.edge(uu))
+          bG.setGraph(this.graph()), Object.entries(this._nodes).forEach((ZG => {
+            let [wG, SG] = ZG;
+            GG(wG) && bG.setNode(wG, SG)
+          })), Object.values(this._edgeObjs).forEach((GG => {
+            bG.hasNode(GG.v) && bG.hasNode(GG.w) && bG.setEdge(GG, this.edge(GG))
           }));
-          let ju = {},
-            su = uu => {
-              let Uu = this.parent(uu);
-              return !Uu || Eu.hasNode(Uu) ? (ju[uu] = Uu, Uu) : Uu in ju ? ju[Uu] : su(Uu)
+          let ZG = {},
+            wG = GG => {
+              let SG = this.parent(GG);
+              return !SG || bG.hasNode(SG) ? (ZG[GG] = SG, SG) : SG in ZG ? ZG[SG] : wG(SG)
             };
-          return this._isCompound && Eu.nodes().forEach((uu => Eu.setParent(uu, su(uu)))), Eu
+          return this._isCompound && bG.nodes().forEach((GG => bG.setParent(GG, wG(GG)))), bG
         }
-        setDefaultEdgeLabel(uu) {
-          return this._defaultEdgeLabelFn = "function" != typeof uu ? () => uu : uu, this
+        setDefaultEdgeLabel(GG) {
+          return this._defaultEdgeLabelFn = "function" != typeof GG ? () => GG : GG, this
         }
         edgeCount() {
           return this._edgeCount
@@ -171,226 +171,226 @@ export const modules = {
         edges() {
           return Object.values(this._edgeObjs)
         }
-        setPath(uu, Eu) {
-          return uu.reduce(((uu, ju) => (void 0 !== Eu ? this.setEdge(uu, ju, Eu) : this.setEdge(uu, ju), ju))), this
+        setPath(GG, bG) {
+          return GG.reduce(((GG, ZG) => (void 0 !== bG ? this.setEdge(GG, ZG, bG) : this.setEdge(GG, ZG), ZG))), this
         }
-        setEdge(uu, Eu, ju, su) {
-          let Uu, Zu, Xu, lu, qu = !1;
-          "object" == typeof uu && null !== uu && "v" in uu ? (Uu = uu.v, Zu = uu.w, Xu = uu.name, 2 === arguments.length && (lu = Eu, qu = !0)) : (Uu = uu, Zu = Eu, Xu = su, arguments.length > 2 && (lu = ju, qu = !0)), Uu = "" + Uu, Zu = "" + Zu, void 0 !== Xu && (Xu = "" + Xu);
-          let Cu = bu(this._isDirected, Uu, Zu, Xu);
-          if (Cu in this._edgeLabels) return qu && (this._edgeLabels[Cu] = lu), this;
-          if (void 0 !== Xu && !this._isMultigraph) throw new Error("Cannot set a named edge when isMultigraph = false");
-          this.setNode(Uu), this.setNode(Zu), this._edgeLabels[Cu] = qu ? lu : this._defaultEdgeLabelFn(Uu, Zu, Xu);
-          let cu = function(uu, Eu, ju, su) {
-            let Uu = "" + Eu,
-              Zu = "" + ju;
-            if (!uu && Uu > Zu) {
-              let uu = Uu;
-              Uu = Zu, Zu = uu
+        setEdge(GG, bG, ZG, wG) {
+          let SG, LG, yG, kG, UG = !1;
+          "object" == typeof GG && null !== GG && "v" in GG ? (SG = GG.v, LG = GG.w, yG = GG.name, 2 === arguments.length && (kG = bG, UG = !0)) : (SG = GG, LG = bG, yG = wG, arguments.length > 2 && (kG = ZG, UG = !0)), SG = "" + SG, LG = "" + LG, void 0 !== yG && (yG = "" + yG);
+          let VG = pG(this._isDirected, SG, LG, yG);
+          if (VG in this._edgeLabels) return UG && (this._edgeLabels[VG] = kG), this;
+          if (void 0 !== yG && !this._isMultigraph) throw new Error("Cannot set a named edge when isMultigraph = false");
+          this.setNode(SG), this.setNode(LG), this._edgeLabels[VG] = UG ? kG : this._defaultEdgeLabelFn(SG, LG, yG);
+          let fG = function(GG, bG, ZG, wG) {
+            let SG = "" + bG,
+              LG = "" + ZG;
+            if (!GG && SG > LG) {
+              let GG = SG;
+              SG = LG, LG = GG
             }
-            let Xu = {
-              v: Uu,
-              w: Zu
+            let yG = {
+              v: SG,
+              w: LG
             };
-            return su && (Xu.name = su), Xu
-          }(this._isDirected, Uu, Zu, Xu);
-          return Uu = cu.v, Zu = cu.w, Object.freeze(cu), this._edgeObjs[Cu] = cu, fu(this._preds[Zu], Uu), fu(this._sucs[Uu], Zu), this._in[Zu][Cu] = cu, this._out[Uu][Cu] = cu, this._edgeCount++, this
+            return wG && (yG.name = wG), yG
+          }(this._isDirected, SG, LG, yG);
+          return SG = fG.v, LG = fG.w, Object.freeze(fG), this._edgeObjs[VG] = fG, YG(this._preds[LG], SG), YG(this._sucs[SG], LG), this._in[LG][VG] = fG, this._out[SG][VG] = fG, this._edgeCount++, this
         }
-        edge(uu, Eu, ju) {
-          let su = 1 === arguments.length ? cu(this._isDirected, uu) : bu(this._isDirected, uu, Eu, ju);
-          return this._edgeLabels[su]
+        edge(GG, bG, ZG) {
+          let wG = 1 === arguments.length ? fG(this._isDirected, GG) : pG(this._isDirected, GG, bG, ZG);
+          return this._edgeLabels[wG]
         }
-        edgeAsObj(uu, Eu, ju) {
-          let su = 1 === arguments.length ? this.edge(uu) : this.edge(uu, Eu, ju);
-          return "object" != typeof su || null === su ? {
-            label: su
-          } : su
+        edgeAsObj(GG, bG, ZG) {
+          let wG = 1 === arguments.length ? this.edge(GG) : this.edge(GG, bG, ZG);
+          return "object" != typeof wG || null === wG ? {
+            label: wG
+          } : wG
         }
-        hasEdge(uu, Eu, ju) {
-          return (1 === arguments.length ? cu(this._isDirected, uu) : bu(this._isDirected, uu, Eu, ju)) in this._edgeLabels
+        hasEdge(GG, bG, ZG) {
+          return (1 === arguments.length ? fG(this._isDirected, GG) : pG(this._isDirected, GG, bG, ZG)) in this._edgeLabels
         }
-        removeEdge(uu, Eu, ju) {
-          let su = 1 === arguments.length ? cu(this._isDirected, uu) : bu(this._isDirected, uu, Eu, ju),
-            Uu = this._edgeObjs[su];
-          if (Uu) {
-            let uu = Uu.v,
-              Eu = Uu.w;
-            delete this._edgeLabels[su], delete this._edgeObjs[su], Cu(this._preds[Eu], uu), Cu(this._sucs[uu], Eu), delete this._in[Eu][su], delete this._out[uu][su], this._edgeCount--
+        removeEdge(GG, bG, ZG) {
+          let wG = 1 === arguments.length ? fG(this._isDirected, GG) : pG(this._isDirected, GG, bG, ZG),
+            SG = this._edgeObjs[wG];
+          if (SG) {
+            let GG = SG.v,
+              bG = SG.w;
+            delete this._edgeLabels[wG], delete this._edgeObjs[wG], VG(this._preds[bG], GG), VG(this._sucs[GG], bG), delete this._in[bG][wG], delete this._out[GG][wG], this._edgeCount--
           }
           return this
         }
-        inEdges(uu, Eu) {
-          return this.isDirected() ? this.filterEdges(this._in[uu], uu, Eu) : this.nodeEdges(uu, Eu)
+        inEdges(GG, bG) {
+          return this.isDirected() ? this.filterEdges(this._in[GG], GG, bG) : this.nodeEdges(GG, bG)
         }
-        outEdges(uu, Eu) {
-          return this.isDirected() ? this.filterEdges(this._out[uu], uu, Eu) : this.nodeEdges(uu, Eu)
+        outEdges(GG, bG) {
+          return this.isDirected() ? this.filterEdges(this._out[GG], GG, bG) : this.nodeEdges(GG, bG)
         }
-        nodeEdges(uu, Eu) {
-          if (uu in this._nodes) return this.filterEdges({
-            ...this._in[uu],
-            ...this._out[uu]
-          }, uu, Eu)
+        nodeEdges(GG, bG) {
+          if (GG in this._nodes) return this.filterEdges({
+            ...this._in[GG],
+            ...this._out[GG]
+          }, GG, bG)
         }
-        _removeFromParentsChildList(uu) {
-          delete this._children[this._parent[uu]][uu]
+        _removeFromParentsChildList(GG) {
+          delete this._children[this._parent[GG]][GG]
         }
-        filterEdges(uu, Eu, ju) {
-          if (!uu) return;
-          let su = Object.values(uu);
-          return ju ? su.filter((uu => uu.v === Eu && uu.w === ju || uu.v === ju && uu.w === Eu)) : su
+        filterEdges(GG, bG, ZG) {
+          if (!GG) return;
+          let wG = Object.values(GG);
+          return ZG ? wG.filter((GG => GG.v === bG && GG.w === ZG || GG.v === ZG && GG.w === bG)) : wG
         }
       };
 
-    function fu(uu, Eu) {
-      uu[Eu] ? uu[Eu]++ : uu[Eu] = 1
+    function YG(GG, bG) {
+      GG[bG] ? GG[bG]++ : GG[bG] = 1
     }
 
-    function Cu(uu, Eu) {
-      void 0 !== uu[Eu] && !--uu[Eu] && delete uu[Eu]
+    function VG(GG, bG) {
+      void 0 !== GG[bG] && !--GG[bG] && delete GG[bG]
     }
 
-    function bu(uu, Eu, ju, su) {
-      let Uu = "" + Eu,
-        Zu = "" + ju;
-      if (!uu && Uu > Zu) {
-        let uu = Uu;
-        Uu = Zu, Zu = uu
+    function pG(GG, bG, ZG, wG) {
+      let SG = "" + bG,
+        LG = "" + ZG;
+      if (!GG && SG > LG) {
+        let GG = SG;
+        SG = LG, LG = GG
       }
-      return Uu + "\x01" + Zu + "\x01" + (void 0 === su ? "\0" : su)
+      return SG + "\x01" + LG + "\x01" + (void 0 === wG ? "\0" : wG)
     }
 
-    function cu(uu, Eu) {
-      return bu(uu, Eu.v, Eu.w, Eu.name)
+    function fG(GG, bG) {
+      return pG(GG, bG.v, bG.w, bG.name)
     }
 
-    function Nu(uu) {
-      let Eu = {
+    function QG(GG) {
+      let bG = {
           options: {
-            directed: uu.isDirected(),
-            multigraph: uu.isMultigraph(),
-            compound: uu.isCompound()
+            directed: GG.isDirected(),
+            multigraph: GG.isMultigraph(),
+            compound: GG.isCompound()
           },
-          nodes: Ou(uu),
-          edges: Yu(uu)
+          nodes: KG(GG),
+          edges: hG(GG)
         },
-        ju = uu.graph();
-      return void 0 !== ju && (Eu.value = structuredClone(ju)), Eu
+        ZG = GG.graph();
+      return void 0 !== ZG && (bG.value = structuredClone(ZG)), bG
     }
 
-    function Ou(uu) {
-      return uu.nodes().map((Eu => {
-        let ju = uu.node(Eu),
-          su = uu.parent(Eu),
-          Uu = {
-            v: Eu
+    function KG(GG) {
+      return GG.nodes().map((bG => {
+        let ZG = GG.node(bG),
+          wG = GG.parent(bG),
+          SG = {
+            v: bG
           };
-        return void 0 !== ju && (Uu.value = ju), void 0 !== su && (Uu.parent = su), Uu
+        return void 0 !== ZG && (SG.value = ZG), void 0 !== wG && (SG.parent = wG), SG
       }))
     }
 
-    function Yu(uu) {
-      return uu.edges().map((Eu => {
-        let ju = uu.edge(Eu),
-          su = {
-            v: Eu.v,
-            w: Eu.w
+    function hG(GG) {
+      return GG.edges().map((bG => {
+        let ZG = GG.edge(bG),
+          wG = {
+            v: bG.v,
+            w: bG.w
           };
-        return void 0 !== Eu.name && (su.name = Eu.name), void 0 !== ju && (su.value = ju), su
+        return void 0 !== bG.name && (wG.name = bG.name), void 0 !== ZG && (wG.value = ZG), wG
       }))
     }
 
-    function hu(uu) {
-      let Eu = new qu(uu.options);
-      return void 0 !== uu.value && Eu.setGraph(uu.value), uu.nodes.forEach((uu => {
-        Eu.setNode(uu.v, uu.value), uu.parent && Eu.setParent(uu.v, uu.parent)
-      })), uu.edges.forEach((uu => {
-        Eu.setEdge({
-          v: uu.v,
-          w: uu.w,
-          name: uu.name
-        }, uu.value)
-      })), Eu
+    function dG(GG) {
+      let bG = new UG(GG.options);
+      return void 0 !== GG.value && bG.setGraph(GG.value), GG.nodes.forEach((GG => {
+        bG.setNode(GG.v, GG.value), GG.parent && bG.setParent(GG.v, GG.parent)
+      })), GG.edges.forEach((GG => {
+        bG.setEdge({
+          v: GG.v,
+          w: GG.w,
+          name: GG.name
+        }, GG.value)
+      })), bG
     }
-    lu({}, {
-      read: () => hu,
-      write: () => Nu
+    kG({}, {
+      read: () => dG,
+      write: () => QG
     });
-    var Du = {};
-    lu(Du, {
-      CycleException: () => ku,
-      bellmanFord: () => Mu,
-      components: () => eu,
-      dijkstra: () => wu,
-      dijkstraAll: () => Ju,
-      findCycles: () => au,
-      floydWarshall: () => ou,
-      isAcyclic: () => vu,
-      postorder: () => Qu,
-      preorder: () => iu,
-      prim: () => Wu,
-      shortestPaths: () => Su,
-      tarjan: () => du,
-      topsort: () => mu
+    var JG = {};
+    kG(JG, {
+      CycleException: () => FG,
+      bellmanFord: () => zG,
+      components: () => EG,
+      dijkstra: () => uG,
+      dijkstraAll: () => iG,
+      findCycles: () => WG,
+      floydWarshall: () => IG,
+      isAcyclic: () => aG,
+      postorder: () => PG,
+      preorder: () => MG,
+      prim: () => AG,
+      shortestPaths: () => sG,
+      tarjan: () => CG,
+      topsort: () => vG
     });
-    var gu = () => 1;
+    var rG = () => 1;
 
-    function Mu(uu, Eu, ju, su) {
-      return function(uu, Eu, ju, su) {
-        let Uu, Zu = {},
-          Xu = 0,
-          lu = uu.nodes(),
-          qu = function(uu) {
-            let Eu = Zu[uu.v],
-              su = Zu[uu.w];
-            if (!Eu || !su) return;
-            let Xu = ju(uu);
-            Eu.distance + Xu < su.distance && (Zu[uu.w] = {
-              distance: Eu.distance + Xu,
-              predecessor: uu.v
-            }, Uu = !0)
+    function zG(GG, bG, ZG, wG) {
+      return function(GG, bG, ZG, wG) {
+        let SG, LG = {},
+          yG = 0,
+          kG = GG.nodes(),
+          UG = function(GG) {
+            let bG = LG[GG.v],
+              wG = LG[GG.w];
+            if (!bG || !wG) return;
+            let yG = ZG(GG);
+            bG.distance + yG < wG.distance && (LG[GG.w] = {
+              distance: bG.distance + yG,
+              predecessor: GG.v
+            }, SG = !0)
           },
-          fu = function() {
-            lu.forEach((function(uu) {
-              su(uu).forEach((function(Eu) {
-                let ju = Eu.v === uu ? Eu.v : Eu.w,
-                  su = ju === Eu.v ? Eu.w : Eu.v;
-                qu({
-                  v: ju,
-                  w: su
+          YG = function() {
+            kG.forEach((function(GG) {
+              wG(GG).forEach((function(bG) {
+                let ZG = bG.v === GG ? bG.v : bG.w,
+                  wG = ZG === bG.v ? bG.w : bG.v;
+                UG({
+                  v: ZG,
+                  w: wG
                 })
               }))
             }))
           };
-        lu.forEach((function(uu) {
-          let ju = uu === Eu ? 0 : Number.POSITIVE_INFINITY;
-          Zu[uu] = {
-            distance: ju,
+        kG.forEach((function(GG) {
+          let ZG = GG === bG ? 0 : Number.POSITIVE_INFINITY;
+          LG[GG] = {
+            distance: ZG,
             predecessor: ""
           }
         }));
-        let Cu = lu.length;
-        for (let bu = 1; bu < Cu && (Uu = !1, Xu++, fu(), Uu); bu++);
-        if (Xu === Cu - 1 && (Uu = !1, fu(), Uu)) throw new Error("The graph contains a negative weight cycle");
-        return Zu
-      }(uu, String(Eu), ju || gu, su || function(Eu) {
-        var ju;
-        return null != (ju = uu.outEdges(Eu)) ? ju : []
+        let VG = kG.length;
+        for (let pG = 1; pG < VG && (SG = !1, yG++, YG(), SG); pG++);
+        if (yG === VG - 1 && (SG = !1, YG(), SG)) throw new Error("The graph contains a negative weight cycle");
+        return LG
+      }(GG, String(bG), ZG || rG, wG || function(bG) {
+        var ZG;
+        return null != (ZG = GG.outEdges(bG)) ? ZG : []
       })
     }
 
-    function eu(uu) {
-      let Eu, ju = {},
-        su = [];
+    function EG(GG) {
+      let bG, ZG = {},
+        wG = [];
 
-      function Uu(su) {
-        var Zu, Xu;
-        su in ju || (ju[su] = !0, Eu.push(su), null == (Zu = uu.successors(su)) || Zu.forEach(Uu), null == (Xu = uu.predecessors(su)) || Xu.forEach(Uu))
+      function SG(wG) {
+        var LG, yG;
+        wG in ZG || (ZG[wG] = !0, bG.push(wG), null == (LG = GG.successors(wG)) || LG.forEach(SG), null == (yG = GG.predecessors(wG)) || yG.forEach(SG))
       }
-      return uu.nodes().forEach((function(uu) {
-        Eu = [], Uu(uu), Eu.length && su.push(Eu)
-      })), su
+      return GG.nodes().forEach((function(GG) {
+        bG = [], SG(GG), bG.length && wG.push(bG)
+      })), wG
     }
-    var Gu = class {
+    var oG = class {
         constructor() {
           this._arr = [], this._keyIndices = {}
         }
@@ -398,1915 +398,1915 @@ export const modules = {
           return this._arr.length
         }
         keys() {
-          return this._arr.map((uu => uu.key))
+          return this._arr.map((GG => GG.key))
         }
-        has(uu) {
-          return uu in this._keyIndices
+        has(GG) {
+          return GG in this._keyIndices
         }
-        priority(uu) {
-          let Eu = this._keyIndices[uu];
-          if (void 0 !== Eu) return this._arr[Eu].priority
+        priority(GG) {
+          let bG = this._keyIndices[GG];
+          if (void 0 !== bG) return this._arr[bG].priority
         }
         min() {
           if (0 === this.size()) throw new Error("Queue underflow");
           return this._arr[0].key
         }
-        add(uu, Eu) {
-          let ju = this._keyIndices,
-            su = String(uu);
-          if (!(su in ju)) {
-            let uu = this._arr,
-              Uu = uu.length;
-            return ju[su] = Uu, uu.push({
-              key: su,
-              priority: Eu
-            }), this._decrease(Uu), !0
+        add(GG, bG) {
+          let ZG = this._keyIndices,
+            wG = String(GG);
+          if (!(wG in ZG)) {
+            let GG = this._arr,
+              SG = GG.length;
+            return ZG[wG] = SG, GG.push({
+              key: wG,
+              priority: bG
+            }), this._decrease(SG), !0
           }
           return !1
         }
         removeMin() {
           if (0 === this.size()) throw new Error("Queue underflow");
           this._swap(0, this._arr.length - 1);
-          let uu = this._arr.pop();
-          return delete this._keyIndices[uu.key], this._heapify(0), uu.key
+          let GG = this._arr.pop();
+          return delete this._keyIndices[GG.key], this._heapify(0), GG.key
         }
-        decrease(uu, Eu) {
-          let ju = this._keyIndices[uu];
-          if (void 0 === ju) throw new Error(`Key not found: ${uu}`);
-          let su = this._arr[ju].priority;
-          if (Eu > su) throw new Error(`New priority is greater than current priority. Key: ${uu} Old: ${su} New: ${Eu}`);
-          this._arr[ju].priority = Eu, this._decrease(ju)
+        decrease(GG, bG) {
+          let ZG = this._keyIndices[GG];
+          if (void 0 === ZG) throw new Error(`Key not found: ${GG}`);
+          let wG = this._arr[ZG].priority;
+          if (bG > wG) throw new Error(`New priority is greater than current priority. Key: ${GG} Old: ${wG} New: ${bG}`);
+          this._arr[ZG].priority = bG, this._decrease(ZG)
         }
-        _heapify(uu) {
-          let Eu = this._arr,
-            ju = 2 * uu,
-            su = ju + 1,
-            Uu = uu;
-          ju < Eu.length && (Uu = Eu[ju].priority < Eu[Uu].priority ? ju : Uu, su < Eu.length && (Uu = Eu[su].priority < Eu[Uu].priority ? su : Uu), Uu !== uu && (this._swap(uu, Uu), this._heapify(Uu)))
+        _heapify(GG) {
+          let bG = this._arr,
+            ZG = 2 * GG,
+            wG = ZG + 1,
+            SG = GG;
+          ZG < bG.length && (SG = bG[ZG].priority < bG[SG].priority ? ZG : SG, wG < bG.length && (SG = bG[wG].priority < bG[SG].priority ? wG : SG), SG !== GG && (this._swap(GG, SG), this._heapify(SG)))
         }
-        _decrease(uu) {
-          let Eu, ju = this._arr,
-            su = ju[uu].priority;
-          for (; 0 !== uu && (Eu = uu >> 1, !(ju[Eu].priority < su));) this._swap(uu, Eu), uu = Eu
+        _decrease(GG) {
+          let bG, ZG = this._arr,
+            wG = ZG[GG].priority;
+          for (; 0 !== GG && (bG = GG >> 1, !(ZG[bG].priority < wG));) this._swap(GG, bG), GG = bG
         }
-        _swap(uu, Eu) {
-          let ju = this._arr,
-            su = this._keyIndices,
-            Uu = ju[uu],
-            Zu = ju[Eu];
-          ju[uu] = Zu, ju[Eu] = Uu, su[Zu.key] = uu, su[Uu.key] = Eu
+        _swap(GG, bG) {
+          let ZG = this._arr,
+            wG = this._keyIndices,
+            SG = ZG[GG],
+            LG = ZG[bG];
+          ZG[GG] = LG, ZG[bG] = SG, wG[LG.key] = GG, wG[SG.key] = bG
         }
       },
-      pu = () => 1;
+      XG = () => 1;
 
-    function wu(uu, Eu, ju, su) {
-      return function(uu, Eu, ju, su) {
-        let Uu, Zu, Xu = {},
-          lu = new Gu,
-          qu = function(uu) {
-            let Eu = uu.v !== Uu ? uu.v : uu.w,
-              su = Xu[Eu];
-            if (!su) return;
-            let qu = ju(uu),
-              fu = Zu.distance + qu;
-            if (qu < 0) throw new Error("dijkstra does not allow negative edge weights. Bad edge: " + uu + " Weight: " + qu);
-            fu < su.distance && (su.distance = fu, su.predecessor = Uu, lu.decrease(Eu, fu))
+    function uG(GG, bG, ZG, wG) {
+      return function(GG, bG, ZG, wG) {
+        let SG, LG, yG = {},
+          kG = new oG,
+          UG = function(GG) {
+            let bG = GG.v !== SG ? GG.v : GG.w,
+              wG = yG[bG];
+            if (!wG) return;
+            let UG = ZG(GG),
+              YG = LG.distance + UG;
+            if (UG < 0) throw new Error("dijkstra does not allow negative edge weights. Bad edge: " + GG + " Weight: " + UG);
+            YG < wG.distance && (wG.distance = YG, wG.predecessor = SG, kG.decrease(bG, YG))
           };
-        for (uu.nodes().forEach((function(uu) {
-            let ju = uu === Eu ? 0 : Number.POSITIVE_INFINITY;
-            Xu[uu] = {
-              distance: ju,
+        for (GG.nodes().forEach((function(GG) {
+            let ZG = GG === bG ? 0 : Number.POSITIVE_INFINITY;
+            yG[GG] = {
+              distance: ZG,
               predecessor: ""
-            }, lu.add(uu, ju)
-          })); lu.size() > 0;) {
-          Uu = lu.removeMin();
-          let uu = Xu[Uu];
-          if (!uu || uu.distance === Number.POSITIVE_INFINITY) break;
-          Zu = uu, su(Uu).forEach(qu)
+            }, kG.add(GG, ZG)
+          })); kG.size() > 0;) {
+          SG = kG.removeMin();
+          let GG = yG[SG];
+          if (!GG || GG.distance === Number.POSITIVE_INFINITY) break;
+          LG = GG, wG(SG).forEach(UG)
         }
-        return Xu
-      }(uu, String(Eu), ju || pu, su || function(Eu) {
-        var ju;
-        return null != (ju = uu.outEdges(Eu)) ? ju : []
+        return yG
+      }(GG, String(bG), ZG || XG, wG || function(bG) {
+        var ZG;
+        return null != (ZG = GG.outEdges(bG)) ? ZG : []
       })
     }
 
-    function Ju(uu, Eu, ju) {
-      return uu.nodes().reduce((function(su, Uu) {
-        return su[Uu] = wu(uu, Uu, Eu, ju), su
+    function iG(GG, bG, ZG) {
+      return GG.nodes().reduce((function(wG, SG) {
+        return wG[SG] = uG(GG, SG, bG, ZG), wG
       }), {})
     }
 
-    function du(uu) {
-      let Eu = 0,
-        ju = [],
-        su = {},
-        Uu = [];
+    function CG(GG) {
+      let bG = 0,
+        ZG = [],
+        wG = {},
+        SG = [];
 
-      function Zu(Xu) {
-        var lu;
-        let qu = su[Xu] = {
+      function LG(yG) {
+        var kG;
+        let UG = wG[yG] = {
           onStack: !0,
-          lowlink: Eu,
-          index: Eu++
+          lowlink: bG,
+          index: bG++
         };
-        if (ju.push(Xu), null == (lu = uu.successors(Xu)) || lu.forEach((function(uu) {
-            if (uu in su) {
-              let Eu = su[uu];
-              null != Eu && Eu.onStack && (qu.lowlink = Math.min(qu.lowlink, Eu.index))
+        if (ZG.push(yG), null == (kG = GG.successors(yG)) || kG.forEach((function(GG) {
+            if (GG in wG) {
+              let bG = wG[GG];
+              null != bG && bG.onStack && (UG.lowlink = Math.min(UG.lowlink, bG.index))
             } else {
-              Zu(uu);
-              let Eu = su[uu];
-              Eu && (qu.lowlink = Math.min(qu.lowlink, Eu.lowlink))
+              LG(GG);
+              let bG = wG[GG];
+              bG && (UG.lowlink = Math.min(UG.lowlink, bG.lowlink))
             }
-          })), qu.lowlink === qu.index) {
-          let uu, Eu = [];
+          })), UG.lowlink === UG.index) {
+          let GG, bG = [];
           do {
-            uu = ju.pop();
-            let Uu = su[uu];
-            Uu && (Uu.onStack = !1), Eu.push(uu)
-          } while (Xu !== uu);
-          Uu.push(Eu)
+            GG = ZG.pop();
+            let SG = wG[GG];
+            SG && (SG.onStack = !1), bG.push(GG)
+          } while (yG !== GG);
+          SG.push(bG)
         }
       }
-      return uu.nodes().forEach((function(uu) {
-        uu in su || Zu(uu)
-      })), Uu
+      return GG.nodes().forEach((function(GG) {
+        GG in wG || LG(GG)
+      })), SG
     }
 
-    function au(uu) {
-      return du(uu).filter((function(Eu) {
-        var ju;
-        let su = Eu[0];
-        return !!su && (Eu.length > 1 || 1 === Eu.length && (null != (ju = uu.outEdges(su, su)) ? ju : []).length > 0)
+    function WG(GG) {
+      return CG(GG).filter((function(bG) {
+        var ZG;
+        let wG = bG[0];
+        return !!wG && (bG.length > 1 || 1 === bG.length && (null != (ZG = GG.outEdges(wG, wG)) ? ZG : []).length > 0)
       }))
     }
-    var Pu = () => 1;
+    var mG = () => 1;
 
-    function ou(uu, Eu, ju) {
-      return function(uu, Eu, ju) {
-        let su = {},
-          Uu = uu.nodes();
-        return Uu.forEach((function(uu) {
-          let Zu = {};
-          su[uu] = Zu, Zu[uu] = {
+    function IG(GG, bG, ZG) {
+      return function(GG, bG, ZG) {
+        let wG = {},
+          SG = GG.nodes();
+        return SG.forEach((function(GG) {
+          let LG = {};
+          wG[GG] = LG, LG[GG] = {
             distance: 0,
             predecessor: ""
-          }, Uu.forEach((function(Eu) {
-            uu !== Eu && (Zu[Eu] = {
+          }, SG.forEach((function(bG) {
+            GG !== bG && (LG[bG] = {
               distance: Number.POSITIVE_INFINITY,
               predecessor: ""
             })
-          })), ju(uu).forEach((function(ju) {
-            let su = ju.v === uu ? ju.w : ju.v,
-              Uu = Eu(ju);
-            Zu[su] = {
-              distance: Uu,
-              predecessor: uu
+          })), ZG(GG).forEach((function(ZG) {
+            let wG = ZG.v === GG ? ZG.w : ZG.v,
+              SG = bG(ZG);
+            LG[wG] = {
+              distance: SG,
+              predecessor: GG
             }
           }))
-        })), Uu.forEach((function(uu) {
-          let Eu = su[uu];
-          Eu && Uu.forEach((function(ju) {
-            let Zu = su[ju];
-            Zu && Uu.forEach((function(ju) {
-              let su = Zu[uu],
-                Uu = Eu[ju],
-                Xu = Zu[ju];
-              if (su && Uu && Xu) {
-                let uu = su.distance + Uu.distance;
-                uu < Xu.distance && (Xu.distance = uu, Xu.predecessor = Uu.predecessor)
+        })), SG.forEach((function(GG) {
+          let bG = wG[GG];
+          bG && SG.forEach((function(ZG) {
+            let LG = wG[ZG];
+            LG && SG.forEach((function(ZG) {
+              let wG = LG[GG],
+                SG = bG[ZG],
+                yG = LG[ZG];
+              if (wG && SG && yG) {
+                let GG = wG.distance + SG.distance;
+                GG < yG.distance && (yG.distance = GG, yG.predecessor = SG.predecessor)
               }
             }))
           }))
-        })), su
-      }(uu, Eu || Pu, ju || function(Eu) {
-        var ju;
-        return null != (ju = uu.outEdges(Eu)) ? ju : []
+        })), wG
+      }(GG, bG || mG, ZG || function(bG) {
+        var ZG;
+        return null != (ZG = GG.outEdges(bG)) ? ZG : []
       })
     }
-    var ku = class extends Error {
-      constructor(uu) {
-        super(uu), this.name = "CycleException"
+    var FG = class extends Error {
+      constructor(GG) {
+        super(GG), this.name = "CycleException"
       }
     };
 
-    function mu(uu) {
-      let Eu = {},
-        ju = {},
-        su = [];
-      if (uu.sinks().forEach((function Uu(Zu) {
-          var Xu;
-          if (Zu in ju) throw new ku;
-          Zu in Eu || (ju[Zu] = !0, Eu[Zu] = !0, null == (Xu = uu.predecessors(Zu)) || Xu.forEach(Uu), delete ju[Zu], su.push(Zu))
-        })), Object.keys(Eu).length !== uu.nodeCount()) throw new ku;
-      return su
+    function vG(GG) {
+      let bG = {},
+        ZG = {},
+        wG = [];
+      if (GG.sinks().forEach((function SG(LG) {
+          var yG;
+          if (LG in ZG) throw new FG;
+          LG in bG || (ZG[LG] = !0, bG[LG] = !0, null == (yG = GG.predecessors(LG)) || yG.forEach(SG), delete ZG[LG], wG.push(LG))
+        })), Object.keys(bG).length !== GG.nodeCount()) throw new FG;
+      return wG
     }
 
-    function vu(uu) {
+    function aG(GG) {
       try {
-        mu(uu)
-      } catch (Eu) {
-        if (Eu instanceof ku) return !1;
-        throw Eu
+        vG(GG)
+      } catch (bG) {
+        if (bG instanceof FG) return !1;
+        throw bG
       }
       return !0
     }
 
-    function Ku(uu, Eu, ju, su, Uu) {
-      Array.isArray(Eu) || (Eu = [Eu]);
-      let Zu = Eu => {
-          var ju;
-          return null != (ju = uu.isDirected() ? uu.successors(Eu) : uu.neighbors(Eu)) ? ju : []
+    function cG(GG, bG, ZG, wG, SG) {
+      Array.isArray(bG) || (bG = [bG]);
+      let LG = bG => {
+          var ZG;
+          return null != (ZG = GG.isDirected() ? GG.successors(bG) : GG.neighbors(bG)) ? ZG : []
         },
-        Xu = {};
-      return Eu.forEach((function(Eu) {
-        if (!uu.hasNode(Eu)) throw new Error("Graph does not have node: " + Eu);
-        Uu = Vu(uu, Eu, "post" === ju, Xu, Zu, su, Uu)
-      })), Uu
+        yG = {};
+      return bG.forEach((function(bG) {
+        if (!GG.hasNode(bG)) throw new Error("Graph does not have node: " + bG);
+        SG = lG(GG, bG, "post" === ZG, yG, LG, wG, SG)
+      })), SG
     }
 
-    function Vu(uu, Eu, ju, su, Uu, Zu, Xu) {
-      return Eu in su || (su[Eu] = !0, ju || (Xu = Zu(Xu, Eu)), Uu(Eu).forEach((function(Eu) {
-        Xu = Vu(uu, Eu, ju, su, Uu, Zu, Xu)
-      })), ju && (Xu = Zu(Xu, Eu))), Xu
+    function lG(GG, bG, ZG, wG, SG, LG, yG) {
+      return bG in wG || (wG[bG] = !0, ZG || (yG = LG(yG, bG)), SG(bG).forEach((function(bG) {
+        yG = lG(GG, bG, ZG, wG, SG, LG, yG)
+      })), ZG && (yG = LG(yG, bG))), yG
     }
 
-    function ru(uu, Eu, ju) {
-      return Ku(uu, Eu, ju, (function(uu, Eu) {
-        return uu.push(Eu), uu
+    function jG(GG, bG, ZG) {
+      return cG(GG, bG, ZG, (function(GG, bG) {
+        return GG.push(bG), GG
       }), [])
     }
 
-    function Qu(uu, Eu) {
-      return ru(uu, Eu, "post")
+    function PG(GG, bG) {
+      return jG(GG, bG, "post")
     }
 
-    function iu(uu, Eu) {
-      return ru(uu, Eu, "pre")
+    function MG(GG, bG) {
+      return jG(GG, bG, "pre")
     }
 
-    function Wu(uu, Eu) {
-      var ju;
-      let su, Uu = new qu,
-        Zu = {},
-        Xu = new Gu;
+    function AG(GG, bG) {
+      var ZG;
+      let wG, SG = new UG,
+        LG = {},
+        yG = new oG;
 
-      function lu(uu) {
-        let ju = uu.v === su ? uu.w : uu.v,
-          Uu = Xu.priority(ju);
-        if (void 0 !== Uu) {
-          let lu = Eu(uu);
-          lu < Uu && (Zu[ju] = su, Xu.decrease(ju, lu))
+      function kG(GG) {
+        let ZG = GG.v === wG ? GG.w : GG.v,
+          SG = yG.priority(ZG);
+        if (void 0 !== SG) {
+          let kG = bG(GG);
+          kG < SG && (LG[ZG] = wG, yG.decrease(ZG, kG))
         }
       }
-      if (0 === uu.nodeCount()) return Uu;
-      uu.nodes().forEach((function(uu) {
-        Xu.add(uu, Number.POSITIVE_INFINITY), Uu.setNode(uu)
+      if (0 === GG.nodeCount()) return SG;
+      GG.nodes().forEach((function(GG) {
+        yG.add(GG, Number.POSITIVE_INFINITY), SG.setNode(GG)
       }));
-      let fu = uu.nodes()[0];
-      void 0 !== fu && Xu.decrease(fu, 0);
-      let Cu = !1;
-      for (; Xu.size() > 0;) {
-        if (su = Xu.removeMin(), su in Zu) Uu.setEdge(su, Zu[su]);
+      let YG = GG.nodes()[0];
+      void 0 !== YG && yG.decrease(YG, 0);
+      let VG = !1;
+      for (; yG.size() > 0;) {
+        if (wG = yG.removeMin(), wG in LG) SG.setEdge(wG, LG[wG]);
         else {
-          if (Cu) throw new Error("Input graph is not connected: " + uu);
-          Cu = !0
+          if (VG) throw new Error("Input graph is not connected: " + GG);
+          VG = !0
         }
-        null == (ju = uu.nodeEdges(su)) || ju.forEach(lu)
+        null == (ZG = GG.nodeEdges(wG)) || ZG.forEach(kG)
       }
-      return Uu
+      return SG
     }
 
-    function Su(uu, Eu, ju, su) {
-      return function(uu, Eu, ju, su) {
-        if (void 0 === ju) return wu(uu, Eu, ju, su);
-        let Uu = !1,
-          Zu = uu.nodes();
-        for (let Xu = 0; Xu < Zu.length; Xu++) {
-          let lu = Zu[Xu];
-          if (void 0 === lu) continue;
-          let qu = su(lu);
-          for (let uu = 0; uu < qu.length; uu++) {
-            let Eu = qu[uu];
-            if (!Eu) continue;
-            let su = Eu.v === lu ? Eu.v : Eu.w;
-            ju({
-              v: su,
-              w: su === Eu.v ? Eu.w : Eu.v
-            }) < 0 && (Uu = !0)
+    function sG(GG, bG, ZG, wG) {
+      return function(GG, bG, ZG, wG) {
+        if (void 0 === ZG) return uG(GG, bG, ZG, wG);
+        let SG = !1,
+          LG = GG.nodes();
+        for (let yG = 0; yG < LG.length; yG++) {
+          let kG = LG[yG];
+          if (void 0 === kG) continue;
+          let UG = wG(kG);
+          for (let GG = 0; GG < UG.length; GG++) {
+            let bG = UG[GG];
+            if (!bG) continue;
+            let wG = bG.v === kG ? bG.v : bG.w;
+            ZG({
+              v: wG,
+              w: wG === bG.v ? bG.w : bG.v
+            }) < 0 && (SG = !0)
           }
-          if (Uu) return Mu(uu, Eu, ju, su)
+          if (SG) return zG(GG, bG, ZG, wG)
         }
-        return wu(uu, Eu, ju, su)
-      }(uu, Eu, ju, null != su ? su : Eu => {
-        var ju;
-        return null != (ju = uu.outEdges(Eu)) ? ju : []
+        return uG(GG, bG, ZG, wG)
+      }(GG, bG, ZG, null != wG ? wG : bG => {
+        var ZG;
+        return null != (ZG = GG.outEdges(bG)) ? ZG : []
       })
     }
-    var Iu = qu;
+    var qG = UG;
 
-    function Fu(uu, Eu, ju, su) {
-      let Uu = su;
-      for (; uu.hasNode(Uu);) Uu = Ru(su);
-      return ju.dummy = Eu, uu.setNode(Uu, ju), Uu
+    function nG(GG, bG, ZG, wG) {
+      let SG = wG;
+      for (; GG.hasNode(SG);) SG = BG(wG);
+      return ZG.dummy = bG, GG.setNode(SG, ZG), SG
     }
 
-    function Bu(uu) {
-      let Eu = new Iu({
-        multigraph: uu.isMultigraph()
-      }).setGraph(uu.graph());
-      return uu.nodes().forEach((ju => {
-        uu.children(ju).length || Eu.setNode(ju, uu.node(ju))
-      })), uu.edges().forEach((ju => {
-        Eu.setEdge(ju, uu.edge(ju))
-      })), Eu
+    function gG(GG) {
+      let bG = new qG({
+        multigraph: GG.isMultigraph()
+      }).setGraph(GG.graph());
+      return GG.nodes().forEach((ZG => {
+        GG.children(ZG).length || bG.setNode(ZG, GG.node(ZG))
+      })), GG.edges().forEach((ZG => {
+        bG.setEdge(ZG, GG.edge(ZG))
+      })), bG
     }
 
-    function Lu(uu, Eu) {
-      let ju, su, Uu = uu.x,
-        Zu = uu.y,
-        Xu = Eu.x - Uu,
-        lu = Eu.y - Zu,
-        qu = uu.width / 2,
-        fu = uu.height / 2;
-      if (!Xu && !lu) throw new Error("Not possible to find intersection inside of the rectangle");
-      return Math.abs(lu) * qu > Math.abs(Xu) * fu ? (lu < 0 && (fu = -fu), ju = fu * Xu / lu, su = fu) : (Xu < 0 && (qu = -qu), ju = qu, su = qu * lu / Xu), {
-        x: Uu + ju,
-        y: Zu + su
+    function eG(GG, bG) {
+      let ZG, wG, SG = GG.x,
+        LG = GG.y,
+        yG = bG.x - SG,
+        kG = bG.y - LG,
+        UG = GG.width / 2,
+        YG = GG.height / 2;
+      if (!yG && !kG) throw new Error("Not possible to find intersection inside of the rectangle");
+      return Math.abs(kG) * UG > Math.abs(yG) * YG ? (kG < 0 && (YG = -YG), ZG = YG * yG / kG, wG = YG) : (yG < 0 && (UG = -UG), ZG = UG, wG = UG * kG / yG), {
+        x: SG + ZG,
+        y: LG + wG
       }
     }
 
-    function tu(uu) {
-      let Eu = uE(Au(uu) + 1).map((() => []));
-      return uu.nodes().forEach((ju => {
-        let su = uu.node(ju),
-          Uu = su.rank;
-        void 0 !== Uu && (Eu[Uu] || (Eu[Uu] = []), Eu[Uu][su.order] = ju)
-      })), Eu
+    function RG(GG) {
+      let bG = Gb(DG(GG) + 1).map((() => []));
+      return GG.nodes().forEach((ZG => {
+        let wG = GG.node(ZG),
+          SG = wG.rank;
+        void 0 !== SG && (bG[SG] || (bG[SG] = []), bG[SG][wG.order] = ZG)
+      })), bG
     }
 
-    function xu(uu, Eu, ju, su) {
-      let Uu = {
+    function TG(GG, bG, ZG, wG) {
+      let SG = {
         width: 0,
         height: 0
       };
-      return arguments.length >= 4 && (Uu.rank = ju, Uu.order = su), Fu(uu, "border", Uu, Eu)
+      return arguments.length >= 4 && (SG.rank = ZG, SG.order = wG), nG(GG, "border", SG, bG)
     }
-    var Tu = 65535;
+    var HG = 65535;
 
-    function Hu(uu, Eu) {
-      if (Eu.length > Tu) {
-        let ju = function(uu) {
-          let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Tu,
-            ju = [];
-          for (let su = 0; su < uu.length; su += Eu) {
-            let Uu = uu.slice(su, su + Eu);
-            ju.push(Uu)
+    function tG(GG, bG) {
+      if (bG.length > HG) {
+        let ZG = function(GG) {
+          let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : HG,
+            ZG = [];
+          for (let wG = 0; wG < GG.length; wG += bG) {
+            let SG = GG.slice(wG, wG + bG);
+            ZG.push(SG)
           }
-          return ju
-        }(Eu);
-        return uu(...ju.map((Eu => uu(...Eu))))
+          return ZG
+        }(bG);
+        return GG(...ZG.map((bG => GG(...bG))))
       }
-      return uu(...Eu)
+      return GG(...bG)
     }
 
-    function Au(uu) {
-      let Eu = uu.nodes().map((Eu => {
-        let ju = uu.node(Eu).rank;
-        return void 0 === ju ? Number.MIN_VALUE : ju
+    function DG(GG) {
+      let bG = GG.nodes().map((bG => {
+        let ZG = GG.node(bG).rank;
+        return void 0 === ZG ? Number.MIN_VALUE : ZG
       }));
-      return Hu(Math.max, Eu)
+      return tG(Math.max, bG)
     }
 
-    function nu(uu, Eu) {
-      let ju = Date.now();
+    function NG(GG, bG) {
+      let ZG = Date.now();
       try {
-        return Eu()
+        return bG()
       } finally {
-        console.log(uu + " time: " + (Date.now() - ju) + "ms")
+        console.log(GG + " time: " + (Date.now() - ZG) + "ms")
       }
     }
 
-    function yu(uu, Eu) {
-      return Eu()
+    function OG(GG, bG) {
+      return bG()
     }
-    var zu = 0;
+    var xG = 0;
 
-    function Ru(uu) {
-      return uu + "" + ++zu
-    }
-
-    function uE(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      null == Eu && (Eu = uu, uu = 0);
-      let su = uu => uu < Eu;
-      ju < 0 && (su = uu => Eu < uu);
-      let Uu = [];
-      for (let Zu = uu; su(Zu); Zu += ju) Uu.push(Zu);
-      return Uu
+    function BG(GG) {
+      return GG + "" + ++xG
     }
 
-    function EE(uu, Eu) {
-      let ju = {};
-      for (let su of Eu) void 0 !== uu[su] && (ju[su] = uu[su]);
-      return ju
+    function Gb(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      null == bG && (bG = GG, GG = 0);
+      let wG = GG => GG < bG;
+      ZG < 0 && (wG = GG => bG < GG);
+      let SG = [];
+      for (let LG = GG; wG(LG); LG += ZG) SG.push(LG);
+      return SG
     }
 
-    function jE(uu, Eu) {
-      let ju;
-      return ju = "string" == typeof Eu ? uu => uu[Eu] : Eu, Object.entries(uu).reduce(((uu, Eu) => {
-        let [su, Uu] = Eu;
-        return uu[su] = ju(Uu, su), uu
+    function bb(GG, bG) {
+      let ZG = {};
+      for (let wG of bG) void 0 !== GG[wG] && (ZG[wG] = GG[wG]);
+      return ZG
+    }
+
+    function Zb(GG, bG) {
+      let ZG;
+      return ZG = "string" == typeof bG ? GG => GG[bG] : bG, Object.entries(GG).reduce(((GG, bG) => {
+        let [wG, SG] = bG;
+        return GG[wG] = ZG(SG, wG), GG
       }), {})
     }
-    var sE = "\0";
+    var wb = "\0";
 
-    function UE(uu, Eu, ju) {
-      var su, Uu, Zu, Xu, lu, qu;
-      if (!(uu && Eu && ju && "edge" === Eu.dummy && "edge" === ju.dummy && Eu.edgeObj && ju.edgeObj && uu[Eu.edgeObj.v] && uu[ju.edgeObj.v] && uu[Eu.edgeObj.w] && uu[ju.edgeObj.w])) return 0;
-      let fu = !0;
-      Eu.edgeObj.w === ju.edgeObj.w && (fu = !1);
-      let Cu = fu ? null != (Uu = null == (su = uu[Eu.edgeObj.v]) ? void 0 : su.rank) ? Uu : NaN : null != (Xu = null == (Zu = uu[Eu.edgeObj.w]) ? void 0 : Zu.rank) ? Xu : NaN,
-        bu = Object.entries(uu).find((uu => {
-          var ju, su;
-          return (null == (ju = uu[1].edgeObj) ? void 0 : ju.v) === Eu.edgeObj.v && (null == (su = uu[1].edgeObj) ? void 0 : su.w) === Eu.edgeObj.w && uu[1].rank === Cu
+    function Sb(GG, bG, ZG) {
+      var wG, SG, LG, yG, kG, UG;
+      if (!(GG && bG && ZG && "edge" === bG.dummy && "edge" === ZG.dummy && bG.edgeObj && ZG.edgeObj && GG[bG.edgeObj.v] && GG[ZG.edgeObj.v] && GG[bG.edgeObj.w] && GG[ZG.edgeObj.w])) return 0;
+      let YG = !0;
+      bG.edgeObj.w === ZG.edgeObj.w && (YG = !1);
+      let VG = YG ? null != (SG = null == (wG = GG[bG.edgeObj.v]) ? void 0 : wG.rank) ? SG : NaN : null != (yG = null == (LG = GG[bG.edgeObj.w]) ? void 0 : LG.rank) ? yG : NaN,
+        pG = Object.entries(GG).find((GG => {
+          var ZG, wG;
+          return (null == (ZG = GG[1].edgeObj) ? void 0 : ZG.v) === bG.edgeObj.v && (null == (wG = GG[1].edgeObj) ? void 0 : wG.w) === bG.edgeObj.w && GG[1].rank === VG
         })),
-        cu = Object.entries(uu).find((uu => {
-          var Eu, su;
-          return (null == (Eu = uu[1].edgeObj) ? void 0 : Eu.v) === ju.edgeObj.v && (null == (su = uu[1].edgeObj) ? void 0 : su.w) === ju.edgeObj.w && uu[1].rank === Cu
+        fG = Object.entries(GG).find((GG => {
+          var bG, wG;
+          return (null == (bG = GG[1].edgeObj) ? void 0 : bG.v) === ZG.edgeObj.v && (null == (wG = GG[1].edgeObj) ? void 0 : wG.w) === ZG.edgeObj.w && GG[1].rank === VG
         }));
-      if (!bu || !cu) return 0;
-      let Nu = null != (lu = bu[1].order) ? lu : NaN,
-        Ou = null != (qu = cu[1].order) ? qu : NaN;
-      return isNaN(Nu - Ou) ? 0 : Nu - Ou
+      if (!pG || !fG) return 0;
+      let QG = null != (kG = pG[1].order) ? kG : NaN,
+        KG = null != (UG = fG[1].order) ? UG : NaN;
+      return isNaN(QG - KG) ? 0 : QG - KG
     }
-    var ZE = "3.1.1";
+    var Lb = "3.1.1";
 
-    function XE(uu) {
-      uu._prev._next = uu._next, uu._next._prev = uu._prev, delete uu._next, delete uu._prev
+    function yb(GG) {
+      GG._prev._next = GG._next, GG._next._prev = GG._prev, delete GG._next, delete GG._prev
     }
 
-    function lE(uu, Eu) {
-      if ("_next" !== uu && "_prev" !== uu) return Eu
+    function kb(GG, bG) {
+      if ("_next" !== GG && "_prev" !== GG) return bG
     }
-    var qE = class {
+    var Ub = class {
         constructor() {
-          Uu(this, "_sentinel");
-          let uu = {};
-          uu._next = uu._prev = uu, this._sentinel = uu
+          SG(this, "_sentinel");
+          let GG = {};
+          GG._next = GG._prev = GG, this._sentinel = GG
         }
         dequeue() {
-          let uu = this._sentinel,
-            Eu = uu._prev;
-          if (Eu !== uu) return XE(Eu), Eu
+          let GG = this._sentinel,
+            bG = GG._prev;
+          if (bG !== GG) return yb(bG), bG
         }
-        enqueue(uu) {
-          let Eu = this._sentinel;
-          uu._prev && uu._next && XE(uu), uu._next = Eu._next, Eu._next._prev = uu, Eu._next = uu, uu._prev = Eu
+        enqueue(GG) {
+          let bG = this._sentinel;
+          GG._prev && GG._next && yb(GG), GG._next = bG._next, bG._next._prev = GG, bG._next = GG, GG._prev = bG
         }
         toString() {
-          let uu = [],
-            Eu = this._sentinel,
-            ju = Eu._prev;
-          for (; ju !== Eu;) uu.push(JSON.stringify(ju, lE)), ju = ju._prev;
-          return "[" + uu.join(", ") + "]"
+          let GG = [],
+            bG = this._sentinel,
+            ZG = bG._prev;
+          for (; ZG !== bG;) GG.push(JSON.stringify(ZG, kb)), ZG = ZG._prev;
+          return "[" + GG.join(", ") + "]"
         }
       },
-      fE = () => 1;
+      Yb = () => 1;
 
-    function CE(uu, Eu) {
-      if (uu.nodeCount() <= 1) return [];
-      let ju = function(uu, Eu) {
-        let ju = new Iu,
-          su = 0,
-          Uu = 0;
-        uu.nodes().forEach((uu => {
-          ju.setNode(uu, {
-            v: uu,
+    function Vb(GG, bG) {
+      if (GG.nodeCount() <= 1) return [];
+      let ZG = function(GG, bG) {
+        let ZG = new qG,
+          wG = 0,
+          SG = 0;
+        GG.nodes().forEach((GG => {
+          ZG.setNode(GG, {
+            v: GG,
             in: 0,
             out: 0
           })
-        })), uu.edges().forEach((uu => {
-          let Zu = ju.edge(uu.v, uu.w) || 0,
-            Xu = Eu(uu),
-            lu = Zu + Xu;
-          ju.setEdge(uu.v, uu.w, lu);
-          let qu = ju.node(uu.v),
-            fu = ju.node(uu.w);
-          Uu = Math.max(Uu, qu.out += Xu), su = Math.max(su, fu.in += Xu)
+        })), GG.edges().forEach((GG => {
+          let LG = ZG.edge(GG.v, GG.w) || 0,
+            yG = bG(GG),
+            kG = LG + yG;
+          ZG.setEdge(GG.v, GG.w, kG);
+          let UG = ZG.node(GG.v),
+            YG = ZG.node(GG.w);
+          SG = Math.max(SG, UG.out += yG), wG = Math.max(wG, YG.in += yG)
         }));
-        let Zu = function(uu) {
-            let Eu = [];
-            for (let ju = 0; ju < uu; ju++) Eu.push(ju);
-            return Eu
-          }(Uu + su + 3).map((() => new qE)),
-          Xu = su + 1;
-        return ju.nodes().forEach((uu => {
-          cE(Zu, Xu, ju.node(uu))
+        let LG = function(GG) {
+            let bG = [];
+            for (let ZG = 0; ZG < GG; ZG++) bG.push(ZG);
+            return bG
+          }(SG + wG + 3).map((() => new Ub)),
+          yG = wG + 1;
+        return ZG.nodes().forEach((GG => {
+          fb(LG, yG, ZG.node(GG))
         })), {
-          graph: ju,
-          buckets: Zu,
-          zeroIdx: Xu
+          graph: ZG,
+          buckets: LG,
+          zeroIdx: yG
         }
-      }(uu, Eu || fE);
-      return function(uu, Eu, ju) {
-        var su;
-        let Uu, Zu = [],
-          Xu = Eu[Eu.length - 1],
-          lu = Eu[0];
-        for (; uu.nodeCount();) {
-          for (; Uu = lu.dequeue();) bE(uu, Eu, ju, Uu);
-          for (; Uu = Xu.dequeue();) bE(uu, Eu, ju, Uu);
-          if (uu.nodeCount())
-            for (let Xu = Eu.length - 2; Xu > 0; --Xu)
-              if (Uu = null == (su = Eu[Xu]) ? void 0 : su.dequeue(), Uu) {
-                Zu = Zu.concat(bE(uu, Eu, ju, Uu, !0) || []);
+      }(GG, bG || Yb);
+      return function(GG, bG, ZG) {
+        var wG;
+        let SG, LG = [],
+          yG = bG[bG.length - 1],
+          kG = bG[0];
+        for (; GG.nodeCount();) {
+          for (; SG = kG.dequeue();) pb(GG, bG, ZG, SG);
+          for (; SG = yG.dequeue();) pb(GG, bG, ZG, SG);
+          if (GG.nodeCount())
+            for (let yG = bG.length - 2; yG > 0; --yG)
+              if (SG = null == (wG = bG[yG]) ? void 0 : wG.dequeue(), SG) {
+                LG = LG.concat(pb(GG, bG, ZG, SG, !0) || []);
                 break
               }
         }
-        return Zu
-      }(ju.graph, ju.buckets, ju.zeroIdx).flatMap((Eu => uu.outEdges(Eu.v, Eu.w) || []))
+        return LG
+      }(ZG.graph, ZG.buckets, ZG.zeroIdx).flatMap((bG => GG.outEdges(bG.v, bG.w) || []))
     }
 
-    function bE(uu, Eu, ju, su, Uu) {
-      let Zu = [],
-        Xu = Uu ? Zu : void 0;
-      return (uu.inEdges(su.v) || []).forEach((su => {
-        let Xu = uu.edge(su),
-          lu = uu.node(su.v);
-        Uu && Zu.push({
-          v: su.v,
-          w: su.w
-        }), lu.out -= Xu, cE(Eu, ju, lu)
-      })), (uu.outEdges(su.v) || []).forEach((su => {
-        let Uu = uu.edge(su),
-          Zu = su.w,
-          Xu = uu.node(Zu);
-        Xu.in -= Uu, cE(Eu, ju, Xu)
-      })), uu.removeNode(su.v), Xu
+    function pb(GG, bG, ZG, wG, SG) {
+      let LG = [],
+        yG = SG ? LG : void 0;
+      return (GG.inEdges(wG.v) || []).forEach((wG => {
+        let yG = GG.edge(wG),
+          kG = GG.node(wG.v);
+        SG && LG.push({
+          v: wG.v,
+          w: wG.w
+        }), kG.out -= yG, fb(bG, ZG, kG)
+      })), (GG.outEdges(wG.v) || []).forEach((wG => {
+        let SG = GG.edge(wG),
+          LG = wG.w,
+          yG = GG.node(LG);
+        yG.in -= SG, fb(bG, ZG, yG)
+      })), GG.removeNode(wG.v), yG
     }
 
-    function cE(uu, Eu, ju) {
-      var su, Uu, Zu;
-      ju.out ? ju.in ? null == (Zu = uu[ju.out - ju.in + Eu]) || Zu.enqueue(ju) : null == (Uu = uu[uu.length - 1]) || Uu.enqueue(ju) : null == (su = uu[0]) || su.enqueue(ju)
+    function fb(GG, bG, ZG) {
+      var wG, SG, LG;
+      ZG.out ? ZG.in ? null == (LG = GG[ZG.out - ZG.in + bG]) || LG.enqueue(ZG) : null == (SG = GG[GG.length - 1]) || SG.enqueue(ZG) : null == (wG = GG[0]) || wG.enqueue(ZG)
     }
 
-    function NE(uu, Eu) {
-      var ju;
-      ("greedy" === uu.graph().acyclicer ? CE(uu, (ju = uu, uu => ju.edge(uu).weight)) : function(uu, Eu) {
-        let ju = [],
-          su = {},
-          Uu = {};
+    function Qb(GG, bG) {
+      var ZG;
+      ("greedy" === GG.graph().acyclicer ? Vb(GG, (ZG = GG, GG => ZG.edge(GG).weight)) : function(GG, bG) {
+        let ZG = [],
+          wG = {},
+          SG = {};
 
-        function Zu(Eu) {
-          Object.hasOwn(Uu, Eu) || (Uu[Eu] = !0, su[Eu] = !0, uu.outEdges(Eu).forEach((uu => {
-            Object.hasOwn(su, uu.w) ? ju.push(uu) : Zu(uu.w)
-          })), delete su[Eu])
+        function LG(bG) {
+          Object.hasOwn(SG, bG) || (SG[bG] = !0, wG[bG] = !0, GG.outEdges(bG).forEach((GG => {
+            Object.hasOwn(wG, GG.w) ? ZG.push(GG) : LG(GG.w)
+          })), delete wG[bG])
         }
 
-        function Xu(Zu) {
-          var lu;
-          Object.hasOwn(Uu, Zu) || (Uu[Zu] = !0, su[Zu] = !0, null == (lu = uu.outEdges(Zu)) || lu.forEach((Uu => {
-            var lu, qu;
-            Object.hasOwn(su, Uu.w) || (null == (lu = Eu.node(Zu)) ? void 0 : lu.rank) > (null == (qu = Eu.node(Uu.w)) ? void 0 : qu.rank) && function(uu, Eu, ju) {
-              let su = new Set;
+        function yG(LG) {
+          var kG;
+          Object.hasOwn(SG, LG) || (SG[LG] = !0, wG[LG] = !0, null == (kG = GG.outEdges(LG)) || kG.forEach((SG => {
+            var kG, UG;
+            Object.hasOwn(wG, SG.w) || (null == (kG = bG.node(LG)) ? void 0 : kG.rank) > (null == (UG = bG.node(SG.w)) ? void 0 : UG.rank) && function(GG, bG, ZG) {
+              let wG = new Set;
 
-              function Uu(Eu) {
-                var Zu;
-                if (uu.sources().includes(Eu)) return !0;
-                su.add(Eu);
-                for (let Xu of null != (Zu = uu.inEdges(Eu)) ? Zu : [])
-                  if ((Xu.v !== ju.v || Xu.w !== ju.w) && !su.has(Xu.v) && Uu(Xu.v)) return !0;
+              function SG(bG) {
+                var LG;
+                if (GG.sources().includes(bG)) return !0;
+                wG.add(bG);
+                for (let yG of null != (LG = GG.inEdges(bG)) ? LG : [])
+                  if ((yG.v !== ZG.v || yG.w !== ZG.w) && !wG.has(yG.v) && SG(yG.v)) return !0;
                 return !1
               }
-              return Uu(Eu)
-            }(uu, Uu.w, Uu) ? ju.push(Uu) : Xu(Uu.w)
-          })), delete su[Zu])
+              return SG(bG)
+            }(GG, SG.w, SG) ? ZG.push(SG) : yG(SG.w)
+          })), delete wG[LG])
         }
-        let lu = Zu;
-        return Eu && "function" == typeof Eu.node && (lu = Xu), uu.sources().forEach(lu), uu.nodes().forEach(lu), ju
-      }(uu, null != Eu ? Eu : null)).forEach((Eu => {
-        let ju = uu.edge(Eu);
-        uu.removeEdge(Eu), ju.forwardName = Eu.name, ju.reversed = !0, uu.setEdge(Eu.w, Eu.v, ju, Ru("rev"))
+        let kG = LG;
+        return bG && "function" == typeof bG.node && (kG = yG), GG.sources().forEach(kG), GG.nodes().forEach(kG), ZG
+      }(GG, null != bG ? bG : null)).forEach((bG => {
+        let ZG = GG.edge(bG);
+        GG.removeEdge(bG), ZG.forwardName = bG.name, ZG.reversed = !0, GG.setEdge(bG.w, bG.v, ZG, BG("rev"))
       }))
     }
 
-    function OE(uu) {
-      uu.graph().dummyChains = [], uu.edges().forEach((Eu => function(uu, Eu) {
-        let ju, su, Uu, Zu = Eu.v,
-          Xu = uu.node(Zu).rank,
-          lu = Eu.w,
-          qu = uu.node(lu).rank,
-          fu = Eu.name,
-          Cu = uu.edge(Eu),
-          bu = Cu.labelRank;
-        if (qu === Xu + 1) return;
-        for (uu.removeEdge(Eu), Uu = 0, ++Xu; Xu < qu; ++Uu, ++Xu) Cu.points = [], su = {
+    function Kb(GG) {
+      GG.graph().dummyChains = [], GG.edges().forEach((bG => function(GG, bG) {
+        let ZG, wG, SG, LG = bG.v,
+          yG = GG.node(LG).rank,
+          kG = bG.w,
+          UG = GG.node(kG).rank,
+          YG = bG.name,
+          VG = GG.edge(bG),
+          pG = VG.labelRank;
+        if (UG === yG + 1) return;
+        for (GG.removeEdge(bG), SG = 0, ++yG; yG < UG; ++SG, ++yG) VG.points = [], wG = {
           width: 0,
           height: 0,
-          edgeLabel: Cu,
-          edgeObj: Eu,
-          rank: Xu
-        }, ju = Fu(uu, "edge", su, "_d"), Xu === bu && (su.width = Cu.width, su.height = Cu.height, su.dummy = "edge-label", su.labelpos = Cu.labelpos), uu.setEdge(Zu, ju, {
-          weight: Cu.weight
-        }, fu), 0 === Uu && uu.graph().dummyChains.push(ju), Zu = ju;
-        uu.setEdge(Zu, lu, {
-          weight: Cu.weight
-        }, fu)
-      }(uu, Eu)))
+          edgeLabel: VG,
+          edgeObj: bG,
+          rank: yG
+        }, ZG = nG(GG, "edge", wG, "_d"), yG === pG && (wG.width = VG.width, wG.height = VG.height, wG.dummy = "edge-label", wG.labelpos = VG.labelpos), GG.setEdge(LG, ZG, {
+          weight: VG.weight
+        }, YG), 0 === SG && GG.graph().dummyChains.push(ZG), LG = ZG;
+        GG.setEdge(LG, kG, {
+          weight: VG.weight
+        }, YG)
+      }(GG, bG)))
     }
 
-    function YE(uu) {
-      let Eu = {};
-      uu.sources().forEach((function ju(su) {
-        let Uu = uu.node(su);
-        if (Object.hasOwn(Eu, su)) return Uu.rank;
-        Eu[su] = !0;
-        let Zu = uu.outEdges(su),
-          Xu = Zu ? Zu.map((Eu => null == Eu ? Number.POSITIVE_INFINITY : ju(Eu.w) - uu.edge(Eu).minlen)) : [],
-          lu = Hu(Math.min, Xu);
-        return lu === Number.POSITIVE_INFINITY && (lu = 0), Uu.rank = lu
+    function hb(GG) {
+      let bG = {};
+      GG.sources().forEach((function ZG(wG) {
+        let SG = GG.node(wG);
+        if (Object.hasOwn(bG, wG)) return SG.rank;
+        bG[wG] = !0;
+        let LG = GG.outEdges(wG),
+          yG = LG ? LG.map((bG => null == bG ? Number.POSITIVE_INFINITY : ZG(bG.w) - GG.edge(bG).minlen)) : [],
+          kG = tG(Math.min, yG);
+        return kG === Number.POSITIVE_INFINITY && (kG = 0), SG.rank = kG
       }))
     }
 
-    function hE(uu, Eu) {
-      return uu.node(Eu.w).rank - uu.node(Eu.v).rank - uu.edge(Eu).minlen
+    function db(GG, bG) {
+      return GG.node(bG.w).rank - GG.node(bG.v).rank - GG.edge(bG).minlen
     }
-    var DE = function(uu) {
-      let Eu = new Iu({
+    var Jb = function(GG) {
+      let bG = new qG({
           directed: !1
         }),
-        ju = uu.nodes();
-      if (0 === ju.length) throw new Error("Graph must have at least one node");
-      let su, Uu, Zu = ju[0],
-        Xu = uu.nodeCount();
-      for (Eu.setNode(Zu, {}); gE(Eu, uu) < Xu && (su = ME(Eu, uu), su);) Uu = Eu.hasNode(su.v) ? hE(uu, su) : -hE(uu, su), eE(Eu, uu, Uu);
-      return Eu
+        ZG = GG.nodes();
+      if (0 === ZG.length) throw new Error("Graph must have at least one node");
+      let wG, SG, LG = ZG[0],
+        yG = GG.nodeCount();
+      for (bG.setNode(LG, {}); rb(bG, GG) < yG && (wG = zb(bG, GG), wG);) SG = bG.hasNode(wG.v) ? db(GG, wG) : -db(GG, wG), Eb(bG, GG, SG);
+      return bG
     };
 
-    function gE(uu, Eu) {
-      return uu.nodes().forEach((function ju(su) {
-        let Uu = Eu.nodeEdges(su);
-        Uu && Uu.forEach((Uu => {
-          let Zu = Uu.v,
-            Xu = su === Zu ? Uu.w : Zu;
-          !uu.hasNode(Xu) && !hE(Eu, Uu) && (uu.setNode(Xu, {}), uu.setEdge(su, Xu, {}), ju(Xu))
+    function rb(GG, bG) {
+      return GG.nodes().forEach((function ZG(wG) {
+        let SG = bG.nodeEdges(wG);
+        SG && SG.forEach((SG => {
+          let LG = SG.v,
+            yG = wG === LG ? SG.w : LG;
+          !GG.hasNode(yG) && !db(bG, SG) && (GG.setNode(yG, {}), GG.setEdge(wG, yG, {}), ZG(yG))
         }))
-      })), uu.nodeCount()
+      })), GG.nodeCount()
     }
 
-    function ME(uu, Eu) {
-      return Eu.edges().reduce(((ju, su) => {
-        let Uu = Number.POSITIVE_INFINITY;
-        return uu.hasNode(su.v) !== uu.hasNode(su.w) && (Uu = hE(Eu, su)), Uu < ju[0] ? [Uu, su] : ju
+    function zb(GG, bG) {
+      return bG.edges().reduce(((ZG, wG) => {
+        let SG = Number.POSITIVE_INFINITY;
+        return GG.hasNode(wG.v) !== GG.hasNode(wG.w) && (SG = db(bG, wG)), SG < ZG[0] ? [SG, wG] : ZG
       }), [Number.POSITIVE_INFINITY, null])[1]
     }
 
-    function eE(uu, Eu, ju) {
-      uu.nodes().forEach((uu => Eu.node(uu).rank += ju))
+    function Eb(GG, bG, ZG) {
+      GG.nodes().forEach((GG => bG.node(GG).rank += ZG))
     }
     var {
-      preorder: GE,
-      postorder: pE
-    } = Du, wE = JE;
+      preorder: ob,
+      postorder: Xb
+    } = JG, ub = ib;
 
-    function JE(uu) {
-      uu = function(uu) {
-        let Eu = (new Iu).setGraph(uu.graph());
-        return uu.nodes().forEach((ju => Eu.setNode(ju, uu.node(ju)))), uu.edges().forEach((ju => {
-          let su = Eu.edge(ju.v, ju.w) || {
+    function ib(GG) {
+      GG = function(GG) {
+        let bG = (new qG).setGraph(GG.graph());
+        return GG.nodes().forEach((ZG => bG.setNode(ZG, GG.node(ZG)))), GG.edges().forEach((ZG => {
+          let wG = bG.edge(ZG.v, ZG.w) || {
               weight: 0,
               minlen: 1
             },
-            Uu = uu.edge(ju);
-          Eu.setEdge(ju.v, ju.w, {
-            weight: su.weight + Uu.weight,
-            minlen: Math.max(su.minlen, Uu.minlen)
+            SG = GG.edge(ZG);
+          bG.setEdge(ZG.v, ZG.w, {
+            weight: wG.weight + SG.weight,
+            minlen: Math.max(wG.minlen, SG.minlen)
           })
-        })), Eu
-      }(uu), YE(uu);
-      let Eu, ju, su = DE(uu);
-      for (PE(su), dE(su, uu); Eu = kE(su);) ju = mE(su, uu, Eu), vE(su, uu, Eu, ju)
+        })), bG
+      }(GG), hb(GG);
+      let bG, ZG, wG = Jb(GG);
+      for (mb(wG), Cb(wG, GG); bG = Fb(wG);) ZG = vb(wG, GG, bG), ab(wG, GG, bG, ZG)
     }
 
-    function dE(uu, Eu) {
-      let ju = pE(uu, uu.nodes());
-      ju = ju.slice(0, ju.length - 1), ju.forEach((ju => function(uu, Eu, ju) {
-        let su = uu.node(ju).parent,
-          Uu = uu.edge(ju, su);
-        Uu.cutvalue = aE(uu, Eu, ju)
-      }(uu, Eu, ju)))
+    function Cb(GG, bG) {
+      let ZG = Xb(GG, GG.nodes());
+      ZG = ZG.slice(0, ZG.length - 1), ZG.forEach((ZG => function(GG, bG, ZG) {
+        let wG = GG.node(ZG).parent,
+          SG = GG.edge(ZG, wG);
+        SG.cutvalue = Wb(GG, bG, ZG)
+      }(GG, bG, ZG)))
     }
 
-    function aE(uu, Eu, ju) {
-      let su = uu.node(ju).parent,
-        Uu = !0,
-        Zu = Eu.edge(ju, su),
-        Xu = 0;
-      Zu || (Uu = !1, Zu = Eu.edge(su, ju)), Xu = Zu.weight;
-      let lu = Eu.nodeEdges(ju);
-      return lu && lu.forEach((Zu => {
-        let lu = Zu.v === ju,
-          qu = lu ? Zu.w : Zu.v;
-        if (qu !== su) {
-          let su = lu === Uu,
-            fu = Eu.edge(Zu).weight;
-          if (Xu += su ? fu : -fu, function(uu, Eu, ju) {
-              return uu.hasEdge(Eu, ju)
-            }(uu, ju, qu)) {
-            let Eu = uu.edge(ju, qu).cutvalue;
-            Xu += su ? -Eu : Eu
+    function Wb(GG, bG, ZG) {
+      let wG = GG.node(ZG).parent,
+        SG = !0,
+        LG = bG.edge(ZG, wG),
+        yG = 0;
+      LG || (SG = !1, LG = bG.edge(wG, ZG)), yG = LG.weight;
+      let kG = bG.nodeEdges(ZG);
+      return kG && kG.forEach((LG => {
+        let kG = LG.v === ZG,
+          UG = kG ? LG.w : LG.v;
+        if (UG !== wG) {
+          let wG = kG === SG,
+            YG = bG.edge(LG).weight;
+          if (yG += wG ? YG : -YG, function(GG, bG, ZG) {
+              return GG.hasEdge(bG, ZG)
+            }(GG, ZG, UG)) {
+            let bG = GG.edge(ZG, UG).cutvalue;
+            yG += wG ? -bG : bG
           }
         }
-      })), Xu
+      })), yG
     }
 
-    function PE(uu, Eu) {
-      arguments.length < 2 && (Eu = uu.nodes()[0]), oE(uu, {}, 1, Eu)
+    function mb(GG, bG) {
+      arguments.length < 2 && (bG = GG.nodes()[0]), Ib(GG, {}, 1, bG)
     }
 
-    function oE(uu, Eu, ju, su, Uu) {
-      let Zu = ju,
-        Xu = uu.node(su);
-      Eu[su] = !0;
-      let lu = uu.neighbors(su);
-      return lu && lu.forEach((Uu => {
-        Object.hasOwn(Eu, Uu) || (ju = oE(uu, Eu, ju, Uu, su))
-      })), Xu.low = Zu, Xu.lim = ju++, Uu ? Xu.parent = Uu : delete Xu.parent, ju
+    function Ib(GG, bG, ZG, wG, SG) {
+      let LG = ZG,
+        yG = GG.node(wG);
+      bG[wG] = !0;
+      let kG = GG.neighbors(wG);
+      return kG && kG.forEach((SG => {
+        Object.hasOwn(bG, SG) || (ZG = Ib(GG, bG, ZG, SG, wG))
+      })), yG.low = LG, yG.lim = ZG++, SG ? yG.parent = SG : delete yG.parent, ZG
     }
 
-    function kE(uu) {
-      return uu.edges().find((Eu => uu.edge(Eu).cutvalue < 0))
+    function Fb(GG) {
+      return GG.edges().find((bG => GG.edge(bG).cutvalue < 0))
     }
 
-    function mE(uu, Eu, ju) {
-      let su = ju.v,
-        Uu = ju.w;
-      Eu.hasEdge(su, Uu) || (su = ju.w, Uu = ju.v);
-      let Zu = uu.node(su),
-        Xu = uu.node(Uu),
-        lu = Zu,
-        qu = !1;
-      return Zu.lim > Xu.lim && (lu = Xu, qu = !0), Eu.edges().filter((Eu => qu === KE(uu, uu.node(Eu.v), lu) && qu !== KE(uu, uu.node(Eu.w), lu))).reduce(((uu, ju) => hE(Eu, ju) < hE(Eu, uu) ? ju : uu))
+    function vb(GG, bG, ZG) {
+      let wG = ZG.v,
+        SG = ZG.w;
+      bG.hasEdge(wG, SG) || (wG = ZG.w, SG = ZG.v);
+      let LG = GG.node(wG),
+        yG = GG.node(SG),
+        kG = LG,
+        UG = !1;
+      return LG.lim > yG.lim && (kG = yG, UG = !0), bG.edges().filter((bG => UG === cb(GG, GG.node(bG.v), kG) && UG !== cb(GG, GG.node(bG.w), kG))).reduce(((GG, ZG) => db(bG, ZG) < db(bG, GG) ? ZG : GG))
     }
 
-    function vE(uu, Eu, ju, su) {
-      let Uu = ju.v,
-        Zu = ju.w;
-      uu.removeEdge(Uu, Zu), uu.setEdge(su.v, su.w, {}), PE(uu), dE(uu, Eu),
-        function(uu, Eu) {
-          let ju = uu.nodes().find((Eu => !uu.node(Eu).parent));
-          if (!ju) return;
-          let su = GE(uu, [ju]);
-          su = su.slice(1), su.forEach((ju => {
-            let su = uu.node(ju).parent,
-              Uu = Eu.edge(ju, su),
-              Zu = !1;
-            Uu || (Uu = Eu.edge(su, ju), Zu = !0), Eu.node(ju).rank = Eu.node(su).rank + (Zu ? Uu.minlen : -Uu.minlen)
+    function ab(GG, bG, ZG, wG) {
+      let SG = ZG.v,
+        LG = ZG.w;
+      GG.removeEdge(SG, LG), GG.setEdge(wG.v, wG.w, {}), mb(GG), Cb(GG, bG),
+        function(GG, bG) {
+          let ZG = GG.nodes().find((bG => !GG.node(bG).parent));
+          if (!ZG) return;
+          let wG = ob(GG, [ZG]);
+          wG = wG.slice(1), wG.forEach((ZG => {
+            let wG = GG.node(ZG).parent,
+              SG = bG.edge(ZG, wG),
+              LG = !1;
+            SG || (SG = bG.edge(wG, ZG), LG = !0), bG.node(ZG).rank = bG.node(wG).rank + (LG ? SG.minlen : -SG.minlen)
           }))
-        }(uu, Eu)
+        }(GG, bG)
     }
 
-    function KE(uu, Eu, ju) {
-      return ju.low <= Eu.lim && Eu.lim <= ju.lim
+    function cb(GG, bG, ZG) {
+      return ZG.low <= bG.lim && bG.lim <= ZG.lim
     }
-    JE.initLowLimValues = PE, JE.initCutValues = dE, JE.calcCutValue = aE, JE.leaveEdge = kE, JE.enterEdge = mE, JE.exchangeEdges = vE;
-    var VE = function(uu) {
-      let Eu = uu.graph().ranker;
-      if ("function" == typeof Eu) return Eu(uu);
-      switch (Eu) {
+    ib.initLowLimValues = mb, ib.initCutValues = Cb, ib.calcCutValue = Wb, ib.leaveEdge = Fb, ib.enterEdge = vb, ib.exchangeEdges = ab;
+    var lb = function(GG) {
+      let bG = GG.graph().ranker;
+      if ("function" == typeof bG) return bG(GG);
+      switch (bG) {
         case "network-simplex":
         default:
-          QE(uu);
+          Pb(GG);
           break;
         case "tight-tree":
-          ! function(uu) {
-            YE(uu), DE(uu)
-          }(uu);
+          ! function(GG) {
+            hb(GG), Jb(GG)
+          }(GG);
           break;
         case "longest-path":
-          rE(uu);
+          jb(GG);
         case "none":
       }
     };
-    var rE = YE;
+    var jb = hb;
 
-    function QE(uu) {
-      wE(uu)
+    function Pb(GG) {
+      ub(GG)
     }
-    var iE = function(uu) {
-      let Eu = function(uu) {
-          let Eu = {},
-            ju = 0;
+    var Mb = function(GG) {
+      let bG = function(GG) {
+          let bG = {},
+            ZG = 0;
 
-          function su(Uu) {
-            let Zu = ju;
-            uu.children(Uu).forEach(su), Eu[Uu] = {
-              low: Zu,
-              lim: ju++
+          function wG(SG) {
+            let LG = ZG;
+            GG.children(SG).forEach(wG), bG[SG] = {
+              low: LG,
+              lim: ZG++
             }
           }
-          return uu.children(sE).forEach(su), Eu
-        }(uu),
-        ju = uu.graph();
-      if (!Array.isArray(ju.dummyChains)) return;
-      ju.dummyChains.forEach((ju => {
-        let su = uu.node(ju),
-          Uu = su.edgeObj,
-          Zu = function(uu, Eu, ju, su) {
-            let Uu, Zu = [],
-              Xu = [],
-              lu = Math.min(Eu[ju].low, Eu[su].low),
-              qu = Math.max(Eu[ju].lim, Eu[su].lim);
-            Uu = ju;
+          return GG.children(wb).forEach(wG), bG
+        }(GG),
+        ZG = GG.graph();
+      if (!Array.isArray(ZG.dummyChains)) return;
+      ZG.dummyChains.forEach((ZG => {
+        let wG = GG.node(ZG),
+          SG = wG.edgeObj,
+          LG = function(GG, bG, ZG, wG) {
+            let SG, LG = [],
+              yG = [],
+              kG = Math.min(bG[ZG].low, bG[wG].low),
+              UG = Math.max(bG[ZG].lim, bG[wG].lim);
+            SG = ZG;
             do {
-              Uu = uu.parent(Uu), Zu.push(Uu)
-            } while (Uu && (Eu[Uu].low > lu || qu > Eu[Uu].lim));
-            let fu = Uu,
-              Cu = su;
+              SG = GG.parent(SG), LG.push(SG)
+            } while (SG && (bG[SG].low > kG || UG > bG[SG].lim));
+            let YG = SG,
+              VG = wG;
             for (;
-              (Cu = uu.parent(Cu)) !== fu;) Xu.push(Cu);
+              (VG = GG.parent(VG)) !== YG;) yG.push(VG);
             return {
-              path: Zu.concat(Xu.reverse()),
-              lca: fu
+              path: LG.concat(yG.reverse()),
+              lca: YG
             }
-          }(uu, Eu, Uu.v, Uu.w),
-          Xu = Zu.path,
-          lu = Zu.lca,
-          qu = 0,
-          fu = Xu[qu],
-          Cu = !0;
-        for (; ju !== Uu.w;) {
-          if (su = uu.node(ju), Cu) {
+          }(GG, bG, SG.v, SG.w),
+          yG = LG.path,
+          kG = LG.lca,
+          UG = 0,
+          YG = yG[UG],
+          VG = !0;
+        for (; ZG !== SG.w;) {
+          if (wG = GG.node(ZG), VG) {
             for (;
-              (fu = Xu[qu]) !== lu && uu.node(fu).maxRank < su.rank;) qu++;
-            fu === lu && (Cu = !1)
+              (YG = yG[UG]) !== kG && GG.node(YG).maxRank < wG.rank;) UG++;
+            YG === kG && (VG = !1)
           }
-          if (!Cu) {
-            for (; qu < Xu.length - 1 && uu.node(Xu[qu + 1]).minRank <= su.rank;) qu++;
-            fu = Xu[qu]
+          if (!VG) {
+            for (; UG < yG.length - 1 && GG.node(yG[UG + 1]).minRank <= wG.rank;) UG++;
+            YG = yG[UG]
           }
-          void 0 !== fu && uu.setParent(ju, fu), ju = uu.successors(ju)[0]
+          void 0 !== YG && GG.setParent(ZG, YG), ZG = GG.successors(ZG)[0]
         }
       }))
     };
 
-    function WE(uu) {
-      let Eu = Fu(uu, "root", {}, "_root"),
-        ju = function(uu) {
-          let Eu = {};
+    function Ab(GG) {
+      let bG = nG(GG, "root", {}, "_root"),
+        ZG = function(GG) {
+          let bG = {};
 
-          function ju(su, Uu) {
-            let Zu = uu.children(su);
-            Zu && Zu.length && Zu.forEach((uu => ju(uu, Uu + 1))), Eu[su] = Uu
+          function ZG(wG, SG) {
+            let LG = GG.children(wG);
+            LG && LG.length && LG.forEach((GG => ZG(GG, SG + 1))), bG[wG] = SG
           }
-          return uu.children(sE).forEach((uu => ju(uu, 1))), Eu
-        }(uu),
-        su = Object.values(ju),
-        Uu = Hu(Math.max, su) - 1,
-        Zu = 2 * Uu + 1;
-      uu.graph().nestingRoot = Eu, uu.edges().forEach((Eu => uu.edge(Eu).minlen *= Zu));
-      let Xu = function(uu) {
-        return uu.edges().reduce(((Eu, ju) => Eu + uu.edge(ju).weight), 0)
-      }(uu) + 1;
-      uu.children(sE).forEach((su => {
-        SE(uu, Eu, Zu, Xu, Uu, ju, su)
-      })), uu.graph().nodeRankFactor = Zu
+          return GG.children(wb).forEach((GG => ZG(GG, 1))), bG
+        }(GG),
+        wG = Object.values(ZG),
+        SG = tG(Math.max, wG) - 1,
+        LG = 2 * SG + 1;
+      GG.graph().nestingRoot = bG, GG.edges().forEach((bG => GG.edge(bG).minlen *= LG));
+      let yG = function(GG) {
+        return GG.edges().reduce(((bG, ZG) => bG + GG.edge(ZG).weight), 0)
+      }(GG) + 1;
+      GG.children(wb).forEach((wG => {
+        sb(GG, bG, LG, yG, SG, ZG, wG)
+      })), GG.graph().nodeRankFactor = LG
     }
 
-    function SE(uu, Eu, ju, su, Uu, Zu, Xu) {
-      var lu;
-      let qu = uu.children(Xu);
-      if (!qu.length) return void(Xu !== Eu && uu.setEdge(Eu, Xu, {
+    function sb(GG, bG, ZG, wG, SG, LG, yG) {
+      var kG;
+      let UG = GG.children(yG);
+      if (!UG.length) return void(yG !== bG && GG.setEdge(bG, yG, {
         weight: 0,
-        minlen: ju
+        minlen: ZG
       }));
-      let fu = xu(uu, "_bt"),
-        Cu = xu(uu, "_bb"),
-        bu = uu.node(Xu);
-      uu.setParent(fu, Xu), bu.borderTop = fu, uu.setParent(Cu, Xu), bu.borderBottom = Cu, qu.forEach((lu => {
-        var qu;
-        SE(uu, Eu, ju, su, Uu, Zu, lu);
-        let bu = uu.node(lu),
-          cu = bu.borderTop ? bu.borderTop : lu,
-          Nu = bu.borderBottom ? bu.borderBottom : lu,
-          Ou = bu.borderTop ? su : 2 * su,
-          Yu = cu !== Nu ? 1 : Uu - (null != (qu = Zu[Xu]) ? qu : 0) + 1;
-        uu.setEdge(fu, cu, {
-          weight: Ou,
-          minlen: Yu,
+      let YG = TG(GG, "_bt"),
+        VG = TG(GG, "_bb"),
+        pG = GG.node(yG);
+      GG.setParent(YG, yG), pG.borderTop = YG, GG.setParent(VG, yG), pG.borderBottom = VG, UG.forEach((kG => {
+        var UG;
+        sb(GG, bG, ZG, wG, SG, LG, kG);
+        let pG = GG.node(kG),
+          fG = pG.borderTop ? pG.borderTop : kG,
+          QG = pG.borderBottom ? pG.borderBottom : kG,
+          KG = pG.borderTop ? wG : 2 * wG,
+          hG = fG !== QG ? 1 : SG - (null != (UG = LG[yG]) ? UG : 0) + 1;
+        GG.setEdge(YG, fG, {
+          weight: KG,
+          minlen: hG,
           nestingEdge: !0
-        }), uu.setEdge(Nu, Cu, {
-          weight: Ou,
-          minlen: Yu,
+        }), GG.setEdge(QG, VG, {
+          weight: KG,
+          minlen: hG,
           nestingEdge: !0
         })
-      })), uu.parent(Xu) || uu.setEdge(Eu, fu, {
+      })), GG.parent(yG) || GG.setEdge(bG, YG, {
         weight: 0,
-        minlen: Uu + (null != (lu = Zu[Xu]) ? lu : 0)
+        minlen: SG + (null != (kG = LG[yG]) ? kG : 0)
       })
     }
-    var IE = function(uu) {
-      uu.children(sE).forEach((function Eu(ju) {
-        let su = uu.children(ju),
-          Uu = uu.node(ju);
-        if (su.length && su.forEach(Eu), Uu && Object.hasOwn(Uu, "minRank")) {
-          Uu.borderLeft = [], Uu.borderRight = [];
-          for (let Eu = Uu.minRank, su = Uu.maxRank + 1; Eu < su; ++Eu) FE(uu, "borderLeft", "_bl", ju, Uu, Eu), FE(uu, "borderRight", "_br", ju, Uu, Eu)
+    var qb = function(GG) {
+      GG.children(wb).forEach((function bG(ZG) {
+        let wG = GG.children(ZG),
+          SG = GG.node(ZG);
+        if (wG.length && wG.forEach(bG), SG && Object.hasOwn(SG, "minRank")) {
+          SG.borderLeft = [], SG.borderRight = [];
+          for (let bG = SG.minRank, wG = SG.maxRank + 1; bG < wG; ++bG) nb(GG, "borderLeft", "_bl", ZG, SG, bG), nb(GG, "borderRight", "_br", ZG, SG, bG)
         }
       }))
     };
 
-    function FE(uu, Eu, ju, su, Uu, Zu) {
-      let Xu = {
+    function nb(GG, bG, ZG, wG, SG, LG) {
+      let yG = {
           width: 0,
           height: 0,
-          rank: Zu,
-          borderType: Eu
+          rank: LG,
+          borderType: bG
         },
-        lu = Uu[Eu][Zu - 1],
-        qu = Fu(uu, "border", Xu, ju);
-      Uu[Eu][Zu] = qu, uu.setParent(qu, su), lu && uu.setEdge(lu, qu, {
+        kG = SG[bG][LG - 1],
+        UG = nG(GG, "border", yG, ZG);
+      SG[bG][LG] = UG, GG.setParent(UG, wG), kG && GG.setEdge(kG, UG, {
         weight: 1
       })
     }
 
-    function BE(uu) {
-      var Eu;
-      let ju = null == (Eu = uu.graph().rankdir) ? void 0 : Eu.toLowerCase();
-      ("bt" === ju || "rl" === ju) && function(uu) {
-        uu.nodes().forEach((Eu => xE(uu.node(Eu)))), uu.edges().forEach((Eu => {
-          var ju;
-          let su = uu.edge(Eu);
-          null == (ju = su.points) || ju.forEach(xE), Object.hasOwn(su, "y") && xE(su)
+    function gb(GG) {
+      var bG;
+      let ZG = null == (bG = GG.graph().rankdir) ? void 0 : bG.toLowerCase();
+      ("bt" === ZG || "rl" === ZG) && function(GG) {
+        GG.nodes().forEach((bG => Tb(GG.node(bG)))), GG.edges().forEach((bG => {
+          var ZG;
+          let wG = GG.edge(bG);
+          null == (ZG = wG.points) || ZG.forEach(Tb), Object.hasOwn(wG, "y") && Tb(wG)
         }))
-      }(uu), ("lr" === ju || "rl" === ju) && (function(uu) {
-        uu.nodes().forEach((Eu => TE(uu.node(Eu)))), uu.edges().forEach((Eu => {
-          var ju;
-          let su = uu.edge(Eu);
-          null == (ju = su.points) || ju.forEach(TE), Object.hasOwn(su, "x") && TE(su)
+      }(GG), ("lr" === ZG || "rl" === ZG) && (function(GG) {
+        GG.nodes().forEach((bG => Hb(GG.node(bG)))), GG.edges().forEach((bG => {
+          var ZG;
+          let wG = GG.edge(bG);
+          null == (ZG = wG.points) || ZG.forEach(Hb), Object.hasOwn(wG, "x") && Hb(wG)
         }))
-      }(uu), LE(uu))
+      }(GG), eb(GG))
     }
 
-    function LE(uu) {
-      uu.nodes().forEach((Eu => tE(uu.node(Eu)))), uu.edges().forEach((Eu => tE(uu.edge(Eu))))
+    function eb(GG) {
+      GG.nodes().forEach((bG => Rb(GG.node(bG)))), GG.edges().forEach((bG => Rb(GG.edge(bG))))
     }
 
-    function tE(uu) {
-      let Eu = uu.width;
-      uu.width = uu.height, uu.height = Eu
+    function Rb(GG) {
+      let bG = GG.width;
+      GG.width = GG.height, GG.height = bG
     }
 
-    function xE(uu) {
-      uu.y = -uu.y
+    function Tb(GG) {
+      GG.y = -GG.y
     }
 
-    function TE(uu) {
-      let Eu = uu.x;
-      uu.x = uu.y, uu.y = Eu
+    function Hb(GG) {
+      let bG = GG.x;
+      GG.x = GG.y, GG.y = bG
     }
 
-    function HE(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-        ju = {},
-        su = uu.nodes().filter((Eu => !uu.children(Eu).length)),
-        Uu = su.map((Eu => uu.node(Eu).rank)),
-        Zu = uE(Hu(Math.max, Uu) + 1).map((() => []));
-      return su.sort(((Eu, ju) => uu.node(Eu).rank - uu.node(ju).rank)).forEach((function su(Uu) {
-        if (ju[Uu]) return;
-        ju[Uu] = !0;
-        let Xu = uu.node(Uu);
-        Zu[Xu.rank].push(Uu);
-        let lu = uu.successors(Uu);
-        lu && [...lu].sort(((ju, su) => function(ju, su) {
-          let Uu = uu.node(ju),
-            Zu = uu.node(su);
-          return UE(Eu, Uu, Zu)
-        }(ju, su))).forEach(su)
-      })), Zu
+    function tb(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+        ZG = {},
+        wG = GG.nodes().filter((bG => !GG.children(bG).length)),
+        SG = wG.map((bG => GG.node(bG).rank)),
+        LG = Gb(tG(Math.max, SG) + 1).map((() => []));
+      return wG.sort(((bG, ZG) => GG.node(bG).rank - GG.node(ZG).rank)).forEach((function wG(SG) {
+        if (ZG[SG]) return;
+        ZG[SG] = !0;
+        let yG = GG.node(SG);
+        LG[yG.rank].push(SG);
+        let kG = GG.successors(SG);
+        kG && [...kG].sort(((ZG, wG) => function(ZG, wG) {
+          let SG = GG.node(ZG),
+            LG = GG.node(wG);
+          return Sb(bG, SG, LG)
+        }(ZG, wG))).forEach(wG)
+      })), LG
     }
 
-    function AE(uu, Eu) {
-      let ju = 0;
-      for (let su = 1; su < Eu.length; ++su) ju += nE(uu, Eu[su - 1], Eu[su]);
-      return ju
+    function Db(GG, bG) {
+      let ZG = 0;
+      for (let wG = 1; wG < bG.length; ++wG) ZG += Nb(GG, bG[wG - 1], bG[wG]);
+      return ZG
     }
 
-    function nE(uu, Eu, ju) {
-      let su = function(uu, Eu) {
-          return uu.reduce(((uu, ju, su) => (uu[ju] = Eu[su], uu)), {})
-        }(ju, ju.map(((uu, Eu) => Eu))),
-        Uu = Eu.flatMap((Eu => {
-          let ju = uu.outEdges(Eu);
-          return ju ? ju.map((Eu => ({
-            pos: su[Eu.w],
-            weight: uu.edge(Eu).weight
-          }))).sort(((uu, Eu) => uu.pos - Eu.pos)) : []
+    function Nb(GG, bG, ZG) {
+      let wG = function(GG, bG) {
+          return GG.reduce(((GG, ZG, wG) => (GG[ZG] = bG[wG], GG)), {})
+        }(ZG, ZG.map(((GG, bG) => bG))),
+        SG = bG.flatMap((bG => {
+          let ZG = GG.outEdges(bG);
+          return ZG ? ZG.map((bG => ({
+            pos: wG[bG.w],
+            weight: GG.edge(bG).weight
+          }))).sort(((GG, bG) => GG.pos - bG.pos)) : []
         })),
-        Zu = 1;
-      for (; Zu < ju.length;) Zu <<= 1;
-      let Xu = 2 * Zu - 1;
-      Zu -= 1;
-      let lu = new Array(Xu).fill(0),
-        qu = 0;
-      return Uu.forEach((uu => {
-        let Eu = uu.pos + Zu;
-        lu[Eu] += uu.weight;
-        let ju = 0;
-        for (; Eu > 0;) Eu % 2 && (ju += lu[Eu + 1]), Eu = Eu - 1 >> 1, lu[Eu] += uu.weight;
-        qu += uu.weight * ju
-      })), qu
+        LG = 1;
+      for (; LG < ZG.length;) LG <<= 1;
+      let yG = 2 * LG - 1;
+      LG -= 1;
+      let kG = new Array(yG).fill(0),
+        UG = 0;
+      return SG.forEach((GG => {
+        let bG = GG.pos + LG;
+        kG[bG] += GG.weight;
+        let ZG = 0;
+        for (; bG > 0;) bG % 2 && (ZG += kG[bG + 1]), bG = bG - 1 >> 1, kG[bG] += GG.weight;
+        UG += GG.weight * ZG
+      })), UG
     }
 
-    function yE(uu, Eu) {
-      let ju = {};
-      return uu.forEach(((uu, Eu) => {
-          let su = {
+    function Ob(GG, bG) {
+      let ZG = {};
+      return GG.forEach(((GG, bG) => {
+          let wG = {
             indegree: 0,
             in: [],
             out: [],
-            vs: [uu.v],
-            i: Eu
+            vs: [GG.v],
+            i: bG
           };
-          void 0 !== uu.barycenter && (su.barycenter = uu.barycenter, su.weight = uu.weight), ju[uu.v] = su
-        })), Eu.edges().forEach((uu => {
-          let Eu = ju[uu.v],
-            su = ju[uu.w];
-          void 0 !== Eu && void 0 !== su && (su.indegree++, Eu.out.push(su))
+          void 0 !== GG.barycenter && (wG.barycenter = GG.barycenter, wG.weight = GG.weight), ZG[GG.v] = wG
+        })), bG.edges().forEach((GG => {
+          let bG = ZG[GG.v],
+            wG = ZG[GG.w];
+          void 0 !== bG && void 0 !== wG && (wG.indegree++, bG.out.push(wG))
         })),
-        function(uu) {
-          let Eu = [];
+        function(GG) {
+          let bG = [];
 
-          function ju(uu) {
-            return Eu => {
-              Eu.merged || (void 0 === Eu.barycenter || void 0 === uu.barycenter || Eu.barycenter >= uu.barycenter) && function(uu, Eu) {
-                let ju = 0,
-                  su = 0;
-                uu.weight && (ju += uu.barycenter * uu.weight, su += uu.weight), Eu.weight && (ju += Eu.barycenter * Eu.weight, su += Eu.weight), uu.vs = Eu.vs.concat(uu.vs), uu.barycenter = ju / su, uu.weight = su, uu.i = Math.min(Eu.i, uu.i), Eu.merged = !0
-              }(uu, Eu)
+          function ZG(GG) {
+            return bG => {
+              bG.merged || (void 0 === bG.barycenter || void 0 === GG.barycenter || bG.barycenter >= GG.barycenter) && function(GG, bG) {
+                let ZG = 0,
+                  wG = 0;
+                GG.weight && (ZG += GG.barycenter * GG.weight, wG += GG.weight), bG.weight && (ZG += bG.barycenter * bG.weight, wG += bG.weight), GG.vs = bG.vs.concat(GG.vs), GG.barycenter = ZG / wG, GG.weight = wG, GG.i = Math.min(bG.i, GG.i), bG.merged = !0
+              }(GG, bG)
             }
           }
 
-          function su(Eu) {
-            return ju => {
-              ju.in.push(Eu), 0 === --ju.indegree && uu.push(ju)
+          function wG(bG) {
+            return ZG => {
+              ZG.in.push(bG), 0 === --ZG.indegree && GG.push(ZG)
             }
           }
-          for (; uu.length;) {
-            let Uu = uu.pop();
-            Eu.push(Uu), Uu.in.reverse().forEach(ju(Uu)), Uu.out.forEach(su(Uu))
+          for (; GG.length;) {
+            let SG = GG.pop();
+            bG.push(SG), SG.in.reverse().forEach(ZG(SG)), SG.out.forEach(wG(SG))
           }
-          return Eu.filter((uu => !uu.merged)).map((uu => EE(uu, ["vs", "i", "barycenter", "weight"])))
-        }(Object.values(ju).filter((uu => !uu.indegree)))
+          return bG.filter((GG => !GG.merged)).map((GG => bb(GG, ["vs", "i", "barycenter", "weight"])))
+        }(Object.values(ZG).filter((GG => !GG.indegree)))
     }
 
-    function zE(uu, Eu, ju, su, Uu) {
-      let Zu = {},
-        Xu = null,
-        lu = null,
-        qu = Uu;
-      "boolean" == typeof Eu ? (qu = Eu, Zu = {}) : Eu && (Zu = Eu, Xu = null != ju ? ju : null, lu = null != su ? su : null);
-      let fu = function(uu, Eu) {
-          let ju = {
+    function xb(GG, bG, ZG, wG, SG) {
+      let LG = {},
+        yG = null,
+        kG = null,
+        UG = SG;
+      "boolean" == typeof bG ? (UG = bG, LG = {}) : bG && (LG = bG, yG = null != ZG ? ZG : null, kG = null != wG ? wG : null);
+      let YG = function(GG, bG) {
+          let ZG = {
             lhs: [],
             rhs: []
           };
-          return uu.forEach((uu => {
-            Eu(uu) ? ju.lhs.push(uu) : ju.rhs.push(uu)
-          })), ju
-        }(uu, (uu => Object.hasOwn(uu, "barycenter"))),
-        Cu = fu.lhs,
-        bu = fu.rhs.sort(((uu, Eu) => Eu.i - uu.i)),
-        cu = [],
-        Nu = 0,
-        Ou = 0,
-        Yu = 0;
-      Cu.sort(function(uu, Eu, ju) {
-        return (su, Uu) => {
-          if (su.barycenter < Uu.barycenter) return -1;
-          if (su.barycenter > Uu.barycenter) return 1;
-          if (uu && ("string" == typeof su.vs[0] || "string" == typeof Uu.vs[0])) {
-            let ju = uu.node(su.vs[0]),
-              Zu = uu.node(Uu.vs[0]),
-              Xu = UE(Eu, ju, Zu);
-            if (0 !== Xu) return Xu
+          return GG.forEach((GG => {
+            bG(GG) ? ZG.lhs.push(GG) : ZG.rhs.push(GG)
+          })), ZG
+        }(GG, (GG => Object.hasOwn(GG, "barycenter"))),
+        VG = YG.lhs,
+        pG = YG.rhs.sort(((GG, bG) => bG.i - GG.i)),
+        fG = [],
+        QG = 0,
+        KG = 0,
+        hG = 0;
+      VG.sort(function(GG, bG, ZG) {
+        return (wG, SG) => {
+          if (wG.barycenter < SG.barycenter) return -1;
+          if (wG.barycenter > SG.barycenter) return 1;
+          if (GG && ("string" == typeof wG.vs[0] || "string" == typeof SG.vs[0])) {
+            let ZG = GG.node(wG.vs[0]),
+              LG = GG.node(SG.vs[0]),
+              yG = Sb(bG, ZG, LG);
+            if (0 !== yG) return yG
           }
-          return ju ? Uu.i - su.i : su.i - Uu.i
+          return ZG ? SG.i - wG.i : wG.i - SG.i
         }
-      }(lu, Xu, !!qu));
-      for (let [Du, gu] of Object.entries(Zu)) {
-        let uu = Cu.findIndex((uu => uu.vs[0] === Du));
-        Cu.splice(uu + 1, 0, gu)
+      }(kG, yG, !!UG));
+      for (let [JG, rG] of Object.entries(LG)) {
+        let GG = VG.findIndex((GG => GG.vs[0] === JG));
+        VG.splice(GG + 1, 0, rG)
       }
-      Yu = RE(cu, bu, Yu), Cu.forEach((uu => {
-        Yu += uu.vs.length, cu.push(uu.vs), Nu += uu.barycenter * uu.weight, Ou += uu.weight, Yu = RE(cu, bu, Yu)
+      hG = Bb(fG, pG, hG), VG.forEach((GG => {
+        hG += GG.vs.length, fG.push(GG.vs), QG += GG.barycenter * GG.weight, KG += GG.weight, hG = Bb(fG, pG, hG)
       }));
-      let hu = {
-        vs: cu.flat(1)
+      let dG = {
+        vs: fG.flat(1)
       };
-      return Ou && (hu.barycenter = Nu / Ou, hu.weight = Ou), hu
+      return KG && (dG.barycenter = QG / KG, dG.weight = KG), dG
     }
 
-    function RE(uu, Eu, ju) {
-      let su;
-      for (; Eu.length && (su = Eu[Eu.length - 1]).i <= ju;) Eu.pop(), uu.push(su.vs), ju++;
-      return ju
+    function Bb(GG, bG, ZG) {
+      let wG;
+      for (; bG.length && (wG = bG[bG.length - 1]).i <= ZG;) bG.pop(), GG.push(wG.vs), ZG++;
+      return ZG
     }
 
-    function uj(uu, Eu, ju, su, Uu) {
-      var Zu, Xu, lu, qu, fu, Cu, bu, cu, Nu, Ou, Yu;
-      let hu = null,
-        Du = Uu;
-      "boolean" == typeof su ? (Du = su, hu = null) : void 0 !== su && (hu = su);
-      let gu = uu.children(Eu),
-        Mu = uu.node(Eu),
-        eu = Mu ? Mu.borderLeft : void 0,
-        Gu = Mu ? Mu.borderRight : void 0,
-        pu = {};
-      eu && (gu = gu.filter((uu => uu !== eu && uu !== Gu)));
-      let wu = function(uu) {
-        return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).map((Eu => {
-          let ju = uu.inEdges(Eu);
-          if (!ju || !ju.length) return {
-            v: Eu
+    function GZ(GG, bG, ZG, wG, SG) {
+      var LG, yG, kG, UG, YG, VG, pG, fG, QG, KG, hG;
+      let dG = null,
+        JG = SG;
+      "boolean" == typeof wG ? (JG = wG, dG = null) : void 0 !== wG && (dG = wG);
+      let rG = GG.children(bG),
+        zG = GG.node(bG),
+        EG = zG ? zG.borderLeft : void 0,
+        oG = zG ? zG.borderRight : void 0,
+        XG = {};
+      EG && (rG = rG.filter((GG => GG !== EG && GG !== oG)));
+      let uG = function(GG) {
+        return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).map((bG => {
+          let ZG = GG.inEdges(bG);
+          if (!ZG || !ZG.length) return {
+            v: bG
           };
           {
-            let su = ju.reduce(((Eu, ju) => {
-              let su = uu.edge(ju),
-                Uu = uu.node(ju.v);
+            let wG = ZG.reduce(((bG, ZG) => {
+              let wG = GG.edge(ZG),
+                SG = GG.node(ZG.v);
               return {
-                sum: Eu.sum + su.weight * Uu.order,
-                weight: Eu.weight + su.weight
+                sum: bG.sum + wG.weight * SG.order,
+                weight: bG.weight + wG.weight
               }
             }), {
               sum: 0,
               weight: 0
             });
             return {
-              v: Eu,
-              barycenter: su.sum / su.weight,
-              weight: su.weight
+              v: bG,
+              barycenter: wG.sum / wG.weight,
+              weight: wG.weight
             }
           }
         }))
-      }(uu, gu);
-      wu.forEach((Eu => {
-        if (uu.children(Eu.v).length) {
+      }(GG, rG);
+      uG.forEach((bG => {
+        if (GG.children(bG.v).length) {
           let {
-            result: su
-          } = uj(uu, Eu.v, ju, hu, Du);
-          pu[Eu.v] = su, Object.hasOwn(su, "barycenter") && function(uu, Eu) {
-            void 0 !== uu.barycenter ? (uu.barycenter = (uu.barycenter * uu.weight + Eu.barycenter * Eu.weight) / (uu.weight + Eu.weight), uu.weight += Eu.weight) : (uu.barycenter = Eu.barycenter, uu.weight = Eu.weight)
-          }(Eu, su)
+            result: wG
+          } = GZ(GG, bG.v, ZG, dG, JG);
+          XG[bG.v] = wG, Object.hasOwn(wG, "barycenter") && function(GG, bG) {
+            void 0 !== GG.barycenter ? (GG.barycenter = (GG.barycenter * GG.weight + bG.barycenter * bG.weight) / (GG.weight + bG.weight), GG.weight += bG.weight) : (GG.barycenter = bG.barycenter, GG.weight = bG.weight)
+          }(bG, wG)
         }
       }));
-      let Ju = yE(wu, ju);
-      ! function(uu, Eu) {
-        uu.forEach((uu => {
-          uu.vs = uu.vs.flatMap((uu => Eu[uu] ? Eu[uu].vs : uu))
+      let iG = Ob(uG, ZG);
+      ! function(GG, bG) {
+        GG.forEach((GG => {
+          GG.vs = GG.vs.flatMap((GG => bG[GG] ? bG[GG].vs : GG))
         }))
-      }(Ju, pu);
-      let du = {},
-        au = !1;
-      for (let ou = 0; ou < Ju.length; ou++)
-        for (let Eu = ou + 1; Eu < Ju.length; Eu++)
-          if (Ju[ou] && Ju[Eu] && null != (Zu = Ju[ou]) && Zu.barycenter && null != (Xu = Ju[Eu]) && Xu.barycenter && (null == (lu = Ju[ou]) ? void 0 : lu.barycenter) === Ju[Eu].barycenter) {
-            let ju = null != (fu = null == (qu = Ju[ou]) ? void 0 : qu.vs[0]) ? fu : "",
-              su = null != (bu = null == (Cu = Ju[Eu]) ? void 0 : Cu.vs[0]) ? bu : "",
-              Uu = uu.node(ju),
-              Zu = uu.node(su);
-            if ("edge" === Uu.dummy && "edge" === Zu.dummy && (null == (cu = Uu.edgeObj) ? void 0 : cu.v) === (null == (Nu = Zu.edgeObj) ? void 0 : Nu.v) && (null == (Ou = Uu.edgeObj) ? void 0 : Ou.w) === (null == (Yu = Zu.edgeObj) ? void 0 : Yu.w)) {
-              if (Uu.edgeLabel.reversed) {
-                du[su] = Ju[ou], Ju.splice(ou, 1), ou--;
+      }(iG, XG);
+      let CG = {},
+        WG = !1;
+      for (let IG = 0; IG < iG.length; IG++)
+        for (let bG = IG + 1; bG < iG.length; bG++)
+          if (iG[IG] && iG[bG] && null != (LG = iG[IG]) && LG.barycenter && null != (yG = iG[bG]) && yG.barycenter && (null == (kG = iG[IG]) ? void 0 : kG.barycenter) === iG[bG].barycenter) {
+            let ZG = null != (YG = null == (UG = iG[IG]) ? void 0 : UG.vs[0]) ? YG : "",
+              wG = null != (pG = null == (VG = iG[bG]) ? void 0 : VG.vs[0]) ? pG : "",
+              SG = GG.node(ZG),
+              LG = GG.node(wG);
+            if ("edge" === SG.dummy && "edge" === LG.dummy && (null == (fG = SG.edgeObj) ? void 0 : fG.v) === (null == (QG = LG.edgeObj) ? void 0 : QG.v) && (null == (KG = SG.edgeObj) ? void 0 : KG.w) === (null == (hG = LG.edgeObj) ? void 0 : hG.w)) {
+              if (SG.edgeLabel.reversed) {
+                CG[wG] = iG[IG], iG.splice(IG, 1), IG--;
                 break
               }
-              du[ju] = Ju[Eu], Ju.splice(Eu, 1), Eu--
-            } else au = !0
-          } let Pu = zE(Ju, du, hu, uu, Du);
-      if (eu && Gu) {
-        Pu.vs = [eu, Pu.vs, Gu].flat(1);
-        let Eu = uu.predecessors(eu);
-        if (Eu && Eu.length) {
-          let ju = uu.node(Eu[0]),
-            su = uu.predecessors(Gu),
-            Uu = uu.node(su[0]);
-          Object.hasOwn(Pu, "barycenter") || (Pu.barycenter = 0, Pu.weight = 0), Pu.barycenter = (Pu.barycenter * Pu.weight + ju.order + Uu.order) / (Pu.weight + 2), Pu.weight += 2
+              CG[ZG] = iG[bG], iG.splice(bG, 1), bG--
+            } else WG = !0
+          } let mG = xb(iG, CG, dG, GG, JG);
+      if (EG && oG) {
+        mG.vs = [EG, mG.vs, oG].flat(1);
+        let bG = GG.predecessors(EG);
+        if (bG && bG.length) {
+          let ZG = GG.node(bG[0]),
+            wG = GG.predecessors(oG),
+            SG = GG.node(wG[0]);
+          Object.hasOwn(mG, "barycenter") || (mG.barycenter = 0, mG.weight = 0), mG.barycenter = (mG.barycenter * mG.weight + ZG.order + SG.order) / (mG.weight + 2), mG.weight += 2
         }
       }
-      return Object.defineProperty(Pu, "result", {
-        value: Pu,
+      return Object.defineProperty(mG, "result", {
+        value: mG,
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), Object.defineProperty(Pu, "usedBias", {
-        value: au,
+      }), Object.defineProperty(mG, "usedBias", {
+        value: WG,
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), Pu
+      }), mG
     }
 
-    function Ej(uu, Eu, ju, su) {
-      su || (su = uu.nodes());
-      let Uu = function(uu) {
-          let Eu;
-          for (; uu.hasNode(Eu = Ru("_root")););
-          return Eu
-        }(uu),
-        Zu = new Iu({
+    function bZ(GG, bG, ZG, wG) {
+      wG || (wG = GG.nodes());
+      let SG = function(GG) {
+          let bG;
+          for (; GG.hasNode(bG = BG("_root")););
+          return bG
+        }(GG),
+        LG = new qG({
           compound: !0
         }).setGraph({
-          root: Uu
-        }).setDefaultNodeLabel((Eu => uu.node(Eu)));
-      return su.forEach((su => {
-        let Xu = uu.node(su),
-          lu = uu.parent(su);
-        if (Xu.rank === Eu || Xu.minRank <= Eu && Eu <= Xu.maxRank) {
-          Zu.setNode(su), Zu.setParent(su, lu || Uu);
-          let qu = uu[ju](su);
-          qu && qu.forEach((Eu => {
-            let ju = Eu.v === su ? Eu.w : Eu.v,
-              Uu = Zu.edge(ju, su),
-              Xu = void 0 !== Uu ? Uu.weight : 0;
-            Zu.setEdge(ju, su, {
-              weight: uu.edge(Eu).weight + Xu
+          root: SG
+        }).setDefaultNodeLabel((bG => GG.node(bG)));
+      return wG.forEach((wG => {
+        let yG = GG.node(wG),
+          kG = GG.parent(wG);
+        if (yG.rank === bG || yG.minRank <= bG && bG <= yG.maxRank) {
+          LG.setNode(wG), LG.setParent(wG, kG || SG);
+          let UG = GG[ZG](wG);
+          UG && UG.forEach((bG => {
+            let ZG = bG.v === wG ? bG.w : bG.v,
+              SG = LG.edge(ZG, wG),
+              yG = void 0 !== SG ? SG.weight : 0;
+            LG.setEdge(ZG, wG, {
+              weight: GG.edge(bG).weight + yG
             })
-          })), Object.hasOwn(Xu, "minRank") && Zu.setNode(su, {
-            borderLeft: Xu.borderLeft[Eu],
-            borderRight: Xu.borderRight[Eu]
+          })), Object.hasOwn(yG, "minRank") && LG.setNode(wG, {
+            borderLeft: yG.borderLeft[bG],
+            borderRight: yG.borderRight[bG]
           })
         }
-      })), Zu
+      })), LG
     }
 
-    function jj(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      if ("function" == typeof Eu.customOrder) return void Eu.customOrder(uu, jj);
-      let su = Au(uu),
-        Uu = sj(uu, uE(1, su + 1), "inEdges"),
-        Zu = sj(uu, uE(su - 1, -1, -1), "outEdges"),
-        Xu = HE(uu, ju);
-      if (Zj(uu, Xu), Eu.disableOptimalOrderHeuristic) return;
-      let lu, qu = Number.POSITIVE_INFINITY,
-        fu = Eu.constraints || [];
-      for (let Cu = 0, bu = 0; bu < 4; ++Cu, ++bu) {
-        Uj(Cu % 2 ? Uu : Zu, Cu % 4 >= 2, fu, ju), Xu = tu(uu);
-        let Eu = AE(uu, Xu);
-        Eu < qu ? (bu = 0, lu = Object.assign({}, Xu), qu = Eu) : Eu === qu && (lu = structuredClone(Xu))
+    function ZZ(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      if ("function" == typeof bG.customOrder) return void bG.customOrder(GG, ZZ);
+      let wG = DG(GG),
+        SG = wZ(GG, Gb(1, wG + 1), "inEdges"),
+        LG = wZ(GG, Gb(wG - 1, -1, -1), "outEdges"),
+        yG = tb(GG, ZG);
+      if (LZ(GG, yG), bG.disableOptimalOrderHeuristic) return;
+      let kG, UG = Number.POSITIVE_INFINITY,
+        YG = bG.constraints || [];
+      for (let VG = 0, pG = 0; pG < 4; ++VG, ++pG) {
+        SZ(VG % 2 ? SG : LG, VG % 4 >= 2, YG, ZG), yG = RG(GG);
+        let bG = Db(GG, yG);
+        bG < UG ? (pG = 0, kG = Object.assign({}, yG), UG = bG) : bG === UG && (kG = structuredClone(yG))
       }
-      Zj(uu, lu)
+      LZ(GG, kG)
     }
 
-    function sj(uu, Eu, ju) {
-      let su = new Map,
-        Uu = (uu, Eu) => {
-          su.has(uu) || su.set(uu, []), su.get(uu).push(Eu)
+    function wZ(GG, bG, ZG) {
+      let wG = new Map,
+        SG = (GG, bG) => {
+          wG.has(GG) || wG.set(GG, []), wG.get(GG).push(bG)
         };
-      for (let Zu of uu.nodes()) {
-        let Eu = uu.node(Zu);
-        if ("number" == typeof Eu.rank && Uu(Eu.rank, Zu), "number" == typeof Eu.minRank && "number" == typeof Eu.maxRank)
-          for (let uu = Eu.minRank; uu <= Eu.maxRank; uu++) uu !== Eu.rank && Uu(uu, Zu)
+      for (let LG of GG.nodes()) {
+        let bG = GG.node(LG);
+        if ("number" == typeof bG.rank && SG(bG.rank, LG), "number" == typeof bG.minRank && "number" == typeof bG.maxRank)
+          for (let GG = bG.minRank; GG <= bG.maxRank; GG++) GG !== bG.rank && SG(GG, LG)
       }
-      return Eu.map((function(Eu) {
-        return Ej(uu, Eu, ju, su.get(Eu) || [])
+      return bG.map((function(bG) {
+        return bZ(GG, bG, ZG, wG.get(bG) || [])
       }))
     }
 
-    function Uj(uu, Eu, ju, su) {
-      let Uu = !0,
-        Zu = new Iu;
-      uu.forEach((function(uu) {
-        ju.forEach((uu => Zu.setEdge(uu.left, uu.right)));
-        let Xu = uu.graph().root,
+    function SZ(GG, bG, ZG, wG) {
+      let SG = !0,
+        LG = new qG;
+      GG.forEach((function(GG) {
+        ZG.forEach((GG => LG.setEdge(GG.left, GG.right)));
+        let yG = GG.graph().root,
           {
-            result: lu,
-            usedBias: qu
-          } = uj(uu, Xu, Zu, su, Uu);
-        Eu && qu && (Uu = !Uu), lu.vs.forEach(((Eu, ju) => uu.node(Eu).order = ju)),
-          function(uu, Eu, ju) {
-            let su, Uu = {};
-            ju.forEach((ju => {
-              let Zu, Xu, lu = uu.parent(ju);
-              for (; lu;) {
-                if (Zu = uu.parent(lu), Zu ? (Xu = Uu[Zu], Uu[Zu] = lu) : (Xu = su, su = lu), Xu && Xu !== lu) return void Eu.setEdge(Xu, lu);
-                lu = Zu
+            result: kG,
+            usedBias: UG
+          } = GZ(GG, yG, LG, wG, SG);
+        bG && UG && (SG = !SG), kG.vs.forEach(((bG, ZG) => GG.node(bG).order = ZG)),
+          function(GG, bG, ZG) {
+            let wG, SG = {};
+            ZG.forEach((ZG => {
+              let LG, yG, kG = GG.parent(ZG);
+              for (; kG;) {
+                if (LG = GG.parent(kG), LG ? (yG = SG[LG], SG[LG] = kG) : (yG = wG, wG = kG), yG && yG !== kG) return void bG.setEdge(yG, kG);
+                kG = LG
               }
             }))
-          }(uu, Zu, lu.vs)
+          }(GG, LG, kG.vs)
       }))
     }
 
-    function Zj(uu, Eu) {
-      Object.values(Eu).forEach((Eu => Eu.forEach(((Eu, ju) => uu.node(Eu).order = ju))))
+    function LZ(GG, bG) {
+      Object.values(bG).forEach((bG => bG.forEach(((bG, ZG) => GG.node(bG).order = ZG))))
     }
 
-    function Xj(uu, Eu, ju) {
-      if (Eu > ju) {
-        let uu = Eu;
-        Eu = ju, ju = uu
+    function yZ(GG, bG, ZG) {
+      if (bG > ZG) {
+        let GG = bG;
+        bG = ZG, ZG = GG
       }
-      let su = uu[Eu];
-      su || (uu[Eu] = su = {}), su[ju] = !0
+      let wG = GG[bG];
+      wG || (GG[bG] = wG = {}), wG[ZG] = !0
     }
 
-    function lj(uu, Eu, ju) {
-      if (Eu > ju) {
-        let uu = Eu;
-        Eu = ju, ju = uu
+    function kZ(GG, bG, ZG) {
+      if (bG > ZG) {
+        let GG = bG;
+        bG = ZG, ZG = GG
       }
-      let su = uu[Eu];
-      return void 0 !== su && Object.hasOwn(su, ju)
+      let wG = GG[bG];
+      return void 0 !== wG && Object.hasOwn(wG, ZG)
     }
 
-    function qj(uu, Eu, ju, su) {
-      let Uu = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        Zu = {},
-        Xu = function(uu, Eu, ju, su) {
-          let Uu = new Iu,
-            Zu = uu.graph(),
-            Xu = function(uu, Eu, ju) {
-              return (su, Uu, Zu) => {
-                let Xu, lu = su.node(Uu),
-                  qu = su.node(Zu),
-                  fu = 0;
-                if (fu += lu.width / 2, Object.hasOwn(lu, "labelpos")) switch (lu.labelpos.toLowerCase()) {
+    function UZ(GG, bG, ZG, wG) {
+      let SG = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        LG = {},
+        yG = function(GG, bG, ZG, wG) {
+          let SG = new qG,
+            LG = GG.graph(),
+            yG = function(GG, bG, ZG) {
+              return (wG, SG, LG) => {
+                let yG, kG = wG.node(SG),
+                  UG = wG.node(LG),
+                  YG = 0;
+                if (YG += kG.width / 2, Object.hasOwn(kG, "labelpos")) switch (kG.labelpos.toLowerCase()) {
                   case "l":
-                    Xu = -lu.width / 2;
+                    yG = -kG.width / 2;
                     break;
                   case "r":
-                    Xu = lu.width / 2
+                    yG = kG.width / 2
                 }
-                if (Xu && (fu += ju ? Xu : -Xu), Xu = void 0, fu += (lu.dummy ? Eu : uu) / 2, fu += (qu.dummy ? Eu : uu) / 2, fu += qu.width / 2, Object.hasOwn(qu, "labelpos")) switch (qu.labelpos.toLowerCase()) {
+                if (yG && (YG += ZG ? yG : -yG), yG = void 0, YG += (kG.dummy ? bG : GG) / 2, YG += (UG.dummy ? bG : GG) / 2, YG += UG.width / 2, Object.hasOwn(UG, "labelpos")) switch (UG.labelpos.toLowerCase()) {
                   case "l":
-                    Xu = qu.width / 2;
+                    yG = UG.width / 2;
                     break;
                   case "r":
-                    Xu = -qu.width / 2
+                    yG = -UG.width / 2
                 }
-                return Xu && (fu += ju ? Xu : -Xu), fu
+                return yG && (YG += ZG ? yG : -yG), YG
               }
-            }(Zu.nodesep, Zu.edgesep, su);
-          return Eu.forEach((Eu => {
-            let su;
-            Eu.forEach((Eu => {
-              let Zu = ju[Eu];
-              if (void 0 !== Zu) {
-                if (Uu.setNode(Zu), void 0 !== su) {
-                  let lu = ju[su];
-                  if (void 0 !== lu) {
-                    let ju = Uu.edge(lu, Zu);
-                    Uu.setEdge(lu, Zu, Math.max(Xu(uu, Eu, su), ju || 0))
+            }(LG.nodesep, LG.edgesep, wG);
+          return bG.forEach((bG => {
+            let wG;
+            bG.forEach((bG => {
+              let LG = ZG[bG];
+              if (void 0 !== LG) {
+                if (SG.setNode(LG), void 0 !== wG) {
+                  let kG = ZG[wG];
+                  if (void 0 !== kG) {
+                    let ZG = SG.edge(kG, LG);
+                    SG.setEdge(kG, LG, Math.max(yG(GG, bG, wG), ZG || 0))
                   }
                 }
-                su = Eu
+                wG = bG
               }
             }))
-          })), Uu
-        }(uu, Eu, ju, Uu),
-        lu = Uu ? "borderLeft" : "borderRight";
+          })), SG
+        }(GG, bG, ZG, SG),
+        kG = SG ? "borderLeft" : "borderRight";
 
-      function qu(uu, Eu) {
-        let ju = Xu.nodes().slice(),
-          su = {},
-          Uu = ju.pop();
-        for (; Uu;) {
-          if (su[Uu]) uu(Uu);
+      function UG(GG, bG) {
+        let ZG = yG.nodes().slice(),
+          wG = {},
+          SG = ZG.pop();
+        for (; SG;) {
+          if (wG[SG]) GG(SG);
           else {
-            su[Uu] = !0, ju.push(Uu);
-            for (let uu of Eu(Uu)) ju.push(uu)
+            wG[SG] = !0, ZG.push(SG);
+            for (let GG of bG(SG)) ZG.push(GG)
           }
-          Uu = ju.pop()
+          SG = ZG.pop()
         }
       }
-      return qu((function(uu) {
-        let Eu = Xu.inEdges(uu);
-        Zu[uu] = Eu ? Eu.reduce(((uu, Eu) => {
-          var ju;
-          let su = null != (ju = Zu[Eu.v]) ? ju : 0,
-            Uu = Xu.edge(Eu);
-          return Math.max(uu, su + (void 0 !== Uu ? Uu : 0))
+      return UG((function(GG) {
+        let bG = yG.inEdges(GG);
+        LG[GG] = bG ? bG.reduce(((GG, bG) => {
+          var ZG;
+          let wG = null != (ZG = LG[bG.v]) ? ZG : 0,
+            SG = yG.edge(bG);
+          return Math.max(GG, wG + (void 0 !== SG ? SG : 0))
         }), 0) : 0
-      }), (function(uu) {
-        return Xu.predecessors(uu) || []
-      })), qu((function(Eu) {
-        let ju = Xu.outEdges(Eu),
-          su = Number.POSITIVE_INFINITY;
-        ju && (su = ju.reduce(((uu, Eu) => {
-          let ju = Zu[Eu.w],
-            su = Xu.edge(Eu);
-          return Math.min(uu, (void 0 !== ju ? ju : 0) - (void 0 !== su ? su : 0))
+      }), (function(GG) {
+        return yG.predecessors(GG) || []
+      })), UG((function(bG) {
+        let ZG = yG.outEdges(bG),
+          wG = Number.POSITIVE_INFINITY;
+        ZG && (wG = ZG.reduce(((GG, bG) => {
+          let ZG = LG[bG.w],
+            wG = yG.edge(bG);
+          return Math.min(GG, (void 0 !== ZG ? ZG : 0) - (void 0 !== wG ? wG : 0))
         }), Number.POSITIVE_INFINITY));
-        let Uu = uu.node(Eu);
-        su !== Number.POSITIVE_INFINITY && Uu.borderType !== lu && (Zu[Eu] = Math.max(void 0 !== Zu[Eu] ? Zu[Eu] : 0, su))
-      }), (function(uu) {
-        return Xu.successors(uu) || []
-      })), Object.keys(su).forEach((uu => {
-        var Eu;
-        let su = ju[uu];
-        void 0 !== su && (Zu[uu] = null != (Eu = Zu[su]) ? Eu : 0)
-      })), Zu
+        let SG = GG.node(bG);
+        wG !== Number.POSITIVE_INFINITY && SG.borderType !== kG && (LG[bG] = Math.max(void 0 !== LG[bG] ? LG[bG] : 0, wG))
+      }), (function(GG) {
+        return yG.successors(GG) || []
+      })), Object.keys(wG).forEach((GG => {
+        var bG;
+        let wG = ZG[GG];
+        void 0 !== wG && (LG[GG] = null != (bG = LG[wG]) ? bG : 0)
+      })), LG
     }
 
-    function fj(uu, Eu) {
-      let ju, su = tu(uu),
-        Uu = Object.assign(function(uu, Eu) {
-          let ju = {};
-          return Eu.length && Eu.reduce((function(Eu, su) {
-            let Uu = 0,
-              Zu = 0,
-              Xu = Eu.length,
-              lu = su[su.length - 1];
-            return su.forEach(((Eu, qu) => {
-              let fu = function(uu, Eu) {
-                  if (uu.node(Eu).dummy) {
-                    let ju = uu.predecessors(Eu);
-                    if (ju) return ju.find((Eu => uu.node(Eu).dummy))
+    function YZ(GG, bG) {
+      let ZG, wG = RG(GG),
+        SG = Object.assign(function(GG, bG) {
+          let ZG = {};
+          return bG.length && bG.reduce((function(bG, wG) {
+            let SG = 0,
+              LG = 0,
+              yG = bG.length,
+              kG = wG[wG.length - 1];
+            return wG.forEach(((bG, UG) => {
+              let YG = function(GG, bG) {
+                  if (GG.node(bG).dummy) {
+                    let ZG = GG.predecessors(bG);
+                    if (ZG) return ZG.find((bG => GG.node(bG).dummy))
                   }
-                }(uu, Eu),
-                Cu = fu ? uu.node(fu).order : Xu;
-              (fu || Eu === lu) && (su.slice(Zu, qu + 1).forEach((Eu => {
-                let su = uu.predecessors(Eu);
-                su && su.forEach((su => {
-                  let Zu = uu.node(su),
-                    Xu = Zu.order;
-                  (Xu < Uu || Cu < Xu) && (!Zu.dummy || !uu.node(Eu).dummy) && Xj(ju, su, Eu)
+                }(GG, bG),
+                VG = YG ? GG.node(YG).order : yG;
+              (YG || bG === kG) && (wG.slice(LG, UG + 1).forEach((bG => {
+                let wG = GG.predecessors(bG);
+                wG && wG.forEach((wG => {
+                  let LG = GG.node(wG),
+                    yG = LG.order;
+                  (yG < SG || VG < yG) && (!LG.dummy || !GG.node(bG).dummy) && yZ(ZG, wG, bG)
                 }))
-              })), Zu = qu + 1, Uu = Cu)
-            })), su
-          })), ju
-        }(uu, su), function(uu, Eu) {
-          let ju = {};
+              })), LG = UG + 1, SG = VG)
+            })), wG
+          })), ZG
+        }(GG, wG), function(GG, bG) {
+          let ZG = {};
 
-          function su(Eu, su, Uu, Zu, Xu) {
-            uE(su, Uu).forEach((su => {
-              let Uu = Eu[su];
-              if (void 0 !== Uu && uu.node(Uu).dummy) {
-                let Eu = uu.predecessors(Uu);
-                Eu && Eu.forEach((Eu => {
-                  if (void 0 === Eu) return;
-                  let su = uu.node(Eu);
-                  su.dummy && (su.order < Zu || su.order > Xu) && Xj(ju, Eu, Uu)
+          function wG(bG, wG, SG, LG, yG) {
+            Gb(wG, SG).forEach((wG => {
+              let SG = bG[wG];
+              if (void 0 !== SG && GG.node(SG).dummy) {
+                let bG = GG.predecessors(SG);
+                bG && bG.forEach((bG => {
+                  if (void 0 === bG) return;
+                  let wG = GG.node(bG);
+                  wG.dummy && (wG.order < LG || wG.order > yG) && yZ(ZG, bG, SG)
                 }))
               }
             }))
           }
-          return Eu.length && Eu.reduce((function(Eu, ju) {
-            let Uu = -1,
-              Zu = -1,
-              Xu = 0;
-            return ju.forEach(((lu, qu) => {
-              if ("border" === uu.node(lu).dummy) {
-                let Eu = uu.predecessors(lu);
-                if (Eu && Eu.length) {
-                  let lu = Eu[0];
-                  if (void 0 === lu) return;
-                  Zu = uu.node(lu).order, su(ju, Xu, qu, Uu, Zu), Xu = qu, Uu = Zu
+          return bG.length && bG.reduce((function(bG, ZG) {
+            let SG = -1,
+              LG = -1,
+              yG = 0;
+            return ZG.forEach(((kG, UG) => {
+              if ("border" === GG.node(kG).dummy) {
+                let bG = GG.predecessors(kG);
+                if (bG && bG.length) {
+                  let kG = bG[0];
+                  if (void 0 === kG) return;
+                  LG = GG.node(kG).order, wG(ZG, yG, UG, SG, LG), yG = UG, SG = LG
                 }
               }
-              su(ju, Xu, ju.length, Zu, Eu.length)
-            })), ju
-          })), ju
-        }(uu, su)),
-        Zu = {};
-      ["u", "d"].forEach((Xu => {
-        ju = "u" === Xu ? su : Object.values(su).reverse(), ["l", "r"].forEach((su => {
-          "r" === su && (ju = ju.map((uu => Object.values(uu).reverse())));
-          let lu = function(uu, Eu, ju, su, Uu) {
-              let Zu = {},
-                Xu = {},
-                lu = {};
-              return Eu.forEach((uu => {
-                uu.forEach(((uu, Eu) => {
-                  Zu[uu] = uu, Xu[uu] = uu, lu[uu] = Eu
+              wG(ZG, yG, ZG.length, LG, bG.length)
+            })), ZG
+          })), ZG
+        }(GG, wG)),
+        LG = {};
+      ["u", "d"].forEach((yG => {
+        ZG = "u" === yG ? wG : Object.values(wG).reverse(), ["l", "r"].forEach((wG => {
+          "r" === wG && (ZG = ZG.map((GG => Object.values(GG).reverse())));
+          let kG = function(GG, bG, ZG, wG, SG) {
+              let LG = {},
+                yG = {},
+                kG = {};
+              return bG.forEach((GG => {
+                GG.forEach(((GG, bG) => {
+                  LG[GG] = GG, yG[GG] = GG, kG[GG] = bG
                 }))
-              })), Eu.forEach((Eu => {
-                let qu = -1,
-                  fu = -1,
-                  Cu = !1,
-                  bu = Eu,
-                  cu = Eu.findIndex((Eu => (null == Uu ? void 0 : Uu.includes(Eu)) || Cj(Eu, uu, Uu)));
-                cu > 0 && (bu = [Eu[cu], ...Eu.slice(0, cu), ...Eu.slice(cu + 1)], Cu = !0), bu.forEach((Eu => {
-                  var bu;
-                  let cu = su(Eu);
-                  if (cu && cu.length) {
-                    null != Uu && Uu.includes(Eu) && (cu = cu.filter((Eu => Cj(Eu, uu, Uu))));
-                    let su = cu.sort(((uu, Eu) => {
-                        let ju = lu[uu],
-                          su = lu[Eu];
-                        return (void 0 !== ju ? ju : 0) - (void 0 !== su ? su : 0)
+              })), bG.forEach((bG => {
+                let UG = -1,
+                  YG = -1,
+                  VG = !1,
+                  pG = bG,
+                  fG = bG.findIndex((bG => (null == SG ? void 0 : SG.includes(bG)) || VZ(bG, GG, SG)));
+                fG > 0 && (pG = [bG[fG], ...bG.slice(0, fG), ...bG.slice(fG + 1)], VG = !0), pG.forEach((bG => {
+                  var pG;
+                  let fG = wG(bG);
+                  if (fG && fG.length) {
+                    null != SG && SG.includes(bG) && (fG = fG.filter((bG => VZ(bG, GG, SG))));
+                    let wG = fG.sort(((GG, bG) => {
+                        let ZG = kG[GG],
+                          wG = kG[bG];
+                        return (void 0 !== ZG ? ZG : 0) - (void 0 !== wG ? wG : 0)
                       })),
-                      Nu = (su.length - 1) / 2;
-                    for (let uu = Math.floor(Nu), Uu = Math.ceil(Nu); uu <= Uu; ++uu) {
-                      let Uu = su[uu];
-                      if (void 0 === Uu) continue;
-                      let cu = lu[Uu];
-                      if (void 0 !== cu && Xu[Eu] === Eu && qu < cu && lu[Uu] !== fu && !lj(ju, Eu, Uu)) {
-                        let uu = Zu[Uu];
-                        void 0 !== uu && (Xu[Uu] = Eu, Xu[Eu] = Zu[Eu] = uu, qu = cu, Cu && (qu = -1, fu = null != (bu = lu[Uu]) ? bu : -1, Cu = !1))
+                      QG = (wG.length - 1) / 2;
+                    for (let GG = Math.floor(QG), SG = Math.ceil(QG); GG <= SG; ++GG) {
+                      let SG = wG[GG];
+                      if (void 0 === SG) continue;
+                      let fG = kG[SG];
+                      if (void 0 !== fG && yG[bG] === bG && UG < fG && kG[SG] !== YG && !kZ(ZG, bG, SG)) {
+                        let GG = LG[SG];
+                        void 0 !== GG && (yG[SG] = bG, yG[bG] = LG[bG] = GG, UG = fG, VG && (UG = -1, YG = null != (pG = kG[SG]) ? pG : -1, VG = !1))
                       }
                     }
                   }
                 }))
               })), {
-                root: Zu,
-                align: Xu
+                root: LG,
+                align: yG
               }
-            }(uu, ju, Uu, (Eu => ("u" === Xu ? uu.predecessors(Eu) : uu.successors(Eu)) || []), Eu),
-            qu = qj(uu, ju, lu.root, lu.align, "r" === su);
-          "r" === su && (qu = jE(qu, (uu => -uu))), Zu[Xu + su] = qu
+            }(GG, ZG, SG, (bG => ("u" === yG ? GG.predecessors(bG) : GG.successors(bG)) || []), bG),
+            UG = UZ(GG, ZG, kG.root, kG.align, "r" === wG);
+          "r" === wG && (UG = Zb(UG, (GG => -GG))), LG[yG + wG] = UG
         }))
       }));
-      let Xu = function(uu, Eu) {
-        return Object.values(Eu).reduce(((Eu, ju) => {
-          let su = Number.NEGATIVE_INFINITY,
-            Uu = Number.POSITIVE_INFINITY;
-          Object.entries(ju).forEach((Eu => {
-            let [ju, Zu] = Eu, Xu = function(uu, Eu) {
-              return uu.node(Eu).width
-            }(uu, ju) / 2;
-            su = Math.max(Zu + Xu, su), Uu = Math.min(Zu - Xu, Uu)
+      let yG = function(GG, bG) {
+        return Object.values(bG).reduce(((bG, ZG) => {
+          let wG = Number.NEGATIVE_INFINITY,
+            SG = Number.POSITIVE_INFINITY;
+          Object.entries(ZG).forEach((bG => {
+            let [ZG, LG] = bG, yG = function(GG, bG) {
+              return GG.node(bG).width
+            }(GG, ZG) / 2;
+            wG = Math.max(LG + yG, wG), SG = Math.min(LG - yG, SG)
           }));
-          let Zu = su - Uu;
-          return Zu < Eu[0] && (Eu = [Zu, ju]), Eu
+          let LG = wG - SG;
+          return LG < bG[0] && (bG = [LG, ZG]), bG
         }), [Number.POSITIVE_INFINITY, null])[1]
-      }(uu, Zu);
-      return function(uu, Eu) {
-          let ju = Object.values(Eu),
-            su = Hu(Math.min, ju),
-            Uu = Hu(Math.max, ju);
-          ["u", "d"].forEach((ju => {
-            ["l", "r"].forEach((Zu => {
-              let Xu = ju + Zu,
-                lu = uu[Xu];
-              if (!lu || lu === Eu) return;
-              let qu = Object.values(lu),
-                fu = su - Hu(Math.min, qu);
-              "l" !== Zu && (fu = Uu - Hu(Math.max, qu)), fu && (uu[Xu] = jE(lu, (uu => uu + fu)))
+      }(GG, LG);
+      return function(GG, bG) {
+          let ZG = Object.values(bG),
+            wG = tG(Math.min, ZG),
+            SG = tG(Math.max, ZG);
+          ["u", "d"].forEach((ZG => {
+            ["l", "r"].forEach((LG => {
+              let yG = ZG + LG,
+                kG = GG[yG];
+              if (!kG || kG === bG) return;
+              let UG = Object.values(kG),
+                YG = wG - tG(Math.min, UG);
+              "l" !== LG && (YG = SG - tG(Math.max, UG)), YG && (GG[yG] = Zb(kG, (GG => GG + YG)))
             }))
           }))
-        }(Zu, Xu),
-        function(uu) {
-          let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            ju = uu.ul;
-          return ju ? jE(ju, ((ju, su) => {
-            var Uu, Zu;
-            if (Eu) {
-              let ju = Eu.toLowerCase(),
-                Uu = uu[ju];
-              if (Uu && void 0 !== Uu[su]) return Uu[su]
+        }(LG, yG),
+        function(GG) {
+          let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
+            ZG = GG.ul;
+          return ZG ? Zb(ZG, ((ZG, wG) => {
+            var SG, LG;
+            if (bG) {
+              let ZG = bG.toLowerCase(),
+                SG = GG[ZG];
+              if (SG && void 0 !== SG[wG]) return SG[wG]
             }
-            let Xu = Object.values(uu).map((uu => {
-              let Eu = uu[su];
-              return void 0 !== Eu ? Eu : 0
-            })).sort(((uu, Eu) => uu - Eu));
-            return ((null != (Uu = Xu[1]) ? Uu : 0) + (null != (Zu = Xu[2]) ? Zu : 0)) / 2
+            let yG = Object.values(GG).map((GG => {
+              let bG = GG[wG];
+              return void 0 !== bG ? bG : 0
+            })).sort(((GG, bG) => GG - bG));
+            return ((null != (SG = yG[1]) ? SG : 0) + (null != (LG = yG[2]) ? LG : 0)) / 2
           })) : {}
-        }(Zu, uu.graph().align)
+        }(LG, GG.graph().align)
     }
 
-    function Cj(uu, Eu, ju) {
-      var su;
-      if (!ju) return !1;
-      let Uu = null == (su = Eu.node(uu)) ? void 0 : su.edgeObj;
-      if (!Uu || Eu.node(uu).edgeLabel.reversed) return !1;
-      let Zu = ju.indexOf(null == Uu ? void 0 : Uu.v),
-        Xu = ju.indexOf(null == Uu ? void 0 : Uu.w);
-      return -1 !== Zu && -1 !== Xu && Zu === (Xu + 1) % ju.length || Zu === (Xu - 1) % ju.length
+    function VZ(GG, bG, ZG) {
+      var wG;
+      if (!ZG) return !1;
+      let SG = null == (wG = bG.node(GG)) ? void 0 : wG.edgeObj;
+      if (!SG || bG.node(GG).edgeLabel.reversed) return !1;
+      let LG = ZG.indexOf(null == SG ? void 0 : SG.v),
+        yG = ZG.indexOf(null == SG ? void 0 : SG.w);
+      return -1 !== LG && -1 !== yG && LG === (yG + 1) % ZG.length || LG === (yG - 1) % ZG.length
     }
 
-    function bj(uu, Eu) {
-      (function(uu) {
-        let Eu = tu(uu),
-          ju = uu.graph(),
-          su = ju.ranksep,
-          Uu = ju.rankalign,
-          Zu = 0;
-        Eu.forEach((Eu => {
-          let ju = Eu.reduce(((Eu, ju) => {
-            var su;
-            let Uu = null != (su = uu.node(ju).height) ? su : 0;
-            return Eu > Uu ? Eu : Uu
+    function pZ(GG, bG) {
+      (function(GG) {
+        let bG = RG(GG),
+          ZG = GG.graph(),
+          wG = ZG.ranksep,
+          SG = ZG.rankalign,
+          LG = 0;
+        bG.forEach((bG => {
+          let ZG = bG.reduce(((bG, ZG) => {
+            var wG;
+            let SG = null != (wG = GG.node(ZG).height) ? wG : 0;
+            return bG > SG ? bG : SG
           }), 0);
-          Eu.forEach((Eu => {
-            let su = uu.node(Eu);
-            su.y = "top" === Uu ? Zu + su.height / 2 : "bottom" === Uu ? Zu + ju - su.height / 2 : Zu + ju / 2
-          })), Zu += ju + su
+          bG.forEach((bG => {
+            let wG = GG.node(bG);
+            wG.y = "top" === SG ? LG + wG.height / 2 : "bottom" === SG ? LG + ZG - wG.height / 2 : LG + ZG / 2
+          })), LG += ZG + wG
         }))
-      })(uu = Bu(uu)), Object.entries(fj(uu, Eu)).forEach((Eu => {
-        let [ju, su] = Eu;
-        return uu.node(ju).x = su
+      })(GG = gG(GG)), Object.entries(YZ(GG, bG)).forEach((bG => {
+        let [ZG, wG] = bG;
+        return GG.node(ZG).x = wG
       }))
     }
-    var cj = new WeakMap;
+    var fZ = new WeakMap;
 
-    function Nj(uu) {
-      return Yj(uu, yu, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}), uu
+    function QZ(GG) {
+      return hZ(GG, OG, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}), GG
     }
 
-    function Oj(uu, Eu, ju) {
-      let su = Eu;
-      for (; void 0 !== su;) {
-        let Eu = uu.parent(su);
-        if (Eu === ju) return su;
-        su = Eu
+    function KZ(GG, bG, ZG) {
+      let wG = bG;
+      for (; void 0 !== wG;) {
+        let bG = GG.parent(wG);
+        if (bG === ZG) return wG;
+        wG = bG
       }
     }
 
-    function Yj(uu, Eu, ju) {
-      var su;
-      let Uu = uu.nodes().filter((Eu => uu.children(Eu).length)),
-        Zu = {};
-      Uu.forEach((su => {
-        let Uu = uu.node(su);
-        if (Uu && Uu.rankdir) {
-          let Xu = new Iu({
+    function hZ(GG, bG, ZG) {
+      var wG;
+      let SG = GG.nodes().filter((bG => GG.children(bG).length)),
+        LG = {};
+      SG.forEach((wG => {
+        let SG = GG.node(wG);
+        if (SG && SG.rankdir) {
+          let yG = new qG({
             multigraph: !0,
             compound: !0
           });
-          Xu.setGraph({
-            rankdir: Uu.rankdir
+          yG.setGraph({
+            rankdir: SG.rankdir
           });
-          let lu = uu.children(su);
-          lu.forEach((Eu => {
-            let ju = {
-              ...uu.node(Eu)
+          let kG = GG.children(wG);
+          kG.forEach((bG => {
+            let ZG = {
+              ...GG.node(bG)
             };
-            Xu.setNode(Eu, ju);
-            let Uu = uu.parent(Eu);
-            Uu && Uu !== su && lu.includes(Uu) && Xu.setParent(Eu, Uu)
+            yG.setNode(bG, ZG);
+            let SG = GG.parent(bG);
+            SG && SG !== wG && kG.includes(SG) && yG.setParent(bG, SG)
           }));
-          let qu = new Set;
-          uu.edges().forEach((Eu => {
-            let ju = Oj(uu, Eu.v, su),
-              Uu = Oj(uu, Eu.w, su);
-            if (ju && Uu && ju !== Uu) {
-              let su = `${ju}\0${Uu}`;
-              qu.has(su) || (qu.add(su), Xu.setEdge(ju, Uu, {
-                ...uu.edge(Eu)
+          let UG = new Set;
+          GG.edges().forEach((bG => {
+            let ZG = KZ(GG, bG.v, wG),
+              SG = KZ(GG, bG.w, wG);
+            if (ZG && SG && ZG !== SG) {
+              let wG = `${ZG}\0${SG}`;
+              UG.has(wG) || (UG.add(wG), yG.setEdge(ZG, SG, {
+                ...GG.edge(bG)
               }))
             }
-          })), Yj(Xu, Eu, ju);
-          let fu = aj(Xu);
-          hj(fu, Eu, ju, null), Dj(Xu, fu);
-          let Cu = 1 / 0,
-            bu = 1 / 0,
-            cu = -1 / 0,
-            Nu = -1 / 0;
-          Xu.nodes().forEach((uu => {
-            if (uu === su) return;
-            let Eu = Xu.node(uu);
-            Eu && "number" == typeof Eu.x && "number" == typeof Eu.y && "number" == typeof Eu.width && "number" == typeof Eu.height && (Cu = Math.min(Cu, Eu.x - Eu.width / 2), cu = Math.max(cu, Eu.x + Eu.width / 2), bu = Math.min(bu, Eu.y - Eu.height / 2), Nu = Math.max(Nu, Eu.y + Eu.height / 2))
-          })), (!isFinite(Cu) || !isFinite(bu) || !isFinite(cu) || !isFinite(Nu)) && (Cu = bu = 0, cu = Nu = 0);
-          let Ou = cu - Cu,
-            Yu = Nu - bu;
-          Zu[su] = {
-            minX: Cu,
-            ss: bu,
-            maxX: cu,
-            Us: Nu,
-            width: Ou,
-            height: Yu,
-            offsetX: Cu,
-            offsetY: bu
-          }, Uu._dagreClusterSubgraph = Xu
+          })), hZ(yG, bG, ZG);
+          let YG = WZ(yG);
+          dZ(YG, bG, ZG, null), JZ(yG, YG);
+          let VG = 1 / 0,
+            pG = 1 / 0,
+            fG = -1 / 0,
+            QG = -1 / 0;
+          yG.nodes().forEach((GG => {
+            if (GG === wG) return;
+            let bG = yG.node(GG);
+            bG && "number" == typeof bG.x && "number" == typeof bG.y && "number" == typeof bG.width && "number" == typeof bG.height && (VG = Math.min(VG, bG.x - bG.width / 2), fG = Math.max(fG, bG.x + bG.width / 2), pG = Math.min(pG, bG.y - bG.height / 2), QG = Math.max(QG, bG.y + bG.height / 2))
+          })), (!isFinite(VG) || !isFinite(pG) || !isFinite(fG) || !isFinite(QG)) && (VG = pG = 0, fG = QG = 0);
+          let KG = fG - VG,
+            hG = QG - pG;
+          LG[wG] = {
+            minX: VG,
+            Zw: pG,
+            maxX: fG,
+            ww: QG,
+            width: KG,
+            height: hG,
+            offsetX: VG,
+            offsetY: pG
+          }, SG._dagreClusterSubgraph = yG
         }
       }));
-      let Xu = [],
-        lu = new Map;
-      Uu.forEach((Eu => {
-        let ju = uu.node(Eu);
-        ju && ju.rankdir && Zu[Eu] && lu.set(Eu, (uu.children(Eu) || []).filter((uu => uu !== Eu)))
+      let yG = [],
+        kG = new Map;
+      SG.forEach((bG => {
+        let ZG = GG.node(bG);
+        ZG && ZG.rankdir && LG[bG] && kG.set(bG, (GG.children(bG) || []).filter((GG => GG !== bG)))
       }));
-      let qu = new Set([...lu.values()].flat()),
-        fu = new Map;
-      lu.forEach(((Eu, ju) => {
-        qu.has(ju) || fu.set(ju, (Eu => {
-          let ju = [],
-            su = (uu.children(Eu) || []).filter((uu => uu !== Eu));
-          for (; su.length > 0;) {
-            let Eu = su.shift();
-            ju.push(Eu), (uu.children(Eu) || []).filter((uu => uu !== Eu)).forEach((uu => su.push(uu)))
+      let UG = new Set([...kG.values()].flat()),
+        YG = new Map;
+      kG.forEach(((bG, ZG) => {
+        UG.has(ZG) || YG.set(ZG, (bG => {
+          let ZG = [],
+            wG = (GG.children(bG) || []).filter((GG => GG !== bG));
+          for (; wG.length > 0;) {
+            let bG = wG.shift();
+            ZG.push(bG), (GG.children(bG) || []).filter((GG => GG !== bG)).forEach((GG => wG.push(GG)))
           }
-          return ju
-        })(ju))
+          return ZG
+        })(ZG))
       }));
-      let Cu = new Set([...fu.values()].flat()),
-        bu = uu => {
-          for (let [Eu, ju] of fu)
-            if (ju.includes(uu)) return Eu;
-          return uu
+      let VG = new Set([...YG.values()].flat()),
+        pG = GG => {
+          for (let [bG, ZG] of YG)
+            if (ZG.includes(GG)) return bG;
+          return GG
         },
-        cu = [];
-      uu.edges().forEach((Eu => {
-        (Cu.has(Eu.v) || Cu.has(Eu.w)) && cu.push({
-          edge: Eu,
-          label: uu.edge(Eu)
+        fG = [];
+      GG.edges().forEach((bG => {
+        (VG.has(bG.v) || VG.has(bG.w)) && fG.push({
+          edge: bG,
+          label: GG.edge(bG)
         })
       }));
-      let Nu = new Map;
-      Cu.forEach((Eu => {
-        let ju = uu.parent(Eu);
-        Nu.set(Eu, "string" == typeof ju ? ju : void 0)
-      })), fu.forEach(((Eu, ju) => {
-        let su = uu.node(ju),
-          Uu = [];
-        Eu.forEach((Eu => {
-          let ju = uu.node(Eu);
-          ju && (Uu.push({
-            id: Eu,
-            node: ju,
-            parent: Nu.get(Eu)
-          }), uu.removeNode(Eu))
+      let QG = new Map;
+      VG.forEach((bG => {
+        let ZG = GG.parent(bG);
+        QG.set(bG, "string" == typeof ZG ? ZG : void 0)
+      })), YG.forEach(((bG, ZG) => {
+        let wG = GG.node(ZG),
+          SG = [];
+        bG.forEach((bG => {
+          let ZG = GG.node(bG);
+          ZG && (SG.push({
+            id: bG,
+            node: ZG,
+            parent: QG.get(bG)
+          }), GG.removeNode(bG))
         }));
-        let lu = cu.filter((uu => {
+        let kG = fG.filter((GG => {
             let {
-              edge: ju
-            } = uu;
-            return Eu.includes(ju.v) || Eu.includes(ju.w)
+              edge: ZG
+            } = GG;
+            return bG.includes(ZG.v) || bG.includes(ZG.w)
           })),
-          qu = Zu[ju];
-        su && (Xu.push({
-          clusterId: ju,
-          subgraph: su._dagreClusterSubgraph,
-          bounds: qu,
-          children: Eu,
-          removedNodes: Uu,
-          removedEdges: lu
-        }), su.width = qu.width, su.height = qu.height)
+          UG = LG[ZG];
+        wG && (yG.push({
+          clusterId: ZG,
+          subgraph: wG._dagreClusterSubgraph,
+          bounds: UG,
+          children: bG,
+          removedNodes: SG,
+          removedEdges: kG
+        }), wG.width = UG.width, wG.height = UG.height)
       }));
-      let Ou = new Set;
-      cu.forEach((Eu => {
+      let KG = new Set;
+      fG.forEach((bG => {
         let {
-          edge: ju,
-          label: su
-        } = Eu, Uu = bu(ju.v), Zu = bu(ju.w);
-        if (Uu !== Zu && uu.hasNode(Uu) && uu.hasNode(Zu)) {
-          let Eu = `${Uu}\0${Zu}`;
-          Ou.has(Eu) || (Ou.add(Eu), uu.setEdge(Uu, Zu, {
-            ...su,
+          edge: ZG,
+          label: wG
+        } = bG, SG = pG(ZG.v), LG = pG(ZG.w);
+        if (SG !== LG && GG.hasNode(SG) && GG.hasNode(LG)) {
+          let bG = `${SG}\0${LG}`;
+          KG.has(bG) || (KG.add(bG), GG.setEdge(SG, LG, {
+            ...wG,
             width: 0,
             height: 0
           }))
         }
       }));
-      let Yu = aj(uu),
-        hu = hj(Yu, Eu, ju, null != (su = cj.get(uu)) ? su : null);
-      cj.set(uu, hu), Dj(uu, Yu), Ou.forEach((Eu => {
-        let ju = Eu.indexOf("\0"),
-          su = Eu.slice(0, ju),
-          Uu = Eu.slice(ju + 1);
-        uu.hasEdge(su, Uu) && uu.removeEdge(su, Uu)
-      })), Xu.forEach((Eu => {
+      let hG = WZ(GG),
+        dG = dZ(hG, bG, ZG, null != (wG = fZ.get(GG)) ? wG : null);
+      fZ.set(GG, dG), JZ(GG, hG), KG.forEach((bG => {
+        let ZG = bG.indexOf("\0"),
+          wG = bG.slice(0, ZG),
+          SG = bG.slice(ZG + 1);
+        GG.hasEdge(wG, SG) && GG.removeEdge(wG, SG)
+      })), yG.forEach((bG => {
         let {
-          clusterId: ju,
-          subgraph: su,
-          bounds: Uu,
-          removedNodes: Zu,
-          removedEdges: Xu
-        } = Eu;
-        var lu, qu;
-        let fu = uu.node(ju),
-          Cu = null != (lu = null == fu ? void 0 : fu.x) ? lu : 0,
-          bu = null != (qu = null == fu ? void 0 : fu.y) ? qu : 0,
-          cu = (Uu.minX + Uu.maxX) / 2,
-          Nu = (Uu.ss + Uu.Us) / 2;
-        Zu.forEach((Eu => {
+          clusterId: ZG,
+          subgraph: wG,
+          bounds: SG,
+          removedNodes: LG,
+          removedEdges: yG
+        } = bG;
+        var kG, UG;
+        let YG = GG.node(ZG),
+          VG = null != (kG = null == YG ? void 0 : YG.x) ? kG : 0,
+          pG = null != (UG = null == YG ? void 0 : YG.y) ? UG : 0,
+          fG = (SG.minX + SG.maxX) / 2,
+          QG = (SG.Zw + SG.ww) / 2;
+        LG.forEach((bG => {
           let {
-            id: ju,
-            node: su,
-            parent: Uu
-          } = Eu;
-          uu.setNode(ju, su), void 0 !== Uu && uu.setParent(ju, Uu)
-        })), Xu.forEach((Eu => {
+            id: ZG,
+            node: wG,
+            parent: SG
+          } = bG;
+          GG.setNode(ZG, wG), void 0 !== SG && GG.setParent(ZG, SG)
+        })), yG.forEach((bG => {
           let {
-            edge: ju,
-            label: su
-          } = Eu;
-          uu.setEdge(ju, su)
-        })), su.nodes().forEach((Eu => {
-          if (Eu === ju) return;
-          let Uu = su.node(Eu),
-            Zu = uu.node(Eu);
-          Zu && Uu && "number" == typeof Uu.x && "number" == typeof Uu.y && (Zu.x = Cu + (Uu.x - cu), Zu.y = bu + (Uu.y - Nu))
-        })), delete fu._dagreClusterSubgraph
-      })), Uu.forEach((Eu => {
-        var ju, su;
-        let Uu = uu.node(Eu),
-          Xu = Zu[Eu];
-        if (Uu && Uu.rankdir && Uu._dagreClusterSubgraph && Xu) {
-          let Zu = Uu._dagreClusterSubgraph,
-            lu = null != (ju = Uu.x) ? ju : 0,
-            qu = null != (su = Uu.y) ? su : 0,
-            fu = (Xu.minX + Xu.maxX) / 2,
-            Cu = (Xu.ss + Xu.Us) / 2;
-          Zu.nodes().forEach((ju => {
-            if (ju === Eu) return;
-            let su = Zu.node(ju),
-              Uu = uu.node(ju);
-            if (Uu && su && "number" == typeof su.x && "number" == typeof su.y) {
-              let uu = su.x - fu,
-                Eu = su.y - Cu;
-              Uu.x = lu + uu, Uu.y = qu + Eu
+            edge: ZG,
+            label: wG
+          } = bG;
+          GG.setEdge(ZG, wG)
+        })), wG.nodes().forEach((bG => {
+          if (bG === ZG) return;
+          let SG = wG.node(bG),
+            LG = GG.node(bG);
+          LG && SG && "number" == typeof SG.x && "number" == typeof SG.y && (LG.x = VG + (SG.x - fG), LG.y = pG + (SG.y - QG))
+        })), delete YG._dagreClusterSubgraph
+      })), SG.forEach((bG => {
+        var ZG, wG;
+        let SG = GG.node(bG),
+          yG = LG[bG];
+        if (SG && SG.rankdir && SG._dagreClusterSubgraph && yG) {
+          let LG = SG._dagreClusterSubgraph,
+            kG = null != (ZG = SG.x) ? ZG : 0,
+            UG = null != (wG = SG.y) ? wG : 0,
+            YG = (yG.minX + yG.maxX) / 2,
+            VG = (yG.Zw + yG.ww) / 2;
+          LG.nodes().forEach((ZG => {
+            if (ZG === bG) return;
+            let wG = LG.node(ZG),
+              SG = GG.node(ZG);
+            if (SG && wG && "number" == typeof wG.x && "number" == typeof wG.y) {
+              let GG = wG.x - YG,
+                bG = wG.y - VG;
+              SG.x = kG + GG, SG.y = UG + bG
             }
-          })), delete Uu._dagreClusterSubgraph
+          })), delete SG._dagreClusterSubgraph
         }
       }))
     }
 
-    function hj(uu, Eu, ju) {
-      let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      var Uu, Zu;
-      let Xu = !1 !== (null == ju ? void 0 : ju.useDynamic),
-        lu = Xu && null != (Uu = null == su ? void 0 : su.graph) ? Uu : null,
-        qu = Xu && null != (Zu = null == su ? void 0 : su.rawNodes) ? Zu : null;
-      Eu("    makeSpaceForEdgeLabels", (() => function(uu) {
-        let Eu = uu.graph();
-        Eu.ranksep /= 2, uu.edges().forEach((ju => {
-          var su;
-          let Uu = uu.edge(ju);
-          Uu.minlen *= 2, "c" !== (null != (su = Uu.labelpos) ? su : "r").toLowerCase() && ("TB" === Eu.rankdir || "BT" === Eu.rankdir ? Uu.width += Uu.labeloffset : Uu.height += Uu.labeloffset)
+    function dZ(GG, bG, ZG) {
+      let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      var SG, LG;
+      let yG = !1 !== (null == ZG ? void 0 : ZG.useDynamic),
+        kG = yG && null != (SG = null == wG ? void 0 : wG.graph) ? SG : null,
+        UG = yG && null != (LG = null == wG ? void 0 : wG.rawNodes) ? LG : null;
+      bG("    makeSpaceForEdgeLabels", (() => function(GG) {
+        let bG = GG.graph();
+        bG.ranksep /= 2, GG.edges().forEach((ZG => {
+          var wG;
+          let SG = GG.edge(ZG);
+          SG.minlen *= 2, "c" !== (null != (wG = SG.labelpos) ? wG : "r").toLowerCase() && ("TB" === bG.rankdir || "BT" === bG.rankdir ? SG.width += SG.labeloffset : SG.height += SG.labeloffset)
         }))
-      }(uu))), Eu("    removeSelfEdges", (() => function(uu) {
-        uu.edges().forEach((Eu => {
-          if (Eu.v === Eu.w) {
-            let ju = uu.node(Eu.v);
-            ju.selfEdges || (ju.selfEdges = []), ju.selfEdges.push({
-              e: Eu,
-              label: uu.edge(Eu)
-            }), uu.removeEdge(Eu)
+      }(GG))), bG("    removeSelfEdges", (() => function(GG) {
+        GG.edges().forEach((bG => {
+          if (bG.v === bG.w) {
+            let ZG = GG.node(bG.v);
+            ZG.selfEdges || (ZG.selfEdges = []), ZG.selfEdges.push({
+              e: bG,
+              label: GG.edge(bG)
+            }), GG.removeEdge(bG)
           }
         }))
-      }(uu))), Eu("    acyclic", (() => NE(uu, lu))), Eu("    nestingGraph.run", (() => WE(uu))), Eu("    rank", (() => VE(Bu(uu)))), Eu("    injectEdgeLabelProxies", (() => function(uu) {
-        uu.edges().forEach((Eu => {
-          let ju = uu.edge(Eu);
-          if (ju.width && ju.height) {
-            let ju = uu.node(Eu.v),
-              su = {
-                rank: (uu.node(Eu.w).rank - ju.rank) / 2 + ju.rank,
-                e: Eu
+      }(GG))), bG("    acyclic", (() => Qb(GG, kG))), bG("    nestingGraph.run", (() => Ab(GG))), bG("    rank", (() => lb(gG(GG)))), bG("    injectEdgeLabelProxies", (() => function(GG) {
+        GG.edges().forEach((bG => {
+          let ZG = GG.edge(bG);
+          if (ZG.width && ZG.height) {
+            let ZG = GG.node(bG.v),
+              wG = {
+                rank: (GG.node(bG.w).rank - ZG.rank) / 2 + ZG.rank,
+                e: bG
               };
-            Fu(uu, "edge-proxy", su, "_ep")
+            nG(GG, "edge-proxy", wG, "_ep")
           }
         }))
-      }(uu))), Eu("    removeEmptyRanks", (() => function(uu) {
-        let Eu = uu.nodes().map((Eu => uu.node(Eu).rank)).filter((uu => void 0 !== uu)),
-          ju = Hu(Math.min, Eu),
-          su = [];
-        uu.nodes().forEach((Eu => {
-          let Uu = uu.node(Eu).rank - ju;
-          su[Uu] || (su[Uu] = []), su[Uu].push(Eu)
+      }(GG))), bG("    removeEmptyRanks", (() => function(GG) {
+        let bG = GG.nodes().map((bG => GG.node(bG).rank)).filter((GG => void 0 !== GG)),
+          ZG = tG(Math.min, bG),
+          wG = [];
+        GG.nodes().forEach((bG => {
+          let SG = GG.node(bG).rank - ZG;
+          wG[SG] || (wG[SG] = []), wG[SG].push(bG)
         }));
-        let Uu = 0,
-          Zu = uu.graph().nodeRankFactor;
-        Array.from(su).forEach(((Eu, ju) => {
-          void 0 === Eu && ju % Zu !== 0 ? --Uu : void 0 !== Eu && Uu && Eu.forEach((Eu => uu.node(Eu).rank += Uu))
+        let SG = 0,
+          LG = GG.graph().nodeRankFactor;
+        Array.from(wG).forEach(((bG, ZG) => {
+          void 0 === bG && ZG % LG !== 0 ? --SG : void 0 !== bG && SG && bG.forEach((bG => GG.node(bG).rank += SG))
         }))
-      }(uu))), Eu("    nestingGraph.cleanup", (() => function(uu) {
-        let Eu = uu.graph();
-        uu.removeNode(Eu.nestingRoot), delete Eu.nestingRoot, uu.edges().forEach((Eu => {
-          uu.edge(Eu).nestingEdge && uu.removeEdge(Eu)
+      }(GG))), bG("    nestingGraph.cleanup", (() => function(GG) {
+        let bG = GG.graph();
+        GG.removeNode(bG.nestingRoot), delete bG.nestingRoot, GG.edges().forEach((bG => {
+          GG.edge(bG).nestingEdge && GG.removeEdge(bG)
         }))
-      }(uu))), Eu("    normalizeRanks", (() => function(uu) {
-        let Eu = uu.nodes().map((Eu => {
-            let ju = uu.node(Eu).rank;
-            return void 0 === ju ? Number.MAX_VALUE : ju
+      }(GG))), bG("    normalizeRanks", (() => function(GG) {
+        let bG = GG.nodes().map((bG => {
+            let ZG = GG.node(bG).rank;
+            return void 0 === ZG ? Number.MAX_VALUE : ZG
           })),
-          ju = Hu(Math.min, Eu);
-        uu.nodes().forEach((Eu => {
-          let su = uu.node(Eu);
-          Object.hasOwn(su, "rank") && (su.rank -= ju)
+          ZG = tG(Math.min, bG);
+        GG.nodes().forEach((bG => {
+          let wG = GG.node(bG);
+          Object.hasOwn(wG, "rank") && (wG.rank -= ZG)
         }))
-      }(uu))), Eu("    assignRankMinMax", (() => function(uu) {
-        let Eu = 0;
-        uu.nodes().forEach((ju => {
-          let su = uu.node(ju);
-          su.borderTop && (su.minRank = uu.node(su.borderTop).rank, su.maxRank = uu.node(su.borderBottom).rank, Eu = Math.max(Eu, su.maxRank))
-        })), uu.graph().maxRank = Eu
-      }(uu))), Eu("    removeEdgeLabelProxies", (() => function(uu) {
-        uu.nodes().forEach((Eu => {
-          let ju = uu.node(Eu);
-          if ("edge-proxy" === ju.dummy) {
-            let su = ju;
-            uu.edge(su.e).labelRank = ju.rank, uu.removeNode(Eu)
+      }(GG))), bG("    assignRankMinMax", (() => function(GG) {
+        let bG = 0;
+        GG.nodes().forEach((ZG => {
+          let wG = GG.node(ZG);
+          wG.borderTop && (wG.minRank = GG.node(wG.borderTop).rank, wG.maxRank = GG.node(wG.borderBottom).rank, bG = Math.max(bG, wG.maxRank))
+        })), GG.graph().maxRank = bG
+      }(GG))), bG("    removeEdgeLabelProxies", (() => function(GG) {
+        GG.nodes().forEach((bG => {
+          let ZG = GG.node(bG);
+          if ("edge-proxy" === ZG.dummy) {
+            let wG = ZG;
+            GG.edge(wG.e).labelRank = ZG.rank, GG.removeNode(bG)
           }
         }))
-      }(uu))), Eu("    normalize.run", (() => OE(uu))), Eu("    parentDummyChains", (() => iE(uu))), Eu("    addBorderSegments", (() => IE(uu))), Eu("    order", (() => jj(uu, ju, qu))), Eu("    insertSelfEdges", (() => function(uu) {
-        tu(uu).forEach((Eu => {
-          let ju = 0;
-          Eu.forEach(((Eu, su) => {
-            let Uu = uu.node(Eu);
-            "number" != typeof Uu.rank && (Uu.rank = 0), Uu.order = su + ju, (Uu.selfEdges || []).forEach((Eu => {
-              Fu(uu, "selfedge", {
-                width: Eu.label.width,
-                height: Eu.label.height,
-                rank: Uu.rank,
-                order: su + ++ju,
-                e: Eu.e,
-                edgeLabel: Eu.label
-              }, "_se"), (!Array.isArray(Eu.label.points) || 7 !== Eu.label.points.length) && (Eu.label.points = [{
+      }(GG))), bG("    normalize.run", (() => Kb(GG))), bG("    parentDummyChains", (() => Mb(GG))), bG("    addBorderSegments", (() => qb(GG))), bG("    order", (() => ZZ(GG, ZG, UG))), bG("    insertSelfEdges", (() => function(GG) {
+        RG(GG).forEach((bG => {
+          let ZG = 0;
+          bG.forEach(((bG, wG) => {
+            let SG = GG.node(bG);
+            "number" != typeof SG.rank && (SG.rank = 0), SG.order = wG + ZG, (SG.selfEdges || []).forEach((bG => {
+              nG(GG, "selfedge", {
+                width: bG.label.width,
+                height: bG.label.height,
+                rank: SG.rank,
+                order: wG + ++ZG,
+                e: bG.e,
+                edgeLabel: bG.label
+              }, "_se"), (!Array.isArray(bG.label.points) || 7 !== bG.label.points.length) && (bG.label.points = [{
                 x: 0,
                 y: -10
               }, {
@@ -2328,199 +2328,199 @@ export const modules = {
                 x: 0,
                 y: 0
               }])
-            })), delete Uu.selfEdges
+            })), delete SG.selfEdges
           }))
         }))
-      }(uu))), Eu("    adjustCoordinateSystem", (() => function(uu) {
-        var Eu;
-        let ju = null == (Eu = uu.graph().rankdir) ? void 0 : Eu.toLowerCase();
-        ("lr" === ju || "rl" === ju) && LE(uu)
-      }(uu))), Eu("    position", (() => bj(uu, ju.corePath))), Eu("    positionSelfEdges", (() => function(uu) {
-        uu.nodes().forEach((Eu => {
-          let ju = uu.node(Eu),
-            su = uu => "number" == typeof uu && isFinite(uu);
-          if ("selfedge" === ju.dummy) {
-            let Uu = ju,
-              Zu = uu.node(Uu.e.v),
-              Xu = su(null == Zu ? void 0 : Zu.x) ? Zu.x : 0,
-              lu = su(null == Zu ? void 0 : Zu.y) ? Zu.y : 0,
-              qu = su(null == Zu ? void 0 : Zu.width) ? Zu.width : 0,
-              fu = su(null == Zu ? void 0 : Zu.height) ? Zu.height : 0,
-              Cu = su(ju.x) ? ju.x : Xu,
-              bu = su(ju.y) ? ju.y : lu,
-              cu = qu / 2,
-              Nu = fu / 2;
-            Uu.edgeLabel.points = [{
-              x: Cu + cu,
-              y: bu - Nu
+      }(GG))), bG("    adjustCoordinateSystem", (() => function(GG) {
+        var bG;
+        let ZG = null == (bG = GG.graph().rankdir) ? void 0 : bG.toLowerCase();
+        ("lr" === ZG || "rl" === ZG) && eb(GG)
+      }(GG))), bG("    position", (() => pZ(GG, ZG.corePath))), bG("    positionSelfEdges", (() => function(GG) {
+        GG.nodes().forEach((bG => {
+          let ZG = GG.node(bG),
+            wG = GG => "number" == typeof GG && isFinite(GG);
+          if ("selfedge" === ZG.dummy) {
+            let SG = ZG,
+              LG = GG.node(SG.e.v),
+              yG = wG(null == LG ? void 0 : LG.x) ? LG.x : 0,
+              kG = wG(null == LG ? void 0 : LG.y) ? LG.y : 0,
+              UG = wG(null == LG ? void 0 : LG.width) ? LG.width : 0,
+              YG = wG(null == LG ? void 0 : LG.height) ? LG.height : 0,
+              VG = wG(ZG.x) ? ZG.x : yG,
+              pG = wG(ZG.y) ? ZG.y : kG,
+              fG = UG / 2,
+              QG = YG / 2;
+            SG.edgeLabel.points = [{
+              x: VG + fG,
+              y: pG - QG
             }, {
-              x: Cu + cu,
-              y: bu - Nu
+              x: VG + fG,
+              y: pG - QG
             }, {
-              x: Cu,
-              y: bu
+              x: VG,
+              y: pG
             }, {
-              x: Cu - cu,
-              y: bu + Nu
+              x: VG - fG,
+              y: pG + QG
             }, {
-              x: Cu - cu,
-              y: bu + Nu
+              x: VG - fG,
+              y: pG + QG
             }, {
-              x: Cu,
-              y: bu
+              x: VG,
+              y: pG
             }, {
-              x: Cu,
-              y: bu
-            }], Uu.edgeLabel.x = Cu, Uu.edgeLabel.y = bu, uu.setEdge(Uu.e, Uu.edgeLabel), uu.removeNode(Eu)
-          } else ju && Array.isArray(ju.selfEdges) && ju.selfEdges.forEach((uu => {
-            if (!Array.isArray(uu.label.points) || 7 !== uu.label.points.length) {
-              let Eu = su(ju.x) ? ju.x : 0,
-                Uu = su(ju.y) ? ju.y : 0,
-                Zu = (su(ju.width) ? ju.width : 0) / 2,
-                Xu = (su(ju.height) ? ju.height : 0) / 2;
-              uu.label.points = [{
-                x: Eu + Zu,
-                y: Uu - Xu
+              x: VG,
+              y: pG
+            }], SG.edgeLabel.x = VG, SG.edgeLabel.y = pG, GG.setEdge(SG.e, SG.edgeLabel), GG.removeNode(bG)
+          } else ZG && Array.isArray(ZG.selfEdges) && ZG.selfEdges.forEach((GG => {
+            if (!Array.isArray(GG.label.points) || 7 !== GG.label.points.length) {
+              let bG = wG(ZG.x) ? ZG.x : 0,
+                SG = wG(ZG.y) ? ZG.y : 0,
+                LG = (wG(ZG.width) ? ZG.width : 0) / 2,
+                yG = (wG(ZG.height) ? ZG.height : 0) / 2;
+              GG.label.points = [{
+                x: bG + LG,
+                y: SG - yG
               }, {
-                x: Eu + Zu,
-                y: Uu - Xu
+                x: bG + LG,
+                y: SG - yG
               }, {
-                x: Eu,
-                y: Uu
+                x: bG,
+                y: SG
               }, {
-                x: Eu - Zu,
-                y: Uu + Xu
+                x: bG - LG,
+                y: SG + yG
               }, {
-                x: Eu - Zu,
-                y: Uu + Xu
+                x: bG - LG,
+                y: SG + yG
               }, {
-                x: Eu,
-                y: Uu
+                x: bG,
+                y: SG
               }, {
-                x: Eu,
-                y: Uu
+                x: bG,
+                y: SG
               }]
             }
           }))
         }))
-      }(uu)));
-      let fu = JSON.parse(JSON.stringify(uu._nodes));
-      return Eu("    removeBorderNodes", (() => function(uu) {
-        uu.nodes().forEach((Eu => {
-          if (uu.children(Eu).length) {
-            let ju = uu.node(Eu),
-              su = uu.node(ju.borderTop),
-              Uu = uu.node(ju.borderBottom),
-              Zu = uu.node(ju.borderLeft[ju.borderLeft.length - 1]),
-              Xu = uu.node(ju.borderRight[ju.borderRight.length - 1]);
-            ju.width = Math.abs(Xu.x - Zu.x), ju.height = Math.abs(Uu.y - su.y), ju.x = Zu.x + ju.width / 2, ju.y = su.y + ju.height / 2
+      }(GG)));
+      let YG = JSON.parse(JSON.stringify(GG._nodes));
+      return bG("    removeBorderNodes", (() => function(GG) {
+        GG.nodes().forEach((bG => {
+          if (GG.children(bG).length) {
+            let ZG = GG.node(bG),
+              wG = GG.node(ZG.borderTop),
+              SG = GG.node(ZG.borderBottom),
+              LG = GG.node(ZG.borderLeft[ZG.borderLeft.length - 1]),
+              yG = GG.node(ZG.borderRight[ZG.borderRight.length - 1]);
+            ZG.width = Math.abs(yG.x - LG.x), ZG.height = Math.abs(SG.y - wG.y), ZG.x = LG.x + ZG.width / 2, ZG.y = wG.y + ZG.height / 2
           }
-        })), uu.nodes().forEach((Eu => {
-          "border" === uu.node(Eu).dummy && uu.removeNode(Eu)
+        })), GG.nodes().forEach((bG => {
+          "border" === GG.node(bG).dummy && GG.removeNode(bG)
         }))
-      }(uu))), Eu("    normalize.undo", (() => function(uu) {
-        uu.graph().dummyChains.forEach((Eu => {
-          let ju, su = uu.node(Eu),
-            Uu = su.edgeLabel;
-          for (uu.setEdge(su.edgeObj, Uu); su.dummy;) ju = uu.successors(Eu)[0], uu.removeNode(Eu), Uu.points.push({
-            x: su.x,
-            y: su.y
-          }), "edge-label" === su.dummy && (Uu.x = su.x, Uu.y = su.y, Uu.width = su.width, Uu.height = su.height), Eu = ju, su = uu.node(Eu)
+      }(GG))), bG("    normalize.undo", (() => function(GG) {
+        GG.graph().dummyChains.forEach((bG => {
+          let ZG, wG = GG.node(bG),
+            SG = wG.edgeLabel;
+          for (GG.setEdge(wG.edgeObj, SG); wG.dummy;) ZG = GG.successors(bG)[0], GG.removeNode(bG), SG.points.push({
+            x: wG.x,
+            y: wG.y
+          }), "edge-label" === wG.dummy && (SG.x = wG.x, SG.y = wG.y, SG.width = wG.width, SG.height = wG.height), bG = ZG, wG = GG.node(bG)
         }))
-      }(uu))), Eu("    fixupEdgeLabelCoords", (() => function(uu) {
-        uu.edges().forEach((Eu => {
-          let ju = uu.edge(Eu);
-          if (Object.hasOwn(ju, "x")) switch (("l" === ju.labelpos || "r" === ju.labelpos) && (ju.width -= ju.labeloffset), ju.labelpos) {
+      }(GG))), bG("    fixupEdgeLabelCoords", (() => function(GG) {
+        GG.edges().forEach((bG => {
+          let ZG = GG.edge(bG);
+          if (Object.hasOwn(ZG, "x")) switch (("l" === ZG.labelpos || "r" === ZG.labelpos) && (ZG.width -= ZG.labeloffset), ZG.labelpos) {
             case "l":
-              ju.x -= ju.width / 2 + ju.labeloffset;
+              ZG.x -= ZG.width / 2 + ZG.labeloffset;
               break;
             case "r":
-              ju.x += ju.width / 2 + ju.labeloffset
+              ZG.x += ZG.width / 2 + ZG.labeloffset
           }
         }))
-      }(uu))), Eu("    undoCoordinateSystem", (() => BE(uu))), Eu("    translateGraph", (() => function(uu) {
-        let Eu = Number.POSITIVE_INFINITY,
-          ju = 0,
-          su = Number.POSITIVE_INFINITY,
-          Uu = 0,
-          Zu = uu.graph(),
-          Xu = Zu.marginx || 0,
-          lu = Zu.marginy || 0;
+      }(GG))), bG("    undoCoordinateSystem", (() => gb(GG))), bG("    translateGraph", (() => function(GG) {
+        let bG = Number.POSITIVE_INFINITY,
+          ZG = 0,
+          wG = Number.POSITIVE_INFINITY,
+          SG = 0,
+          LG = GG.graph(),
+          yG = LG.marginx || 0,
+          kG = LG.marginy || 0;
 
-        function qu(uu) {
-          let Zu = uu.x,
-            Xu = uu.y,
-            lu = uu.width,
-            qu = uu.height;
-          Eu = Math.min(Eu, Zu - lu / 2), ju = Math.max(ju, Zu + lu / 2), su = Math.min(su, Xu - qu / 2), Uu = Math.max(Uu, Xu + qu / 2)
+        function UG(GG) {
+          let LG = GG.x,
+            yG = GG.y,
+            kG = GG.width,
+            UG = GG.height;
+          bG = Math.min(bG, LG - kG / 2), ZG = Math.max(ZG, LG + kG / 2), wG = Math.min(wG, yG - UG / 2), SG = Math.max(SG, yG + UG / 2)
         }
-        uu.nodes().forEach((Eu => qu(uu.node(Eu)))), uu.edges().forEach((Eu => {
-          let ju = uu.edge(Eu);
-          Object.hasOwn(ju, "x") && qu(ju)
-        })), Eu -= Xu, su -= lu, uu.nodes().forEach((ju => {
-          let Uu = uu.node(ju);
-          Uu.x -= Eu, Uu.y -= su
-        })), uu.edges().forEach((ju => {
-          let Uu = uu.edge(ju);
-          Uu.points.forEach((uu => {
-            uu.x -= Eu, uu.y -= su
-          })), Object.hasOwn(Uu, "x") && (Uu.x -= Eu), Object.hasOwn(Uu, "y") && (Uu.y -= su)
-        })), Zu.width = ju - Eu + Xu, Zu.height = Uu - su + lu
-      }(uu))), Eu("    assignNodeIntersects", (() => function(uu) {
-        uu.edges().forEach((Eu => {
-          if (Eu.v === Eu.w) return;
-          let ju, su, Uu = uu.edge(Eu),
-            Zu = uu.node(Eu.v),
-            Xu = uu.node(Eu.w);
-          Uu.points ? (ju = Uu.points[0], su = Uu.points[Uu.points.length - 1]) : (Uu.points = [], ju = Xu, su = Zu), Uu.points.unshift(Lu(Zu, ju)), Uu.points.push(Lu(Xu, su))
+        GG.nodes().forEach((bG => UG(GG.node(bG)))), GG.edges().forEach((bG => {
+          let ZG = GG.edge(bG);
+          Object.hasOwn(ZG, "x") && UG(ZG)
+        })), bG -= yG, wG -= kG, GG.nodes().forEach((ZG => {
+          let SG = GG.node(ZG);
+          SG.x -= bG, SG.y -= wG
+        })), GG.edges().forEach((ZG => {
+          let SG = GG.edge(ZG);
+          SG.points.forEach((GG => {
+            GG.x -= bG, GG.y -= wG
+          })), Object.hasOwn(SG, "x") && (SG.x -= bG), Object.hasOwn(SG, "y") && (SG.y -= wG)
+        })), LG.width = ZG - bG + yG, LG.height = SG - wG + kG
+      }(GG))), bG("    assignNodeIntersects", (() => function(GG) {
+        GG.edges().forEach((bG => {
+          if (bG.v === bG.w) return;
+          let ZG, wG, SG = GG.edge(bG),
+            LG = GG.node(bG.v),
+            yG = GG.node(bG.w);
+          SG.points ? (ZG = SG.points[0], wG = SG.points[SG.points.length - 1]) : (SG.points = [], ZG = yG, wG = LG), SG.points.unshift(eG(LG, ZG)), SG.points.push(eG(yG, wG))
         }))
-      }(uu))), Eu("    reversePoints", (() => function(uu) {
-        uu.edges().forEach((Eu => {
-          let ju = uu.edge(Eu);
-          ju.reversed && ju.points.reverse()
+      }(GG))), bG("    reversePoints", (() => function(GG) {
+        GG.edges().forEach((bG => {
+          let ZG = GG.edge(bG);
+          ZG.reversed && ZG.points.reverse()
         }))
-      }(uu))), Eu("    acyclic.undo", (() => function(uu) {
-        uu.edges().forEach((Eu => {
-          let ju = uu.edge(Eu);
-          if (ju.reversed) {
-            uu.removeEdge(Eu);
-            let su = ju.forwardName;
-            delete ju.reversed, delete ju.forwardName, uu.setEdge(Eu.w, Eu.v, ju, su)
+      }(GG))), bG("    acyclic.undo", (() => function(GG) {
+        GG.edges().forEach((bG => {
+          let ZG = GG.edge(bG);
+          if (ZG.reversed) {
+            GG.removeEdge(bG);
+            let wG = ZG.forwardName;
+            delete ZG.reversed, delete ZG.forwardName, GG.setEdge(bG.w, bG.v, ZG, wG)
           }
         }))
-      }(uu))), {
-        graph: uu,
-        rawNodes: fu
+      }(GG))), {
+        graph: GG,
+        rawNodes: YG
       }
     }
 
-    function Dj(uu, Eu) {
-      uu.nodes().forEach((ju => {
-        let su = uu.node(ju),
-          Uu = Eu.node(ju);
-        su && (su.x = Uu.x, su.y = Uu.y, su.order = Uu.order, su.rank = Uu.rank, Eu.children(ju).length && (su.width = Uu.width, su.height = Uu.height))
-      })), uu.edges().forEach((ju => {
-        let su = uu.edge(ju),
-          Uu = Eu.edge(ju);
-        su.points = Uu.points, Object.hasOwn(Uu, "x") && (su.x = Uu.x, su.y = Uu.y)
-      })), uu.graph().width = Eu.graph().width, uu.graph().height = Eu.graph().height
+    function JZ(GG, bG) {
+      GG.nodes().forEach((ZG => {
+        let wG = GG.node(ZG),
+          SG = bG.node(ZG);
+        wG && (wG.x = SG.x, wG.y = SG.y, wG.order = SG.order, wG.rank = SG.rank, bG.children(ZG).length && (wG.width = SG.width, wG.height = SG.height))
+      })), GG.edges().forEach((ZG => {
+        let wG = GG.edge(ZG),
+          SG = bG.edge(ZG);
+        wG.points = SG.points, Object.hasOwn(SG, "x") && (wG.x = SG.x, wG.y = SG.y)
+      })), GG.graph().width = bG.graph().width, GG.graph().height = bG.graph().height
     }
-    var gj = ["nodesep", "edgesep", "ranksep", "marginx", "marginy"],
-      Mj = {
+    var rZ = ["nodesep", "edgesep", "ranksep", "marginx", "marginy"],
+      zZ = {
         ranksep: 50,
         edgesep: 20,
         nodesep: 50,
         rankdir: "TB",
         rankalign: "center"
       },
-      ej = ["acyclicer", "ranker", "rankdir", "align", "rankalign"],
-      Gj = ["width", "height", "rank"],
-      pj = {
+      EZ = ["acyclicer", "ranker", "rankdir", "align", "rankalign"],
+      oZ = ["width", "height", "rank"],
+      XZ = {
         width: 0,
         height: 0
       },
-      wj = ["minlen", "weight", "width", "height", "labeloffset"],
-      Jj = {
+      uZ = ["minlen", "weight", "width", "height", "labeloffset"],
+      iZ = {
         minlen: 1,
         weight: 1,
         width: 0,
@@ -2528,73 +2528,73 @@ export const modules = {
         labeloffset: 10,
         labelpos: "r"
       },
-      dj = ["labelpos"];
+      CZ = ["labelpos"];
 
-    function aj(uu) {
-      let Eu = new Iu({
+    function WZ(GG) {
+      let bG = new qG({
           multigraph: !0,
           compound: !0
         }),
-        ju = oj(uu.graph());
-      return Eu.setGraph(Object.assign({}, Mj, Pj(ju, gj), EE(ju, ej))), uu.nodes().forEach((ju => {
-        let su = Pj(oj(uu.node(ju)), Gj);
-        Object.keys(pj).forEach((uu => {
-          void 0 === su[uu] && (su[uu] = pj[uu])
-        })), Eu.setNode(ju, su);
-        let Uu = uu.parent(ju);
-        void 0 !== Uu && Eu.setParent(ju, Uu)
-      })), uu.edges().forEach((ju => {
-        let su = oj(uu.edge(ju));
-        Eu.setEdge(ju, Object.assign({}, Jj, Pj(su, wj), EE(su, dj)))
-      })), Eu
+        ZG = IZ(GG.graph());
+      return bG.setGraph(Object.assign({}, zZ, mZ(ZG, rZ), bb(ZG, EZ))), GG.nodes().forEach((ZG => {
+        let wG = mZ(IZ(GG.node(ZG)), oZ);
+        Object.keys(XZ).forEach((GG => {
+          void 0 === wG[GG] && (wG[GG] = XZ[GG])
+        })), bG.setNode(ZG, wG);
+        let SG = GG.parent(ZG);
+        void 0 !== SG && bG.setParent(ZG, SG)
+      })), GG.edges().forEach((ZG => {
+        let wG = IZ(GG.edge(ZG));
+        bG.setEdge(ZG, Object.assign({}, iZ, mZ(wG, uZ), bb(wG, CZ)))
+      })), bG
     }
 
-    function Pj(uu, Eu) {
-      return jE(EE(uu, Eu), Number)
+    function mZ(GG, bG) {
+      return Zb(bb(GG, bG), Number)
     }
 
-    function oj(uu) {
-      let Eu = {};
-      return uu && Object.entries(uu).forEach((uu => {
-        let [ju, su] = uu;
-        "string" == typeof ju && (ju = ju.toLowerCase()), Eu[ju] = su
-      })), Eu
+    function IZ(GG) {
+      let bG = {};
+      return GG && Object.entries(GG).forEach((GG => {
+        let [ZG, wG] = GG;
+        "string" == typeof ZG && (ZG = ZG.toLowerCase()), bG[ZG] = wG
+      })), bG
     }
 
-    function kj(uu) {
-      let Eu = tu(uu),
-        ju = new Iu({
+    function FZ(GG) {
+      let bG = RG(GG),
+        ZG = new qG({
           compound: !0,
           multigraph: !0
         }).setGraph({});
-      return uu.nodes().forEach((Eu => {
-        ju.setNode(Eu, {
-          label: Eu
-        }), ju.setParent(Eu, "layer" + uu.node(Eu).rank)
-      })), uu.edges().forEach((uu => ju.setEdge(uu.v, uu.w, {}, uu.name))), Eu.forEach(((uu, Eu) => {
-        let su = "layer" + Eu;
-        ju.setNode(su, {
+      return GG.nodes().forEach((bG => {
+        ZG.setNode(bG, {
+          label: bG
+        }), ZG.setParent(bG, "layer" + GG.node(bG).rank)
+      })), GG.edges().forEach((GG => ZG.setEdge(GG.v, GG.w, {}, GG.name))), bG.forEach(((GG, bG) => {
+        let wG = "layer" + bG;
+        ZG.setNode(wG, {
           rank: "same"
-        }), uu.reduce(((uu, Eu) => (ju.setEdge(uu, Eu, {
+        }), GG.reduce(((GG, bG) => (ZG.setEdge(GG, bG, {
           style: "invis"
-        }), Eu)))
-      })), ju
+        }), bG)))
+      })), ZG
     }
-    var mj = {
-        time: nu,
-        notime: yu
+    var vZ = {
+        time: NG,
+        notime: OG
       },
-      vj = {
-        graphlib: Zu,
-        version: ZE,
-        layout: Nj,
-        debug: kj,
+      aZ = {
+        graphlib: LG,
+        version: Lb,
+        layout: QZ,
+        debug: FZ,
         util: {
-          time: nu,
-          notime: yu
+          time: NG,
+          notime: OG
         }
       }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

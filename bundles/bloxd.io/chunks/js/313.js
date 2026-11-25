@@ -1,467 +1,467 @@
 export const id = 313;
 export const ids = [313];
 export const modules = {
-  42066: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      _ENVTextureLoader: () => du
+  42240: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      _ENVTextureLoader: () => CG
     });
-    var su = ju(40192),
-      Uu = ju(37494),
-      Zu = ju(37519),
-      Xu = ju(40245),
-      lu = ju(40108),
-      qu = ju(40253),
-      fu = (ju(40350), ju(42068)),
-      Cu = ju(39032),
-      bu = (ju(42077), ju(42102), ju(40319));
-    const cu = "image/png",
-      Nu = [134, 22, 135, 150, 246, 214, 150, 54];
+    var wG = ZG(40319),
+      SG = ZG(37439),
+      LG = ZG(37471),
+      yG = ZG(40379),
+      kG = ZG(40210),
+      UG = ZG(40387),
+      YG = (ZG(40475), ZG(42248)),
+      VG = ZG(39093),
+      pG = (ZG(42262), ZG(42289), ZG(40447));
+    const fG = "image/png",
+      QG = [134, 22, 135, 150, 246, 214, 150, 54];
 
-    function Ou(uu) {
-      const Eu = new DataView(uu.buffer, uu.byteOffset, uu.byteLength);
-      let ju = 0;
-      for (let Xu = 0; Xu < Nu.length; Xu++)
-        if (Eu.getUint8(ju++) !== Nu[Xu]) return Cu.b.Error("Not a babylon environment map"), null;
-      let su, Uu = "";
-      for (; su = Eu.getUint8(ju++);) Uu += String.fromCharCode(su);
-      let Zu = JSON.parse(Uu);
-      return Zu = Yu(Zu), Zu.binaryDataPosition = ju, Zu.specular && (Zu.specular.lodGenerationScale = Zu.specular.lodGenerationScale || .8), Zu
+    function KG(GG) {
+      const bG = new DataView(GG.buffer, GG.byteOffset, GG.byteLength);
+      let ZG = 0;
+      for (let yG = 0; yG < QG.length; yG++)
+        if (bG.getUint8(ZG++) !== QG[yG]) return VG.c.Error("Not a babylon environment map"), null;
+      let wG, SG = "";
+      for (; wG = bG.getUint8(ZG++);) SG += String.fromCharCode(wG);
+      let LG = JSON.parse(SG);
+      return LG = hG(LG), LG.binaryDataPosition = ZG, LG.specular && (LG.specular.lodGenerationScale = LG.specular.lodGenerationScale || .8), LG
     }
 
-    function Yu(uu) {
-      if (uu.version > 2) throw new Error(`Unsupported babylon environment map version "${uu.version}". Latest supported version is "2".`);
-      return 2 === uu.version ? uu : uu = {
-        ...uu,
+    function hG(GG) {
+      if (GG.version > 2) throw new Error(`Unsupported babylon environment map version "${GG.version}". Latest supported version is "2".`);
+      return 2 === GG.version ? GG : GG = {
+        ...GG,
         version: 2,
-        imageType: cu
+        imageType: fG
       }
     }
 
-    function hu(uu, Eu) {
-      const ju = (Eu = Yu(Eu)).specular;
-      let su = Math.log2(Eu.width);
-      if (su = Math.round(su) + 1, ju.mipmaps.length !== 6 * su) throw new Error(`Unsupported specular mipmaps number "${ju.mipmaps.length}"`);
-      const Uu = new Array(su);
-      for (let Zu = 0; Zu < su; Zu++) {
-        Uu[Zu] = new Array(6);
-        for (let su = 0; su < 6; su++) {
-          const Xu = ju.mipmaps[6 * Zu + su];
-          Uu[Zu][su] = new Uint8Array(uu.buffer, uu.byteOffset + Eu.binaryDataPosition + Xu.position, Xu.length)
+    function dG(GG, bG) {
+      const ZG = (bG = hG(bG)).specular;
+      let wG = Math.log2(bG.width);
+      if (wG = Math.round(wG) + 1, ZG.mipmaps.length !== 6 * wG) throw new Error(`Unsupported specular mipmaps number "${ZG.mipmaps.length}"`);
+      const SG = new Array(wG);
+      for (let LG = 0; LG < wG; LG++) {
+        SG[LG] = new Array(6);
+        for (let wG = 0; wG < 6; wG++) {
+          const yG = ZG.mipmaps[6 * LG + wG];
+          SG[LG][wG] = new Uint8Array(GG.buffer, GG.byteOffset + bG.binaryDataPosition + yG.position, yG.length)
         }
       }
-      return Uu
+      return SG
     }
 
-    function Du(uu, Eu) {
-      Eu = Yu(Eu);
-      const ju = new Array(6),
-        su = Eu.irradiance?.irradianceTexture;
-      if (su) {
-        if (6 !== su.faces.length) throw new Error(`Incorrect irradiance texture faces number "${su.faces.length}"`);
-        for (let Uu = 0; Uu < 6; Uu++) {
-          const Zu = su.faces[Uu];
-          ju[Uu] = new Uint8Array(uu.buffer, uu.byteOffset + Eu.binaryDataPosition + Zu.position, Zu.length)
+    function JG(GG, bG) {
+      bG = hG(bG);
+      const ZG = new Array(6),
+        wG = bG.irradiance?.irradianceTexture;
+      if (wG) {
+        if (6 !== wG.faces.length) throw new Error(`Incorrect irradiance texture faces number "${wG.faces.length}"`);
+        for (let SG = 0; SG < 6; SG++) {
+          const LG = wG.faces[SG];
+          ZG[SG] = new Uint8Array(GG.buffer, GG.byteOffset + bG.binaryDataPosition + LG.position, LG.length)
         }
       }
-      return ju
+      return ZG
     }
 
-    function gu(uu, Eu, ju) {
-      const su = (ju = Yu(ju)).specular;
-      if (!su) return Promise.resolve([]);
-      uu._lodGenerationScale = su.lodGenerationScale;
-      const Zu = [],
-        Xu = hu(Eu, ju);
-      Zu.push(eu(uu, Xu, ju.imageType));
-      const lu = ju.irradiance?.irradianceTexture;
-      if (lu) {
-        const su = Du(Eu, ju);
-        let Xu = null;
-        ju.irradiance?.irradianceTexture?.dominantDirection && (Xu = Uu.t.FromArray(ju.irradiance.irradianceTexture.dominantDirection)), Zu.push(Gu(uu, su, lu.size, ju.imageType, Xu))
+    function rG(GG, bG, ZG) {
+      const wG = (ZG = hG(ZG)).specular;
+      if (!wG) return Promise.resolve([]);
+      GG._lodGenerationScale = wG.lodGenerationScale;
+      const LG = [],
+        yG = dG(bG, ZG);
+      LG.push(EG(GG, yG, ZG.imageType));
+      const kG = ZG.irradiance?.irradianceTexture;
+      if (kG) {
+        const wG = JG(bG, ZG);
+        let yG = null;
+        ZG.irradiance?.irradianceTexture?.dominantDirection && (yG = SG.p.FromArray(ZG.irradiance.irradianceTexture.dominantDirection)), LG.push(oG(GG, wG, kG.size, ZG.imageType, yG))
       }
-      return Promise.all(Zu)
+      return Promise.all(LG)
     }
-    async function Mu(uu, Eu, ju, su, Uu, Zu, Xu, lu, qu, fu, Cu) {
-      return await new Promise(((bu, cu) => {
-        if (ju) {
-          const ju = Eu.createTexture(null, !0, !0, null, 1, null, (uu => {
-            cu(uu)
-          }), uu);
-          su?.onEffectCreatedObservable.addOnce((lu => {
-            lu.executeWhenCompiled((() => {
-              su.externalTextureSamplerBinding = !0, su.onApply = su => {
-                su._bindTexture("textureSampler", ju), su.setFloat2("scale", 1, Eu._features.needsInvertingBitmap && uu instanceof ImageBitmap ? -1 : 1)
-              }, Eu.scenes.length && (Eu.scenes[0].postProcessManager.directRender([su], fu, !0, Zu, Xu), Eu.restoreDefaultFramebuffer(), ju.dispose(), URL.revokeObjectURL(Uu), bu())
+    async function zG(GG, bG, ZG, wG, SG, LG, yG, kG, UG, YG, VG) {
+      return await new Promise(((pG, fG) => {
+        if (ZG) {
+          const ZG = bG.createTexture(null, !0, !0, null, 1, null, (GG => {
+            fG(GG)
+          }), GG);
+          wG?.onEffectCreatedObservable.addOnce((kG => {
+            kG.executeWhenCompiled((() => {
+              wG.externalTextureSamplerBinding = !0, wG.onApply = wG => {
+                wG._bindTexture("textureSampler", ZG), wG.setFloat2("scale", 1, bG._features.needsInvertingBitmap && GG instanceof ImageBitmap ? -1 : 1)
+              }, bG.scenes.length && (bG.scenes[0].postProcessManager.directRender([wG], YG, !0, LG, yG), bG.restoreDefaultFramebuffer(), ZG.dispose(), URL.revokeObjectURL(SG), pG())
             }))
           }))
         } else {
-          if (Eu._uploadImageToTexture(Cu, uu, Zu, Xu), lu) {
-            const ju = qu[Xu];
-            ju && Eu._uploadImageToTexture(ju._texture, uu, Zu, 0)
+          if (bG._uploadImageToTexture(VG, GG, LG, yG), kG) {
+            const ZG = UG[yG];
+            ZG && bG._uploadImageToTexture(ZG._texture, GG, LG, 0)
           }
-          bu()
+          pG()
         }
       }))
     }
-    async function eu(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : cu;
-      const su = uu.wO();
-      uu.format = 5, uu.type = 0, uu.generateMipMaps = !0, uu._cachedAnisotropicFilteringLevel = null, su.updateTextureSamplingMode(3, uu), await pu(uu, Eu, !0, ju), uu.isReady = !0
+    async function EG(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : fG;
+      const wG = GG.CK();
+      GG.format = 5, GG.type = 0, GG.generateMipMaps = !0, GG._cachedAnisotropicFilteringLevel = null, wG.updateTextureSamplingMode(3, GG), await XG(GG, bG, !0, ZG), GG.isReady = !0
     }
-    async function Gu(uu, Eu, ju) {
-      let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : cu,
-        Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-      const Zu = uu.wO(),
-        Xu = new lu.c(Zu, 5),
-        fu = new qu.c(Zu, Xu);
-      uu._irradianceTexture = fu, fu._dominantDirection = Uu, Xu.isCube = !0, Xu.format = 5, Xu.type = 0, Xu.generateMipMaps = !0, Xu._cachedAnisotropicFilteringLevel = null, Xu.generateMipMaps = !0, Xu.width = ju, Xu.height = ju, Zu.updateTextureSamplingMode(3, Xu), await pu(Xu, [Eu], !1, su), Zu.generateMipMapsForCubemap(Xu), Xu.isReady = !0
+    async function oG(GG, bG, ZG) {
+      let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : fG,
+        SG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+      const LG = GG.CK(),
+        yG = new kG.b(LG, 5),
+        YG = new UG.b(LG, yG);
+      GG._irradianceTexture = YG, YG._dominantDirection = SG, yG.isCube = !0, yG.format = 5, yG.type = 0, yG.generateMipMaps = !0, yG._cachedAnisotropicFilteringLevel = null, yG.generateMipMaps = !0, yG.width = ZG, yG.height = ZG, LG.updateTextureSamplingMode(3, yG), await XG(yG, [bG], !1, wG), LG.generateMipMapsForCubemap(yG), yG.isReady = !0
     }
-    async function pu(uu, Eu, Uu) {
-      let Xu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : cu;
-      if (!(0, su.k)(uu.width)) throw new Error("Texture size must be a power of two");
-      const Cu = (0, Zu.ILog2)(uu.width) + 1,
-        Nu = uu.wO();
-      let Ou = !1,
-        Yu = !1,
-        hu = null,
-        Du = null,
-        gu = null;
-      const eu = Nu.getCaps();
-      eu.textureLOD ? Nu._features.supportRenderAndCopyToLodForFloatTextures ? eu.textureHalfFloatRender && eu.textureHalfFloatLinearFiltering ? (Ou = !0, uu.type = 2) : eu.textureFloatRender && eu.textureFloatLinearFiltering && (Ou = !0, uu.type = 1) : Ou = !1 : (Ou = !1, Yu = Uu);
-      let Gu = 0;
-      if (Ou) Nu.isWebGPU ? (Gu = 1, await ju.e(347).then((() => ju(61615)))) : await ju.e(329).then((() => ju(61624))), hu = new fu.b("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, Nu, !1, void 0, uu.type, void 0, null, !1, void 0, Gu), uu._isRGBD = !1, uu.invertY = !1, Du = Nu.createRenderTargetCubeTexture(uu.width, {
+    async function XG(GG, bG, SG) {
+      let yG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : fG;
+      if (!(0, wG.k)(GG.width)) throw new Error("Texture size must be a power of two");
+      const VG = (0, LG.ILog2)(GG.width) + 1,
+        QG = GG.CK();
+      let KG = !1,
+        hG = !1,
+        dG = null,
+        JG = null,
+        rG = null;
+      const EG = QG.getCaps();
+      EG.textureLOD ? QG._features.supportRenderAndCopyToLodForFloatTextures ? EG.textureHalfFloatRender && EG.textureHalfFloatLinearFiltering ? (KG = !0, GG.type = 2) : EG.textureFloatRender && EG.textureFloatLinearFiltering && (KG = !0, GG.type = 1) : KG = !1 : (KG = !1, hG = SG);
+      let oG = 0;
+      if (KG) QG.isWebGPU ? (oG = 1, await ZG.e(347).then((() => ZG(61933)))) : await ZG.e(329).then((() => ZG(61942))), dG = new YG.e("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, QG, !1, void 0, GG.type, void 0, null, !1, void 0, oG), GG._isRGBD = !1, GG.invertY = !1, JG = QG.createRenderTargetCubeTexture(GG.width, {
         generateDepthBuffer: !1,
         generateMipMaps: !0,
         generateStencilBuffer: !1,
         samplingMode: 3,
-        type: uu.type,
+        type: GG.type,
         format: 5
       });
-      else if (uu._isRGBD = !0, uu.invertY = !0, Yu) {
-        const Eu = 3;
-        gu = {};
-        const ju = uu._lodGenerationScale,
-          su = uu._lodGenerationOffset;
-        for (let Uu = 0; Uu < Eu; Uu++) {
-          const Zu = (Cu - 1) * ju + su,
-            Xu = su + (Zu - su) * (1 - Uu / (Eu - 1)),
-            fu = Math.round(Math.min(Math.max(Xu, 0), Zu)),
-            bu = new lu.c(Nu, 2);
-          bu.isCube = !0, bu.invertY = !0, bu.generateMipMaps = !1, Nu.updateTextureSamplingMode(2, bu);
-          const cu = new qu.c(null);
-          switch (cu._isCube = !0, cu._texture = bu, gu[fu] = cu, Uu) {
+      else if (GG._isRGBD = !0, GG.invertY = !0, hG) {
+        const bG = 3;
+        rG = {};
+        const ZG = GG._lodGenerationScale,
+          wG = GG._lodGenerationOffset;
+        for (let SG = 0; SG < bG; SG++) {
+          const LG = (VG - 1) * ZG + wG,
+            yG = wG + (LG - wG) * (1 - SG / (bG - 1)),
+            YG = Math.round(Math.min(Math.max(yG, 0), LG)),
+            pG = new kG.b(QG, 2);
+          pG.isCube = !0, pG.invertY = !0, pG.generateMipMaps = !1, QG.updateTextureSamplingMode(2, pG);
+          const fG = new UG.b(null);
+          switch (fG._isCube = !0, fG._texture = pG, rG[YG] = fG, SG) {
             case 0:
-              uu._lodTextureLow = cu;
+              GG._lodTextureLow = fG;
               break;
             case 1:
-              uu._lodTextureMid = cu;
+              GG._lodTextureMid = fG;
               break;
             case 2:
-              uu._lodTextureHigh = cu
+              GG._lodTextureHigh = fG
           }
         }
       }
-      const pu = [];
-      for (let ju = 0; ju < Eu.length; ju++)
-        for (let su = 0; su < 6; su++) {
-          const Uu = Eu[ju][su],
-            Zu = (0, bu.l)(Uu),
-            lu = new Blob([Zu], {
-              type: Xu
+      const XG = [];
+      for (let ZG = 0; ZG < bG.length; ZG++)
+        for (let wG = 0; wG < 6; wG++) {
+          const SG = bG[ZG][wG],
+            LG = (0, pG.j)(SG),
+            kG = new Blob([LG], {
+              type: yG
             }),
-            qu = URL.createObjectURL(lu);
-          let fu;
-          if (Nu._features.forceBitmapOverHTMLImageElement) fu = Nu.createImageBitmap(lu, {
+            UG = URL.createObjectURL(kG);
+          let YG;
+          if (QG._features.forceBitmapOverHTMLImageElement) YG = QG.createImageBitmap(kG, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none"
-          }).then((async Eu => await Mu(Eu, Nu, Ou, hu, qu, su, ju, Yu, gu, Du, uu)));
+          }).then((async bG => await zG(bG, QG, KG, dG, UG, wG, ZG, hG, rG, JG, GG)));
           else {
-            const Eu = new Image;
-            Eu.src = qu, fu = new Promise(((Uu, Zu) => {
-              Eu.onload = () => {
-                Mu(Eu, Nu, Ou, hu, qu, su, ju, Yu, gu, Du, uu).then((() => Uu())).catch((uu => {
-                  Zu(uu)
+            const bG = new Image;
+            bG.src = UG, YG = new Promise(((SG, LG) => {
+              bG.onload = () => {
+                zG(bG, QG, KG, dG, UG, wG, ZG, hG, rG, JG, GG).then((() => SG())).catch((GG => {
+                  LG(GG)
                 }))
-              }, Eu.onerror = uu => {
-                Zu(uu)
+              }, bG.onerror = GG => {
+                LG(GG)
               }
             }))
           }
-          pu.push(fu)
+          XG.push(YG)
         }
-      if (await Promise.all(pu), Eu.length < Cu) {
-        let ju;
-        const su = Math.pow(2, Cu - 1 - Eu.length),
-          Uu = su * su * 4;
-        switch (uu.type) {
+      if (await Promise.all(XG), bG.length < VG) {
+        let ZG;
+        const wG = Math.pow(2, VG - 1 - bG.length),
+          SG = wG * wG * 4;
+        switch (GG.type) {
           case 0:
-            ju = new Uint8Array(Uu);
+            ZG = new Uint8Array(SG);
             break;
           case 2:
-            ju = new Uint16Array(Uu);
+            ZG = new Uint16Array(SG);
             break;
           case 1:
-            ju = new Float32Array(Uu)
+            ZG = new Float32Array(SG)
         }
-        for (let Zu = Eu.length; Zu < Cu; Zu++)
-          for (let Eu = 0; Eu < 6; Eu++) Nu._uploadArrayBufferViewToTexture(Du?.texture || uu, ju, Eu, Zu)
+        for (let LG = bG.length; LG < VG; LG++)
+          for (let bG = 0; bG < 6; bG++) QG._uploadArrayBufferViewToTexture(JG?.texture || GG, ZG, bG, LG)
       }
-      if (Du) {
-        const Eu = uu._irradianceTexture;
-        uu._irradianceTexture = null, Nu._releaseTexture(uu), Du._swapAndDie(uu), uu._irradianceTexture = Eu
+      if (JG) {
+        const bG = GG._irradianceTexture;
+        GG._irradianceTexture = null, QG._releaseTexture(GG), JG._swapAndDie(GG), GG._irradianceTexture = bG
       }
-      hu && hu.dispose(), Yu && (uu._lodTextureHigh && uu._lodTextureHigh._texture && (uu._lodTextureHigh._texture.isReady = !0), uu._lodTextureMid && uu._lodTextureMid._texture && (uu._lodTextureMid._texture.isReady = !0), uu._lodTextureLow && uu._lodTextureLow._texture && (uu._lodTextureLow._texture.isReady = !0))
+      dG && dG.dispose(), hG && (GG._lodTextureHigh && GG._lodTextureHigh._texture && (GG._lodTextureHigh._texture.isReady = !0), GG._lodTextureMid && GG._lodTextureMid._texture && (GG._lodTextureMid._texture.isReady = !0), GG._lodTextureLow && GG._lodTextureLow._texture && (GG._lodTextureLow._texture.isReady = !0))
     }
 
-    function wu(uu, Eu) {
-      const ju = (Eu = Yu(Eu)).irradiance;
-      if (!ju) return;
-      const su = new Xu.e;
-      Uu.t.FromArrayToRef(ju.x, 0, su.x), Uu.t.FromArrayToRef(ju.y, 0, su.y), Uu.t.FromArrayToRef(ju.z, 0, su.z), Uu.t.FromArrayToRef(ju.xx, 0, su.xx), Uu.t.FromArrayToRef(ju.yy, 0, su.yy), Uu.t.FromArrayToRef(ju.zz, 0, su.zz), Uu.t.FromArrayToRef(ju.yz, 0, su.yz), Uu.t.FromArrayToRef(ju.zx, 0, su.zx), Uu.t.FromArrayToRef(ju.xy, 0, su.xy), uu._sphericalPolynomial = su
+    function uG(GG, bG) {
+      const ZG = (bG = hG(bG)).irradiance;
+      if (!ZG) return;
+      const wG = new yG.e;
+      SG.p.FromArrayToRef(ZG.x, 0, wG.x), SG.p.FromArrayToRef(ZG.y, 0, wG.y), SG.p.FromArrayToRef(ZG.z, 0, wG.z), SG.p.FromArrayToRef(ZG.xx, 0, wG.xx), SG.p.FromArrayToRef(ZG.yy, 0, wG.yy), SG.p.FromArrayToRef(ZG.zz, 0, wG.zz), SG.p.FromArrayToRef(ZG.yz, 0, wG.yz), SG.p.FromArrayToRef(ZG.zx, 0, wG.zx), SG.p.FromArrayToRef(ZG.xy, 0, wG.xy), GG._sphericalPolynomial = wG
     }
-    var Ju = ju(42109);
-    class du {
+    var iG = ZG(42292);
+    class CG {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(uu, Eu, ju, su, Uu) {
-        if (Array.isArray(uu)) return;
-        const Zu = Ou(uu);
-        if (Zu) {
-          Eu.width = Zu.width, Eu.height = Zu.width;
+      loadCubeData(GG, bG, ZG, wG, SG) {
+        if (Array.isArray(GG)) return;
+        const LG = KG(GG);
+        if (LG) {
+          bG.width = LG.width, bG.height = LG.width;
           try {
-            (0, Ju.c)(), wu(Eu, Zu), gu(Eu, uu, Zu).then((() => {
-              Eu.isReady = !0, Eu.onLoadedObservable.notifyObservers(Eu), Eu.onLoadedObservable.clear(), su && su()
-            }), (uu => {
-              Uu?.("Can not upload environment levels", uu)
+            (0, iG.e)(), uG(bG, LG), rG(bG, GG, LG).then((() => {
+              bG.isReady = !0, bG.onLoadedObservable.notifyObservers(bG), bG.onLoadedObservable.clear(), wG && wG()
+            }), (GG => {
+              SG?.("Can not upload environment levels", GG)
             }))
-          } catch (Xu) {
-            Uu?.("Can not upload environment file", Xu)
+          } catch (yG) {
+            SG?.("Can not upload environment file", yG)
           }
-        } else Uu && Uu("Can not parse the environment file", null)
+        } else SG && SG("Can not parse the environment file", null)
       }
       loadData() {
         throw ".env not supported in 2d."
       }
     }
   },
-  42109: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Xu
+  42292: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => yG
     });
-    var su = ju(42037),
-      Uu = ju(40253);
-    let Zu = !1;
+    var wG = ZG(42219),
+      SG = ZG(40387);
+    let LG = !1;
 
-    function Xu() {
-      Zu || (Zu = !0, Uu.c.prototype._sphericalPolynomialTargetSize = 0, Uu.c.prototype.forceSphericalPolynomialsRecompute = function() {
+    function yG() {
+      LG || (LG = !0, SG.b.prototype._sphericalPolynomialTargetSize = 0, SG.b.prototype.forceSphericalPolynomialsRecompute = function() {
         this._texture && (this._texture._sphericalPolynomial = null, this._texture._sphericalPolynomialPromise = null, this._texture._sphericalPolynomialComputed = !1)
-      }, Object.defineProperty(Uu.c.prototype, "sphericalPolynomial", {
+      }, Object.defineProperty(SG.b.prototype, "sphericalPolynomial", {
         get: function() {
           if (this._texture) {
             if (this._texture._sphericalPolynomial || this._texture._sphericalPolynomialComputed) return this._texture._sphericalPolynomial;
-            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = su.e.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((uu => {
-              this._texture._sphericalPolynomial = uu, this._texture._sphericalPolynomialComputed = !0
+            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = wG.d.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((GG => {
+              this._texture._sphericalPolynomial = GG, this._texture._sphericalPolynomialComputed = !0
             }))), null
           }
           return null
         },
-        set: function(uu) {
-          this._texture && (this._texture._sphericalPolynomial = uu)
+        set: function(GG) {
+          this._texture && (this._texture._sphericalPolynomial = GG)
         },
         enumerable: !0,
         configurable: !0
       }))
     }
   },
-  42037: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => fu
+  42219: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => YG
     });
-    var su = ju(37494),
-      Uu = ju(37519),
-      Zu = ju(40245),
-      Xu = ju(37496),
-      lu = ju(37680);
-    class qu {
-      constructor(uu, Eu, ju, su) {
-        this.name = uu, this.worldAxisForNormal = Eu, this.worldAxisForFileX = ju, this.worldAxisForFileY = su
+    var wG = ZG(37439),
+      SG = ZG(37471),
+      LG = ZG(40379),
+      yG = ZG(37443),
+      kG = ZG(37621);
+    class UG {
+      constructor(GG, bG, ZG, wG) {
+        this.name = GG, this.worldAxisForNormal = bG, this.worldAxisForFileX = ZG, this.worldAxisForFileY = wG
       }
     }
-    class fu {
-      static _NearestPow2Floor(uu) {
-        return uu <= 1 ? 1 : 1 << Math.floor(Math.log2(uu))
+    class YG {
+      static _NearestPow2Floor(GG) {
+        return GG <= 1 ? 1 : 1 << Math.floor(Math.log2(GG))
       }
-      static ConvertCubeMapTextureToSphericalPolynomial(uu) {
-        if (!uu.isCube) return null;
-        uu.hV()?.wO().flushFramebuffer();
-        const Eu = uu.getSize().width,
-          ju = uu._sphericalPolynomialTargetSize,
-          su = ju > 0 ? this._NearestPow2Floor(ju) : 0,
-          Uu = !uu.noMipmap && !0 === uu._texture?.generateMipMaps,
-          Zu = su > 0 && su < Eu && Uu,
-          Xu = Zu ? Math.max(0, Math.round(Math.log2(Eu / su))) : 0,
-          lu = Zu ? Math.max(1, Math.floor(Eu / Math.pow(2, Xu))) : Eu,
-          qu = uu.readPixels(0, Xu, void 0, !1),
-          fu = uu.readPixels(1, Xu, void 0, !1);
-        let Cu, bu;
-        uu.isRenderTarget ? (Cu = uu.readPixels(3, Xu, void 0, !1), bu = uu.readPixels(2, Xu, void 0, !1)) : (Cu = uu.readPixels(2, Xu, void 0, !1), bu = uu.readPixels(3, Xu, void 0, !1));
-        const cu = uu.readPixels(4, Xu, void 0, !1),
-          Nu = uu.readPixels(5, Xu, void 0, !1),
-          Ou = uu.gammaSpace,
-          Yu = su > 0 && su < Eu && !Zu;
-        return new Promise((uu => {
-          Promise.all([fu, qu, Cu, bu, cu, Nu]).then((ju => {
-            let [Uu, Zu, Xu, qu, fu, Cu] = ju, bu = lu;
-            if (Yu) {
-              const uu = 4;
-              Uu = this._DownsampleFace(Uu, Eu, su, uu), Zu = this._DownsampleFace(Zu, Eu, su, uu), Xu = this._DownsampleFace(Xu, Eu, su, uu), qu = this._DownsampleFace(qu, Eu, su, uu), fu = this._DownsampleFace(fu, Eu, su, uu), Cu = this._DownsampleFace(Cu, Eu, su, uu), bu = su
+      static ConvertCubeMapTextureToSphericalPolynomial(GG) {
+        if (!GG.isCube) return null;
+        GG.Dv()?.CK().flushFramebuffer();
+        const bG = GG.getSize().width,
+          ZG = GG._sphericalPolynomialTargetSize,
+          wG = ZG > 0 ? this._NearestPow2Floor(ZG) : 0,
+          SG = !GG.noMipmap && !0 === GG._texture?.generateMipMaps,
+          LG = wG > 0 && wG < bG && SG,
+          yG = LG ? Math.max(0, Math.round(Math.log2(bG / wG))) : 0,
+          kG = LG ? Math.max(1, Math.floor(bG / Math.pow(2, yG))) : bG,
+          UG = GG.readPixels(0, yG, void 0, !1),
+          YG = GG.readPixels(1, yG, void 0, !1);
+        let VG, pG;
+        GG.isRenderTarget ? (VG = GG.readPixels(3, yG, void 0, !1), pG = GG.readPixels(2, yG, void 0, !1)) : (VG = GG.readPixels(2, yG, void 0, !1), pG = GG.readPixels(3, yG, void 0, !1));
+        const fG = GG.readPixels(4, yG, void 0, !1),
+          QG = GG.readPixels(5, yG, void 0, !1),
+          KG = GG.gammaSpace,
+          hG = wG > 0 && wG < bG && !LG;
+        return new Promise((GG => {
+          Promise.all([YG, UG, VG, pG, fG, QG]).then((ZG => {
+            let [SG, LG, yG, UG, YG, VG] = ZG, pG = kG;
+            if (hG) {
+              const GG = 4;
+              SG = this._DownsampleFace(SG, bG, wG, GG), LG = this._DownsampleFace(LG, bG, wG, GG), yG = this._DownsampleFace(yG, bG, wG, GG), UG = this._DownsampleFace(UG, bG, wG, GG), YG = this._DownsampleFace(YG, bG, wG, GG), VG = this._DownsampleFace(VG, bG, wG, GG), pG = wG
             }
-            const cu = {
-              size: bu,
-              right: Zu,
-              left: Uu,
-              up: Xu,
-              down: qu,
-              front: fu,
-              back: Cu,
+            const fG = {
+              size: pG,
+              right: LG,
+              left: SG,
+              up: yG,
+              down: UG,
+              front: YG,
+              back: VG,
               format: 5,
-              type: Uu instanceof Float32Array ? 1 : 0,
-              gammaSpace: Ou
+              type: SG instanceof Float32Array ? 1 : 0,
+              gammaSpace: KG
             };
-            uu(this.ConvertCubeMapToSphericalPolynomial(cu))
+            GG(this.ConvertCubeMapToSphericalPolynomial(fG))
           }))
         }))
       }
-      static _AreaElement(uu, Eu) {
-        return Math.atan2(uu * Eu, Math.sqrt(uu * uu + Eu * Eu + 1))
+      static _AreaElement(GG, bG) {
+        return Math.atan2(GG * bG, Math.sqrt(GG * GG + bG * bG + 1))
       }
-      static _DownsampleFace(uu, Eu, ju, su) {
-        const Uu = uu instanceof Float32Array ? uu : Float32Array.from(uu),
-          Zu = ju * ju * su,
-          Xu = new Float32Array(Zu),
-          lu = Eu / ju,
-          qu = 1 / (lu * lu);
-        for (let Cu = 0; Cu < ju; Cu++) {
-          const uu = Math.floor(Cu * lu),
-            Zu = Math.floor((Cu + 1) * lu);
-          for (let fu = 0; fu < ju; fu++) {
-            const bu = Math.floor(fu * lu),
-              cu = Math.floor((fu + 1) * lu),
-              Nu = (Cu * ju + fu) * su;
-            for (let ju = 0; ju < su; ju++) {
-              let lu = 0;
-              for (let Xu = uu; Xu < Zu; Xu++)
-                for (let uu = bu; uu < cu; uu++) lu += Uu[(Xu * Eu + uu) * su + ju];
-              Xu[Nu + ju] = lu * qu
+      static _DownsampleFace(GG, bG, ZG, wG) {
+        const SG = GG instanceof Float32Array ? GG : Float32Array.from(GG),
+          LG = ZG * ZG * wG,
+          yG = new Float32Array(LG),
+          kG = bG / ZG,
+          UG = 1 / (kG * kG);
+        for (let VG = 0; VG < ZG; VG++) {
+          const GG = Math.floor(VG * kG),
+            LG = Math.floor((VG + 1) * kG);
+          for (let YG = 0; YG < ZG; YG++) {
+            const pG = Math.floor(YG * kG),
+              fG = Math.floor((YG + 1) * kG),
+              QG = (VG * ZG + YG) * wG;
+            for (let ZG = 0; ZG < wG; ZG++) {
+              let kG = 0;
+              for (let yG = GG; yG < LG; yG++)
+                for (let GG = pG; GG < fG; GG++) kG += SG[(yG * bG + GG) * wG + ZG];
+              yG[QG + ZG] = kG * UG
             }
           }
         }
-        if (uu instanceof Float32Array) return Xu;
-        const fu = new(0, uu.constructor)(Zu);
-        for (let Cu = 0; Cu < Zu; Cu++) fu[Cu] = Xu[Cu] + .5 | 0;
-        return fu
+        if (GG instanceof Float32Array) return yG;
+        const YG = new(0, GG.constructor)(LG);
+        for (let VG = 0; VG < LG; VG++) YG[VG] = yG[VG] + .5 | 0;
+        return YG
       }
-      static ConvertCubeMapToSphericalPolynomial(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const ju = Eu > 0 ? this._NearestPow2Floor(Eu) : 0;
-        if (ju > 0 && uu.size > ju) {
-          const Eu = 5 === uu.format ? 4 : 3,
-            su = ["right", "left", "up", "down", "front", "back"],
-            Uu = {};
-          for (const Zu of su) Uu[Zu] = this._DownsampleFace(uu[Zu], uu.size, ju, Eu);
-          uu = {
-            ...uu,
-            ...Uu,
-            size: ju
+      static ConvertCubeMapToSphericalPolynomial(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const ZG = bG > 0 ? this._NearestPow2Floor(bG) : 0;
+        if (ZG > 0 && GG.size > ZG) {
+          const bG = 5 === GG.format ? 4 : 3,
+            wG = ["right", "left", "up", "down", "front", "back"],
+            SG = {};
+          for (const LG of wG) SG[LG] = this._DownsampleFace(GG[LG], GG.size, ZG, bG);
+          GG = {
+            ...GG,
+            ...SG,
+            size: ZG
           }
         }
-        const su = new Zu.b;
-        let qu = 0;
-        const fu = 2 / uu.size,
-          Cu = fu,
-          bu = .5 * fu,
-          cu = bu - 1;
-        for (let Zu = 0; Zu < 6; Zu++) {
-          const Eu = this._FileFaces[Zu],
-            ju = uu[Eu.name];
-          let Nu = cu;
-          const Ou = 5 === uu.format ? 4 : 3;
-          for (let Zu = 0; Zu < uu.size; Zu++) {
-            let Yu = cu;
-            for (let Cu = 0; Cu < uu.size; Cu++) {
-              const cu = Eu.worldAxisForFileX.scale(Yu).add(Eu.worldAxisForFileY.scale(Nu)).add(Eu.worldAxisForNormal);
-              cu.normalize();
-              const hu = this._AreaElement(Yu - bu, Nu - bu) - this._AreaElement(Yu - bu, Nu + bu) - this._AreaElement(Yu + bu, Nu - bu) + this._AreaElement(Yu + bu, Nu + bu);
-              let Du = ju[Zu * uu.size * Ou + Cu * Ou + 0],
-                gu = ju[Zu * uu.size * Ou + Cu * Ou + 1],
-                Mu = ju[Zu * uu.size * Ou + Cu * Ou + 2];
-              isNaN(Du) && (Du = 0), isNaN(gu) && (gu = 0), isNaN(Mu) && (Mu = 0), 0 === uu.type && (Du /= 255, gu /= 255, Mu /= 255), uu.gammaSpace && (Du = Math.pow((0, Uu.Clamp)(Du), Xu.i), gu = Math.pow((0, Uu.Clamp)(gu), Xu.i), Mu = Math.pow((0, Uu.Clamp)(Mu), Xu.i));
-              const eu = this.MAX_HDRI_VALUE;
+        const wG = new LG.b;
+        let UG = 0;
+        const YG = 2 / GG.size,
+          VG = YG,
+          pG = .5 * YG,
+          fG = pG - 1;
+        for (let LG = 0; LG < 6; LG++) {
+          const bG = this._FileFaces[LG],
+            ZG = GG[bG.name];
+          let QG = fG;
+          const KG = 5 === GG.format ? 4 : 3;
+          for (let LG = 0; LG < GG.size; LG++) {
+            let hG = fG;
+            for (let VG = 0; VG < GG.size; VG++) {
+              const fG = bG.worldAxisForFileX.scale(hG).add(bG.worldAxisForFileY.scale(QG)).add(bG.worldAxisForNormal);
+              fG.normalize();
+              const dG = this._AreaElement(hG - pG, QG - pG) - this._AreaElement(hG - pG, QG + pG) - this._AreaElement(hG + pG, QG - pG) + this._AreaElement(hG + pG, QG + pG);
+              let JG = ZG[LG * GG.size * KG + VG * KG + 0],
+                rG = ZG[LG * GG.size * KG + VG * KG + 1],
+                zG = ZG[LG * GG.size * KG + VG * KG + 2];
+              isNaN(JG) && (JG = 0), isNaN(rG) && (rG = 0), isNaN(zG) && (zG = 0), 0 === GG.type && (JG /= 255, rG /= 255, zG /= 255), GG.gammaSpace && (JG = Math.pow((0, SG.Clamp)(JG), yG.k), rG = Math.pow((0, SG.Clamp)(rG), yG.k), zG = Math.pow((0, SG.Clamp)(zG), yG.k));
+              const EG = this.MAX_HDRI_VALUE;
               if (this.PRESERVE_CLAMPED_COLORS) {
-                const uu = Math.max(Du, gu, Mu);
-                if (uu > eu) {
-                  const Eu = eu / uu;
-                  Du *= Eu, gu *= Eu, Mu *= Eu
+                const GG = Math.max(JG, rG, zG);
+                if (GG > EG) {
+                  const bG = EG / GG;
+                  JG *= bG, rG *= bG, zG *= bG
                 }
-              } else Du = (0, Uu.Clamp)(Du, 0, eu), gu = (0, Uu.Clamp)(gu, 0, eu), Mu = (0, Uu.Clamp)(Mu, 0, eu);
-              const Gu = new lu.c(Du, gu, Mu);
-              su.addLight(cu, Gu, hu), qu += hu, Yu += fu
+              } else JG = (0, SG.Clamp)(JG, 0, EG), rG = (0, SG.Clamp)(rG, 0, EG), zG = (0, SG.Clamp)(zG, 0, EG);
+              const oG = new kG.c(JG, rG, zG);
+              wG.addLight(fG, oG, dG), UG += dG, hG += YG
             }
-            Nu += Cu
+            QG += VG
           }
         }
-        const Nu = 6 * (4 * Math.PI) / 6 / qu;
-        return su.scaleInPlace(Nu), su.convertIncidentRadianceToIrradiance(), su.convertIrradianceToLambertianRadiance(), Zu.e.FromHarmonics(su)
+        const QG = 6 * (4 * Math.PI) / 6 / UG;
+        return wG.scaleInPlace(QG), wG.convertIncidentRadianceToIrradiance(), wG.convertIrradianceToLambertianRadiance(), LG.e.FromHarmonics(wG)
       }
     }
-    fu._FileFaces = [new qu("right", new su.t(1, 0, 0), new su.t(0, 0, -1), new su.t(0, -1, 0)), new qu("left", new su.t(-1, 0, 0), new su.t(0, 0, 1), new su.t(0, -1, 0)), new qu("up", new su.t(0, 1, 0), new su.t(1, 0, 0), new su.t(0, 0, 1)), new qu("down", new su.t(0, -1, 0), new su.t(1, 0, 0), new su.t(0, 0, -1)), new qu("front", new su.t(0, 0, 1), new su.t(1, 0, 0), new su.t(0, -1, 0)), new qu("back", new su.t(0, 0, -1), new su.t(-1, 0, 0), new su.t(0, -1, 0))], fu.MAX_HDRI_VALUE = 4096, fu.PRESERVE_CLAMPED_COLORS = !1
+    YG._FileFaces = [new UG("right", new wG.p(1, 0, 0), new wG.p(0, 0, -1), new wG.p(0, -1, 0)), new UG("left", new wG.p(-1, 0, 0), new wG.p(0, 0, 1), new wG.p(0, -1, 0)), new UG("up", new wG.p(0, 1, 0), new wG.p(1, 0, 0), new wG.p(0, 0, 1)), new UG("down", new wG.p(0, -1, 0), new wG.p(1, 0, 0), new wG.p(0, 0, -1)), new UG("front", new wG.p(0, 0, 1), new wG.p(1, 0, 0), new wG.p(0, -1, 0)), new UG("back", new wG.p(0, 0, -1), new wG.p(-1, 0, 0), new wG.p(0, -1, 0))], YG.MAX_HDRI_VALUE = 4096, YG.PRESERVE_CLAMPED_COLORS = !1
   },
-  42077: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Zu
+  42262: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => LG
     });
-    var su = ju(42068),
-      Uu = ju(42082);
-    class Zu {
-      static ExpandRGBDTexture(uu) {
-        const Eu = uu._texture;
-        if (!Eu || !uu.isRGBD) return;
-        const Uu = Eu.wO(),
-          Zu = Uu.getCaps(),
-          Xu = Eu.isReady;
-        let lu = !1;
-        Zu.textureHalfFloatRender && Zu.textureHalfFloatLinearFiltering ? (lu = !0, Eu.type = 2) : Zu.textureFloatRender && Zu.textureFloatLinearFiltering && (lu = !0, Eu.type = 1), lu && (Eu.isReady = !1, Eu._isRGBD = !1, Eu.invertY = !1);
-        const qu = async () => {
-          const Zu = Uu.isWebGPU,
-            Xu = Zu ? 1 : 0;
-          Eu.isReady = !1, Zu ? await ju.e(347).then((() => ju(61615))) : await ju.e(329).then((() => ju(61624)));
-          const lu = new su.b("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, Uu, !1, void 0, Eu.type, void 0, null, !1, void 0, Xu);
-          lu.externalTextureSamplerBinding = !0;
-          const qu = Uu.createRenderTargetTexture(Eu.width, {
+    var wG = ZG(42248),
+      SG = ZG(42268);
+    class LG {
+      static ExpandRGBDTexture(GG) {
+        const bG = GG._texture;
+        if (!bG || !GG.isRGBD) return;
+        const SG = bG.CK(),
+          LG = SG.getCaps(),
+          yG = bG.isReady;
+        let kG = !1;
+        LG.textureHalfFloatRender && LG.textureHalfFloatLinearFiltering ? (kG = !0, bG.type = 2) : LG.textureFloatRender && LG.textureFloatLinearFiltering && (kG = !0, bG.type = 1), kG && (bG.isReady = !1, bG._isRGBD = !1, bG.invertY = !1);
+        const UG = async () => {
+          const LG = SG.isWebGPU,
+            yG = LG ? 1 : 0;
+          bG.isReady = !1, LG ? await ZG.e(347).then((() => ZG(61933))) : await ZG.e(329).then((() => ZG(61942)));
+          const kG = new wG.e("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, SG, !1, void 0, bG.type, void 0, null, !1, void 0, yG);
+          kG.externalTextureSamplerBinding = !0;
+          const UG = SG.createRenderTargetTexture(bG.width, {
             generateDepthBuffer: !1,
             generateMipMaps: !1,
             generateStencilBuffer: !1,
-            samplingMode: Eu.samplingMode,
-            type: Eu.type,
+            samplingMode: bG.samplingMode,
+            type: bG.type,
             format: 5
           });
-          lu.onEffectCreatedObservable.addOnce((ju => {
-            ju.executeWhenCompiled((() => {
-              lu.onApply = uu => {
-                uu._bindTexture("textureSampler", Eu), uu.setFloat2("scale", 1, 1)
-              }, uu.hV()?.postProcessManager.directRender([lu], qu, !0), Uu.restoreDefaultFramebuffer(), Uu._releaseTexture(Eu), lu && lu.dispose(), qu._swapAndDie(Eu), Eu.isReady = !0
+          kG.onEffectCreatedObservable.addOnce((ZG => {
+            ZG.executeWhenCompiled((() => {
+              kG.onApply = GG => {
+                GG._bindTexture("textureSampler", bG), GG.setFloat2("scale", 1, 1)
+              }, GG.Dv()?.postProcessManager.directRender([kG], UG, !0), SG.restoreDefaultFramebuffer(), SG._releaseTexture(bG), kG && kG.dispose(), UG._swapAndDie(bG), bG.isReady = !0
             }))
           }))
         };
-        lu && (Xu ? qu() : uu.onLoadObservable.addOnce(qu))
+        kG && (yG ? UG() : GG.onLoadObservable.addOnce(UG))
       }
-      static async EncodeTextureToRGBD(uu, Eu) {
-        let su = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return Eu.wO().isWebGPU ? await ju.e(348).then((() => ju(61641))) : await ju.e(330).then((() => ju(61634))), await (0, Uu.c)("rgbdEncode", uu, Eu, su, 1, 5)
+      static async EncodeTextureToRGBD(GG, bG) {
+        let wG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        return bG.CK().isWebGPU ? await ZG.e(348).then((() => ZG(61960))) : await ZG.e(330).then((() => ZG(61956))), await (0, SG.e)("rgbdEncode", GG, bG, wG, 1, 5)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

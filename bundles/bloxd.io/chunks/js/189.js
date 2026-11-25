@@ -1,106 +1,106 @@
 export const id = 189;
 export const ids = [189];
 export const modules = {
-  38123: (uu, Eu, ju) => {
-    var su = ju(38126);
+  38135: (GG, bG, ZG) => {
+    var wG = ZG(38141);
 
-    function Uu(uu) {
-      for (var Eu, ju, Uu = 0, Zu = uu.length, Xu = 0; Xu < uu.length;) {
-        for (Eu = uu[Xu], ju = 0; Xu < Zu && uu[Xu] === Eu;) ++Xu, ++ju;
-        Uu += su.log2(ju) / 7 | 0, Uu += su.log2(Eu >>> 0) / 7 | 0, Uu += 2
+    function SG(GG) {
+      for (var bG, ZG, SG = 0, LG = GG.length, yG = 0; yG < GG.length;) {
+        for (bG = GG[yG], ZG = 0; yG < LG && GG[yG] === bG;) ++yG, ++ZG;
+        SG += wG.log2(ZG) / 7 | 0, SG += wG.log2(bG >>> 0) / 7 | 0, SG += 2
       }
-      return Uu
+      return SG
     }
-    Eu.size = Uu, Eu.encode = function(uu, Eu) {
-      Eu || (Eu = new Uint8Array(Uu(uu)));
-      for (var ju, su, Zu = 0, Xu = Eu.length, lu = 0; lu < uu.length;) {
-        for (ju = uu[lu], su = 0; lu < uu.length && uu[lu] === ju;) ++lu, ++su;
-        for (; Zu < Xu && su >= 128;) Eu[Zu++] = 128 + (127 & su), su >>>= 7;
-        if (Zu >= Xu) throw new Error("RLE buffer overflow");
-        for (Eu[Zu++] = su, ju >>>= 0; Zu < Xu && ju >= 128;) Eu[Zu++] = 128 + (127 & ju), ju >>>= 7;
-        if (Zu >= Xu) throw new Error("RLE buffer overflow");
-        Eu[Zu++] = ju
+    bG.size = SG, bG.encode = function(GG, bG) {
+      bG || (bG = new Uint8Array(SG(GG)));
+      for (var ZG, wG, LG = 0, yG = bG.length, kG = 0; kG < GG.length;) {
+        for (ZG = GG[kG], wG = 0; kG < GG.length && GG[kG] === ZG;) ++kG, ++wG;
+        for (; LG < yG && wG >= 128;) bG[LG++] = 128 + (127 & wG), wG >>>= 7;
+        if (LG >= yG) throw new Error("RLE buffer overflow");
+        for (bG[LG++] = wG, ZG >>>= 0; LG < yG && ZG >= 128;) bG[LG++] = 128 + (127 & ZG), ZG >>>= 7;
+        if (LG >= yG) throw new Error("RLE buffer overflow");
+        bG[LG++] = ZG
       }
-      return Eu
-    }, Eu.decode = function(uu, Eu) {
-      for (var ju, su, Uu, Zu, Xu = Eu.length, lu = uu.length, qu = 0, fu = 0; fu < lu;) {
-        for (ju = 0, su = 0; fu < lu && uu[fu] >= 128;) ju += (127 & uu[fu++]) << su, su += 7;
-        if (ju += uu[fu++] << su, fu >= lu) throw new Error("RLE buffer underrun");
-        if (qu + ju > Xu) throw new Error("Chunk buffer overflow");
-        for (Uu = 0, su = 0; fu < lu && uu[fu] >= 128;) Uu += (127 & uu[fu++]) << su, su += 7;
-        if (fu >= lu) throw new Error("RLE buffer underrun");
-        for (Uu += uu[fu++] << su, Zu = 0; Zu < ju; ++Zu) Eu[qu++] = Uu
+      return bG
+    }, bG.decode = function(GG, bG) {
+      for (var ZG, wG, SG, LG, yG = bG.length, kG = GG.length, UG = 0, YG = 0; YG < kG;) {
+        for (ZG = 0, wG = 0; YG < kG && GG[YG] >= 128;) ZG += (127 & GG[YG++]) << wG, wG += 7;
+        if (ZG += GG[YG++] << wG, YG >= kG) throw new Error("RLE buffer underrun");
+        if (UG + ZG > yG) throw new Error("Chunk buffer overflow");
+        for (SG = 0, wG = 0; YG < kG && GG[YG] >= 128;) SG += (127 & GG[YG++]) << wG, wG += 7;
+        if (YG >= kG) throw new Error("RLE buffer underrun");
+        for (SG += GG[YG++] << wG, LG = 0; LG < ZG; ++LG) bG[UG++] = SG
       }
-      return Eu
+      return bG
     }
   },
-  38126: (uu, Eu) => {
-    function ju(uu) {
-      var Eu = 32;
-      return (uu &= -uu) && Eu--, 65535 & uu && (Eu -= 16), 16711935 & uu && (Eu -= 8), 252645135 & uu && (Eu -= 4), 858993459 & uu && (Eu -= 2), 1431655765 & uu && (Eu -= 1), Eu
+  38141: (GG, bG) => {
+    function ZG(GG) {
+      var bG = 32;
+      return (GG &= -GG) && bG--, 65535 & GG && (bG -= 16), 16711935 & GG && (bG -= 8), 252645135 & GG && (bG -= 4), 858993459 & GG && (bG -= 2), 1431655765 & GG && (bG -= 1), bG
     }
-    Eu.INT_BITS = 32, Eu.INT_MAX = 2147483647, Eu.INT_MIN = -1 << 31, Eu.sign = function(uu) {
-      return (uu > 0) - (uu < 0)
-    }, Eu.abs = function(uu) {
-      var Eu = uu >> 31;
-      return (uu ^ Eu) - Eu
-    }, Eu.min = function(uu, Eu) {
-      return Eu ^ (uu ^ Eu) & -(uu < Eu)
-    }, Eu.max = function(uu, Eu) {
-      return uu ^ (uu ^ Eu) & -(uu < Eu)
-    }, Eu.isPow2 = function(uu) {
-      return !(uu & uu - 1) && !!uu
-    }, Eu.log2 = function(uu) {
-      var Eu, ju;
-      return Eu = (uu > 65535) << 4, Eu |= ju = ((uu >>>= Eu) > 255) << 3, Eu |= ju = ((uu >>>= ju) > 15) << 2, (Eu |= ju = ((uu >>>= ju) > 3) << 1) | (uu >>>= ju) >> 1
-    }, Eu.log10 = function(uu) {
-      return uu >= 1e9 ? 9 : uu >= 1e8 ? 8 : uu >= 1e7 ? 7 : uu >= 1e6 ? 6 : uu >= 1e5 ? 5 : uu >= 1e4 ? 4 : uu >= 1e3 ? 3 : uu >= 100 ? 2 : uu >= 10 ? 1 : 0
-    }, Eu.popCount = function(uu) {
-      return 16843009 * ((uu = (858993459 & (uu -= uu >>> 1 & 1431655765)) + (uu >>> 2 & 858993459)) + (uu >>> 4) & 252645135) >>> 24
-    }, Eu.countTrailingZeros = ju, Eu.nextPow2 = function(uu) {
-      return uu += 0 === uu, --uu, uu |= uu >>> 1, uu |= uu >>> 2, uu |= uu >>> 4, uu |= uu >>> 8, (uu |= uu >>> 16) + 1
-    }, Eu.prevPow2 = function(uu) {
-      return uu |= uu >>> 1, uu |= uu >>> 2, uu |= uu >>> 4, uu |= uu >>> 8, (uu |= uu >>> 16) - (uu >>> 1)
-    }, Eu.parity = function(uu) {
-      return uu ^= uu >>> 16, uu ^= uu >>> 8, uu ^= uu >>> 4, 27030 >>> (uu &= 15) & 1
+    bG.INT_BITS = 32, bG.INT_MAX = 2147483647, bG.INT_MIN = -1 << 31, bG.sign = function(GG) {
+      return (GG > 0) - (GG < 0)
+    }, bG.abs = function(GG) {
+      var bG = GG >> 31;
+      return (GG ^ bG) - bG
+    }, bG.min = function(GG, bG) {
+      return bG ^ (GG ^ bG) & -(GG < bG)
+    }, bG.max = function(GG, bG) {
+      return GG ^ (GG ^ bG) & -(GG < bG)
+    }, bG.isPow2 = function(GG) {
+      return !(GG & GG - 1) && !!GG
+    }, bG.log2 = function(GG) {
+      var bG, ZG;
+      return bG = (GG > 65535) << 4, bG |= ZG = ((GG >>>= bG) > 255) << 3, bG |= ZG = ((GG >>>= ZG) > 15) << 2, (bG |= ZG = ((GG >>>= ZG) > 3) << 1) | (GG >>>= ZG) >> 1
+    }, bG.log10 = function(GG) {
+      return GG >= 1e9 ? 9 : GG >= 1e8 ? 8 : GG >= 1e7 ? 7 : GG >= 1e6 ? 6 : GG >= 1e5 ? 5 : GG >= 1e4 ? 4 : GG >= 1e3 ? 3 : GG >= 100 ? 2 : GG >= 10 ? 1 : 0
+    }, bG.popCount = function(GG) {
+      return 16843009 * ((GG = (858993459 & (GG -= GG >>> 1 & 1431655765)) + (GG >>> 2 & 858993459)) + (GG >>> 4) & 252645135) >>> 24
+    }, bG.countTrailingZeros = ZG, bG.nextPow2 = function(GG) {
+      return GG += 0 === GG, --GG, GG |= GG >>> 1, GG |= GG >>> 2, GG |= GG >>> 4, GG |= GG >>> 8, (GG |= GG >>> 16) + 1
+    }, bG.prevPow2 = function(GG) {
+      return GG |= GG >>> 1, GG |= GG >>> 2, GG |= GG >>> 4, GG |= GG >>> 8, (GG |= GG >>> 16) - (GG >>> 1)
+    }, bG.parity = function(GG) {
+      return GG ^= GG >>> 16, GG ^= GG >>> 8, GG ^= GG >>> 4, 27030 >>> (GG &= 15) & 1
     };
-    var su = new Array(256);
-    ! function(uu) {
-      for (var Eu = 0; Eu < 256; ++Eu) {
-        var ju = Eu,
-          su = Eu,
-          Uu = 7;
-        for (ju >>>= 1; ju; ju >>>= 1) su <<= 1, su |= 1 & ju, --Uu;
-        uu[Eu] = su << Uu & 255
+    var wG = new Array(256);
+    ! function(GG) {
+      for (var bG = 0; bG < 256; ++bG) {
+        var ZG = bG,
+          wG = bG,
+          SG = 7;
+        for (ZG >>>= 1; ZG; ZG >>>= 1) wG <<= 1, wG |= 1 & ZG, --SG;
+        GG[bG] = wG << SG & 255
       }
-    }(su), Eu.reverse = function(uu) {
-      return su[255 & uu] << 24 | su[uu >>> 8 & 255] << 16 | su[uu >>> 16 & 255] << 8 | su[uu >>> 24 & 255]
-    }, Eu.interleave2 = function(uu, Eu) {
-      return (uu = 1431655765 & ((uu = 858993459 & ((uu = 252645135 & ((uu = 16711935 & ((uu &= 65535) | uu << 8)) | uu << 4)) | uu << 2)) | uu << 1)) | (Eu = 1431655765 & ((Eu = 858993459 & ((Eu = 252645135 & ((Eu = 16711935 & ((Eu &= 65535) | Eu << 8)) | Eu << 4)) | Eu << 2)) | Eu << 1)) << 1
-    }, Eu.deinterleave2 = function(uu, Eu) {
-      return (uu = 65535 & ((uu = 16711935 & ((uu = 252645135 & ((uu = 858993459 & ((uu = uu >>> Eu & 1431655765) | uu >>> 1)) | uu >>> 2)) | uu >>> 4)) | uu >>> 16)) << 16 >> 16
-    }, Eu.interleave3 = function(uu, Eu, ju) {
-      return uu = 1227133513 & ((uu = 3272356035 & ((uu = 251719695 & ((uu = 4278190335 & ((uu &= 1023) | uu << 16)) | uu << 8)) | uu << 4)) | uu << 2), (uu |= (Eu = 1227133513 & ((Eu = 3272356035 & ((Eu = 251719695 & ((Eu = 4278190335 & ((Eu &= 1023) | Eu << 16)) | Eu << 8)) | Eu << 4)) | Eu << 2)) << 1) | (ju = 1227133513 & ((ju = 3272356035 & ((ju = 251719695 & ((ju = 4278190335 & ((ju &= 1023) | ju << 16)) | ju << 8)) | ju << 4)) | ju << 2)) << 2
-    }, Eu.deinterleave3 = function(uu, Eu) {
-      return (uu = 1023 & ((uu = 4278190335 & ((uu = 251719695 & ((uu = 3272356035 & ((uu = uu >>> Eu & 1227133513) | uu >>> 2)) | uu >>> 4)) | uu >>> 8)) | uu >>> 16)) << 22 >> 22
-    }, Eu.nextCombination = function(uu) {
-      var Eu = uu | uu - 1;
-      return Eu + 1 | (~Eu & -~Eu) - 1 >>> ju(uu) + 1
+    }(wG), bG.reverse = function(GG) {
+      return wG[255 & GG] << 24 | wG[GG >>> 8 & 255] << 16 | wG[GG >>> 16 & 255] << 8 | wG[GG >>> 24 & 255]
+    }, bG.interleave2 = function(GG, bG) {
+      return (GG = 1431655765 & ((GG = 858993459 & ((GG = 252645135 & ((GG = 16711935 & ((GG &= 65535) | GG << 8)) | GG << 4)) | GG << 2)) | GG << 1)) | (bG = 1431655765 & ((bG = 858993459 & ((bG = 252645135 & ((bG = 16711935 & ((bG &= 65535) | bG << 8)) | bG << 4)) | bG << 2)) | bG << 1)) << 1
+    }, bG.deinterleave2 = function(GG, bG) {
+      return (GG = 65535 & ((GG = 16711935 & ((GG = 252645135 & ((GG = 858993459 & ((GG = GG >>> bG & 1431655765) | GG >>> 1)) | GG >>> 2)) | GG >>> 4)) | GG >>> 16)) << 16 >> 16
+    }, bG.interleave3 = function(GG, bG, ZG) {
+      return GG = 1227133513 & ((GG = 3272356035 & ((GG = 251719695 & ((GG = 4278190335 & ((GG &= 1023) | GG << 16)) | GG << 8)) | GG << 4)) | GG << 2), (GG |= (bG = 1227133513 & ((bG = 3272356035 & ((bG = 251719695 & ((bG = 4278190335 & ((bG &= 1023) | bG << 16)) | bG << 8)) | bG << 4)) | bG << 2)) << 1) | (ZG = 1227133513 & ((ZG = 3272356035 & ((ZG = 251719695 & ((ZG = 4278190335 & ((ZG &= 1023) | ZG << 16)) | ZG << 8)) | ZG << 4)) | ZG << 2)) << 2
+    }, bG.deinterleave3 = function(GG, bG) {
+      return (GG = 1023 & ((GG = 4278190335 & ((GG = 251719695 & ((GG = 3272356035 & ((GG = GG >>> bG & 1227133513) | GG >>> 2)) | GG >>> 4)) | GG >>> 8)) | GG >>> 16)) << 22 >> 22
+    }, bG.nextCombination = function(GG) {
+      var bG = GG | GG - 1;
+      return bG + 1 | (~bG & -~bG) - 1 >>> ZG(GG) + 1
     }
   },
-  40081: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      emptyColumnHeight: () => eu,
-      loadHeatmapSchematic: () => Gu,
-      readSchematicBlocks: () => pu
+  40191: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      emptyColumnHeight: () => EG,
+      loadHeatmapSchematic: () => oG,
+      readSchematicBlocks: () => XG
     });
-    var su = ju(3948),
-      Uu = ju.n(su),
-      Zu = ju(3932),
-      Xu = ju(38123),
-      lu = ju(202),
-      qu = ju(9409);
-    const fu = [{
+    var wG = ZG(3768),
+      SG = ZG.n(wG),
+      LG = ZG(3746),
+      yG = ZG(38135),
+      kG = ZG(188),
+      UG = ZG(9249);
+    const YG = [{
         name: "x",
         type: "int"
       }, {
@@ -110,20 +110,20 @@ export const modules = {
         name: "z",
         type: "int"
       }],
-      Cu = [{
+      VG = [{
         name: "name",
         type: "string"
       }, {
         name: "startOffset",
         type: {
           type: "record",
-          fields: fu
+          fields: YG
         }
       }, {
         name: "dimensions",
         type: {
           type: "record",
-          fields: fu
+          fields: YG
         }
       }, {
         name: "chunkData",
@@ -131,26 +131,26 @@ export const modules = {
           type: "array",
           items: {
             type: "record",
-            fields: [...fu, {
+            fields: [...YG, {
               name: "rle",
               type: "bytes"
             }]
           }
         }
       }],
-      bu = Uu().Type.forSchema({
+      pG = SG().Type.forSchema({
         type: "record",
-        fields: Cu
+        fields: VG
       }),
-      cu = Uu().Type.forSchema({
+      fG = SG().Type.forSchema({
         type: "record",
-        fields: [...Cu, {
+        fields: [...VG, {
           name: "blockData",
           type: {
             type: "array",
             items: {
               type: "record",
-              fields: [...fu, {
+              fields: [...YG, {
                 name: "data",
                 type: "bytes"
               }]
@@ -160,187 +160,187 @@ export const modules = {
           name: "pasteOffset",
           type: {
             type: "record",
-            fields: fu
+            fields: YG
           }
         }]
       }),
-      Nu = 2,
-      Ou = 6,
-      Yu = {
+      QG = 2,
+      KG = 6,
+      hG = {
         Water: [63, 118, 228],
         Lava: [232, 110, 30]
       },
-      hu = [150, 150, 150],
-      Du = 16,
-      gu = 4096,
-      Mu = lu.e.hO,
-      eu = -2147483648;
-    async function Gu(uu) {
-      const Eu = await pu(new Uint8Array(await uu.arrayBuffer()), await async function() {
+      dG = [150, 150, 150],
+      JG = 16,
+      rG = 4096,
+      zG = kG.d.rK,
+      EG = -2147483648;
+    async function oG(GG) {
+      const bG = await XG(new Uint8Array(await GG.arrayBuffer()), await async function() {
         const {
-          averageColors: uu
-        } = await ju.e(207).then((() => ju(34634))), Eu = new Map;
-        return ju => {
-          var su, Uu, Zu, Xu, lu;
-          const fu = Eu.get(ju);
-          if (void 0 !== fu) return fu;
-          const Cu = null !== (su = null === (Uu = qu.f[ju]) || void 0 === Uu ? void 0 : Uu.name) && void 0 !== su ? su : "",
-            bu = null !== (Zu = uu[Cu]) && void 0 !== Zu ? Zu : uu[Cu.split("|")[0]],
-            cu = Yu[Cu.split("|")[0]],
-            Nu = null !== (Xu = null !== (lu = null === bu || void 0 === bu ? void 0 : bu[0]) && void 0 !== lu ? lu : cu) && void 0 !== Xu ? Xu : 0 === (null === bu || void 0 === bu ? void 0 : bu.length) ? null : hu;
-          return Eu.set(ju, Nu), Nu
+          averageColors: GG
+        } = await ZG.e(207).then((() => ZG(34575))), bG = new Map;
+        return ZG => {
+          var wG, SG, LG, yG, kG;
+          const YG = bG.get(ZG);
+          if (void 0 !== YG) return YG;
+          const VG = null !== (wG = null === (SG = UG.l[ZG]) || void 0 === SG ? void 0 : SG.name) && void 0 !== wG ? wG : "",
+            pG = null !== (LG = GG[VG]) && void 0 !== LG ? LG : GG[VG.split("|")[0]],
+            fG = hG[VG.split("|")[0]],
+            QG = null !== (yG = null !== (kG = null === pG || void 0 === pG ? void 0 : pG[0]) && void 0 !== kG ? kG : fG) && void 0 !== yG ? yG : 0 === (null === pG || void 0 === pG ? void 0 : pG.length) ? null : dG;
+          return bG.set(ZG, QG), QG
         }
       }());
       return {
-        surface: Eu.surface,
-        topDown: Ju(Eu.columnTops)
+        surface: bG.surface,
+        topDown: iG(bG.columnTops)
       }
     }
-    async function pu(uu, Eu) {
-      var ju;
-      if (uu.byteLength < 4) throw new Error("The file is too short to be a schematic.");
-      const su = new DataView(uu.buffer, uu.byteOffset, uu.byteLength).getUint32(0, !0);
-      if (su > Ou) throw new Error("The file isn't a schematic this version of Bloxd can read.");
-      const Uu = (su >= Nu ? cu : bu).decode(Zu.qO.from(uu.subarray(4)), 0).value;
-      if (!Uu) throw new Error("The file isn't a schematic.");
-      if (0 === Uu.chunkData.length) throw new Error("The schematic has no blocks in it.");
-      const lu = null !== (ju = Uu.pasteOffset) && void 0 !== ju ? ju : {
+    async function XG(GG, bG) {
+      var ZG;
+      if (GG.byteLength < 4) throw new Error("The file is too short to be a schematic.");
+      const wG = new DataView(GG.buffer, GG.byteOffset, GG.byteLength).getUint32(0, !0);
+      if (wG > KG) throw new Error("The file isn't a schematic this version of Bloxd can read.");
+      const SG = (wG >= QG ? fG : pG).decode(LG.VK.from(GG.subarray(4)), 0).value;
+      if (!SG) throw new Error("The file isn't a schematic.");
+      if (0 === SG.chunkData.length) throw new Error("The schematic has no blocks in it.");
+      const kG = null !== (ZG = SG.pasteOffset) && void 0 !== ZG ? ZG : {
           x: 0,
           y: 0,
           z: 0
         },
-        qu = [lu.x, lu.y, lu.z].map((uu => Math.floor(uu / Mu))),
-        fu = Uu.chunkData.map((uu => ({
-          x: uu.x + qu[0],
-          y: uu.y + qu[1],
-          z: uu.z + qu[2],
-          rle: uu.rle
+        UG = [kG.x, kG.y, kG.z].map((GG => Math.floor(GG / zG))),
+        YG = SG.chunkData.map((GG => ({
+          x: GG.x + UG[0],
+          y: GG.y + UG[1],
+          z: GG.z + UG[2],
+          rle: GG.rle
         }))),
-        Cu = new Map;
-      for (const [Zu, bu] of fu.entries()) {
-        const uu = new Uint16Array(Mu ** 3);
-        Xu.decode(bu.rle, uu), Cu.set(`${bu.x},${bu.y},${bu.z}`, uu), Zu % Du === Du - 1 && await du()
+        VG = new Map;
+      for (const [LG, pG] of YG.entries()) {
+        const GG = new Uint16Array(zG ** 3);
+        yG.decode(pG.rle, GG), VG.set(`${pG.x},${pG.y},${pG.z}`, GG), LG % JG === JG - 1 && await CG()
       }
-      const Yu = (uu, Eu, ju) => uu * Mu * Mu + Eu * Mu + ju,
-        hu = (uu, Eu, ju) => {
-          var su, Uu;
-          const Zu = Math.floor(uu / Mu),
-            Xu = Math.floor(Eu / Mu),
-            lu = Math.floor(ju / Mu);
-          return null !== (su = null === (Uu = Cu.get(`${Zu},${Xu},${lu}`)) || void 0 === Uu ? void 0 : Uu[Yu(uu - Zu * Mu, Eu - Xu * Mu, ju - lu * Mu)]) && void 0 !== su ? su : 0
+      const hG = (GG, bG, ZG) => GG * zG * zG + bG * zG + ZG,
+        dG = (GG, bG, ZG) => {
+          var wG, SG;
+          const LG = Math.floor(GG / zG),
+            yG = Math.floor(bG / zG),
+            kG = Math.floor(ZG / zG);
+          return null !== (wG = null === (SG = VG.get(`${LG},${yG},${kG}`)) || void 0 === SG ? void 0 : SG[hG(GG - LG * zG, bG - yG * zG, ZG - kG * zG)]) && void 0 !== wG ? wG : 0
         },
-        gu = new Map,
-        Gu = [],
-        pu = [];
-      for (const [Zu, Xu] of fu.entries()) {
-        const uu = Cu.get(`${Xu.x},${Xu.y},${Xu.z}`),
-          ju = [Xu.x * Mu, Xu.y * Mu, Xu.z * Mu],
-          su = (Eu, su, Uu) => Eu < 0 || su < 0 || Uu < 0 || Eu >= Mu || su >= Mu || Uu >= Mu ? hu(ju[0] + Eu, ju[1] + su, ju[2] + Uu) : uu[Yu(Eu, su, Uu)],
-          Uu = `${Xu.x},${Xu.z}`;
-        let lu = gu.get(Uu);
-        void 0 === lu && (lu = {
-          chunkX: Xu.x,
-          chunkZ: Xu.z,
-          heights: new Int32Array(Mu * Mu).fill(eu),
-          colours: new Uint8Array(Mu * Mu * 3)
-        }, gu.set(Uu, lu));
-        for (let Zu = 0; Zu < Mu; Zu++)
-          for (let Uu = 0; Uu < Mu; Uu++)
-            for (let Xu = 0; Xu < Mu; Xu++) {
-              const qu = uu[Yu(Zu, Uu, Xu)];
-              if (0 === qu) continue;
-              const fu = ju[0] + Zu,
-                Cu = ju[1] + Uu,
-                bu = ju[2] + Xu,
-                cu = Eu(qu);
-              if (null === cu) continue;
-              const Nu = Xu * Mu + Zu;
-              Cu > lu.heights[Nu] && (lu.heights[Nu] = Cu, lu.colours.set(cu, 3 * Nu));
-              !wu(qu) && (wu(su(Zu + 1, Uu, Xu)) || wu(su(Zu - 1, Uu, Xu)) || wu(su(Zu, Uu + 1, Xu)) || wu(su(Zu, Uu - 1, Xu)) || wu(su(Zu, Uu, Xu + 1)) || wu(su(Zu, Uu, Xu - 1))) && (Gu.push(fu, Cu, bu), pu.push(cu[0], cu[1], cu[2]))
+        rG = new Map,
+        oG = [],
+        XG = [];
+      for (const [LG, yG] of YG.entries()) {
+        const GG = VG.get(`${yG.x},${yG.y},${yG.z}`),
+          ZG = [yG.x * zG, yG.y * zG, yG.z * zG],
+          wG = (bG, wG, SG) => bG < 0 || wG < 0 || SG < 0 || bG >= zG || wG >= zG || SG >= zG ? dG(ZG[0] + bG, ZG[1] + wG, ZG[2] + SG) : GG[hG(bG, wG, SG)],
+          SG = `${yG.x},${yG.z}`;
+        let kG = rG.get(SG);
+        void 0 === kG && (kG = {
+          chunkX: yG.x,
+          chunkZ: yG.z,
+          heights: new Int32Array(zG * zG).fill(EG),
+          colours: new Uint8Array(zG * zG * 3)
+        }, rG.set(SG, kG));
+        for (let LG = 0; LG < zG; LG++)
+          for (let SG = 0; SG < zG; SG++)
+            for (let yG = 0; yG < zG; yG++) {
+              const UG = GG[hG(LG, SG, yG)];
+              if (0 === UG) continue;
+              const YG = ZG[0] + LG,
+                VG = ZG[1] + SG,
+                pG = ZG[2] + yG,
+                fG = bG(UG);
+              if (null === fG) continue;
+              const QG = yG * zG + LG;
+              VG > kG.heights[QG] && (kG.heights[QG] = VG, kG.colours.set(fG, 3 * QG));
+              !uG(UG) && (uG(wG(LG + 1, SG, yG)) || uG(wG(LG - 1, SG, yG)) || uG(wG(LG, SG + 1, yG)) || uG(wG(LG, SG - 1, yG)) || uG(wG(LG, SG, yG + 1)) || uG(wG(LG, SG, yG - 1))) && (oG.push(YG, VG, pG), XG.push(fG[0], fG[1], fG[2]))
             }
-        Zu % Du === Du - 1 && await du()
+        LG % JG === JG - 1 && await CG()
       }
-      if (0 === Gu.length) throw new Error("The schematic has no blocks in it.");
+      if (0 === oG.length) throw new Error("The schematic has no blocks in it.");
       return {
-        name: Uu.name,
+        name: SG.name,
         surface: {
-          positions: Int32Array.from(Gu),
-          colours: Uint8Array.from(pu),
-          count: Gu.length / 3
+          positions: Int32Array.from(oG),
+          colours: Uint8Array.from(XG),
+          count: oG.length / 3
         },
-        columnTops: [...gu.values()]
+        columnTops: [...rG.values()]
       }
     }
 
-    function wu(uu) {
-      if (0 === uu) return !0;
-      const Eu = qu.f[uu];
-      return void 0 === Eu || Eu.XN || Eu.transTex || !1 === Eu.solid
+    function uG(GG) {
+      if (0 === GG) return !0;
+      const bG = UG.l[GG];
+      return void 0 === bG || bG.UQ || bG.transTex || !1 === bG.solid
     }
 
-    function Ju(uu) {
-      let Eu = 1 / 0,
-        ju = -1 / 0,
-        su = 1 / 0,
-        Uu = -1 / 0;
+    function iG(GG) {
+      let bG = 1 / 0,
+        ZG = -1 / 0,
+        wG = 1 / 0,
+        SG = -1 / 0;
       for (const {
-          chunkX: Ou,
-          chunkZ: Yu,
-          heights: hu
+          chunkX: KG,
+          chunkZ: hG,
+          heights: dG
         }
-        of uu) hu.forEach(((uu, Zu) => {
-        if (uu === eu) return;
-        const Xu = Ou * Mu + Zu % Mu,
-          lu = Yu * Mu + Math.floor(Zu / Mu);
-        Eu = Math.min(Eu, Xu), ju = Math.max(ju, Xu), su = Math.min(su, lu), Uu = Math.max(Uu, lu)
+        of GG) dG.forEach(((GG, LG) => {
+        if (GG === EG) return;
+        const yG = KG * zG + LG % zG,
+          kG = hG * zG + Math.floor(LG / zG);
+        bG = Math.min(bG, yG), ZG = Math.max(ZG, yG), wG = Math.min(wG, kG), SG = Math.max(SG, kG)
       }));
-      const Zu = ju - Eu + 1,
-        Xu = Uu - su + 1,
-        lu = Math.max(1, Math.ceil(Zu / gu), Math.ceil(Xu / gu)),
-        qu = Math.ceil(Zu / lu),
-        fu = Math.ceil(Xu / lu),
-        Cu = document.createElement("canvas");
-      Cu.width = qu, Cu.height = fu;
-      const bu = Cu.getContext("2d");
-      if (!bu) throw new Error("Couldn't draw the schematic from above.");
-      const cu = bu.createImageData(qu, fu),
-        Nu = new Int32Array(qu * fu).fill(eu);
+      const LG = ZG - bG + 1,
+        yG = SG - wG + 1,
+        kG = Math.max(1, Math.ceil(LG / rG), Math.ceil(yG / rG)),
+        UG = Math.ceil(LG / kG),
+        YG = Math.ceil(yG / kG),
+        VG = document.createElement("canvas");
+      VG.width = UG, VG.height = YG;
+      const pG = VG.getContext("2d");
+      if (!pG) throw new Error("Couldn't draw the schematic from above.");
+      const fG = pG.createImageData(UG, YG),
+        QG = new Int32Array(UG * YG).fill(EG);
       for (const {
-          chunkX: Ou,
-          chunkZ: Yu,
-          heights: hu,
-          colours: Du
+          chunkX: KG,
+          chunkZ: hG,
+          heights: dG,
+          colours: JG
         }
-        of uu) hu.forEach(((uu, Eu) => {
-        const Uu = Ou * Mu + Eu % Mu,
-          Zu = Yu * Mu + Math.floor(Eu / Mu),
-          Xu = Math.floor((Zu - su) / lu) * qu + Math.floor((ju - Uu) / lu);
-        uu === eu || uu <= Nu[Xu] || (Nu[Xu] = uu, cu.data.set(Du.subarray(3 * Eu, 3 * Eu + 3), 4 * Xu), cu.data[4 * Xu + 3] = 255)
+        of GG) dG.forEach(((GG, bG) => {
+        const SG = KG * zG + bG % zG,
+          LG = hG * zG + Math.floor(bG / zG),
+          yG = Math.floor((LG - wG) / kG) * UG + Math.floor((ZG - SG) / kG);
+        GG === EG || GG <= QG[yG] || (QG[yG] = GG, fG.data.set(JG.subarray(3 * bG, 3 * bG + 3), 4 * yG), fG.data[4 * yG + 3] = 255)
       }));
-      return bu.putImageData(cu, 0, 0), {
-        maxX: ju,
-        minZ: su,
-        width: qu * lu,
-        depth: fu * lu,
-        canvas: Cu
+      return pG.putImageData(fG, 0, 0), {
+        maxX: ZG,
+        minZ: wG,
+        width: UG * kG,
+        depth: YG * kG,
+        canvas: VG
       }
     }
 
-    function du() {
-      return new Promise((uu => {
-        setTimeout(uu, 0)
+    function CG() {
+      return new Promise((GG => {
+        setTimeout(GG, 0)
       }))
     }
   },
-  9505: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Uu,
-      g: () => Zu
+  9356: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => SG,
+      f: () => LG
     });
-    var su = ju(9456);
-    const Uu = "Air",
-      Zu = Object.freeze(new su.h(Uu, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var wG = ZG(9303);
+    const SG = "Air",
+      LG = Object.freeze(new wG.h(SG, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

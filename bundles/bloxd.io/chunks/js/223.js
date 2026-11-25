@@ -1,80 +1,80 @@
 export const id = 223;
 export const ids = [223];
 export const modules = {
-  41300: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      LobbyManageView: () => pE
+  41470: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      LobbyManageView: () => Xb
     });
-    var su = ju(58),
-      Uu = ju(1533),
-      Zu = ju(37411),
-      Xu = ju(2560),
-      lu = ju(2568),
-      qu = ju(2543),
-      fu = ju(36951);
+    var wG = ZG(51),
+      SG = ZG(1415),
+      LG = ZG(37379),
+      yG = ZG(2428),
+      kG = ZG(2431),
+      UG = ZG(2409),
+      YG = ZG(36911);
 
-    function Cu() {
-      const [uu, Eu] = (0, su.useState)(new Map);
+    function VG() {
+      const [GG, bG] = (0, wG.useState)(new Map);
       return {
-        get: Eu => uu.get(Eu),
-        hold: (0, su.useCallback)(((uu, ju, su) => {
-          Eu((Eu => new Map(Eu).set(uu, ju))), su.then((() => {
-            Eu((Eu => {
-              const ju = new Map(Eu);
-              return ju.delete(uu), ju
+        get: bG => GG.get(bG),
+        hold: (0, wG.useCallback)(((GG, ZG, wG) => {
+          bG((bG => new Map(bG).set(GG, ZG))), wG.then((() => {
+            bG((bG => {
+              const ZG = new Map(bG);
+              return ZG.delete(GG), ZG
             }))
           }))
         }), [])
       }
     }
-    var bu = ju(1105),
-      cu = ju.n(bu),
-      Nu = ju(1244),
-      Ou = ju(1116),
-      Yu = ju(1393),
-      hu = ju(2777),
-      Du = ju(5179),
-      gu = ju(3634);
-    var Mu = ju(2027),
-      eu = ju(1506);
+    var pG = ZG(1006),
+      fG = ZG.n(pG),
+      QG = ZG(1151),
+      KG = ZG(1016),
+      hG = ZG(1302),
+      dG = ZG(2632),
+      JG = ZG(5039),
+      rG = ZG(3423);
+    var zG = ZG(1945),
+      EG = ZG(1393);
 
-    function Gu(uu, Eu, ju) {
-      const su = uu.filter((uu => uu.name !== Eu)),
-        Uu = su.filter((uu => "none" === uu.role)).sort(((uu, Eu) => Eu.at - uu.at)),
-        Zu = su.filter((uu => "none" !== uu.role)).sort(((uu, Eu) => ju.indexOf(uu.role) - ju.indexOf(Eu.role) || Eu.at - uu.at));
-      return [...uu.some((uu => uu.name === Eu)) && null !== Eu ? [Eu] : [], ...[...Uu, ...Zu].map((uu => uu.name))]
+    function oG(GG, bG, ZG) {
+      const wG = GG.filter((GG => GG.name !== bG)),
+        SG = wG.filter((GG => "none" === GG.role)).sort(((GG, bG) => bG.at - GG.at)),
+        LG = wG.filter((GG => "none" !== GG.role)).sort(((GG, bG) => ZG.indexOf(GG.role) - ZG.indexOf(bG.role) || bG.at - GG.at));
+      return [...GG.some((GG => GG.name === bG)) && null !== bG ? [bG] : [], ...[...SG, ...LG].map((GG => GG.name))]
     }
 
-    function pu(uu, Eu) {
-      const ju = uu.banned.map((uu => uu.name)),
-        su = new Set(ju);
+    function XG(GG, bG) {
+      const ZG = GG.banned.map((GG => GG.name)),
+        wG = new Set(ZG);
       return {
-        here: Gu(uu.here, Eu, uu.roles.map((uu => uu.role))),
-        away: uu.away.filter((uu => !su.has(uu.name))).map((uu => uu.name)),
-        banned: ju
+        here: oG(GG.here, bG, GG.roles.map((GG => GG.role))),
+        away: GG.away.filter((GG => !wG.has(GG.name))).map((GG => GG.name)),
+        banned: ZG
       }
     }
 
-    function wu(uu, Eu) {
-      const ju = uu.here.find((uu => uu.name === Eu));
-      if (ju) return {
+    function uG(GG, bG) {
+      const ZG = GG.here.find((GG => GG.name === bG));
+      if (ZG) return {
         section: "here",
-        player: ju
+        player: ZG
       };
-      const su = uu.banned.find((uu => uu.name === Eu));
-      if (su) return {
+      const wG = GG.banned.find((GG => GG.name === bG));
+      if (wG) return {
         section: "banned",
-        bannedAt: su.at
+        bannedAt: wG.at
       };
-      const Uu = uu.away.find((uu => uu.name === Eu));
-      return Uu ? {
+      const SG = GG.away.find((GG => GG.name === bG));
+      return SG ? {
         section: "away",
-        player: Uu
+        player: SG
       } : {
         section: "gone"
       }
     }
-    const Ju = {
+    const iG = {
       gamemode: !1,
       roles: [],
       fixedRole: null,
@@ -82,357 +82,357 @@ export const modules = {
       ban: !1,
       unban: !1
     };
-    var du = ju(2774),
-      au = ju(36946),
-      Pu = ju(37109),
-      ou = ju(3309),
-      ku = ju(349);
+    var CG = ZG(2630),
+      WG = ZG(36898),
+      mG = ZG(37079),
+      IG = ZG(3113),
+      FG = ZG(352);
 
-    function mu(uu, Eu, ju) {
-      return Eu.map((Eu => {
-        if ("string" === typeof Eu) return Eu;
-        const su = "str" in Eu ? Eu.str : Eu;
-        return "string" === typeof su ? su : "entityName" in su ? su.entityName : "translationKey" in su ? uu(su.translationKey, (0, Nu.r)(su.params, ju)) : ""
+    function vG(GG, bG, ZG) {
+      return bG.map((bG => {
+        if ("string" === typeof bG) return bG;
+        const wG = "str" in bG ? bG.str : bG;
+        return "string" === typeof wG ? wG : "entityName" in wG ? wG.entityName : "translationKey" in wG ? GG(wG.translationKey, (0, QG.k)(wG.params, ZG)) : ""
       })).join("")
     }
 
-    function vu(uu, Eu, ju, su, Uu) {
-      return Uu - su < 6e4 ? uu(`${ju}JustNow`) : uu(ju, {
-        time: (0, ku._)((0, Nu.n)(Eu, ju), su, Uu)
+    function aG(GG, bG, ZG, wG, SG) {
+      return SG - wG < 6e4 ? GG(`${ZG}JustNow`) : GG(ZG, {
+        time: (0, FG.lb)((0, QG.j)(bG, ZG), wG, SG)
       })
     }
-    var Ku = ju(1964),
-      Vu = ju(1723),
-      ru = ju(1154);
+    var cG = ZG(1876),
+      lG = ZG(1621),
+      jG = ZG(1067);
 
-    function Qu(uu) {
+    function PG(GG) {
       let {
-        status: Eu
-      } = uu;
-      return (0, ru.jsx)("span", {
-        className: cu()("LobbyManageStatus", {
-          LobbyManageStatusRefused: !Eu.ok
+        status: bG
+      } = GG;
+      return (0, jG.jsx)("span", {
+        className: fG()("LobbyManageStatus", {
+          LobbyManageStatusRefused: !bG.ok
         }),
-        children: (0, ru.jsx)(Ku.d, {
-          text: Eu.text
+        children: (0, jG.jsx)(cG.c, {
+          text: bG.text
         })
       })
     }
 
-    function iu(uu) {
+    function MG(GG) {
       let {
-        names: Eu,
-        cap: ju,
-        filterFrom: Uu,
-        moreLabel: Zu,
-        reveal: Xu = null,
-        renderRow: lu
-      } = uu;
+        names: bG,
+        cap: ZG,
+        filterFrom: SG,
+        moreLabel: LG,
+        reveal: yG = null,
+        renderRow: kG
+      } = GG;
       const {
-        t: qu
-      } = (0, Nu.A)(), [fu, Cu] = (0, su.useState)(!1), [bu, cu] = (0, su.useState)(""), Yu = fu || null !== Xu && Eu.indexOf(Xu) >= ju, Du = (Yu || Eu.length <= ju) && null !== Uu && Eu.length > Uu, gu = bu.trim().toLowerCase();
-      let Mu = Yu ? Eu : Eu.slice(0, ju);
-      return Du && "" !== gu && (Mu = Mu.filter((uu => uu.toLowerCase().includes(gu)))), (0, ru.jsxs)(ru.Fragment, {
-        children: [Du && (0, ru.jsx)(Vu.d, {
+        t: UG
+      } = (0, QG.w)(), [YG, VG] = (0, wG.useState)(!1), [pG, fG] = (0, wG.useState)(""), hG = YG || null !== yG && bG.indexOf(yG) >= ZG, JG = (hG || bG.length <= ZG) && null !== SG && bG.length > SG, rG = pG.trim().toLowerCase();
+      let zG = hG ? bG : bG.slice(0, ZG);
+      return JG && "" !== rG && (zG = zG.filter((GG => GG.toLowerCase().includes(rG)))), (0, jG.jsxs)(jG.Fragment, {
+        children: [JG && (0, jG.jsx)(lG.b, {
           className: "LobbyManageFilter",
-          placeholderText: qu("lobbyManage:findName"),
-          ariaLabel: qu("lobbyManage:findName"),
-          onValueChange: uu => {
-            cu(uu)
+          placeholderText: UG("lobbyManage:findName"),
+          ariaLabel: UG("lobbyManage:findName"),
+          onValueChange: GG => {
+            fG(GG)
           }
-        }), Mu.length > 0 && (0, ru.jsx)("div", {
+        }), zG.length > 0 && (0, jG.jsx)("div", {
           className: "PlayerRows",
-          children: Mu.map(((uu, Eu) => lu(uu, Mu.length - Eu)))
-        }), !Yu && Eu.length > ju && (0, ru.jsx)("div", {
+          children: zG.map(((GG, bG) => kG(GG, zG.length - bG)))
+        }), !hG && bG.length > ZG && (0, jG.jsx)("div", {
           className: "LobbyManageMore",
-          children: (0, ru.jsx)(hu.b, {
-            label: (0, ru.jsxs)(ru.Fragment, {
-              children: [Zu, " ", (0, ru.jsx)(Ou.e, {
+          children: (0, jG.jsx)(dG.e, {
+            label: (0, jG.jsxs)(jG.Fragment, {
+              children: [LG, " ", (0, jG.jsx)(KG.c, {
                 name: "angle-down"
               })]
             }),
             onClick: () => {
-              Cu(!0)
+              VG(!0)
             }
           })
         })]
       })
     }
 
-    function Wu(uu) {
+    function AG(GG) {
       let {
-        value: Eu,
-        placeholder: ju,
-        ariaLabel: Uu,
-        maxLength: Zu,
-        wide: Xu = !1,
-        onSave: lu
-      } = uu;
-      const qu = (0, su.useRef)(null),
-        [fu, Cu] = (0, su.useState)(0),
-        bu = (0, su.useRef)(!0),
-        Nu = (0, su.useRef)(null),
-        Ou = (0, su.useRef)({
-          value: Eu,
-          onSave: lu
+        value: bG,
+        placeholder: ZG,
+        ariaLabel: SG,
+        maxLength: LG,
+        wide: yG = !1,
+        onSave: kG
+      } = GG;
+      const UG = (0, wG.useRef)(null),
+        [YG, VG] = (0, wG.useState)(0),
+        pG = (0, wG.useRef)(!0),
+        QG = (0, wG.useRef)(null),
+        KG = (0, wG.useRef)({
+          value: bG,
+          onSave: kG
         });
-      Ou.current = {
-        value: Eu,
-        onSave: lu
+      KG.current = {
+        value: bG,
+        onSave: kG
       };
-      const Yu = () => {
-        const uu = Nu.current;
-        Nu.current = null, null !== uu && uu !== Ou.current.value && Ou.current.onSave(uu).then((() => {
-          bu.current && Cu((uu => uu + 1))
+      const hG = () => {
+        const GG = QG.current;
+        QG.current = null, null !== GG && GG !== KG.current.value && KG.current.onSave(GG).then((() => {
+          pG.current && VG((GG => GG + 1))
         }))
       };
-      return (0, su.useEffect)((() => {
-        null === Nu.current && qu.current && (qu.current.value = Eu)
-      }), [Eu, fu]), (0, su.useEffect)((() => () => {
-        bu.current = !1, Yu()
-      }), []), (0, ru.jsx)("div", {
-        className: cu()("LobbyManageRuleInput", {
-          LobbyManageRuleInputWide: Xu
+      return (0, wG.useEffect)((() => {
+        null === QG.current && UG.current && (UG.current.value = bG)
+      }), [bG, YG]), (0, wG.useEffect)((() => () => {
+        pG.current = !1, hG()
+      }), []), (0, jG.jsx)("div", {
+        className: fG()("LobbyManageRuleInput", {
+          LobbyManageRuleInputWide: yG
         }),
-        onBlur: Yu,
-        children: (0, ru.jsx)(Vu.d, {
-          domRef: qu,
-          defaultValue: Eu,
-          placeholderText: ju,
-          ariaLabel: Uu,
-          maxLength: Zu,
-          onValueChange: uu => {
-            Nu.current = uu
+        onBlur: hG,
+        children: (0, jG.jsx)(lG.b, {
+          domRef: UG,
+          defaultValue: bG,
+          placeholderText: ZG,
+          ariaLabel: SG,
+          maxLength: LG,
+          onValueChange: GG => {
+            QG.current = GG
           },
-          onEnter: Yu
+          onEnter: hG
         })
       })
     }
-    const Su = ["mod", "coOwner"],
-      Iu = {
+    const sG = ["mod", "coOwner"],
+      qG = {
         coOwner: "lobbyManage:roleCanCoOwner",
         mod: "lobbyManage:roleCanMod",
         coder: "lobbyManage:roleCanCoder",
         builder: "lobbyManage:roleCanBuilder"
       };
 
-    function Fu(uu) {
-      var Eu, ju, Zu;
+    function nG(GG) {
+      var bG, ZG, LG;
       let {
-        name: Xu,
-        place: lu,
-        openedIn: qu,
-        isYou: fu,
-        manage: bu,
-        hiddenNames: cu,
-        zIndex: Yu
-      } = uu;
+        name: yG,
+        place: kG,
+        openedIn: UG,
+        isYou: YG,
+        manage: pG,
+        hiddenNames: fG,
+        zIndex: hG
+      } = GG;
       const {
-        t: hu,
-        selectedLanguage: Du
-      } = (0, Nu.A)(), [gu, Mu] = (0, su.useState)(null), {
-        state: Gu
-      } = bu, pu = `player:${Xu}`, wu = function(uu, Eu) {
-        if ("banned" === uu.section) return {
-          ...Ju,
+        t: dG,
+        selectedLanguage: JG
+      } = (0, QG.w)(), [rG, zG] = (0, wG.useState)(null), {
+        state: oG
+      } = pG, XG = `player:${yG}`, uG = function(GG, bG) {
+        if ("banned" === GG.section) return {
+          ...iG,
           unban: !0
         };
-        if ("gone" === uu.section) return Ju;
+        if ("gone" === GG.section) return iG;
         const {
-          player: ju
-        } = uu, su = "here" === uu.section, Uu = su || "none" !== ju.role ? ju.can.roles : [];
+          player: ZG
+        } = GG, wG = "here" === GG.section, SG = wG || "none" !== ZG.role ? ZG.can.roles : [];
         return {
-          gamemode: su && Eu && null !== ju.gamemode && ju.can.gamemode,
-          roles: Uu,
-          fixedRole: 0 === Uu.length && "none" !== ju.role ? ju.role : null,
-          kick: su && ju.can.kick,
-          ban: ju.can.ban,
+          gamemode: wG && bG && null !== ZG.gamemode && ZG.can.gamemode,
+          roles: SG,
+          fixedRole: 0 === SG.length && "none" !== ZG.role ? ZG.role : null,
+          kick: wG && ZG.can.kick,
+          ban: ZG.can.ban,
           unban: !1
         }
-      }(lu, null !== Gu.gamemodes), ku = bu.statusOf(pu), Ku = bu.isPending(pu), Vu = Cu(), iu = Date.now(), Wu = uu => {
-        var Eu, ju;
-        return null !== (Eu = null === (ju = (uu => Gu.roles.find((Eu => Eu.role === uu)))(uu)) || void 0 === ju ? void 0 : ju.label) && void 0 !== Eu ? Eu : uu
-      }, Fu = uu => {
-        const Eu = Iu[uu];
-        return void 0 === Eu ? void 0 : hu(Eu)
-      }, Bu = "here" === lu.section || "away" === lu.section ? lu.player : null, Lu = "here" === lu.section ? lu.player.id : null, {
-        playerSocialPreview: tu,
-        isFriend: xu
-      } = null === Lu ? {
-        playerSocialPreview: (0, Pu.h)(Xu, null),
+      }(kG, null !== oG.gamemodes), FG = pG.statusOf(XG), cG = pG.isPending(XG), lG = VG(), MG = Date.now(), AG = GG => {
+        var bG, ZG;
+        return null !== (bG = null === (ZG = (GG => oG.roles.find((bG => bG.role === GG)))(GG)) || void 0 === ZG ? void 0 : ZG.label) && void 0 !== bG ? bG : GG
+      }, nG = GG => {
+        const bG = qG[GG];
+        return void 0 === bG ? void 0 : dG(bG)
+      }, gG = "here" === kG.section || "away" === kG.section ? kG.player : null, eG = "here" === kG.section ? kG.player.id : null, {
+        playerSocialPreview: RG,
+        isFriend: TG
+      } = null === eG ? {
+        playerSocialPreview: (0, mG.f)(yG, null),
         isFriend: !1
-      } : (0, au.c)(Lu, Xu), Tu = function() {
-        bu.send(...arguments)
-      }, Hu = (uu, Eu) => {
-        Vu.hold("role", uu, bu.send({
+      } : (0, WG.c)(eG, yG), HG = function() {
+        pG.send(...arguments)
+      }, tG = (GG, bG) => {
+        lG.hold("role", GG, pG.send({
           type: "setRole",
-          name: Xu,
-          role: uu
-        }, pu, Eu))
+          name: yG,
+          role: GG
+        }, XG, bG))
       };
-      let Au = null;
-      if ("ban" === (null === gu || void 0 === gu ? void 0 : gu.kind)) Au = hu("lobbyManageEntry:banConfirm", {
-        playerName: Xu
+      let DG = null;
+      if ("ban" === (null === rG || void 0 === rG ? void 0 : rG.kind)) DG = dG("lobbyManageEntry:banConfirm", {
+        playerName: yG
       });
-      else if ("role" === (null === gu || void 0 === gu ? void 0 : gu.kind)) {
-        var nu;
-        Au = `${hu("lobbyManage:roleConfirm",{playerName:Xu,role:Wu(gu.role)})} ${null!==(nu=Fu(gu.role))&&void 0!==nu?nu:""}`
-      } else if (ku) Au = (0, ru.jsx)(Qu, {
-        status: ku
+      else if ("role" === (null === rG || void 0 === rG ? void 0 : rG.kind)) {
+        var NG;
+        DG = `${dG("lobbyManage:roleConfirm",{playerName:yG,role:AG(rG.role)})} ${null!==(NG=nG(rG.role))&&void 0!==NG?NG:""}`
+      } else if (FG) DG = (0, jG.jsx)(PG, {
+        status: FG
       });
-      else if (fu) Au = hu("lobbyManage:you");
-      else if ("here" === lu.section) "none" === lu.player.role && iu - lu.player.at < 6e5 && (Au = vu(hu, Du.code, "lobbyManage:joinedAgo", lu.player.at, iu));
-      else if ("away" === lu.section) {
-        if (lu.player.at > 0) {
-          const uu = "kicked" === lu.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
-          Au = vu(hu, Du.code, uu, lu.player.at, iu)
+      else if (YG) DG = dG("lobbyManage:you");
+      else if ("here" === kG.section) "none" === kG.player.role && MG - kG.player.at < 6e5 && (DG = aG(dG, JG.code, "lobbyManage:joinedAgo", kG.player.at, MG));
+      else if ("away" === kG.section) {
+        if (kG.player.at > 0) {
+          const GG = "kicked" === kG.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
+          DG = aG(dG, JG.code, GG, kG.player.at, MG)
         }
-      } else "banned" === lu.section ? null !== lu.bannedAt && (Au = vu(hu, Du.code, "lobbyManage:bannedAgo", lu.bannedAt, iu)) : "banned" === qu && (Au = hu("lobbyManageEntry:unbanned"));
-      return (0, ru.jsx)("div", {
+      } else "banned" === kG.section ? null !== kG.bannedAt && (DG = aG(dG, JG.code, "lobbyManage:bannedAgo", kG.bannedAt, MG)) : "banned" === UG && (DG = dG("lobbyManageEntry:unbanned"));
+      return (0, jG.jsx)("div", {
         className: "LobbyManagePlayerRow",
-        "data-lobby-manage-row": Xu,
-        children: (0, ru.jsxs)(du.g, {
-          playerSocialPreview: tu,
-          isFriend: xu,
-          status: Au,
-          opensProfileCard: !fu && (0, au.d)(!0, Xu, cu),
-          zIndex: Yu,
-          children: [null !== gu && (0, ru.jsxs)("div", {
+        "data-lobby-manage-row": yG,
+        children: (0, jG.jsxs)(CG.h, {
+          playerSocialPreview: RG,
+          isFriend: TG,
+          status: DG,
+          opensProfileCard: !YG && (0, WG.f)(!0, yG, fG),
+          zIndex: hG,
+          children: [null !== rG && (0, jG.jsxs)("div", {
             className: "LobbyManageButtons",
-            children: ["ban" === gu.kind && (0, ru.jsxs)(eu.R, {
+            children: ["ban" === rG.kind && (0, jG.jsxs)(EG.C, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.ban",
                 value: "row"
               },
               onClick: () => {
-                Mu(null), Tu({
+                zG(null), HG({
                   type: "ban",
-                  name: Xu
-                }, pu)
+                  name: yG
+                }, XG)
               },
-              children: [(0, ru.jsx)(Ou.e, {
+              children: [(0, jG.jsx)(KG.c, {
                 name: "gavel"
-              }), (0, ru.jsx)("span", {
+              }), (0, jG.jsx)("span", {
                 className: "LobbyManageButtonLabel",
-                children: hu("lobbyManageEntry:ban")
+                children: dG("lobbyManageEntry:ban")
               })]
-            }), "role" === gu.kind && (0, ru.jsx)(eu.f, {
+            }), "role" === rG.kind && (0, jG.jsx)(EG.d, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.set_role",
-                value: gu.role
+                value: rG.role
               },
               onClick: () => {
-                Mu(null), Hu(gu.role)
+                zG(null), tG(rG.role)
               },
-              children: hu("lobbyManage:makeRole", {
-                role: Wu(gu.role)
+              children: dG("lobbyManage:makeRole", {
+                role: AG(rG.role)
               })
-            }), (0, ru.jsx)(eu.i, {
+            }), (0, jG.jsx)(EG.h, {
               className: "LobbyManageIconButton SmallTextLight",
               onClick: () => {
-                Mu(null)
+                zG(null)
               },
-              children: hu("general:cancel")
+              children: dG("general:cancel")
             })]
-          }), null === gu && (0, ru.jsxs)(ru.Fragment, {
-            children: [(0, ru.jsxs)("div", {
+          }), null === rG && (0, jG.jsxs)(jG.Fragment, {
+            children: [(0, jG.jsxs)("div", {
               className: "LobbyManageChoices",
-              children: [wu.gamemode && null !== Bu && (0, ru.jsx)(ou.c, {
-                options: (null !== (Eu = Gu.gamemodes) && void 0 !== Eu ? Eu : []).map((uu => ({
-                  value: uu.value,
-                  label: mu(hu, uu.label, cu)
+              children: [uG.gamemode && null !== gG && (0, jG.jsx)(IG.b, {
+                options: (null !== (bG = oG.gamemodes) && void 0 !== bG ? bG : []).map((GG => ({
+                  value: GG.value,
+                  label: vG(dG, GG.label, fG)
                 }))),
-                value: null !== (ju = Vu.get("gamemode")) && void 0 !== ju ? ju : Bu.gamemode,
-                disabled: Ku,
-                onChange: uu => {
-                  (0, Uu.reportAnalyticsClick)({
+                value: null !== (ZG = lG.get("gamemode")) && void 0 !== ZG ? ZG : gG.gamemode,
+                disabled: cG,
+                onChange: GG => {
+                  (0, SG.reportAnalyticsClick)({
                     id: "lobby_manage.set_gamemode",
-                    value: uu.value
-                  }), Vu.hold("gamemode", uu.value, bu.send({
+                    value: GG.value
+                  }), lG.hold("gamemode", GG.value, pG.send({
                     type: "setGamemode",
-                    name: Xu,
-                    gamemode: uu.value
-                  }, pu))
+                    name: yG,
+                    gamemode: GG.value
+                  }, XG))
                 }
-              }), wu.roles.length > 0 && null !== Bu && (0, ru.jsx)(ou.c, {
-                options: [...Gu.roles].reverse().filter((uu => wu.roles.includes(uu.role))).map((uu => ({
-                  value: uu.role,
-                  label: uu.label
+              }), uG.roles.length > 0 && null !== gG && (0, jG.jsx)(IG.b, {
+                options: [...oG.roles].reverse().filter((GG => uG.roles.includes(GG.role))).map((GG => ({
+                  value: GG.role,
+                  label: GG.label
                 }))),
-                value: null !== (Zu = Vu.get("role")) && void 0 !== Zu ? Zu : Bu.role,
-                disabled: Ku,
-                onChange: uu => {
-                  var Eu;
-                  (Eu = uu.value) !== (null === Bu || void 0 === Bu ? void 0 : Bu.role) && (Su.includes(Eu) ? Mu({
+                value: null !== (LG = lG.get("role")) && void 0 !== LG ? LG : gG.role,
+                disabled: cG,
+                onChange: GG => {
+                  var bG;
+                  (bG = GG.value) !== (null === gG || void 0 === gG ? void 0 : gG.role) && (sG.includes(bG) ? zG({
                     kind: "role",
-                    role: Eu
-                  }) : ((0, Uu.reportAnalyticsClick)({
+                    role: bG
+                  }) : ((0, SG.reportAnalyticsClick)({
                     id: "lobby_manage.set_role",
-                    value: Eu
-                  }), Hu(Eu, Fu(Eu))))
+                    value: bG
+                  }), tG(bG, nG(bG))))
                 }
-              }), null !== wu.fixedRole && (0, ru.jsx)("div", {
+              }), null !== uG.fixedRole && (0, jG.jsx)("div", {
                 className: "LobbyManageChoiceFixed",
-                children: Wu(wu.fixedRole)
+                children: AG(uG.fixedRole)
               })]
-            }), (0, ru.jsxs)("div", {
+            }), (0, jG.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [wu.kick && (0, ru.jsxs)(eu.i, {
+              children: [uG.kick && (0, jG.jsxs)(EG.h, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${hu("lobbyManageEntry:kick")} ${Xu}`,
-                disabled: Ku,
+                ariaLabel: `${dG("lobbyManageEntry:kick")} ${yG}`,
+                disabled: cG,
                 analyticsClick: {
                   id: "lobby_manage.kick",
                   value: "row"
                 },
                 onClick: () => {
-                  Tu({
+                  HG({
                     type: "kick",
-                    name: Xu
-                  }, pu)
+                    name: yG
+                  }, XG)
                 },
-                children: [(0, ru.jsx)(Ou.e, {
+                children: [(0, jG.jsx)(KG.c, {
                   name: "person-falling-burst"
-                }), (0, ru.jsx)("span", {
+                }), (0, jG.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: hu("lobbyManageEntry:kick")
+                  children: dG("lobbyManageEntry:kick")
                 })]
-              }), wu.ban && (0, ru.jsxs)(eu.U, {
+              }), uG.ban && (0, jG.jsxs)(EG.E, {
                 className: "LobbyManageOutlineButton SmallTextLight",
-                ariaLabel: `${hu("lobbyManageEntry:ban")} ${Xu}`,
-                disabled: Ku,
+                ariaLabel: `${dG("lobbyManageEntry:ban")} ${yG}`,
+                disabled: cG,
                 padDestructive: !0,
                 onClick: () => {
-                  Mu({
+                  zG({
                     kind: "ban"
                   })
                 },
-                children: [(0, ru.jsx)(Ou.e, {
+                children: [(0, jG.jsx)(KG.c, {
                   name: "gavel"
-                }), (0, ru.jsx)("span", {
+                }), (0, jG.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: hu("lobbyManageEntry:ban")
+                  children: dG("lobbyManageEntry:ban")
                 })]
-              }), wu.unban && (0, ru.jsxs)(eu.i, {
+              }), uG.unban && (0, jG.jsxs)(EG.h, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${hu("lobbyManageEntry:unban")} ${Xu}`,
-                disabled: Ku,
+                ariaLabel: `${dG("lobbyManageEntry:unban")} ${yG}`,
+                disabled: cG,
                 analyticsClick: {
                   id: "lobby_manage.unban"
                 },
                 onClick: () => {
-                  Tu({
+                  HG({
                     type: "unban",
-                    name: Xu
-                  }, pu)
+                    name: yG
+                  }, XG)
                 },
-                children: [(0, ru.jsx)(Ou.e, {
+                children: [(0, jG.jsx)(KG.c, {
                   name: "user-unlock"
-                }), (0, ru.jsx)("span", {
+                }), (0, jG.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: hu("lobbyManageEntry:unban")
+                  children: dG("lobbyManageEntry:unban")
                 })]
               })]
             })]
@@ -441,783 +441,783 @@ export const modules = {
       })
     }
 
-    function Bu(uu) {
-      var Eu, ju, Uu, Zu;
+    function gG(GG) {
+      var bG, ZG, SG, LG;
       let {
-        manage: Xu,
-        focusRequest: lu,
-        onFocused: qu
-      } = uu;
+        manage: yG,
+        focusRequest: kG,
+        onFocused: UG
+      } = GG;
       const {
-        t: fu
-      } = (0, Nu.A)(), Cu = (0, Mu.f)("players"), bu = (0, Mu.f)("hiddenPlayerNames"), cu = (0, su.useRef)(null), {
-        state: Yu
-      } = Xu, Du = null === Cu.localId ? null : null !== (Eu = null === (ju = Cu.byId[Cu.localId]) || void 0 === ju ? void 0 : ju.name) && void 0 !== Eu ? Eu : null, [gu] = (0, su.useState)((() => pu(Yu, Du))), Gu = function(uu, Eu, ju) {
-        const su = new Set([...uu.here, ...uu.away, ...uu.banned]),
-          Uu = pu(Eu, ju),
-          Zu = Eu => {
-            const ju = Uu[Eu].filter((uu => !su.has(uu)));
-            for (const uu of ju) su.add(uu);
-            return [...uu[Eu], ...ju]
+        t: YG
+      } = (0, QG.w)(), VG = (0, zG.f)("players"), pG = (0, zG.f)("hiddenPlayerNames"), fG = (0, wG.useRef)(null), {
+        state: hG
+      } = yG, JG = null === VG.localId ? null : null !== (bG = null === (ZG = VG.byId[VG.localId]) || void 0 === ZG ? void 0 : ZG.name) && void 0 !== bG ? bG : null, [rG] = (0, wG.useState)((() => XG(hG, JG))), oG = function(GG, bG, ZG) {
+        const wG = new Set([...GG.here, ...GG.away, ...GG.banned]),
+          SG = XG(bG, ZG),
+          LG = bG => {
+            const ZG = SG[bG].filter((GG => !wG.has(GG)));
+            for (const GG of ZG) wG.add(GG);
+            return [...GG[bG], ...ZG]
           };
         return {
-          here: Zu("here"),
-          away: Zu("away"),
-          banned: Zu("banned")
+          here: LG("here"),
+          away: LG("away"),
+          banned: LG("banned")
         }
-      }(gu, Yu, Du), [Ju, du] = (0, su.useState)(!1), au = function(uu, Eu) {
-        return uu.here.filter((uu => uu.name !== Eu && "none" === uu.role && uu.can.kick)).length
-      }(Yu, Du), Pu = Xu.statusOf("kickAll");
-      (0, su.useEffect)((() => {
-        var uu, Eu;
-        if (null === lu) return;
-        const ju = null === (uu = cu.current) || void 0 === uu ? void 0 : uu.querySelector(`[data-lobby-manage-row="${CSS.escape(lu.name)}"]`);
-        null === ju || void 0 === ju || ju.scrollIntoView({
+      }(rG, hG, JG), [iG, CG] = (0, wG.useState)(!1), WG = function(GG, bG) {
+        return GG.here.filter((GG => GG.name !== bG && "none" === GG.role && GG.can.kick)).length
+      }(hG, JG), mG = yG.statusOf("kickAll");
+      (0, wG.useEffect)((() => {
+        var GG, bG;
+        if (null === kG) return;
+        const ZG = null === (GG = fG.current) || void 0 === GG ? void 0 : GG.querySelector(`[data-lobby-manage-row="${CSS.escape(kG.name)}"]`);
+        null === ZG || void 0 === ZG || ZG.scrollIntoView({
           block: "center"
-        }), null === ju || void 0 === ju || null === (Eu = ju.querySelector(".ProfilePreview")) || void 0 === Eu || Eu.focus({
+        }), null === ZG || void 0 === ZG || null === (bG = ZG.querySelector(".ProfilePreview")) || void 0 === bG || bG.focus({
           preventScroll: !0
-        }), qu(lu.seq)
-      }), [null === lu || void 0 === lu ? void 0 : lu.seq]);
-      const ou = uu => (Eu, ju) => (0, ru.jsx)(Fu, {
-        name: Eu,
-        place: wu(Yu, Eu),
-        openedIn: uu,
-        isYou: Eu === Du,
-        manage: Xu,
-        hiddenNames: bu,
-        zIndex: ju
-      }, Eu);
-      return (0, ru.jsxs)("div", {
-        ref: cu,
+        }), UG(kG.seq)
+      }), [null === kG || void 0 === kG ? void 0 : kG.seq]);
+      const IG = GG => (bG, ZG) => (0, jG.jsx)(nG, {
+        name: bG,
+        place: uG(hG, bG),
+        openedIn: GG,
+        isYou: bG === JG,
+        manage: yG,
+        hiddenNames: pG,
+        zIndex: ZG
+      }, bG);
+      return (0, jG.jsxs)("div", {
+        ref: fG,
         className: "LobbyManagePage",
-        children: [Gu.here.length > 0 && (0, ru.jsxs)("div", {
+        children: [oG.here.length > 0 && (0, jG.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, ru.jsxs)("div", {
+          children: [(0, jG.jsxs)("div", {
             className: "LobbyManageBoxHeading",
-            children: [(0, ru.jsx)(hu.b, {
-              label: fu("lobbyManage:here"),
-              meta: Yu.here.length
-            }), au >= 2 && !Ju && (0, ru.jsxs)(eu.U, {
+            children: [(0, jG.jsx)(dG.e, {
+              label: YG("lobbyManage:here"),
+              meta: hG.here.length
+            }), WG >= 2 && !iG && (0, jG.jsxs)(EG.E, {
               className: "LobbyManageTitleAction SmallTextLight",
               padDestructive: !0,
-              disabled: Xu.isPending("kickAll"),
+              disabled: yG.isPending("kickAll"),
               onClick: () => {
-                du(!0)
+                CG(!0)
               },
-              children: [(0, ru.jsx)(Ou.e, {
+              children: [(0, jG.jsx)(KG.c, {
                 name: "person-falling-burst"
-              }), " ", fu("lobbyManage:kickAll")]
+              }), " ", YG("lobbyManage:kickAll")]
             })]
-          }), Ju && au >= 2 && (0, ru.jsxs)("div", {
+          }), iG && WG >= 2 && (0, jG.jsxs)("div", {
             className: "LobbyManageConfirm",
-            children: [(0, ru.jsx)("span", {
+            children: [(0, jG.jsx)("span", {
               className: "LobbyManageConfirmText",
-              children: fu("lobbyManage:kickAllConfirm", {
-                count: au
+              children: YG("lobbyManage:kickAllConfirm", {
+                count: WG
               })
-            }), (0, ru.jsxs)("div", {
+            }), (0, jG.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [(0, ru.jsx)(eu.R, {
+              children: [(0, jG.jsx)(EG.C, {
                 className: "LobbyManageIconButton SmallTextLight",
                 analyticsClick: {
                   id: "lobby_manage.kick_all"
                 },
                 onClick: () => {
-                  du(!1), Xu.send({
+                  CG(!1), yG.send({
                     type: "kickAll"
                   }, "kickAll")
                 },
-                children: fu("lobbyManage:kickAll")
-              }), (0, ru.jsx)(eu.i, {
+                children: YG("lobbyManage:kickAll")
+              }), (0, jG.jsx)(EG.h, {
                 className: "LobbyManageIconButton SmallTextLight",
                 onClick: () => {
-                  du(!1)
+                  CG(!1)
                 },
-                children: fu("general:cancel")
+                children: YG("general:cancel")
               })]
             })]
-          }), Pu && (0, ru.jsx)("div", {
+          }), mG && (0, jG.jsx)("div", {
             className: "LobbyManageBoxStatus",
-            children: (0, ru.jsx)(Qu, {
-              status: Pu
+            children: (0, jG.jsx)(PG, {
+              status: mG
             })
-          }), (0, ru.jsx)(iu, {
-            names: Gu.here,
-            cap: Gu.here.length,
+          }), (0, jG.jsx)(MG, {
+            names: oG.here,
+            cap: oG.here.length,
             filterFrom: 20,
             moreLabel: "",
-            renderRow: ou("here")
+            renderRow: IG("here")
           })]
-        }), Gu.away.length > 0 && (0, ru.jsxs)("div", {
+        }), oG.away.length > 0 && (0, jG.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, ru.jsx)(hu.b, {
-            label: fu("lobbyManage:notHere"),
-            meta: Gu.away.length
-          }), (0, ru.jsx)(iu, {
-            names: Gu.away,
+          children: [(0, jG.jsx)(dG.e, {
+            label: YG("lobbyManage:notHere"),
+            meta: oG.away.length
+          }), (0, jG.jsx)(MG, {
+            names: oG.away,
             cap: 5,
             filterFrom: null,
-            moreLabel: fu("lobbyManage:allCount", {
-              count: Gu.away.length
+            moreLabel: YG("lobbyManage:allCount", {
+              count: oG.away.length
             }),
-            reveal: null !== (Uu = null === lu || void 0 === lu ? void 0 : lu.name) && void 0 !== Uu ? Uu : null,
-            renderRow: ou("away")
+            reveal: null !== (SG = null === kG || void 0 === kG ? void 0 : kG.name) && void 0 !== SG ? SG : null,
+            renderRow: IG("away")
           })]
-        }), Gu.banned.length > 0 && (0, ru.jsxs)("div", {
+        }), oG.banned.length > 0 && (0, jG.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, ru.jsx)(hu.b, {
-            label: fu("lobbyManage:banned"),
-            meta: Gu.banned.length
-          }), (0, ru.jsx)(iu, {
-            names: Gu.banned,
+          children: [(0, jG.jsx)(dG.e, {
+            label: YG("lobbyManage:banned"),
+            meta: oG.banned.length
+          }), (0, jG.jsx)(MG, {
+            names: oG.banned,
             cap: 5,
             filterFrom: 20,
-            moreLabel: fu("lobbyManage:allCount", {
-              count: Gu.banned.length
+            moreLabel: YG("lobbyManage:allCount", {
+              count: oG.banned.length
             }),
-            reveal: null !== (Zu = null === lu || void 0 === lu ? void 0 : lu.name) && void 0 !== Zu ? Zu : null,
-            renderRow: ou("banned")
+            reveal: null !== (LG = null === kG || void 0 === kG ? void 0 : kG.name) && void 0 !== LG ? LG : null,
+            renderRow: IG("banned")
           })]
         })]
       })
     }
-    var Lu = ju(4809),
-      tu = ju(1693),
-      xu = ju(37087),
-      Tu = ju(37101),
-      Hu = ju(37099),
-      Au = ju(37091),
-      nu = ju(37130),
-      yu = ju(37115),
-      zu = ju(37123);
+    var eG = ZG(4655),
+      RG = ZG(1583),
+      TG = ZG(37055),
+      HG = ZG(37071),
+      tG = ZG(37067),
+      DG = ZG(37060),
+      NG = ZG(37093),
+      OG = ZG(37086),
+      xG = ZG(37089);
 
-    function Ru(uu) {
-      const Eu = new Set;
-      for (const ju of uu) Eu.add(ju.toLowerCase());
-      return Eu
+    function BG(GG) {
+      const bG = new Set;
+      for (const ZG of GG) bG.add(ZG.toLowerCase());
+      return bG
     }
 
-    function uE(uu) {
-      var Eu, ju;
+    function Gb(GG) {
+      var bG, ZG;
       let {
-        state: Uu,
-        lobbyName: Zu,
-        listed: Xu,
-        isListed: lu,
-        RD: qu,
-        lG: fu,
-        statusOf: Cu
-      } = uu;
+        state: SG,
+        lobbyName: LG,
+        listed: yG,
+        isListed: kG,
+        gJ: UG,
+        Kr: YG,
+        statusOf: VG
+      } = GG;
       const {
-        t: bu,
-        selectedLanguage: cu
-      } = (0, Nu.A)(), Ou = (0, tu.m)(), Yu = (0, Mu.f)("players"), Du = null === Yu.localId ? null : null !== (Eu = null === (ju = Yu.byId[Yu.localId]) || void 0 === ju ? void 0 : ju.name) && void 0 !== Eu ? Eu : null, gu = (0, su.useMemo)((() => (0, Au.i)(Ou.friends, Zu, Uu.here.map((uu => uu.name)))), [Ou.friends, Zu, Uu.here]), eu = new Map(gu.map((uu => [uu.friend.name.toLowerCase(), uu]))), Gu = function(uu) {
+        t: pG,
+        selectedLanguage: fG
+      } = (0, QG.w)(), KG = (0, RG.k)(), hG = (0, zG.f)("players"), JG = null === hG.localId ? null : null !== (bG = null === (ZG = hG.byId[hG.localId]) || void 0 === ZG ? void 0 : ZG.name) && void 0 !== bG ? bG : null, rG = (0, wG.useMemo)((() => (0, DG.d)(KG.friends, LG, SG.here.map((GG => GG.name)))), [KG.friends, LG, SG.here]), EG = new Map(rG.map((GG => [GG.friend.name.toLowerCase(), GG]))), oG = function(GG) {
         let {
-          refused: Eu,
-          listed: ju,
-          here: su,
-          friends: Uu,
-          excluded: Zu
-        } = uu;
-        const Xu = Ru(Zu),
-          lu = uu => uu.filter((uu => {
-            const Eu = uu.toLowerCase();
-            return !Xu.has(Eu) && (Xu.add(Eu), !0)
+          refused: bG,
+          listed: ZG,
+          here: wG,
+          friends: SG,
+          excluded: LG
+        } = GG;
+        const yG = BG(LG),
+          kG = GG => GG.filter((GG => {
+            const bG = GG.toLowerCase();
+            return !yG.has(bG) && (yG.add(bG), !0)
           }));
         return {
           added: [],
-          refused: lu(Eu),
-          listed: lu(ju),
-          suggested: lu([...su, ...Uu])
+          refused: kG(bG),
+          listed: kG(ZG),
+          suggested: kG([...wG, ...SG])
         }
       }({
-        refused: Uu.refused.map((uu => uu.name)),
-        listed: Xu,
-        here: Uu.here.map((uu => uu.name)),
-        friends: gu.flatMap((uu => "here" === uu.place ? [] : [uu.friend.name])),
-        excluded: [...null === Du ? [] : [Du], ...[...Uu.here, ...Uu.away].flatMap((uu => "none" === uu.role || (0, Au.l)(Xu, uu.name) ? [] : [uu.name]))]
-      }), [pu] = (0, su.useState)(Gu), [wu, Ju] = (0, su.useState)([]), du = function(uu, Eu, ju) {
-        const su = Ru(ju),
-          Uu = Ru([...ju, ...uu.refused, ...uu.listed, ...uu.suggested]),
-          Zu = ju => [...uu[ju].filter((uu => !su.has(uu.toLowerCase()))), ...Eu[ju].filter((uu => {
-            const Eu = uu.toLowerCase();
-            return !Uu.has(Eu) && (Uu.add(Eu), !0)
+        refused: SG.refused.map((GG => GG.name)),
+        listed: yG,
+        here: SG.here.map((GG => GG.name)),
+        friends: rG.flatMap((GG => "here" === GG.place ? [] : [GG.friend.name])),
+        excluded: [...null === JG ? [] : [JG], ...[...SG.here, ...SG.away].flatMap((GG => "none" === GG.role || (0, DG.e)(yG, GG.name) ? [] : [GG.name]))]
+      }), [XG] = (0, wG.useState)(oG), [uG, iG] = (0, wG.useState)([]), CG = function(GG, bG, ZG) {
+        const wG = BG(ZG),
+          SG = BG([...ZG, ...GG.refused, ...GG.listed, ...GG.suggested]),
+          LG = ZG => [...GG[ZG].filter((GG => !wG.has(GG.toLowerCase()))), ...bG[ZG].filter((GG => {
+            const bG = GG.toLowerCase();
+            return !SG.has(bG) && (SG.add(bG), !0)
           }))];
         return {
-          added: [...ju],
-          refused: Zu("refused"),
-          listed: Zu("listed"),
-          suggested: Zu("suggested")
+          added: [...ZG],
+          refused: LG("refused"),
+          listed: LG("listed"),
+          suggested: LG("suggested")
         }
-      }(pu, Gu, wu), ou = (uu, Eu) => {
-        var ju, su;
-        const Zu = uu.toLowerCase(),
-          Xu = eu.get(Zu),
-          fu = Uu.here.find((uu => uu.name.toLowerCase() === Zu)),
-          Nu = Uu.refused.find((uu => uu.name.toLowerCase() === Zu)),
-          Ou = null !== (ju = null === Cu || void 0 === Cu ? void 0 : Cu(uu)) && void 0 !== ju ? ju : null;
-        let Yu = null;
-        Ou ? Yu = (0, ru.jsx)(Qu, {
-          status: Ou
-        }) : Nu ? Yu = vu(bu, cu.code, "lobbyManage:triedToJoinAgo", Nu.at, Date.now()) : Xu && fu ? Yu = bu("lobbyManage:friendHere") : Xu ? Yu = "online" === Xu.place ? bu("lobbyManage:friendOnline") : bu("lobbyManage:friend") : fu && (Yu = bu("lobbyManage:hereStatus"));
-        let hu = null !== (su = null === Xu || void 0 === Xu ? void 0 : Xu.friend) && void 0 !== su ? su : (0, Pu.h)(uu, null);
-        return !Xu && null !== fu && void 0 !== fu && fu.id && (hu = (0, au.c)(fu.id, fu.name).playerSocialPreview), (0, ru.jsx)(yu.d, {
-          playerSocialPreview: hu,
-          isFriend: void 0 !== Xu,
+      }(XG, oG, uG), IG = (GG, bG) => {
+        var ZG, wG;
+        const LG = GG.toLowerCase(),
+          yG = EG.get(LG),
+          YG = SG.here.find((GG => GG.name.toLowerCase() === LG)),
+          QG = SG.refused.find((GG => GG.name.toLowerCase() === LG)),
+          KG = null !== (ZG = null === VG || void 0 === VG ? void 0 : VG(GG)) && void 0 !== ZG ? ZG : null;
+        let hG = null;
+        KG ? hG = (0, jG.jsx)(PG, {
+          status: KG
+        }) : QG ? hG = aG(pG, fG.code, "lobbyManage:triedToJoinAgo", QG.at, Date.now()) : yG && YG ? hG = pG("lobbyManage:friendHere") : yG ? hG = "online" === yG.place ? pG("lobbyManage:friendOnline") : pG("lobbyManage:friend") : YG && (hG = pG("lobbyManage:hereStatus"));
+        let dG = null !== (wG = null === yG || void 0 === yG ? void 0 : yG.friend) && void 0 !== wG ? wG : (0, mG.f)(GG, null);
+        return !yG && null !== YG && void 0 !== YG && YG.id && (dG = (0, WG.c)(YG.id, YG.name).playerSocialPreview), (0, jG.jsx)(OG.b, {
+          playerSocialPreview: dG,
+          isFriend: void 0 !== yG,
           hideFriendBadge: !0,
-          status: Yu,
-          zIndex: Eu,
-          Tb: {
-            on: lu(uu),
-            onChange: Eu => {
-              qu(uu, Eu)
+          status: hG,
+          zIndex: bG,
+          Tp: {
+            on: kG(GG),
+            onChange: bG => {
+              UG(GG, bG)
             }
           }
-        }, Zu)
-      }, ku = [...du.added, ...du.refused];
-      return (0, ru.jsxs)("div", {
+        }, LG)
+      }, FG = [...CG.added, ...CG.refused];
+      return (0, jG.jsxs)("div", {
         className: "LobbyManageBox",
-        children: [(0, ru.jsx)(hu.b, {
-          label: bu("worldSocial:whitelist"),
-          meta: Xu.length
-        }), (0, ru.jsx)(zu.d, {
-          label: bu("lobbyManage:add"),
+        children: [(0, jG.jsx)(dG.e, {
+          label: pG("worldSocial:whitelist"),
+          meta: yG.length
+        }), (0, jG.jsx)(xG.b, {
+          label: pG("lobbyManage:add"),
           icon: "user-check",
-          placeholder: bu("socialBar:enterPlayerName"),
-          onSubmit: async uu => {
-            const Eu = await fu(uu);
-            return Eu.ok && Ju((Eu => [uu, ...Eu])), Eu
+          placeholder: pG("socialBar:enterPlayerName"),
+          onSubmit: async GG => {
+            const bG = await YG(GG);
+            return bG.ok && iG((bG => [GG, ...bG])), bG
           }
-        }), ku.length > 0 && (0, ru.jsx)("div", {
+        }), FG.length > 0 && (0, jG.jsx)("div", {
           className: "PlayerRows",
-          children: ku.map(((uu, Eu) => ou(uu, ku.length - Eu)))
-        }), (0, ru.jsx)(iu, {
-          names: du.listed,
+          children: FG.map(((GG, bG) => IG(GG, FG.length - bG)))
+        }), (0, jG.jsx)(MG, {
+          names: CG.listed,
           cap: 8,
           filterFrom: 8,
-          moreLabel: bu("lobbyManage:allOnWhitelist", {
-            count: du.listed.length
+          moreLabel: pG("lobbyManage:allOnWhitelist", {
+            count: CG.listed.length
           }),
-          renderRow: ou
-        }), (0, ru.jsx)(iu, {
-          names: du.suggested,
+          renderRow: IG
+        }), (0, jG.jsx)(MG, {
+          names: CG.suggested,
           cap: 8,
           filterFrom: null,
-          moreLabel: bu("lobbyManage:allCount", {
-            count: du.suggested.length
+          moreLabel: pG("lobbyManage:allCount", {
+            count: CG.suggested.length
           }),
-          renderRow: ou
+          renderRow: IG
         })]
       })
     }
 
-    function EE(uu) {
+    function bb(GG) {
       let {
-        manage: Eu,
-        listing: ju
-      } = uu;
+        manage: bG,
+        listing: ZG
+      } = GG;
       const {
-        t: su
-      } = (0, Nu.A)(), Zu = (uu, ju) => ((0, Uu.reportAnalyticsClick)({
+        t: wG
+      } = (0, QG.w)(), LG = (GG, ZG) => ((0, SG.reportAnalyticsClick)({
         id: "lobby_manage.set_listing",
-        value: uu
-      }), Eu.send({
+        value: GG
+      }), bG.send({
         type: "setListing",
-        field: uu,
-        value: ju
-      }, `listing:${uu}`)), Xu = uu => {
-        const ju = Eu.statusOf(`listing:${uu}`);
-        return ju && !ju.ok && (0, ru.jsx)("div", {
+        field: GG,
+        value: ZG
+      }, `listing:${GG}`)), yG = GG => {
+        const ZG = bG.statusOf(`listing:${GG}`);
+        return ZG && !ZG.ok && (0, jG.jsx)("div", {
           className: "LobbyManageFieldError",
-          children: (0, ru.jsx)(Qu, {
-            status: ju
+          children: (0, jG.jsx)(PG, {
+            status: ZG
           })
         })
       };
-      return (0, ru.jsxs)("div", {
+      return (0, jG.jsxs)("div", {
         className: "LobbyManageBox LobbyManageListing",
-        children: [(0, ru.jsx)(hu.b, {
-          label: su("lobbyManage:inWorldsList")
-        }), (0, ru.jsxs)("div", {
+        children: [(0, jG.jsx)(dG.e, {
+          label: wG("lobbyManage:inWorldsList")
+        }), (0, jG.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, ru.jsx)("div", {
+          children: [(0, jG.jsx)("div", {
             className: "SliderText",
-            children: su("lobbyManage:description")
-          }), (0, ru.jsx)(Wu, {
-            value: ju.description,
-            ariaLabel: su("lobbyManage:description"),
+            children: wG("lobbyManage:description")
+          }), (0, jG.jsx)(AG, {
+            value: ZG.description,
+            ariaLabel: wG("lobbyManage:description"),
             wide: !0,
-            onSave: uu => Zu("description", uu)
+            onSave: GG => LG("description", GG)
           })]
-        }), Xu("description"), (0, ru.jsxs)("div", {
+        }), yG("description"), (0, jG.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, ru.jsx)("div", {
+          children: [(0, jG.jsx)("div", {
             className: "SliderText",
-            children: su("lobbyManage:emojis")
-          }), (0, ru.jsx)(Wu, {
-            value: ju.emojis,
-            ariaLabel: su("lobbyManage:emojis"),
-            onSave: uu => Zu("emojis", uu)
+            children: wG("lobbyManage:emojis")
+          }), (0, jG.jsx)(AG, {
+            value: ZG.emojis,
+            ariaLabel: wG("lobbyManage:emojis"),
+            onSave: GG => LG("emojis", GG)
           })]
-        }), Xu("emojis"), (0, ru.jsxs)("div", {
+        }), yG("emojis"), (0, jG.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, ru.jsx)("div", {
+          children: [(0, jG.jsx)("div", {
             className: "SliderText",
-            children: su("lobbyManage:colour")
-          }), (0, ru.jsx)(jE, {
-            value: ju.colour,
-            ariaLabel: su("lobbyManage:colour"),
-            onSave: uu => {
-              Zu("colour", uu)
+            children: wG("lobbyManage:colour")
+          }), (0, jG.jsx)(Zb, {
+            value: ZG.colour,
+            ariaLabel: wG("lobbyManage:colour"),
+            onSave: GG => {
+              LG("colour", GG)
             }
           })]
-        }), Xu("colour")]
+        }), yG("colour")]
       })
     }
 
-    function jE(uu) {
+    function Zb(GG) {
       let {
-        value: Eu,
-        ariaLabel: ju,
-        onSave: Uu
-      } = uu;
-      const Zu = (0, su.useRef)(null),
-        Xu = (0, su.useRef)({
-          value: Eu,
-          onSave: Uu
+        value: bG,
+        ariaLabel: ZG,
+        onSave: SG
+      } = GG;
+      const LG = (0, wG.useRef)(null),
+        yG = (0, wG.useRef)({
+          value: bG,
+          onSave: SG
         });
-      Xu.current = {
-        value: Eu,
-        onSave: Uu
+      yG.current = {
+        value: bG,
+        onSave: SG
       };
-      const lu = (0, su.useRef)(null),
-        qu = (0, su.useRef)(!1),
-        fu = uu => {
-          qu.current && uu.value !== Xu.current.value && uu.value !== lu.current && (lu.current = uu.value, Xu.current.onSave(uu.value))
+      const kG = (0, wG.useRef)(null),
+        UG = (0, wG.useRef)(!1),
+        YG = GG => {
+          UG.current && GG.value !== yG.current.value && GG.value !== kG.current && (kG.current = GG.value, yG.current.onSave(GG.value))
         };
-      return (0, su.useEffect)((() => {
-        Zu.current && document.activeElement !== Zu.current && (Zu.current.value = Eu)
-      }), [Eu]), (0, su.useEffect)((() => {
-        const uu = Zu.current,
-          Eu = () => {
-            fu(uu)
+      return (0, wG.useEffect)((() => {
+        LG.current && document.activeElement !== LG.current && (LG.current.value = bG)
+      }), [bG]), (0, wG.useEffect)((() => {
+        const GG = LG.current,
+          bG = () => {
+            YG(GG)
           };
-        return uu.addEventListener("change", Eu), () => {
-          uu.removeEventListener("change", Eu), fu(uu)
+        return GG.addEventListener("change", bG), () => {
+          GG.removeEventListener("change", bG), YG(GG)
         }
-      }), []), (0, ru.jsx)("input", {
-        ref: Zu,
+      }), []), (0, jG.jsx)("input", {
+        ref: LG,
         type: "color",
         className: "LobbyManageColour",
-        defaultValue: Eu,
-        "aria-label": ju,
+        defaultValue: bG,
+        "aria-label": ZG,
         onInput: () => {
-          qu.current = !0
+          UG.current = !0
         },
-        onBlur: uu => {
-          fu(uu.currentTarget)
+        onBlur: GG => {
+          YG(GG.currentTarget)
         }
       })
     }
 
-    function sE(uu) {
+    function wb(GG) {
       let {
-        manage: Eu
-      } = uu;
+        manage: bG
+      } = GG;
       const {
-        lobbyName: ju,
-        shownLobbyName: su
-      } = (0, Mu.f)("connectedGame");
-      return Eu.state.you.canSetVisibility && null !== ju ? (0, ru.jsx)(ZE, {
-        manage: Eu,
-        lobbyName: ju,
-        worldCode: null !== su && void 0 !== su ? su : ju
-      }, ju) : (0, ru.jsx)(XE, {
-        manage: Eu,
-        lobbyName: null !== ju && void 0 !== ju ? ju : ""
+        lobbyName: ZG,
+        shownLobbyName: wG
+      } = (0, zG.f)("connectedGame");
+      return bG.state.you.canSetVisibility && null !== ZG ? (0, jG.jsx)(Lb, {
+        manage: bG,
+        lobbyName: ZG,
+        worldCode: null !== wG && void 0 !== wG ? wG : ZG
+      }, ZG) : (0, jG.jsx)(yb, {
+        manage: bG,
+        lobbyName: null !== ZG && void 0 !== ZG ? ZG : ""
       })
     }
 
-    function UE(uu) {
-      return uu.map((uu => uu.toLowerCase())).sort().join(",")
+    function Sb(GG) {
+      return GG.map((GG => GG.toLowerCase())).sort().join(",")
     }
 
-    function ZE(uu) {
-      var Eu;
+    function Lb(GG) {
+      var bG;
       let {
-        manage: ju,
-        lobbyName: Zu,
-        worldCode: Xu
-      } = uu;
+        manage: ZG,
+        lobbyName: LG,
+        worldCode: yG
+      } = GG;
       const {
-        t: lu
-      } = (0, Nu.A)(), {
-        settings: qu,
-        loading: fu,
-        change: Cu,
-        retry: bu,
-        refresh: cu
-      } = (0, xu.k)(Zu), Ou = (0, tu.m)(), {
-        state: Du
-      } = ju, gu = (0, su.useRef)(qu);
-      gu.current = qu;
-      const Mu = UE(null !== (Eu = Du.whitelist) && void 0 !== Eu ? Eu : []),
-        Gu = null !== Du.whitelist;
-      (0, su.useEffect)((() => {
-        const uu = gu.current;
-        null !== uu && (uu.visibility !== Du.visibility || Gu && UE(uu.whitelist) !== Mu) && cu()
-      }), [Du.visibility, Mu, Gu, cu]);
-      const pu = async (uu, Eu) => {
-        let ju = null;
-        return await Cu(uu, Eu, {
+        t: kG
+      } = (0, QG.w)(), {
+        settings: UG,
+        loading: YG,
+        change: VG,
+        retry: pG,
+        refresh: fG
+      } = (0, TG.j)(LG), KG = (0, RG.k)(), {
+        state: JG
+      } = ZG, rG = (0, wG.useRef)(UG);
+      rG.current = UG;
+      const zG = Sb(null !== (bG = JG.whitelist) && void 0 !== bG ? bG : []),
+        oG = null !== JG.whitelist;
+      (0, wG.useEffect)((() => {
+        const GG = rG.current;
+        null !== GG && (GG.visibility !== JG.visibility || oG && Sb(GG.whitelist) !== zG) && fG()
+      }), [JG.visibility, zG, oG, fG]);
+      const XG = async (GG, bG) => {
+        let ZG = null;
+        return await VG(GG, bG, {
           quiet: !0,
-          onAnswer: uu => {
-            ju = uu
+          onAnswer: GG => {
+            ZG = GG
           }
-        }), ju
-      }, wu = (uu, Eu) => {
-        null !== Eu && "error" in Eu && ju.showStatus(uu, {
+        }), ZG
+      }, uG = (GG, bG) => {
+        null !== bG && "error" in bG && ZG.showStatus(GG, {
           ok: !1,
-          text: [lu(Eu.error)]
+          text: [kG(bG.error)]
         })
-      }, Ju = async uu => {
-        if (null === qu || uu === qu.visibility) return;
-        (0, Uu.reportAnalyticsClick)({
+      }, iG = async GG => {
+        if (null === UG || GG === UG.visibility) return;
+        (0, SG.reportAnalyticsClick)({
           id: "lobby_manage.set_mode",
-          value: uu
+          value: GG
         });
-        const Eu = "whitelist" === uu ? (0, Au.e)((0, Au.i)(Ou.friends, Zu, Du.here.map((uu => uu.name))), (0, nu.e)(Zu), qu.whitelist) : [],
-          ju = await pu({
-            setVisibility: uu
-          }, (Eu => ({
-            ...Eu,
-            visibility: uu
+        const bG = "whitelist" === GG ? (0, DG.c)((0, DG.d)(KG.friends, LG, JG.here.map((GG => GG.name))), (0, NG.e)(LG), UG.whitelist) : [],
+          ZG = await XG({
+            setVisibility: GG
+          }, (bG => ({
+            ...bG,
+            visibility: GG
           })));
-        wu("mode", ju), null === ju || "error" in ju || await (async uu => {
-          for (const Eu of (0, Au.o)(uu, Lu.E))
-            if (!await Cu({
-                whitelistAdd: Eu
-              }, (uu => (0, Au.r)(uu, Eu, !0)))) return !1;
+        uG("mode", ZG), null === ZG || "error" in ZG || await (async GG => {
+          for (const bG of (0, DG.f)(GG, eG.B))
+            if (!await VG({
+                whitelistAdd: bG
+              }, (GG => (0, DG.k)(GG, bG, !0)))) return !1;
           return !0
-        })(Eu)
-      }, du = (0, su.useMemo)((() => {
-        var uu;
-        if (null === qu) return [];
-        const Eu = null !== (uu = Du.whitelist) && void 0 !== uu ? uu : [];
-        return [...Eu.filter((uu => (0, Au.l)(qu.whitelist, uu))), ...qu.whitelist.filter((uu => !(0, Au.l)(Eu, uu)))]
-      }), [qu, Du.whitelist]), au = ju.statusOf("mode");
-      return (0, ru.jsxs)("div", {
+        })(bG)
+      }, CG = (0, wG.useMemo)((() => {
+        var GG;
+        if (null === UG) return [];
+        const bG = null !== (GG = JG.whitelist) && void 0 !== GG ? GG : [];
+        return [...bG.filter((GG => (0, DG.e)(UG.whitelist, GG))), ...UG.whitelist.filter((GG => !(0, DG.e)(bG, GG)))]
+      }), [UG, JG.whitelist]), WG = ZG.statusOf("mode");
+      return (0, jG.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, ru.jsxs)("div", {
+        children: [(0, jG.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, ru.jsx)(hu.b, {
-            label: lu("worldSocial:whoCanJoin")
-          }), null === qu && fu && (0, ru.jsx)("div", {
+          children: [(0, jG.jsx)(dG.e, {
+            label: kG("worldSocial:whoCanJoin")
+          }), null === UG && YG && (0, jG.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, ru.jsx)(Yu.b, {})
-          }), null === qu && !fu && (0, ru.jsx)(eu.i, {
+            children: (0, jG.jsx)(hG.b, {})
+          }), null === UG && !YG && (0, jG.jsx)(EG.h, {
             className: "SmallTextLight",
-            onClick: bu,
-            children: lu("worldSocial:loadFailed")
-          }), null !== qu && (0, ru.jsx)(Tu.d, {
-            visibility: qu.visibility,
-            onPick: uu => {
-              Ju(uu)
+            onClick: pG,
+            children: kG("worldSocial:loadFailed")
+          }), null !== UG && (0, jG.jsx)(HG.c, {
+            visibility: UG.visibility,
+            onPick: GG => {
+              iG(GG)
             }
-          }), au && (0, ru.jsx)("div", {
+          }), WG && (0, jG.jsx)("div", {
             className: "LobbyManageFieldError",
-            children: (0, ru.jsx)(Qu, {
-              status: au
+            children: (0, jG.jsx)(PG, {
+              status: WG
             })
-          }), null !== qu && "private" !== qu.visibility && (0, ru.jsx)(Hu.d, {
-            worldCode: Xu,
+          }), null !== UG && "private" !== UG.visibility && (0, jG.jsx)(tG.d, {
+            worldCode: yG,
             message: null
           })]
-        }), "whitelist" === (null === qu || void 0 === qu ? void 0 : qu.visibility) && (0, ru.jsx)(uE, {
-          state: Du,
-          lobbyName: Zu,
-          listed: du,
-          isListed: uu => (0, Au.l)(qu.whitelist, uu),
-          RD: (uu, Eu) => {
-            (0, Uu.reportAnalyticsClick)(Eu ? {
+        }), "whitelist" === (null === UG || void 0 === UG ? void 0 : UG.visibility) && (0, jG.jsx)(Gb, {
+          state: JG,
+          lobbyName: LG,
+          listed: CG,
+          isListed: GG => (0, DG.e)(UG.whitelist, GG),
+          gJ: (GG, bG) => {
+            (0, SG.reportAnalyticsClick)(bG ? {
               id: "lobby_manage.whitelist_add",
-              value: "Tb"
+              value: "Tp"
             } : {
               id: "lobby_manage.whitelist_remove"
-            }), pu(Eu ? {
-              whitelistAdd: [uu]
+            }), XG(bG ? {
+              whitelistAdd: [GG]
             } : {
-              whitelistRemove: uu
-            }, (ju => (0, Au.r)(ju, [uu], Eu))).then((Eu => {
-              wu(`whitelist:${uu.toLowerCase()}`, Eu)
+              whitelistRemove: GG
+            }, (ZG => (0, DG.k)(ZG, [GG], bG))).then((bG => {
+              uG(`whitelist:${GG.toLowerCase()}`, bG)
             }))
           },
-          lG: async uu => {
-            (0, Uu.reportAnalyticsClick)({
+          Kr: async GG => {
+            (0, SG.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const Eu = await pu({
-              whitelistAdd: [uu]
-            }, (Eu => (0, Au.r)(Eu, [uu], !0)));
-            return null === Eu ? {
+            const bG = await XG({
+              whitelistAdd: [GG]
+            }, (bG => (0, DG.k)(bG, [GG], !0)));
+            return null === bG ? {
               ok: !1,
-              error: lu("worldSocial:changeFailed")
-            } : "error" in Eu ? {
+              error: kG("worldSocial:changeFailed")
+            } : "error" in bG ? {
               ok: !1,
-              error: lu(Eu.error)
-            } : (0, Au.l)(Eu.notFound, uu) ? {
+              error: kG(bG.error)
+            } : (0, DG.e)(bG.notFound, GG) ? {
               ok: !1,
-              error: lu("lobbyManage:noPlayerCalled", {
-                playerName: uu
+              error: kG("lobbyManage:noPlayerCalled", {
+                playerName: GG
               })
             } : {
               ok: !0
             }
           },
-          statusOf: uu => ju.statusOf(`whitelist:${uu.toLowerCase()}`)
-        }), "public" === (null === qu || void 0 === qu ? void 0 : qu.visibility) && null !== Du.listing && (0, ru.jsx)(EE, {
-          manage: ju,
-          listing: Du.listing
+          statusOf: GG => ZG.statusOf(`whitelist:${GG.toLowerCase()}`)
+        }), "public" === (null === UG || void 0 === UG ? void 0 : UG.visibility) && null !== JG.listing && (0, jG.jsx)(bb, {
+          manage: ZG,
+          listing: JG.listing
         })]
       })
     }
 
-    function XE(uu) {
-      var Eu;
+    function yb(GG) {
+      var bG;
       let {
-        manage: ju,
-        lobbyName: su
-      } = uu;
+        manage: ZG,
+        lobbyName: wG
+      } = GG;
       const {
-        t: Zu
-      } = (0, Nu.A)(), {
-        state: Xu
-      } = ju, lu = Cu(), qu = null !== (Eu = Xu.whitelist) && void 0 !== Eu ? Eu : [];
-      return (0, ru.jsxs)("div", {
+        t: LG
+      } = (0, QG.w)(), {
+        state: yG
+      } = ZG, kG = VG(), UG = null !== (bG = yG.whitelist) && void 0 !== bG ? bG : [];
+      return (0, jG.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, ru.jsxs)("div", {
+        children: [(0, jG.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, ru.jsx)(hu.b, {
-            label: Zu("worldSocial:whoCanJoin")
-          }), (0, ru.jsx)("div", {
+          children: [(0, jG.jsx)(dG.e, {
+            label: LG("worldSocial:whoCanJoin")
+          }), (0, jG.jsx)("div", {
             className: "LobbyManageModeText",
-            children: Zu(`worldSocial:${Xu.visibility}`)
+            children: LG(`worldSocial:${yG.visibility}`)
           })]
-        }), "whitelist" === Xu.visibility && Xu.you.canEditWhitelist && (0, ru.jsx)(uE, {
-          state: Xu,
-          lobbyName: su,
-          listed: qu,
-          isListed: uu => {
-            var Eu;
-            return null !== (Eu = lu.get(uu.toLowerCase())) && void 0 !== Eu ? Eu : (0, Au.l)(qu, uu)
+        }), "whitelist" === yG.visibility && yG.you.canEditWhitelist && (0, jG.jsx)(Gb, {
+          state: yG,
+          lobbyName: wG,
+          listed: UG,
+          isListed: GG => {
+            var bG;
+            return null !== (bG = kG.get(GG.toLowerCase())) && void 0 !== bG ? bG : (0, DG.e)(UG, GG)
           },
-          RD: (uu, Eu) => {
-            (0, Uu.reportAnalyticsClick)(Eu ? {
+          gJ: (GG, bG) => {
+            (0, SG.reportAnalyticsClick)(bG ? {
               id: "lobby_manage.whitelist_add",
-              value: "Tb"
+              value: "Tp"
             } : {
               id: "lobby_manage.whitelist_remove"
             });
-            const su = uu.toLowerCase();
-            lu.hold(su, Eu, ju.send(Eu ? {
+            const wG = GG.toLowerCase();
+            kG.hold(wG, bG, ZG.send(bG ? {
               type: "whitelistAdd",
-              names: [uu]
+              names: [GG]
             } : {
               type: "whitelistRemove",
-              name: uu
-            }, `whitelist:${su}`))
+              name: GG
+            }, `whitelist:${wG}`))
           },
-          lG: async uu => {
-            (0, Uu.reportAnalyticsClick)({
+          Kr: async GG => {
+            (0, SG.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const Eu = await ju.send({
+            const bG = await ZG.send({
               type: "whitelistAdd",
-              names: [uu]
+              names: [GG]
             }, "whitelist-field");
-            return Eu.ok ? {
+            return bG.ok ? {
               ok: !0
             } : {
               ok: !1,
-              error: (0, ru.jsx)(Ku.d, {
-                text: Eu.message
+              error: (0, jG.jsx)(cG.c, {
+                text: bG.message
               })
             }
           },
-          statusOf: uu => ju.statusOf(`whitelist:${uu.toLowerCase()}`)
-        }), "public" === Xu.visibility && null !== Xu.listing && (0, ru.jsx)(EE, {
-          manage: ju,
-          listing: Xu.listing
+          statusOf: GG => ZG.statusOf(`whitelist:${GG.toLowerCase()}`)
+        }), "public" === yG.visibility && null !== yG.listing && (0, jG.jsx)(bb, {
+          manage: ZG,
+          listing: yG.listing
         })]
       })
     }
-    var lE = ju(5155),
-      qE = ju(1419);
-    const fE = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
-    const CE = (0, su.memo)((function(uu) {
-      var Eu;
+    var kb = ZG(5019),
+      Ub = ZG(1320);
+    const Yb = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
+    const Vb = (0, wG.memo)((function(GG) {
+      var bG;
       let {
-        rule: ju,
-        value: su,
-        status: Uu,
-        pending: Zu,
-        hiddenNames: Xu,
-        MJ: lu,
-        onAction: qu
-      } = uu;
+        rule: ZG,
+        value: wG,
+        status: SG,
+        pending: LG,
+        hiddenNames: yG,
+        mC: kG,
+        onAction: UG
+      } = GG;
       const {
-        t: fu
-      } = (0, Nu.A)(), Cu = uu => lu(ju, uu), bu = (uu, Eu) => {
-        qu(ju, uu, Eu)
-      }, cu = mu(fu, ju.label, Xu), Ou = ju.info ? mu(fu, ju.info, Xu) : void 0, Yu = ju.placeholder ? mu(fu, ju.placeholder, Xu) : void 0, hu = (null !== (Eu = ju.options) && void 0 !== Eu ? Eu : []).map((uu => ({
-        value: uu.value,
-        label: mu(fu, uu.label, Xu)
-      }))), Du = Math.max(0, ...hu.map((uu => function(uu) {
-        let Eu = 0;
-        for (const ju of uu) Eu += fE.test(ju) ? 2 : 1;
-        return Eu
-      }(uu.label)))), gu = Uu && (0, ru.jsx)("div", {
+        t: YG
+      } = (0, QG.w)(), VG = GG => kG(ZG, GG), pG = (GG, bG) => {
+        UG(ZG, GG, bG)
+      }, fG = vG(YG, ZG.label, yG), KG = ZG.info ? vG(YG, ZG.info, yG) : void 0, hG = ZG.placeholder ? vG(YG, ZG.placeholder, yG) : void 0, dG = (null !== (bG = ZG.options) && void 0 !== bG ? bG : []).map((GG => ({
+        value: GG.value,
+        label: vG(YG, GG.label, yG)
+      }))), JG = Math.max(0, ...dG.map((GG => function(GG) {
+        let bG = 0;
+        for (const ZG of GG) bG += Yb.test(ZG) ? 2 : 1;
+        return bG
+      }(GG.label)))), rG = SG && (0, jG.jsx)("div", {
         className: "LobbyManageRuleStatus",
-        children: (0, ru.jsx)(Qu, {
-          status: Uu
+        children: (0, jG.jsx)(PG, {
+          status: SG
         })
-      }), Mu = (0, ru.jsxs)("div", {
+      }), zG = (0, jG.jsxs)("div", {
         className: "SliderText",
-        children: [cu, void 0 !== Ou && (0, ru.jsx)(qE.c, {
+        children: [fG, void 0 !== KG && (0, jG.jsx)(Ub.d, {
           className: "SettingsTextInputCircleInfo",
-          hoverInfo: Ou
+          hoverInfo: KG
         })]
       });
-      return "toggle" === ju.kind ? (0, ru.jsxs)(ru.Fragment, {
-        children: [(0, ru.jsx)(lE.b, {
-          label: cu,
-          checked: !0 === su,
-          circleInfoText: Ou,
-          disabled: Zu,
-          onClick: Cu
-        }), gu]
-      }) : "choice" === ju.kind && hu.length <= 3 ? (0, ru.jsxs)(ru.Fragment, {
-        children: [(0, ru.jsx)(lE.f, {
-          label: cu,
-          options: hu,
-          value: String(su),
-          circleInfoText: Ou,
-          onChange: Cu
-        }), gu]
-      }) : (0, ru.jsxs)("div", {
+      return "toggle" === ZG.kind ? (0, jG.jsxs)(jG.Fragment, {
+        children: [(0, jG.jsx)(kb.c, {
+          label: fG,
+          checked: !0 === wG,
+          circleInfoText: KG,
+          disabled: LG,
+          onClick: VG
+        }), rG]
+      }) : "choice" === ZG.kind && dG.length <= 3 ? (0, jG.jsxs)(jG.Fragment, {
+        children: [(0, jG.jsx)(kb.e, {
+          label: fG,
+          options: dG,
+          value: String(wG),
+          circleInfoText: KG,
+          onChange: VG
+        }), rG]
+      }) : (0, jG.jsxs)("div", {
         className: "SettingBox LobbyManageRuleRow",
-        children: [Mu, "choice" === ju.kind && (0, ru.jsx)("span", {
+        children: [zG, "choice" === ZG.kind && (0, jG.jsx)("span", {
           className: "LobbyManageRuleChoice",
           style: {
-            "--lobby-choice-chars": Du
+            "--lobby-choice-chars": JG
           },
-          children: (0, ru.jsx)(ou.c, {
-            options: hu,
-            value: String(su),
-            disabled: Zu,
-            onChange: uu => {
-              Cu(uu.value)
+          children: (0, jG.jsx)(IG.b, {
+            options: dG,
+            value: String(wG),
+            disabled: LG,
+            onChange: GG => {
+              VG(GG.value)
             }
           })
-        }), ("number" === ju.kind || "text" === ju.kind) && (0, ru.jsx)(Wu, {
-          value: null === su ? "" : String(su),
-          placeholder: Yu,
-          ariaLabel: cu,
-          onSave: uu => {
-            const Eu = uu.trim(),
-              su = Number(Eu);
-            return Cu("number" === ju.kind && "" !== Eu && Number.isFinite(su) ? su : Eu)
+        }), ("number" === ZG.kind || "text" === ZG.kind) && (0, jG.jsx)(AG, {
+          value: null === wG ? "" : String(wG),
+          placeholder: hG,
+          ariaLabel: fG,
+          onSave: GG => {
+            const bG = GG.trim(),
+              wG = Number(bG);
+            return VG("number" === ZG.kind && "" !== bG && Number.isFinite(wG) ? wG : bG)
           }
-        }), "action" === ju.kind && (0, ru.jsxs)("div", {
+        }), "action" === ZG.kind && (0, jG.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [hu.length > 3 && (0, ru.jsx)(ou.c, {
-            options: hu,
+          children: [dG.length > 3 && (0, jG.jsx)(IG.b, {
+            options: dG,
             value: {
               value: "",
-              label: null !== Yu && void 0 !== Yu ? Yu : cu
+              label: null !== hG && void 0 !== hG ? hG : fG
             },
-            disabled: Zu,
-            onChange: uu => {
-              bu(uu.value)
+            disabled: LG,
+            onChange: GG => {
+              pG(GG.value)
             }
-          }), hu.length > 0 && hu.length <= 3 && hu.map((uu => (0, ru.jsx)(eu.i, {
+          }), dG.length > 0 && dG.length <= 3 && dG.map((GG => (0, jG.jsx)(EG.h, {
             className: "SmallTextLight",
-            disabled: Zu,
+            disabled: LG,
             onClick: () => {
-              bu(uu.value)
+              pG(GG.value)
             },
-            children: uu.label
-          }, uu.value))), 0 === hu.length && (0, ru.jsx)(eu.i, {
+            children: GG.label
+          }, GG.value))), 0 === dG.length && (0, jG.jsx)(EG.h, {
             className: "SmallTextLight",
-            disabled: Zu,
+            disabled: LG,
             onClick: () => {
-              bu()
+              pG()
             },
-            children: null !== Yu && void 0 !== Yu ? Yu : cu
+            children: null !== hG && void 0 !== hG ? hG : fG
           })]
-        }), "names" === ju.kind && (0, ru.jsx)(bE, {
-          names: Array.isArray(su) ? su : [],
-          pending: Zu,
-          onAction: bu
-        }), gu]
+        }), "names" === ZG.kind && (0, jG.jsx)(pb, {
+          names: Array.isArray(wG) ? wG : [],
+          pending: LG,
+          onAction: pG
+        }), rG]
       })
     }));
 
-    function bE(uu) {
+    function pb(GG) {
       let {
-        names: Eu,
-        pending: ju,
-        onAction: Uu
-      } = uu;
+        names: bG,
+        pending: ZG,
+        onAction: SG
+      } = GG;
       const {
-        t: Zu
-      } = (0, Nu.A)(), Xu = (0, su.useRef)(null), [lu, qu] = (0, su.useState)(""), fu = () => {
-        const uu = lu.trim();
-        "" !== uu && (Uu(uu, "add"), Xu.current && (Xu.current.value = ""), qu(""))
+        t: LG
+      } = (0, QG.w)(), yG = (0, wG.useRef)(null), [kG, UG] = (0, wG.useState)(""), YG = () => {
+        const GG = kG.trim();
+        "" !== GG && (SG(GG, "add"), yG.current && (yG.current.value = ""), UG(""))
       };
-      return (0, ru.jsxs)("div", {
+      return (0, jG.jsxs)("div", {
         className: "LobbyManageNames",
-        children: [Eu.map((uu => (0, ru.jsxs)("div", {
+        children: [bG.map((GG => (0, jG.jsxs)("div", {
           className: "LobbyManageName",
-          children: [(0, ru.jsx)("span", {
+          children: [(0, jG.jsx)("span", {
             className: "LobbyManageNameText",
-            children: uu
-          }), (0, ru.jsx)(eu.i, {
+            children: GG
+          }), (0, jG.jsx)(EG.h, {
             className: "LobbyManageIconButton SmallTextLight",
-            ariaLabel: Zu("lobbyManage:removeName", {
-              name: uu
+            ariaLabel: LG("lobbyManage:removeName", {
+              name: GG
             }),
-            disabled: ju,
+            disabled: ZG,
             onClick: () => {
-              Uu(uu, "remove")
+              SG(GG, "remove")
             },
-            children: (0, ru.jsx)(Ou.e, {
+            children: (0, jG.jsx)(KG.c, {
               name: "xmark"
             })
           })]
-        }, uu))), (0, ru.jsxs)("div", {
+        }, GG))), (0, jG.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [(0, ru.jsx)(Vu.d, {
-            domRef: Xu,
-            placeholderText: Zu("lobbyManage:namePlaceholder"),
-            ariaLabel: Zu("lobbyManage:namePlaceholder"),
+          children: [(0, jG.jsx)(lG.b, {
+            domRef: yG,
+            placeholderText: LG("lobbyManage:namePlaceholder"),
+            ariaLabel: LG("lobbyManage:namePlaceholder"),
             maxLength: 32,
-            onValueChange: uu => {
-              qu(uu)
+            onValueChange: GG => {
+              UG(GG)
             },
-            onEnter: fu
-          }), (0, ru.jsx)(eu.i, {
+            onEnter: YG
+          }), (0, jG.jsx)(EG.h, {
             className: "SmallTextLight",
-            disabled: ju || "" === lu.trim(),
-            onClick: fu,
-            children: Zu("lobbyManage:addHere")
+            disabled: ZG || "" === kG.trim(),
+            onClick: YG,
+            children: LG("lobbyManage:addHere")
           })]
         })]
       })
     }
-    const cE = [{
+    const fb = [{
       group: "gameplay",
       title: "lobbyManage:gameplay"
     }, {
@@ -1225,125 +1225,125 @@ export const modules = {
       title: "lobbyManage:world"
     }];
 
-    function NE(uu, Eu) {
-      return cE.map((ju => {
+    function Qb(GG, bG) {
+      return fb.map((ZG => {
         let {
-          group: su,
-          title: Uu
-        } = ju;
-        const Zu = uu.filter((uu => uu.group === su && void 0 === uu.parent)).map((ju => {
-          const su = !0 === Eu(ju) ? uu.filter((uu => uu.parent === ju.key)) : [];
+          group: wG,
+          title: SG
+        } = ZG;
+        const LG = GG.filter((GG => GG.group === wG && void 0 === GG.parent)).map((ZG => {
+          const wG = !0 === bG(ZG) ? GG.filter((GG => GG.parent === ZG.key)) : [];
           return {
-            rule: ju,
-            children: su
+            rule: ZG,
+            children: wG
           }
         }));
         return {
-          group: su,
-          title: Uu,
-          items: Zu
+          group: wG,
+          title: SG,
+          items: LG
         }
       }))
     }
 
-    function OE(uu) {
-      return uu.flatMap((uu => {
+    function Kb(GG) {
+      return GG.flatMap((GG => {
         let {
-          items: Eu
-        } = uu;
-        return Eu.flatMap((uu => {
+          items: bG
+        } = GG;
+        return bG.flatMap((GG => {
           let {
-            rule: Eu,
-            children: ju
-          } = uu;
-          return [Eu, ...ju]
+            rule: bG,
+            children: ZG
+          } = GG;
+          return [bG, ...ZG]
         }))
       }))
     }
 
-    function YE(uu) {
+    function hb(GG) {
       let {
-        manage: Eu,
-        rowsShown: ju
-      } = uu;
+        manage: bG,
+        rowsShown: ZG
+      } = GG;
       const {
-        t: Zu
-      } = (0, Nu.A)(), Xu = (0, Mu.f)("hiddenPlayerNames"), {
-        rules: lu
-      } = Eu.state, qu = Cu(), fu = uu => {
-        const Eu = qu.get(uu.key);
-        return void 0 === Eu ? uu.value : Eu
-      }, bu = NE(lu, fu), [cu] = (0, su.useState)((() => OE(bu).map((uu => uu.key)))), Ou = ju === 1 / 0 ? null : new Set(cu.slice(0, ju)), Yu = uu => null === Ou || Ou.has(uu.key), {
-        hold: Du
-      } = qu, gu = (0, su.useCallback)(((uu, ju) => {
-        (0, Uu.reportAnalyticsClick)({
+        t: LG
+      } = (0, QG.w)(), yG = (0, zG.f)("hiddenPlayerNames"), {
+        rules: kG
+      } = bG.state, UG = VG(), YG = GG => {
+        const bG = UG.get(GG.key);
+        return void 0 === bG ? GG.value : bG
+      }, pG = Qb(kG, YG), [fG] = (0, wG.useState)((() => Kb(pG).map((GG => GG.key)))), KG = ZG === 1 / 0 ? null : new Set(fG.slice(0, ZG)), hG = GG => null === KG || KG.has(GG.key), {
+        hold: JG
+      } = UG, rG = (0, wG.useCallback)(((GG, ZG) => {
+        (0, SG.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
-          value: uu.key
+          value: GG.key
         });
-        const su = Eu.send({
+        const wG = bG.send({
           type: "setRule",
-          key: uu.key,
-          value: ju
-        }, `rule:${uu.key}`);
-        return Du(uu.key, ju, su), su
-      }), [Eu, Du]), eu = (0, su.useCallback)(((uu, ju, su) => {
-        (0, Uu.reportAnalyticsClick)({
+          key: GG.key,
+          value: ZG
+        }, `rule:${GG.key}`);
+        return JG(GG.key, ZG, wG), wG
+      }), [bG, JG]), EG = (0, wG.useCallback)(((GG, ZG, wG) => {
+        (0, SG.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
-          value: uu.key
-        }), Eu.send({
+          value: GG.key
+        }), bG.send({
           type: "ruleAction",
-          key: uu.key,
-          ...void 0 === ju ? {} : {
-            arg: ju
+          key: GG.key,
+          ...void 0 === ZG ? {} : {
+            arg: ZG
           },
-          ...void 0 === su ? {} : {
-            op: su
+          ...void 0 === wG ? {} : {
+            op: wG
           }
-        }, `rule:${uu.key}`, void 0 === su ? Zu("lobbyManage:setJustNow") : void 0)
-      }), [Eu, Zu]), Gu = uu => {
-        const ju = `rule:${uu.key}`;
-        return (0, ru.jsx)(CE, {
-          rule: uu,
-          value: fu(uu),
-          status: Eu.statusOf(ju),
-          pending: Eu.isPending(ju),
-          hiddenNames: Xu,
-          MJ: gu,
-          onAction: eu
-        }, uu.key)
+        }, `rule:${GG.key}`, void 0 === wG ? LG("lobbyManage:setJustNow") : void 0)
+      }), [bG, LG]), oG = GG => {
+        const ZG = `rule:${GG.key}`;
+        return (0, jG.jsx)(Vb, {
+          rule: GG,
+          value: YG(GG),
+          status: bG.statusOf(ZG),
+          pending: bG.isPending(ZG),
+          hiddenNames: yG,
+          mC: rG,
+          onAction: EG
+        }, GG.key)
       };
-      return (0, ru.jsx)("div", {
+      return (0, jG.jsx)("div", {
         className: "LobbyManagePage LobbyManageRules",
-        children: bu.map((uu => {
+        children: pG.map((GG => {
           let {
-            group: Eu,
-            title: ju,
-            items: Uu
-          } = uu;
-          const Xu = Uu.filter((uu => {
+            group: bG,
+            title: ZG,
+            items: SG
+          } = GG;
+          const yG = SG.filter((GG => {
             let {
-              rule: Eu
-            } = uu;
-            return Yu(Eu)
+              rule: bG
+            } = GG;
+            return hG(bG)
           }));
-          return 0 === Xu.length ? null : (0, ru.jsxs)(su.Fragment, {
-            children: [(0, ru.jsx)(hu.b, {
-              label: Zu(ju)
-            }), Xu.map((uu => {
+          return 0 === yG.length ? null : (0, jG.jsxs)(wG.Fragment, {
+            children: [(0, jG.jsx)(dG.e, {
+              label: LG(ZG)
+            }), yG.map((GG => {
               let {
-                rule: Eu,
-                children: ju
-              } = uu;
-              return 0 === ju.length ? Gu(Eu) : (0, ru.jsxs)("div", {
+                rule: bG,
+                children: ZG
+              } = GG;
+              return 0 === ZG.length ? oG(bG) : (0, jG.jsxs)("div", {
                 className: "SettingBoxGroup",
-                children: [Gu(Eu), ju.filter(Yu).map(Gu)]
-              }, Eu.key)
+                children: [oG(bG), ZG.filter(hG).map(oG)]
+              }, bG.key)
             }))]
-          }, Eu)
+          }, bG)
         }))
       })
     }
-    const hE = {
+    const db = {
         players: {
           icon: "user-group",
           title: "lobbyManage:players"
@@ -1361,590 +1361,590 @@ export const modules = {
           title: "lobbyManage:leaderboard"
         }
       },
-      DE = 5,
-      gE = (0, su.memo)((function(uu) {
+      Jb = 5,
+      rb = (0, wG.memo)((function(GG) {
         let {
-          page: Eu,
-          manage: ju,
-          leaderboard: Uu,
-          focusRequest: Zu,
-          onFocused: Xu,
-          ruleRowsShown: lu
-        } = uu;
-        return "leaderboard" === Eu ? (0, ru.jsx)(su.Suspense, {
-          fallback: (0, ru.jsx)("div", {
+          page: bG,
+          manage: ZG,
+          leaderboard: SG,
+          focusRequest: LG,
+          onFocused: yG,
+          ruleRowsShown: kG
+        } = GG;
+        return "leaderboard" === bG ? (0, jG.jsx)(wG.Suspense, {
+          fallback: (0, jG.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, ru.jsx)(Yu.b, {})
+            children: (0, jG.jsx)(hG.b, {})
           }),
-          children: Uu
-        }) : "joining" === Eu ? (0, ru.jsx)(sE, {
-          manage: ju
-        }) : "rules" === Eu ? (0, ru.jsx)(YE, {
-          manage: ju,
-          rowsShown: lu
-        }) : (0, ru.jsx)(Bu, {
-          manage: ju,
-          focusRequest: Zu,
-          onFocused: Xu
+          children: SG
+        }) : "joining" === bG ? (0, jG.jsx)(wb, {
+          manage: ZG
+        }) : "rules" === bG ? (0, jG.jsx)(hb, {
+          manage: ZG,
+          rowsShown: kG
+        }) : (0, jG.jsx)(gG, {
+          manage: ZG,
+          focusRequest: LG,
+          onFocused: yG
         })
       }));
 
-    function ME(uu) {
+    function zb(GG) {
       let {
-        page: Eu
-      } = uu;
+        page: bG
+      } = GG;
       const {
-        t: ju
-      } = (0, Nu.A)(), su = hE[Eu];
-      return (0, ru.jsxs)(ru.Fragment, {
-        children: [(0, ru.jsx)(Ou.e, {
-          name: su.icon
-        }), " ", (0, ru.jsx)("span", {
+        t: ZG
+      } = (0, QG.w)(), wG = db[bG];
+      return (0, jG.jsxs)(jG.Fragment, {
+        children: [(0, jG.jsx)(KG.c, {
+          name: wG.icon
+        }), " ", (0, jG.jsx)("span", {
           className: "LobbyManagePageTitle",
-          children: ju(su.title)
+          children: ZG(wG.title)
         })]
       })
     }
 
-    function eE(uu) {
-      var Eu;
+    function Eb(GG) {
+      var bG;
       const {
-        t: ju
-      } = (0, Nu.A)(), {
-        pages: Zu,
-        landing: Xu
-      } = uu, qu = (0, su.useRef)(null), fu = (0, su.useRef)(null), Cu = (0, su.useRef)(null), bu = (0, su.useRef)(new Map), [Ou, Yu] = (0, su.useState)(null), Mu = (0, su.useRef)(Ou), eu = (0, su.useRef)(0), [Gu, pu] = (0, su.useState)(Zu[0]), wu = null !== Ou && void 0 !== Ou ? Ou : Zu.includes(Gu) ? Gu : Zu[0], [Ju] = (0, su.useState)(null !== (Eu = null === Xu || void 0 === Xu ? void 0 : Xu.page) && void 0 !== Eu ? Eu : null), du = null !== Ju && Zu.includes(Ju) ? [Ju, ...Zu.filter((uu => uu !== Ju))] : Zu, [au] = (0, su.useState)((() => {
-        const Eu = OE(NE(uu.manage.state.rules, (uu => uu.value)));
-        return Math.max(1, Math.ceil(Eu.length / DE))
-      })), Pu = du.flatMap((uu => "rules" === uu ? Array(au).fill(uu) : [uu])), ou = function(uu, Eu) {
-        const [ju, Uu] = (0, su.useState)(uu), Zu = ju >= Eu;
-        return Zu && ju !== 1 / 0 && Uu(1 / 0), (0, su.useLayoutEffect)((() => {
-          if (Zu) return;
-          let uu = !0;
-          return (0, gu.e)().then((() => {
-            uu && Uu((uu => uu + 1))
+        t: ZG
+      } = (0, QG.w)(), {
+        pages: LG,
+        landing: yG
+      } = GG, UG = (0, wG.useRef)(null), YG = (0, wG.useRef)(null), VG = (0, wG.useRef)(null), pG = (0, wG.useRef)(new Map), [KG, hG] = (0, wG.useState)(null), zG = (0, wG.useRef)(KG), EG = (0, wG.useRef)(0), [oG, XG] = (0, wG.useState)(LG[0]), uG = null !== KG && void 0 !== KG ? KG : LG.includes(oG) ? oG : LG[0], [iG] = (0, wG.useState)(null !== (bG = null === yG || void 0 === yG ? void 0 : yG.page) && void 0 !== bG ? bG : null), CG = null !== iG && LG.includes(iG) ? [iG, ...LG.filter((GG => GG !== iG))] : LG, [WG] = (0, wG.useState)((() => {
+        const bG = Kb(Qb(GG.manage.state.rules, (GG => GG.value)));
+        return Math.max(1, Math.ceil(bG.length / Jb))
+      })), mG = CG.flatMap((GG => "rules" === GG ? Array(WG).fill(GG) : [GG])), IG = function(GG, bG) {
+        const [ZG, SG] = (0, wG.useState)(GG), LG = ZG >= bG;
+        return LG && ZG !== 1 / 0 && SG(1 / 0), (0, wG.useLayoutEffect)((() => {
+          if (LG) return;
+          let GG = !0;
+          return (0, rG.e)().then((() => {
+            GG && SG((GG => GG + 1))
           })), () => {
-            uu = !1
+            GG = !1
           }
-        }), [ju, Zu]), Zu ? 1 / 0 : ju
-      }(1, Pu.length), ku = Pu.slice(0, ou), mu = new Set(ku), vu = ou < Pu.length, Ku = vu ? ku.filter((uu => "rules" === uu)).length * DE : 1 / 0, Vu = (0, su.useRef)(uu.focusRequest);
-      Vu.current = uu.focusRequest;
-      const Qu = uu => {
-          Mu.current = uu, Yu(uu)
+        }), [ZG, LG]), LG ? 1 / 0 : ZG
+      }(1, mG.length), FG = mG.slice(0, IG), vG = new Set(FG), aG = IG < mG.length, cG = aG ? FG.filter((GG => "rules" === GG)).length * Jb : 1 / 0, lG = (0, wG.useRef)(GG.focusRequest);
+      lG.current = GG.focusRequest;
+      const PG = GG => {
+          zG.current = GG, hG(GG)
         },
-        iu = () => {
-          var uu, Eu;
-          qu.current.style.scrollPaddingTop = `${null!==(uu=null===(Eu=Cu.current)||void 0===Eu?void 0:Eu.offsetHeight)&&void 0!==uu?uu:0}px`
+        MG = () => {
+          var GG, bG;
+          UG.current.style.scrollPaddingTop = `${null!==(GG=null===(bG=VG.current)||void 0===bG?void 0:bG.offsetHeight)&&void 0!==GG?GG:0}px`
         },
-        Wu = uu => {
-          const Eu = qu.current,
-            ju = bu.current.get(uu);
-          if (void 0 === ju) return;
-          const su = document.activeElement,
-            Uu = Vu.current,
-            Zu = null === Uu ? null : ju.querySelector(`[data-lobby-manage-row="${CSS.escape(Uu.name)}"]`);
-          iu(), su instanceof HTMLElement && null !== Zu && void 0 !== Zu && Zu.contains(su) ? su.scrollIntoView({
+        AG = GG => {
+          const bG = UG.current,
+            ZG = pG.current.get(GG);
+          if (void 0 === ZG) return;
+          const wG = document.activeElement,
+            SG = lG.current,
+            LG = null === SG ? null : ZG.querySelector(`[data-lobby-manage-row="${CSS.escape(SG.name)}"]`);
+          MG(), wG instanceof HTMLElement && null !== LG && void 0 !== LG && LG.contains(wG) ? wG.scrollIntoView({
             block: "center"
-          }) : null === ju.previousElementSibling ? Eu.scrollTop = 0 : ju.scrollIntoView({
+          }) : null === ZG.previousElementSibling ? bG.scrollTop = 0 : ZG.scrollIntoView({
             block: "start"
-          }), eu.current = Eu.scrollTop
+          }), EG.current = bG.scrollTop
         },
-        Su = uu => {
-          (0, Uu.reportAnalyticsClick)({
+        sG = GG => {
+          (0, SG.reportAnalyticsClick)({
             id: "lobby_manage.page",
-            value: uu
-          }), Qu(uu), Wu(uu)
+            value: GG
+          }), PG(GG), AG(GG)
         },
-        Iu = () => {
-          var uu, Eu;
-          const ju = qu.current,
-            su = ju.getBoundingClientRect().top + (null !== (uu = null === (Eu = Cu.current) || void 0 === Eu ? void 0 : Eu.offsetHeight) && void 0 !== uu ? uu : 0),
-            Uu = Zu.map((uu => {
-              var Eu, ju;
-              return (null !== (Eu = null === (ju = bu.current.get(uu)) || void 0 === ju ? void 0 : ju.getBoundingClientRect().top) && void 0 !== Eu ? Eu : 1 / 0) - su
+        qG = () => {
+          var GG, bG;
+          const ZG = UG.current,
+            wG = ZG.getBoundingClientRect().top + (null !== (GG = null === (bG = VG.current) || void 0 === bG ? void 0 : bG.offsetHeight) && void 0 !== GG ? GG : 0),
+            SG = LG.map((GG => {
+              var bG, ZG;
+              return (null !== (bG = null === (ZG = pG.current.get(GG)) || void 0 === ZG ? void 0 : ZG.getBoundingClientRect().top) && void 0 !== bG ? bG : 1 / 0) - wG
             })),
-            Xu = !vu && ju.scrollTop + ju.clientHeight >= ju.scrollHeight - 1;
-          pu(Zu[(0, lu.g)(Uu, Xu)])
+            yG = !aG && ZG.scrollTop + ZG.clientHeight >= ZG.scrollHeight - 1;
+          XG(LG[(0, kG.l)(SG, yG)])
         },
-        Fu = () => {
-          null !== Mu.current && (Qu(null), Iu())
+        nG = () => {
+          null !== zG.current && (PG(null), qG())
         };
-      (0, su.useLayoutEffect)((() => {
-        null !== Xu && Zu.includes(Xu.page) && Su(Xu.page)
-      }), [null === Xu || void 0 === Xu ? void 0 : Xu.seq]), (0, su.useLayoutEffect)((() => {
-        null === Mu.current || Zu.includes(Mu.current) || Fu()
+      (0, wG.useLayoutEffect)((() => {
+        null !== yG && LG.includes(yG.page) && sG(yG.page)
+      }), [null === yG || void 0 === yG ? void 0 : yG.seq]), (0, wG.useLayoutEffect)((() => {
+        null === zG.current || LG.includes(zG.current) || nG()
       }));
       const {
-        onFocused: Bu
-      } = uu, Lu = (0, su.useCallback)((uu => {
-        null !== Mu.current && Wu(Mu.current), Bu(uu)
-      }), [Bu]);
-      (0, su.useLayoutEffect)((() => {
-        const uu = Mu.current;
-        null !== uu && (!vu || Zu.indexOf(Pu[ou - 1]) < Zu.indexOf(uu)) && Wu(uu)
-      }), [ou]), (0, su.useEffect)((() => {
-        const uu = new ResizeObserver((() => {
-          null !== Mu.current ? Wu(Mu.current) : iu()
+        onFocused: gG
+      } = GG, eG = (0, wG.useCallback)((GG => {
+        null !== zG.current && AG(zG.current), gG(GG)
+      }), [gG]);
+      (0, wG.useLayoutEffect)((() => {
+        const GG = zG.current;
+        null !== GG && (!aG || LG.indexOf(mG[IG - 1]) < LG.indexOf(GG)) && AG(GG)
+      }), [IG]), (0, wG.useEffect)((() => {
+        const GG = new ResizeObserver((() => {
+          null !== zG.current ? AG(zG.current) : MG()
         }));
-        return uu.observe(qu.current), uu.observe(fu.current), () => {
-          uu.disconnect()
+        return GG.observe(UG.current), GG.observe(YG.current), () => {
+          GG.disconnect()
         }
-      }), []), (0, su.useLayoutEffect)((() => {
-        const uu = Cu.current,
-          Eu = null === uu || void 0 === uu ? void 0 : uu.querySelector(".SegmentedToggleOptionSelected");
-        Eu && (uu.scrollLeft = Math.min(Eu.offsetLeft, Math.max(uu.scrollLeft, Eu.offsetLeft + Eu.offsetWidth - uu.clientWidth)))
-      }), [wu]);
-      return (0, ru.jsxs)("div", {
-        ref: qu,
+      }), []), (0, wG.useLayoutEffect)((() => {
+        const GG = VG.current,
+          bG = null === GG || void 0 === GG ? void 0 : GG.querySelector(".SegmentedToggleOptionSelected");
+        bG && (GG.scrollLeft = Math.min(bG.offsetLeft, Math.max(GG.scrollLeft, bG.offsetLeft + bG.offsetWidth - GG.clientWidth)))
+      }), [uG]);
+      return (0, jG.jsxs)("div", {
+        ref: UG,
         className: "MenuBody LobbyManageBody",
         onScroll: () => {
-          null === Mu.current ? Iu() : Math.abs(qu.current.scrollTop - eu.current) > 1 && Fu()
+          null === zG.current ? qG() : Math.abs(UG.current.scrollTop - EG.current) > 1 && nG()
         },
-        onClick: uu => {
-          var Eu;
-          null !== (Eu = Cu.current) && void 0 !== Eu && Eu.contains(uu.target) || Fu()
+        onClick: GG => {
+          var bG;
+          null !== (bG = VG.current) && void 0 !== bG && bG.contains(GG.target) || nG()
         },
-        onFocus: uu => {
-          var Eu;
-          const ju = null === Mu.current ? null : bu.current.get(Mu.current);
-          !ju || ju.contains(uu.target) || null !== (Eu = Cu.current) && void 0 !== Eu && Eu.contains(uu.target) || Fu()
+        onFocus: GG => {
+          var bG;
+          const ZG = null === zG.current ? null : pG.current.get(zG.current);
+          !ZG || ZG.contains(GG.target) || null !== (bG = VG.current) && void 0 !== bG && bG.contains(GG.target) || nG()
         },
-        children: [Zu.length > 1 && (0, ru.jsx)("div", {
-          ref: Cu,
+        children: [LG.length > 1 && (0, jG.jsx)("div", {
+          ref: VG,
           className: "LobbyManageChips",
-          children: (0, ru.jsx)(Du.c, {
-            options: Zu.map((uu => ({
-              value: uu,
-              label: (0, ru.jsx)(ME, {
-                page: uu
+          children: (0, jG.jsx)(JG.c, {
+            options: LG.map((GG => ({
+              value: GG,
+              label: (0, jG.jsx)(zb, {
+                page: GG
               }),
-              ariaLabel: ju(hE[uu].title)
+              ariaLabel: ZG(db[GG].title)
             }))),
-            value: wu,
+            value: uG,
             padTabs: "2",
-            ariaLabel: ju("lobbyManageEntry:manageLobby"),
+            ariaLabel: ZG("lobbyManageEntry:manageLobby"),
             reselectable: !0,
-            onChange: Su
+            onChange: sG
           })
-        }), (0, ru.jsx)("div", {
-          ref: fu,
-          className: cu()("LobbyManageInner", {
-            Staging: vu
+        }), (0, jG.jsx)("div", {
+          ref: YG,
+          className: fG()("LobbyManageInner", {
+            Staging: aG
           }),
-          children: Zu.filter((uu => mu.has(uu))).map((Eu => {
-            const ju = Eu === Ou;
-            return (0, ru.jsxs)("section", {
-              ref: uu => {
-                uu ? bu.current.set(Eu, uu) : bu.current.delete(Eu)
+          children: LG.filter((GG => vG.has(GG))).map((bG => {
+            const ZG = bG === KG;
+            return (0, jG.jsxs)("section", {
+              ref: GG => {
+                GG ? pG.current.set(bG, GG) : pG.current.delete(bG)
               },
               className: "LobbyManageSection",
-              "data-pad-initial-area": ju || void 0,
-              children: [Zu.length > 1 && (0, ru.jsx)("div", {
+              "data-pad-initial-area": ZG || void 0,
+              children: [LG.length > 1 && (0, jG.jsx)("div", {
                 className: "LobbyManageSectionHeading",
-                "data-pad-focusable": ju || void 0,
-                "data-pad-unavailable": ju || void 0,
-                children: (0, ru.jsx)(hu.b, {
-                  label: (0, ru.jsx)(ME, {
-                    page: Eu
+                "data-pad-focusable": ZG || void 0,
+                "data-pad-unavailable": ZG || void 0,
+                children: (0, jG.jsx)(dG.e, {
+                  label: (0, jG.jsx)(zb, {
+                    page: bG
                   })
                 })
-              }), (0, ru.jsx)(gE, {
-                page: Eu,
-                manage: uu.manage,
-                leaderboard: uu.leaderboard,
-                focusRequest: uu.focusRequest,
-                onFocused: Lu,
-                ruleRowsShown: "rules" === Eu ? Ku : 1 / 0
+              }), (0, jG.jsx)(rb, {
+                page: bG,
+                manage: GG.manage,
+                leaderboard: GG.leaderboard,
+                focusRequest: GG.focusRequest,
+                onFocused: eG,
+                ruleRowsShown: "rules" === bG ? cG : 1 / 0
               })]
-            }, Eu)
+            }, bG)
           }))
         })]
       })
     }
 
-    function GE(uu) {
-      return void 0 === (null === uu || void 0 === uu ? void 0 : uu.page) ? null : {
-        page: uu.page,
-        seq: uu.seq
+    function ob(GG) {
+      return void 0 === (null === GG || void 0 === GG ? void 0 : GG.page) ? null : {
+        page: GG.page,
+        seq: GG.seq
       }
     }
 
-    function pE(uu) {
+    function Xb(GG) {
       let {
-        leaderboard: Eu
-      } = uu;
-      const ju = function() {
-          const uu = (0, qu.h)("lobbyManage"),
-            [Eu, ju] = (0, su.useReducer)((uu => uu + 1), 0),
-            [Uu] = (0, su.useState)((() => new fu.b(ju)));
-          return (0, su.useEffect)((() => {
-            const uu = Uu.nextDeadline();
-            if (null === uu) return;
-            const Eu = setTimeout((() => {
-              Uu.expire(Date.now()), ju()
-            }), Math.max(0, uu - Date.now()));
+        leaderboard: bG
+      } = GG;
+      const ZG = function() {
+          const GG = (0, UG.i)("lobbyManage"),
+            [bG, ZG] = (0, wG.useReducer)((GG => GG + 1), 0),
+            [SG] = (0, wG.useState)((() => new YG.d(ZG)));
+          return (0, wG.useEffect)((() => {
+            const GG = SG.nextDeadline();
+            if (null === GG) return;
+            const bG = setTimeout((() => {
+              SG.expire(Date.now()), ZG()
+            }), Math.max(0, GG - Date.now()));
             return () => {
-              clearTimeout(Eu)
+              clearTimeout(bG)
             }
-          })), (0, su.useMemo)((() => null === uu ? null : {
-            state: uu,
-            send: (uu, Eu, su) => {
-              const Zu = Uu.send(uu, Eu, null !== su && void 0 !== su ? su : null);
-              return ju(), Zu
+          })), (0, wG.useMemo)((() => null === GG ? null : {
+            state: GG,
+            send: (GG, bG, wG) => {
+              const LG = SG.send(GG, bG, null !== wG && void 0 !== wG ? wG : null);
+              return ZG(), LG
             },
-            statusOf: uu => Uu.statusOf(uu, Date.now()),
-            showStatus: (uu, Eu) => {
-              Uu.show(uu, Eu)
+            statusOf: GG => SG.statusOf(GG, Date.now()),
+            showStatus: (GG, bG) => {
+              SG.show(GG, bG)
             },
-            isPending: uu => Uu.isPending(uu)
-          }), [uu, Eu, Uu])
+            isPending: GG => SG.isPending(GG)
+          }), [GG, bG, SG])
         }(),
-        Cu = (0, lu.j)((0, Zu.c)()),
-        bu = (0, Xu.l)(),
-        [cu, Nu] = (0, su.useState)((() => GE(bu))),
-        [Ou, Yu] = (0, su.useState)(null);
-      return (0, su.useEffect)((() => {
-        null === bu && (0, Uu.reportAnalyticsClick)({
+        VG = (0, kG.n)((0, LG.e)()),
+        pG = (0, yG.j)(),
+        [fG, QG] = (0, wG.useState)((() => ob(pG))),
+        [KG, hG] = (0, wG.useState)(null);
+      return (0, wG.useEffect)((() => {
+        null === pG && (0, SG.reportAnalyticsClick)({
           id: "lobby_manage.open",
           value: "menu_tab"
         })
-      }), []), (0, su.useEffect)((() => {
-        null !== bu && (Nu((uu => (null === uu || void 0 === uu ? void 0 : uu.seq) === bu.seq ? uu : GE(bu))), void 0 !== bu.focusName && "players" === bu.page ? Yu({
-          name: bu.focusName,
-          seq: bu.seq
-        }) : (0, Xu.j)(bu.seq))
-      }), [null === bu || void 0 === bu ? void 0 : bu.seq]), null === ju ? null : (0, ru.jsx)("div", {
+      }), []), (0, wG.useEffect)((() => {
+        null !== pG && (QG((GG => (null === GG || void 0 === GG ? void 0 : GG.seq) === pG.seq ? GG : ob(pG))), void 0 !== pG.focusName && "players" === pG.page ? hG({
+          name: pG.focusName,
+          seq: pG.seq
+        }) : (0, yG.h)(pG.seq))
+      }), [null === pG || void 0 === pG ? void 0 : pG.seq]), null === ZG ? null : (0, jG.jsx)("div", {
         className: "LobbyManage Menu",
-        children: (0, ru.jsx)(eE, {
-          pages: (0, lu.f)(ju.state, Cu),
-          manage: ju,
-          leaderboard: Eu,
-          focusRequest: Ou,
-          onFocused: Xu.j,
-          landing: cu
+        children: (0, jG.jsx)(Eb, {
+          pages: (0, kG.i)(ZG.state, VG),
+          manage: ZG,
+          leaderboard: bG,
+          focusRequest: KG,
+          onFocused: yG.h,
+          landing: fG
         })
       })
     }
   },
-  36951: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Cu,
-      f: () => qu
+  36911: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => VG,
+      e: () => UG
     });
-    var su = ju(1533),
-      Uu = ju(2011),
-      Zu = ju(1986);
-    const Xu = 1e4;
-    let lu = 0;
+    var wG = ZG(1415),
+      SG = ZG(1923),
+      LG = ZG(1895);
+    const yG = 1e4;
+    let kG = 0;
 
-    function qu(uu) {
-      const Eu = ++lu;
-      return new Promise((ju => {
-        const lu = Eu => {
-            qu(), clearTimeout(fu), !1 === (null === Eu || void 0 === Eu ? void 0 : Eu.ok) && (0, su.reportAnalyticsClick)({
+    function UG(GG) {
+      const bG = ++kG;
+      return new Promise((ZG => {
+        const kG = bG => {
+            UG(), clearTimeout(YG), !1 === (null === bG || void 0 === bG ? void 0 : bG.ok) && (0, wG.reportAnalyticsClick)({
               id: "lobby_manage.refused",
-              value: uu.type
-            }), ju(Eu)
+              value: GG.type
+            }), ZG(bG)
           },
-          qu = Uu.e.subscribe("lobbyManage", (uu => {
-            const ju = function(uu, Eu) {
-              var ju;
-              return null !== (ju = null === uu || void 0 === uu ? void 0 : uu.results.find((uu => uu.requestId === Eu))) && void 0 !== ju ? ju : null
-            }(uu, Eu);
-            null !== ju && lu(ju)
+          UG = SG.c.subscribe("lobbyManage", (GG => {
+            const ZG = function(GG, bG) {
+              var ZG;
+              return null !== (ZG = null === GG || void 0 === GG ? void 0 : GG.results.find((GG => GG.requestId === bG))) && void 0 !== ZG ? ZG : null
+            }(GG, bG);
+            null !== ZG && kG(ZG)
           })),
-          fu = setTimeout((() => {
-            lu(null)
-          }), Xu);
-        Zu.gameBridge.send("lobbyManage", {
-          ...uu,
-          requestId: Eu
+          YG = setTimeout((() => {
+            kG(null)
+          }), yG);
+        LG.gameBridge.send("lobbyManage", {
+          ...GG,
+          requestId: bG
         })
       }))
     }
-    const fu = [{
+    const YG = [{
       translationKey: "lobbyManageEntry:noAnswer"
     }];
-    class Cu {
-      constructor(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qu;
-        this.onChange = uu, this.sendAction = Eu, this.pending = new Map, this.statuses = new Map
+    class VG {
+      constructor(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UG;
+        this.onChange = GG, this.sendAction = bG, this.pending = new Map, this.statuses = new Map
       }
-      send(uu, Eu, ju) {
-        var su;
-        return this.statuses.delete(Eu), this.pending.set(Eu, (null !== (su = this.pending.get(Eu)) && void 0 !== su ? su : 0) + 1), this.sendAction(uu).then((uu => {
-          var su;
-          const Uu = null !== uu && void 0 !== uu ? uu : {
+      send(GG, bG, ZG) {
+        var wG;
+        return this.statuses.delete(bG), this.pending.set(bG, (null !== (wG = this.pending.get(bG)) && void 0 !== wG ? wG : 0) + 1), this.sendAction(GG).then((GG => {
+          var wG;
+          const SG = null !== GG && void 0 !== GG ? GG : {
               requestId: -1,
               ok: !1,
-              message: fu
+              message: YG
             },
-            Zu = (null !== (su = this.pending.get(Eu)) && void 0 !== su ? su : 1) - 1;
-          Zu > 0 ? this.pending.set(Eu, Zu) : this.pending.delete(Eu);
-          const Xu = !Uu.ok || Uu.message.length > 0 ? Uu.message : null === ju ? null : [ju];
-          return null !== Xu && this.statuses.set(Eu, {
-            ok: Uu.ok,
-            text: Xu,
+            LG = (null !== (wG = this.pending.get(bG)) && void 0 !== wG ? wG : 1) - 1;
+          LG > 0 ? this.pending.set(bG, LG) : this.pending.delete(bG);
+          const yG = !SG.ok || SG.message.length > 0 ? SG.message : null === ZG ? null : [ZG];
+          return null !== yG && this.statuses.set(bG, {
+            ok: SG.ok,
+            text: yG,
             until: Date.now() + 4e3
-          }), this.onChange(), Uu
+          }), this.onChange(), SG
         }))
       }
-      show(uu, Eu) {
-        this.statuses.set(uu, {
-          ...Eu,
+      show(GG, bG) {
+        this.statuses.set(GG, {
+          ...bG,
           until: Date.now() + 4e3
         }), this.onChange()
       }
-      expire(uu) {
-        for (const [Eu, ju] of this.statuses) ju.until <= uu && this.statuses.delete(Eu)
+      expire(GG) {
+        for (const [bG, ZG] of this.statuses) ZG.until <= GG && this.statuses.delete(bG)
       }
       nextDeadline() {
-        let uu = null;
-        for (const ju of this.statuses.values()) {
-          var Eu;
-          uu = Math.min(null !== (Eu = uu) && void 0 !== Eu ? Eu : 1 / 0, ju.until)
+        let GG = null;
+        for (const ZG of this.statuses.values()) {
+          var bG;
+          GG = Math.min(null !== (bG = GG) && void 0 !== bG ? bG : 1 / 0, ZG.until)
         }
-        return uu
+        return GG
       }
-      statusOf(uu, Eu) {
-        const ju = this.statuses.get(uu);
-        return !ju || ju.until <= Eu ? null : {
-          ok: ju.ok,
-          text: ju.text
+      statusOf(GG, bG) {
+        const ZG = this.statuses.get(GG);
+        return !ZG || ZG.until <= bG ? null : {
+          ok: ZG.ok,
+          text: ZG.text
         }
       }
-      isPending(uu) {
-        return this.pending.has(uu)
+      isPending(GG) {
+        return this.pending.has(GG)
       }
     }
   },
-  36946: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => fu,
-      d: () => qu
+  36898: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => YG,
+      f: () => UG
     });
-    var su = ju(628),
-      Uu = ju(1986),
-      Zu = ju(1693),
-      Xu = ju(91),
-      lu = ju(1314);
+    var wG = ZG(580),
+      SG = ZG(1895),
+      LG = ZG(1583),
+      yG = ZG(80),
+      kG = ZG(1222);
 
-    function qu(uu, Eu, ju) {
-      return Xu.featureFlags.useSocialFeatures && uu && null === (0, lu.d)(Eu, ju)
+    function UG(GG, bG, ZG) {
+      return yG.featureFlags.useSocialFeatures && GG && null === (0, kG.e)(bG, ZG)
     }
 
-    function fu(uu, Eu) {
-      var ju, Xu;
-      const lu = Zu.b.getSocialState().friends.find((uu => uu.name.toLowerCase() === Eu.toLowerCase())),
-        qu = Uu.gameBridge.latest("players").byId[uu],
-        fu = void 0 !== qu && qu.name === Eu,
-        Cu = fu && null !== (ju = qu.cosmetics) && void 0 !== ju ? ju : void 0,
-        bu = lu && Cu ? {
-          ...lu,
-          cosmetics: Cu
-        } : lu;
+    function YG(GG, bG) {
+      var ZG, yG;
+      const kG = LG.b.getSocialState().friends.find((GG => GG.name.toLowerCase() === bG.toLowerCase())),
+        UG = SG.gameBridge.latest("players").byId[GG],
+        YG = void 0 !== UG && UG.name === bG,
+        VG = YG && null !== (ZG = UG.cosmetics) && void 0 !== ZG ? ZG : void 0,
+        pG = kG && VG ? {
+          ...kG,
+          cosmetics: VG
+        } : kG;
       return {
-        playerSocialPreview: null !== bu && void 0 !== bu ? bu : {
+        playerSocialPreview: null !== pG && void 0 !== pG ? pG : {
           isError: !1,
-          name: Eu,
-          ranks: fu ? [...qu.ranks] : [],
-          cosmetics: null !== Cu && void 0 !== Cu ? Cu : {},
-          nameColour: null !== (Xu = null === Cu || void 0 === Cu ? void 0 : Cu.nameColour) && void 0 !== Xu ? Xu : su.e,
+          name: bG,
+          ranks: YG ? [...UG.ranks] : [],
+          cosmetics: null !== VG && void 0 !== VG ? VG : {},
+          nameColour: null !== (yG = null === VG || void 0 === VG ? void 0 : VG.nameColour) && void 0 !== yG ? yG : wG.d,
           location: {
             status: "inGame"
           }
         },
-        isFriend: void 0 !== lu
+        isFriend: void 0 !== kG
       }
     }
   },
-  37123: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => bu
+  37089: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => pG
     });
-    var su = ju(58),
-      Uu = ju(1105),
-      Zu = ju.n(Uu),
-      Xu = ju(1723),
-      lu = ju(1506),
-      qu = ju(1393),
-      fu = ju(1116),
-      Cu = ju(1154);
+    var wG = ZG(51),
+      SG = ZG(1006),
+      LG = ZG.n(SG),
+      yG = ZG(1621),
+      kG = ZG(1393),
+      UG = ZG(1302),
+      YG = ZG(1016),
+      VG = ZG(1067);
 
-    function bu(uu) {
+    function pG(GG) {
       let {
-        label: Eu,
-        icon: ju,
-        placeholder: Uu,
-        onSubmit: bu
-      } = uu;
-      const cu = (0, su.useRef)(null),
-        [Nu, Ou] = (0, su.useState)(""),
-        [Yu, hu] = (0, su.useState)("Enter"),
-        [Du, gu] = (0, su.useState)(null);
-      (0, su.useEffect)((() => {
-        if ("Success" !== Yu && "Error" !== Yu) return;
-        const uu = setTimeout((() => {
-          "Success" === Yu && cu.current && (cu.current.value = "", Ou("")), hu("Enter")
-        }), "Success" === Yu ? 1e3 : 4e3);
+        label: bG,
+        icon: ZG,
+        placeholder: SG,
+        onSubmit: pG
+      } = GG;
+      const fG = (0, wG.useRef)(null),
+        [QG, KG] = (0, wG.useState)(""),
+        [hG, dG] = (0, wG.useState)("Enter"),
+        [JG, rG] = (0, wG.useState)(null);
+      (0, wG.useEffect)((() => {
+        if ("Success" !== hG && "Error" !== hG) return;
+        const GG = setTimeout((() => {
+          "Success" === hG && fG.current && (fG.current.value = "", KG("")), dG("Enter")
+        }), "Success" === hG ? 1e3 : 4e3);
         return () => {
-          clearTimeout(uu)
+          clearTimeout(GG)
         }
-      }), [Yu]);
-      const Mu = () => {
-        const uu = Nu.trim();
-        "" !== uu && "Enter" === Yu && (hu("Loading"), bu(uu).then((uu => {
-          cu.current && ("error" in uu ? null === uu.error ? hu("Enter") : (gu(uu.error), hu("Error")) : hu("Success"))
+      }), [hG]);
+      const zG = () => {
+        const GG = QG.trim();
+        "" !== GG && "Enter" === hG && (dG("Loading"), pG(GG).then((GG => {
+          fG.current && ("error" in GG ? null === GG.error ? dG("Enter") : (rG(GG.error), dG("Error")) : dG("Success"))
         })))
       };
-      return (0, Cu.jsxs)("div", {
+      return (0, VG.jsxs)("div", {
         className: "PlayerNameField",
-        onKeyDown: uu => {
-          uu.target === cu.current && "Escape" !== uu.key && uu.stopPropagation()
+        onKeyDown: GG => {
+          GG.target === fG.current && "Escape" !== GG.key && GG.stopPropagation()
         },
-        children: [(0, Cu.jsxs)("div", {
-          className: Zu()("AddFriendBodyOverlay", `AddFriendBodyOverlay${Yu}`),
-          children: ["Loading" === Yu && (0, Cu.jsx)(qu.b, {}), "Success" === Yu && (0, Cu.jsx)(fu.e, {
+        children: [(0, VG.jsxs)("div", {
+          className: LG()("AddFriendBodyOverlay", `AddFriendBodyOverlay${hG}`),
+          children: ["Loading" === hG && (0, VG.jsx)(UG.b, {}), "Success" === hG && (0, VG.jsx)(YG.c, {
             name: "check"
-          }), "Error" === Yu && Du]
-        }), (0, Cu.jsxs)("div", {
+          }), "Error" === hG && JG]
+        }), (0, VG.jsxs)("div", {
           className: "PlayerSearch",
-          children: [(0, Cu.jsx)(Xu.d, {
+          children: [(0, VG.jsx)(yG.b, {
             className: "PlayerSearchInput",
-            domRef: cu,
+            domRef: fG,
             maxLength: 32,
-            placeholderText: Uu,
-            ariaLabel: Uu,
+            placeholderText: SG,
+            ariaLabel: SG,
             stopPropagation: !1,
-            onValueChange: uu => {
-              Ou(uu)
+            onValueChange: GG => {
+              KG(GG)
             },
-            onEnter: Mu
-          }), (0, Cu.jsxs)(lu.f, {
+            onEnter: zG
+          }), (0, VG.jsxs)(kG.d, {
             className: "PlayerSearchInputButton SmallTextLight",
-            disabled: "Enter" !== Yu || "" === Nu.trim(),
-            onClick: Mu,
-            children: [(0, Cu.jsx)(fu.e, {
-              name: ju
-            }), " ", Eu]
+            disabled: "Enter" !== hG || "" === QG.trim(),
+            onClick: zG,
+            children: [(0, VG.jsx)(YG.c, {
+              name: ZG
+            }), " ", bG]
           })]
         })]
       })
     }
   },
-  37101: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => bu
+  37071: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => pG
     });
-    var su = ju(58),
-      Uu = ju(1105),
-      Zu = ju.n(Uu),
-      Xu = ju(1244),
-      lu = ju(1116),
-      qu = ju(1154);
-    const fu = {
+    var wG = ZG(51),
+      SG = ZG(1006),
+      LG = ZG.n(SG),
+      yG = ZG(1151),
+      kG = ZG(1016),
+      UG = ZG(1067);
+    const YG = {
         unlisted: "link",
         public: "globe",
         whitelist: "user-check",
         private: "lock"
       },
-      Cu = ["unlisted", "public", "whitelist", "private"];
+      VG = ["unlisted", "public", "whitelist", "private"];
 
-    function bu(uu) {
+    function pG(GG) {
       let {
-        visibility: Eu,
-        onPick: ju
-      } = uu;
+        visibility: bG,
+        onPick: ZG
+      } = GG;
       const {
-        t: Uu
-      } = (0, Xu.A)(), bu = (0, su.useRef)([]);
-      return (0, qu.jsx)("div", {
+        t: SG
+      } = (0, yG.w)(), pG = (0, wG.useRef)([]);
+      return (0, UG.jsx)("div", {
         className: "WorldSocialTiles",
         role: "group",
-        "aria-label": Uu("worldSocial:whoCanJoin"),
-        children: Cu.map(((uu, su) => {
-          const Xu = uu === Eu;
-          return (0, qu.jsxs)("button", {
-            ref: uu => {
-              bu.current[su] = uu
+        "aria-label": SG("worldSocial:whoCanJoin"),
+        children: VG.map(((GG, wG) => {
+          const yG = GG === bG;
+          return (0, UG.jsxs)("button", {
+            ref: GG => {
+              pG.current[wG] = GG
             },
             type: "button",
-            className: Zu()("WorldSocialTile", {
-              WorldSocialTileSelected: Xu
+            className: LG()("WorldSocialTile", {
+              WorldSocialTileSelected: yG
             }),
-            "aria-pressed": Xu,
-            tabIndex: Xu ? 0 : -1,
-            onKeyDown: uu => {
-              ((uu, Eu) => {
-                const ju = "ArrowRight" === uu.key || "ArrowDown" === uu.key ? 1 : "ArrowLeft" === uu.key || "ArrowUp" === uu.key ? -1 : 0;
-                var su;
-                0 !== ju && (uu.preventDefault(), null === (su = bu.current[(Eu + ju + Cu.length) % Cu.length]) || void 0 === su || su.focus())
-              })(uu, su)
+            "aria-pressed": yG,
+            tabIndex: yG ? 0 : -1,
+            onKeyDown: GG => {
+              ((GG, bG) => {
+                const ZG = "ArrowRight" === GG.key || "ArrowDown" === GG.key ? 1 : "ArrowLeft" === GG.key || "ArrowUp" === GG.key ? -1 : 0;
+                var wG;
+                0 !== ZG && (GG.preventDefault(), null === (wG = pG.current[(bG + ZG + VG.length) % VG.length]) || void 0 === wG || wG.focus())
+              })(GG, wG)
             },
             onClick: () => {
-              ju(uu)
+              ZG(GG)
             },
-            children: [(0, qu.jsx)("span", {
+            children: [(0, UG.jsx)("span", {
               className: "WorldSocialTileIcon",
-              children: (0, qu.jsx)(lu.e, {
-                name: fu[uu]
+              children: (0, UG.jsx)(kG.c, {
+                name: YG[GG]
               })
-            }), (0, qu.jsxs)("span", {
+            }), (0, UG.jsxs)("span", {
               className: "WorldSocialTileText",
-              children: [(0, qu.jsx)("span", {
+              children: [(0, UG.jsx)("span", {
                 className: "WorldSocialTileTitle",
-                children: Uu(`worldSocial:${uu}`)
-              }), (0, qu.jsx)("span", {
+                children: SG(`worldSocial:${GG}`)
+              }), (0, UG.jsx)("span", {
                 className: "WorldSocialTileDescription",
-                children: Uu(`worldSocial:${uu}Description`)
+                children: SG(`worldSocial:${GG}Description`)
               })]
             })]
-          }, uu)
+          }, GG)
         }))
       })
     }
   },
-  37115: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => lu
+  37086: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => kG
     });
-    var su = ju(1244),
-      Uu = ju(2774),
-      Zu = ju(4528),
-      Xu = ju(1154);
+    var wG = ZG(1151),
+      SG = ZG(2630),
+      LG = ZG(4396),
+      yG = ZG(1067);
 
-    function lu(uu) {
+    function kG(GG) {
       let {
-        Tb: Eu,
-        children: ju,
-        ...lu
-      } = uu;
+        Tp: bG,
+        children: ZG,
+        ...kG
+      } = GG;
       const {
-        t: qu
-      } = (0, su.A)();
-      return (0, Xu.jsx)("div", {
+        t: UG
+      } = (0, wG.w)();
+      return (0, yG.jsx)("div", {
         className: "WhitelistTickRow",
         onClick: () => {
-          Eu.onChange(!Eu.on)
+          bG.onChange(!bG.on)
         },
-        children: (0, Xu.jsx)(Uu.g, {
-          ...lu,
+        children: (0, yG.jsx)(SG.h, {
+          ...kG,
           opensProfileCard: !1,
-          children: (0, Xu.jsxs)("div", {
+          children: (0, yG.jsxs)("div", {
             className: "WhitelistTickRowActions",
-            onClick: uu => {
-              uu.stopPropagation()
+            onClick: GG => {
+              GG.stopPropagation()
             },
-            children: [ju, (0, Xu.jsx)("label", {
+            children: [ZG, (0, yG.jsx)("label", {
               className: "WhitelistTickRowTick",
-              children: (0, Xu.jsx)(Zu.d, {
-                checked: Eu.on,
+              children: (0, yG.jsx)(LG.e, {
+                checked: bG.on,
                 disabled: !1,
-                ariaLabel: qu("worldSocial:letJoin", {
-                  playerName: lu.playerSocialPreview.name
+                ariaLabel: UG("worldSocial:letJoin", {
+                  playerName: kG.playerSocialPreview.name
                 }),
-                onChange: uu => {
-                  Eu.onChange(uu.target.checked)
+                onChange: GG => {
+                  bG.onChange(GG.target.checked)
                 }
               })
             })]
@@ -1953,395 +1953,395 @@ export const modules = {
       })
     }
   },
-  37099: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Ou
+  37067: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => KG
     });
-    var su = ju(58),
-      Uu = ju(1244),
-      Zu = ju(1906),
-      Xu = ju(91),
-      lu = ju(22),
-      qu = ju(1533),
-      fu = ju(2806),
-      Cu = ju(34457),
-      bu = ju(1506),
-      cu = ju(1116),
-      Nu = ju(1154);
+    var wG = ZG(51),
+      SG = ZG(1151),
+      LG = ZG(1827),
+      yG = ZG(80),
+      kG = ZG(17),
+      UG = ZG(1415),
+      YG = ZG(2657),
+      VG = ZG(34376),
+      pG = ZG(1393),
+      fG = ZG(1016),
+      QG = ZG(1067);
 
-    function Ou(uu) {
+    function KG(GG) {
       let {
-        worldCode: Eu,
-        message: ju
-      } = uu;
+        worldCode: bG,
+        message: ZG
+      } = GG;
       const {
-        t: Ou
-      } = (0, Uu.A)(), {
-        isTouchScreen: Yu
-      } = (0, lu.l)(["isTouchScreen"]), hu = Xu.featureFlags.canUseInviteLinks, Du = (0, Cu.k)(hu && null === ju), [gu, Mu] = (0, fu.f)(), eu = (0, su.useRef)(null);
-      if (null !== ju) return (0, Nu.jsxs)("div", {
+        t: KG
+      } = (0, SG.w)(), {
+        isTouchScreen: hG
+      } = (0, kG.o)(["isTouchScreen"]), dG = yG.featureFlags.canUseInviteLinks, JG = (0, VG.h)(dG && null === ZG), [rG, zG] = (0, YG.j)(), EG = (0, wG.useRef)(null);
+      if (null !== ZG) return (0, QG.jsxs)("div", {
         className: "WorldSocialLinkRow WorldSocialLinkRowMessage",
-        children: [(0, Nu.jsx)(cu.e, {
+        children: [(0, QG.jsx)(fG.c, {
           name: "lock"
-        }), (0, Nu.jsx)("span", {
-          children: ju
+        }), (0, QG.jsx)("span", {
+          children: ZG
         })]
       });
-      const Gu = hu ? Du : Eu,
-        pu = Yu && hu && (0, fu.b)();
-      return (0, Nu.jsxs)("div", {
+      const oG = dG ? JG : bG,
+        XG = hG && dG && (0, YG.e)();
+      return (0, QG.jsxs)("div", {
         className: "WorldSocialLinkRow",
-        children: [!hu && (0, Nu.jsx)("span", {
+        children: [!dG && (0, QG.jsx)("span", {
           className: "WorldSocialCodeLabel",
-          children: Ou("worldSocial:worldCode")
-        }), (0, Nu.jsx)("input", {
-          ref: eu,
+          children: KG("worldSocial:worldCode")
+        }), (0, QG.jsx)("input", {
+          ref: EG,
           className: "WorldSocialLink",
           readOnly: !0,
-          value: null !== Gu && void 0 !== Gu ? Gu : "",
-          "aria-label": Ou(hu ? "worldSocial:worldLink" : "worldSocial:worldCode"),
-          onFocus: uu => {
-            uu.currentTarget.select()
+          value: null !== oG && void 0 !== oG ? oG : "",
+          "aria-label": KG(dG ? "worldSocial:worldLink" : "worldSocial:worldCode"),
+          onFocus: GG => {
+            GG.currentTarget.select()
           }
-        }), (0, Nu.jsxs)(bu.f, {
+        }), (0, QG.jsxs)(pG.d, {
           className: "WorldSocialCopy",
-          disabled: null === Gu,
+          disabled: null === oG,
           onClick: () => {
-            null !== Gu && (0, fu.d)(Gu, {
-              useShareSheet: pu,
-              onOutcome: uu => {
-                if ((0, qu.reportAnalyticsClick)({
+            null !== oG && (0, YG.h)(oG, {
+              useShareSheet: XG,
+              onOutcome: GG => {
+                if ((0, UG.reportAnalyticsClick)({
                     id: "world_social.copy_link",
-                    value: "copied" !== uu || hu ? uu : "code"
-                  }), "copied" === uu) Mu();
-                else if ("failed" === uu) {
-                  var Eu;
-                  null === (Eu = eu.current) || void 0 === Eu || Eu.focus(), Zu.f.showMessage({
+                    value: "copied" !== GG || dG ? GG : "code"
+                  }), "copied" === GG) zG();
+                else if ("failed" === GG) {
+                  var bG;
+                  null === (bG = EG.current) || void 0 === bG || bG.focus(), LG.g.showMessage({
                     translationKey: "partyBar:copyFailed"
                   })
                 }
               }
             })
           },
-          children: [(0, Nu.jsx)(cu.e, {
-            name: gu ? "check" : pu ? "up-from-bracket" : "copy"
-          }), " ", Ou(gu ? "general:copied" : pu ? "worldSocial:share" : "general:copy")]
+          children: [(0, QG.jsx)(fG.c, {
+            name: rG ? "check" : XG ? "up-from-bracket" : "copy"
+          }), " ", KG(rG ? "general:copied" : XG ? "worldSocial:share" : "general:copy")]
         })]
       })
     }
   },
-  37109: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Nu,
-      f: () => cu,
-      h: () => bu
+  37079: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => QG,
+      d: () => fG,
+      f: () => pG
     });
-    var su = ju(628),
-      Uu = ju(1244),
-      Zu = ju(1693),
-      Xu = ju(2774),
-      lu = ju(2716),
-      qu = ju(1506),
-      fu = ju(37115),
-      Cu = ju(1154);
+    var wG = ZG(580),
+      SG = ZG(1151),
+      LG = ZG(1583),
+      yG = ZG(2630),
+      kG = ZG(2575),
+      UG = ZG(1393),
+      YG = ZG(37086),
+      VG = ZG(1067);
 
-    function bu(uu, Eu) {
-      var ju;
+    function pG(GG, bG) {
+      var ZG;
       return {
         isError: !1,
-        name: uu,
+        name: GG,
         ranks: [...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : []],
-        cosmetics: null !== Eu && void 0 !== Eu ? Eu : {},
-        nameColour: null !== (ju = null === Eu || void 0 === Eu ? void 0 : Eu.nameColour) && void 0 !== ju ? ju : su.e,
+        cosmetics: null !== bG && void 0 !== bG ? bG : {},
+        nameColour: null !== (ZG = null === bG || void 0 === bG ? void 0 : bG.nameColour) && void 0 !== ZG ? ZG : wG.d,
         location: {
           status: "offline"
         }
       }
     }
 
-    function cu(uu) {
+    function fG(GG) {
       let {
-        player: Eu,
-        isFriend: ju = !1,
-        status: su,
-        showLocation: qu = void 0 === su,
-        Tb: bu,
-        onSendFriendRequest: cu,
-        actions: Nu,
-        zIndex: Ou
-      } = uu;
+        player: bG,
+        isFriend: ZG = !1,
+        status: wG,
+        showLocation: UG = void 0 === wG,
+        Tp: pG,
+        onSendFriendRequest: fG,
+        actions: QG,
+        zIndex: KG
+      } = GG;
       const {
-        t: Yu
-      } = (0, Uu.A)();
-      let hu = su;
-      null !== bu && void 0 !== bu && bu.on && (hu = (0, Cu.jsxs)(Cu.Fragment, {
-        children: [null !== su && void 0 !== su ? su : (0, Cu.jsx)(lu.b, {
-          socialPreview: Eu
-        }), (0, Cu.jsxs)("span", {
+        t: hG
+      } = (0, SG.w)();
+      let dG = wG;
+      null !== pG && void 0 !== pG && pG.on && (dG = (0, VG.jsxs)(VG.Fragment, {
+        children: [null !== wG && void 0 !== wG ? wG : (0, VG.jsx)(kG.d, {
+          socialPreview: bG
+        }), (0, VG.jsxs)("span", {
           className: "WorldSocialCanJoin",
-          children: [" \xb7 ", Yu("worldSocial:canJoin")]
+          children: [" \xb7 ", hG("worldSocial:canJoin")]
         })]
       }));
-      const Du = {
-        playerSocialPreview: Eu,
-        isFriend: ju,
+      const JG = {
+        playerSocialPreview: bG,
+        isFriend: ZG,
         hideFriendBadge: !0,
-        onFriendRemoved: ju ? uu => {
-          Zu.b.removeFriendFromState(uu)
+        onFriendRemoved: ZG ? GG => {
+          LG.b.removeFriendFromState(GG)
         } : void 0,
-        status: hu,
-        showLocation: qu,
-        onSendFriendRequest: cu,
-        zIndex: Ou
+        status: dG,
+        showLocation: UG,
+        onSendFriendRequest: fG,
+        zIndex: KG
       };
-      return bu ? (0, Cu.jsx)(fu.d, {
-        ...Du,
-        Tb: bu,
-        children: Nu
-      }) : (0, Cu.jsx)(Xu.g, {
-        ...Du,
+      return pG ? (0, VG.jsx)(YG.b, {
+        ...JG,
+        Tp: pG,
+        children: QG
+      }) : (0, VG.jsx)(yG.h, {
+        ...JG,
         opensProfileCard: !1,
-        children: Nu || void 0
+        children: QG || void 0
       })
     }
 
-    function Nu(uu) {
+    function QG(GG) {
       let {
-        row: Eu,
-        Tb: ju,
-        canInvite: su,
-        invited: Zu,
-        onInvite: Xu,
-        zIndex: lu
-      } = uu;
+        row: bG,
+        Tp: ZG,
+        canInvite: wG,
+        invited: LG,
+        onInvite: yG,
+        zIndex: kG
+      } = GG;
       const {
-        t: fu
-      } = (0, Uu.A)(), bu = "online" === Eu.place ? qu.f : qu.i;
-      return (0, Cu.jsx)(cu, {
-        player: Eu.friend,
+        t: YG
+      } = (0, SG.w)(), pG = "online" === bG.place ? UG.d : UG.h;
+      return (0, VG.jsx)(fG, {
+        player: bG.friend,
         isFriend: !0,
-        status: "here" === Eu.place ? fu("worldSocial:inThisWorld") : void 0,
+        status: "here" === bG.place ? YG("worldSocial:inThisWorld") : void 0,
         showLocation: !0,
-        Tb: ju,
-        zIndex: lu,
-        actions: su && (0, Cu.jsx)(bu, {
+        Tp: ZG,
+        zIndex: kG,
+        actions: wG && (0, VG.jsx)(pG, {
           className: "WorldSocialInvite SmallTextLight",
-          disabled: Zu,
-          onClick: Xu,
-          ariaLabel: `${fu("worldSocial:invite")} ${Eu.friend.name}`,
-          children: fu(Zu ? "worldSocial:invited" : "worldSocial:invite")
+          disabled: LG,
+          onClick: yG,
+          ariaLabel: `${YG("worldSocial:invite")} ${bG.friend.name}`,
+          children: YG(LG ? "worldSocial:invited" : "worldSocial:invite")
         })
       })
     }
   },
-  37087: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => qu,
-      h: () => Xu,
-      k: () => fu
+  37055: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => UG,
+      g: () => yG,
+      j: () => YG
     });
-    var su = ju(58),
-      Uu = ju(4769),
-      Zu = ju(1906);
+    var wG = ZG(51),
+      SG = ZG(4611),
+      LG = ZG(1827);
 
-    function Xu(uu) {
-      const Eu = {
-        lobbyName: uu,
+    function yG(GG) {
+      const bG = {
+        lobbyName: GG,
         answer: null,
-        response: Uu.d.getSocialSettings(uu)
+        response: SG.d.getSocialSettings(GG)
       };
-      return Eu.response.then((uu => {
-        Eu.answer = uu
-      })), Eu
+      return bG.response.then((GG => {
+        bG.answer = GG
+      })), bG
     }
-    const lu = new Map;
+    const kG = new Map;
 
-    function qu(uu) {
-      lu.set(uu.lobbyName, uu)
+    function UG(GG) {
+      kG.set(GG.lobbyName, GG)
     }
 
-    function fu(uu) {
-      const [Eu] = (0, su.useState)((() => function(uu) {
-        var Eu;
-        const ju = null !== (Eu = lu.get(uu)) && void 0 !== Eu ? Eu : null;
-        return null !== ju && void 0 !== ju && ju.answer && "error" in ju.answer ? null : ju
-      }(uu))), [ju, Xu] = (0, su.useState)((() => null !== Eu && void 0 !== Eu && Eu.answer && "settings" in Eu.answer ? Eu.answer.settings : null)), [qu, fu] = (0, su.useState)(!0), [Cu, bu] = (0, su.useState)(null !== ju), cu = (0, su.useRef)(ju);
-      cu.current = ju;
-      const Nu = (0, su.useRef)(0),
-        Ou = (0, su.useRef)(0),
-        Yu = (0, su.useRef)(!1),
-        hu = (0, su.useRef)(!0),
-        Du = (0, su.useCallback)((async Eu => {
-          const ju = ++Nu.current,
-            su = await (null !== Eu && void 0 !== Eu ? Eu : Uu.d.getSocialSettings(uu));
-          hu.current && ju === Nu.current && (bu(!0), fu(!1), "error" in su || Xu(su.settings))
-        }), [uu]),
-        gu = (0, su.useCallback)((() => {
-          fu(!0), Du()
-        }), [Du]),
-        Mu = (0, su.useCallback)((() => {
-          Ou.current > 0 ? Yu.current = !0 : Du()
-        }), [Du]);
-      (0, su.useEffect)((() => (hu.current = !0, lu.delete(uu), fu(!0), Du(null === Eu || void 0 === Eu ? void 0 : Eu.response), () => {
-        hu.current = !1
-      })), [Du, uu, Eu]);
-      const eu = uu => {
-        Nu.current++, fu(!1), cu.current = uu, Xu(uu)
+    function YG(GG) {
+      const [bG] = (0, wG.useState)((() => function(GG) {
+        var bG;
+        const ZG = null !== (bG = kG.get(GG)) && void 0 !== bG ? bG : null;
+        return null !== ZG && void 0 !== ZG && ZG.answer && "error" in ZG.answer ? null : ZG
+      }(GG))), [ZG, yG] = (0, wG.useState)((() => null !== bG && void 0 !== bG && bG.answer && "settings" in bG.answer ? bG.answer.settings : null)), [UG, YG] = (0, wG.useState)(!0), [VG, pG] = (0, wG.useState)(null !== ZG), fG = (0, wG.useRef)(ZG);
+      fG.current = ZG;
+      const QG = (0, wG.useRef)(0),
+        KG = (0, wG.useRef)(0),
+        hG = (0, wG.useRef)(!1),
+        dG = (0, wG.useRef)(!0),
+        JG = (0, wG.useCallback)((async bG => {
+          const ZG = ++QG.current,
+            wG = await (null !== bG && void 0 !== bG ? bG : SG.d.getSocialSettings(GG));
+          dG.current && ZG === QG.current && (pG(!0), YG(!1), "error" in wG || yG(wG.settings))
+        }), [GG]),
+        rG = (0, wG.useCallback)((() => {
+          YG(!0), JG()
+        }), [JG]),
+        zG = (0, wG.useCallback)((() => {
+          KG.current > 0 ? hG.current = !0 : JG()
+        }), [JG]);
+      (0, wG.useEffect)((() => (dG.current = !0, kG.delete(GG), YG(!0), JG(null === bG || void 0 === bG ? void 0 : bG.response), () => {
+        dG.current = !1
+      })), [JG, GG, bG]);
+      const EG = GG => {
+        QG.current++, YG(!1), fG.current = GG, yG(GG)
       };
       return {
-        settings: ju,
-        loading: qu,
-        answered: Cu,
-        retry: gu,
-        refresh: Mu,
-        change: async function(Eu, ju) {
+        settings: ZG,
+        loading: UG,
+        answered: VG,
+        retry: rG,
+        refresh: zG,
+        change: async function(bG, ZG) {
           let {
-            quiet: su = !1,
-            onAnswer: Xu
+            quiet: wG = !1,
+            onAnswer: yG
           } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-          const lu = cu.current;
-          if (null === lu) return !1;
-          eu(ju(lu)), Ou.current > 0 && (Yu.current = !0), Ou.current++;
-          const qu = await Uu.d.setSocialSettings(uu, Eu);
-          Ou.current--;
-          const fu = !("error" in qu);
-          if (!hu.current) return fu;
-          if (null === Xu || void 0 === Xu || Xu(qu), su);
-          else if ("error" in qu) Zu.f.showMessage({
-            translationKey: qu.error
+          const kG = fG.current;
+          if (null === kG) return !1;
+          EG(ZG(kG)), KG.current > 0 && (hG.current = !0), KG.current++;
+          const UG = await SG.d.setSocialSettings(GG, bG);
+          KG.current--;
+          const YG = !("error" in UG);
+          if (!dG.current) return YG;
+          if (null === yG || void 0 === yG || yG(UG), wG);
+          else if ("error" in UG) LG.g.showMessage({
+            translationKey: UG.error
           });
           else
-            for (const uu of qu.notFound) Zu.f.showMessage({
+            for (const GG of UG.notFound) LG.g.showMessage({
               translationKey: "worldSocial:notFound",
               params: {
-                playerName: uu
+                playerName: GG
               }
             });
-          if (Ou.current > 0) return fu;
-          const Cu = Yu.current;
-          return Yu.current = !1, !Cu && "settings" in qu ? eu(qu.settings) : (Cu || eu(lu), Du()), fu
+          if (KG.current > 0) return YG;
+          const VG = hG.current;
+          return hG.current = !1, !VG && "settings" in UG ? EG(UG.settings) : (VG || EG(kG), JG()), YG
         }
       }
     }
   },
-  37130: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Xu,
-      h: () => Zu
+  37093: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => yG,
+      f: () => LG
     });
-    var su = ju(166);
-    const Uu = new Map;
+    var wG = ZG(140);
+    const SG = new Map;
 
-    function Zu(uu, Eu) {
-      var ju;
-      const su = null !== (ju = Uu.get(uu)) && void 0 !== ju ? ju : new Map;
-      su.set(Eu, Date.now()), Uu.set(uu, su)
+    function LG(GG, bG) {
+      var ZG;
+      const wG = null !== (ZG = SG.get(GG)) && void 0 !== ZG ? ZG : new Map;
+      wG.set(bG, Date.now()), SG.set(GG, wG)
     }
 
-    function Xu(uu) {
-      const Eu = Uu.get(uu);
-      if (!Eu) return [];
-      const ju = Date.now();
-      for (const [Uu, Zu] of Eu) ju - Zu >= su.l && Eu.delete(Uu);
-      return [...Eu.keys()]
+    function yG(GG) {
+      const bG = SG.get(GG);
+      if (!bG) return [];
+      const ZG = Date.now();
+      for (const [SG, LG] of bG) ZG - LG >= wG.i && bG.delete(SG);
+      return [...bG.keys()]
     }
   },
-  37091: (uu, Eu, ju) => {
-    function su(uu, Eu) {
-      const ju = Eu.toLowerCase();
-      for (const su of uu)
-        if (su.toLowerCase() === ju) return !0;
+  37060: (GG, bG, ZG) => {
+    function wG(GG, bG) {
+      const ZG = bG.toLowerCase();
+      for (const wG of GG)
+        if (wG.toLowerCase() === ZG) return !0;
       return !1
     }
 
-    function Uu(uu, Eu, ju) {
-      const Uu = [],
-        Zu = [],
-        Xu = [];
-      for (const lu of uu) !lu.isError && lu.name && ("inGame" === lu.location.status && lu.location.inLobbyName === Eu || su(ju, lu.name) ? Zu.push({
-        friend: lu,
+    function SG(GG, bG, ZG) {
+      const SG = [],
+        LG = [],
+        yG = [];
+      for (const kG of GG) !kG.isError && kG.name && ("inGame" === kG.location.status && kG.location.inLobbyName === bG || wG(ZG, kG.name) ? LG.push({
+        friend: kG,
         place: "here"
-      }) : "offline" === lu.location.status ? Xu.push({
-        friend: lu,
+      }) : "offline" === kG.location.status ? yG.push({
+        friend: kG,
         place: "offline"
-      }) : Uu.push({
-        friend: lu,
+      }) : SG.push({
+        friend: kG,
         place: "online"
       }));
-      return [...Uu, ...Zu, ...Xu]
+      return [...SG, ...LG, ...yG]
     }
 
-    function Zu(uu, Eu, ju) {
-      const Uu = [],
-        Zu = uu.flatMap((uu => "here" === uu.place ? [uu.friend.name] : []));
-      for (const Xu of [...Zu, ...Eu]) su(Uu, Xu) || su(ju, Xu) || Uu.push(Xu);
-      return Uu
+    function LG(GG, bG, ZG) {
+      const SG = [],
+        LG = GG.flatMap((GG => "here" === GG.place ? [GG.friend.name] : []));
+      for (const yG of [...LG, ...bG]) wG(SG, yG) || wG(ZG, yG) || SG.push(yG);
+      return SG
     }
 
-    function Xu(uu, Eu) {
-      return null === uu || void 0 === uu || !uu.canManage || su(uu.whitelist, Eu) ? "none" : "whitelist" === uu.visibility ? "required" : "quiet"
+    function yG(GG, bG) {
+      return null === GG || void 0 === GG || !GG.canManage || wG(GG.whitelist, bG) ? "none" : "whitelist" === GG.visibility ? "required" : "quiet"
     }
 
-    function lu(uu) {
-      if (null === uu) return !0;
+    function kG(GG) {
+      if (null === GG) return !0;
       const {
-        visibility: Eu
-      } = uu;
-      return "public" === Eu || "unlisted" === Eu || "whitelist" === Eu && uu.canManage
+        visibility: bG
+      } = GG;
+      return "public" === bG || "unlisted" === bG || "whitelist" === bG && GG.canManage
     }
 
-    function qu(uu, Eu, ju) {
-      if (ju) {
-        const ju = Eu.filter((Eu => !su(uu.whitelist, Eu)));
+    function UG(GG, bG, ZG) {
+      if (ZG) {
+        const ZG = bG.filter((bG => !wG(GG.whitelist, bG)));
         return {
-          ...uu,
-          whitelist: [...uu.whitelist, ...ju]
+          ...GG,
+          whitelist: [...GG.whitelist, ...ZG]
         }
       }
       return {
-        ...uu,
-        whitelist: uu.whitelist.filter((uu => !su(Eu, uu)))
+        ...GG,
+        whitelist: GG.whitelist.filter((GG => !wG(bG, GG)))
       }
     }
 
-    function fu(uu, Eu) {
-      const ju = [];
-      for (let su = 0; su < uu.length; su += Eu) ju.push(uu.slice(su, su + Eu));
-      return ju
+    function YG(GG, bG) {
+      const ZG = [];
+      for (let wG = 0; wG < GG.length; wG += bG) ZG.push(GG.slice(wG, wG + bG));
+      return ZG
     }
-    ju.d(Eu, {
-      b: () => lu,
-      e: () => Zu,
-      i: () => Uu,
-      l: () => su,
-      o: () => fu,
-      q: () => Xu,
-      r: () => qu
+    ZG.d(bG, {
+      b: () => kG,
+      c: () => LG,
+      d: () => SG,
+      e: () => wG,
+      f: () => YG,
+      g: () => yG,
+      k: () => UG
     })
   },
-  37411: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Zu
+  37379: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => LG
     });
-    var su = ju(58),
-      Uu = ju(2543);
+    var wG = ZG(51),
+      SG = ZG(2409);
 
-    function Zu() {
-      const uu = (0, Uu.h)("lobbyLeaderboardInfo");
-      return (0, su.useMemo)((() => function(uu) {
-        if (null === uu) return null;
-        const Eu = Object.entries(uu),
-          ju = Eu.filter((uu => {
-            let [, Eu] = uu;
-            return void 0 !== Eu
+    function LG() {
+      const GG = (0, SG.i)("lobbyLeaderboardInfo");
+      return (0, wG.useMemo)((() => function(GG) {
+        if (null === GG) return null;
+        const bG = Object.entries(GG),
+          ZG = bG.filter((GG => {
+            let [, bG] = GG;
+            return void 0 !== bG
           }));
-        if (ju.length === Eu.length) return uu;
-        const su = Object.fromEntries(ju),
-          Uu = Object.keys(uu).filter((uu => !Object.hasOwn(su, uu)));
-        return console.warn(`lobbyLeaderboardInfo left out its undefined columns: ${Uu.join(", ")}`), su
-      }(uu)), [uu])
+        if (ZG.length === bG.length) return GG;
+        const wG = Object.fromEntries(ZG),
+          SG = Object.keys(GG).filter((GG => !Object.hasOwn(wG, GG)));
+        return console.warn(`lobbyLeaderboardInfo left out its undefined columns: ${SG.join(", ")}`), wG
+      }(GG)), [GG])
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

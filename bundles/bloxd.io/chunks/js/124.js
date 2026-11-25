@@ -1,1220 +1,1220 @@
 export const id = 124;
 export const ids = [124, 125];
 export const modules = {
-  6737: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Uu
+  6533: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => SG
     });
-    var su = ju(1154);
+    var wG = ZG(1067);
 
-    function Uu(uu) {
+    function SG(GG) {
       let {
-        href: Eu,
-        children: ju
-      } = uu;
-      return (0, su.jsxs)("a", {
+        href: bG,
+        children: ZG
+      } = GG;
+      return (0, wG.jsxs)("a", {
         className: "WorldCodeAiExternalLink",
-        href: Eu,
+        href: bG,
         target: "_blank",
         rel: "noreferrer noopener",
-        children: [ju, " ", (0, su.jsx)("span", {
+        children: [ZG, " ", (0, wG.jsx)("span", {
           "aria-hidden": "true",
           children: "\u2197"
         })]
       })
     }
   },
-  6732: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      WorldCodeAiChatGptNotice: () => Cu,
-      WorldCodeAiDeepSeekNotice: () => fu,
-      c: () => Xu,
-      d: () => qu,
-      f: () => lu
+  6524: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      WorldCodeAiChatGptNotice: () => VG,
+      WorldCodeAiDeepSeekNotice: () => YG,
+      e: () => yG,
+      g: () => UG,
+      h: () => kG
     });
-    var su = ju(1244),
-      Uu = ju(6737),
-      Zu = ju(1154);
-    const Xu = "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html",
-      lu = "https://openai.com/policies/terms-of-use/",
-      qu = "https://openai.com/policies/privacy-policy/";
+    var wG = ZG(1151),
+      SG = ZG(6533),
+      LG = ZG(1067);
+    const yG = "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html",
+      kG = "https://openai.com/policies/terms-of-use/",
+      UG = "https://openai.com/policies/privacy-policy/";
 
-    function fu() {
+    function YG() {
       const {
-        t: uu
-      } = (0, su.A)();
-      return (0, Zu.jsxs)(Zu.Fragment, {
-        children: [uu("superBotXd:deepSeekNotice"), " ", (0, Zu.jsx)(Uu.c, {
-          href: Xu,
-          children: uu("superBotXd:deepSeekPrivacyPolicy")
+        t: GG
+      } = (0, wG.w)();
+      return (0, LG.jsxs)(LG.Fragment, {
+        children: [GG("superBotXd:deepSeekNotice"), " ", (0, LG.jsx)(SG.d, {
+          href: yG,
+          children: GG("superBotXd:deepSeekPrivacyPolicy")
         })]
       })
     }
 
-    function Cu() {
+    function VG() {
       const {
-        t: uu
-      } = (0, su.A)();
-      return (0, Zu.jsxs)(Zu.Fragment, {
-        children: [uu("aiHelperChatGpt:notice"), " ", (0, Zu.jsx)(Uu.c, {
-          href: lu,
-          children: uu("aiHelperChatGpt:terms")
-        }), " ", (0, Zu.jsx)(Uu.c, {
-          href: qu,
-          children: uu("aiHelperChatGpt:privacyPolicy")
+        t: GG
+      } = (0, wG.w)();
+      return (0, LG.jsxs)(LG.Fragment, {
+        children: [GG("aiHelperChatGpt:notice"), " ", (0, LG.jsx)(SG.d, {
+          href: kG,
+          children: GG("aiHelperChatGpt:terms")
+        }), " ", (0, LG.jsx)(SG.d, {
+          href: UG,
+          children: GG("aiHelperChatGpt:privacyPolicy")
         })]
       })
     }
   },
-  6724: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      default: () => hu
+  6520: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      default: () => dG
     });
-    var su = ju(1244),
-      Uu = ju(131),
-      Zu = ju(236),
-      Xu = ju(1506),
-      lu = ju(1362),
-      qu = ju(22),
-      fu = ju(1735),
-      Cu = ju(3594),
-      bu = ju(3307),
-      cu = ju(6732),
-      Nu = ju(1154);
+    var wG = ZG(1151),
+      SG = ZG(116),
+      LG = ZG(233),
+      yG = ZG(1393),
+      kG = ZG(1275),
+      UG = ZG(17),
+      YG = ZG(1634),
+      VG = ZG(3386),
+      pG = ZG(3111),
+      fG = ZG(6524),
+      QG = ZG(1067);
 
-    function Ou() {
+    function KG() {
       const {
-        t: uu
-      } = (0, su.A)(), Eu = !(0, Zu.shouldUseUkPrivacyPolicy)();
-      return (0, Nu.jsxs)("div", {
+        t: GG
+      } = (0, wG.w)(), bG = !(0, LG.shouldUseUkPrivacyPolicy)();
+      return (0, QG.jsxs)("div", {
         className: "LegalText",
-        children: [(0, Nu.jsx)("div", {
+        children: [(0, QG.jsx)("div", {
           className: "BloxdInformationHeader FullyFancyText",
-          children: uu("homePage:privacyPolicy")
-        }), (0, Nu.jsx)("p", {
-          children: (0, Nu.jsxs)("em", {
-            children: ["Last updated: ", Cu.k.toLocaleDateString()]
+          children: GG("homePage:privacyPolicy")
+        }), (0, QG.jsx)("p", {
+          children: (0, QG.jsxs)("em", {
+            children: ["Last updated: ", VG.g.toLocaleDateString()]
           })
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "This Privacy Policy outlines how Bloxd LTD collects, uses, and protects your information when you visit and interact with Bloxd.io. This document is intended to provide clarity on our practices and your rights concerning your data."
-        }), (0, Nu.jsx)("h2", {
+        }), (0, QG.jsx)("h2", {
           children: "1. Who We Are"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "At Bloxd.io, we take your privacy\u2014and the privacy of your children\u2014very seriously. This Privacy Policy explains how we collect, use, and protect the information of both you and your child when you use our website. Our goal is to make sure you understand what information we collect, why we collect it, and how we keep it safe. We also want to ensure that you know your rights and how you can exercise them."
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Whether you\u2019re a parent, guardian, or player, this document is designed to provide you with clear and straightforward information about our privacy practices. We\u2019re committed to providing a safe and enjoyable environment for our younger players while respecting the privacy and concerns of parents and guardians."
-        }), (0, Nu.jsx)("h2", {
+        }), (0, QG.jsx)("h2", {
           children: "2. Information We Collect, Why We Collect It, and How It Is Used"
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "2.1 Visitors"
-        }), (0, Nu.jsx)("h4", {
+        }), (0, QG.jsx)("h4", {
           children: "2.1.1 Data Collection and Usage"
-        }), (0, Nu.jsxs)("p", {
+        }), (0, QG.jsxs)("p", {
           children: ["When you interact with Bloxd.io, certain data is collected to ensure the website operates correctly and securely. By default, we apply the highest level of privacy protection for all visitors. This means that we collect only the minimal amount of information necessary to operate the website and ensure its functionality. The following types of information may be collected:", " "]
-        }), (0, Nu.jsxs)("table", {
-          children: [(0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+        }), (0, QG.jsxs)("table", {
+          children: [(0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Type of Information"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What We Collect"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Why We Collect It"
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Technical Info"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "IP address, browser type, device type, screen resolution, language selection"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "To ensure the website functions correctly and displays in your preferred language."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Usage Info"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Pages visited, time spent on pages, clicks, and interactions"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "To analyze how the website is used and to improve player experience."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Cookie Info"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsxs)("p", {
-                children: ["Cookies that store settings, advert frequency, fraud prevention", Eu ? ", and with your consent, enable personalized advertising" : ""]
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsxs)("p", {
+                children: ["Cookies that store settings, advert frequency, fraud prevention", bG ? ", and with your consent, enable personalized advertising" : ""]
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsxs)("p", {
-                children: ["To enhance your experience by remembering your preferences, save your game progress, and ensure ads are displayed an appropriate number of times and to prevent fraudulent activity.", Eu ? " With your consent, cookies may also be used to enable personalized advertising based on your interests." : ""]
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsxs)("p", {
+                children: ["To enhance your experience by remembering your preferences, save your game progress, and ensure ads are displayed an appropriate number of times and to prevent fraudulent activity.", bG ? " With your consent, cookies may also be used to enable personalized advertising based on your interests." : ""]
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Moderation Info"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Anonymized IP address, Chat logs, username, reports"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "To maintain a safe environment in chat rooms and enforce community guidelines."
               })
             })]
           })]
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Data Retention:\xa0Data related to visitors is retained as long as the account is active, or 14 months after your last play session. If a user requests account deletion, the associated data will be deleted promptly, typically within 30 days after the request is processed."
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "2.2 Chat Rooms"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Bloxd.io includes online social features, such as chat rooms, where players can interact. We implement several measures to ensure chat safety:"
-        }), (0, Nu.jsxs)("ul", {
-          children: [(0, Nu.jsx)("li", {
+        }), (0, QG.jsxs)("ul", {
+          children: [(0, QG.jsx)("li", {
             children: "Automated Moderation: Tools are used to automatically detect and filter inappropriate content."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Manual Moderation: Human moderators review flagged content to ensure compliance with our chat safety rules."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "User Reports: players can report content they believe violates guidelines, and it will be reviewed by moderators."
           })]
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Before participating in chat rooms, players and their guardians are encouraged to review our Community Conduct."
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "2.3 Registered players"
-        }), (0, Nu.jsx)("h4", {
+        }), (0, QG.jsx)("h4", {
           children: "2.3.1 Age Requirements and Parental Consent"
-        }), (0, Nu.jsxs)("p", {
-          children: ["Accounts on Bloxd.io can only be created by players aged 13 or older, or by younger players with parental consent. For those registering through Google, Google will verify the user\u2019s age and obtain parental consent if required. For more details, refer to", " ", (0, Nu.jsx)("a", {
+        }), (0, QG.jsxs)("p", {
+          children: ["Accounts on Bloxd.io can only be created by players aged 13 or older, or by younger players with parental consent. For those registering through Google, Google will verify the user\u2019s age and obtain parental consent if required. For more details, refer to", " ", (0, QG.jsx)("a", {
             href: "https://families.google.com/familylink/privacy/child-policy",
             children: "Google\u2019s Child Privacy Policy"
           }), "."]
-        }), (0, Nu.jsx)("h4", {
+        }), (0, QG.jsx)("h4", {
           children: "2.3.2 Data Collection for Registered Players"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "When creating an account, the following data is collected to provide personalized services and enhance user experience:"
-        }), (0, Nu.jsxs)("table", {
-          children: [(0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+        }), (0, QG.jsxs)("table", {
+          children: [(0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Type of Information"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What We Collect"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Why We Collect It"
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Account Info"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Username, email address"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "To create and manage user accounts."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Profile Info"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Optional profile details (e.g., avatar)"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "To personalize the user experience."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Technical Info"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "IP address, device type, browser type"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "To secure accounts and ensure the website functions correctly."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Usage Info"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Pages visited, site interactions"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "To improve the user experience and offer tailored features."
               })
             })]
           })]
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Data Retention: Data related to registered players is retained for as long as the account is active, 14 months after your last play session or If a user requests account deletion, the associated data will be deleted promptly, typically within 30 days after the request is processed."
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "2.3.3 Data Collection for Store Purchases"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "When making a store purchase as a registered player, the following data is collected by us or our payment partners listed in section 3.3 to provide a compliant checkout experience and access to their purchase:"
-        }), (0, Nu.jsxs)("table", {
-          children: [(0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+        }), (0, QG.jsxs)("table", {
+          children: [(0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Type of Information"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What We Collect"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Why We Collect It"
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Account Info"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "User ID, email address"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "To attach any purchase made to your account."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Technical Info"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Transaction ID, IP address, device type, browser type"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Combat fraud and reporting."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Usage Info"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Pages visited, site interactions, purchase history"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "To secure accounts and ensure the website functions correctly."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Usage Info"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Pages visited, site interactions"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "To improve the user experience and offer tailored features after purchase."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Payment Info"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Payment Information, Billing address "
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "To complete and validate your purchase"
               })
             })]
           })]
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Our payment providers, who act as our merchant of record, securely collect payment information and handle it according to the required security & law. Payment information is not shared with or processed by bloxd."
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Data Retention: Data related to purchases can be stored for up to 5 years after fulfilling the purposes for which the data were collected to combat fraud and for reporting purposes."
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "2.4 When You Contact Us"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "When you reach out to us, we collect information to help us respond to you effectively:"
-        }), (0, Nu.jsxs)("table", {
-          children: [(0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+        }), (0, QG.jsxs)("table", {
+          children: [(0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Type of Information"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What We Collect"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Why We Collect It"
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Contact Info"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Your email address or phone number"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "To get back to you about your questions or concerns."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Message Content"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What you say in your message"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "To understand and address your issue or feedback."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Technical Info"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Date, time, and details of how you contacted us"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "For security and to ensure we respond appropriately."
               })
             })]
           })]
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Data Retention:\xa0We will retain the personal data collected from your inquiries for up to\xa0three months after your query is resolved or closed. This extended period allows us to ensure that any follow-up questions can be addressed. If the inquiry is from a child under the age of 13, any data collected will be deleted as soon as possible."
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "2.5 The AI Helper in the Code Editor"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "The Code Editor\u2019s AI Helper answers questions about the code of games made in Bloxd.io. To answer, the AI is sent your question, your game\u2019s code, the recent messages in that chat, errors your game showed and the AI notes you kept. When the AI looks it up, it is also sent what is in your game: its blocks, your position, health and inventory, and the names and positions of players near you. Where this goes depends on the AI you use:"
-        }), (0, Nu.jsxs)("ul", {
-          children: [(0, Nu.jsx)("li", {
+        }), (0, QG.jsxs)("ul", {
+          children: [(0, QG.jsx)("li", {
             children: "Bot.xd: your browser sends them to OVHcloud, a company in France, whose AI models answer."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Super Bot.xd: our game servers send them to DeepSeek, a company in China, or to OVHcloud when Super Bot.xd runs on its models. We ask for your consent before you first use DeepSeek."
-          }), (0, Nu.jsxs)("li", {
-            children: ["ChatGPT: when Bot.xd isn\u2019t working on our website, you can ask ChatGPT instead. We open it in a new tab that sends OpenAI, a company in the United States, your question, the code of the file you have open, the names and line counts of your other files and the names of the functions in your main file; a question too long for that is copied for you to paste in yourself. We ask for your consent first, ChatGPT is for ages 13 and up, and OpenAI\u2019s ", (0, Nu.jsx)("a", {
-              href: cu.f,
+          }), (0, QG.jsxs)("li", {
+            children: ["ChatGPT: when Bot.xd isn\u2019t working on our website, you can ask ChatGPT instead. We open it in a new tab that sends OpenAI, a company in the United States, your question, the code of the file you have open, the names and line counts of your other files and the names of the functions in your main file; a question too long for that is copied for you to paste in yourself. We ask for your consent first, ChatGPT is for ages 13 and up, and OpenAI\u2019s ", (0, QG.jsx)("a", {
+              href: fG.h,
               children: "terms"
-            }), " and ", (0, Nu.jsx)("a", {
-              href: cu.d,
+            }), " and ", (0, QG.jsx)("a", {
+              href: fG.g,
               children: "privacy policy"
             }), " apply. If you paste its answer back, the code it puts in your files goes with your later questions as part of your files; its words don\u2019t, except to your own keys while their safety check is off. We count how many answers are pasted."]
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Your own API key: if you add a key from another AI company, your browser sends your questions straight to that company, and its terms and privacy policy apply. Your key is kept only in your browser."
           })]
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Bot.xd\u2019s and Super Bot.xd\u2019s questions and answers are also sent to a safety model run by OVHcloud to check them, and so is the code sent with Super Bot.xd\u2019s questions. So are your own keys\u2019 questions and answers, unless you turn off the safety check for your own keys. A ChatGPT answer you paste back isn\u2019t checked. Where we ask for your consent, that consent is our basis for sending this data; otherwise our basis is providing the AI Helper you asked to use."
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "If you agree when asked, we keep what the AI was sent for each question, as listed above, and its answers, linked to your account or guest account, to improve the AI Helper. You can change this in the AI Helper\u2019s AI settings. To stop sending anything to DeepSeek or ChatGPT, stop using Super Bot.xd or ChatGPT."
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Data Retention: AI Helper chats you agreed to share are deleted after 30 days."
-        }), (0, Nu.jsx)("h2", {
+        }), (0, QG.jsx)("h2", {
           children: "3. Third-Party Data Use"
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "3.1 Scope of This Privacy Policy"
-        }), (0, Nu.jsxs)("p", {
+        }), (0, QG.jsxs)("p", {
           children: ["This Privacy Policy applies only to the Bloxd.io game and its related services when accessed through the official Bloxd.io website or our mobile apps (such as those on iOS and Android).", " "]
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "If you use Bloxd.io through a third-party platform or website, this Privacy Policy does not cover those environments. We recommend checking the privacy policies of those sites or platforms and making sure you understand how your data is used before engaging with them."
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "We may also work with third-party services for some features in our game. These third parties have their own privacy policies, which apply in addition to ours. We encourage you to review those policies as well."
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "3.2 Advertisers"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Bloxd.io displays ads from selected partners. On our website, ads are managed and delivered by our web advertising partners; within our mobile apps (available on iOS and Android), ads are delivered through Google AdMob."
-        }), Eu && (0, Nu.jsx)("p", {
+        }), bG && (0, QG.jsx)("p", {
           children: "With your consent, we may display personalized ads tailored to your interests based on information such as your browsing history, device information, your device\u2019s advertising identifier, and your interactions with our site and apps. Where you do not provide consent, you will only be shown non-personalized ads."
-        }), !Eu && (0, Nu.jsx)("p", {
+        }), !bG && (0, QG.jsx)("p", {
           children: "These ads are non-personalized, meaning they are not based on your personal data or browsing behavior, but rather on general context. We do not collect personal data from children under 13 for advertising purposes."
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Where the EU or UK General Data Protection Regulation (GDPR) applies, our website asks for your advertising and cookie choices through a consent prompt registered with the IAB Transparency and Consent Framework when you first visit. You can review, change or withdraw your consent at any time through the consent settings link shown in the footer of our home page and at the top of this Privacy Policy, or by contacting us. Withdrawing consent does not affect processing carried out before you withdrew it."
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "3.3 Service Providers"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "We work with trusted third-party service providers to help operate the website and deliver services effectively. These providers only receive the data necessary to perform their functions and are required to maintain the confidentiality and security of your information. The key service providers we work with are categorized as follows:"
-        }), (0, Nu.jsx)("h4", {
+        }), (0, QG.jsx)("h4", {
           children: "Hosting and Data Storage"
-        }), (0, Nu.jsxs)("table", {
-          children: [(0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+        }), (0, QG.jsxs)("table", {
+          children: [(0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Service Provider"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What They Collect"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What They Do"
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "AWS Cloud"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Data storage and processing"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Hosts our servers and stores backup, data securely."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Digital Ocean"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Data storage and processing"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Hosts our servers and stores data securely."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Google Firebase"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Email, User data, app usage data, device information"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Provides backend services including database for registered users"
               })
             })]
           })]
-        }), (0, Nu.jsx)("h4", {
+        }), (0, QG.jsx)("h4", {
           children: "Website Security and Performance"
-        }), (0, Nu.jsxs)("table", {
-          children: [(0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+        }), (0, QG.jsxs)("table", {
+          children: [(0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Service Provider"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What They Collect"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What They Do"
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
-                children: (0, Nu.jsx)("a", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
+                children: (0, QG.jsx)("a", {
                   href: "https://www.cloudflare.com/en-gb/privacypolicy/",
                   children: "Cloudflare"
                 })
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "IP addresses, browser types, device information"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Provides\xa0website security, performance optimization, and protection against malicious attacks."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
-                children: (0, Nu.jsx)("a", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
+                children: (0, QG.jsx)("a", {
                   href: "https://policies.google.com/privacy",
                   children: "Google reCAPTCHA"
                 })
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "IP addresses, browser types, device information"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Protection against malicious attacks."
               })
             })]
           })]
-        }), (0, Nu.jsx)("h4", {
+        }), (0, QG.jsx)("h4", {
           children: "Advertising Management"
-        }), (0, Nu.jsxs)("table", {
-          children: [(0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+        }), (0, QG.jsxs)("table", {
+          children: [(0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Service Provider"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What They Collect"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What They Do"
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
-                children: (0, Nu.jsx)("a", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
+                children: (0, QG.jsx)("a", {
                   href: "https://adinplay.com/privacy-policy",
                   children: "Adinplay"
                 })
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsxs)("p", {
-                children: ["Advertiser data, ad performance data", Eu ? ", personalized with your consent" : ""]
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsxs)("p", {
+                children: ["Advertiser data, ad performance data", bG ? ", personalized with your consent" : ""]
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Manages and delivers in-game advertisements on our website."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
-                children: (0, Nu.jsx)("a", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
+                children: (0, QG.jsx)("a", {
                   href: "https://aditude.com/privacy",
                   children: "Aditude"
                 })
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsxs)("p", {
-                children: ["Advertiser data, ad performance data", Eu ? ", personalized with your consent" : ""]
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsxs)("p", {
+                children: ["Advertiser data, ad performance data", bG ? ", personalized with your consent" : ""]
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Manages and delivers in-game advertisements on our website."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
-                children: (0, Nu.jsx)("a", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
+                children: (0, QG.jsx)("a", {
                   href: "https://policies.google.com/privacy",
                   children: "Google Ads Manager"
                 })
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsxs)("p", {
-                children: ["Advertiser data, ad performance data", Eu ? ", personalized with your consent" : ""]
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsxs)("p", {
+                children: ["Advertiser data, ad performance data", bG ? ", personalized with your consent" : ""]
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Manages and optimizes the display of advertisements on our website."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
-                children: (0, Nu.jsx)("a", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
+                children: (0, QG.jsx)("a", {
                   href: "https://nitropay.com/privacy",
                   children: "Nitro (NitroPay)"
                 })
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsxs)("p", {
-                children: ["Advertiser data, ad performance data", Eu ? ", personalized with your consent" : ""]
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsxs)("p", {
+                children: ["Advertiser data, ad performance data", bG ? ", personalized with your consent" : ""]
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Manages and delivers in-game advertisements on our website, and manages advertising consent and opt-out choices."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
-                children: (0, Nu.jsx)("a", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
+                children: (0, QG.jsx)("a", {
                   href: "https://policies.google.com/privacy",
                   children: "Google AdMob"
                 })
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsxs)("p", {
-                children: ["Device advertising identifier, IP address, app usage and ad interaction data", Eu ? ", personalized with your consent" : ""]
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsxs)("p", {
+                children: ["Device advertising identifier, IP address, app usage and ad interaction data", bG ? ", personalized with your consent" : ""]
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Delivers banner, interstitial, and rewarded ads within our iOS and Android mobile apps."
               })
             })]
           })]
-        }), (0, Nu.jsx)("h4", {
+        }), (0, QG.jsx)("h4", {
           children: "Analytics"
-        }), (0, Nu.jsxs)("table", {
-          children: [(0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+        }), (0, QG.jsxs)("table", {
+          children: [(0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Service Provider"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What They Collect"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What They Do"
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
-                children: (0, Nu.jsx)("a", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
+                children: (0, QG.jsx)("a", {
                   href: "https://policies.google.com/technologies/partner-sites",
                   children: "Google Analytics"
                 })
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Usage data, pages visited, interactions on the site"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Analyzes website usage to help us understand how the site is used and improve user experience."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
-                children: (0, Nu.jsx)("a", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
+                children: (0, QG.jsx)("a", {
                   href: "https://docs.bytebrew.io/BBSettings/privacypolicy",
                   children: "ByteBrew"
                 })
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Usage data, device data, interactions on the site"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Analyzes website usage to help us understand how the site is used and improve user experience."
               })
             })]
           })]
-        }), (0, Nu.jsx)("h4", {
+        }), (0, QG.jsx)("h4", {
           children: "Content Moderation"
-        }), (0, Nu.jsxs)("table", {
-          children: [(0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+        }), (0, QG.jsxs)("table", {
+          children: [(0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Service Provider"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What They Collect"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What They Do"
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
-                children: (0, Nu.jsx)("a", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
+                children: (0, QG.jsx)("a", {
                   href: "https://www.lassomoderation.com/privacy-policy/",
                   children: "Lasso Moderation"
                 })
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Anonymized IP addresses, chat logs, usernames, reports, custom lobby metadata, custom game metadata, thumbnail uploads"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Provides automated and manual moderation services to ensure chat safety and compliance with guidelines."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
-                children: (0, Nu.jsx)("a", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
+                children: (0, QG.jsx)("a", {
                   href: "https://www.purgomalum.com/",
                   children: "PurgoMalum"
                 })
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Chat logs"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Provides profanity filtering for moderating chat messages."
               })
             })]
           })]
-        }), (0, Nu.jsx)("h4", {
+        }), (0, QG.jsx)("h4", {
           children: "Payment Providers"
-        }), (0, Nu.jsxs)("table", {
-          children: [(0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+        }), (0, QG.jsxs)("table", {
+          children: [(0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Service Provider"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What They Collect"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What They Do"
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
-                children: (0, Nu.jsx)("a", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
+                children: (0, QG.jsx)("a", {
                   href: "https://xsolla.com/privacypolicy",
                   children: "Xsolla"
                 })
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "User ID, Email Address, IP addresses, Purchase History, Purchase Request"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Act as our merchant of record, handling all our secure payment protection insurance and checkout experience to complete your purchase and handle payment support."
               })
             })]
           })]
-        }), (0, Nu.jsx)("h4", {
+        }), (0, QG.jsx)("h4", {
           children: "Platform Integrations"
-        }), (0, Nu.jsxs)("table", {
-          children: [(0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+        }), (0, QG.jsxs)("table", {
+          children: [(0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Service Provider"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Information Processed"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What They Do"
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
-                children: (0, Nu.jsx)("a", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
+                children: (0, QG.jsx)("a", {
                   href: "http://www.google.com/policies/privacy",
                   children: "YouTube API Services"
                 })
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Public YouTube channel identifiers submitted by creators"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Retrieves and displays publicly available YouTube content."
               })
             })]
           })]
-        }), (0, Nu.jsx)("h4", {
+        }), (0, QG.jsx)("h4", {
           children: "AI Helper"
-        }), (0, Nu.jsxs)("table", {
-          children: [(0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+        }), (0, QG.jsxs)("table", {
+          children: [(0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Service Provider"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What They Collect"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "What They Do"
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "OVHcloud"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "AI Helper questions, game code and chats, as section 2.5 describes"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Runs the AI models that answer Bot.xd and some Super Bot.xd questions, and the safety check."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
-                children: (0, Nu.jsx)("a", {
-                  href: cu.c,
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
+                children: (0, QG.jsx)("a", {
+                  href: fG.e,
                   children: "DeepSeek"
                 })
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "AI Helper questions, game code and chats, as section 2.5 describes"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Runs the AI model that answers Super Bot.xd questions."
               })
             })]
           })]
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "3.4 YouTube API Services"
-        }), (0, Nu.jsxs)("p", {
-          children: ["Bloxd.io uses YouTube API Services to show YouTube videos, livestreams and Shorts from Bloxd creators on our homepage, and to find the YouTube channel that a creator links to their Bloxd profile. By using these features, you agree to be bound by the", " ", (0, Nu.jsx)("a", {
+        }), (0, QG.jsxs)("p", {
+          children: ["Bloxd.io uses YouTube API Services to show YouTube videos, livestreams and Shorts from Bloxd creators on our homepage, and to find the YouTube channel that a creator links to their Bloxd profile. By using these features, you agree to be bound by the", " ", (0, QG.jsx)("a", {
             href: "https://www.youtube.com/t/terms",
             children: "YouTube Terms of Service"
           }), "."]
-        }), (0, Nu.jsxs)("p", {
-          children: ["YouTube API Services are provided by Google. Google\u2019s use of information is described in the Google Privacy Policy at", " ", (0, Nu.jsx)("a", {
+        }), (0, QG.jsxs)("p", {
+          children: ["YouTube API Services are provided by Google. Google\u2019s use of information is described in the Google Privacy Policy at", " ", (0, QG.jsx)("a", {
             href: "http://www.google.com/policies/privacy",
             children: "http://www.google.com/policies/privacy"
           }), "."]
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "We only retrieve publicly available YouTube data: video titles, thumbnails, publish dates, view and live viewer counts and live status, and the channel ID for a YouTube handle a creator adds to their profile. We do not ask you to sign in with YouTube or Google for these features, and we do not access your YouTube account. Creators can remove their linked YouTube handle from their profile, or contact us to remove it, at any time; this deletes the stored channel ID straight away, and deleting an account removes it too."
-        }), (0, Nu.jsx)("h2", {
+        }), (0, QG.jsx)("h2", {
           children: "4. Cookies and Tracking Technologies"
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "4.1 What Are Cookies?"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Cookies are small data files stored on your device that help identify you when you visit a website. They allow the site to remember your preferences and provide a smoother experience."
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "4.2 Types of Cookies We Use"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "We use different types of cookies to enhance your experience and ensure that Bloxd.io\xa0functions properly. Here\u2019s what each type of cookie does:"
-        }), (0, Nu.jsxs)("table", {
-          children: [(0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+        }), (0, QG.jsxs)("table", {
+          children: [(0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Type of Cookie"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Purpose"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Example"
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Functional Cookies"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Ensure the website works properly by enabling basic functions like navigation and settings."
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Remembering your game settings, progress or language preferences."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Analytical Cookies"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Help us understand how players use the site by collecting anonymized data (e.g., pages visited)."
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Tracking the number of visitors or identifying popular game features."
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Ad Cookies"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsxs)("p", {
-                children: ["Manage ad display frequency, prevent repetitive ads, and help detect fraudulent activity", Eu ? ", and with your consent, enable personalized advertising based on your interests and browsing behavior." : "."]
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsxs)("p", {
+                children: ["Manage ad display frequency, prevent repetitive ads, and help detect fraudulent activity", bG ? ", and with your consent, enable personalized advertising based on your interests and browsing behavior." : "."]
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsxs)("p", {
-                children: ["Ensuring the same ad doesn\u2019t appear too frequently or detecting fraudulent ad interactions", Eu ? ", and when you consent, showing you ads that are more relevant to your interests." : "."]
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsxs)("p", {
+                children: ["Ensuring the same ad doesn\u2019t appear too frequently or detecting fraudulent ad interactions", bG ? ", and when you consent, showing you ads that are more relevant to your interests." : "."]
               })
             })]
-          }), (0, Nu.jsxs)("tr", {
-            children: [(0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+          }), (0, QG.jsxs)("tr", {
+            children: [(0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Notice Acceptance Cookies"
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Record whether you have acknowledged or accepted notices, such as our cookie policy."
               })
-            }), (0, Nu.jsx)("td", {
-              children: (0, Nu.jsx)("p", {
+            }), (0, QG.jsx)("td", {
+              children: (0, QG.jsx)("p", {
                 children: "Storing your acceptance of our cookie banner or other notifications."
               })
             })]
           })]
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "4.3 Managing Cookies"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "You can control cookie settings through your browser. Below are links to guides on how to manage cookies for common browsers:"
-        }), (0, Nu.jsxs)("ul", {
-          children: [(0, Nu.jsx)("li", {
+        }), (0, QG.jsxs)("ul", {
+          children: [(0, QG.jsx)("li", {
             children: "Google Chrome: Go to Settings > Privacy and Security > Clear browsing data > Cookies and other site data."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Mozilla Firefox: Go to Options > Privacy & Security > Cookies and Site Data > Clear Data."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Safari: Go to Preferences > Privacy > Manage Website Data > Remove All."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Microsoft Edge: Go to Settings > Cookies and site permissions > Manage and delete cookies and site data."
           })]
-        }), (0, Nu.jsx)("h2", {
+        }), (0, QG.jsx)("h2", {
           children: "5. Security Measures"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "We take the security of your data seriously. We implement various measures to ensure your personal information is protected and manage it according to applicable data protection laws."
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "5.1 Technologies and Procedures"
-        }), (0, Nu.jsxs)("ul", {
-          children: [(0, Nu.jsx)("li", {
+        }), (0, QG.jsxs)("ul", {
+          children: [(0, QG.jsx)("li", {
             children: "We use encryption\xa0and other security technologies to safeguard your personal information during transmission and storage."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Our servers are hosted by trusted partners who apply high security standards to protect the data we store."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "We regularly monitor our systems for potential vulnerabilities and use firewalls and anti-virus software to prevent unauthorized access."
           })]
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "5.2 Staff Training and Compliance"
-        }), (0, Nu.jsxs)("ul", {
-          children: [(0, Nu.jsx)("li", {
+        }), (0, QG.jsxs)("ul", {
+          children: [(0, QG.jsx)("li", {
             children: "Our team is trained to manage your data securely and in accordance with data protection laws like GDPR\xa0and COPPA."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Internal procedures are in place to ensure that only authorized personnel can access sensitive data."
           })]
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "5.3 Data Breach Notification"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "In the unlikely event of a data breach that affects your personal information:"
-        }), (0, Nu.jsxs)("ul", {
-          children: [(0, Nu.jsx)("li", {
+        }), (0, QG.jsxs)("ul", {
+          children: [(0, QG.jsx)("li", {
             children: "We will promptly notify\xa0affected users, as required by law."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "The notification will include:"
           })]
-        }), (0, Nu.jsxs)("ul", {
-          children: [(0, Nu.jsx)("li", {
+        }), (0, QG.jsxs)("ul", {
+          children: [(0, QG.jsx)("li", {
             children: "What data was compromised."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "The steps we are taking to resolve the issue and protect your data."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Recommendations for what you can do to protect yourself (e.g., change passwords)."
           })]
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "We take all necessary steps to ensure that breaches are addressed swiftly to minimize any potential harm."
-        }), (0, Nu.jsx)("h2", {
+        }), (0, QG.jsx)("h2", {
           children: "6. International Data Transfers"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Your data may be transferred to servers in other countries. All international transfers comply with relevant data protection regulations, ensuring that your information is safeguarded. The AI Helper sends data to France and China, and ChatGPT to the United States, as section 2.5 describes. With your own API key, your questions go to the company you chose, wherever it is."
-        }), (0, Nu.jsx)("h2", {
+        }), (0, QG.jsx)("h2", {
           children: "7. Data Retention"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "We retain your data only for as long as necessary to fulfil the purposes outlined in this policy:"
-        }), (0, Nu.jsxs)("ul", {
-          children: [(0, Nu.jsx)("li", {
+        }), (0, QG.jsxs)("ul", {
+          children: [(0, QG.jsx)("li", {
             children: "Technical and Usage Data:\xa0Retained for 14 months after your last visit to the site or until you request removal and the removal is verified."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Personal Data for Registered players:\xa0Retained for as long as the account is active. Upon request for account deletion, data will be removed promptly, typically within 30 days after the request is processed."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Contact Information:\xa0Retained for three months after the query is resolved or closed. If personal data from children is collected, it will be deleted as soon as possible."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Cookies:\xa0Cookies are retained for varying periods, depending on their purpose. Functional cookies are typically retained for as long as they are needed to operate the site, while analytical cookies may be retained for a shorter period to analyze site performance."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "YouTube API Data:\xa0Public video metadata retrieved from YouTube API Services is refreshed every hour and is never kept for more than 24 hours. Creator-linked YouTube handles and channel IDs are retained while the link remains on the account and deleted as soon as it is removed."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "AI Helper Chats:\xa0Kept only if you agree to share them, and deleted after 30 days."
           })]
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "If we collect personal data beyond what is outlined above, we will remove it as soon as possible once it is no longer needed."
-        }), (0, Nu.jsx)("h2", {
+        }), (0, QG.jsx)("h2", {
           children: "8. Your Rights"
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "8.1 Your Choices and Control"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "As a user of Bloxd.io, you have the right to:"
-        }), (0, Nu.jsxs)("ul", {
-          children: [(0, Nu.jsx)("li", {
+        }), (0, QG.jsxs)("ul", {
+          children: [(0, QG.jsx)("li", {
             children: "Access Your Data: Request a copy of the personal information we hold about you."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Correct Your Data: Ask us to correct any inaccurate or incomplete information."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Delete Your Data: Request the deletion of your personal information when it is no longer needed."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Limit Data Collection: Request that we limit the collection or use of your data."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Object to Data Processing: Object to certain types of data processing, such as for marketing purposes."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Withdraw Consent: Where we rely on your consent, withdraw it at any time, as described in section 3.2, or for the AI Helper in section 2.5."
           })]
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "8.2 Parental Choices and Control "
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "As a verified parent or guardian of a child using Bloxd.io, you have the right to:"
-        }), (0, Nu.jsxs)("ul", {
-          children: [(0, Nu.jsx)("li", {
+        }), (0, QG.jsxs)("ul", {
+          children: [(0, QG.jsx)("li", {
             children: "Access Your Child\u2019s Data: Request a copy of the personal information we\u2019ve collected about your child, including details like username, email address, and chat logs."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Correct Your Child\u2019s Data: Ask us to correct any inaccurate or incomplete information about your child."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Delete Your Child\u2019s Data: Request the deletion of your child\u2019s account and all associated data. Once verified, we will delete this data promptly, typically within 30 days. This will also remove any saved progress in the game."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Limit Data Collection for Your Child: Request that we limit the collection or use of certain types of data, such as usage information, from your child."
           })]
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "8.3 How to Exercise Your Rights"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "To exercise any of these rights, contact us using the information provided below. We may require proof of identity before proceeding with your request. Responses will typically be provided within 30 days."
-        }), (0, Nu.jsx)("h3", {
+        }), (0, QG.jsx)("h3", {
           children: "8.4 Your California Privacy Rights"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "If you are a California resident, the California Consumer Privacy Act, as amended by the California Privacy Rights Act (together, the \u201cCCPA\u201d), gives you the rights below. This section supplements the rest of this Privacy Policy."
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Personal Information We Collect: In the past 12 months we have collected the following categories of personal information, from you, from your device, and from the service providers listed in section 3.3, for the purposes described in sections 2 and 3:"
-        }), (0, Nu.jsxs)("ul", {
-          children: [(0, Nu.jsx)("li", {
+        }), (0, QG.jsxs)("ul", {
+          children: [(0, QG.jsx)("li", {
             children: "Identifiers, such as your username, email address, user ID, IP address and device advertising identifiers."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Internet or other electronic network activity information, such as pages visited, interactions with our website and ad interactions."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Commercial information, such as your purchase history."
           })]
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Sale and Sharing of Personal Information: Our advertising partners listed in section 3.3 may collect identifiers and internet or other electronic network activity information through cookies and similar technologies on our website to deliver and measure ads. This may be considered a \u201csale\u201d or \u201csharing\u201d of personal information under the CCPA."
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Under the CCPA, you have the right to:"
-        }), (0, Nu.jsxs)("ul", {
-          children: [(0, Nu.jsx)("li", {
+        }), (0, QG.jsxs)("ul", {
+          children: [(0, QG.jsx)("li", {
             children: "Know: Request the categories and specific pieces of personal information we have collected about you, and how we use and disclose it."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Delete: Request the deletion of personal information we have collected from you."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Correct: Ask us to correct inaccurate personal information we hold about you."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Opt Out of Sale or Sharing: Opt out of the sale or sharing of your personal information."
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Non-Discrimination: Exercise any of these rights without being treated differently by us."
           })]
-        }), (0, Nu.jsxs)("p", {
-          children: ["To opt out of the sale or sharing of your personal information, use the \u201cDo Not Sell My Personal Information\u201d link shown to California visitors in the footer of our home page and at the top of this Privacy Policy, or email us at", " ", (0, Nu.jsx)("a", {
+        }), (0, QG.jsxs)("p", {
+          children: ["To opt out of the sale or sharing of your personal information, use the \u201cDo Not Sell My Personal Information\u201d link shown to California visitors in the footer of our home page and at the top of this Privacy Policy, or email us at", " ", (0, QG.jsx)("a", {
             href: "mailto:privacy@bloxd.io",
             children: "privacy@bloxd.io"
           }), ". To exercise your other rights, contact us as described in section 8.3. You may also ask an authorized agent to make a request on your behalf; we may ask the agent for proof of your permission and ask you to verify your identity with us."]
-        }), (0, Nu.jsx)("h2", {
+        }), (0, QG.jsx)("h2", {
           children: "9. Contact Us"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "Got questions or concerns? We\u2019re here to help. Reach out to us at:"
-        }), (0, Nu.jsxs)("ul", {
-          children: [(0, Nu.jsxs)("li", {
-            children: ["Email: ", (0, Nu.jsx)("a", {
+        }), (0, QG.jsxs)("ul", {
+          children: [(0, QG.jsxs)("li", {
+            children: ["Email: ", (0, QG.jsx)("a", {
               href: "mailto:privacy@bloxd.io",
               children: "privacy@bloxd.io"
             })]
-          }), (0, Nu.jsx)("li", {
+          }), (0, QG.jsx)("li", {
             children: "Address: Bloxd LTD, 86-90 Paul Street, London, England, United Kingdom, EC2A 4NE"
           })]
-        }), (0, Nu.jsx)("h2", {
+        }), (0, QG.jsx)("h2", {
           children: "10. Updates to This Policy"
-        }), (0, Nu.jsx)("p", {
+        }), (0, QG.jsx)("p", {
           children: "We may update this policy occasionally to reflect changes in our practices or the law. When we do, we\u2019ll update the \u201cLast updated\u201d date at the top. Please check back occasionally to stay informed."
         })]
       })
     }
 
-    function Yu() {
+    function hG() {
       const {
-        adMobPrivacyOptionsRequired: uu
-      } = (0, qu.l)(["adMobPrivacyOptionsRequired"]);
-      if (!uu) return null;
-      return (0, Nu.jsx)(Xu.f, {
+        adMobPrivacyOptionsRequired: GG
+      } = (0, UG.o)(["adMobPrivacyOptionsRequired"]);
+      if (!GG) return null;
+      return (0, QG.jsx)(yG.d, {
         className: "PrivacyChoicesButton",
         onClick: () => {
           (async () => {
             try {
-              await fu.d.request("ads.showPrivacyOptions", {})
-            } catch (uu) {
-              console.error("Failed to open AdMob privacy options:", uu)
+              await YG.c.request("ads.showPrivacyOptions", {})
+            } catch (GG) {
+              console.error("Failed to open AdMob privacy options:", GG)
             }
           })()
         },
@@ -1222,22 +1222,22 @@ export const modules = {
       })
     }
 
-    function hu() {
-      return (0, Nu.jsxs)(Nu.Fragment, {
-        children: [(0, Uu.isDiscordClient)() && (0, Nu.jsx)(Nu.Fragment, {
-          children: (0, Nu.jsx)(Xu.f, {
+    function dG() {
+      return (0, QG.jsxs)(QG.Fragment, {
+        children: [(0, SG.isDiscordClient)() && (0, QG.jsx)(QG.Fragment, {
+          children: (0, QG.jsx)(yG.d, {
             className: "PrivacyChoicesButton",
             onClick: () => {
-              (0, lu.n)()
+              (0, kG.t)()
             },
             children: "Adjust Discord Privacy Choices"
           })
-        }), (0, Nu.jsx)(Yu, {}), (0, Nu.jsx)(bu.d, {
+        }), (0, QG.jsx)(hG, {}), (0, QG.jsx)(pG.e, {
           className: "PrivacyPolicyLinks"
-        }), (0, Nu.jsx)(Ou, {})]
+        }), (0, QG.jsx)(KG, {})]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

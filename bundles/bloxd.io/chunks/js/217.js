@@ -1,52 +1,52 @@
 export const id = 217;
 export const ids = [217];
 export const modules = {
-  36730: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      CreateCustomLobby: () => ku
+  36668: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      CreateCustomLobby: () => FG
     });
-    ju(36737);
-    var su = ju(4809),
-      Uu = ju(58),
-      Zu = ju(1723),
-      Xu = ju(1105),
-      lu = ju.n(Xu),
-      qu = ju(3309),
-      fu = ju(1183),
-      Cu = ju(1255),
-      bu = ju(4769),
-      cu = ju(1506),
-      Nu = ju(36740),
-      Ou = ju(1244),
-      Yu = ju(1376),
-      hu = ju(1570),
-      Du = ju(22),
-      gu = ju(1510),
-      Mu = ju(649),
-      eu = ju(5102),
-      Gu = ju(822),
-      pu = ju(1298),
-      wu = ju(1278),
-      Ju = ju(5110),
-      du = ju(1116),
-      au = ju(36748),
-      Pu = ju(36751),
-      ou = ju(1154);
+    ZG(36670);
+    var wG = ZG(4655),
+      SG = ZG(51),
+      LG = ZG(1621),
+      yG = ZG(1006),
+      kG = ZG.n(yG),
+      UG = ZG(3113),
+      YG = ZG(1096),
+      VG = ZG(1163),
+      pG = ZG(4611),
+      fG = ZG(1393),
+      QG = ZG(36672),
+      KG = ZG(1151),
+      hG = ZG(1290),
+      dG = ZG(1444),
+      JG = ZG(17),
+      rG = ZG(1396),
+      zG = ZG(604),
+      EG = ZG(4959),
+      oG = ZG(751),
+      XG = ZG(1198),
+      uG = ZG(1177),
+      iG = ZG(4973),
+      CG = ZG(1016),
+      WG = ZG(36680),
+      mG = ZG(36686),
+      IG = ZG(1067);
 
-    function ku(uu) {
-      var Eu, ju, Xu, ku;
+    function FG(GG) {
+      var bG, ZG, yG, FG;
       let {
-        gameNameWithVariation: mu,
-        close: vu,
-        initialDefaultGamemode: Ku
-      } = uu;
+        gameNameWithVariation: vG,
+        close: aG,
+        initialDefaultGamemode: cG
+      } = GG;
       const {
-        t: Vu
-      } = (0, Ou.A)(), ru = (0, hu.useNavigatePreserveSearch)(), [Qu, iu] = (0, Uu.useState)("Enter"), [Wu, Su] = (0, Uu.useState)(""), Iu = Uu.useRef(null), Fu = null === (Eu = Gu.c[mu]) || void 0 === Eu ? void 0 : Eu.showWorldsInsteadOfCustomLobbies, Bu = Fu ? 1 : null === (ju = Gu.c[mu]) || void 0 === ju ? void 0 : ju.customLobbyCustomSchematicLimit, [Lu, tu] = (0, Uu.useState)(!Fu);
-      Ku || (Ku = "classic_creative" === mu || "classic_creativeFlat" === mu ? "creative" : "classic" === mu ? "peaceful" : "survival");
-      const xu = {
+        t: lG
+      } = (0, KG.w)(), jG = (0, dG.useNavigatePreserveSearch)(), [PG, MG] = (0, SG.useState)("Enter"), [AG, sG] = (0, SG.useState)(""), qG = SG.useRef(null), nG = null === (bG = oG.d[vG]) || void 0 === bG ? void 0 : bG.showWorldsInsteadOfCustomLobbies, gG = nG ? 1 : null === (ZG = oG.d[vG]) || void 0 === ZG ? void 0 : ZG.customLobbyCustomSchematicLimit, [eG, RG] = (0, SG.useState)(!nG);
+      cG || (cG = "classic_creative" === vG || "classic_creativeFlat" === vG ? "creative" : "classic" === vG ? "peaceful" : "survival");
+      const TG = {
         baseOptions: {
-          gameNameWithVariation: Fu ? "classic" : mu,
+          gameNameWithVariation: nG ? "classic" : vG,
           name: "",
           visibility: "unlisted"
         },
@@ -56,13 +56,13 @@ export const modules = {
           emojis: ""
         },
         mapOptions: {
-          mapType: "classic_creativeFlat" === mu ? "flat" : "default",
+          mapType: "classic_creativeFlat" === vG ? "flat" : "default",
           schematicIdList: []
         },
         worldOptions: null
       };
-      Fu && (xu.worldOptions = {
-        defaultGamemode: Ku,
+      nG && (TG.worldOptions = {
+        defaultGamemode: cG,
         disableProtectors: !1,
         spawnProtection: !0,
         disableTpRequests: !1,
@@ -78,631 +78,631 @@ export const modules = {
         enableSpawnReset: !1,
         enableDayNight: !0
       });
-      const [Tu, Hu] = (0, Uu.useState)(xu), [Au, nu] = (0, Uu.useState)(null);
+      const [HG, tG] = (0, SG.useState)(TG), [DG, NG] = (0, SG.useState)(null);
 
-      function yu(uu, Eu) {
-        Hu({
-          ...Tu,
+      function OG(GG, bG) {
+        tG({
+          ...HG,
           baseOptions: {
-            ...Tu.baseOptions,
-            [uu]: Eu
+            ...HG.baseOptions,
+            [GG]: bG
           }
         })
       }
 
-      function zu(uu, Eu) {
-        Hu({
-          ...Tu,
+      function xG(GG, bG) {
+        tG({
+          ...HG,
           listedOptions: {
-            ...Tu.listedOptions,
-            [uu]: Eu
+            ...HG.listedOptions,
+            [GG]: bG
           }
         })
       }
 
-      function Ru(uu, Eu) {
-        Hu({
-          ...Tu,
+      function BG(GG, bG) {
+        tG({
+          ...HG,
           worldOptions: {
-            ...Tu.worldOptions,
-            [uu]: Eu
+            ...HG.worldOptions,
+            [GG]: bG
           }
         })
       }
 
-      function uE(uu) {
-        Hu({
-          ...Tu,
+      function Gb(GG) {
+        tG({
+          ...HG,
           mapOptions: {
-            ...Tu.mapOptions,
-            ...uu
+            ...HG.mapOptions,
+            ...GG
           }
         })
-      }(0, Uu.useEffect)((() => {
-        bu.d.getNewStarterName().then((uu => {
-          Hu((Eu => "" !== Eu.baseOptions.name ? Eu : {
-            ...Eu,
+      }(0, SG.useEffect)((() => {
+        pG.d.getNewStarterName().then((GG => {
+          tG((bG => "" !== bG.baseOptions.name ? bG : {
+            ...bG,
             baseOptions: {
-              ...Eu.baseOptions,
-              name: uu
+              ...bG.baseOptions,
+              name: GG
             }
           }))
-        })).catch((uu => {
-          console.error("Error getting new starter name:", uu)
+        })).catch((GG => {
+          console.error("Error getting new starter name:", GG)
         }))
-      }), []), (0, Uu.useEffect)((() => {
-        "customSchematic" === Tu.mapOptions.mapType && null === Au && (0, fu.postJsonWithMetricsCookiesAndJsonResponse)(`${Cu.clientSideServerUrls.indexUrl}/index/schematic/get-owned-schematics`, {}, {
+      }), []), (0, SG.useEffect)((() => {
+        "customSchematic" === HG.mapOptions.mapType && null === DG && (0, YG.postJsonWithMetricsCookiesAndJsonResponse)(`${VG.clientSideServerUrls.indexUrl}/index/schematic/get-owned-schematics`, {}, {
           retries: 0,
           minTimeout: 3e3
-        }).then((uu => {
-          nu(uu)
+        }).then((GG => {
+          NG(GG)
         }))
-      }), [Tu.mapOptions.mapType, Au]);
-      const EE = {
+      }), [HG.mapOptions.mapType, DG]);
+      const bb = {
           tpRequests: {
-            isEnabled: () => !Tu.worldOptions.disableTpRequests,
-            Wk: uu => {
-              Ru("disableTpRequests", !uu)
+            isEnabled: () => !HG.worldOptions.disableTpRequests,
+            DW: GG => {
+              BG("disableTpRequests", !GG)
             }
           },
           spawnProtection: {
-            isEnabled: () => Tu.worldOptions.spawnProtection,
-            Wk: uu => {
-              Ru("spawnProtection", uu)
+            isEnabled: () => HG.worldOptions.spawnProtection,
+            DW: GG => {
+              BG("spawnProtection", GG)
             }
           },
           spawnReset: {
-            isEnabled: () => Tu.worldOptions.enableSpawnReset,
-            Wk: uu => {
-              Ru("enableSpawnReset", uu)
+            isEnabled: () => HG.worldOptions.enableSpawnReset,
+            DW: GG => {
+              BG("enableSpawnReset", GG)
             }
           },
           smpMarketplace: {
-            isEnabled: () => Tu.worldOptions.enableSmpMarketplace,
-            Wk: uu => {
-              Ru("enableSmpMarketplace", uu)
+            isEnabled: () => HG.worldOptions.enableSmpMarketplace,
+            DW: GG => {
+              BG("enableSmpMarketplace", GG)
             }
           },
           survivalGuns: {
-            isEnabled: () => Tu.worldOptions.enableSurvivalGuns,
-            Wk: uu => {
-              Ru("enableSurvivalGuns", uu)
+            isEnabled: () => HG.worldOptions.enableSurvivalGuns,
+            DW: GG => {
+              BG("enableSurvivalGuns", GG)
             }
           },
           fallDamage: {
-            isEnabled: () => !Tu.worldOptions.disableFallDamage,
-            Wk: uu => {
-              Ru("disableFallDamage", !uu)
+            isEnabled: () => !HG.worldOptions.disableFallDamage,
+            DW: GG => {
+              BG("disableFallDamage", !GG)
             }
           },
           dayNight: {
-            isEnabled: () => Tu.worldOptions.enableDayNight,
-            Wk: uu => {
-              Ru("enableDayNight", uu)
+            isEnabled: () => HG.worldOptions.enableDayNight,
+            DW: GG => {
+              BG("enableDayNight", GG)
             }
           }
         },
-        jE = "Enter" !== Qu,
-        sE = (0, ou.jsx)(eu.e, {
+        Zb = "Enter" !== PG,
+        wb = (0, IG.jsx)(EG.e, {
           className: "NameInput",
           label: "general:name",
-          disabled: "Enter" !== Qu,
-          children: (0, ou.jsx)(Zu.d, {
-            domRef: Iu,
-            onValueChange: (uu, Eu) => {
-              const ju = (0, wu.tb)(uu);
-              yu("name", ju), Iu.current.value = ju
+          disabled: "Enter" !== PG,
+          children: (0, IG.jsx)(LG.b, {
+            domRef: qG,
+            onValueChange: (GG, bG) => {
+              const ZG = (0, uG.wb)(GG);
+              OG("name", ZG), qG.current.value = ZG
             },
-            maxLength: wu.P,
-            defaultValue: Tu.baseOptions.name
+            maxLength: uG.L,
+            defaultValue: HG.baseOptions.name
           })
         });
-      return (0, ou.jsxs)("div", {
-        className: lu()("CreateCustomLobby", {
-          CreateCustomLobbySuccess: "Success" === Qu,
-          AdvancedMode: Lu
+      return (0, IG.jsxs)("div", {
+        className: kG()("CreateCustomLobby", {
+          CreateCustomLobbySuccess: "Success" === PG,
+          AdvancedMode: eG
         }),
-        children: ["Success" === Qu && (0, ou.jsxs)("div", {
+        children: ["Success" === PG && (0, IG.jsxs)("div", {
           className: "CreateCustomLobbySuccessOverlay",
-          children: [(0, ou.jsxs)("div", {
+          children: [(0, IG.jsxs)("div", {
             className: "CreateCustomLobbySuccessTitle FullyFancyText AnimFadeInScaleUp",
-            children: [(0, ou.jsx)(du.e, {
+            children: [(0, IG.jsx)(CG.c, {
               name: "check"
-            }), (0, ou.jsx)(gu.c, {})]
-          }), (0, ou.jsx)("div", {
+            }), (0, IG.jsx)(rG.d, {})]
+          }), (0, IG.jsx)("div", {
             className: "CreateCustomLobbySuccessButtons AnimFadeInScaleUp",
-            children: (0, ou.jsx)(cu.p, {
+            children: (0, IG.jsx)(fG.k, {
               padDefaultFocus: !0,
               onClick: () => {
-                (0, Du.j)("worldCreation"), ru((0, Yu.c)(mu, Tu.baseOptions.name))
+                (0, JG.n)("worldCreation"), jG((0, hG.d)(vG, HG.baseOptions.name))
               },
-              children: Vu("homePage:joinLobbyName", {
-                lobbyName: Tu.baseOptions.name
+              children: lG("homePage:joinLobbyName", {
+                lobbyName: HG.baseOptions.name
               })
             })
           })]
-        }), (0, ou.jsx)("div", {
+        }), (0, IG.jsx)("div", {
           className: "CreateCustomLobbyTitleContainer",
-          children: (0, ou.jsx)("div", {
+          children: (0, IG.jsx)("div", {
             className: "CreateCustomLobbyTitle",
-            children: Vu(Fu ? "homePage:createWorld" : "homePage:createCustomLobby")
+            children: lG(nG ? "homePage:createWorld" : "homePage:createCustomLobby")
           })
-        }), (0, ou.jsx)(Pu.c, {
-          locked: jE,
-          children: (0, ou.jsxs)("div", {
+        }), (0, IG.jsx)(mG.d, {
+          locked: Zb,
+          children: (0, IG.jsxs)("div", {
             className: "CreateCustomLobbyFields",
-            children: [!Lu && sE, Lu && (0, ou.jsxs)("div", {
+            children: [!eG && wb, eG && (0, IG.jsxs)("div", {
               className: "BloxdForm",
-              children: [(0, ou.jsx)("div", {
+              children: [(0, IG.jsx)("div", {
                 className: "SectionTitle",
-                children: Vu("customLobby:generalOptions")
-              }), (0, ou.jsxs)("div", {
+                children: lG("customLobby:generalOptions")
+              }), (0, IG.jsxs)("div", {
                 className: "SectionBody",
-                children: [sE, (0, ou.jsx)(eu.e, {
+                children: [wb, (0, IG.jsx)(EG.e, {
                   label: "customLobby:visibility",
-                  circleInfoText: Vu("customLobby:visibilityDescription"),
-                  disabled: "Enter" !== Qu,
-                  children: (0, ou.jsx)(qu.c, {
-                    options: su.u.map((uu => ({
-                      value: uu,
-                      label: su.f[uu]
+                  circleInfoText: lG("customLobby:visibilityDescription"),
+                  disabled: "Enter" !== PG,
+                  children: (0, IG.jsx)(UG.b, {
+                    options: wG.q.map((GG => ({
+                      value: GG,
+                      label: wG.f[GG]
                     }))),
-                    value: Tu.baseOptions.visibility,
-                    onChange: uu => {
-                      yu("visibility", uu.value)
+                    value: HG.baseOptions.visibility,
+                    onChange: GG => {
+                      OG("visibility", GG.value)
                     }
                   })
                 })]
               })]
-            }), Fu && (0, ou.jsx)(au.d, {
-              value: Tu.worldOptions.defaultGamemode,
-              onChange: uu => {
-                Ru("defaultGamemode", uu)
+            }), nG && (0, IG.jsx)(WG.d, {
+              value: HG.worldOptions.defaultGamemode,
+              onChange: GG => {
+                BG("defaultGamemode", GG)
               },
-              showAll: Lu,
-              disabled: jE
-            }), (Fu || !(0, Mu.H)(Bu) && Bu > 0) && (0, ou.jsx)(au.g, {
-              mapTypes: Fu ? su.J : su.r,
-              value: Tu.mapOptions.mapType,
-              onChange: uu => {
-                const Eu = {
-                  mapType: uu
+              showAll: eG,
+              disabled: Zb
+            }), (nG || !(0, zG.L)(gG) && gG > 0) && (0, IG.jsx)(WG.f, {
+              mapTypes: nG ? wG.J : wG.m,
+              value: HG.mapOptions.mapType,
+              onChange: GG => {
+                const bG = {
+                  mapType: GG
                 };
-                "customSchematic" !== uu && (Eu.schematicIdList = []), uE(Eu)
+                "customSchematic" !== GG && (bG.schematicIdList = []), Gb(bG)
               },
-              showAll: Lu,
-              disabled: jE,
-              children: "customSchematic" === Tu.mapOptions.mapType && (0, ou.jsxs)(ou.Fragment, {
-                children: [(0, ou.jsxs)("div", {
+              showAll: eG,
+              disabled: Zb,
+              children: "customSchematic" === HG.mapOptions.mapType && (0, IG.jsxs)(IG.Fragment, {
+                children: [(0, IG.jsxs)("div", {
                   className: "SchematicListTitle AnimFadeIn",
-                  children: [Fu && Vu("customLobby:selectWorldSchematic"), !Fu && Vu("customLobby:selectCustomLobbySchematics", {
-                    schematicLimit: Bu
+                  children: [nG && lG("customLobby:selectWorldSchematic"), !nG && lG("customLobby:selectCustomLobbySchematics", {
+                    schematicLimit: gG
                   })]
-                }), (0, ou.jsx)("div", {
-                  className: lu()("SchematicListContainer AnimFadeIn", {
-                    SchematicListContainerDisabled: "Enter" !== Qu
+                }), (0, IG.jsx)("div", {
+                  className: kG()("SchematicListContainer AnimFadeIn", {
+                    SchematicListContainerDisabled: "Enter" !== PG
                   }),
-                  children: (0, ou.jsx)(Nu.c, {
-                    loading: null === Au,
-                    schematics: null !== Au && void 0 !== Au ? Au : [],
-                    onSchematicPicked: function(uu) {
-                      const Eu = Tu.mapOptions.schematicIdList;
-                      if (Eu.includes(uu.schematicId)) uE({
-                        schematicIdList: Eu.filter((Eu => Eu !== uu.schematicId))
+                  children: (0, IG.jsx)(QG.b, {
+                    loading: null === DG,
+                    schematics: null !== DG && void 0 !== DG ? DG : [],
+                    onSchematicPicked: function(GG) {
+                      const bG = HG.mapOptions.schematicIdList;
+                      if (bG.includes(GG.schematicId)) Gb({
+                        schematicIdList: bG.filter((bG => bG !== GG.schematicId))
                       });
                       else {
-                        if (Bu && Tu.mapOptions.schematicIdList.length >= Bu) return;
-                        uE({
-                          schematicIdList: [...Tu.mapOptions.schematicIdList, uu.schematicId]
+                        if (gG && HG.mapOptions.schematicIdList.length >= gG) return;
+                        Gb({
+                          schematicIdList: [...HG.mapOptions.schematicIdList, GG.schematicId]
                         })
                       }
                     },
-                    selectedSchematicIdList: Tu.mapOptions.schematicIdList,
+                    selectedSchematicIdList: HG.mapOptions.schematicIdList,
                     disableAutoExport: !0
                   })
                 })]
               })
-            }), Lu && (0, ou.jsxs)("div", {
+            }), eG && (0, IG.jsxs)("div", {
               className: "BloxdForm",
-              children: [(0, ou.jsx)("div", {
+              children: [(0, IG.jsx)("div", {
                 className: "SectionTitle",
-                children: Vu("customLobby:listedOptions")
-              }), (0, ou.jsxs)("div", {
+                children: lG("customLobby:listedOptions")
+              }), (0, IG.jsxs)("div", {
                 className: "SectionBody",
-                children: [(0, ou.jsx)(eu.e, {
+                children: [(0, IG.jsx)(EG.e, {
                   label: "general:description",
                   className: "CustomLobbyDescription",
-                  disabled: "Enter" !== Qu,
-                  children: (0, ou.jsx)(Zu.d, {
-                    onValueChange: (uu, Eu) => {
-                      zu("description", uu)
+                  disabled: "Enter" !== PG,
+                  children: (0, IG.jsx)(LG.b, {
+                    onValueChange: (GG, bG) => {
+                      xG("description", GG)
                     },
                     maxLength: 100,
-                    defaultValue: Tu.listedOptions.description
+                    defaultValue: HG.listedOptions.description
                   })
-                }), (0, ou.jsx)(eu.e, {
+                }), (0, IG.jsx)(EG.e, {
                   label: "general:color",
                   circleInfoText: "customLobby:lobbyColorDescription",
-                  disabled: "Enter" !== Qu,
-                  children: (0, ou.jsx)("div", {
+                  disabled: "Enter" !== PG,
+                  children: (0, IG.jsx)("div", {
                     className: "OtherInput",
-                    children: (0, ou.jsx)("input", {
+                    children: (0, IG.jsx)("input", {
                       type: "color",
-                      value: Tu.listedOptions.color,
-                      onChange: uu => {
-                        zu("color", uu.target.value)
+                      value: HG.listedOptions.color,
+                      onChange: GG => {
+                        xG("color", GG.target.value)
                       }
                     })
                   })
-                }), (0, ou.jsx)(eu.e, {
+                }), (0, IG.jsx)(EG.e, {
                   label: "general:emojis",
                   circleInfoText: "customLobby:lobbyEmojisDescription",
-                  disabled: "Enter" !== Qu,
-                  children: (0, ou.jsx)(Zu.d, {
-                    onValueChange: (uu, Eu) => {
-                      zu("emojis", uu)
+                  disabled: "Enter" !== PG,
+                  children: (0, IG.jsx)(LG.b, {
+                    onValueChange: (GG, bG) => {
+                      xG("emojis", GG)
                     },
                     maxLength: 6,
-                    defaultValue: Tu.listedOptions.emojis
+                    defaultValue: HG.listedOptions.emojis
                   })
                 })]
               })]
-            }), Lu && Fu && (0, ou.jsxs)("div", {
+            }), eG && nG && (0, IG.jsxs)("div", {
               className: "BloxdForm",
-              children: [(0, ou.jsx)("div", {
+              children: [(0, IG.jsx)("div", {
                 className: "SectionTitle",
-                children: Vu("customLobby:advancedOptions")
-              }), (0, ou.jsxs)("div", {
+                children: lG("customLobby:advancedOptions")
+              }), (0, IG.jsxs)("div", {
                 className: "SectionBody",
-                children: [(0, ou.jsx)(eu.e, {
+                children: [(0, IG.jsx)(EG.e, {
                   label: "classic:worldGenSeed",
-                  disabled: "Enter" !== Qu,
-                  children: (0, ou.jsx)(Zu.d, {
-                    onValueChange: (uu, Eu) => {
-                      Ru("worldGenSeed", uu)
+                  disabled: "Enter" !== PG,
+                  children: (0, IG.jsx)(LG.b, {
+                    onValueChange: (GG, bG) => {
+                      BG("worldGenSeed", GG)
                     },
-                    maxLength: wu.P
+                    maxLength: uG.L
                   })
-                }), (0, ou.jsx)(eu.e, {
+                }), (0, IG.jsx)(EG.e, {
                   label: "classic:disableProtectors",
-                  disabled: "Enter" !== Qu,
-                  children: (0, ou.jsx)(eu.c, {
-                    checked: Tu.worldOptions.disableProtectors,
-                    setChecked: uu => {
-                      Ru("disableProtectors", uu)
+                  disabled: "Enter" !== PG,
+                  children: (0, IG.jsx)(EG.b, {
+                    checked: HG.worldOptions.disableProtectors,
+                    setChecked: GG => {
+                      BG("disableProtectors", GG)
                     }
                   })
-                }), (0, ou.jsx)(eu.e, {
+                }), (0, IG.jsx)(EG.e, {
                   label: "classic:disableTribeCreation",
-                  disabled: "Enter" !== Qu,
-                  children: (0, ou.jsx)(eu.c, {
-                    checked: Tu.worldOptions.disableTribeCreation,
-                    setChecked: uu => {
-                      Ru("disableTribeCreation", uu)
+                  disabled: "Enter" !== PG,
+                  children: (0, IG.jsx)(EG.b, {
+                    checked: HG.worldOptions.disableTribeCreation,
+                    setChecked: GG => {
+                      BG("disableTribeCreation", GG)
                     }
                   })
-                }), (0, ou.jsx)(eu.e, {
+                }), (0, IG.jsx)(EG.e, {
                   label: "classic:voidDeathHeight",
                   circleInfoText: "classic:voidDeathHeightDescription",
-                  disabled: "Enter" !== Qu,
-                  children: (0, ou.jsx)("input", {
+                  disabled: "Enter" !== PG,
+                  children: (0, IG.jsx)("input", {
                     type: "number",
-                    max: pu.D,
-                    value: null !== (Xu = Tu.worldOptions.voidDeathHeight) && void 0 !== Xu ? Xu : "",
-                    onChange: uu => {
-                      const Eu = parseInt(uu.target.value);
-                      Ru("voidDeathHeight", isNaN(Eu) ? null : Eu)
+                    max: XG.F,
+                    value: null !== (yG = HG.worldOptions.voidDeathHeight) && void 0 !== yG ? yG : "",
+                    onChange: GG => {
+                      const bG = parseInt(GG.target.value);
+                      BG("voidDeathHeight", isNaN(bG) ? null : bG)
                     }
                   })
-                }), (0, ou.jsx)(eu.e, {
+                }), (0, IG.jsx)(EG.e, {
                   label: "classic:disableLobbySpawn",
-                  disabled: "Enter" !== Qu,
-                  children: (0, ou.jsx)(eu.c, {
-                    checked: Tu.worldOptions.disableLobbySpawn,
-                    setChecked: uu => {
-                      Ru("disableLobbySpawn", uu)
+                  disabled: "Enter" !== PG,
+                  children: (0, IG.jsx)(EG.b, {
+                    checked: HG.worldOptions.disableLobbySpawn,
+                    setChecked: GG => {
+                      BG("disableLobbySpawn", GG)
                     }
                   })
-                }), (0, ou.jsx)(eu.e, {
+                }), (0, IG.jsx)(EG.e, {
                   label: "classic:worldBorder",
                   circleInfoText: "classic:worldBorderDescription",
-                  disabled: "Enter" !== Qu,
-                  children: (0, ou.jsx)("input", {
+                  disabled: "Enter" !== PG,
+                  children: (0, IG.jsx)("input", {
                     type: "number",
-                    min: pu.I,
-                    max: pu.E,
-                    value: null !== (ku = Tu.worldOptions.worldBorder) && void 0 !== ku ? ku : "",
-                    onChange: uu => {
-                      const Eu = parseInt(uu.target.value);
-                      Ru("worldBorder", isNaN(Eu) ? null : Eu)
+                    min: XG.N,
+                    max: XG.I,
+                    value: null !== (FG = HG.worldOptions.worldBorder) && void 0 !== FG ? FG : "",
+                    onChange: GG => {
+                      const bG = parseInt(GG.target.value);
+                      BG("worldBorder", isNaN(bG) ? null : bG)
                     }
                   })
-                }), (0, ou.jsx)(eu.e, {
+                }), (0, IG.jsx)(EG.e, {
                   label: "classic:disableMobs",
-                  disabled: "Enter" !== Qu,
-                  children: (0, ou.jsx)(eu.c, {
-                    checked: Tu.worldOptions.disableMobs,
-                    setChecked: uu => {
-                      Ru("disableMobs", uu)
+                  disabled: "Enter" !== PG,
+                  children: (0, IG.jsx)(EG.b, {
+                    checked: HG.worldOptions.disableMobs,
+                    setChecked: GG => {
+                      BG("disableMobs", GG)
                     }
                   })
                 })]
               })]
-            }), Fu && (0, ou.jsx)(Ju.d, {
-              callbacks: EE,
-              disabled: "Enter" !== Qu,
-              advancedMode: Lu
+            }), nG && (0, IG.jsx)(iG.d, {
+              callbacks: bb,
+              disabled: "Enter" !== PG,
+              advancedMode: eG
             })]
           })
-        }), (0, ou.jsxs)("div", {
+        }), (0, IG.jsxs)("div", {
           className: "CreateCustomLobbyFooter",
-          children: [(0, ou.jsx)(cu.p, {
+          children: [(0, IG.jsx)(fG.k, {
             className: "CreateCustomLobbyButton",
             padDefaultFocus: !0,
-            loading: "Enter" !== Qu,
+            loading: "Enter" !== PG,
             onClick: () => {
               !async function() {
-                if ("Enter" === Qu) {
-                  iu("Loading"), Su("");
+                if ("Enter" === PG) {
+                  MG("Loading"), sG("");
                   try {
-                    await bu.d.createCustomLobby(Tu), iu("Success")
-                  } catch (uu) {
-                    Su(uu.message), console.error(uu.message), iu("Enter")
+                    await pG.d.createCustomLobby(HG), MG("Success")
+                  } catch (GG) {
+                    sG(GG.message), console.error(GG.message), MG("Enter")
                   }
                 }
               }()
             },
-            children: Vu("general:create")
-          }), Fu && (0, ou.jsx)("div", {
+            children: lG("general:create")
+          }), nG && (0, IG.jsx)("div", {
             className: "CreateCustomLobbyAdvancedToggle",
-            "data-pad-ignore": jE || void 0,
-            children: (0, ou.jsx)(eu.e, {
+            "data-pad-ignore": Zb || void 0,
+            children: (0, IG.jsx)(EG.e, {
               label: "customLobby:showAdvancedOptions",
-              disabled: jE,
+              disabled: Zb,
               onLabelClick: () => {
-                tu(!Lu)
+                RG(!eG)
               },
-              children: (0, ou.jsx)(eu.c, {
-                checked: Lu,
-                setChecked: tu
+              children: (0, IG.jsx)(EG.b, {
+                checked: eG,
+                setChecked: RG
               })
             })
-          }), Wu && (0, ou.jsx)("div", {
+          }), AG && (0, IG.jsx)("div", {
             className: "CreateCustomLobbyError AnimFadeInScaleUp",
-            children: Wu
+            children: AG
           })]
         })]
       })
     }
   },
-  36751: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => qu
+  36686: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => UG
     });
-    var su = ju(1105),
-      Uu = ju.n(su),
-      Zu = ju(58),
-      Xu = ju(4756),
-      lu = ju(1154);
+    var wG = ZG(1006),
+      SG = ZG.n(wG),
+      LG = ZG(51),
+      yG = ZG(4596),
+      kG = ZG(1067);
 
-    function qu(uu) {
+    function UG(GG) {
       let {
-        locked: Eu,
-        children: ju
-      } = uu;
-      const su = (0, Zu.useRef)(null),
-        qu = (0, Xu.b)(su, "y");
-      return (0, lu.jsx)("div", {
-        ref: su,
-        className: Uu()("CreateCustomLobbyBody", {
-          CreateCustomLobbyBodyMoreAbove: qu.before,
-          CreateCustomLobbyBodyMoreBelow: qu.after
+        locked: bG,
+        children: ZG
+      } = GG;
+      const wG = (0, LG.useRef)(null),
+        UG = (0, yG.e)(wG, "y");
+      return (0, kG.jsx)("div", {
+        ref: wG,
+        className: SG()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: UG.before,
+          CreateCustomLobbyBodyMoreBelow: UG.after
         }),
-        "data-pad-ignore": Eu || void 0,
-        children: ju
+        "data-pad-ignore": bG || void 0,
+        children: ZG
       })
     }
   },
-  36740: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Cu,
-      e: () => cu
+  36672: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => VG,
+      f: () => fG
     });
-    var su = ju(58),
-      Uu = ju(1405),
-      Zu = ju(1244),
-      Xu = ju(1393),
-      lu = ju(3667),
-      qu = ju(5099),
-      fu = ju(1154);
+    var wG = ZG(51),
+      SG = ZG(1311),
+      LG = ZG(1151),
+      yG = ZG(1302),
+      kG = ZG(3458),
+      UG = ZG(4955),
+      YG = ZG(1067);
 
-    function Cu(uu) {
+    function VG(GG) {
       let {
-        loading: Eu,
-        schematics: ju,
-        onSchematicPicked: su,
-        selectedSchematicIdList: Uu = [],
-        disableAutoExport: qu
-      } = uu;
+        loading: bG,
+        schematics: ZG,
+        onSchematicPicked: wG,
+        selectedSchematicIdList: SG = [],
+        disableAutoExport: UG
+      } = GG;
       const {
-        t: Cu
-      } = (0, Zu.A)();
-      return (0, fu.jsxs)("div", {
+        t: VG
+      } = (0, LG.w)();
+      return (0, YG.jsxs)("div", {
         className: "SchematicList",
-        children: [Eu && (0, fu.jsx)(Xu.b, {}), !Eu && 0 === ju.length && (0, fu.jsx)("div", {
+        children: [bG && (0, YG.jsx)(yG.b, {}), !bG && 0 === ZG.length && (0, YG.jsx)("div", {
           className: "NoSchematicsText",
-          children: Cu("worldBuilder:noSavedSchematic")
-        }), !Eu && ju.map((uu => (0, fu.jsx)(lu.e, {
+          children: VG("worldBuilder:noSavedSchematic")
+        }), !bG && ZG.map((GG => (0, YG.jsx)(kG.g, {
           source: {
             type: "schematic",
-            schematic: uu
+            schematic: GG
           },
           gameWidth: "25%",
           useLongRatio: !0,
           onClick: () => {
-            su(uu)
+            wG(GG)
           },
-          isSelected: Uu.includes(uu.schematicId),
+          isSelected: SG.includes(GG.schematicId),
           hideCcu: !0,
           hideFavourites: !0,
           showPublishedChip: !0,
           hideUnpublishedChip: !0,
-          disabled: uu.isAutoExported && qu,
+          disabled: GG.isAutoExported && UG,
           disabledReason: "worldBuilder:autoExportDisabled"
-        }, uu.schematicId)))]
+        }, GG.schematicId)))]
       })
     }
 
-    function bu(uu) {
+    function pG(GG) {
       let {
-        ownedSchematics: Eu,
-        currentWorldSchematicId: ju,
-        onClose: Uu
-      } = uu;
+        ownedSchematics: bG,
+        currentWorldSchematicId: ZG,
+        onClose: SG
+      } = GG;
       const {
-        t: Xu
-      } = (0, Zu.A)(), [lu, bu] = (0, su.useState)(null);
-      return (0, fu.jsxs)("div", {
+        t: yG
+      } = (0, LG.w)(), [kG, pG] = (0, wG.useState)(null);
+      return (0, YG.jsxs)("div", {
         className: "SchematicListWindow",
-        children: [null === lu && (0, fu.jsxs)(fu.Fragment, {
-          children: [(0, fu.jsx)("h1", {
+        children: [null === kG && (0, YG.jsxs)(YG.Fragment, {
+          children: [(0, YG.jsx)("h1", {
             className: "SchematicPopupTitle",
-            children: Xu("worldBuilder:schematicList")
-          }), (0, fu.jsx)("h2", {
+            children: yG("worldBuilder:schematicList")
+          }), (0, YG.jsx)("h2", {
             className: "SchematicPopupSubtitle",
-            children: Xu("worldBuilder:clickSchematicForOptions")
-          }), (0, fu.jsx)("div", {
+            children: yG("worldBuilder:clickSchematicForOptions")
+          }), (0, YG.jsx)("div", {
             className: "SchematicPopupSchematicListContainer",
-            children: (0, fu.jsx)(Cu, {
+            children: (0, YG.jsx)(VG, {
               loading: !1,
-              schematics: Eu,
-              onSchematicPicked: uu => {
-                bu(uu)
+              schematics: bG,
+              onSchematicPicked: GG => {
+                pG(GG)
               },
               disableAutoExport: !1
             })
           })]
-        }), null !== lu && (0, fu.jsx)(qu.h, {
-          schematic: lu,
-          inSourceWorld: lu.schematicId === ju,
-          onSchematicUpdate: uu => {
-            bu(uu)
+        }), null !== kG && (0, YG.jsx)(UG.i, {
+          schematic: kG,
+          inSourceWorld: kG.schematicId === ZG,
+          onSchematicUpdate: GG => {
+            pG(GG)
           },
           onClose: () => {
-            bu(null), Uu()
+            pG(null), SG()
           }
         })]
       })
     }
 
-    function cu(uu) {
+    function fG(GG) {
       let {
-        ownedSchematics: Eu,
-        currentWorldSchematicId: ju,
-        onClose: su
-      } = uu;
-      Uu.NotificationProvider.showCustomPopup({
-        body: uu => (0, fu.jsx)(bu, {
-          ownedSchematics: Eu,
-          currentWorldSchematicId: ju,
-          onClose: uu
+        ownedSchematics: bG,
+        currentWorldSchematicId: ZG,
+        onClose: wG
+      } = GG;
+      SG.NotificationProvider.showCustomPopup({
+        body: GG => (0, YG.jsx)(pG, {
+          ownedSchematics: bG,
+          currentWorldSchematicId: ZG,
+          onClose: GG
         }),
         middleScreenPopupClassName: "SchematicPopup",
-        onClose: su,
+        onClose: wG,
         unlockPointerKey: "schematicListPopup"
       })
     }
   },
-  36748: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => fu,
-      g: () => Cu
+  36680: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => YG,
+      f: () => VG
     });
-    ju(58);
-    var su = ju(1105),
-      Uu = ju.n(su),
-      Zu = ju(4809),
-      Xu = ju(337),
-      lu = ju(1244),
-      qu = ju(1154);
+    ZG(51);
+    var wG = ZG(1006),
+      SG = ZG.n(wG),
+      LG = ZG(4655),
+      yG = ZG(333),
+      kG = ZG(1151),
+      UG = ZG(1067);
 
-    function fu(uu) {
+    function YG(GG) {
       let {
-        value: Eu,
-        onChange: ju,
-        showAll: su,
-        disabled: fu = !1
-      } = uu;
+        value: bG,
+        onChange: ZG,
+        showAll: wG,
+        disabled: YG = !1
+      } = GG;
       const {
-        t: Cu
-      } = (0, lu.A)();
-      return (0, qu.jsxs)("div", {
-        className: Uu()("BloxdForm GamemodeForm", {
-          BasicOptions: !su
+        t: VG
+      } = (0, kG.w)();
+      return (0, UG.jsxs)("div", {
+        className: SG()("BloxdForm GamemodeForm", {
+          BasicOptions: !wG
         }),
-        children: [(0, qu.jsx)("div", {
+        children: [(0, UG.jsx)("div", {
           className: "SectionTitle",
-          children: Cu("classic:defaultGamemode")
-        }), (0, qu.jsx)("div", {
+          children: VG("classic:defaultGamemode")
+        }), (0, UG.jsx)("div", {
           className: "SectionBody",
-          children: Zu.G.map((uu => su || (0, Zu.z)(uu) ? (0, qu.jsx)("button", {
+          children: LG.F.map((GG => wG || (0, LG.w)(GG) ? (0, UG.jsx)("button", {
             type: "button",
-            className: Uu()("WorldGamemode", {
-              Selected: Eu === uu
+            className: SG()("WorldGamemode", {
+              Selected: bG === GG
             }),
-            disabled: fu,
+            disabled: YG,
             onClick: () => {
-              ju(uu)
+              ZG(GG)
             },
             style: {
-              "--background-image": `url(${Xu.v[uu]})`
+              "--background-image": `url(${yG.C[GG]})`
             },
-            children: Xu.r[uu]
-          }, uu) : null))
+            children: yG.y[GG]
+          }, GG) : null))
         })]
       })
     }
 
-    function Cu(uu) {
+    function VG(GG) {
       let {
-        mapTypes: Eu,
-        value: ju,
-        onChange: su,
-        showAll: fu,
-        disabled: Cu = !1,
-        children: bu
-      } = uu;
+        mapTypes: bG,
+        value: ZG,
+        onChange: wG,
+        showAll: YG,
+        disabled: VG = !1,
+        children: pG
+      } = GG;
       const {
-        t: cu
-      } = (0, lu.A)();
-      return (0, qu.jsxs)("div", {
-        className: Uu()("BloxdForm MapTypeForm", {
-          BasicOptions: !fu
+        t: fG
+      } = (0, kG.w)();
+      return (0, UG.jsxs)("div", {
+        className: SG()("BloxdForm MapTypeForm", {
+          BasicOptions: !YG
         }),
-        children: [(0, qu.jsx)("div", {
+        children: [(0, UG.jsx)("div", {
           className: "SectionTitle",
-          children: cu("customLobby:mapType")
-        }), (0, qu.jsx)("div", {
+          children: fG("customLobby:mapType")
+        }), (0, UG.jsx)("div", {
           className: "SectionBody",
-          children: Eu.map((uu => fu || (0, Zu.D)(uu) ? (0, qu.jsx)("button", {
+          children: bG.map((GG => YG || (0, LG.A)(GG) ? (0, UG.jsx)("button", {
             type: "button",
-            className: Uu()("MapType", {
-              Selected: ju === uu
+            className: SG()("MapType", {
+              Selected: ZG === GG
             }),
-            disabled: Cu,
+            disabled: VG,
             onClick: () => {
-              su(uu)
+              wG(GG)
             },
             style: {
-              "--background-image": `url(${Xu.k[uu]})`
+              "--background-image": `url(${yG.r[GG]})`
             },
-            children: Xu.j[uu]
-          }, uu) : null))
-        }), bu]
+            children: yG.n[GG]
+          }, GG) : null))
+        }), pG]
       })
     }
   },
-  36737: () => {}
+  36670: () => {}
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

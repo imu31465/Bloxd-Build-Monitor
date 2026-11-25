@@ -1,303 +1,303 @@
 export const id = 27;
 export const ids = [27];
 export const modules = {
-  5003: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Vu,
-      i: () => Ku
+  4864: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => lG,
+      f: () => cG
     });
-    var su = ju(5011),
-      Uu = ju(337);
-    const Zu = 120,
-      Xu = 260,
-      lu = 1.15,
-      qu = 1.2,
-      fu = 2,
-      Cu = 1.08,
-      bu = .8,
-      cu = .95,
-      Nu = 8,
-      Ou = "[\"')\\]\u300d\u300f\uff09]*",
-      Yu = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Ou}$`),
-      hu = new RegExp(`[?\uff1f]${Ou}$`),
-      Du = new RegExp(`[!\uff01]${Ou}$`),
-      gu = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      Mu = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      eu = new RegExp(`[${Mu}]`),
-      Gu = new RegExp(`[${Mu}]|[^${Mu}]+`, "g"),
-      pu = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var wG = ZG(4871),
+      SG = ZG(333);
+    const LG = 120,
+      yG = 260,
+      kG = 1.15,
+      UG = 1.2,
+      YG = 2,
+      VG = 1.08,
+      pG = .8,
+      fG = .95,
+      QG = 8,
+      KG = "[\"')\\]\u300d\u300f\uff09]*",
+      hG = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${KG}$`),
+      dG = new RegExp(`[?\uff1f]${KG}$`),
+      JG = new RegExp(`[!\uff01]${KG}$`),
+      rG = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      zG = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      EG = new RegExp(`[${zG}]`),
+      oG = new RegExp(`[${zG}]|[^${zG}]+`, "g"),
+      XG = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function wu(uu) {
-      let Eu = 2166136261;
-      for (let ju = 0; ju < uu.length; ju++) Eu ^= uu.charCodeAt(ju), Eu = Math.imul(Eu, 16777619);
-      return (Eu >>> 0) / 4294967295 * 2 - 1
+    function uG(GG) {
+      let bG = 2166136261;
+      for (let ZG = 0; ZG < GG.length; ZG++) bG ^= GG.charCodeAt(ZG), bG = Math.imul(bG, 16777619);
+      return (bG >>> 0) / 4294967295 * 2 - 1
     }
 
-    function Ju(uu) {
-      var Eu;
-      if (eu.test(uu)) return 1;
-      const ju = uu.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        su = ju.replace(/[^0-9]/g, "");
-      if (su.length > 0 && !/\p{L}/u.test(ju)) return Math.min(su.length, 4);
-      const Uu = null !== (Eu = ju.match(pu)) && void 0 !== Eu ? Eu : [];
-      if (0 === Uu.length) {
-        var Zu, Xu;
-        const uu = null !== (Zu = null === (Xu = ju.match(/\p{L}/gu)) || void 0 === Xu ? void 0 : Xu.length) && void 0 !== Zu ? Zu : 0;
-        return 0 === uu ? 0 : Math.min(Math.max(1, Math.round(uu / 2.5)), Nu)
+    function iG(GG) {
+      var bG;
+      if (EG.test(GG)) return 1;
+      const ZG = GG.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        wG = ZG.replace(/[^0-9]/g, "");
+      if (wG.length > 0 && !/\p{L}/u.test(ZG)) return Math.min(wG.length, 4);
+      const SG = null !== (bG = ZG.match(XG)) && void 0 !== bG ? bG : [];
+      if (0 === SG.length) {
+        var LG, yG;
+        const GG = null !== (LG = null === (yG = ZG.match(/\p{L}/gu)) || void 0 === yG ? void 0 : yG.length) && void 0 !== LG ? LG : 0;
+        return 0 === GG ? 0 : Math.min(Math.max(1, Math.round(GG / 2.5)), QG)
       }
-      const lu = ju.replace(/[^\p{L}]/gu, ""),
-        qu = Uu.length > 1 && "e" === Uu.at(-1) && lu.endsWith("e") && !lu.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(uu.replace(/[^\p{L}]/gu, ""));
-      return Math.min(Uu.length - (qu ? 1 : 0), Nu)
+      const kG = ZG.replace(/[^\p{L}]/gu, ""),
+        UG = SG.length > 1 && "e" === SG.at(-1) && kG.endsWith("e") && !kG.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(GG.replace(/[^\p{L}]/gu, ""));
+      return Math.min(SG.length - (UG ? 1 : 0), QG)
     }
 
-    function du(uu) {
-      return uu.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function CG(GG) {
+      return GG.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function au(uu) {
-      const Eu = uu.replace(/[^\p{L}]/gu, "");
-      return Eu.length >= 2 && Eu === Eu.toUpperCase() && Eu !== Eu.toLowerCase()
+    function WG(GG) {
+      const bG = GG.replace(/[^\p{L}]/gu, "");
+      return bG.length >= 2 && bG === bG.toUpperCase() && bG !== bG.toLowerCase()
     }
 
-    function Pu(uu, Eu) {
-      var ju;
-      const Nu = Eu && (0, su.l)(Eu),
-        Ou = null !== (ju = null === Nu || void 0 === Nu ? void 0 : Nu.syllableMs) && void 0 !== ju ? ju : su.e,
-        Mu = function(uu) {
-          const Eu = [];
-          for (const su of (0, Uu.gc)(uu))
-            if ("string" === typeof su)
-              for (const uu of su.split(/(\s+)/)) {
-                if ("" === uu) continue;
-                if (/^\s+$/.test(uu)) {
-                  Eu.push({
+    function mG(GG, bG) {
+      var ZG;
+      const QG = bG && (0, wG.i)(bG),
+        KG = null !== (ZG = null === QG || void 0 === QG ? void 0 : QG.syllableMs) && void 0 !== ZG ? ZG : wG.d,
+        zG = function(GG) {
+          const bG = [];
+          for (const wG of (0, SG.xc)(GG))
+            if ("string" === typeof wG)
+              for (const GG of wG.split(/(\s+)/)) {
+                if ("" === GG) continue;
+                if (/^\s+$/.test(GG)) {
+                  bG.push({
                     kind: "space",
-                    text: uu
+                    text: GG
                   });
                   continue
                 }
-                if (!eu.test(uu)) {
-                  Eu.push({
+                if (!EG.test(GG)) {
+                  bG.push({
                     kind: "word",
-                    text: uu,
+                    text: GG,
                     delayMs: 0
                   });
                   continue
                 }
-                let su = !0;
-                for (const Uu of null !== (ju = uu.match(Gu)) && void 0 !== ju ? ju : []) {
-                  var ju;
-                  const uu = Eu.at(-1);
-                  su || "word" !== (null === uu || void 0 === uu ? void 0 : uu.kind) || eu.test(Uu) || /[\p{L}\p{N}]/u.test(Uu) ? (su || Eu.push({
+                let wG = !0;
+                for (const SG of null !== (ZG = GG.match(oG)) && void 0 !== ZG ? ZG : []) {
+                  var ZG;
+                  const GG = bG.at(-1);
+                  wG || "word" !== (null === GG || void 0 === GG ? void 0 : GG.kind) || EG.test(SG) || /[\p{L}\p{N}]/u.test(SG) ? (wG || bG.push({
                     kind: "space",
                     text: "\u200b"
-                  }), Eu.push({
+                  }), bG.push({
                     kind: "word",
-                    text: Uu,
+                    text: SG,
                     delayMs: 0
-                  }), su = !1) : uu.text += Uu
+                  }), wG = !1) : GG.text += SG
                 }
-              } else Eu.push({
+              } else bG.push({
                 kind: "icon",
-                text: su.icon,
+                text: wG.icon,
                 delayMs: 0
               });
-          return Eu
-        }(uu),
-        pu = [];
-      let Pu = [];
-      for (const su of Mu) "space" !== su.kind && (Pu.push(su), Yu.test(su.text) && (pu.push(Pu), Pu = []));
-      pu.push(Pu);
-      const ou = [];
-      let ku = 0;
-      for (const su of pu) {
-        var mu, vu;
-        const uu = null !== (mu = null === (vu = su.at(-1)) || void 0 === vu ? void 0 : vu.text) && void 0 !== mu ? mu : "",
-          Eu = hu.test(uu),
-          ju = Du.test(uu),
-          Uu = su.map((uu => "word" === uu.kind ? Ju(uu.text) : 1)),
-          Mu = Uu.findLastIndex((uu => uu > 0));
-        for (const [hu, Du] of su.entries()) {
-          const uu = "word" === Du.kind,
-            su = Uu[hu];
-          Du.delayMs = ku;
-          for (let Uu = 0; Nu && Uu < su; Uu++) {
+          return bG
+        }(GG),
+        XG = [];
+      let mG = [];
+      for (const wG of zG) "space" !== wG.kind && (mG.push(wG), hG.test(wG.text) && (XG.push(mG), mG = []));
+      XG.push(mG);
+      const IG = [];
+      let FG = 0;
+      for (const wG of XG) {
+        var vG, aG;
+        const GG = null !== (vG = null === (aG = wG.at(-1)) || void 0 === aG ? void 0 : aG.text) && void 0 !== vG ? vG : "",
+          bG = dG.test(GG),
+          ZG = JG.test(GG),
+          SG = wG.map((GG => "word" === GG.kind ? iG(GG.text) : 1)),
+          zG = SG.findLastIndex((GG => GG > 0));
+        for (const [dG, JG] of wG.entries()) {
+          const GG = "word" === JG.kind,
+            wG = SG[dG];
+          JG.delayMs = FG;
+          for (let SG = 0; QG && SG < wG; SG++) {
             const {
-              intonation: Zu
-            } = Nu;
-            let Xu = Mu > 0 ? -Zu.declineSemitones * (hu / Mu) : 0;
-            Xu += wu(`${du(Du.text)}|${Uu}`) * Zu.variationSemitones;
-            const Yu = Math.min(1, Zu.variationSemitones);
-            let gu = Nu.glideSemitones,
-              eu = 1;
-            ju && (Xu += Zu.exclaimLiftSemitones, eu *= lu), Eu && hu === Mu && (Xu += Zu.questionRiseSemitones * (su > 1 ? .5 + .5 * Uu / (su - 1) : 1), Uu === su - 1 && (gu = Math.abs(gu) + Zu.questionRiseSemitones / 2)), uu && au(Du.text) && (Xu += fu * Yu, eu *= qu), su > 1 && 0 === Uu && (Xu += bu * Yu, eu *= Cu), ou.push({
-              atMs: ku + Uu * Ou,
-              semitones: Xu,
-              glideSemitones: gu,
-              durationMs: Uu < su - 1 ? Math.min(Nu.durationMs, Ou * cu) : Nu.durationMs,
-              level: eu
+              intonation: LG
+            } = QG;
+            let yG = zG > 0 ? -LG.declineSemitones * (dG / zG) : 0;
+            yG += uG(`${CG(JG.text)}|${SG}`) * LG.variationSemitones;
+            const hG = Math.min(1, LG.variationSemitones);
+            let rG = QG.glideSemitones,
+              EG = 1;
+            ZG && (yG += LG.exclaimLiftSemitones, EG *= kG), bG && dG === zG && (yG += LG.questionRiseSemitones * (wG > 1 ? .5 + .5 * SG / (wG - 1) : 1), SG === wG - 1 && (rG = Math.abs(rG) + LG.questionRiseSemitones / 2)), GG && WG(JG.text) && (yG += YG * hG, EG *= UG), wG > 1 && 0 === SG && (yG += pG * hG, EG *= VG), IG.push({
+              atMs: FG + SG * KG,
+              semitones: yG,
+              glideSemitones: rG,
+              durationMs: SG < wG - 1 ? Math.min(QG.durationMs, KG * fG) : QG.durationMs,
+              level: EG
             })
           }
-          ku += su * Ou + (Yu.test(Du.text) ? Xu : gu.test(Du.text) ? Zu : 0)
+          FG += wG * KG + (hG.test(JG.text) ? yG : rG.test(JG.text) ? LG : 0)
         }
       }
       return {
-        pieces: Mu.map((uu => "space" === uu.kind ? uu : "icon" === uu.kind ? {
+        pieces: zG.map((GG => "space" === GG.kind ? GG : "icon" === GG.kind ? {
           kind: "icon",
-          icon: uu.text,
-          delayMs: uu.delayMs
+          icon: GG.text,
+          delayMs: GG.delayMs
         } : {
           kind: "word",
-          text: uu.text,
-          delayMs: uu.delayMs
+          text: GG.text,
+          delayMs: GG.delayMs
         })),
-        blips: ou
+        blips: IG
       }
     }
-    var ou = ju(1244),
-      ku = ju(1303),
-      mu = ju(1995);
+    var IG = ZG(1151),
+      FG = ZG(1204),
+      vG = ZG(1903);
 
-    function vu(uu) {
-      if ("string" === typeof uu) return uu;
-      const Eu = ku.h.get().getCurrentLanguageCode();
-      return (0, ou.u)(Eu, uu.translationKey, (0, ou.r)(uu.params, mu.e.shown))
+    function aG(GG) {
+      if ("string" === typeof GG) return GG;
+      const bG = FG.d.get().getCurrentLanguageCode();
+      return (0, IG.o)(bG, GG.translationKey, (0, IG.k)(GG.params, vG.b.shown))
     }
 
-    function Ku(uu) {
-      const Eu = void 0 === uu.voice ? null : (0, su.o)(uu.voice),
-        ju = Eu && (0, su.l)(Eu);
+    function cG(GG) {
+      const bG = void 0 === GG.voice ? null : (0, wG.j)(GG.voice),
+        ZG = bG && (0, wG.i)(bG);
       return {
-        plan: Pu(vu(uu.line), ju),
-        synth: ju
+        plan: mG(aG(GG.line), ZG),
+        synth: ZG
       }
     }
 
-    function Vu(uu) {
-      const Eu = [];
-      let ju = [];
-      for (const [Uu, Zu] of uu.entries()) {
-        var su;
-        "space" === Zu.kind && (" " !== Zu.text || "icon" !== (null === (su = uu[Uu + 1]) || void 0 === su ? void 0 : su.kind)) ? (ju.length > 0 && Eu.push(ju), Eu.push([Zu]), ju = []) : ju.push(Zu)
+    function lG(GG) {
+      const bG = [];
+      let ZG = [];
+      for (const [SG, LG] of GG.entries()) {
+        var wG;
+        "space" === LG.kind && (" " !== LG.text || "icon" !== (null === (wG = GG[SG + 1]) || void 0 === wG ? void 0 : wG.kind)) ? (ZG.length > 0 && bG.push(ZG), bG.push([LG]), ZG = []) : ZG.push(LG)
       }
-      return ju.length > 0 && Eu.push(ju), Eu
+      return ZG.length > 0 && bG.push(ZG), bG
     }
   },
-  5019: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Cu,
-      d: () => bu
+  4874: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => VG,
+      d: () => pG
     });
-    var su = ju(5026),
-      Uu = ju(22);
-    const Zu = .25,
-      Xu = .85,
-      lu = .02,
-      qu = .01;
+    var wG = ZG(4883),
+      SG = ZG(17);
+    const LG = .25,
+      yG = .85,
+      kG = .02,
+      UG = .01;
 
-    function fu(uu, Eu, ju, su, Uu, Zu, lu) {
+    function YG(GG, bG, ZG, wG, SG, LG, kG) {
       const {
-        waveform: qu,
-        pitchHz: fu,
-        attackMs: Cu,
-        releaseMs: bu,
-        lowpassHz: cu
-      } = ju, Nu = Uu + su.durationMs / 1e3, Ou = fu * 2 ** (su.semitones / 12), Yu = uu.createOscillator();
-      Yu.type = qu, Yu.frequency.setValueAtTime(Ou, Uu), Yu.frequency.exponentialRampToValueAtTime(Ou * 2 ** (su.glideSemitones / 12), Nu);
-      const hu = Uu + Math.min(Cu, su.durationMs) / 1e3,
-        Du = uu.createGain();
-      Du.gain.setValueAtTime(0, Uu), Du.gain.linearRampToValueAtTime(Zu, hu), Du.gain.linearRampToValueAtTime(Zu * Xu, Math.max(hu, Nu - bu / 1e3)), Du.gain.linearRampToValueAtTime(0, Nu);
-      const gu = [Yu];
-      if (null !== cu) {
-        const Eu = uu.createBiquadFilter();
-        Eu.type = "lowpass", Eu.frequency.value = cu, gu.push(Eu)
+        waveform: UG,
+        pitchHz: YG,
+        attackMs: VG,
+        releaseMs: pG,
+        lowpassHz: fG
+      } = ZG, QG = SG + wG.durationMs / 1e3, KG = YG * 2 ** (wG.semitones / 12), hG = GG.createOscillator();
+      hG.type = UG, hG.frequency.setValueAtTime(KG, SG), hG.frequency.exponentialRampToValueAtTime(KG * 2 ** (wG.glideSemitones / 12), QG);
+      const dG = SG + Math.min(VG, wG.durationMs) / 1e3,
+        JG = GG.createGain();
+      JG.gain.setValueAtTime(0, SG), JG.gain.linearRampToValueAtTime(LG, dG), JG.gain.linearRampToValueAtTime(LG * yG, Math.max(dG, QG - pG / 1e3)), JG.gain.linearRampToValueAtTime(0, QG);
+      const rG = [hG];
+      if (null !== fG) {
+        const bG = GG.createBiquadFilter();
+        bG.type = "lowpass", bG.frequency.value = fG, rG.push(bG)
       }
-      gu.push(Du, Eu);
-      for (let Xu = 1; Xu < gu.length; Xu++) gu[Xu - 1].connect(gu[Xu]);
-      return Yu.onended = () => {
-        for (const uu of gu.slice(0, -1)) uu.disconnect();
-        lu()
-      }, Yu.start(Uu), Yu.stop(Nu), Yu
+      rG.push(JG, bG);
+      for (let yG = 1; yG < rG.length; yG++) rG[yG - 1].connect(rG[yG]);
+      return hG.onended = () => {
+        for (const GG of rG.slice(0, -1)) GG.disconnect();
+        kG()
+      }, hG.start(SG), hG.stop(QG), hG
     }
 
-    function Cu(uu, Eu, ju, su, Uu, Xu) {
-      if (0 === su.length) return Xu(), () => {};
-      const Cu = Zu * ju.volume * Uu,
-        bu = uu.createGain();
-      bu.connect(Eu);
-      const cu = uu.currentTime + lu,
-        Nu = new Set;
-      for (const Zu of su) {
-        const Eu = fu(uu, bu, ju, Zu, cu + Zu.atMs / 1e3, Cu * Zu.level, (() => {
-          Nu.delete(Eu), 0 === Nu.size && (bu.disconnect(), Xu())
+    function VG(GG, bG, ZG, wG, SG, yG) {
+      if (0 === wG.length) return yG(), () => {};
+      const VG = LG * ZG.volume * SG,
+        pG = GG.createGain();
+      pG.connect(bG);
+      const fG = GG.currentTime + kG,
+        QG = new Set;
+      for (const LG of wG) {
+        const bG = YG(GG, pG, ZG, LG, fG + LG.atMs / 1e3, VG * LG.level, (() => {
+          QG.delete(bG), 0 === QG.size && (pG.disconnect(), yG())
         }));
-        Nu.add(Eu)
+        QG.add(bG)
       }
       return () => {
-        const Eu = uu.currentTime;
-        bu.gain.setTargetAtTime(0, Eu, qu);
-        for (const uu of Nu) try {
-          uu.stop(Eu + 5 * qu)
+        const bG = GG.currentTime;
+        pG.gain.setTargetAtTime(0, bG, UG);
+        for (const GG of QG) try {
+          GG.stop(bG + 5 * UG)
         } catch {}
       }
     }
 
-    function bu(uu, Eu) {
-      var ju;
-      const Zu = su.Howler.ctx,
-        Xu = su.Howler.masterGain;
-      if (!Zu || !Xu || !Uu.d.get("soundOnFromAd")) return () => {};
-      const lu = su.Howler;
-      return null === (ju = lu._autoResume) || void 0 === ju || ju.call(lu), Cu(Zu, Xu, uu, Eu, Uu.d.get("soundVolume"), (() => {
-        var uu;
-        null === (uu = lu._autoSuspend) || void 0 === uu || uu.call(lu)
+    function pG(GG, bG) {
+      var ZG;
+      const LG = wG.Howler.ctx,
+        yG = wG.Howler.masterGain;
+      if (!LG || !yG || !SG.e.get("soundOnFromAd")) return () => {};
+      const kG = wG.Howler;
+      return null === (ZG = kG._autoResume) || void 0 === ZG || ZG.call(kG), VG(LG, yG, GG, bG, SG.e.get("soundVolume"), (() => {
+        var GG;
+        null === (GG = kG._autoSuspend) || void 0 === GG || GG.call(kG)
       }))
     }
   },
-  39455: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      closeClientGame: () => ru,
-      createDefaultClientPlugins: () => Vu
+  39558: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      closeClientGame: () => jG,
+      createDefaultClientPlugins: () => lG
     });
-    var su = ju(349);
+    var wG = ZG(352);
 
-    function Uu() {
-      let uu;
+    function SG() {
+      let GG;
       return {
-        onCreate(Eu) {
-          uu = Eu
+        onCreate(bG) {
+          GG = bG
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(Eu, ju, Uu, Zu, Xu, lu) {
-          var qu, fu;
-          if ("Iron Chest" !== uu.getMetaInfo(Xu).rootName) return;
-          if (!uu.hasEffect(Eu, "Thief")) return;
-          const Cu = uu.getBlockData(ju, Uu, Zu);
-          return uu.getPlayerDbId(Eu) !== (null === Cu || void 0 === Cu || null === (qu = Cu.persisted) || void 0 === qu || null === (fu = qu.shared) || void 0 === fu ? void 0 : fu.ownerDbId) ? (uu.sendMessage(Eu, [{
+        onPlayerAttemptAltAction(bG, ZG, SG, LG, yG, kG) {
+          var UG, YG;
+          if ("Iron Chest" !== GG.getMetaInfo(yG).rootName) return;
+          if (!GG.hasEffect(bG, "Thief")) return;
+          const VG = GG.getBlockData(ZG, SG, LG);
+          return GG.getPlayerDbId(bG) !== (null === VG || void 0 === VG || null === (UG = VG.persisted) || void 0 === UG || null === (YG = UG.shared) || void 0 === YG ? void 0 : YG.ownerDbId) ? (GG.sendMessage(bG, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: su.G.redUiText
+              color: wG.O.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var Zu = ju(4427),
-      Xu = ju(1298);
-    const lu = 8.4,
-      qu = 1e-4,
-      fu = .15,
-      Cu = .04,
-      bu = [.12, .04, .12],
-      cu = 26,
-      Nu = {
+    var LG = ZG(4255),
+      yG = ZG(1198);
+    const kG = 8.4,
+      UG = 1e-4,
+      YG = .15,
+      VG = .04,
+      pG = [.12, .04, .12],
+      fG = 26,
+      QG = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        Mb: 1,
-        minLifeTime: qu,
-        maxLifeTime: qu,
+        rp: 1,
+        minLifeTime: UG,
+        maxLifeTime: UG,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -310,19 +310,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: Zu.e.Standard
+        blendMode: LG.c.Standard
       },
-      Ou = {
+      KG = {
         texture: "bubble",
         mipmaps: !1,
-        Mb: 96,
+        rp: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: cu,
+        emitRate: fG,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -336,159 +336,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: Zu.e.Standard
+        blendMode: LG.c.Standard
       },
-      Yu = [0, 0, 0],
-      hu = [0, 0, 0];
+      hG = [0, 0, 0],
+      dG = [0, 0, 0];
 
-    function Du(uu) {
-      const Eu = new Map;
-      let ju = null;
+    function JG(GG) {
+      const bG = new Map;
+      let ZG = null;
 
-      function su(uu) {
-        var Eu, ju;
-        null === (Eu = uu.bubbles) || void 0 === Eu || Eu.stop(), null === (ju = uu.fish) || void 0 === ju || ju.stop()
+      function wG(GG) {
+        var bG, ZG;
+        null === (bG = GG.bubbles) || void 0 === bG || bG.stop(), null === (ZG = GG.fish) || void 0 === ZG || ZG.stop()
       }
 
-      function Uu(ju) {
-        if (!ju.readDrawnPosition(uu, hu)) {
-          for (const uu of Eu.values()) {
-            var su;
-            null === (su = uu.bubbles) || void 0 === su || su.setEmitRate(0)
+      function SG(ZG) {
+        if (!ZG.readDrawnPosition(GG, dG)) {
+          for (const GG of bG.values()) {
+            var wG;
+            null === (wG = GG.bubbles) || void 0 === wG || wG.setEmitRate(0)
           }
           return
         }
-        const Uu = performance.now();
-        for (const [uu, Xu] of Eu) {
-          var Zu;
-          if (null === (Zu = Xu.bubbles) || void 0 === Zu || Zu.setEmitRate(0), !ju.readDrawnPosition(uu, Yu)) continue;
-          if (!((Yu[0] - hu[0]) ** 2 + (Yu[1] - hu[1]) ** 2 + (Yu[2] - hu[2]) ** 2 < 900)) continue;
-          const Eu = Math.max(0, Xu.biteAt - Uu),
-            su = Xu.approachDurationMs > 0 ? Math.min(1, 1 - Eu / Xu.approachDurationMs) : 1,
-            qu = (Xu.approachDurationMs - Eu) / 1e3,
-            Du = Xu.phase + .25 * Math.sin(1.7 * qu + Xu.phase),
-            gu = Math.min(Xu.approachDurationMs / 3e3 * 2.8, lu) * (1 - su) * (1 + .15 * Math.sin(2.1 * qu + Xu.phase)),
-            Mu = Math.min(1, 4 * (1 - su)),
-            eu = (.45 * Math.sin(4.1 * qu + Xu.phase) + .18 * Math.sin(9.7 * qu + 2 * Xu.phase)) * Mu,
-            Gu = Yu[0] + Math.cos(Du) * gu - Math.sin(Du) * eu,
-            pu = Math.ceil(Xu.surfaceY),
-            wu = Yu[2] + Math.sin(Du) * gu + Math.cos(Du) * eu,
+        const SG = performance.now();
+        for (const [GG, yG] of bG) {
+          var LG;
+          if (null === (LG = yG.bubbles) || void 0 === LG || LG.setEmitRate(0), !ZG.readDrawnPosition(GG, hG)) continue;
+          if (!((hG[0] - dG[0]) ** 2 + (hG[1] - dG[1]) ** 2 + (hG[2] - dG[2]) ** 2 < 900)) continue;
+          const bG = Math.max(0, yG.biteAt - SG),
+            wG = yG.approachDurationMs > 0 ? Math.min(1, 1 - bG / yG.approachDurationMs) : 1,
+            UG = (yG.approachDurationMs - bG) / 1e3,
+            JG = yG.phase + .25 * Math.sin(1.7 * UG + yG.phase),
+            rG = Math.min(yG.approachDurationMs / 3e3 * 2.8, kG) * (1 - wG) * (1 + .15 * Math.sin(2.1 * UG + yG.phase)),
+            zG = Math.min(1, 4 * (1 - wG)),
+            EG = (.45 * Math.sin(4.1 * UG + yG.phase) + .18 * Math.sin(9.7 * UG + 2 * yG.phase)) * zG,
+            oG = hG[0] + Math.cos(JG) * rG - Math.sin(JG) * EG,
+            XG = Math.ceil(yG.surfaceY),
+            uG = hG[2] + Math.sin(JG) * rG + Math.cos(JG) * EG,
             {
-              fishAt: Ju,
-              bubblesAt: du
-            } = Xu;
-          Ju[0] = du[0] = Gu, Ju[1] = pu + fu, du[1] = pu + Cu, Ju[2] = du[2] = wu, Xu.fish ??= ju.createParticles(Nu, {
-            pos: Ju
-          }), Xu.fish.moveTo(Ju), Xu.fish.emit(1), Xu.bubbles ??= ju.createParticles(Ou, {
-            pos: du,
-            half: bu
-          }), Xu.bubbles.moveTo(du), Xu.bubbles.setEmitRate(cu + 32 * (.5 + .5 * Math.sin(9 * qu + Xu.phase)) ** 4 + 13 * su)
+              fishAt: iG,
+              bubblesAt: CG
+            } = yG;
+          iG[0] = CG[0] = oG, iG[1] = XG + YG, CG[1] = XG + VG, iG[2] = CG[2] = uG, yG.fish ??= ZG.createParticles(QG, {
+            pos: iG
+          }), yG.fish.moveTo(iG), yG.fish.emit(1), yG.bubbles ??= ZG.createParticles(KG, {
+            pos: CG,
+            half: pG
+          }), yG.bubbles.moveTo(CG), yG.bubbles.setEmitRate(fG + 32 * (.5 + .5 * Math.sin(9 * UG + yG.phase)) ** 4 + 13 * wG)
         }
       }
       return {
-        onCreate(uu) {
-          ju = uu
+        onCreate(GG) {
+          ZG = GG
         },
         onAfterRender() {
-          ju && Uu(ju)
+          ZG && SG(ZG)
         },
         onClose() {
-          for (const uu of Eu.values()) su(uu);
-          Eu.clear(), ju = null
+          for (const GG of bG.values()) wG(GG);
+          bG.clear(), ZG = null
         },
-        onReceivedMessageFromServer(uu, ju) {
-          if (uu !== Xu.x) return;
+        onReceivedMessageFromServer(GG, ZG) {
+          if (GG !== yG.A) return;
           const {
-            hookId: Uu,
-            waiting: Zu
-          } = ju;
-          if (Zu) Eu.has(Uu) || Eu.set(Uu, {
+            hookId: SG,
+            waiting: LG
+          } = ZG;
+          if (LG) bG.has(SG) || bG.set(SG, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + Zu.remainingMs,
-            approachDurationMs: Zu.durationMs,
-            surfaceY: Zu.surfaceY,
+            biteAt: performance.now() + LG.remainingMs,
+            approachDurationMs: LG.durationMs,
+            surfaceY: LG.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const uu = Eu.get(Uu);
-            uu && su(uu), Eu.delete(Uu)
+            const GG = bG.get(SG);
+            GG && wG(GG), bG.delete(SG)
           }
         }
       }
     }
-    var gu = ju(5019),
-      Mu = ju(5003);
+    var rG = ZG(4874),
+      zG = ZG(4864);
 
-    function eu(uu) {
-      let Eu, ju = null,
-        su = null;
-      const Uu = () => {
-        var uu;
-        null === (uu = su) || void 0 === uu || uu(), su = null
+    function EG(GG) {
+      let bG, ZG = null,
+        wG = null;
+      const SG = () => {
+        var GG;
+        null === (GG = wG) || void 0 === GG || GG(), wG = null
       };
       return {
-        onCreate(su) {
-          Eu = su, ju = Eu.getClientOption(uu, "dialogue")
+        onCreate(wG) {
+          bG = wG, ZG = bG.getClientOption(GG, "dialogue")
         },
         onAfterRender() {
-          if (!Eu) return;
-          const Zu = Eu.getClientOption(uu, "dialogue");
-          if (Zu === ju) return;
-          if (ju = Zu, Uu(), !Zu || !1 === Zu.animateIn) return;
+          if (!bG) return;
+          const LG = bG.getClientOption(GG, "dialogue");
+          if (LG === ZG) return;
+          if (ZG = LG, SG(), !LG || !1 === LG.animateIn) return;
           const {
-            plan: Xu,
-            synth: lu
-          } = (0, Mu.i)(Zu);
-          lu && (su = (0, gu.d)(lu, Xu.blips))
+            plan: yG,
+            synth: kG
+          } = (0, zG.f)(LG);
+          kG && (wG = (0, rG.d)(kG, yG.blips))
         },
-        onClose: Uu
+        onClose: SG
       }
     }
-    var Gu = ju(39461);
-    const pu = [
+    var oG = ZG(39565);
+    const XG = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      wu = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      Ju = [0, 1, 2, 0, 2, 3];
+      uG = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      iG = [0, 1, 2, 0, 2, 3];
 
-    function du(uu, Eu, ju) {
-      var su;
-      let [Uu, Zu, Xu] = Eu;
-      if (uu.hasPackModel("Furnace")) return null;
-      const lu = ((null !== (su = uu.getMetaInfo(ju).rot) && void 0 !== su ? su : 1) - 1) * Math.PI / 2,
-        qu = Math.PI + lu,
-        fu = Math.cos(qu),
-        Cu = Math.sin(qu),
-        bu = [];
-      for (const [Ou, Yu] of pu) bu.push(Ou * fu, Yu, -Ou * Cu);
-      const cu = {
-          positions: bu,
-          indices: Ju,
-          uvs: wu
+    function CG(GG, bG, ZG) {
+      var wG;
+      let [SG, LG, yG] = bG;
+      if (GG.hasPackModel("Furnace")) return null;
+      const kG = ((null !== (wG = GG.getMetaInfo(ZG).rot) && void 0 !== wG ? wG : 1) - 1) * Math.PI / 2,
+        UG = Math.PI + kG,
+        YG = Math.cos(UG),
+        VG = Math.sin(UG),
+        pG = [];
+      for (const [KG, hG] of XG) pG.push(KG * YG, hG, -KG * VG);
+      const fG = {
+          positions: pG,
+          indices: iG,
+          uvs: uG
         },
-        Nu = [Uu + .5 + .51 * Math.sin(lu), Zu + .375, Xu + .5 + .51 * Math.cos(lu)];
-      return uu.createGameMesh(cu, {
+        QG = [SG + .5 + .51 * Math.sin(kG), LG + .375, yG + .5 + .51 * Math.cos(kG)];
+      return GG.createGameMesh(fG, {
         kind: "furnaceFire"
-      }, Nu)
+      }, QG)
     }
 
-    function au(uu) {
-      return Math.floor(uu / 200) % 3
+    function WG(GG) {
+      return Math.floor(GG / 200) % 3
     }
 
-    function Pu(uu, Eu, ju) {
-      uu.setGameMesh(Eu, {
-        uvOffset: [0, ju / 3]
+    function mG(GG, bG, ZG) {
+      GG.setGameMesh(bG, {
+        uvOffset: [0, ZG / 3]
       })
     }
-    const ou = [.12, .025, .12],
-      ku = [{
+    const IG = [.12, .025, .12],
+      FG = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -501,7 +501,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: Zu.e.Standard,
+          blendMode: LG.c.Standard,
           soft: !0
         },
         perSecond: 7
@@ -518,196 +518,196 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: Zu.e.Add,
+          blendMode: LG.c.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class mu {
+    class vG {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(uu, Eu) {
-        const ju = uu.getBlockId(Eu[0], Eu[1], Eu[2]);
-        if ("Furnace" !== uu.getMetaInfo(ju).rootName) return;
-        const su = performance.now();
-        let Uu = this.smokes.find((uu => uu.pos[0] === Eu[0] && uu.pos[1] === Eu[1] && uu.pos[2] === Eu[2] && uu.ul === ju));
-        if (Uu || (Uu = {
-            pos: [Eu[0], Eu[1], Eu[2]],
-            ul: ju,
-            endMs: su,
+      start(GG, bG) {
+        const ZG = GG.getBlockId(bG[0], bG[1], bG[2]);
+        if ("Furnace" !== GG.getMetaInfo(ZG).rootName) return;
+        const wG = performance.now();
+        let SG = this.smokes.find((GG => GG.pos[0] === bG[0] && GG.pos[1] === bG[1] && GG.pos[2] === bG[2] && GG.Gk === ZG));
+        if (SG || (SG = {
+            pos: [bG[0], bG[1], bG[2]],
+            Gk: ZG,
+            endMs: wG,
             lastBurstMs: -1 / 0,
-            pending: new Array(ku.length).fill(0),
-            fire: du(uu, Eu, ju)
-          }, this.smokes.push(Uu), null !== Uu.fire && (Pu(uu, Uu.fire, au(su)), this.shownFireFrame = -1)), Uu.endMs = su + 6e3, this.smokes.length > 4) {
-          const Eu = this.smokes.reduce(((uu, Eu) => Eu.endMs < uu.endMs ? Eu : uu));
-          vu(uu, Eu), this.smokes.splice(this.smokes.indexOf(Eu), 1)
+            pending: new Array(FG.length).fill(0),
+            fire: CG(GG, bG, ZG)
+          }, this.smokes.push(SG), null !== SG.fire && (mG(GG, SG.fire, WG(wG)), this.shownFireFrame = -1)), SG.endMs = wG + 6e3, this.smokes.length > 4) {
+          const bG = this.smokes.reduce(((GG, bG) => bG.endMs < GG.endMs ? bG : GG));
+          aG(GG, bG), this.smokes.splice(this.smokes.indexOf(bG), 1)
         }
-        su - Uu.lastBurstMs >= 300 && (Uu.lastBurstMs = su, ku.forEach(((uu, Eu) => {
-          Uu.pending[Eu] += uu.style.count
+        wG - SG.lastBurstMs >= 300 && (SG.lastBurstMs = wG, FG.forEach(((GG, bG) => {
+          SG.pending[bG] += GG.style.count
         })))
       }
-      onAfterRender(uu, Eu) {
+      onAfterRender(GG, bG) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const ju = performance.now();
-        this.smokes = this.smokes.filter((Eu => {
-          const [su, Uu, Zu] = Eu.pos, Xu = ju < Eu.endMs && uu.getBlockId(su, Uu, Zu) === Eu.ul;
-          return Xu || vu(uu, Eu), Xu
+        const ZG = performance.now();
+        this.smokes = this.smokes.filter((bG => {
+          const [wG, SG, LG] = bG.pos, yG = ZG < bG.endMs && GG.getBlockId(wG, SG, LG) === bG.Gk;
+          return yG || aG(GG, bG), yG
         }));
-        const su = au(ju);
-        if (su !== this.shownFireFrame) {
-          this.shownFireFrame = su;
-          for (const Eu of this.smokes) null !== Eu.fire && Pu(uu, Eu.fire, su)
+        const wG = WG(ZG);
+        if (wG !== this.shownFireFrame) {
+          this.shownFireFrame = wG;
+          for (const bG of this.smokes) null !== bG.fire && mG(GG, bG.fire, wG)
         }
-        if (!uu.particlesEnabled()) {
-          for (const uu of this.smokes) uu.pending.fill(0);
+        if (!GG.particlesEnabled()) {
+          for (const GG of this.smokes) GG.pending.fill(0);
           return
         }
-        const Uu = Math.min(Eu, 250) / 1e3;
-        for (const Zu of this.smokes) {
-          const [Eu, su, Xu] = Zu.pos;
-          if (0 !== uu.getBlockId(Eu, su + 1, Xu)) {
-            Zu.pending.fill(0);
+        const SG = Math.min(bG, 250) / 1e3;
+        for (const LG of this.smokes) {
+          const [bG, wG, yG] = LG.pos;
+          if (0 !== GG.getBlockId(bG, wG + 1, yG)) {
+            LG.pending.fill(0);
             continue
           }
-          const lu = (Zu.endMs - ju) / 6e3,
-            qu = this.centre;
-          qu[0] = Eu + .5, qu[1] = su + 1.275, qu[2] = Xu + .5, ku.forEach(((Eu, ju) => {
-            Zu.pending[ju] += Eu.perSecond * lu * Uu;
-            const su = Math.floor(Zu.pending[ju]);
-            su > 0 && this.emit(uu, ju, qu, su) && (Zu.pending[ju] -= su)
+          const kG = (LG.endMs - ZG) / 6e3,
+            UG = this.centre;
+          UG[0] = bG + .5, UG[1] = wG + 1.275, UG[2] = yG + .5, FG.forEach(((bG, ZG) => {
+            LG.pending[ZG] += bG.perSecond * kG * SG;
+            const wG = Math.floor(LG.pending[ZG]);
+            wG > 0 && this.emit(GG, ZG, UG, wG) && (LG.pending[ZG] -= wG)
           }))
         }
       }
-      dispose(uu) {
-        for (const ju of this.smokes) vu(uu, ju);
+      dispose(GG) {
+        for (const ZG of this.smokes) aG(GG, ZG);
         this.smokes = [];
-        for (const ju of null !== (Eu = this.puffers) && void 0 !== Eu ? Eu : []) {
-          var Eu;
-          ju.dispose()
+        for (const ZG of null !== (bG = this.puffers) && void 0 !== bG ? bG : []) {
+          var bG;
+          ZG.dispose()
         }
         this.puffers = null
       }
-      emit(uu, Eu, ju, su) {
-        return this.puffers ??= ku.map((uu => {
+      emit(GG, bG, ZG, wG) {
+        return this.puffers ??= FG.map((GG => {
           let {
-            style: Eu,
-            perSecond: ju
-          } = uu;
-          const su = (Eu.count / .3 + ju) * Eu.life[1];
-          return new Gu.h(Eu, Math.ceil(4 * su), ou)
-        })), this.puffers[Eu].emit(uu, ju, this.renderFrame, su)
+            style: bG,
+            perSecond: ZG
+          } = GG;
+          const wG = (bG.count / .3 + ZG) * bG.life[1];
+          return new oG.f(bG, Math.ceil(4 * wG), IG)
+        })), this.puffers[bG].emit(GG, ZG, this.renderFrame, wG)
       }
     }
 
-    function vu(uu, Eu) {
-      null !== Eu.fire && (uu.disposeGameMesh(Eu.fire), Eu.fire = null)
+    function aG(GG, bG) {
+      null !== bG.fire && (GG.disposeGameMesh(bG.fire), bG.fire = null)
     }
 
-    function Ku() {
-      let uu;
-      const Eu = new mu;
+    function cG() {
+      let GG;
+      const bG = new vG;
       return {
-        onCreate(Eu) {
-          uu = Eu
+        onCreate(bG) {
+          GG = bG
         },
-        onReceivedMessageFromServer(ju, su) {
-          ju === Xu.A && Eu.start(uu, su)
+        onReceivedMessageFromServer(ZG, wG) {
+          ZG === yG.B && bG.start(GG, wG)
         },
-        onAfterRender(ju) {
-          Eu.onAfterRender(uu, ju)
+        onAfterRender(ZG) {
+          bG.onAfterRender(GG, ZG)
         },
         onClose() {
-          Eu.dispose(uu)
+          bG.dispose(GG)
         }
       }
     }
 
-    function Vu(uu, Eu, ju, su) {
+    function lG(GG, bG, ZG, wG) {
       return {
-        dialogue: eu(su.localPlayerId),
-        fishing: Du(su.localPlayerId),
-        furnaceSmoke: Ku(),
-        ironChest: Uu()
+        dialogue: EG(wG.localPlayerId),
+        fishing: JG(wG.localPlayerId),
+        furnaceSmoke: cG(),
+        ironChest: SG()
       }
     }
 
-    function ru(uu, Eu) {
-      for (const Uu of [uu, ...null !== Eu && void 0 !== Eu ? Eu : []]) try {
-        var ju;
-        null === Uu || void 0 === Uu || null === (ju = Uu.onClose) || void 0 === ju || ju.call(Uu)
-      } catch (su) {
-        console.error("Error in client onClose callback", su)
+    function jG(GG, bG) {
+      for (const SG of [GG, ...null !== bG && void 0 !== bG ? bG : []]) try {
+        var ZG;
+        null === SG || void 0 === SG || null === (ZG = SG.onClose) || void 0 === ZG || ZG.call(SG)
+      } catch (wG) {
+        console.error("Error in client onClose callback", wG)
       }
     }
   },
-  39461: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => su,
-      h: () => Zu
+  39565: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => wG,
+      f: () => LG
     });
-    const su = 1 / .6,
-      Uu = {
+    const wG = 1 / .6,
+      SG = {
         kind: "smokePuff"
       };
-    class Zu {
-      constructor(uu, Eu, ju) {
-        this.style = uu, this.Mb = Eu, this.half = ju, this.particles = null, this.lastFrame = -1
+    class LG {
+      constructor(GG, bG, ZG) {
+        this.style = GG, this.rp = bG, this.half = ZG, this.particles = null, this.lastFrame = -1
       }
-      emit(uu, Eu, ju) {
-        let Zu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return ju !== this.lastFrame && (this.lastFrame = ju, this.particles || (this.particles = uu.createParticles(function(uu, Eu) {
+      emit(GG, bG, ZG) {
+        let LG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return ZG !== this.lastFrame && (this.lastFrame = ZG, this.particles || (this.particles = GG.createParticles(function(GG, bG) {
           const [
-            [ju, Zu, Xu],
-            [lu, qu, fu]
-          ] = uu.colours;
+            [ZG, LG, yG],
+            [kG, UG, YG]
+          ] = GG.colours;
           return {
-            texture: uu.soft ? Uu : "square_particle",
-            Mb: Eu,
-            minLifeTime: uu.life[0] / su,
-            maxLifeTime: uu.life[1] / su,
-            minEmitPower: uu.power[0] * su,
-            maxEmitPower: uu.power[1] * su,
-            minSize: uu.size[0],
-            maxSize: uu.size[1],
+            texture: GG.soft ? SG : "square_particle",
+            rp: bG,
+            minLifeTime: GG.life[0] / wG,
+            maxLifeTime: GG.life[1] / wG,
+            minEmitPower: GG.power[0] * wG,
+            maxEmitPower: GG.power[1] * wG,
+            minSize: GG.size[0],
+            maxSize: GG.size[1],
             emitRate: 0,
-            gravity: [0, uu.lift * su * su, 0],
-            dir1: [-uu.spread, 1, -uu.spread],
-            dir2: [uu.spread, 1, uu.spread],
+            gravity: [0, GG.lift * wG * wG, 0],
+            dir1: [-GG.spread, 1, -GG.spread],
+            dir2: [GG.spread, 1, GG.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [ju, Zu, Xu, uu.alpha],
-              maxColor: [lu, qu, fu, uu.alpha]
+              minColor: [ZG, LG, yG, GG.alpha],
+              maxColor: [kG, UG, YG, GG.alpha]
             }, {
               timeFraction: 1,
-              minColor: [ju, Zu, Xu, 0],
-              maxColor: [lu, qu, fu, 0]
+              minColor: [ZG, LG, yG, 0],
+              maxColor: [kG, UG, YG, 0]
             }],
-            blendMode: uu.blendMode
+            blendMode: GG.blendMode
           }
-        }(this.style, this.Mb), {
-          pos: Eu,
+        }(this.style, this.rp), {
+          pos: bG,
           half: this.half
-        })), this.particles.moveTo(Eu, this.half), this.particles.emit(Zu), !0)
+        })), this.particles.moveTo(bG, this.half), this.particles.emit(LG), !0)
       }
       dispose() {
-        var uu;
-        null === (uu = this.particles) || void 0 === uu || uu.stop(), this.particles = null
+        var GG;
+        null === (GG = this.particles) || void 0 === GG || GG.stop(), this.particles = null
       }
     }
   },
-  5011: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Uu,
-      h: () => su,
-      j: () => Zu,
-      l: () => qu,
-      o: () => Xu
+  4871: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => SG,
+      e: () => wG,
+      g: () => LG,
+      i: () => UG,
+      j: () => yG
     });
-    const su = ["sine", "triangle", "square", "sawtooth"],
-      Uu = 55,
-      Zu = {
+    const wG = ["sine", "triangle", "square", "sawtooth"],
+      SG = 55,
+      LG = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -846,39 +846,39 @@ export const modules = {
         }
       };
 
-    function Xu(uu) {
-      return "string" !== typeof uu ? uu : Object.hasOwn(Zu, uu) ? Zu[uu] : null
+    function yG(GG) {
+      return "string" !== typeof GG ? GG : Object.hasOwn(LG, GG) ? LG[GG] : null
     }
 
-    function lu(uu, Eu, ju) {
-      return Math.min(ju, Math.max(Eu, uu))
+    function kG(GG, bG, ZG) {
+      return Math.min(ZG, Math.max(bG, GG))
     }
 
-    function qu(uu) {
-      const Eu = lu(uu.durationMs, 10, 500),
-        ju = lu(uu.attackMs, 0, Eu),
+    function UG(GG) {
+      const bG = kG(GG.durationMs, 10, 500),
+        ZG = kG(GG.attackMs, 0, bG),
         {
-          intonation: Uu
-        } = uu;
+          intonation: SG
+        } = GG;
       return {
-        waveform: su.includes(uu.waveform) ? uu.waveform : "sine",
-        pitchHz: lu(uu.pitchHz, 20, 4e3),
-        glideSemitones: lu(uu.glideSemitones, -24, 24),
-        durationMs: Eu,
-        attackMs: ju,
-        releaseMs: lu(uu.releaseMs, 0, Eu - ju),
-        lowpassHz: null === uu.lowpassHz ? null : lu(uu.lowpassHz, 20, 2e4),
-        volume: lu(uu.volume, 0, 2),
+        waveform: wG.includes(GG.waveform) ? GG.waveform : "sine",
+        pitchHz: kG(GG.pitchHz, 20, 4e3),
+        glideSemitones: kG(GG.glideSemitones, -24, 24),
+        durationMs: bG,
+        attackMs: ZG,
+        releaseMs: kG(GG.releaseMs, 0, bG - ZG),
+        lowpassHz: null === GG.lowpassHz ? null : kG(GG.lowpassHz, 20, 2e4),
+        volume: kG(GG.volume, 0, 2),
         intonation: {
-          variationSemitones: lu(Uu.variationSemitones, 0, 6),
-          declineSemitones: lu(Uu.declineSemitones, 0, 12),
-          questionRiseSemitones: lu(Uu.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: lu(Uu.exclaimLiftSemitones, 0, 12)
+          variationSemitones: kG(SG.variationSemitones, 0, 6),
+          declineSemitones: kG(SG.declineSemitones, 0, 12),
+          questionRiseSemitones: kG(SG.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: kG(SG.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: lu(uu.syllableMs, 25, 200)
+        syllableMs: kG(GG.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

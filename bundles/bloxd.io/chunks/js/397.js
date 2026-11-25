@@ -1,197 +1,197 @@
 export const id = 397;
 export const ids = [397];
 export const modules = {
-  62126: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      rebuildScenePbrPipelines: () => lu,
-      rebuildSceneRenderables: () => qu
+  62457: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      rebuildScenePbrPipelines: () => kG,
+      rebuildSceneRenderables: () => UG
     });
-    var su = ju(41976),
-      Uu = (uu, Eu) => uu.order - Eu.order,
-      Zu = 8,
-      Xu = uu => qu(uu);
-    async function lu(uu) {
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      await fu(uu, "pbr", Eu)
+    var wG = ZG(42155),
+      SG = (GG, bG) => GG.order - bG.order,
+      LG = 8,
+      yG = GG => UG(GG);
+    async function kG(GG) {
+      let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      await YG(GG, "pbr", bG)
     }
-    async function qu(uu) {
-      await fu(uu, void 0, !1)
+    async function UG(GG) {
+      await YG(GG, void 0, !1)
     }
-    async function fu(uu, Eu, lu) {
-      const qu = uu;
-      if (!qu._built && !lu) return;
-      const fu = qu._lightListVersion ?? 0,
-        Cu = qu.surface.engine,
-        bu = uu => {
-          qu._z ? uu.forEach((uu => uu())) : (0, su.d)(Cu, (() => uu.forEach((uu => uu()))))
+    async function YG(GG, bG, kG) {
+      const UG = GG;
+      if (!UG._built && !kG) return;
+      const YG = UG._lightListVersion ?? 0,
+        VG = UG.surface.engine,
+        pG = GG => {
+          UG._z ? GG.forEach((GG => GG())) : (0, wG.d)(VG, (() => GG.forEach((GG => GG()))))
         };
-      let cu = !1,
-        Nu = !1,
-        Ou = !1,
-        Yu = !1;
+      let fG = !1,
+        QG = !1,
+        KG = !1,
+        hG = !1;
       try {
-        for (let uu = 1;; uu++) {
-          if (void 0 !== Eu) {
-            await hu();
+        for (let GG = 1;; GG++) {
+          if (void 0 !== bG) {
+            await dG();
             break
           }
-          if (gu(qu), await hu(), !Du(qu)) break;
-          if (uu >= Zu) {
-            qu._rebuildHook = Xu, Yu = !0, Nu = !0;
+          if (rG(UG), await dG(), !JG(UG)) break;
+          if (GG >= LG) {
+            UG._rebuildHook = yG, hG = !0, QG = !0;
             break
           }
         }
-        Ou = !0
+        KG = !0
       } finally {
-        if (cu && (qu._renderables.sort(Uu), qu._renderableVersion++, qu._materialEpoch++, qu._built && qu._frameGraph.build()), void 0 === Eu && Ou && !Nu && (qu._lightListVersion ?? 0) === fu) {
-          const uu = qu._pendingTopologyRetirements?.splice(0);
-          uu?.length && bu(uu), Yu || (qu._rebuildHook = void 0)
+        if (fG && (UG._renderables.sort(SG), UG._renderableVersion++, UG._materialEpoch++, UG._built && UG._frameGraph.build()), void 0 === bG && KG && !QG && (UG._lightListVersion ?? 0) === YG) {
+          const GG = UG._pendingTopologyRetirements?.splice(0);
+          GG?.length && pG(GG), hG || (UG._rebuildHook = void 0)
         }
       }
-      async function hu() {
-        for (const [uu, su] of qu._groups) {
-          if (void 0 !== Eu && uu._materialFamily !== Eu) continue;
-          if (0 === su.length) {
-            (su.o || su.r) && (Mu(uu, su), cu = !0);
+      async function dG() {
+        for (const [GG, wG] of UG._groups) {
+          if (void 0 !== bG && GG._materialFamily !== bG) continue;
+          if (0 === wG.length) {
+            (wG.o || wG.r) && (zG(GG, wG), fG = !0);
             continue
           }
-          const Uu = qu._runtimeBuilds;
-          await (Uu?.wait(su));
-          let Zu = !1;
-          const lu = async () => {
-            const Eu = qu._runtimeBuilds,
-              ju = [...su].filter((Eu => qu.meshes.includes(Eu) && Eu.material?._buildGroup === uu));
-            if (0 === ju.length) return void Mu(uu, su);
-            const Xu = !!su.r,
-              lu = qu._disposables.length,
-              fu = new Map,
-              Cu = new Map(ju.map((uu => [uu, uu.material])));
-            for (const uu of ju) {
-              const ju = qu._meshDisposables.get(uu);
-              ju && (fu.set(uu, ju), qu._meshDisposables.delete(uu), Eu?.holdPendingDisposers(uu, ju))
+          const SG = UG._runtimeBuilds;
+          await (SG?.wait(wG));
+          let LG = !1;
+          const kG = async () => {
+            const bG = UG._runtimeBuilds,
+              ZG = [...wG].filter((bG => UG.meshes.includes(bG) && bG.material?._buildGroup === GG));
+            if (0 === ZG.length) return void zG(GG, wG);
+            const yG = !!wG.r,
+              kG = UG._disposables.length,
+              YG = new Map,
+              VG = new Map(ZG.map((GG => [GG, GG.material])));
+            for (const GG of ZG) {
+              const ZG = UG._meshDisposables.get(GG);
+              ZG && (YG.set(GG, ZG), UG._meshDisposables.delete(GG), bG?.holdPendingDisposers(GG, ZG))
             }
-            let cu, Nu;
-            qu._p = uu => (Nu = uu, !0);
+            let fG, QG;
+            UG._p = GG => (QG = GG, !0);
             try {
-              cu = await uu(qu, ju)
-            } catch (pu) {
-              Nu?.[1]();
-              for (const Uu of ju) {
-                const ju = fu.get(Uu),
-                  Zu = qu._meshDisposables.get(Uu);
-                if (Zu && Zu !== ju)
-                  for (const uu of Zu) uu();
-                const Xu = qu.meshes.includes(Uu) && Uu.material === Cu.get(Uu) && Uu.material?._buildGroup === uu && su.includes(Uu);
-                ju && Xu ? qu._meshDisposables.set(Uu, ju) : (qu._meshDisposables.delete(Uu), ju && bu(ju)), ju && Eu?.releasePendingDisposers(Uu, ju)
+              fG = await GG(UG, ZG)
+            } catch (XG) {
+              QG?.[1]();
+              for (const SG of ZG) {
+                const ZG = YG.get(SG),
+                  LG = UG._meshDisposables.get(SG);
+                if (LG && LG !== ZG)
+                  for (const GG of LG) GG();
+                const yG = UG.meshes.includes(SG) && SG.material === VG.get(SG) && SG.material?._buildGroup === GG && wG.includes(SG);
+                ZG && yG ? UG._meshDisposables.set(SG, ZG) : (UG._meshDisposables.delete(SG), ZG && pG(ZG)), ZG && bG?.releasePendingDisposers(SG, ZG)
               }
-              throw pu
+              throw XG
             } finally {
-              delete qu._p
+              delete UG._p
             }
-            if (qu._z || Uu?._d()) {
-              Nu?.[1]();
-              for (const Eu of ju) {
-                const uu = qu._meshDisposables.get(Eu),
-                  ju = fu.get(Eu);
-                if (uu && uu !== ju)
-                  for (const Eu of uu) Eu();
-                qu._meshDisposables.delete(Eu)
+            if (UG._z || SG?._d()) {
+              QG?.[1]();
+              for (const bG of ZG) {
+                const GG = UG._meshDisposables.get(bG),
+                  ZG = YG.get(bG);
+                if (GG && GG !== ZG)
+                  for (const bG of GG) bG();
+                UG._meshDisposables.delete(bG)
               }
-              for (const Eu of qu._disposables.splice(0)) Eu();
-              const uu = [...fu.values()].flat();
-              bu(uu);
-              for (const [ju, su] of fu) Eu?.releasePendingDisposers(ju, su);
+              for (const bG of UG._disposables.splice(0)) bG();
+              const GG = [...YG.values()].flat();
+              pG(GG);
+              for (const [ZG, wG] of YG) bG?.releasePendingDisposers(ZG, wG);
               return
             }
-            Nu?.[0](), uu._rebuildSingle = cu.rebuildSingle, su.r = qu._runtimeBuilds?.base(uu, cu.rebuildSingle) ?? cu.rebuildSingle, "pbr" === uu._materialFamily && cu._G && (su._w = null), Xu && eu(qu, lu);
-            const Ou = new Set(ju.filter((Eu => qu.meshes.includes(Eu) && Eu.material === Cu.get(Eu) && Eu.material?._buildGroup === uu && su.includes(Eu))));
-            if (Ou.size !== ju.length && cu.renderables.some((uu => !uu.mesh))) {
-              for (const uu of ju) {
-                const ju = qu._meshDisposables.get(uu),
-                  su = fu.get(uu);
-                if (ju && ju !== su)
-                  for (const uu of ju) uu();
-                su && qu.meshes.includes(uu) ? qu._meshDisposables.set(uu, su) : (qu._meshDisposables.delete(uu), su && bu(su)), su && Eu?.releasePendingDisposers(uu, su)
+            QG?.[0](), GG._rebuildSingle = fG.rebuildSingle, wG.r = UG._runtimeBuilds?.base(GG, fG.rebuildSingle) ?? fG.rebuildSingle, "pbr" === GG._materialFamily && fG._G && (wG._w = null), yG && EG(UG, kG);
+            const KG = new Set(ZG.filter((bG => UG.meshes.includes(bG) && bG.material === VG.get(bG) && bG.material?._buildGroup === GG && wG.includes(bG))));
+            if (KG.size !== ZG.length && fG.renderables.some((GG => !GG.mesh))) {
+              for (const GG of ZG) {
+                const ZG = UG._meshDisposables.get(GG),
+                  wG = YG.get(GG);
+                if (ZG && ZG !== wG)
+                  for (const GG of ZG) GG();
+                wG && UG.meshes.includes(GG) ? UG._meshDisposables.set(GG, wG) : (UG._meshDisposables.delete(GG), wG && pG(wG)), wG && bG?.releasePendingDisposers(GG, wG)
               }
-              return void(Zu = !0)
+              return void(LG = !0)
             }
-            const Yu = new Set;
-            for (const uu of ju)
-              if (Ou.has(uu)) Yu.add(uu.material), qu._runtimeBuilds?.reset(uu);
+            const hG = new Set;
+            for (const GG of ZG)
+              if (KG.has(GG)) hG.add(GG.material), UG._runtimeBuilds?.reset(GG);
               else {
-                const ju = fu.get(uu),
-                  su = qu._meshDisposables.get(uu);
-                if (su && su !== ju)
-                  for (const uu of su) uu();
-                ju && qu.meshes.includes(uu) ? (qu._meshDisposables.set(uu, ju), fu.delete(uu), Eu?.releasePendingDisposers(uu, ju)) : qu._meshDisposables.delete(uu)
-              } for (const uu of Yu) uu._csmGen = (uu._csmGen ?? 0) + 1;
-            const hu = su.o,
-              Du = hu?.length ? new Set(hu) : null;
-            for (let uu = qu._renderables.length - 1; uu >= 0; uu--) {
-              const Eu = qu._renderables[uu];
-              (Ou.has(Eu.mesh) || Du?.has(Eu)) && qu._renderables.splice(uu, 1)
+                const ZG = YG.get(GG),
+                  wG = UG._meshDisposables.get(GG);
+                if (wG && wG !== ZG)
+                  for (const GG of wG) GG();
+                ZG && UG.meshes.includes(GG) ? (UG._meshDisposables.set(GG, ZG), YG.delete(GG), bG?.releasePendingDisposers(GG, ZG)) : UG._meshDisposables.delete(GG)
+              } for (const GG of hG) GG._csmGen = (GG._csmGen ?? 0) + 1;
+            const dG = wG.o,
+              JG = dG?.length ? new Set(dG) : null;
+            for (let GG = UG._renderables.length - 1; GG >= 0; GG--) {
+              const bG = UG._renderables[GG];
+              (KG.has(bG.mesh) || JG?.has(bG)) && UG._renderables.splice(GG, 1)
             }
-            const gu = cu.renderables.filter((uu => !uu.mesh || Ou.has(uu.mesh)));
-            qu._renderables.push(...gu), su.o = gu;
-            const Gu = [...fu.values()].flat();
-            bu(Gu);
-            for (const [uu, su] of fu) Eu?.releasePendingDisposers(uu, su)
+            const rG = fG.renderables.filter((GG => !GG.mesh || KG.has(GG.mesh)));
+            UG._renderables.push(...rG), wG.o = rG;
+            const oG = [...YG.values()].flat();
+            pG(oG);
+            for (const [GG, wG] of YG) bG?.releasePendingDisposers(GG, wG)
           }, {
-            X: fu
-          } = await Promise.resolve().then((() => ju(61601))), Cu = 3;
-          for (let Eu = 1;; Eu++) {
-            if (Zu = !1, await fu(qu, uu, lu), qu._z || Uu?._d()) return void(Nu = !0);
-            if (!Zu) break;
-            if (Eu >= Cu) {
-              Mu(uu, su), qu._rebuildHook = Xu, Yu = !0, Nu = !0;
+            X: YG
+          } = await Promise.resolve().then((() => ZG(61920))), VG = 3;
+          for (let bG = 1;; bG++) {
+            if (LG = !1, await YG(UG, GG, kG), UG._z || SG?._d()) return void(QG = !0);
+            if (!LG) break;
+            if (bG >= VG) {
+              zG(GG, wG), UG._rebuildHook = yG, hG = !0, QG = !0;
               break
             }
           }
-          Zu ? cu = !0 : cu = !0
+          LG ? fG = !0 : fG = !0
         }
       }
 
-      function Du(uu) {
-        for (const Eu of uu.meshes) {
-          const ju = Eu.material?._buildGroup;
-          if (ju && !uu._groups.get(ju)?.includes(Eu)) return !0
+      function JG(GG) {
+        for (const bG of GG.meshes) {
+          const ZG = bG.material?._buildGroup;
+          if (ZG && !GG._groups.get(ZG)?.includes(bG)) return !0
         }
         return !1
       }
 
-      function gu(uu) {
-        const Eu = new Map;
-        for (const ju of uu.meshes) {
-          const uu = ju.material?._buildGroup;
-          if (!uu) continue;
-          const su = Eu.get(uu);
-          su ? su.push(ju) : Eu.set(uu, [ju])
+      function rG(GG) {
+        const bG = new Map;
+        for (const ZG of GG.meshes) {
+          const GG = ZG.material?._buildGroup;
+          if (!GG) continue;
+          const wG = bG.get(GG);
+          wG ? wG.push(ZG) : bG.set(GG, [ZG])
         }
-        for (const [ju, su] of uu._groups) {
-          const uu = Eu.get(ju) ?? [];
-          (su.length !== uu.length || uu.some(((uu, Eu) => su[Eu] !== uu))) && (su.length = 0, su.push(...uu)), Eu.delete(ju)
+        for (const [ZG, wG] of GG._groups) {
+          const GG = bG.get(ZG) ?? [];
+          (wG.length !== GG.length || GG.some(((GG, bG) => wG[bG] !== GG))) && (wG.length = 0, wG.push(...GG)), bG.delete(ZG)
         }
-        for (const [ju, su] of Eu) {
-          const Eu = su;
-          uu._groups.set(ju, Eu)
+        for (const [ZG, wG] of bG) {
+          const bG = wG;
+          GG._groups.set(ZG, bG)
         }
       }
 
-      function Mu(uu, Eu) {
-        const ju = Eu.o;
-        if (ju?.length) {
-          const uu = new Set(ju);
-          for (let Eu = qu._renderables.length - 1; Eu >= 0; Eu--) uu.has(qu._renderables[Eu]) && qu._renderables.splice(Eu, 1)
+      function zG(GG, bG) {
+        const ZG = bG.o;
+        if (ZG?.length) {
+          const GG = new Set(ZG);
+          for (let bG = UG._renderables.length - 1; bG >= 0; bG--) GG.has(UG._renderables[bG]) && UG._renderables.splice(bG, 1)
         }
-        Eu.o = void 0, Eu.r = void 0, qu._runtimeBuilds?.dropBase(uu), qu._rebuildHook = Xu, Yu = !0
+        bG.o = void 0, bG.r = void 0, UG._runtimeBuilds?.dropBase(GG), UG._rebuildHook = yG, hG = !0
       }
 
-      function eu(uu, Eu) {
-        const ju = new Set(uu._disposables.slice(0, Eu));
-        for (let su = uu._disposables.length - 1; su >= Eu; su--) ju.has(uu._disposables[su]) && uu._disposables.splice(su, 1)
+      function EG(GG, bG) {
+        const ZG = new Set(GG._disposables.slice(0, bG));
+        for (let wG = GG._disposables.length - 1; wG >= bG; wG--) ZG.has(GG._disposables[wG]) && GG._disposables.splice(wG, 1)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

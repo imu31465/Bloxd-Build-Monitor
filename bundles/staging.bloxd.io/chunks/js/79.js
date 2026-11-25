@@ -1,272 +1,272 @@
 export const id = 79;
 export const ids = [79, 95];
 export const modules = {
-    4997: (uu, Eu, ju) => {
-      ju.d(Eu, {
-        b: () => hu,
-        e: () => Du
+    4851: (GG, bG, ZG) => {
+      ZG.d(bG, {
+        d: () => dG,
+        e: () => JG
       });
-      var su = ju(1105),
-        Uu = ju.n(su),
-        Zu = ju(58),
-        Xu = ju(1244),
-        lu = ju(4999),
-        qu = ju(1964),
-        fu = ju(2543),
-        Cu = ju(5003),
-        bu = ju(1154);
-      const cu = new WeakMap;
-      let Nu = 0;
+      var wG = ZG(1006),
+        SG = ZG.n(wG),
+        LG = ZG(51),
+        yG = ZG(1151),
+        kG = ZG(4858),
+        UG = ZG(1876),
+        YG = ZG(2409),
+        VG = ZG(4864),
+        pG = ZG(1067);
+      const fG = new WeakMap;
+      let QG = 0;
 
-      function Ou(uu) {
-        let Eu = cu.get(uu);
-        return void 0 === Eu && (Eu = Nu++, cu.set(uu, Eu)), Eu
+      function KG(GG) {
+        let bG = fG.get(GG);
+        return void 0 === bG && (bG = QG++, fG.set(GG, bG)), bG
       }
 
-      function Yu(uu) {
+      function hG(GG) {
         let {
-          piece: Eu
-        } = uu;
-        return "space" === Eu.kind ? (0, bu.jsx)(bu.Fragment, {
-          children: Eu.text
-        }) : (0, bu.jsx)("span", {
+          piece: bG
+        } = GG;
+        return "space" === bG.kind ? (0, pG.jsx)(pG.Fragment, {
+          children: bG.text
+        }) : (0, pG.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${Eu.delayMs}ms`
+            "--word-delay": `${bG.delayMs}ms`
           },
-          children: (0, bu.jsx)(lu.e, {
-            text: "icon" === Eu.kind ? `[[${Eu.icon}]]` : Eu.text
+          children: (0, pG.jsx)(kG.b, {
+            text: "icon" === bG.kind ? `[[${bG.icon}]]` : bG.text
           })
         })
       }
 
-      function hu(uu) {
+      function dG(GG) {
         let {
-          display: Eu
-        } = uu;
+          display: bG
+        } = GG;
         const {
-          selectedLanguage: ju
-        } = (0, Xu.A)(), su = (0, Zu.useMemo)((() => (0, Cu.e)((0, Cu.i)(Eu).plan.pieces)), [Eu, ju.code]);
-        return (0, bu.jsxs)("div", {
-          className: Uu()("Dialogue", {
-            DialogueAnimateIn: !1 !== Eu.animateIn
+          selectedLanguage: ZG
+        } = (0, yG.w)(), wG = (0, LG.useMemo)((() => (0, VG.d)((0, VG.f)(bG).plan.pieces)), [bG, ZG.code]);
+        return (0, pG.jsxs)("div", {
+          className: SG()("Dialogue", {
+            DialogueAnimateIn: !1 !== bG.animateIn
           }),
-          children: [Eu.speakerName && (0, bu.jsx)(qu.d, {
-            text: Eu.speakerName,
+          children: [bG.speakerName && (0, pG.jsx)(UG.c, {
+            text: bG.speakerName,
             className: "DialogueSpeaker"
-          }), (0, bu.jsx)("p", {
+          }), (0, pG.jsx)("p", {
             className: "DialogueLine",
-            children: su.map(((uu, Eu) => 1 === uu.length && "space" === uu[0].kind ? uu[0].text : (0, bu.jsx)("span", {
+            children: wG.map(((GG, bG) => 1 === GG.length && "space" === GG[0].kind ? GG[0].text : (0, pG.jsx)("span", {
               className: "DialogueGlue",
-              children: uu.map(((uu, Eu) => (0, bu.jsx)(Yu, {
-                piece: uu
-              }, Eu)))
-            }, Eu)))
+              children: GG.map(((GG, bG) => (0, pG.jsx)(hG, {
+                piece: GG
+              }, bG)))
+            }, bG)))
           })]
         })
       }
-      const Du = (0, Zu.memo)((function() {
-        const uu = (0, fu.h)("dialogue");
-        return (0, bu.jsx)("div", {
+      const JG = (0, LG.memo)((function() {
+        const GG = (0, YG.i)("dialogue");
+        return (0, pG.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: uu && (0, bu.jsx)(hu, {
-            display: uu
-          }, Ou(uu))
+          children: GG && (0, pG.jsx)(dG, {
+            display: GG
+          }, KG(GG))
         })
       }))
     },
-    4895: (uu, Eu, ju) => {
-        ju.r(Eu), ju.d(Eu, {
-          default: () => EX
+    4729: (GG, bG, ZG) => {
+        ZG.r(bG), ZG.d(bG, {
+          default: () => Gy
         });
-        var su = ju(58),
-          Uu = ju(1105),
-          Zu = ju.n(Uu),
-          Xu = ju(1572),
-          lu = ju(1580),
-          qu = ju(22),
-          fu = ju(65),
-          Cu = ju(4899),
-          bu = ju(4916),
-          cu = ju(4925),
-          Nu = ju(4526),
-          Ou = ju(1154);
-        const Yu = "/textures/docs/icons";
+        var wG = ZG(51),
+          SG = ZG(1006),
+          LG = ZG.n(SG),
+          yG = ZG(1448),
+          kG = ZG(1457),
+          UG = ZG(17),
+          YG = ZG(59),
+          VG = ZG(4734),
+          pG = ZG(4745),
+          fG = ZG(4750),
+          QG = ZG(4387),
+          KG = ZG(1067);
+        const hG = "/textures/docs/icons";
 
-        function hu(uu) {
+        function dG(GG) {
           let {
-            name: Eu,
-            isTinted: ju,
-            className: su,
-            style: Uu
-          } = uu;
-          const Xu = `${Yu}/${Eu}.png`;
-          return ju ? (0, Ou.jsxs)("span", {
-            className: Zu()("DocsPixelIcon", "Tinted", su),
+            name: bG,
+            isTinted: ZG,
+            className: wG,
+            style: SG
+          } = GG;
+          const yG = `${hG}/${bG}.png`;
+          return ZG ? (0, KG.jsxs)("span", {
+            className: LG()("DocsPixelIcon", "Tinted", wG),
             "aria-hidden": "true",
-            style: Uu,
-            children: [(0, Ou.jsx)("span", {
+            style: SG,
+            children: [(0, KG.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${Xu}")`,
-                WebkitMaskImage: `url("${Xu}")`
+                maskImage: `url("${yG}")`,
+                WebkitMaskImage: `url("${yG}")`
               }
-            }), (0, Ou.jsx)("img", {
-              src: Xu,
+            }), (0, KG.jsx)("img", {
+              src: yG,
               alt: ""
             })]
-          }) : (0, Ou.jsx)("img", {
-            className: Zu()("DocsPixelIcon", su),
-            src: Xu,
+          }) : (0, KG.jsx)("img", {
+            className: LG()("DocsPixelIcon", wG),
+            src: yG,
             alt: "",
             "aria-hidden": "true",
-            style: Uu
+            style: SG
           })
         }
-        const Du = 1500;
+        const JG = 1500;
 
-        function gu() {
-          const [uu, Eu] = (0, su.useState)(null);
-          (0, su.useEffect)((() => {
-            if (null === uu) return;
-            const ju = setTimeout((() => {
-              Eu(null)
-            }), Du);
+        function rG() {
+          const [GG, bG] = (0, wG.useState)(null);
+          (0, wG.useEffect)((() => {
+            if (null === GG) return;
+            const ZG = setTimeout((() => {
+              bG(null)
+            }), JG);
             return () => {
-              clearTimeout(ju)
+              clearTimeout(ZG)
             }
-          }), [uu]);
-          return [uu, uu => {
-            (0, Nu.b)(uu).then((() => {
-              Eu({
-                text: uu,
+          }), [GG]);
+          return [GG, GG => {
+            (0, QG.b)(GG).then((() => {
+              bG({
+                text: GG,
                 failed: !1
               })
-            }), (ju => {
-              console.error("Could not copy to the clipboard", ju), Eu({
-                text: uu,
+            }), (ZG => {
+              console.error("Could not copy to the clipboard", ZG), bG({
+                text: GG,
                 failed: !0
               })
             }))
           }]
         }
 
-        function Mu(uu) {
+        function zG(GG) {
           let {
-            text: Eu,
-            label: ju,
-            className: su
-          } = uu;
-          const [Uu, Xu] = gu(), lu = !1 === (null === Uu || void 0 === Uu ? void 0 : Uu.failed);
-          return (0, Ou.jsxs)("button", {
+            text: bG,
+            label: ZG,
+            className: wG
+          } = GG;
+          const [SG, yG] = rG(), kG = !1 === (null === SG || void 0 === SG ? void 0 : SG.failed);
+          return (0, KG.jsxs)("button", {
             type: "button",
-            className: Zu()("DocsCopyButton", su, {
-              Copied: lu
+            className: LG()("DocsCopyButton", wG, {
+              Copied: kG
             }),
-            title: `Copy ${Eu.length>40?"to clipboard":Eu}`,
-            "aria-label": ju ? void 0 : `Copy ${Eu}`,
-            onClick: uu => {
-              uu.stopPropagation(), Xu(Eu)
+            title: `Copy ${bG.length>40?"to clipboard":bG}`,
+            "aria-label": ZG ? void 0 : `Copy ${bG}`,
+            onClick: GG => {
+              GG.stopPropagation(), yG(bG)
             },
-            children: [(0, Ou.jsx)(hu, {
-              name: lu ? "check" : "copy"
-            }), ju && (0, Ou.jsx)("span", {
-              children: lu ? "Copied" : null !== Uu && void 0 !== Uu && Uu.failed ? "Copy failed" : ju
+            children: [(0, KG.jsx)(dG, {
+              name: kG ? "check" : "copy"
+            }), ZG && (0, KG.jsx)("span", {
+              children: kG ? "Copied" : null !== SG && void 0 !== SG && SG.failed ? "Copy failed" : ZG
             })]
           })
         }
-        Cu.b.registerLanguage("javascript", bu.d), Cu.b.registerLanguage("typescript", cu.c);
-        const eu = {
+        VG.e.registerLanguage("javascript", pG.e), VG.e.registerLanguage("typescript", fG.c);
+        const EG = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          Gu = {
+          oG = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          pu = 24;
+          XG = 24;
 
-        function wu(uu) {
+        function uG(GG) {
           let {
-            code: Eu,
-            lang: ju,
-            compact: Uu = !1
-          } = uu;
-          const Xu = (0, su.useMemo)((() => function(uu, Eu) {
-              const ju = eu[Eu];
-              return ju ? Cu.b.highlight(uu, {
-                language: ju
-              }).value : uu.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(Eu, ju)), [Eu, ju]),
-            lu = Eu.split("\n").length,
-            qu = !Uu && lu > pu + 6,
-            [fu, bu] = (0, su.useState)(!1),
-            cu = eu[ju];
-          return (0, Ou.jsxs)("div", {
-            className: Zu()("DocsCodeBlock", {
-              Compact: Uu,
-              Collapsed: qu && !fu
+            code: bG,
+            lang: ZG,
+            compact: SG = !1
+          } = GG;
+          const yG = (0, wG.useMemo)((() => function(GG, bG) {
+              const ZG = EG[bG];
+              return ZG ? VG.e.highlight(GG, {
+                language: ZG
+              }).value : GG.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(bG, ZG)), [bG, ZG]),
+            kG = bG.split("\n").length,
+            UG = !SG && kG > XG + 6,
+            [YG, pG] = (0, wG.useState)(!1),
+            fG = EG[ZG];
+          return (0, KG.jsxs)("div", {
+            className: LG()("DocsCodeBlock", {
+              Compact: SG,
+              Collapsed: UG && !YG
             }),
-            children: [!Uu && (0, Ou.jsxs)("div", {
+            children: [!SG && (0, KG.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, Ou.jsx)("span", {
+              children: [(0, KG.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: cu ? Gu[cu] : "Text"
-              }), (0, Ou.jsx)(Mu, {
-                text: Eu,
+                children: fG ? oG[fG] : "Text"
+              }), (0, KG.jsx)(zG, {
+                text: bG,
                 label: "Copy"
               })]
-            }), (0, Ou.jsx)("pre", {
-              children: (0, Ou.jsx)("code", {
+            }), (0, KG.jsx)("pre", {
+              children: (0, KG.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: Xu
+                  __html: yG
                 }
               })
-            }), qu && (0, Ou.jsxs)("button", {
+            }), UG && (0, KG.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": fu,
+              "aria-expanded": YG,
               onClick: () => {
-                bu(!fu)
+                pG(!YG)
               },
-              children: [(0, Ou.jsx)(hu, {
-                name: fu ? "chevron-up" : "chevron-down"
-              }), fu ? "Show less" : `Show all ${lu} lines`]
+              children: [(0, KG.jsx)(dG, {
+                name: YG ? "chevron-up" : "chevron-down"
+              }), YG ? "Show less" : `Show all ${kG} lines`]
             })]
           })
         }
-        var Ju = ju(4928);
-        var du = ju(4931);
-        const au = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var iG = ZG(4758);
+        var CG = ZG(4760);
+        const WG = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function Pu(uu) {
-          const Eu = new Map;
-          let ju, su = [],
-            Uu = !1;
-          const Zu = () => {
-            ju && Eu.set(ju.name, ju.lines.join("\n").trimEnd())
+        function mG(GG) {
+          const bG = new Map;
+          let ZG, wG = [],
+            SG = !1;
+          const LG = () => {
+            ZG && bG.set(ZG.name, ZG.lines.join("\n").trimEnd())
           };
-          for (const Xu of uu.split("\n")) {
-            const uu = Xu.match(au);
-            Uu || Xu.startsWith("/*") ? (Uu || (Zu(), ju = void 0), su.push(Xu), Uu = !Xu.includes("*/")) : uu ? (Zu(), ju = {
-              name: uu[1],
-              lines: [...su, Xu]
-            }, su = []) : ju && (Xu.startsWith(" ") || Xu.startsWith("\t") || /^[}\])|]/.test(Xu)) ? ju.lines.push(Xu) : ju && "" !== Xu.trim() && (Zu(), ju = void 0)
+          for (const yG of GG.split("\n")) {
+            const GG = yG.match(WG);
+            SG || yG.startsWith("/*") ? (SG || (LG(), ZG = void 0), wG.push(yG), SG = !yG.includes("*/")) : GG ? (LG(), ZG = {
+              name: GG[1],
+              lines: [...wG, yG]
+            }, wG = []) : ZG && (yG.startsWith(" ") || yG.startsWith("\t") || /^[}\])|]/.test(yG)) ? ZG.lines.push(yG) : ZG && "" !== yG.trim() && (LG(), ZG = void 0)
           }
-          return Zu(), Eu
+          return LG(), bG
         }
 
-        function ou(uu) {
-          return "methods" === uu || "callbacks" === uu || "settings" === uu
+        function IG(GG) {
+          return "methods" === GG || "callbacks" === GG || "settings" === GG
         }
-        const ku = {
+        const FG = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (uu, Eu) => `api.setClientOption(playerId, "${uu}", ${Eu})`
+              setterSnippet: (GG, bG) => `api.setClientOption(playerId, "${GG}", ${bG})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (uu, Eu) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${uu}", ${Eu})`
+              setterSnippet: (GG, bG) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${GG}", ${bG})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (uu, Eu) => `api.setMobSetting(mobId, "${uu}", ${Eu})`
+              setterSnippet: (GG, bG) => `api.setMobSetting(mobId, "${GG}", ${bG})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (uu, Eu) => `api.setVehicleSetting(vehicleId, "${uu}", ${Eu})`
+              setterSnippet: (GG, bG) => `api.setVehicleSetting(vehicleId, "${GG}", ${bG})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          mu = {
+          vG = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function vu(uu) {
-          return uu.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function aG(GG) {
+          return GG.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function Ku(uu) {
-          let Eu = !1;
-          return uu.split("\n").map((uu => (uu.startsWith("```") && (Eu = !Eu), !Eu && /^#{3,} /.test(uu) ? uu.slice(1) : uu))).join("\n")
+        function cG(GG) {
+          let bG = !1;
+          return GG.split("\n").map((GG => (GG.startsWith("```") && (bG = !bG), !bG && /^#{3,} /.test(GG) ? GG.slice(1) : GG))).join("\n")
         }
 
-        function Vu(uu) {
-          return "readme" === uu ? "getting-started" : vu(uu)
+        function lG(GG) {
+          return "readme" === GG ? "getting-started" : aG(GG)
         }
-        const ru = "## Glossary of Referenced Types";
-        const Qu = [{
+        const jG = "## Glossary of Referenced Types";
+        const PG = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...du.d.flatMap((uu => {
-            const Eu = {
-              id: uu.id,
-              slug: Vu(uu.id),
-              title: uu.title,
-              markdown: uu.content,
-              ...ku[uu.id]
+          }, ...CG.e.flatMap((GG => {
+            const bG = {
+              id: GG.id,
+              slug: lG(GG.id),
+              title: GG.title,
+              markdown: GG.content,
+              ...FG[GG.id]
             };
-            if ("readme" === uu.id) return function(uu) {
-              const Eu = uu.markdown.indexOf(ru),
-                ju = uu.markdown.indexOf("\n```", Eu),
-                su = uu.markdown.indexOf("\n```", ju + 1);
-              if (-1 === Eu || -1 === ju || -1 === su) throw new Error(`Getting started has no "${ru}" section with a code block`);
-              const Uu = uu.markdown.slice(Eu + 31, ju).trim(),
-                Zu = [...Pu(uu.markdown.slice(uu.markdown.indexOf("\n", ju + 1) + 1, su))].map((uu => {
-                  let [Eu, ju] = uu;
-                  return `## ${Eu}\n\n\`\`\`ts\n${ju}\n\`\`\`\n`
+            if ("readme" === GG.id) return function(GG) {
+              const bG = GG.markdown.indexOf(jG),
+                ZG = GG.markdown.indexOf("\n```", bG),
+                wG = GG.markdown.indexOf("\n```", ZG + 1);
+              if (-1 === bG || -1 === ZG || -1 === wG) throw new Error(`Getting started has no "${jG}" section with a code block`);
+              const SG = GG.markdown.slice(bG + 31, ZG).trim(),
+                LG = [...mG(GG.markdown.slice(GG.markdown.indexOf("\n", ZG + 1) + 1, wG))].map((GG => {
+                  let [bG, ZG] = GG;
+                  return `## ${bG}\n\n\`\`\`ts\n${ZG}\n\`\`\`\n`
                 })),
-                Xu = uu.markdown.slice(uu.markdown.indexOf("\n", su + 1) + 1);
+                yG = GG.markdown.slice(GG.markdown.indexOf("\n", wG + 1) + 1);
               return [{
-                ...uu,
-                markdown: `${uu.markdown.slice(0,Eu)}${Xu}`
+                ...GG,
+                markdown: `${GG.markdown.slice(0,bG)}${yG}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${Uu}\n\n${Zu.join("\n")}`
+                markdown: `# Types\n\n${SG}\n\n${LG.join("\n")}`
               }]
-            }(Eu);
-            if ("howTo" === uu.id) {
+            }(bG);
+            if ("howTo" === GG.id) {
               const {
-                parent: uu,
-                guides: ju
-              } = function(uu) {
-                const [Eu, ...ju] = uu.markdown.split(/^(?=## )/m), su = [Eu], Uu = [];
-                for (const Xu of ju) {
-                  var Zu;
-                  const Eu = Xu.indexOf("\n"),
-                    ju = Xu.slice(3, Eu).trim(),
-                    lu = Xu.slice(Eu + 1);
-                  if (!lu.includes("```")) {
-                    su.push(Xu);
+                parent: GG,
+                guides: ZG
+              } = function(GG) {
+                const [bG, ...ZG] = GG.markdown.split(/^(?=## )/m), wG = [bG], SG = [];
+                for (const yG of ZG) {
+                  var LG;
+                  const bG = yG.indexOf("\n"),
+                    ZG = yG.slice(3, bG).trim(),
+                    kG = yG.slice(bG + 1);
+                  if (!kG.includes("```")) {
+                    wG.push(yG);
                     continue
                   }
-                  const qu = null !== (Zu = mu[ju]) && void 0 !== Zu ? Zu : {
+                  const UG = null !== (LG = vG[ZG]) && void 0 !== LG ? LG : {
                     icon: "lightbulb",
-                    summary: `How to use ${ju.toLowerCase()} in World Code.`
+                    summary: `How to use ${ZG.toLowerCase()} in World Code.`
                   };
-                  Uu.push({
-                    id: `${uu.id}${ju.split(/[^A-Za-z0-9]+/).map((uu=>uu.charAt(0).toUpperCase()+uu.slice(1))).join("")}`,
-                    slug: `${uu.slug}-${vu(ju)}`,
-                    title: ju,
+                  SG.push({
+                    id: `${GG.id}${ZG.split(/[^A-Za-z0-9]+/).map((GG=>GG.charAt(0).toUpperCase()+GG.slice(1))).join("")}`,
+                    slug: `${GG.slug}-${aG(ZG)}`,
+                    title: ZG,
                     layout: "article",
-                    sourceAnchor: (0, Ju.u)(ju),
-                    markdown: `# ${ju}\n\n${Ku(lu)}`,
-                    ...qu
+                    sourceAnchor: (0, iG.r)(ZG),
+                    markdown: `# ${ZG}\n\n${cG(kG)}`,
+                    ...UG
                   })
                 }
                 return {
                   parent: {
-                    ...uu,
-                    markdown: su.join(""),
-                    childPageIds: Uu.map((uu => uu.id))
+                    ...GG,
+                    markdown: wG.join(""),
+                    childPageIds: SG.map((GG => GG.id))
                   },
-                  guides: Uu
+                  guides: SG
                 }
-              }(Eu);
-              return [uu, ...ju]
+              }(bG);
+              return [GG, ...ZG]
             }
-            return [Eu]
+            return [bG]
           }))],
-          iu = [{
+          MG = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...Qu.filter((uu => void 0 !== uu.sourceAnchor)).map((uu => uu.id))]
+            pageIds: ["howTo", ...PG.filter((GG => void 0 !== GG.sourceAnchor)).map((GG => GG.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function Wu(uu) {
-          return Qu.find((Eu => Eu.id === uu))
+        function AG(GG) {
+          return PG.find((bG => bG.id === GG))
         }
-        const Su = new Map;
+        const sG = new Map;
 
-        function Iu(uu) {
-          let Eu = Su.get(uu.id);
-          return Eu || (Eu = (0, Ju.z)(uu.markdown, "changelog" === uu.layout ? 3 : 2), Su.set(uu.id, Eu)), Eu
-        }
-
-        function Fu(uu, Eu) {
-          return Iu(uu).sections.some((uu => uu.heading.anchor === Eu || uu.blocks.some((uu => "heading" === uu.kind && uu.anchor === Eu))))
+        function qG(GG) {
+          let bG = sG.get(GG.id);
+          return bG || (bG = (0, iG.w)(GG.markdown, "changelog" === GG.layout ? 3 : 2), sG.set(GG.id, bG)), bG
         }
 
-        function Bu(uu) {
-          const [Eu, ...ju] = uu.replace(/^#/, "").split("-"), su = Qu.find((uu => uu.id === Eu));
-          if (!su) return null;
-          const Uu = ju.length > 0 ? (0, Ju.u)(ju.join("-")) : "";
-          for (const Xu of null !== (Zu = su.childPageIds) && void 0 !== Zu ? Zu : []) {
-            var Zu;
-            const uu = Wu(Xu);
-            if (uu.sourceAnchor === Uu) return {
-              page: uu,
+        function nG(GG, bG) {
+          return qG(GG).sections.some((GG => GG.heading.anchor === bG || GG.blocks.some((GG => "heading" === GG.kind && GG.anchor === bG))))
+        }
+
+        function gG(GG) {
+          const [bG, ...ZG] = GG.replace(/^#/, "").split("-"), wG = PG.find((GG => GG.id === bG));
+          if (!wG) return null;
+          const SG = ZG.length > 0 ? (0, iG.r)(ZG.join("-")) : "";
+          for (const yG of null !== (LG = wG.childPageIds) && void 0 !== LG ? LG : []) {
+            var LG;
+            const GG = AG(yG);
+            if (GG.sourceAnchor === SG) return {
+              page: GG,
               anchor: ""
             };
-            if (Fu(uu, Uu)) return {
-              page: uu,
-              anchor: Uu
+            if (nG(GG, SG)) return {
+              page: GG,
+              anchor: SG
             }
           }
           return {
-            page: su,
-            anchor: Uu
+            page: wG,
+            anchor: SG
           }
         }
-        const Lu = {
+        const eG = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function tu(uu, Eu) {
-          let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const su = Eu.slug ? `${uu}/${Eu.slug}` : uu;
-          return ju ? `${su}#${ju}` : su
+        function RG(GG, bG) {
+          let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const wG = bG.slug ? `${GG}/${bG.slug}` : GG;
+          return ZG ? `${wG}#${ZG}` : wG
         }
-        var xu = ju(4942);
-        const Tu = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          Hu = new Set(["GameApi", "Console", "_TypeOf"]),
-          Au = 4;
+        var TG = ZG(4779);
+        const HG = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          tG = new Set(["GameApi", "Console", "_TypeOf"]),
+          DG = 4;
 
-        function nu(uu) {
-          let Eu = uu.length;
-          for (; Eu > 0 && "" === uu[Eu - 1].trim();) Eu--;
-          return uu.slice(0, Eu)
+        function NG(GG) {
+          let bG = GG.length;
+          for (; bG > 0 && "" === GG[bG - 1].trim();) bG--;
+          return GG.slice(0, bG)
         }
 
-        function yu(uu) {
-          var Eu;
-          const ju = nu(uu);
-          if (null === (Eu = ju.at(-1)) || void 0 === Eu || !Eu.trimEnd().endsWith("*/")) return {
-            lines: ju,
+        function OG(GG) {
+          var bG;
+          const ZG = NG(GG);
+          if (null === (bG = ZG.at(-1)) || void 0 === bG || !bG.trimEnd().endsWith("*/")) return {
+            lines: ZG,
             doc: ""
           };
-          const su = ju.findLastIndex((uu => uu.startsWith("/**")));
-          return -1 === su ? {
-            lines: ju,
+          const wG = ZG.findLastIndex((GG => GG.startsWith("/**")));
+          return -1 === wG ? {
+            lines: ZG,
             doc: ""
           } : {
-            lines: nu(ju.slice(0, su)),
-            doc: ju.slice(su).join("\n")
+            lines: NG(ZG.slice(0, wG)),
+            doc: ZG.slice(wG).join("\n")
           }
         }
 
-        function zu(uu) {
-          var Eu;
-          const ju = uu.split("\n"),
-            su = ju.flatMap(((uu, Eu) => Tu.test(uu) ? [Eu] : []));
-          let Uu = yu(ju.slice(0, null !== (Eu = su[0]) && void 0 !== Eu ? Eu : ju.length)).doc;
-          return su.map(((uu, Eu) => {
-            var Zu;
-            const Xu = yu(ju.slice(uu, null !== (Zu = su[Eu + 1]) && void 0 !== Zu ? Zu : ju.length)),
-              lu = {
-                name: ju[uu].match(Tu)[1],
-                doc: Uu,
-                lines: Xu.lines
+        function xG(GG) {
+          var bG;
+          const ZG = GG.split("\n"),
+            wG = ZG.flatMap(((GG, bG) => HG.test(GG) ? [bG] : []));
+          let SG = OG(ZG.slice(0, null !== (bG = wG[0]) && void 0 !== bG ? bG : ZG.length)).doc;
+          return wG.map(((GG, bG) => {
+            var LG;
+            const yG = OG(ZG.slice(GG, null !== (LG = wG[bG + 1]) && void 0 !== LG ? LG : ZG.length)),
+              kG = {
+                name: ZG[GG].match(HG)[1],
+                doc: SG,
+                lines: yG.lines
               };
-            return Uu = Xu.doc, lu
+            return SG = yG.doc, kG
           }))
         }
 
-        function Ru(uu) {
-          var Eu;
-          const ju = uu.match(/^readonly \[([\s\S]*)\]$/);
-          return ju ? null !== (Eu = ju[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== Eu ? Eu : [] : null
+        function BG(GG) {
+          var bG;
+          const ZG = GG.match(/^readonly \[([\s\S]*)\]$/);
+          return ZG ? null !== (bG = ZG[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== bG ? bG : [] : null
         }
 
-        function uE(uu) {
-          if (!uu.startsWith("{") || !uu.endsWith("}")) return null;
-          const Eu = {
+        function Gb(GG) {
+          if (!GG.startsWith("{") || !GG.endsWith("}")) return null;
+          const bG = {
               keys: [],
               values: []
             },
-            ju = uu => {
-              const ju = uu.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              ju && (Eu.keys.push(ju[1].startsWith('"') ? ju[1] : `"${ju[1]}"`), Eu.values.push(ju[2].trim()))
+            ZG = GG => {
+              const ZG = GG.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              ZG && (bG.keys.push(ZG[1].startsWith('"') ? ZG[1] : `"${ZG[1]}"`), bG.values.push(ZG[2].trim()))
             };
-          let su = 0,
-            Uu = "";
-          for (const Zu of uu.slice(1, -1)) "{[(".includes(Zu) ? su++ : "}])".includes(Zu) && su--, ";" === Zu && 0 === su ? (ju(Uu), Uu = "") : Uu += Zu;
-          return ju(Uu), Eu
+          let wG = 0,
+            SG = "";
+          for (const LG of GG.slice(1, -1)) "{[(".includes(LG) ? wG++ : "}])".includes(LG) && wG--, ";" === LG && 0 === wG ? (ZG(SG), SG = "") : SG += LG;
+          return ZG(SG), bG
         }
 
-        function EE(uu) {
-          return uu.length > Au ? `\n\t| ${uu.join("\n\t| ")}` : uu.join(" | ")
+        function bb(GG) {
+          return GG.length > DG ? `\n\t| ${GG.join("\n\t| ")}` : GG.join(" | ")
         }
 
-        function jE(uu, Eu) {
-          const ju = function(uu, Eu) {
-            return uu.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((uu, ju) => {
-              var su;
-              const Uu = null === (su = Eu.get(ju)) || void 0 === su ? void 0 : su.object;
-              return Uu ? EE(Uu.values) : uu
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((uu, ju) => {
-              var su, Uu;
-              const Zu = null === (su = Eu.get(ju)) || void 0 === su || null === (Uu = su.object) || void 0 === Uu ? void 0 : Uu.values.map(Ru);
-              return null !== Zu && void 0 !== Zu && Zu.every((uu => null !== uu)) ? EE([...new Set(Zu.flat())]) : uu
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((uu, ju) => {
-              var su;
-              const Uu = null === (su = Eu.get(ju)) || void 0 === su ? void 0 : su.members;
-              return Uu ? EE(Uu) : uu
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((uu, ju) => {
-              var su;
-              const Uu = null === (su = Eu.get(ju)) || void 0 === su ? void 0 : su.object;
-              return Uu ? EE(Uu.keys) : uu
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((uu, ju) => {
-              var su, Uu;
-              return null !== (su = null === (Uu = Eu.get(ju)) || void 0 === Uu ? void 0 : Uu.text) && void 0 !== su ? su : uu
+        function Zb(GG, bG) {
+          const ZG = function(GG, bG) {
+            return GG.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((GG, ZG) => {
+              var wG;
+              const SG = null === (wG = bG.get(ZG)) || void 0 === wG ? void 0 : wG.object;
+              return SG ? bb(SG.values) : GG
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((GG, ZG) => {
+              var wG, SG;
+              const LG = null === (wG = bG.get(ZG)) || void 0 === wG || null === (SG = wG.object) || void 0 === SG ? void 0 : SG.values.map(BG);
+              return null !== LG && void 0 !== LG && LG.every((GG => null !== GG)) ? bb([...new Set(LG.flat())]) : GG
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((GG, ZG) => {
+              var wG;
+              const SG = null === (wG = bG.get(ZG)) || void 0 === wG ? void 0 : wG.members;
+              return SG ? bb(SG) : GG
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((GG, ZG) => {
+              var wG;
+              const SG = null === (wG = bG.get(ZG)) || void 0 === wG ? void 0 : wG.object;
+              return SG ? bb(SG.keys) : GG
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((GG, ZG) => {
+              var wG, SG;
+              return null !== (wG = null === (SG = bG.get(ZG)) || void 0 === SG ? void 0 : SG.text) && void 0 !== wG ? wG : GG
             }))
-          }(uu.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), Eu);
-          return [uu.doc, ju].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(GG.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), bG);
+          return [GG.doc, ZG].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function sE(uu) {
-          const Eu = zu(uu),
-            ju = function(uu) {
-              const Eu = new Map,
-                ju = uu.find((uu => "_TypeOf" === uu.name));
-              let su = null;
-              const Uu = () => {
-                if (su) {
-                  const uu = su.lines.join("\n");
-                  Eu.set(su.name, {
-                    text: uu,
-                    members: Ru(uu),
-                    object: uE(uu)
+        function wb(GG) {
+          const bG = xG(GG),
+            ZG = function(GG) {
+              const bG = new Map,
+                ZG = GG.find((GG => "_TypeOf" === GG.name));
+              let wG = null;
+              const SG = () => {
+                if (wG) {
+                  const GG = wG.lines.join("\n");
+                  bG.set(wG.name, {
+                    text: GG,
+                    members: BG(GG),
+                    object: Gb(GG)
                   })
                 }
               };
-              for (const Zu of ju.lines.slice(1, -1)) {
-                const uu = Zu.match(/^\t([\w$]+): (.+)$/);
-                uu ? (Uu(), su = {
-                  name: uu[1],
-                  lines: [uu[2]]
-                }) : su && su.lines.push(Zu.replace(/^\t/, ""))
+              for (const LG of ZG.lines.slice(1, -1)) {
+                const GG = LG.match(/^\t([\w$]+): (.+)$/);
+                GG ? (SG(), wG = {
+                  name: GG[1],
+                  lines: [GG[2]]
+                }) : wG && wG.lines.push(LG.replace(/^\t/, ""))
               }
-              return Uu(), Eu
-            }(Eu),
-            su = new Map;
-          for (const Uu of Eu) Hu.has(Uu.name) || su.has(Uu.name) || su.set(Uu.name, jE(Uu, ju));
-          return su
+              return SG(), bG
+            }(bG),
+            wG = new Map;
+          for (const SG of bG) tG.has(SG.name) || wG.has(SG.name) || wG.set(SG.name, Zb(SG, ZG));
+          return wG
         }
-        let UE, ZE, XE;
+        let Sb, Lb, yb;
 
-        function lE() {
-          return ZE ??= function(uu) {
-            const Eu = zu(uu).find((uu => "GameApi" === uu.name)),
-              ju = new Map,
-              su = Eu.lines;
-            for (let Zu = 0; Zu < su.length; Zu++) {
-              var Uu;
-              if (!su[Zu].trimStart().startsWith("/**")) continue;
-              const uu = Zu;
-              for (; Zu < su.length && !su[Zu].includes("*/");) Zu++;
-              const Eu = null === (Uu = su[Zu + 1]) || void 0 === Uu ? void 0 : Uu.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!Eu) continue;
-              let Xu = null;
-              const lu = [];
-              let qu = "description",
-                fu = !1;
-              for (const ju of su.slice(uu, Zu + 1).join("\n").split("\n").map((uu => uu.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const uu = ju.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                uu ? (Xu = uu[1].trim(), qu = "deprecation") : ju.startsWith("@") ? (qu = "otherTag", fu = !0) : "" === ju.trim() ? fu || (qu = "description", lu.push(ju)) : "deprecation" !== qu || /^[A-Z]/.test(ju.trim()) ? "otherTag" !== qu && (qu = "description", lu.push(ju)) : Xu = `${Xu} ${ju.trim()}`.trim()
+        function kb() {
+          return Lb ??= function(GG) {
+            const bG = xG(GG).find((GG => "GameApi" === GG.name)),
+              ZG = new Map,
+              wG = bG.lines;
+            for (let LG = 0; LG < wG.length; LG++) {
+              var SG;
+              if (!wG[LG].trimStart().startsWith("/**")) continue;
+              const GG = LG;
+              for (; LG < wG.length && !wG[LG].includes("*/");) LG++;
+              const bG = null === (SG = wG[LG + 1]) || void 0 === SG ? void 0 : SG.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!bG) continue;
+              let yG = null;
+              const kG = [];
+              let UG = "description",
+                YG = !1;
+              for (const ZG of wG.slice(GG, LG + 1).join("\n").split("\n").map((GG => GG.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const GG = ZG.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                GG ? (yG = GG[1].trim(), UG = "deprecation") : ZG.startsWith("@") ? (UG = "otherTag", YG = !0) : "" === ZG.trim() ? YG || (UG = "description", kG.push(ZG)) : "deprecation" !== UG || /^[A-Z]/.test(ZG.trim()) ? "otherTag" !== UG && (UG = "description", kG.push(ZG)) : yG = `${yG} ${ZG.trim()}`.trim()
               }
-              ju.set(Eu[1], {
-                deprecation: Xu,
-                description: lu.join("\n").trim()
+              ZG.set(bG[1], {
+                deprecation: yG,
+                description: kG.join("\n").trim()
               })
             }
-            return ju
-          }(xu.default), ZE
+            return ZG
+          }(TG.default), Lb
         }
 
-        function qE() {
-          if (!XE) {
-            XE = new Map;
-            for (const uu of Qu) {
-              const Eu = (0, Ju.y)(Iu(uu)).flatMap((uu => uu.blocks));
-              for (const uu of (0, Ju.l)(Eu))
-                if ("ts" === uu.lang || "typescript" === uu.lang)
-                  for (const [Eu, ju] of Pu(uu.code)) XE.set(Eu, ju)
+        function Ub() {
+          if (!yb) {
+            yb = new Map;
+            for (const GG of PG) {
+              const bG = (0, iG.t)(qG(GG)).flatMap((GG => GG.blocks));
+              for (const GG of (0, iG.k)(bG))
+                if ("ts" === GG.lang || "typescript" === GG.lang)
+                  for (const [bG, ZG] of mG(GG.code)) yb.set(bG, ZG)
             }
-            for (const [uu, Eu] of(UE ??= sE(xu.default), UE)) XE.has(uu) || XE.set(uu, Eu)
+            for (const [GG, bG] of(Sb ??= wb(TG.default), Sb)) yb.has(GG) || yb.set(GG, bG)
           }
-          return XE
+          return yb
         }
-        const fE = {
+        const Yb = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let CE;
+        let Vb;
 
-        function bE() {
-          if (!CE) {
-            CE = new Map;
-            for (const uu of Qu)
-              if (ou(uu.layout))
-                for (const Eu of Iu(uu).sections) CE.has(Eu.heading.text) || CE.set(Eu.heading.text, {
-                  pageId: uu.id,
-                  anchor: Eu.heading.anchor
+        function pb() {
+          if (!Vb) {
+            Vb = new Map;
+            for (const GG of PG)
+              if (IG(GG.layout))
+                for (const bG of qG(GG).sections) Vb.has(bG.heading.text) || Vb.set(bG.heading.text, {
+                  pageId: GG.id,
+                  anchor: bG.heading.anchor
                 })
           }
-          return CE
+          return Vb
         }
 
-        function cE(uu) {
-          const Eu = uu.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return Eu ? bE().get(Eu[1]) : void 0
+        function fb(GG) {
+          const bG = GG.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return bG ? pb().get(bG[1]) : void 0
         }
-        const NE = (0, su.createContext)("/docs"),
-          OE = (0, su.createContext)(null),
-          YE = (0, su.createContext)(!1),
-          hE = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const Qb = (0, wG.createContext)("/docs"),
+          Kb = (0, wG.createContext)(null),
+          hb = (0, wG.createContext)(!1),
+          db = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function DE(uu) {
-          const Eu = uu.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return Eu ? Eu[1] : null
+        function Jb(GG) {
+          const bG = GG.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return bG ? bG[1] : null
         }
 
-        function gE(uu) {
+        function rb(GG) {
           let {
-            colour: Eu
-          } = uu;
-          return (0, Ou.jsx)("span", {
+            colour: bG
+          } = GG;
+          return (0, KG.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: Eu
+              background: bG
             },
             "aria-hidden": "true"
           })
         }
 
-        function ME(uu) {
-          const Eu = [];
-          let ju = 0;
-          for (const su of uu.matchAll(hE)) Eu.push(uu.slice(ju, su.index), (0, Ou.jsx)(gE, {
-            colour: su[0]
-          }), su[0]), ju = su.index + su[0].length;
-          return Eu.push(uu.slice(ju)), Eu
+        function zb(GG) {
+          const bG = [];
+          let ZG = 0;
+          for (const wG of GG.matchAll(db)) bG.push(GG.slice(ZG, wG.index), (0, KG.jsx)(rb, {
+            colour: wG[0]
+          }), wG[0]), ZG = wG.index + wG[0].length;
+          return bG.push(GG.slice(ZG)), bG
         }
 
-        function eE(uu) {
+        function Eb(GG) {
           let {
-            href: Eu,
-            children: ju
-          } = uu;
-          const Uu = (0, su.useContext)(NE);
-          if (Eu.startsWith("#")) {
-            const uu = Bu(Eu);
-            if (uu) return (0, Ou.jsx)(Xu.c, {
-              to: tu(Uu, uu.page, uu.anchor),
-              children: (0, Ou.jsx)(YE.Provider, {
+            href: bG,
+            children: ZG
+          } = GG;
+          const SG = (0, wG.useContext)(Qb);
+          if (bG.startsWith("#")) {
+            const GG = gG(bG);
+            if (GG) return (0, KG.jsx)(yG.c, {
+              to: RG(SG, GG.page, GG.anchor),
+              children: (0, KG.jsx)(hb.Provider, {
                 value: !0,
-                children: ju
+                children: ZG
               })
             })
           }
-          return (0, Ou.jsx)("a", {
-            href: Eu,
+          return (0, KG.jsx)("a", {
+            href: bG,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, Ou.jsx)(YE.Provider, {
+            children: (0, KG.jsx)(hb.Provider, {
               value: !0,
-              children: ju
+              children: ZG
             })
           })
         }
 
-        function GE(uu) {
+        function ob(GG) {
           let {
-            code: Eu
-          } = uu;
-          const ju = (0, su.useContext)(NE);
-          if ((0, su.useContext)(YE)) return (0, Ou.jsx)("code", {
+            code: bG
+          } = GG;
+          const ZG = (0, wG.useContext)(Qb);
+          if ((0, wG.useContext)(hb)) return (0, KG.jsx)("code", {
             className: "DocsInlineCode",
-            children: Eu
+            children: bG
           });
-          if (qE().has(Eu)) return (0, Ou.jsx)(dE, {
-            type: Eu
+          if (Ub().has(bG)) return (0, KG.jsx)(Cb, {
+            type: bG
           });
-          const Uu = cE(Eu);
-          if (Uu) return (0, Ou.jsx)(Xu.c, {
+          const SG = fb(bG);
+          if (SG) return (0, KG.jsx)(yG.c, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: tu(ju, Wu(Uu.pageId), Uu.anchor),
-            children: Eu
+            to: RG(ZG, AG(SG.pageId), SG.anchor),
+            children: bG
           });
-          const Zu = DE(Eu);
-          return (0, Ou.jsxs)("code", {
+          const LG = Jb(bG);
+          return (0, KG.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [Zu && (0, Ou.jsx)(gE, {
-              colour: Zu
-            }), Eu]
+            children: [LG && (0, KG.jsx)(rb, {
+              colour: LG
+            }), bG]
           })
         }
 
-        function pE(uu) {
+        function Xb(GG) {
           let {
-            text: Eu
-          } = uu;
-          const ju = [];
-          let Uu = 0;
-          for (const su of Eu.matchAll(Ju.h)) {
-            su.index > Uu && ju.push(...ME(Eu.slice(Uu, su.index)));
-            const [, uu, Zu, Xu, lu, qu] = su;
-            uu ? ju.push((0, Ou.jsx)(GE, {
-              code: (0, Ju.n)(uu, Zu)
-            })) : Xu ? ju.push((0, Ou.jsx)("strong", {
-              children: (0, Ou.jsx)(pE, {
-                text: Xu
+            text: bG
+          } = GG;
+          const ZG = [];
+          let SG = 0;
+          for (const wG of bG.matchAll(iG.f)) {
+            wG.index > SG && ZG.push(...zb(bG.slice(SG, wG.index)));
+            const [, GG, LG, yG, kG, UG] = wG;
+            GG ? ZG.push((0, KG.jsx)(ob, {
+              code: (0, iG.m)(GG, LG)
+            })) : yG ? ZG.push((0, KG.jsx)("strong", {
+              children: (0, KG.jsx)(Xb, {
+                text: yG
               })
-            })) : ju.push((0, Ou.jsx)(eE, {
-              href: qu,
-              children: (0, Ou.jsx)(pE, {
-                text: lu
+            })) : ZG.push((0, KG.jsx)(Eb, {
+              href: UG,
+              children: (0, KG.jsx)(Xb, {
+                text: kG
               })
-            })), Uu = su.index + su[0].length
+            })), SG = wG.index + wG[0].length
           }
-          return Uu < Eu.length && ju.push(...ME(Eu.slice(Uu))), (0, Ou.jsx)(Ou.Fragment, {
-            children: ju.map(((uu, Eu) => (0, Ou.jsx)(su.Fragment, {
-              children: uu
-            }, Eu)))
+          return SG < bG.length && ZG.push(...zb(bG.slice(SG))), (0, KG.jsx)(KG.Fragment, {
+            children: ZG.map(((GG, bG) => (0, KG.jsx)(wG.Fragment, {
+              children: GG
+            }, bG)))
           })
         }
-        const wE = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          JE = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const ub = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          ib = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function dE(uu) {
+        function Cb(GG) {
           let {
-            type: Eu
-          } = uu;
-          const ju = qE(),
-            Uu = [];
-          for (const su of Eu.trim().matchAll(wE)) {
-            const [uu, Eu, Zu, Xu, lu] = su;
-            Eu ? Uu.push((0, Ou.jsx)("span", {
+            type: bG
+          } = GG;
+          const ZG = Ub(),
+            SG = [];
+          for (const wG of bG.trim().matchAll(ub)) {
+            const [GG, bG, LG, yG, kG] = wG;
+            bG ? SG.push((0, KG.jsx)("span", {
               className: "DocsTypeString",
-              children: uu
-            })) : Zu && ju.has(Zu) ? Uu.push((0, Ou.jsx)(mE, {
-              name: Zu,
-              definition: ju.get(Zu)
-            })) : Zu ? Uu.push((0, Ou.jsx)("span", {
-              className: JE.has(Zu) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: uu
-            })) : Xu ? Uu.push((0, Ou.jsx)("span", {
+              children: GG
+            })) : LG && ZG.has(LG) ? SG.push((0, KG.jsx)(vb, {
+              name: LG,
+              definition: ZG.get(LG)
+            })) : LG ? SG.push((0, KG.jsx)("span", {
+              className: ib.has(LG) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: GG
+            })) : yG ? SG.push((0, KG.jsx)("span", {
               className: "DocsTypeNumber",
-              children: uu
-            })) : lu ? Uu.push(" ") : Uu.push((0, Ou.jsx)("span", {
+              children: GG
+            })) : kG ? SG.push(" ") : SG.push((0, KG.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: uu
+              children: GG
             }))
           }
-          return (0, Ou.jsx)("code", {
+          return (0, KG.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: Uu.map(((uu, Eu) => (0, Ou.jsx)(su.Fragment, {
-              children: uu
-            }, Eu)))
+            children: SG.map(((GG, bG) => (0, KG.jsx)(wG.Fragment, {
+              children: GG
+            }, bG)))
           })
         }
-        const aE = 480,
-          PE = 6,
-          oE = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let kE = 0;
+        const Wb = 480,
+          mb = 6,
+          Ib = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let Fb = 0;
 
-        function mE(uu) {
+        function vb(GG) {
           let {
-            name: Eu,
-            definition: ju
-          } = uu;
-          const Uu = (0, su.useContext)(NE),
-            Zu = fE[Eu],
-            lu = (0, su.useRef)(null),
-            qu = (0, su.useRef)(null),
-            Cu = (0, su.useRef)(null),
-            [bu, cu] = (0, su.useState)(!1),
-            [Nu, Yu] = (0, su.useState)(null),
-            Du = (0, su.useRef)(),
-            gu = (0, su.useContext)(OE),
-            [Mu] = (0, su.useState)((() => "DocsTypePopover-" + kE++)),
-            eu = () => {
-              clearTimeout(Du.current), cu(!0)
+            name: bG,
+            definition: ZG
+          } = GG;
+          const SG = (0, wG.useContext)(Qb),
+            LG = Yb[bG],
+            kG = (0, wG.useRef)(null),
+            UG = (0, wG.useRef)(null),
+            VG = (0, wG.useRef)(null),
+            [pG, fG] = (0, wG.useState)(!1),
+            [QG, hG] = (0, wG.useState)(null),
+            JG = (0, wG.useRef)(),
+            rG = (0, wG.useContext)(Kb),
+            [zG] = (0, wG.useState)((() => "DocsTypePopover-" + Fb++)),
+            EG = () => {
+              clearTimeout(JG.current), fG(!0)
             },
-            Gu = () => {
-              clearTimeout(Du.current), Du.current = setTimeout((() => {
-                cu(!1)
+            oG = () => {
+              clearTimeout(JG.current), JG.current = setTimeout((() => {
+                fG(!1)
               }), 120)
             };
-          return (0, su.useEffect)((() => {
-            if (!bu) return;
-            const uu = uu => {
-              if ("Escape" === uu.key) {
-                var Eu, ju;
-                if (null !== (Eu = qu.current) && void 0 !== Eu && Eu.contains(document.activeElement)) null === (ju = lu.current) || void 0 === ju || ju.focus();
-                cu(!1)
+          return (0, wG.useEffect)((() => {
+            if (!pG) return;
+            const GG = GG => {
+              if ("Escape" === GG.key) {
+                var bG, ZG;
+                if (null !== (bG = UG.current) && void 0 !== bG && bG.contains(document.activeElement)) null === (ZG = kG.current) || void 0 === ZG || ZG.focus();
+                fG(!1)
               }
             };
-            return document.addEventListener("keydown", uu), () => {
-              document.removeEventListener("keydown", uu)
+            return document.addEventListener("keydown", GG), () => {
+              document.removeEventListener("keydown", GG)
             }
-          }), [bu]), (0, su.useEffect)((() => () => {
-            clearTimeout(Du.current)
-          }), []), (0, su.useLayoutEffect)((() => {
-            if (!bu || !lu.current || !qu.current) return void Yu(null);
-            const uu = lu.current.getBoundingClientRect(),
-              Eu = qu.current.offsetHeight,
-              ju = Math.min(aE, window.innerWidth - 32),
-              su = Math.min(Math.max(16, uu.left), window.innerWidth - ju - 16),
-              Uu = uu.bottom + PE + Eu < window.innerHeight;
-            Yu({
-              left: su,
-              top: Uu ? uu.bottom + PE : Math.max(16, uu.top - PE - Eu)
+          }), [pG]), (0, wG.useEffect)((() => () => {
+            clearTimeout(JG.current)
+          }), []), (0, wG.useLayoutEffect)((() => {
+            if (!pG || !kG.current || !UG.current) return void hG(null);
+            const GG = kG.current.getBoundingClientRect(),
+              bG = UG.current.offsetHeight,
+              ZG = Math.min(Wb, window.innerWidth - 32),
+              wG = Math.min(Math.max(16, GG.left), window.innerWidth - ZG - 16),
+              SG = GG.bottom + mb + bG < window.innerHeight;
+            hG({
+              left: wG,
+              top: SG ? GG.bottom + mb : Math.max(16, GG.top - mb - bG)
             })
-          }), [bu]), (0, Ou.jsxs)(Ou.Fragment, {
-            children: [(0, Ou.jsx)("button", {
+          }), [pG]), (0, KG.jsxs)(KG.Fragment, {
+            children: [(0, KG.jsx)("button", {
               type: "button",
-              ref: lu,
+              ref: kG,
               className: "DocsTypeLink",
-              "aria-expanded": bu,
-              "aria-describedby": bu ? Mu : void 0,
-              onMouseEnter: eu,
-              onMouseLeave: Gu,
-              onFocus: eu,
-              onBlur: Gu,
-              onKeyDown: uu => {
-                "Tab" === uu.key && !uu.shiftKey && Cu.current && (uu.preventDefault(), Cu.current.focus())
+              "aria-expanded": pG,
+              "aria-describedby": pG ? zG : void 0,
+              onMouseEnter: EG,
+              onMouseLeave: oG,
+              onFocus: EG,
+              onBlur: oG,
+              onKeyDown: GG => {
+                "Tab" === GG.key && !GG.shiftKey && VG.current && (GG.preventDefault(), VG.current.focus())
               },
-              onClick: eu,
-              children: Eu
-            }), bu && (0, fu.createPortal)((0, Ou.jsxs)("span", {
-              ref: qu,
-              id: Mu,
+              onClick: EG,
+              children: bG
+            }), pG && (0, YG.createPortal)((0, KG.jsxs)("span", {
+              ref: UG,
+              id: zG,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: Nu ? {
-                left: Nu.left,
-                top: Nu.top,
-                maxWidth: aE
+              style: QG ? {
+                left: QG.left,
+                top: QG.top,
+                maxWidth: Wb
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: eu,
-              onMouseLeave: Gu,
-              onFocus: eu,
-              onBlur: Gu,
-              children: [(0, Ou.jsxs)("span", {
+              onMouseEnter: EG,
+              onMouseLeave: oG,
+              onFocus: EG,
+              onBlur: oG,
+              children: [(0, KG.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, Ou.jsx)("span", {
+                children: [(0, KG.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: Eu
-                }), Zu && (0, Ou.jsxs)(Xu.c, {
-                  ref: Cu,
+                  children: bG
+                }), LG && (0, KG.jsxs)(yG.c, {
+                  ref: VG,
                   className: "DocsTypePopoverLink",
-                  to: tu(Uu, Wu(Zu)),
+                  to: RG(SG, AG(LG)),
                   onClick: () => {
-                    cu(!1)
+                    fG(!1)
                   },
-                  onKeyDown: uu => {
-                    if ("Tab" === uu.key) {
-                      var Eu;
-                      if (uu.preventDefault(), uu.shiftKey || !lu.current || ! function(uu, Eu) {
-                          const ju = [...document.querySelectorAll(oE)],
-                            su = ju.slice(ju.indexOf(uu) + 1).find((uu => uu.getClientRects().length > 0 && !(null !== Eu && void 0 !== Eu && Eu.contains(uu))));
-                          return null === su || void 0 === su || su.focus(), void 0 !== su
-                        }(lu.current, qu.current)) null === (Eu = lu.current) || void 0 === Eu || Eu.focus();
-                      uu.shiftKey || cu(!1)
+                  onKeyDown: GG => {
+                    if ("Tab" === GG.key) {
+                      var bG;
+                      if (GG.preventDefault(), GG.shiftKey || !kG.current || ! function(GG, bG) {
+                          const ZG = [...document.querySelectorAll(Ib)],
+                            wG = ZG.slice(ZG.indexOf(GG) + 1).find((GG => GG.getClientRects().length > 0 && !(null !== bG && void 0 !== bG && bG.contains(GG))));
+                          return null === wG || void 0 === wG || wG.focus(), void 0 !== wG
+                        }(kG.current, UG.current)) null === (bG = kG.current) || void 0 === bG || bG.focus();
+                      GG.shiftKey || fG(!1)
                     }
                   },
-                  children: [Wu(Zu).title, (0, Ou.jsx)(hu, {
+                  children: [AG(LG).title, (0, KG.jsx)(dG, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, Ou.jsx)(wu, {
+              }), (0, KG.jsx)(uG, {
                 lang: "ts",
-                code: ju,
+                code: ZG,
                 compact: !0
               })]
-            }), null !== gu && void 0 !== gu ? gu : document.body)]
+            }), null !== rG && void 0 !== rG ? rG : document.body)]
           })
         }
-        var vE = ju(202),
-          KE = ju(4944),
-          VE = ju(4952),
-          rE = ju(4958);
-        const QE = {
+        var ab = ZG(188),
+          cb = ZG(4786),
+          lb = ZG(4790),
+          jb = ZG(4792);
+        const Pb = {
           progressBar: {
-            zu: 30,
-            Ru: .075,
-            uE: 5,
-            EE: !1,
+            NG: 30,
+            OG: .075,
+            xG: 5,
+            BG: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            UE: "fa-solid fa-computer-mouse",
+            Zb: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            XE: 3e3,
+            Lb: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            lE: !0,
+            yb: !0,
             scale: 3,
             rotation: 15,
-            qE: !1
+            kb: !1
           },
           gravityBar: {
-            zu: 30,
-            CE: .25,
-            bE: 3,
-            cE: .8,
+            NG: 30,
+            Yb: .25,
+            Vb: 3,
+            pb: .8,
             gravity: 1,
-            NE: 1.5,
-            OE: 8,
-            YE: 4,
-            EE: !1,
+            fb: 1.5,
+            Qb: 8,
+            Kb: 4,
+            BG: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            DE: .15,
+            Jb: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            ME: 5,
-            eE: 1200,
-            GE: .15,
-            pE: 3,
+            zb: 5,
+            Eb: 1200,
+            ob: .15,
+            Xb: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var iE = ju(337),
-          WE = ju(2045);
+        var Mb = ZG(333),
+          Ab = ZG(1972);
 
-        function SE(uu) {
-          return uu.startsWith("fa-")
+        function sb(GG) {
+          return GG.startsWith("fa-")
         }
-        const IE = {
+        const qb = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          FE = {
+          nb = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function BE(uu) {
-          return "string" === typeof uu ? "text" : "entityName" in uu || "translationKey" in uu ? "other" : (0, iE.ub)(uu) ? "progressBar" : (0, iE.tb)(uu) ? "keyBinding" : "icon" in uu ? "icon" : "str" in uu && "string" === typeof uu.str ? "text" : "other"
+        function gb(GG) {
+          return "string" === typeof GG ? "text" : "entityName" in GG || "translationKey" in GG ? "other" : (0, Mb.Tb)(GG) ? "progressBar" : (0, Mb.Qb)(GG) ? "keyBinding" : "icon" in GG ? "icon" : "str" in GG && "string" === typeof GG.str ? "text" : "other"
         }
-        const LE = [{
+        const eb = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          tE = {
+          Rb = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...LE],
+            }, ...eb],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: WE.j
+                options: Ab.k
               },
               isRequired: !0
-            }, ...LE],
+            }, ...eb],
             other: []
           };
 
-        function xE(uu) {
-          return "string" === typeof uu ? {
-            str: uu
-          } : uu
+        function Tb(GG) {
+          return "string" === typeof GG ? {
+            str: GG
+          } : GG
         }
 
-        function TE(uu, Eu) {
-          let ju = xE(uu);
-          for (const su of Eu) ju = ju && "object" === typeof ju ? ju[su] : void 0;
-          return ju
+        function Hb(GG, bG) {
+          let ZG = Tb(GG);
+          for (const wG of bG) ZG = ZG && "object" === typeof ZG ? ZG[wG] : void 0;
+          return ZG
         }
 
-        function HE(uu, Eu, ju) {
-          const su = (uu, Uu) => {
-            var Zu;
-            const Xu = Eu[Uu],
-              lu = {
-                ...uu
+        function tb(GG, bG, ZG) {
+          const wG = (GG, SG) => {
+            var LG;
+            const yG = bG[SG],
+              kG = {
+                ...GG
               };
-            if (Uu === Eu.length - 1) return void 0 === ju ? delete lu[Xu] : lu[Xu] = ju, lu;
-            const qu = su(null !== (Zu = uu[Xu]) && void 0 !== Zu ? Zu : {}, Uu + 1);
-            return 0 === Object.keys(qu).length ? delete lu[Xu] : lu[Xu] = qu, lu
+            if (SG === bG.length - 1) return void 0 === ZG ? delete kG[yG] : kG[yG] = ZG, kG;
+            const UG = wG(null !== (LG = GG[yG]) && void 0 !== LG ? LG : {}, SG + 1);
+            return 0 === Object.keys(UG).length ? delete kG[yG] : kG[yG] = UG, kG
           };
-          return function(uu) {
-            const Eu = Object.keys(uu);
-            return "string" === typeof uu.str && 1 === Eu.length ? uu.str : uu
-          }(su(xE(uu), 0))
+          return function(GG) {
+            const bG = Object.keys(GG);
+            return "string" === typeof GG.str && 1 === bG.length ? GG.str : GG
+          }(wG(Tb(GG), 0))
         }
 
-        function AE(uu, Eu) {
-          const ju = BE(uu),
-            su = tE[ju].find((uu => uu.path.join(".") === Eu.join("."))),
-            Uu = null !== su && void 0 !== su && su.isRequired && "other" !== ju ? TE(FE[ju], Eu) : void 0;
-          return HE(uu, Eu, Uu)
+        function Db(GG, bG) {
+          const ZG = gb(GG),
+            wG = Rb[ZG].find((GG => GG.path.join(".") === bG.join("."))),
+            SG = null !== wG && void 0 !== wG && wG.isRequired && "other" !== ZG ? Hb(nb[ZG], bG) : void 0;
+          return tb(GG, bG, SG)
         }
 
-        function nE(uu) {
-          switch (BE(uu)) {
+        function Nb(GG) {
+          switch (gb(GG)) {
             case "text":
-              return String(TE(uu, ["str"]));
+              return String(Hb(GG, ["str"]));
             case "icon":
-              return String(TE(uu, ["icon"]));
+              return String(Hb(GG, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(TE(uu,["progress"])))}%`;
+              return `${Math.round(100*Number(Hb(GG,["progress"])))}%`;
             case "keyBinding":
-              return String(TE(uu, ["action"]));
+              return String(Hb(GG, ["action"]));
             case "other":
-              return JSON.stringify(uu)
+              return JSON.stringify(GG)
           }
         }
-        const yE = /^[A-Za-z_$][\w$]*$/;
+        const Ob = /^[A-Za-z_$][\w$]*$/;
 
-        function zE(uu) {
-          if (Array.isArray(uu)) return `[${uu.map(zE).join(", ")}]`;
-          if (uu && "object" === typeof uu) {
-            const Eu = Object.entries(uu).map((uu => {
-              let [Eu, ju] = uu;
-              return `${yE.test(Eu)?Eu:JSON.stringify(Eu)}: ${zE(ju)}`
+        function xb(GG) {
+          if (Array.isArray(GG)) return `[${GG.map(xb).join(", ")}]`;
+          if (GG && "object" === typeof GG) {
+            const bG = Object.entries(GG).map((GG => {
+              let [bG, ZG] = GG;
+              return `${Ob.test(bG)?bG:JSON.stringify(bG)}: ${xb(ZG)}`
             }));
-            return 0 === Eu.length ? "{}" : `{ ${Eu.join(", ")} }`
+            return 0 === bG.length ? "{}" : `{ ${bG.join(", ")} }`
           }
-          return JSON.stringify(uu)
+          return JSON.stringify(GG)
         }
 
-        function RE(uu) {
-          const Eu = uu.map(zE),
-            ju = `[${Eu.join(", ")}]`;
-          return ju.length <= 60 ? ju : `[\n${Eu.map((uu=>`    ${uu},`)).join("\n")}\n]`
+        function Bb(GG) {
+          const bG = GG.map(xb),
+            ZG = `[${bG.join(", ")}]`;
+          return ZG.length <= 60 ? ZG : `[\n${bG.map((GG=>`    ${GG},`)).join("\n")}\n]`
         }
-        const uj = {
+        const GZ = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function Ej(uu) {
-          let Eu = "";
-          for (let Uu = 0; Uu < uu.length; Uu++) {
-            const Zu = uu[Uu];
-            if ("\\" === Zu) {
-              var ju;
-              const su = null !== (ju = uu[Uu + 1]) && void 0 !== ju ? ju : "";
-              Eu += "'" === su ? "'" : Zu + su, Uu++
-            } else if ('"' === Zu) Eu += '\\"';
+        function bZ(GG) {
+          let bG = "";
+          for (let SG = 0; SG < GG.length; SG++) {
+            const LG = GG[SG];
+            if ("\\" === LG) {
+              var ZG;
+              const wG = null !== (ZG = GG[SG + 1]) && void 0 !== ZG ? ZG : "";
+              bG += "'" === wG ? "'" : LG + wG, SG++
+            } else if ('"' === LG) bG += '\\"';
             else {
-              var su;
-              Eu += null !== (su = uj[Zu]) && void 0 !== su ? su : Zu
+              var wG;
+              bG += null !== (wG = GZ[LG]) && void 0 !== wG ? wG : LG
             }
           }
-          return `"${Eu}"`
+          return `"${bG}"`
         }
 
-        function jj(uu) {
-          if ("string" === typeof uu) return !0;
-          if (!uu || "object" !== typeof uu || Array.isArray(uu)) return !1;
-          const Eu = uu;
-          return "ProgressBar" === Eu.type ? "number" === typeof Eu.progress : "StyledKeyBinding" === Eu.type ? WE.j.includes(Eu.action) : "string" === typeof Eu.icon || "string" === typeof Eu.str || "string" === typeof Eu.entityName || "string" === typeof Eu.translationKey
+        function ZZ(GG) {
+          if ("string" === typeof GG) return !0;
+          if (!GG || "object" !== typeof GG || Array.isArray(GG)) return !1;
+          const bG = GG;
+          return "ProgressBar" === bG.type ? "number" === typeof bG.progress : "StyledKeyBinding" === bG.type ? Ab.k.includes(bG.action) : "string" === typeof bG.icon || "string" === typeof bG.str || "string" === typeof bG.entityName || "string" === typeof bG.translationKey
         }
 
-        function sj(uu) {
-          let Eu;
+        function wZ(GG) {
+          let bG;
           try {
-            Eu = function(uu) {
-              let Eu = "",
-                ju = "",
-                su = 0;
-              const Uu = () => {
-                Eu += ju.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), ju = ""
+            bG = function(GG) {
+              let bG = "",
+                ZG = "",
+                wG = 0;
+              const SG = () => {
+                bG += ZG.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), ZG = ""
               };
-              for (; su < uu.length;) {
-                const Zu = uu.slice(su).search(/["'`]|\/\//);
-                if (-1 === Zu) {
-                  ju += uu.slice(su);
+              for (; wG < GG.length;) {
+                const LG = GG.slice(wG).search(/["'`]|\/\//);
+                if (-1 === LG) {
+                  ZG += GG.slice(wG);
                   break
                 }
-                ju += uu.slice(su, su + Zu);
-                const Xu = su + Zu,
-                  lu = uu[Xu];
-                if ("/" === lu) {
-                  const Eu = uu.indexOf("\n", Xu);
-                  su = -1 === Eu ? uu.length : Eu;
+                ZG += GG.slice(wG, wG + LG);
+                const yG = wG + LG,
+                  kG = GG[yG];
+                if ("/" === kG) {
+                  const bG = GG.indexOf("\n", yG);
+                  wG = -1 === bG ? GG.length : bG;
                   continue
                 }
-                if (Uu(), "`" === lu) throw new Error("Use quotes rather than template strings.");
-                let qu = Xu + 1;
-                for (; qu < uu.length && uu[qu] !== lu;) qu += "\\" === uu[qu] ? 2 : 1;
-                if (qu >= uu.length) throw new Error("A string is missing its closing quote.");
-                const fu = uu.slice(Xu + 1, qu);
-                Eu += Ej(fu), su = qu + 1
+                if (SG(), "`" === kG) throw new Error("Use quotes rather than template strings.");
+                let UG = yG + 1;
+                for (; UG < GG.length && GG[UG] !== kG;) UG += "\\" === GG[UG] ? 2 : 1;
+                if (UG >= GG.length) throw new Error("A string is missing its closing quote.");
+                const YG = GG.slice(yG + 1, UG);
+                bG += bZ(YG), wG = UG + 1
               }
-              return Uu(), JSON.parse(Eu)
-            }(uu.trim())
-          } catch (su) {
+              return SG(), JSON.parse(bG)
+            }(GG.trim())
+          } catch (wG) {
             return {
               parts: null,
-              error: su instanceof SyntaxError ? "This isn't a valid array yet." : su.message
+              error: wG instanceof SyntaxError ? "This isn't a valid array yet." : wG.message
             }
           }
-          if (!Array.isArray(Eu)) return {
+          if (!Array.isArray(bG)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const ju = Eu.findIndex((uu => !jj(uu)));
-          return -1 !== ju ? {
+          const ZG = bG.findIndex((GG => !ZZ(GG)));
+          return -1 !== ZG ? {
             parts: null,
-            error: `Part ${ju+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${ZG+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: Eu,
+            parts: bG,
             error: null
           }
         }
-        const Uj = 1 / vE.e.clientTicksPerSecond,
-          Zj = 700,
-          Xj = {
+        const SZ = 1 / ab.d.clientTicksPerSecond,
+          LZ = 700,
+          yZ = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          lj = {
-            progressBar: QE.progressBar.UE,
-            timedClick: QE.timedClick.icon,
-            gravityBar: QE.gravityBar.icon,
-            precisionBar: QE.precisionBar.icon,
-            rhythmClick: QE.rhythmClick.icon
+          kZ = {
+            progressBar: Pb.progressBar.Zb,
+            timedClick: Pb.timedClick.icon,
+            gravityBar: Pb.gravityBar.icon,
+            precisionBar: Pb.precisionBar.icon,
+            rhythmClick: Pb.rhythmClick.icon
           };
 
-        function qj(uu) {
+        function UZ(GG) {
           let {
-            type: Eu
-          } = uu;
-          const [ju, Uu] = (0, su.useState)("ready"), [Xu, lu] = (0, su.useState)(1), [qu, fu] = (0, su.useState)(!0), Cu = (0, su.useRef)(null), bu = (0, su.useRef)(null), cu = (0, su.useRef)(null), Nu = (0, su.useRef)(new Set), Yu = (0, su.useRef)(!1), Du = lj[Eu], gu = (0, su.useMemo)((() => ({
+            type: bG
+          } = GG;
+          const [ZG, SG] = (0, wG.useState)("ready"), [yG, kG] = (0, wG.useState)(1), [UG, YG] = (0, wG.useState)(!0), VG = (0, wG.useRef)(null), pG = (0, wG.useRef)(null), fG = (0, wG.useRef)(null), QG = (0, wG.useRef)(new Set), hG = (0, wG.useRef)(!1), JG = kZ[bG], rG = (0, wG.useMemo)((() => ({
             getState: () => {
-              var uu, Eu;
-              return null !== (uu = null === (Eu = cu.current) || void 0 === Eu ? void 0 : Eu.getState()) && void 0 !== uu ? uu : Xj
+              var GG, bG;
+              return null !== (GG = null === (bG = fG.current) || void 0 === bG ? void 0 : bG.getState()) && void 0 !== GG ? GG : yZ
             },
-            onFrame: uu => (Nu.current.add(uu), () => {
-              Nu.current.delete(uu)
+            onFrame: GG => (QG.current.add(GG), () => {
+              QG.current.delete(GG)
             })
           })), []);
-          (0, su.useEffect)((() => {
-            const uu = Cu.current,
-              Eu = bu.current;
-            if (!uu || !Eu) return;
-            const ju = new ResizeObserver((() => {
-              lu(uu.clientWidth / Math.max(1, Eu.offsetWidth))
+          (0, wG.useEffect)((() => {
+            const GG = VG.current,
+              bG = pG.current;
+            if (!GG || !bG) return;
+            const ZG = new ResizeObserver((() => {
+              kG(GG.clientWidth / Math.max(1, bG.offsetWidth))
             }));
-            return ju.observe(uu), () => {
-              ju.disconnect()
+            return ZG.observe(GG), () => {
+              ZG.disconnect()
             }
-          }), []), (0, su.useEffect)((() => {
-            var uu;
-            if ("playing" !== ju) return;
-            let su = !1;
-            const Zu = new rE.f[Eu](QE[Eu], (uu => {
-              su = !0, fu(!1), Uu(uu ? "succeeded" : "failed")
+          }), []), (0, wG.useEffect)((() => {
+            var GG;
+            if ("playing" !== ZG) return;
+            let wG = !1;
+            const LG = new jb.g[bG](Pb[bG], (GG => {
+              wG = !0, YG(!1), SG(GG ? "succeeded" : "failed")
             }), (() => {}));
-            cu.current = Zu;
-            let Xu = 0,
-              lu = performance.now(),
-              qu = requestAnimationFrame((function uu(Eu) {
-                for (Xu += Math.min(.25, (Eu - lu) / 1e3), lu = Eu; Xu >= Uj && !su;) Xu -= Uj, Zu.handleTick(Uj);
-                for (const ju of Nu.current) ju();
-                su || (qu = requestAnimationFrame(uu))
+            fG.current = LG;
+            let yG = 0,
+              kG = performance.now(),
+              UG = requestAnimationFrame((function GG(bG) {
+                for (yG += Math.min(.25, (bG - kG) / 1e3), kG = bG; yG >= SZ && !wG;) yG -= SZ, LG.handleTick(SZ);
+                for (const ZG of QG.current) ZG();
+                wG || (UG = requestAnimationFrame(GG))
               }));
-            return null === (uu = Cu.current) || void 0 === uu || uu.focus({
+            return null === (GG = VG.current) || void 0 === GG || GG.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(qu), Zu.tearDown(), cu.current = null, Yu.current = !1
+              cancelAnimationFrame(UG), LG.tearDown(), fG.current = null, hG.current = !1
             }
-          }), [ju, Eu]), (0, su.useEffect)((() => {
-            if (qu) return;
-            const uu = setTimeout((() => {
-              fu(!0)
-            }), Zj);
+          }), [ZG, bG]), (0, wG.useEffect)((() => {
+            if (UG) return;
+            const GG = setTimeout((() => {
+              YG(!0)
+            }), LZ);
             return () => {
-              clearTimeout(uu)
+              clearTimeout(GG)
             }
-          }), [qu]);
-          const Mu = uu => {
-            var Eu;
-            "playing" === ju && Yu.current !== uu && (Yu.current = uu, null === (Eu = cu.current) || void 0 === Eu || Eu.handleMouseInput(uu))
+          }), [UG]);
+          const zG = GG => {
+            var bG;
+            "playing" === ZG && hG.current !== GG && (hG.current = GG, null === (bG = fG.current) || void 0 === bG || bG.handleMouseInput(GG))
           };
-          return (0, Ou.jsxs)("div", {
+          return (0, KG.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, Ou.jsxs)("div", {
-              ref: Cu,
-              className: Zu()("DocsQteStage", {
-                Playing: "playing" === ju
+            children: [(0, KG.jsxs)("div", {
+              ref: VG,
+              className: LG()("DocsQteStage", {
+                Playing: "playing" === ZG
               }),
-              tabIndex: "playing" === ju ? 0 : -1,
-              role: "playing" === ju ? "button" : void 0,
-              "aria-label": "playing" === ju ? `${Eu} quick time event: click or press Space` : void 0,
-              onPointerDown: uu => {
-                0 === uu.button && Mu(!0)
+              tabIndex: "playing" === ZG ? 0 : -1,
+              role: "playing" === ZG ? "button" : void 0,
+              "aria-label": "playing" === ZG ? `${bG} quick time event: click or press Space` : void 0,
+              onPointerDown: GG => {
+                0 === GG.button && zG(!0)
               },
               onPointerUp: () => {
-                Mu(!1)
+                zG(!1)
               },
               onPointerLeave: () => {
-                Mu(!1)
+                zG(!1)
               },
               onPointerCancel: () => {
-                Mu(!1)
+                zG(!1)
               },
-              onKeyDown: uu => {
-                "playing" !== ju || " " !== uu.key && "Enter" !== uu.key || (uu.preventDefault(), Mu(!0))
+              onKeyDown: GG => {
+                "playing" !== ZG || " " !== GG.key && "Enter" !== GG.key || (GG.preventDefault(), zG(!0))
               },
-              onKeyUp: uu => {
-                "playing" !== ju || " " !== uu.key && "Enter" !== uu.key || Mu(!1)
+              onKeyUp: GG => {
+                "playing" !== ZG || " " !== GG.key && "Enter" !== GG.key || zG(!1)
               },
-              children: [(0, Ou.jsx)("div", {
-                ref: bu,
+              children: [(0, KG.jsx)("div", {
+                ref: pG,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${Xu})`
+                  transform: `scale(${yG})`
                 },
-                children: "playing" === ju && (0, Ou.jsx)(VE.c.Provider, {
-                  value: gu,
-                  children: (0, Ou.jsx)(KE.b, {
+                children: "playing" === ZG && (0, KG.jsx)(lb.b.Provider, {
+                  value: rG,
+                  children: (0, KG.jsx)(cb.e, {
                     qte: {
-                      type: Eu,
-                      parameters: QE[Eu]
+                      type: bG,
+                      parameters: Pb[bG]
                     }
                   })
                 })
-              }), "playing" !== ju && (0, Ou.jsxs)("div", {
+              }), "playing" !== ZG && (0, KG.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== ju && (0, Ou.jsxs)("div", {
-                  className: Zu()("DocsQteResult", "succeeded" === ju ? "Succeeded" : "Failed"),
-                  children: [(0, Ou.jsx)(hu, {
-                    name: "succeeded" === ju ? "check" : "cross",
+                children: ["ready" !== ZG && (0, KG.jsxs)("div", {
+                  className: LG()("DocsQteResult", "succeeded" === ZG ? "Succeeded" : "Failed"),
+                  children: [(0, KG.jsx)(dG, {
+                    name: "succeeded" === ZG ? "check" : "cross",
                     isTinted: !0
-                  }), (0, Ou.jsx)("span", {
-                    children: "succeeded" === ju ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, KG.jsx)("span", {
+                    children: "succeeded" === ZG ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, Ou.jsxs)("button", {
+                }), (0, KG.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !qu,
+                  disabled: !UG,
                   onClick: () => {
-                    Uu("playing")
+                    SG("playing")
                   },
-                  children: [(0, Ou.jsx)(hu, {
-                    name: "ready" === ju ? "play" : "replay"
-                  }), (0, Ou.jsx)("span", {
-                    children: "ready" === ju ? `Try ${Eu}` : "Play again"
+                  children: [(0, KG.jsx)(dG, {
+                    name: "ready" === ZG ? "play" : "replay"
+                  }), (0, KG.jsx)("span", {
+                    children: "ready" === ZG ? `Try ${bG}` : "Play again"
                   })]
                 })]
               })]
-            }), Du && !SE(Du) && (0, Ou.jsxs)("p", {
+            }), JG && !sb(JG) && (0, KG.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, Ou.jsx)("code", {
-                children: Du
+              children: ["The ", (0, KG.jsx)("code", {
+                children: JG
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function fj(uu) {
+        function YZ(GG) {
           let {
-            level: Eu,
-            text: ju,
-            anchor: su,
-            className: Uu
-          } = uu;
-          const Xu = `h${Math.min(Eu,6)}`;
-          return (0, Ou.jsxs)(Xu, {
-                id: su,
-                className: Zu()("DocsHeading", Uu),
-                children: [(0, Ou.jsx)(pE, {
-                      text: ju
-                    }), (0, Ou.jsx)("a", {
+            level: bG,
+            text: ZG,
+            anchor: wG,
+            className: SG
+          } = GG;
+          const yG = `h${Math.min(bG,6)}`;
+          return (0, KG.jsxs)(yG, {
+                id: wG,
+                className: LG()("DocsHeading", SG),
+                children: [(0, KG.jsx)(Xb, {
+                      text: ZG
+                    }), (0, KG.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${su}`,
-                        "aria-label": `Link to ${ju.replace(/`/g,"")}`,children:"#"})]})}function Cj(uu){let{items:Eu,ordered:ju}=uu;const su=ju?"ol":"ul";return(0,Ou.jsx)(su,{className:"DocsList",children:Eu.map(((uu,Eu)=>(0,Ou.jsxs)("li",{children:[(0,Ou.jsx)(pE,{text:uu.text}),uu.children.length>0&&(0,Ou.jsx)(Cj,{items:uu.children,ordered:ju})]},Eu)))})}function bj(uu){const Eu=uu[0],ju="paragraph"===(null===Eu||void 0===Eu?void 0:Eu.kind)?Eu.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(ju)?"warning":/^\*\*(tip|prefer)/.test(ju)?"tip":"note"}function cj(uu){let{block:Eu}=uu;switch(Eu.kind){case"heading":return(0,Ou.jsx)(fj,{level:Eu.level,text:Eu.text,anchor:Eu.anchor});case"paragraph":return(0,Ou.jsx)("p",{children:(0,Ou.jsx)(pE,{text:Eu.text})});case"code":{const uu="ts"===Eu.lang?function(uu){const Eu=uu.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return Eu&&Object.hasOwn(QE,Eu[1])?Eu[1]:null}(Eu.code):null;return(0,Ou.jsxs)(Ou.Fragment,{children:[(0,Ou.jsx)(wu,{code:Eu.code,lang:Eu.lang}),uu&&(0,Ou.jsx)(qj,{type:uu})]})}case"table":return(0,Ou.jsx)("div",{className:"DocsTableScroll",children:(0,Ou.jsxs)("table",{className:"DocsTable",children:[(0,Ou.jsx)("thead",{children:(0,Ou.jsx)("tr",{children:Eu.header.map(((uu,Eu)=>(0,Ou.jsx)("th",{children:(0,Ou.jsx)(pE,{text:uu})},Eu)))})}),(0,Ou.jsx)("tbody",{children:Eu.rows.map(((uu,Eu)=>(0,Ou.jsx)("tr",{children:uu.map(((uu,Eu)=>(0,Ou.jsx)("td",{children:(0,Ou.jsx)(pE,{text:uu})},Eu)))},Eu)))})]})});case"list":return(0,Ou.jsx)(Cj,{items:Eu.items,ordered:Eu.ordered});case"quote":return(0,Ou.jsx)("aside",{className:Zu()("DocsCallout",bj(Eu.blocks)),children:(0,Ou.jsx)(Nj,{blocks:Eu.blocks})});case"rule":return(0,Ou.jsx)("hr",{className:"DocsRule"})}}function Nj(uu){let{blocks:Eu}=uu;return(0,Ou.jsx)(Ou.Fragment,{children:Eu.map(((uu,Eu)=>(0,Ou.jsx)(cj,{block:uu},Eu)))})}var Oj=ju(4934),Yj=ju(4938);function hj(uu){return"blocks"===uu||"items"===uu}const Dj=new Map;function gj(uu){let Eu=Dj.get(uu);return Eu||(Eu=function(uu){const Eu={entries:[],legend:[],notes:[],examples:[]};let ju=!1;for(const Zu of uu.split(/\r?\n/).slice(1)){if(Zu.startsWith("#")){const uu=Zu.replace(/^# ?/,""),su=uu.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);su?Eu.legend.push({code:su[1],meaning:su[2],usage:su[3].trim()}):/^Examples:/.test(uu.trim())?ju=!0:ju&&uu.trim()?Eu.examples.push(uu.trim()):uu.trim()&&!/^\s/.test(uu)&&Eu.notes.push(uu.trim());continue}const uu=Zu.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var su,Uu;uu&&Eu.entries.push({name:uu[1],variants:null!==(su=null===(Uu=uu[2])||void 0===Uu?void 0:Uu.split(","))&&void 0!==su?su:[]})}return Eu}("blocks"===uu?Oj:Yj),Dj.set(uu,Eu)),Eu}function Mj(uu){let{className:Eu,value:ju,placeholder:su,label:Uu,onChange:Zu,count:Xu,children:lu}=uu;return(0,Ou.jsxs)("div",{className:Eu,children:[(0,Ou.jsx)(hu,{name:"magnifying-glass"}),(0,Ou.jsx)("input",{type:"search",value:ju,placeholder:su,"aria-label":Uu,onChange:uu=>{Zu(uu.target.value)}}),lu,Xu&&(0,Ou.jsxs)("span",{className:"DocsFilterCount",children:[Xu.visible," of ",Xu.total]})]})}var ej=ju(1116);function Gj(uu){const Eu=uu.trim().match(/^(` {
+                        href: `#${wG}`,
+                        "aria-label": `Link to ${ZG.replace(/`/g,"")}`,children:"#"})]})}function VZ(GG){let{items:bG,ordered:ZG}=GG;const wG=ZG?"ol":"ul";return(0,KG.jsx)(wG,{className:"DocsList",children:bG.map(((GG,bG)=>(0,KG.jsxs)("li",{children:[(0,KG.jsx)(Xb,{text:GG.text}),GG.children.length>0&&(0,KG.jsx)(VZ,{items:GG.children,ordered:ZG})]},bG)))})}function pZ(GG){const bG=GG[0],ZG="paragraph"===(null===bG||void 0===bG?void 0:bG.kind)?bG.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(ZG)?"warning":/^\*\*(tip|prefer)/.test(ZG)?"tip":"note"}function fZ(GG){let{block:bG}=GG;switch(bG.kind){case"heading":return(0,KG.jsx)(YZ,{level:bG.level,text:bG.text,anchor:bG.anchor});case"paragraph":return(0,KG.jsx)("p",{children:(0,KG.jsx)(Xb,{text:bG.text})});case"code":{const GG="ts"===bG.lang?function(GG){const bG=GG.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return bG&&Object.hasOwn(Pb,bG[1])?bG[1]:null}(bG.code):null;return(0,KG.jsxs)(KG.Fragment,{children:[(0,KG.jsx)(uG,{code:bG.code,lang:bG.lang}),GG&&(0,KG.jsx)(UZ,{type:GG})]})}case"table":return(0,KG.jsx)("div",{className:"DocsTableScroll",children:(0,KG.jsxs)("table",{className:"DocsTable",children:[(0,KG.jsx)("thead",{children:(0,KG.jsx)("tr",{children:bG.header.map(((GG,bG)=>(0,KG.jsx)("th",{children:(0,KG.jsx)(Xb,{text:GG})},bG)))})}),(0,KG.jsx)("tbody",{children:bG.rows.map(((GG,bG)=>(0,KG.jsx)("tr",{children:GG.map(((GG,bG)=>(0,KG.jsx)("td",{children:(0,KG.jsx)(Xb,{text:GG})},bG)))},bG)))})]})});case"list":return(0,KG.jsx)(VZ,{items:bG.items,ordered:bG.ordered});case"quote":return(0,KG.jsx)("aside",{className:LG()("DocsCallout",pZ(bG.blocks)),children:(0,KG.jsx)(QZ,{blocks:bG.blocks})});case"rule":return(0,KG.jsx)("hr",{className:"DocsRule"})}}function QZ(GG){let{blocks:bG}=GG;return(0,KG.jsx)(KG.Fragment,{children:bG.map(((GG,bG)=>(0,KG.jsx)(fZ,{block:GG},bG)))})}var KZ=ZG(4768),hZ=ZG(4772);function dZ(GG){return"blocks"===GG||"items"===GG}const JZ=new Map;function rZ(GG){let bG=JZ.get(GG);return bG||(bG=function(GG){const bG={entries:[],legend:[],notes:[],examples:[]};let ZG=!1;for(const LG of GG.split(/\r?\n/).slice(1)){if(LG.startsWith("#")){const GG=LG.replace(/^# ?/,""),wG=GG.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);wG?bG.legend.push({code:wG[1],meaning:wG[2],usage:wG[3].trim()}):/^Examples:/.test(GG.trim())?ZG=!0:ZG&&GG.trim()?bG.examples.push(GG.trim()):GG.trim()&&!/^\s/.test(GG)&&bG.notes.push(GG.trim());continue}const GG=LG.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var wG,SG;GG&&bG.entries.push({name:GG[1],variants:null!==(wG=null===(SG=GG[2])||void 0===SG?void 0:SG.split(","))&&void 0!==wG?wG:[]})}return bG}("blocks"===GG?KZ:hZ),JZ.set(GG,bG)),bG}function zZ(GG){let{className:bG,value:ZG,placeholder:wG,label:SG,onChange:LG,count:yG,children:kG}=GG;return(0,KG.jsxs)("div",{className:bG,children:[(0,KG.jsx)(dG,{name:"magnifying-glass"}),(0,KG.jsx)("input",{type:"search",value:ZG,placeholder:wG,"aria-label":SG,onChange:GG=>{LG(GG.target.value)}}),kG,yG&&(0,KG.jsxs)("span",{className:"DocsFilterCount",children:[yG.visible," of ",yG.total]})]})}var EZ=ZG(1016);function oZ(GG){const bG=GG.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return Eu?Eu[2]:null}function pj(uu){return"paragraph"===uu.kind&&""===uu.text.trim()}function wj(uu){const Eu={name:uu.heading.text,description:[],params:[],returns:null};let ju="description";for(const Uu of uu.blocks)if(!pj(Uu))if("heading"===Uu.kind&&/^Parameters:?$/.test(Uu.text))ju="params";else if("heading"===Uu.kind&&/^Returns:?$/.test(Uu.text))ju="returns",Eu.returns={type:"",description:[]};else if("params"!==ju||"table"!==Uu.kind){if("returns"===ju&&"paragraph"===Uu.kind&&""===Eu.returns.type){const uu=Gj(Uu.text);if(null!==uu){Eu.returns.type=uu.replaceAll("\\|","|");continue}}"returns"===ju?Eu.returns.description.push(Uu):Eu.description.push(Uu)}else for(const[uu,ju,Zu]of Uu.rows){var su;Eu.params.push({name:uu,type:null!==(su=Gj(ju))&&void 0!==su?su:ju,description:null!==Zu&&void 0!==Zu?Zu:""})}return Eu}const Jj=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function dj(uu){return uu.filter((uu=>!pj(uu)))}const aj=/^[\w][\w .'&!:()-]*$/,Pj=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function oj(uu){var Eu;if("code"===uu.kind&&"text"===uu.lang){const Eu=uu.code.split("\n").map((uu=>uu.trim())).filter(Boolean);return Eu.length>0&&Eu.every((uu=>aj.test(uu)))?Eu.map((uu=>({name:uu}))):null}return"paragraph"===uu.kind&&Pj.test(uu.text.trim())?[...uu.text.matchAll(/`([ ^ `]+)` / g)].flatMap((uu => uu[1].split(/,\s*/).map((uu => ({
-                              name: uu.trim()
-                            }))))): "table" === uu.kind && null !== (Eu = uu.header[0]) && void 0 !== Eu && Eu.startsWith("Song") ? uu.rows.map((uu => {
-                              let [Eu, ju] = uu;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return bG?bG[2]:null}function XZ(GG){return"paragraph"===GG.kind&&""===GG.text.trim()}function uZ(GG){const bG={name:GG.heading.text,description:[],params:[],returns:null};let ZG="description";for(const SG of GG.blocks)if(!XZ(SG))if("heading"===SG.kind&&/^Parameters:?$/.test(SG.text))ZG="params";else if("heading"===SG.kind&&/^Returns:?$/.test(SG.text))ZG="returns",bG.returns={type:"",description:[]};else if("params"!==ZG||"table"!==SG.kind){if("returns"===ZG&&"paragraph"===SG.kind&&""===bG.returns.type){const GG=oZ(SG.text);if(null!==GG){bG.returns.type=GG.replaceAll("\\|","|");continue}}"returns"===ZG?bG.returns.description.push(SG):bG.description.push(SG)}else for(const[GG,ZG,LG]of SG.rows){var wG;bG.params.push({name:GG,type:null!==(wG=oZ(ZG))&&void 0!==wG?wG:ZG,description:null!==LG&&void 0!==LG?LG:""})}return bG}const iZ=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function CZ(GG){return GG.filter((GG=>!XZ(GG)))}const WZ=/^[\w][\w .'&!:()-]*$/,mZ=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function IZ(GG){var bG;if("code"===GG.kind&&"text"===GG.lang){const bG=GG.code.split("\n").map((GG=>GG.trim())).filter(Boolean);return bG.length>0&&bG.every((GG=>WZ.test(GG)))?bG.map((GG=>({name:GG}))):null}return"paragraph"===GG.kind&&mZ.test(GG.text.trim())?[...GG.text.matchAll(/`([ ^ `]+)` / g)].flatMap((GG => GG[1].split(/,\s*/).map((GG => ({
+                              name: GG.trim()
+                            }))))): "table" === GG.kind && null !== (bG = GG.header[0]) && void 0 !== bG && bG.startsWith("Song") ? GG.rows.map((GG => {
+                              let [bG, ZG] = GG;
                               return {
-                                name: Eu.replace(/`/g, ""),
-                                caption: ju
+                                name: bG.replace(/`/g, ""),
+                                caption: ZG
                               }
                             })) : null
                           }
 
-                          function kj(uu) {
-                            const Eu = [];
-                            for (const ju of uu) {
-                              const uu = oj(ju),
-                                su = Eu.at(-1),
-                                Uu = "table" === ju.kind;
-                              uu ? "names" === (null === su || void 0 === su ? void 0 : su.kind) && su.isSongs === Uu ? su.names.push(...uu) : Eu.push({
+                          function FZ(GG) {
+                            const bG = [];
+                            for (const ZG of GG) {
+                              const GG = IZ(ZG),
+                                wG = bG.at(-1),
+                                SG = "table" === ZG.kind;
+                              GG ? "names" === (null === wG || void 0 === wG ? void 0 : wG.kind) && wG.isSongs === SG ? wG.names.push(...GG) : bG.push({
                                 kind: "names",
-                                names: uu,
-                                isSongs: Uu
-                              }) : Eu.push({
+                                names: GG,
+                                isSongs: SG
+                              }) : bG.push({
                                 kind: "block",
-                                block: ju
+                                block: ZG
                               })
                             }
-                            return Eu
+                            return bG
                           }
-                          const mj = {
+                          const vZ = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function vj(uu, Eu) {
-                            return `${mj[uu]}-${(0,Ju.u)(Eu)}`
+                          function aZ(GG, bG) {
+                            return `${vZ[GG]}-${(0,iG.r)(bG)}`
                           }
-                          const Kj = new WeakMap;
+                          const cZ = new WeakMap;
 
-                          function Vj(uu, Eu, ju) {
-                            let su = Kj.get(Eu);
-                            if (!su) {
-                              su = new Map;
-                              const ju = new Set;
-                              for (const Uu of (0, Ju.y)(Eu)) {
-                                const Eu = kj(dj(Uu.blocks)).map((Eu => {
-                                  if ("block" === Eu.kind) return Eu;
+                          function lZ(GG, bG, ZG) {
+                            let wG = cZ.get(bG);
+                            if (!wG) {
+                              wG = new Map;
+                              const ZG = new Set;
+                              for (const SG of (0, iG.t)(bG)) {
+                                const bG = FZ(CZ(SG.blocks)).map((bG => {
+                                  if ("block" === bG.kind) return bG;
                                   return {
                                     kind: "names",
-                                    names: Eu.names.map((Eu => {
-                                      var su, Zu;
-                                      const Xu = vj(uu, Eu.name);
-                                      let lu = Xu;
-                                      for (let uu = 2; ju.has(lu); uu++) lu = `${Xu}-${uu}`;
-                                      return ju.add(lu), {
-                                        ...Eu,
-                                        anchor: lu,
-                                        heading: null !== (su = null === (Zu = Uu.heading) || void 0 === Zu ? void 0 : Zu.text) && void 0 !== su ? su : ""
+                                    names: bG.names.map((bG => {
+                                      var wG, LG;
+                                      const yG = aZ(GG, bG.name);
+                                      let kG = yG;
+                                      for (let GG = 2; ZG.has(kG); GG++) kG = `${yG}-${GG}`;
+                                      return ZG.add(kG), {
+                                        ...bG,
+                                        anchor: kG,
+                                        heading: null !== (wG = null === (LG = SG.heading) || void 0 === LG ? void 0 : LG.text) && void 0 !== wG ? wG : ""
                                       }
                                     })),
-                                    isSongs: Eu.isSongs
+                                    isSongs: bG.isSongs
                                   }
                                 }));
-                                su.set(Uu.blocks, Eu)
+                                wG.set(SG.blocks, bG)
                               }
-                              Kj.set(Eu, su)
+                              cZ.set(bG, wG)
                             }
-                            const Uu = su.get(ju);
-                            if (!Uu) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return Uu
+                            const SG = wG.get(ZG);
+                            if (!SG) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return SG
                           }
-                          const rj = "/textures/docs/skinPreviews",
-                            Qj = [{
+                          const jZ = "/textures/docs/skinPreviews",
+                            PZ = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var ij = ju(4408),
-                            Wj = ju(4427);
+                          var MZ = ZG(4241),
+                            AZ = ZG(4255);
 
-                          function Sj(uu) {
-                            return Object.hasOwn(ij.h, uu) ? ij.h[uu] : null
+                          function sZ(GG) {
+                            return Object.hasOwn(MZ.h, GG) ? MZ.h[GG] : null
                           }
-                          const Ij = {
+                          const qZ = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: Wj.e.Standard
+                            blendMode: AZ.c.Standard
                           };
 
-                          function Fj(uu, Eu, ju) {
-                            return Eu + (ju - Eu) * uu()
+                          function nZ(GG, bG, ZG) {
+                            return bG + (ZG - bG) * GG()
                           }
 
-                          function Bj(uu, Eu, ju) {
-                            return uu + (Eu - uu) * ju
+                          function gZ(GG, bG, ZG) {
+                            return GG + (bG - GG) * ZG
                           }
 
-                          function Lj(uu) {
-                            return uu.length > 0 && "timeFraction" in uu[0]
+                          function eZ(GG) {
+                            return GG.length > 0 && "timeFraction" in GG[0]
                           }
 
-                          function tj(uu, Eu) {
-                            if (0 === uu.colorGradients.length) return [{
+                          function RZ(GG, bG) {
+                            if (0 === GG.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!Lj(uu.colorGradients)) {
-                              const ju = uu.colorGradients,
+                            if (!eZ(GG.colorGradients)) {
+                              const ZG = GG.colorGradients,
                                 {
-                                  color: su
-                                } = ju[Math.floor(Eu() * ju.length) % ju.length];
+                                  color: wG
+                                } = ZG[Math.floor(bG() * ZG.length) % ZG.length];
                               return [{
                                 at: 0,
-                                colour: [su[0] / 255, su[1] / 255, su[2] / 255, 1]
+                                colour: [wG[0] / 255, wG[1] / 255, wG[2] / 255, 1]
                               }]
                             }
-                            return [...uu.colorGradients].sort(((uu, Eu) => uu.timeFraction - Eu.timeFraction)).map((uu => {
-                              var ju, su, Uu;
-                              const Zu = uu.minColor,
-                                Xu = null !== (ju = uu.maxColor) && void 0 !== ju ? ju : Zu,
-                                lu = Eu(),
-                                qu = [Bj(Zu[0], Xu[0], lu) / 255, Bj(Zu[1], Xu[1], lu) / 255, Bj(Zu[2], Xu[2], lu) / 255, Bj(null !== (su = Zu[3]) && void 0 !== su ? su : 1, null !== (Uu = Xu[3]) && void 0 !== Uu ? Uu : 1, lu)];
+                            return [...GG.colorGradients].sort(((GG, bG) => GG.timeFraction - bG.timeFraction)).map((GG => {
+                              var ZG, wG, SG;
+                              const LG = GG.minColor,
+                                yG = null !== (ZG = GG.maxColor) && void 0 !== ZG ? ZG : LG,
+                                kG = bG(),
+                                UG = [gZ(LG[0], yG[0], kG) / 255, gZ(LG[1], yG[1], kG) / 255, gZ(LG[2], yG[2], kG) / 255, gZ(null !== (wG = LG[3]) && void 0 !== wG ? wG : 1, null !== (SG = yG[3]) && void 0 !== SG ? SG : 1, kG)];
                               return {
-                                at: uu.timeFraction,
-                                colour: qu
+                                at: GG.timeFraction,
+                                colour: UG
                               }
                             }))
                           }
 
-                          function xj(uu, Eu, ju, su) {
-                            const Uu = Fj(su, uu.minEmitPower, uu.maxEmitPower),
-                              Zu = Eu => Fj(su, Math.min(uu.dir1[Eu], uu.dir2[Eu]), Math.max(uu.dir1[Eu], uu.dir2[Eu])) * Uu,
-                              Xu = [...uu.velocityGradients].sort(((uu, Eu) => uu.timeFraction - Eu.timeFraction)).map((uu => ({
-                                at: uu.timeFraction,
-                                factor: Fj(su, uu.factor, uu.factor2)
+                          function TZ(GG, bG, ZG, wG) {
+                            const SG = nZ(wG, GG.minEmitPower, GG.maxEmitPower),
+                              LG = bG => nZ(wG, Math.min(GG.dir1[bG], GG.dir2[bG]), Math.max(GG.dir1[bG], GG.dir2[bG])) * SG,
+                              yG = [...GG.velocityGradients].sort(((GG, bG) => GG.timeFraction - bG.timeFraction)).map((GG => ({
+                                at: GG.timeFraction,
+                                factor: nZ(wG, GG.factor, GG.factor2)
                               })));
                             return {
-                              pos: [Fj(su, Eu[0], ju[0]), Fj(su, Eu[1], ju[1]), Fj(su, Eu[2], ju[2])],
-                              dir: [Zu(0), Zu(1), Zu(2)],
+                              pos: [nZ(wG, bG[0], ZG[0]), nZ(wG, bG[1], ZG[1]), nZ(wG, bG[2], ZG[2])],
+                              dir: [LG(0), LG(1), LG(2)],
                               age: 0,
-                              life: Fj(su, uu.minLifeTime, uu.maxLifeTime),
-                              size: Fj(su, uu.minSize, uu.maxSize),
-                              colours: tj(uu, su),
-                              velocityFactors: Xu
+                              life: nZ(wG, GG.minLifeTime, GG.maxLifeTime),
+                              size: nZ(wG, GG.minSize, GG.maxSize),
+                              colours: RZ(GG, wG),
+                              velocityFactors: yG
                             }
                           }
 
-                          function Tj(uu, Eu, ju, su) {
-                            if (Eu < uu[0].at) return ju(Math.min(1, uu.length - 1));
-                            for (let Uu = 0; Uu < uu.length - 1; Uu++)
-                              if (Eu <= uu[Uu + 1].at) {
-                                const Zu = uu[Uu + 1].at - uu[Uu].at;
-                                return su(ju(Uu), ju(Uu + 1), Zu > 0 ? (Eu - uu[Uu].at) / Zu : 1)
-                              } return ju(uu.length - 1)
+                          function HZ(GG, bG, ZG, wG) {
+                            if (bG < GG[0].at) return ZG(Math.min(1, GG.length - 1));
+                            for (let SG = 0; SG < GG.length - 1; SG++)
+                              if (bG <= GG[SG + 1].at) {
+                                const LG = GG[SG + 1].at - GG[SG].at;
+                                return wG(ZG(SG), ZG(SG + 1), LG > 0 ? (bG - GG[SG].at) / LG : 1)
+                              } return ZG(GG.length - 1)
                           }
 
-                          function Hj(uu) {
-                            return Tj(uu.colours, uu.age / uu.life, (Eu => uu.colours[Eu].colour), ((uu, Eu, ju) => [Bj(uu[0], Eu[0], ju), Bj(uu[1], Eu[1], ju), Bj(uu[2], Eu[2], ju), Bj(uu[3], Eu[3], ju)]))
+                          function tZ(GG) {
+                            return HZ(GG.colours, GG.age / GG.life, (bG => GG.colours[bG].colour), ((GG, bG, ZG) => [gZ(GG[0], bG[0], ZG), gZ(GG[1], bG[1], ZG), gZ(GG[2], bG[2], ZG), gZ(GG[3], bG[3], ZG)]))
                           }
 
-                          function Aj(uu, Eu, ju) {
-                            if (uu.age += ju, uu.age >= uu.life) return !1;
-                            const su = function(uu) {
-                              return 0 === uu.velocityFactors.length ? 1 : Tj(uu.velocityFactors, uu.age / uu.life, (Eu => uu.velocityFactors[Eu].factor), Bj)
-                            }(uu) * ju;
-                            for (let Zu = 0; Zu < 3; Zu++) {
-                              var Uu;
-                              uu.pos[Zu] += uu.dir[Zu] * su, uu.dir[Zu] += (null !== (Uu = Eu[Zu]) && void 0 !== Uu ? Uu : 0) * ju
+                          function DZ(GG, bG, ZG) {
+                            if (GG.age += ZG, GG.age >= GG.life) return !1;
+                            const wG = function(GG) {
+                              return 0 === GG.velocityFactors.length ? 1 : HZ(GG.velocityFactors, GG.age / GG.life, (bG => GG.velocityFactors[bG].factor), gZ)
+                            }(GG) * ZG;
+                            for (let LG = 0; LG < 3; LG++) {
+                              var SG;
+                              GG.pos[LG] += GG.dir[LG] * wG, GG.dir[LG] += (null !== (SG = bG[LG]) && void 0 !== SG ? SG : 0) * ZG
                             }
                             return !0
                           }
 
-                          function nj(uu) {
-                            return String(Math.round(1e6 * uu) / 1e6)
+                          function NZ(GG) {
+                            return String(Math.round(1e6 * GG) / 1e6)
                           }
 
-                          function yj(uu) {
-                            return `[${uu.map(nj).join(", ")}]`
+                          function OZ(GG) {
+                            return `[${GG.map(NZ).join(", ")}]`
                           }
 
-                          function zj(uu, Eu) {
-                            const ju = `${Eu}    `;
-                            return `[\n${(Lj(uu)?uu.map((uu=>{const Eu=[`${ju}    timeFraction: ${nj(uu.timeFraction)},`,`${ju}    minColor: ${yj(uu.minColor)},`];return uu.maxColor&&Eu.push(`${ju}    maxColor: ${yj(uu.maxColor)},`),`${ju}{\n${Eu.join("\n")}\n${ju}},`})):uu.map((uu=>`
+                          function xZ(GG, bG) {
+                            const ZG = `${bG}    `;
+                            return `[\n${(eZ(GG)?GG.map((GG=>{const bG=[`${ZG}    timeFraction: ${NZ(GG.timeFraction)},`,`${ZG}    minColor: ${OZ(GG.minColor)},`];return GG.maxColor&&bG.push(`${ZG}    maxColor: ${OZ(GG.maxColor)},`),`${ZG}{\n${bG.join("\n")}\n${ZG}},`})):GG.map((GG=>`
                             $ {
-                              ju
+                              ZG
                             } {
                               color: $ {
-                                yj(uu.color)
+                                OZ(GG.color)
                               }
-                            }, `))).join("\n")}\n${Eu}]`
+                            }, `))).join("\n")}\n${bG}]`
                           }
-                          const Rj = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            us = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const Es = .6;
+                          const BZ = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            Gw = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const bw = .6;
 
-                          function ss(uu, Eu) {
-                            return `${Eu?"song":"sound"}:${uu}`
+                          function Zw(GG, bG) {
+                            return `${bG?"song":"sound"}:${GG}`
                           }
-                          let Us = {
+                          let ww = {
                               track: null,
-                              volume: Es
+                              volume: bw
                             },
-                            Zs = null,
-                            Xs = 0,
-                            ls = 0;
-                          const qs = new Set;
+                            Sw = null,
+                            Lw = 0,
+                            yw = 0;
+                          const kw = new Set;
 
-                          function fs(uu) {
-                            Us = {
-                              ...Us,
-                              ...uu
-                            }, qs.forEach((uu => {
-                              uu()
+                          function Uw(GG) {
+                            ww = {
+                              ...ww,
+                              ...GG
+                            }, kw.forEach((GG => {
+                              GG()
                             }))
                           }
 
-                          function Cs(uu) {
-                            Us.track && fs({
+                          function Yw(GG) {
+                            ww.track && Uw({
                               track: {
-                                ...Us.track,
-                                ...uu
+                                ...ww.track,
+                                ...GG
                               }
                             })
                           }
 
-                          function bs(uu) {
-                            const [Eu, ju] = (0, su.useState)((() => uu(Us))), Uu = (0, su.useRef)(uu);
-                            return Uu.current = uu, (0, su.useEffect)((() => {
-                              const uu = () => {
-                                ju((() => Uu.current(Us)))
+                          function Vw(GG) {
+                            const [bG, ZG] = (0, wG.useState)((() => GG(ww))), SG = (0, wG.useRef)(GG);
+                            return SG.current = GG, (0, wG.useEffect)((() => {
+                              const GG = () => {
+                                ZG((() => SG.current(ww)))
                               };
-                              return qs.add(uu), uu(), () => {
-                                qs.delete(uu)
+                              return kw.add(GG), GG(), () => {
+                                kw.delete(GG)
                               }
-                            }), []), Eu
+                            }), []), bG
                           }
 
-                          function cs() {
-                            Xs++;
-                            const uu = Zs;
-                            Zs = null, null === uu || void 0 === uu || uu.stop()
+                          function pw() {
+                            Lw++;
+                            const GG = Sw;
+                            Sw = null, null === GG || void 0 === GG || GG.stop()
                           }
 
-                          function Ns(uu, Eu) {
-                            let su = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            cs();
-                            const Uu = Xs,
+                          function fw(GG, bG) {
+                            let wG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            pw();
+                            const SG = Lw,
                               {
-                                track: Zu
-                              } = Us,
-                              Xu = Zu && Zu.name === uu && Zu.isSong === Eu ? Zu.duration : 0;
-                            ls = su, fs({
+                                track: LG
+                              } = ww,
+                              yG = LG && LG.name === GG && LG.isSong === bG ? LG.duration : 0;
+                            yw = wG, Uw({
                               track: {
-                                name: uu,
-                                isSong: Eu,
+                                name: GG,
+                                isSong: bG,
                                 status: "loading",
-                                duration: Xu
+                                duration: yG
                               }
-                            }), Promise.all([ju.e(227), ju.e(253)]).then((() => ju(40076))).then((ju => {
+                            }), Promise.all([ZG.e(227), ZG.e(253)]).then((() => ZG(40183))).then((ZG => {
                               let {
-                                playDocsSound: Zu
-                              } = ju;
-                              Uu === Xs && (Zs = Zu(uu, Eu, Us.volume, su, {
-                                onPlay: uu => {
-                                  Uu === Xs && Cs({
+                                playDocsSound: LG
+                              } = ZG;
+                              SG === Lw && (Sw = LG(GG, bG, ww.volume, wG, {
+                                onPlay: GG => {
+                                  SG === Lw && Yw({
                                     status: "playing",
-                                    duration: uu
+                                    duration: GG
                                   })
                                 },
-                                onEnd: uu => {
-                                  var Eu, ju;
-                                  Uu === Xs && (Zs = null, uu ? fs({
+                                onEnd: GG => {
+                                  var bG, ZG;
+                                  SG === Lw && (Sw = null, GG ? Uw({
                                     track: null
-                                  }) : (ls = null !== (Eu = null === (ju = Us.track) || void 0 === ju ? void 0 : ju.duration) && void 0 !== Eu ? Eu : 0, Cs({
+                                  }) : (yw = null !== (bG = null === (ZG = ww.track) || void 0 === ZG ? void 0 : ZG.duration) && void 0 !== bG ? bG : 0, Yw({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((Eu => {
-                              console.error(`Could not play docs sound ${uu}`, Eu), Uu === Xs && fs({
+                            })).catch((bG => {
+                              console.error(`Could not play docs sound ${GG}`, bG), SG === Lw && Uw({
                                 track: null
                               })
                             }))
                           }
 
-                          function Os() {
+                          function Qw() {
                             const {
-                              track: uu
-                            } = Us;
-                            if (!uu) return;
-                            if ("playing" === uu.status && Zs) return ls = Zs.bM(), Zs.pause(), void Cs({
+                              track: GG
+                            } = ww;
+                            if (!GG) return;
+                            if ("playing" === GG.status && Sw) return yw = Sw.HJ(), Sw.pause(), void Yw({
                               status: "paused"
                             });
-                            if ("loading" === uu.status) return cs(), void Cs({
+                            if ("loading" === GG.status) return pw(), void Yw({
                               status: "paused"
                             });
-                            if (Zs) return void Zs.resume();
-                            const Eu = uu.duration > 0 && ls >= uu.duration - .05;
-                            Ns(uu.name, uu.isSong, Eu ? 0 : ls)
+                            if (Sw) return void Sw.resume();
+                            const bG = GG.duration > 0 && yw >= GG.duration - .05;
+                            fw(GG.name, GG.isSong, bG ? 0 : yw)
                           }
 
-                          function Ys() {
-                            var uu;
-                            return Zs && "playing" === (null === (uu = Us.track) || void 0 === uu ? void 0 : uu.status) ? Zs.bM() : ls
+                          function Kw() {
+                            var GG;
+                            return Sw && "playing" === (null === (GG = ww.track) || void 0 === GG ? void 0 : GG.status) ? Sw.HJ() : yw
                           }
 
-                          function hs(uu) {
-                            var Eu;
-                            null === (Eu = Zs) || void 0 === Eu || Eu.setVolume(uu), fs({
-                              volume: uu
+                          function hw(GG) {
+                            var bG;
+                            null === (bG = Sw) || void 0 === bG || bG.setVolume(GG), Uw({
+                              volume: GG
                             })
                           }
 
-                          function Ds() {
-                            cs(), ls = 0, fs({
+                          function dw() {
+                            pw(), yw = 0, Uw({
                               track: null
                             })
                           }
-                          const gs = (0, su.createContext)(null);
-                          let Ms = null;
+                          const Jw = (0, wG.createContext)(null);
+                          let rw = null;
 
-                          function es() {
-                            const [uu, Eu] = (0, su.useState)(null);
-                            return (0, su.useEffect)((() => {
-                              let uu = !1;
-                              return Ms ??= Promise.all([ju.e(73), ju.e(76), ju.e(75), ju.e(74), ju.e(188), ju.e(100), ju.e(231)]).then((() => ju(40070))), Ms.then((ju => {
-                                uu || Eu(ju)
-                              }), (uu => {
-                                console.error("Could not load the docs gallery's textures", uu), Ms = null
+                          function zw() {
+                            const [GG, bG] = (0, wG.useState)(null);
+                            return (0, wG.useEffect)((() => {
+                              let GG = !1;
+                              return rw ??= Promise.all([ZG.e(73), ZG.e(76), ZG.e(75), ZG.e(74), ZG.e(188), ZG.e(100), ZG.e(231)]).then((() => ZG(40175))), rw.then((ZG => {
+                                GG || bG(ZG)
+                              }), (GG => {
+                                console.error("Could not load the docs gallery's textures", GG), rw = null
                               })), () => {
-                                uu = !0
+                                GG = !0
                               }
-                            }), []), uu
+                            }), []), GG
                           }
-                          const Gs = 24,
-                            ps = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const Ew = 24,
+                            ow = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function ws(uu, Eu) {
-                            const ju = "skins" === uu ? function(uu, Eu) {
-                              const ju = Qj.find((Eu => uu.startsWith(Eu.heading)));
-                              return ju ? function(uu, Eu) {
-                                return `${uu}-${Eu}`
-                              }(ju.prefix, Eu) : null
-                            }(Eu.heading, Eu.name) : null;
-                            return null === ju ? null : `${rj}/${ju}.webp`
+                          function Xw(GG, bG) {
+                            const ZG = "skins" === GG ? function(GG, bG) {
+                              const ZG = PZ.find((bG => GG.startsWith(bG.heading)));
+                              return ZG ? function(GG, bG) {
+                                return `${GG}-${bG}`
+                              }(ZG.prefix, bG) : null
+                            }(bG.heading, bG.name) : null;
+                            return null === ZG ? null : `${jZ}/${ZG}.webp`
                           }
 
-                          function ds(uu) {
+                          function uw(GG) {
                             let {
-                              kind: Eu,
-                              entry: ju,
-                              assets: Uu,
-                              renderedUrl: Xu
-                            } = uu;
+                              kind: bG,
+                              entry: ZG,
+                              assets: SG,
+                              renderedUrl: yG
+                            } = GG;
                             const {
-                              name: lu
-                            } = ju, [qu, fu] = (0, su.useState)(!1);
-                            if ("icons" === Eu && SE(lu)) return (0, Ou.jsx)(ej.e, {
+                              name: kG
+                            } = ZG, [UG, YG] = (0, wG.useState)(!1);
+                            if ("icons" === bG && sb(kG)) return (0, KG.jsx)(EZ.c, {
                               className: "DocsTileIcon",
-                              name: lu
+                              name: kG
                             });
-                            let Cu = null;
-                            var bu;
-                            if ("icons" === Eu) Cu = null !== (bu = null === Uu || void 0 === Uu ? void 0 : Uu.getIngameIconUrl(lu)) && void 0 !== bu ? bu : null;
-                            else if ("particles" === Eu) {
-                              var cu, Nu, Yu;
-                              Cu = null !== (cu = null === Uu || void 0 === Uu ? void 0 : Uu.getParticleTextureUrl(null !== (Nu = null === (Yu = Sj(lu)) || void 0 === Yu ? void 0 : Yu.texture) && void 0 !== Nu ? Nu : lu)) && void 0 !== cu ? cu : null
-                            } else "skins" === Eu && (Cu = null !== Xu && void 0 !== Xu ? Xu : ps.test(lu) ? `/textures/charSkins/previews/${lu}_preview.png` : null);
-                            return !Cu || qu ? (0, Ou.jsx)(hu, {
+                            let VG = null;
+                            var pG;
+                            if ("icons" === bG) VG = null !== (pG = null === SG || void 0 === SG ? void 0 : SG.getIngameIconUrl(kG)) && void 0 !== pG ? pG : null;
+                            else if ("particles" === bG) {
+                              var fG, QG, hG;
+                              VG = null !== (fG = null === SG || void 0 === SG ? void 0 : SG.getParticleTextureUrl(null !== (QG = null === (hG = sZ(kG)) || void 0 === hG ? void 0 : hG.texture) && void 0 !== QG ? QG : kG)) && void 0 !== fG ? fG : null
+                            } else "skins" === bG && (VG = null !== yG && void 0 !== yG ? yG : ow.test(kG) ? `/textures/charSkins/previews/${kG}_preview.png` : null);
+                            return !VG || UG ? (0, KG.jsx)(dG, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === Eu ? "person" : "image"
-                            }) : (0, Ou.jsx)("img", {
-                              className: Zu()("DocsTileImage", {
-                                Pixelated: "skins" !== Eu
+                              name: "skins" === bG ? "person" : "image"
+                            }) : (0, KG.jsx)("img", {
+                              className: LG()("DocsTileImage", {
+                                Pixelated: "skins" !== bG
                               }),
-                              src: Cu,
-                              srcSet: Cu === Xu ? `${Cu} 2x` : void 0,
+                              src: VG,
+                              srcSet: VG === yG ? `${VG} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${Cu}`), fu(!0)
+                                console.warn(`Docs gallery: could not load ${VG}`), YG(!0)
                               }
                             })
                           }
 
-                          function as(uu) {
+                          function iw(GG) {
                             let {
-                              entry: Eu,
-                              isSong: ju
-                            } = uu;
-                            const su = bs((uu => {
+                              entry: bG,
+                              isSong: ZG
+                            } = GG;
+                            const wG = Vw((GG => {
                                 let {
-                                  track: su
-                                } = uu;
-                                return (null === su || void 0 === su ? void 0 : su.name) === Eu.name && su.isSong === ju ? su.status : null
+                                  track: wG
+                                } = GG;
+                                return (null === wG || void 0 === wG ? void 0 : wG.name) === bG.name && wG.isSong === ZG ? wG.status : null
                               })),
-                              Uu = null !== su && "paused" !== su;
-                            return (0, Ou.jsxs)("button", {
+                              SG = null !== wG && "paused" !== wG;
+                            return (0, KG.jsxs)("button", {
                               type: "button",
-                              id: Eu.anchor,
-                              className: Zu()("DocsSoundTile", {
-                                Playing: Uu
+                              id: bG.anchor,
+                              className: LG()("DocsSoundTile", {
+                                Playing: SG
                               }),
-                              "data-docs-track": ss(Eu.name, ju),
-                              "aria-label": Uu ? `Pause ${Eu.name}` : `Play ${Eu.name}`,
+                              "data-docs-track": Zw(bG.name, ZG),
+                              "aria-label": SG ? `Pause ${bG.name}` : `Play ${bG.name}`,
                               onClick: () => {
-                                null !== su ? Os() : Ns(Eu.name, ju)
+                                null !== wG ? Qw() : fw(bG.name, ZG)
                               },
-                              children: [(0, Ou.jsx)("span", {
+                              children: [(0, KG.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, Ou.jsx)(hu, {
-                                  name: Uu ? "pause" : "play"
+                                children: (0, KG.jsx)(dG, {
+                                  name: SG ? "pause" : "play"
                                 })
-                              }), (0, Ou.jsx)("code", {
+                              }), (0, KG.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: Eu.name
-                              }), Eu.caption && (0, Ou.jsx)("span", {
+                                children: bG.name
+                              }), bG.caption && (0, KG.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: Eu.caption
+                                children: bG.caption
                               })]
                             })
                           }
 
-                          function Ps(uu) {
+                          function Cw(GG) {
                             let {
-                              kind: Eu,
-                              names: ju,
-                              isSongs: Uu
-                            } = uu;
-                            const Xu = es(),
-                              [lu, qu] = gu(),
-                              fu = !1 === (null === lu || void 0 === lu ? void 0 : lu.failed) ? lu.text : null,
-                              Cu = (0, su.useContext)(gs),
-                              [bu, cu] = (0, su.useState)(""),
-                              Nu = bu.trim().toLowerCase(),
-                              Yu = Nu ? ju.filter((uu => uu.name.toLowerCase().includes(Nu))) : ju;
-                            return (0, Ou.jsxs)("div", {
+                              kind: bG,
+                              names: ZG,
+                              isSongs: SG
+                            } = GG;
+                            const yG = zw(),
+                              [kG, UG] = rG(),
+                              YG = !1 === (null === kG || void 0 === kG ? void 0 : kG.failed) ? kG.text : null,
+                              VG = (0, wG.useContext)(Jw),
+                              [pG, fG] = (0, wG.useState)(""),
+                              QG = pG.trim().toLowerCase(),
+                              hG = QG ? ZG.filter((GG => GG.name.toLowerCase().includes(QG))) : ZG;
+                            return (0, KG.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [ju.length > Gs && (0, Ou.jsx)(Mj, {
+                              children: [ZG.length > Ew && (0, KG.jsx)(zZ, {
                                 className: "DocsGalleryFilter",
-                                value: bu,
-                                placeholder: `Filter ${ju.length} names\u2026`,
+                                value: pG,
+                                placeholder: `Filter ${ZG.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: cu,
-                                count: Nu ? {
-                                  visible: Yu.length,
-                                  total: ju.length
+                                onChange: fG,
+                                count: QG ? {
+                                  visible: hG.length,
+                                  total: ZG.length
                                 } : null
-                              }), (0, Ou.jsx)("div", {
-                                className: Zu()("DocsGalleryGrid", `Kind-${Eu}`, {
-                                  Songs: Uu
+                              }), (0, KG.jsx)("div", {
+                                className: LG()("DocsGalleryGrid", `Kind-${bG}`, {
+                                  Songs: SG
                                 }),
-                                children: Yu.map((uu => {
-                                  if ("sounds" === Eu) return (0, Ou.jsx)(as, {
-                                    entry: uu,
-                                    isSong: Uu
-                                  }, uu.anchor);
-                                  if (Cu && "particles" === Eu && Sj(uu.name)) return (0, Ou.jsxs)("button", {
+                                children: hG.map((GG => {
+                                  if ("sounds" === bG) return (0, KG.jsx)(iw, {
+                                    entry: GG,
+                                    isSong: SG
+                                  }, GG.anchor);
+                                  if (VG && "particles" === bG && sZ(GG.name)) return (0, KG.jsxs)("button", {
                                     type: "button",
-                                    id: uu.anchor,
-                                    className: Zu()("DocsTile Previewable", {
-                                      Copied: fu === uu.name
+                                    id: GG.anchor,
+                                    className: LG()("DocsTile Previewable", {
+                                      Copied: YG === GG.name
                                     }),
-                                    title: `Play "${uu.name}" in the playground and copy its name`,
+                                    title: `Play "${GG.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      Cu(uu.name), qu(uu.name)
+                                      VG(GG.name), UG(GG.name)
                                     },
-                                    children: [(0, Ou.jsxs)("span", {
+                                    children: [(0, KG.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, Ou.jsx)(ds, {
-                                        kind: Eu,
-                                        entry: uu,
-                                        assets: Xu,
+                                      children: [(0, KG.jsx)(uw, {
+                                        kind: bG,
+                                        entry: GG,
+                                        assets: yG,
                                         renderedUrl: null
-                                      }), (0, Ou.jsx)("span", {
+                                      }), (0, KG.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, Ou.jsx)(hu, {
+                                        children: (0, KG.jsx)(dG, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, Ou.jsx)("span", {
+                                    }), (0, KG.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: fu === uu.name ? "Copied!" : uu.name
+                                      children: YG === GG.name ? "Copied!" : GG.name
                                     })]
-                                  }, uu.anchor);
-                                  const ju = ws(Eu, uu);
-                                  return (0, Ou.jsxs)("button", {
+                                  }, GG.anchor);
+                                  const ZG = Xw(bG, GG);
+                                  return (0, KG.jsxs)("button", {
                                     type: "button",
-                                    id: uu.anchor,
-                                    className: Zu()("DocsTile", {
-                                      Copied: fu === uu.name
+                                    id: GG.anchor,
+                                    className: LG()("DocsTile", {
+                                      Copied: YG === GG.name
                                     }),
-                                    title: `Copy "${uu.name}"`,
+                                    title: `Copy "${GG.name}"`,
                                     onClick: () => {
-                                      qu(uu.name)
+                                      UG(GG.name)
                                     },
-                                    children: [(0, Ou.jsx)("span", {
-                                      className: Zu()("DocsTilePreview", {
-                                        Rendered: null !== ju
+                                    children: [(0, KG.jsx)("span", {
+                                      className: LG()("DocsTilePreview", {
+                                        Rendered: null !== ZG
                                       }),
-                                      children: (0, Ou.jsx)(ds, {
-                                        kind: Eu,
-                                        entry: uu,
-                                        assets: Xu,
-                                        renderedUrl: ju
+                                      children: (0, KG.jsx)(uw, {
+                                        kind: bG,
+                                        entry: GG,
+                                        assets: yG,
+                                        renderedUrl: ZG
                                       })
-                                    }), (0, Ou.jsx)("span", {
+                                    }), (0, KG.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: fu === uu.name ? "Copied!" : uu.name
+                                      children: YG === GG.name ? "Copied!" : GG.name
                                     })]
-                                  }, uu.anchor)
+                                  }, GG.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function os(uu) {
+                          function Ww(GG) {
                             let {
-                              kind: Eu,
-                              content: ju,
-                              blocks: su
-                            } = uu;
-                            return (0, Ou.jsx)(Ou.Fragment, {
-                              children: Vj(Eu, ju, su).map(((uu, ju) => "block" === uu.kind ? (0, Ou.jsx)(cj, {
-                                block: uu.block
-                              }, ju) : (0, Ou.jsx)(Ps, {
-                                kind: Eu,
-                                names: uu.names,
-                                isSongs: uu.isSongs
-                              }, ju)))
+                              kind: bG,
+                              content: ZG,
+                              blocks: wG
+                            } = GG;
+                            return (0, KG.jsx)(KG.Fragment, {
+                              children: lZ(bG, ZG, wG).map(((GG, ZG) => "block" === GG.kind ? (0, KG.jsx)(fZ, {
+                                block: GG.block
+                              }, ZG) : (0, KG.jsx)(Cw, {
+                                kind: bG,
+                                names: GG.names,
+                                isSongs: GG.isSongs
+                              }, ZG)))
                             })
                           }
-                          const ks = [{
+                          const mw = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,789 +2161,789 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function ms(uu) {
+                          function Iw(GG) {
                             let {
-                              cards: Eu = ks,
-                              label: ju = "Start here"
-                            } = uu;
-                            const Uu = (0, su.useContext)(NE);
-                            return (0, Ou.jsx)("nav", {
+                              cards: bG = mw,
+                              label: ZG = "Start here"
+                            } = GG;
+                            const SG = (0, wG.useContext)(Qb);
+                            return (0, KG.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": ju,
-                              children: Eu.map((uu => {
+                              "aria-label": ZG,
+                              children: bG.map((GG => {
                                 let {
-                                  pageId: Eu,
-                                  countNoun: ju
-                                } = uu;
-                                const su = Wu(Eu);
-                                return (0, Ou.jsxs)(Xu.c, {
-                                  to: tu(Uu, su),
+                                  pageId: bG,
+                                  countNoun: ZG
+                                } = GG;
+                                const wG = AG(bG);
+                                return (0, KG.jsxs)(yG.c, {
+                                  to: RG(SG, wG),
                                   className: "DocsLandingCard",
-                                  children: [(0, Ou.jsx)("span", {
+                                  children: [(0, KG.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, Ou.jsx)(hu, {
-                                      name: su.icon
+                                    children: (0, KG.jsx)(dG, {
+                                      name: wG.icon
                                     })
-                                  }), (0, Ou.jsx)("span", {
+                                  }), (0, KG.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: su.title
-                                  }), (0, Ou.jsx)("span", {
+                                    children: wG.title
+                                  }), (0, KG.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: su.summary
-                                  }), ju && (0, Ou.jsxs)("span", {
+                                    children: wG.summary
+                                  }), ZG && (0, KG.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [Iu(su).sections.length, " ", ju]
+                                    children: [qG(wG).sections.length, " ", ZG]
                                   })]
-                                }, Eu)
+                                }, bG)
                               }))
                             })
                           }
-                          const vs = 240;
+                          const Fw = 240;
 
-                          function Ks(uu) {
+                          function vw(GG) {
                             let {
-                              faces: Eu
-                            } = uu;
-                            return (0, Ou.jsxs)("span", {
+                              faces: bG
+                            } = GG;
+                            return (0, KG.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, Ou.jsx)("span", {
+                              children: [(0, KG.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${Eu.top}")`
+                                  backgroundImage: `url("${bG.top}")`
                                 }
-                              }), (0, Ou.jsx)("span", {
+                              }), (0, KG.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${Eu.left}")`
+                                  backgroundImage: `url("${bG.left}")`
                                 }
-                              }), (0, Ou.jsx)("span", {
+                              }), (0, KG.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${Eu.right}")`
+                                  backgroundImage: `url("${bG.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function Vs(uu) {
+                          function aw(GG) {
                             let {
-                              src: Eu
-                            } = uu;
-                            const [ju, Uu] = (0, su.useState)(!1);
-                            return ju ? null : (0, Ou.jsx)("img", {
-                              src: Eu,
+                              src: bG
+                            } = GG;
+                            const [ZG, SG] = (0, wG.useState)(!1);
+                            return ZG ? null : (0, KG.jsx)("img", {
+                              src: bG,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${Eu}`), Uu(!0)
+                                console.warn(`Docs catalogue: could not load ${bG}`), SG(!0)
                               }
                             })
                           }
 
-                          function rs(uu) {
+                          function lw(GG) {
                             let {
-                              kind: Eu
-                            } = uu;
-                            const ju = gj(Eu),
-                              Uu = es(),
-                              Xu = (0, lu.r)(),
-                              [qu, fu] = (0, su.useState)(""),
-                              [Cu, bu] = (0, su.useState)(null),
-                              [cu, Nu] = (0, su.useState)(vs),
-                              [Yu, Du] = (0, su.useState)(null),
-                              gu = (0, su.useRef)(null),
-                              eu = qu.trim().toLowerCase();
-                            (0, su.useEffect)((() => {
-                              const uu = (0, Ju.r)(Xu.hash),
-                                su = ju.entries.find((ju => vj(Eu, ju.name) === uu));
-                              if (su) gu.current = su.name, fu(su.name), bu(null), Du(su.name);
-                              else if (null !== gu.current) {
-                                const uu = gu.current;
-                                gu.current = null, fu((Eu => Eu === uu ? "" : Eu)), Du(null)
+                              kind: bG
+                            } = GG;
+                            const ZG = rZ(bG),
+                              SG = zw(),
+                              yG = (0, kG.n)(),
+                              [UG, YG] = (0, wG.useState)(""),
+                              [VG, pG] = (0, wG.useState)(null),
+                              [fG, QG] = (0, wG.useState)(Fw),
+                              [hG, JG] = (0, wG.useState)(null),
+                              rG = (0, wG.useRef)(null),
+                              EG = UG.trim().toLowerCase();
+                            (0, wG.useEffect)((() => {
+                              const GG = (0, iG.p)(yG.hash),
+                                wG = ZG.entries.find((ZG => aZ(bG, ZG.name) === GG));
+                              if (wG) rG.current = wG.name, YG(wG.name), pG(null), JG(wG.name);
+                              else if (null !== rG.current) {
+                                const GG = rG.current;
+                                rG.current = null, YG((bG => bG === GG ? "" : bG)), JG(null)
                               }
-                            }), [ju, Eu, Xu.hash, Xu.key]), (0, su.useEffect)((() => {
-                              var uu;
-                              null !== Yu && (null === (uu = document.getElementById(vj(Eu, Yu))) || void 0 === uu || uu.scrollIntoView({
+                            }), [ZG, bG, yG.hash, yG.key]), (0, wG.useEffect)((() => {
+                              var GG;
+                              null !== hG && (null === (GG = document.getElementById(aZ(bG, hG))) || void 0 === GG || GG.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [Eu, Yu]);
-                            const Gu = ju.entries.filter((uu => (!eu || uu.name.toLowerCase().includes(eu)) && (!Cu || uu.variants.includes(Cu))));
-                            return (0, Ou.jsxs)("div", {
+                            }), [bG, hG]);
+                            const oG = ZG.entries.filter((GG => (!EG || GG.name.toLowerCase().includes(EG)) && (!VG || GG.variants.includes(VG))));
+                            return (0, KG.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [ju.notes.length > 0 && (0, Ou.jsx)("div", {
+                              children: [ZG.notes.length > 0 && (0, KG.jsx)("div", {
                                 className: "DocsProse",
-                                children: ju.notes.map((uu => (0, Ou.jsx)("p", {
-                                  children: uu
-                                }, uu)))
-                              }), ju.legend.length > 0 && (0, Ou.jsx)("div", {
+                                children: ZG.notes.map((GG => (0, KG.jsx)("p", {
+                                  children: GG
+                                }, GG)))
+                              }), ZG.legend.length > 0 && (0, KG.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, Ou.jsxs)("table", {
+                                children: (0, KG.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, Ou.jsx)("thead", {
-                                    children: (0, Ou.jsxs)("tr", {
-                                      children: [(0, Ou.jsx)("th", {
+                                  children: [(0, KG.jsx)("thead", {
+                                    children: (0, KG.jsxs)("tr", {
+                                      children: [(0, KG.jsx)("th", {
                                         children: "Code"
-                                      }), (0, Ou.jsx)("th", {
+                                      }), (0, KG.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, Ou.jsx)("th", {
+                                      }), (0, KG.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, Ou.jsx)("tbody", {
-                                    children: ju.legend.map((uu => (0, Ou.jsxs)("tr", {
-                                      children: [(0, Ou.jsx)("td", {
-                                        children: (0, Ou.jsx)("button", {
+                                  }), (0, KG.jsx)("tbody", {
+                                    children: ZG.legend.map((GG => (0, KG.jsxs)("tr", {
+                                      children: [(0, KG.jsx)("td", {
+                                        children: (0, KG.jsx)("button", {
                                           type: "button",
-                                          className: Zu()("DocsVariantChip", {
-                                            Active: Cu === uu.code
+                                          className: LG()("DocsVariantChip", {
+                                            Active: VG === GG.code
                                           }),
-                                          "aria-pressed": Cu === uu.code,
-                                          title: `Show only ${Eu} with ${uu.meaning} variants`,
+                                          "aria-pressed": VG === GG.code,
+                                          title: `Show only ${bG} with ${GG.meaning} variants`,
                                           onClick: () => {
-                                            bu(Cu === uu.code ? null : uu.code)
+                                            pG(VG === GG.code ? null : GG.code)
                                           },
-                                          children: uu.code
+                                          children: GG.code
                                         })
-                                      }), (0, Ou.jsx)("td", {
-                                        children: uu.meaning
-                                      }), (0, Ou.jsx)("td", {
-                                        children: (0, Ou.jsx)("code", {
+                                      }), (0, KG.jsx)("td", {
+                                        children: GG.meaning
+                                      }), (0, KG.jsx)("td", {
+                                        children: (0, KG.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: uu.usage
+                                          children: GG.usage
                                         })
                                       })]
-                                    }, uu.code)))
+                                    }, GG.code)))
                                   })]
                                 })
-                              }), ju.examples.length > 0 && (0, Ou.jsx)(wu, {
+                              }), ZG.examples.length > 0 && (0, KG.jsx)(uG, {
                                 lang: "text",
-                                code: ju.examples.join("\n")
-                              }), (0, Ou.jsx)(Mj, {
+                                code: ZG.examples.join("\n")
+                              }), (0, KG.jsx)(zZ, {
                                 className: "DocsFilterBar",
-                                value: qu,
-                                placeholder: `Search ${ju.entries.length} ${Eu}\u2026`,
-                                label: `Search ${Eu}`,
-                                onChange: uu => {
-                                  fu(uu), Nu(vs)
+                                value: UG,
+                                placeholder: `Search ${ZG.entries.length} ${bG}\u2026`,
+                                label: `Search ${bG}`,
+                                onChange: GG => {
+                                  YG(GG), QG(Fw)
                                 },
-                                count: eu || Cu ? {
-                                  visible: Gu.length,
-                                  total: ju.entries.length
+                                count: EG || VG ? {
+                                  visible: oG.length,
+                                  total: ZG.entries.length
                                 } : null,
-                                children: Cu && (0, Ou.jsxs)("button", {
+                                children: VG && (0, KG.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    bu(null)
+                                    pG(null)
                                   },
-                                  children: [Cu, " ", (0, Ou.jsx)(hu, {
+                                  children: [VG, " ", (0, KG.jsx)(dG, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, Ou.jsx)("div", {
+                              }), (0, KG.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: Gu.slice(0, cu).map((uu => {
-                                  const ju = "blocks" === Eu ? null === Uu || void 0 === Uu ? void 0 : Uu.getBlockFaces(uu.name) : null,
-                                    su = Uu && !ju ? Uu.getItemTextureUrl(uu.name) : null;
-                                  return (0, Ou.jsxs)("div", {
-                                    id: vj(Eu, uu.name),
-                                    className: Zu()("DocsCatalogueTile", {
-                                      Linked: uu.name === Yu
+                                children: oG.slice(0, fG).map((GG => {
+                                  const ZG = "blocks" === bG ? null === SG || void 0 === SG ? void 0 : SG.getBlockFaces(GG.name) : null,
+                                    wG = SG && !ZG ? SG.getItemTextureUrl(GG.name) : null;
+                                  return (0, KG.jsxs)("div", {
+                                    id: aZ(bG, GG.name),
+                                    className: LG()("DocsCatalogueTile", {
+                                      Linked: GG.name === hG
                                     }),
-                                    children: [(0, Ou.jsxs)("span", {
+                                    children: [(0, KG.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [ju && (0, Ou.jsx)(Ks, {
-                                        faces: ju
-                                      }), su && (0, Ou.jsx)(Vs, {
-                                        src: su
+                                      children: [ZG && (0, KG.jsx)(vw, {
+                                        faces: ZG
+                                      }), wG && (0, KG.jsx)(aw, {
+                                        src: wG
                                       })]
-                                    }), (0, Ou.jsx)("span", {
+                                    }), (0, KG.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: uu.name
-                                    }), uu.variants.length > 0 && (0, Ou.jsx)("span", {
+                                      children: GG.name
+                                    }), GG.variants.length > 0 && (0, KG.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: uu.variants.map((uu => (0, Ou.jsx)("span", {
-                                        children: uu
-                                      }, uu)))
-                                    }), (0, Ou.jsx)(Mu, {
-                                      text: uu.name,
+                                      children: GG.variants.map((GG => (0, KG.jsx)("span", {
+                                        children: GG
+                                      }, GG)))
+                                    }), (0, KG.jsx)(zG, {
+                                      text: GG.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, uu.name)
+                                  }, GG.name)
                                 }))
-                              }), Gu.length > cu && (0, Ou.jsxs)("button", {
+                              }), oG.length > fG && (0, KG.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  Nu(Gu.length)
+                                  QG(oG.length)
                                 },
-                                children: ["Show all ", Gu.length]
-                              }), 0 === Gu.length && (0, Ou.jsxs)("p", {
+                                children: ["Show all ", oG.length]
+                              }), 0 === oG.length && (0, KG.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", Eu, " match."]
+                                children: ["No ", bG, " match."]
                               })]
                             })
                           }
-                          var Qs = ju(4992),
-                            is = ju(1639);
-                          const Ws = .95 * Qs.d;
+                          var jw = ZG(4847),
+                            Pw = ZG(1527);
+                          const Mw = .95 * jw.b;
 
-                          function Ss(uu) {
-                            return /^\s*```/.test(uu)
+                          function Aw(GG) {
+                            return /^\s*```/.test(GG)
                           }
 
-                          function Is(uu, Eu) {
-                            const ju = [
+                          function sw(GG, bG) {
+                            const ZG = [
                               []
                             ];
-                            let su = !1;
-                            for (const Uu of uu.split("\n")) !su && Eu(Uu) && ju.at(-1).length > 0 && ju.push([]), Ss(Uu) && (su = !su), ju.at(-1).push(Uu);
-                            return ju.map((uu => uu.join("\n").trim())).filter(Boolean)
+                            let wG = !1;
+                            for (const SG of GG.split("\n")) !wG && bG(SG) && ZG.at(-1).length > 0 && ZG.push([]), Aw(SG) && (wG = !wG), ZG.at(-1).push(SG);
+                            return ZG.map((GG => GG.join("\n").trim())).filter(Boolean)
                           }
 
-                          function Fs(uu, Eu) {
-                            const ju = `${"#".repeat(Eu)} `,
-                              su = [];
-                            let Uu = !1;
-                            for (const Zu of uu.split("\n")) Ss(Zu) ? Uu = !Uu : !Uu && Zu.startsWith(ju) && su.push(Zu.slice(ju.length).trim());
-                            return su
+                          function qw(GG, bG) {
+                            const ZG = `${"#".repeat(bG)} `,
+                              wG = [];
+                            let SG = !1;
+                            for (const LG of GG.split("\n")) Aw(LG) ? SG = !SG : !SG && LG.startsWith(ZG) && wG.push(LG.slice(ZG.length).trim());
+                            return wG
                           }
 
-                          function Bs(uu) {
-                            return uu.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function nw(GG) {
+                            return GG.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class Ls {
-                            constructor(uu, Eu) {
-                              this.origin = Eu, this.pages = void 0, this.partPaths = new Map;
-                              const ju = uu.map((uu => {
-                                const Eu = Eu => this.resolveLinks(uu, Eu).length,
-                                  ju = function(uu, Eu) {
-                                    const ju = uu.map((uu => Eu(uu.markdown) + 2)),
-                                      su = ju.reduce(((uu, Eu) => uu + Eu), 0),
-                                      Uu = su / Math.ceil(su / Ws),
-                                      Zu = [];
-                                    let Xu = 0;
-                                    return uu.forEach(((uu, Eu) => {
-                                      const su = ju[Eu];
-                                      (0 === Zu.length || Xu + su > Ws || Xu + su / 2 > Uu) && (Zu.push([]), Xu = 0), Zu.at(-1).push(uu), Xu += su
-                                    })), Zu
-                                  }(function(uu, Eu) {
-                                    return Is(uu, (uu => uu.startsWith("## "))).flatMap((uu => {
-                                      var ju;
-                                      const su = null !== (ju = Fs(uu, 2)[0]) && void 0 !== ju ? ju : "";
-                                      if (Eu(uu) <= Ws) return [{
-                                        markdown: uu,
-                                        section: su
+                          class gw {
+                            constructor(GG, bG) {
+                              this.origin = bG, this.pages = void 0, this.partPaths = new Map;
+                              const ZG = GG.map((GG => {
+                                const bG = bG => this.resolveLinks(GG, bG).length,
+                                  ZG = function(GG, bG) {
+                                    const ZG = GG.map((GG => bG(GG.markdown) + 2)),
+                                      wG = ZG.reduce(((GG, bG) => GG + bG), 0),
+                                      SG = wG / Math.ceil(wG / Mw),
+                                      LG = [];
+                                    let yG = 0;
+                                    return GG.forEach(((GG, bG) => {
+                                      const wG = ZG[bG];
+                                      (0 === LG.length || yG + wG > Mw || yG + wG / 2 > SG) && (LG.push([]), yG = 0), LG.at(-1).push(GG), yG += wG
+                                    })), LG
+                                  }(function(GG, bG) {
+                                    return sw(GG, (GG => GG.startsWith("## "))).flatMap((GG => {
+                                      var ZG;
+                                      const wG = null !== (ZG = qw(GG, 2)[0]) && void 0 !== ZG ? ZG : "";
+                                      if (bG(GG) <= Mw) return [{
+                                        markdown: GG,
+                                        section: wG
                                       }];
-                                      let Uu = !1,
-                                        Zu = "";
-                                      return Is(uu, (uu => {
-                                        const Eu = Uu && "" !== uu.trim();
-                                        return Uu = "" === uu.trim(), Eu
-                                      })).map((uu => {
-                                        var Eu;
-                                        const ju = Fs(uu, 3),
-                                          Uu = uu.startsWith("### ") ? ju[0] : Zu;
-                                        return Zu = null !== (Eu = ju.at(-1)) && void 0 !== Eu ? Eu : Zu, {
-                                          markdown: uu,
-                                          section: su || Uu
+                                      let SG = !1,
+                                        LG = "";
+                                      return sw(GG, (GG => {
+                                        const bG = SG && "" !== GG.trim();
+                                        return SG = "" === GG.trim(), bG
+                                      })).map((GG => {
+                                        var bG;
+                                        const ZG = qw(GG, 3),
+                                          SG = GG.startsWith("### ") ? ZG[0] : LG;
+                                        return LG = null !== (bG = ZG.at(-1)) && void 0 !== bG ? bG : LG, {
+                                          markdown: GG,
+                                          section: wG || SG
                                         }
                                       }))
                                     }))
-                                  }(Bs(uu), Eu), Eu);
+                                  }(nw(GG), bG), bG);
                                 return {
-                                  page: uu,
-                                  groups: ju.length > 1 ? ju : []
+                                  page: GG,
+                                  groups: ZG.length > 1 ? ZG : []
                                 }
                               }));
                               for (const {
-                                  page: su,
-                                  groups: Uu
+                                  page: wG,
+                                  groups: SG
                                 }
-                                of ju) Uu.forEach(((uu, Eu) => {
-                                const ju = (0, Qs.w)(su.slug, Eu);
-                                for (const Uu of uu.flatMap((uu => [...Fs(uu.markdown, 2), ...Fs(uu.markdown, 3)]))) {
-                                  const uu = `${su.id}#${(0,Ju.u)(Uu)}`;
-                                  this.partPaths.has(uu) || this.partPaths.set(uu, ju)
+                                of ZG) SG.forEach(((GG, bG) => {
+                                const ZG = (0, jw.q)(wG.slug, bG);
+                                for (const SG of GG.flatMap((GG => [...qw(GG.markdown, 2), ...qw(GG.markdown, 3)]))) {
+                                  const GG = `${wG.id}#${(0,iG.r)(SG)}`;
+                                  this.partPaths.has(GG) || this.partPaths.set(GG, ZG)
                                 }
                               }));
-                              this.pages = ju.map((uu => {
+                              this.pages = ZG.map((GG => {
                                 let {
-                                  page: Eu,
-                                  groups: ju
-                                } = uu;
+                                  page: bG,
+                                  groups: ZG
+                                } = GG;
                                 return {
-                                  page: Eu,
-                                  path: (0, Qs.t)(Eu.slug),
-                                  markdown: `# ${Eu.title}\n\n${this.resolveLinks(Eu,Bs(Eu))}\n`,
-                                  parts: ju.map(((uu, su) => this.renderPart(Eu, uu, su, ju.length)))
+                                  page: bG,
+                                  path: (0, jw.m)(bG.slug),
+                                  markdown: `# ${bG.title}\n\n${this.resolveLinks(bG,nw(bG))}\n`,
+                                  parts: ZG.map(((GG, wG) => this.renderPart(bG, GG, wG, ZG.length)))
                                 }
                               }))
                             }
-                            url(uu) {
-                              return `${this.origin}${uu}`
+                            url(GG) {
+                              return `${this.origin}${GG}`
                             }
-                            getPage(uu) {
-                              return this.pages.find((Eu => Eu.page.id === uu))
+                            getPage(GG) {
+                              return this.pages.find((bG => bG.page.id === GG))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((uu => (uu.parts.length > 0 ? uu.parts : [{
-                                path: uu.path,
+                              return this.pages.flatMap((GG => (GG.parts.length > 0 ? GG.parts : [{
+                                path: GG.path,
                                 label: "",
-                                markdown: uu.markdown
-                              }]).filter((uu => uu.markdown.length > Qs.d))))
+                                markdown: GG.markdown
+                              }]).filter((GG => GG.markdown.length > jw.b))))
                             }
-                            markdownUrl(uu, Eu) {
-                              const ju = Eu && this.partPaths.get(`${uu.id}#${Eu}`) || (0, Qs.t)(uu.slug);
-                              return this.url(Eu ? `${ju}#${Eu}` : ju)
+                            markdownUrl(GG, bG) {
+                              const ZG = bG && this.partPaths.get(`${GG.id}#${bG}`) || (0, jw.m)(GG.slug);
+                              return this.url(bG ? `${ZG}#${bG}` : ZG)
                             }
-                            resolveLinks(uu, Eu) {
-                              return Eu.replace(/\]\((#[^)]+)\)/g, ((Eu, ju) => {
-                                var su;
-                                const Uu = null !== (su = Bu(ju)) && void 0 !== su ? su : this.samePageTarget(uu, ju);
-                                return Uu ? `](${this.markdownUrl(Uu.page,Uu.anchor)})` : Eu
+                            resolveLinks(GG, bG) {
+                              return bG.replace(/\]\((#[^)]+)\)/g, ((bG, ZG) => {
+                                var wG;
+                                const SG = null !== (wG = gG(ZG)) && void 0 !== wG ? wG : this.samePageTarget(GG, ZG);
+                                return SG ? `](${this.markdownUrl(SG.page,SG.anchor)})` : bG
                               }))
                             }
-                            samePageTarget(uu, Eu) {
-                              const ju = (0, Ju.u)(Eu.slice(1));
-                              return Fu(uu, ju) ? {
-                                page: uu,
-                                anchor: ju
+                            samePageTarget(GG, bG) {
+                              const ZG = (0, iG.r)(bG.slice(1));
+                              return nG(GG, ZG) ? {
+                                page: GG,
+                                anchor: ZG
                               } : null
                             }
-                            renderPart(uu, Eu, ju, su) {
-                              const Uu = function(uu) {
-                                  const Eu = uu.map((uu => uu.section)).filter(Boolean);
-                                  if (0 === Eu.length) return "";
-                                  const ju = Eu[0],
-                                    su = Eu.at(-1);
-                                  return ju === su ? ju : `${ju} to ${su}`
-                                }(Eu),
-                                Zu = Eu.map((uu => uu.markdown)).join("\n\n"),
-                                Xu = Uu ? `It covers ${Uu}. ` : "",
-                                lu = `Part ${ju+1} of ${su} of [${uu.title}](${this.url((0,Qs.t)(uu.slug))}). ${Xu}[llms.txt](${this.url(Qs.f)}) lists every part.`;
+                            renderPart(GG, bG, ZG, wG) {
+                              const SG = function(GG) {
+                                  const bG = GG.map((GG => GG.section)).filter(Boolean);
+                                  if (0 === bG.length) return "";
+                                  const ZG = bG[0],
+                                    wG = bG.at(-1);
+                                  return ZG === wG ? ZG : `${ZG} to ${wG}`
+                                }(bG),
+                                LG = bG.map((GG => GG.markdown)).join("\n\n"),
+                                yG = SG ? `It covers ${SG}. ` : "",
+                                kG = `Part ${ZG+1} of ${wG} of [${GG.title}](${this.url((0,jw.m)(GG.slug))}). ${yG}[llms.txt](${this.url(jw.e)}) lists every part.`;
                               return {
-                                path: (0, Qs.w)(uu.slug, ju),
-                                label: Uu,
-                                markdown: `# ${uu.title}, part ${ju+1} of ${su}\n\n${lu}\n\n${this.resolveLinks(uu,Zu)}\n`
+                                path: (0, jw.q)(GG.slug, ZG),
+                                label: SG,
+                                markdown: `# ${GG.title}, part ${ZG+1} of ${wG}\n\n${kG}\n\n${this.resolveLinks(GG,LG)}\n`
                               }
                             }
-                            llmsTxt(uu) {
-                              const Eu = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${ts(Qs.d)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const ju of iu) {
-                                Eu.push("", `## ${ju.title}`, "");
-                                for (const uu of ju.pageIds) {
-                                  const ju = this.getPage(uu),
+                            llmsTxt(GG) {
+                              const bG = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${ew(jw.b)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const ZG of MG) {
+                                bG.push("", `## ${ZG.title}`, "");
+                                for (const GG of ZG.pageIds) {
+                                  const ZG = this.getPage(GG),
                                     {
-                                      page: su,
-                                      parts: Uu
-                                    } = ju,
-                                    Zu = `About ${ts(ju.markdown.length)} tokens${Uu.length>0?`, in ${Uu.length} parts:`:"."}`;
-                                  Eu.push(`- [${su.title}](${this.url(ju.path)}): ${su.summary} ${Zu}`), Uu.forEach(((uu, ju) => {
-                                    Eu.push(`  - [Part ${ju+1}${uu.label?`: ${uu.label}`:""}](${this.url(uu.path)})`)
+                                      page: wG,
+                                      parts: SG
+                                    } = ZG,
+                                    LG = `About ${ew(ZG.markdown.length)} tokens${SG.length>0?`, in ${SG.length} parts:`:"."}`;
+                                  bG.push(`- [${wG.title}](${this.url(ZG.path)}): ${wG.summary} ${LG}`), SG.forEach(((GG, ZG) => {
+                                    bG.push(`  - [Part ${ZG+1}${GG.label?`: ${GG.label}`:""}](${this.url(GG.path)})`)
                                   }))
                                 }
                               }
-                              return Eu.push("", "## Optional", "", `- [Every page in one file](${this.url(Qs.e)}): About ${ts(uu.length)} tokens, for a model with a large context window.`, ""), Eu.join("\n")
+                              return bG.push("", "## Optional", "", `- [Every page in one file](${this.url(jw.c)}): About ${ew(GG.length)} tokens, for a model with a large context window.`, ""), bG.join("\n")
                             }
                             llmsFullTxt() {
-                              return iu.flatMap((uu => uu.pageIds.map((uu => this.getPage(uu).markdown)))).join("\n---\n\n")
+                              return MG.flatMap((GG => GG.pageIds.map((GG => this.getPage(GG).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const uu = this.llmsFullTxt(),
-                                Eu = this.llmsTxt(uu),
-                                ju = new Map([
-                                  [Qs.m, Eu],
-                                  [Qs.f, Eu],
-                                  [Qs.e, uu]
+                              const GG = this.llmsFullTxt(),
+                                bG = this.llmsTxt(GG),
+                                ZG = new Map([
+                                  [jw.h, bG],
+                                  [jw.e, bG],
+                                  [jw.c, GG]
                                 ]);
-                              for (const su of this.pages) {
-                                ju.set(su.path, su.markdown);
-                                for (const uu of su.parts) ju.set(uu.path, uu.markdown)
+                              for (const wG of this.pages) {
+                                ZG.set(wG.path, wG.markdown);
+                                for (const GG of wG.parts) ZG.set(GG.path, GG.markdown)
                               }
-                              return ju
+                              return ZG
                             }
                           }
 
-                          function ts(uu) {
-                            return `${Math.max(1,Math.round(uu/4e3))}K`
+                          function ew(GG) {
+                            return `${Math.max(1,Math.round(GG/4e3))}K`
                           }
-                          let xs = null;
+                          let Rw = null;
 
-                          function Ts() {
-                            return xs ??= new Ls(Qu, is.e), xs
+                          function Tw() {
+                            return Rw ??= new gw(PG, Pw.d), Rw
                           }
-                          var Hs = ju(4995);
-                          const As = [Hs.g, Hs.k];
+                          var Hw = ZG(4849);
+                          const tw = [Hw.i, Hw.p];
 
-                          function ns(uu) {
-                            return Ts().getPage(uu.id).parts.length > 0 ? `Read ${Qs.i}, then the parts of the Bloxd Code API's ${uu.title} page it lists, so I can ask questions about it.` : `Read ${is.e}${(0,Qs.t)(uu.slug)} so I can ask questions about it. ${Hs.j}`
+                          function Dw(GG) {
+                            return Tw().getPage(GG.id).parts.length > 0 ? `Read ${jw.f}, then the parts of the Bloxd Code API's ${GG.title} page it lists, so I can ask questions about it.` : `Read ${Pw.d}${(0,jw.m)(GG.slug)} so I can ask questions about it. ${Hw.n}`
                           }
 
-                          function ys(uu) {
+                          function Nw(GG) {
                             let {
-                              page: Eu
-                            } = uu;
-                            const [ju, su] = gu();
-                            return (0, Ou.jsxs)("div", {
+                              page: bG
+                            } = GG;
+                            const [ZG, wG] = rG();
+                            return (0, KG.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, Ou.jsxs)("button", {
+                              children: [(0, KG.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  su(Ts().getPage(Eu.id).markdown)
+                                  wG(Tw().getPage(bG.id).markdown)
                                 },
-                                children: [(0, Ou.jsx)(hu, {
-                                  name: !1 === (null === ju || void 0 === ju ? void 0 : ju.failed) ? "check" : "copy"
-                                }), (0, Ou.jsx)("span", {
-                                  children: ju ? ju.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, KG.jsx)(dG, {
+                                  name: !1 === (null === ZG || void 0 === ZG ? void 0 : ZG.failed) ? "check" : "copy"
+                                }), (0, KG.jsx)("span", {
+                                  children: ZG ? ZG.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), As.map((uu => (0, Ou.jsxs)("a", {
+                              }), tw.map((GG => (0, KG.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: (0, Hs.d)(uu, ns(Eu)),
+                                href: (0, Hw.e)(GG, Dw(bG)),
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, Ou.jsx)(hu, {
+                                children: [(0, KG.jsx)(dG, {
                                   name: "external-link"
-                                }), (0, Ou.jsxs)("span", {
-                                  children: ["Open in ", uu.name]
+                                }), (0, KG.jsxs)("span", {
+                                  children: ["Open in ", GG.name]
                                 })]
-                              }, uu.name)))]
+                              }, GG.name)))]
                             })
                           }
 
-                          function zs(uu) {
-                            return `#${[0,1,2].map((Eu=>Math.round(Math.min(255,Math.max(0,uu[Eu]))).toString(16).padStart(2,"0"))).join("")}`
+                          function Ow(GG) {
+                            return `#${[0,1,2].map((bG=>Math.round(Math.min(255,Math.max(0,GG[bG]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function Rs(uu) {
-                            return [parseInt(uu.slice(1, 3), 16), parseInt(uu.slice(3, 5), 16), parseInt(uu.slice(5, 7), 16)]
+                          function xw(GG) {
+                            return [parseInt(GG.slice(1, 3), 16), parseInt(GG.slice(3, 5), 16), parseInt(GG.slice(5, 7), 16)]
                           }
 
-                          function uU(uu) {
+                          function Bw(GG) {
                             let {
-                              label: Eu,
-                              min: ju,
-                              max: su,
-                              step: Uu,
-                              low: Zu,
-                              high: Xu,
-                              onChange: lu
-                            } = uu;
-                            return (0, Ou.jsxs)("div", {
+                              label: bG,
+                              min: ZG,
+                              max: wG,
+                              step: SG,
+                              low: LG,
+                              high: yG,
+                              onChange: kG
+                            } = GG;
+                            return (0, KG.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Ou.jsxs)("div", {
+                              children: [(0, KG.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, Ou.jsx)("span", {
-                                  children: Eu
-                                }), (0, Ou.jsx)("span", {
+                                children: [(0, KG.jsx)("span", {
+                                  children: bG
+                                }), (0, KG.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: Zu === Xu ? Zu : `${Zu}\u2013${Xu}`
+                                  children: LG === yG ? LG : `${LG}\u2013${yG}`
                                 })]
-                              }), (0, Ou.jsxs)("div", {
+                              }), (0, KG.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, Ou.jsx)("input", {
+                                children: [(0, KG.jsx)("input", {
                                   type: "range",
-                                  min: ju,
-                                  max: su,
-                                  step: Uu,
-                                  value: Math.min(su, Zu),
-                                  "aria-label": `Minimum ${Eu.toLowerCase()}`,
-                                  onChange: uu => {
-                                    const Eu = Number(uu.target.value);
-                                    lu(Eu, Math.max(Eu, Xu))
+                                  min: ZG,
+                                  max: wG,
+                                  step: SG,
+                                  value: Math.min(wG, LG),
+                                  "aria-label": `Minimum ${bG.toLowerCase()}`,
+                                  onChange: GG => {
+                                    const bG = Number(GG.target.value);
+                                    kG(bG, Math.max(bG, yG))
                                   }
-                                }), (0, Ou.jsx)("input", {
+                                }), (0, KG.jsx)("input", {
                                   type: "range",
-                                  min: ju,
-                                  max: su,
-                                  step: Uu,
-                                  value: Math.min(su, Xu),
-                                  "aria-label": `Maximum ${Eu.toLowerCase()}`,
-                                  onChange: uu => {
-                                    const Eu = Number(uu.target.value);
-                                    lu(Math.min(Eu, Zu), Eu)
+                                  min: ZG,
+                                  max: wG,
+                                  step: SG,
+                                  value: Math.min(wG, yG),
+                                  "aria-label": `Maximum ${bG.toLowerCase()}`,
+                                  onChange: GG => {
+                                    const bG = Number(GG.target.value);
+                                    kG(Math.min(bG, LG), bG)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function EU(uu) {
+                          function GS(GG) {
                             let {
-                              label: Eu,
-                              min: ju,
-                              max: su,
-                              step: Uu,
-                              value: Zu,
-                              onChange: Xu,
-                              format: lu = String
-                            } = uu;
-                            return (0, Ou.jsxs)("div", {
+                              label: bG,
+                              min: ZG,
+                              max: wG,
+                              step: SG,
+                              value: LG,
+                              onChange: yG,
+                              format: kG = String
+                            } = GG;
+                            return (0, KG.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Ou.jsxs)("div", {
+                              children: [(0, KG.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, Ou.jsx)("span", {
-                                  children: Eu
-                                }), (0, Ou.jsx)("span", {
+                                children: [(0, KG.jsx)("span", {
+                                  children: bG
+                                }), (0, KG.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: lu(Zu)
+                                  children: kG(LG)
                                 })]
-                              }), (0, Ou.jsx)("input", {
+                              }), (0, KG.jsx)("input", {
                                 type: "range",
-                                min: ju,
-                                max: su,
-                                step: Uu,
-                                value: Math.min(su, Math.max(ju, Zu)),
-                                "aria-label": Eu,
-                                onChange: uu => {
-                                  Xu(Number(uu.target.value))
+                                min: ZG,
+                                max: wG,
+                                step: SG,
+                                value: Math.min(wG, Math.max(ZG, LG)),
+                                "aria-label": bG,
+                                onChange: GG => {
+                                  yG(Number(GG.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function jU(uu) {
+                          function bS(GG) {
                             let {
-                              opts: Eu,
-                              onChange: ju
-                            } = uu;
-                            const su = Eu.colorGradients;
-                            if (!Lj(su)) return (0, Ou.jsxs)("div", {
+                              opts: bG,
+                              onChange: ZG
+                            } = GG;
+                            const wG = bG.colorGradients;
+                            if (!eZ(wG)) return (0, KG.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Ou.jsx)("div", {
+                              children: [(0, KG.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, Ou.jsx)("span", {
+                                children: (0, KG.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, Ou.jsx)("div", {
+                              }), (0, KG.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: su.map(((uu, Eu) => (0, Ou.jsx)("input", {
+                                children: wG.map(((GG, bG) => (0, KG.jsx)("input", {
                                   type: "color",
-                                  value: zs(uu.color),
-                                  "aria-label": `Colour ${Eu+1}`,
-                                  onChange: uu => {
-                                    const Uu = [...su];
-                                    Uu[Eu] = {
-                                      color: Rs(uu.target.value)
-                                    }, ju(Uu)
+                                  value: Ow(GG.color),
+                                  "aria-label": `Colour ${bG+1}`,
+                                  onChange: GG => {
+                                    const SG = [...wG];
+                                    SG[bG] = {
+                                      color: xw(GG.target.value)
+                                    }, ZG(SG)
                                   }
-                                }, Eu)))
+                                }, bG)))
                               })]
                             });
-                            const Uu = (uu, Eu) => {
-                              const Uu = [...su];
-                              Uu[uu] = Eu, ju(Uu)
+                            const SG = (GG, bG) => {
+                              const SG = [...wG];
+                              SG[GG] = bG, ZG(SG)
                             };
-                            return (0, Ou.jsxs)("div", {
+                            return (0, KG.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Ou.jsxs)("div", {
+                              children: [(0, KG.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, Ou.jsx)("span", {
+                                children: [(0, KG.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, Ou.jsx)("span", {
+                                }), (0, KG.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), su.map(((uu, Eu) => {
-                                var ju;
-                                const su = null !== (ju = uu.maxColor) && void 0 !== ju ? ju : uu.minColor;
-                                return (0, Ou.jsxs)("div", {
+                              }), wG.map(((GG, bG) => {
+                                var ZG;
+                                const wG = null !== (ZG = GG.maxColor) && void 0 !== ZG ? ZG : GG.minColor;
+                                return (0, KG.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, Ou.jsxs)("span", {
+                                  children: [(0, KG.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * uu.timeFraction), "%"]
-                                  }), (0, Ou.jsx)("span", {
+                                    children: [Math.round(100 * GG.timeFraction), "%"]
+                                  }), (0, KG.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${zs(uu.minColor)}, ${zs(su)})`
+                                      background: `linear-gradient(90deg, ${Ow(GG.minColor)}, ${Ow(wG)})`
                                     }
-                                  }), (0, Ou.jsx)("input", {
+                                  }), (0, KG.jsx)("input", {
                                     type: "color",
-                                    value: zs(uu.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*uu.timeFraction)}%`,
-                                    onChange: ju => {
-                                      Uu(Eu, {
-                                        ...uu,
-                                        minColor: [...Rs(ju.target.value), uu.minColor[3]]
+                                    value: Ow(GG.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*GG.timeFraction)}%`,
+                                    onChange: ZG => {
+                                      SG(bG, {
+                                        ...GG,
+                                        minColor: [...xw(ZG.target.value), GG.minColor[3]]
                                       })
                                     }
-                                  }), (0, Ou.jsx)("input", {
+                                  }), (0, KG.jsx)("input", {
                                     type: "color",
-                                    value: zs(su),
-                                    "aria-label": `Maximum colour at ${Math.round(100*uu.timeFraction)}%`,
-                                    onChange: ju => {
-                                      Uu(Eu, {
-                                        ...uu,
-                                        maxColor: [...Rs(ju.target.value), su[3]]
+                                    value: Ow(wG),
+                                    "aria-label": `Maximum colour at ${Math.round(100*GG.timeFraction)}%`,
+                                    onChange: ZG => {
+                                      SG(bG, {
+                                        ...GG,
+                                        maxColor: [...xw(ZG.target.value), wG[3]]
                                       })
                                     }
                                   })]
-                                }, Eu)
+                                }, bG)
                               }))]
                             })
                           }
-                          const sU = [-.5, -.5, -.5],
-                            UU = [.5, .5, .5],
-                            ZU = [0, 1, 2, 3, 4, 5, 6, 7].map((uu => [1 & uu ? UU[0] : sU[0], 2 & uu ? UU[1] : sU[1], 4 & uu ? UU[2] : sU[2]]));class XU {
+                          const ZS = [-.5, -.5, -.5],
+                            wS = [.5, .5, .5],
+                            SS = [0, 1, 2, 3, 4, 5, 6, 7].map((GG => [1 & GG ? wS[0] : ZS[0], 2 & GG ? wS[1] : ZS[1], 4 & GG ? wS[2] : ZS[2]]));class LS {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(uu, Eu, ju, su) {
-                              const Uu = Math.round(31 * Eu),
-                                Zu = Math.round(31 * ju),
-                                Xu = Math.round(31 * su),
-                                lu = `${Uu}|${Zu}|${Xu}`;
-                              let qu = this.tints.get(uu);
-                              (!qu || qu.size > 2e3) && (qu = new Map, this.tints.set(uu, qu));
-                              let fu = qu.get(lu);
-                              if (fu) return fu;
-                              fu = document.createElement("canvas"), fu.width = uu.naturalWidth || 16, fu.height = uu.naturalHeight || 16;
-                              const Cu = fu.getContext("2d");
-                              return Cu ? (Cu.imageSmoothingEnabled = !1, Cu.drawImage(uu, 0, 0, fu.width, fu.height), Cu.globalCompositeOperation = "multiply", Cu.fillStyle = `rgb(${Uu/31*255}, ${Zu/31*255}, ${Xu/31*255})`, Cu.fillRect(0, 0, fu.width, fu.height), Cu.globalCompositeOperation = "destination-in", Cu.drawImage(uu, 0, 0, fu.width, fu.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), qu.set(lu, fu), fu
+                            get(GG, bG, ZG, wG) {
+                              const SG = Math.round(31 * bG),
+                                LG = Math.round(31 * ZG),
+                                yG = Math.round(31 * wG),
+                                kG = `${SG}|${LG}|${yG}`;
+                              let UG = this.tints.get(GG);
+                              (!UG || UG.size > 2e3) && (UG = new Map, this.tints.set(GG, UG));
+                              let YG = UG.get(kG);
+                              if (YG) return YG;
+                              YG = document.createElement("canvas"), YG.width = GG.naturalWidth || 16, YG.height = GG.naturalHeight || 16;
+                              const VG = YG.getContext("2d");
+                              return VG ? (VG.imageSmoothingEnabled = !1, VG.drawImage(GG, 0, 0, YG.width, YG.height), VG.globalCompositeOperation = "multiply", VG.fillStyle = `rgb(${SG/31*255}, ${LG/31*255}, ${yG/31*255})`, VG.fillRect(0, 0, YG.width, YG.height), VG.globalCompositeOperation = "destination-in", VG.drawImage(GG, 0, 0, YG.width, YG.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), UG.set(kG, YG), YG
                             }
                           }
 
-                          function lU(uu) {
+                          function yS(GG) {
                             let {
-                              opts: Eu,
-                              textureUrl: ju,
-                              burst: Uu,
-                              paused: Zu
-                            } = uu;
-                            const Xu = (0, su.useRef)(null),
-                              lu = (0, su.useRef)(Eu);
-                            lu.current = Eu;
-                            const qu = (0, su.useRef)(Zu);
-                            qu.current = Zu;
-                            const fu = (0, su.useRef)(null),
-                              Cu = (0, su.useRef)(null),
-                              bu = (0, su.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(uu) {
-                                let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const ju = [-.5, -.5, -.5],
-                                  su = [.5, .5, .5];
-                                let Uu = .5;
-                                for (let Zu = 0; Zu < 40; Zu++) {
-                                  const Zu = xj(uu, ju, su, Eu),
-                                    Xu = Math.max(Zu.life / 30, .001);
-                                  for (; Aj(Zu, uu.gravity, Xu);) Uu = Math.max(Uu, Math.hypot(Zu.pos[0], Zu.pos[1], Zu.pos[2]) + Zu.size / 2)
+                              opts: bG,
+                              textureUrl: ZG,
+                              burst: SG,
+                              paused: LG
+                            } = GG;
+                            const yG = (0, wG.useRef)(null),
+                              kG = (0, wG.useRef)(bG);
+                            kG.current = bG;
+                            const UG = (0, wG.useRef)(LG);
+                            UG.current = LG;
+                            const YG = (0, wG.useRef)(null),
+                              VG = (0, wG.useRef)(null),
+                              pG = (0, wG.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(GG) {
+                                let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const ZG = [-.5, -.5, -.5],
+                                  wG = [.5, .5, .5];
+                                let SG = .5;
+                                for (let LG = 0; LG < 40; LG++) {
+                                  const LG = TZ(GG, ZG, wG, bG),
+                                    yG = Math.max(LG.life / 30, .001);
+                                  for (; DZ(LG, GG.gravity, yG);) SG = Math.max(SG, Math.hypot(LG.pos[0], LG.pos[1], LG.pos[2]) + LG.size / 2)
                                 }
-                                return Uu
-                              }(Eu)))), [Eu]),
-                              cu = (0, su.useRef)(bu);
-                            return cu.current = bu, (0, su.useEffect)((() => {
-                              if (fu.current = null, !ju) return;
-                              const uu = new Image;
-                              let Eu = !1;
-                              return uu.onload = () => {
-                                Eu || (fu.current = uu)
-                              }, uu.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${ju}`)
-                              }, uu.src = ju, () => {
-                                Eu = !0
+                                return SG
+                              }(bG)))), [bG]),
+                              fG = (0, wG.useRef)(pG);
+                            return fG.current = pG, (0, wG.useEffect)((() => {
+                              if (YG.current = null, !ZG) return;
+                              const GG = new Image;
+                              let bG = !1;
+                              return GG.onload = () => {
+                                bG || (YG.current = GG)
+                              }, GG.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${ZG}`)
+                              }, GG.src = ZG, () => {
+                                bG = !0
                               }
-                            }), [ju]), (0, su.useEffect)((() => {
-                              var uu;
-                              null === (uu = Cu.current) || void 0 === uu || uu.call(Cu)
-                            }), [Eu, Uu]), (0, su.useEffect)((() => {
-                              const uu = Xu.current,
-                                Eu = null === uu || void 0 === uu ? void 0 : uu.getContext("2d");
-                              if (!uu || !Eu) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const ju = new XU;
-                              let su = [],
-                                Uu = 0,
-                                Zu = -.7,
-                                bu = cu.current,
-                                Nu = performance.now(),
-                                Ou = 0,
-                                Yu = !0,
-                                hu = null;
-                              const Du = () => {
-                                const uu = lu.current,
-                                  Eu = Math.min(400, Math.max(0, Math.ceil(uu.manualEmitCount)));
-                                su = [];
-                                for (let ju = 0; ju < Eu; ju++) su.push(xj(uu, sU, UU, Math.random));
-                                Uu = 0
+                            }), [ZG]), (0, wG.useEffect)((() => {
+                              var GG;
+                              null === (GG = VG.current) || void 0 === GG || GG.call(VG)
+                            }), [bG, SG]), (0, wG.useEffect)((() => {
+                              const GG = yG.current,
+                                bG = null === GG || void 0 === GG ? void 0 : GG.getContext("2d");
+                              if (!GG || !bG) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const ZG = new LS;
+                              let wG = [],
+                                SG = 0,
+                                LG = -.7,
+                                pG = fG.current,
+                                QG = performance.now(),
+                                KG = 0,
+                                hG = !0,
+                                dG = null;
+                              const JG = () => {
+                                const GG = kG.current,
+                                  bG = Math.min(400, Math.max(0, Math.ceil(GG.manualEmitCount)));
+                                wG = [];
+                                for (let ZG = 0; ZG < bG; ZG++) wG.push(TZ(GG, ZS, wS, Math.random));
+                                SG = 0
                               };
-                              Cu.current = Du, Du();
-                              const gu = Xu => {
-                                Ou = requestAnimationFrame(gu);
-                                const Cu = Math.min(.05, (Xu - Nu) / 1e3);
-                                if (Nu = Xu, !Yu) return;
-                                const Mu = window.devicePixelRatio || 1,
-                                  eu = Math.round(uu.clientWidth * Mu),
-                                  Gu = Math.round(uu.clientHeight * Mu);
-                                if (0 === eu || 0 === Gu) return;
-                                uu.width === eu && uu.height === Gu || (uu.width = eu, uu.height = Gu);
-                                const pu = lu.current;
-                                null === hu && (Zu += .18 * Cu), bu += (cu.current - bu) * Math.min(1, 4 * Cu);
-                                const wu = .6 * Cu;
-                                su = su.filter((uu => Aj(uu, pu.gravity, wu))), 0 !== su.length || qu.current || (Uu += Cu, Uu > .6 && Du());
-                                const Ju = function(uu, Eu, ju, su) {
-                                  const Uu = 3.2 * su,
-                                    Zu = .44 * Math.min(uu, Eu) * Uu / su,
-                                    Xu = Math.cos(ju),
-                                    lu = Math.sin(ju),
-                                    qu = Math.cos(.42),
-                                    fu = Math.sin(.42);
-                                  return (ju, su, Cu) => {
-                                    const bu = ju * lu + Cu * Xu,
-                                      cu = Uu - (su * fu + bu * qu);
-                                    if (cu < .05) return null;
-                                    const Nu = Zu / cu;
+                              VG.current = JG, JG();
+                              const rG = yG => {
+                                KG = requestAnimationFrame(rG);
+                                const VG = Math.min(.05, (yG - QG) / 1e3);
+                                if (QG = yG, !hG) return;
+                                const zG = window.devicePixelRatio || 1,
+                                  EG = Math.round(GG.clientWidth * zG),
+                                  oG = Math.round(GG.clientHeight * zG);
+                                if (0 === EG || 0 === oG) return;
+                                GG.width === EG && GG.height === oG || (GG.width = EG, GG.height = oG);
+                                const XG = kG.current;
+                                null === dG && (LG += .18 * VG), pG += (fG.current - pG) * Math.min(1, 4 * VG);
+                                const uG = .6 * VG;
+                                wG = wG.filter((GG => DZ(GG, XG.gravity, uG))), 0 !== wG.length || UG.current || (SG += VG, SG > .6 && JG());
+                                const iG = function(GG, bG, ZG, wG) {
+                                  const SG = 3.2 * wG,
+                                    LG = .44 * Math.min(GG, bG) * SG / wG,
+                                    yG = Math.cos(ZG),
+                                    kG = Math.sin(ZG),
+                                    UG = Math.cos(.42),
+                                    YG = Math.sin(.42);
+                                  return (ZG, wG, VG) => {
+                                    const pG = ZG * kG + VG * yG,
+                                      fG = SG - (wG * YG + pG * UG);
+                                    if (fG < .05) return null;
+                                    const QG = LG / fG;
                                     return {
-                                      x: uu / 2 + (ju * Xu - Cu * lu) * Nu,
-                                      y: Eu / 2 - (su * qu - bu * fu) * Nu,
-                                      scale: Nu,
-                                      depth: cu
+                                      x: GG / 2 + (ZG * yG - VG * kG) * QG,
+                                      y: bG / 2 - (wG * UG - pG * YG) * QG,
+                                      scale: QG,
+                                      depth: fG
                                     }
                                   }
-                                }(eu, Gu, Zu, bu);
-                                ! function(uu, Eu, ju, su, Uu) {
-                                  const Zu = uu.createLinearGradient(0, 0, 0, ju);
-                                  Zu.addColorStop(0, "#23262d"), Zu.addColorStop(1, "#16181c"), uu.globalCompositeOperation = "source-over", uu.globalAlpha = 1, uu.fillStyle = Zu, uu.fillRect(0, 0, Eu, ju);
-                                  const Xu = (Eu, ju) => {
-                                      const Uu = su(Eu[0], Eu[1], Eu[2]),
-                                        Zu = su(ju[0], ju[1], ju[2]);
-                                      Uu && Zu && (uu.beginPath(), uu.moveTo(Uu.x, Uu.y), uu.lineTo(Zu.x, Zu.y), uu.stroke())
+                                }(EG, oG, LG, pG);
+                                ! function(GG, bG, ZG, wG, SG) {
+                                  const LG = GG.createLinearGradient(0, 0, 0, ZG);
+                                  LG.addColorStop(0, "#23262d"), LG.addColorStop(1, "#16181c"), GG.globalCompositeOperation = "source-over", GG.globalAlpha = 1, GG.fillStyle = LG, GG.fillRect(0, 0, bG, ZG);
+                                  const yG = (bG, ZG) => {
+                                      const SG = wG(bG[0], bG[1], bG[2]),
+                                        LG = wG(ZG[0], ZG[1], ZG[2]);
+                                      SG && LG && (GG.beginPath(), GG.moveTo(SG.x, SG.y), GG.lineTo(LG.x, LG.y), GG.stroke())
                                     },
-                                    lu = Math.ceil(Uu) + 1,
-                                    qu = sU[1];
-                                  uu.lineWidth = 1, uu.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let fu = -lu; fu <= lu; fu++) Xu([fu + .5, qu, .5 - lu], [fu + .5, qu, lu + .5]), Xu([.5 - lu, qu, fu + .5], [lu + .5, qu, fu + .5]);
-                                  uu.strokeStyle = "rgba(255, 255, 255, 0.28)", uu.setLineDash([4, 4]);
-                                  for (const fu of ZU)
-                                    for (const uu of ZU) {
-                                      const Eu = [0, 1, 2].filter((Eu => fu[Eu] !== uu[Eu]));
-                                      1 === Eu.length && fu[Eu[0]] < uu[Eu[0]] && Xu(fu, uu)
+                                    kG = Math.ceil(SG) + 1,
+                                    UG = ZS[1];
+                                  GG.lineWidth = 1, GG.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let YG = -kG; YG <= kG; YG++) yG([YG + .5, UG, .5 - kG], [YG + .5, UG, kG + .5]), yG([.5 - kG, UG, YG + .5], [kG + .5, UG, YG + .5]);
+                                  GG.strokeStyle = "rgba(255, 255, 255, 0.28)", GG.setLineDash([4, 4]);
+                                  for (const YG of SS)
+                                    for (const GG of SS) {
+                                      const bG = [0, 1, 2].filter((bG => YG[bG] !== GG[bG]));
+                                      1 === bG.length && YG[bG[0]] < GG[bG[0]] && yG(YG, GG)
                                     }
-                                  uu.setLineDash([])
-                                }(Eu, eu, Gu, Ju, bu);
-                                const du = fu.current,
-                                  au = su.map((uu => ({
-                                    particle: uu,
-                                    at: Ju(uu.pos[0], uu.pos[1], uu.pos[2])
-                                  }))).filter((uu => null !== uu.at)).sort(((uu, Eu) => Eu.at.depth - uu.at.depth));
-                                Eu.imageSmoothingEnabled = !1;
-                                for (const uu of function(uu) {
-                                    switch (uu) {
-                                      case Wj.e.OneOne:
+                                  GG.setLineDash([])
+                                }(bG, EG, oG, iG, pG);
+                                const CG = YG.current,
+                                  WG = wG.map((GG => ({
+                                    particle: GG,
+                                    at: iG(GG.pos[0], GG.pos[1], GG.pos[2])
+                                  }))).filter((GG => null !== GG.at)).sort(((GG, bG) => bG.at.depth - GG.at.depth));
+                                bG.imageSmoothingEnabled = !1;
+                                for (const GG of function(GG) {
+                                    switch (GG) {
+                                      case AZ.c.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case Wj.e.Add:
+                                      case AZ.c.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case Wj.e.Multiply:
+                                      case AZ.c.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case Wj.e.MultiplyAdd:
+                                      case AZ.c.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2957,665 +2957,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(pu.blendMode)) {
-                                  Eu.globalCompositeOperation = uu.operation;
+                                  }(XG.blendMode)) {
+                                  bG.globalCompositeOperation = GG.operation;
                                   for (const {
-                                      particle: su,
-                                      at: Uu
+                                      particle: wG,
+                                      at: SG
                                     }
-                                    of au) {
-                                    const [Zu, Xu, lu, qu] = Hj(su), fu = Math.max(1, su.size * Uu.scale);
-                                    Eu.globalAlpha = uu.usesAlpha ? Math.min(1, Math.max(0, qu)) : 1, du ? Eu.drawImage(ju.get(du, Zu, Xu, lu), Uu.x - fu / 2, Uu.y - fu / 2, fu, fu) : (Eu.fillStyle = `rgb(${255*Zu}, ${255*Xu}, ${255*lu})`, Eu.fillRect(Uu.x - fu / 2, Uu.y - fu / 2, fu, fu))
+                                    of WG) {
+                                    const [LG, yG, kG, UG] = tZ(wG), YG = Math.max(1, wG.size * SG.scale);
+                                    bG.globalAlpha = GG.usesAlpha ? Math.min(1, Math.max(0, UG)) : 1, CG ? bG.drawImage(ZG.get(CG, LG, yG, kG), SG.x - YG / 2, SG.y - YG / 2, YG, YG) : (bG.fillStyle = `rgb(${255*LG}, ${255*yG}, ${255*kG})`, bG.fillRect(SG.x - YG / 2, SG.y - YG / 2, YG, YG))
                                   }
                                 }
-                                Eu.globalCompositeOperation = "source-over", Eu.globalAlpha = 1
+                                bG.globalCompositeOperation = "source-over", bG.globalAlpha = 1
                               };
-                              Ou = requestAnimationFrame(gu);
-                              const Mu = new IntersectionObserver((uu => {
-                                let [Eu] = uu;
-                                Yu = Eu.isIntersecting
+                              KG = requestAnimationFrame(rG);
+                              const zG = new IntersectionObserver((GG => {
+                                let [bG] = GG;
+                                hG = bG.isIntersecting
                               }));
-                              Mu.observe(uu);
-                              const eu = Eu => {
-                                  hu = Eu.clientX, uu.setPointerCapture(Eu.pointerId)
+                              zG.observe(GG);
+                              const EG = bG => {
+                                  dG = bG.clientX, GG.setPointerCapture(bG.pointerId)
                                 },
-                                Gu = uu => {
-                                  null !== hu && (Zu += .01 * (uu.clientX - hu), hu = uu.clientX)
+                                oG = GG => {
+                                  null !== dG && (LG += .01 * (GG.clientX - dG), dG = GG.clientX)
                                 },
-                                pu = () => {
-                                  hu = null
+                                XG = () => {
+                                  dG = null
                                 };
-                              return uu.addEventListener("pointerdown", eu), uu.addEventListener("pointermove", Gu), uu.addEventListener("pointerup", pu), uu.addEventListener("pointercancel", pu), () => {
-                                cancelAnimationFrame(Ou), Mu.disconnect(), Cu.current = null, uu.removeEventListener("pointerdown", eu), uu.removeEventListener("pointermove", Gu), uu.removeEventListener("pointerup", pu), uu.removeEventListener("pointercancel", pu)
+                              return GG.addEventListener("pointerdown", EG), GG.addEventListener("pointermove", oG), GG.addEventListener("pointerup", XG), GG.addEventListener("pointercancel", XG), () => {
+                                cancelAnimationFrame(KG), zG.disconnect(), VG.current = null, GG.removeEventListener("pointerdown", EG), GG.removeEventListener("pointermove", oG), GG.removeEventListener("pointerup", XG), GG.removeEventListener("pointercancel", XG)
                               }
-                            }), []), (0, Ou.jsx)("canvas", {
-                              ref: Xu,
+                            }), []), (0, KG.jsx)("canvas", {
+                              ref: yG,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${Eu.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${bG.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const qU = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            fU = [{
-                              mode: Wj.e.OneOne,
+                          const kS = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            US = [{
+                              mode: AZ.c.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: Wj.e.Standard,
+                              mode: AZ.c.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: Wj.e.Add,
+                              mode: AZ.c.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: Wj.e.Multiply,
+                              mode: AZ.c.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: Wj.e.MultiplyAdd,
+                              mode: AZ.c.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            CU = (0, su.forwardRef)((function(uu, Eu) {
-                              var ju, Uu;
+                            YS = (0, wG.forwardRef)((function(GG, bG) {
+                              var ZG, SG;
                               let {
-                                textures: Xu
-                              } = uu;
-                              const lu = es(),
-                                qu = (0, su.useRef)(null),
-                                [fu, Cu] = (0, su.useState)(Ij),
-                                [bu, cu] = (0, su.useState)("example"),
-                                [Nu, Yu] = (0, su.useState)(0),
-                                [Du, gu] = (0, su.useState)(!1),
-                                eu = uu => {
-                                  const Eu = "example" === uu ? Ij : Sj(uu);
-                                  Eu && (Cu(Eu), cu(uu))
+                                textures: yG
+                              } = GG;
+                              const kG = zw(),
+                                UG = (0, wG.useRef)(null),
+                                [YG, VG] = (0, wG.useState)(qZ),
+                                [pG, fG] = (0, wG.useState)("example"),
+                                [QG, hG] = (0, wG.useState)(0),
+                                [JG, rG] = (0, wG.useState)(!1),
+                                EG = GG => {
+                                  const bG = "example" === GG ? qZ : sZ(GG);
+                                  bG && (VG(bG), fG(GG))
                                 };
-                              (0, su.useImperativeHandle)(Eu, (() => ({
-                                preview: uu => {
-                                  var Eu;
-                                  eu(uu), null === (Eu = qu.current) || void 0 === Eu || Eu.scrollIntoView({
+                              (0, wG.useImperativeHandle)(bG, (() => ({
+                                preview: GG => {
+                                  var bG;
+                                  EG(GG), null === (bG = UG.current) || void 0 === bG || bG.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const Gu = uu => {
-                                  Cu({
-                                    ...fu,
-                                    ...uu
-                                  }), cu(null)
+                              const oG = GG => {
+                                  VG({
+                                    ...YG,
+                                    ...GG
+                                  }), fG(null)
                                 },
-                                pu = function(uu, Eu) {
-                                  if (null !== Eu) return `${Rj}    presetId: "${Eu}",\n${us}\n})`;
-                                  const ju = uu.velocityGradients.map((uu => `        {\n            timeFraction: ${nj(uu.timeFraction)},\n            factor: ${nj(uu.factor)},\n            factor2: ${nj(uu.factor2)},\n        },`)),
-                                    su = [`    dir1: ${yj(uu.dir1)},`, `    dir2: ${yj(uu.dir2)},`, us, `    texture: "${uu.texture}",`, `    minLifeTime: ${nj(uu.minLifeTime)},`, `    maxLifeTime: ${nj(uu.maxLifeTime)},`, `    minEmitPower: ${nj(uu.minEmitPower)},`, `    maxEmitPower: ${nj(uu.maxEmitPower)},`, `    minSize: ${nj(uu.minSize)},`, `    maxSize: ${nj(uu.maxSize)},`, `    manualEmitCount: ${nj(uu.manualEmitCount)},`, `    gravity: ${yj(uu.gravity)},`, `    colorGradients: ${zj(uu.colorGradients,"    ")},`, `    velocityGradients: ${ju.length>0?`[\n${ju.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${nj(uu.blendMode)},`];
-                                  return void 0 !== uu.hideDist && su.push(`    hideDist: ${nj(uu.hideDist)},`), `${Rj}${su.join("\n")}\n})`
-                                }(fu, null === bu || "example" === bu ? null : bu),
-                                Ju = Xu.includes(fu.texture) ? Xu : [...Xu, fu.texture];
-                              return (0, Ou.jsxs)("section", {
-                                ref: qu,
+                                XG = function(GG, bG) {
+                                  if (null !== bG) return `${BZ}    presetId: "${bG}",\n${Gw}\n})`;
+                                  const ZG = GG.velocityGradients.map((GG => `        {\n            timeFraction: ${NZ(GG.timeFraction)},\n            factor: ${NZ(GG.factor)},\n            factor2: ${NZ(GG.factor2)},\n        },`)),
+                                    wG = [`    dir1: ${OZ(GG.dir1)},`, `    dir2: ${OZ(GG.dir2)},`, Gw, `    texture: "${GG.texture}",`, `    minLifeTime: ${NZ(GG.minLifeTime)},`, `    maxLifeTime: ${NZ(GG.maxLifeTime)},`, `    minEmitPower: ${NZ(GG.minEmitPower)},`, `    maxEmitPower: ${NZ(GG.maxEmitPower)},`, `    minSize: ${NZ(GG.minSize)},`, `    maxSize: ${NZ(GG.maxSize)},`, `    manualEmitCount: ${NZ(GG.manualEmitCount)},`, `    gravity: ${OZ(GG.gravity)},`, `    colorGradients: ${xZ(GG.colorGradients,"    ")},`, `    velocityGradients: ${ZG.length>0?`[\n${ZG.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${NZ(GG.blendMode)},`];
+                                  return void 0 !== GG.hideDist && wG.push(`    hideDist: ${NZ(GG.hideDist)},`), `${BZ}${wG.join("\n")}\n})`
+                                }(YG, null === pG || "example" === pG ? null : pG),
+                                iG = yG.includes(YG.texture) ? yG : [...yG, YG.texture];
+                              return (0, KG.jsxs)("section", {
+                                ref: UG,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, Ou.jsxs)("header", {
+                                children: [(0, KG.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, Ou.jsxs)("div", {
-                                    children: [(0, Ou.jsx)("div", {
+                                  children: [(0, KG.jsxs)("div", {
+                                    children: [(0, KG.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, Ou.jsx)("div", {
+                                    }), (0, KG.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, Ou.jsx)(Mu, {
-                                    text: pu,
+                                  }), (0, KG.jsx)(zG, {
+                                    text: XG,
                                     label: "Copy code"
                                   })]
-                                }), (0, Ou.jsxs)("div", {
+                                }), (0, KG.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, Ou.jsx)("button", {
+                                  children: [(0, KG.jsx)("button", {
                                     type: "button",
-                                    className: Zu()("DocsVariantChip", {
-                                      Active: "example" === bu
+                                    className: LG()("DocsVariantChip", {
+                                      Active: "example" === pG
                                     }),
                                     onClick: () => {
-                                      eu("example")
+                                      EG("example")
                                     },
                                     children: "Example"
-                                  }), qU.filter((uu => null !== Sj(uu))).map((uu => (0, Ou.jsx)("button", {
+                                  }), kS.filter((GG => null !== sZ(GG))).map((GG => (0, KG.jsx)("button", {
                                     type: "button",
-                                    className: Zu()("DocsVariantChip", {
-                                      Active: bu === uu
+                                    className: LG()("DocsVariantChip", {
+                                      Active: pG === GG
                                     }),
                                     onClick: () => {
-                                      eu(uu)
+                                      EG(GG)
                                     },
-                                    children: uu
-                                  }, uu))), (0, Ou.jsxs)("select", {
+                                    children: GG
+                                  }, GG))), (0, KG.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== bu && void 0 !== bu ? bu : "custom",
+                                    value: null !== pG && void 0 !== pG ? pG : "custom",
                                     "aria-label": "Preset",
-                                    onChange: uu => {
-                                      eu(uu.target.value)
+                                    onChange: GG => {
+                                      EG(GG.target.value)
                                     },
-                                    children: [(0, Ou.jsx)("option", {
+                                    children: [(0, KG.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === bu && (0, Ou.jsx)("option", {
+                                    }), null === pG && (0, KG.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), ij.d.map((uu => (0, Ou.jsx)("option", {
-                                      value: uu,
-                                      children: uu
-                                    }, uu)))]
+                                    }), MZ.e.map((GG => (0, KG.jsx)("option", {
+                                      value: GG,
+                                      children: GG
+                                    }, GG)))]
                                   })]
-                                }), (0, Ou.jsxs)("div", {
+                                }), (0, KG.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, Ou.jsxs)("div", {
+                                  children: [(0, KG.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, Ou.jsx)(lU, {
-                                      opts: fu,
-                                      textureUrl: null !== (ju = null === lu || void 0 === lu ? void 0 : lu.getParticleTextureUrl(fu.texture)) && void 0 !== ju ? ju : null,
-                                      burst: Nu,
-                                      paused: Du
-                                    }), (0, Ou.jsxs)("div", {
+                                    children: [(0, KG.jsx)(yS, {
+                                      opts: YG,
+                                      textureUrl: null !== (ZG = null === kG || void 0 === kG ? void 0 : kG.getParticleTextureUrl(YG.texture)) && void 0 !== ZG ? ZG : null,
+                                      burst: QG,
+                                      paused: JG
+                                    }), (0, KG.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, Ou.jsxs)("button", {
+                                      children: [(0, KG.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          Yu(Nu + 1)
+                                          hG(QG + 1)
                                         },
-                                        children: [(0, Ou.jsx)(hu, {
+                                        children: [(0, KG.jsx)(dG, {
                                           name: "replay"
-                                        }), (0, Ou.jsx)("span", {
+                                        }), (0, KG.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, Ou.jsxs)("button", {
+                                      }), (0, KG.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": Du,
+                                        "aria-pressed": JG,
                                         onClick: () => {
-                                          gu(!Du)
+                                          rG(!JG)
                                         },
-                                        children: [(0, Ou.jsx)(hu, {
-                                          name: Du ? "play" : "pause"
-                                        }), (0, Ou.jsx)("span", {
-                                          children: Du ? "Loop" : "Stop looping"
+                                        children: [(0, KG.jsx)(dG, {
+                                          name: JG ? "play" : "pause"
+                                        }), (0, KG.jsx)("span", {
+                                          children: JG ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, Ou.jsxs)("div", {
+                                  }), (0, KG.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, Ou.jsxs)("div", {
+                                    children: [(0, KG.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, Ou.jsxs)("div", {
+                                      children: [(0, KG.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, Ou.jsx)("span", {
+                                        children: [(0, KG.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, Ou.jsx)("code", {
+                                        }), (0, KG.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: fu.texture
+                                          children: YG.texture
                                         })]
-                                      }), (0, Ou.jsx)("div", {
+                                      }), (0, KG.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: Ju.map((uu => {
-                                          var Eu;
-                                          const ju = null !== (Eu = null === lu || void 0 === lu ? void 0 : lu.getParticleTextureUrl(uu)) && void 0 !== Eu ? Eu : null;
-                                          return (0, Ou.jsx)("button", {
+                                        children: iG.map((GG => {
+                                          var bG;
+                                          const ZG = null !== (bG = null === kG || void 0 === kG ? void 0 : kG.getParticleTextureUrl(GG)) && void 0 !== bG ? bG : null;
+                                          return (0, KG.jsx)("button", {
                                             type: "button",
-                                            className: Zu()("DocsParticleTexture", {
-                                              Active: fu.texture === uu
+                                            className: LG()("DocsParticleTexture", {
+                                              Active: YG.texture === GG
                                             }),
-                                            title: uu,
-                                            "aria-label": uu,
-                                            "aria-pressed": fu.texture === uu,
+                                            title: GG,
+                                            "aria-label": GG,
+                                            "aria-pressed": YG.texture === GG,
                                             onClick: () => {
-                                              Gu({
-                                                texture: uu
+                                              oG({
+                                                texture: GG
                                               })
                                             },
-                                            children: ju ? (0, Ou.jsx)("img", {
-                                              src: ju,
+                                            children: ZG ? (0, KG.jsx)("img", {
+                                              src: ZG,
                                               alt: ""
-                                            }) : (0, Ou.jsx)(hu, {
+                                            }) : (0, KG.jsx)(dG, {
                                               name: "image"
                                             })
-                                          }, uu)
+                                          }, GG)
                                         }))
                                       })]
-                                    }), (0, Ou.jsx)(EU, {
+                                    }), (0, KG.jsx)(GS, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: fu.manualEmitCount,
-                                      onChange: uu => {
-                                        Gu({
-                                          manualEmitCount: uu
+                                      value: YG.manualEmitCount,
+                                      onChange: GG => {
+                                        oG({
+                                          manualEmitCount: GG
                                         })
                                       }
-                                    }), (0, Ou.jsx)(uU, {
+                                    }), (0, KG.jsx)(Bw, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: fu.minLifeTime,
-                                      high: fu.maxLifeTime,
-                                      onChange: (uu, Eu) => {
-                                        Gu({
-                                          minLifeTime: uu,
-                                          maxLifeTime: Eu
+                                      low: YG.minLifeTime,
+                                      high: YG.maxLifeTime,
+                                      onChange: (GG, bG) => {
+                                        oG({
+                                          minLifeTime: GG,
+                                          maxLifeTime: bG
                                         })
                                       }
-                                    }), (0, Ou.jsx)(uU, {
+                                    }), (0, KG.jsx)(Bw, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: fu.minEmitPower,
-                                      high: fu.maxEmitPower,
-                                      onChange: (uu, Eu) => {
-                                        Gu({
-                                          minEmitPower: uu,
-                                          maxEmitPower: Eu
+                                      low: YG.minEmitPower,
+                                      high: YG.maxEmitPower,
+                                      onChange: (GG, bG) => {
+                                        oG({
+                                          minEmitPower: GG,
+                                          maxEmitPower: bG
                                         })
                                       }
-                                    }), (0, Ou.jsx)(uU, {
+                                    }), (0, KG.jsx)(Bw, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: fu.minSize,
-                                      high: fu.maxSize,
-                                      onChange: (uu, Eu) => {
-                                        Gu({
-                                          minSize: uu,
-                                          maxSize: Eu
+                                      low: YG.minSize,
+                                      high: YG.maxSize,
+                                      onChange: (GG, bG) => {
+                                        oG({
+                                          minSize: GG,
+                                          maxSize: bG
                                         })
                                       }
-                                    }), (0, Ou.jsx)(EU, {
+                                    }), (0, KG.jsx)(GS, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (Uu = fu.gravity[1]) && void 0 !== Uu ? Uu : 0,
-                                      onChange: uu => {
-                                        var Eu, ju;
-                                        Gu({
-                                          gravity: [null !== (Eu = fu.gravity[0]) && void 0 !== Eu ? Eu : 0, uu, null !== (ju = fu.gravity[2]) && void 0 !== ju ? ju : 0]
+                                      value: null !== (SG = YG.gravity[1]) && void 0 !== SG ? SG : 0,
+                                      onChange: GG => {
+                                        var bG, ZG;
+                                        oG({
+                                          gravity: [null !== (bG = YG.gravity[0]) && void 0 !== bG ? bG : 0, GG, null !== (ZG = YG.gravity[2]) && void 0 !== ZG ? ZG : 0]
                                         })
                                       }
-                                    }), (0, Ou.jsxs)("div", {
+                                    }), (0, KG.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, Ou.jsx)("div", {
+                                      children: [(0, KG.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, Ou.jsx)("span", {
+                                        children: (0, KG.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, Ou.jsx)("select", {
+                                      }), (0, KG.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: fu.blendMode,
+                                        value: YG.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: uu => {
-                                          Gu({
-                                            blendMode: Number(uu.target.value)
+                                        onChange: GG => {
+                                          oG({
+                                            blendMode: Number(GG.target.value)
                                           })
                                         },
-                                        children: fU.map((uu => {
+                                        children: US.map((GG => {
                                           let {
-                                            mode: Eu,
-                                            label: ju
-                                          } = uu;
-                                          return (0, Ou.jsx)("option", {
-                                            value: Eu,
-                                            children: ju
-                                          }, Eu)
+                                            mode: bG,
+                                            label: ZG
+                                          } = GG;
+                                          return (0, KG.jsx)("option", {
+                                            value: bG,
+                                            children: ZG
+                                          }, bG)
                                         }))
                                       })]
-                                    }), (0, Ou.jsx)(jU, {
-                                      opts: fu,
-                                      onChange: uu => {
-                                        Gu({
-                                          colorGradients: uu
+                                    }), (0, KG.jsx)(bS, {
+                                      opts: YG,
+                                      onChange: GG => {
+                                        oG({
+                                          colorGradients: GG
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, Ou.jsx)(wu, {
-                                  code: pu,
+                                }), (0, KG.jsx)(uG, {
+                                  code: XG,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var bU = ju(4653),
-                            cU = ju(1964);
+                          var VS = ZG(4487),
+                            pS = ZG(1876);
 
-                          function NU(uu, Eu) {
-                            return uu ? bU.c.includes(Eu) ? uu.getIngameIconUrl(Eu) : uu.getItemIconUrl(Eu) : null
+                          function fS(GG, bG) {
+                            return GG ? VS.b.includes(bG) ? GG.getIngameIconUrl(bG) : GG.getItemIconUrl(bG) : null
                           }
 
-                          function OU(uu) {
-                            var Eu, ju, su;
+                          function QS(GG) {
+                            var bG, ZG, wG;
                             let {
-                              part: Uu,
-                              assets: Xu
-                            } = uu;
-                            const lu = NU(Xu, Uu.icon),
-                              qu = null !== (Eu = null === (ju = Uu.style) || void 0 === ju ? void 0 : ju.fontSize) && void 0 !== Eu ? Eu : "1.8em",
-                              fu = (0, iE.Yb)(Uu.style);
-                            return (0, Ou.jsxs)("span", {
-                              className: Zu()("DocsBloxdTextIcon", {
-                                Missing: !lu
+                              part: SG,
+                              assets: yG
+                            } = GG;
+                            const kG = fS(yG, SG.icon),
+                              UG = null !== (bG = null === (ZG = SG.style) || void 0 === ZG ? void 0 : ZG.fontSize) && void 0 !== bG ? bG : "1.8em",
+                              YG = (0, Mb.qc)(SG.style);
+                            return (0, KG.jsxs)("span", {
+                              className: LG()("DocsBloxdTextIcon", {
+                                Missing: !kG
                               }),
                               style: {
-                                width: qu,
-                                height: qu,
-                                opacity: null === (su = Uu.style) || void 0 === su ? void 0 : su.opacity
+                                width: UG,
+                                height: UG,
+                                opacity: null === (wG = SG.style) || void 0 === wG ? void 0 : wG.opacity
                               },
-                              title: lu ? void 0 : `No Bloxd icon, item or block is called "${Uu.icon}"`,
-                              children: [lu && fu && (0, Ou.jsx)("span", {
+                              title: kG ? void 0 : `No Bloxd icon, item or block is called "${SG.icon}"`,
+                              children: [kG && YG && (0, KG.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: fu,
-                                  maskImage: `url("${lu}")`,
-                                  WebkitMaskImage: `url("${lu}")`
+                                  background: YG,
+                                  maskImage: `url("${kG}")`,
+                                  WebkitMaskImage: `url("${kG}")`
                                 }
-                              }), lu ? (0, Ou.jsx)("img", {
-                                src: lu,
+                              }), kG ? (0, KG.jsx)("img", {
+                                src: kG,
                                 alt: "",
-                                className: Zu()({
-                                  Tinted: fu
+                                className: LG()({
+                                  Tinted: YG
                                 })
-                              }) : (0, Ou.jsx)(hu, {
+                              }) : (0, KG.jsx)(dG, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function YU(uu) {
+                          function KS(GG) {
                             let {
-                              parts: Eu,
-                              className: ju
-                            } = uu;
-                            const su = es(),
-                              Uu = [];
-                            let Xu = [];
-                            const lu = uu => {
-                              Xu.length > 0 && (Uu.push((0, Ou.jsx)(cU.d, {
-                                text: Xu
-                              }, `run-${uu}`)), Xu = [])
+                              parts: bG,
+                              className: ZG
+                            } = GG;
+                            const wG = zw(),
+                              SG = [];
+                            let yG = [];
+                            const kG = GG => {
+                              yG.length > 0 && (SG.push((0, KG.jsx)(pS.c, {
+                                text: yG
+                              }, `run-${GG}`)), yG = [])
                             };
-                            return Eu.forEach(((uu, Eu) => {
-                              "icon" !== BE(uu) || SE(uu.icon) ? Xu.push(uu) : (lu(Eu), Uu.push((0, Ou.jsx)(OU, {
-                                part: uu,
-                                assets: su
-                              }, `icon-${Eu}`)))
-                            })), lu(Eu.length), (0, Ou.jsx)("div", {
-                              className: Zu()("DocsStyledTextPreview", ju),
-                              children: Uu
+                            return bG.forEach(((GG, bG) => {
+                              "icon" !== gb(GG) || sb(GG.icon) ? yG.push(GG) : (kG(bG), SG.push((0, KG.jsx)(QS, {
+                                part: GG,
+                                assets: wG
+                              }, `icon-${bG}`)))
+                            })), kG(bG.length), (0, KG.jsx)("div", {
+                              className: LG()("DocsStyledTextPreview", ZG),
+                              children: SG
                             })
                           }
-                          const hU = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let DU = null;
+                          const hS = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let dS = null;
 
-                          function gU(uu) {
-                            if (DU ??= document.createElement("canvas").getContext("2d"), !DU) return "#000000";
-                            DU.fillStyle = "#000000", DU.fillStyle = uu;
-                            const Eu = DU.fillStyle;
-                            return Eu.startsWith("#") ? Eu : "#000000"
+                          function JS(GG) {
+                            if (dS ??= document.createElement("canvas").getContext("2d"), !dS) return "#000000";
+                            dS.fillStyle = "#000000", dS.fillStyle = GG;
+                            const bG = dS.fillStyle;
+                            return bG.startsWith("#") ? bG : "#000000"
                           }
 
-                          function MU(uu) {
+                          function rS(GG) {
                             let {
-                              value: Eu,
-                              label: ju,
-                              onChange: su
-                            } = uu;
-                            return (0, Ou.jsxs)("span", {
+                              value: bG,
+                              label: ZG,
+                              onChange: wG
+                            } = GG;
+                            return (0, KG.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, Ou.jsx)("input", {
+                              children: [(0, KG.jsx)("input", {
                                 type: "color",
-                                value: gU(Eu),
-                                "aria-label": `${ju} picker`,
-                                onChange: uu => {
-                                  su(uu.target.value)
+                                value: JS(bG),
+                                "aria-label": `${ZG} picker`,
+                                onChange: GG => {
+                                  wG(GG.target.value)
                                 }
-                              }), (0, Ou.jsx)("input", {
+                              }), (0, KG.jsx)("input", {
                                 type: "text",
-                                value: Eu,
+                                value: bG,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": ju,
+                                "aria-label": ZG,
                                 spellCheck: !1,
-                                onChange: uu => {
-                                  su(uu.target.value)
+                                onChange: GG => {
+                                  wG(GG.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function eU(uu) {
+                          function zS(GG) {
                             let {
-                              value: Eu,
-                              fontAwesomeIcons: ju,
-                              onChange: Uu
-                            } = uu;
-                            const Xu = es(),
-                              [lu, qu] = (0, su.useState)(SE(Eu) ? "fontAwesome" : "bloxd"),
-                              [fu, Cu] = (0, su.useState)(""),
-                              bu = fu.trim().toLowerCase(),
-                              cu = "bloxd" === lu ? bU.c : ju,
-                              Nu = bu ? cu.filter((uu => uu.toLowerCase().includes(bu))) : cu;
-                            return (0, Ou.jsxs)("div", {
+                              value: bG,
+                              fontAwesomeIcons: ZG,
+                              onChange: SG
+                            } = GG;
+                            const yG = zw(),
+                              [kG, UG] = (0, wG.useState)(sb(bG) ? "fontAwesome" : "bloxd"),
+                              [YG, VG] = (0, wG.useState)(""),
+                              pG = YG.trim().toLowerCase(),
+                              fG = "bloxd" === kG ? VS.b : ZG,
+                              QG = pG ? fG.filter((GG => GG.toLowerCase().includes(pG))) : fG;
+                            return (0, KG.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, Ou.jsx)("input", {
+                              children: [(0, KG.jsx)("input", {
                                 type: "text",
-                                value: Eu,
+                                value: bG,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: uu => {
-                                  Uu(uu.target.value)
+                                onChange: GG => {
+                                  SG(GG.target.value)
                                 }
-                              }), (0, Ou.jsx)("p", {
+                              }), (0, KG.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, Ou.jsxs)("div", {
+                              }), (0, KG.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((uu => (0, Ou.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((GG => (0, KG.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": lu === uu,
-                                    className: Zu()("DocsVariantChip", {
-                                      Active: lu === uu
+                                    "aria-selected": kG === GG,
+                                    className: LG()("DocsVariantChip", {
+                                      Active: kG === GG
                                     }),
                                     onClick: () => {
-                                      qu(uu)
+                                      UG(GG)
                                     },
-                                    children: "bloxd" === uu ? `Bloxd icons (${bU.c.length})` : `Font Awesome (${ju.length})`
-                                  }, uu))), (0, Ou.jsx)("input", {
+                                    children: "bloxd" === GG ? `Bloxd icons (${VS.b.length})` : `Font Awesome (${ZG.length})`
+                                  }, GG))), (0, KG.jsx)("input", {
                                     type: "search",
-                                    value: fu,
+                                    value: YG,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: uu => {
-                                      Cu(uu.target.value)
+                                    onChange: GG => {
+                                      VG(GG.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, Ou.jsxs)("div", {
+                              }), (0, KG.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [Nu.map((uu => {
-                                  const ju = "bloxd" === lu ? NU(Xu, uu) : null;
-                                  return (0, Ou.jsx)("button", {
+                                children: [QG.map((GG => {
+                                  const ZG = "bloxd" === kG ? fS(yG, GG) : null;
+                                  return (0, KG.jsx)("button", {
                                     type: "button",
-                                    title: uu,
-                                    "aria-label": uu,
-                                    "aria-pressed": uu === Eu,
-                                    className: Zu()("DocsIconPickerOption", {
-                                      Active: uu === Eu
+                                    title: GG,
+                                    "aria-label": GG,
+                                    "aria-pressed": GG === bG,
+                                    className: LG()("DocsIconPickerOption", {
+                                      Active: GG === bG
                                     }),
                                     onClick: () => {
-                                      Uu(uu)
+                                      SG(GG)
                                     },
-                                    children: "fontAwesome" === lu ? (0, Ou.jsx)(ej.e, {
-                                      name: uu
-                                    }) : ju ? (0, Ou.jsx)("img", {
-                                      src: ju,
+                                    children: "fontAwesome" === kG ? (0, KG.jsx)(EZ.c, {
+                                      name: GG
+                                    }) : ZG ? (0, KG.jsx)("img", {
+                                      src: ZG,
                                       alt: ""
-                                    }) : (0, Ou.jsx)(hu, {
+                                    }) : (0, KG.jsx)(dG, {
                                       name: "image"
                                     })
-                                  }, uu)
-                                })), 0 === Nu.length && (0, Ou.jsxs)("p", {
+                                  }, GG)
+                                })), 0 === QG.length && (0, KG.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", fu, "\u201d."]
+                                  children: ["No icons match \u201c", YG, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function GU(uu) {
+                          function ES(GG) {
                             let {
-                              property: Eu,
-                              value: ju,
-                              fontAwesomeIcons: su,
-                              onChange: Uu
-                            } = uu;
+                              property: bG,
+                              value: ZG,
+                              fontAwesomeIcons: wG,
+                              onChange: SG
+                            } = GG;
                             const {
-                              field: Zu,
-                              label: Xu
-                            } = Eu, lu = uu => "" !== uu || Eu.isRequired ? uu : void 0;
-                            switch (Zu.kind) {
+                              field: LG,
+                              label: yG
+                            } = bG, kG = GG => "" !== GG || bG.isRequired ? GG : void 0;
+                            switch (LG.kind) {
                               case "text":
-                                return Zu.multiline ? (0, Ou.jsx)("textarea", {
-                                  value: String(null !== ju && void 0 !== ju ? ju : ""),
+                                return LG.multiline ? (0, KG.jsx)("textarea", {
+                                  value: String(null !== ZG && void 0 !== ZG ? ZG : ""),
                                   rows: 2,
-                                  "aria-label": Xu,
-                                  onChange: uu => {
-                                    Uu(uu.target.value)
+                                  "aria-label": yG,
+                                  onChange: GG => {
+                                    SG(GG.target.value)
                                   }
-                                }) : (0, Ou.jsx)("input", {
+                                }) : (0, KG.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== ju && void 0 !== ju ? ju : ""),
-                                  "aria-label": Xu,
-                                  onChange: uu => {
-                                    Uu(lu(uu.target.value))
+                                  value: String(null !== ZG && void 0 !== ZG ? ZG : ""),
+                                  "aria-label": yG,
+                                  onChange: GG => {
+                                    SG(kG(GG.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, Ou.jsx)("input", {
+                                return (0, KG.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== ju && void 0 !== ju ? ju : ""),
-                                  placeholder: Eu.defaultText,
+                                  value: String(null !== ZG && void 0 !== ZG ? ZG : ""),
+                                  placeholder: bG.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": Xu,
+                                  "aria-label": yG,
                                   spellCheck: !1,
-                                  onChange: uu => {
-                                    Uu(lu(uu.target.value.trim()))
+                                  onChange: GG => {
+                                    SG(kG(GG.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, Ou.jsx)(MU, {
-                                  value: String(null !== ju && void 0 !== ju ? ju : ""),
-                                  label: Xu,
-                                  onChange: uu => {
-                                    Uu(lu(uu))
+                                return (0, KG.jsx)(rS, {
+                                  value: String(null !== ZG && void 0 !== ZG ? ZG : ""),
+                                  label: yG,
+                                  onChange: GG => {
+                                    SG(kG(GG))
                                   }
                                 });
                               case "colours": {
-                                const uu = Array.isArray(ju) ? ju : [],
-                                  Eu = uu => {
-                                    Uu(uu.length > 0 ? uu : void 0)
+                                const GG = Array.isArray(ZG) ? ZG : [],
+                                  bG = GG => {
+                                    SG(GG.length > 0 ? GG : void 0)
                                   };
-                                return (0, Ou.jsxs)("div", {
+                                return (0, KG.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [uu.map(((ju, su) => (0, Ou.jsxs)("span", {
+                                  children: [GG.map(((ZG, wG) => (0, KG.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, Ou.jsx)(MU, {
-                                      value: ju,
-                                      label: `${Xu} ${su+1}`,
-                                      onChange: ju => {
-                                        Eu(uu.map(((uu, Eu) => Eu === su ? ju : uu)))
+                                    children: [(0, KG.jsx)(rS, {
+                                      value: ZG,
+                                      label: `${yG} ${wG+1}`,
+                                      onChange: ZG => {
+                                        bG(GG.map(((GG, bG) => bG === wG ? ZG : GG)))
                                       }
-                                    }), (0, Ou.jsx)("button", {
+                                    }), (0, KG.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${su+1}`,
+                                      "aria-label": `Remove colour ${wG+1}`,
                                       onClick: () => {
-                                        Eu(uu.filter(((uu, Eu) => Eu !== su)))
+                                        bG(GG.filter(((GG, bG) => bG !== wG)))
                                       },
-                                      children: (0, Ou.jsx)(hu, {
+                                      children: (0, KG.jsx)(dG, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, su))), (0, Ou.jsxs)("button", {
+                                  }, wG))), (0, KG.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var ju;
-                                      Eu([...uu, null !== (ju = uu.at(-1)) && void 0 !== ju ? ju : "#ffffff"])
+                                      var ZG;
+                                      bG([...GG, null !== (ZG = GG.at(-1)) && void 0 !== ZG ? ZG : "#ffffff"])
                                     },
-                                    children: [(0, Ou.jsx)(hu, {
+                                    children: [(0, KG.jsx)(dG, {
                                       name: "plus"
-                                    }), 0 === uu.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === GG.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var qu;
-                                const uu = "number" === typeof ju ? ju : Number(null !== (qu = Eu.defaultText) && void 0 !== qu ? qu : 0);
-                                return (0, Ou.jsxs)("span", {
+                                var UG;
+                                const GG = "number" === typeof ZG ? ZG : Number(null !== (UG = bG.defaultText) && void 0 !== UG ? UG : 0);
+                                return (0, KG.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, Ou.jsx)("input", {
+                                  children: [(0, KG.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: uu,
-                                    "aria-label": Xu,
-                                    onChange: uu => {
-                                      Uu(Number(uu.target.value))
+                                    value: GG,
+                                    "aria-label": yG,
+                                    onChange: GG => {
+                                      SG(Number(GG.target.value))
                                     }
-                                  }), (0, Ou.jsx)("output", {
-                                    children: uu.toFixed(2)
+                                  }), (0, KG.jsx)("output", {
+                                    children: GG.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, Ou.jsxs)("select", {
-                                  value: String(null !== ju && void 0 !== ju ? ju : ""),
-                                  "aria-label": Xu,
-                                  onChange: uu => {
-                                    Uu(lu(uu.target.value))
+                                return (0, KG.jsxs)("select", {
+                                  value: String(null !== ZG && void 0 !== ZG ? ZG : ""),
+                                  "aria-label": yG,
+                                  onChange: GG => {
+                                    SG(kG(GG.target.value))
                                   },
-                                  children: [!Eu.isRequired && (0, Ou.jsxs)("option", {
+                                  children: [!bG.isRequired && (0, KG.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", Eu.defaultText, ")"]
-                                  }), Zu.options.map((uu => (0, Ou.jsx)("option", {
-                                    value: uu,
-                                    children: uu
-                                  }, uu)))]
+                                    children: ["Default (", bG.defaultText, ")"]
+                                  }), LG.options.map((GG => (0, KG.jsx)("option", {
+                                    value: GG,
+                                    children: GG
+                                  }, GG)))]
                                 });
                               case "icon":
-                                return (0, Ou.jsx)(eU, {
-                                  value: String(null !== ju && void 0 !== ju ? ju : ""),
-                                  fontAwesomeIcons: su,
-                                  onChange: Uu
+                                return (0, KG.jsx)(zS, {
+                                  value: String(null !== ZG && void 0 !== ZG ? ZG : ""),
+                                  fontAwesomeIcons: wG,
+                                  onChange: SG
                                 })
                             }
                           }
 
-                          function pU(uu) {
-                            let Eu;
+                          function oS(GG) {
+                            let bG;
                             try {
-                              Eu = JSON.parse(uu)
-                            } catch (ju) {
+                              bG = JSON.parse(GG)
+                            } catch (ZG) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${ju.message}`
+                                error: `Not valid JSON yet: ${ZG.message}`
                               }
                             }
-                            return jj(Eu) ? {
-                              part: Eu,
+                            return ZZ(bG) ? {
+                              part: bG,
                               error: null
                             } : {
                               part: null,
@@ -3623,150 +3623,150 @@ export const modules = {
                             }
                           }
 
-                          function wU(uu) {
+                          function XS(GG) {
                             let {
-                              parts: Eu,
-                              index: ju,
-                              fontAwesomeIcons: Uu,
-                              onChange: Zu,
-                              jK: Xu,
-                              onClose: lu
-                            } = uu;
-                            const qu = (0, su.useContext)(OE),
-                              Cu = (0, su.useRef)(null),
-                              bu = Eu[ju],
-                              cu = BE(bu),
-                              [Nu, Yu] = (0, su.useState)((() => JSON.stringify(bu, null, 2))),
-                              Du = (0, su.useMemo)((() => "other" === cu ? pU(Nu).error : null), [cu, Nu]);
-                            (0, su.useEffect)((() => {
-                              var uu;
-                              null === (uu = Cu.current) || void 0 === uu || uu.focus()
+                              parts: bG,
+                              index: ZG,
+                              fontAwesomeIcons: SG,
+                              onChange: LG,
+                              MI: yG,
+                              onClose: kG
+                            } = GG;
+                            const UG = (0, wG.useContext)(Kb),
+                              VG = (0, wG.useRef)(null),
+                              pG = bG[ZG],
+                              fG = gb(pG),
+                              [QG, hG] = (0, wG.useState)((() => JSON.stringify(pG, null, 2))),
+                              JG = (0, wG.useMemo)((() => "other" === fG ? oS(QG).error : null), [fG, QG]);
+                            (0, wG.useEffect)((() => {
+                              var GG;
+                              null === (GG = VG.current) || void 0 === GG || GG.focus()
                             }), []);
-                            const gu = (0, Ou.jsx)("div", {
+                            const rG = (0, KG.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: uu => {
-                                uu.target === uu.currentTarget && lu()
+                              onMouseDown: GG => {
+                                GG.target === GG.currentTarget && kG()
                               },
-                              children: (0, Ou.jsxs)("div", {
-                                ref: Cu,
+                              children: (0, KG.jsxs)("div", {
+                                ref: VG,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${ju+1}: ${IE[cu]}`,
+                                "aria-label": `Edit part ${ZG+1}: ${qb[fG]}`,
                                 tabIndex: -1,
-                                onKeyDown: uu => {
-                                  "Escape" === uu.key ? (uu.stopPropagation(), lu()) : "Tab" === uu.key && Cu.current && function(uu, Eu) {
-                                    const ju = Array.from(uu.querySelectorAll(oE)),
-                                      su = ju[0],
-                                      Uu = ju.at(-1);
-                                    if (!su || !Uu) return;
-                                    const Zu = document.activeElement;
-                                    !Eu.shiftKey || Zu !== su && Zu !== uu ? Eu.shiftKey || Zu !== Uu || (Eu.preventDefault(), su.focus()) : (Eu.preventDefault(), Uu.focus())
-                                  }(Cu.current, uu)
+                                onKeyDown: GG => {
+                                  "Escape" === GG.key ? (GG.stopPropagation(), kG()) : "Tab" === GG.key && VG.current && function(GG, bG) {
+                                    const ZG = Array.from(GG.querySelectorAll(Ib)),
+                                      wG = ZG[0],
+                                      SG = ZG.at(-1);
+                                    if (!wG || !SG) return;
+                                    const LG = document.activeElement;
+                                    !bG.shiftKey || LG !== wG && LG !== GG ? bG.shiftKey || LG !== SG || (bG.preventDefault(), wG.focus()) : (bG.preventDefault(), SG.focus())
+                                  }(VG.current, GG)
                                 },
-                                children: [(0, Ou.jsxs)("header", {
+                                children: [(0, KG.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, Ou.jsxs)("div", {
-                                    children: [(0, Ou.jsxs)("div", {
+                                  children: [(0, KG.jsxs)("div", {
+                                    children: [(0, KG.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", ju + 1]
-                                    }), (0, Ou.jsx)("div", {
+                                      children: ["Part ", ZG + 1]
+                                    }), (0, KG.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: IE[cu]
+                                      children: qb[fG]
                                     })]
-                                  }), (0, Ou.jsx)("button", {
+                                  }), (0, KG.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: lu,
-                                    children: (0, Ou.jsx)(hu, {
+                                    onClick: kG,
+                                    children: (0, KG.jsx)(dG, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, Ou.jsx)(YU, {
-                                  parts: Eu,
+                                }), (0, KG.jsx)(KS, {
+                                  parts: bG,
                                   className: "DocsTextDialogPreview"
-                                }), (0, Ou.jsx)("div", {
+                                }), (0, KG.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === cu ? (0, Ou.jsxs)("label", {
+                                  children: "other" === fG ? (0, KG.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, Ou.jsx)("span", {
+                                    children: [(0, KG.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, Ou.jsx)("textarea", {
+                                    }), (0, KG.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: Nu,
+                                      value: QG,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: uu => {
-                                        Yu(uu.target.value);
-                                        const Eu = pU(uu.target.value);
-                                        null !== Eu.part && Zu(Eu.part)
+                                      onChange: GG => {
+                                        hG(GG.target.value);
+                                        const bG = oS(GG.target.value);
+                                        null !== bG.part && LG(bG.part)
                                       }
-                                    }), Du && (0, Ou.jsx)("span", {
+                                    }), JG && (0, KG.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: Du
+                                      children: JG
                                     })]
-                                  }) : tE[cu].map((uu => {
-                                    const Eu = TE(bu, uu.path),
-                                      ju = uu.isRequired ? JSON.stringify(AE(bu, uu.path)) === JSON.stringify(bu) : void 0 === Eu;
-                                    return (0, Ou.jsxs)("div", {
+                                  }) : Rb[fG].map((GG => {
+                                    const bG = Hb(pG, GG.path),
+                                      ZG = GG.isRequired ? JSON.stringify(Db(pG, GG.path)) === JSON.stringify(pG) : void 0 === bG;
+                                    return (0, KG.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, Ou.jsxs)("div", {
+                                      children: [(0, KG.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, Ou.jsx)("span", {
-                                          children: uu.label
-                                        }), (0, Ou.jsxs)("button", {
+                                        children: [(0, KG.jsx)("span", {
+                                          children: GG.label
+                                        }), (0, KG.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: ju,
-                                          "aria-label": `Reset ${uu.label.toLowerCase()} to default`,
+                                          disabled: ZG,
+                                          "aria-label": `Reset ${GG.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            Zu(AE(bu, uu.path))
+                                            LG(Db(pG, GG.path))
                                           },
-                                          children: [(0, Ou.jsx)(hu, {
+                                          children: [(0, KG.jsx)(dG, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, Ou.jsx)(GU, {
-                                        property: uu,
-                                        value: Eu,
-                                        fontAwesomeIcons: Uu,
-                                        onChange: Eu => {
-                                          Zu(HE(bu, uu.path, Eu))
+                                      }), (0, KG.jsx)(ES, {
+                                        property: GG,
+                                        value: bG,
+                                        fontAwesomeIcons: SG,
+                                        onChange: bG => {
+                                          LG(tb(pG, GG.path, bG))
                                         }
-                                      }), !uu.isRequired && (0, Ou.jsxs)("span", {
+                                      }), !GG.isRequired && (0, KG.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", uu.defaultText]
+                                        children: ["Default: ", GG.defaultText]
                                       })]
-                                    }, uu.path.join("."))
+                                    }, GG.path.join("."))
                                   }))
-                                }), (0, Ou.jsxs)("footer", {
+                                }), (0, KG.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, Ou.jsxs)("button", {
+                                  children: [(0, KG.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: Xu,
-                                    children: [(0, Ou.jsx)(hu, {
+                                    onClick: yG,
+                                    children: [(0, KG.jsx)(dG, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, Ou.jsx)("button", {
+                                  }), (0, KG.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: lu,
+                                    onClick: kG,
                                     children: "Done"
                                   })]
-                                }), (0, Ou.jsx)("datalist", {
+                                }), (0, KG.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: hU.map((uu => (0, Ou.jsx)("option", {
-                                    value: uu
-                                  }, uu)))
+                                  children: hS.map((GG => (0, KG.jsx)("option", {
+                                    value: GG
+                                  }, GG)))
                                 })]
                               })
                             });
-                            return qu ? (0, fu.createPortal)(gu, qu) : gu
+                            return UG ? (0, YG.createPortal)(rG, UG) : rG
                           }
-                          const JU = [{
+                          const uS = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3810,265 +3810,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            dU = Object.keys(FE);
+                            iS = Object.keys(nb);
 
-                          function aU(uu) {
+                          function CS(GG) {
                             let {
-                              fontAwesomeIcons: Eu
-                            } = uu;
-                            const [ju, Uu] = (0, su.useState)(JU[0].parts), [Xu, lu] = (0, su.useState)((() => RE(JU[0].parts))), [qu, fu] = (0, su.useState)(null), [Cu, bu] = (0, su.useState)(!1), [cu, Nu] = (0, su.useState)(null), [Yu, Du] = (0, su.useState)(!1), [gu, Mu] = (0, su.useState)(null), eu = (0, su.useRef)(null), Gu = RE(ju);
-                            (0, su.useLayoutEffect)((() => {
-                              var uu;
-                              if (!gu) return;
-                              const Eu = uu => {
-                                  var Eu;
-                                  return null === (Eu = eu.current) || void 0 === Eu ? void 0 : Eu.querySelector(`[data-focus-key="${uu}"]`)
+                              fontAwesomeIcons: bG
+                            } = GG;
+                            const [ZG, SG] = (0, wG.useState)(uS[0].parts), [yG, kG] = (0, wG.useState)((() => Bb(uS[0].parts))), [UG, YG] = (0, wG.useState)(null), [VG, pG] = (0, wG.useState)(!1), [fG, QG] = (0, wG.useState)(null), [hG, JG] = (0, wG.useState)(!1), [rG, zG] = (0, wG.useState)(null), EG = (0, wG.useRef)(null), oG = Bb(ZG);
+                            (0, wG.useLayoutEffect)((() => {
+                              var GG;
+                              if (!rG) return;
+                              const bG = GG => {
+                                  var bG;
+                                  return null === (bG = EG.current) || void 0 === bG ? void 0 : bG.querySelector(`[data-focus-key="${GG}"]`)
                                 },
-                                ju = Eu(gu.key);
-                              null === (uu = ju && !ju.disabled ? ju : Eu(gu.fallback)) || void 0 === uu || uu.focus(), Mu(null)
-                            }), [gu]);
-                            const pu = uu => {
-                                Uu(uu), lu(RE(uu)), fu(null)
+                                ZG = bG(rG.key);
+                              null === (GG = ZG && !ZG.disabled ? ZG : bG(rG.fallback)) || void 0 === GG || GG.focus(), zG(null)
+                            }), [rG]);
+                            const XG = GG => {
+                                SG(GG), kG(Bb(GG)), YG(null)
                               },
-                              Ju = uu => {
-                                pu(ju.filter(((Eu, ju) => ju !== uu))), Mu({
-                                  key: `edit-${Math.min(uu,ju.length-2)}`,
+                              iG = GG => {
+                                XG(ZG.filter(((bG, ZG) => ZG !== GG))), zG({
+                                  key: `edit-${Math.min(GG,ZG.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              du = (uu, Eu) => {
-                                const su = [...ju],
-                                  [Uu] = su.splice(uu, 1);
-                                su.splice(uu + Eu, 0, Uu), pu(su);
-                                Mu({
-                                  key: `${Eu<0?"up":"down"}-${uu+Eu}`,
-                                  fallback: `edit-${uu+Eu}`
+                              CG = (GG, bG) => {
+                                const wG = [...ZG],
+                                  [SG] = wG.splice(GG, 1);
+                                wG.splice(GG + bG, 0, SG), XG(wG);
+                                zG({
+                                  key: `${bG<0?"up":"down"}-${GG+bG}`,
+                                  fallback: `edit-${GG+bG}`
                                 })
                               };
-                            return (0, Ou.jsxs)("section", {
-                              ref: eu,
+                            return (0, KG.jsxs)("section", {
+                              ref: EG,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, Ou.jsx)("header", {
+                              children: [(0, KG.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, Ou.jsxs)("div", {
-                                  children: [(0, Ou.jsx)("div", {
+                                children: (0, KG.jsxs)("div", {
+                                  children: [(0, KG.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, Ou.jsx)("div", {
+                                  }), (0, KG.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, Ou.jsx)("div", {
+                              }), (0, KG.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: JU.map((uu => (0, Ou.jsx)("button", {
+                                children: uS.map((GG => (0, KG.jsx)("button", {
                                   type: "button",
-                                  className: Zu()("DocsVariantChip", {
-                                    Active: Gu === RE(uu.parts)
+                                  className: LG()("DocsVariantChip", {
+                                    Active: oG === Bb(GG.parts)
                                   }),
                                   onClick: () => {
-                                    pu(uu.parts)
+                                    XG(GG.parts)
                                   },
-                                  children: uu.label
-                                }, uu.label)))
-                              }), (0, Ou.jsx)(YU, {
-                                parts: ju,
+                                  children: GG.label
+                                }, GG.label)))
+                              }), (0, KG.jsx)(KS, {
+                                parts: ZG,
                                 className: "DocsTextEditorPreview"
-                              }), (0, Ou.jsxs)("div", {
+                              }), (0, KG.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, Ou.jsxs)("div", {
+                                children: [(0, KG.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, Ou.jsx)("div", {
+                                  children: [(0, KG.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, Ou.jsxs)("ol", {
+                                  }), (0, KG.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [ju.map(((uu, Eu) => {
-                                      const su = BE(uu);
-                                      return (0, Ou.jsxs)("li", {
+                                    children: [ZG.map(((GG, bG) => {
+                                      const wG = gb(GG);
+                                      return (0, KG.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, Ou.jsxs)("button", {
+                                        children: [(0, KG.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${Eu}`,
-                                          "aria-label": `Edit part ${Eu+1}, ${IE[su]}`,
+                                          "data-focus-key": `edit-${bG}`,
+                                          "aria-label": `Edit part ${bG+1}, ${qb[wG]}`,
                                           onClick: () => {
-                                            Nu(Eu)
+                                            QG(bG)
                                           },
-                                          children: [(0, Ou.jsx)("span", {
+                                          children: [(0, KG.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: IE[su]
-                                          }), (0, Ou.jsx)(YU, {
-                                            parts: [uu],
+                                            children: qb[wG]
+                                          }), (0, KG.jsx)(KS, {
+                                            parts: [GG],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== su && (0, Ou.jsx)("code", {
+                                          }), "text" !== wG && (0, KG.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: nE(uu)
+                                            children: Nb(GG)
                                           })]
-                                        }), (0, Ou.jsxs)("span", {
+                                        }), (0, KG.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, Ou.jsx)("button", {
+                                          children: [(0, KG.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${Eu+1} up`,
-                                            "data-focus-key": `up-${Eu}`,
-                                            disabled: 0 === Eu,
+                                            "aria-label": `Move part ${bG+1} up`,
+                                            "data-focus-key": `up-${bG}`,
+                                            disabled: 0 === bG,
                                             onClick: () => {
-                                              du(Eu, -1)
+                                              CG(bG, -1)
                                             },
-                                            children: (0, Ou.jsx)(hu, {
+                                            children: (0, KG.jsx)(dG, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, Ou.jsx)("button", {
+                                          }), (0, KG.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${Eu+1} down`,
-                                            "data-focus-key": `down-${Eu}`,
-                                            disabled: Eu === ju.length - 1,
+                                            "aria-label": `Move part ${bG+1} down`,
+                                            "data-focus-key": `down-${bG}`,
+                                            disabled: bG === ZG.length - 1,
                                             onClick: () => {
-                                              du(Eu, 1)
+                                              CG(bG, 1)
                                             },
-                                            children: (0, Ou.jsx)(hu, {
+                                            children: (0, KG.jsx)(dG, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, Ou.jsx)("button", {
+                                          }), (0, KG.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${Eu+1}`,
+                                            "aria-label": `Remove part ${bG+1}`,
                                             onClick: () => {
-                                              Ju(Eu)
+                                              iG(bG)
                                             },
-                                            children: (0, Ou.jsx)(hu, {
+                                            children: (0, KG.jsx)(dG, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, Eu)
-                                    })), 0 === ju.length && (0, Ou.jsx)("li", {
+                                      }, bG)
+                                    })), 0 === ZG.length && (0, KG.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, Ou.jsxs)("div", {
+                                  }), (0, KG.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: uu => {
-                                      "Escape" === uu.key && Yu && (uu.stopPropagation(), Du(!1), Mu({
+                                    onKeyDown: GG => {
+                                      "Escape" === GG.key && hG && (GG.stopPropagation(), JG(!1), zG({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, Ou.jsxs)("button", {
+                                    children: [(0, KG.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": Yu,
+                                      "aria-expanded": hG,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        Du(!Yu)
+                                        JG(!hG)
                                       },
-                                      children: [(0, Ou.jsx)(hu, {
+                                      children: [(0, KG.jsx)(dG, {
                                         name: "plus"
-                                      }), "Add a part", (0, Ou.jsx)(hu, {
-                                        name: Yu ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, KG.jsx)(dG, {
+                                        name: hG ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), Yu && (0, Ou.jsx)("ul", {
+                                    }), hG && (0, KG.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: dU.map((uu => (0, Ou.jsx)("li", {
-                                        children: (0, Ou.jsx)("button", {
+                                      children: iS.map((GG => (0, KG.jsx)("li", {
+                                        children: (0, KG.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (uu => {
-                                              pu([...ju, FE[uu]]), Du(!1), Nu(ju.length)
-                                            })(uu)
+                                            (GG => {
+                                              XG([...ZG, nb[GG]]), JG(!1), QG(ZG.length)
+                                            })(GG)
                                           },
-                                          children: IE[uu]
+                                          children: qb[GG]
                                         })
-                                      }, uu)))
+                                      }, GG)))
                                     })]
                                   })]
-                                }), (0, Ou.jsxs)("div", {
+                                }), (0, KG.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, Ou.jsxs)("div", {
+                                  children: [(0, KG.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, Ou.jsxs)("button", {
+                                    children: ["Code", (0, KG.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": Cu,
+                                      "aria-pressed": VG,
                                       onClick: () => {
-                                        bu(!Cu)
+                                        pG(!VG)
                                       },
-                                      children: [(0, Ou.jsx)(hu, {
-                                        name: Cu ? "check" : "pencil"
-                                      }), Cu ? "Done" : "Edit"]
+                                      children: [(0, KG.jsx)(dG, {
+                                        name: VG ? "check" : "pencil"
+                                      }), VG ? "Done" : "Edit"]
                                     })]
-                                  }), Cu ? (0, Ou.jsxs)(Ou.Fragment, {
-                                    children: [(0, Ou.jsx)("textarea", {
+                                  }), VG ? (0, KG.jsxs)(KG.Fragment, {
+                                    children: [(0, KG.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: Xu,
+                                      value: yG,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: uu => {
-                                        lu(uu.target.value);
-                                        const Eu = sj(uu.target.value);
-                                        fu(Eu.error), Eu.parts && Uu(Eu.parts)
+                                      onChange: GG => {
+                                        kG(GG.target.value);
+                                        const bG = wZ(GG.target.value);
+                                        YG(bG.error), bG.parts && SG(bG.parts)
                                       }
-                                    }), qu && (0, Ou.jsx)("p", {
+                                    }), UG && (0, KG.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: qu
+                                      children: UG
                                     })]
-                                  }) : (0, Ou.jsx)(wu, {
+                                  }) : (0, KG.jsx)(uG, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${Gu})`
+                                    code: `api.sendMessage(playerId, ${oG})`
                                   })]
                                 })]
-                              }), null !== cu && cu < ju.length && (0, Ou.jsx)(wU, {
-                                parts: ju,
-                                index: cu,
-                                fontAwesomeIcons: Eu,
-                                onChange: uu => {
-                                  ((uu, Eu) => {
-                                    pu(ju.map(((ju, su) => su === uu ? Eu : ju)))
-                                  })(cu, uu)
+                              }), null !== fG && fG < ZG.length && (0, KG.jsx)(XS, {
+                                parts: ZG,
+                                index: fG,
+                                fontAwesomeIcons: bG,
+                                onChange: GG => {
+                                  ((GG, bG) => {
+                                    XG(ZG.map(((ZG, wG) => wG === GG ? bG : ZG)))
+                                  })(fG, GG)
                                 },
-                                jK: () => {
-                                  Ju(cu), Nu(null)
+                                MI: () => {
+                                  iG(fG), QG(null)
                                 },
                                 onClose: () => {
-                                  Nu(null), Mu({
-                                    key: `edit-${cu}`,
+                                  QG(null), zG({
+                                    key: `edit-${fG}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var PU = ju(5011),
-                            oU = ju(4997),
-                            kU = ju(5003),
-                            mU = ju(5019);
-                          const vU = 40,
-                            KU = 800,
-                            VU = 150,
-                            rU = 8e3,
-                            QU = 2e3;
+                          var WS = ZG(4871),
+                            mS = ZG(4851),
+                            IS = ZG(4864),
+                            FS = ZG(4874);
+                          const vS = 40,
+                            aS = 800,
+                            cS = 150,
+                            lS = 8e3,
+                            jS = 2e3;
 
-                          function iU(uu, Eu) {
-                            return 12 * Math.log2(Eu / uu)
+                          function PS(GG, bG) {
+                            return 12 * Math.log2(bG / GG)
                           }
 
-                          function WU(uu, Eu) {
-                            return Math.round(uu * 2 ** (Eu / 12) * 10) / 10
+                          function MS(GG, bG) {
+                            return Math.round(GG * 2 ** (bG / 12) * 10) / 10
                           }
 
-                          function SU(uu) {
-                            return `${uu} ms`
+                          function AS(GG) {
+                            return `${GG} ms`
                           }
 
-                          function IU(uu) {
-                            return `${uu} st`
+                          function sS(GG) {
+                            return `${GG} st`
                           }
-                          const FU = [{
+                          const qS = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4086,769 +4086,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function BU(uu) {
+                          function nS(GG) {
                             let {
-                              synth: Eu,
-                              onChange: ju
-                            } = uu;
-                            const su = (0, PU.l)(Eu);
-                            return (0, Ou.jsxs)("div", {
+                              synth: bG,
+                              onChange: ZG
+                            } = GG;
+                            const wG = (0, WS.i)(bG);
+                            return (0, KG.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, Ou.jsxs)("div", {
+                              children: [(0, KG.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, Ou.jsx)("div", {
+                                children: [(0, KG.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, Ou.jsxs)("div", {
+                                }), (0, KG.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, Ou.jsx)("div", {
+                                  children: [(0, KG.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, Ou.jsx)("span", {
+                                    children: (0, KG.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, Ou.jsx)("div", {
+                                  }), (0, KG.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: PU.h.map((uu => (0, Ou.jsx)("button", {
+                                    children: WS.e.map((GG => (0, KG.jsx)("button", {
                                       type: "button",
-                                      className: Zu()("DocsVariantChip", {
-                                        Active: Eu.waveform === uu
+                                      className: LG()("DocsVariantChip", {
+                                        Active: bG.waveform === GG
                                       }),
-                                      "aria-pressed": Eu.waveform === uu,
+                                      "aria-pressed": bG.waveform === GG,
                                       onClick: () => {
-                                        ju({
-                                          waveform: uu
+                                        ZG({
+                                          waveform: GG
                                         })
                                       },
-                                      children: uu
-                                    }, uu)))
+                                      children: GG
+                                    }, GG)))
                                   })]
-                                }), (0, Ou.jsx)(EU, {
+                                }), (0, KG.jsx)(GS, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: iU(vU, KU),
+                                  max: PS(vS, aS),
                                   step: .1,
-                                  value: iU(vU, Eu.pitchHz),
-                                  format: () => `${Eu.pitchHz} Hz`,
-                                  onChange: uu => {
-                                    ju({
-                                      pitchHz: WU(vU, uu)
+                                  value: PS(vS, bG.pitchHz),
+                                  format: () => `${bG.pitchHz} Hz`,
+                                  onChange: GG => {
+                                    ZG({
+                                      pitchHz: MS(vS, GG)
                                     })
                                   }
-                                }), (0, Ou.jsx)(EU, {
+                                }), (0, KG.jsx)(GS, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: Eu.syllableMs,
-                                  format: SU,
-                                  onChange: uu => {
-                                    ju({
-                                      syllableMs: uu
+                                  value: bG.syllableMs,
+                                  format: AS,
+                                  onChange: GG => {
+                                    ZG({
+                                      syllableMs: GG
                                     })
                                   }
-                                }), (0, Ou.jsx)(EU, {
+                                }), (0, KG.jsx)(GS, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: Eu.volume,
-                                  onChange: uu => {
-                                    ju({
-                                      volume: uu
+                                  value: bG.volume,
+                                  onChange: GG => {
+                                    ZG({
+                                      volume: GG
                                     })
                                   }
                                 })]
-                              }), (0, Ou.jsxs)("div", {
+                              }), (0, KG.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, Ou.jsx)("div", {
+                                children: [(0, KG.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, Ou.jsx)(EU, {
+                                }), (0, KG.jsx)(GS, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: Eu.durationMs,
-                                  format: SU,
-                                  onChange: uu => {
-                                    ju({
-                                      durationMs: uu
+                                  value: bG.durationMs,
+                                  format: AS,
+                                  onChange: GG => {
+                                    ZG({
+                                      durationMs: GG
                                     })
                                   }
-                                }), (0, Ou.jsx)(EU, {
+                                }), (0, KG.jsx)(GS, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: su.durationMs,
+                                  max: wG.durationMs,
                                   step: 1,
-                                  value: su.attackMs,
-                                  format: SU,
-                                  onChange: uu => {
-                                    ju({
-                                      attackMs: uu
+                                  value: wG.attackMs,
+                                  format: AS,
+                                  onChange: GG => {
+                                    ZG({
+                                      attackMs: GG
                                     })
                                   }
-                                }), (0, Ou.jsx)(EU, {
+                                }), (0, KG.jsx)(GS, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: su.durationMs - su.attackMs,
+                                  max: wG.durationMs - wG.attackMs,
                                   step: 1,
-                                  value: su.releaseMs,
-                                  format: SU,
-                                  onChange: uu => {
-                                    ju({
-                                      releaseMs: uu
+                                  value: wG.releaseMs,
+                                  format: AS,
+                                  onChange: GG => {
+                                    ZG({
+                                      releaseMs: GG
                                     })
                                   }
-                                }), (0, Ou.jsx)(EU, {
+                                }), (0, KG.jsx)(GS, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: Eu.glideSemitones,
-                                  format: IU,
-                                  onChange: uu => {
-                                    ju({
-                                      glideSemitones: uu
+                                  value: bG.glideSemitones,
+                                  format: sS,
+                                  onChange: GG => {
+                                    ZG({
+                                      glideSemitones: GG
                                     })
                                   }
-                                }), (0, Ou.jsxs)("label", {
+                                }), (0, KG.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, Ou.jsx)("input", {
+                                  children: [(0, KG.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== Eu.lowpassHz,
-                                    onChange: uu => {
-                                      ju({
-                                        lowpassHz: uu.target.checked ? QU : null
+                                    checked: null !== bG.lowpassHz,
+                                    onChange: GG => {
+                                      ZG({
+                                        lowpassHz: GG.target.checked ? jS : null
                                       })
                                     }
-                                  }), (0, Ou.jsx)("span", {
+                                  }), (0, KG.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== Eu.lowpassHz && (0, Ou.jsx)(EU, {
+                                }), null !== bG.lowpassHz && (0, KG.jsx)(GS, {
                                   label: "Filter",
                                   min: 0,
-                                  max: iU(VU, rU),
+                                  max: PS(cS, lS),
                                   step: .1,
-                                  value: iU(VU, Eu.lowpassHz),
-                                  format: () => `${Eu.lowpassHz} Hz`,
-                                  onChange: uu => {
-                                    ju({
-                                      lowpassHz: WU(VU, uu)
+                                  value: PS(cS, bG.lowpassHz),
+                                  format: () => `${bG.lowpassHz} Hz`,
+                                  onChange: GG => {
+                                    ZG({
+                                      lowpassHz: MS(cS, GG)
                                     })
                                   }
                                 })]
-                              }), (0, Ou.jsxs)("div", {
+                              }), (0, KG.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, Ou.jsx)("div", {
+                                children: [(0, KG.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), FU.map((uu => {
+                                }), qS.map((GG => {
                                   let {
-                                    key: su,
-                                    label: Uu,
-                                    max: Zu
-                                  } = uu;
-                                  return (0, Ou.jsx)(EU, {
-                                    label: Uu,
+                                    key: wG,
+                                    label: SG,
+                                    max: LG
+                                  } = GG;
+                                  return (0, KG.jsx)(GS, {
+                                    label: SG,
                                     min: 0,
-                                    max: Zu,
+                                    max: LG,
                                     step: .1,
-                                    value: Eu.intonation[su],
-                                    format: IU,
-                                    onChange: uu => {
-                                      ju({
+                                    value: bG.intonation[wG],
+                                    format: sS,
+                                    onChange: GG => {
+                                      ZG({
                                         intonation: {
-                                          ...Eu.intonation,
-                                          [su]: uu
+                                          ...bG.intonation,
+                                          [wG]: GG
                                         }
                                       })
                                     }
-                                  }, su)
+                                  }, wG)
                                 }))]
                               })]
                             })
                           }
-                          const LU = Object.keys(PU.j),
-                            tU = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const gS = Object.keys(WS.g),
+                            eS = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function xU(uu) {
-                            var Eu;
-                            const ju = JSON.stringify((0, PU.l)(uu));
-                            return null !== (Eu = LU.find((uu => JSON.stringify((0, PU.l)(PU.j[uu])) === ju))) && void 0 !== Eu ? Eu : null
+                          function RS(GG) {
+                            var bG;
+                            const ZG = JSON.stringify((0, WS.i)(GG));
+                            return null !== (bG = gS.find((GG => JSON.stringify((0, WS.i)(WS.g[GG])) === ZG))) && void 0 !== bG ? bG : null
                           }
 
-                          function TU(uu) {
-                            let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof uu || null === uu) return JSON.stringify(uu);
-                            return `{\n${Object.entries(uu).map((uu=>{let[ju,su]=uu;return`${Eu}    ${ju}: ${TU(su,`${Eu}    `)},`})).join("\n")}\n${Eu}}`
+                          function TS(GG) {
+                            let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof GG || null === GG) return JSON.stringify(GG);
+                            return `{\n${Object.entries(GG).map((GG=>{let[ZG,wG]=GG;return`${bG}    ${ZG}: ${TS(wG,`${bG}    `)},`})).join("\n")}\n${bG}}`
                           }
 
-                          function HU(uu, Eu, ju) {
-                            const su = xU(uu),
-                              Uu = [`    line: ${JSON.stringify(Eu)},`];
-                            return ju && Uu.push(`    speakerName: ${JSON.stringify(ju)},`), Uu.push("    voice,"), `const voice = ${su?JSON.stringify(su):TU((0,PU.l)(uu))}\n\napi.setClientOption(playerId, "dialogue", {\n${Uu.join("\n")}\n})`
+                          function HS(GG, bG, ZG) {
+                            const wG = RS(GG),
+                              SG = [`    line: ${JSON.stringify(bG)},`];
+                            return ZG && SG.push(`    speakerName: ${JSON.stringify(ZG)},`), SG.push("    voice,"), `const voice = ${wG?JSON.stringify(wG):TS((0,WS.i)(GG))}\n\napi.setClientOption(playerId, "dialogue", {\n${SG.join("\n")}\n})`
                           }
-                          const AU = 400,
-                            nU = 90;
-                          let yU = null;
+                          const tS = 400,
+                            DS = 90;
+                          let NS = null;
 
-                          function zU(uu, Eu, ju) {
-                            return yU ??= new AudioContext, yU.resume(), (0, mU.c)(yU, yU.destination, uu, Eu, ju, (() => {}))
+                          function OS(GG, bG, ZG) {
+                            return NS ??= new AudioContext, NS.resume(), (0, FS.b)(NS, NS.destination, GG, bG, ZG, (() => {}))
                           }
 
-                          function RU() {
-                            const [uu, Eu] = (0, su.useState)(PU.j.regular), [ju, Uu] = (0, su.useState)(tU[0]), [Xu, lu] = (0, su.useState)("Innkeeper"), [qu, fu] = (0, su.useState)(0), Cu = bs((uu => uu.volume)), bu = (0, su.useRef)(null), cu = (0, su.useRef)(0), Nu = (0, su.useRef)(0), Yu = () => {
-                              var uu;
-                              null === (uu = bu.current) || void 0 === uu || uu.call(bu), bu.current = null
+                          function xS() {
+                            const [GG, bG] = (0, wG.useState)(WS.g.regular), [ZG, SG] = (0, wG.useState)(eS[0]), [yG, kG] = (0, wG.useState)("Innkeeper"), [UG, YG] = (0, wG.useState)(0), VG = Vw((GG => GG.volume)), pG = (0, wG.useRef)(null), fG = (0, wG.useRef)(0), QG = (0, wG.useRef)(0), hG = () => {
+                              var GG;
+                              null === (GG = pG.current) || void 0 === GG || GG.call(pG), pG.current = null
                             };
-                            (0, su.useEffect)((() => () => {
-                              var uu;
-                              null === (uu = bu.current) || void 0 === uu || uu.call(bu), window.clearTimeout(cu.current)
+                            (0, wG.useEffect)((() => () => {
+                              var GG;
+                              null === (GG = pG.current) || void 0 === GG || GG.call(pG), window.clearTimeout(fG.current)
                             }), []);
-                            const Du = (0, su.useMemo)((() => ({
-                                line: ju,
-                                speakerName: Xu || void 0,
-                                voice: uu
-                              })), [ju, Xu, uu]),
-                              gu = (0, su.useRef)(Du);
-                            gu.current = Du;
-                            const eu = xU(uu),
-                              Gu = uu => {
-                                window.clearTimeout(cu.current), Yu();
+                            const JG = (0, wG.useMemo)((() => ({
+                                line: ZG,
+                                speakerName: yG || void 0,
+                                voice: GG
+                              })), [ZG, yG, GG]),
+                              rG = (0, wG.useRef)(JG);
+                            rG.current = JG;
+                            const EG = RS(GG),
+                              oG = GG => {
+                                window.clearTimeout(fG.current), hG();
                                 const {
-                                  plan: Eu,
-                                  synth: ju
-                                } = (0, kU.i)(uu);
-                                ju && (bu.current = zU(ju, Eu.blips, Cu)), fu((uu => uu + 1))
+                                  plan: bG,
+                                  synth: ZG
+                                } = (0, IS.f)(GG);
+                                ZG && (pG.current = OS(ZG, bG.blips, VG)), YG((GG => GG + 1))
                               },
-                              pu = HU(uu, ju, Xu);
-                            return (0, Ou.jsxs)("section", {
+                              XG = HS(GG, ZG, yG);
+                            return (0, KG.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, Ou.jsxs)("header", {
+                              children: [(0, KG.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, Ou.jsxs)("div", {
-                                  children: [(0, Ou.jsx)("div", {
+                                children: [(0, KG.jsxs)("div", {
+                                  children: [(0, KG.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, Ou.jsx)("div", {
+                                  }), (0, KG.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, Ou.jsx)(Mu, {
-                                  text: pu,
+                                }), (0, KG.jsx)(zG, {
+                                  text: XG,
                                   label: "Copy code"
                                 })]
-                              }), (0, Ou.jsxs)("div", {
+                              }), (0, KG.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [LU.map((uu => (0, Ou.jsx)("button", {
+                                children: [gS.map((GG => (0, KG.jsx)("button", {
                                   type: "button",
-                                  className: Zu()("DocsVariantChip", {
-                                    Active: eu === uu
+                                  className: LG()("DocsVariantChip", {
+                                    Active: EG === GG
                                   }),
-                                  "aria-pressed": eu === uu,
+                                  "aria-pressed": EG === GG,
                                   onClick: () => {
-                                    (uu => {
-                                      const ju = PU.j[uu];
-                                      Eu(ju), Gu({
-                                        ...Du,
-                                        voice: ju
+                                    (GG => {
+                                      const ZG = WS.g[GG];
+                                      bG(ZG), oG({
+                                        ...JG,
+                                        voice: ZG
                                       })
-                                    })(uu)
+                                    })(GG)
                                   },
-                                  children: uu
-                                }, uu))), !eu && (0, Ou.jsx)("span", {
+                                  children: GG
+                                }, GG))), !EG && (0, KG.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, Ou.jsxs)("div", {
+                              }), (0, KG.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, Ou.jsxs)("div", {
+                                children: [(0, KG.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, Ou.jsx)("div", {
+                                  children: [(0, KG.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, Ou.jsx)(oU.b, {
-                                      display: Du
-                                    }, qu)
-                                  }), (0, Ou.jsxs)("form", {
+                                    children: (0, KG.jsx)(mS.d, {
+                                      display: JG
+                                    }, UG)
+                                  }), (0, KG.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: uu => {
-                                      uu.preventDefault(), Gu(Du)
+                                    onSubmit: GG => {
+                                      GG.preventDefault(), oG(JG)
                                     },
-                                    children: [(0, Ou.jsx)("input", {
-                                      value: ju,
+                                    children: [(0, KG.jsx)("input", {
+                                      value: ZG,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: uu => {
-                                        Uu(uu.target.value)
+                                      onChange: GG => {
+                                        SG(GG.target.value)
                                       }
-                                    }), (0, Ou.jsxs)("button", {
+                                    }), (0, KG.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, Ou.jsx)(hu, {
+                                      children: [(0, KG.jsx)(dG, {
                                         name: "play"
-                                      }), (0, Ou.jsx)("span", {
+                                      }), (0, KG.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, Ou.jsx)("div", {
+                                  }), (0, KG.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: tU.map((uu => (0, Ou.jsx)("button", {
+                                    children: eS.map((GG => (0, KG.jsx)("button", {
                                       type: "button",
-                                      className: Zu()("DocsVariantChip", {
-                                        Active: ju === uu
+                                      className: LG()("DocsVariantChip", {
+                                        Active: ZG === GG
                                       }),
                                       onClick: () => {
-                                        var Eu;
-                                        Uu(Eu = uu), Gu({
-                                          ...Du,
-                                          line: Eu
+                                        var bG;
+                                        SG(bG = GG), oG({
+                                          ...JG,
+                                          line: bG
                                         })
                                       },
-                                      children: uu
-                                    }, uu)))
-                                  }), (0, Ou.jsxs)("label", {
+                                      children: GG
+                                    }, GG)))
+                                  }), (0, KG.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, Ou.jsx)("span", {
+                                    children: [(0, KG.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, Ou.jsx)("input", {
-                                      value: Xu,
+                                    }), (0, KG.jsx)("input", {
+                                      value: yG,
                                       placeholder: "No name",
-                                      onChange: uu => {
-                                        lu(uu.target.value)
+                                      onChange: GG => {
+                                        kG(GG.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, Ou.jsx)(BU, {
-                                  synth: uu,
-                                  onChange: ju => {
-                                    const su = {
-                                      ...uu,
-                                      ...ju
+                                }), (0, KG.jsx)(nS, {
+                                  synth: GG,
+                                  onChange: ZG => {
+                                    const wG = {
+                                      ...GG,
+                                      ...ZG
                                     };
-                                    Eu(su);
-                                    const Uu = {
-                                        ...Du,
-                                        voice: su
+                                    bG(wG);
+                                    const SG = {
+                                        ...JG,
+                                        voice: wG
                                       },
-                                      Zu = performance.now();
-                                    if (Zu - Nu.current >= nU) {
-                                      Nu.current = Zu, Yu();
-                                      const uu = (0, kU.i)(Uu).plan.blips[0];
-                                      uu && (bu.current = zU((0, PU.l)(su), [{
-                                        ...uu,
+                                      LG = performance.now();
+                                    if (LG - QG.current >= DS) {
+                                      QG.current = LG, hG();
+                                      const GG = (0, IS.f)(SG).plan.blips[0];
+                                      GG && (pG.current = OS((0, WS.i)(wG), [{
+                                        ...GG,
                                         atMs: 0
-                                      }], Cu))
+                                      }], VG))
                                     }
-                                    window.clearTimeout(cu.current), cu.current = window.setTimeout((() => {
-                                      Gu(gu.current)
-                                    }), AU)
+                                    window.clearTimeout(fG.current), fG.current = window.setTimeout((() => {
+                                      oG(rG.current)
+                                    }), tS)
                                   }
                                 })]
-                              }), (0, Ou.jsx)(wu, {
-                                code: pu,
+                              }), (0, KG.jsx)(uG, {
+                                code: XG,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var uZ = ju(5041);
-                          const EZ = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            jZ = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            sZ = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${jZ}`, "g"), uZ.j],
+                          var BS = ZG(4894);
+                          const GL = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            bL = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            ZL = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${bL}`, "g"), BS.r],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, uZ.j]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, BS.r]
                             ];
 
-                          function UZ(uu) {
-                            return `${uu.pageId}#${uu.anchor}`
+                          function wL(GG) {
+                            return `${GG.pageId}#${GG.anchor}`
                           }
-                          let ZZ, XZ, lZ;
+                          let SL, LL, yL;
 
-                          function qZ(uu) {
-                            const Eu = (0, Ju.j)(uu),
-                              ju = new Set;
-                            for (const [, , su] of Eu.matchAll(Ju.d)) {
-                              const uu = su.startsWith("#") ? Bu(su) : null,
-                                Eu = uu ? UZ({
-                                  pageId: uu.page.id,
-                                  anchor: uu.anchor
+                          function kL(GG) {
+                            const bG = (0, iG.g)(GG),
+                              ZG = new Set;
+                            for (const [, , wG] of bG.matchAll(iG.e)) {
+                              const GG = wG.startsWith("#") ? gG(wG) : null,
+                                bG = GG ? wL({
+                                  pageId: GG.page.id,
+                                  anchor: GG.anchor
                                 }) : null;
-                              null !== Eu && (ZZ || (ZZ = new Set(Qu.flatMap((uu => ou(uu.layout) ? Iu(uu).sections.map((Eu => UZ({
-                                pageId: uu.id,
-                                anchor: Eu.heading.anchor
-                              }))) : [])))), ZZ).has(Eu) && ju.add(Eu)
+                              null !== bG && (SL || (SL = new Set(PG.flatMap((GG => IG(GG.layout) ? qG(GG).sections.map((bG => wL({
+                                pageId: GG.id,
+                                anchor: bG.heading.anchor
+                              }))) : [])))), SL).has(bG) && ZG.add(bG)
                             }
-                            for (const [, , su] of Eu.matchAll(EZ)) {
-                              const uu = cE(su);
-                              uu && ju.add(UZ(uu))
+                            for (const [, , wG] of bG.matchAll(GL)) {
+                              const GG = fb(wG);
+                              GG && ZG.add(wL(GG))
                             }
-                            return ju
+                            return ZG
                           }
 
-                          function fZ(uu, Eu) {
-                            const ju = new Set,
-                              su = function(uu) {
-                                return uu.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(uu);
-                            for (const [, Uu] of su.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) ju.add(Uu);
-                            for (const [Uu, Zu] of sZ)
-                              for (const [, uu] of(0, uZ.e)(su, Uu, Zu)) Eu.has(uu) && ju.add(uu);
-                            return ju
+                          function UL(GG, bG) {
+                            const ZG = new Set,
+                              wG = function(GG) {
+                                return GG.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(GG);
+                            for (const [, SG] of wG.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) ZG.add(SG);
+                            for (const [SG, LG] of ZL)
+                              for (const [, GG] of(0, BS.g)(wG, SG, LG)) bG.has(GG) && ZG.add(GG);
+                            return ZG
                           }
 
-                          function CZ(uu, Eu, ju, su) {
-                            const Uu = uu.get(Eu);
-                            Uu ? !su && Uu.some((uu => uu.pageId === ju.pageId)) || Uu.push(ju) : uu.set(Eu, [ju])
+                          function YL(GG, bG, ZG, wG) {
+                            const SG = GG.get(bG);
+                            SG ? !wG && SG.some((GG => GG.pageId === ZG.pageId)) || SG.push(ZG) : GG.set(bG, [ZG])
                           }
-                          const bZ = /^[A-Za-z_$][\w$]*$/;
+                          const VL = /^[A-Za-z_$][\w$]*$/;
 
-                          function cZ(uu) {
-                            return bZ.test(uu.name) ? uu.name : "options"
-                          }
-
-                          function NZ(uu, Eu) {
-                            const ju = uu.params.map(cZ).join(", ");
-                            return Eu ? `${uu.name} = (${ju}) => {\n\t\n}` : `api.${uu.name}(${ju})`
+                          function pL(GG) {
+                            return VL.test(GG.name) ? GG.name : "options"
                           }
 
-                          function OZ(uu) {
+                          function fL(GG, bG) {
+                            const ZG = GG.params.map(pL).join(", ");
+                            return bG ? `${GG.name} = (${ZG}) => {\n\t\n}` : `api.${GG.name}(${ZG})`
+                          }
+
+                          function QL(GG) {
                             let {
-                              method: Eu,
-                              isCallback: ju
-                            } = uu;
-                            return (0, Ou.jsxs)("div", {
+                              method: bG,
+                              isCallback: ZG
+                            } = GG;
+                            return (0, KG.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, Ou.jsxs)("span", {
+                              children: [(0, KG.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [ju ? (0, Ou.jsxs)(Ou.Fragment, {
-                                  children: [(0, Ou.jsx)("span", {
+                                children: [ZG ? (0, KG.jsxs)(KG.Fragment, {
+                                  children: [(0, KG.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: Eu.name
-                                  }), (0, Ou.jsx)("span", {
+                                    children: bG.name
+                                  }), (0, KG.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, Ou.jsxs)(Ou.Fragment, {
-                                  children: [(0, Ou.jsx)("span", {
+                                }) : (0, KG.jsxs)(KG.Fragment, {
+                                  children: [(0, KG.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, Ou.jsx)("span", {
+                                  }), (0, KG.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: Eu.name
-                                  }), (0, Ou.jsx)("span", {
+                                    children: bG.name
+                                  }), (0, KG.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), Eu.params.map(((uu, ju) => (0, Ou.jsxs)(su.Fragment, {
-                                  children: [ju > 0 && (0, Ou.jsx)("span", {
+                                }), bG.params.map(((GG, ZG) => (0, KG.jsxs)(wG.Fragment, {
+                                  children: [ZG > 0 && (0, KG.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, Ou.jsx)("a", {
+                                  }), (0, KG.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${Eu.name}-${cZ(uu)}`,
-                                    children: uu.name
+                                    href: `#${bG.name}-${pL(GG)}`,
+                                    children: GG.name
                                   })]
-                                }, uu.name))), (0, Ou.jsx)("span", {
+                                }, GG.name))), (0, KG.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: ju ? ") => " : ")"
-                                }), ju && !Eu.returns && (0, Ou.jsx)("span", {
+                                  children: ZG ? ") => " : ")"
+                                }), ZG && !bG.returns && (0, KG.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), Eu.returns && Eu.returns.type && (0, Ou.jsxs)("span", {
+                              }), bG.returns && bG.returns.type && (0, KG.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!ju && (0, Ou.jsx)("span", {
+                                children: [!ZG && (0, KG.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, Ou.jsx)(dE, {
-                                  type: Eu.returns.type
+                                }), (0, KG.jsx)(Cb, {
+                                  type: bG.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function YZ(uu) {
+                          function KL(GG) {
                             let {
-                              title: Eu,
-                              references: ju
-                            } = uu;
-                            const Uu = (0, su.useContext)(NE);
-                            return (0, Ou.jsxs)("div", {
+                              title: bG,
+                              references: ZG
+                            } = GG;
+                            const SG = (0, wG.useContext)(Qb);
+                            return (0, KG.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, Ou.jsx)("span", {
+                              children: [(0, KG.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: Eu
-                              }), ju.map((uu => (0, Ou.jsx)(Xu.c, {
-                                to: tu(Uu, Wu(uu.pageId), uu.anchor),
-                                children: uu.label
-                              }, `${uu.pageId}#${uu.anchor}`)))]
+                                children: bG
+                              }), ZG.map((GG => (0, KG.jsx)(yG.c, {
+                                to: RG(SG, AG(GG.pageId), GG.anchor),
+                                children: GG.label
+                              }, `${GG.pageId}#${GG.anchor}`)))]
                             })
                           }
 
-                          function hZ(uu) {
-                            var Eu, ju;
+                          function hL(GG) {
+                            var bG, ZG;
                             let {
-                              pageId: su,
-                              anchor: Uu
-                            } = uu;
-                            const Zu = UZ({
-                                pageId: su,
-                                anchor: Uu
+                              pageId: wG,
+                              anchor: SG
+                            } = GG;
+                            const LG = wL({
+                                pageId: wG,
+                                anchor: SG
                               }),
-                              Xu = null !== (Eu = function() {
-                                if (!lZ) {
-                                  lZ = new Map;
-                                  const su = new Set(Qu.filter((uu => "callbacks" === uu.layout)).flatMap((uu => Iu(uu).sections.map((uu => uu.heading.text)))));
-                                  for (const Uu of Qu)
-                                    if ("article" === Uu.layout || "snippets" === Uu.layout)
-                                      for (const Zu of (0, Ju.y)(Iu(Uu)))
+                              yG = null !== (bG = function() {
+                                if (!yL) {
+                                  yL = new Map;
+                                  const wG = new Set(PG.filter((GG => "callbacks" === GG.layout)).flatMap((GG => qG(GG).sections.map((GG => GG.heading.text)))));
+                                  for (const SG of PG)
+                                    if ("article" === SG.layout || "snippets" === SG.layout)
+                                      for (const LG of (0, iG.t)(qG(SG)))
                                         for (const {
-                                            code: Xu
+                                            code: yG
                                           }
-                                          of(0, Ju.l)(Zu.blocks))
-                                          for (const lu of fZ(Xu, su)) {
-                                            const su = bE().get(lu);
-                                            if (su) {
-                                              var uu, Eu, ju;
-                                              const Xu = {
-                                                pageId: Uu.id,
-                                                anchor: null !== (uu = null === (Eu = Zu.heading) || void 0 === Eu ? void 0 : Eu.anchor) && void 0 !== uu ? uu : "",
-                                                label: null !== (ju = Uu.navTitle) && void 0 !== ju ? ju : Uu.title
+                                          of(0, iG.k)(LG.blocks))
+                                          for (const kG of UL(yG, wG)) {
+                                            const wG = pb().get(kG);
+                                            if (wG) {
+                                              var GG, bG, ZG;
+                                              const yG = {
+                                                pageId: SG.id,
+                                                anchor: null !== (GG = null === (bG = LG.heading) || void 0 === bG ? void 0 : bG.anchor) && void 0 !== GG ? GG : "",
+                                                label: null !== (ZG = SG.navTitle) && void 0 !== ZG ? ZG : SG.title
                                               };
-                                              CZ(lZ, UZ(su), Xu, !1)
+                                              YL(yL, wL(wG), yG, !1)
                                             }
                                           }
                                 }
-                                return lZ
-                              }().get(Zu)) && void 0 !== Eu ? Eu : [],
-                              lu = null !== (ju = function() {
-                                if (!XZ) {
-                                  XZ = new Map;
-                                  const uu = Wu("changelog");
-                                  for (const Eu of Iu(uu).sections) {
-                                    const ju = new Set(Eu.blocks.flatMap((uu => [...qZ(uu)])));
-                                    for (const su of ju) {
-                                      const ju = {
-                                        pageId: uu.id,
-                                        anchor: Eu.heading.anchor,
-                                        label: Eu.heading.text
+                                return yL
+                              }().get(LG)) && void 0 !== bG ? bG : [],
+                              kG = null !== (ZG = function() {
+                                if (!LL) {
+                                  LL = new Map;
+                                  const GG = AG("changelog");
+                                  for (const bG of qG(GG).sections) {
+                                    const ZG = new Set(bG.blocks.flatMap((GG => [...kL(GG)])));
+                                    for (const wG of ZG) {
+                                      const ZG = {
+                                        pageId: GG.id,
+                                        anchor: bG.heading.anchor,
+                                        label: bG.heading.text
                                       };
-                                      CZ(XZ, su, ju, !0)
+                                      YL(LL, wG, ZG, !0)
                                     }
                                   }
                                 }
-                                return XZ
-                              }().get(Zu)) && void 0 !== ju ? ju : [];
-                            return 0 === Xu.length && 0 === lu.length ? null : (0, Ou.jsxs)("footer", {
+                                return LL
+                              }().get(LG)) && void 0 !== ZG ? ZG : [];
+                            return 0 === yG.length && 0 === kG.length ? null : (0, KG.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [Xu.length > 0 && (0, Ou.jsx)(YZ, {
+                              children: [yG.length > 0 && (0, KG.jsx)(KL, {
                                 title: "Used in",
-                                references: Xu
-                              }), lu.length > 0 && (0, Ou.jsx)(YZ, {
+                                references: yG
+                              }), kG.length > 0 && (0, KG.jsx)(KL, {
                                 title: "Changelog",
-                                references: lu
+                                references: kG
                               })]
                             })
                           }
 
-                          function DZ(uu) {
+                          function dL(GG) {
                             let {
-                              method: Eu,
-                              pageId: ju,
-                              anchor: su,
-                              isCallback: Uu
-                            } = uu;
-                            const Zu = Uu ? void 0 : lE().get(Eu.name),
-                              Xu = Eu.description.length > 0 || null === Zu || void 0 === Zu || !Zu.description ? Eu.description : (0, Ju.B)(Zu.description);
-                            return (0, Ou.jsxs)("article", {
+                              method: bG,
+                              pageId: ZG,
+                              anchor: wG,
+                              isCallback: SG
+                            } = GG;
+                            const LG = SG ? void 0 : kb().get(bG.name),
+                              yG = bG.description.length > 0 || null === LG || void 0 === LG || !LG.description ? bG.description : (0, iG.z)(LG.description);
+                            return (0, KG.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, Ou.jsxs)("header", {
+                              children: [(0, KG.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, Ou.jsx)(fj, {
+                                children: [(0, KG.jsx)(YZ, {
                                   level: 2,
-                                  text: Eu.name,
-                                  anchor: su,
+                                  text: bG.name,
+                                  anchor: wG,
                                   className: "DocsCardTitle"
-                                }), (0, Ou.jsx)(Mu, {
-                                  text: NZ(Eu, Uu),
-                                  label: Uu ? "Copy handler" : "Copy call",
+                                }), (0, KG.jsx)(zG, {
+                                  text: fL(bG, SG),
+                                  label: SG ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, Ou.jsx)(OZ, {
-                                method: Eu,
-                                isCallback: Uu
-                              }), Zu && null !== Zu.deprecation && (0, Ou.jsxs)("aside", {
+                              }), (0, KG.jsx)(QL, {
+                                method: bG,
+                                isCallback: SG
+                              }), LG && null !== LG.deprecation && (0, KG.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, Ou.jsx)("strong", {
+                                children: [(0, KG.jsx)("strong", {
                                   children: "Deprecated"
-                                }), Zu.deprecation && (0, Ou.jsxs)(Ou.Fragment, {
-                                  children: [": ", (0, Ou.jsx)(pE, {
-                                    text: (lu = Zu.deprecation, (0, uZ.u)(lu, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, uZ.i)("`\\w"), (uu => {
-                                      let [Eu] = uu;
-                                      return bE().has(Eu) ? `\`${Eu}\`` : Eu
+                                }), LG.deprecation && (0, KG.jsxs)(KG.Fragment, {
+                                  children: [": ", (0, KG.jsx)(Xb, {
+                                    text: (kG = LG.deprecation, (0, BS.y)(kG, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, BS.n)("`\\w"), (GG => {
+                                      let [bG] = GG;
+                                      return pb().has(bG) ? `\`${bG}\`` : bG
                                     })))
                                   })]
                                 })]
-                              }), Xu.length > 0 && (0, Ou.jsx)("div", {
+                              }), yG.length > 0 && (0, KG.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, Ou.jsx)(Nj, {
-                                  blocks: Xu
+                                children: (0, KG.jsx)(QZ, {
+                                  blocks: yG
                                 })
-                              }), Eu.params.length > 0 && (0, Ou.jsxs)("section", {
+                              }), bG.params.length > 0 && (0, KG.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, Ou.jsx)("h3", {
+                                children: [(0, KG.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, Ou.jsx)("dl", {
+                                }), (0, KG.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: Eu.params.map((uu => (0, Ou.jsxs)("div", {
-                                    id: `${Eu.name}-${cZ(uu)}`,
+                                  children: bG.params.map((GG => (0, KG.jsxs)("div", {
+                                    id: `${bG.name}-${pL(GG)}`,
                                     className: "DocsParam",
-                                    children: [(0, Ou.jsxs)("dt", {
-                                      children: [(0, Ou.jsx)("code", {
+                                    children: [(0, KG.jsxs)("dt", {
+                                      children: [(0, KG.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: uu.name
-                                      }), (0, Ou.jsx)(dE, {
-                                        type: uu.type
+                                        children: GG.name
+                                      }), (0, KG.jsx)(Cb, {
+                                        type: GG.type
                                       })]
-                                    }), uu.description && (0, Ou.jsx)("dd", {
-                                      children: (0, Ou.jsx)(pE, {
-                                        text: uu.description
+                                    }), GG.description && (0, KG.jsx)("dd", {
+                                      children: (0, KG.jsx)(Xb, {
+                                        text: GG.description
                                       })
                                     })]
-                                  }, uu.name)))
+                                  }, GG.name)))
                                 })]
-                              }), Eu.returns && (Eu.returns.type || Eu.returns.description.length > 0) && (0, Ou.jsxs)("section", {
+                              }), bG.returns && (bG.returns.type || bG.returns.description.length > 0) && (0, KG.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, Ou.jsx)("h3", {
+                                children: [(0, KG.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, Ou.jsxs)("div", {
+                                }), (0, KG.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [Eu.returns.type && (0, Ou.jsx)(dE, {
-                                    type: Eu.returns.type
-                                  }), Eu.returns.description.length > 0 && (0, Ou.jsx)("div", {
+                                  children: [bG.returns.type && (0, KG.jsx)(Cb, {
+                                    type: bG.returns.type
+                                  }), bG.returns.description.length > 0 && (0, KG.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, Ou.jsx)(Nj, {
-                                      blocks: Eu.returns.description
+                                    children: (0, KG.jsx)(QZ, {
+                                      blocks: bG.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, Ou.jsx)(hZ, {
-                                pageId: ju,
-                                anchor: su
+                              }), (0, KG.jsx)(hL, {
+                                pageId: ZG,
+                                anchor: wG
                               })]
                             });
-                            var lu
+                            var kG
                           }
 
-                          function gZ(uu) {
-                            var Eu;
-                            return null !== uu.defaultValue && "undefined" !== uu.defaultValue ? uu.defaultValue : null !== (Eu = uu.example) && void 0 !== Eu ? Eu : "value"
+                          function JL(GG) {
+                            var bG;
+                            return null !== GG.defaultValue && "undefined" !== GG.defaultValue ? GG.defaultValue : null !== (bG = GG.example) && void 0 !== bG ? bG : "value"
                           }
 
-                          function MZ(uu) {
+                          function rL(GG) {
                             let {
-                              setting: Eu,
-                              pageId: ju,
-                              anchor: su,
-                              setterSnippet: Uu
-                            } = uu;
-                            const Zu = null === Eu.defaultValue ? null : DE(Eu.defaultValue);
-                            return (0, Ou.jsxs)("article", {
+                              setting: bG,
+                              pageId: ZG,
+                              anchor: wG,
+                              setterSnippet: SG
+                            } = GG;
+                            const LG = null === bG.defaultValue ? null : Jb(bG.defaultValue);
+                            return (0, KG.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, Ou.jsxs)("header", {
+                              children: [(0, KG.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, Ou.jsx)(fj, {
+                                children: [(0, KG.jsx)(YZ, {
                                   level: 2,
-                                  text: Eu.name,
-                                  anchor: su,
+                                  text: bG.name,
+                                  anchor: wG,
                                   className: "DocsCardTitle"
-                                }), (0, Ou.jsx)(Mu, {
-                                  text: Uu(Eu.name, gZ(Eu)),
+                                }), (0, KG.jsx)(zG, {
+                                  text: SG(bG.name, JL(bG)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, Ou.jsxs)("dl", {
+                              }), (0, KG.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, Ou.jsxs)("div", {
-                                  children: [(0, Ou.jsx)("dt", {
+                                children: [(0, KG.jsxs)("div", {
+                                  children: [(0, KG.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, Ou.jsx)("dd", {
-                                    children: (0, Ou.jsx)(dE, {
-                                      type: Eu.type
+                                  }), (0, KG.jsx)("dd", {
+                                    children: (0, KG.jsx)(Cb, {
+                                      type: bG.type
                                     })
                                   })]
-                                }), null !== Eu.defaultValue && (0, Ou.jsxs)("div", {
-                                  children: [(0, Ou.jsx)("dt", {
+                                }), null !== bG.defaultValue && (0, KG.jsxs)("div", {
+                                  children: [(0, KG.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, Ou.jsx)("dd", {
-                                    children: (0, Ou.jsxs)("code", {
+                                  }), (0, KG.jsx)("dd", {
+                                    children: (0, KG.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [Zu && (0, Ou.jsx)(gE, {
-                                        colour: Zu
-                                      }), Eu.defaultValue]
+                                      children: [LG && (0, KG.jsx)(rb, {
+                                        colour: LG
+                                      }), bG.defaultValue]
                                     })
                                   })]
-                                }), null !== Eu.example && (0, Ou.jsxs)("div", {
-                                  children: [(0, Ou.jsx)("dt", {
+                                }), null !== bG.example && (0, KG.jsxs)("div", {
+                                  children: [(0, KG.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, Ou.jsx)("dd", {
-                                    children: (0, Ou.jsx)("code", {
+                                  }), (0, KG.jsx)("dd", {
+                                    children: (0, KG.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: Eu.example
+                                      children: bG.example
                                     })
                                   })]
                                 })]
-                              }), Eu.description.length > 0 && (0, Ou.jsx)("div", {
+                              }), bG.description.length > 0 && (0, KG.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, Ou.jsx)(Nj, {
-                                  blocks: Eu.description
+                                children: (0, KG.jsx)(QZ, {
+                                  blocks: bG.description
                                 })
-                              }), (0, Ou.jsx)(hZ, {
-                                pageId: ju,
-                                anchor: su
+                              }), (0, KG.jsx)(hL, {
+                                pageId: ZG,
+                                anchor: wG
                               })]
                             })
                           }
 
-                          function eZ(uu) {
+                          function zL(GG) {
                             let {
-                              section: Eu
-                            } = uu;
-                            return (0, Ou.jsxs)("article", {
+                              section: bG
+                            } = GG;
+                            return (0, KG.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, Ou.jsx)(fj, {
+                              children: [(0, KG.jsx)(YZ, {
                                 level: 2,
-                                text: Eu.heading.text,
-                                anchor: Eu.heading.anchor,
+                                text: bG.heading.text,
+                                anchor: bG.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, Ou.jsx)("div", {
+                              }), (0, KG.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, Ou.jsx)(Nj, {
-                                  blocks: Eu.blocks
+                                children: (0, KG.jsx)(QZ, {
+                                  blocks: bG.blocks
                                 })
                               })]
                             })
                           }
 
-                          function GZ(uu) {
+                          function EL(GG) {
                             let {
-                              section: Eu
-                            } = uu;
-                            return (0, Ou.jsxs)("section", {
+                              section: bG
+                            } = GG;
+                            return (0, KG.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, Ou.jsx)(fj, {
-                                level: Eu.heading.level,
-                                text: Eu.heading.text,
-                                anchor: Eu.heading.anchor
-                              }), (0, Ou.jsx)(Nj, {
-                                blocks: Eu.blocks
+                              children: [(0, KG.jsx)(YZ, {
+                                level: bG.heading.level,
+                                text: bG.heading.text,
+                                anchor: bG.heading.anchor
+                              }), (0, KG.jsx)(QZ, {
+                                blocks: bG.blocks
                               })]
                             })
                           }
-                          const pZ = {
+                          const oL = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4857,337 +4857,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function wZ(uu) {
+                          function XL(GG) {
                             let {
-                              page: Eu,
-                              section: ju
-                            } = uu;
-                            if ("methods" === Eu.layout || "callbacks" === Eu.layout) return (0, Ou.jsx)(DZ, {
-                              method: wj(ju),
-                              pageId: Eu.id,
-                              anchor: ju.heading.anchor,
-                              isCallback: "callbacks" === Eu.layout
+                              page: bG,
+                              section: ZG
+                            } = GG;
+                            if ("methods" === bG.layout || "callbacks" === bG.layout) return (0, KG.jsx)(dL, {
+                              method: uZ(ZG),
+                              pageId: bG.id,
+                              anchor: ZG.heading.anchor,
+                              isCallback: "callbacks" === bG.layout
                             });
-                            if ("settings" === Eu.layout) {
-                              const uu = function(uu) {
-                                const Eu = {
-                                  name: uu.heading.text,
+                            if ("settings" === bG.layout) {
+                              const GG = function(GG) {
+                                const bG = {
+                                  name: GG.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const su of uu.blocks) {
-                                  var ju;
-                                  if (pj(su)) continue;
-                                  const uu = "paragraph" === su.kind ? su.text.match(Jj) : null;
-                                  if (!uu) {
-                                    Eu.description.push(su);
+                                for (const wG of GG.blocks) {
+                                  var ZG;
+                                  if (XZ(wG)) continue;
+                                  const GG = "paragraph" === wG.kind ? wG.text.match(iZ) : null;
+                                  if (!GG) {
+                                    bG.description.push(wG);
                                     continue
                                   }
-                                  const Uu = null !== (ju = Gj(uu[2])) && void 0 !== ju ? ju : uu[2];
-                                  "Type" === uu[1] ? Eu.type = Uu : "Default" === uu[1] ? Eu.defaultValue = Uu : "" !== Uu && (Eu.example = Uu)
+                                  const SG = null !== (ZG = oZ(GG[2])) && void 0 !== ZG ? ZG : GG[2];
+                                  "Type" === GG[1] ? bG.type = SG : "Default" === GG[1] ? bG.defaultValue = SG : "" !== SG && (bG.example = SG)
                                 }
-                                return Eu.type ? Eu : null
-                              }(ju);
-                              if (uu) return (0, Ou.jsx)(MZ, {
-                                setting: uu,
-                                pageId: Eu.id,
-                                anchor: ju.heading.anchor,
-                                setterSnippet: Eu.setterSnippet
+                                return bG.type ? bG : null
+                              }(ZG);
+                              if (GG) return (0, KG.jsx)(rL, {
+                                setting: GG,
+                                pageId: bG.id,
+                                anchor: ZG.heading.anchor,
+                                setterSnippet: bG.setterSnippet
                               })
                             }
-                            return "snippets" === Eu.layout ? (0, Ou.jsx)(eZ, {
-                              section: ju
-                            }) : "changelog" === Eu.layout ? (0, Ou.jsxs)("section", {
+                            return "snippets" === bG.layout ? (0, KG.jsx)(zL, {
+                              section: ZG
+                            }) : "changelog" === bG.layout ? (0, KG.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, Ou.jsx)("div", {
+                              children: [(0, KG.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, Ou.jsx)(fj, {
+                                children: (0, KG.jsx)(YZ, {
                                   level: 2,
-                                  text: ju.heading.text,
-                                  anchor: ju.heading.anchor
+                                  text: ZG.heading.text,
+                                  anchor: ZG.heading.anchor
                                 })
-                              }), (0, Ou.jsx)("div", {
+                              }), (0, KG.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, Ou.jsx)(Nj, {
-                                  blocks: dj(ju.blocks)
+                                children: (0, KG.jsx)(QZ, {
+                                  blocks: CZ(ZG.blocks)
                                 })
                               })]
-                            }) : Eu.gallery ? (0, Ou.jsxs)("section", {
+                            }) : bG.gallery ? (0, KG.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, Ou.jsx)(fj, {
-                                level: ju.heading.level,
-                                text: ju.heading.text,
-                                anchor: ju.heading.anchor
-                              }), (0, Ou.jsx)(os, {
-                                kind: Eu.gallery,
-                                content: Iu(Eu),
-                                blocks: ju.blocks
+                              children: [(0, KG.jsx)(YZ, {
+                                level: ZG.heading.level,
+                                text: ZG.heading.text,
+                                anchor: ZG.heading.anchor
+                              }), (0, KG.jsx)(Ww, {
+                                kind: bG.gallery,
+                                content: qG(bG),
+                                blocks: ZG.blocks
                               })]
-                            }) : (0, Ou.jsx)(GZ, {
-                              section: ju
+                            }) : (0, KG.jsx)(EL, {
+                              section: ZG
                             })
                           }
 
-                          function JZ(uu) {
+                          function uL(GG) {
                             let {
-                              page: Eu,
-                              onTocChange: ju
-                            } = uu;
-                            const Uu = Iu(Eu),
-                              [Zu, Xu] = (0, su.useState)(""),
-                              lu = "article" !== Eu.layout,
-                              qu = hj(Eu.gallery) ? Eu.gallery : null,
-                              fu = null !== qu,
-                              Cu = Zu.trim().toLowerCase(),
-                              bu = (0, su.useRef)(null),
-                              cu = (0, su.useCallback)((uu => {
-                                var Eu;
-                                null === (Eu = bu.current) || void 0 === Eu || Eu.preview(uu)
+                              page: bG,
+                              onTocChange: ZG
+                            } = GG;
+                            const SG = qG(bG),
+                              [LG, yG] = (0, wG.useState)(""),
+                              kG = "article" !== bG.layout,
+                              UG = dZ(bG.gallery) ? bG.gallery : null,
+                              YG = null !== UG,
+                              VG = LG.trim().toLowerCase(),
+                              pG = (0, wG.useRef)(null),
+                              fG = (0, wG.useCallback)((GG => {
+                                var bG;
+                                null === (bG = pG.current) || void 0 === bG || bG.preview(GG)
                               }), []),
-                              Nu = (0, su.useMemo)((() => {
-                                if (!Eu.hasParticlePlayground) return [];
-                                const uu = kj(Uu.intro).find((uu => "names" === uu.kind && !uu.names.some((uu => null !== Sj(uu.name)))));
-                                return "names" === (null === uu || void 0 === uu ? void 0 : uu.kind) ? uu.names.map((uu => uu.name)) : []
-                              }), [Eu, Uu]),
-                              Yu = (0, su.useMemo)((() => {
-                                if (!Eu.hasTextPlayground) return [];
-                                const uu = Uu.sections.flatMap((uu => uu.blocks.flatMap((uu => {
-                                  var Eu;
-                                  return (null !== (Eu = oj(uu)) && void 0 !== Eu ? Eu : []).flatMap((uu => SE(uu.name) ? [uu.name] : []))
+                              QG = (0, wG.useMemo)((() => {
+                                if (!bG.hasParticlePlayground) return [];
+                                const GG = FZ(SG.intro).find((GG => "names" === GG.kind && !GG.names.some((GG => null !== sZ(GG.name)))));
+                                return "names" === (null === GG || void 0 === GG ? void 0 : GG.kind) ? GG.names.map((GG => GG.name)) : []
+                              }), [bG, SG]),
+                              hG = (0, wG.useMemo)((() => {
+                                if (!bG.hasTextPlayground) return [];
+                                const GG = SG.sections.flatMap((GG => GG.blocks.flatMap((GG => {
+                                  var bG;
+                                  return (null !== (bG = IZ(GG)) && void 0 !== bG ? bG : []).flatMap((GG => sb(GG.name) ? [GG.name] : []))
                                 }))));
-                                return [...new Set(uu)]
-                              }), [Eu, Uu]),
-                              hu = (0, su.useMemo)((() => Cu ? Uu.sections.filter((uu => function(uu, Eu) {
-                                return !!uu.heading.text.toLowerCase().includes(Eu) || uu.blocks.some((uu => (0, Ju.j)(uu).toLowerCase().includes(Eu)))
-                              }(uu, Cu))) : Uu.sections), [Uu, Cu]),
-                              Du = (0, su.useMemo)((() => function(uu, Eu) {
-                                return "article" !== uu.layout ? Eu.map((uu => ({
-                                  anchor: uu.heading.anchor,
-                                  text: uu.heading.text,
+                                return [...new Set(GG)]
+                              }), [bG, SG]),
+                              dG = (0, wG.useMemo)((() => VG ? SG.sections.filter((GG => function(GG, bG) {
+                                return !!GG.heading.text.toLowerCase().includes(bG) || GG.blocks.some((GG => (0, iG.g)(GG).toLowerCase().includes(bG)))
+                              }(GG, VG))) : SG.sections), [SG, VG]),
+                              JG = (0, wG.useMemo)((() => function(GG, bG) {
+                                return "article" !== GG.layout ? bG.map((GG => ({
+                                  anchor: GG.heading.anchor,
+                                  text: GG.heading.text,
                                   level: 2
-                                }))) : Eu.flatMap((uu => {
-                                  const Eu = uu.blocks.flatMap((uu => "heading" === uu.kind && 3 === uu.level ? [{
-                                    anchor: uu.anchor,
-                                    text: uu.text,
+                                }))) : bG.flatMap((GG => {
+                                  const bG = GG.blocks.flatMap((GG => "heading" === GG.kind && 3 === GG.level ? [{
+                                    anchor: GG.anchor,
+                                    text: GG.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: uu.heading.anchor,
-                                    text: uu.heading.text,
+                                    anchor: GG.heading.anchor,
+                                    text: GG.heading.text,
                                     level: 2
-                                  }, ...Eu]
+                                  }, ...bG]
                                 }))
-                              }(Eu, hu)), [Eu, hu]);
-                            return (0, su.useEffect)((() => {
-                              ju(Du)
-                            }), [Du, ju]), (0, Ou.jsxs)("article", {
+                              }(bG, dG)), [bG, dG]);
+                            return (0, wG.useEffect)((() => {
+                              ZG(JG)
+                            }), [JG, ZG]), (0, KG.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, Ou.jsxs)("header", {
+                              children: [(0, KG.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, Ou.jsx)("h1", {
+                                children: [(0, KG.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: Uu.title || Eu.title
-                                }), (0, Ou.jsx)("p", {
+                                  children: SG.title || bG.title
+                                }), (0, KG.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: Eu.summary
-                                }), (0, Ou.jsx)(ys, {
-                                  page: Eu
-                                }), lu && (0, Ou.jsx)("div", {
+                                  children: bG.summary
+                                }), (0, KG.jsx)(Nw, {
+                                  page: bG
+                                }), kG && (0, KG.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, Ou.jsxs)("span", {
-                                    children: [(0, Ou.jsx)("strong", {
-                                      children: Uu.sections.length
-                                    }), " ", pZ[Eu.layout]]
+                                  children: (0, KG.jsxs)("span", {
+                                    children: [(0, KG.jsx)("strong", {
+                                      children: SG.sections.length
+                                    }), " ", oL[bG.layout]]
                                   })
                                 })]
-                              }), "" === Eu.slug && (0, Ou.jsx)(ms, {}), qu && (0, Ou.jsx)(rs, {
-                                kind: qu
-                              }, qu), Eu.hasParticlePlayground && (0, Ou.jsx)(CU, {
-                                ref: bu,
-                                textures: Nu
-                              }), !fu && Uu.intro.length > 0 && (0, Ou.jsx)("div", {
+                              }), "" === bG.slug && (0, KG.jsx)(Iw, {}), UG && (0, KG.jsx)(lw, {
+                                kind: UG
+                              }, UG), bG.hasParticlePlayground && (0, KG.jsx)(YS, {
+                                ref: pG,
+                                textures: QG
+                              }), !YG && SG.intro.length > 0 && (0, KG.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: Eu.gallery ? (0, Ou.jsx)(gs.Provider, {
-                                  value: Eu.hasParticlePlayground ? cu : null,
-                                  children: (0, Ou.jsx)(os, {
-                                    kind: Eu.gallery,
-                                    content: Uu,
-                                    blocks: Uu.intro
+                                children: bG.gallery ? (0, KG.jsx)(Jw.Provider, {
+                                  value: bG.hasParticlePlayground ? fG : null,
+                                  children: (0, KG.jsx)(Ww, {
+                                    kind: bG.gallery,
+                                    content: SG,
+                                    blocks: SG.intro
                                   })
-                                }) : (0, Ou.jsx)(Nj, {
-                                  blocks: dj(Uu.intro)
+                                }) : (0, KG.jsx)(QZ, {
+                                  blocks: CZ(SG.intro)
                                 })
-                              }), Eu.hasTextPlayground && (0, Ou.jsx)(aU, {
-                                fontAwesomeIcons: Yu
-                              }), Eu.hasVoicePlayground && (0, Ou.jsx)(RU, {}), Eu.childPageIds && (0, Ou.jsx)(ms, {
-                                cards: Eu.childPageIds.map((uu => ({
-                                  pageId: uu
+                              }), bG.hasTextPlayground && (0, KG.jsx)(CS, {
+                                fontAwesomeIcons: hG
+                              }), bG.hasVoicePlayground && (0, KG.jsx)(xS, {}), bG.childPageIds && (0, KG.jsx)(Iw, {
+                                cards: bG.childPageIds.map((GG => ({
+                                  pageId: GG
                                 }))),
-                                label: Eu.title
-                              }), lu && (0, Ou.jsx)(Mj, {
+                                label: bG.title
+                              }), kG && (0, KG.jsx)(zZ, {
                                 className: "DocsFilterBar",
-                                value: Zu,
-                                placeholder: `Filter ${Uu.sections.length} ${pZ[Eu.layout]}\u2026`,
-                                label: `Filter ${pZ[Eu.layout]}`,
-                                onChange: Xu,
-                                count: Cu ? {
-                                  visible: hu.length,
-                                  total: Uu.sections.length
+                                value: LG,
+                                placeholder: `Filter ${SG.sections.length} ${oL[bG.layout]}\u2026`,
+                                label: `Filter ${oL[bG.layout]}`,
+                                onChange: yG,
+                                count: VG ? {
+                                  visible: dG.length,
+                                  total: SG.sections.length
                                 } : null
-                              }), !fu && (0, Ou.jsxs)("div", {
-                                className: `DocsSections Layout-${Eu.layout}`,
-                                children: [hu.map((uu => (0, Ou.jsx)(wZ, {
-                                  page: Eu,
-                                  section: uu
-                                }, uu.heading.anchor))), 0 === hu.length && (0, Ou.jsxs)("p", {
+                              }), !YG && (0, KG.jsxs)("div", {
+                                className: `DocsSections Layout-${bG.layout}`,
+                                children: [dG.map((GG => (0, KG.jsx)(XL, {
+                                  page: bG,
+                                  section: GG
+                                }, GG.heading.anchor))), 0 === dG.length && (0, KG.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", pZ[Eu.layout], " match \u201c", Zu, "\u201d."]
+                                  children: ["No ", oL[bG.layout], " match \u201c", LG, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const dZ = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const iL = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function aZ(uu) {
+                          function CL(GG) {
                             let {
-                              entry: Eu,
-                              isActive: ju,
-                              onNavigate: su,
-                              label: Uu,
-                              children: Xu
-                            } = uu;
-                            return (0, Ou.jsx)("a", {
-                              href: `#${Eu.anchor}`,
-                              "aria-label": Uu,
-                              className: Zu()(`Level${Eu.level}`, {
-                                Active: ju
+                              entry: bG,
+                              isActive: ZG,
+                              onNavigate: wG,
+                              label: SG,
+                              children: yG
+                            } = GG;
+                            return (0, KG.jsx)("a", {
+                              href: `#${bG.anchor}`,
+                              "aria-label": SG,
+                              className: LG()(`Level${bG.level}`, {
+                                Active: ZG
                               }),
-                              "aria-current": ju ? "location" : void 0,
-                              onClick: uu => {
-                                uu.preventDefault(), su(Eu.anchor)
+                              "aria-current": ZG ? "location" : void 0,
+                              onClick: GG => {
+                                GG.preventDefault(), wG(bG.anchor)
                               },
-                              children: Xu
+                              children: yG
                             })
                           }
 
-                          function PZ(uu) {
+                          function WL(GG) {
                             let {
-                              toc: Eu,
-                              activeAnchor: ju,
-                              onNavigate: Uu
-                            } = uu;
-                            const Xu = Math.max(0, Eu.findIndex((uu => uu.anchor === ju))),
-                              lu = (0, su.useRef)(null),
-                              qu = (0, su.useRef)(!1);
-                            (0, su.useEffect)((() => {
-                              var uu, ju;
-                              const su = null === (uu = lu.current) || void 0 === uu ? void 0 : uu.closest(".DocsToc"),
-                                Uu = null === (ju = lu.current) || void 0 === ju ? void 0 : ju.querySelector(".DocsTimelineNotch.Active");
-                              if (!su || !Uu) return;
-                              let Zu = 0;
-                              if (Xu === Eu.length - 1) Zu = su.scrollHeight;
-                              else if (Xu > 0) {
-                                const uu = su.getBoundingClientRect(),
-                                  Eu = Uu.getBoundingClientRect();
-                                Zu = su.scrollTop + Eu.top + Eu.height / 2 - (uu.top + su.clientHeight / 2)
+                              toc: bG,
+                              activeAnchor: ZG,
+                              onNavigate: SG
+                            } = GG;
+                            const yG = Math.max(0, bG.findIndex((GG => GG.anchor === ZG))),
+                              kG = (0, wG.useRef)(null),
+                              UG = (0, wG.useRef)(!1);
+                            (0, wG.useEffect)((() => {
+                              var GG, ZG;
+                              const wG = null === (GG = kG.current) || void 0 === GG ? void 0 : GG.closest(".DocsToc"),
+                                SG = null === (ZG = kG.current) || void 0 === ZG ? void 0 : ZG.querySelector(".DocsTimelineNotch.Active");
+                              if (!wG || !SG) return;
+                              let LG = 0;
+                              if (yG === bG.length - 1) LG = wG.scrollHeight;
+                              else if (yG > 0) {
+                                const GG = wG.getBoundingClientRect(),
+                                  bG = SG.getBoundingClientRect();
+                                LG = wG.scrollTop + bG.top + bG.height / 2 - (GG.top + wG.clientHeight / 2)
                               }
-                              su.scrollTo({
-                                top: Zu,
-                                behavior: qu.current ? "smooth" : "auto"
-                              }), qu.current = !0
-                            }), [Xu, Eu.length]);
-                            const fu = [];
-                            return Eu.forEach(((uu, Eu) => {
-                              var ju, su, Uu;
-                              const Zu = function(uu) {
-                                  const Eu = uu.trim().match(dZ);
-                                  return Eu ? {
-                                    day: Eu[1],
-                                    month: `${Eu[2]} ${Eu[3]}`
+                              wG.scrollTo({
+                                top: LG,
+                                behavior: UG.current ? "smooth" : "auto"
+                              }), UG.current = !0
+                            }), [yG, bG.length]);
+                            const YG = [];
+                            return bG.forEach(((GG, bG) => {
+                              var ZG, wG, SG;
+                              const LG = function(GG) {
+                                  const bG = GG.trim().match(iL);
+                                  return bG ? {
+                                    day: bG[1],
+                                    month: `${bG[2]} ${bG[3]}`
                                   } : null
-                                }(uu.text),
-                                Xu = null !== (ju = null === Zu || void 0 === Zu ? void 0 : Zu.month) && void 0 !== ju ? ju : null;
-                              null !== Xu && (null === (su = fu.at(-1)) || void 0 === su ? void 0 : su.month) === Xu || fu.push({
-                                month: Xu,
+                                }(GG.text),
+                                yG = null !== (ZG = null === LG || void 0 === LG ? void 0 : LG.month) && void 0 !== ZG ? ZG : null;
+                              null !== yG && (null === (wG = YG.at(-1)) || void 0 === wG ? void 0 : wG.month) === yG || YG.push({
+                                month: yG,
                                 entries: []
-                              }), fu.at(-1).entries.push({
-                                entry: uu,
-                                day: null !== (Uu = null === Zu || void 0 === Zu ? void 0 : Zu.day) && void 0 !== Uu ? Uu : null,
-                                index: Eu
+                              }), YG.at(-1).entries.push({
+                                entry: GG,
+                                day: null !== (SG = null === LG || void 0 === LG ? void 0 : LG.day) && void 0 !== SG ? SG : null,
+                                index: bG
                               })
-                            })), (0, Ou.jsx)("ol", {
-                              ref: lu,
+                            })), (0, KG.jsx)("ol", {
+                              ref: kG,
                               className: "DocsTimeline",
-                              children: fu.map((uu => {
+                              children: YG.map((GG => {
                                 let {
-                                  month: Eu,
-                                  entries: ju
-                                } = uu;
-                                return (0, Ou.jsxs)("li", {
+                                  month: bG,
+                                  entries: ZG
+                                } = GG;
+                                return (0, KG.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [Eu && (0, Ou.jsx)("span", {
+                                  children: [bG && (0, KG.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: Eu
-                                  }), (0, Ou.jsx)("ol", {
-                                    children: ju.map((uu => {
+                                    children: bG
+                                  }), (0, KG.jsx)("ol", {
+                                    children: ZG.map((GG => {
                                       let {
-                                        entry: Eu,
-                                        day: ju,
-                                        index: su
-                                      } = uu;
-                                      return (0, Ou.jsx)("li", {
-                                        className: Zu()("DocsTimelineNotch", {
-                                          Passed: su < Xu,
-                                          Active: su === Xu
+                                        entry: bG,
+                                        day: ZG,
+                                        index: wG
+                                      } = GG;
+                                      return (0, KG.jsx)("li", {
+                                        className: LG()("DocsTimelineNotch", {
+                                          Passed: wG < yG,
+                                          Active: wG === yG
                                         }),
-                                        children: (0, Ou.jsx)(aZ, {
-                                          entry: Eu,
-                                          isActive: su === Xu,
-                                          onNavigate: Uu,
-                                          label: Eu.text,
-                                          children: (0, Ou.jsx)("span", {
+                                        children: (0, KG.jsx)(CL, {
+                                          entry: bG,
+                                          isActive: wG === yG,
+                                          onNavigate: SG,
+                                          label: bG.text,
+                                          children: (0, KG.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== ju && void 0 !== ju ? ju : Eu.text
+                                            children: null !== ZG && void 0 !== ZG ? ZG : bG.text
                                           })
                                         })
-                                      }, Eu.anchor)
+                                      }, bG.anchor)
                                     }))
                                   })]
-                                }, ju[0].entry.anchor)
+                                }, ZG[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function oZ(uu) {
+                          function mL(GG) {
                             let {
-                              isChangelog: Eu,
-                              toc: ju,
-                              activeAnchor: su,
-                              onNavigate: Uu
-                            } = uu;
-                            return 0 === ju.length ? null : (0, Ou.jsxs)(Ou.Fragment, {
-                              children: [(0, Ou.jsx)("div", {
+                              isChangelog: bG,
+                              toc: ZG,
+                              activeAnchor: wG,
+                              onNavigate: SG
+                            } = GG;
+                            return 0 === ZG.length ? null : (0, KG.jsxs)(KG.Fragment, {
+                              children: [(0, KG.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: Eu ? "Updates" : "On this page"
-                              }), Eu ? (0, Ou.jsx)(PZ, {
-                                toc: ju,
-                                activeAnchor: su,
-                                onNavigate: Uu
-                              }) : (0, Ou.jsx)("ul", {
-                                children: ju.map((uu => (0, Ou.jsx)("li", {
-                                  children: (0, Ou.jsx)(aZ, {
-                                    entry: uu,
-                                    isActive: uu.anchor === su,
-                                    onNavigate: Uu,
-                                    children: uu.text.replace(/`/g, "")
+                                children: bG ? "Updates" : "On this page"
+                              }), bG ? (0, KG.jsx)(WL, {
+                                toc: ZG,
+                                activeAnchor: wG,
+                                onNavigate: SG
+                              }) : (0, KG.jsx)("ul", {
+                                children: ZG.map((GG => (0, KG.jsx)("li", {
+                                  children: (0, KG.jsx)(CL, {
+                                    entry: GG,
+                                    isActive: GG.anchor === wG,
+                                    onNavigate: SG,
+                                    children: GG.text.replace(/`/g, "")
                                   })
-                                }, uu.anchor)))
+                                }, GG.anchor)))
                               })]
                             })
                           }
-                          const kZ = {
+                          const IL = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5195,7 +5195,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            mZ = {
+                            FL = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5203,1086 +5203,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            vZ = 20,
-                            KZ = 10,
-                            VZ = 40,
-                            rZ = 120;
-                          let QZ;
+                            vL = 20,
+                            aL = 10,
+                            cL = 40,
+                            lL = 120;
+                          let jL;
 
-                          function iZ(uu) {
-                            const Eu = uu.gallery;
-                            if (!Eu) return [];
-                            if (hj(Eu)) return function(uu) {
-                              return gj(uu).entries.map((uu => uu.name))
-                            }(Eu).map((ju => ({
-                              page: uu,
-                              anchor: vj(Eu, ju),
-                              title: ju,
-                              kind: mZ[Eu],
+                          function PL(GG) {
+                            const bG = GG.gallery;
+                            if (!bG) return [];
+                            if (dZ(bG)) return function(GG) {
+                              return rZ(GG).entries.map((GG => GG.name))
+                            }(bG).map((ZG => ({
+                              page: GG,
+                              anchor: aZ(bG, ZG),
+                              title: ZG,
+                              kind: FL[bG],
                               text: "",
-                              listedUnder: uu.title
+                              listedUnder: GG.title
                             })));
-                            const ju = Iu(uu);
-                            return (0, Ju.y)(ju).flatMap((su => {
-                              const Uu = su.heading ? `${uu.title} \u203a ${su.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : uu.title;
-                              return Vj(Eu, ju, su.blocks).flatMap((ju => "names" !== ju.kind ? [] : ju.names.map((su => {
-                                const Zu = ju.isSongs ? "Song" : mZ[Eu];
+                            const ZG = qG(GG);
+                            return (0, iG.t)(ZG).flatMap((wG => {
+                              const SG = wG.heading ? `${GG.title} \u203a ${wG.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : GG.title;
+                              return lZ(bG, ZG, wG.blocks).flatMap((ZG => "names" !== ZG.kind ? [] : ZG.names.map((wG => {
+                                const LG = ZG.isSongs ? "Song" : FL[bG];
                                 return {
-                                  page: uu,
-                                  anchor: su.anchor,
-                                  title: su.name,
-                                  kind: Zu,
+                                  page: GG,
+                                  anchor: wG.anchor,
+                                  title: wG.name,
+                                  kind: LG,
                                   text: "",
-                                  listedUnder: Uu
+                                  listedUnder: SG
                                 }
                               }))))
                             }))
                           }
 
-                          function WZ(uu, Eu, ju) {
-                            const su = uu.title.toLowerCase();
-                            let Uu = 0;
-                            if (su === Eu) Uu = 100;
-                            else if (su.startsWith(Eu)) Uu = 80;
-                            else if (su.includes(Eu)) Uu = 60;
-                            else if (ju.every((uu => su.includes(uu)))) Uu = 45;
+                          function ML(GG, bG, ZG) {
+                            const wG = GG.title.toLowerCase();
+                            let SG = 0;
+                            if (wG === bG) SG = 100;
+                            else if (wG.startsWith(bG)) SG = 80;
+                            else if (wG.includes(bG)) SG = 60;
+                            else if (ZG.every((GG => wG.includes(GG)))) SG = 45;
                             else {
-                              if (!uu.text.toLowerCase().includes(Eu)) return 0;
-                              Uu = 20
+                              if (!GG.text.toLowerCase().includes(bG)) return 0;
+                              SG = 20
                             }
-                            return Uu - Math.min(su.length / 10, 9) + ("Page" === uu.kind ? 8 : "Method" === uu.kind ? 3 : 0) - (uu.listedUnder ? vZ : 0)
+                            return SG - Math.min(wG.length / 10, 9) + ("Page" === GG.kind ? 8 : "Method" === GG.kind ? 3 : 0) - (GG.listedUnder ? vL : 0)
                           }
 
-                          function SZ(uu, Eu) {
-                            const ju = uu.toLowerCase().indexOf(Eu),
-                              su = Math.max(0, ju - rZ / 3);
-                            return `${su>0?"\u2026":""}${uu.slice(su,su+rZ)}${su+rZ<uu.length?"\u2026":""}`
+                          function AL(GG, bG) {
+                            const ZG = GG.toLowerCase().indexOf(bG),
+                              wG = Math.max(0, ZG - lL / 3);
+                            return `${wG>0?"\u2026":""}${GG.slice(wG,wG+lL)}${wG+lL<GG.length?"\u2026":""}`
                           }
 
-                          function IZ(uu) {
+                          function sL(GG) {
                             let {
-                              text: Eu,
-                              query: ju
-                            } = uu;
-                            const su = ju ? Eu.toLowerCase().indexOf(ju) : -1;
-                            return -1 === su ? (0, Ou.jsx)(Ou.Fragment, {
-                              children: Eu
-                            }) : (0, Ou.jsxs)(Ou.Fragment, {
-                              children: [Eu.slice(0, su), (0, Ou.jsx)("mark", {
-                                children: Eu.slice(su, su + ju.length)
-                              }), Eu.slice(su + ju.length)]
+                              text: bG,
+                              query: ZG
+                            } = GG;
+                            const wG = ZG ? bG.toLowerCase().indexOf(ZG) : -1;
+                            return -1 === wG ? (0, KG.jsx)(KG.Fragment, {
+                              children: bG
+                            }) : (0, KG.jsxs)(KG.Fragment, {
+                              children: [bG.slice(0, wG), (0, KG.jsx)("mark", {
+                                children: bG.slice(wG, wG + ZG.length)
+                              }), bG.slice(wG + ZG.length)]
                             })
                           }
 
-                          function FZ(uu) {
+                          function qL(GG) {
                             let {
-                              basePath: Eu,
-                              onClose: ju
-                            } = uu;
-                            const Uu = (0, lu.v)(),
-                              [Xu, qu] = (0, su.useState)(""),
-                              [fu, Cu] = (0, su.useState)(0),
-                              bu = (0, su.useRef)(null),
-                              cu = (0, su.useRef)(null),
-                              Nu = Xu.trim().toLowerCase(),
-                              Yu = (0, su.useMemo)((() => {
-                                const uu = (QZ || (QZ = Qu.flatMap((uu => {
-                                  const Eu = Iu(uu);
+                              basePath: bG,
+                              onClose: ZG
+                            } = GG;
+                            const SG = (0, kG.q)(),
+                              [yG, UG] = (0, wG.useState)(""),
+                              [YG, VG] = (0, wG.useState)(0),
+                              pG = (0, wG.useRef)(null),
+                              fG = (0, wG.useRef)(null),
+                              QG = yG.trim().toLowerCase(),
+                              hG = (0, wG.useMemo)((() => {
+                                const GG = (jL || (jL = PG.flatMap((GG => {
+                                  const bG = qG(GG);
                                   return [{
-                                    page: uu,
+                                    page: GG,
                                     anchor: "",
-                                    title: uu.title,
+                                    title: GG.title,
                                     kind: "Page",
-                                    text: uu.summary
-                                  }, ...Eu.sections.flatMap((Eu => {
-                                    const ju = Eu.blocks.filter((uu => "paragraph" === uu.kind)).map(Ju.j).join(" ").replace(/[`*]/g, ""),
-                                      su = {
-                                        page: uu,
-                                        anchor: Eu.heading.anchor,
-                                        title: Eu.heading.text.replace(/`/g, ""),
-                                        kind: kZ[uu.layout],
-                                        text: ju
+                                    text: GG.summary
+                                  }, ...bG.sections.flatMap((bG => {
+                                    const ZG = bG.blocks.filter((GG => "paragraph" === GG.kind)).map(iG.g).join(" ").replace(/[`*]/g, ""),
+                                      wG = {
+                                        page: GG,
+                                        anchor: bG.heading.anchor,
+                                        title: bG.heading.text.replace(/`/g, ""),
+                                        kind: IL[GG.layout],
+                                        text: ZG
                                       },
-                                      Uu = Eu.blocks.flatMap((Eu => "article" === uu.layout && "heading" === Eu.kind && 3 === Eu.level ? [{
-                                        page: uu,
-                                        anchor: Eu.anchor,
-                                        title: Eu.text.replace(/`/g, ""),
+                                      SG = bG.blocks.flatMap((bG => "article" === GG.layout && "heading" === bG.kind && 3 === bG.level ? [{
+                                        page: GG,
+                                        anchor: bG.anchor,
+                                        title: bG.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: su.title
+                                        text: wG.title
                                       }] : []));
-                                    return [su, ...Uu]
-                                  })), ...iZ(uu)]
-                                }))), QZ);
-                                if (!Nu) return uu.filter((uu => "Page" === uu.kind));
-                                const Eu = Nu.split(/\s+/);
-                                let ju = 0;
-                                return uu.map((uu => ({
-                                  entry: uu,
-                                  score: WZ(uu, Nu, Eu)
-                                }))).filter((uu => uu.score > 0)).sort(((uu, Eu) => Eu.score - uu.score)).filter((uu => !uu.entry.listedUnder || (ju++, ju <= KZ))).slice(0, VZ).map((uu => uu.entry))
-                              }), [Nu]);
-                            (0, su.useEffect)((() => {
-                              Cu(0)
-                            }), [Nu]), (0, su.useEffect)((() => {
-                              const uu = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [wG, ...SG]
+                                  })), ...PL(GG)]
+                                }))), jL);
+                                if (!QG) return GG.filter((GG => "Page" === GG.kind));
+                                const bG = QG.split(/\s+/);
+                                let ZG = 0;
+                                return GG.map((GG => ({
+                                  entry: GG,
+                                  score: ML(GG, QG, bG)
+                                }))).filter((GG => GG.score > 0)).sort(((GG, bG) => bG.score - GG.score)).filter((GG => !GG.entry.listedUnder || (ZG++, ZG <= aL))).slice(0, cL).map((GG => GG.entry))
+                              }), [QG]);
+                            (0, wG.useEffect)((() => {
+                              VG(0)
+                            }), [QG]), (0, wG.useEffect)((() => {
+                              const GG = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === uu || void 0 === uu || uu.focus()
+                                null === GG || void 0 === GG || GG.focus()
                               }
-                            }), []), (0, su.useEffect)((() => {
-                              var uu, Eu;
-                              null === (uu = bu.current) || void 0 === uu || null === (Eu = uu.querySelector(".Active")) || void 0 === Eu || Eu.scrollIntoView({
+                            }), []), (0, wG.useEffect)((() => {
+                              var GG, bG;
+                              null === (GG = pG.current) || void 0 === GG || null === (bG = GG.querySelector(".Active")) || void 0 === bG || bG.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [fu]);
-                            const Du = uu => {
-                              Uu(tu(Eu, uu.page, uu.anchor)), ju()
+                            }), [YG]);
+                            const JG = GG => {
+                              SG(RG(bG, GG.page, GG.anchor)), ZG()
                             };
-                            return (0, Ou.jsx)("div", {
+                            return (0, KG.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: uu => {
-                                uu.target === uu.currentTarget && ju()
+                              onMouseDown: GG => {
+                                GG.target === GG.currentTarget && ZG()
                               },
-                              children: (0, Ou.jsxs)("div", {
+                              children: (0, KG.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: uu => {
-                                  uu.target !== cu.current && uu.preventDefault()
+                                onMouseDown: GG => {
+                                  GG.target !== fG.current && GG.preventDefault()
                                 },
-                                onKeyDown: uu => {
-                                  if ("Escape" === uu.key) ju();
-                                  else if ("Tab" === uu.key) {
-                                    var Eu;
-                                    uu.preventDefault(), null === (Eu = cu.current) || void 0 === Eu || Eu.focus()
+                                onKeyDown: GG => {
+                                  if ("Escape" === GG.key) ZG();
+                                  else if ("Tab" === GG.key) {
+                                    var bG;
+                                    GG.preventDefault(), null === (bG = fG.current) || void 0 === bG || bG.focus()
                                   }
                                 },
-                                children: [(0, Ou.jsxs)("div", {
+                                children: [(0, KG.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, Ou.jsx)(hu, {
+                                  children: [(0, KG.jsx)(dG, {
                                     name: "magnifying-glass"
-                                  }), (0, Ou.jsx)("input", {
-                                    ref: cu,
+                                  }), (0, KG.jsx)("input", {
+                                    ref: fG,
                                     autoFocus: !0,
-                                    value: Xu,
+                                    value: yG,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": Yu.length > 0 ? `DocsSearchResult-${fu}` : void 0,
-                                    onChange: uu => {
-                                      qu(uu.target.value)
+                                    "aria-activedescendant": hG.length > 0 ? `DocsSearchResult-${YG}` : void 0,
+                                    onChange: GG => {
+                                      UG(GG.target.value)
                                     },
-                                    onKeyDown: uu => {
-                                      if ("ArrowDown" === uu.key || "ArrowUp" === uu.key) {
-                                        uu.preventDefault();
-                                        const Eu = "ArrowDown" === uu.key ? 1 : -1;
-                                        Cu((fu + Eu + Yu.length) % Math.max(Yu.length, 1))
-                                      } else "Enter" === uu.key && Yu[fu] && Du(Yu[fu])
+                                    onKeyDown: GG => {
+                                      if ("ArrowDown" === GG.key || "ArrowUp" === GG.key) {
+                                        GG.preventDefault();
+                                        const bG = "ArrowDown" === GG.key ? 1 : -1;
+                                        VG((YG + bG + hG.length) % Math.max(hG.length, 1))
+                                      } else "Enter" === GG.key && hG[YG] && JG(hG[YG])
                                     }
-                                  }), (0, Ou.jsx)("kbd", {
+                                  }), (0, KG.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, Ou.jsxs)("ul", {
+                                }), (0, KG.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: bu,
+                                  ref: pG,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!Nu && (0, Ou.jsx)("li", {
+                                  children: [!QG && (0, KG.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), Yu.map(((uu, Eu) => {
-                                    var ju;
-                                    return (0, Ou.jsxs)("li", {
-                                      id: `DocsSearchResult-${Eu}`,
+                                  }), hG.map(((GG, bG) => {
+                                    var ZG;
+                                    return (0, KG.jsxs)("li", {
+                                      id: `DocsSearchResult-${bG}`,
                                       role: "option",
-                                      "aria-selected": Eu === fu,
-                                      className: Zu()("DocsSearchResult", {
-                                        Active: Eu === fu
+                                      "aria-selected": bG === YG,
+                                      className: LG()("DocsSearchResult", {
+                                        Active: bG === YG
                                       }),
                                       onMouseMove: () => {
-                                        Cu(Eu)
+                                        VG(bG)
                                       },
                                       onClick: () => {
-                                        Du(uu)
+                                        JG(GG)
                                       },
-                                      children: [(0, Ou.jsx)(hu, {
-                                        name: uu.page.icon
-                                      }), (0, Ou.jsxs)("div", {
+                                      children: [(0, KG.jsx)(dG, {
+                                        name: GG.page.icon
+                                      }), (0, KG.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, Ou.jsx)("div", {
+                                        children: [(0, KG.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, Ou.jsx)(IZ, {
-                                            text: uu.title,
-                                            query: Nu
+                                          children: (0, KG.jsx)(sL, {
+                                            text: GG.title,
+                                            query: QG
                                           })
-                                        }), uu.text && (0, Ou.jsx)("div", {
+                                        }), GG.text && (0, KG.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, Ou.jsx)(IZ, {
-                                            text: SZ(uu.text, Nu),
-                                            query: Nu
+                                          children: (0, KG.jsx)(sL, {
+                                            text: AL(GG.text, QG),
+                                            query: QG
                                           })
                                         })]
-                                      }), (0, Ou.jsx)("span", {
+                                      }), (0, KG.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === uu.kind ? "Page" : null !== (ju = uu.listedUnder) && void 0 !== ju ? ju : `${uu.kind} \xb7 ${uu.page.title}`
+                                        children: "Page" === GG.kind ? "Page" : null !== (ZG = GG.listedUnder) && void 0 !== ZG ? ZG : `${GG.kind} \xb7 ${GG.page.title}`
                                       })]
-                                    }, `${uu.page.id}#${uu.anchor}`)
-                                  })), Nu && 0 === Yu.length && (0, Ou.jsxs)("li", {
+                                    }, `${GG.page.id}#${GG.anchor}`)
+                                  })), QG && 0 === hG.length && (0, KG.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", Xu, "\u201d."]
+                                    children: ["Nothing matches \u201c", yG, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function BZ(uu, Eu) {
-                            if (Eu < 10) return `${uu.toFixed(1)}s`;
-                            const ju = Math.floor(uu);
-                            return `${Math.floor(ju/60)}:${String(ju%60).padStart(2,"0")}`
+                          function nL(GG, bG) {
+                            if (bG < 10) return `${GG.toFixed(1)}s`;
+                            const ZG = Math.floor(GG);
+                            return `${Math.floor(ZG/60)}:${String(ZG%60).padStart(2,"0")}`
                           }
 
-                          function LZ() {
-                            const uu = bs((uu => uu.track)),
-                              Eu = bs((uu => uu.volume)),
-                              [ju, Uu] = (0, su.useState)(0),
-                              Xu = (0, su.useRef)(Es);
-                            if ((0, su.useEffect)((() => {
-                                if (!uu) return;
-                                if (Uu(Ys()), "playing" !== uu.status) return;
-                                let Eu = 0;
-                                const ju = () => {
-                                  Uu(Ys()), Eu = requestAnimationFrame(ju)
+                          function gL() {
+                            const GG = Vw((GG => GG.track)),
+                              bG = Vw((GG => GG.volume)),
+                              [ZG, SG] = (0, wG.useState)(0),
+                              yG = (0, wG.useRef)(bw);
+                            if ((0, wG.useEffect)((() => {
+                                if (!GG) return;
+                                if (SG(Kw()), "playing" !== GG.status) return;
+                                let bG = 0;
+                                const ZG = () => {
+                                  SG(Kw()), bG = requestAnimationFrame(ZG)
                                 };
-                                return Eu = requestAnimationFrame(ju), () => {
-                                  cancelAnimationFrame(Eu)
+                                return bG = requestAnimationFrame(ZG), () => {
+                                  cancelAnimationFrame(bG)
                                 }
-                              }), [uu]), !uu) return null;
-                            const lu = "paused" !== uu.status,
-                              qu = Math.min(ju, uu.duration);
-                            return (0, Ou.jsx)("div", {
+                              }), [GG]), !GG) return null;
+                            const kG = "paused" !== GG.status,
+                              UG = Math.min(ZG, GG.duration);
+                            return (0, KG.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, Ou.jsxs)("section", {
+                              children: (0, KG.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, Ou.jsx)("button", {
+                                children: [(0, KG.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": lu ? `Pause ${uu.name}` : `Play ${uu.name}`,
-                                  onClick: Os,
-                                  children: (0, Ou.jsx)(hu, {
-                                    name: lu ? "pause" : "play"
+                                  "aria-label": kG ? `Pause ${GG.name}` : `Play ${GG.name}`,
+                                  onClick: Qw,
+                                  children: (0, KG.jsx)(dG, {
+                                    name: kG ? "pause" : "play"
                                   })
-                                }), (0, Ou.jsxs)("div", {
+                                }), (0, KG.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, Ou.jsxs)("div", {
+                                  children: [(0, KG.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, Ou.jsx)("code", {
-                                      children: uu.name
-                                    }), (0, Ou.jsx)("span", {
-                                      children: uu.isSong ? "Song" : "Sound"
+                                    children: [(0, KG.jsx)("code", {
+                                      children: GG.name
+                                    }), (0, KG.jsx)("span", {
+                                      children: GG.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, Ou.jsxs)("div", {
+                                  }), (0, KG.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, Ou.jsx)("span", {
-                                      children: BZ(qu, uu.duration)
-                                    }), (0, Ou.jsx)("input", {
+                                    children: [(0, KG.jsx)("span", {
+                                      children: nL(UG, GG.duration)
+                                    }), (0, KG.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: uu.duration || 1,
+                                      max: GG.duration || 1,
                                       step: .01,
-                                      value: qu,
-                                      disabled: 0 === uu.duration,
+                                      value: UG,
+                                      disabled: 0 === GG.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${BZ(qu,uu.duration)} of ${BZ(uu.duration,uu.duration)}`,
-                                      onChange: uu => {
-                                        const Eu = Number(uu.target.value);
-                                        ! function(uu) {
-                                          var Eu;
-                                          ls = uu, null === (Eu = Zs) || void 0 === Eu || Eu.seek(uu)
-                                        }(Eu), Uu(Eu)
+                                      "aria-valuetext": `${nL(UG,GG.duration)} of ${nL(GG.duration,GG.duration)}`,
+                                      onChange: GG => {
+                                        const bG = Number(GG.target.value);
+                                        ! function(GG) {
+                                          var bG;
+                                          yw = GG, null === (bG = Sw) || void 0 === bG || bG.seek(GG)
+                                        }(bG), SG(bG)
                                       }
-                                    }), (0, Ou.jsx)("span", {
-                                      children: uu.duration > 0 ? BZ(uu.duration, uu.duration) : "\u2013"
+                                    }), (0, KG.jsx)("span", {
+                                      children: GG.duration > 0 ? nL(GG.duration, GG.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, Ou.jsxs)("div", {
+                                }), (0, KG.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, Ou.jsx)("button", {
+                                  children: [(0, KG.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === Eu ? "Unmute" : "Mute",
+                                    "aria-label": 0 === bG ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === Eu ? hs(Xu.current) : (Xu.current = Eu, hs(0))
+                                      0 === bG ? hw(yG.current) : (yG.current = bG, hw(0))
                                     },
-                                    children: (0, Ou.jsx)(hu, {
+                                    children: (0, KG.jsx)(dG, {
                                       name: "volume",
-                                      className: Zu()({
-                                        Muted: 0 === Eu
+                                      className: LG()({
+                                        Muted: 0 === bG
                                       })
                                     })
-                                  }), (0, Ou.jsx)("input", {
+                                  }), (0, KG.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: Eu,
+                                    value: bG,
                                     "aria-label": "Volume",
-                                    onChange: uu => {
-                                      hs(Number(uu.target.value))
+                                    onChange: GG => {
+                                      hw(Number(GG.target.value))
                                     }
                                   })]
-                                }), (0, Ou.jsx)("button", {
+                                }), (0, KG.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var Eu;
-                                    null === (Eu = document.querySelector(`[data-docs-track="${CSS.escape(ss(uu.name,uu.isSong))}"]`)) || void 0 === Eu || Eu.focus(), Ds()
+                                    var bG;
+                                    null === (bG = document.querySelector(`[data-docs-track="${CSS.escape(Zw(GG.name,GG.isSong))}"]`)) || void 0 === bG || bG.focus(), dw()
                                   },
-                                  children: (0, Ou.jsx)(hu, {
+                                  children: (0, KG.jsx)(dG, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var tZ = ju(31);
-                          const xZ = "docsTheme",
-                            TZ = window.matchMedia("(prefers-color-scheme: light)");
+                          var eL = ZG(29);
+                          const RL = "docsTheme",
+                            TL = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function HZ(uu) {
+                          function HL(GG) {
                             let {
-                              theme: Eu,
-                              onChange: ju
-                            } = uu;
-                            const su = "dark" === Eu ? "light" : "dark";
-                            return (0, Ou.jsx)("button", {
+                              theme: bG,
+                              onChange: ZG
+                            } = GG;
+                            const wG = "dark" === bG ? "light" : "dark";
+                            return (0, KG.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${su} theme`,
-                              title: `Switch to ${su} theme`,
+                              "aria-label": `Switch to ${wG} theme`,
+                              title: `Switch to ${wG} theme`,
                               onClick: () => {
-                                ju(su)
+                                ZG(wG)
                               },
-                              children: (0, Ou.jsx)(hu, {
-                                name: "dark" === Eu ? "moon" : "sun"
+                              children: (0, KG.jsx)(dG, {
+                                name: "dark" === bG ? "moon" : "sun"
                               })
                             })
                           }
-                          const AZ = "https://github.com/Bloxdy/code-api",
-                            nZ = "https://discord.gg/playbloxd",
-                            yZ = 180,
-                            zZ = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const tL = "https://github.com/Bloxdy/code-api",
+                            DL = "https://discord.gg/playbloxd",
+                            NL = 180,
+                            OL = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function RZ(uu) {
+                          function xL(GG) {
                             let {
-                              basePath: Eu,
-                              activePageId: ju,
-                              onNavigate: su
-                            } = uu;
-                            return (0, Ou.jsx)("nav", {
+                              basePath: bG,
+                              activePageId: ZG,
+                              onNavigate: wG
+                            } = GG;
+                            return (0, KG.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: iu.map((uu => (0, Ou.jsxs)("div", {
+                              children: MG.map((GG => (0, KG.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, Ou.jsx)("div", {
+                                children: [(0, KG.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: uu.title
-                                }), uu.pageIds.map((uu => {
-                                  var Uu;
-                                  const lu = Wu(uu);
-                                  return (0, Ou.jsxs)(Xu.c, {
-                                    to: tu(Eu, lu),
-                                    className: Zu()("DocsNavLink", {
-                                      Active: lu.id === ju
+                                  children: GG.title
+                                }), GG.pageIds.map((GG => {
+                                  var SG;
+                                  const kG = AG(GG);
+                                  return (0, KG.jsxs)(yG.c, {
+                                    to: RG(bG, kG),
+                                    className: LG()("DocsNavLink", {
+                                      Active: kG.id === ZG
                                     }),
-                                    "aria-current": lu.id === ju ? "page" : void 0,
-                                    onClick: su,
-                                    children: [(0, Ou.jsx)(hu, {
-                                      name: lu.icon
-                                    }), (0, Ou.jsx)("span", {
-                                      children: null !== (Uu = lu.navTitle) && void 0 !== Uu ? Uu : lu.title
+                                    "aria-current": kG.id === ZG ? "page" : void 0,
+                                    onClick: wG,
+                                    children: [(0, KG.jsx)(dG, {
+                                      name: kG.icon
+                                    }), (0, KG.jsx)("span", {
+                                      children: null !== (SG = kG.navTitle) && void 0 !== SG ? SG : kG.title
                                     })]
-                                  }, lu.id)
+                                  }, kG.id)
                                 }))]
-                              }, uu.title)))
+                              }, GG.title)))
                             })
                           }
 
-                          function uX(uu) {
+                          function BL(GG) {
                             let {
-                              basePath: Eu,
-                              pageId: ju
-                            } = uu;
-                            const su = iu.flatMap((uu => uu.pageIds)),
-                              Uu = su.indexOf(ju),
-                              Zu = Uu > 0 ? Wu(su[Uu - 1]) : null,
-                              lu = Uu < su.length - 1 ? Wu(su[Uu + 1]) : null;
-                            return (0, Ou.jsxs)("nav", {
+                              basePath: bG,
+                              pageId: ZG
+                            } = GG;
+                            const wG = MG.flatMap((GG => GG.pageIds)),
+                              SG = wG.indexOf(ZG),
+                              LG = SG > 0 ? AG(wG[SG - 1]) : null,
+                              kG = SG < wG.length - 1 ? AG(wG[SG + 1]) : null;
+                            return (0, KG.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [Zu ? (0, Ou.jsxs)(Xu.c, {
+                              children: [LG ? (0, KG.jsxs)(yG.c, {
                                 className: "DocsPagerLink Previous",
-                                to: tu(Eu, Zu),
-                                children: [(0, Ou.jsx)("span", {
+                                to: RG(bG, LG),
+                                children: [(0, KG.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, Ou.jsx)("span", {
+                                }), (0, KG.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: Zu.title
+                                  children: LG.title
                                 })]
-                              }) : (0, Ou.jsx)("span", {}), lu && (0, Ou.jsxs)(Xu.c, {
+                              }) : (0, KG.jsx)("span", {}), kG && (0, KG.jsxs)(yG.c, {
                                 className: "DocsPagerLink Next",
-                                to: tu(Eu, lu),
-                                children: [(0, Ou.jsx)("span", {
+                                to: RG(bG, kG),
+                                children: [(0, KG.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, Ou.jsx)("span", {
+                                }), (0, KG.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: lu.title
+                                  children: kG.title
                                 })]
                               })]
                             })
                           }
 
-                          function EX(uu) {
+                          function Gy(GG) {
                             let {
-                              basePath: Eu,
-                              embedded: ju = !1
-                            } = uu;
+                              basePath: bG,
+                              embedded: ZG = !1
+                            } = GG;
                             const {
-                              pageSlug: Uu = ""
-                            } = (0, lu.B)(), fu = (0, lu.r)(), Cu = (0, lu.v)(), bu = (cu = Uu, Qu.find((uu => uu.slug === cu)));
-                            var cu;
-                            const [Nu, Yu] = function() {
-                              const [uu, Eu] = (0, su.useState)((() => {
-                                const uu = tZ.k.getItem(xZ);
-                                return "dark" === uu || "light" === uu ? uu : null
-                              })), [ju, Uu] = (0, su.useState)(TZ.matches ? "light" : "dark");
-                              return (0, su.useEffect)((() => {
-                                const uu = () => {
-                                  Uu(TZ.matches ? "light" : "dark")
+                              pageSlug: SG = ""
+                            } = (0, kG.v)(), YG = (0, kG.n)(), VG = (0, kG.q)(), pG = (fG = SG, PG.find((GG => GG.slug === fG)));
+                            var fG;
+                            const [QG, hG] = function() {
+                              const [GG, bG] = (0, wG.useState)((() => {
+                                const GG = eL.h.getItem(RL);
+                                return "dark" === GG || "light" === GG ? GG : null
+                              })), [ZG, SG] = (0, wG.useState)(TL.matches ? "light" : "dark");
+                              return (0, wG.useEffect)((() => {
+                                const GG = () => {
+                                  SG(TL.matches ? "light" : "dark")
                                 };
-                                return TZ.addEventListener("change", uu), () => {
-                                  TZ.removeEventListener("change", uu)
+                                return TL.addEventListener("change", GG), () => {
+                                  TL.removeEventListener("change", GG)
                                 }
-                              }), []), [null !== uu && void 0 !== uu ? uu : ju, uu => {
-                                tZ.k.setItem(xZ, uu), Eu(uu)
+                              }), []), [null !== GG && void 0 !== GG ? GG : ZG, GG => {
+                                eL.h.setItem(RL, GG), bG(GG)
                               }]
-                            }(), [Du, gu] = (0, su.useState)(null), [Mu, eu] = (0, su.useState)(!1), [Gu, pu] = (0, su.useState)(!1), [wu, du] = (0, su.useState)([]), au = function(uu, Eu) {
-                              const [ju, Uu] = (0, su.useState)("");
-                              return (0, su.useEffect)((() => {
-                                if (!Eu) return;
-                                let ju = 0;
-                                const su = () => {
-                                    var su, Zu;
-                                    ju = 0;
-                                    const Xu = Eu.getBoundingClientRect().top + yZ;
-                                    let lu = null !== (su = null === (Zu = uu[0]) || void 0 === Zu ? void 0 : Zu.anchor) && void 0 !== su ? su : "";
-                                    for (const Eu of uu) {
-                                      const uu = document.getElementById(Eu.anchor);
-                                      uu && uu.getBoundingClientRect().top <= Xu && (lu = Eu.anchor)
+                            }(), [JG, rG] = (0, wG.useState)(null), [zG, EG] = (0, wG.useState)(!1), [oG, XG] = (0, wG.useState)(!1), [uG, CG] = (0, wG.useState)([]), WG = function(GG, bG) {
+                              const [ZG, SG] = (0, wG.useState)("");
+                              return (0, wG.useEffect)((() => {
+                                if (!bG) return;
+                                let ZG = 0;
+                                const wG = () => {
+                                    var wG, LG;
+                                    ZG = 0;
+                                    const yG = bG.getBoundingClientRect().top + NL;
+                                    let kG = null !== (wG = null === (LG = GG[0]) || void 0 === LG ? void 0 : LG.anchor) && void 0 !== wG ? wG : "";
+                                    for (const bG of GG) {
+                                      const GG = document.getElementById(bG.anchor);
+                                      GG && GG.getBoundingClientRect().top <= yG && (kG = bG.anchor)
                                     }
-                                    Eu.scrollTop + Eu.clientHeight >= Eu.scrollHeight - 2 && Eu.scrollTop > 0 && uu.length > 0 && (lu = uu[uu.length - 1].anchor), Uu(lu)
+                                    bG.scrollTop + bG.clientHeight >= bG.scrollHeight - 2 && bG.scrollTop > 0 && GG.length > 0 && (kG = GG[GG.length - 1].anchor), SG(kG)
                                   },
-                                  Zu = () => {
-                                    ju || (ju = requestAnimationFrame(su))
+                                  LG = () => {
+                                    ZG || (ZG = requestAnimationFrame(wG))
                                   };
-                                return su(), Eu.addEventListener("scroll", Zu, {
+                                return wG(), bG.addEventListener("scroll", LG, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(ju), Eu.removeEventListener("scroll", Zu)
+                                  cancelAnimationFrame(ZG), bG.removeEventListener("scroll", LG)
                                 }
-                              }), [uu, Eu]), ju
-                            }(wu, Du), Pu = "" === Uu && fu.hash ? function(uu) {
-                              const Eu = (0, Ju.r)(uu);
-                              if (Fu(Wu("welcome"), Eu)) return null;
-                              const ju = Object.hasOwn(Lu, Eu) ? Lu[Eu] : null;
-                              if (ju) return {
-                                page: Wu(ju.pageId),
-                                anchor: ju.anchor
+                              }), [GG, bG]), ZG
+                            }(uG, JG), mG = "" === SG && YG.hash ? function(GG) {
+                              const bG = (0, iG.p)(GG);
+                              if (nG(AG("welcome"), bG)) return null;
+                              const ZG = Object.hasOwn(eG, bG) ? eG[bG] : null;
+                              if (ZG) return {
+                                page: AG(ZG.pageId),
+                                anchor: ZG.anchor
                               };
-                              const su = Wu("readme");
-                              return Fu(su, Eu) ? {
-                                page: su,
-                                anchor: Eu
-                              } : Bu(`#${Eu}`)
-                            }(fu.hash) : null;
-                            (0, su.useEffect)((() => (qu.d.set({
+                              const wG = AG("readme");
+                              return nG(wG, bG) ? {
+                                page: wG,
+                                anchor: bG
+                              } : gG(`#${bG}`)
+                            }(YG.hash) : null;
+                            (0, wG.useEffect)((() => (UG.e.set({
                               musicOnFromPage: !1
                             }), () => {
-                              qu.d.set({
+                              UG.e.set({
                                 musicOnFromPage: !0
-                              }), Ds()
-                            })), []), (0, su.useEffect)((() => {
-                              const uu = uu => {
-                                const Eu = uu.target;
-                                if (Eu.closest(".DocsTextDialog")) return;
-                                const ju = Eu.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(Eu.tagName);
-                                "k" === uu.key && (uu.metaKey || uu.ctrlKey) || "/" === uu.key && !ju ? (uu.preventDefault(), pu(!0)) : "Escape" === uu.key && eu(!1)
+                              }), dw()
+                            })), []), (0, wG.useEffect)((() => {
+                              const GG = GG => {
+                                const bG = GG.target;
+                                if (bG.closest(".DocsTextDialog")) return;
+                                const ZG = bG.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(bG.tagName);
+                                "k" === GG.key && (GG.metaKey || GG.ctrlKey) || "/" === GG.key && !ZG ? (GG.preventDefault(), XG(!0)) : "Escape" === GG.key && EG(!1)
                               };
-                              return window.addEventListener("keydown", uu), () => {
-                                window.removeEventListener("keydown", uu)
+                              return window.addEventListener("keydown", GG), () => {
+                                window.removeEventListener("keydown", GG)
                               }
                             }), []);
-                            const ou = (0, su.useRef)(null);
-                            (0, su.useLayoutEffect)((() => {
-                              var uu, Eu;
-                              if (!Du) return;
-                              const ju = ou.current === fu.pathname;
-                              ou.current = fu.pathname;
-                              const su = (0, Ju.r)(fu.hash),
-                                Uu = su ? document.getElementById(su) : null;
-                              if (null === (uu = Du.querySelector(".DocsTargeted")) || void 0 === uu || uu.classList.remove("DocsTargeted"), null === Uu || void 0 === Uu || null === (Eu = Uu.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === Eu || Eu.classList.add("DocsTargeted"), Uu) {
-                                var Zu;
-                                const uu = Uu.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (Zu = Uu.closest(".DocsChangelogEntry")) && void 0 !== Zu ? Zu : Uu).scrollIntoView({
-                                  block: uu ? "center" : "start",
-                                  behavior: ju ? "smooth" : "auto"
+                            const IG = (0, wG.useRef)(null);
+                            (0, wG.useLayoutEffect)((() => {
+                              var GG, bG;
+                              if (!JG) return;
+                              const ZG = IG.current === YG.pathname;
+                              IG.current = YG.pathname;
+                              const wG = (0, iG.p)(YG.hash),
+                                SG = wG ? document.getElementById(wG) : null;
+                              if (null === (GG = JG.querySelector(".DocsTargeted")) || void 0 === GG || GG.classList.remove("DocsTargeted"), null === SG || void 0 === SG || null === (bG = SG.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === bG || bG.classList.add("DocsTargeted"), SG) {
+                                var LG;
+                                const GG = SG.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (LG = SG.closest(".DocsChangelogEntry")) && void 0 !== LG ? LG : SG).scrollIntoView({
+                                  block: GG ? "center" : "start",
+                                  behavior: ZG ? "smooth" : "auto"
                                 })
-                              } else ju || Du.scrollTo({
+                              } else ZG || JG.scrollTo({
                                 top: 0
                               })
-                            }), [Du, fu.pathname, fu.hash, fu.key]);
-                            const ku = (0, su.useCallback)((() => {
-                                eu(!1)
+                            }), [JG, YG.pathname, YG.hash, YG.key]);
+                            const FG = (0, wG.useCallback)((() => {
+                                EG(!1)
                               }), []),
-                              mu = (0, su.useCallback)((uu => {
-                                Cu({
-                                  hash: uu
+                              vG = (0, wG.useCallback)((GG => {
+                                VG({
+                                  hash: GG
                                 })
-                              }), [Cu]);
-                            if (Pu) return (0, Ou.jsx)(lu.e, {
+                              }), [VG]);
+                            if (mG) return (0, KG.jsx)(kG.c, {
                               replace: !0,
-                              to: tu(Eu, Pu.page, Pu.anchor)
+                              to: RG(bG, mG.page, mG.anchor)
                             });
-                            if (!bu) return (0, Ou.jsx)(lu.e, {
+                            if (!pG) return (0, KG.jsx)(kG.c, {
                               replace: !0,
-                              to: Eu
+                              to: bG
                             });
-                            const vu = ju ? "div" : "main";
-                            return (0, Ou.jsx)(NE.Provider, {
-                              value: Eu,
-                              children: (0, Ou.jsx)(OE.Provider, {
-                                value: Du,
-                                children: (0, Ou.jsxs)("div", {
-                                  ref: gu,
-                                  className: Zu()("DocsSite", {
-                                    Embedded: ju,
-                                    NavOpen: Mu
+                            const aG = ZG ? "div" : "main";
+                            return (0, KG.jsx)(Qb.Provider, {
+                              value: bG,
+                              children: (0, KG.jsx)(Kb.Provider, {
+                                value: JG,
+                                children: (0, KG.jsxs)("div", {
+                                  ref: rG,
+                                  className: LG()("DocsSite", {
+                                    Embedded: ZG,
+                                    NavOpen: zG
                                   }),
-                                  "data-theme": Nu,
-                                  children: [(0, Ou.jsxs)("header", {
+                                  "data-theme": QG,
+                                  children: [(0, KG.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, Ou.jsx)("button", {
+                                    children: [(0, KG.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": Mu ? "Close menu" : "Open menu",
-                                      "aria-expanded": Mu,
+                                      "aria-label": zG ? "Close menu" : "Open menu",
+                                      "aria-expanded": zG,
                                       onClick: () => {
-                                        eu(!Mu)
+                                        EG(!zG)
                                       },
-                                      children: (0, Ou.jsx)(hu, {
-                                        name: Mu ? "cross" : "menu"
+                                      children: (0, KG.jsx)(dG, {
+                                        name: zG ? "cross" : "menu"
                                       })
-                                    }), (0, Ou.jsxs)(Xu.c, {
-                                      to: Eu,
+                                    }), (0, KG.jsxs)(yG.c, {
+                                      to: bG,
                                       className: "DocsBrand",
-                                      children: [(0, Ou.jsx)("img", {
+                                      children: [(0, KG.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, Ou.jsx)("span", {
+                                      }), (0, KG.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, Ou.jsx)("span", {
+                                      }), (0, KG.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, Ou.jsxs)("button", {
+                                    }), (0, KG.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        pu(!0)
+                                        XG(!0)
                                       },
-                                      children: [(0, Ou.jsx)(hu, {
+                                      children: [(0, KG.jsx)(dG, {
                                         name: "magnifying-glass"
-                                      }), (0, Ou.jsx)("span", {
+                                      }), (0, KG.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, Ou.jsxs)("kbd", {
-                                        children: [zZ ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, KG.jsxs)("kbd", {
+                                        children: [OL ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, Ou.jsxs)("div", {
+                                    }), (0, KG.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, Ou.jsxs)("a", {
-                                        href: nZ,
+                                      children: [(0, KG.jsxs)("a", {
+                                        href: DL,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, Ou.jsx)(hu, {
+                                        children: [(0, KG.jsx)(dG, {
                                           name: "discord"
-                                        }), (0, Ou.jsx)("span", {
+                                        }), (0, KG.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, Ou.jsxs)("a", {
-                                        href: AZ,
+                                      }), (0, KG.jsxs)("a", {
+                                        href: tL,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, Ou.jsx)(hu, {
+                                        children: [(0, KG.jsx)(dG, {
                                           name: "external-link"
-                                        }), (0, Ou.jsx)("span", {
+                                        }), (0, KG.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !ju && (0, Ou.jsxs)(Xu.c, {
+                                      }), !ZG && (0, KG.jsxs)(yG.c, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, Ou.jsx)(hu, {
+                                        children: [(0, KG.jsx)(dG, {
                                           name: "play"
-                                        }), (0, Ou.jsx)("span", {
+                                        }), (0, KG.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, Ou.jsx)(HZ, {
-                                        theme: Nu,
-                                        onChange: Yu
+                                      }), (0, KG.jsx)(HL, {
+                                        theme: QG,
+                                        onChange: hG
                                       })]
                                     })]
-                                  }), (0, Ou.jsxs)("div", {
+                                  }), (0, KG.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, Ou.jsx)("aside", {
+                                    children: [(0, KG.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, Ou.jsx)(RZ, {
-                                        basePath: Eu,
-                                        activePageId: bu.id,
-                                        onNavigate: ku
+                                      children: (0, KG.jsx)(xL, {
+                                        basePath: bG,
+                                        activePageId: pG.id,
+                                        onNavigate: FG
                                       })
-                                    }), (0, Ou.jsx)("div", {
+                                    }), (0, KG.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: ku
-                                    }), (0, Ou.jsxs)(vu, {
+                                      onClick: FG
+                                    }), (0, KG.jsxs)(aG, {
                                       className: "DocsMain",
-                                      children: [(0, Ou.jsx)(JZ, {
-                                        page: bu,
-                                        onTocChange: du
-                                      }, bu.id), (0, Ou.jsx)(uX, {
-                                        basePath: Eu,
-                                        pageId: bu.id
+                                      children: [(0, KG.jsx)(uL, {
+                                        page: pG,
+                                        onTocChange: CG
+                                      }, pG.id), (0, KG.jsx)(BL, {
+                                        basePath: bG,
+                                        pageId: pG.id
                                       })]
-                                    }), (0, Ou.jsx)("aside", {
-                                      className: Zu()("DocsToc", {
-                                        Timeline: "changelog" === bu.layout
+                                    }), (0, KG.jsx)("aside", {
+                                      className: LG()("DocsToc", {
+                                        Timeline: "changelog" === pG.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, Ou.jsx)(oZ, {
-                                        isChangelog: "changelog" === bu.layout,
-                                        toc: wu,
-                                        activeAnchor: au,
-                                        onNavigate: mu
+                                      children: (0, KG.jsx)(mL, {
+                                        isChangelog: "changelog" === pG.layout,
+                                        toc: uG,
+                                        activeAnchor: WG,
+                                        onNavigate: vG
                                       })
                                     })]
-                                  }), (0, Ou.jsx)(LZ, {}), Gu && (0, Ou.jsx)(FZ, {
-                                    basePath: Eu,
+                                  }), (0, KG.jsx)(gL, {}), oG && (0, KG.jsx)(qL, {
+                                    basePath: bG,
                                     onClose: () => {
-                                      pu(!1)
+                                      XG(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 4928: (uu, Eu, ju) => {
-                          ju.d(Eu, {
-                            B: () => cu,
-                            d: () => su,
-                            h: () => Xu,
-                            j: () => hu,
-                            l: () => Yu,
-                            n: () => lu,
-                            r: () => Uu,
-                            u: () => Zu,
-                            y: () => Ou,
-                            z: () => Nu
+                        }, 4758: (GG, bG, ZG) => {
+                          ZG.d(bG, {
+                            e: () => wG,
+                            f: () => yG,
+                            g: () => dG,
+                            k: () => hG,
+                            m: () => kG,
+                            p: () => SG,
+                            r: () => LG,
+                            t: () => KG,
+                            w: () => QG,
+                            z: () => fG
                           });
-                          const su = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const wG = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function Uu(uu) {
+                          function SG(GG) {
                             try {
-                              return decodeURIComponent(uu.slice(1))
+                              return decodeURIComponent(GG.slice(1))
                             } catch {
-                              return uu.slice(1)
+                              return GG.slice(1)
                             }
                           }
 
-                          function Zu(uu) {
-                            return uu.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function LG(GG) {
+                            return GG.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const Xu = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${su.source}`, "g");
+                          const yG = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${wG.source}`, "g");
 
-                          function lu(uu, Eu) {
-                            return 2 === uu.length ? Eu.replace(/^ (.*) $/, "$1") : Eu
-                          }
-
-                          function qu(uu) {
-                            return "" === uu.trim()
+                          function kG(GG, bG) {
+                            return 2 === GG.length ? bG.replace(/^ (.*) $/, "$1") : bG
                           }
 
-                          function fu(uu) {
-                            const Eu = [];
-                            for (const ju of uu.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Eu.length > 0 && Eu[Eu.length - 1].endsWith("\\") ? Eu[Eu.length - 1] += `|${ju}` : Eu.push(ju);
-                            return Eu.map((uu => uu.trim().replaceAll("\\|", "|")))
+                          function UG(GG) {
+                            return "" === GG.trim()
                           }
-                          const Cu = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function bu(uu) {
-                            const Eu = [],
-                              ju = [{
+                          function YG(GG) {
+                            const bG = [];
+                            for (const ZG of GG.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) bG.length > 0 && bG[bG.length - 1].endsWith("\\") ? bG[bG.length - 1] += `|${ZG}` : bG.push(ZG);
+                            return bG.map((GG => GG.trim().replaceAll("\\|", "|")))
+                          }
+                          const VG = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function pG(GG) {
+                            const bG = [],
+                              ZG = [{
                                 indent: -1,
-                                items: Eu
+                                items: bG
                               }];
-                            let su = null;
-                            for (const Uu of uu) {
-                              const uu = Uu.match(Cu);
-                              if (!uu) {
-                                su && (su.text += ` ${Uu.trim()}`);
+                            let wG = null;
+                            for (const SG of GG) {
+                              const GG = SG.match(VG);
+                              if (!GG) {
+                                wG && (wG.text += ` ${SG.trim()}`);
                                 continue
                               }
-                              const Eu = uu[1].replace(/\t/g, "  ").length;
-                              for (; Eu <= ju[ju.length - 1].indent;) ju.pop();
-                              su = {
-                                text: uu[3].trim(),
+                              const bG = GG[1].replace(/\t/g, "  ").length;
+                              for (; bG <= ZG[ZG.length - 1].indent;) ZG.pop();
+                              wG = {
+                                text: GG[3].trim(),
                                 children: []
-                              }, ju[ju.length - 1].items.push(su), ju.push({
-                                indent: Eu,
-                                items: su.children
+                              }, ZG[ZG.length - 1].items.push(wG), ZG.push({
+                                indent: bG,
+                                items: wG.children
                               })
                             }
-                            return Eu
+                            return bG
                           }
 
-                          function cu(uu) {
-                            const Eu = uu.replace(/\r\n/g, "\n").split("\n"),
-                              ju = [];
-                            let su = 0;
-                            for (; su < Eu.length;) {
-                              const uu = Eu[su];
-                              if (qu(uu)) {
-                                su++;
+                          function fG(GG) {
+                            const bG = GG.replace(/\r\n/g, "\n").split("\n"),
+                              ZG = [];
+                            let wG = 0;
+                            for (; wG < bG.length;) {
+                              const GG = bG[wG];
+                              if (UG(GG)) {
+                                wG++;
                                 continue
                               }
-                              const Uu = uu.match(/^\s*```\s*(\w*)\s*$/);
-                              if (Uu) {
-                                const uu = [];
-                                for (su++; su < Eu.length && !/^\s*```\s*$/.test(Eu[su]);) uu.push(Eu[su]), su++;
-                                su++, ju.push({
+                              const SG = GG.match(/^\s*```\s*(\w*)\s*$/);
+                              if (SG) {
+                                const GG = [];
+                                for (wG++; wG < bG.length && !/^\s*```\s*$/.test(bG[wG]);) GG.push(bG[wG]), wG++;
+                                wG++, ZG.push({
                                   kind: "code",
-                                  lang: Uu[1] || "text",
-                                  code: uu.join("\n").replace(/\s+$/, "")
+                                  lang: SG[1] || "text",
+                                  code: GG.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const Xu = uu.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (Xu) {
-                                const uu = Xu[2].trim();
-                                ju.push({
+                              const yG = GG.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (yG) {
+                                const GG = yG[2].trim();
+                                ZG.push({
                                   kind: "heading",
-                                  level: Xu[1].length,
-                                  text: uu,
-                                  anchor: Zu(uu)
-                                }), su++;
+                                  level: yG[1].length,
+                                  text: GG,
+                                  anchor: LG(GG)
+                                }), wG++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(uu)) {
-                                ju.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(GG)) {
+                                ZG.push({
                                   kind: "rule"
-                                }), su++;
+                                }), wG++;
                                 continue
                               }
-                              if (uu.trim().startsWith("|") && su + 1 < Eu.length && /^\s*\|[\s:|-]+\|\s*$/.test(Eu[su + 1])) {
-                                const Uu = fu(uu),
-                                  Zu = [];
-                                for (su += 2; su < Eu.length && Eu[su].trim().startsWith("|");) Zu.push(fu(Eu[su])), su++;
-                                ju.push({
+                              if (GG.trim().startsWith("|") && wG + 1 < bG.length && /^\s*\|[\s:|-]+\|\s*$/.test(bG[wG + 1])) {
+                                const SG = YG(GG),
+                                  LG = [];
+                                for (wG += 2; wG < bG.length && bG[wG].trim().startsWith("|");) LG.push(YG(bG[wG])), wG++;
+                                ZG.push({
                                   kind: "table",
-                                  header: Uu,
-                                  rows: Zu
+                                  header: SG,
+                                  rows: LG
                                 });
                                 continue
                               }
-                              if (uu.startsWith(">")) {
-                                const uu = [];
-                                for (; su < Eu.length && Eu[su].startsWith(">");) uu.push(Eu[su].replace(/^>\s?/, "")), su++;
-                                ju.push({
+                              if (GG.startsWith(">")) {
+                                const GG = [];
+                                for (; wG < bG.length && bG[wG].startsWith(">");) GG.push(bG[wG].replace(/^>\s?/, "")), wG++;
+                                ZG.push({
                                   kind: "quote",
-                                  blocks: cu(uu.join("\n"))
+                                  blocks: fG(GG.join("\n"))
                                 });
                                 continue
                               }
-                              if (Cu.test(uu)) {
-                                const Uu = [],
-                                  Zu = /^\s*\d+\./.test(uu);
-                                for (; su < Eu.length && !qu(Eu[su]) && (Cu.test(Eu[su]) || /^\s+\S/.test(Eu[su]));) Uu.push(Eu[su]), su++;
-                                ju.push({
+                              if (VG.test(GG)) {
+                                const SG = [],
+                                  LG = /^\s*\d+\./.test(GG);
+                                for (; wG < bG.length && !UG(bG[wG]) && (VG.test(bG[wG]) || /^\s+\S/.test(bG[wG]));) SG.push(bG[wG]), wG++;
+                                ZG.push({
                                   kind: "list",
-                                  ordered: Zu,
-                                  items: bu(Uu)
+                                  ordered: LG,
+                                  items: pG(SG)
                                 });
                                 continue
                               }
-                              const lu = [];
-                              for (; su < Eu.length && !qu(Eu[su]) && !/^\s*```/.test(Eu[su]) && !/^#{1,6}\s/.test(Eu[su]) && !Eu[su].startsWith(">") && !Cu.test(Eu[su]) && (!Eu[su].trim().startsWith("|") || 0 !== lu.length);) lu.push(Eu[su].trim()), su++;
-                              0 === lu.length && (lu.push(Eu[su].trim()), su++), ju.push({
+                              const kG = [];
+                              for (; wG < bG.length && !UG(bG[wG]) && !/^\s*```/.test(bG[wG]) && !/^#{1,6}\s/.test(bG[wG]) && !bG[wG].startsWith(">") && !VG.test(bG[wG]) && (!bG[wG].trim().startsWith("|") || 0 !== kG.length);) kG.push(bG[wG].trim()), wG++;
+                              0 === kG.length && (kG.push(bG[wG].trim()), wG++), ZG.push({
                                 kind: "paragraph",
-                                text: lu.join(" ")
+                                text: kG.join(" ")
                               })
                             }
-                            return ju
+                            return ZG
                           }
 
-                          function Nu(uu) {
-                            let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const ju = cu(uu);
-                            let su = "";
-                            const Uu = [],
-                              Zu = [],
-                              Xu = new Map;
-                            for (const fu of ju) {
-                              if ("heading" === fu.kind) {
-                                var lu;
-                                const uu = (null !== (lu = Xu.get(fu.anchor)) && void 0 !== lu ? lu : 0) + 1;
-                                Xu.set(fu.anchor, uu), uu > 1 && (fu.anchor = `${fu.anchor}-${uu}`)
+                          function QG(GG) {
+                            let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const ZG = fG(GG);
+                            let wG = "";
+                            const SG = [],
+                              LG = [],
+                              yG = new Map;
+                            for (const YG of ZG) {
+                              if ("heading" === YG.kind) {
+                                var kG;
+                                const GG = (null !== (kG = yG.get(YG.anchor)) && void 0 !== kG ? kG : 0) + 1;
+                                yG.set(YG.anchor, GG), GG > 1 && (YG.anchor = `${YG.anchor}-${GG}`)
                               }
-                              if ("heading" === fu.kind && 1 === fu.level && !su) {
-                                su = fu.text;
+                              if ("heading" === YG.kind && 1 === YG.level && !wG) {
+                                wG = YG.text;
                                 continue
                               }
-                              if ("heading" === fu.kind && fu.level <= Eu) {
-                                Zu.push({
-                                  heading: fu,
+                              if ("heading" === YG.kind && YG.level <= bG) {
+                                LG.push({
+                                  heading: YG,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const uu = Zu.at(-1);
-                              uu ? uu.blocks.push(fu) : Uu.push(fu)
+                              const GG = LG.at(-1);
+                              GG ? GG.blocks.push(YG) : SG.push(YG)
                             }
-                            const qu = uu => {
+                            const UG = GG => {
                               for (;
-                                "rule" === (null === (Eu = uu.at(-1)) || void 0 === Eu ? void 0 : Eu.kind);) {
-                                var Eu;
-                                uu.pop()
+                                "rule" === (null === (bG = GG.at(-1)) || void 0 === bG ? void 0 : bG.kind);) {
+                                var bG;
+                                GG.pop()
                               }
                             };
-                            qu(Uu);
-                            for (const fu of Zu) qu(fu.blocks);
+                            UG(SG);
+                            for (const YG of LG) UG(YG.blocks);
                             return {
-                              title: su,
-                              intro: Uu,
-                              sections: Zu
+                              title: wG,
+                              intro: SG,
+                              sections: LG
                             }
                           }
 
-                          function Ou(uu) {
+                          function KG(GG) {
                             return [{
                               heading: null,
-                              blocks: uu.intro
-                            }, ...uu.sections.map((uu => ({
-                              heading: uu.heading,
-                              blocks: uu.blocks
+                              blocks: GG.intro
+                            }, ...GG.sections.map((GG => ({
+                              heading: GG.heading,
+                              blocks: GG.blocks
                             })))]
                           }
 
-                          function Yu(uu) {
-                            return uu.flatMap((uu => "code" === uu.kind ? [uu] : "quote" === uu.kind ? Yu(uu.blocks) : []))
+                          function hG(GG) {
+                            return GG.flatMap((GG => "code" === GG.kind ? [GG] : "quote" === GG.kind ? hG(GG.blocks) : []))
                           }
 
-                          function hu(uu) {
-                            switch (uu.kind) {
+                          function dG(GG) {
+                            switch (GG.kind) {
                               case "heading":
                               case "paragraph":
-                                return uu.text;
+                                return GG.text;
                               case "code":
-                                return uu.code;
+                                return GG.code;
                               case "table":
-                                return [uu.header, ...uu.rows].map((uu => uu.join(" "))).join(" ");
+                                return [GG.header, ...GG.rows].map((GG => GG.join(" "))).join(" ");
                               case "list": {
-                                const Eu = uu => uu.map((uu => `${uu.text} ${Eu(uu.children)}`)).join(" ");
-                                return Eu(uu.items)
+                                const bG = GG => GG.map((GG => `${GG.text} ${bG(GG.children)}`)).join(" ");
+                                return bG(GG.items)
                               }
                               case "quote":
-                                return uu.blocks.map(hu).join(" ");
+                                return GG.blocks.map(dG).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 4999: (uu, Eu, ju) => {
-                          ju.d(Eu, {
-                            e: () => lu
+                        }, 4858: (GG, bG, ZG) => {
+                          ZG.d(bG, {
+                            b: () => kG
                           });
-                          var su = ju(58),
-                            Uu = ju(337),
-                            Zu = ju(1971),
-                            Xu = ju(1154);
+                          var wG = ZG(51),
+                            SG = ZG(333),
+                            LG = ZG(1889),
+                            yG = ZG(1067);
 
-                          function lu(uu) {
+                          function kG(GG) {
                             let {
-                              text: Eu
-                            } = uu;
-                            const ju = [];
-                            let lu = "";
-                            return (0, Uu.gc)(Eu).forEach(((uu, Eu) => {
-                              if ("string" === typeof uu || !(0, Zu.h)(uu.icon)) return void(lu += "string" === typeof uu ? uu : uu.icon);
-                              const Uu = Math.max(0, lu.trimEnd().search(/\S{1,12}$/));
-                              ju.push((0, Xu.jsxs)(su.Fragment, {
-                                children: [lu.slice(0, Uu), (0, Xu.jsxs)("span", {
+                              text: bG
+                            } = GG;
+                            const ZG = [];
+                            let kG = "";
+                            return (0, SG.xc)(bG).forEach(((GG, bG) => {
+                              if ("string" === typeof GG || !(0, LG.e)(GG.icon)) return void(kG += "string" === typeof GG ? GG : GG.icon);
+                              const SG = Math.max(0, kG.trimEnd().search(/\S{1,12}$/));
+                              ZG.push((0, yG.jsxs)(wG.Fragment, {
+                                children: [kG.slice(0, SG), (0, yG.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [lu.slice(Uu), (0, Xu.jsx)("span", {
+                                  children: [kG.slice(SG), (0, yG.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": uu.icon,
-                                    children: (0, Xu.jsx)(Zu.d, {
-                                      itemName: uu.icon,
+                                    "aria-label": GG.icon,
+                                    children: (0, yG.jsx)(LG.b, {
+                                      itemName: GG.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, Eu)), lu = ""
-                            })), ju.push(lu), (0, Xu.jsx)(Xu.Fragment, {
-                              children: ju
+                              }, bG)), kG = ""
+                            })), ZG.push(kG), (0, yG.jsx)(yG.Fragment, {
+                              children: ZG
                             })
                           }
-                        }, 4944: (uu, Eu, ju) => {
-                          ju.d(Eu, {
-                            d: () => gu,
-                            b: () => Du
+                        }, 4786: (GG, bG, ZG) => {
+                          ZG.d(bG, {
+                            g: () => rG,
+                            e: () => JG
                           });
-                          var su = ju(58),
-                            Uu = ju(1499),
-                            Zu = ju(1964),
-                            Xu = ju(4952),
-                            lu = ju(1154);
-                          const qu = (0, su.memo)((function(uu) {
+                          var wG = ZG(51),
+                            SG = ZG(1389),
+                            LG = ZG(1876),
+                            yG = ZG(4790),
+                            kG = ZG(1067);
+                          const UG = (0, wG.memo)((function(GG) {
                             let {
-                              initialParameters: Eu
-                            } = uu;
-                            const ju = (0, su.useRef)(null),
-                              Uu = (0, su.useRef)(null),
-                              qu = (0, su.useRef)(0),
-                              fu = (0, su.useRef)(null),
-                              Cu = Eu.description,
-                              bu = Eu.UE,
+                              initialParameters: bG
+                            } = GG;
+                            const ZG = (0, wG.useRef)(null),
+                              SG = (0, wG.useRef)(null),
+                              UG = (0, wG.useRef)(0),
+                              YG = (0, wG.useRef)(null),
+                              VG = bG.description,
+                              pG = bG.Zb,
                               {
-                                scale: cu,
-                                rotation: Nu
-                              } = null !== Eu && void 0 !== Eu ? Eu : {},
-                              Ou = (0, Xu.d)();
-                            return (0, su.useEffect)((() => {
-                              const uu = Ou.onFrame((() => {
-                                const uu = Ou.getState();
-                                if (!uu.isActive || !ju.current || !Uu.current) return;
-                                const Eu = uu.state;
-                                if (ju.current.value = Eu.progress, Eu.clickCount > qu.current) {
-                                  qu.current = Eu.clickCount;
-                                  const uu = Uu.current;
-                                  uu.classList.add("pulse"), fu.current = setTimeout((() => {
-                                    uu.classList.remove("pulse")
+                                scale: fG,
+                                rotation: QG
+                              } = null !== bG && void 0 !== bG ? bG : {},
+                              KG = (0, yG.f)();
+                            return (0, wG.useEffect)((() => {
+                              const GG = KG.onFrame((() => {
+                                const GG = KG.getState();
+                                if (!GG.isActive || !ZG.current || !SG.current) return;
+                                const bG = GG.state;
+                                if (ZG.current.value = bG.progress, bG.clickCount > UG.current) {
+                                  UG.current = bG.clickCount;
+                                  const GG = SG.current;
+                                  GG.classList.add("pulse"), YG.current = setTimeout((() => {
+                                    GG.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(fu.current), uu()
+                                clearTimeout(YG.current), GG()
                               }
-                            }), [Ou]), (0, lu.jsx)(lu.Fragment, {
-                              children: (0, lu.jsxs)("div", {
+                            }), [KG]), (0, kG.jsx)(kG.Fragment, {
+                              children: (0, kG.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== cu && {
-                                    "--scale": cu
+                                  ...null !== fG && {
+                                    "--scale": fG
                                   },
-                                  ...null !== Nu && {
-                                    "--rotation": `${Nu}deg`
+                                  ...null !== QG && {
+                                    "--rotation": `${QG}deg`
                                   }
                                 },
-                                children: [(0, lu.jsx)("progress", {
+                                children: [(0, kG.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: ju
-                                }), (0, lu.jsx)("span", {
+                                  ref: ZG
+                                }), (0, kG.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: Uu,
-                                  children: (0, lu.jsx)(Zu.d, {
+                                  ref: SG,
+                                  children: (0, kG.jsx)(LG.c, {
                                     text: [{
-                                      icon: bu
+                                      icon: pG
                                     }]
                                   })
-                                }), (0, lu.jsx)("div", {
+                                }), (0, kG.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, lu.jsx)(Zu.d, {
-                                    text: Cu
+                                  children: (0, kG.jsx)(LG.c, {
+                                    text: VG
                                   })
                                 })]
                               })
                             })
                           }));
-                          var fu = ju(1105),
-                            Cu = ju.n(fu);
-                          const bu = 2 * Math.PI * 90,
-                            cu = (0, su.memo)((function(uu) {
+                          var YG = ZG(1006),
+                            VG = ZG.n(YG);
+                          const pG = 2 * Math.PI * 90,
+                            fG = (0, wG.memo)((function(GG) {
                               let {
-                                initialParameters: Eu
-                              } = uu;
-                              const ju = (0, su.useRef)(null),
-                                Uu = (0, su.useRef)(null),
-                                qu = (0, su.useRef)(null),
-                                fu = Eu.label,
-                                cu = Eu.icon,
-                                Nu = Eu.lE,
+                                initialParameters: bG
+                              } = GG;
+                              const ZG = (0, wG.useRef)(null),
+                                SG = (0, wG.useRef)(null),
+                                UG = (0, wG.useRef)(null),
+                                YG = bG.label,
+                                fG = bG.icon,
+                                QG = bG.yb,
                                 {
-                                  scale: Ou,
-                                  rotation: Yu,
-                                  qE: hu
-                                } = null !== Eu && void 0 !== Eu ? Eu : {},
-                                Du = (0, Xu.d)();
-                              return (0, su.useEffect)((() => {
-                                const uu = Du.onFrame((() => {
-                                  var uu, Eu;
-                                  const su = Du.getState();
-                                  if (!su.isActive || !Uu.current) return;
-                                  const Zu = su.state,
-                                    Xu = null !== (uu = Zu.timeRemaining) && void 0 !== uu ? uu : 0,
-                                    lu = null !== (Eu = Zu.XE) && void 0 !== Eu ? Eu : 1,
-                                    fu = bu * (1 - Xu / lu);
-                                  Uu.current.style.strokeDashoffset = `${fu}`, ju.current && (ju.current.style.opacity = Xu > 0 ? "1" : "0"), qu.current && Nu && (qu.current.textContent = `${(Xu/1e3).toFixed(1)}s`)
+                                  scale: KG,
+                                  rotation: hG,
+                                  kb: dG
+                                } = null !== bG && void 0 !== bG ? bG : {},
+                                JG = (0, yG.f)();
+                              return (0, wG.useEffect)((() => {
+                                const GG = JG.onFrame((() => {
+                                  var GG, bG;
+                                  const wG = JG.getState();
+                                  if (!wG.isActive || !SG.current) return;
+                                  const LG = wG.state,
+                                    yG = null !== (GG = LG.timeRemaining) && void 0 !== GG ? GG : 0,
+                                    kG = null !== (bG = LG.Lb) && void 0 !== bG ? bG : 1,
+                                    YG = pG * (1 - yG / kG);
+                                  SG.current.style.strokeDashoffset = `${YG}`, ZG.current && (ZG.current.style.opacity = yG > 0 ? "1" : "0"), UG.current && QG && (UG.current.textContent = `${(yG/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  uu()
+                                  GG()
                                 }
-                              }), [Du, Nu]), (0, lu.jsxs)("div", {
+                              }), [JG, QG]), (0, kG.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: ju,
+                                ref: ZG,
                                 style: {
-                                  ...null !== Ou && {
-                                    "--scale": Ou
+                                  ...null !== KG && {
+                                    "--scale": KG
                                   },
-                                  ...null !== Yu && {
-                                    "--rotation": `${Yu}deg`
+                                  ...null !== hG && {
+                                    "--rotation": `${hG}deg`
                                   }
                                 },
-                                children: [(0, lu.jsxs)("div", {
+                                children: [(0, kG.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, lu.jsxs)("svg", {
+                                  children: [(0, kG.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, lu.jsx)("circle", {
+                                    children: [(0, kG.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, lu.jsx)("circle", {
+                                    }), (0, kG.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6290,80 +6290,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: bu,
-                                      ref: Uu
+                                      strokeDasharray: pG,
+                                      ref: SG
                                     })]
-                                  }), (0, lu.jsx)("div", {
+                                  }), (0, kG.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, lu.jsx)(Zu.d, {
+                                    children: (0, kG.jsx)(LG.c, {
                                       text: [{
-                                        icon: cu
+                                        icon: fG
                                       }],
-                                      className: Cu()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: hu
+                                      className: VG()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: dG
                                       })
                                     })
                                   })]
-                                }), (0, lu.jsxs)("div", {
+                                }), (0, kG.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, lu.jsx)(Zu.d, {
-                                    text: fu,
+                                  children: [(0, kG.jsx)(LG.c, {
+                                    text: YG,
                                     className: "QTETimedClickLabelText"
-                                  }), Nu && (0, lu.jsx)("span", {
+                                  }), QG && (0, kG.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: qu
+                                    ref: UG
                                   })]
                                 })]
                               })
                             })),
-                            Nu = (0, su.memo)((function(uu) {
+                            QG = (0, wG.memo)((function(GG) {
                               let {
-                                initialParameters: Eu
-                              } = uu;
-                              const ju = (0, su.useRef)(null),
-                                Uu = (0, su.useRef)(null),
-                                qu = (0, su.useRef)(null),
-                                fu = (0, su.useRef)(!1),
-                                Cu = Eu.description,
-                                bu = null === Eu || void 0 === Eu ? void 0 : Eu.icon,
-                                cu = (0, Xu.d)();
-                              return (0, su.useEffect)((() => {
-                                const uu = cu.onFrame((() => {
-                                  const uu = cu.getState();
-                                  if (!uu.isActive) return;
-                                  const Eu = uu.state;
-                                  if (ju.current) {
-                                    const uu = 100 * (Eu.catchZonePosition - Eu.CE / 2);
-                                    ju.current.style.left = `${uu}%`, ju.current.style.width = 100 * Eu.CE + "%", Eu.isCatching !== fu.current && (fu.current = Eu.isCatching, Eu.isCatching ? ju.current.classList.add("catching") : ju.current.classList.remove("catching"))
+                                initialParameters: bG
+                              } = GG;
+                              const ZG = (0, wG.useRef)(null),
+                                SG = (0, wG.useRef)(null),
+                                UG = (0, wG.useRef)(null),
+                                YG = (0, wG.useRef)(!1),
+                                VG = bG.description,
+                                pG = null === bG || void 0 === bG ? void 0 : bG.icon,
+                                fG = (0, yG.f)();
+                              return (0, wG.useEffect)((() => {
+                                const GG = fG.onFrame((() => {
+                                  const GG = fG.getState();
+                                  if (!GG.isActive) return;
+                                  const bG = GG.state;
+                                  if (ZG.current) {
+                                    const GG = 100 * (bG.catchZonePosition - bG.Yb / 2);
+                                    ZG.current.style.left = `${GG}%`, ZG.current.style.width = 100 * bG.Yb + "%", bG.isCatching !== YG.current && (YG.current = bG.isCatching, bG.isCatching ? ZG.current.classList.add("catching") : ZG.current.classList.remove("catching"))
                                   }
-                                  Uu.current && (Uu.current.style.left = 100 * Eu.moverPosition + "%"), qu.current && (qu.current.value = Eu.progress)
+                                  SG.current && (SG.current.style.left = 100 * bG.moverPosition + "%"), UG.current && (UG.current.value = bG.progress)
                                 }));
                                 return () => {
-                                  uu()
+                                  GG()
                                 }
-                              }), [cu]), (0, lu.jsxs)("div", {
+                              }), [fG]), (0, kG.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, lu.jsx)("div", {
+                                children: [(0, kG.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, lu.jsx)(Zu.d, {
-                                    text: Cu
+                                  children: (0, kG.jsx)(LG.c, {
+                                    text: VG
                                   })
-                                }), (0, lu.jsx)("progress", {
+                                }), (0, kG.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: qu
-                                }), (0, lu.jsxs)("div", {
+                                  ref: UG
+                                }), (0, kG.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, lu.jsx)("div", {
+                                  children: [(0, kG.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: ju
-                                  }), (0, lu.jsx)("div", {
+                                    ref: ZG
+                                  }), (0, kG.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: Uu,
-                                    children: (0, lu.jsx)("span", {
-                                      children: bu && (0, lu.jsx)(Zu.d, {
+                                    ref: SG,
+                                    children: (0, kG.jsx)("span", {
+                                      children: pG && (0, kG.jsx)(LG.c, {
                                         text: [{
-                                          icon: bu,
+                                          icon: pG,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6374,782 +6374,782 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var Ou = ju(649);
-                          const Yu = (0, su.memo)((function(uu) {
+                          var KG = ZG(604);
+                          const hG = (0, wG.memo)((function(GG) {
                               let {
-                                initialParameters: Eu
-                              } = uu;
-                              const ju = (0, su.useRef)(null),
-                                Uu = Eu.label,
-                                qu = Eu.DE,
+                                initialParameters: bG
+                              } = GG;
+                              const ZG = (0, wG.useRef)(null),
+                                SG = bG.label,
+                                UG = bG.Jb,
                                 {
-                                  icon: fu,
-                                  scale: Cu,
-                                  rotation: bu
-                                } = null !== Eu && void 0 !== Eu ? Eu : {},
-                                cu = 100 * (.5 - qu / 2),
-                                Nu = 100 * qu,
-                                Yu = (0, Xu.d)();
-                              return (0, su.useEffect)((() => {
-                                const uu = Yu.onFrame((() => {
-                                  const uu = Yu.getState();
-                                  if (!uu.isActive || !ju.current) return;
-                                  const Eu = uu.state;
-                                  ju.current.style.left = 100 * Eu.markerPosition + "%"
+                                  icon: YG,
+                                  scale: VG,
+                                  rotation: pG
+                                } = null !== bG && void 0 !== bG ? bG : {},
+                                fG = 100 * (.5 - UG / 2),
+                                QG = 100 * UG,
+                                hG = (0, yG.f)();
+                              return (0, wG.useEffect)((() => {
+                                const GG = hG.onFrame((() => {
+                                  const GG = hG.getState();
+                                  if (!GG.isActive || !ZG.current) return;
+                                  const bG = GG.state;
+                                  ZG.current.style.left = 100 * bG.markerPosition + "%"
                                 }));
                                 return () => {
-                                  uu()
+                                  GG()
                                 }
-                              }), [Yu]), (0, lu.jsxs)("div", {
+                              }), [hG]), (0, kG.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, Ou.H)(Cu) && {
-                                    "--scale": Cu
+                                  ...!(0, KG.L)(VG) && {
+                                    "--scale": VG
                                   },
-                                  ...!(0, Ou.H)(bu) && {
-                                    "--rotation": `${bu}deg`
+                                  ...!(0, KG.L)(pG) && {
+                                    "--rotation": `${pG}deg`
                                   }
                                 },
-                                children: [fu && (0, lu.jsx)(Zu.d, {
+                                children: [YG && (0, kG.jsx)(LG.c, {
                                   text: [{
-                                    icon: fu
+                                    icon: YG
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, lu.jsxs)("div", {
+                                }), (0, kG.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, lu.jsx)("div", {
+                                  children: [(0, kG.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${cu}%`,
-                                      width: `${Nu}%`
+                                      left: `${fG}%`,
+                                      width: `${QG}%`
                                     }
-                                  }), (0, lu.jsx)("div", {
+                                  }), (0, kG.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: ju
+                                    ref: ZG
                                   })]
-                                }), (0, lu.jsx)("div", {
+                                }), (0, kG.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, lu.jsx)(Zu.d, {
-                                    text: Uu
+                                  children: (0, kG.jsx)(LG.c, {
+                                    text: SG
                                   })
                                 })]
                               })
                             })),
-                            hu = (0, su.memo)((function(uu) {
+                            dG = (0, wG.memo)((function(GG) {
                               let {
-                                initialParameters: Eu
-                              } = uu;
-                              const ju = (0, su.useRef)(null),
-                                [Uu, qu] = (0, su.useState)((() => new Array(Eu.ME).fill("pending"))),
-                                [fu, Cu] = (0, su.useState)((() => {
-                                  const uu = Eu.pE;
-                                  return (0, Ou.H)(uu) || uu <= 0 ? [] : new Array(uu).fill("pending")
+                                initialParameters: bG
+                              } = GG;
+                              const ZG = (0, wG.useRef)(null),
+                                [SG, UG] = (0, wG.useState)((() => new Array(bG.zb).fill("pending"))),
+                                [YG, VG] = (0, wG.useState)((() => {
+                                  const GG = bG.Xb;
+                                  return (0, KG.L)(GG) || GG <= 0 ? [] : new Array(GG).fill("pending")
                                 })),
-                                bu = Eu.label,
+                                pG = bG.label,
                                 {
-                                  icon: cu
-                                } = Eu,
-                                Nu = (0, su.useRef)(0),
-                                Yu = (0, su.useRef)(0),
-                                hu = (0, su.useRef)([]),
-                                Du = (0, Xu.d)();
-                              return (0, su.useEffect)((() => {
-                                const uu = Du.onFrame((() => {
-                                  const uu = Du.getState();
-                                  if (!uu.isActive || !ju.current) return;
-                                  const Eu = uu.state,
-                                    su = 30 + 60 * Eu.outerCircleProgress;
-                                  if (ju.current.setAttribute("r", String(su)), !0 === Eu.lastClickResult && Eu.successes > Nu.current) {
-                                    ju.current.classList.remove("QTERhythmClickOuterCircle--miss"), ju.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const uu = setTimeout((() => {
-                                      var uu;
-                                      null === (uu = ju.current) || void 0 === uu || uu.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: fG
+                                } = bG,
+                                QG = (0, wG.useRef)(0),
+                                hG = (0, wG.useRef)(0),
+                                dG = (0, wG.useRef)([]),
+                                JG = (0, yG.f)();
+                              return (0, wG.useEffect)((() => {
+                                const GG = JG.onFrame((() => {
+                                  const GG = JG.getState();
+                                  if (!GG.isActive || !ZG.current) return;
+                                  const bG = GG.state,
+                                    wG = 30 + 60 * bG.outerCircleProgress;
+                                  if (ZG.current.setAttribute("r", String(wG)), !0 === bG.lastClickResult && bG.successes > QG.current) {
+                                    ZG.current.classList.remove("QTERhythmClickOuterCircle--miss"), ZG.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const GG = setTimeout((() => {
+                                      var GG;
+                                      null === (GG = ZG.current) || void 0 === GG || GG.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    hu.current.push(uu)
-                                  } else if (!1 === Eu.lastClickResult && Eu.misses > Yu.current) {
-                                    ju.current.classList.remove("QTERhythmClickOuterCircle--hit"), ju.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const uu = setTimeout((() => {
-                                      var uu;
-                                      null === (uu = ju.current) || void 0 === uu || uu.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    dG.current.push(GG)
+                                  } else if (!1 === bG.lastClickResult && bG.misses > hG.current) {
+                                    ZG.current.classList.remove("QTERhythmClickOuterCircle--hit"), ZG.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const GG = setTimeout((() => {
+                                      var GG;
+                                      null === (GG = ZG.current) || void 0 === GG || GG.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    hu.current.push(uu)
+                                    dG.current.push(GG)
                                   }
-                                  Eu.successes === Nu.current && Eu.misses === Yu.current || (Nu.current = Eu.successes, Yu.current = Eu.misses, qu((uu => {
-                                    const ju = [...uu];
-                                    for (let su = 0; su < Eu.ME; su++) ju[su] = su < Eu.successes ? "success" : "pending";
-                                    return ju
-                                  })), Cu((uu => {
-                                    if (0 === uu.length) return uu;
-                                    const ju = [...uu];
-                                    for (let su = 0; su < ju.length; su++) ju[su] = su < Eu.misses ? "miss" : "pending";
-                                    return ju
+                                  bG.successes === QG.current && bG.misses === hG.current || (QG.current = bG.successes, hG.current = bG.misses, UG((GG => {
+                                    const ZG = [...GG];
+                                    for (let wG = 0; wG < bG.zb; wG++) ZG[wG] = wG < bG.successes ? "success" : "pending";
+                                    return ZG
+                                  })), VG((GG => {
+                                    if (0 === GG.length) return GG;
+                                    const ZG = [...GG];
+                                    for (let wG = 0; wG < ZG.length; wG++) ZG[wG] = wG < bG.misses ? "miss" : "pending";
+                                    return ZG
                                   })))
                                 }));
                                 return () => {
-                                  uu();
-                                  for (const uu of hu.current) clearTimeout(uu);
-                                  hu.current = []
+                                  GG();
+                                  for (const GG of dG.current) clearTimeout(GG);
+                                  dG.current = []
                                 }
-                              }), [Du]), (0, lu.jsxs)("div", {
+                              }), [JG]), (0, kG.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, lu.jsx)("div", {
+                                children: [(0, kG.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: Uu.map(((uu, Eu) => (0, lu.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === uu ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, Eu)))
-                                }), (0, lu.jsxs)("div", {
+                                  children: SG.map(((GG, bG) => (0, kG.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === GG ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, bG)))
+                                }), (0, kG.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, lu.jsxs)("svg", {
+                                  children: [(0, kG.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, lu.jsx)("circle", {
+                                    children: [(0, kG.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, lu.jsx)("circle", {
+                                    }), (0, kG.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: ju
+                                      ref: ZG
                                     })]
-                                  }), cu && (0, lu.jsx)("div", {
+                                  }), fG && (0, kG.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, lu.jsx)(Zu.d, {
+                                    children: (0, kG.jsx)(LG.c, {
                                       text: [{
-                                        icon: cu
+                                        icon: fG
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), fu.length > 0 && (0, lu.jsx)("div", {
+                                }), YG.length > 0 && (0, kG.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: fu.map(((uu, Eu) => (0, lu.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === uu ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, Eu)))
-                                }), (0, lu.jsx)("div", {
+                                  children: YG.map(((GG, bG) => (0, kG.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === GG ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, bG)))
+                                }), (0, kG.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, lu.jsx)(Zu.d, {
-                                    text: bu
+                                  children: (0, kG.jsx)(LG.c, {
+                                    text: pG
                                   })
                                 })]
                               })
                             }));
 
-                          function Du(uu) {
+                          function JG(GG) {
                             let {
-                              qte: Eu
-                            } = uu;
-                            switch (Eu.type) {
+                              qte: bG
+                            } = GG;
+                            switch (bG.type) {
                               case "progressBar":
-                                return (0, lu.jsx)(qu, {
-                                  initialParameters: Eu.parameters
+                                return (0, kG.jsx)(UG, {
+                                  initialParameters: bG.parameters
                                 });
                               case "timedClick":
-                                return (0, lu.jsx)(cu, {
-                                  initialParameters: Eu.parameters
+                                return (0, kG.jsx)(fG, {
+                                  initialParameters: bG.parameters
                                 });
                               case "gravityBar":
-                                return (0, lu.jsx)(Nu, {
-                                  initialParameters: Eu.parameters
+                                return (0, kG.jsx)(QG, {
+                                  initialParameters: bG.parameters
                                 });
                               case "precisionBar":
-                                return (0, lu.jsx)(Yu, {
-                                  initialParameters: Eu.parameters
+                                return (0, kG.jsx)(hG, {
+                                  initialParameters: bG.parameters
                                 });
                               case "rhythmClick":
-                                return (0, lu.jsx)(hu, {
-                                  initialParameters: Eu.parameters
+                                return (0, kG.jsx)(dG, {
+                                  initialParameters: bG.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const gu = (0, su.memo)((function() {
-                            const [uu, Eu] = (0, su.useState)({
+                          const rG = (0, wG.memo)((function() {
+                            const [GG, bG] = (0, wG.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, Uu.f)("qteStateUpdated", (uu => {
-                              Eu(uu)
-                            })), uu.isActive && uu.type ? (0, lu.jsx)("div", {
+                            return (0, SG.g)("qteStateUpdated", (GG => {
+                              bG(GG)
+                            })), GG.isActive && GG.type ? (0, kG.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, lu.jsx)(Du, {
-                                qte: uu
+                              children: (0, kG.jsx)(JG, {
+                                qte: GG
                               })
                             }) : null
                           }))
-                        }, 4952: (uu, Eu, ju) => {
-                          ju.d(Eu, {
-                            c: () => lu,
-                            d: () => qu
+                        }, 4790: (GG, bG, ZG) => {
+                          ZG.d(bG, {
+                            b: () => kG,
+                            f: () => UG
                           });
-                          var su = ju(58),
-                            Uu = ju(1353),
-                            Zu = ju(4958);
-                          const Xu = {
-                              getState: () => Zu.d.getCurrentState(),
-                              onFrame: Uu.t
+                          var wG = ZG(51),
+                            SG = ZG(1260),
+                            LG = ZG(4792);
+                          const yG = {
+                              getState: () => LG.e.getCurrentState(),
+                              onFrame: SG.q
                             },
-                            lu = (0, su.createContext)(Xu);
+                            kG = (0, wG.createContext)(yG);
 
-                          function qu() {
-                            return (0, su.useContext)(lu)
+                          function UG() {
+                            return (0, wG.useContext)(kG)
                           }
-                        }, 5003: (uu, Eu, ju) => {
-                          ju.d(Eu, {
-                            e: () => Vu,
-                            i: () => Ku
+                        }, 4864: (GG, bG, ZG) => {
+                          ZG.d(bG, {
+                            d: () => lG,
+                            f: () => cG
                           });
-                          var su = ju(5011),
-                            Uu = ju(337);
-                          const Zu = 120,
-                            Xu = 260,
-                            lu = 1.15,
-                            qu = 1.2,
-                            fu = 2,
-                            Cu = 1.08,
-                            bu = .8,
-                            cu = .95,
-                            Nu = 8,
-                            Ou = "[\"')\\]\u300d\u300f\uff09]*",
-                            Yu = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Ou}$`),
-                            hu = new RegExp(`[?\uff1f]${Ou}$`),
-                            Du = new RegExp(`[!\uff01]${Ou}$`),
-                            gu = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            Mu = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            eu = new RegExp(`[${Mu}]`),
-                            Gu = new RegExp(`[${Mu}]|[^${Mu}]+`, "g"),
-                            pu = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var wG = ZG(4871),
+                            SG = ZG(333);
+                          const LG = 120,
+                            yG = 260,
+                            kG = 1.15,
+                            UG = 1.2,
+                            YG = 2,
+                            VG = 1.08,
+                            pG = .8,
+                            fG = .95,
+                            QG = 8,
+                            KG = "[\"')\\]\u300d\u300f\uff09]*",
+                            hG = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${KG}$`),
+                            dG = new RegExp(`[?\uff1f]${KG}$`),
+                            JG = new RegExp(`[!\uff01]${KG}$`),
+                            rG = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            zG = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            EG = new RegExp(`[${zG}]`),
+                            oG = new RegExp(`[${zG}]|[^${zG}]+`, "g"),
+                            XG = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function wu(uu) {
-                            let Eu = 2166136261;
-                            for (let ju = 0; ju < uu.length; ju++) Eu ^= uu.charCodeAt(ju), Eu = Math.imul(Eu, 16777619);
-                            return (Eu >>> 0) / 4294967295 * 2 - 1
+                          function uG(GG) {
+                            let bG = 2166136261;
+                            for (let ZG = 0; ZG < GG.length; ZG++) bG ^= GG.charCodeAt(ZG), bG = Math.imul(bG, 16777619);
+                            return (bG >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function Ju(uu) {
-                            var Eu;
-                            if (eu.test(uu)) return 1;
-                            const ju = uu.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              su = ju.replace(/[^0-9]/g, "");
-                            if (su.length > 0 && !/\p{L}/u.test(ju)) return Math.min(su.length, 4);
-                            const Uu = null !== (Eu = ju.match(pu)) && void 0 !== Eu ? Eu : [];
-                            if (0 === Uu.length) {
-                              var Zu, Xu;
-                              const uu = null !== (Zu = null === (Xu = ju.match(/\p{L}/gu)) || void 0 === Xu ? void 0 : Xu.length) && void 0 !== Zu ? Zu : 0;
-                              return 0 === uu ? 0 : Math.min(Math.max(1, Math.round(uu / 2.5)), Nu)
+                          function iG(GG) {
+                            var bG;
+                            if (EG.test(GG)) return 1;
+                            const ZG = GG.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              wG = ZG.replace(/[^0-9]/g, "");
+                            if (wG.length > 0 && !/\p{L}/u.test(ZG)) return Math.min(wG.length, 4);
+                            const SG = null !== (bG = ZG.match(XG)) && void 0 !== bG ? bG : [];
+                            if (0 === SG.length) {
+                              var LG, yG;
+                              const GG = null !== (LG = null === (yG = ZG.match(/\p{L}/gu)) || void 0 === yG ? void 0 : yG.length) && void 0 !== LG ? LG : 0;
+                              return 0 === GG ? 0 : Math.min(Math.max(1, Math.round(GG / 2.5)), QG)
                             }
-                            const lu = ju.replace(/[^\p{L}]/gu, ""),
-                              qu = Uu.length > 1 && "e" === Uu.at(-1) && lu.endsWith("e") && !lu.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(uu.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(Uu.length - (qu ? 1 : 0), Nu)
+                            const kG = ZG.replace(/[^\p{L}]/gu, ""),
+                              UG = SG.length > 1 && "e" === SG.at(-1) && kG.endsWith("e") && !kG.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(GG.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(SG.length - (UG ? 1 : 0), QG)
                           }
 
-                          function du(uu) {
-                            return uu.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function CG(GG) {
+                            return GG.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function au(uu) {
-                            const Eu = uu.replace(/[^\p{L}]/gu, "");
-                            return Eu.length >= 2 && Eu === Eu.toUpperCase() && Eu !== Eu.toLowerCase()
+                          function WG(GG) {
+                            const bG = GG.replace(/[^\p{L}]/gu, "");
+                            return bG.length >= 2 && bG === bG.toUpperCase() && bG !== bG.toLowerCase()
                           }
 
-                          function Pu(uu, Eu) {
-                            var ju;
-                            const Nu = Eu && (0, su.l)(Eu),
-                              Ou = null !== (ju = null === Nu || void 0 === Nu ? void 0 : Nu.syllableMs) && void 0 !== ju ? ju : su.e,
-                              Mu = function(uu) {
-                                const Eu = [];
-                                for (const su of (0, Uu.gc)(uu))
-                                  if ("string" === typeof su)
-                                    for (const uu of su.split(/(\s+)/)) {
-                                      if ("" === uu) continue;
-                                      if (/^\s+$/.test(uu)) {
-                                        Eu.push({
+                          function mG(GG, bG) {
+                            var ZG;
+                            const QG = bG && (0, wG.i)(bG),
+                              KG = null !== (ZG = null === QG || void 0 === QG ? void 0 : QG.syllableMs) && void 0 !== ZG ? ZG : wG.d,
+                              zG = function(GG) {
+                                const bG = [];
+                                for (const wG of (0, SG.xc)(GG))
+                                  if ("string" === typeof wG)
+                                    for (const GG of wG.split(/(\s+)/)) {
+                                      if ("" === GG) continue;
+                                      if (/^\s+$/.test(GG)) {
+                                        bG.push({
                                           kind: "space",
-                                          text: uu
+                                          text: GG
                                         });
                                         continue
                                       }
-                                      if (!eu.test(uu)) {
-                                        Eu.push({
+                                      if (!EG.test(GG)) {
+                                        bG.push({
                                           kind: "word",
-                                          text: uu,
+                                          text: GG,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let su = !0;
-                                      for (const Uu of null !== (ju = uu.match(Gu)) && void 0 !== ju ? ju : []) {
-                                        var ju;
-                                        const uu = Eu.at(-1);
-                                        su || "word" !== (null === uu || void 0 === uu ? void 0 : uu.kind) || eu.test(Uu) || /[\p{L}\p{N}]/u.test(Uu) ? (su || Eu.push({
+                                      let wG = !0;
+                                      for (const SG of null !== (ZG = GG.match(oG)) && void 0 !== ZG ? ZG : []) {
+                                        var ZG;
+                                        const GG = bG.at(-1);
+                                        wG || "word" !== (null === GG || void 0 === GG ? void 0 : GG.kind) || EG.test(SG) || /[\p{L}\p{N}]/u.test(SG) ? (wG || bG.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), Eu.push({
+                                        }), bG.push({
                                           kind: "word",
-                                          text: Uu,
+                                          text: SG,
                                           delayMs: 0
-                                        }), su = !1) : uu.text += Uu
+                                        }), wG = !1) : GG.text += SG
                                       }
-                                    } else Eu.push({
+                                    } else bG.push({
                                       kind: "icon",
-                                      text: su.icon,
+                                      text: wG.icon,
                                       delayMs: 0
                                     });
-                                return Eu
-                              }(uu),
-                              pu = [];
-                            let Pu = [];
-                            for (const su of Mu) "space" !== su.kind && (Pu.push(su), Yu.test(su.text) && (pu.push(Pu), Pu = []));
-                            pu.push(Pu);
-                            const ou = [];
-                            let ku = 0;
-                            for (const su of pu) {
-                              var mu, vu;
-                              const uu = null !== (mu = null === (vu = su.at(-1)) || void 0 === vu ? void 0 : vu.text) && void 0 !== mu ? mu : "",
-                                Eu = hu.test(uu),
-                                ju = Du.test(uu),
-                                Uu = su.map((uu => "word" === uu.kind ? Ju(uu.text) : 1)),
-                                Mu = Uu.findLastIndex((uu => uu > 0));
-                              for (const [hu, Du] of su.entries()) {
-                                const uu = "word" === Du.kind,
-                                  su = Uu[hu];
-                                Du.delayMs = ku;
-                                for (let Uu = 0; Nu && Uu < su; Uu++) {
+                                return bG
+                              }(GG),
+                              XG = [];
+                            let mG = [];
+                            for (const wG of zG) "space" !== wG.kind && (mG.push(wG), hG.test(wG.text) && (XG.push(mG), mG = []));
+                            XG.push(mG);
+                            const IG = [];
+                            let FG = 0;
+                            for (const wG of XG) {
+                              var vG, aG;
+                              const GG = null !== (vG = null === (aG = wG.at(-1)) || void 0 === aG ? void 0 : aG.text) && void 0 !== vG ? vG : "",
+                                bG = dG.test(GG),
+                                ZG = JG.test(GG),
+                                SG = wG.map((GG => "word" === GG.kind ? iG(GG.text) : 1)),
+                                zG = SG.findLastIndex((GG => GG > 0));
+                              for (const [dG, JG] of wG.entries()) {
+                                const GG = "word" === JG.kind,
+                                  wG = SG[dG];
+                                JG.delayMs = FG;
+                                for (let SG = 0; QG && SG < wG; SG++) {
                                   const {
-                                    intonation: Zu
-                                  } = Nu;
-                                  let Xu = Mu > 0 ? -Zu.declineSemitones * (hu / Mu) : 0;
-                                  Xu += wu(`${du(Du.text)}|${Uu}`) * Zu.variationSemitones;
-                                  const Yu = Math.min(1, Zu.variationSemitones);
-                                  let gu = Nu.glideSemitones,
-                                    eu = 1;
-                                  ju && (Xu += Zu.exclaimLiftSemitones, eu *= lu), Eu && hu === Mu && (Xu += Zu.questionRiseSemitones * (su > 1 ? .5 + .5 * Uu / (su - 1) : 1), Uu === su - 1 && (gu = Math.abs(gu) + Zu.questionRiseSemitones / 2)), uu && au(Du.text) && (Xu += fu * Yu, eu *= qu), su > 1 && 0 === Uu && (Xu += bu * Yu, eu *= Cu), ou.push({
-                                    atMs: ku + Uu * Ou,
-                                    semitones: Xu,
-                                    glideSemitones: gu,
-                                    durationMs: Uu < su - 1 ? Math.min(Nu.durationMs, Ou * cu) : Nu.durationMs,
-                                    level: eu
+                                    intonation: LG
+                                  } = QG;
+                                  let yG = zG > 0 ? -LG.declineSemitones * (dG / zG) : 0;
+                                  yG += uG(`${CG(JG.text)}|${SG}`) * LG.variationSemitones;
+                                  const hG = Math.min(1, LG.variationSemitones);
+                                  let rG = QG.glideSemitones,
+                                    EG = 1;
+                                  ZG && (yG += LG.exclaimLiftSemitones, EG *= kG), bG && dG === zG && (yG += LG.questionRiseSemitones * (wG > 1 ? .5 + .5 * SG / (wG - 1) : 1), SG === wG - 1 && (rG = Math.abs(rG) + LG.questionRiseSemitones / 2)), GG && WG(JG.text) && (yG += YG * hG, EG *= UG), wG > 1 && 0 === SG && (yG += pG * hG, EG *= VG), IG.push({
+                                    atMs: FG + SG * KG,
+                                    semitones: yG,
+                                    glideSemitones: rG,
+                                    durationMs: SG < wG - 1 ? Math.min(QG.durationMs, KG * fG) : QG.durationMs,
+                                    level: EG
                                   })
                                 }
-                                ku += su * Ou + (Yu.test(Du.text) ? Xu : gu.test(Du.text) ? Zu : 0)
+                                FG += wG * KG + (hG.test(JG.text) ? yG : rG.test(JG.text) ? LG : 0)
                               }
                             }
                             return {
-                              pieces: Mu.map((uu => "space" === uu.kind ? uu : "icon" === uu.kind ? {
+                              pieces: zG.map((GG => "space" === GG.kind ? GG : "icon" === GG.kind ? {
                                 kind: "icon",
-                                icon: uu.text,
-                                delayMs: uu.delayMs
+                                icon: GG.text,
+                                delayMs: GG.delayMs
                               } : {
                                 kind: "word",
-                                text: uu.text,
-                                delayMs: uu.delayMs
+                                text: GG.text,
+                                delayMs: GG.delayMs
                               })),
-                              blips: ou
+                              blips: IG
                             }
                           }
-                          var ou = ju(1244),
-                            ku = ju(1303),
-                            mu = ju(1995);
+                          var IG = ZG(1151),
+                            FG = ZG(1204),
+                            vG = ZG(1903);
 
-                          function vu(uu) {
-                            if ("string" === typeof uu) return uu;
-                            const Eu = ku.h.get().getCurrentLanguageCode();
-                            return (0, ou.u)(Eu, uu.translationKey, (0, ou.r)(uu.params, mu.e.shown))
+                          function aG(GG) {
+                            if ("string" === typeof GG) return GG;
+                            const bG = FG.d.get().getCurrentLanguageCode();
+                            return (0, IG.o)(bG, GG.translationKey, (0, IG.k)(GG.params, vG.b.shown))
                           }
 
-                          function Ku(uu) {
-                            const Eu = void 0 === uu.voice ? null : (0, su.o)(uu.voice),
-                              ju = Eu && (0, su.l)(Eu);
+                          function cG(GG) {
+                            const bG = void 0 === GG.voice ? null : (0, wG.j)(GG.voice),
+                              ZG = bG && (0, wG.i)(bG);
                             return {
-                              plan: Pu(vu(uu.line), ju),
-                              synth: ju
+                              plan: mG(aG(GG.line), ZG),
+                              synth: ZG
                             }
                           }
 
-                          function Vu(uu) {
-                            const Eu = [];
-                            let ju = [];
-                            for (const [Uu, Zu] of uu.entries()) {
-                              var su;
-                              "space" === Zu.kind && (" " !== Zu.text || "icon" !== (null === (su = uu[Uu + 1]) || void 0 === su ? void 0 : su.kind)) ? (ju.length > 0 && Eu.push(ju), Eu.push([Zu]), ju = []) : ju.push(Zu)
+                          function lG(GG) {
+                            const bG = [];
+                            let ZG = [];
+                            for (const [SG, LG] of GG.entries()) {
+                              var wG;
+                              "space" === LG.kind && (" " !== LG.text || "icon" !== (null === (wG = GG[SG + 1]) || void 0 === wG ? void 0 : wG.kind)) ? (ZG.length > 0 && bG.push(ZG), bG.push([LG]), ZG = []) : ZG.push(LG)
                             }
-                            return ju.length > 0 && Eu.push(ju), Eu
+                            return ZG.length > 0 && bG.push(ZG), bG
                           }
-                        }, 5019: (uu, Eu, ju) => {
-                          ju.d(Eu, {
-                            c: () => Cu,
-                            d: () => bu
+                        }, 4874: (GG, bG, ZG) => {
+                          ZG.d(bG, {
+                            b: () => VG,
+                            d: () => pG
                           });
-                          var su = ju(5026),
-                            Uu = ju(22);
-                          const Zu = .25,
-                            Xu = .85,
-                            lu = .02,
-                            qu = .01;
+                          var wG = ZG(4883),
+                            SG = ZG(17);
+                          const LG = .25,
+                            yG = .85,
+                            kG = .02,
+                            UG = .01;
 
-                          function fu(uu, Eu, ju, su, Uu, Zu, lu) {
+                          function YG(GG, bG, ZG, wG, SG, LG, kG) {
                             const {
-                              waveform: qu,
-                              pitchHz: fu,
-                              attackMs: Cu,
-                              releaseMs: bu,
-                              lowpassHz: cu
-                            } = ju, Nu = Uu + su.durationMs / 1e3, Ou = fu * 2 ** (su.semitones / 12), Yu = uu.createOscillator();
-                            Yu.type = qu, Yu.frequency.setValueAtTime(Ou, Uu), Yu.frequency.exponentialRampToValueAtTime(Ou * 2 ** (su.glideSemitones / 12), Nu);
-                            const hu = Uu + Math.min(Cu, su.durationMs) / 1e3,
-                              Du = uu.createGain();
-                            Du.gain.setValueAtTime(0, Uu), Du.gain.linearRampToValueAtTime(Zu, hu), Du.gain.linearRampToValueAtTime(Zu * Xu, Math.max(hu, Nu - bu / 1e3)), Du.gain.linearRampToValueAtTime(0, Nu);
-                            const gu = [Yu];
-                            if (null !== cu) {
-                              const Eu = uu.createBiquadFilter();
-                              Eu.type = "lowpass", Eu.frequency.value = cu, gu.push(Eu)
+                              waveform: UG,
+                              pitchHz: YG,
+                              attackMs: VG,
+                              releaseMs: pG,
+                              lowpassHz: fG
+                            } = ZG, QG = SG + wG.durationMs / 1e3, KG = YG * 2 ** (wG.semitones / 12), hG = GG.createOscillator();
+                            hG.type = UG, hG.frequency.setValueAtTime(KG, SG), hG.frequency.exponentialRampToValueAtTime(KG * 2 ** (wG.glideSemitones / 12), QG);
+                            const dG = SG + Math.min(VG, wG.durationMs) / 1e3,
+                              JG = GG.createGain();
+                            JG.gain.setValueAtTime(0, SG), JG.gain.linearRampToValueAtTime(LG, dG), JG.gain.linearRampToValueAtTime(LG * yG, Math.max(dG, QG - pG / 1e3)), JG.gain.linearRampToValueAtTime(0, QG);
+                            const rG = [hG];
+                            if (null !== fG) {
+                              const bG = GG.createBiquadFilter();
+                              bG.type = "lowpass", bG.frequency.value = fG, rG.push(bG)
                             }
-                            gu.push(Du, Eu);
-                            for (let Xu = 1; Xu < gu.length; Xu++) gu[Xu - 1].connect(gu[Xu]);
-                            return Yu.onended = () => {
-                              for (const uu of gu.slice(0, -1)) uu.disconnect();
-                              lu()
-                            }, Yu.start(Uu), Yu.stop(Nu), Yu
+                            rG.push(JG, bG);
+                            for (let yG = 1; yG < rG.length; yG++) rG[yG - 1].connect(rG[yG]);
+                            return hG.onended = () => {
+                              for (const GG of rG.slice(0, -1)) GG.disconnect();
+                              kG()
+                            }, hG.start(SG), hG.stop(QG), hG
                           }
 
-                          function Cu(uu, Eu, ju, su, Uu, Xu) {
-                            if (0 === su.length) return Xu(), () => {};
-                            const Cu = Zu * ju.volume * Uu,
-                              bu = uu.createGain();
-                            bu.connect(Eu);
-                            const cu = uu.currentTime + lu,
-                              Nu = new Set;
-                            for (const Zu of su) {
-                              const Eu = fu(uu, bu, ju, Zu, cu + Zu.atMs / 1e3, Cu * Zu.level, (() => {
-                                Nu.delete(Eu), 0 === Nu.size && (bu.disconnect(), Xu())
+                          function VG(GG, bG, ZG, wG, SG, yG) {
+                            if (0 === wG.length) return yG(), () => {};
+                            const VG = LG * ZG.volume * SG,
+                              pG = GG.createGain();
+                            pG.connect(bG);
+                            const fG = GG.currentTime + kG,
+                              QG = new Set;
+                            for (const LG of wG) {
+                              const bG = YG(GG, pG, ZG, LG, fG + LG.atMs / 1e3, VG * LG.level, (() => {
+                                QG.delete(bG), 0 === QG.size && (pG.disconnect(), yG())
                               }));
-                              Nu.add(Eu)
+                              QG.add(bG)
                             }
                             return () => {
-                              const Eu = uu.currentTime;
-                              bu.gain.setTargetAtTime(0, Eu, qu);
-                              for (const uu of Nu) try {
-                                uu.stop(Eu + 5 * qu)
+                              const bG = GG.currentTime;
+                              pG.gain.setTargetAtTime(0, bG, UG);
+                              for (const GG of QG) try {
+                                GG.stop(bG + 5 * UG)
                               } catch {}
                             }
                           }
 
-                          function bu(uu, Eu) {
-                            var ju;
-                            const Zu = su.Howler.ctx,
-                              Xu = su.Howler.masterGain;
-                            if (!Zu || !Xu || !Uu.d.get("soundOnFromAd")) return () => {};
-                            const lu = su.Howler;
-                            return null === (ju = lu._autoResume) || void 0 === ju || ju.call(lu), Cu(Zu, Xu, uu, Eu, Uu.d.get("soundVolume"), (() => {
-                              var uu;
-                              null === (uu = lu._autoSuspend) || void 0 === uu || uu.call(lu)
+                          function pG(GG, bG) {
+                            var ZG;
+                            const LG = wG.Howler.ctx,
+                              yG = wG.Howler.masterGain;
+                            if (!LG || !yG || !SG.e.get("soundOnFromAd")) return () => {};
+                            const kG = wG.Howler;
+                            return null === (ZG = kG._autoResume) || void 0 === ZG || ZG.call(kG), VG(LG, yG, GG, bG, SG.e.get("soundVolume"), (() => {
+                              var GG;
+                              null === (GG = kG._autoSuspend) || void 0 === GG || GG.call(kG)
                             }))
                           }
-                        }, 4995: (uu, Eu, ju) => {
-                          ju.d(Eu, {
-                            d: () => lu,
-                            g: () => Uu,
-                            h: () => qu,
-                            j: () => Xu,
-                            k: () => Zu
+                        }, 4849: (GG, bG, ZG) => {
+                          ZG.d(bG, {
+                            e: () => kG,
+                            i: () => SG,
+                            k: () => UG,
+                            n: () => yG,
+                            p: () => LG
                           });
-                          var su = ju(4992);
-                          const Uu = {
+                          var wG = ZG(4847);
+                          const SG = {
                               name: "ChatGPT",
                               url: "https://chatgpt.com/?hints=search&q="
                             },
-                            Zu = {
+                            LG = {
                               name: "Claude",
                               url: "https://claude.ai/new?q="
                             },
-                            Xu = `${su.i} lists every page of the Bloxd Code API docs.`;
+                            yG = `${wG.f} lists every page of the Bloxd Code API docs.`;
 
-                          function lu(uu, Eu) {
-                            return `${uu.url}${encodeURIComponent(Eu.toWellFormed())}`
+                          function kG(GG, bG) {
+                            return `${GG.url}${encodeURIComponent(bG.toWellFormed())}`
                           }
 
-                          function qu(uu) {
-                            const Eu = lu(Uu, uu);
-                            return Eu.length <= 3e4 ? {
-                              url: Eu,
+                          function UG(GG) {
+                            const bG = kG(SG, GG);
+                            return bG.length <= 3e4 ? {
+                              url: bG,
                               sendsPrompt: !0
                             } : {
-                              url: new URL(Uu.url).origin,
+                              url: new URL(SG.url).origin,
                               sendsPrompt: !1
                             }
                           }
-                        }, 5026: (uu, Eu, ju) => {
-                          ju.r(Eu), ju.d(Eu, {
-                            Howl: () => Uu.Howl,
-                            Howler: () => Uu.Howler,
-                            musicOutput: () => hu,
-                            readyAudioContext: () => Du
+                        }, 4883: (GG, bG, ZG) => {
+                          ZG.r(bG), ZG.d(bG, {
+                            Howl: () => SG.Howl,
+                            Howler: () => SG.Howler,
+                            musicOutput: () => dG,
+                            readyAudioContext: () => JG
                           });
-                          var su, Uu = ju(5032),
-                            Zu = ju(3634),
-                            Xu = ju(4834);
-                          const lu = Uu.Howler;
+                          var wG, SG = ZG(4889),
+                            LG = ZG(3423),
+                            yG = ZG(4672);
+                          const kG = SG.Howler;
 
-                          function qu() {
-                            var uu, Eu;
-                            if (lu.ctx || !lu.usingWebAudio || "undefined" === typeof AudioContext || !(0, Xu.j)()) return;
-                            const ju = navigator.audioSession;
-                            let su;
-                            "auto" === (null === ju || void 0 === ju ? void 0 : ju.type) && (ju.type = "ambient");
+                          function UG() {
+                            var GG, bG;
+                            if (kG.ctx || !kG.usingWebAudio || "undefined" === typeof AudioContext || !(0, yG.h)()) return;
+                            const ZG = navigator.audioSession;
+                            let wG;
+                            "auto" === (null === ZG || void 0 === ZG ? void 0 : ZG.type) && (ZG.type = "ambient");
                             try {
-                              su = new AudioContext({
+                              wG = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const Uu = su.createGain();
-                            Uu.gain.setValueAtTime(lu._muted ? 0 : null !== (uu = lu._volume) && void 0 !== uu ? uu : 1, su.currentTime), Uu.connect(su.destination), lu.ctx = su, lu.masterGain = Uu, null === (Eu = lu._setup) || void 0 === Eu || Eu.call(lu)
+                            const SG = wG.createGain();
+                            SG.gain.setValueAtTime(kG._muted ? 0 : null !== (GG = kG._volume) && void 0 !== GG ? GG : 1, wG.currentTime), SG.connect(wG.destination), kG.ctx = wG, kG.masterGain = SG, null === (bG = kG._setup) || void 0 === bG || bG.call(kG)
                           }
-                          lu._mobileUnloaded = !0;
-                          const fu = lu.volume.bind(Uu.Howler);
-                          lu.volume = function() {
-                            return qu(), fu(...arguments)
+                          kG._mobileUnloaded = !0;
+                          const YG = kG.volume.bind(SG.Howler);
+                          kG.volume = function() {
+                            return UG(), YG(...arguments)
                           };
-                          const Cu = lu.mute.bind(Uu.Howler);
-                          lu.mute = uu => (qu(), Cu(uu));
-                          const bu = Uu.Howl.prototype,
-                            cu = bu.init;
+                          const VG = kG.mute.bind(SG.Howler);
+                          kG.mute = GG => (UG(), VG(GG));
+                          const pG = SG.Howl.prototype,
+                            fG = pG.init;
 
-                          function Nu() {
-                            for (; lu._html5AudioPool.length < lu.html5PoolSize;) {
-                              const uu = new Audio;
-                              uu._unlocked = !0, lu._releaseHtml5Audio(uu)
+                          function QG() {
+                            for (; kG._html5AudioPool.length < kG.html5PoolSize;) {
+                              const GG = new Audio;
+                              GG._unlocked = !0, kG._releaseHtml5Audio(GG)
                             }
-                            for (const Eu of lu._howls)
-                              if (!Eu._webAudio)
-                                for (const ju of Eu._getSoundIds()) {
-                                  var uu;
-                                  const su = null === (uu = Eu._soundById(ju)) || void 0 === uu ? void 0 : uu._node;
-                                  su && !su._unlocked && (su._unlocked = !0, su.load())
+                            for (const bG of kG._howls)
+                              if (!bG._webAudio)
+                                for (const ZG of bG._getSoundIds()) {
+                                  var GG;
+                                  const wG = null === (GG = bG._soundById(ZG)) || void 0 === GG ? void 0 : GG._node;
+                                  wG && !wG._unlocked && (wG._unlocked = !0, wG.load())
                                 }
                           }
-                          bu.init = function(uu) {
-                            return qu(), cu.call(this, uu)
-                          }, (0, Xu.j)() && (lu._unlockAudio = () => {
-                            const uu = lu.ctx;
-                            if (lu._audioUnlocked || !uu) return;
-                            lu.autoUnlock = !1;
-                            const Eu = uu.createBuffer(1, 1, 22050);
-                            lu._scratchBuffer = Eu;
-                            const ju = new AbortController;
-                            let su = "afterPaint";
-                            const Uu = () => {
-                                var su;
-                                if (lu._audioUnlocked) return;
-                                null === (su = lu._autoResume) || void 0 === su || su.call(lu);
-                                const Uu = uu.createBufferSource();
-                                Uu.buffer = Eu, Uu.connect(uu.destination), Uu.start(0), uu.resume().catch((() => {})), Uu.onended = () => {
-                                  Uu.disconnect(0), lu._audioUnlocked = !0, ju.abort();
-                                  for (const uu of lu._howls) uu._emit("unlock")
+                          pG.init = function(GG) {
+                            return UG(), fG.call(this, GG)
+                          }, (0, yG.h)() && (kG._unlockAudio = () => {
+                            const GG = kG.ctx;
+                            if (kG._audioUnlocked || !GG) return;
+                            kG.autoUnlock = !1;
+                            const bG = GG.createBuffer(1, 1, 22050);
+                            kG._scratchBuffer = bG;
+                            const ZG = new AbortController;
+                            let wG = "afterPaint";
+                            const SG = () => {
+                                var wG;
+                                if (kG._audioUnlocked) return;
+                                null === (wG = kG._autoResume) || void 0 === wG || wG.call(kG);
+                                const SG = GG.createBufferSource();
+                                SG.buffer = bG, SG.connect(GG.destination), SG.start(0), GG.resume().catch((() => {})), SG.onended = () => {
+                                  SG.disconnect(0), kG._audioUnlocked = !0, ZG.abort();
+                                  for (const GG of kG._howls) GG._emit("unlock")
                                 }
                               },
-                              qu = () => {
-                                Nu(), Uu()
+                              UG = () => {
+                                QG(), SG()
                               },
-                              fu = Eu => {
-                                if (Nu(), "inTap" === su) {
-                                  if ("running" === uu.state) return;
-                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Uu()
-                                } else "afterPaint" === su && (su = "queued", (0, Zu.d)(Eu.timeStamp, (() => {
-                                  su = "inTap", Uu()
+                              YG = bG => {
+                                if (QG(), "inTap" === wG) {
+                                  if ("running" === GG.state) return;
+                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), SG()
+                                } else "afterPaint" === wG && (wG = "queued", (0, LG.d)(bG.timeStamp, (() => {
+                                  wG = "inTap", SG()
                                 })))
                               };
-                            for (const Zu of ["touchstart", "touchend"]) document.addEventListener(Zu, qu, {
+                            for (const LG of ["touchstart", "touchend"]) document.addEventListener(LG, UG, {
                               capture: !0,
-                              signal: ju.signal
+                              signal: ZG.signal
                             });
-                            for (const Zu of Xu.c) document.addEventListener(Zu, fu, {
+                            for (const LG of yG.d) document.addEventListener(LG, YG, {
                               capture: !0,
-                              signal: ju.signal
+                              signal: ZG.signal
                             })
                           });
-                          let Ou = 0;
-                          const Yu = null === (su = lu._autoSuspend) || void 0 === su ? void 0 : su.bind(Uu.Howler);
+                          let KG = 0;
+                          const hG = null === (wG = kG._autoSuspend) || void 0 === wG ? void 0 : wG.bind(SG.Howler);
 
-                          function hu() {
-                            Du();
+                          function dG() {
+                            JG();
                             const {
-                              ctx: uu,
-                              masterGain: Eu
-                            } = lu;
-                            return uu && Eu ? {
-                              ctx: uu,
-                              destination: Eu,
-                              holdAwake: uu => {
-                                var Eu, ju;
-                                (Ou += uu ? 1 : -1, uu) ? null === (Eu = lu._autoResume) || void 0 === Eu || Eu.call(lu): null === (ju = lu._autoSuspend) || void 0 === ju || ju.call(lu)
+                              ctx: GG,
+                              masterGain: bG
+                            } = kG;
+                            return GG && bG ? {
+                              ctx: GG,
+                              destination: bG,
+                              holdAwake: GG => {
+                                var bG, ZG;
+                                (KG += GG ? 1 : -1, GG) ? null === (bG = kG._autoResume) || void 0 === bG || bG.call(kG): null === (ZG = kG._autoSuspend) || void 0 === ZG || ZG.call(kG)
                               },
                               wake: () => {
-                                var Eu;
-                                "running" !== uu.state && (null === (Eu = lu._autoResume) || void 0 === Eu || Eu.call(lu), uu.resume().catch((() => {})))
+                                var bG;
+                                "running" !== GG.state && (null === (bG = kG._autoResume) || void 0 === bG || bG.call(kG), GG.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function Du() {
-                            var uu;
-                            (lu.volume(), lu.ctx && lu.autoUnlock) && (null === (uu = lu._unlockAudio) || void 0 === uu || uu.call(lu))
+                          function JG() {
+                            var GG;
+                            (kG.volume(), kG.ctx && kG.autoUnlock) && (null === (GG = kG._unlockAudio) || void 0 === GG || GG.call(kG))
                           }
-                          Yu && (lu._autoSuspend = () => Ou > 0 ? Uu.Howler : Yu())
-                        }, 5041: (uu, Eu, ju) => {
-                          function su(uu) {
+                          hG && (kG._autoSuspend = () => KG > 0 ? SG.Howler : hG())
+                        }, 4894: (GG, bG, ZG) => {
+                          function wG(GG) {
                             return {
-                              notAfter: uu
+                              notAfter: GG
                             }
                           }
-                          ju.d(Eu, {
-                            d: () => qu,
-                            e: () => fu,
-                            h: () => lu,
-                            i: () => su,
-                            j: () => Uu,
-                            n: () => Zu,
-                            q: () => Xu,
-                            u: () => Cu,
-                            x: () => bu
+                          ZG.d(bG, {
+                            e: () => UG,
+                            g: () => YG,
+                            j: () => kG,
+                            n: () => wG,
+                            r: () => SG,
+                            u: () => LG,
+                            x: () => yG,
+                            y: () => VG,
+                            z: () => pG
                           });
-                          const Uu = su("\\w$."),
-                            Zu = su("\\w.,");
+                          const SG = wG("\\w$."),
+                            LG = wG("\\w.,");
 
-                          function Xu(uu) {
-                            return Eu => qu(Eu, uu)
+                          function yG(GG) {
+                            return bG => UG(bG, GG)
                           }
 
-                          function lu(uu) {
-                            return Eu => !uu.test(Eu.input.slice(0, Eu.index))
+                          function kG(GG) {
+                            return bG => !GG.test(bG.input.slice(0, bG.index))
                           }
 
-                          function qu(uu, Eu) {
-                            return uu.index > 0 && new RegExp(`[${Eu}]`).test(uu.input[uu.index - 1])
+                          function UG(GG, bG) {
+                            return GG.index > 0 && new RegExp(`[${bG}]`).test(GG.input[GG.index - 1])
                           }
 
-                          function fu(uu, Eu, ju) {
-                            return function(uu) {
-                              return void 0 !== uu && "function" !== typeof uu
-                            }(ju) ? function(uu, Eu, ju) {
-                              const su = Eu.flags.replace(/[gy]/g, ""),
-                                Uu = new RegExp(`[^${ju}](?:${Eu.source})`, `${su}g`),
-                                Zu = [],
-                                Xu = ju => {
-                                  const su = ju.index + ju[0].length;
-                                  return ("" === ju[0] ? cu(uu, Eu, su) : su) - 1
+                          function YG(GG, bG, ZG) {
+                            return function(GG) {
+                              return void 0 !== GG && "function" !== typeof GG
+                            }(ZG) ? function(GG, bG, ZG) {
+                              const wG = bG.flags.replace(/[gy]/g, ""),
+                                SG = new RegExp(`[^${ZG}](?:${bG.source})`, `${wG}g`),
+                                LG = [],
+                                yG = ZG => {
+                                  const wG = ZG.index + ZG[0].length;
+                                  return ("" === ZG[0] ? fG(GG, bG, wG) : wG) - 1
                                 },
-                                lu = new RegExp(`(?:${Eu.source})`, `${su}y`).exec(uu);
-                              if (lu) {
-                                if (Zu.push(lu), !Eu.global) return Zu;
-                                Uu.lastIndex = Xu(lu)
+                                kG = new RegExp(`(?:${bG.source})`, `${wG}y`).exec(GG);
+                              if (kG) {
+                                if (LG.push(kG), !bG.global) return LG;
+                                SG.lastIndex = yG(kG)
                               }
-                              for (let qu = Uu.exec(uu); qu; qu = Uu.exec(uu)) {
-                                const ju = cu(uu, Eu, qu.index) - qu.index;
-                                if (qu[0] = qu[0].slice(ju), qu.index += ju, Zu.push(qu), !Eu.global) break;
-                                Uu.lastIndex = Xu(qu)
+                              for (let UG = SG.exec(GG); UG; UG = SG.exec(GG)) {
+                                const ZG = fG(GG, bG, UG.index) - UG.index;
+                                if (UG[0] = UG[0].slice(ZG), UG.index += ZG, LG.push(UG), !bG.global) break;
+                                SG.lastIndex = yG(UG)
                               }
-                              return Zu
-                            }(uu, Eu, ju.notAfter) : function(uu, Eu, ju) {
-                              const su = new RegExp(Eu.source, `${Eu.flags.replace(/[gy]/g,"")}g`),
-                                Uu = [];
-                              for (let Zu = su.exec(uu); Zu; Zu = su.exec(uu))
-                                if (!ju || ju(Zu)) {
-                                  if (Uu.push(Zu), !Eu.global) break;
-                                  "" === Zu[0] && (su.lastIndex = cu(uu, Eu, su.lastIndex))
-                                } else su.lastIndex = cu(uu, Eu, Zu.index);
-                              return Uu
-                            }(uu, Eu, ju)
+                              return LG
+                            }(GG, bG, ZG.notAfter) : function(GG, bG, ZG) {
+                              const wG = new RegExp(bG.source, `${bG.flags.replace(/[gy]/g,"")}g`),
+                                SG = [];
+                              for (let LG = wG.exec(GG); LG; LG = wG.exec(GG))
+                                if (!ZG || ZG(LG)) {
+                                  if (SG.push(LG), !bG.global) break;
+                                  "" === LG[0] && (wG.lastIndex = fG(GG, bG, wG.lastIndex))
+                                } else wG.lastIndex = fG(GG, bG, LG.index);
+                              return SG
+                            }(GG, bG, ZG)
                           }
 
-                          function Cu(uu, Eu, ju, su) {
-                            let Uu = "",
-                              Zu = 0;
-                            for (const Xu of fu(uu, Eu, ju)) Uu += uu.slice(Zu, Xu.index) + su(Xu), Zu = Xu.index + Xu[0].length;
-                            return Uu + uu.slice(Zu)
+                          function VG(GG, bG, ZG, wG) {
+                            let SG = "",
+                              LG = 0;
+                            for (const yG of YG(GG, bG, ZG)) SG += GG.slice(LG, yG.index) + wG(yG), LG = yG.index + yG[0].length;
+                            return SG + GG.slice(LG)
                           }
 
-                          function bu(uu, Eu, ju) {
-                            const su = [];
-                            let Uu = 0;
-                            for (const Zu of fu(uu, Eu, ju)) su.push(uu.slice(Uu, Zu.index)), Uu = Zu.index + Zu[0].length;
-                            return [...su, uu.slice(Uu)]
+                          function pG(GG, bG, ZG) {
+                            const wG = [];
+                            let SG = 0;
+                            for (const LG of YG(GG, bG, ZG)) wG.push(GG.slice(SG, LG.index)), SG = LG.index + LG[0].length;
+                            return [...wG, GG.slice(SG)]
                           }
 
-                          function cu(uu, Eu, ju) {
-                            var su;
-                            return ju + (Eu.unicode && (null !== (su = uu.codePointAt(ju)) && void 0 !== su ? su : 0) > 65535 ? 2 : 1)
+                          function fG(GG, bG, ZG) {
+                            var wG;
+                            return ZG + (bG.unicode && (null !== (wG = GG.codePointAt(ZG)) && void 0 !== wG ? wG : 0) > 65535 ? 2 : 1)
                           }
-                        }, 4992: (uu, Eu, ju) => {
-                          ju.d(Eu, {
-                            C: () => Nu,
-                            d: () => Uu,
-                            e: () => qu,
-                            f: () => Zu,
-                            i: () => Xu,
-                            m: () => lu,
-                            q: () => hu,
-                            t: () => Cu,
-                            w: () => bu,
-                            y: () => Yu
+                        }, 4847: (GG, bG, ZG) => {
+                          ZG.d(bG, {
+                            b: () => SG,
+                            c: () => UG,
+                            e: () => LG,
+                            f: () => yG,
+                            h: () => kG,
+                            l: () => dG,
+                            m: () => VG,
+                            q: () => pG,
+                            s: () => hG,
+                            t: () => QG
                           });
-                          var su = ju(1639);
-                          const Uu = 24e3,
-                            Zu = "/docs/llms.txt",
-                            Xu = `${su.e}${Zu}`,
-                            lu = "/llms.txt",
-                            qu = "/docs/llms-full.txt";
+                          var wG = ZG(1527);
+                          const SG = 24e3,
+                            LG = "/docs/llms.txt",
+                            yG = `${wG.d}${LG}`,
+                            kG = "/llms.txt",
+                            UG = "/docs/llms-full.txt";
 
-                          function fu(uu) {
-                            return uu || "index"
+                          function YG(GG) {
+                            return GG || "index"
                           }
 
-                          function Cu(uu) {
-                            return `/docs/${fu(uu)}.md`
+                          function VG(GG) {
+                            return `/docs/${YG(GG)}.md`
                           }
 
-                          function bu(uu, Eu) {
-                            return `/docs/${fu(uu)}/${Eu+1}.md`
+                          function pG(GG, bG) {
+                            return `/docs/${YG(GG)}/${bG+1}.md`
                           }
-                          const cu = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const fG = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function Nu(uu) {
-                            const Eu = cu.exec(uu);
-                            return null === Eu ? null : {
-                              name: Eu[1],
-                              part: void 0 === Eu[2] ? null : Number(Eu[2])
+                          function QG(GG) {
+                            const bG = fG.exec(GG);
+                            return null === bG ? null : {
+                              name: bG[1],
+                              part: void 0 === bG[2] ? null : Number(bG[2])
                             }
                           }
-                          const Ou = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const KG = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function Yu(uu) {
-                            const Eu = Ou.exec(uu);
-                            if (null === Eu) return null;
-                            const [, ju = "", su] = Eu;
-                            return void 0 === su ? Cu(ju) : bu(ju, Number(su) - 1)
+                          function hG(GG) {
+                            const bG = KG.exec(GG);
+                            if (null === bG) return null;
+                            const [, ZG = "", wG] = bG;
+                            return void 0 === wG ? VG(ZG) : pG(ZG, Number(wG) - 1)
                           }
 
-                          function hu(uu) {
-                            return `/docsHtml/${fu(uu)}.html`
+                          function dG(GG) {
+                            return `/docsHtml/${YG(GG)}.html`
                           }
-                        }, 5011: (uu, Eu, ju) => {
-                          ju.d(Eu, {
-                            e: () => Uu,
-                            h: () => su,
-                            j: () => Zu,
-                            l: () => qu,
-                            o: () => Xu
+                        }, 4871: (GG, bG, ZG) => {
+                          ZG.d(bG, {
+                            d: () => SG,
+                            e: () => wG,
+                            g: () => LG,
+                            i: () => UG,
+                            j: () => yG
                           });
-                          const su = ["sine", "triangle", "square", "sawtooth"],
-                            Uu = 55,
-                            Zu = {
+                          const wG = ["sine", "triangle", "square", "sawtooth"],
+                            SG = 55,
+                            LG = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7288,38 +7288,38 @@ export const modules = {
                               }
                             };
 
-                          function Xu(uu) {
-                            return "string" !== typeof uu ? uu : Object.hasOwn(Zu, uu) ? Zu[uu] : null
+                          function yG(GG) {
+                            return "string" !== typeof GG ? GG : Object.hasOwn(LG, GG) ? LG[GG] : null
                           }
 
-                          function lu(uu, Eu, ju) {
-                            return Math.min(ju, Math.max(Eu, uu))
+                          function kG(GG, bG, ZG) {
+                            return Math.min(ZG, Math.max(bG, GG))
                           }
 
-                          function qu(uu) {
-                            const Eu = lu(uu.durationMs, 10, 500),
-                              ju = lu(uu.attackMs, 0, Eu),
+                          function UG(GG) {
+                            const bG = kG(GG.durationMs, 10, 500),
+                              ZG = kG(GG.attackMs, 0, bG),
                               {
-                                intonation: Uu
-                              } = uu;
+                                intonation: SG
+                              } = GG;
                             return {
-                              waveform: su.includes(uu.waveform) ? uu.waveform : "sine",
-                              pitchHz: lu(uu.pitchHz, 20, 4e3),
-                              glideSemitones: lu(uu.glideSemitones, -24, 24),
-                              durationMs: Eu,
-                              attackMs: ju,
-                              releaseMs: lu(uu.releaseMs, 0, Eu - ju),
-                              lowpassHz: null === uu.lowpassHz ? null : lu(uu.lowpassHz, 20, 2e4),
-                              volume: lu(uu.volume, 0, 2),
+                              waveform: wG.includes(GG.waveform) ? GG.waveform : "sine",
+                              pitchHz: kG(GG.pitchHz, 20, 4e3),
+                              glideSemitones: kG(GG.glideSemitones, -24, 24),
+                              durationMs: bG,
+                              attackMs: ZG,
+                              releaseMs: kG(GG.releaseMs, 0, bG - ZG),
+                              lowpassHz: null === GG.lowpassHz ? null : kG(GG.lowpassHz, 20, 2e4),
+                              volume: kG(GG.volume, 0, 2),
                               intonation: {
-                                variationSemitones: lu(Uu.variationSemitones, 0, 6),
-                                declineSemitones: lu(Uu.declineSemitones, 0, 12),
-                                questionRiseSemitones: lu(Uu.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: lu(Uu.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: kG(SG.variationSemitones, 0, 6),
+                                declineSemitones: kG(SG.declineSemitones, 0, 12),
+                                questionRiseSemitones: kG(SG.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: kG(SG.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: lu(uu.syllableMs, 25, 200)
+                              syllableMs: kG(GG.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const uu in modules) Object.freeze(modules[uu]);
+                      for (const GG in modules) Object.freeze(modules[GG]);

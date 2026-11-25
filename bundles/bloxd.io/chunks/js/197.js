@@ -1,225 +1,225 @@
 export const id = 197;
 export const ids = [197];
 export const modules = {
-  36772: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      showOnboardingPopup: () => ru
+  36715: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      showOnboardingPopup: () => jG
     });
-    var su = ju(58),
-      Uu = ju(1244),
-      Zu = ju(1405),
-      Xu = ju(1506),
-      lu = ju(4485),
-      qu = ju(1614),
-      fu = ju(1611),
-      Cu = ju(2329),
-      bu = ju(1105),
-      cu = ju.n(bu),
-      Nu = ju(1183),
-      Ou = ju(36774),
-      Yu = ju(1116),
-      hu = ju(2479),
-      Du = ju(3678),
-      gu = ju(1178),
-      Mu = ju(1154);
-    const eu = Object.entries(qu.d).filter((uu => {
-      let [, Eu] = uu;
-      return "default" === Eu.cosmeticPack
+    var wG = ZG(51),
+      SG = ZG(1151),
+      LG = ZG(1311),
+      yG = ZG(1393),
+      kG = ZG(4341),
+      UG = ZG(1509),
+      YG = ZG(1501),
+      VG = ZG(2222),
+      pG = ZG(1006),
+      fG = ZG.n(pG),
+      QG = ZG(1096),
+      KG = ZG(36724),
+      hG = ZG(1016),
+      dG = ZG(2359),
+      JG = ZG(3465),
+      rG = ZG(1092),
+      zG = ZG(1067);
+    const EG = Object.entries(UG.d).filter((GG => {
+      let [, bG] = GG;
+      return "default" === bG.cosmeticPack
     }));
 
-    function Gu(uu) {
-      return fu.e.default.colourGroups[uu].colours.map(((uu, Eu) => {
+    function oG(GG) {
+      return YG.c.default.colourGroups[GG].colours.map(((GG, bG) => {
         let {
-          rbg: ju,
-          order: su
-        } = uu;
+          rbg: ZG,
+          order: wG
+        } = GG;
         return {
-          rbg: ju,
-          order: su,
-          index: Eu
+          rbg: ZG,
+          order: wG,
+          index: bG
         }
-      })).sort(((uu, Eu) => uu.order - Eu.order))
+      })).sort(((GG, bG) => GG.order - bG.order))
     }
-    const pu = Gu("eyes"),
-      wu = Gu("skin");
+    const XG = oG("eyes"),
+      uG = oG("skin");
 
-    function Ju(uu, Eu) {
-      var ju;
-      if (void 0 === Eu || "default" !== (null === (ju = (0, Cu.m)(uu, Eu)) || void 0 === ju ? void 0 : ju.cosmeticPack)) return null;
-      const su = (0, Cu.j)(Eu);
-      return su && [su[0], Number(su[1])]
-    }
-
-    function du(uu, Eu, ju) {
-      return `${uu}_${Eu}_${ju}`
+    function iG(GG, bG) {
+      var ZG;
+      if (void 0 === bG || "default" !== (null === (ZG = (0, VG.k)(GG, bG)) || void 0 === ZG ? void 0 : ZG.cosmeticPack)) return null;
+      const wG = (0, VG.g)(bG);
+      return wG && [wG[0], Number(wG[1])]
     }
 
-    function au(uu) {
+    function CG(GG, bG, ZG) {
+      return `${GG}_${bG}_${ZG}`
+    }
+
+    function WG(GG) {
       let {
-        label: Eu,
-        colours: ju,
-        picked: su,
-        onPick: Zu
-      } = uu;
+        label: bG,
+        colours: ZG,
+        picked: wG,
+        onPick: LG
+      } = GG;
       const {
-        t: Xu
-      } = (0, Uu.A)();
-      return (0, Mu.jsxs)("div", {
+        t: yG
+      } = (0, SG.w)();
+      return (0, zG.jsxs)("div", {
         className: "OnboardingColours",
-        children: [(0, Mu.jsx)("div", {
+        children: [(0, zG.jsx)("div", {
           className: "OnboardingColoursLabel",
-          children: Eu
-        }), (0, Mu.jsx)("div", {
+          children: bG
+        }), (0, zG.jsx)("div", {
           className: "OnboardingSwatches",
           role: "radiogroup",
-          "aria-label": Eu,
-          children: ju.map(((uu, Eu) => {
+          "aria-label": bG,
+          children: ZG.map(((GG, bG) => {
             let {
-              rbg: ju,
-              index: Uu
-            } = uu;
-            return (0, Mu.jsx)("button", {
+              rbg: ZG,
+              index: SG
+            } = GG;
+            return (0, zG.jsx)("button", {
               type: "button",
-              className: cu()("OnboardingSwatch", {
-                OnboardingSwatchSelected: Uu === su
+              className: fG()("OnboardingSwatch", {
+                OnboardingSwatchSelected: SG === wG
               }),
               style: {
-                backgroundColor: `rgb(${ju.join(",")})`
+                backgroundColor: `rgb(${ZG.join(",")})`
               },
               role: "radio",
-              "aria-checked": Uu === su,
-              "aria-label": Xu("homePage:onboardingColour", {
-                number: Eu + 1
+              "aria-checked": SG === wG,
+              "aria-label": yG("homePage:onboardingColour", {
+                number: bG + 1
               }),
               onClick: () => {
-                Zu(Uu)
+                LG(SG)
               }
-            }, Uu)
+            }, SG)
           }))
         })]
       })
     }
 
-    function Pu() {
+    function mG() {
       const {
-        t: uu
-      } = (0, Uu.A)(), {
-        userContext: Eu,
-        isUserContextUpdating: ju
-      } = (0, gu.c)(), [Zu, Xu] = (0, su.useState)(!1), [, qu] = (0, su.useReducer)((uu => uu + 1), 0), fu = (0, su.useRef)({}), Cu = (0, su.useRef)(null), bu = (0, Du.c)(), Gu = {
-        ...Eu.getPlayerCosmetics(),
-        ...Cu.current
-      }, Pu = (0, su.useRef)(null);
-      (0, su.useEffect)((() => {
-        var uu;
-        Zu && (null === (uu = Pu.current) || void 0 === uu || uu.scrollIntoView({
+        t: GG
+      } = (0, SG.w)(), {
+        userContext: bG,
+        isUserContextUpdating: ZG
+      } = (0, rG.e)(), [LG, yG] = (0, wG.useState)(!1), [, UG] = (0, wG.useReducer)((GG => GG + 1), 0), YG = (0, wG.useRef)({}), VG = (0, wG.useRef)(null), pG = (0, JG.c)(), oG = {
+        ...bG.getPlayerCosmetics(),
+        ...VG.current
+      }, mG = (0, wG.useRef)(null);
+      (0, wG.useEffect)((() => {
+        var GG;
+        LG && (null === (GG = mG.current) || void 0 === GG || GG.scrollIntoView({
           block: "nearest"
         }))
-      }), [Zu]);
-      const ou = (uu, Eu) => {
-          (0, Ou.c)(uu, Object.entries(Eu)), bu.current ? qu() : uu.publishUpdateIfCurrent()
+      }), [LG]);
+      const IG = (GG, bG) => {
+          (0, KG.d)(GG, Object.entries(bG)), pG.current ? UG() : GG.publishUpdateIfCurrent()
         },
-        ku = uu => {
-          const su = {
-            ...Cu.current,
-            ...uu
+        FG = GG => {
+          const wG = {
+            ...VG.current,
+            ...GG
           };
-          if (!ju) return Cu.current = null, void ou(Eu, su);
-          Cu.current = su, qu(), Nu.userContextManager.getCurrentUserContext().then((uu => {
-            Cu.current === su && (Cu.current = null, ou(uu, su))
-          })).catch((uu => {
-            console.warn("Couldn't put on the onboarding look held for the account", uu), Cu.current === su && (Cu.current = null, bu.current && qu())
+          if (!ZG) return VG.current = null, void IG(bG, wG);
+          VG.current = wG, UG(), QG.userContextManager.getCurrentUserContext().then((GG => {
+            VG.current === wG && (VG.current = null, IG(GG, wG))
+          })).catch((GG => {
+            console.warn("Couldn't put on the onboarding look held for the account", GG), VG.current === wG && (VG.current = null, pG.current && UG())
           }))
         };
-      (0, su.useEffect)((() => () => {
-        Eu.publishUpdateIfCurrent()
-      }), [Eu]);
-      const mu = Ju("eyes", Gu.eyes),
-        vu = Ju("skin", Gu.skin);
-      return (0, Mu.jsxs)(Mu.Fragment, {
-        children: [(0, Mu.jsx)("div", {
+      (0, wG.useEffect)((() => () => {
+        bG.publishUpdateIfCurrent()
+      }), [bG]);
+      const vG = iG("eyes", oG.eyes),
+        aG = iG("skin", oG.skin);
+      return (0, zG.jsxs)(zG.Fragment, {
+        children: [(0, zG.jsx)("div", {
           className: "OnboardingPresets",
-          children: eu.map(((Eu, ju) => {
-            let [su, {
-              cosmetics: Uu
-            }] = Eu;
-            const Zu = function(uu, Eu) {
-              return Object.entries(Eu).every((Eu => {
-                let [ju, su] = Eu;
-                return "skin" === ju || ("eyes" === ju ? (null === (Uu = Ju("eyes", uu.eyes)) || void 0 === Uu ? void 0 : Uu[0]) === (null === (Zu = Ju("eyes", su)) || void 0 === Zu ? void 0 : Zu[0]) : uu[ju] === su);
-                var Uu, Zu
+          children: EG.map(((bG, ZG) => {
+            let [wG, {
+              cosmetics: SG
+            }] = bG;
+            const LG = function(GG, bG) {
+              return Object.entries(bG).every((bG => {
+                let [ZG, wG] = bG;
+                return "skin" === ZG || ("eyes" === ZG ? (null === (SG = iG("eyes", GG.eyes)) || void 0 === SG ? void 0 : SG[0]) === (null === (LG = iG("eyes", wG)) || void 0 === LG ? void 0 : LG[0]) : GG[ZG] === wG);
+                var SG, LG
               }))
-            }(Gu, Uu);
-            return (0, Mu.jsx)("button", {
+            }(oG, SG);
+            return (0, zG.jsx)("button", {
               type: "button",
-              className: cu()("OnboardingPreset", {
-                OnboardingPresetSelected: Zu
+              className: fG()("OnboardingPreset", {
+                OnboardingPresetSelected: LG
               }),
-              "aria-label": uu("homePage:onboardingPreset", {
-                number: ju + 1
+              "aria-label": GG("homePage:onboardingPreset", {
+                number: ZG + 1
               }),
-              "aria-pressed": Zu,
+              "aria-pressed": LG,
               onClick: () => {
-                (0, lu.i)(`preset.${su}`);
+                (0, kG.k)(`preset.${wG}`);
                 const {
-                  eyes: uu,
-                  skin: Eu
-                } = fu.current;
-                ku({
-                  ...Uu,
-                  ...void 0 !== uu && {
-                    eyes: du("eyes", Ju("eyes", Uu.eyes)[0], uu)
+                  eyes: GG,
+                  skin: bG
+                } = YG.current;
+                FG({
+                  ...SG,
+                  ...void 0 !== GG && {
+                    eyes: CG("eyes", iG("eyes", SG.eyes)[0], GG)
                   },
-                  ...void 0 !== Eu && {
-                    skin: du("skin", "0", Eu)
+                  ...void 0 !== bG && {
+                    skin: CG("skin", "0", bG)
                   }
                 })
               },
-              children: (0, Mu.jsx)("div", {
+              children: (0, zG.jsx)("div", {
                 className: "OnboardingPresetImage",
                 style: {
-                  backgroundImage: `url(/textures/charSkins/previews/character_${su}_preview.png)`
+                  backgroundImage: `url(/textures/charSkins/previews/character_${wG}_preview.png)`
                 }
               })
-            }, su)
+            }, wG)
           }))
-        }), (0, Mu.jsxs)("button", {
+        }), (0, zG.jsxs)("button", {
           type: "button",
           className: "OnboardingMoreOptions",
-          "aria-expanded": Zu,
+          "aria-expanded": LG,
           onClick: () => {
-            Zu || (0, lu.i)("more"), Xu(!Zu)
+            LG || (0, kG.k)("more"), yG(!LG)
           },
-          children: [uu("homePage:onboardingMoreOptions"), (0, Mu.jsx)(Yu.e, {
-            name: Zu ? "caret-up" : "caret-down"
+          children: [GG("homePage:onboardingMoreOptions"), (0, zG.jsx)(hG.c, {
+            name: LG ? "caret-up" : "caret-down"
           })]
-        }), Zu && (0, Mu.jsxs)("div", {
-          ref: Pu,
+        }), LG && (0, zG.jsxs)("div", {
+          ref: mG,
           className: "OnboardingMore",
-          children: [(0, Mu.jsx)("div", {
+          children: [(0, zG.jsx)("div", {
             className: "OnboardingMorePreview",
-            children: (0, Mu.jsx)(hu.d, {
-              cosmetics: Gu
+            children: (0, zG.jsx)(dG.c, {
+              cosmetics: oG
             })
-          }), (0, Mu.jsxs)("div", {
+          }), (0, zG.jsxs)("div", {
             className: "OnboardingMoreColours",
-            children: [(0, Mu.jsx)(au, {
-              label: uu("homePage:onboardingEyeColour"),
-              colours: pu,
-              picked: null === mu || void 0 === mu ? void 0 : mu[1],
-              onPick: uu => {
-                var Eu;
-                (0, lu.i)("eyes"), fu.current.eyes = uu, ku({
-                  eyes: du("eyes", null !== (Eu = null === mu || void 0 === mu ? void 0 : mu[0]) && void 0 !== Eu ? Eu : "0", uu)
+            children: [(0, zG.jsx)(WG, {
+              label: GG("homePage:onboardingEyeColour"),
+              colours: XG,
+              picked: null === vG || void 0 === vG ? void 0 : vG[1],
+              onPick: GG => {
+                var bG;
+                (0, kG.k)("eyes"), YG.current.eyes = GG, FG({
+                  eyes: CG("eyes", null !== (bG = null === vG || void 0 === vG ? void 0 : vG[0]) && void 0 !== bG ? bG : "0", GG)
                 })
               }
-            }), (0, Mu.jsx)(au, {
-              label: uu("homePage:onboardingSkinColour"),
-              colours: wu,
-              picked: null === vu || void 0 === vu ? void 0 : vu[1],
-              onPick: uu => {
-                (0, lu.i)("skin"), fu.current.skin = uu, ku({
-                  skin: du("skin", "0", uu)
+            }), (0, zG.jsx)(WG, {
+              label: GG("homePage:onboardingSkinColour"),
+              colours: uG,
+              picked: null === aG || void 0 === aG ? void 0 : aG[1],
+              onPick: GG => {
+                (0, kG.k)("skin"), YG.current.skin = GG, FG({
+                  skin: CG("skin", "0", GG)
                 })
               }
             })]
@@ -227,339 +227,339 @@ export const modules = {
         })]
       })
     }
-    var ou = ju(1320),
-      ku = ju(22),
-      mu = ju(34452),
-      vu = ju(1393),
-      Ku = ju(1723);
+    var IG = ZG(1230),
+      FG = ZG(17),
+      vG = ZG(34370),
+      aG = ZG(1302),
+      cG = ZG(1621);
 
-    function Vu(uu) {
+    function lG(GG) {
       const {
-        t: Eu
-      } = (0, Uu.A)(), {
-        userContext: ju,
-        isUserContextUpdating: Zu
-      } = (0, gu.c)(), qu = Zu ? null : ju.getPlayerName(), fu = (0, su.useRef)(null), [Cu, bu] = (0, su.useState)((() => null === qu ? (0, ou.f)() : null)), [cu, Nu] = (0, su.useState)(null), [Ou, hu] = (0, su.useState)(!1), eu = (0, su.useRef)("oN"), Gu = (0, Du.c)(), pu = (0, su.useRef)(null !== Cu), wu = (0, su.useRef)(!1), Ju = null !== Cu && void 0 !== Cu ? Cu : qu, du = (0, su.useRef)(null), au = uu => {
-        fu.current && (fu.current.value = uu), bu(uu)
-      }, Pu = (0, su.useRef)(!1);
-      (0, su.useEffect)((() => {
-        var uu, Eu;
-        !Ou && Pu.current && (Pu.current = !1, null === (uu = fu.current) || void 0 === uu || uu.focus(), null === (Eu = fu.current) || void 0 === Eu || Eu.select())
-      }), [Ou]);
-      const Vu = (0, su.useRef)(null);
-      (0, su.useEffect)((() => {
-        var uu;
-        null !== cu && (null === (uu = Vu.current) || void 0 === uu || uu.scrollIntoView({
+        t: bG
+      } = (0, SG.w)(), {
+        userContext: ZG,
+        isUserContextUpdating: LG
+      } = (0, rG.e)(), UG = LG ? null : ZG.getPlayerName(), YG = (0, wG.useRef)(null), [VG, pG] = (0, wG.useState)((() => null === UG ? (0, IG.f)() : null)), [fG, QG] = (0, wG.useState)(null), [KG, dG] = (0, wG.useState)(!1), EG = (0, wG.useRef)("vQ"), oG = (0, JG.c)(), XG = (0, wG.useRef)(null !== VG), uG = (0, wG.useRef)(!1), iG = null !== VG && void 0 !== VG ? VG : UG, CG = (0, wG.useRef)(null), WG = GG => {
+        YG.current && (YG.current.value = GG), pG(GG)
+      }, mG = (0, wG.useRef)(!1);
+      (0, wG.useEffect)((() => {
+        var GG, bG;
+        !KG && mG.current && (mG.current = !1, null === (GG = YG.current) || void 0 === GG || GG.focus(), null === (bG = YG.current) || void 0 === bG || bG.select())
+      }), [KG]);
+      const lG = (0, wG.useRef)(null);
+      (0, wG.useEffect)((() => {
+        var GG;
+        null !== fG && (null === (GG = lG.current) || void 0 === GG || GG.scrollIntoView({
           block: "nearest"
         }))
-      }), [cu]);
-      const ru = (uu, Eu) => {
-        const ju = document.activeElement === fu.current || Pu.current;
-        hu(!0), Nu(null), uu.then((uu => {
-          Gu.current && (hu(!1), Pu.current = ju, Eu(uu))
+      }), [fG]);
+      const jG = (GG, bG) => {
+        const ZG = document.activeElement === YG.current || mG.current;
+        dG(!0), QG(null), GG.then((GG => {
+          oG.current && (dG(!1), mG.current = ZG, bG(GG))
         }))
       };
-      (0, su.useEffect)((() => {
-        var uu, Eu;
-        ku.d.get("isTouchScreen") || (null === (uu = fu.current) || void 0 === uu || uu.focus(), null === (Eu = fu.current) || void 0 === Eu || Eu.select())
+      (0, wG.useEffect)((() => {
+        var GG, bG;
+        FG.e.get("isTouchScreen") || (null === (GG = YG.current) || void 0 === GG || GG.focus(), null === (bG = YG.current) || void 0 === bG || bG.select())
       }), []);
-      const Qu = () => {
-          (0, lu.j)(eu.current), uu()
+      const PG = () => {
+          (0, kG.n)(EG.current), GG()
         },
-        iu = uu => "refused" === uu.outcome ? uu.message : Eu((0, mu.d)(uu.failure)),
-        Wu = uu => !(uu.length >= ou.j) && (Nu({
+        MG = GG => "refused" === GG.outcome ? GG.message : bG((0, vG.g)(GG.failure)),
+        AG = GG => !(GG.length >= IG.k) && (QG({
           kind: "error",
-          message: Eu("homePage:changeNameMinLengthError", {
-            length: ou.j
+          message: bG("homePage:changeNameMinLengthError", {
+            length: IG.k
           })
         }), !0),
-        Su = uu => {
-          var su, Uu, Zu;
-          uu.toLowerCase() !== (null === (su = null !== (Uu = null === (Zu = du.current) || void 0 === Zu ? void 0 : Zu.name) && void 0 !== Uu ? Uu : qu) || void 0 === su ? void 0 : su.toLowerCase()) ? Wu(uu) || ru((0, mu.c)(ju, uu), (ju => {
-            "taken" !== ju.outcome ? "refused" !== ju.outcome && "failed" !== ju.outcome ? ju.name !== uu ? (eu.current = "suffixed", du.current = {
-              name: ju.name,
-              outcome: eu.current
-            }, au(ju.name), Nu({
+        sG = GG => {
+          var wG, SG, LG;
+          GG.toLowerCase() !== (null === (wG = null !== (SG = null === (LG = CG.current) || void 0 === LG ? void 0 : LG.name) && void 0 !== SG ? SG : UG) || void 0 === wG ? void 0 : wG.toLowerCase()) ? AG(GG) || jG((0, vG.d)(ZG, GG), (ZG => {
+            "taken" !== ZG.outcome ? "refused" !== ZG.outcome && "failed" !== ZG.outcome ? ZG.name !== GG ? (EG.current = "suffixed", CG.current = {
+              name: ZG.name,
+              outcome: EG.current
+            }, WG(ZG.name), QG({
               kind: "suffixed",
-              taken: uu,
-              name: ju.name
-            })) : Qu() : Nu({
+              taken: GG,
+              name: ZG.name
+            })) : PG() : QG({
               kind: "error",
-              message: iu(ju)
-            }) : Nu({
+              message: MG(ZG)
+            }) : QG({
               kind: "error",
-              message: Eu("homePage:onboardingNameAllTaken")
+              message: bG("homePage:onboardingNameAllTaken")
             })
-          })) : Qu()
+          })) : PG()
         };
-      (0, su.useEffect)((() => {
-        if (!Ou || null !== qu || !wu.current) return;
-        const uu = setTimeout((() => {
-          wu.current = !1, hu(!1), Nu({
+      (0, wG.useEffect)((() => {
+        if (!KG || null !== UG || !uG.current) return;
+        const GG = setTimeout((() => {
+          uG.current = !1, dG(!1), QG({
             kind: "noAccount"
           })
         }), 2e4);
         return () => {
-          clearTimeout(uu)
+          clearTimeout(GG)
         }
-      }), [Ou, qu]), (0, su.useEffect)((() => {
-        if (null === qu) return;
-        const uu = pu.current && "oN" === eu.current && ju.isLoggedIn();
-        pu.current = !1, "noAccount" === (null === cu || void 0 === cu ? void 0 : cu.kind) && Nu(null), uu && au(qu), wu.current && (wu.current = !1, hu(!1), Su(uu ? qu : Ju))
-      }), [qu]);
-      const Iu = "error" === (null === cu || void 0 === cu ? void 0 : cu.kind) ? cu.message : "noAccount" === (null === cu || void 0 === cu ? void 0 : cu.kind) ? Eu("homePage:onboardingNameNoAccount") : null;
+      }), [KG, UG]), (0, wG.useEffect)((() => {
+        if (null === UG) return;
+        const GG = XG.current && "vQ" === EG.current && ZG.isLoggedIn();
+        XG.current = !1, "noAccount" === (null === fG || void 0 === fG ? void 0 : fG.kind) && QG(null), GG && WG(UG), uG.current && (uG.current = !1, dG(!1), sG(GG ? UG : iG))
+      }), [UG]);
+      const qG = "error" === (null === fG || void 0 === fG ? void 0 : fG.kind) ? fG.message : "noAccount" === (null === fG || void 0 === fG ? void 0 : fG.kind) ? bG("homePage:onboardingNameNoAccount") : null;
       return {
-        field: (0, Mu.jsxs)("div", {
+        field: (0, zG.jsxs)("div", {
           className: "OnboardingNameField",
-          ref: Vu,
-          children: [(0, Mu.jsx)("div", {
+          ref: lG,
+          children: [(0, zG.jsx)("div", {
             className: "OnboardingSubtitle",
-            children: Eu("general:name")
-          }), null === Ju && (0, Mu.jsx)(vu.b, {}), null !== Ju && (0, Mu.jsxs)("div", {
+            children: bG("general:name")
+          }), null === iG && (0, zG.jsx)(aG.b, {}), null !== iG && (0, zG.jsxs)("div", {
             className: "OnboardingNameRow",
-            children: [(0, Mu.jsx)(Ku.d, {
+            children: [(0, zG.jsx)(cG.b, {
               className: "OnboardingNameInput",
-              ariaLabel: Eu("general:name"),
-              maxLength: ou.g,
-              defaultValue: Ju,
-              domRef: fu,
-              forcedText: Ou ? Ju : null,
+              ariaLabel: bG("general:name"),
+              maxLength: IG.g,
+              defaultValue: iG,
+              domRef: YG,
+              forcedText: KG ? iG : null,
               onEnter: () => {
-                var uu;
-                null === (uu = fu.current) || void 0 === uu || uu.blur()
+                var GG;
+                null === (GG = YG.current) || void 0 === GG || GG.blur()
               },
-              onValueChange: uu => {
-                const ju = (0, ou.m)(uu);
-                ju !== uu && fu.current && (fu.current.value = ju), Nu(ju !== uu ? {
+              onValueChange: GG => {
+                const ZG = (0, IG.n)(GG);
+                ZG !== GG && YG.current && (YG.current.value = ZG), QG(ZG !== GG ? {
                   kind: "error",
-                  message: Eu("homePage:nameCharacters")
-                } : null), ju !== Ju && (eu.current = "changed"), bu(ju)
+                  message: bG("homePage:nameCharacters")
+                } : null), ZG !== iG && (EG.current = "changed"), pG(ZG)
               }
-            }), (0, Mu.jsx)(Xu.f, {
+            }), (0, zG.jsx)(yG.d, {
               className: "OnboardingRandomName",
-              ariaLabel: Eu("homePage:onboardingRandomName"),
-              disabled: Ou,
+              ariaLabel: bG("homePage:onboardingRandomName"),
+              disabled: KG,
               onClick: () => {
                 (() => {
-                  if (Nu(null), null === qu || ju.isLoggedIn()) return au((0, ou.f)()), void(eu.current = "rolled");
-                  ru((0, mu.g)(ju), (uu => {
-                    var Eu, su;
-                    if ("refused" === uu.outcome || "failed" === uu.outcome) return au(ju.getPlayerName()), eu.current = null !== (Eu = null === (su = du.current) || void 0 === su ? void 0 : su.outcome) && void 0 !== Eu ? Eu : "oN", void Nu({
+                  if (QG(null), null === UG || ZG.isLoggedIn()) return WG((0, IG.f)()), void(EG.current = "rolled");
+                  jG((0, vG.j)(ZG), (GG => {
+                    var bG, wG;
+                    if ("refused" === GG.outcome || "failed" === GG.outcome) return WG(ZG.getPlayerName()), EG.current = null !== (bG = null === (wG = CG.current) || void 0 === wG ? void 0 : wG.outcome) && void 0 !== bG ? bG : "vQ", void QG({
                       kind: "error",
-                      message: iu(uu)
+                      message: MG(GG)
                     });
-                    eu.current = "rolled", du.current = {
-                      name: uu.name,
+                    EG.current = "rolled", CG.current = {
+                      name: GG.name,
                       outcome: "rolled"
-                    }, au(uu.name)
+                    }, WG(GG.name)
                   }))
                 })()
               },
-              children: (0, Mu.jsx)(Yu.e, {
+              children: (0, zG.jsx)(hG.c, {
                 name: "dice"
               })
             })]
-          }), "suffixed" === (null === cu || void 0 === cu ? void 0 : cu.kind) && (0, Mu.jsx)("div", {
+          }), "suffixed" === (null === fG || void 0 === fG ? void 0 : fG.kind) && (0, zG.jsx)("div", {
             className: "OnboardingNameNote",
-            children: Eu("homePage:onboardingNameSuffixed", {
-              taken: cu.taken,
-              name: cu.name
+            children: bG("homePage:onboardingNameSuffixed", {
+              taken: fG.taken,
+              name: fG.name
             })
-          }), null !== Iu && (0, Mu.jsx)("div", {
+          }), null !== qG && (0, zG.jsx)("div", {
             className: "OnboardingNameNote OnboardingNameError",
-            children: Iu
+            children: qG
           })]
         }),
         submit: () => {
-          if (!Ou && null !== Ju) {
-            if (null === qu) {
-              if (Wu(Ju)) return;
-              return Pu.current = document.activeElement === fu.current, wu.current = !0, hu(!0), void Nu(null)
+          if (!KG && null !== iG) {
+            if (null === UG) {
+              if (AG(iG)) return;
+              return mG.current = document.activeElement === YG.current, uG.current = !0, dG(!0), void QG(null)
             }
-            Su(Ju)
+            sG(iG)
           }
         },
-        busy: Ou,
-        ready: null !== Ju
+        busy: KG,
+        ready: null !== iG
       }
     }
 
-    function ru() {
-      const uu = {
+    function jG() {
+      const GG = {
         finished: !1
       };
-      return Zu.NotificationProvider.showCustomPopup({
-        body: Eu => (0, Mu.jsx)(Qu, {
+      return LG.NotificationProvider.showCustomPopup({
+        body: bG => (0, zG.jsx)(PG, {
           onFinish: () => {
-            (0, lu.e)(), uu.finished = !0, Eu()
+            (0, kG.h)(), GG.finished = !0, bG()
           }
         }),
         middleScreenPopupClassName: "OnboardingPopup",
         ignoreBackgroundPress: !0,
         onClose: () => {
-          uu.finished || (0, lu.b)()
+          GG.finished || (0, kG.e)()
         }
       })
     }
 
-    function Qu(uu) {
+    function PG(GG) {
       let {
-        onFinish: Eu
-      } = uu;
+        onFinish: bG
+      } = GG;
       const {
-        t: ju
-      } = (0, Uu.A)(), Zu = Vu(Eu);
-      return (0, su.useEffect)((() => {
-        (0, lu.n)()
-      }), []), (0, Mu.jsxs)("div", {
+        t: ZG
+      } = (0, SG.w)(), LG = lG(bG);
+      return (0, wG.useEffect)((() => {
+        (0, kG.r)()
+      }), []), (0, zG.jsxs)("div", {
         className: "Onboarding",
-        children: [(0, Mu.jsx)("div", {
+        children: [(0, zG.jsx)("div", {
           className: "OnboardingTitle",
-          children: ju("homePage:onboardingTitle")
-        }), (0, Mu.jsxs)("div", {
+          children: ZG("homePage:onboardingTitle")
+        }), (0, zG.jsxs)("div", {
           className: "OnboardingBody",
-          children: [Zu.field, (0, Mu.jsx)(Pu, {})]
-        }), (0, Mu.jsx)("div", {
+          children: [LG.field, (0, zG.jsx)(mG, {})]
+        }), (0, zG.jsx)("div", {
           className: "OnboardingFooter",
-          children: (0, Mu.jsx)(Xu.p, {
+          children: (0, zG.jsx)(yG.k, {
             className: "OnboardingPrimaryButton",
             padDefaultFocus: !0,
-            loading: Zu.busy,
-            disabled: !Zu.ready,
-            onClick: Zu.submit,
-            children: ju("homePage:onboardingDone")
+            loading: LG.busy,
+            disabled: !LG.ready,
+            onClick: LG.submit,
+            children: ZG("homePage:onboardingDone")
           })
         })]
       })
     }
   },
-  36774: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Xu
+  36724: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => yG
     });
-    var su = ju(1986),
-      Uu = ju(1559);
-    const Zu = new class {
+    var wG = ZG(1895),
+      SG = ZG(1431);
+    const LG = new class {
       constructor() {
         this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
       }
-      save(uu, Eu) {
-        uu !== this.userContext && this.sendHeld(), this.userContext = uu;
-        for (const [su, Uu] of Eu) this.pending.set(su, Uu);
+      save(GG, bG) {
+        GG !== this.userContext && this.sendHeld(), this.userContext = GG;
+        for (const [wG, SG] of bG) this.pending.set(wG, SG);
         if (null !== this.timer) return;
-        const ju = this.lastSentAt + 1100 - Date.now();
-        ju <= 0 ? this.send(uu) : (this.timer = setTimeout((() => {
+        const ZG = this.lastSentAt + 1100 - Date.now();
+        ZG <= 0 ? this.send(GG) : (this.timer = setTimeout((() => {
           this.sendHeld()
-        }), ju), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+        }), ZG), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.sendHeld()
         }))))
       }
       sendHeld() {
         null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
       }
-      send(uu) {
-        const Eu = Array.from(this.pending, (uu => {
-          let [Eu, ju] = uu;
+      send(GG) {
+        const bG = Array.from(this.pending, (GG => {
+          let [bG, ZG] = GG;
           return {
-            iZ: Eu,
-            WZ: ju
+            FL: bG,
+            vL: ZG
           }
         }));
-        this.pending.clear(), this.lastSentAt = Date.now(), Uu.b.updateCosmetics(uu, Eu).catch((uu => {
-          console.error("Failed to update cosmetics", uu)
+        this.pending.clear(), this.lastSentAt = Date.now(), SG.d.updateCosmetics(GG, bG).catch((GG => {
+          console.error("Failed to update cosmetics", GG)
         }))
       }
     };
 
-    function Xu(uu, Eu) {
-      for (const [ju, su] of Eu) uu.setPlayerCosmetics(ju, su);
-      if (null === su.gameBridge.latest("connectedGame").websocketUrl) Zu.save(uu, Eu);
+    function yG(GG, bG) {
+      for (const [ZG, wG] of bG) GG.setPlayerCosmetics(ZG, wG);
+      if (null === wG.gameBridge.latest("connectedGame").websocketUrl) LG.save(GG, bG);
       else
-        for (const [ju, Uu] of Eu) su.gameBridge.send("updateMyCosmetic", {
-          iZ: ju,
-          WZ: Uu
+        for (const [ZG, SG] of bG) wG.gameBridge.send("updateMyCosmetic", {
+          FL: ZG,
+          vL: SG
         })
     }
   },
-  34452: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => gu,
-      d: () => fu,
-      e: () => Yu,
-      g: () => Ou
+  34370: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => rG,
+      g: () => YG,
+      h: () => hG,
+      j: () => KG
     });
-    var su = ju(166),
-      Uu = ju(1320),
-      Zu = ju(1255),
-      Xu = ju(1183),
-      lu = ju(1776);
-    const qu = {
+    var wG = ZG(140),
+      SG = ZG(1230),
+      LG = ZG(1163),
+      yG = ZG(1096),
+      kG = ZG(1694);
+    const UG = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function fu(uu) {
-      return qu[uu]
+    function YG(GG) {
+      return UG[GG]
     }
 
-    function Cu(uu) {
-      return (0, lu.b)(uu) ? "outdated" : uu instanceof su.b ? 429 === uu.httpCode ? "busy" : "server" : "offline"
+    function VG(GG) {
+      return (0, kG.d)(GG) ? "outdated" : GG instanceof wG.b ? 429 === GG.httpCode ? "busy" : "server" : "offline"
     }
 
-    function bu(uu, Eu, ju) {
-      return (0, Xu.postJsonWithMetricsCookiesAndJsonResponse)(`${Zu.clientSideServerUrls.indexUrl}${Eu}`, ju, {
+    function pG(GG, bG, ZG) {
+      return (0, yG.postJsonWithMetricsCookiesAndJsonResponse)(`${LG.clientSideServerUrls.indexUrl}${bG}`, ZG, {
         retries: 3
-      }, uu.getMetricsCookies()).catch((uu => (console.error("Bad response from the server when trying to change name:", Eu, uu), {
+      }, GG.getMetricsCookies()).catch((GG => (console.error("Bad response from the server when trying to change name:", bG, GG), {
         outcome: "failed",
-        failure: Cu(uu)
+        failure: VG(GG)
       })))
     }
 
-    function cu(uu) {
-      return "outcome" in uu && "failed" === uu.outcome
+    function fG(GG) {
+      return "outcome" in GG && "failed" === GG.outcome
     }
 
-    function Nu(uu) {
-      return console.error("Error when trying to get with new name from DB", uu), {
+    function QG(GG) {
+      return console.error("Error when trying to get with new name from DB", GG), {
         outcome: "refused",
-        message: uu
+        message: GG
       }
     }
-    async function Ou(uu) {
-      const Eu = await bu(uu, "/index/name/random", {});
-      return cu(Eu) ? Eu : "err" in Eu ? Nu(Eu.err) : (uu.setPlayerName(Eu.name), {
+    async function KG(GG) {
+      const bG = await pG(GG, "/index/name/random", {});
+      return fG(bG) ? bG : "err" in bG ? QG(bG.err) : (GG.setPlayerName(bG.name), {
         outcome: "changed",
-        name: Eu.name
+        name: bG.name
       })
     }
-    async function Yu(uu, Eu) {
-      const ju = await bu(uu, "/index/name/update", {
-        name: Eu
+    async function hG(GG, bG) {
+      const ZG = await pG(GG, "/index/name/update", {
+        name: bG
       });
-      return cu(ju) ? ju : "err" in ju ? Nu(ju.err) : ju.nameExists ? {
+      return fG(ZG) ? ZG : "err" in ZG ? QG(ZG.err) : ZG.nameExists ? {
         outcome: "taken"
-      } : (uu.setPlayerName(Eu), {
+      } : (GG.setPlayerName(bG), {
         outcome: "changed",
-        name: Eu
+        name: bG
       })
     }
 
-    function hu(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const su = 1 === Eu ? 1 : 10 ** (Eu - 1),
-        Zu = String(su + Math.floor(ju() * (10 ** Eu - su)));
-      return `${uu.slice(0,Uu.g-Eu)}${Zu}`
+    function dG(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const wG = 1 === bG ? 1 : 10 ** (bG - 1),
+        LG = String(wG + Math.floor(ZG() * (10 ** bG - wG)));
+      return `${GG.slice(0,SG.g-bG)}${LG}`
     }
-    const Du = [1, 2, 3, 4];
-    async function gu(uu, Eu) {
-      const ju = await Yu(uu, Eu);
-      if ("taken" !== ju.outcome) return ju;
-      for (const su of Du) {
-        const ju = hu(Eu, su),
-          Uu = await Yu(uu, ju);
-        if ("taken" !== Uu.outcome) return Uu
+    const JG = [1, 2, 3, 4];
+    async function rG(GG, bG) {
+      const ZG = await hG(GG, bG);
+      if ("taken" !== ZG.outcome) return ZG;
+      for (const wG of JG) {
+        const ZG = dG(bG, wG),
+          SG = await hG(GG, ZG);
+        if ("taken" !== SG.outcome) return SG
       }
       return {
         outcome: "taken"
@@ -568,4 +568,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

@@ -1,144 +1,144 @@
 export const id = 209;
 export const ids = [209];
 export const modules = {
-  41759: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      loadGlbAsset: () => ME,
-      loadGlbTree: () => gE
+  41913: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      loadGlbAsset: () => zb,
+      loadGlbTree: () => rb
     });
-    var su = ju(38303),
-      Uu = ju(41761),
-      Zu = ju(36664),
-      Xu = ju.n(Zu);
+    var wG = ZG(38311),
+      SG = ZG(41918),
+      LG = ZG(36579),
+      yG = ZG.n(LG);
 
-    function lu() {
-      return Xu()('(()=>{class uu extends Error{}function Eu(Eu,ju){const su=Eu._malloc(ju);if(0===su)throw new uu(`Draco: the decoder\'s heap refused ${ju} bytes`);return su}function ju(uu){return{[uu.DT_FLOAT32]:[Float32Array,5126],[uu.DT_INT8]:[Int8Array,5120],[uu.DT_INT16]:[Int16Array,5122],[uu.DT_INT32]:[Int32Array,5124],[uu.DT_UINT8]:[Uint8Array,5121],[uu.DT_UINT16]:[Uint16Array,5123],[uu.DT_UINT32]:[Uint32Array,5125]}}function su(Eu,su,Uu,Zu,Xu){let lu=null,qu=null,fu=null;try{lu=new Eu.Decoder,qu=new Eu.DecoderBuffer,qu.Init(su,su.byteLength);let Cu=0;const bu=lu.GetEncodedGeometryType(qu);if(bu===Eu.TRIANGULAR_MESH){const ju=new Eu.Mesh;fu=ju;const su=lu.DecodeBufferToMesh(qu,ju);if(!su.ok()||0===ju.ptr)throw new uu(su.error_msg());Cu=3*ju.num_faces()}else{if(bu!==Eu.POINT_CLOUD)throw new uu(`Draco: Cannot decode invalid geometry type ${bu}`);{const ju=new Eu.PointCloud;fu=ju;const su=lu.DecodeBufferToPointCloud(qu,ju);if(!su.ok()||!ju.ptr)throw new uu(su.error_msg())}}const cu=fu.num_points();if(cu!==Zu.vertices||Cu!==Zu.indices)throw new uu(`Draco: decoded ${cu} vertices and ${Cu} indices, the accessors declare ${Zu.vertices} and ${Zu.indices}`);const Nu=ju(Eu),Ou=[];for(const{kind:Eu,id:ju,components:su}of Uu){const Uu=lu.GetAttributeByUniqueId(fu,ju);if(!Uu||0===Uu.ptr)throw new uu(`Draco: no attribute with id ${ju} (${Eu})`);const Zu=Uu.data_type();if(!Nu[Zu])throw new uu(`Draco: Cannot decode invalid data type ${Zu}`);if(Uu.num_components()!==su)throw new uu(`Draco: ${Eu} decodes to ${Uu.num_components()} components, its accessor declares ${su}`);Ou.push([Eu,Uu,Zu])}return Xu({dracoDecoder:lu,geometry:fu,triangles:bu===Eu.TRIANGULAR_MESH,numPoints:cu,numIndices:Cu,attributes:Ou})}finally{fu&&Eu.destroy(fu),qu&&Eu.destroy(qu),lu&&Eu.destroy(lu)}}const Uu=self;let Zu=null;self.onmessage=uu=>{let{data:Xu}=uu;if("init"===Xu.id){try{importScripts(Xu.url),Zu=DracoDecoderModule({wasmBinary:Xu.wasmBinary}),Uu.postMessage({id:"initDone"})}catch(bu){Uu.postMessage({id:"initError",message:bu instanceof Error?bu.message:String(bu)})}return}const{seq:lu,data:qu,attributeIds:fu,expected:Cu}=Xu;Zu?Zu.then((uu=>{try{const Zu=function(uu,Uu,Zu,Xu){const lu=Object.keys(Zu).map((uu=>({kind:uu,id:Zu[uu],components:Xu.components[uu]})));return su(uu,Uu,lu,Xu,(su=>{let{dracoDecoder:Uu,geometry:Zu,triangles:Xu,numPoints:lu,numIndices:qu,attributes:fu}=su;const Cu=ju(uu);let bu=null;if(Xu){const ju=4*qu,su=Eu(uu,ju);try{Uu.GetTrianglesUInt32Array(Zu,ju,su),bu=new Uint32Array(qu),bu.set(new Uint32Array(uu.HEAPF32.buffer,su,qu))}finally{uu._free(su)}}const cu=[];for(const[ju,Nu,Ou]of fu){const[su]=Cu[Ou],Xu=Nu.num_components(),qu=lu*Xu,fu=qu*su.BYTES_PER_ELEMENT,bu=Eu(uu,fu);try{Uu.GetAttributeDataArrayForAllPoints(Zu,Nu,Ou,fu,bu),cu.push({kind:ju,data:new su(uu.HEAPF32.buffer,bu,qu).slice(),size:Xu,byteOffset:Nu.byte_offset(),byteStride:Nu.byte_stride(),normalized:Nu.normalized()})}finally{uu._free(bu)}}return{indices:bu,attributes:cu,totalVertices:lu}}))}(uu,qu,fu,Cu),Xu=Zu.attributes.map((uu=>uu.data.buffer));Zu.indices&&Xu.push(Zu.indices.buffer),Uu.postMessage({id:"decoded",seq:lu,...Zu},Xu)}catch(bu){Uu.postMessage({id:"decodeError",seq:lu,message:bu instanceof Error?bu.message:String(bu)})}}),(uu=>{Uu.postMessage({id:"decodeError",seq:lu,message:uu instanceof Error?uu.message:String(uu)})})):Uu.postMessage({id:"decodeError",seq:lu,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, ju.p + "dracoDecode.worker.9e3a9b7f.worker.js")
+    function kG() {
+      return yG()('(()=>{class GG extends Error{}function bG(bG,ZG){const wG=bG._malloc(ZG);if(0===wG)throw new GG(`Draco: the decoder\'s heap refused ${ZG} bytes`);return wG}function ZG(GG){return{[GG.DT_FLOAT32]:[Float32Array,5126],[GG.DT_INT8]:[Int8Array,5120],[GG.DT_INT16]:[Int16Array,5122],[GG.DT_INT32]:[Int32Array,5124],[GG.DT_UINT8]:[Uint8Array,5121],[GG.DT_UINT16]:[Uint16Array,5123],[GG.DT_UINT32]:[Uint32Array,5125]}}function wG(bG,wG,SG,LG,yG){let kG=null,UG=null,YG=null;try{kG=new bG.Decoder,UG=new bG.DecoderBuffer,UG.Init(wG,wG.byteLength);let VG=0;const pG=kG.GetEncodedGeometryType(UG);if(pG===bG.TRIANGULAR_MESH){const ZG=new bG.Mesh;YG=ZG;const wG=kG.DecodeBufferToMesh(UG,ZG);if(!wG.ok()||0===ZG.ptr)throw new GG(wG.error_msg());VG=3*ZG.num_faces()}else{if(pG!==bG.POINT_CLOUD)throw new GG(`Draco: Cannot decode invalid geometry type ${pG}`);{const ZG=new bG.PointCloud;YG=ZG;const wG=kG.DecodeBufferToPointCloud(UG,ZG);if(!wG.ok()||!ZG.ptr)throw new GG(wG.error_msg())}}const fG=YG.num_points();if(fG!==LG.vertices||VG!==LG.indices)throw new GG(`Draco: decoded ${fG} vertices and ${VG} indices, the accessors declare ${LG.vertices} and ${LG.indices}`);const QG=ZG(bG),KG=[];for(const{kind:bG,id:ZG,components:wG}of SG){const SG=kG.GetAttributeByUniqueId(YG,ZG);if(!SG||0===SG.ptr)throw new GG(`Draco: no attribute with id ${ZG} (${bG})`);const LG=SG.data_type();if(!QG[LG])throw new GG(`Draco: Cannot decode invalid data type ${LG}`);if(SG.num_components()!==wG)throw new GG(`Draco: ${bG} decodes to ${SG.num_components()} components, its accessor declares ${wG}`);KG.push([bG,SG,LG])}return yG({dracoDecoder:kG,geometry:YG,triangles:pG===bG.TRIANGULAR_MESH,numPoints:fG,numIndices:VG,attributes:KG})}finally{YG&&bG.destroy(YG),UG&&bG.destroy(UG),kG&&bG.destroy(kG)}}const SG=self;let LG=null;self.onmessage=GG=>{let{data:yG}=GG;if("init"===yG.id){try{importScripts(yG.url),LG=DracoDecoderModule({wasmBinary:yG.wasmBinary}),SG.postMessage({id:"initDone"})}catch(pG){SG.postMessage({id:"initError",message:pG instanceof Error?pG.message:String(pG)})}return}const{seq:kG,data:UG,attributeIds:YG,expected:VG}=yG;LG?LG.then((GG=>{try{const LG=function(GG,SG,LG,yG){const kG=Object.keys(LG).map((GG=>({kind:GG,id:LG[GG],components:yG.components[GG]})));return wG(GG,SG,kG,yG,(wG=>{let{dracoDecoder:SG,geometry:LG,triangles:yG,numPoints:kG,numIndices:UG,attributes:YG}=wG;const VG=ZG(GG);let pG=null;if(yG){const ZG=4*UG,wG=bG(GG,ZG);try{SG.GetTrianglesUInt32Array(LG,ZG,wG),pG=new Uint32Array(UG),pG.set(new Uint32Array(GG.HEAPF32.buffer,wG,UG))}finally{GG._free(wG)}}const fG=[];for(const[ZG,QG,KG]of YG){const[wG]=VG[KG],yG=QG.num_components(),UG=kG*yG,YG=UG*wG.BYTES_PER_ELEMENT,pG=bG(GG,YG);try{SG.GetAttributeDataArrayForAllPoints(LG,QG,KG,YG,pG),fG.push({kind:ZG,data:new wG(GG.HEAPF32.buffer,pG,UG).slice(),size:yG,byteOffset:QG.byte_offset(),byteStride:QG.byte_stride(),normalized:QG.normalized()})}finally{GG._free(pG)}}return{indices:pG,attributes:fG,totalVertices:kG}}))}(GG,UG,YG,VG),yG=LG.attributes.map((GG=>GG.data.buffer));LG.indices&&yG.push(LG.indices.buffer),SG.postMessage({id:"decoded",seq:kG,...LG},yG)}catch(pG){SG.postMessage({id:"decodeError",seq:kG,message:pG instanceof Error?pG.message:String(pG)})}}),(GG=>{SG.postMessage({id:"decodeError",seq:kG,message:GG instanceof Error?GG.message:String(GG)})})):SG.postMessage({id:"decodeError",seq:kG,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, ZG.p + "dracoDecode.worker.6469c408.worker.js")
     }
-    var qu = ju(91);
-    const fu = 1e3;
-    let Cu = null,
-      bu = null;
-    const cu = [],
-      Nu = [];
-    let Ou = 0;
-    const Yu = {
+    var UG = ZG(80);
+    const YG = 1e3;
+    let VG = null,
+      pG = null;
+    const fG = [],
+      QG = [];
+    let KG = 0;
+    const hG = {
         decodes: 0,
         workersStarted: 0,
         mostWorkers: 0
       },
-      hu = function(uu, Eu) {
-        const ju = uu ? Math.max(1, Math.min(Math.floor(.5 * uu), 4)) : 1;
-        return Eu ? Math.min(ju, 2) : ju
-      }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, qu.isMobile)());
+      dG = function(GG, bG) {
+        const ZG = GG ? Math.max(1, Math.min(Math.floor(.5 * GG), 4)) : 1;
+        return bG ? Math.min(ZG, 2) : ZG
+      }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, UG.isMobile)());
 
-    function Du() {
-      if (!Cu) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
+    function JG() {
+      if (!VG) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
       const {
-        scriptUrl: uu,
-        wasmBinaryUrl: Eu
-      } = Cu;
-      return bu ??= fetch(Eu).then((uu => {
-        if (!uu.ok) throw new Error(`Draco: fetching ${Eu} failed: ${uu.status}`);
-        return uu.arrayBuffer()
-      })), bu.catch((() => {
-        bu = null
-      })), Yu.workersStarted++, bu.then((Eu => new Promise(((ju, su) => {
-        const Uu = new lu;
-        Uu.onerror = uu => {
-          Uu.onmessage = null, Uu.onerror = null, Uu.terminate(), su(new Error("Draco: the decode worker failed to start" + (uu.message ? `: ${uu.message}` : " (its script did not load)")))
-        }, Uu.onmessage = uu => {
+        scriptUrl: GG,
+        wasmBinaryUrl: bG
+      } = VG;
+      return pG ??= fetch(bG).then((GG => {
+        if (!GG.ok) throw new Error(`Draco: fetching ${bG} failed: ${GG.status}`);
+        return GG.arrayBuffer()
+      })), pG.catch((() => {
+        pG = null
+      })), hG.workersStarted++, pG.then((bG => new Promise(((ZG, wG) => {
+        const SG = new kG;
+        SG.onerror = GG => {
+          SG.onmessage = null, SG.onerror = null, SG.terminate(), wG(new Error("Draco: the decode worker failed to start" + (GG.message ? `: ${GG.message}` : " (its script did not load)")))
+        }, SG.onmessage = GG => {
           let {
-            data: Eu
-          } = uu;
-          Uu.onmessage = null, Uu.onerror = null, "initDone" === Eu.id ? ju(Uu) : (Uu.terminate(), su(new Error(`Draco: ${"initError"===Eu.id?Eu.message:"the worker did not start"}`)))
+            data: bG
+          } = GG;
+          SG.onmessage = null, SG.onerror = null, "initDone" === bG.id ? ZG(SG) : (SG.terminate(), wG(new Error(`Draco: ${"initError"===bG.id?bG.message:"the worker did not start"}`)))
         };
-        const Zu = Eu.slice(0),
-          Xu = {
+        const LG = bG.slice(0),
+          yG = {
             id: "init",
-            url: uu,
-            wasmBinary: Zu
+            url: GG,
+            wasmBinary: LG
           };
-        Uu.postMessage(Xu, [Zu])
+        SG.postMessage(yG, [LG])
       }))))
     }
 
-    function gu(uu) {
-      const Eu = cu.indexOf(uu); - 1 !== Eu && cu.splice(Eu, 1);
-      const ju = Nu.shift();
-      ju && eu(ju)
+    function rG(GG) {
+      const bG = fG.indexOf(GG); - 1 !== bG && fG.splice(bG, 1);
+      const ZG = QG.shift();
+      ZG && EG(ZG)
     }
 
-    function Mu(uu, Eu) {
-      uu.busy = !0, uu.releaseTimer && (clearTimeout(uu.releaseTimer), uu.releaseTimer = null);
-      uu.worker.then((ju => {
-        const su = Ou++;
-        ju.onmessage = Uu => {
+    function zG(GG, bG) {
+      GG.busy = !0, GG.releaseTimer && (clearTimeout(GG.releaseTimer), GG.releaseTimer = null);
+      GG.worker.then((ZG => {
+        const wG = KG++;
+        ZG.onmessage = SG => {
           let {
-            data: Zu
-          } = Uu;
-          if (("decoded" === Zu.id || "decodeError" === Zu.id) && Zu.seq === su) {
-            if (ju.onmessage = null, ju.onerror = null, "decoded" === Zu.id) return Yu.decodes++, Eu.resolve({
-              indices: Zu.indices,
-              attributes: Zu.attributes,
-              totalVertices: Zu.totalVertices
+            data: LG
+          } = SG;
+          if (("decoded" === LG.id || "decodeError" === LG.id) && LG.seq === wG) {
+            if (ZG.onmessage = null, ZG.onerror = null, "decoded" === LG.id) return hG.decodes++, bG.resolve({
+              indices: LG.indices,
+              attributes: LG.attributes,
+              totalVertices: LG.totalVertices
             }), void(() => {
-              const Eu = Nu.shift();
-              Eu ? Mu(uu, Eu) : (uu.busy = !1, uu.releaseTimer = setTimeout((() => {
-                const Eu = cu.indexOf(uu); - 1 !== Eu && cu.splice(Eu, 1), uu.worker.then((uu => {
-                  uu.terminate()
+              const bG = QG.shift();
+              bG ? zG(GG, bG) : (GG.busy = !1, GG.releaseTimer = setTimeout((() => {
+                const bG = fG.indexOf(GG); - 1 !== bG && fG.splice(bG, 1), GG.worker.then((GG => {
+                  GG.terminate()
                 }))
-              }), fu))
+              }), YG))
             })();
-            ju.terminate(), Eu.reject(new Error(Zu.message)), gu(uu)
+            ZG.terminate(), bG.reject(new Error(LG.message)), rG(GG)
           }
-        }, ju.onerror = su => {
-          ju.onmessage = null, ju.onerror = null, ju.terminate(), Eu.reject(new Error(`Draco: the decode worker failed: ${su.message}`)), gu(uu)
+        }, ZG.onerror = wG => {
+          ZG.onmessage = null, ZG.onerror = null, ZG.terminate(), bG.reject(new Error(`Draco: the decode worker failed: ${wG.message}`)), rG(GG)
         };
-        const Uu = {
+        const SG = {
           id: "decode",
-          seq: su,
-          data: Eu.data,
-          attributeIds: Eu.attributeIds,
-          expected: Eu.expected
+          seq: wG,
+          data: bG.data,
+          attributeIds: bG.attributeIds,
+          expected: bG.expected
         };
-        ju.postMessage(Uu, [Eu.data.buffer])
-      }), (ju => {
-        Eu.reject(ju instanceof Error ? ju : new Error(String(ju))), gu(uu)
+        ZG.postMessage(SG, [bG.data.buffer])
+      }), (ZG => {
+        bG.reject(ZG instanceof Error ? ZG : new Error(String(ZG))), rG(GG)
       }))
     }
 
-    function eu(uu) {
-      const Eu = cu.find((uu => !uu.busy));
-      if (Eu) Mu(Eu, uu);
+    function EG(GG) {
+      const bG = fG.find((GG => !GG.busy));
+      if (bG) zG(bG, GG);
       else {
-        if (cu.length < hu) {
-          const Eu = {
-            worker: Du(),
+        if (fG.length < dG) {
+          const bG = {
+            worker: JG(),
             busy: !0,
             releaseTimer: null
           };
-          return cu.push(Eu), Yu.mostWorkers = Math.max(Yu.mostWorkers, cu.length), void Mu(Eu, uu)
+          return fG.push(bG), hG.mostWorkers = Math.max(hG.mostWorkers, fG.length), void zG(bG, GG)
         }
-        Nu.push(uu)
+        QG.push(GG)
       }
     }
 
-    function Gu(uu, Eu, ju) {
-      return new Promise(((su, Uu) => {
-        eu({
-          data: new Int8Array(uu.buffer, uu.byteOffset, uu.byteLength).slice(),
-          attributeIds: Eu,
-          expected: ju,
-          resolve: su,
-          reject: Uu
+    function oG(GG, bG, ZG) {
+      return new Promise(((wG, SG) => {
+        EG({
+          data: new Int8Array(GG.buffer, GG.byteOffset, GG.byteLength).slice(),
+          attributeIds: bG,
+          expected: ZG,
+          resolve: wG,
+          reject: SG
         })
       }))
     }
-    var pu = ju(37854),
-      wu = ju(37867),
-      Ju = ju(34621),
-      du = ju(34617);
-    const au = {
+    var XG = ZG(37835),
+      uG = ZG(37845),
+      iG = ZG(34560),
+      CG = ZG(34555);
+    const WG = {
       index: -1,
       magFilter: void 0,
       minFilter: void 0,
@@ -146,323 +146,323 @@ export const modules = {
       wrapT: void 0
     };
 
-    function Pu(uu) {
-      const Eu = (0, du.k)(uu.byteLength);
-      if (Eu) throw new Ju.o(Eu);
+    function mG(GG) {
+      const bG = (0, CG.f)(GG.byteLength);
+      if (bG) throw new iG.n(bG);
       const {
-        json: ju,
-        bin: su
-      } = (0, Ju.C)(uu), Uu = (0, du.h)(ju, su);
-      if (Uu) throw new Ju.o(Uu);
+        json: ZG,
+        bin: wG
+      } = (0, iG.w)(GG), SG = (0, CG.d)(ZG, wG);
+      if (SG) throw new iG.n(SG);
       try {
-        return function(uu, Eu) {
-          var ju, su, Uu, Zu, Xu, lu, qu, fu, Cu, bu, cu, Nu, Ou, Yu, hu;
-          const Du = new Map,
-            gu = ju => {
-              let su = Du.get(ju);
-              if (!su) {
-                var Uu;
-                const Zu = uu.bufferViews[ju],
-                  Xu = null !== (Uu = Zu.byteOffset) && void 0 !== Uu ? Uu : 0;
-                su = {
-                  index: ju,
-                  bytes: Eu.subarray(Xu, Xu + Zu.byteLength),
-                  byteStride: Zu.byteStride
-                }, Du.set(ju, su)
+        return function(GG, bG) {
+          var ZG, wG, SG, LG, yG, kG, UG, YG, VG, pG, fG, QG, KG, hG, dG;
+          const JG = new Map,
+            rG = ZG => {
+              let wG = JG.get(ZG);
+              if (!wG) {
+                var SG;
+                const LG = GG.bufferViews[ZG],
+                  yG = null !== (SG = LG.byteOffset) && void 0 !== SG ? SG : 0;
+                wG = {
+                  index: ZG,
+                  bytes: bG.subarray(yG, yG + LG.byteLength),
+                  byteStride: LG.byteStride
+                }, JG.set(ZG, wG)
               }
-              return su
+              return wG
             },
-            Mu = new Map,
-            eu = Eu => {
-              let ju = Mu.get(Eu);
-              if (!ju) {
-                var su;
-                const Uu = uu.accessors[Eu];
-                ju = {
-                  index: Eu,
-                  count: Uu.count,
-                  type: Uu.type,
-                  numComponents: Ju.r[Uu.type],
-                  componentType: Uu.componentType,
-                  normalized: null !== (su = Uu.normalized) && void 0 !== su && su,
-                  byteOffset: Uu.byteOffset,
-                  bufferView: void 0 === Uu.bufferView ? null : gu(Uu.bufferView),
-                  min: Uu.min,
-                  max: Uu.max
-                }, Mu.set(Eu, ju)
+            zG = new Map,
+            EG = bG => {
+              let ZG = zG.get(bG);
+              if (!ZG) {
+                var wG;
+                const SG = GG.accessors[bG];
+                ZG = {
+                  index: bG,
+                  count: SG.count,
+                  type: SG.type,
+                  numComponents: iG.r[SG.type],
+                  componentType: SG.componentType,
+                  normalized: null !== (wG = SG.normalized) && void 0 !== wG && wG,
+                  byteOffset: SG.byteOffset,
+                  bufferView: void 0 === SG.bufferView ? null : rG(SG.bufferView),
+                  min: SG.min,
+                  max: SG.max
+                }, zG.set(bG, ZG)
               }
-              return ju
+              return ZG
             },
-            Gu = null !== (ju = null === (su = uu.extensionsUsed) || void 0 === su ? void 0 : su.includes("KHR_draco_mesh_compression")) && void 0 !== ju && ju,
-            pu = (null !== (Uu = uu.meshes) && void 0 !== Uu ? Uu : []).map(((Eu, ju) => {
-              const su = Eu.primitives.map(((Eu, ju) => {
-                var su, Uu, Zu;
-                const Xu = Gu ? null === (su = Eu.extensions) || void 0 === su ? void 0 : su.KHR_draco_mesh_compression : void 0;
-                let lu = null;
-                const qu = [];
-                if (Xu) {
-                  const ju = {
-                    vertices: uu.accessors[Eu.attributes.POSITION].count,
-                    indices: void 0 === Eu.indices ? 0 : uu.accessors[Eu.indices].count,
+            oG = null !== (ZG = null === (wG = GG.extensionsUsed) || void 0 === wG ? void 0 : wG.includes("KHR_draco_mesh_compression")) && void 0 !== ZG && ZG,
+            XG = (null !== (SG = GG.meshes) && void 0 !== SG ? SG : []).map(((bG, ZG) => {
+              const wG = bG.primitives.map(((bG, ZG) => {
+                var wG, SG, LG;
+                const yG = oG ? null === (wG = bG.extensions) || void 0 === wG ? void 0 : wG.KHR_draco_mesh_compression : void 0;
+                let kG = null;
+                const UG = [];
+                if (yG) {
+                  const ZG = {
+                    vertices: GG.accessors[bG.attributes.POSITION].count,
+                    indices: void 0 === bG.indices ? 0 : GG.accessors[bG.indices].count,
                     components: {}
                   };
-                  lu = {
-                    bufferView: gu(Xu.bufferView),
+                  kG = {
+                    bufferView: rG(yG.bufferView),
                     attributeIds: {},
                     normalized: {},
-                    expected: ju
+                    expected: ZG
                   };
-                  for (const [su, Uu] of Ju.j) {
-                    const Zu = Xu.attributes[su];
-                    if (void 0 === Zu) continue;
-                    lu.attributeIds[Uu] = Zu;
-                    const qu = Eu.attributes[su];
-                    var fu;
-                    if (void 0 !== qu) lu.normalized[Uu] = null !== (fu = uu.accessors[qu].normalized) && void 0 !== fu && fu, ju.components[Uu] = Ju.r[uu.accessors[qu].type]
+                  for (const [wG, SG] of iG.i) {
+                    const LG = yG.attributes[wG];
+                    if (void 0 === LG) continue;
+                    kG.attributeIds[SG] = LG;
+                    const UG = bG.attributes[wG];
+                    var YG;
+                    if (void 0 !== UG) kG.normalized[SG] = null !== (YG = GG.accessors[UG].normalized) && void 0 !== YG && YG, ZG.components[SG] = iG.r[GG.accessors[UG].type]
                   }
                 } else
-                  for (const [uu, Cu] of Ju.j) {
-                    const ju = Eu.attributes[uu];
-                    void 0 !== ju && qu.push({
-                      semantic: uu,
-                      kind: Cu,
-                      accessor: eu(ju)
+                  for (const [GG, VG] of iG.i) {
+                    const ZG = bG.attributes[GG];
+                    void 0 !== ZG && UG.push({
+                      semantic: GG,
+                      kind: VG,
+                      accessor: EG(ZG)
                     })
                   }
                 return {
-                  index: ju,
-                  mode: null !== (Uu = Eu.mode) && void 0 !== Uu ? Uu : 4,
-                  attributes: qu,
-                  indices: Xu || void 0 === Eu.indices ? null : eu(Eu.indices),
-                  position: void 0 === Eu.attributes.POSITION ? null : eu(Eu.attributes.POSITION),
-                  material: null !== (Zu = Eu.material) && void 0 !== Zu ? Zu : null,
-                  draco: lu
+                  index: ZG,
+                  mode: null !== (SG = bG.mode) && void 0 !== SG ? SG : 4,
+                  attributes: UG,
+                  indices: yG || void 0 === bG.indices ? null : EG(bG.indices),
+                  position: void 0 === bG.attributes.POSITION ? null : EG(bG.attributes.POSITION),
+                  material: null !== (LG = bG.material) && void 0 !== LG ? LG : null,
+                  draco: kG
                 }
               }));
               return {
-                index: ju,
-                name: Eu.name,
-                primitives: su,
-                extras: Eu.extras
+                index: ZG,
+                name: bG.name,
+                primitives: wG,
+                extras: bG.extras
               }
             })),
-            wu = (null !== (Zu = uu.nodes) && void 0 !== Zu ? Zu : []).map(((uu, Eu) => {
-              var ju, su;
+            uG = (null !== (LG = GG.nodes) && void 0 !== LG ? LG : []).map(((GG, bG) => {
+              var ZG, wG;
               return {
-                index: Eu,
-                name: uu.name,
-                children: null !== (ju = uu.children) && void 0 !== ju ? ju : [],
-                mesh: null !== (su = uu.mesh) && void 0 !== su ? su : null,
-                translation: uu.translation,
-                rotation: uu.rotation,
-                scale: uu.scale,
-                hasCamera: void 0 !== uu.camera,
-                extras: uu.extras
+                index: bG,
+                name: GG.name,
+                children: null !== (ZG = GG.children) && void 0 !== ZG ? ZG : [],
+                mesh: null !== (wG = GG.mesh) && void 0 !== wG ? wG : null,
+                translation: GG.translation,
+                rotation: GG.rotation,
+                scale: GG.scale,
+                hasCamera: void 0 !== GG.camera,
+                extras: GG.extras
               }
             })),
-            du = null !== (Xu = null === (lu = uu.extensionsUsed) || void 0 === lu ? void 0 : lu.includes("KHR_materials_unlit")) && void 0 !== Xu && Xu,
-            Pu = null !== (qu = null === (fu = uu.extensionsUsed) || void 0 === fu ? void 0 : fu.includes("KHR_texture_transform")) && void 0 !== qu && qu,
-            ou = (null !== (Cu = uu.materials) && void 0 !== Cu ? Cu : []).map(((uu, Eu) => {
-              var ju, su, Uu, Zu;
-              const Xu = uu.pbrMetallicRoughness,
-                lu = null === Xu || void 0 === Xu ? void 0 : Xu.baseColorTexture;
+            CG = null !== (yG = null === (kG = GG.extensionsUsed) || void 0 === kG ? void 0 : kG.includes("KHR_materials_unlit")) && void 0 !== yG && yG,
+            mG = null !== (UG = null === (YG = GG.extensionsUsed) || void 0 === YG ? void 0 : YG.includes("KHR_texture_transform")) && void 0 !== UG && UG,
+            IG = (null !== (VG = GG.materials) && void 0 !== VG ? VG : []).map(((GG, bG) => {
+              var ZG, wG, SG, LG;
+              const yG = GG.pbrMetallicRoughness,
+                kG = null === yG || void 0 === yG ? void 0 : yG.baseColorTexture;
               return {
-                index: Eu,
-                name: uu.name,
-                extras: uu.extras,
-                unlit: du && void 0 !== (null === (ju = uu.extensions) || void 0 === ju ? void 0 : ju.KHR_materials_unlit),
-                pbr: Xu ? {
-                  baseColorFactor: Xu.baseColorFactor,
-                  metallicFactor: Xu.metallicFactor,
-                  roughnessFactor: Xu.roughnessFactor
+                index: bG,
+                name: GG.name,
+                extras: GG.extras,
+                unlit: CG && void 0 !== (null === (ZG = GG.extensions) || void 0 === ZG ? void 0 : ZG.KHR_materials_unlit),
+                pbr: yG ? {
+                  baseColorFactor: yG.baseColorFactor,
+                  metallicFactor: yG.metallicFactor,
+                  roughnessFactor: yG.roughnessFactor
                 } : null,
-                baseColorTexture: lu ? {
-                  texture: lu.index,
-                  transform: Pu && (null === (su = lu.extensions) || void 0 === su ? void 0 : su.KHR_texture_transform) || null
+                baseColorTexture: kG ? {
+                  texture: kG.index,
+                  transform: mG && (null === (wG = kG.extensions) || void 0 === wG ? void 0 : wG.KHR_texture_transform) || null
                 } : null,
-                emissiveFactor: uu.emissiveFactor,
-                alphaMode: null !== (Uu = uu.alphaMode) && void 0 !== Uu ? Uu : "OPAQUE",
-                alphaCutoff: uu.alphaCutoff,
-                doubleSided: null !== (Zu = uu.doubleSided) && void 0 !== Zu && Zu
+                emissiveFactor: GG.emissiveFactor,
+                alphaMode: null !== (SG = GG.alphaMode) && void 0 !== SG ? SG : "OPAQUE",
+                alphaCutoff: GG.alphaCutoff,
+                doubleSided: null !== (LG = GG.doubleSided) && void 0 !== LG && LG
               }
             })),
-            ku = (null !== (bu = uu.textures) && void 0 !== bu ? bu : []).map(((Eu, ju) => {
-              var su, Uu;
-              const Zu = void 0 === Eu.sampler ? au : {
-                index: Eu.sampler,
-                ...null === (su = uu.samplers) || void 0 === su ? void 0 : su[Eu.sampler]
+            FG = (null !== (pG = GG.textures) && void 0 !== pG ? pG : []).map(((bG, ZG) => {
+              var wG, SG;
+              const LG = void 0 === bG.sampler ? WG : {
+                index: bG.sampler,
+                ...null === (wG = GG.samplers) || void 0 === wG ? void 0 : wG[bG.sampler]
               };
               return {
-                index: ju,
+                index: ZG,
                 sampler: {
-                  index: Zu.index,
-                  magFilter: Zu.magFilter,
-                  minFilter: Zu.minFilter,
-                  wrapS: Zu.wrapS,
-                  wrapT: Zu.wrapT
+                  index: LG.index,
+                  magFilter: LG.magFilter,
+                  minFilter: LG.minFilter,
+                  wrapS: LG.wrapS,
+                  wrapT: LG.wrapT
                 },
-                image: null !== (Uu = Eu.source) && void 0 !== Uu ? Uu : -1
+                image: null !== (SG = bG.source) && void 0 !== SG ? SG : -1
               }
             })),
-            mu = (null !== (cu = uu.images) && void 0 !== cu ? cu : []).map(((uu, Eu) => ({
-              index: Eu,
-              name: uu.name,
-              mimeType: uu.mimeType,
-              bufferView: gu(uu.bufferView)
+            vG = (null !== (fG = GG.images) && void 0 !== fG ? fG : []).map(((GG, bG) => ({
+              index: bG,
+              name: GG.name,
+              mimeType: GG.mimeType,
+              bufferView: rG(GG.bufferView)
             }))),
-            vu = null !== (Nu = (0, Ju.A)(uu)) && void 0 !== Nu ? Nu : 0;
+            aG = null !== (QG = (0, iG.v)(GG)) && void 0 !== QG ? QG : 0;
           return {
-            json: uu,
-            rootNodes: null !== (Ou = null === (Yu = uu.scenes) || void 0 === Yu || null === (hu = Yu[vu]) || void 0 === hu ? void 0 : hu.nodes) && void 0 !== Ou ? Ou : [],
-            nodes: wu,
-            meshes: pu,
-            materials: ou,
-            textures: ku,
-            images: mu
+            json: GG,
+            rootNodes: null !== (KG = null === (hG = GG.scenes) || void 0 === hG || null === (dG = hG[aG]) || void 0 === dG ? void 0 : dG.nodes) && void 0 !== KG ? KG : [],
+            nodes: uG,
+            meshes: XG,
+            materials: IG,
+            textures: FG,
+            images: vG
           }
-        }(ju, su)
-      } catch (Zu) {
-        throw Zu instanceof Ju.k ? Zu : new Ju.k(`reading the GLB failed: ${Zu instanceof Error?Zu.message:String(Zu)}`)
+        }(ZG, wG)
+      } catch (LG) {
+        throw LG instanceof iG.k ? LG : new iG.k(`reading the GLB failed: ${LG instanceof Error?LG.message:String(LG)}`)
       }
     }
-    async function ou(uu, Eu) {
-      var ju, su;
-      const Uu = uu.draco;
-      if (!Uu) throw new Ju.k("not a Draco primitive");
-      let Zu;
+    async function IG(GG, bG) {
+      var ZG, wG;
+      const SG = GG.draco;
+      if (!SG) throw new iG.k("not a Draco primitive");
+      let LG;
       try {
-        Zu = await Eu(Uu.bufferView.bytes, Uu.attributeIds, Uu.expected)
-      } catch (fu) {
-        throw new Ju.k(`Draco decoding failed: ${fu instanceof Error?fu.message:String(fu)}`)
+        LG = await bG(SG.bufferView.bytes, SG.attributeIds, SG.expected)
+      } catch (YG) {
+        throw new iG.k(`Draco decoding failed: ${YG instanceof Error?YG.message:String(YG)}`)
       }
       const {
-        vertices: Xu,
-        indices: lu,
-        components: qu
-      } = Uu.expected;
-      if (Zu.totalVertices !== Xu || (null !== (ju = null === (su = Zu.indices) || void 0 === su ? void 0 : su.length) && void 0 !== ju ? ju : 0) !== lu || Zu.attributes.some((uu => uu.size !== qu[uu.kind] || uu.data.length !== Xu * uu.size))) throw new Ju.k("Draco decoding gave other counts than the accessors declare");
-      for (const Cu of Zu.attributes) {
-        const uu = Uu.normalized[Cu.kind];
-        void 0 !== uu && (Cu.normalized = uu)
+        vertices: yG,
+        indices: kG,
+        components: UG
+      } = SG.expected;
+      if (LG.totalVertices !== yG || (null !== (ZG = null === (wG = LG.indices) || void 0 === wG ? void 0 : wG.length) && void 0 !== ZG ? ZG : 0) !== kG || LG.attributes.some((GG => GG.size !== UG[GG.kind] || GG.data.length !== yG * GG.size))) throw new iG.k("Draco decoding gave other counts than the accessors declare");
+      for (const VG of LG.attributes) {
+        const GG = SG.normalized[VG.kind];
+        void 0 !== GG && (VG.normalized = GG)
       }
-      return Zu
+      return LG
     }
-    const ku = new WeakMap;
+    const FG = new WeakMap;
 
-    function mu(uu, Eu) {
-      var ju;
-      const su = null !== (ju = ku.get(uu)) && void 0 !== ju ? ju : Eu(uu);
-      return ku.set(uu, su), su
-    }
-
-    function vu(uu) {
-      const Eu = uu.bufferView,
-        ju = 5125 === uu.componentType ? Uint32Array : Uint16Array,
-        su = Eu.bytes.buffer,
-        Uu = Eu.bytes.byteOffset + (uu.byteOffset || 0);
-      return Uu % ju.BYTES_PER_ELEMENT !== 0 ? new ju(su.slice(Uu, Uu + uu.count * ju.BYTES_PER_ELEMENT), 0) : new ju(su, Uu, uu.count)
+    function vG(GG, bG) {
+      var ZG;
+      const wG = null !== (ZG = FG.get(GG)) && void 0 !== ZG ? ZG : bG(GG);
+      return FG.set(GG, wG), wG
     }
 
-    function Ku(uu, Eu) {
-      if (uu.min && uu.max) return [new Float64Array(uu.min), new Float64Array(uu.max)];
-      const ju = Eu.find((uu => {
+    function aG(GG) {
+      const bG = GG.bufferView,
+        ZG = 5125 === GG.componentType ? Uint32Array : Uint16Array,
+        wG = bG.bytes.buffer,
+        SG = bG.bytes.byteOffset + (GG.byteOffset || 0);
+      return SG % ZG.BYTES_PER_ELEMENT !== 0 ? new ZG(wG.slice(SG, SG + GG.count * ZG.BYTES_PER_ELEMENT), 0) : new ZG(wG, SG, GG.count)
+    }
+
+    function cG(GG, bG) {
+      if (GG.min && GG.max) return [new Float64Array(GG.min), new Float64Array(GG.max)];
+      const ZG = bG.find((GG => {
           let {
-            kind: Eu
-          } = uu;
-          return "position" === Eu
+            kind: bG
+          } = GG;
+          return "position" === bG
         })),
-        su = ju ? (0, wu.j)(ju, uu.count) : new Float32Array(0);
-      return (0, wu.v)(su.length / 3, ((uu, Eu) => su[3 * uu + Eu]))
+        wG = ZG ? (0, uG.j)(ZG, GG.count) : new Float32Array(0);
+      return (0, uG.s)(wG.length / 3, ((GG, bG) => wG[3 * GG + bG]))
     }
 
-    function Vu(uu) {
-      const Eu = uu.attributes.map((uu => {
-          var Eu, ju;
+    function lG(GG) {
+      const bG = GG.attributes.map((GG => {
+          var bG, ZG;
           let {
-            kind: su,
-            accessor: Uu
-          } = uu;
+            kind: wG,
+            accessor: SG
+          } = GG;
           const {
-            bufferView: Zu,
-            numComponents: Xu
-          } = Uu;
-          if (!Zu) {
+            bufferView: LG,
+            numComponents: yG
+          } = SG;
+          if (!LG) {
             return {
-              kind: su,
-              data: mu(Uu, (() => new Float32Array(Xu * Uu.count))),
+              kind: wG,
+              data: vG(SG, (() => new Float32Array(yG * SG.count))),
               offset: 0,
-              stride: 4 * Xu,
-              components: Xu,
+              stride: 4 * yG,
+              components: yG,
               glType: 5126,
               isNormalized: !1
             }
           }
-          const lu = null !== (Eu = Zu.byteStride) && void 0 !== Eu ? Eu : Xu * Ju.d[Uu.componentType];
+          const kG = null !== (bG = LG.byteStride) && void 0 !== bG ? bG : yG * iG.e[SG.componentType];
           return {
-            kind: su,
-            data: Zu.bytes,
-            offset: null !== (ju = Uu.byteOffset) && void 0 !== ju ? ju : 0,
-            stride: lu,
-            components: Xu,
-            glType: Uu.componentType,
-            isNormalized: Uu.normalized
+            kind: wG,
+            data: LG.bytes,
+            offset: null !== (ZG = SG.byteOffset) && void 0 !== ZG ? ZG : 0,
+            stride: kG,
+            components: yG,
+            glType: SG.componentType,
+            isNormalized: SG.normalized
           }
         })),
-        ju = uu.indices,
-        su = ju && mu(ju, vu),
-        Uu = uu.position;
-      return new wu.f(Eu, su, Uu.count, ...Ku(Uu, Eu))
+        ZG = GG.indices,
+        wG = ZG && vG(ZG, aG),
+        SG = GG.position;
+      return new uG.f(bG, wG, SG.count, ...cG(SG, bG))
     }
-    const ru = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
+    const jG = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
 
-    function Qu(uu, Eu) {
-      const ju = Eu.attributes.map((uu => {
+    function PG(GG, bG) {
+      const ZG = bG.attributes.map((GG => {
         let {
-          kind: Eu,
-          data: ju,
-          size: su,
-          byteOffset: Uu,
-          byteStride: Zu,
-          normalized: Xu
-        } = uu;
+          kind: bG,
+          data: ZG,
+          size: wG,
+          byteOffset: SG,
+          byteStride: LG,
+          normalized: yG
+        } = GG;
         return {
-          kind: Eu,
-          data: ju,
-          offset: Uu,
-          stride: Zu,
-          components: su,
-          glType: 5120 + ru.indexOf(ju.constructor),
-          isNormalized: Xu
+          kind: bG,
+          data: ZG,
+          offset: SG,
+          stride: LG,
+          components: wG,
+          glType: 5120 + jG.indexOf(ZG.constructor),
+          isNormalized: yG
         }
       }));
-      return new wu.f(ju, Eu.indices, Eu.totalVertices, ...Ku(uu.position, ju))
+      return new uG.f(ZG, bG.indices, bG.totalVertices, ...cG(GG.position, ZG))
     }
 
-    function iu(uu) {
-      const Eu = uu.lastIndexOf("/");
-      return Eu < 0 ? uu : uu.substring(Eu + 1)
+    function MG(GG) {
+      const bG = GG.lastIndexOf("/");
+      return bG < 0 ? GG : GG.substring(bG + 1)
     }
 
-    function Wu(uu) {
-      const Eu = uu.lastIndexOf("/");
-      return Eu < 0 ? "" : uu.substring(0, Eu + 1)
+    function AG(GG) {
+      const bG = GG.lastIndexOf("/");
+      return bG < 0 ? "" : GG.substring(0, bG + 1)
     }
 
-    function Su(uu) {
-      return uu.name || `node${uu.index}`
+    function sG(GG) {
+      return GG.name || `node${GG.index}`
     }
-    const Iu = {
+    const qG = {
         rotation: [0, 1, 0, 0],
         scale: [1, 1, -1]
       },
-      Fu = {
+      nG = {
         9728: 12,
         9729: 2,
         9984: 9,
         9985: 11,
         9986: 10
       },
-      Bu = {
+      gG = {
         9728: 1,
         9729: 7,
         9984: 4,
@@ -471,353 +471,353 @@ export const modules = {
         9987: 6
       };
 
-    function Lu(uu) {
-      var Eu, ju, su, Uu;
-      const Zu = null !== (Eu = uu.minFilter) && void 0 !== Eu ? Eu : 9987;
-      return 9729 === (null !== (ju = uu.magFilter) && void 0 !== ju ? ju : 9729) ? null !== (su = Fu[Zu]) && void 0 !== su ? su : 3 : null !== (Uu = Bu[Zu]) && void 0 !== Uu ? Uu : 4
+    function eG(GG) {
+      var bG, ZG, wG, SG;
+      const LG = null !== (bG = GG.minFilter) && void 0 !== bG ? bG : 9987;
+      return 9729 === (null !== (ZG = GG.magFilter) && void 0 !== ZG ? ZG : 9729) ? null !== (wG = nG[LG]) && void 0 !== wG ? wG : 3 : null !== (SG = gG[LG]) && void 0 !== SG ? SG : 4
     }
-    const tu = {
+    const RG = {
       33071: 0,
       33648: 2
     };
 
-    function xu(uu) {
-      var Eu;
-      return null !== (Eu = tu[null !== uu && void 0 !== uu ? uu : 10497]) && void 0 !== Eu ? Eu : 1
+    function TG(GG) {
+      var bG;
+      return null !== (bG = RG[null !== GG && void 0 !== GG ? GG : 10497]) && void 0 !== bG ? bG : 1
     }
 
-    function Tu(uu) {
-      return 9728 === uu.minFilter || 9729 === uu.minFilter
+    function HG(GG) {
+      return 9728 === GG.minFilter || 9729 === GG.minFilter
     }
 
-    function Hu(uu) {
-      var Eu, ju, su;
-      const Uu = Float64Array.from(null !== (Eu = uu.scale) && void 0 !== Eu ? Eu : [1, 1, 1]);
-      return uu.hasCamera && (Uu[0] = -1), {
-        translation: Float64Array.from(null !== (ju = uu.translation) && void 0 !== ju ? ju : [0, 0, 0]),
-        rotation: Float64Array.from(null !== (su = uu.rotation) && void 0 !== su ? su : [0, 0, 0, 1]),
-        scale: Uu
+    function tG(GG) {
+      var bG, ZG, wG;
+      const SG = Float64Array.from(null !== (bG = GG.scale) && void 0 !== bG ? bG : [1, 1, 1]);
+      return GG.hasCamera && (SG[0] = -1), {
+        translation: Float64Array.from(null !== (ZG = GG.translation) && void 0 !== ZG ? ZG : [0, 0, 0]),
+        rotation: Float64Array.from(null !== (wG = GG.rotation) && void 0 !== wG ? wG : [0, 0, 0, 1]),
+        scale: SG
       }
     }
 
-    function Au(uu, Eu) {
+    function DG(GG, bG) {
       let {
-        translation: ju,
-        rotation: su,
-        scale: Uu
-      } = uu;
-      const Zu = new Float32Array(16);
-      return (0, pu.d)(Uu, 0, su, 0, ju, 0, Zu), Eu && (0, pu.j)(Zu, Eu, 0, Zu), Zu
+        translation: ZG,
+        rotation: wG,
+        scale: SG
+      } = GG;
+      const LG = new Float32Array(16);
+      return (0, XG.d)(SG, 0, wG, 0, ZG, 0, LG), bG && (0, XG.n)(LG, bG, 0, LG), LG
     }
-    class nu {
-      constructor(uu, Eu, ju, su) {
-        this.model = uu, this.decode = Eu, this.fileInfo = ju, this.uniqueRootUrl = su, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
-        const Uu = new Set,
-          Zu = (Eu, ju) => {
-            const su = uu.nodes[Eu];
-            if (this.parents.has(su)) throw new Ju.k(`/nodes/${Eu}: Invalid recursive node hierarchy`);
-            this.parents.set(su, ju);
-            const Xu = null === su.mesh ? [] : uu.meshes[su.mesh].primitives,
-              lu = Xu.map((uu => {
-                const Eu = Xu.length > 1;
+    class NG {
+      constructor(GG, bG, ZG, wG) {
+        this.model = GG, this.decode = bG, this.fileInfo = ZG, this.uniqueRootUrl = wG, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
+        const SG = new Set,
+          LG = (bG, ZG) => {
+            const wG = GG.nodes[bG];
+            if (this.parents.has(wG)) throw new iG.k(`/nodes/${bG}: Invalid recursive node hierarchy`);
+            this.parents.set(wG, ZG);
+            const yG = null === wG.mesh ? [] : GG.meshes[wG.mesh].primitives,
+              kG = yG.map((GG => {
+                const bG = yG.length > 1;
                 return {
-                  name: Eu ? `${Su(su)}_primitive${uu.index}` : Su(su),
-                  node: su,
-                  primitive: uu,
-                  part: Eu,
+                  name: bG ? `${sG(wG)}_primitive${GG.index}` : sG(wG),
+                  node: wG,
+                  primitive: GG,
+                  part: bG,
                   geometry: null
                 }
               }));
-            this.uses.set(su, lu);
-            const qu = null !== su.mesh && Uu.has(su.mesh);
-            Uu.add(su.mesh), this.own.set(su, qu ? [] : lu);
-            for (const uu of su.children) Zu(uu, su)
+            this.uses.set(wG, kG);
+            const UG = null !== wG.mesh && SG.has(wG.mesh);
+            SG.add(wG.mesh), this.own.set(wG, UG ? [] : kG);
+            for (const GG of wG.children) LG(GG, wG)
           };
-        for (const Xu of uu.rootNodes) Zu(Xu, null);
-        this.primitives = uu.nodes.flatMap((uu => {
-          var Eu;
-          return null !== (Eu = this.own.get(uu)) && void 0 !== Eu ? Eu : []
+        for (const yG of GG.rootNodes) LG(yG, null);
+        this.primitives = GG.nodes.flatMap((GG => {
+          var bG;
+          return null !== (bG = this.own.get(GG)) && void 0 !== bG ? bG : []
         }))
       }
       decodeGeometries() {
-        const uu = new Map;
-        return Promise.all(this.primitives.map((async Eu => {
+        const GG = new Map;
+        return Promise.all(this.primitives.map((async bG => {
           const {
-            primitive: ju
-          } = Eu, su = ju.draco;
-          let Uu = su ? uu.get(su.bufferView.index) : Promise.resolve(Vu(ju));
-          Uu || (Uu = ou(ju, this.decode).then((uu => Qu(ju, uu))), uu.set(su.bufferView.index, Uu)), Eu.geometry = await Uu
+            primitive: ZG
+          } = bG, wG = ZG.draco;
+          let SG = wG ? GG.get(wG.bufferView.index) : Promise.resolve(lG(ZG));
+          SG || (SG = IG(ZG, this.decode).then((GG => PG(ZG, GG))), GG.set(wG.bufferView.index, SG)), bG.geometry = await SG
         })))
       }
-      parentOf(uu) {
-        var Eu;
-        return null !== (Eu = this.parents.get(uu)) && void 0 !== Eu ? Eu : null
+      parentOf(GG) {
+        var bG;
+        return null !== (bG = this.parents.get(GG)) && void 0 !== bG ? bG : null
       }
-      meshesUnder(uu) {
-        const Eu = this.model.nodes.filter((uu => this.uses.has(uu)));
-        for (const su of Eu) {
-          const Eu = this.uses.get(su),
-            ju = Eu.find((Eu => Eu.name === uu));
-          if (ju) return 1 === Eu.length ? this.subtree(su) : this.own.get(su).includes(ju) ? [ju] : []
+      meshesUnder(GG) {
+        const bG = this.model.nodes.filter((GG => this.uses.has(GG)));
+        for (const wG of bG) {
+          const bG = this.uses.get(wG),
+            ZG = bG.find((bG => bG.name === GG));
+          if (ZG) return 1 === bG.length ? this.subtree(wG) : this.own.get(wG).includes(ZG) ? [ZG] : []
         }
-        const ju = Eu.find((Eu => 1 !== this.uses.get(Eu).length && Su(Eu) === uu));
-        return ju ? this.subtree(ju) : null
+        const ZG = bG.find((bG => 1 !== this.uses.get(bG).length && sG(bG) === GG));
+        return ZG ? this.subtree(ZG) : null
       }
-      subtree(uu) {
-        return [...this.own.get(uu), ...uu.children.flatMap((uu => this.subtree(this.model.nodes[uu])))]
+      subtree(GG) {
+        return [...this.own.get(GG), ...GG.children.flatMap((GG => this.subtree(this.model.nodes[GG])))]
       }
-      worldMatrix(uu, Eu, ju) {
-        let su = Au(Hu(Eu ? Iu : {}), null);
-        const Uu = [];
-        for (let Xu = uu.part ? uu.node : this.parentOf(uu.node); Xu; Xu = this.parentOf(Xu)) Uu.unshift(Xu);
-        for (const Xu of Uu) su = Au(Hu(Xu), su);
-        const Zu = Hu(uu.part ? {} : uu.node);
-        return void 0 !== ju && Zu.scale.fill(ju), Au(Zu, su)
+      worldMatrix(GG, bG, ZG) {
+        let wG = DG(tG(bG ? qG : {}), null);
+        const SG = [];
+        for (let yG = GG.part ? GG.node : this.parentOf(GG.node); yG; yG = this.parentOf(yG)) SG.unshift(yG);
+        for (const yG of SG) wG = DG(tG(yG), wG);
+        const LG = tG(GG.part ? {} : GG.node);
+        return void 0 !== ZG && LG.scale.fill(ZG), DG(LG, wG)
       }
-      floats(uu) {
+      floats(GG) {
         const {
-          vertexAttributes: Eu,
-          vertexCount: ju
-        } = uu.geometry;
-        return new Map(Eu.map((uu => [uu.kind, (0, wu.j)(uu, ju)])))
+          vertexAttributes: bG,
+          vertexCount: ZG
+        } = GG.geometry;
+        return new Map(bG.map((GG => [GG.kind, (0, uG.j)(GG, ZG)])))
       }
-      imageUrl(uu) {
-        return function(uu, Eu, ju) {
+      imageUrl(GG) {
+        return function(GG, bG, ZG) {
           let {
-            name: su
-          } = Eu;
-          return `data:${uu}${su}#image${ju}`
-        }(this.uniqueRootUrl, this.fileInfo, uu)
+            name: wG
+          } = bG;
+          return `data:${GG}${wG}#image${ZG}`
+        }(this.uniqueRootUrl, this.fileInfo, GG)
       }
-      textureDesc(uu, Eu) {
-        var ju;
+      textureDesc(GG, bG) {
+        var ZG;
         let {
-          texture: su,
-          transform: Uu
-        } = uu;
+          texture: wG,
+          transform: SG
+        } = GG;
         const {
-          sampler: Zu,
-          image: Xu
-        } = this.model.textures[su], {
-          bufferView: lu,
-          mimeType: qu,
-          name: fu
-        } = this.model.images[Xu], Cu = Uu && {
-          ...Uu.offset ? {
-            uOffset: Uu.offset[0],
-            vOffset: Uu.offset[1]
+          sampler: LG,
+          image: yG
+        } = this.model.textures[wG], {
+          bufferView: kG,
+          mimeType: UG,
+          name: YG
+        } = this.model.images[yG], VG = SG && {
+          ...SG.offset ? {
+            uOffset: SG.offset[0],
+            vOffset: SG.offset[1]
           } : {},
           uRotationCenter: 0,
           vRotationCenter: 0,
-          ...Uu.rotation ? {
-            wAng: -Uu.rotation
+          ...SG.rotation ? {
+            wAng: -SG.rotation
           } : {},
-          ...Uu.scale ? {
-            uScale: Uu.scale[0],
-            vScale: Uu.scale[1]
+          ...SG.scale ? {
+            uScale: SG.scale[0],
+            vScale: SG.scale[1]
           } : {}
         };
         return {
-          url: this.imageUrl(Xu),
-          noMipmap: Tu(Zu),
+          url: this.imageUrl(yG),
+          noMipmap: HG(LG),
           invertY: !1,
-          samplingMode: Lu(Zu),
+          samplingMode: eG(LG),
           data: {
-            bytes: lu.bytes,
-            mimeType: qu,
-            label: fu,
-            context: `/textures/${su}`
+            bytes: kG.bytes,
+            mimeType: UG,
+            label: YG,
+            context: `/textures/${wG}`
           },
           sets: {
-            wrapU: xu(Zu.wrapS),
-            wrapV: xu(Zu.wrapT),
-            ...Cu,
-            coordinatesIndex: null !== (ju = null === Uu || void 0 === Uu ? void 0 : Uu.texCoord) && void 0 !== ju ? ju : 0,
-            hasAlpha: Eu
+            wrapU: TG(LG.wrapS),
+            wrapV: TG(LG.wrapT),
+            ...VG,
+            coordinatesIndex: null !== (ZG = null === SG || void 0 === SG ? void 0 : SG.texCoord) && void 0 !== ZG ? ZG : 0,
+            hasAlpha: bG
           }
         }
       }
     }
-    async function yu(uu, Eu, ju, su, Uu, Zu) {
-      let Xu = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-      const lu = function(uu, Eu, ju) {
-          return "string" !== typeof Eu ? {
+    async function OG(GG, bG, ZG, wG, SG, LG) {
+      let yG = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+      const kG = function(GG, bG, ZG) {
+          return "string" !== typeof bG ? {
             url: "",
-            rootUrl: uu,
-            name: ju()
-          } : Eu ? Eu.startsWith("data:") ? {
-            url: Eu,
-            rootUrl: uu,
+            rootUrl: GG,
+            name: ZG()
+          } : bG ? bG.startsWith("data:") ? {
+            url: bG,
+            rootUrl: GG,
             name: ""
-          } : uu ? {
-            url: uu + Eu,
-            rootUrl: uu,
-            name: Eu
+          } : GG ? {
+            url: GG + bG,
+            rootUrl: GG,
+            name: bG
           } : {
-            url: Eu,
-            rootUrl: Wu(Eu),
-            name: iu(Eu)
+            url: bG,
+            rootUrl: AG(bG),
+            name: MG(bG)
           } : {
-            url: uu,
-            rootUrl: Wu(uu),
-            name: iu(uu)
+            url: GG,
+            rootUrl: AG(GG),
+            name: MG(GG)
           }
-        }(ju, uu, Uu),
-        qu = {};
-      Eu.addPendingData(qu);
+        }(ZG, GG, SG),
+        UG = {};
+      bG.addPendingData(UG);
       try {
-        const ju = Pu(await async function(uu, Eu) {
-            return "string" !== typeof Eu ? Eu : uu.url.startsWith("data:") ? (0, Ju.u)(uu.url) : await (0, Ju.x)(uu.url)
-          }(lu, uu)),
-          qu = new nu(ju, su, lu, function(uu, Eu) {
+        const ZG = mG(await async function(GG, bG) {
+            return "string" !== typeof bG ? bG : GG.url.startsWith("data:") ? (0, iG.s)(GG.url) : await (0, iG.u)(GG.url)
+          }(kG, GG)),
+          UG = new NG(ZG, wG, kG, function(GG, bG) {
             let {
-              rootUrl: ju,
-              name: su
-            } = uu;
-            return !ju.startsWith("file:") && su ? ju : `${ju}${Eu()}/`
-          }(lu, Uu));
-        return await Zu(qu), Eu.importedMeshesFiles && (Eu.loadingPluginName = "WK", Xu && Eu.importedMeshesFiles.push(lu.url)), qu
+              rootUrl: ZG,
+              name: wG
+            } = GG;
+            return !ZG.startsWith("file:") && wG ? ZG : `${ZG}${bG()}/`
+          }(kG, SG));
+        return await LG(UG), bG.importedMeshesFiles && (bG.loadingPluginName = "JF", yG && bG.importedMeshesFiles.push(kG.url)), UG
       } finally {
-        Eu.removePendingData(qu)
+        bG.removePendingData(UG)
       }
     }
-    var zu = ju(37969),
-      Ru = ju(37837),
-      uE = ju(38287);
+    var xG = ZG(37962),
+      BG = ZG(37808),
+      Gb = ZG(38296);
 
-    function EE(uu) {
-      if (null === uu || void 0 === uu || !uu.min || !uu.max) return null;
-      const [Eu, ju, su] = uu.min, [Uu, Zu, Xu] = uu.max, {
-        BoundingInfo: lu,
-        dO: qu
-      } = (0, zu.c)();
-      return new lu(new qu(Eu, ju, su), new qu(Uu, Zu, Xu))
+    function bb(GG) {
+      if (null === GG || void 0 === GG || !GG.min || !GG.max) return null;
+      const [bG, ZG, wG] = GG.min, [SG, LG, yG] = GG.max, {
+        BoundingInfo: kG,
+        mK: UG
+      } = (0, xG.c)();
+      return new kG(new UG(bG, ZG, wG), new UG(SG, LG, yG))
     }
 
-    function jE(uu) {
-      (0, Ru.g)(uu) || (uu.geometry && uu.geometry.useBoundingInfoFromGeometry ? uu._updateBoundingInfo() : uu.refreshBoundingInfo(!0, !0))
+    function Zb(GG) {
+      (0, BG.e)(GG) || (GG.geometry && GG.geometry.useBoundingInfoFromGeometry ? GG._updateBoundingInfo() : GG.refreshBoundingInfo(!0, !0))
     }
-    class sE {
-      constructor(uu, Eu) {
-        this.vY = uu, this.decode = Eu, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
+    class wb {
+      constructor(GG, bG) {
+        this.Ah = GG, this.decode = bG, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
       }
-      viewBytes(uu) {
-        let Eu = this.viewData.get(uu.index);
-        return Eu || (Eu = this.bufferData.then((() => uu.bytes)), this.viewData.set(uu.index, Eu)), Eu
+      viewBytes(GG) {
+        let bG = this.viewData.get(GG.index);
+        return bG || (bG = this.bufferData.then((() => GG.bytes)), this.viewData.set(GG.index, bG)), bG
       }
-      viewBuffer(uu) {
-        let Eu = this.viewBuffers.get(uu.index);
-        return Eu || (Eu = this.viewBytes(uu).then((uu => new((0, zu.c)().qO)(this.vY.wO(), uu, !1))), this.viewBuffers.set(uu.index, Eu)), Eu
+      viewBuffer(GG) {
+        let bG = this.viewBuffers.get(GG.index);
+        return bG || (bG = this.viewBytes(GG).then((GG => new((0, xG.c)().VK)(this.Ah.CK(), GG, !1))), this.viewBuffers.set(GG.index, bG)), bG
       }
-      vertexBuffer(uu, Eu) {
+      vertexBuffer(GG, bG) {
         const {
-          kind: ju,
-          data: su
-        } = Eu, Uu = `${uu.index}:${ju}`;
-        let Zu = this.vertexBuffers.get(Uu);
-        if (!Zu) {
-          const Xu = uu.bufferView;
-          Zu = Xu ? this.viewBuffer(Xu).then((uu => this.layoutVertexBuffer(uu, Eu))) : Promise.resolve(su).then((uu => new((0, zu.c)().VertexBuffer)(this.vY.wO(), uu, ju, !1))), this.vertexBuffers.set(Uu, Zu)
+          kind: ZG,
+          data: wG
+        } = bG, SG = `${GG.index}:${ZG}`;
+        let LG = this.vertexBuffers.get(SG);
+        if (!LG) {
+          const yG = GG.bufferView;
+          LG = yG ? this.viewBuffer(yG).then((GG => this.layoutVertexBuffer(GG, bG))) : Promise.resolve(wG).then((GG => new((0, xG.c)().VertexBuffer)(this.Ah.CK(), GG, ZG, !1))), this.vertexBuffers.set(SG, LG)
         }
-        return Zu
+        return LG
       }
-      layoutVertexBuffer(uu, Eu) {
+      layoutVertexBuffer(GG, bG) {
         let {
-          kind: ju,
-          offset: su,
-          stride: Uu,
-          components: Zu,
-          glType: Xu,
-          isNormalized: lu
-        } = Eu;
-        const qu = this.vY.wO();
-        return new((0, zu.c)().VertexBuffer)(qu, uu, ju, !1, void 0, Uu, void 0, su, Zu, Xu, lu, !0, void 0, !0)
+          kind: ZG,
+          offset: wG,
+          stride: SG,
+          components: LG,
+          glType: yG,
+          isNormalized: kG
+        } = bG;
+        const UG = this.Ah.CK();
+        return new((0, xG.c)().VertexBuffer)(UG, GG, ZG, !1, void 0, SG, void 0, wG, LG, yG, kG, !0, void 0, !0)
       }
-      load(uu, Eu, ju) {
-        const su = (0, Ru.g)(ju),
-          Uu = uu => {
-            su || (ju._delayInfo = ju._delayInfo || [], -1 === ju._delayInfo.indexOf(uu) && ju._delayInfo.push(uu))
+      load(GG, bG, ZG) {
+        const wG = (0, BG.e)(ZG),
+          SG = GG => {
+            wG || (ZG._delayInfo = ZG._delayInfo || [], -1 === ZG._delayInfo.indexOf(GG) && ZG._delayInfo.push(GG))
           },
-          Zu = Eu.draco;
-        if (Zu) {
-          for (const uu in Zu.attributeIds) Uu(uu);
-          let Xu = this.dracoGeometry.get(Zu.bufferView.index);
-          return Xu || (Xu = this.viewBytes(Zu.bufferView).then((async () => {
-            let Uu;
+          LG = bG.draco;
+        if (LG) {
+          for (const GG in LG.attributeIds) SG(GG);
+          let yG = this.dracoGeometry.get(LG.bufferView.index);
+          return yG || (yG = this.viewBytes(LG.bufferView).then((async () => {
+            let SG;
             try {
-              Uu = await ou(Eu, this.decode)
-            } catch (qu) {
-              throw new Ju.k(`${uu}: ${qu instanceof Error?qu.message:String(qu)}`)
+              SG = await IG(bG, this.decode)
+            } catch (UG) {
+              throw new iG.k(`${GG}: ${UG instanceof Error?UG.message:String(UG)}`)
             }
-            const Zu = Qu(Eu, Uu);
-            if (su) return Zu;
-            const Xu = EE(Eu.position),
-              lu = new((0, zu.c)().MirroredGeometry)(ju.name, this.vY);
-            Xu && (lu._boundingInfo = Xu, lu.useBoundingInfoFromGeometry = !0), Zu.indexData && lu.setIndices(Zu.indexData);
-            for (const uu of Zu.vertexAttributes) lu.setVerticesBuffer(this.layoutVertexBuffer(uu.data, uu), Zu.vertexCount);
-            return lu.link(Zu), lu
-          })), this.dracoGeometry.set(Zu.bufferView.index, Xu)), Xu
+            const LG = PG(bG, SG);
+            if (wG) return LG;
+            const yG = bb(bG.position),
+              kG = new((0, xG.c)().MirroredGeometry)(ZG.name, this.Ah);
+            yG && (kG._boundingInfo = yG, kG.useBoundingInfoFromGeometry = !0), LG.indexData && kG.setIndices(LG.indexData);
+            for (const GG of LG.vertexAttributes) kG.setVerticesBuffer(this.layoutVertexBuffer(GG.data, GG), LG.vertexCount);
+            return kG.link(LG), kG
+          })), this.dracoGeometry.set(LG.bufferView.index, yG)), yG
         }
-        const Xu = [],
-          lu = Vu(Eu);
-        if (su) return ju.isUnIndexed = !lu.indexData, ju.hasVertexAlpha = (0, uE.e)(Eu), Promise.resolve(lu);
-        const qu = new((0, zu.c)().MirroredGeometry)(ju.name, this.vY),
+        const yG = [],
+          kG = lG(bG);
+        if (wG) return ZG.isUnIndexed = !kG.indexData, ZG.hasVertexAlpha = (0, Gb.g)(bG), Promise.resolve(kG);
+        const UG = new((0, xG.c)().MirroredGeometry)(ZG.name, this.Ah),
           {
-            indexData: fu
-          } = lu;
-        fu ? Xu.push(this.viewBytes(Eu.indices.bufferView).then((() => {
-          qu.setIndices(fu)
-        }))) : ju.isUnIndexed = !0;
-        for (const [Cu, {
-            kind: bu,
-            accessor: cu
-          }] of Eu.attributes.entries()) Uu(bu), Xu.push(this.vertexBuffer(cu, lu.vertexAttributes[Cu]).then((uu => {
-          if ("position" === uu.getKind()) {
-            const uu = EE(cu);
-            uu && (qu._boundingInfo = uu, qu.useBoundingInfoFromGeometry = !0)
+            indexData: YG
+          } = kG;
+        YG ? yG.push(this.viewBytes(bG.indices.bufferView).then((() => {
+          UG.setIndices(YG)
+        }))) : ZG.isUnIndexed = !0;
+        for (const [VG, {
+            kind: pG,
+            accessor: fG
+          }] of bG.attributes.entries()) SG(pG), yG.push(this.vertexBuffer(fG, kG.vertexAttributes[VG]).then((GG => {
+          if ("position" === GG.getKind()) {
+            const GG = bb(fG);
+            GG && (UG._boundingInfo = GG, UG.useBoundingInfoFromGeometry = !0)
           }
-          qu.setVerticesBuffer(uu, lu.vertexCount)
+          UG.setVerticesBuffer(GG, kG.vertexCount)
         })));
-        return (0, uE.e)(Eu) && (ju.hasVertexAlpha = !0), Promise.all(Xu).then((() => (qu.link(lu), qu)))
+        return (0, Gb.g)(bG) && (ZG.hasVertexAlpha = !0), Promise.all(yG).then((() => (UG.link(kG), UG)))
       }
     }
-    var UE, ZE = ju(37729),
-      XE = ju(37488),
-      lE = ju(38298),
-      qE = ju(37664),
-      fE = ju(37704),
-      CE = ju(2893),
-      bE = ju(37693);
+    var Sb, Lb = ZG(37679),
+      yb = ZG(37432),
+      kb = ZG(38304),
+      Ub = ZG(37613),
+      Yb = ZG(37647),
+      Vb = ZG(2751),
+      pb = ZG(37639);
 
-    function cE(uu, Eu) {
-      uu.metadata = uu.metadata || {};
-      const ju = uu._internalMetadata = uu._internalMetadata || {},
-        su = ju.WK = ju.WK || {};
-      (su.pointers = su.pointers || []).push(Eu)
+    function fb(GG, bG) {
+      GG.metadata = GG.metadata || {};
+      const ZG = GG._internalMetadata = GG._internalMetadata || {},
+        wG = ZG.JF = ZG.JF || {};
+      (wG.pointers = wG.pointers || []).push(bG)
     }
 
-    function NE(uu, Eu) {
-      if (Eu && Object.keys(Eu).length > 0) {
-        const ju = uu.metadata = uu.metadata || {};
-        (ju.WK = ju.WK || {}).extras = Eu
+    function Qb(GG, bG) {
+      if (bG && Object.keys(bG).length > 0) {
+        const ZG = GG.metadata = GG.metadata || {};
+        (ZG.JF = ZG.JF || {}).extras = bG
       }
     }
 
-    function OE(uu, Eu) {
-      Eu.position = uu.translation ? XE.dO.FromArray(uu.translation) : XE.dO.Zero(), Eu.rotationQuaternion = uu.rotation ? XE.Quaternion.FromArray(uu.rotation) : XE.Quaternion.Identity(), Eu.Of = uu.scale ? XE.dO.FromArray(uu.scale) : XE.dO.One()
+    function Kb(GG, bG) {
+      bG.position = GG.translation ? yb.mK.FromArray(GG.translation) : yb.mK.Zero(), bG.rotationQuaternion = GG.rotation ? yb.Quaternion.FromArray(GG.rotation) : yb.Quaternion.Identity(), bG.nY = GG.scale ? yb.mK.FromArray(GG.scale) : yb.mK.One()
     }
-    class YE {
-      constructor(uu, Eu) {
-        if (this.vY = uu, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, Eu) {
-          const Eu = uu.wO(),
-            ju = uu.wV.add((() => {
+    class hb {
+      constructor(GG, bG) {
+        if (this.Ah = GG, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, bG) {
+          const bG = GG.CK(),
+            ZG = GG.Gl.add((() => {
               this.dispose()
             })),
-            su = Eu.pO.add((() => {
-              for (const uu of [...this.geometries, ...this.meshes, ...this.textures]) uu._rebuild()
+            wG = bG.iK.add((() => {
+              for (const GG of [...this.geometries, ...this.meshes, ...this.textures]) GG._rebuild()
             }));
           this.release = () => {
-            uu.wV.remove(ju), Eu.pO.remove(su)
+            GG.Gl.remove(ZG), bG.iK.remove(wG)
           }
         }
       }
@@ -827,267 +827,267 @@ export const modules = {
       addAllToScene() {
         if (this.release) {
           this.release(), this.release = null;
-          for (const uu of this.meshes) this.vY.hsu(uu);
-          for (const uu of this.materials) this.vY.addMaterial(uu);
-          for (const uu of this.geometries) this.vY.addGeometry(uu);
-          for (const uu of this.transformNodes) this.vY.addTransformNode(uu);
-          for (const uu of this.textures) this.vY.addTexture(uu)
+          for (const GG of this.meshes) this.Ah.FwG(GG);
+          for (const GG of this.materials) this.Ah.addMaterial(GG);
+          for (const GG of this.geometries) this.Ah.addGeometry(GG);
+          for (const GG of this.transformNodes) this.Ah.addTransformNode(GG);
+          for (const GG of this.textures) this.Ah.addTexture(GG)
         }
       }
       dispose() {
-        var uu;
-        for (const Eu of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
-          for (const uu of Eu.slice()) uu.dispose();
-          Eu.length = 0
+        var GG;
+        for (const bG of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
+          for (const GG of bG.slice()) GG.dispose();
+          bG.length = 0
         }
-        null === (uu = this.release) || void 0 === uu || uu.call(this), this.release = null
+        null === (GG = this.release) || void 0 === GG || GG.call(this), this.release = null
       }
     }
-    class hE {
-      constructor(uu, Eu, ju, su, Uu, Zu, Xu) {
-        this.asset = uu, this.vY = Eu, this.tree = ju, this.geometryData = Uu, this.materials = Zu, this.lite = Xu, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = su ? ju : null
+    class db {
+      constructor(GG, bG, ZG, wG, SG, LG, yG) {
+        this.asset = GG, this.Ah = bG, this.tree = ZG, this.geometryData = SG, this.materials = LG, this.lite = yG, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = wG ? ZG : null
       }
-      create(uu) {
-        if (this.lite) return uu();
-        const Eu = this.vY;
-        Eu._blockEntityCollection = !!this.container;
+      create(GG) {
+        if (this.lite) return GG();
+        const bG = this.Ah;
+        bG._blockEntityCollection = !!this.container;
         try {
-          const Eu = uu();
-          return this.container && (Eu._parentContainer = this.container), Eu
+          const bG = GG();
+          return this.container && (bG._parentContainer = this.container), bG
         } finally {
-          Eu._blockEntityCollection = !1
+          bG._blockEntityCollection = !1
         }
       }
-      node(uu, Eu) {
-        return this.create((() => this.lite ? Eu ? (0, lE.g)(this.lite, uu) : (0, lE.q)(this.lite, uu) : Eu ? new((0, zu.c)().Mesh)(uu, this.vY) : new((0, zu.c)().TransformNode)(uu, this.vY)))
+      node(GG, bG) {
+        return this.create((() => this.lite ? bG ? (0, kb.c)(this.lite, GG) : (0, kb.u)(this.lite, GG) : bG ? new((0, xG.c)().Mesh)(GG, this.Ah) : new((0, xG.c)().TransformNode)(GG, this.Ah)))
       }
       async load() {
-        var uu;
+        var GG;
         this.asset.model.json.nodes && this.createRoot();
-        const Eu = this.lite ? null : this.vY,
-          ju = null !== (uu = null === Eu || void 0 === Eu ? void 0 : Eu.blockMaterialDirtyMechanism) && void 0 !== uu && uu;
-        let su;
-        Eu && (Eu.blockMaterialDirtyMechanism = !0);
+        const bG = this.lite ? null : this.Ah,
+          ZG = null !== (GG = null === bG || void 0 === bG ? void 0 : bG.blockMaterialDirtyMechanism) && void 0 !== GG && GG;
+        let wG;
+        bG && (bG.blockMaterialDirtyMechanism = !0);
         try {
-          su = this.loadScene()
+          wG = this.loadScene()
         } finally {
-          null === Eu || void 0 === Eu || Eu._forceBlockMaterialDirtyMechanism(ju)
+          null === bG || void 0 === bG || bG._forceBlockMaterialDirtyMechanism(ZG)
         }
-        await su;
+        await wG;
         const {
-          root: Uu,
-          tree: Zu
+          root: SG,
+          tree: LG
         } = this;
-        Uu && (Uu.Wk(!0), Zu.meshes.push(Uu), Zu.rootNodes.push(Uu));
-        for (const lu of this.asset.model.nodes) {
-          const uu = this.nodeObjects.get(lu.index);
-          uu && ["TransformNode", "LiteNode"].includes(uu.getClassName()) && Zu.transformNodes.push(uu);
-          for (const Eu of null !== (Xu = this.nodePrimitives.get(lu.index)) && void 0 !== Xu ? Xu : []) {
-            var Xu;
-            Zu.meshes.push(Eu);
-            const uu = Eu.geometry;
-            uu && !Zu.geometries.includes(uu) && Zu.geometries.push(uu)
+        SG && (SG.DW(!0), LG.meshes.push(SG), LG.rootNodes.push(SG));
+        for (const kG of this.asset.model.nodes) {
+          const GG = this.nodeObjects.get(kG.index);
+          GG && ["TransformNode", "LiteNode"].includes(GG.getClassName()) && LG.transformNodes.push(GG);
+          for (const bG of null !== (yG = this.nodePrimitives.get(kG.index)) && void 0 !== yG ? yG : []) {
+            var yG;
+            LG.meshes.push(bG);
+            const GG = bG.geometry;
+            GG && !LG.geometries.includes(GG) && LG.geometries.push(GG)
           }
         }
       }
       createRoot() {
-        const uu = this.node("__root__", !0);
-        this.root = uu, uu.Wk(!1), this.vY.useRightHandedSystem || OE(Iu, uu)
+        const GG = this.node("__root__", !0);
+        this.root = GG, GG.DW(!1), this.Ah.useRightHandedSystem || Kb(qG, GG)
       }
       loadScene() {
-        const uu = [];
-        for (const Eu of this.asset.model.rootNodes) uu.push(this.loadNode(this.asset.model.nodes[Eu], (uu => {
-          uu.parent = this.root
+        const GG = [];
+        for (const bG of this.asset.model.rootNodes) GG.push(this.loadNode(this.asset.model.nodes[bG], (GG => {
+          GG.parent = this.root
         })));
-        return uu.push(Promise.resolve()), Promise.all(uu).then((() => {}))
+        return GG.push(Promise.resolve()), Promise.all(GG).then((() => {}))
       }
-      loadNode(uu, Eu) {
-        const ju = `/nodes/${uu.index}`,
-          su = [],
-          Uu = Uu => {
-            if (cE(Uu, ju), OE(uu, Uu), uu.hasCamera && !this.vY.useRightHandedSystem) {
+      loadNode(GG, bG) {
+        const ZG = `/nodes/${GG.index}`,
+          wG = [],
+          SG = SG => {
+            if (fb(SG, ZG), Kb(GG, SG), GG.hasCamera && !this.Ah.useRightHandedSystem) {
               const {
-                Of: uu
-              } = Uu;
-              uu.set(-1, uu.y, uu.z)
+                nY: GG
+              } = SG;
+              GG.set(-1, GG.y, GG.z)
             }
-            for (const Eu of uu.children) su.push(this.loadNode(this.asset.model.nodes[Eu], (uu => {
-              uu.parent = Uu
+            for (const bG of GG.children) wG.push(this.loadNode(this.asset.model.nodes[bG], (GG => {
+              GG.parent = SG
             })));
-            (ju => {
-              NE(ju, uu.extras), Eu(ju)
-            })(Uu)
+            (ZG => {
+              Qb(ZG, GG.extras), bG(ZG)
+            })(SG)
           };
-        if (null === uu.mesh) {
-          const Eu = this.node(Su(uu), !1);
-          this.nodeObjects.set(uu.index, Eu), Uu(Eu)
+        if (null === GG.mesh) {
+          const bG = this.node(sG(GG), !1);
+          this.nodeObjects.set(GG.index, bG), SG(bG)
         } else {
-          const Eu = this.asset.model.meshes[uu.mesh];
-          su.push(this.loadMesh(`/meshes/${Eu.index}`, uu, Eu, Uu))
+          const bG = this.asset.model.meshes[GG.mesh];
+          wG.push(this.loadMesh(`/meshes/${bG.index}`, GG, bG, SG))
         }
-        return Promise.all(su).then((() => {
-          for (const ju of null !== (Eu = this.nodePrimitives.get(uu.index)) && void 0 !== Eu ? Eu : []) {
-            var Eu;
-            jE(ju)
+        return Promise.all(wG).then((() => {
+          for (const ZG of null !== (bG = this.nodePrimitives.get(GG.index)) && void 0 !== bG ? bG : []) {
+            var bG;
+            Zb(ZG)
           }
-          return this.nodeObjects.get(uu.index)
+          return this.nodeObjects.get(GG.index)
         }))
       }
-      loadMesh(uu, Eu, ju, su) {
-        const Uu = [],
-          Zu = Su(Eu);
-        if (1 === ju.primitives.length) {
-          const su = ju.primitives[0];
-          Uu.push(this.loadPrimitive(`${uu}/primitives/${su.index}`, Zu, su, (uu => {
-            this.nodeObjects.set(Eu.index, uu), this.nodePrimitives.set(Eu.index, [uu])
+      loadMesh(GG, bG, ZG, wG) {
+        const SG = [],
+          LG = sG(bG);
+        if (1 === ZG.primitives.length) {
+          const wG = ZG.primitives[0];
+          SG.push(this.loadPrimitive(`${GG}/primitives/${wG.index}`, LG, wG, (GG => {
+            this.nodeObjects.set(bG.index, GG), this.nodePrimitives.set(bG.index, [GG])
           })))
         } else {
-          const su = this.node(Zu, !1);
-          this.nodeObjects.set(Eu.index, su);
-          const Xu = [];
-          this.nodePrimitives.set(Eu.index, Xu);
-          for (const Eu of ju.primitives) Uu.push(this.loadPrimitive(`${uu}/primitives/${Eu.index}`, `${Zu}_primitive${Eu.index}`, Eu, (uu => {
-            uu.parent = su, Xu.push(uu)
+          const wG = this.node(LG, !1);
+          this.nodeObjects.set(bG.index, wG);
+          const yG = [];
+          this.nodePrimitives.set(bG.index, yG);
+          for (const bG of ZG.primitives) SG.push(this.loadPrimitive(`${GG}/primitives/${bG.index}`, `${LG}_primitive${bG.index}`, bG, (GG => {
+            GG.parent = wG, yG.push(GG)
           })))
         }
-        const Xu = this.nodeObjects.get(Eu.index);
-        return su(Xu), Promise.all(Uu).then((() => Xu))
+        const yG = this.nodeObjects.get(bG.index);
+        return wG(yG), Promise.all(SG).then((() => yG))
       }
-      loadPrimitive(uu, Eu, ju, su) {
-        const Uu = [],
-          Zu = this.node(Eu, !0);
-        if (Zu.sideOrientation = this.vY.useRightHandedSystem ? qE.b.CounterClockWiseSideOrientation : qE.b.ClockWiseSideOrientation, Uu.push(this.geometryData.load(uu, ju, Zu).then((uu => {
-            if ((0, Ru.g)(Zu)) {
-              var Eu, ju;
-              const su = uu;
-              Zu.replaceModel(su, Int32Array.of(0, null !== (Eu = null === (ju = su.indexData) || void 0 === ju ? void 0 : ju.length) && void 0 !== Eu ? Eu : su.vertexCount, 0, su.vertexCount))
-            } else this.create((() => (uu.applyToMesh(Zu), uu)))
+      loadPrimitive(GG, bG, ZG, wG) {
+        const SG = [],
+          LG = this.node(bG, !0);
+        if (LG.sideOrientation = this.Ah.useRightHandedSystem ? Ub.e.CounterClockWiseSideOrientation : Ub.e.ClockWiseSideOrientation, SG.push(this.geometryData.load(GG, ZG, LG).then((GG => {
+            if ((0, BG.e)(LG)) {
+              var bG, ZG;
+              const wG = GG;
+              LG.replaceModel(wG, Int32Array.of(0, null !== (bG = null === (ZG = wG.indexData) || void 0 === ZG ? void 0 : ZG.length) && void 0 !== bG ? bG : wG.vertexCount, 0, wG.vertexCount))
+            } else this.create((() => (GG.applyToMesh(LG), GG)))
           }))), this.materials) {
-          const uu = 0 === ju.mode ? qE.b.PointListDrawMode : qE.b.TriangleFillMode,
-            Eu = null === ju.material ? null : this.asset.model.materials[ju.material];
-          Uu.push(this.loadMaterial(Eu, uu, (uu => {
-            Zu.material = uu
+          const GG = 0 === ZG.mode ? Ub.e.PointListDrawMode : Ub.e.TriangleFillMode,
+            bG = null === ZG.material ? null : this.asset.model.materials[ZG.material];
+          SG.push(this.loadMaterial(bG, GG, (GG => {
+            LG.material = GG
           })))
         }
-        return cE(Zu, uu), su(Zu), Promise.all(Uu).then((() => Zu))
+        return fb(LG, GG), wG(LG), Promise.all(SG).then((() => LG))
       }
-      loadMaterial(uu, Eu, ju) {
-        var su;
-        const Uu = `${null!==(su=null===uu||void 0===uu?void 0:uu.index)&&void 0!==su?su:"default"}:${Eu}`;
-        let Zu = this.materialData.get(Uu);
-        return Zu || (Zu = this.createMaterial(uu, Eu), this.materialData.set(Uu, Zu)), ju(Zu.material), Zu.promise
+      loadMaterial(GG, bG, ZG) {
+        var wG;
+        const SG = `${null!==(wG=null===GG||void 0===GG?void 0:GG.index)&&void 0!==wG?wG:"default"}:${bG}`;
+        let LG = this.materialData.get(SG);
+        return LG || (LG = this.createMaterial(GG, bG), this.materialData.set(SG, LG)), ZG(LG.material), LG.promise
       }
-      createMaterial(uu, Eu) {
-        const ju = uu ? uu.name || `material${uu.index}` : "__GLTFLoader._default",
+      createMaterial(GG, bG) {
+        const ZG = GG ? GG.name || `material${GG.index}` : "__GLTFLoader._default",
           {
-            style: su,
-            unlit: Uu
+            style: wG,
+            unlit: SG
           } = this.materials;
-        let Zu;
-        const Xu = this.create((() => {
-          const Xu = (0, bE.d)({
-            name: ju,
-            vY: this.vY,
+        let LG;
+        const yG = this.create((() => {
+          const yG = (0, pb.e)({
+            name: ZG,
+            Ah: this.Ah,
             sets: {
-              ...(0, uE.b)(this.asset, uu, su, Uu),
-              fillMode: Eu
+              ...(0, Gb.c)(this.asset, GG, wG, SG),
+              fillMode: bG
             },
             unrendered: !0
           });
-          return Zu = Xu.model, Xu.mirror
+          return LG = yG.model, yG.mirror
         }));
-        let lu = Promise.resolve();
-        if (uu) {
-          const Eu = `/materials/${uu.index}`,
-            su = Zu.diffuseTexture;
-          if (su && !su.mirror) lu = new Promise((uu => setTimeout(uu)));
-          else if (su) {
-            const Uu = su.mirror;
-            Uu._parentContainer = this.container, Uu.name = `${ju} (Base Color)`, cE(Uu, `${Eu}${uu.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(Uu), lu = (0, fE.z)(su)
+        let kG = Promise.resolve();
+        if (GG) {
+          const bG = `/materials/${GG.index}`,
+            wG = LG.diffuseTexture;
+          if (wG && !wG.mirror) kG = new Promise((GG => setTimeout(GG)));
+          else if (wG) {
+            const SG = wG.mirror;
+            SG._parentContainer = this.container, SG.name = `${ZG} (Base Color)`, fb(SG, `${bG}${GG.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(SG), kG = (0, Yb.v)(wG)
           }
-          NE(Xu, uu.extras), cE(Xu, Eu)
+          Qb(yG, GG.extras), fb(yG, bG)
         }
-        return this.tree.materials.push(Xu), {
-          material: Xu,
-          promise: lu
+        return this.tree.materials.push(yG), {
+          material: yG,
+          promise: kG
         }
       }
     }
 
-    function DE() {
-      ZE.f.dracoDecodes = Yu.decodes, ZE.f.dracoWorkersStarted = Yu.workersStarted, ZE.f.dracoMostWorkers = Yu.mostWorkers
+    function Jb() {
+      Lb.e.dracoDecodes = hG.decodes, Lb.e.dracoWorkersStarted = hG.workersStarted, Lb.e.dracoMostWorkers = hG.mostWorkers
     }
-    async function gE(uu, Eu, ju, Uu, Zu) {
+    async function rb(GG, bG, ZG, SG, LG) {
       try {
-        return await async function(uu, Eu, ju, Uu, Zu, Xu) {
-          var lu;
-          let qu;
-          const fu = null === (lu = (0, CE.c)()) || void 0 === lu ? void 0 : lu.tO,
-            Cu = null !== fu && void 0 !== fu && fu.xO && Eu === fu.hV() ? fu : null,
-            bu = Zu && !Cu;
-          return await yu(uu, Eu, ju, Uu, su.e, (uu => (qu = new YE(Eu, bu), new hE(uu, Eu, qu, bu, new sE(Eu, Uu), Xu, Cu).load())), !Zu), qu
-        }(uu, Eu, ju, Gu, Uu, Zu)
+        return await async function(GG, bG, ZG, SG, LG, yG) {
+          var kG;
+          let UG;
+          const YG = null === (kG = (0, Vb.i)()) || void 0 === kG ? void 0 : kG.HK,
+            VG = null !== YG && void 0 !== YG && YG.tK && bG === YG.Dv() ? YG : null,
+            pG = LG && !VG;
+          return await OG(GG, bG, ZG, SG, wG.e, (GG => (UG = new hb(bG, pG), new db(GG, bG, UG, pG, new wb(bG, SG), yG, VG).load())), !LG), UG
+        }(GG, bG, ZG, oG, SG, LG)
       } finally {
-        DE()
+        Jb()
       }
     }
-    async function ME(uu, Eu, ju, Uu) {
+    async function zb(GG, bG, ZG, SG) {
       try {
-        return await yu(uu, Eu, ju, Gu, su.e, (uu => Uu(uu, new sE(Eu, Gu))))
+        return await OG(GG, bG, ZG, oG, wG.e, (GG => SG(GG, new wb(bG, oG))))
       } finally {
-        DE()
+        Jb()
       }
     }
-    UE = Uu.b, Cu || (Cu = {
-      scriptUrl: new URL(UE.scriptUrl, location.href).href,
-      wasmBinaryUrl: new URL(UE.wasmBinaryUrl, location.href).href
+    Sb = SG.e, VG || (VG = {
+      scriptUrl: new URL(Sb.scriptUrl, location.href).href,
+      wasmBinaryUrl: new URL(Sb.wasmBinaryUrl, location.href).href
     })
   },
-  41761: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Xu
+  41918: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => yG
     });
-    var su = ju(131),
-      Uu = ju(1135);
+    var wG = ZG(116),
+      SG = ZG(1036);
 
-    function Zu(uu) {
-      return (0, su.isDiscordClient)() ? `https://${Uu.e.discordDomain}/${uu.href}` : uu.href
+    function LG(GG) {
+      return (0, wG.isDiscordClient)() ? `https://${SG.c.discordDomain}/${GG.href}` : GG.href
     }
-    const Xu = {
-      scriptUrl: Zu(new ju.U(ju(41768))),
-      wasmBinaryUrl: Zu(new ju.U(ju(41772)))
+    const yG = {
+      scriptUrl: LG(new ZG.U(ZG(41927))),
+      wasmBinaryUrl: LG(new ZG.U(ZG(41932)))
     }
   },
-  36664: uu => {
-    uu.exports = function(uu, Eu, ju, su) {
-      var Uu = self || window;
+  36579: GG => {
+    GG.exports = function(GG, bG, ZG, wG) {
+      var SG = self || window;
       try {
         try {
-          var Zu;
+          var LG;
           try {
-            Zu = new Uu.Blob([uu])
-          } catch (fu) {
-            (Zu = new(Uu.BlobBuilder || Uu.WebKitBlobBuilder || Uu.MozBlobBuilder || Uu.MSBlobBuilder)).append(uu), Zu = Zu.getBlob()
+            LG = new SG.Blob([GG])
+          } catch (YG) {
+            (LG = new(SG.BlobBuilder || SG.WebKitBlobBuilder || SG.MozBlobBuilder || SG.MSBlobBuilder)).append(GG), LG = LG.getBlob()
           }
-          var Xu = Uu.URL || Uu.webkitURL,
-            lu = Xu.createObjectURL(Zu),
-            qu = new Uu[Eu](lu, ju);
-          return Xu.revokeObjectURL(lu), qu
-        } catch (fu) {
-          return new Uu[Eu]("data:application/javascript,".concat(encodeURIComponent(uu)), ju)
+          var yG = SG.URL || SG.webkitURL,
+            kG = yG.createObjectURL(LG),
+            UG = new SG[bG](kG, ZG);
+          return yG.revokeObjectURL(kG), UG
+        } catch (YG) {
+          return new SG[bG]("data:application/javascript,".concat(encodeURIComponent(GG)), ZG)
         }
-      } catch (fu) {
-        if (!su) throw Error("Inline worker is not supported");
-        return new Uu[Eu](su, ju)
+      } catch (YG) {
+        if (!wG) throw Error("Inline worker is not supported");
+        return new SG[bG](wG, ZG)
       }
     }
   },
-  41768: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
+  41927: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
   },
-  41772: (uu, Eu, ju) => {
-    uu.exports = ju.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
+  41932: (GG, bG, ZG) => {
+    GG.exports = ZG.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

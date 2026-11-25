@@ -1,176 +1,176 @@
 export const id = 317;
 export const ids = [317];
 export const modules = {
-  42114: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      _HDRTextureLoader: () => Cu
+  42294: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      _HDRTextureLoader: () => VG
     });
-    var su = ju(37494);
-    class Uu {
-      static ConvertPanoramaToCubemap(uu, Eu, ju, su) {
-        let Uu, Zu = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          Xu = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-        if (!uu) throw "ConvertPanoramaToCubemap: input cannot be null";
-        if (uu.length != Eu * ju * 3) {
-          if (uu.length != Eu * ju * 4) throw "ConvertPanoramaToCubemap: input size is wrong";
-          Uu = 4
-        } else Uu = 3;
+    var wG = ZG(37439);
+    class SG {
+      static ConvertPanoramaToCubemap(GG, bG, ZG, wG) {
+        let SG, LG = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          yG = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+        if (!GG) throw "ConvertPanoramaToCubemap: input cannot be null";
+        if (GG.length != bG * ZG * 3) {
+          if (GG.length != bG * ZG * 4) throw "ConvertPanoramaToCubemap: input size is wrong";
+          SG = 4
+        } else SG = 3;
         return {
-          front: this.CreateCubemapTexture(su, this.FACE_FRONT, uu, Eu, ju, Zu, Xu, Uu),
-          back: this.CreateCubemapTexture(su, this.FACE_BACK, uu, Eu, ju, Zu, Xu, Uu),
-          left: this.CreateCubemapTexture(su, this.FACE_LEFT, uu, Eu, ju, Zu, Xu, Uu),
-          right: this.CreateCubemapTexture(su, this.FACE_RIGHT, uu, Eu, ju, Zu, Xu, Uu),
-          up: this.CreateCubemapTexture(su, this.FACE_UP, uu, Eu, ju, Zu, Xu, Uu),
-          down: this.CreateCubemapTexture(su, this.FACE_DOWN, uu, Eu, ju, Zu, Xu, Uu),
-          size: su,
+          front: this.CreateCubemapTexture(wG, this.FACE_FRONT, GG, bG, ZG, LG, yG, SG),
+          back: this.CreateCubemapTexture(wG, this.FACE_BACK, GG, bG, ZG, LG, yG, SG),
+          left: this.CreateCubemapTexture(wG, this.FACE_LEFT, GG, bG, ZG, LG, yG, SG),
+          right: this.CreateCubemapTexture(wG, this.FACE_RIGHT, GG, bG, ZG, LG, yG, SG),
+          up: this.CreateCubemapTexture(wG, this.FACE_UP, GG, bG, ZG, LG, yG, SG),
+          down: this.CreateCubemapTexture(wG, this.FACE_DOWN, GG, bG, ZG, LG, yG, SG),
+          size: wG,
           type: 1,
           format: 4,
           gammaSpace: !1
         }
       }
-      static CreateCubemapTexture(uu, Eu, ju, su, Uu, Zu, Xu, lu) {
-        const qu = new ArrayBuffer(uu * uu * 4 * 3),
-          fu = new Float32Array(qu),
-          Cu = Zu ? Math.max(1, Math.round(su / 4 / uu)) : 1,
-          bu = 1 / Cu,
-          cu = bu * bu,
-          Nu = Eu[1].subtract(Eu[0]).scale(bu / uu),
-          Ou = Eu[3].subtract(Eu[2]).scale(bu / uu),
-          Yu = 1 / uu;
-        let hu = 0;
-        for (let Du = 0; Du < uu; Du++)
-          for (let Zu = 0; Zu < Cu; Zu++) {
-            let Zu = Eu[0],
-              qu = Eu[2];
-            for (let Eu = 0; Eu < uu; Eu++)
-              for (let bu = 0; bu < Cu; bu++) {
-                const Cu = qu.subtract(Zu).scale(hu).add(Zu);
-                Cu.normalize();
-                const bu = this.CalcProjectionSpherical(Cu, ju, su, Uu, lu, Xu);
-                fu[Du * uu * 3 + 3 * Eu + 0] += bu.r * cu, fu[Du * uu * 3 + 3 * Eu + 1] += bu.g * cu, fu[Du * uu * 3 + 3 * Eu + 2] += bu.b * cu, Zu = Zu.add(Nu), qu = qu.add(Ou)
+      static CreateCubemapTexture(GG, bG, ZG, wG, SG, LG, yG, kG) {
+        const UG = new ArrayBuffer(GG * GG * 4 * 3),
+          YG = new Float32Array(UG),
+          VG = LG ? Math.max(1, Math.round(wG / 4 / GG)) : 1,
+          pG = 1 / VG,
+          fG = pG * pG,
+          QG = bG[1].subtract(bG[0]).scale(pG / GG),
+          KG = bG[3].subtract(bG[2]).scale(pG / GG),
+          hG = 1 / GG;
+        let dG = 0;
+        for (let JG = 0; JG < GG; JG++)
+          for (let LG = 0; LG < VG; LG++) {
+            let LG = bG[0],
+              UG = bG[2];
+            for (let bG = 0; bG < GG; bG++)
+              for (let pG = 0; pG < VG; pG++) {
+                const VG = UG.subtract(LG).scale(dG).add(LG);
+                VG.normalize();
+                const pG = this.CalcProjectionSpherical(VG, ZG, wG, SG, kG, yG);
+                YG[JG * GG * 3 + 3 * bG + 0] += pG.r * fG, YG[JG * GG * 3 + 3 * bG + 1] += pG.g * fG, YG[JG * GG * 3 + 3 * bG + 2] += pG.b * fG, LG = LG.add(QG), UG = UG.add(KG)
               }
-            hu += Yu * bu
+            dG += hG * pG
           }
-        return fu
+        return YG
       }
-      static CalcProjectionSpherical(uu, Eu, ju, su, Uu, Zu) {
-        let Xu = Math.atan2(uu.z, uu.x);
-        const lu = Math.acos(uu.y);
-        for (; Xu < -Math.PI;) Xu += 2 * Math.PI;
-        for (; Xu > Math.PI;) Xu -= 2 * Math.PI;
-        let qu = Xu / Math.PI;
-        const fu = lu / Math.PI;
-        qu = .5 * qu + .5;
-        let Cu = Math.round(qu * ju);
-        Cu < 0 ? Cu = 0 : Cu >= ju && (Cu = ju - 1);
-        let bu = Math.round(fu * su);
-        bu < 0 ? bu = 0 : bu >= su && (bu = su - 1);
-        const cu = Zu ? su - bu - 1 : bu;
+      static CalcProjectionSpherical(GG, bG, ZG, wG, SG, LG) {
+        let yG = Math.atan2(GG.z, GG.x);
+        const kG = Math.acos(GG.y);
+        for (; yG < -Math.PI;) yG += 2 * Math.PI;
+        for (; yG > Math.PI;) yG -= 2 * Math.PI;
+        let UG = yG / Math.PI;
+        const YG = kG / Math.PI;
+        UG = .5 * UG + .5;
+        let VG = Math.round(UG * ZG);
+        VG < 0 ? VG = 0 : VG >= ZG && (VG = ZG - 1);
+        let pG = Math.round(YG * wG);
+        pG < 0 ? pG = 0 : pG >= wG && (pG = wG - 1);
+        const fG = LG ? wG - pG - 1 : pG;
         return {
-          r: Eu[cu * ju * Uu + Cu * Uu + 0],
-          g: Eu[cu * ju * Uu + Cu * Uu + 1],
-          b: Eu[cu * ju * Uu + Cu * Uu + 2]
+          r: bG[fG * ZG * SG + VG * SG + 0],
+          g: bG[fG * ZG * SG + VG * SG + 1],
+          b: bG[fG * ZG * SG + VG * SG + 2]
         }
       }
     }
 
-    function Zu(uu, Eu, ju, su, Uu, Zu) {
-      Uu > 0 ? (Uu = function(uu, Eu) {
-        return Eu > 1023 ? uu * Math.pow(2, 1023) * Math.pow(2, Eu - 1023) : Eu < -1074 ? uu * Math.pow(2, -1074) * Math.pow(2, Eu + 1074) : uu * Math.pow(2, Eu)
-      }(1, Uu - 136), uu[Zu + 0] = Eu * Uu, uu[Zu + 1] = ju * Uu, uu[Zu + 2] = su * Uu) : (uu[Zu + 0] = 0, uu[Zu + 1] = 0, uu[Zu + 2] = 0)
+    function LG(GG, bG, ZG, wG, SG, LG) {
+      SG > 0 ? (SG = function(GG, bG) {
+        return bG > 1023 ? GG * Math.pow(2, 1023) * Math.pow(2, bG - 1023) : bG < -1074 ? GG * Math.pow(2, -1074) * Math.pow(2, bG + 1074) : GG * Math.pow(2, bG)
+      }(1, SG - 136), GG[LG + 0] = bG * SG, GG[LG + 1] = ZG * SG, GG[LG + 2] = wG * SG) : (GG[LG + 0] = 0, GG[LG + 1] = 0, GG[LG + 2] = 0)
     }
 
-    function Xu(uu, Eu) {
-      let ju, su = "";
-      for (let Uu = Eu; Uu < uu.length - Eu && (ju = String.fromCharCode(uu[Uu]), "\n" != ju); Uu++) su += ju;
-      return su
+    function yG(GG, bG) {
+      let ZG, wG = "";
+      for (let SG = bG; SG < GG.length - bG && (ZG = String.fromCharCode(GG[SG]), "\n" != ZG); SG++) wG += ZG;
+      return wG
     }
 
-    function lu(uu) {
-      let Eu = Xu(uu, 0);
-      if ("#" != Eu[0] || "?" != Eu[1]) throw "Bad HDR Format.";
-      let ju = !1,
-        su = !1,
-        Uu = 0;
+    function kG(GG) {
+      let bG = yG(GG, 0);
+      if ("#" != bG[0] || "?" != bG[1]) throw "Bad HDR Format.";
+      let ZG = !1,
+        wG = !1,
+        SG = 0;
       do {
-        Uu += Eu.length + 1, Eu = Xu(uu, Uu), "FORMAT=32-bit_rle_rgbe" == Eu ? su = !0 : 0 == Eu.length && (ju = !0)
-      } while (!ju);
-      if (!su) throw "HDR Bad header format, unsupported FORMAT";
-      Uu += Eu.length + 1, Eu = Xu(uu, Uu);
-      const Zu = /^-Y (.*) \+X (.*)$/g.exec(Eu);
-      if (!Zu || Zu.length < 3) throw "HDR Bad header format, no size";
-      const lu = parseInt(Zu[2]),
-        qu = parseInt(Zu[1]);
-      if (lu < 8 || lu > 32767) throw "HDR Bad header format, unsupported size";
-      return Uu += Eu.length + 1, {
-        height: qu,
-        width: lu,
-        dataPosition: Uu
+        SG += bG.length + 1, bG = yG(GG, SG), "FORMAT=32-bit_rle_rgbe" == bG ? wG = !0 : 0 == bG.length && (ZG = !0)
+      } while (!ZG);
+      if (!wG) throw "HDR Bad header format, unsupported FORMAT";
+      SG += bG.length + 1, bG = yG(GG, SG);
+      const LG = /^-Y (.*) \+X (.*)$/g.exec(bG);
+      if (!LG || LG.length < 3) throw "HDR Bad header format, no size";
+      const kG = parseInt(LG[2]),
+        UG = parseInt(LG[1]);
+      if (kG < 8 || kG > 32767) throw "HDR Bad header format, unsupported size";
+      return SG += bG.length + 1, {
+        height: UG,
+        width: kG,
+        dataPosition: SG
       }
     }
 
-    function qu(uu, Eu) {
-      return function(uu, Eu) {
-        let ju = Eu.height;
-        const su = Eu.width;
-        let Uu, Xu, lu, qu, Cu, bu, cu, Nu, Ou = Eu.dataPosition;
-        const Yu = new ArrayBuffer(4 * su),
-          hu = new Uint8Array(Yu),
-          Du = new ArrayBuffer(Eu.width * Eu.height * 4 * 3),
-          gu = new Float32Array(Du);
-        for (; ju > 0;) {
-          if (Uu = uu[Ou++], Xu = uu[Ou++], lu = uu[Ou++], qu = uu[Ou++], 2 != Uu || 2 != Xu || 128 & lu || Eu.width < 8 || Eu.width > 32767) return fu(uu, Eu);
-          if ((lu << 8 | qu) != su) throw "HDR Bad header format, wrong scan line width";
-          for (bu = 0, Nu = 0; Nu < 4; Nu++)
-            for (cu = (Nu + 1) * su; bu < cu;)
-              if (Uu = uu[Ou++], Xu = uu[Ou++], Uu > 128) {
-                if (Cu = Uu - 128, 0 == Cu || Cu > cu - bu) throw "HDR Bad Format, bad scanline data (run)";
-                for (; Cu-- > 0;) hu[bu++] = Xu
+    function UG(GG, bG) {
+      return function(GG, bG) {
+        let ZG = bG.height;
+        const wG = bG.width;
+        let SG, yG, kG, UG, VG, pG, fG, QG, KG = bG.dataPosition;
+        const hG = new ArrayBuffer(4 * wG),
+          dG = new Uint8Array(hG),
+          JG = new ArrayBuffer(bG.width * bG.height * 4 * 3),
+          rG = new Float32Array(JG);
+        for (; ZG > 0;) {
+          if (SG = GG[KG++], yG = GG[KG++], kG = GG[KG++], UG = GG[KG++], 2 != SG || 2 != yG || 128 & kG || bG.width < 8 || bG.width > 32767) return YG(GG, bG);
+          if ((kG << 8 | UG) != wG) throw "HDR Bad header format, wrong scan line width";
+          for (pG = 0, QG = 0; QG < 4; QG++)
+            for (fG = (QG + 1) * wG; pG < fG;)
+              if (SG = GG[KG++], yG = GG[KG++], SG > 128) {
+                if (VG = SG - 128, 0 == VG || VG > fG - pG) throw "HDR Bad Format, bad scanline data (run)";
+                for (; VG-- > 0;) dG[pG++] = yG
               } else {
-                if (Cu = Uu, 0 == Cu || Cu > cu - bu) throw "HDR Bad Format, bad scanline data (non-run)";
-                if (hu[bu++] = Xu, --Cu > 0)
-                  for (let Eu = 0; Eu < Cu; Eu++) hu[bu++] = uu[Ou++]
-              } for (Nu = 0; Nu < su; Nu++) Uu = hu[Nu], Xu = hu[Nu + su], lu = hu[Nu + 2 * su], qu = hu[Nu + 3 * su], Zu(gu, Uu, Xu, lu, qu, (Eu.height - ju) * su * 3 + 3 * Nu);
-          ju--
+                if (VG = SG, 0 == VG || VG > fG - pG) throw "HDR Bad Format, bad scanline data (non-run)";
+                if (dG[pG++] = yG, --VG > 0)
+                  for (let bG = 0; bG < VG; bG++) dG[pG++] = GG[KG++]
+              } for (QG = 0; QG < wG; QG++) SG = dG[QG], yG = dG[QG + wG], kG = dG[QG + 2 * wG], UG = dG[QG + 3 * wG], LG(rG, SG, yG, kG, UG, (bG.height - ZG) * wG * 3 + 3 * QG);
+          ZG--
         }
-        return gu
-      }(uu, Eu)
+        return rG
+      }(GG, bG)
     }
 
-    function fu(uu, Eu) {
-      let ju = Eu.height;
-      const su = Eu.width;
-      let Uu, Xu, lu, qu, fu, Cu = Eu.dataPosition;
-      const bu = new ArrayBuffer(Eu.width * Eu.height * 4 * 3),
-        cu = new Float32Array(bu);
-      for (; ju > 0;) {
-        for (fu = 0; fu < Eu.width; fu++) Uu = uu[Cu++], Xu = uu[Cu++], lu = uu[Cu++], qu = uu[Cu++], Zu(cu, Uu, Xu, lu, qu, (Eu.height - ju) * su * 3 + 3 * fu);
-        ju--
+    function YG(GG, bG) {
+      let ZG = bG.height;
+      const wG = bG.width;
+      let SG, yG, kG, UG, YG, VG = bG.dataPosition;
+      const pG = new ArrayBuffer(bG.width * bG.height * 4 * 3),
+        fG = new Float32Array(pG);
+      for (; ZG > 0;) {
+        for (YG = 0; YG < bG.width; YG++) SG = GG[VG++], yG = GG[VG++], kG = GG[VG++], UG = GG[VG++], LG(fG, SG, yG, kG, UG, (bG.height - ZG) * wG * 3 + 3 * YG);
+        ZG--
       }
-      return cu
+      return fG
     }
-    Uu.FACE_LEFT = [new su.t(-1, -1, -1), new su.t(1, -1, -1), new su.t(-1, 1, -1), new su.t(1, 1, -1)], Uu.FACE_RIGHT = [new su.t(1, -1, 1), new su.t(-1, -1, 1), new su.t(1, 1, 1), new su.t(-1, 1, 1)], Uu.FACE_FRONT = [new su.t(1, -1, -1), new su.t(1, -1, 1), new su.t(1, 1, -1), new su.t(1, 1, 1)], Uu.FACE_BACK = [new su.t(-1, -1, 1), new su.t(-1, -1, -1), new su.t(-1, 1, 1), new su.t(-1, 1, -1)], Uu.FACE_DOWN = [new su.t(1, 1, -1), new su.t(1, 1, 1), new su.t(-1, 1, -1), new su.t(-1, 1, 1)], Uu.FACE_UP = [new su.t(-1, -1, -1), new su.t(-1, -1, 1), new su.t(1, -1, -1), new su.t(1, -1, 1)];
-    class Cu {
+    SG.FACE_LEFT = [new wG.p(-1, -1, -1), new wG.p(1, -1, -1), new wG.p(-1, 1, -1), new wG.p(1, 1, -1)], SG.FACE_RIGHT = [new wG.p(1, -1, 1), new wG.p(-1, -1, 1), new wG.p(1, 1, 1), new wG.p(-1, 1, 1)], SG.FACE_FRONT = [new wG.p(1, -1, -1), new wG.p(1, -1, 1), new wG.p(1, 1, -1), new wG.p(1, 1, 1)], SG.FACE_BACK = [new wG.p(-1, -1, 1), new wG.p(-1, -1, -1), new wG.p(-1, 1, 1), new wG.p(-1, 1, -1)], SG.FACE_DOWN = [new wG.p(1, 1, -1), new wG.p(1, 1, 1), new wG.p(-1, 1, -1), new wG.p(-1, 1, 1)], SG.FACE_UP = [new wG.p(-1, -1, -1), new wG.p(-1, -1, 1), new wG.p(1, -1, -1), new wG.p(1, -1, 1)];
+    class VG {
       constructor() {
         this.supportCascades = !1
       }
       loadCubeData() {
         throw ".hdr not supported in Cube."
       }
-      loadData(uu, Eu, ju) {
-        const su = new Uint8Array(uu.buffer, uu.byteOffset, uu.byteLength),
-          Uu = lu(su),
-          Zu = qu(su, Uu),
-          Xu = Uu.width * Uu.height,
-          fu = new Float32Array(4 * Xu);
-        for (let lu = 0; lu < Xu; lu += 1) fu[4 * lu] = Zu[3 * lu], fu[4 * lu + 1] = Zu[3 * lu + 1], fu[4 * lu + 2] = Zu[3 * lu + 2], fu[4 * lu + 3] = 1;
-        ju(Uu.width, Uu.height, Eu.generateMipMaps, !1, (() => {
-          const uu = Eu.wO();
-          Eu.type = 1, Eu.format = 5, Eu._gammaSpace = !1, uu._uploadDataToTextureDirectly(Eu, fu)
+      loadData(GG, bG, ZG) {
+        const wG = new Uint8Array(GG.buffer, GG.byteOffset, GG.byteLength),
+          SG = kG(wG),
+          LG = UG(wG, SG),
+          yG = SG.width * SG.height,
+          YG = new Float32Array(4 * yG);
+        for (let kG = 0; kG < yG; kG += 1) YG[4 * kG] = LG[3 * kG], YG[4 * kG + 1] = LG[3 * kG + 1], YG[4 * kG + 2] = LG[3 * kG + 2], YG[4 * kG + 3] = 1;
+        ZG(SG.width, SG.height, bG.generateMipMaps, !1, (() => {
+          const GG = bG.CK();
+          bG.type = 1, bG.format = 5, bG._gammaSpace = !1, GG._uploadDataToTextureDirectly(bG, YG)
         }))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

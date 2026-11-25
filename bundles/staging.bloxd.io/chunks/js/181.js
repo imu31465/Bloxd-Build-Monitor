@@ -1,11 +1,11 @@
 export const id = 181;
 export const ids = [181];
 export const modules = {
-  9265: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      pageBody: () => su
+  9086: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      pageBody: () => wG
     });
-    const su = {
+    const wG = {
       whatIs: ["Set sail for messy sea fights where good timing and teamwork decide who rules the waves. In Bloxd Pirates your crew fires cannons, grabs loot and races to destroy the other team's spawn blocks. It doesn't cost a thing and it loads straight in your browser."],
       howToPlay: ["You'll join a team, usually Red or Blue, though Classic (4 Teams) and Treasure Island have 4. Each team has spawn blocks to protect. Break the enemy's spawn blocks and they can't respawn any more, then use your Compass to hunt down the rest of their crew. Last team standing wins.", "To fire the cannons, click your team's coloured glass. After that you'll have to wait 15 seconds for them to reload. Before the match you pick a kit in the lobby. The Cannoneer fires two cannonballs at once, the Medic heals teammates and the Admiral can call in artillery strikes. Loot refills during the match, so keep grabbing new gear. Wins, final kills and broken spawn blocks all earn Gold, which you spend on new kits."],
       features: ["Team Cannon Battles on the High Seas", "Destroy Spawn Blocks to Stop the Enemy Respawning", "26 Kits, from Swashbuckler and Pegleg to Ghost and Portalmaster", "Perks like Bridger, Leech and Inferno", "11 Maps, Including 4-Team Classic and Treasure Island", "Loot That Refills During the Match", "Track Your Games Played and Wins"],
@@ -34,4 +34,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

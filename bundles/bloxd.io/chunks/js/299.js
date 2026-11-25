@@ -1,181 +1,181 @@
 export const id = 299;
 export const ids = [299];
 export const modules = {
-  41550: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => gE,
-      e: () => vu,
-      ChangeSet: () => Ku,
-      i: () => kE,
-      l: () => Fu,
-      o: () => VE,
-      r: () => tu,
-      u: () => mu,
-      y: () => UE,
-      E: () => FE,
-      C: () => BE,
-      I: () => QE,
-      L: () => GE,
-      N: () => zu,
-      P: () => Yu,
-      Q: () => pE,
-      T: () => au,
-      X: () => ou,
-      Z: () => rE,
-      bb: () => uj,
-      fb: () => du,
-      gb: () => Ej,
-      jb: () => Pu
+  41727: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => rb,
+      d: () => aG,
+      ChangeSet: () => cG,
+      f: () => Fb,
+      j: () => nG,
+      l: () => lb,
+      m: () => RG,
+      q: () => vG,
+      s: () => Sb,
+      x: () => nb,
+      v: () => gb,
+      A: () => Pb,
+      C: () => ob,
+      G: () => xG,
+      I: () => hG,
+      M: () => Xb,
+      Q: () => WG,
+      R: () => IG,
+      S: () => jb,
+      T: () => GZ,
+      X: () => CG,
+      _: () => bZ,
+      cb: () => mG
     });
-    let su = [],
-      Uu = [];
+    let wG = [],
+      SG = [];
 
-    function Zu(uu) {
-      if (uu < 768) return !1;
-      for (let Eu = 0, ju = su.length;;) {
-        let Zu = Eu + ju >> 1;
-        if (uu < su[Zu]) ju = Zu;
+    function LG(GG) {
+      if (GG < 768) return !1;
+      for (let bG = 0, ZG = wG.length;;) {
+        let LG = bG + ZG >> 1;
+        if (GG < wG[LG]) ZG = LG;
         else {
-          if (!(uu >= Uu[Zu])) return !0;
-          Eu = Zu + 1
+          if (!(GG >= SG[LG])) return !0;
+          bG = LG + 1
         }
-        if (Eu == ju) return !1
+        if (bG == ZG) return !1
       }
     }
 
-    function Xu(uu) {
-      return uu >= 127462 && uu <= 127487
+    function yG(GG) {
+      return GG >= 127462 && GG <= 127487
     }(() => {
-      let uu = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((uu => uu ? parseInt(uu, 36) : 1));
-      for (let Eu = 0, ju = 0; Eu < uu.length; Eu++)(Eu % 2 ? Uu : su).push(ju += uu[Eu])
+      let GG = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((GG => GG ? parseInt(GG, 36) : 1));
+      for (let bG = 0, ZG = 0; bG < GG.length; bG++)(bG % 2 ? SG : wG).push(ZG += GG[bG])
     })();
-    const lu = 8205;
+    const kG = 8205;
 
-    function qu(uu, Eu) {
-      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? fu : Cu)(uu, Eu, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function UG(GG, bG) {
+      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? YG : VG)(GG, bG, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function fu(uu, Eu, ju) {
-      if (Eu == uu.length) return Eu;
-      Eu && cu(uu.charCodeAt(Eu)) && Nu(uu.charCodeAt(Eu - 1)) && Eu--;
-      let su = bu(uu, Eu);
-      for (Eu += Ou(su); Eu < uu.length;) {
-        let Uu = bu(uu, Eu);
-        if (su == lu || Uu == lu || ju && Zu(Uu)) Eu += Ou(Uu), su = Uu;
+    function YG(GG, bG, ZG) {
+      if (bG == GG.length) return bG;
+      bG && fG(GG.charCodeAt(bG)) && QG(GG.charCodeAt(bG - 1)) && bG--;
+      let wG = pG(GG, bG);
+      for (bG += KG(wG); bG < GG.length;) {
+        let SG = pG(GG, bG);
+        if (wG == kG || SG == kG || ZG && LG(SG)) bG += KG(SG), wG = SG;
         else {
-          if (!Xu(Uu)) break;
+          if (!yG(SG)) break;
           {
-            let ju = 0,
-              su = Eu - 2;
-            for (; su >= 0 && Xu(bu(uu, su));) ju++, su -= 2;
-            if (ju % 2 == 0) break;
-            Eu += 2
+            let ZG = 0,
+              wG = bG - 2;
+            for (; wG >= 0 && yG(pG(GG, wG));) ZG++, wG -= 2;
+            if (ZG % 2 == 0) break;
+            bG += 2
           }
         }
       }
-      return Eu
+      return bG
     }
 
-    function Cu(uu, Eu, ju) {
-      for (; Eu > 0;) {
-        let su = fu(uu, Eu - 2, ju);
-        if (su < Eu) return su;
-        Eu--
+    function VG(GG, bG, ZG) {
+      for (; bG > 0;) {
+        let wG = YG(GG, bG - 2, ZG);
+        if (wG < bG) return wG;
+        bG--
       }
       return 0
     }
 
-    function bu(uu, Eu) {
-      let ju = uu.charCodeAt(Eu);
-      if (!Nu(ju) || Eu + 1 == uu.length) return ju;
-      let su = uu.charCodeAt(Eu + 1);
-      return cu(su) ? su - 56320 + (ju - 55296 << 10) + 65536 : ju
+    function pG(GG, bG) {
+      let ZG = GG.charCodeAt(bG);
+      if (!QG(ZG) || bG + 1 == GG.length) return ZG;
+      let wG = GG.charCodeAt(bG + 1);
+      return fG(wG) ? wG - 56320 + (ZG - 55296 << 10) + 65536 : ZG
     }
 
-    function cu(uu) {
-      return uu >= 56320 && uu < 57344
+    function fG(GG) {
+      return GG >= 56320 && GG < 57344
     }
 
-    function Nu(uu) {
-      return uu >= 55296 && uu < 56320
+    function QG(GG) {
+      return GG >= 55296 && GG < 56320
     }
 
-    function Ou(uu) {
-      return uu < 65536 ? 1 : 2
+    function KG(GG) {
+      return GG < 65536 ? 1 : 2
     }
-    class Yu {
-      lineAt(uu) {
-        if (uu < 0 || uu > this.length) throw new RangeError(`Invalid position ${uu} in document of length ${this.length}`);
-        return this.lineInner(uu, !1, 1, 0)
+    class hG {
+      lineAt(GG) {
+        if (GG < 0 || GG > this.length) throw new RangeError(`Invalid position ${GG} in document of length ${this.length}`);
+        return this.lineInner(GG, !1, 1, 0)
       }
-      line(uu) {
-        if (uu < 1 || uu > this.lines) throw new RangeError(`Invalid line number ${uu} in ${this.lines}-line document`);
-        return this.lineInner(uu, !0, 1, 0)
+      line(GG) {
+        if (GG < 1 || GG > this.lines) throw new RangeError(`Invalid line number ${GG} in ${this.lines}-line document`);
+        return this.lineInner(GG, !0, 1, 0)
       }
-      replace(uu, Eu, ju) {
-        [uu, Eu] = Ju(this, uu, Eu);
-        let su = [];
-        return this.decompose(0, uu, su, 2), ju.length && ju.decompose(0, ju.length, su, 3), this.decompose(Eu, this.length, su, 1), Du.from(su, this.length - (Eu - uu) + ju.length)
+      replace(GG, bG, ZG) {
+        [GG, bG] = iG(this, GG, bG);
+        let wG = [];
+        return this.decompose(0, GG, wG, 2), ZG.length && ZG.decompose(0, ZG.length, wG, 3), this.decompose(bG, this.length, wG, 1), JG.from(wG, this.length - (bG - GG) + ZG.length)
       }
-      append(uu) {
-        return this.replace(this.length, this.length, uu)
+      append(GG) {
+        return this.replace(this.length, this.length, GG)
       }
-      slice(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        [uu, Eu] = Ju(this, uu, Eu);
-        let ju = [];
-        return this.decompose(uu, Eu, ju, 0), Du.from(ju, Eu - uu)
+      slice(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        [GG, bG] = iG(this, GG, bG);
+        let ZG = [];
+        return this.decompose(GG, bG, ZG, 0), JG.from(ZG, bG - GG)
       }
-      eq(uu) {
-        if (uu == this) return !0;
-        if (uu.length != this.length || uu.lines != this.lines) return !1;
-        let Eu = this.scanIdentical(uu, 1),
-          ju = this.length - this.scanIdentical(uu, -1),
-          su = new eu(this),
-          Uu = new eu(uu);
-        for (let Zu = Eu, Xu = Eu;;) {
-          if (su.next(Zu), Uu.next(Zu), Zu = 0, su.lineBreak != Uu.lineBreak || su.done != Uu.done || su.value != Uu.value) return !1;
-          if (Xu += su.value.length, su.done || Xu >= ju) return !0
+      eq(GG) {
+        if (GG == this) return !0;
+        if (GG.length != this.length || GG.lines != this.lines) return !1;
+        let bG = this.scanIdentical(GG, 1),
+          ZG = this.length - this.scanIdentical(GG, -1),
+          wG = new EG(this),
+          SG = new EG(GG);
+        for (let LG = bG, yG = bG;;) {
+          if (wG.next(LG), SG.next(LG), LG = 0, wG.lineBreak != SG.lineBreak || wG.done != SG.done || wG.value != SG.value) return !1;
+          if (yG += wG.value.length, wG.done || yG >= ZG) return !0
         }
       }
       iter() {
-        return new eu(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
+        return new EG(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
       }
-      iterRange(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        return new Gu(this, uu, Eu)
+      iterRange(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        return new oG(this, GG, bG)
       }
-      iterLines(uu, Eu) {
-        let ju;
-        if (null == uu) ju = this.iter();
+      iterLines(GG, bG) {
+        let ZG;
+        if (null == GG) ZG = this.iter();
         else {
-          null == Eu && (Eu = this.lines + 1);
-          let su = this.line(uu).from;
-          ju = this.iterRange(su, Math.max(su, Eu == this.lines + 1 ? this.length : Eu <= 1 ? 0 : this.line(Eu - 1).to))
+          null == bG && (bG = this.lines + 1);
+          let wG = this.line(GG).from;
+          ZG = this.iterRange(wG, Math.max(wG, bG == this.lines + 1 ? this.length : bG <= 1 ? 0 : this.line(bG - 1).to))
         }
-        return new pu(ju)
+        return new XG(ZG)
       }
       toString() {
         return this.sliceString(0)
       }
       toJSON() {
-        let uu = [];
-        return this.flatten(uu), uu
+        let GG = [];
+        return this.flatten(GG), GG
       }
       constructor() {}
-      static of (uu) {
-        if (0 == uu.length) throw new RangeError("A document must have at least one line");
-        return 1 != uu.length || uu[0] ? uu.length <= 32 ? new hu(uu) : Du.from(hu.split(uu, [])) : Yu.empty
+      static of (GG) {
+        if (0 == GG.length) throw new RangeError("A document must have at least one line");
+        return 1 != GG.length || GG[0] ? GG.length <= 32 ? new dG(GG) : JG.from(dG.split(GG, [])) : hG.empty
       }
     }
-    class hu extends Yu {
-      constructor(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(uu) {
-          let Eu = -1;
-          for (let ju of uu) Eu += ju.length + 1;
-          return Eu
-        }(uu);
-        super(), this.text = uu, this.length = Eu
+    class dG extends hG {
+      constructor(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(GG) {
+          let bG = -1;
+          for (let ZG of GG) bG += ZG.length + 1;
+          return bG
+        }(GG);
+        super(), this.text = GG, this.length = bG
       }
       get lines() {
         return this.text.length
@@ -183,629 +183,629 @@ export const modules = {
       get children() {
         return null
       }
-      lineInner(uu, Eu, ju, su) {
-        for (let Uu = 0;; Uu++) {
-          let Zu = this.text[Uu],
-            Xu = su + Zu.length;
-          if ((Eu ? ju : Xu) >= uu) return new wu(su, Xu, ju, Zu);
-          su = Xu + 1, ju++
+      lineInner(GG, bG, ZG, wG) {
+        for (let SG = 0;; SG++) {
+          let LG = this.text[SG],
+            yG = wG + LG.length;
+          if ((bG ? ZG : yG) >= GG) return new uG(wG, yG, ZG, LG);
+          wG = yG + 1, ZG++
         }
       }
-      decompose(uu, Eu, ju, su) {
-        let Uu = uu <= 0 && Eu >= this.length ? this : new hu(Mu(this.text, uu, Eu), Math.min(Eu, this.length) - Math.max(0, uu));
-        if (1 & su) {
-          let uu = ju.pop(),
-            Eu = gu(Uu.text, uu.text.slice(), 0, Uu.length);
-          if (Eu.length <= 32) ju.push(new hu(Eu, uu.length + Uu.length));
+      decompose(GG, bG, ZG, wG) {
+        let SG = GG <= 0 && bG >= this.length ? this : new dG(zG(this.text, GG, bG), Math.min(bG, this.length) - Math.max(0, GG));
+        if (1 & wG) {
+          let GG = ZG.pop(),
+            bG = rG(SG.text, GG.text.slice(), 0, SG.length);
+          if (bG.length <= 32) ZG.push(new dG(bG, GG.length + SG.length));
           else {
-            let uu = Eu.length >> 1;
-            ju.push(new hu(Eu.slice(0, uu)), new hu(Eu.slice(uu)))
+            let GG = bG.length >> 1;
+            ZG.push(new dG(bG.slice(0, GG)), new dG(bG.slice(GG)))
           }
-        } else ju.push(Uu)
+        } else ZG.push(SG)
       }
-      replace(uu, Eu, ju) {
-        if (!(ju instanceof hu)) return super.replace(uu, Eu, ju);
-        [uu, Eu] = Ju(this, uu, Eu);
-        let su = gu(this.text, gu(ju.text, Mu(this.text, 0, uu)), Eu),
-          Uu = this.length + ju.length - (Eu - uu);
-        return su.length <= 32 ? new hu(su, Uu) : Du.from(hu.split(su, []), Uu)
+      replace(GG, bG, ZG) {
+        if (!(ZG instanceof dG)) return super.replace(GG, bG, ZG);
+        [GG, bG] = iG(this, GG, bG);
+        let wG = rG(this.text, rG(ZG.text, zG(this.text, 0, GG)), bG),
+          SG = this.length + ZG.length - (bG - GG);
+        return wG.length <= 32 ? new dG(wG, SG) : JG.from(dG.split(wG, []), SG)
       }
-      sliceString(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [uu, Eu] = Ju(this, uu, Eu);
-        let su = "";
-        for (let Uu = 0, Zu = 0; Uu <= Eu && Zu < this.text.length; Zu++) {
-          let Xu = this.text[Zu],
-            lu = Uu + Xu.length;
-          Uu > uu && Zu && (su += ju), uu < lu && Eu > Uu && (su += Xu.slice(Math.max(0, uu - Uu), Eu - Uu)), Uu = lu + 1
+      sliceString(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [GG, bG] = iG(this, GG, bG);
+        let wG = "";
+        for (let SG = 0, LG = 0; SG <= bG && LG < this.text.length; LG++) {
+          let yG = this.text[LG],
+            kG = SG + yG.length;
+          SG > GG && LG && (wG += ZG), GG < kG && bG > SG && (wG += yG.slice(Math.max(0, GG - SG), bG - SG)), SG = kG + 1
         }
-        return su
+        return wG
       }
-      flatten(uu) {
-        for (let Eu of this.text) uu.push(Eu)
+      flatten(GG) {
+        for (let bG of this.text) GG.push(bG)
       }
       scanIdentical() {
         return 0
       }
-      static split(uu, Eu) {
-        let ju = [],
-          su = -1;
-        for (let Uu of uu) ju.push(Uu), su += Uu.length + 1, 32 == ju.length && (Eu.push(new hu(ju, su)), ju = [], su = -1);
-        return su > -1 && Eu.push(new hu(ju, su)), Eu
+      static split(GG, bG) {
+        let ZG = [],
+          wG = -1;
+        for (let SG of GG) ZG.push(SG), wG += SG.length + 1, 32 == ZG.length && (bG.push(new dG(ZG, wG)), ZG = [], wG = -1);
+        return wG > -1 && bG.push(new dG(ZG, wG)), bG
       }
     }
-    class Du extends Yu {
-      constructor(uu, Eu) {
-        super(), this.children = uu, this.length = Eu, this.lines = 0;
-        for (let ju of uu) this.lines += ju.lines
+    class JG extends hG {
+      constructor(GG, bG) {
+        super(), this.children = GG, this.length = bG, this.lines = 0;
+        for (let ZG of GG) this.lines += ZG.lines
       }
-      lineInner(uu, Eu, ju, su) {
-        for (let Uu = 0;; Uu++) {
-          let Zu = this.children[Uu],
-            Xu = su + Zu.length,
-            lu = ju + Zu.lines - 1;
-          if ((Eu ? lu : Xu) >= uu) return Zu.lineInner(uu, Eu, ju, su);
-          su = Xu + 1, ju = lu + 1
+      lineInner(GG, bG, ZG, wG) {
+        for (let SG = 0;; SG++) {
+          let LG = this.children[SG],
+            yG = wG + LG.length,
+            kG = ZG + LG.lines - 1;
+          if ((bG ? kG : yG) >= GG) return LG.lineInner(GG, bG, ZG, wG);
+          wG = yG + 1, ZG = kG + 1
         }
       }
-      decompose(uu, Eu, ju, su) {
-        for (let Uu = 0, Zu = 0; Zu <= Eu && Uu < this.children.length; Uu++) {
-          let Xu = this.children[Uu],
-            lu = Zu + Xu.length;
-          if (uu <= lu && Eu >= Zu) {
-            let Uu = su & ((Zu <= uu ? 1 : 0) | (lu >= Eu ? 2 : 0));
-            Zu >= uu && lu <= Eu && !Uu ? ju.push(Xu) : Xu.decompose(uu - Zu, Eu - Zu, ju, Uu)
+      decompose(GG, bG, ZG, wG) {
+        for (let SG = 0, LG = 0; LG <= bG && SG < this.children.length; SG++) {
+          let yG = this.children[SG],
+            kG = LG + yG.length;
+          if (GG <= kG && bG >= LG) {
+            let SG = wG & ((LG <= GG ? 1 : 0) | (kG >= bG ? 2 : 0));
+            LG >= GG && kG <= bG && !SG ? ZG.push(yG) : yG.decompose(GG - LG, bG - LG, ZG, SG)
           }
-          Zu = lu + 1
+          LG = kG + 1
         }
       }
-      replace(uu, Eu, ju) {
-        if ([uu, Eu] = Ju(this, uu, Eu), ju.lines < this.lines)
-          for (let su = 0, Uu = 0; su < this.children.length; su++) {
-            let Zu = this.children[su],
-              Xu = Uu + Zu.length;
-            if (uu >= Uu && Eu <= Xu) {
-              let lu = Zu.replace(uu - Uu, Eu - Uu, ju),
-                qu = this.lines - Zu.lines + lu.lines;
-              if (lu.lines < qu >> 4 && lu.lines > qu >> 6) {
-                let Uu = this.children.slice();
-                return Uu[su] = lu, new Du(Uu, this.length - (Eu - uu) + ju.length)
+      replace(GG, bG, ZG) {
+        if ([GG, bG] = iG(this, GG, bG), ZG.lines < this.lines)
+          for (let wG = 0, SG = 0; wG < this.children.length; wG++) {
+            let LG = this.children[wG],
+              yG = SG + LG.length;
+            if (GG >= SG && bG <= yG) {
+              let kG = LG.replace(GG - SG, bG - SG, ZG),
+                UG = this.lines - LG.lines + kG.lines;
+              if (kG.lines < UG >> 4 && kG.lines > UG >> 6) {
+                let SG = this.children.slice();
+                return SG[wG] = kG, new JG(SG, this.length - (bG - GG) + ZG.length)
               }
-              return super.replace(Uu, Xu, lu)
+              return super.replace(SG, yG, kG)
             }
-            Uu = Xu + 1
+            SG = yG + 1
           }
-        return super.replace(uu, Eu, ju)
+        return super.replace(GG, bG, ZG)
       }
-      sliceString(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [uu, Eu] = Ju(this, uu, Eu);
-        let su = "";
-        for (let Uu = 0, Zu = 0; Uu < this.children.length && Zu <= Eu; Uu++) {
-          let Xu = this.children[Uu],
-            lu = Zu + Xu.length;
-          Zu > uu && Uu && (su += ju), uu < lu && Eu > Zu && (su += Xu.sliceString(uu - Zu, Eu - Zu, ju)), Zu = lu + 1
+      sliceString(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [GG, bG] = iG(this, GG, bG);
+        let wG = "";
+        for (let SG = 0, LG = 0; SG < this.children.length && LG <= bG; SG++) {
+          let yG = this.children[SG],
+            kG = LG + yG.length;
+          LG > GG && SG && (wG += ZG), GG < kG && bG > LG && (wG += yG.sliceString(GG - LG, bG - LG, ZG)), LG = kG + 1
         }
-        return su
+        return wG
       }
-      flatten(uu) {
-        for (let Eu of this.children) Eu.flatten(uu)
+      flatten(GG) {
+        for (let bG of this.children) bG.flatten(GG)
       }
-      scanIdentical(uu, Eu) {
-        if (!(uu instanceof Du)) return 0;
-        let ju = 0,
-          [su, Uu, Zu, Xu] = Eu > 0 ? [0, 0, this.children.length, uu.children.length] : [this.children.length - 1, uu.children.length - 1, -1, -1];
-        for (;; su += Eu, Uu += Eu) {
-          if (su == Zu || Uu == Xu) return ju;
-          let lu = this.children[su],
-            qu = uu.children[Uu];
-          if (lu != qu) return ju + lu.scanIdentical(qu, Eu);
-          ju += lu.length + 1
+      scanIdentical(GG, bG) {
+        if (!(GG instanceof JG)) return 0;
+        let ZG = 0,
+          [wG, SG, LG, yG] = bG > 0 ? [0, 0, this.children.length, GG.children.length] : [this.children.length - 1, GG.children.length - 1, -1, -1];
+        for (;; wG += bG, SG += bG) {
+          if (wG == LG || SG == yG) return ZG;
+          let kG = this.children[wG],
+            UG = GG.children[SG];
+          if (kG != UG) return ZG + kG.scanIdentical(UG, bG);
+          ZG += kG.length + 1
         }
       }
-      static from(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu.reduce(((uu, Eu) => uu + Eu.length + 1), -1),
-          ju = 0;
-        for (let cu of uu) ju += cu.lines;
-        if (ju < 32) {
-          let ju = [];
-          for (let Eu of uu) Eu.flatten(ju);
-          return new hu(ju, Eu)
+      static from(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : GG.reduce(((GG, bG) => GG + bG.length + 1), -1),
+          ZG = 0;
+        for (let fG of GG) ZG += fG.lines;
+        if (ZG < 32) {
+          let ZG = [];
+          for (let bG of GG) bG.flatten(ZG);
+          return new dG(ZG, bG)
         }
-        let su = Math.max(32, ju >> 5),
-          Uu = su << 1,
-          Zu = su >> 1,
-          Xu = [],
-          lu = 0,
-          qu = -1,
-          fu = [];
+        let wG = Math.max(32, ZG >> 5),
+          SG = wG << 1,
+          LG = wG >> 1,
+          yG = [],
+          kG = 0,
+          UG = -1,
+          YG = [];
 
-        function Cu(uu) {
-          let Eu;
-          if (uu.lines > Uu && uu instanceof Du)
-            for (let ju of uu.children) Cu(ju);
-          else uu.lines > Zu && (lu > Zu || !lu) ? (bu(), Xu.push(uu)) : uu instanceof hu && lu && (Eu = fu[fu.length - 1]) instanceof hu && uu.lines + Eu.lines <= 32 ? (lu += uu.lines, qu += uu.length + 1, fu[fu.length - 1] = new hu(Eu.text.concat(uu.text), Eu.length + 1 + uu.length)) : (lu + uu.lines > su && bu(), lu += uu.lines, qu += uu.length + 1, fu.push(uu))
+        function VG(GG) {
+          let bG;
+          if (GG.lines > SG && GG instanceof JG)
+            for (let ZG of GG.children) VG(ZG);
+          else GG.lines > LG && (kG > LG || !kG) ? (pG(), yG.push(GG)) : GG instanceof dG && kG && (bG = YG[YG.length - 1]) instanceof dG && GG.lines + bG.lines <= 32 ? (kG += GG.lines, UG += GG.length + 1, YG[YG.length - 1] = new dG(bG.text.concat(GG.text), bG.length + 1 + GG.length)) : (kG + GG.lines > wG && pG(), kG += GG.lines, UG += GG.length + 1, YG.push(GG))
         }
 
-        function bu() {
-          0 != lu && (Xu.push(1 == fu.length ? fu[0] : Du.from(fu, qu)), qu = -1, lu = fu.length = 0)
+        function pG() {
+          0 != kG && (yG.push(1 == YG.length ? YG[0] : JG.from(YG, UG)), UG = -1, kG = YG.length = 0)
         }
-        for (let cu of uu) Cu(cu);
-        return bu(), 1 == Xu.length ? Xu[0] : new Du(Xu, Eu)
+        for (let fG of GG) VG(fG);
+        return pG(), 1 == yG.length ? yG[0] : new JG(yG, bG)
       }
     }
 
-    function gu(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
-      for (let Uu = 0, Zu = 0, Xu = !0; Zu < uu.length && Uu <= su; Zu++) {
-        let lu = uu[Zu],
-          qu = Uu + lu.length;
-        qu >= ju && (qu > su && (lu = lu.slice(0, su - Uu)), Uu < ju && (lu = lu.slice(ju - Uu)), Xu ? (Eu[Eu.length - 1] += lu, Xu = !1) : Eu.push(lu)), Uu = qu + 1
+    function rG(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
+      for (let SG = 0, LG = 0, yG = !0; LG < GG.length && SG <= wG; LG++) {
+        let kG = GG[LG],
+          UG = SG + kG.length;
+        UG >= ZG && (UG > wG && (kG = kG.slice(0, wG - SG)), SG < ZG && (kG = kG.slice(ZG - SG)), yG ? (bG[bG.length - 1] += kG, yG = !1) : bG.push(kG)), SG = UG + 1
       }
-      return Eu
+      return bG
     }
 
-    function Mu(uu, Eu, ju) {
-      return gu(uu, [""], Eu, ju)
+    function zG(GG, bG, ZG) {
+      return rG(GG, [""], bG, ZG)
     }
-    Yu.empty = new hu([""], 0);
-    class eu {
-      constructor(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.dir = Eu, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [uu], this.offsets = [Eu > 0 ? 1 : (uu instanceof hu ? uu.text.length : uu.children.length) << 1]
+    hG.empty = new dG([""], 0);
+    class EG {
+      constructor(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.dir = bG, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [GG], this.offsets = [bG > 0 ? 1 : (GG instanceof dG ? GG.text.length : GG.children.length) << 1]
       }
-      nextInner(uu, Eu) {
+      nextInner(GG, bG) {
         for (this.done = this.lineBreak = !1;;) {
-          let ju = this.nodes.length - 1,
-            su = this.nodes[ju],
-            Uu = this.offsets[ju],
-            Zu = Uu >> 1,
-            Xu = su instanceof hu ? su.text.length : su.children.length;
-          if (Zu == (Eu > 0 ? Xu : 0)) {
-            if (0 == ju) return this.done = !0, this.value = "", this;
-            Eu > 0 && this.offsets[ju - 1]++, this.nodes.pop(), this.offsets.pop()
-          } else if ((1 & Uu) == (Eu > 0 ? 0 : 1)) {
-            if (this.offsets[ju] += Eu, 0 == uu) return this.lineBreak = !0, this.value = "\n", this;
-            uu--
-          } else if (su instanceof hu) {
-            let Uu = su.text[Zu + (Eu < 0 ? -1 : 0)];
-            if (this.offsets[ju] += Eu, Uu.length > Math.max(0, uu)) return this.value = 0 == uu ? Uu : Eu > 0 ? Uu.slice(uu) : Uu.slice(0, Uu.length - uu), this;
-            uu -= Uu.length
+          let ZG = this.nodes.length - 1,
+            wG = this.nodes[ZG],
+            SG = this.offsets[ZG],
+            LG = SG >> 1,
+            yG = wG instanceof dG ? wG.text.length : wG.children.length;
+          if (LG == (bG > 0 ? yG : 0)) {
+            if (0 == ZG) return this.done = !0, this.value = "", this;
+            bG > 0 && this.offsets[ZG - 1]++, this.nodes.pop(), this.offsets.pop()
+          } else if ((1 & SG) == (bG > 0 ? 0 : 1)) {
+            if (this.offsets[ZG] += bG, 0 == GG) return this.lineBreak = !0, this.value = "\n", this;
+            GG--
+          } else if (wG instanceof dG) {
+            let SG = wG.text[LG + (bG < 0 ? -1 : 0)];
+            if (this.offsets[ZG] += bG, SG.length > Math.max(0, GG)) return this.value = 0 == GG ? SG : bG > 0 ? SG.slice(GG) : SG.slice(0, SG.length - GG), this;
+            GG -= SG.length
           } else {
-            let Uu = su.children[Zu + (Eu < 0 ? -1 : 0)];
-            uu > Uu.length ? (uu -= Uu.length, this.offsets[ju] += Eu) : (Eu < 0 && this.offsets[ju]--, this.nodes.push(Uu), this.offsets.push(Eu > 0 ? 1 : (Uu instanceof hu ? Uu.text.length : Uu.children.length) << 1))
+            let SG = wG.children[LG + (bG < 0 ? -1 : 0)];
+            GG > SG.length ? (GG -= SG.length, this.offsets[ZG] += bG) : (bG < 0 && this.offsets[ZG]--, this.nodes.push(SG), this.offsets.push(bG > 0 ? 1 : (SG instanceof dG ? SG.text.length : SG.children.length) << 1))
           }
         }
       }
       next() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return uu < 0 && (this.nextInner(-uu, -this.dir), uu = this.value.length), this.nextInner(uu, this.dir)
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return GG < 0 && (this.nextInner(-GG, -this.dir), GG = this.value.length), this.nextInner(GG, this.dir)
       }
     }
-    class Gu {
-      constructor(uu, Eu, ju) {
-        this.value = "", this.done = !1, this.cursor = new eu(uu, Eu > ju ? -1 : 1), this.pos = Eu > ju ? uu.length : 0, this.from = Math.min(Eu, ju), this.to = Math.max(Eu, ju)
+    class oG {
+      constructor(GG, bG, ZG) {
+        this.value = "", this.done = !1, this.cursor = new EG(GG, bG > ZG ? -1 : 1), this.pos = bG > ZG ? GG.length : 0, this.from = Math.min(bG, ZG), this.to = Math.max(bG, ZG)
       }
-      nextInner(uu, Eu) {
-        if (Eu < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
-        uu += Math.max(0, Eu < 0 ? this.pos - this.to : this.from - this.pos);
-        let ju = Eu < 0 ? this.pos - this.from : this.to - this.pos;
-        uu > ju && (uu = ju), ju -= uu;
+      nextInner(GG, bG) {
+        if (bG < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
+        GG += Math.max(0, bG < 0 ? this.pos - this.to : this.from - this.pos);
+        let ZG = bG < 0 ? this.pos - this.from : this.to - this.pos;
+        GG > ZG && (GG = ZG), ZG -= GG;
         let {
-          value: su
-        } = this.cursor.next(uu);
-        return this.pos += (su.length + uu) * Eu, this.value = su.length <= ju ? su : Eu < 0 ? su.slice(su.length - ju) : su.slice(0, ju), this.done = !this.value, this
+          value: wG
+        } = this.cursor.next(GG);
+        return this.pos += (wG.length + GG) * bG, this.value = wG.length <= ZG ? wG : bG < 0 ? wG.slice(wG.length - ZG) : wG.slice(0, ZG), this.done = !this.value, this
       }
       next() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return uu < 0 ? uu = Math.max(uu, this.from - this.pos) : uu > 0 && (uu = Math.min(uu, this.to - this.pos)), this.nextInner(uu, this.cursor.dir)
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return GG < 0 ? GG = Math.max(GG, this.from - this.pos) : GG > 0 && (GG = Math.min(GG, this.to - this.pos)), this.nextInner(GG, this.cursor.dir)
       }
       get lineBreak() {
         return this.cursor.lineBreak && "" != this.value
       }
     }
-    class pu {
-      constructor(uu) {
-        this.inner = uu, this.afterBreak = !0, this.value = "", this.done = !1
+    class XG {
+      constructor(GG) {
+        this.inner = GG, this.afterBreak = !0, this.value = "", this.done = !1
       }
       next() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
           {
-            done: Eu,
-            lineBreak: ju,
-            value: su
-          } = this.inner.next(uu);
-        return Eu && this.afterBreak ? (this.value = "", this.afterBreak = !1) : Eu ? (this.done = !0, this.value = "") : ju ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = su, this.afterBreak = !1), this
+            done: bG,
+            lineBreak: ZG,
+            value: wG
+          } = this.inner.next(GG);
+        return bG && this.afterBreak ? (this.value = "", this.afterBreak = !1) : bG ? (this.done = !0, this.value = "") : ZG ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = wG, this.afterBreak = !1), this
       }
       get lineBreak() {
         return !1
       }
     }
-    "undefined" != typeof Symbol && (Yu.prototype[Symbol.iterator] = function() {
+    "undefined" != typeof Symbol && (hG.prototype[Symbol.iterator] = function() {
       return this.iter()
-    }, eu.prototype[Symbol.iterator] = Gu.prototype[Symbol.iterator] = pu.prototype[Symbol.iterator] = function() {
+    }, EG.prototype[Symbol.iterator] = oG.prototype[Symbol.iterator] = XG.prototype[Symbol.iterator] = function() {
       return this
     });
-    class wu {
-      constructor(uu, Eu, ju, su) {
-        this.from = uu, this.to = Eu, this.number = ju, this.text = su
+    class uG {
+      constructor(GG, bG, ZG, wG) {
+        this.from = GG, this.to = bG, this.number = ZG, this.text = wG
       }
       get length() {
         return this.to - this.from
       }
     }
 
-    function Ju(uu, Eu, ju) {
-      return [Eu = Math.max(0, Math.min(uu.length, Eu)), Math.max(Eu, Math.min(uu.length, ju))]
+    function iG(GG, bG, ZG) {
+      return [bG = Math.max(0, Math.min(GG.length, bG)), Math.max(bG, Math.min(GG.length, ZG))]
     }
 
-    function du(uu, Eu) {
-      return qu(uu, Eu, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function CG(GG, bG) {
+      return UG(GG, bG, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function au(uu, Eu) {
-      let ju = uu.charCodeAt(Eu);
-      if (!((su = ju) >= 55296 && su < 56320) || Eu + 1 == uu.length) return ju;
-      var su;
-      let Uu = uu.charCodeAt(Eu + 1);
-      return function(uu) {
-        return uu >= 56320 && uu < 57344
-      }(Uu) ? Uu - 56320 + (ju - 55296 << 10) + 65536 : ju
+    function WG(GG, bG) {
+      let ZG = GG.charCodeAt(bG);
+      if (!((wG = ZG) >= 55296 && wG < 56320) || bG + 1 == GG.length) return ZG;
+      var wG;
+      let SG = GG.charCodeAt(bG + 1);
+      return function(GG) {
+        return GG >= 56320 && GG < 57344
+      }(SG) ? SG - 56320 + (ZG - 55296 << 10) + 65536 : ZG
     }
 
-    function Pu(uu) {
-      return uu <= 65535 ? String.fromCharCode(uu) : (uu -= 65536, String.fromCharCode(55296 + (uu >> 10), 56320 + (1023 & uu)))
+    function mG(GG) {
+      return GG <= 65535 ? String.fromCharCode(GG) : (GG -= 65536, String.fromCharCode(55296 + (GG >> 10), 56320 + (1023 & GG)))
     }
 
-    function ou(uu) {
-      return uu < 65536 ? 1 : 2
+    function IG(GG) {
+      return GG < 65536 ? 1 : 2
     }
-    const ku = /\r\n?|\n/;
-    var mu = function(uu) {
-      return uu[uu.Simple = 0] = "Simple", uu[uu.TrackDel = 1] = "TrackDel", uu[uu.TrackBefore = 2] = "TrackBefore", uu[uu.TrackAfter = 3] = "TrackAfter", uu
-    }(mu || (mu = {}));
-    class vu {
-      constructor(uu) {
-        this.sections = uu
+    const FG = /\r\n?|\n/;
+    var vG = function(GG) {
+      return GG[GG.Simple = 0] = "Simple", GG[GG.TrackDel = 1] = "TrackDel", GG[GG.TrackBefore = 2] = "TrackBefore", GG[GG.TrackAfter = 3] = "TrackAfter", GG
+    }(vG || (vG = {}));
+    class aG {
+      constructor(GG) {
+        this.sections = GG
       }
       get length() {
-        let uu = 0;
-        for (let Eu = 0; Eu < this.sections.length; Eu += 2) uu += this.sections[Eu];
-        return uu
+        let GG = 0;
+        for (let bG = 0; bG < this.sections.length; bG += 2) GG += this.sections[bG];
+        return GG
       }
       get newLength() {
-        let uu = 0;
-        for (let Eu = 0; Eu < this.sections.length; Eu += 2) {
-          let ju = this.sections[Eu + 1];
-          uu += ju < 0 ? this.sections[Eu] : ju
+        let GG = 0;
+        for (let bG = 0; bG < this.sections.length; bG += 2) {
+          let ZG = this.sections[bG + 1];
+          GG += ZG < 0 ? this.sections[bG] : ZG
         }
-        return uu
+        return GG
       }
       get empty() {
         return 0 == this.sections.length || 2 == this.sections.length && this.sections[1] < 0
       }
-      iterGaps(uu) {
-        for (let Eu = 0, ju = 0, su = 0; Eu < this.sections.length;) {
-          let Uu = this.sections[Eu++],
-            Zu = this.sections[Eu++];
-          Zu < 0 ? (uu(ju, su, Uu), su += Uu) : su += Zu, ju += Uu
+      iterGaps(GG) {
+        for (let bG = 0, ZG = 0, wG = 0; bG < this.sections.length;) {
+          let SG = this.sections[bG++],
+            LG = this.sections[bG++];
+          LG < 0 ? (GG(ZG, wG, SG), wG += SG) : wG += LG, ZG += SG
         }
       }
-      iterChangedRanges(uu) {
-        Qu(this, uu, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChangedRanges(GG) {
+        PG(this, GG, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get invertedDesc() {
-        let uu = [];
-        for (let Eu = 0; Eu < this.sections.length;) {
-          let ju = this.sections[Eu++],
-            su = this.sections[Eu++];
-          su < 0 ? uu.push(ju, su) : uu.push(su, ju)
+        let GG = [];
+        for (let bG = 0; bG < this.sections.length;) {
+          let ZG = this.sections[bG++],
+            wG = this.sections[bG++];
+          wG < 0 ? GG.push(ZG, wG) : GG.push(wG, ZG)
         }
-        return new vu(uu)
+        return new aG(GG)
       }
-      composeDesc(uu) {
-        return this.empty ? uu : uu.empty ? this : Wu(this, uu)
+      composeDesc(GG) {
+        return this.empty ? GG : GG.empty ? this : AG(this, GG)
       }
-      mapDesc(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return uu.empty ? this : iu(this, uu, Eu)
+      mapDesc(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return GG.empty ? this : MG(this, GG, bG)
       }
-      mapPos(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : mu.Simple,
-          su = 0,
-          Uu = 0;
-        for (let Zu = 0; Zu < this.sections.length;) {
-          let Xu = this.sections[Zu++],
-            lu = this.sections[Zu++],
-            qu = su + Xu;
-          if (lu < 0) {
-            if (qu > uu) return Uu + (uu - su);
-            Uu += Xu
+      mapPos(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : vG.Simple,
+          wG = 0,
+          SG = 0;
+        for (let LG = 0; LG < this.sections.length;) {
+          let yG = this.sections[LG++],
+            kG = this.sections[LG++],
+            UG = wG + yG;
+          if (kG < 0) {
+            if (UG > GG) return SG + (GG - wG);
+            SG += yG
           } else {
-            if (ju != mu.Simple && qu >= uu && (ju == mu.TrackDel && su < uu && qu > uu || ju == mu.TrackBefore && su < uu || ju == mu.TrackAfter && qu > uu)) return null;
-            if (qu > uu || qu == uu && Eu < 0 && !Xu) return uu == su || Eu < 0 ? Uu : Uu + lu;
-            Uu += lu
+            if (ZG != vG.Simple && UG >= GG && (ZG == vG.TrackDel && wG < GG && UG > GG || ZG == vG.TrackBefore && wG < GG || ZG == vG.TrackAfter && UG > GG)) return null;
+            if (UG > GG || UG == GG && bG < 0 && !yG) return GG == wG || bG < 0 ? SG : SG + kG;
+            SG += kG
           }
-          su = qu
+          wG = UG
         }
-        if (uu > su) throw new RangeError(`Position ${uu} is out of range for changeset of length ${su}`);
-        return Uu
+        if (GG > wG) throw new RangeError(`Position ${GG} is out of range for changeset of length ${wG}`);
+        return SG
       }
-      touchesRange(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu;
-        for (let ju = 0, su = 0; ju < this.sections.length && su <= Eu;) {
-          let Uu = su + this.sections[ju++];
-          if (this.sections[ju++] >= 0 && su <= Eu && Uu >= uu) return !(su < uu && Uu > Eu) || "cover";
-          su = Uu
+      touchesRange(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : GG;
+        for (let ZG = 0, wG = 0; ZG < this.sections.length && wG <= bG;) {
+          let SG = wG + this.sections[ZG++];
+          if (this.sections[ZG++] >= 0 && wG <= bG && SG >= GG) return !(wG < GG && SG > bG) || "cover";
+          wG = SG
         }
         return !1
       }
       toString() {
-        let uu = "";
-        for (let Eu = 0; Eu < this.sections.length;) {
-          let ju = this.sections[Eu++],
-            su = this.sections[Eu++];
-          uu += (uu ? " " : "") + ju + (su >= 0 ? ":" + su : "")
+        let GG = "";
+        for (let bG = 0; bG < this.sections.length;) {
+          let ZG = this.sections[bG++],
+            wG = this.sections[bG++];
+          GG += (GG ? " " : "") + ZG + (wG >= 0 ? ":" + wG : "")
         }
-        return uu
+        return GG
       }
       toJSON() {
         return this.sections
       }
-      static fromJSON(uu) {
-        if (!Array.isArray(uu) || uu.length % 2 || uu.some((uu => "number" != typeof uu))) throw new RangeError("Invalid JSON representation of ChangeDesc");
-        return new vu(uu)
+      static fromJSON(GG) {
+        if (!Array.isArray(GG) || GG.length % 2 || GG.some((GG => "number" != typeof GG))) throw new RangeError("Invalid JSON representation of ChangeDesc");
+        return new aG(GG)
       }
-      static create(uu) {
-        return new vu(uu)
+      static create(GG) {
+        return new aG(GG)
       }
     }
-    class Ku extends vu {
-      constructor(uu, Eu) {
-        super(uu), this.inserted = Eu
+    class cG extends aG {
+      constructor(GG, bG) {
+        super(GG), this.inserted = bG
       }
-      apply(uu) {
-        if (this.length != uu.length) throw new RangeError("Applying change set to a document with the wrong length");
-        return Qu(this, ((Eu, ju, su, Uu, Zu) => uu = uu.replace(su, su + (ju - Eu), Zu)), !1), uu
+      apply(GG) {
+        if (this.length != GG.length) throw new RangeError("Applying change set to a document with the wrong length");
+        return PG(this, ((bG, ZG, wG, SG, LG) => GG = GG.replace(wG, wG + (ZG - bG), LG)), !1), GG
       }
-      mapDesc(uu) {
-        return iu(this, uu, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
+      mapDesc(GG) {
+        return MG(this, GG, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
       }
-      invert(uu) {
-        let Eu = this.sections.slice(),
-          ju = [];
-        for (let su = 0, Uu = 0; su < Eu.length; su += 2) {
-          let Zu = Eu[su],
-            Xu = Eu[su + 1];
-          if (Xu >= 0) {
-            Eu[su] = Xu, Eu[su + 1] = Zu;
-            let lu = su >> 1;
-            for (; ju.length < lu;) ju.push(Yu.empty);
-            ju.push(Zu ? uu.slice(Uu, Uu + Zu) : Yu.empty)
+      invert(GG) {
+        let bG = this.sections.slice(),
+          ZG = [];
+        for (let wG = 0, SG = 0; wG < bG.length; wG += 2) {
+          let LG = bG[wG],
+            yG = bG[wG + 1];
+          if (yG >= 0) {
+            bG[wG] = yG, bG[wG + 1] = LG;
+            let kG = wG >> 1;
+            for (; ZG.length < kG;) ZG.push(hG.empty);
+            ZG.push(LG ? GG.slice(SG, SG + LG) : hG.empty)
           }
-          Uu += Zu
+          SG += LG
         }
-        return new Ku(Eu, ju)
+        return new cG(bG, ZG)
       }
-      compose(uu) {
-        return this.empty ? uu : uu.empty ? this : Wu(this, uu, !0)
+      compose(GG) {
+        return this.empty ? GG : GG.empty ? this : AG(this, GG, !0)
       }
-      map(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return uu.empty ? this : iu(this, uu, Eu, !0)
+      map(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return GG.empty ? this : MG(this, GG, bG, !0)
       }
-      iterChanges(uu) {
-        Qu(this, uu, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChanges(GG) {
+        PG(this, GG, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get desc() {
-        return vu.create(this.sections)
+        return aG.create(this.sections)
       }
-      filter(uu) {
-        let Eu = [],
-          ju = [],
-          su = [],
-          Uu = new Su(this);
-        uu: for (let Zu = 0, Xu = 0;;) {
-          let lu = Zu == uu.length ? 1e9 : uu[Zu++];
-          for (; Xu < lu || Xu == lu && 0 == Uu.len;) {
-            if (Uu.done) break uu;
-            let uu = Math.min(Uu.len, lu - Xu);
-            Vu(su, uu, -1);
-            let Zu = -1 == Uu.ins ? -1 : 0 == Uu.off ? Uu.ins : 0;
-            Vu(Eu, uu, Zu), Zu > 0 && ru(ju, Eu, Uu.text), Uu.forward(uu), Xu += uu
+      filter(GG) {
+        let bG = [],
+          ZG = [],
+          wG = [],
+          SG = new sG(this);
+        GG: for (let LG = 0, yG = 0;;) {
+          let kG = LG == GG.length ? 1e9 : GG[LG++];
+          for (; yG < kG || yG == kG && 0 == SG.len;) {
+            if (SG.done) break GG;
+            let GG = Math.min(SG.len, kG - yG);
+            lG(wG, GG, -1);
+            let LG = -1 == SG.ins ? -1 : 0 == SG.off ? SG.ins : 0;
+            lG(bG, GG, LG), LG > 0 && jG(ZG, bG, SG.text), SG.forward(GG), yG += GG
           }
-          let qu = uu[Zu++];
-          for (; Xu < qu;) {
-            if (Uu.done) break uu;
-            let uu = Math.min(Uu.len, qu - Xu);
-            Vu(Eu, uu, -1), Vu(su, uu, -1 == Uu.ins ? -1 : 0 == Uu.off ? Uu.ins : 0), Uu.forward(uu), Xu += uu
+          let UG = GG[LG++];
+          for (; yG < UG;) {
+            if (SG.done) break GG;
+            let GG = Math.min(SG.len, UG - yG);
+            lG(bG, GG, -1), lG(wG, GG, -1 == SG.ins ? -1 : 0 == SG.off ? SG.ins : 0), SG.forward(GG), yG += GG
           }
         }
         return {
-          changes: new Ku(Eu, ju),
-          filtered: vu.create(su)
+          changes: new cG(bG, ZG),
+          filtered: aG.create(wG)
         }
       }
       toJSON() {
-        let uu = [];
-        for (let Eu = 0; Eu < this.sections.length; Eu += 2) {
-          let ju = this.sections[Eu],
-            su = this.sections[Eu + 1];
-          su < 0 ? uu.push(ju) : 0 == su ? uu.push([ju]) : uu.push([ju].concat(this.inserted[Eu >> 1].toJSON()))
+        let GG = [];
+        for (let bG = 0; bG < this.sections.length; bG += 2) {
+          let ZG = this.sections[bG],
+            wG = this.sections[bG + 1];
+          wG < 0 ? GG.push(ZG) : 0 == wG ? GG.push([ZG]) : GG.push([ZG].concat(this.inserted[bG >> 1].toJSON()))
         }
-        return uu
+        return GG
       }
-      static of (uu, Eu, ju) {
-        let su = [],
-          Uu = [],
-          Zu = 0,
-          Xu = null;
+      static of (GG, bG, ZG) {
+        let wG = [],
+          SG = [],
+          LG = 0,
+          yG = null;
 
-        function lu() {
-          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !su.length) return;
-          Zu < Eu && Vu(su, Eu - Zu, -1);
-          let uu = new Ku(su, Uu);
-          Xu = Xu ? Xu.compose(uu.map(Xu)) : uu, su = [], Uu = [], Zu = 0
+        function kG() {
+          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !wG.length) return;
+          LG < bG && lG(wG, bG - LG, -1);
+          let GG = new cG(wG, SG);
+          yG = yG ? yG.compose(GG.map(yG)) : GG, wG = [], SG = [], LG = 0
         }
-        return function uu(qu) {
-          if (Array.isArray(qu))
-            for (let Eu of qu) uu(Eu);
-          else if (qu instanceof Ku) {
-            if (qu.length != Eu) throw new RangeError(`Mismatched change set length (got ${qu.length}, expected ${Eu})`);
-            lu(), Xu = Xu ? Xu.compose(qu.map(Xu)) : qu
+        return function GG(UG) {
+          if (Array.isArray(UG))
+            for (let bG of UG) GG(bG);
+          else if (UG instanceof cG) {
+            if (UG.length != bG) throw new RangeError(`Mismatched change set length (got ${UG.length}, expected ${bG})`);
+            kG(), yG = yG ? yG.compose(UG.map(yG)) : UG
           } else {
             let {
-              from: uu,
-              to: Xu = uu,
-              insert: fu
-            } = qu;
-            if (uu > Xu || uu < 0 || Xu > Eu) throw new RangeError(`Invalid change range ${uu} to ${Xu} (in doc of length ${Eu})`);
-            let Cu = fu ? "string" == typeof fu ? Yu.of(fu.split(ju || ku)) : fu : Yu.empty,
-              bu = Cu.length;
-            if (uu == Xu && 0 == bu) return;
-            uu < Zu && lu(), uu > Zu && Vu(su, uu - Zu, -1), Vu(su, Xu - uu, bu), ru(Uu, su, Cu), Zu = Xu
+              from: GG,
+              to: yG = GG,
+              insert: YG
+            } = UG;
+            if (GG > yG || GG < 0 || yG > bG) throw new RangeError(`Invalid change range ${GG} to ${yG} (in doc of length ${bG})`);
+            let VG = YG ? "string" == typeof YG ? hG.of(YG.split(ZG || FG)) : YG : hG.empty,
+              pG = VG.length;
+            if (GG == yG && 0 == pG) return;
+            GG < LG && kG(), GG > LG && lG(wG, GG - LG, -1), lG(wG, yG - GG, pG), jG(SG, wG, VG), LG = yG
           }
-        }(uu), lu(!Xu), Xu
+        }(GG), kG(!yG), yG
       }
-      static empty(uu) {
-        return new Ku(uu ? [uu, -1] : [], [])
+      static empty(GG) {
+        return new cG(GG ? [GG, -1] : [], [])
       }
-      static fromJSON(uu) {
-        if (!Array.isArray(uu)) throw new RangeError("Invalid JSON representation of ChangeSet");
-        let Eu = [],
-          ju = [];
-        for (let su = 0; su < uu.length; su++) {
-          let Uu = uu[su];
-          if ("number" == typeof Uu) Eu.push(Uu, -1);
+      static fromJSON(GG) {
+        if (!Array.isArray(GG)) throw new RangeError("Invalid JSON representation of ChangeSet");
+        let bG = [],
+          ZG = [];
+        for (let wG = 0; wG < GG.length; wG++) {
+          let SG = GG[wG];
+          if ("number" == typeof SG) bG.push(SG, -1);
           else {
-            if (!Array.isArray(Uu) || "number" != typeof Uu[0] || Uu.some(((uu, Eu) => Eu && "string" != typeof uu))) throw new RangeError("Invalid JSON representation of ChangeSet");
-            if (1 == Uu.length) Eu.push(Uu[0], 0);
+            if (!Array.isArray(SG) || "number" != typeof SG[0] || SG.some(((GG, bG) => bG && "string" != typeof GG))) throw new RangeError("Invalid JSON representation of ChangeSet");
+            if (1 == SG.length) bG.push(SG[0], 0);
             else {
-              for (; ju.length < su;) ju.push(Yu.empty);
-              ju[su] = Yu.of(Uu.slice(1)), Eu.push(Uu[0], ju[su].length)
+              for (; ZG.length < wG;) ZG.push(hG.empty);
+              ZG[wG] = hG.of(SG.slice(1)), bG.push(SG[0], ZG[wG].length)
             }
           }
         }
-        return new Ku(Eu, ju)
+        return new cG(bG, ZG)
       }
-      static createSet(uu, Eu) {
-        return new Ku(uu, Eu)
+      static createSet(GG, bG) {
+        return new cG(GG, bG)
       }
     }
 
-    function Vu(uu, Eu, ju) {
-      let su = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (0 == Eu && ju <= 0) return;
-      let Uu = uu.length - 2;
-      Uu >= 0 && ju <= 0 && ju == uu[Uu + 1] ? uu[Uu] += Eu : Uu >= 0 && 0 == Eu && 0 == uu[Uu] ? uu[Uu + 1] += ju : su ? (uu[Uu] += Eu, uu[Uu + 1] += ju) : uu.push(Eu, ju)
+    function lG(GG, bG, ZG) {
+      let wG = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (0 == bG && ZG <= 0) return;
+      let SG = GG.length - 2;
+      SG >= 0 && ZG <= 0 && ZG == GG[SG + 1] ? GG[SG] += bG : SG >= 0 && 0 == bG && 0 == GG[SG] ? GG[SG + 1] += ZG : wG ? (GG[SG] += bG, GG[SG + 1] += ZG) : GG.push(bG, ZG)
     }
 
-    function ru(uu, Eu, ju) {
-      if (0 == ju.length) return;
-      let su = Eu.length - 2 >> 1;
-      if (su < uu.length) uu[uu.length - 1] = uu[uu.length - 1].append(ju);
+    function jG(GG, bG, ZG) {
+      if (0 == ZG.length) return;
+      let wG = bG.length - 2 >> 1;
+      if (wG < GG.length) GG[GG.length - 1] = GG[GG.length - 1].append(ZG);
       else {
-        for (; uu.length < su;) uu.push(Yu.empty);
-        uu.push(ju)
+        for (; GG.length < wG;) GG.push(hG.empty);
+        GG.push(ZG)
       }
     }
 
-    function Qu(uu, Eu, ju) {
-      let su = uu.inserted;
-      for (let Uu = 0, Zu = 0, Xu = 0; Xu < uu.sections.length;) {
-        let lu = uu.sections[Xu++],
-          qu = uu.sections[Xu++];
-        if (qu < 0) Uu += lu, Zu += lu;
+    function PG(GG, bG, ZG) {
+      let wG = GG.inserted;
+      for (let SG = 0, LG = 0, yG = 0; yG < GG.sections.length;) {
+        let kG = GG.sections[yG++],
+          UG = GG.sections[yG++];
+        if (UG < 0) SG += kG, LG += kG;
         else {
-          let fu = Uu,
-            Cu = Zu,
-            bu = Yu.empty;
-          for (; fu += lu, Cu += qu, qu && su && (bu = bu.append(su[Xu - 2 >> 1])), !(ju || Xu == uu.sections.length || uu.sections[Xu + 1] < 0);) lu = uu.sections[Xu++], qu = uu.sections[Xu++];
-          Eu(Uu, fu, Zu, Cu, bu), Uu = fu, Zu = Cu
+          let YG = SG,
+            VG = LG,
+            pG = hG.empty;
+          for (; YG += kG, VG += UG, UG && wG && (pG = pG.append(wG[yG - 2 >> 1])), !(ZG || yG == GG.sections.length || GG.sections[yG + 1] < 0);) kG = GG.sections[yG++], UG = GG.sections[yG++];
+          bG(SG, YG, LG, VG, pG), SG = YG, LG = VG
         }
       }
     }
 
-    function iu(uu, Eu, ju) {
-      let su = [],
-        Uu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
-        Zu = new Su(uu),
-        Xu = new Su(Eu),
-        lu = 0;
-      for (let qu = -1;;) {
-        if (++lu > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
-        if (Zu.done && Xu.len || Xu.done && Zu.len) throw new Error("Mismatched change set lengths");
-        if (-1 == Zu.ins && -1 == Xu.ins) {
-          let uu = Math.min(Zu.len, Xu.len);
-          Vu(su, uu, -1), Zu.forward(uu), Xu.forward(uu)
-        } else if (Xu.ins >= 0 && (Zu.ins < 0 || qu == Zu.i || 0 == Zu.off && (Xu.len < Zu.len || Xu.len == Zu.len && !ju))) {
-          let uu = Xu.len;
-          for (Vu(su, Xu.ins, -1); uu;) {
-            if (++lu > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
-            let Eu = Math.min(Zu.len, uu);
-            Zu.ins >= 0 && qu < Zu.i && Zu.len <= Eu && (Vu(su, 0, Zu.ins), Uu && ru(Uu, su, Zu.text), qu = Zu.i), Zu.forward(Eu), uu -= Eu
+    function MG(GG, bG, ZG) {
+      let wG = [],
+        SG = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
+        LG = new sG(GG),
+        yG = new sG(bG),
+        kG = 0;
+      for (let UG = -1;;) {
+        if (++kG > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
+        if (LG.done && yG.len || yG.done && LG.len) throw new Error("Mismatched change set lengths");
+        if (-1 == LG.ins && -1 == yG.ins) {
+          let GG = Math.min(LG.len, yG.len);
+          lG(wG, GG, -1), LG.forward(GG), yG.forward(GG)
+        } else if (yG.ins >= 0 && (LG.ins < 0 || UG == LG.i || 0 == LG.off && (yG.len < LG.len || yG.len == LG.len && !ZG))) {
+          let GG = yG.len;
+          for (lG(wG, yG.ins, -1); GG;) {
+            if (++kG > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
+            let bG = Math.min(LG.len, GG);
+            LG.ins >= 0 && UG < LG.i && LG.len <= bG && (lG(wG, 0, LG.ins), SG && jG(SG, wG, LG.text), UG = LG.i), LG.forward(bG), GG -= bG
           }
-          Xu.next()
+          yG.next()
         } else {
-          if (!(Zu.ins >= 0)) {
-            if (Zu.done && Xu.done) return Uu ? Ku.createSet(su, Uu) : vu.create(su);
+          if (!(LG.ins >= 0)) {
+            if (LG.done && yG.done) return SG ? cG.createSet(wG, SG) : aG.create(wG);
             throw new Error("Mismatched change set lengths")
           } {
-            let uu = 0,
-              Eu = Zu.len;
-            for (; Eu;) {
-              if (++lu > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
-              if (-1 == Xu.ins) {
-                let ju = Math.min(Eu, Xu.len);
-                uu += ju, Eu -= ju, Xu.forward(ju)
+            let GG = 0,
+              bG = LG.len;
+            for (; bG;) {
+              if (++kG > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
+              if (-1 == yG.ins) {
+                let ZG = Math.min(bG, yG.len);
+                GG += ZG, bG -= ZG, yG.forward(ZG)
               } else {
-                if (!(0 == Xu.ins && Xu.len < Eu)) break;
-                Eu -= Xu.len, Xu.next()
+                if (!(0 == yG.ins && yG.len < bG)) break;
+                bG -= yG.len, yG.next()
               }
             }
-            Vu(su, uu, qu < Zu.i ? Zu.ins : 0), Uu && qu < Zu.i && ru(Uu, su, Zu.text), qu = Zu.i, Zu.forward(Zu.len - Eu)
+            lG(wG, GG, UG < LG.i ? LG.ins : 0), SG && UG < LG.i && jG(SG, wG, LG.text), UG = LG.i, LG.forward(LG.len - bG)
           }
         }
       }
     }
 
-    function Wu(uu, Eu) {
-      let ju = [],
-        su = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
-        Uu = new Su(uu),
-        Zu = new Su(Eu),
-        Xu = 0;
-      for (let lu = !1;;) {
-        if (++Xu > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
-        if (Uu.done && Zu.done) return su ? Ku.createSet(ju, su) : vu.create(ju);
-        if (0 == Uu.ins) Vu(ju, Uu.len, 0, lu), Uu.next();
-        else if (0 != Zu.len || Zu.done) {
-          if (Uu.done || Zu.done) throw new Error("Mismatched change set lengths");
+    function AG(GG, bG) {
+      let ZG = [],
+        wG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
+        SG = new sG(GG),
+        LG = new sG(bG),
+        yG = 0;
+      for (let kG = !1;;) {
+        if (++yG > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
+        if (SG.done && LG.done) return wG ? cG.createSet(ZG, wG) : aG.create(ZG);
+        if (0 == SG.ins) lG(ZG, SG.len, 0, kG), SG.next();
+        else if (0 != LG.len || LG.done) {
+          if (SG.done || LG.done) throw new Error("Mismatched change set lengths");
           {
-            let uu = Math.min(Uu.len2, Zu.len),
-              Eu = ju.length;
-            if (-1 == Uu.ins) {
-              let Eu = -1 == Zu.ins ? -1 : Zu.off ? 0 : Zu.ins;
-              Vu(ju, uu, Eu, lu), su && Eu && ru(su, ju, Zu.text)
-            } else - 1 == Zu.ins ? (Vu(ju, Uu.off ? 0 : Uu.len, uu, lu), su && ru(su, ju, Uu.textBit(uu))) : (Vu(ju, Uu.off ? 0 : Uu.len, Zu.off ? 0 : Zu.ins, lu), su && !Zu.off && ru(su, ju, Zu.text));
-            lu = (Uu.ins > uu || Zu.ins >= 0 && Zu.len > uu) && (lu || ju.length > Eu), Uu.forward2(uu), Zu.forward(uu)
+            let GG = Math.min(SG.len2, LG.len),
+              bG = ZG.length;
+            if (-1 == SG.ins) {
+              let bG = -1 == LG.ins ? -1 : LG.off ? 0 : LG.ins;
+              lG(ZG, GG, bG, kG), wG && bG && jG(wG, ZG, LG.text)
+            } else - 1 == LG.ins ? (lG(ZG, SG.off ? 0 : SG.len, GG, kG), wG && jG(wG, ZG, SG.textBit(GG))) : (lG(ZG, SG.off ? 0 : SG.len, LG.off ? 0 : LG.ins, kG), wG && !LG.off && jG(wG, ZG, LG.text));
+            kG = (SG.ins > GG || LG.ins >= 0 && LG.len > GG) && (kG || ZG.length > bG), SG.forward2(GG), LG.forward(GG)
           }
-        } else Vu(ju, 0, Zu.ins, lu), su && ru(su, ju, Zu.text), Zu.next()
+        } else lG(ZG, 0, LG.ins, kG), wG && jG(wG, ZG, LG.text), LG.next()
       }
     }
-    class Su {
-      constructor(uu) {
-        this.set = uu, this.i = 0, this.next()
+    class sG {
+      constructor(GG) {
+        this.set = GG, this.i = 0, this.next()
       }
       next() {
         let {
-          sections: uu
+          sections: GG
         } = this.set;
-        this.i < uu.length ? (this.len = uu[this.i++], this.ins = uu[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
+        this.i < GG.length ? (this.len = GG[this.i++], this.ins = GG[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
       }
       get done() {
         return -2 == this.ins
@@ -815,26 +815,26 @@ export const modules = {
       }
       get text() {
         let {
-          inserted: uu
-        } = this.set, Eu = this.i - 2 >> 1;
-        return Eu >= uu.length ? Yu.empty : uu[Eu]
+          inserted: GG
+        } = this.set, bG = this.i - 2 >> 1;
+        return bG >= GG.length ? hG.empty : GG[bG]
       }
-      textBit(uu) {
+      textBit(GG) {
         let {
-          inserted: Eu
-        } = this.set, ju = this.i - 2 >> 1;
-        return ju >= Eu.length && !uu ? Yu.empty : Eu[ju].slice(this.off, null == uu ? void 0 : this.off + uu)
+          inserted: bG
+        } = this.set, ZG = this.i - 2 >> 1;
+        return ZG >= bG.length && !GG ? hG.empty : bG[ZG].slice(this.off, null == GG ? void 0 : this.off + GG)
       }
-      forward(uu) {
-        uu == this.len ? this.next() : (this.len -= uu, this.off += uu)
+      forward(GG) {
+        GG == this.len ? this.next() : (this.len -= GG, this.off += GG)
       }
-      forward2(uu) {
-        -1 == this.ins ? this.forward(uu) : uu == this.ins ? this.next() : (this.ins -= uu, this.off += uu)
+      forward2(GG) {
+        -1 == this.ins ? this.forward(GG) : GG == this.ins ? this.next() : (this.ins -= GG, this.off += GG)
       }
     }
-    class Iu {
-      constructor(uu, Eu, ju) {
-        this.from = uu, this.to = Eu, this.flags = ju
+    class qG {
+      constructor(GG, bG, ZG) {
+        this.from = GG, this.to = bG, this.flags = ZG
       }
       get anchor() {
         return 32 & this.flags ? this.to : this.from
@@ -849,27 +849,27 @@ export const modules = {
         return 8 & this.flags ? -1 : 16 & this.flags ? 1 : 0
       }
       get bidiLevel() {
-        let uu = 7 & this.flags;
-        return 7 == uu ? null : uu
+        let GG = 7 & this.flags;
+        return 7 == GG ? null : GG
       }
       get goalColumn() {
-        let uu = this.flags >> 6;
-        return 16777215 == uu ? void 0 : uu
+        let GG = this.flags >> 6;
+        return 16777215 == GG ? void 0 : GG
       }
-      map(uu) {
-        let Eu, ju, su = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return this.empty ? Eu = ju = uu.mapPos(this.from, su) : (Eu = uu.mapPos(this.from, 1), ju = uu.mapPos(this.to, -1)), Eu == this.from && ju == this.to ? this : new Iu(Eu, ju, this.flags)
+      map(GG) {
+        let bG, ZG, wG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return this.empty ? bG = ZG = GG.mapPos(this.from, wG) : (bG = GG.mapPos(this.from, 1), ZG = GG.mapPos(this.to, -1)), bG == this.from && ZG == this.to ? this : new qG(bG, ZG, this.flags)
       }
-      extend(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu,
-          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (uu <= this.anchor && Eu >= this.anchor) return Fu.range(uu, Eu, void 0, void 0, ju);
-        let su = Math.abs(uu - this.anchor) > Math.abs(Eu - this.anchor) ? uu : Eu;
-        return Fu.range(this.anchor, su, void 0, void 0, ju)
+      extend(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : GG,
+          ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (GG <= this.anchor && bG >= this.anchor) return nG.range(GG, bG, void 0, void 0, ZG);
+        let wG = Math.abs(GG - this.anchor) > Math.abs(bG - this.anchor) ? GG : bG;
+        return nG.range(this.anchor, wG, void 0, void 0, ZG)
       }
-      eq(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.anchor == uu.anchor && this.head == uu.head && this.goalColumn == uu.goalColumn && (!Eu || !this.empty || this.assoc == uu.assoc)
+      eq(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.anchor == GG.anchor && this.head == GG.head && this.goalColumn == GG.goalColumn && (!bG || !this.empty || this.assoc == GG.assoc)
       }
       toJSON() {
         return {
@@ -877,447 +877,447 @@ export const modules = {
           head: this.head
         }
       }
-      static fromJSON(uu) {
-        if (!uu || "number" != typeof uu.anchor || "number" != typeof uu.head) throw new RangeError("Invalid JSON representation for SelectionRange");
-        return Fu.range(uu.anchor, uu.head)
+      static fromJSON(GG) {
+        if (!GG || "number" != typeof GG.anchor || "number" != typeof GG.head) throw new RangeError("Invalid JSON representation for SelectionRange");
+        return nG.range(GG.anchor, GG.head)
       }
-      static create(uu, Eu, ju) {
-        return new Iu(uu, Eu, ju)
+      static create(GG, bG, ZG) {
+        return new qG(GG, bG, ZG)
       }
     }
-    class Fu {
-      constructor(uu, Eu) {
-        this.HY = uu, this.mainIndex = Eu
+    class nG {
+      constructor(GG, bG) {
+        this.Bh = GG, this.mainIndex = bG
       }
-      map(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return uu.empty ? this : Fu.create(this.HY.map((ju => ju.map(uu, Eu))), this.mainIndex)
+      map(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return GG.empty ? this : nG.create(this.Bh.map((ZG => ZG.map(GG, bG))), this.mainIndex)
       }
-      eq(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.HY.length != uu.HY.length || this.mainIndex != uu.mainIndex) return !1;
-        for (let ju = 0; ju < this.HY.length; ju++)
-          if (!this.HY[ju].eq(uu.HY[ju], Eu)) return !1;
+      eq(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.Bh.length != GG.Bh.length || this.mainIndex != GG.mainIndex) return !1;
+        for (let ZG = 0; ZG < this.Bh.length; ZG++)
+          if (!this.Bh[ZG].eq(GG.Bh[ZG], bG)) return !1;
         return !0
       }
       get main() {
-        return this.HY[this.mainIndex]
+        return this.Bh[this.mainIndex]
       }
       asSingle() {
-        return 1 == this.HY.length ? this : new Fu([this.main], 0)
+        return 1 == this.Bh.length ? this : new nG([this.main], 0)
       }
-      addRange(uu) {
-        let Eu = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return Fu.create([uu].concat(this.HY), Eu ? 0 : this.mainIndex + 1)
+      addRange(GG) {
+        let bG = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return nG.create([GG].concat(this.Bh), bG ? 0 : this.mainIndex + 1)
       }
-      replaceRange(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
-          ju = this.HY.slice();
-        return ju[Eu] = uu, Fu.create(ju, this.mainIndex)
+      replaceRange(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
+          ZG = this.Bh.slice();
+        return ZG[bG] = GG, nG.create(ZG, this.mainIndex)
       }
       toJSON() {
         return {
-          HY: this.HY.map((uu => uu.toJSON())),
+          Bh: this.Bh.map((GG => GG.toJSON())),
           main: this.mainIndex
         }
       }
-      static fromJSON(uu) {
-        if (!uu || !Array.isArray(uu.HY) || "number" != typeof uu.main || uu.main >= uu.HY.length) throw new RangeError("Invalid JSON representation for EditorSelection");
-        return new Fu(uu.HY.map((uu => Iu.fromJSON(uu))), uu.main)
+      static fromJSON(GG) {
+        if (!GG || !Array.isArray(GG.Bh) || "number" != typeof GG.main || GG.main >= GG.Bh.length) throw new RangeError("Invalid JSON representation for EditorSelection");
+        return new nG(GG.Bh.map((GG => qG.fromJSON(GG))), GG.main)
       }
-      static single(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu;
-        return new Fu([Fu.range(uu, Eu)], 0)
+      static single(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : GG;
+        return new nG([nG.range(GG, bG)], 0)
       }
-      static create(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (0 == uu.length) throw new RangeError("A selection needs at least one range");
-        for (let ju = 0, su = 0; su < uu.length; su++) {
-          let Uu = uu[su];
-          if (Uu.empty ? Uu.from <= ju : Uu.from < ju) return Fu.normalized(uu.slice(), Eu);
-          ju = Uu.to
+      static create(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (0 == GG.length) throw new RangeError("A selection needs at least one range");
+        for (let ZG = 0, wG = 0; wG < GG.length; wG++) {
+          let SG = GG[wG];
+          if (SG.empty ? SG.from <= ZG : SG.from < ZG) return nG.normalized(GG.slice(), bG);
+          ZG = SG.to
         }
-        return new Fu(uu, Eu)
+        return new nG(GG, bG)
       }
-      static cursor(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ju = arguments.length > 2 ? arguments[2] : void 0,
-          su = arguments.length > 3 ? arguments[3] : void 0;
-        return Iu.create(uu, uu, (0 == Eu ? 0 : Eu < 0 ? 8 : 16) | (null == ju ? 7 : Math.min(6, ju)) | (null !== su && void 0 !== su ? su : 16777215) << 6)
+      static cursor(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          ZG = arguments.length > 2 ? arguments[2] : void 0,
+          wG = arguments.length > 3 ? arguments[3] : void 0;
+        return qG.create(GG, GG, (0 == bG ? 0 : bG < 0 ? 8 : 16) | (null == ZG ? 7 : Math.min(6, ZG)) | (null !== wG && void 0 !== wG ? wG : 16777215) << 6)
       }
-      static range(uu, Eu, ju, su, Uu) {
-        let Zu = (null !== ju && void 0 !== ju ? ju : 16777215) << 6 | (null == su ? 7 : Math.min(6, su));
-        return Uu || uu == Eu || (Uu = Eu < uu ? 1 : -1), Eu < uu ? Iu.create(Eu, uu, 48 | Zu) : Iu.create(uu, Eu, (Uu ? Uu < 0 ? 8 : 16 : 0) | Zu)
+      static range(GG, bG, ZG, wG, SG) {
+        let LG = (null !== ZG && void 0 !== ZG ? ZG : 16777215) << 6 | (null == wG ? 7 : Math.min(6, wG));
+        return SG || GG == bG || (SG = bG < GG ? 1 : -1), bG < GG ? qG.create(bG, GG, 48 | LG) : qG.create(GG, bG, (SG ? SG < 0 ? 8 : 16 : 0) | LG)
       }
-      static normalized(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ju = uu[Eu];
-        uu.sort(((uu, Eu) => uu.from - Eu.from)), Eu = uu.indexOf(ju);
-        for (let su = 1; su < uu.length; su++) {
-          let ju = uu[su],
-            Uu = uu[su - 1];
-          if (ju.empty ? ju.from <= Uu.to : ju.from < Uu.to) {
-            let Zu = Uu.from,
-              Xu = Math.max(ju.to, Uu.to);
-            su <= Eu && Eu--, uu.splice(--su, 2, ju.anchor > ju.head ? Fu.range(Xu, Zu) : Fu.range(Zu, Xu))
+      static normalized(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          ZG = GG[bG];
+        GG.sort(((GG, bG) => GG.from - bG.from)), bG = GG.indexOf(ZG);
+        for (let wG = 1; wG < GG.length; wG++) {
+          let ZG = GG[wG],
+            SG = GG[wG - 1];
+          if (ZG.empty ? ZG.from <= SG.to : ZG.from < SG.to) {
+            let LG = SG.from,
+              yG = Math.max(ZG.to, SG.to);
+            wG <= bG && bG--, GG.splice(--wG, 2, ZG.anchor > ZG.head ? nG.range(yG, LG) : nG.range(LG, yG))
           }
         }
-        return new Fu(uu, Eu)
+        return new nG(GG, bG)
       }
     }
 
-    function Bu(uu, Eu) {
-      for (let ju of uu.HY)
-        if (ju.to > Eu) throw new RangeError("Selection points outside of document")
+    function gG(GG, bG) {
+      for (let ZG of GG.Bh)
+        if (ZG.to > bG) throw new RangeError("Selection points outside of document")
     }
-    let Lu = 0;
-    class tu {
-      constructor(uu, Eu, ju, su, Uu) {
-        this.combine = uu, this.compareInput = Eu, this.compare = ju, this.isStatic = su, this.id = Lu++, this.default = uu([]), this.extensions = "function" == typeof Uu ? Uu(this) : Uu
+    let eG = 0;
+    class RG {
+      constructor(GG, bG, ZG, wG, SG) {
+        this.combine = GG, this.compareInput = bG, this.compare = ZG, this.isStatic = wG, this.id = eG++, this.default = GG([]), this.extensions = "function" == typeof SG ? SG(this) : SG
       }
       get reader() {
         return this
       }
       static define() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return new tu(uu.combine || (uu => uu), uu.compareInput || ((uu, Eu) => uu === Eu), uu.compare || (uu.combine ? (uu, Eu) => uu === Eu : xu), !!uu.static, uu.enables)
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        return new RG(GG.combine || (GG => GG), GG.compareInput || ((GG, bG) => GG === bG), GG.compare || (GG.combine ? (GG, bG) => GG === bG : TG), !!GG.static, GG.enables)
       }
-      of(uu) {
-        return new Tu([], this, 0, uu)
+      of(GG) {
+        return new HG([], this, 0, GG)
       }
-      compute(uu, Eu) {
+      compute(GG, bG) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new Tu(uu, this, 1, Eu)
+        return new HG(GG, this, 1, bG)
       }
-      computeN(uu, Eu) {
+      computeN(GG, bG) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new Tu(uu, this, 2, Eu)
+        return new HG(GG, this, 2, bG)
       }
-      from(uu, Eu) {
-        return Eu || (Eu = uu => uu), this.compute([uu], (ju => Eu(ju.field(uu))))
+      from(GG, bG) {
+        return bG || (bG = GG => GG), this.compute([GG], (ZG => bG(ZG.field(GG))))
       }
     }
 
-    function xu(uu, Eu) {
-      return uu == Eu || uu.length == Eu.length && uu.every(((uu, ju) => uu === Eu[ju]))
+    function TG(GG, bG) {
+      return GG == bG || GG.length == bG.length && GG.every(((GG, ZG) => GG === bG[ZG]))
     }
-    class Tu {
-      constructor(uu, Eu, ju, su) {
-        this.dependencies = uu, this.facet = Eu, this.type = ju, this.value = su, this.id = Lu++
+    class HG {
+      constructor(GG, bG, ZG, wG) {
+        this.dependencies = GG, this.facet = bG, this.type = ZG, this.value = wG, this.id = eG++
       }
-      dynamicSlot(uu) {
-        var Eu;
-        let ju = this.value,
-          su = this.facet.compareInput,
-          Uu = this.id,
-          Zu = uu[Uu] >> 1,
-          Xu = 2 == this.type,
-          lu = !1,
-          qu = !1,
-          fu = [];
-        for (let Cu of this.dependencies) "doc" == Cu ? lu = !0 : "selection" == Cu ? qu = !0 : 0 == (1 & (null !== (Eu = uu[Cu.id]) && void 0 !== Eu ? Eu : 1)) && fu.push(uu[Cu.id]);
+      dynamicSlot(GG) {
+        var bG;
+        let ZG = this.value,
+          wG = this.facet.compareInput,
+          SG = this.id,
+          LG = GG[SG] >> 1,
+          yG = 2 == this.type,
+          kG = !1,
+          UG = !1,
+          YG = [];
+        for (let VG of this.dependencies) "doc" == VG ? kG = !0 : "selection" == VG ? UG = !0 : 0 == (1 & (null !== (bG = GG[VG.id]) && void 0 !== bG ? bG : 1)) && YG.push(GG[VG.id]);
         return {
-          create: uu => (uu.values[Zu] = ju(uu), 1),
-          update(uu, Eu) {
-            if (lu && Eu.docChanged || qu && (Eu.docChanged || Eu.selection) || Au(uu, fu)) {
-              let Eu = ju(uu);
-              if (Xu ? !Hu(Eu, uu.values[Zu], su) : !su(Eu, uu.values[Zu])) return uu.values[Zu] = Eu, 1
+          create: GG => (GG.values[LG] = ZG(GG), 1),
+          update(GG, bG) {
+            if (kG && bG.docChanged || UG && (bG.docChanged || bG.selection) || DG(GG, YG)) {
+              let bG = ZG(GG);
+              if (yG ? !tG(bG, GG.values[LG], wG) : !wG(bG, GG.values[LG])) return GG.values[LG] = bG, 1
             }
             return 0
           },
-          reconfigure: (uu, Eu) => {
-            let lu, qu = Eu.config.address[Uu];
-            if (null != qu) {
-              let Uu = CE(Eu, qu);
-              if (this.dependencies.every((ju => ju instanceof tu ? Eu.facet(ju) === uu.facet(ju) : !(ju instanceof zu) || Eu.field(ju, !1) == uu.field(ju, !1))) || (Xu ? Hu(lu = ju(uu), Uu, su) : su(lu = ju(uu), Uu))) return uu.values[Zu] = Uu, 0
-            } else lu = ju(uu);
-            return uu.values[Zu] = lu, 1
+          reconfigure: (GG, bG) => {
+            let kG, UG = bG.config.address[SG];
+            if (null != UG) {
+              let SG = Vb(bG, UG);
+              if (this.dependencies.every((ZG => ZG instanceof RG ? bG.facet(ZG) === GG.facet(ZG) : !(ZG instanceof xG) || bG.field(ZG, !1) == GG.field(ZG, !1))) || (yG ? tG(kG = ZG(GG), SG, wG) : wG(kG = ZG(GG), SG))) return GG.values[LG] = SG, 0
+            } else kG = ZG(GG);
+            return GG.values[LG] = kG, 1
           }
         }
       }
     }
 
-    function Hu(uu, Eu, ju) {
-      if (uu.length != Eu.length) return !1;
-      for (let su = 0; su < uu.length; su++)
-        if (!ju(uu[su], Eu[su])) return !1;
+    function tG(GG, bG, ZG) {
+      if (GG.length != bG.length) return !1;
+      for (let wG = 0; wG < GG.length; wG++)
+        if (!ZG(GG[wG], bG[wG])) return !1;
       return !0
     }
 
-    function Au(uu, Eu) {
-      let ju = !1;
-      for (let su of Eu) 1 & fE(uu, su) && (ju = !0);
-      return ju
+    function DG(GG, bG) {
+      let ZG = !1;
+      for (let wG of bG) 1 & Yb(GG, wG) && (ZG = !0);
+      return ZG
     }
 
-    function nu(uu, Eu, ju) {
-      let su = ju.map((Eu => uu[Eu.id])),
-        Uu = ju.map((uu => uu.type)),
-        Zu = su.filter((uu => !(1 & uu))),
-        Xu = uu[Eu.id] >> 1;
+    function NG(GG, bG, ZG) {
+      let wG = ZG.map((bG => GG[bG.id])),
+        SG = ZG.map((GG => GG.type)),
+        LG = wG.filter((GG => !(1 & GG))),
+        yG = GG[bG.id] >> 1;
 
-      function lu(uu) {
-        let ju = [];
-        for (let Eu = 0; Eu < su.length; Eu++) {
-          let Zu = CE(uu, su[Eu]);
-          if (2 == Uu[Eu])
-            for (let uu of Zu) ju.push(uu);
-          else ju.push(Zu)
+      function kG(GG) {
+        let ZG = [];
+        for (let bG = 0; bG < wG.length; bG++) {
+          let LG = Vb(GG, wG[bG]);
+          if (2 == SG[bG])
+            for (let GG of LG) ZG.push(GG);
+          else ZG.push(LG)
         }
-        return Eu.combine(ju)
+        return bG.combine(ZG)
       }
       return {
-        create(uu) {
-          for (let Eu of su) fE(uu, Eu);
-          return uu.values[Xu] = lu(uu), 1
+        create(GG) {
+          for (let bG of wG) Yb(GG, bG);
+          return GG.values[yG] = kG(GG), 1
         },
-        update(uu, ju) {
-          if (!Au(uu, Zu)) return 0;
-          let su = lu(uu);
-          return Eu.compare(su, uu.values[Xu]) ? 0 : (uu.values[Xu] = su, 1)
+        update(GG, ZG) {
+          if (!DG(GG, LG)) return 0;
+          let wG = kG(GG);
+          return bG.compare(wG, GG.values[yG]) ? 0 : (GG.values[yG] = wG, 1)
         },
-        reconfigure(uu, Uu) {
-          let Zu = Au(uu, su),
-            qu = Uu.config.facets[Eu.id],
-            fu = Uu.facet(Eu);
-          if (qu && !Zu && xu(ju, qu)) return uu.values[Xu] = fu, 0;
-          let Cu = lu(uu);
-          return Eu.compare(Cu, fu) ? (uu.values[Xu] = fu, 0) : (uu.values[Xu] = Cu, 1)
+        reconfigure(GG, SG) {
+          let LG = DG(GG, wG),
+            UG = SG.config.facets[bG.id],
+            YG = SG.facet(bG);
+          if (UG && !LG && TG(ZG, UG)) return GG.values[yG] = YG, 0;
+          let VG = kG(GG);
+          return bG.compare(VG, YG) ? (GG.values[yG] = YG, 0) : (GG.values[yG] = VG, 1)
         }
       }
     }
-    const yu = tu.define({
+    const OG = RG.define({
       static: !0
     });
-    class zu {
-      constructor(uu, Eu, ju, su, Uu) {
-        this.id = uu, this.createF = Eu, this.updateF = ju, this.compareF = su, this.spec = Uu, this.provides = void 0
+    class xG {
+      constructor(GG, bG, ZG, wG, SG) {
+        this.id = GG, this.createF = bG, this.updateF = ZG, this.compareF = wG, this.spec = SG, this.provides = void 0
       }
-      static define(uu) {
-        let Eu = new zu(Lu++, uu.create, uu.update, uu.compare || ((uu, Eu) => uu === Eu), uu);
-        return uu.provide && (Eu.provides = uu.provide(Eu)), Eu
+      static define(GG) {
+        let bG = new xG(eG++, GG.create, GG.update, GG.compare || ((GG, bG) => GG === bG), GG);
+        return GG.provide && (bG.provides = GG.provide(bG)), bG
       }
-      create(uu) {
-        let Eu = uu.facet(yu).find((uu => uu.field == this));
-        return ((null === Eu || void 0 === Eu ? void 0 : Eu.create) || this.createF)(uu)
+      create(GG) {
+        let bG = GG.facet(OG).find((GG => GG.field == this));
+        return ((null === bG || void 0 === bG ? void 0 : bG.create) || this.createF)(GG)
       }
-      slot(uu) {
-        let Eu = uu[this.id] >> 1;
+      slot(GG) {
+        let bG = GG[this.id] >> 1;
         return {
-          create: uu => (uu.values[Eu] = this.create(uu), 1),
-          update: (uu, ju) => {
-            let su = uu.values[Eu],
-              Uu = this.updateF(su, ju);
-            return this.compareF(su, Uu) ? 0 : (uu.values[Eu] = Uu, 1)
+          create: GG => (GG.values[bG] = this.create(GG), 1),
+          update: (GG, ZG) => {
+            let wG = GG.values[bG],
+              SG = this.updateF(wG, ZG);
+            return this.compareF(wG, SG) ? 0 : (GG.values[bG] = SG, 1)
           },
-          reconfigure: (uu, ju) => {
-            let su, Uu = uu.facet(yu),
-              Zu = ju.facet(yu);
-            return (su = Uu.find((uu => uu.field == this))) && su != Zu.find((uu => uu.field == this)) ? (uu.values[Eu] = su.create(uu), 1) : null != ju.config.address[this.id] ? (uu.values[Eu] = ju.field(this), 0) : (uu.values[Eu] = this.create(uu), 1)
+          reconfigure: (GG, ZG) => {
+            let wG, SG = GG.facet(OG),
+              LG = ZG.facet(OG);
+            return (wG = SG.find((GG => GG.field == this))) && wG != LG.find((GG => GG.field == this)) ? (GG.values[bG] = wG.create(GG), 1) : null != ZG.config.address[this.id] ? (GG.values[bG] = ZG.field(this), 0) : (GG.values[bG] = this.create(GG), 1)
           }
         }
       }
-      init(uu) {
-        return [this, yu.of({
+      init(GG) {
+        return [this, OG.of({
           field: this,
-          create: uu
+          create: GG
         })]
       }
       get extension() {
         return this
       }
     }
-    const Ru = 4,
-      uE = 3,
-      EE = 2,
-      jE = 1;
+    const BG = 4,
+      Gb = 3,
+      bb = 2,
+      Zb = 1;
 
-    function sE(uu) {
-      return Eu => new ZE(Eu, uu)
+    function wb(GG) {
+      return bG => new Lb(bG, GG)
     }
-    const UE = {
-      highest: sE(0),
-      high: sE(jE),
-      default: sE(EE),
-      low: sE(uE),
-      lowest: sE(Ru)
+    const Sb = {
+      highest: wb(0),
+      high: wb(Zb),
+      default: wb(bb),
+      low: wb(Gb),
+      lowest: wb(BG)
     };
-    class ZE {
-      constructor(uu, Eu) {
-        this.inner = uu, this.prec = Eu
+    class Lb {
+      constructor(GG, bG) {
+        this.inner = GG, this.prec = bG
       }
     }
-    class XE {
-      of(uu) {
-        return new lE(this, uu)
+    class yb {
+      of(GG) {
+        return new kb(this, GG)
       }
-      reconfigure(uu) {
-        return XE.reconfigure.of({
+      reconfigure(GG) {
+        return yb.reconfigure.of({
           compartment: this,
-          extension: uu
+          extension: GG
         })
       }
-      get(uu) {
-        return uu.config.compartments.get(this)
+      get(GG) {
+        return GG.config.compartments.get(this)
       }
     }
-    class lE {
-      constructor(uu, Eu) {
-        this.compartment = uu, this.inner = Eu
+    class kb {
+      constructor(GG, bG) {
+        this.compartment = GG, this.inner = bG
       }
     }
-    class qE {
-      constructor(uu, Eu, ju, su, Uu, Zu) {
-        for (this.base = uu, this.compartments = Eu, this.dynamicSlots = ju, this.address = su, this.staticValues = Uu, this.facets = Zu, this.statusTemplate = []; this.statusTemplate.length < ju.length;) this.statusTemplate.push(0)
+    class Ub {
+      constructor(GG, bG, ZG, wG, SG, LG) {
+        for (this.base = GG, this.compartments = bG, this.dynamicSlots = ZG, this.address = wG, this.staticValues = SG, this.facets = LG, this.statusTemplate = []; this.statusTemplate.length < ZG.length;) this.statusTemplate.push(0)
       }
-      staticFacet(uu) {
-        let Eu = this.address[uu.id];
-        return null == Eu ? uu.default : this.staticValues[Eu >> 1]
+      staticFacet(GG) {
+        let bG = this.address[GG.id];
+        return null == bG ? GG.default : this.staticValues[bG >> 1]
       }
-      static resolve(uu, Eu, ju) {
-        let su = [],
-          Uu = Object.create(null),
-          Zu = new Map;
-        for (let bu of function(uu, Eu, ju) {
-            let su = [
+      static resolve(GG, bG, ZG) {
+        let wG = [],
+          SG = Object.create(null),
+          LG = new Map;
+        for (let pG of function(GG, bG, ZG) {
+            let wG = [
                 [],
                 [],
                 [],
                 [],
                 []
               ],
-              Uu = new Map;
+              SG = new Map;
 
-            function Zu(uu, Xu) {
-              let lu = Uu.get(uu);
-              if (null != lu) {
-                if (lu <= Xu) return;
-                let Eu = su[lu].indexOf(uu);
-                Eu > -1 && su[lu].splice(Eu, 1), uu instanceof lE && ju.delete(uu.compartment)
+            function LG(GG, yG) {
+              let kG = SG.get(GG);
+              if (null != kG) {
+                if (kG <= yG) return;
+                let bG = wG[kG].indexOf(GG);
+                bG > -1 && wG[kG].splice(bG, 1), GG instanceof kb && ZG.delete(GG.compartment)
               }
-              if (Uu.set(uu, Xu), Array.isArray(uu))
-                for (let Eu of uu) Zu(Eu, Xu);
-              else if (uu instanceof lE) {
-                if (ju.has(uu.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
-                let su = Eu.get(uu.compartment) || uu.inner;
-                ju.set(uu.compartment, su), Zu(su, Xu)
-              } else if (uu instanceof ZE) Zu(uu.inner, uu.prec);
-              else if (uu instanceof zu) su[Xu].push(uu), uu.provides && Zu(uu.provides, Xu);
-              else if (uu instanceof Tu) su[Xu].push(uu), uu.facet.extensions && Zu(uu.facet.extensions, EE);
+              if (SG.set(GG, yG), Array.isArray(GG))
+                for (let bG of GG) LG(bG, yG);
+              else if (GG instanceof kb) {
+                if (ZG.has(GG.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
+                let wG = bG.get(GG.compartment) || GG.inner;
+                ZG.set(GG.compartment, wG), LG(wG, yG)
+              } else if (GG instanceof Lb) LG(GG.inner, GG.prec);
+              else if (GG instanceof xG) wG[yG].push(GG), GG.provides && LG(GG.provides, yG);
+              else if (GG instanceof HG) wG[yG].push(GG), GG.facet.extensions && LG(GG.facet.extensions, bb);
               else {
-                let Eu = uu.extension;
-                if (!Eu) throw new Error(`Unrecognized extension value in extension set (${uu}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
-                Zu(Eu, Xu)
+                let bG = GG.extension;
+                if (!bG) throw new Error(`Unrecognized extension value in extension set (${GG}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
+                LG(bG, yG)
               }
             }
-            return Zu(uu, EE), su.reduce(((uu, Eu) => uu.concat(Eu)))
-          }(uu, Eu, Zu)) bu instanceof zu ? su.push(bu) : (Uu[bu.facet.id] || (Uu[bu.facet.id] = [])).push(bu);
-        let Xu = Object.create(null),
-          lu = [],
-          qu = [];
-        for (let bu of su) Xu[bu.id] = qu.length << 1, qu.push((uu => bu.slot(uu)));
-        let fu = null === ju || void 0 === ju ? void 0 : ju.config.facets;
-        for (let bu in Uu) {
-          let uu = Uu[bu],
-            Eu = uu[0].facet,
-            su = fu && fu[bu] || [];
-          if (uu.every((uu => 0 == uu.type)))
-            if (Xu[Eu.id] = lu.length << 1 | 1, xu(su, uu)) lu.push(ju.facet(Eu));
+            return LG(GG, bb), wG.reduce(((GG, bG) => GG.concat(bG)))
+          }(GG, bG, LG)) pG instanceof xG ? wG.push(pG) : (SG[pG.facet.id] || (SG[pG.facet.id] = [])).push(pG);
+        let yG = Object.create(null),
+          kG = [],
+          UG = [];
+        for (let pG of wG) yG[pG.id] = UG.length << 1, UG.push((GG => pG.slot(GG)));
+        let YG = null === ZG || void 0 === ZG ? void 0 : ZG.config.facets;
+        for (let pG in SG) {
+          let GG = SG[pG],
+            bG = GG[0].facet,
+            wG = YG && YG[pG] || [];
+          if (GG.every((GG => 0 == GG.type)))
+            if (yG[bG.id] = kG.length << 1 | 1, TG(wG, GG)) kG.push(ZG.facet(bG));
             else {
-              let su = Eu.combine(uu.map((uu => uu.value)));
-              lu.push(ju && Eu.compare(su, ju.facet(Eu)) ? ju.facet(Eu) : su)
+              let wG = bG.combine(GG.map((GG => GG.value)));
+              kG.push(ZG && bG.compare(wG, ZG.facet(bG)) ? ZG.facet(bG) : wG)
             }
           else {
-            for (let Eu of uu) 0 == Eu.type ? (Xu[Eu.id] = lu.length << 1 | 1, lu.push(Eu.value)) : (Xu[Eu.id] = qu.length << 1, qu.push((uu => Eu.dynamicSlot(uu))));
-            Xu[Eu.id] = qu.length << 1, qu.push((ju => nu(ju, Eu, uu)))
+            for (let bG of GG) 0 == bG.type ? (yG[bG.id] = kG.length << 1 | 1, kG.push(bG.value)) : (yG[bG.id] = UG.length << 1, UG.push((GG => bG.dynamicSlot(GG))));
+            yG[bG.id] = UG.length << 1, UG.push((ZG => NG(ZG, bG, GG)))
           }
         }
-        let Cu = qu.map((uu => uu(Xu)));
-        return new qE(uu, Zu, Cu, Xu, lu, Uu)
+        let VG = UG.map((GG => GG(yG)));
+        return new Ub(GG, LG, VG, yG, kG, SG)
       }
     }
 
-    function fE(uu, Eu) {
-      if (1 & Eu) return 2;
-      let ju = Eu >> 1,
-        su = uu.status[ju];
-      if (4 == su) throw new Error("Cyclic dependency between fields and/or facets");
-      if (2 & su) return su;
-      uu.status[ju] = 4;
-      let Uu = uu.computeSlot(uu, uu.config.dynamicSlots[ju]);
-      return uu.status[ju] = 2 | Uu
+    function Yb(GG, bG) {
+      if (1 & bG) return 2;
+      let ZG = bG >> 1,
+        wG = GG.status[ZG];
+      if (4 == wG) throw new Error("Cyclic dependency between fields and/or facets");
+      if (2 & wG) return wG;
+      GG.status[ZG] = 4;
+      let SG = GG.computeSlot(GG, GG.config.dynamicSlots[ZG]);
+      return GG.status[ZG] = 2 | SG
     }
 
-    function CE(uu, Eu) {
-      return 1 & Eu ? uu.config.staticValues[Eu >> 1] : uu.values[Eu >> 1]
+    function Vb(GG, bG) {
+      return 1 & bG ? GG.config.staticValues[bG >> 1] : GG.values[bG >> 1]
     }
-    const bE = tu.define(),
-      cE = tu.define({
-        combine: uu => uu.some((uu => uu)),
+    const pb = RG.define(),
+      fb = RG.define({
+        combine: GG => GG.some((GG => GG)),
         static: !0
       }),
-      NE = tu.define({
-        combine: uu => uu.length ? uu[0] : void 0,
+      Qb = RG.define({
+        combine: GG => GG.length ? GG[0] : void 0,
         static: !0
       }),
-      OE = tu.define(),
-      YE = tu.define(),
-      hE = tu.define(),
-      DE = tu.define({
-        combine: uu => !!uu.length && uu[0]
+      Kb = RG.define(),
+      hb = RG.define(),
+      db = RG.define(),
+      Jb = RG.define({
+        combine: GG => !!GG.length && GG[0]
       });
-    class gE {
-      constructor(uu, Eu) {
-        this.type = uu, this.value = Eu
+    class rb {
+      constructor(GG, bG) {
+        this.type = GG, this.value = bG
       }
       static define() {
-        return new ME
+        return new zb
       }
     }
-    class ME {
-      of(uu) {
-        return new gE(this, uu)
+    class zb {
+      of(GG) {
+        return new rb(this, GG)
       }
     }
-    class eE {
-      constructor(uu) {
-        this.map = uu
+    class Eb {
+      constructor(GG) {
+        this.map = GG
       }
-      of(uu) {
-        return new GE(this, uu)
+      of(GG) {
+        return new ob(this, GG)
       }
     }
-    class GE {
-      constructor(uu, Eu) {
-        this.type = uu, this.value = Eu
+    class ob {
+      constructor(GG, bG) {
+        this.type = GG, this.value = bG
       }
-      map(uu) {
-        let Eu = this.type.map(this.value, uu);
-        return void 0 === Eu ? void 0 : Eu == this.value ? this : new GE(this.type, Eu)
+      map(GG) {
+        let bG = this.type.map(this.value, GG);
+        return void 0 === bG ? void 0 : bG == this.value ? this : new ob(this.type, bG)
       }
-      is(uu) {
-        return this.type == uu
+      is(GG) {
+        return this.type == GG
       }
       static define() {
-        return new eE((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (uu => uu))
+        return new Eb((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (GG => GG))
       }
-      static mapEffects(uu, Eu) {
-        if (!uu.length) return uu;
-        let ju = [];
-        for (let su of uu) {
-          let uu = su.map(Eu);
-          uu && ju.push(uu)
+      static mapEffects(GG, bG) {
+        if (!GG.length) return GG;
+        let ZG = [];
+        for (let wG of GG) {
+          let GG = wG.map(bG);
+          GG && ZG.push(GG)
         }
-        return ju
+        return ZG
       }
     }
-    GE.reconfigure = GE.define(), GE.appendConfig = GE.define();
-    class pE {
-      constructor(uu, Eu, ju, su, Uu, Zu) {
-        this.startState = uu, this.changes = Eu, this.selection = ju, this.effects = su, this.annotations = Uu, this.scrollIntoView = Zu, this._doc = null, this._state = null, ju && Bu(ju, Eu.newLength), Uu.some((uu => uu.type == pE.time)) || (this.annotations = Uu.concat(pE.time.of(Date.now())))
+    ob.reconfigure = ob.define(), ob.appendConfig = ob.define();
+    class Xb {
+      constructor(GG, bG, ZG, wG, SG, LG) {
+        this.startState = GG, this.changes = bG, this.selection = ZG, this.effects = wG, this.annotations = SG, this.scrollIntoView = LG, this._doc = null, this._state = null, ZG && gG(ZG, bG.newLength), SG.some((GG => GG.type == Xb.time)) || (this.annotations = SG.concat(Xb.time.of(Date.now())))
       }
-      static create(uu, Eu, ju, su, Uu, Zu) {
-        return new pE(uu, Eu, ju, su, Uu, Zu)
+      static create(GG, bG, ZG, wG, SG, LG) {
+        return new Xb(GG, bG, ZG, wG, SG, LG)
       }
       get newDoc() {
         return this._doc || (this._doc = this.changes.apply(this.startState.doc))
@@ -1328,9 +1328,9 @@ export const modules = {
       get state() {
         return this._state || this.startState.applyTransaction(this), this._state
       }
-      annotation(uu) {
-        for (let Eu of this.annotations)
-          if (Eu.type == uu) return Eu.value
+      annotation(GG) {
+        for (let bG of this.annotations)
+          if (bG.type == GG) return bG.value
       }
       get docChanged() {
         return !this.changes.empty
@@ -1338,584 +1338,584 @@ export const modules = {
       get reconfigured() {
         return this.startState.config != this.state.config
       }
-      isUserEvent(uu) {
-        let Eu = this.annotation(pE.userEvent);
-        return !(!Eu || !(Eu == uu || Eu.length > uu.length && Eu.slice(0, uu.length) == uu && "." == Eu[uu.length]))
+      isUserEvent(GG) {
+        let bG = this.annotation(Xb.userEvent);
+        return !(!bG || !(bG == GG || bG.length > GG.length && bG.slice(0, GG.length) == GG && "." == bG[GG.length]))
       }
     }
 
-    function wE(uu, Eu) {
-      let ju = [];
-      for (let su = 0, Uu = 0;;) {
-        let Zu, Xu;
-        if (su < uu.length && (Uu == Eu.length || Eu[Uu] >= uu[su])) Zu = uu[su++], Xu = uu[su++];
+    function ub(GG, bG) {
+      let ZG = [];
+      for (let wG = 0, SG = 0;;) {
+        let LG, yG;
+        if (wG < GG.length && (SG == bG.length || bG[SG] >= GG[wG])) LG = GG[wG++], yG = GG[wG++];
         else {
-          if (!(Uu < Eu.length)) return ju;
-          Zu = Eu[Uu++], Xu = Eu[Uu++]
-        }!ju.length || ju[ju.length - 1] < Zu ? ju.push(Zu, Xu) : ju[ju.length - 1] < Xu && (ju[ju.length - 1] = Xu)
+          if (!(SG < bG.length)) return ZG;
+          LG = bG[SG++], yG = bG[SG++]
+        }!ZG.length || ZG[ZG.length - 1] < LG ? ZG.push(LG, yG) : ZG[ZG.length - 1] < yG && (ZG[ZG.length - 1] = yG)
       }
     }
 
-    function JE(uu, Eu, ju) {
-      var su;
-      let Uu, Zu, Xu;
-      return ju ? (Uu = Eu.changes, Zu = Ku.empty(Eu.changes.length), Xu = uu.changes.compose(Eu.changes)) : (Uu = Eu.changes.map(uu.changes), Zu = uu.changes.mapDesc(Eu.changes, !0), Xu = uu.changes.compose(Uu)), {
-        changes: Xu,
-        selection: Eu.selection ? Eu.selection.map(Zu) : null === (su = uu.selection) || void 0 === su ? void 0 : su.map(Uu),
-        effects: GE.mapEffects(uu.effects, Uu).concat(GE.mapEffects(Eu.effects, Zu)),
-        annotations: uu.annotations.length ? uu.annotations.concat(Eu.annotations) : Eu.annotations,
-        scrollIntoView: uu.scrollIntoView || Eu.scrollIntoView
+    function ib(GG, bG, ZG) {
+      var wG;
+      let SG, LG, yG;
+      return ZG ? (SG = bG.changes, LG = cG.empty(bG.changes.length), yG = GG.changes.compose(bG.changes)) : (SG = bG.changes.map(GG.changes), LG = GG.changes.mapDesc(bG.changes, !0), yG = GG.changes.compose(SG)), {
+        changes: yG,
+        selection: bG.selection ? bG.selection.map(LG) : null === (wG = GG.selection) || void 0 === wG ? void 0 : wG.map(SG),
+        effects: ob.mapEffects(GG.effects, SG).concat(ob.mapEffects(bG.effects, LG)),
+        annotations: GG.annotations.length ? GG.annotations.concat(bG.annotations) : bG.annotations,
+        scrollIntoView: GG.scrollIntoView || bG.scrollIntoView
       }
     }
 
-    function dE(uu, Eu, ju) {
-      let su = Eu.selection,
-        Uu = oE(Eu.annotations);
-      return Eu.userEvent && (Uu = Uu.concat(pE.userEvent.of(Eu.userEvent))), {
-        changes: Eu.changes instanceof Ku ? Eu.changes : Ku.of(Eu.changes || [], ju, uu.facet(NE)),
-        selection: su && (su instanceof Fu ? su : Fu.single(su.anchor, su.head)),
-        effects: oE(Eu.effects),
-        annotations: Uu,
-        scrollIntoView: !!Eu.scrollIntoView
+    function Cb(GG, bG, ZG) {
+      let wG = bG.selection,
+        SG = Ib(bG.annotations);
+      return bG.userEvent && (SG = SG.concat(Xb.userEvent.of(bG.userEvent))), {
+        changes: bG.changes instanceof cG ? bG.changes : cG.of(bG.changes || [], ZG, GG.facet(Qb)),
+        selection: wG && (wG instanceof nG ? wG : nG.single(wG.anchor, wG.head)),
+        effects: Ib(bG.effects),
+        annotations: SG,
+        scrollIntoView: !!bG.scrollIntoView
       }
     }
 
-    function aE(uu, Eu, ju) {
-      let su = dE(uu, Eu.length ? Eu[0] : {}, uu.doc.length);
-      Eu.length && !1 === Eu[0].filter && (ju = !1);
-      for (let Zu = 1; Zu < Eu.length; Zu++) {
-        !1 === Eu[Zu].filter && (ju = !1);
-        let Uu = !!Eu[Zu].sequential;
-        su = JE(su, dE(uu, Eu[Zu], Uu ? su.changes.newLength : uu.doc.length), Uu)
+    function Wb(GG, bG, ZG) {
+      let wG = Cb(GG, bG.length ? bG[0] : {}, GG.doc.length);
+      bG.length && !1 === bG[0].filter && (ZG = !1);
+      for (let LG = 1; LG < bG.length; LG++) {
+        !1 === bG[LG].filter && (ZG = !1);
+        let SG = !!bG[LG].sequential;
+        wG = ib(wG, Cb(GG, bG[LG], SG ? wG.changes.newLength : GG.doc.length), SG)
       }
-      let Uu = pE.create(uu, su.changes, su.selection, su.effects, su.annotations, su.scrollIntoView);
-      return function(uu) {
-        let Eu = uu.startState,
-          ju = Eu.facet(hE),
-          su = uu;
-        for (let Uu = ju.length - 1; Uu >= 0; Uu--) {
-          let Zu = ju[Uu](uu);
-          Zu && Object.keys(Zu).length && (su = JE(su, dE(Eu, Zu, uu.changes.newLength), !0))
+      let SG = Xb.create(GG, wG.changes, wG.selection, wG.effects, wG.annotations, wG.scrollIntoView);
+      return function(GG) {
+        let bG = GG.startState,
+          ZG = bG.facet(db),
+          wG = GG;
+        for (let SG = ZG.length - 1; SG >= 0; SG--) {
+          let LG = ZG[SG](GG);
+          LG && Object.keys(LG).length && (wG = ib(wG, Cb(bG, LG, GG.changes.newLength), !0))
         }
-        return su == uu ? uu : pE.create(Eu, uu.changes, uu.selection, su.effects, su.annotations, su.scrollIntoView)
-      }(ju ? function(uu) {
-        let Eu = uu.startState,
-          ju = !0;
-        for (let Uu of Eu.facet(OE)) {
-          let Eu = Uu(uu);
-          if (!1 === Eu) {
-            ju = !1;
+        return wG == GG ? GG : Xb.create(bG, GG.changes, GG.selection, wG.effects, wG.annotations, wG.scrollIntoView)
+      }(ZG ? function(GG) {
+        let bG = GG.startState,
+          ZG = !0;
+        for (let SG of bG.facet(Kb)) {
+          let bG = SG(GG);
+          if (!1 === bG) {
+            ZG = !1;
             break
           }
-          Array.isArray(Eu) && (ju = !0 === ju ? Eu : wE(ju, Eu))
+          Array.isArray(bG) && (ZG = !0 === ZG ? bG : ub(ZG, bG))
         }
-        if (!0 !== ju) {
-          let su, Uu;
-          if (!1 === ju) Uu = uu.changes.invertedDesc, su = Ku.empty(Eu.doc.length);
+        if (!0 !== ZG) {
+          let wG, SG;
+          if (!1 === ZG) SG = GG.changes.invertedDesc, wG = cG.empty(bG.doc.length);
           else {
-            let Eu = uu.changes.filter(ju);
-            su = Eu.changes, Uu = Eu.filtered.mapDesc(Eu.changes).invertedDesc
+            let bG = GG.changes.filter(ZG);
+            wG = bG.changes, SG = bG.filtered.mapDesc(bG.changes).invertedDesc
           }
-          uu = pE.create(Eu, su, uu.selection && uu.selection.map(Uu), GE.mapEffects(uu.effects, Uu), uu.annotations, uu.scrollIntoView)
+          GG = Xb.create(bG, wG, GG.selection && GG.selection.map(SG), ob.mapEffects(GG.effects, SG), GG.annotations, GG.scrollIntoView)
         }
-        let su = Eu.facet(YE);
-        for (let Uu = su.length - 1; Uu >= 0; Uu--) {
-          let ju = su[Uu](uu);
-          uu = ju instanceof pE ? ju : Array.isArray(ju) && 1 == ju.length && ju[0] instanceof pE ? ju[0] : aE(Eu, oE(ju), !1)
+        let wG = bG.facet(hb);
+        for (let SG = wG.length - 1; SG >= 0; SG--) {
+          let ZG = wG[SG](GG);
+          GG = ZG instanceof Xb ? ZG : Array.isArray(ZG) && 1 == ZG.length && ZG[0] instanceof Xb ? ZG[0] : Wb(bG, Ib(ZG), !1)
         }
-        return uu
-      }(Uu) : Uu)
+        return GG
+      }(SG) : SG)
     }
-    pE.time = gE.define(), pE.userEvent = gE.define(), pE.addToHistory = gE.define(), pE.remote = gE.define();
-    const PE = [];
+    Xb.time = rb.define(), Xb.userEvent = rb.define(), Xb.addToHistory = rb.define(), Xb.remote = rb.define();
+    const mb = [];
 
-    function oE(uu) {
-      return null == uu ? PE : Array.isArray(uu) ? uu : [uu]
+    function Ib(GG) {
+      return null == GG ? mb : Array.isArray(GG) ? GG : [GG]
     }
-    var kE = function(uu) {
-      return uu[uu.Word = 0] = "Word", uu[uu.Space = 1] = "Space", uu[uu.Other = 2] = "Other", uu
-    }(kE || (kE = {}));
-    const mE = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
-    let vE;
+    var Fb = function(GG) {
+      return GG[GG.Word = 0] = "Word", GG[GG.Space = 1] = "Space", GG[GG.Other = 2] = "Other", GG
+    }(Fb || (Fb = {}));
+    const vb = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
+    let ab;
     try {
-      vE = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
-    } catch (jj) {}
+      ab = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
+    } catch (ZZ) {}
 
-    function KE(uu) {
-      return Eu => {
-        if (!/\S/.test(Eu)) return kE.Space;
-        if (function(uu) {
-            if (vE) return vE.test(uu);
-            for (let Eu = 0; Eu < uu.length; Eu++) {
-              let ju = uu[Eu];
-              if (/\w/.test(ju) || ju > "\x80" && (ju.toUpperCase() != ju.toLowerCase() || mE.test(ju))) return !0
+    function cb(GG) {
+      return bG => {
+        if (!/\S/.test(bG)) return Fb.Space;
+        if (function(GG) {
+            if (ab) return ab.test(GG);
+            for (let bG = 0; bG < GG.length; bG++) {
+              let ZG = GG[bG];
+              if (/\w/.test(ZG) || ZG > "\x80" && (ZG.toUpperCase() != ZG.toLowerCase() || vb.test(ZG))) return !0
             }
             return !1
-          }(Eu)) return kE.Word;
-        for (let ju = 0; ju < uu.length; ju++)
-          if (Eu.indexOf(uu[ju]) > -1) return kE.Word;
-        return kE.Other
+          }(bG)) return Fb.Word;
+        for (let ZG = 0; ZG < GG.length; ZG++)
+          if (bG.indexOf(GG[ZG]) > -1) return Fb.Word;
+        return Fb.Other
       }
     }
-    class VE {
-      constructor(uu, Eu, ju, su, Uu, Zu) {
-        this.config = uu, this.doc = Eu, this.selection = ju, this.values = su, this.status = uu.statusTemplate.slice(), this.computeSlot = Uu, Zu && (Zu._state = this);
-        for (let Xu = 0; Xu < this.config.dynamicSlots.length; Xu++) fE(this, Xu << 1);
+    class lb {
+      constructor(GG, bG, ZG, wG, SG, LG) {
+        this.config = GG, this.doc = bG, this.selection = ZG, this.values = wG, this.status = GG.statusTemplate.slice(), this.computeSlot = SG, LG && (LG._state = this);
+        for (let yG = 0; yG < this.config.dynamicSlots.length; yG++) Yb(this, yG << 1);
         this.computeSlot = null
       }
-      field(uu) {
-        let Eu = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          ju = this.config.address[uu.id];
-        if (null != ju) return fE(this, ju), CE(this, ju);
-        if (Eu) throw new RangeError("Field is not present in this state")
+      field(GG) {
+        let bG = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          ZG = this.config.address[GG.id];
+        if (null != ZG) return Yb(this, ZG), Vb(this, ZG);
+        if (bG) throw new RangeError("Field is not present in this state")
       }
       update() {
-        for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
-        return aE(this, Eu, !0)
+        for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
+        return Wb(this, bG, !0)
       }
-      applyTransaction(uu) {
-        let Eu, ju = this.config,
+      applyTransaction(GG) {
+        let bG, ZG = this.config,
           {
-            base: su,
-            compartments: Uu
-          } = ju;
-        for (let Xu of uu.effects) Xu.is(XE.reconfigure) ? (ju && (Uu = new Map, ju.compartments.forEach(((uu, Eu) => Uu.set(Eu, uu))), ju = null), Uu.set(Xu.value.compartment, Xu.value.extension)) : Xu.is(GE.reconfigure) ? (ju = null, su = Xu.value) : Xu.is(GE.appendConfig) && (ju = null, su = oE(su).concat(Xu.value));
-        if (ju) Eu = uu.startState.values.slice();
+            base: wG,
+            compartments: SG
+          } = ZG;
+        for (let yG of GG.effects) yG.is(yb.reconfigure) ? (ZG && (SG = new Map, ZG.compartments.forEach(((GG, bG) => SG.set(bG, GG))), ZG = null), SG.set(yG.value.compartment, yG.value.extension)) : yG.is(ob.reconfigure) ? (ZG = null, wG = yG.value) : yG.is(ob.appendConfig) && (ZG = null, wG = Ib(wG).concat(yG.value));
+        if (ZG) bG = GG.startState.values.slice();
         else {
-          ju = qE.resolve(su, Uu, this), Eu = new VE(ju, this.doc, this.selection, ju.dynamicSlots.map((() => null)), ((uu, Eu) => Eu.reconfigure(uu, this)), null).values
+          ZG = Ub.resolve(wG, SG, this), bG = new lb(ZG, this.doc, this.selection, ZG.dynamicSlots.map((() => null)), ((GG, bG) => bG.reconfigure(GG, this)), null).values
         }
-        let Zu = uu.startState.facet(cE) ? uu.newSelection : uu.newSelection.asSingle();
-        new VE(ju, uu.newDoc, Zu, Eu, ((Eu, ju) => ju.update(Eu, uu)), uu)
+        let LG = GG.startState.facet(fb) ? GG.newSelection : GG.newSelection.asSingle();
+        new lb(ZG, GG.newDoc, LG, bG, ((bG, ZG) => ZG.update(bG, GG)), GG)
       }
-      replaceSelection(uu) {
-        return "string" == typeof uu && (uu = this.toText(uu)), this.changeByRange((Eu => ({
+      replaceSelection(GG) {
+        return "string" == typeof GG && (GG = this.toText(GG)), this.changeByRange((bG => ({
           changes: {
-            from: Eu.from,
-            to: Eu.to,
-            insert: uu
+            from: bG.from,
+            to: bG.to,
+            insert: GG
           },
-          range: Fu.cursor(Eu.from + uu.length)
+          range: nG.cursor(bG.from + GG.length)
         })))
       }
-      changeByRange(uu) {
-        let Eu = this.selection,
-          ju = uu(Eu.HY[0]),
-          su = this.changes(ju.changes),
-          Uu = [ju.range],
-          Zu = oE(ju.effects);
-        for (let Xu = 1; Xu < Eu.HY.length; Xu++) {
-          let ju = uu(Eu.HY[Xu]),
-            lu = this.changes(ju.changes),
-            qu = lu.map(su);
-          for (let uu = 0; uu < Xu; uu++) Uu[uu] = Uu[uu].map(qu);
-          let fu = su.mapDesc(lu, !0);
-          Uu.push(ju.range.map(fu)), su = su.compose(qu), Zu = GE.mapEffects(Zu, qu).concat(GE.mapEffects(oE(ju.effects), fu))
+      changeByRange(GG) {
+        let bG = this.selection,
+          ZG = GG(bG.Bh[0]),
+          wG = this.changes(ZG.changes),
+          SG = [ZG.range],
+          LG = Ib(ZG.effects);
+        for (let yG = 1; yG < bG.Bh.length; yG++) {
+          let ZG = GG(bG.Bh[yG]),
+            kG = this.changes(ZG.changes),
+            UG = kG.map(wG);
+          for (let GG = 0; GG < yG; GG++) SG[GG] = SG[GG].map(UG);
+          let YG = wG.mapDesc(kG, !0);
+          SG.push(ZG.range.map(YG)), wG = wG.compose(UG), LG = ob.mapEffects(LG, UG).concat(ob.mapEffects(Ib(ZG.effects), YG))
         }
         return {
-          changes: su,
-          selection: Fu.create(Uu, Eu.mainIndex),
-          effects: Zu
+          changes: wG,
+          selection: nG.create(SG, bG.mainIndex),
+          effects: LG
         }
       }
       changes() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return uu instanceof Ku ? uu : Ku.of(uu, this.doc.length, this.facet(VE.lineSeparator))
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return GG instanceof cG ? GG : cG.of(GG, this.doc.length, this.facet(lb.lineSeparator))
       }
-      toText(uu) {
-        return Yu.of(uu.split(this.facet(VE.lineSeparator) || ku))
+      toText(GG) {
+        return hG.of(GG.split(this.facet(lb.lineSeparator) || FG))
       }
       sliceDoc() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
-        return this.doc.sliceString(uu, Eu, this.lineBreak)
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
+        return this.doc.sliceString(GG, bG, this.lineBreak)
       }
-      facet(uu) {
-        let Eu = this.config.address[uu.id];
-        return null == Eu ? uu.default : (fE(this, Eu), CE(this, Eu))
+      facet(GG) {
+        let bG = this.config.address[GG.id];
+        return null == bG ? GG.default : (Yb(this, bG), Vb(this, bG))
       }
-      toJSON(uu) {
-        let Eu = {
+      toJSON(GG) {
+        let bG = {
           doc: this.sliceDoc(),
           selection: this.selection.toJSON()
         };
-        if (uu)
-          for (let ju in uu) {
-            let su = uu[ju];
-            su instanceof zu && null != this.config.address[su.id] && (Eu[ju] = su.spec.toJSON(this.field(uu[ju]), this))
+        if (GG)
+          for (let ZG in GG) {
+            let wG = GG[ZG];
+            wG instanceof xG && null != this.config.address[wG.id] && (bG[ZG] = wG.spec.toJSON(this.field(GG[ZG]), this))
           }
-        return Eu
+        return bG
       }
-      static fromJSON(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          ju = arguments.length > 2 ? arguments[2] : void 0;
-        if (!uu || "string" != typeof uu.doc) throw new RangeError("Invalid JSON representation for EditorState");
-        let su = [];
-        if (ju)
-          for (let Uu in ju)
-            if (Object.prototype.hasOwnProperty.call(uu, Uu)) {
-              let Eu = ju[Uu],
-                Zu = uu[Uu];
-              su.push(Eu.init((uu => Eu.spec.fromJSON(Zu, uu))))
-            } return VE.create({
-          doc: uu.doc,
-          selection: Fu.fromJSON(uu.selection),
-          extensions: Eu.extensions ? su.concat([Eu.extensions]) : su
+      static fromJSON(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          ZG = arguments.length > 2 ? arguments[2] : void 0;
+        if (!GG || "string" != typeof GG.doc) throw new RangeError("Invalid JSON representation for EditorState");
+        let wG = [];
+        if (ZG)
+          for (let SG in ZG)
+            if (Object.prototype.hasOwnProperty.call(GG, SG)) {
+              let bG = ZG[SG],
+                LG = GG[SG];
+              wG.push(bG.init((GG => bG.spec.fromJSON(LG, GG))))
+            } return lb.create({
+          doc: GG.doc,
+          selection: nG.fromJSON(GG.selection),
+          extensions: bG.extensions ? wG.concat([bG.extensions]) : wG
         })
       }
       static create() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          Eu = qE.resolve(uu.extensions || [], new Map),
-          ju = uu.doc instanceof Yu ? uu.doc : Yu.of((uu.doc || "").split(Eu.staticFacet(VE.lineSeparator) || ku)),
-          su = uu.selection ? uu.selection instanceof Fu ? uu.selection : Fu.single(uu.selection.anchor, uu.selection.head) : Fu.single(0);
-        return Bu(su, ju.length), Eu.staticFacet(cE) || (su = su.asSingle()), new VE(Eu, ju, su, Eu.dynamicSlots.map((() => null)), ((uu, Eu) => Eu.create(uu)), null)
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          bG = Ub.resolve(GG.extensions || [], new Map),
+          ZG = GG.doc instanceof hG ? GG.doc : hG.of((GG.doc || "").split(bG.staticFacet(lb.lineSeparator) || FG)),
+          wG = GG.selection ? GG.selection instanceof nG ? GG.selection : nG.single(GG.selection.anchor, GG.selection.head) : nG.single(0);
+        return gG(wG, ZG.length), bG.staticFacet(fb) || (wG = wG.asSingle()), new lb(bG, ZG, wG, bG.dynamicSlots.map((() => null)), ((GG, bG) => bG.create(GG)), null)
       }
       get tabSize() {
-        return this.facet(VE.tabSize)
+        return this.facet(lb.tabSize)
       }
       get lineBreak() {
-        return this.facet(VE.lineSeparator) || "\n"
+        return this.facet(lb.lineSeparator) || "\n"
       }
       get readOnly() {
-        return this.facet(DE)
+        return this.facet(Jb)
       }
-      phrase(uu) {
-        for (var Eu = arguments.length, ju = new Array(Eu > 1 ? Eu - 1 : 0), su = 1; su < Eu; su++) ju[su - 1] = arguments[su];
-        for (let Uu of this.facet(VE.phrases))
-          if (Object.prototype.hasOwnProperty.call(Uu, uu)) {
-            uu = Uu[uu];
+      phrase(GG) {
+        for (var bG = arguments.length, ZG = new Array(bG > 1 ? bG - 1 : 0), wG = 1; wG < bG; wG++) ZG[wG - 1] = arguments[wG];
+        for (let SG of this.facet(lb.phrases))
+          if (Object.prototype.hasOwnProperty.call(SG, GG)) {
+            GG = SG[GG];
             break
-          } return ju.length && (uu = uu.replace(/\$(\$|\d*)/g, ((uu, Eu) => {
-          if ("$" == Eu) return "$";
-          let su = +(Eu || 1);
-          return !su || su > ju.length ? uu : ju[su - 1]
-        }))), uu
+          } return ZG.length && (GG = GG.replace(/\$(\$|\d*)/g, ((GG, bG) => {
+          if ("$" == bG) return "$";
+          let wG = +(bG || 1);
+          return !wG || wG > ZG.length ? GG : ZG[wG - 1]
+        }))), GG
       }
-      languageDataAt(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          su = [];
-        for (let Uu of this.facet(bE))
-          for (let Zu of Uu(this, Eu, ju)) Object.prototype.hasOwnProperty.call(Zu, uu) && su.push(Zu[uu]);
-        return su
+      languageDataAt(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          wG = [];
+        for (let SG of this.facet(pb))
+          for (let LG of SG(this, bG, ZG)) Object.prototype.hasOwnProperty.call(LG, GG) && wG.push(LG[GG]);
+        return wG
       }
-      charCategorizer(uu) {
-        let Eu = this.languageDataAt("wordChars", uu);
-        return KE(Eu.length ? Eu[0] : "")
+      charCategorizer(GG) {
+        let bG = this.languageDataAt("wordChars", GG);
+        return cb(bG.length ? bG[0] : "")
       }
-      wordAt(uu) {
+      wordAt(GG) {
         let {
-          text: Eu,
-          from: ju,
-          length: su
-        } = this.doc.lineAt(uu), Uu = this.charCategorizer(uu), Zu = uu - ju, Xu = uu - ju;
-        for (; Zu > 0;) {
-          let uu = du(Eu, Zu, !1);
-          if (Uu(Eu.slice(uu, Zu)) != kE.Word) break;
-          Zu = uu
+          text: bG,
+          from: ZG,
+          length: wG
+        } = this.doc.lineAt(GG), SG = this.charCategorizer(GG), LG = GG - ZG, yG = GG - ZG;
+        for (; LG > 0;) {
+          let GG = CG(bG, LG, !1);
+          if (SG(bG.slice(GG, LG)) != Fb.Word) break;
+          LG = GG
         }
-        for (; Xu < su;) {
-          let uu = du(Eu, Xu);
-          if (Uu(Eu.slice(Xu, uu)) != kE.Word) break;
-          Xu = uu
+        for (; yG < wG;) {
+          let GG = CG(bG, yG);
+          if (SG(bG.slice(yG, GG)) != Fb.Word) break;
+          yG = GG
         }
-        return Zu == Xu ? null : Fu.range(Zu + ju, Xu + ju)
+        return LG == yG ? null : nG.range(LG + ZG, yG + ZG)
       }
     }
 
-    function rE(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        su = {};
-      for (let Uu of uu)
-        for (let uu of Object.keys(Uu)) {
-          let Eu = Uu[uu],
-            Zu = su[uu];
-          if (void 0 === Zu) su[uu] = Eu;
-          else if (Zu === Eu || void 0 === Eu);
+    function jb(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        wG = {};
+      for (let SG of GG)
+        for (let GG of Object.keys(SG)) {
+          let bG = SG[GG],
+            LG = wG[GG];
+          if (void 0 === LG) wG[GG] = bG;
+          else if (LG === bG || void 0 === bG);
           else {
-            if (!Object.hasOwnProperty.call(ju, uu)) throw new Error("Config merge conflict for field " + uu);
-            su[uu] = ju[uu](Zu, Eu)
+            if (!Object.hasOwnProperty.call(ZG, GG)) throw new Error("Config merge conflict for field " + GG);
+            wG[GG] = ZG[GG](LG, bG)
           }
         }
-      for (let Uu in Eu) void 0 === su[Uu] && (su[Uu] = Eu[Uu]);
-      return su
+      for (let SG in bG) void 0 === wG[SG] && (wG[SG] = bG[SG]);
+      return wG
     }
-    VE.allowMultipleSelections = cE, VE.tabSize = tu.define({
-      combine: uu => uu.length ? uu[0] : 4
-    }), VE.lineSeparator = NE, VE.readOnly = DE, VE.phrases = tu.define({
-      compare(uu, Eu) {
-        let ju = Object.keys(uu),
-          su = Object.keys(Eu);
-        return ju.length == su.length && ju.every((ju => uu[ju] == Eu[ju]))
+    lb.allowMultipleSelections = fb, lb.tabSize = RG.define({
+      combine: GG => GG.length ? GG[0] : 4
+    }), lb.lineSeparator = Qb, lb.readOnly = Jb, lb.phrases = RG.define({
+      compare(GG, bG) {
+        let ZG = Object.keys(GG),
+          wG = Object.keys(bG);
+        return ZG.length == wG.length && ZG.every((ZG => GG[ZG] == bG[ZG]))
       }
-    }), VE.languageData = bE, VE.changeFilter = OE, VE.transactionFilter = YE, VE.transactionExtender = hE, XE.reconfigure = GE.define();
-    class QE {
-      eq(uu) {
-        return this == uu
+    }), lb.languageData = pb, lb.changeFilter = Kb, lb.transactionFilter = hb, lb.transactionExtender = db, yb.reconfigure = ob.define();
+    class Pb {
+      eq(GG) {
+        return this == GG
       }
-      range(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu;
-        return WE.create(uu, Eu, this)
-      }
-    }
-
-    function iE(uu, Eu) {
-      return uu == Eu || uu.constructor == Eu.constructor && uu.eq(Eu)
-    }
-    QE.prototype.startSide = QE.prototype.endSide = 0, QE.prototype.point = !1, QE.prototype.mapMode = mu.TrackDel;
-    class WE {
-      constructor(uu, Eu, ju) {
-        this.from = uu, this.to = Eu, this.value = ju
-      }
-      static create(uu, Eu, ju) {
-        return new WE(uu, Eu, ju)
+      range(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : GG;
+        return Ab.create(GG, bG, this)
       }
     }
 
-    function SE(uu, Eu) {
-      return uu.from - Eu.from || uu.value.startSide - Eu.value.startSide
+    function Mb(GG, bG) {
+      return GG == bG || GG.constructor == bG.constructor && GG.eq(bG)
     }
-    class IE {
-      constructor(uu, Eu, ju, su) {
-        this.from = uu, this.to = Eu, this.value = ju, this.Gsu = su
+    Pb.prototype.startSide = Pb.prototype.endSide = 0, Pb.prototype.point = !1, Pb.prototype.mapMode = vG.TrackDel;
+    class Ab {
+      constructor(GG, bG, ZG) {
+        this.from = GG, this.to = bG, this.value = ZG
+      }
+      static create(GG, bG, ZG) {
+        return new Ab(GG, bG, ZG)
+      }
+    }
+
+    function sb(GG, bG) {
+      return GG.from - bG.from || GG.value.startSide - bG.value.startSide
+    }
+    class qb {
+      constructor(GG, bG, ZG, wG) {
+        this.from = GG, this.to = bG, this.value = ZG, this.lwG = wG
       }
       get length() {
         return this.to[this.to.length - 1]
       }
-      findIndex(uu, Eu, ju) {
-        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          Uu = ju ? this.to : this.from;
-        for (let Zu = su, Xu = Uu.length;;) {
-          if (Zu == Xu) return Zu;
-          let su = Zu + Xu >> 1,
-            lu = Uu[su] - uu || (ju ? this.value[su].endSide : this.value[su].startSide) - Eu;
-          if (su == Zu) return lu >= 0 ? Zu : Xu;
-          lu >= 0 ? Xu = su : Zu = su + 1
+      findIndex(GG, bG, ZG) {
+        let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          SG = ZG ? this.to : this.from;
+        for (let LG = wG, yG = SG.length;;) {
+          if (LG == yG) return LG;
+          let wG = LG + yG >> 1,
+            kG = SG[wG] - GG || (ZG ? this.value[wG].endSide : this.value[wG].startSide) - bG;
+          if (wG == LG) return kG >= 0 ? LG : yG;
+          kG >= 0 ? yG = wG : LG = wG + 1
         }
       }
-      between(uu, Eu, ju, su) {
-        for (let Uu = this.findIndex(Eu, -1e9, !0), Zu = this.findIndex(ju, 1e9, !1, Uu); Uu < Zu; Uu++)
-          if (!1 === su(this.from[Uu] + uu, this.to[Uu] + uu, this.value[Uu])) return !1
+      between(GG, bG, ZG, wG) {
+        for (let SG = this.findIndex(bG, -1e9, !0), LG = this.findIndex(ZG, 1e9, !1, SG); SG < LG; SG++)
+          if (!1 === wG(this.from[SG] + GG, this.to[SG] + GG, this.value[SG])) return !1
       }
-      map(uu, Eu) {
-        let ju = [],
-          su = [],
-          Uu = [],
-          Zu = -1,
-          Xu = -1;
-        for (let lu = 0; lu < this.value.length; lu++) {
-          let qu, fu, Cu = this.value[lu],
-            bu = this.from[lu] + uu,
-            cu = this.to[lu] + uu;
-          if (bu == cu) {
-            let uu = Eu.mapPos(bu, Cu.startSide, Cu.mapMode);
-            if (null == uu) continue;
-            if (qu = fu = uu, Cu.startSide != Cu.endSide && (fu = Eu.mapPos(bu, Cu.endSide), fu < qu)) continue
-          } else if (qu = Eu.mapPos(bu, Cu.startSide), fu = Eu.mapPos(cu, Cu.endSide), qu > fu || qu == fu && Cu.startSide > 0 && Cu.endSide <= 0) continue;
-          (fu - qu || Cu.endSide - Cu.startSide) < 0 || (Zu < 0 && (Zu = qu), Cu.point && (Xu = Math.max(Xu, fu - qu)), ju.push(Cu), su.push(qu - Zu), Uu.push(fu - Zu))
+      map(GG, bG) {
+        let ZG = [],
+          wG = [],
+          SG = [],
+          LG = -1,
+          yG = -1;
+        for (let kG = 0; kG < this.value.length; kG++) {
+          let UG, YG, VG = this.value[kG],
+            pG = this.from[kG] + GG,
+            fG = this.to[kG] + GG;
+          if (pG == fG) {
+            let GG = bG.mapPos(pG, VG.startSide, VG.mapMode);
+            if (null == GG) continue;
+            if (UG = YG = GG, VG.startSide != VG.endSide && (YG = bG.mapPos(pG, VG.endSide), YG < UG)) continue
+          } else if (UG = bG.mapPos(pG, VG.startSide), YG = bG.mapPos(fG, VG.endSide), UG > YG || UG == YG && VG.startSide > 0 && VG.endSide <= 0) continue;
+          (YG - UG || VG.endSide - VG.startSide) < 0 || (LG < 0 && (LG = UG), VG.point && (yG = Math.max(yG, YG - UG)), ZG.push(VG), wG.push(UG - LG), SG.push(YG - LG))
         }
         return {
-          mapped: ju.length ? new IE(su, Uu, ju, Xu) : null,
-          pos: Zu
+          mapped: ZG.length ? new qb(wG, SG, ZG, yG) : null,
+          pos: LG
         }
       }
     }
-    class FE {
-      constructor(uu, Eu, ju, su) {
-        this.chunkPos = uu, this.chunk = Eu, this.nextLayer = ju, this.Gsu = su
+    class nb {
+      constructor(GG, bG, ZG, wG) {
+        this.chunkPos = GG, this.chunk = bG, this.nextLayer = ZG, this.lwG = wG
       }
-      static create(uu, Eu, ju, su) {
-        return new FE(uu, Eu, ju, su)
+      static create(GG, bG, ZG, wG) {
+        return new nb(GG, bG, ZG, wG)
       }
       get length() {
-        let uu = this.chunk.length - 1;
-        return uu < 0 ? 0 : Math.max(this.chunkEnd(uu), this.nextLayer.length)
+        let GG = this.chunk.length - 1;
+        return GG < 0 ? 0 : Math.max(this.chunkEnd(GG), this.nextLayer.length)
       }
       get size() {
-        if (this.EO) return 0;
-        let uu = this.nextLayer.size;
-        for (let Eu of this.chunk) uu += Eu.value.length;
-        return uu
+        if (this.wK) return 0;
+        let GG = this.nextLayer.size;
+        for (let bG of this.chunk) GG += bG.value.length;
+        return GG
       }
-      chunkEnd(uu) {
-        return this.chunkPos[uu] + this.chunk[uu].length
+      chunkEnd(GG) {
+        return this.chunkPos[GG] + this.chunk[GG].length
       }
-      update(uu) {
+      update(GG) {
         let {
-          add: Eu = [],
-          sort: ju = !1,
-          filterFrom: su = 0,
-          filterTo: Uu = this.length
-        } = uu, Zu = uu.filter;
-        if (0 == Eu.length && !Zu) return this;
-        if (ju && (Eu = Eu.slice().sort(SE)), this.EO) return Eu.length ? FE.of(Eu) : this;
-        let Xu = new tE(this, null, -1).goto(0),
-          lu = 0,
-          qu = [],
-          fu = new BE;
-        for (; Xu.value || lu < Eu.length;)
-          if (lu < Eu.length && (Xu.from - Eu[lu].from || Xu.startSide - Eu[lu].value.startSide) >= 0) {
-            let uu = Eu[lu++];
-            fu.addInner(uu.from, uu.to, uu.value) || qu.push(uu)
-          } else 1 == Xu.rangeIndex && Xu.chunkIndex < this.chunk.length && (lu == Eu.length || this.chunkEnd(Xu.chunkIndex) < Eu[lu].from) && (!Zu || su > this.chunkEnd(Xu.chunkIndex) || Uu < this.chunkPos[Xu.chunkIndex]) && fu.addChunk(this.chunkPos[Xu.chunkIndex], this.chunk[Xu.chunkIndex]) ? Xu.nextChunk() : ((!Zu || su > Xu.to || Uu < Xu.from || Zu(Xu.from, Xu.to, Xu.value)) && (fu.addInner(Xu.from, Xu.to, Xu.value) || qu.push(WE.create(Xu.from, Xu.to, Xu.value))), Xu.next());
-        return fu.finishInner(this.nextLayer.EO && !qu.length ? FE.empty : this.nextLayer.update({
-          add: qu,
-          filter: Zu,
-          filterFrom: su,
-          filterTo: Uu
+          add: bG = [],
+          sort: ZG = !1,
+          filterFrom: wG = 0,
+          filterTo: SG = this.length
+        } = GG, LG = GG.filter;
+        if (0 == bG.length && !LG) return this;
+        if (ZG && (bG = bG.slice().sort(sb)), this.wK) return bG.length ? nb.of(bG) : this;
+        let yG = new Rb(this, null, -1).goto(0),
+          kG = 0,
+          UG = [],
+          YG = new gb;
+        for (; yG.value || kG < bG.length;)
+          if (kG < bG.length && (yG.from - bG[kG].from || yG.startSide - bG[kG].value.startSide) >= 0) {
+            let GG = bG[kG++];
+            YG.addInner(GG.from, GG.to, GG.value) || UG.push(GG)
+          } else 1 == yG.rangeIndex && yG.chunkIndex < this.chunk.length && (kG == bG.length || this.chunkEnd(yG.chunkIndex) < bG[kG].from) && (!LG || wG > this.chunkEnd(yG.chunkIndex) || SG < this.chunkPos[yG.chunkIndex]) && YG.addChunk(this.chunkPos[yG.chunkIndex], this.chunk[yG.chunkIndex]) ? yG.nextChunk() : ((!LG || wG > yG.to || SG < yG.from || LG(yG.from, yG.to, yG.value)) && (YG.addInner(yG.from, yG.to, yG.value) || UG.push(Ab.create(yG.from, yG.to, yG.value))), yG.next());
+        return YG.finishInner(this.nextLayer.wK && !UG.length ? nb.empty : this.nextLayer.update({
+          add: UG,
+          filter: LG,
+          filterFrom: wG,
+          filterTo: SG
         }))
       }
-      map(uu) {
-        if (uu.empty || this.EO) return this;
-        let Eu = [],
-          ju = [],
-          su = -1;
-        for (let Zu = 0; Zu < this.chunk.length; Zu++) {
-          let Uu = this.chunkPos[Zu],
-            Xu = this.chunk[Zu],
-            lu = uu.touchesRange(Uu, Uu + Xu.length);
-          if (!1 === lu) su = Math.max(su, Xu.Gsu), Eu.push(Xu), ju.push(uu.mapPos(Uu));
-          else if (!0 === lu) {
+      map(GG) {
+        if (GG.empty || this.wK) return this;
+        let bG = [],
+          ZG = [],
+          wG = -1;
+        for (let LG = 0; LG < this.chunk.length; LG++) {
+          let SG = this.chunkPos[LG],
+            yG = this.chunk[LG],
+            kG = GG.touchesRange(SG, SG + yG.length);
+          if (!1 === kG) wG = Math.max(wG, yG.lwG), bG.push(yG), ZG.push(GG.mapPos(SG));
+          else if (!0 === kG) {
             let {
-              mapped: Zu,
-              pos: lu
-            } = Xu.map(Uu, uu);
-            Zu && (su = Math.max(su, Zu.Gsu), Eu.push(Zu), ju.push(lu))
+              mapped: LG,
+              pos: kG
+            } = yG.map(SG, GG);
+            LG && (wG = Math.max(wG, LG.lwG), bG.push(LG), ZG.push(kG))
           }
         }
-        let Uu = this.nextLayer.map(uu);
-        return 0 == Eu.length ? Uu : new FE(ju, Eu, Uu || FE.empty, su)
+        let SG = this.nextLayer.map(GG);
+        return 0 == bG.length ? SG : new nb(ZG, bG, SG || nb.empty, wG)
       }
-      between(uu, Eu, ju) {
-        if (!this.EO) {
-          for (let su = 0; su < this.chunk.length; su++) {
-            let Uu = this.chunkPos[su],
-              Zu = this.chunk[su];
-            if (Eu >= Uu && uu <= Uu + Zu.length && !1 === Zu.between(Uu, uu - Uu, Eu - Uu, ju)) return
+      between(GG, bG, ZG) {
+        if (!this.wK) {
+          for (let wG = 0; wG < this.chunk.length; wG++) {
+            let SG = this.chunkPos[wG],
+              LG = this.chunk[wG];
+            if (bG >= SG && GG <= SG + LG.length && !1 === LG.between(SG, GG - SG, bG - SG, ZG)) return
           }
-          this.nextLayer.between(uu, Eu, ju)
+          this.nextLayer.between(GG, bG, ZG)
         }
       }
       iter() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return xE.from([this]).goto(uu)
+        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return Tb.from([this]).goto(GG)
       }
-      get EO() {
+      get wK() {
         return this.nextLayer == this
       }
-      static iter(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return xE.from(uu).goto(Eu)
+      static iter(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return Tb.from(GG).goto(bG)
       }
-      static compare(uu, Eu, ju, su) {
-        let Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
-          Zu = uu.filter((uu => uu.Gsu > 0 || !uu.EO && uu.Gsu >= Uu)),
-          Xu = Eu.filter((uu => uu.Gsu > 0 || !uu.EO && uu.Gsu >= Uu)),
-          lu = LE(Zu, Xu, ju),
-          qu = new HE(Zu, lu, Uu),
-          fu = new HE(Xu, lu, Uu);
-        ju.iterGaps(((uu, Eu, ju) => AE(qu, uu, fu, Eu, ju, su))), ju.empty && 0 == ju.length && AE(qu, 0, fu, 0, 0, su)
+      static compare(GG, bG, ZG, wG) {
+        let SG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
+          LG = GG.filter((GG => GG.lwG > 0 || !GG.wK && GG.lwG >= SG)),
+          yG = bG.filter((GG => GG.lwG > 0 || !GG.wK && GG.lwG >= SG)),
+          kG = eb(LG, yG, ZG),
+          UG = new tb(LG, kG, SG),
+          YG = new tb(yG, kG, SG);
+        ZG.iterGaps(((GG, bG, ZG) => Db(UG, GG, YG, bG, ZG, wG))), ZG.empty && 0 == ZG.length && Db(UG, 0, YG, 0, 0, wG)
       }
-      static eq(uu, Eu) {
-        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          su = arguments.length > 3 ? arguments[3] : void 0;
-        null == su && (su = 999999999);
-        let Uu = uu.filter((uu => !uu.EO && Eu.indexOf(uu) < 0)),
-          Zu = Eu.filter((Eu => !Eu.EO && uu.indexOf(Eu) < 0));
-        if (Uu.length != Zu.length) return !1;
-        if (!Uu.length) return !0;
-        let Xu = LE(Uu, Zu),
-          lu = new HE(Uu, Xu, 0).goto(ju),
-          qu = new HE(Zu, Xu, 0).goto(ju);
+      static eq(GG, bG) {
+        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          wG = arguments.length > 3 ? arguments[3] : void 0;
+        null == wG && (wG = 999999999);
+        let SG = GG.filter((GG => !GG.wK && bG.indexOf(GG) < 0)),
+          LG = bG.filter((bG => !bG.wK && GG.indexOf(bG) < 0));
+        if (SG.length != LG.length) return !1;
+        if (!SG.length) return !0;
+        let yG = eb(SG, LG),
+          kG = new tb(SG, yG, 0).goto(ZG),
+          UG = new tb(LG, yG, 0).goto(ZG);
         for (;;) {
-          if (lu.to != qu.to || !nE(lu.active, qu.active) || lu.point && (!qu.point || !iE(lu.point, qu.point))) return !1;
-          if (lu.to > su) return !0;
-          lu.next(), qu.next()
+          if (kG.to != UG.to || !Nb(kG.active, UG.active) || kG.point && (!UG.point || !Mb(kG.point, UG.point))) return !1;
+          if (kG.to > wG) return !0;
+          kG.next(), UG.next()
         }
       }
-      static spans(uu, Eu, ju, su) {
-        let Uu = new HE(uu, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(Eu),
-          Zu = Eu,
-          Xu = Uu.openStart;
+      static spans(GG, bG, ZG, wG) {
+        let SG = new tb(GG, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(bG),
+          LG = bG,
+          yG = SG.openStart;
         for (;;) {
-          let uu = Math.min(Uu.to, ju);
-          if (Uu.point) {
-            let ju = Uu.activeForPoint(Uu.to),
-              lu = Uu.pointFrom < Eu ? ju.length + 1 : Uu.point.startSide < 0 ? ju.length : Math.min(ju.length, Xu);
-            su.point(Zu, uu, Uu.point, ju, lu, Uu.pointRank), Xu = Math.min(Uu.openEnd(uu), ju.length)
-          } else uu > Zu && (su.span(Zu, uu, Uu.active, Xu), Xu = Uu.openEnd(uu));
-          if (Uu.to > ju) return Xu + (Uu.point && Uu.to > ju ? 1 : 0);
-          Zu = Uu.to, Uu.next()
+          let GG = Math.min(SG.to, ZG);
+          if (SG.point) {
+            let ZG = SG.activeForPoint(SG.to),
+              kG = SG.pointFrom < bG ? ZG.length + 1 : SG.point.startSide < 0 ? ZG.length : Math.min(ZG.length, yG);
+            wG.point(LG, GG, SG.point, ZG, kG, SG.pointRank), yG = Math.min(SG.openEnd(GG), ZG.length)
+          } else GG > LG && (wG.span(LG, GG, SG.active, yG), yG = SG.openEnd(GG));
+          if (SG.to > ZG) return yG + (SG.point && SG.to > ZG ? 1 : 0);
+          LG = SG.to, SG.next()
         }
       }
-      static of (uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ju = new BE;
-        for (let su of uu instanceof WE ? [uu] : Eu ? function(uu) {
-            if (uu.length > 1)
-              for (let Eu = uu[0], ju = 1; ju < uu.length; ju++) {
-                let su = uu[ju];
-                if (SE(Eu, su) > 0) return uu.slice().sort(SE);
-                Eu = su
+      static of (GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ZG = new gb;
+        for (let wG of GG instanceof Ab ? [GG] : bG ? function(GG) {
+            if (GG.length > 1)
+              for (let bG = GG[0], ZG = 1; ZG < GG.length; ZG++) {
+                let wG = GG[ZG];
+                if (sb(bG, wG) > 0) return GG.slice().sort(sb);
+                bG = wG
               }
-            return uu
-          }(uu) : uu) ju.add(su.from, su.to, su.value);
-        return ju.finish()
+            return GG
+          }(GG) : GG) ZG.add(wG.from, wG.to, wG.value);
+        return ZG.finish()
       }
-      static join(uu) {
-        if (!uu.length) return FE.empty;
-        let Eu = uu[uu.length - 1];
-        for (let ju = uu.length - 2; ju >= 0; ju--)
-          for (let su = uu[ju]; su != FE.empty; su = su.nextLayer) Eu = new FE(su.chunkPos, su.chunk, Eu, Math.max(su.Gsu, Eu.Gsu));
-        return Eu
+      static join(GG) {
+        if (!GG.length) return nb.empty;
+        let bG = GG[GG.length - 1];
+        for (let ZG = GG.length - 2; ZG >= 0; ZG--)
+          for (let wG = GG[ZG]; wG != nb.empty; wG = wG.nextLayer) bG = new nb(wG.chunkPos, wG.chunk, bG, Math.max(wG.lwG, bG.lwG));
+        return bG
       }
     }
-    FE.empty = new FE([], [], null, -1), FE.empty.nextLayer = FE.empty;
-    class BE {
-      finishChunk(uu) {
-        this.chunks.push(new IE(this.from, this.to, this.value, this.Gsu)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.Gsu), this.Gsu = -1, uu && (this.from = [], this.to = [], this.value = [])
+    nb.empty = new nb([], [], null, -1), nb.empty.nextLayer = nb.empty;
+    class gb {
+      finishChunk(GG) {
+        this.chunks.push(new qb(this.from, this.to, this.value, this.lwG)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.lwG), this.lwG = -1, GG && (this.from = [], this.to = [], this.value = [])
       }
       constructor() {
-        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.Gsu = -1, this.setMaxPoint = -1, this.nextLayer = null
+        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.lwG = -1, this.setMaxPoint = -1, this.nextLayer = null
       }
-      add(uu, Eu, ju) {
-        this.addInner(uu, Eu, ju) || (this.nextLayer || (this.nextLayer = new BE)).add(uu, Eu, ju)
+      add(GG, bG, ZG) {
+        this.addInner(GG, bG, ZG) || (this.nextLayer || (this.nextLayer = new gb)).add(GG, bG, ZG)
       }
-      addInner(uu, Eu, ju) {
-        let su = uu - this.lastTo || ju.startSide - this.last.endSide;
-        if (su <= 0 && (uu - this.lastFrom || ju.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
-        return !(su < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = uu), this.from.push(uu - this.chunkStart), this.to.push(Eu - this.chunkStart), this.last = ju, this.lastFrom = uu, this.lastTo = Eu, this.value.push(ju), ju.point && (this.Gsu = Math.max(this.Gsu, Eu - uu)), !0)
+      addInner(GG, bG, ZG) {
+        let wG = GG - this.lastTo || ZG.startSide - this.last.endSide;
+        if (wG <= 0 && (GG - this.lastFrom || ZG.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
+        return !(wG < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = GG), this.from.push(GG - this.chunkStart), this.to.push(bG - this.chunkStart), this.last = ZG, this.lastFrom = GG, this.lastTo = bG, this.value.push(ZG), ZG.point && (this.lwG = Math.max(this.lwG, bG - GG)), !0)
       }
-      addChunk(uu, Eu) {
-        if ((uu - this.lastTo || Eu.value[0].startSide - this.last.endSide) < 0) return !1;
-        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, Eu.Gsu), this.chunks.push(Eu), this.chunkPos.push(uu);
-        let ju = Eu.value.length - 1;
-        return this.last = Eu.value[ju], this.lastFrom = Eu.from[ju] + uu, this.lastTo = Eu.to[ju] + uu, !0
+      addChunk(GG, bG) {
+        if ((GG - this.lastTo || bG.value[0].startSide - this.last.endSide) < 0) return !1;
+        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, bG.lwG), this.chunks.push(bG), this.chunkPos.push(GG);
+        let ZG = bG.value.length - 1;
+        return this.last = bG.value[ZG], this.lastFrom = bG.from[ZG] + GG, this.lastTo = bG.to[ZG] + GG, !0
       }
       finish() {
-        return this.finishInner(FE.empty)
+        return this.finishInner(nb.empty)
       }
-      finishInner(uu) {
-        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return uu;
-        let Eu = FE.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(uu) : uu, this.setMaxPoint);
-        return this.from = null, Eu
+      finishInner(GG) {
+        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return GG;
+        let bG = nb.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(GG) : GG, this.setMaxPoint);
+        return this.from = null, bG
       }
     }
 
-    function LE(uu, Eu, ju) {
-      let su = new Map;
-      for (let Zu of uu)
-        for (let uu = 0; uu < Zu.chunk.length; uu++) Zu.chunk[uu].Gsu <= 0 && su.set(Zu.chunk[uu], Zu.chunkPos[uu]);
-      let Uu = new Set;
-      for (let Zu of Eu)
-        for (let uu = 0; uu < Zu.chunk.length; uu++) {
-          let Eu = su.get(Zu.chunk[uu]);
-          null == Eu || (ju ? ju.mapPos(Eu) : Eu) != Zu.chunkPos[uu] || (null === ju || void 0 === ju ? void 0 : ju.touchesRange(Eu, Eu + Zu.chunk[uu].length)) || Uu.add(Zu.chunk[uu])
+    function eb(GG, bG, ZG) {
+      let wG = new Map;
+      for (let LG of GG)
+        for (let GG = 0; GG < LG.chunk.length; GG++) LG.chunk[GG].lwG <= 0 && wG.set(LG.chunk[GG], LG.chunkPos[GG]);
+      let SG = new Set;
+      for (let LG of bG)
+        for (let GG = 0; GG < LG.chunk.length; GG++) {
+          let bG = wG.get(LG.chunk[GG]);
+          null == bG || (ZG ? ZG.mapPos(bG) : bG) != LG.chunkPos[GG] || (null === ZG || void 0 === ZG ? void 0 : ZG.touchesRange(bG, bG + LG.chunk[GG].length)) || SG.add(LG.chunk[GG])
         }
-      return Uu
+      return SG
     }
-    class tE {
-      constructor(uu, Eu, ju) {
-        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.layer = uu, this.skip = Eu, this.wsu = ju, this.rank = su
+    class Rb {
+      constructor(GG, bG, ZG) {
+        let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.layer = GG, this.skip = bG, this.jwG = ZG, this.rank = wG
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
@@ -1923,24 +1923,24 @@ export const modules = {
       get endSide() {
         return this.value ? this.value.endSide : 0
       }
-      goto(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(uu, Eu, !1), this
+      goto(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(GG, bG, !1), this
       }
-      gotoInner(uu, Eu, ju) {
+      gotoInner(GG, bG, ZG) {
         for (; this.chunkIndex < this.layer.chunk.length;) {
-          let Eu = this.layer.chunk[this.chunkIndex];
-          if (!(this.skip && this.skip.has(Eu) || this.layer.chunkEnd(this.chunkIndex) < uu || Eu.Gsu < this.wsu)) break;
-          this.chunkIndex++, ju = !1
+          let bG = this.layer.chunk[this.chunkIndex];
+          if (!(this.skip && this.skip.has(bG) || this.layer.chunkEnd(this.chunkIndex) < GG || bG.lwG < this.jwG)) break;
+          this.chunkIndex++, ZG = !1
         }
         if (this.chunkIndex < this.layer.chunk.length) {
-          let su = this.layer.chunk[this.chunkIndex].findIndex(uu - this.layer.chunkPos[this.chunkIndex], Eu, !0);
-          (!ju || this.rangeIndex < su) && this.setRangeIndex(su)
+          let wG = this.layer.chunk[this.chunkIndex].findIndex(GG - this.layer.chunkPos[this.chunkIndex], bG, !0);
+          (!ZG || this.rangeIndex < wG) && this.setRangeIndex(wG)
         }
         this.next()
       }
-      forward(uu, Eu) {
-        (this.to - uu || this.endSide - Eu) < 0 && this.gotoInner(uu, Eu, !0)
+      forward(GG, bG) {
+        (this.to - GG || this.endSide - bG) < 0 && this.gotoInner(GG, bG, !0)
       }
       next() {
         for (;;) {
@@ -1948,203 +1948,203 @@ export const modules = {
             this.from = this.to = 1e9, this.value = null;
             break
           } {
-            let uu = this.layer.chunkPos[this.chunkIndex],
-              Eu = this.layer.chunk[this.chunkIndex],
-              ju = uu + Eu.from[this.rangeIndex];
-            if (this.from = ju, this.to = uu + Eu.to[this.rangeIndex], this.value = Eu.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.wsu < 0 || this.value.point && this.to - this.from >= this.wsu) break
+            let GG = this.layer.chunkPos[this.chunkIndex],
+              bG = this.layer.chunk[this.chunkIndex],
+              ZG = GG + bG.from[this.rangeIndex];
+            if (this.from = ZG, this.to = GG + bG.to[this.rangeIndex], this.value = bG.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.jwG < 0 || this.value.point && this.to - this.from >= this.jwG) break
           }
         }
       }
-      setRangeIndex(uu) {
-        if (uu == this.layer.chunk[this.chunkIndex].value.length) {
+      setRangeIndex(GG) {
+        if (GG == this.layer.chunk[this.chunkIndex].value.length) {
           if (this.chunkIndex++, this.skip)
             for (; this.chunkIndex < this.layer.chunk.length && this.skip.has(this.layer.chunk[this.chunkIndex]);) this.chunkIndex++;
           this.rangeIndex = 0
-        } else this.rangeIndex = uu
+        } else this.rangeIndex = GG
       }
       nextChunk() {
         this.chunkIndex++, this.rangeIndex = 0, this.next()
       }
-      compare(uu) {
-        return this.from - uu.from || this.startSide - uu.startSide || this.rank - uu.rank || this.to - uu.to || this.endSide - uu.endSide
+      compare(GG) {
+        return this.from - GG.from || this.startSide - GG.startSide || this.rank - GG.rank || this.to - GG.to || this.endSide - GG.endSide
       }
     }
-    class xE {
-      constructor(uu) {
-        this.heap = uu
+    class Tb {
+      constructor(GG) {
+        this.heap = GG
       }
-      static from(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          su = [];
-        for (let Uu = 0; Uu < uu.length; Uu++)
-          for (let Zu = uu[Uu]; !Zu.EO; Zu = Zu.nextLayer) Zu.Gsu >= ju && su.push(new tE(Zu, Eu, ju, Uu));
-        return 1 == su.length ? su[0] : new xE(su)
+      static from(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          wG = [];
+        for (let SG = 0; SG < GG.length; SG++)
+          for (let LG = GG[SG]; !LG.wK; LG = LG.nextLayer) LG.lwG >= ZG && wG.push(new Rb(LG, bG, ZG, SG));
+        return 1 == wG.length ? wG[0] : new Tb(wG)
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
       }
-      goto(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        for (let ju of this.heap) ju.goto(uu, Eu);
-        for (let ju = this.heap.length >> 1; ju >= 0; ju--) TE(this.heap, ju);
+      goto(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        for (let ZG of this.heap) ZG.goto(GG, bG);
+        for (let ZG = this.heap.length >> 1; ZG >= 0; ZG--) Hb(this.heap, ZG);
         return this.next(), this
       }
-      forward(uu, Eu) {
-        for (let ju of this.heap) ju.forward(uu, Eu);
-        for (let ju = this.heap.length >> 1; ju >= 0; ju--) TE(this.heap, ju);
-        (this.to - uu || this.value.endSide - Eu) < 0 && this.next()
+      forward(GG, bG) {
+        for (let ZG of this.heap) ZG.forward(GG, bG);
+        for (let ZG = this.heap.length >> 1; ZG >= 0; ZG--) Hb(this.heap, ZG);
+        (this.to - GG || this.value.endSide - bG) < 0 && this.next()
       }
       next() {
         if (0 == this.heap.length) this.from = this.to = 1e9, this.value = null, this.rank = -1;
         else {
-          let uu = this.heap[0];
-          this.from = uu.from, this.to = uu.to, this.value = uu.value, this.rank = uu.rank, uu.value && uu.next(), TE(this.heap, 0)
+          let GG = this.heap[0];
+          this.from = GG.from, this.to = GG.to, this.value = GG.value, this.rank = GG.rank, GG.value && GG.next(), Hb(this.heap, 0)
         }
       }
     }
 
-    function TE(uu, Eu) {
-      for (let ju = uu[Eu];;) {
-        let su = 1 + (Eu << 1);
-        if (su >= uu.length) break;
-        let Uu = uu[su];
-        if (su + 1 < uu.length && Uu.compare(uu[su + 1]) >= 0 && (Uu = uu[su + 1], su++), ju.compare(Uu) < 0) break;
-        uu[su] = ju, uu[Eu] = Uu, Eu = su
+    function Hb(GG, bG) {
+      for (let ZG = GG[bG];;) {
+        let wG = 1 + (bG << 1);
+        if (wG >= GG.length) break;
+        let SG = GG[wG];
+        if (wG + 1 < GG.length && SG.compare(GG[wG + 1]) >= 0 && (SG = GG[wG + 1], wG++), ZG.compare(SG) < 0) break;
+        GG[wG] = ZG, GG[bG] = SG, bG = wG
       }
     }
-    class HE {
-      constructor(uu, Eu, ju) {
-        this.wsu = ju, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = xE.from(uu, Eu, ju)
+    class tb {
+      constructor(GG, bG, ZG) {
+        this.jwG = ZG, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = Tb.from(GG, bG, ZG)
       }
-      goto(uu) {
-        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.cursor.goto(uu, Eu), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = uu, this.endSide = Eu, this.openStart = -1, this.next(), this
+      goto(GG) {
+        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.cursor.goto(GG, bG), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = GG, this.endSide = bG, this.openStart = -1, this.next(), this
       }
-      forward(uu, Eu) {
-        for (; this.minActive > -1 && (this.activeTo[this.minActive] - uu || this.active[this.minActive].endSide - Eu) < 0;) this.removeActive(this.minActive);
-        this.cursor.forward(uu, Eu)
+      forward(GG, bG) {
+        for (; this.minActive > -1 && (this.activeTo[this.minActive] - GG || this.active[this.minActive].endSide - bG) < 0;) this.removeActive(this.minActive);
+        this.cursor.forward(GG, bG)
       }
-      removeActive(uu) {
-        yE(this.active, uu), yE(this.activeTo, uu), yE(this.activeRank, uu), this.minActive = RE(this.active, this.activeTo)
+      removeActive(GG) {
+        Ob(this.active, GG), Ob(this.activeTo, GG), Ob(this.activeRank, GG), this.minActive = Bb(this.active, this.activeTo)
       }
-      addActive(uu) {
-        let Eu = 0,
+      addActive(GG) {
+        let bG = 0,
           {
-            value: ju,
-            to: su,
-            rank: Uu
+            value: ZG,
+            to: wG,
+            rank: SG
           } = this.cursor;
-        for (; Eu < this.activeRank.length && (Uu - this.activeRank[Eu] || su - this.activeTo[Eu]) > 0;) Eu++;
-        zE(this.active, Eu, ju), zE(this.activeTo, Eu, su), zE(this.activeRank, Eu, Uu), uu && zE(uu, Eu, this.cursor.from), this.minActive = RE(this.active, this.activeTo)
+        for (; bG < this.activeRank.length && (SG - this.activeRank[bG] || wG - this.activeTo[bG]) > 0;) bG++;
+        xb(this.active, bG, ZG), xb(this.activeTo, bG, wG), xb(this.activeRank, bG, SG), GG && xb(GG, bG, this.cursor.from), this.minActive = Bb(this.active, this.activeTo)
       }
       next() {
-        let uu = this.to,
-          Eu = this.point;
+        let GG = this.to,
+          bG = this.point;
         this.point = null;
-        let ju = this.openStart < 0 ? [] : null;
+        let ZG = this.openStart < 0 ? [] : null;
         for (;;) {
-          let su = this.minActive;
-          if (su > -1 && (this.activeTo[su] - this.cursor.from || this.active[su].endSide - this.cursor.startSide) < 0) {
-            if (this.activeTo[su] > uu) {
-              this.to = this.activeTo[su], this.endSide = this.active[su].endSide;
+          let wG = this.minActive;
+          if (wG > -1 && (this.activeTo[wG] - this.cursor.from || this.active[wG].endSide - this.cursor.startSide) < 0) {
+            if (this.activeTo[wG] > GG) {
+              this.to = this.activeTo[wG], this.endSide = this.active[wG].endSide;
               break
             }
-            this.removeActive(su), ju && yE(ju, su)
+            this.removeActive(wG), ZG && Ob(ZG, wG)
           } else {
             if (!this.cursor.value) {
               this.to = this.endSide = 1e9;
               break
             }
-            if (this.cursor.from > uu) {
+            if (this.cursor.from > GG) {
               this.to = this.cursor.from, this.endSide = this.cursor.startSide;
               break
             } {
-              let uu = this.cursor.value;
-              if (uu.point) {
-                if (!(Eu && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
-                  this.point = uu, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = uu.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
+              let GG = this.cursor.value;
+              if (GG.point) {
+                if (!(bG && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
+                  this.point = GG, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = GG.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
                   break
                 }
                 this.cursor.next()
-              } else this.addActive(ju), this.cursor.next()
+              } else this.addActive(ZG), this.cursor.next()
             }
           }
         }
-        if (ju) {
+        if (ZG) {
           this.openStart = 0;
-          for (let Eu = ju.length - 1; Eu >= 0 && ju[Eu] < uu; Eu--) this.openStart++
+          for (let bG = ZG.length - 1; bG >= 0 && ZG[bG] < GG; bG--) this.openStart++
         }
       }
-      activeForPoint(uu) {
+      activeForPoint(GG) {
         if (!this.active.length) return this.active;
-        let Eu = [];
-        for (let ju = this.active.length - 1; ju >= 0 && !(this.activeRank[ju] < this.pointRank); ju--)(this.activeTo[ju] > uu || this.activeTo[ju] == uu && this.active[ju].endSide >= this.point.endSide) && Eu.push(this.active[ju]);
-        return Eu.reverse()
+        let bG = [];
+        for (let ZG = this.active.length - 1; ZG >= 0 && !(this.activeRank[ZG] < this.pointRank); ZG--)(this.activeTo[ZG] > GG || this.activeTo[ZG] == GG && this.active[ZG].endSide >= this.point.endSide) && bG.push(this.active[ZG]);
+        return bG.reverse()
       }
-      openEnd(uu) {
-        let Eu = 0;
-        for (let ju = this.activeTo.length - 1; ju >= 0 && this.activeTo[ju] > uu; ju--) Eu++;
-        return Eu
-      }
-    }
-
-    function AE(uu, Eu, ju, su, Uu, Zu) {
-      uu.goto(Eu), ju.goto(su);
-      let Xu = su + Uu,
-        lu = su,
-        qu = su - Eu,
-        fu = !!Zu.boundChange;
-      for (let Cu = !1;;) {
-        let Eu = uu.to + qu - ju.to,
-          su = Eu || uu.endSide - ju.endSide,
-          Uu = su < 0 ? uu.to + qu : ju.to,
-          bu = Math.min(Uu, Xu);
-        if (uu.point || ju.point ? (uu.point && ju.point && iE(uu.point, ju.point) && nE(uu.activeForPoint(uu.to), ju.activeForPoint(ju.to)) || Zu.comparePoint(lu, bu, uu.point, ju.point), Cu = !1) : (Cu && Zu.boundChange(lu), bu > lu && !nE(uu.active, ju.active) && Zu.compareRange(lu, bu, uu.active, ju.active), fu && bu < Xu && (Eu || uu.openEnd(Uu) != ju.openEnd(Uu)) && (Cu = !0)), Uu > Xu) break;
-        lu = Uu, su <= 0 && uu.next(), su >= 0 && ju.next()
+      openEnd(GG) {
+        let bG = 0;
+        for (let ZG = this.activeTo.length - 1; ZG >= 0 && this.activeTo[ZG] > GG; ZG--) bG++;
+        return bG
       }
     }
 
-    function nE(uu, Eu) {
-      if (uu.length != Eu.length) return !1;
-      for (let ju = 0; ju < uu.length; ju++)
-        if (uu[ju] != Eu[ju] && !iE(uu[ju], Eu[ju])) return !1;
+    function Db(GG, bG, ZG, wG, SG, LG) {
+      GG.goto(bG), ZG.goto(wG);
+      let yG = wG + SG,
+        kG = wG,
+        UG = wG - bG,
+        YG = !!LG.boundChange;
+      for (let VG = !1;;) {
+        let bG = GG.to + UG - ZG.to,
+          wG = bG || GG.endSide - ZG.endSide,
+          SG = wG < 0 ? GG.to + UG : ZG.to,
+          pG = Math.min(SG, yG);
+        if (GG.point || ZG.point ? (GG.point && ZG.point && Mb(GG.point, ZG.point) && Nb(GG.activeForPoint(GG.to), ZG.activeForPoint(ZG.to)) || LG.comparePoint(kG, pG, GG.point, ZG.point), VG = !1) : (VG && LG.boundChange(kG), pG > kG && !Nb(GG.active, ZG.active) && LG.compareRange(kG, pG, GG.active, ZG.active), YG && pG < yG && (bG || GG.openEnd(SG) != ZG.openEnd(SG)) && (VG = !0)), SG > yG) break;
+        kG = SG, wG <= 0 && GG.next(), wG >= 0 && ZG.next()
+      }
+    }
+
+    function Nb(GG, bG) {
+      if (GG.length != bG.length) return !1;
+      for (let ZG = 0; ZG < GG.length; ZG++)
+        if (GG[ZG] != bG[ZG] && !Mb(GG[ZG], bG[ZG])) return !1;
       return !0
     }
 
-    function yE(uu, Eu) {
-      for (let ju = Eu, su = uu.length - 1; ju < su; ju++) uu[ju] = uu[ju + 1];
-      uu.pop()
+    function Ob(GG, bG) {
+      for (let ZG = bG, wG = GG.length - 1; ZG < wG; ZG++) GG[ZG] = GG[ZG + 1];
+      GG.pop()
     }
 
-    function zE(uu, Eu, ju) {
-      for (let su = uu.length - 1; su >= Eu; su--) uu[su + 1] = uu[su];
-      uu[Eu] = ju
+    function xb(GG, bG, ZG) {
+      for (let wG = GG.length - 1; wG >= bG; wG--) GG[wG + 1] = GG[wG];
+      GG[bG] = ZG
     }
 
-    function RE(uu, Eu) {
-      let ju = -1,
-        su = 1e9;
-      for (let Uu = 0; Uu < Eu.length; Uu++)(Eu[Uu] - su || uu[Uu].endSide - uu[ju].endSide) < 0 && (ju = Uu, su = Eu[Uu]);
-      return ju
+    function Bb(GG, bG) {
+      let ZG = -1,
+        wG = 1e9;
+      for (let SG = 0; SG < bG.length; SG++)(bG[SG] - wG || GG[SG].endSide - GG[ZG].endSide) < 0 && (ZG = SG, wG = bG[SG]);
+      return ZG
     }
 
-    function uj(uu, Eu) {
-      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : uu.length,
-        su = 0;
-      for (let Uu = 0; Uu < ju && Uu < uu.length;) 9 == uu.charCodeAt(Uu) ? (su += Eu - su % Eu, Uu++) : (su++, Uu = du(uu, Uu));
-      return su
+    function GZ(GG, bG) {
+      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : GG.length,
+        wG = 0;
+      for (let SG = 0; SG < ZG && SG < GG.length;) 9 == GG.charCodeAt(SG) ? (wG += bG - wG % bG, SG++) : (wG++, SG = CG(GG, SG));
+      return wG
     }
 
-    function Ej(uu, Eu, ju, su) {
-      for (let Uu = 0, Zu = 0;;) {
-        if (Zu >= Eu) return Uu;
-        if (Uu == uu.length) break;
-        Zu += 9 == uu.charCodeAt(Uu) ? ju - Zu % ju : 1, Uu = du(uu, Uu)
+    function bZ(GG, bG, ZG, wG) {
+      for (let SG = 0, LG = 0;;) {
+        if (LG >= bG) return SG;
+        if (SG == GG.length) break;
+        LG += 9 == GG.charCodeAt(SG) ? ZG - LG % ZG : 1, SG = CG(GG, SG)
       }
-      return !0 === su ? -1 : uu.length
+      return !0 === wG ? -1 : GG.length
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

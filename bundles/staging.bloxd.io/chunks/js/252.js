@@ -1,502 +1,502 @@
 export const id = 252;
 export const ids = [252];
 export const modules = {
-  41252: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Zu,
-      d: () => Xu
+  41427: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => LG,
+      f: () => yG
     });
-    var su = ju(1999);
-    let Uu = !1;
+    var wG = ZG(1910);
+    let SG = !1;
 
-    function Zu() {
-      Uu = !0
+    function LG() {
+      SG = !0
     }
 
-    function Xu() {
-      Uu && (Uu = !1, (0, su.c)())
+    function yG() {
+      SG && (SG = !1, (0, wG.d)())
     }
   },
-  41247: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Xu,
-      e: () => Zu,
-      h: () => lu
+  41423: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => yG,
+      f: () => LG,
+      j: () => kG
     });
-    var su = ju(40833),
-      Uu = ju(40847);
+    var wG = ZG(40954),
+      SG = ZG(40971);
 
-    function Zu(uu) {
-      if (uu.queries.drawCensus() < su.vb.BYTES) return null;
-      const Eu = uu.memoryData(uu.scratch(), su.vb.BYTES, 4, "the draw census");
-      return null === Eu ? null : {
-        terrainOpaque: su.vb.terrainOpaque(Eu, 0),
-        terrainTransparent: su.vb.terrainTransparent(Eu, 0),
-        terrainPack: su.vb.terrainPack(Eu, 0),
-        earthSky: su.vb.earthSky(Eu, 0),
-        skyMeshes: su.vb.skyMeshes(Eu, 0),
-        regular: su.vb.regular(Eu, 0),
-        thin: su.vb.thin(Eu, 0),
-        line: su.vb.line(Eu, 0),
-        text: su.vb.text(Eu, 0),
-        particles: su.vb.particles(Eu, 0),
-        terrainParts: su.vb.terrainParts(Eu, 0),
-        terrainCompiling: su.vb.terrainCompiling(Eu, 0),
-        ringCopiesMax: su.vb.ringCopiesMax(Eu, 0),
-        ringBusyWrites: su.vb.ringBusyWrites(Eu, 0)
+    function LG(GG) {
+      if (GG.queries.drawCensus() < wG.Bb.BYTES) return null;
+      const bG = GG.memoryData(GG.scratch(), wG.Bb.BYTES, 4, "the draw census");
+      return null === bG ? null : {
+        terrainOpaque: wG.Bb.terrainOpaque(bG, 0),
+        terrainTransparent: wG.Bb.terrainTransparent(bG, 0),
+        terrainPack: wG.Bb.terrainPack(bG, 0),
+        earthSky: wG.Bb.earthSky(bG, 0),
+        skyMeshes: wG.Bb.skyMeshes(bG, 0),
+        regular: wG.Bb.regular(bG, 0),
+        thin: wG.Bb.thin(bG, 0),
+        line: wG.Bb.line(bG, 0),
+        text: wG.Bb.text(bG, 0),
+        particles: wG.Bb.particles(bG, 0),
+        terrainParts: wG.Bb.terrainParts(bG, 0),
+        terrainCompiling: wG.Bb.terrainCompiling(bG, 0),
+        ringCopiesMax: wG.Bb.ringCopiesMax(bG, 0),
+        ringBusyWrites: wG.Bb.ringBusyWrites(bG, 0)
       }
     }
 
-    function Xu(uu) {
+    function yG(GG) {
       const {
-        terrainOpaque: Eu,
-        terrainTransparent: ju,
-        earthSky: su,
-        skyMeshes: Uu,
-        regular: Zu,
-        thin: Xu,
-        line: lu,
-        text: qu,
-        particles: fu
-      } = uu;
-      return Eu + ju + su + Uu + Zu + Xu + lu + qu + fu
+        terrainOpaque: bG,
+        terrainTransparent: ZG,
+        earthSky: wG,
+        skyMeshes: SG,
+        regular: LG,
+        thin: yG,
+        line: kG,
+        text: UG,
+        particles: YG
+      } = GG;
+      return bG + ZG + wG + SG + LG + yG + kG + UG + YG
     }
 
-    function lu() {
-      const uu = (0, Uu.l)();
-      return !0 === (null === uu || void 0 === uu ? void 0 : uu.isCoreRunning) ? function(uu) {
-        const Eu = Zu(uu);
-        if (null === Eu) return [];
+    function kG() {
+      const GG = (0, SG.f)();
+      return !0 === (null === GG || void 0 === GG ? void 0 : GG.isCoreRunning) ? function(GG) {
+        const bG = LG(GG);
+        if (null === bG) return [];
         const {
-          terrainOpaque: ju,
-          terrainTransparent: su,
-          terrainPack: Uu,
-          earthSky: lu,
-          skyMeshes: qu,
-          regular: fu,
-          thin: Cu,
-          line: bu,
-          text: cu,
-          particles: Nu
-        } = Eu;
+          terrainOpaque: ZG,
+          terrainTransparent: wG,
+          terrainPack: SG,
+          earthSky: kG,
+          skyMeshes: UG,
+          regular: YG,
+          thin: VG,
+          line: pG,
+          text: fG,
+          particles: QG
+        } = bG;
         return [{
           label: "Drawn",
-          value: `${Xu(Eu)}`
+          value: `${yG(bG)}`
         }, {
           label: "Terrain",
-          value: `${ju} opaque / ${su} transparent (${Uu} shader pack)`
+          value: `${ZG} opaque / ${wG} transparent (${SG} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${fu} / ${Cu}`
+          value: `${YG} / ${VG}`
         }, {
           label: "Text / Lines",
-          value: `${cu} / ${bu}`
+          value: `${fG} / ${pG}`
         }, {
           label: "Sky / Particles",
-          value: `${lu+qu} / ${Nu}`
+          value: `${kG+UG} / ${QG}`
         }]
-      }(uu.api) : []
+      }(GG.api) : []
     }
   },
-  41230: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Ou,
-      c: () => cu,
-      g: () => Nu
+  41410: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => KG,
+      f: () => fG,
+      i: () => QG
     });
-    var su = ju(2007),
-      Uu = ju(1345),
-      Zu = ju(40847),
-      Xu = ju(40864),
-      lu = ju(40873),
-      qu = ju(40889);
-    const fu = new Uu.d;
-    let Cu = !1;
+    var wG = ZG(1915),
+      SG = ZG(1257),
+      LG = ZG(40971),
+      yG = ZG(40989),
+      kG = ZG(40993),
+      UG = ZG(41012);
+    const YG = new SG.c;
+    let VG = !1;
 
-    function bu(uu) {
-      const Eu = (0, Zu.l)();
-      return null !== Eu && +uu === Eu.api.localId
+    function pG(GG) {
+      const bG = (0, LG.f)();
+      return null !== bG && +GG === bG.api.localId
     }
 
-    function cu() {
-      Cu || (Cu = !0, (0, qu.n)(Xu.k, (uu => {
-        var Eu, ju;
-        const su = (0, lu.g)(Xu.k, uu);
-        if (!(0, lu.e)(su)) return;
-        const Uu = su;
-        bu(Uu.Qu) && Nu(Uu.iu, {
-          icon: Uu.BE,
-          level: Uu.tE,
-          displayName: null !== (Eu = Uu.Wu) && void 0 !== Eu ? Eu : null,
-          durationMs: null !== (ju = Uu.LE) && void 0 !== ju ? ju : null
+    function fG() {
+      VG || (VG = !0, (0, UG.l)(yG.j, (GG => {
+        var bG, ZG;
+        const wG = (0, kG.f)(yG.j, GG);
+        if (!(0, kG.d)(wG)) return;
+        const SG = wG;
+        pG(SG.cG) && QG(SG.lG, {
+          icon: SG.Rb,
+          level: SG.Hb,
+          displayName: null !== (bG = SG.jG) && void 0 !== bG ? bG : null,
+          durationMs: null !== (ZG = SG.Tb) && void 0 !== ZG ? ZG : null
         })
-      })), (0, qu.n)(Xu.V, (uu => {
-        const Eu = (0, lu.g)(Xu.V, uu);
-        if (!(0, lu.e)(Eu)) return;
-        const ju = Eu;
-        bu(ju.Qu) && su.c.remove(ju.iu)
-      })), (0, qu.i)((() => {
-        su.c.clear()
+      })), (0, UG.l)(yG.U, (GG => {
+        const bG = (0, kG.f)(yG.U, GG);
+        if (!(0, kG.d)(bG)) return;
+        const ZG = bG;
+        pG(ZG.cG) && wG.e.remove(ZG.lG)
+      })), (0, UG.f)((() => {
+        wG.e.clear()
       })))
     }
 
-    function Nu(uu, Eu) {
-      su.c.update(uu, Eu), fu.forEach((Eu => {
-        Eu(uu)
+    function QG(GG, bG) {
+      wG.e.update(GG, bG), YG.forEach((bG => {
+        bG(GG)
       }))
     }
-    const Ou = {
+    const KG = {
       localEffectUpdated: {
-        watch: uu => fu.add(uu)
+        watch: GG => YG.add(GG)
       }
     }
   },
-  41235: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Cu
+  41413: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => VG
     });
-    var su = ju(4976),
-      Uu = ju(4970),
-      Zu = ju(40877),
-      Xu = ju(40889);
-    const lu = new Set(su.O),
-      qu = su.O.map((uu => (new TextEncoder).encode(uu))),
-      fu = new Map;
+    var wG = ZG(4818),
+      SG = ZG(4810),
+      LG = ZG(40999),
+      yG = ZG(41012);
+    const kG = new Set(wG.Q),
+      UG = wG.Q.map((GG => (new TextEncoder).encode(GG))),
+      YG = new Map;
 
-    function Cu(uu, Eu) {
-      var ju;
-      return null === (ju = fu.get(uu)) || void 0 === ju ? void 0 : ju[Eu]
-    }(0, Xu.n)(su.mc.NewOtherEntitySettings, (uu => {
-      uu.payloadKind === Uu.ic.Msgpack && qu.some((Eu => function(uu, Eu) {
-        const ju = Eu[0];
-        for (let su = uu.indexOf(ju); - 1 !== su && su + Eu.length <= uu.length; su = uu.indexOf(ju, su + 1)) {
-          let ju = 1;
-          for (; ju < Eu.length && uu[su + ju] === Eu[ju];) ju++;
-          if (ju === Eu.length) return !0
+    function VG(GG, bG) {
+      var ZG;
+      return null === (ZG = YG.get(GG)) || void 0 === ZG ? void 0 : ZG[bG]
+    }(0, yG.l)(wG.jc.NewOtherEntitySettings, (GG => {
+      GG.payloadKind === SG.jc.Msgpack && UG.some((bG => function(GG, bG) {
+        const ZG = bG[0];
+        for (let wG = GG.indexOf(ZG); - 1 !== wG && wG + bG.length <= GG.length; wG = GG.indexOf(ZG, wG + 1)) {
+          let ZG = 1;
+          for (; ZG < bG.length && GG[wG + ZG] === bG[ZG];) ZG++;
+          if (ZG === bG.length) return !0
         }
         return !1
-      }(uu.payload, Eu))) && function(uu) {
-        if (null === uu || "object" !== typeof uu || null === uu.settings || "object" !== typeof uu.settings) return;
-        const Eu = String(uu.eId),
-          ju = uu.settings;
-        let su = fu.get(Eu);
-        for (const Uu in ju) {
-          if (!lu.has(Uu)) continue;
-          const uu = ju[Uu];
-          null === uu || void 0 === uu ? su && delete su[Uu] : (su ??= {}, su[Uu] = uu)
+      }(GG.payload, bG))) && function(GG) {
+        if (null === GG || "object" !== typeof GG || null === GG.settings || "object" !== typeof GG.settings) return;
+        const bG = String(GG.eId),
+          ZG = GG.settings;
+        let wG = YG.get(bG);
+        for (const SG in ZG) {
+          if (!kG.has(SG)) continue;
+          const GG = ZG[SG];
+          null === GG || void 0 === GG ? wG && delete wG[SG] : (wG ??= {}, wG[SG] = GG)
         }
-        su && fu.set(Eu, su)
-      }((0, Zu.d)(uu.payload))
-    })), (0, Xu.i)((() => {
-      fu.clear()
+        wG && YG.set(bG, wG)
+      }((0, LG.e)(GG.payload))
+    })), (0, yG.f)((() => {
+      YG.clear()
     }))
   },
-  41223: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Nu,
-      f: () => fu,
-      h: () => bu
+  41404: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => QG,
+      f: () => YG,
+      g: () => pG
     });
-    var su = ju(39312),
-      Uu = ju(1995),
-      Zu = ju(1345),
-      Xu = ju(40864),
-      lu = ju(40873),
-      qu = ju(40889);
-    const fu = new su.c;
-    let Cu = {};
+    var wG = ZG(39396),
+      SG = ZG(1903),
+      LG = ZG(1257),
+      yG = ZG(40989),
+      kG = ZG(40993),
+      UG = ZG(41012);
+    const YG = new wG.c;
+    let VG = {};
 
-    function bu(uu) {
-      return Cu[uu]
+    function pG(GG) {
+      return VG[GG]
     }
-    const cu = new Zu.d;
+    const fG = new LG.c;
 
-    function Nu(uu) {
-      return cu.add(uu)
+    function QG(GG) {
+      return fG.add(GG)
     }
 
-    function Ou(uu) {
-      cu.callEach(uu, "a roster listener")
-    }(0, qu.n)(Xu.db, (uu => {
-      const Eu = (0, lu.g)(Xu.db, uu);
-      if (void 0 === Eu) return;
-      const ju = Eu.Su.some((uu => {
+    function KG(GG) {
+      fG.callEach(GG, "a roster listener")
+    }(0, UG.l)(yG.$, (GG => {
+      const bG = (0, kG.f)(yG.$, GG);
+      if (void 0 === bG) return;
+      const ZG = bG.PG.some((GG => {
           let {
-            Iu: Eu,
-            Fu: ju
-          } = uu;
-          return null !== ju && fu.has(Eu) && fu.getName(Eu) !== ju
+            MG: bG,
+            AG: ZG
+          } = GG;
+          return null !== ZG && YG.has(bG) && YG.getName(bG) !== ZG
         })),
         {
-          added: su,
-          removed: Zu,
-          settingChanges: qu
-        } = fu.apply(Eu),
-        Cu = new Set;
-      for (const Uu of qu)
-        for (const uu in Uu.settings) Cu.add(uu);
-      const bu = ju || su.length > 0 || Zu.length > 0;
-      (bu || Cu.has("hideNameSeed")) && function() {
-        const uu = new Map;
-        for (const Eu of fu.ids()) {
-          const ju = fu.getName(Eu),
-            su = fu.getSetting(Eu, "hideNameSeed");
-          void 0 !== ju && void 0 !== su && null !== su && uu.set(ju, su)
+          added: wG,
+          removed: LG,
+          settingChanges: UG
+        } = YG.apply(bG),
+        VG = new Set;
+      for (const SG of UG)
+        for (const GG in SG.settings) VG.add(GG);
+      const pG = ZG || wG.length > 0 || LG.length > 0;
+      (pG || VG.has("hideNameSeed")) && function() {
+        const GG = new Map;
+        for (const bG of YG.ids()) {
+          const ZG = YG.getName(bG),
+            wG = YG.getSetting(bG, "hideNameSeed");
+          void 0 !== ZG && void 0 !== wG && null !== wG && GG.set(ZG, wG)
         }
-        Uu.e.replaceAll(uu)
-      }(), Ou({
+        SG.b.replaceAll(GG)
+      }(), KG({
         kind: "roster",
-        members: bu,
-        settings: Cu
+        members: pG,
+        settings: VG
       })
-    })), (0, qu.n)(Xu.R, (uu => {
-      const Eu = (0, lu.g)(Xu.R, uu);
-      if (void 0 !== Eu) {
+    })), (0, UG.l)(yG.T, (GG => {
+      const bG = (0, kG.f)(yG.T, GG);
+      if (void 0 !== bG) {
         for (const {
-            QZ: uu,
-            iZ: ju,
-            WZ: su
+            IL: GG,
+            FL: ZG,
+            vL: wG
           }
-          of Eu) Cu[uu] = {
-          ...Cu[uu],
-          [ju]: su
+          of bG) VG[GG] = {
+          ...VG[GG],
+          [ZG]: wG
         };
-        Ou({
+        KG({
           kind: "cosmetics",
-          updates: Eu
+          updates: bG
         })
       }
-    })), (0, qu.i)((() => {
-      fu.clear(), Cu = {}, Uu.e.clear(), Ou({
+    })), (0, UG.f)((() => {
+      YG.clear(), VG = {}, SG.b.clear(), KG({
         kind: "reset"
       })
-    })), (0, qu.k)((() => {
-      fu.clear(), Ou({
+    })), (0, UG.j)((() => {
+      YG.clear(), KG({
         kind: "reset"
       })
     }))
   },
-  41242: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Pu,
-      f: () => hu,
-      j: () => vu,
-      l: () => Ku
+  41421: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => mG,
+      d: () => dG,
+      g: () => aG,
+      i: () => cG
     });
-    var su = ju(1320),
-      Uu = ju(636),
-      Zu = ju(91),
-      Xu = ju(4976),
-      lu = ju(40833),
-      qu = ju(40860),
-      fu = ju(40847),
-      Cu = ju(41235),
-      bu = ju(41223),
-      cu = ju(40873),
-      Nu = ju(40889);
+    var wG = ZG(1230),
+      SG = ZG(589),
+      LG = ZG(80),
+      yG = ZG(4818),
+      kG = ZG(40954),
+      UG = ZG(40986),
+      YG = ZG(40971),
+      VG = ZG(41413),
+      pG = ZG(41404),
+      fG = ZG(40993),
+      QG = ZG(41012);
 
-    function Ou(uu) {
+    function KG(GG) {
       let {
-        deadEId: Eu,
-        killerEId: ju,
-        killerLifeformType: su,
-        withItem: Uu,
-        killstreak: Zu
-      } = uu;
+        deadEId: bG,
+        killerEId: ZG,
+        killerLifeformType: wG,
+        withItem: SG,
+        killstreak: LG
+      } = GG;
       return {
-        killer: eu({
-          eId: ju,
-          lifeformType: su
+        killer: EG({
+          eId: ZG,
+          lifeformType: wG
         }),
-        victim: eu({
-          eId: Eu
+        victim: EG({
+          eId: bG
         }),
-        withItem: Uu,
-        killstreak: Zu
+        withItem: SG,
+        killstreak: LG
       }
     }
 
-    function Yu(uu) {
+    function hG(GG) {
       let {
-        killer: Eu,
-        victim: ju,
-        withItem: su
-      } = uu;
+        killer: bG,
+        victim: ZG,
+        withItem: wG
+      } = GG;
       return {
-        killer: eu(Eu),
-        victim: eu(ju),
-        withItem: su,
+        killer: EG(bG),
+        victim: EG(ZG),
+        withItem: wG,
         killstreak: 0
       }
     }
 
-    function hu(uu) {
-      Ju && au((() => "killed" === uu.kind ? Ou(uu.body) : Yu(uu.body)))
+    function dG(GG) {
+      iG && WG((() => "killed" === GG.kind ? KG(GG.body) : hG(GG.body)))
     }
-    const Du = "#2727f1",
-      gu = "#912c2c";
+    const JG = "#2727f1",
+      rG = "#912c2c";
 
-    function Mu(uu, Eu) {
-      var ju;
-      return bu.f.has(uu) ? null === (ju = bu.f.getSettings(uu)) || void 0 === ju ? void 0 : ju[Eu] : (0, Cu.c)(uu, Eu)
+    function zG(GG, bG) {
+      var ZG;
+      return pG.f.has(GG) ? null === (ZG = pG.f.getSettings(GG)) || void 0 === ZG ? void 0 : ZG[bG] : (0, VG.b)(GG, bG)
     }
 
-    function eu(uu) {
-      var Eu, ju, Xu, lu, Cu;
+    function EG(GG) {
+      var bG, ZG, yG, kG, VG;
       let {
-        eId: cu,
-        name: Nu,
-        colour: Ou,
-        lifeformType: Yu
-      } = uu;
-      if (void 0 === cu || null === cu || "" === cu) {
-        const uu = Nu || null;
+        eId: fG,
+        name: QG,
+        colour: KG,
+        lifeformType: hG
+      } = GG;
+      if (void 0 === fG || null === fG || "" === fG) {
+        const GG = QG || null;
         return {
           id: null,
-          shownName: uu,
-          lifeformType: null === uu && null !== Yu && void 0 !== Yu ? Yu : null,
-          colour: Ou || null,
+          shownName: GG,
+          lifeformType: null === GG && null !== hG && void 0 !== hG ? hG : null,
+          colour: KG || null,
           local: !1,
           realName: null
         }
       }
-      const hu = String(cu),
-        eu = null === (Eu = (0, fu.l)()) || void 0 === Eu ? void 0 : Eu.api,
-        Gu = void 0 !== eu && String(eu.localId) === hu,
-        pu = null !== (ju = bu.f.getName(hu)) && void 0 !== ju ? ju : null,
-        wu = null !== (Xu = Mu(hu, "hideNameSeed")) && void 0 !== Xu ? Xu : null;
-      let Ju = null === pu ? null : (0, su.e)(pu, !Zu.featureFlags.canSeeRealPlayerNames, wu) || null,
-        du = null;
-      if (null === Ju && void 0 !== eu) {
-        const uu = eu.getEntityType(hu);
-        "Player" !== uu && (Ju = (0, qu.h)(eu, +hu) || null), du = Uu.n.includes(uu) ? uu : null
+      const dG = String(fG),
+        EG = null === (bG = (0, YG.f)()) || void 0 === bG ? void 0 : bG.api,
+        oG = void 0 !== EG && String(EG.localId) === dG,
+        XG = null !== (ZG = pG.f.getName(dG)) && void 0 !== ZG ? ZG : null,
+        uG = null !== (yG = zG(dG, "hideNameSeed")) && void 0 !== yG ? yG : null;
+      let iG = null === XG ? null : (0, wG.b)(XG, !LG.featureFlags.canSeeRealPlayerNames, uG) || null,
+        CG = null;
+      if (null === iG && void 0 !== EG) {
+        const GG = EG.getEntityType(dG);
+        "Player" !== GG && (iG = (0, UG.i)(EG, +dG) || null), CG = SG.m.includes(GG) ? GG : null
       }
       return {
-        id: hu,
-        shownName: Ju,
-        lifeformType: null === Ju && null !== (lu = null !== (Cu = du) && void 0 !== Cu ? Cu : Yu) && void 0 !== lu ? lu : null,
-        colour: Ou || Mu(hu, "killfeedColour") || (Gu ? Du : gu),
-        local: Gu,
-        realName: pu
+        id: dG,
+        shownName: iG,
+        lifeformType: null === iG && null !== (kG = null !== (VG = CG) && void 0 !== VG ? VG : hG) && void 0 !== kG ? kG : null,
+        colour: KG || zG(dG, "killfeedColour") || (oG ? JG : rG),
+        local: oG,
+        realName: XG
       }
     }
-    const Gu = 32;
-    let pu = [],
-      wu = null,
-      Ju = !1,
-      du = !1;
+    const oG = 32;
+    let XG = [],
+      uG = null,
+      iG = !1,
+      CG = !1;
 
-    function au(uu) {
-      null === wu ? (pu.length === Gu && pu.shift(), pu.push(uu)) : wu(uu())
+    function WG(GG) {
+      null === uG ? (XG.length === oG && XG.shift(), XG.push(GG)) : uG(GG())
     }
 
-    function Pu() {
-      du || (du = !0, (0, Nu.n)(Xu.mc.PlayerKilled, (uu => {
-        const Eu = (0, cu.i)(uu);
-        (0, cu.e)(Eu) && au((() => Ou(Eu)))
-      })), (0, Nu.n)(Xu.mc.CustomKillfeed, (uu => {
-        const Eu = (0, cu.i)(uu);
-        (0, cu.e)(Eu) && (0, cu.e)(Eu.killer) && (0, cu.e)(Eu.victim) && au((() => Yu(Eu)))
-      })), (0, Nu.i)((() => {
-        pu = []
+    function mG() {
+      CG || (CG = !0, (0, QG.l)(yG.jc.PlayerKilled, (GG => {
+        const bG = (0, fG.j)(GG);
+        (0, fG.d)(bG) && WG((() => KG(bG)))
+      })), (0, QG.l)(yG.jc.CustomKillfeed, (GG => {
+        const bG = (0, fG.j)(GG);
+        (0, fG.d)(bG) && (0, fG.d)(bG.killer) && (0, fG.d)(bG.victim) && WG((() => hG(bG)))
+      })), (0, QG.f)((() => {
+        XG = []
       })))
     }
-    const ou = Object.freeze([0, 0, 0]),
-      ku = [0, 0, 0],
-      mu = [0, 0, 0],
-      vu = {
+    const IG = Object.freeze([0, 0, 0]),
+      FG = [0, 0, 0],
+      vG = [0, 0, 0],
+      aG = {
         kill: {
-          watch(uu) {
-            if (Ju = !0, 0 === pu.length) return wu = uu, () => {
-              Ju = !1, wu = null
+          watch(GG) {
+            if (iG = !0, 0 === XG.length) return uG = GG, () => {
+              iG = !1, uG = null
             };
-            const Eu = setTimeout((() => {
-              const Eu = pu;
-              pu = [], wu = uu;
-              for (const su of Eu) try {
-                uu(su())
-              } catch (ju) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", ju)
+            const bG = setTimeout((() => {
+              const bG = XG;
+              XG = [], uG = GG;
+              for (const wG of bG) try {
+                GG(wG())
+              } catch (ZG) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", ZG)
               }
             }), 0);
             return () => {
-              clearTimeout(Eu), Ju = !1, wu = null
+              clearTimeout(bG), iG = !1, uG = null
             }
           }
         }
       },
-      Ku = {
+      cG = {
         localPos() {
-          const uu = (0, fu.l)();
-          if (null === uu) return ou;
-          const Eu = uu.api.apiView;
-          for (let ju = 0; ju < 3; ju++) ku[ju] = lu.u.localPos(Eu, 0, ju);
-          return ku
+          const GG = (0, YG.f)();
+          if (null === GG) return IG;
+          const bG = GG.api.apiView;
+          for (let ZG = 0; ZG < 3; ZG++) FG[ZG] = kG.v.localPos(bG, 0, ZG);
+          return FG
         },
         targetedBlockPos() {
-          const uu = (0, fu.l)();
-          if (null === uu || lu.u.targetBlockId(uu.api.apiView, 0) === lu.Tc) return null;
-          for (let Eu = 0; Eu < 3; Eu++) mu[Eu] = lu.u.targetBlock(uu.api.apiView, 0, Eu);
-          return mu
+          const GG = (0, YG.f)();
+          if (null === GG || kG.v.targetBlockId(GG.api.apiView, 0) === kG.Yc) return null;
+          for (let bG = 0; bG < 3; bG++) vG[bG] = kG.v.targetBlock(GG.api.apiView, 0, bG);
+          return vG
         }
       }
   },
-  39312: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => su
+  39396: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => wG
     });
-    class su {
+    class wG {
       constructor() {
         this.members = new Map
       }
-      apply(uu) {
-        const Eu = {
+      apply(GG) {
+        const bG = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const su of uu.Su) {
-          let uu = this.members.get(su.Iu);
-          if (uu || (uu = {
+        for (const wG of GG.PG) {
+          let GG = this.members.get(wG.MG);
+          if (GG || (GG = {
               name: null,
               settings: {}
-            }, this.members.set(su.Iu, uu), Eu.added.push(su.Iu)), null !== su.Fu && (uu.name = su.Fu), null !== su.Bu || su.Lu.length > 0) {
-            const ju = null === su.Bu ? {} : JSON.parse(su.Bu);
-            Object.assign(uu.settings, ju);
-            for (const Eu of su.Lu) delete uu.settings[Eu], ju[Eu] = void 0;
-            Eu.settingChanges.push({
-              playerId: su.Iu,
-              settings: ju
+            }, this.members.set(wG.MG, GG), bG.added.push(wG.MG)), null !== wG.AG && (GG.name = wG.AG), null !== wG.sG || wG.qG.length > 0) {
+            const ZG = null === wG.sG ? {} : JSON.parse(wG.sG);
+            Object.assign(GG.settings, ZG);
+            for (const bG of wG.qG) delete GG.settings[bG], ZG[bG] = void 0;
+            bG.settingChanges.push({
+              playerId: wG.MG,
+              settings: ZG
             })
           }
         }
-        for (const su of uu.tu) {
-          const uu = this.members.get(su);
-          var ju;
-          if (uu) this.members.delete(su), Eu.removed.push({
-            playerId: su,
-            name: null !== (ju = uu.name) && void 0 !== ju ? ju : void 0
+        for (const wG of GG.nG) {
+          const GG = this.members.get(wG);
+          var ZG;
+          if (GG) this.members.delete(wG), bG.removed.push({
+            playerId: wG,
+            name: null !== (ZG = GG.name) && void 0 !== ZG ? ZG : void 0
           })
         }
-        return Eu
+        return bG
       }
-      has(uu) {
-        return this.members.has(uu)
+      has(GG) {
+        return this.members.has(GG)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(uu) {
-        var Eu, ju;
-        return null !== (Eu = null === (ju = this.members.get(uu)) || void 0 === ju ? void 0 : ju.name) && void 0 !== Eu ? Eu : void 0
+      getName(GG) {
+        var bG, ZG;
+        return null !== (bG = null === (ZG = this.members.get(GG)) || void 0 === ZG ? void 0 : ZG.name) && void 0 !== bG ? bG : void 0
       }
-      getSettings(uu) {
-        var Eu;
-        return null === (Eu = this.members.get(uu)) || void 0 === Eu ? void 0 : Eu.settings
+      getSettings(GG) {
+        var bG;
+        return null === (bG = this.members.get(GG)) || void 0 === bG ? void 0 : bG.settings
       }
-      getSetting(uu, Eu) {
-        var ju;
-        return null === (ju = this.members.get(uu)) || void 0 === ju ? void 0 : ju.settings[Eu]
+      getSetting(GG, bG) {
+        var ZG;
+        return null === (ZG = this.members.get(GG)) || void 0 === ZG ? void 0 : ZG.settings[bG]
       }
       clear() {
         this.members.clear()
@@ -505,4 +505,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

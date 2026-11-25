@@ -1,36 +1,36 @@
 export const id = 190;
 export const ids = [190];
 export const modules = {
-  40746: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      FORMER_BLOCK_IMAGE_NAMES: () => su.d,
-      textureAnimationData: () => Uu.s,
-      textureNameToIndex: () => Uu.u
+  40868: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      FORMER_BLOCK_IMAGE_NAMES: () => wG.d,
+      textureAnimationData: () => SG.y,
+      textureNameToIndex: () => SG.B
     });
-    var su = ju(39067),
-      Uu = ju(9409)
+    var wG = ZG(39130),
+      SG = ZG(9249)
   },
-  9505: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Uu,
-      g: () => Zu
+  9356: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => SG,
+      f: () => LG
     });
-    var su = ju(9456);
-    const Uu = "Air",
-      Zu = Object.freeze(new su.h(Uu, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var wG = ZG(9303);
+    const SG = "Air",
+      LG = Object.freeze(new wG.h(SG, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  39067: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => su,
-      h: () => Uu
+  39130: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => wG,
+      e: () => SG
     });
-    const su = new Map(["graphite", "football", "torch", "torch_blue", "torch_cyan", "torch_green", "torch_orange", "torch_purple", "torch_red"].map((uu => [uu, `${uu}_block`])));
+    const wG = new Map(["graphite", "football", "torch", "torch_blue", "torch_cyan", "torch_green", "torch_orange", "torch_purple", "torch_red"].map((GG => [GG, `${GG}_block`])));
 
-    function Uu(uu) {
-      var Eu;
-      return null !== (Eu = su.get(uu)) && void 0 !== Eu ? Eu : uu
+    function SG(GG) {
+      var bG;
+      return null !== (bG = wG.get(GG)) && void 0 !== bG ? bG : GG
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);

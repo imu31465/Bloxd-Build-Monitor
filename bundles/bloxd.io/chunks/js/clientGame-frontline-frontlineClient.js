@@ -1,128 +1,128 @@
 export const id = 17;
 export const ids = [17];
 export const modules = {
-  36990: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Nu,
-      h: () => Ou,
-      k: () => cu,
-      n: () => bu
+  36946: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => QG,
+      d: () => KG,
+      g: () => fG,
+      j: () => pG
     });
-    var su = ju(34547),
-      Uu = ju(36992),
-      Zu = ju(36998),
-      Xu = ju(8942),
-      lu = ju(1499),
-      qu = ju(58),
-      fu = ju(65),
-      Cu = ju(1154);
+    var wG = ZG(34472),
+      SG = ZG(36951),
+      LG = ZG(36955),
+      yG = ZG(8759),
+      kG = ZG(1389),
+      UG = ZG(51),
+      YG = ZG(59),
+      VG = ZG(1067);
 
-    function bu() {
-      var uu;
-      return (0, lu.g)(Uu.c, (0, Uu.l)()), (0, Cu.jsx)(Cu.Fragment, {
-        children: null === (uu = (0, Uu.l)()) || void 0 === uu ? void 0 : uu.content
+    function pG() {
+      var GG;
+      return (0, kG.j)(SG.c, (0, SG.l)()), (0, VG.jsx)(VG.Fragment, {
+        children: null === (GG = (0, SG.l)()) || void 0 === GG ? void 0 : GG.content
       })
     }
 
-    function cu(uu) {
-      var Eu;
+    function fG(GG) {
+      var bG;
       let {
-        show: ju
-      } = uu;
-      (0, lu.g)(Uu.c, (0, Uu.l)());
-      const fu = null === (Eu = (0, Uu.l)()) || void 0 === Eu ? void 0 : Eu.menu;
-      return (0, qu.useEffect)((() => {
-        var uu;
-        ju || (null === fu || void 0 === fu || null === (uu = fu.onClose) || void 0 === uu || uu.call(fu), (0, Zu.q)())
-      }), [ju, fu]), (0, qu.useEffect)((() => ju ? (0, Xu.f)(Zu.x, Zu.h) : void 0), [ju]), (0, Cu.jsx)(su.b, {
-        showing: ju,
+        show: ZG
+      } = GG;
+      (0, kG.j)(SG.c, (0, SG.l)());
+      const YG = null === (bG = (0, SG.l)()) || void 0 === bG ? void 0 : bG.menu;
+      return (0, UG.useEffect)((() => {
+        var GG;
+        ZG || (null === YG || void 0 === YG || null === (GG = YG.onClose) || void 0 === GG || GG.call(YG), (0, LG.m)())
+      }), [ZG, YG]), (0, UG.useEffect)((() => ZG ? (0, yG.g)(LG.t, LG.f) : void 0), [ZG]), (0, VG.jsx)(wG.b, {
+        showing: ZG,
         globallyUniqueKey: "clientGameMenu",
-        children: null === fu || void 0 === fu ? void 0 : fu.content
+        children: null === YG || void 0 === YG ? void 0 : YG.content
       })
     }
 
-    function Nu(uu) {
+    function QG(GG) {
       let {
-        placement: Eu = "bottom"
-      } = uu;
-      return (0, Cu.jsx)("div", {
-        id: `clientGameHud-${Eu}`,
+        placement: bG = "bottom"
+      } = GG;
+      return (0, VG.jsx)("div", {
+        id: `clientGameHud-${bG}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function Ou(uu) {
+    function KG(GG) {
       let {
-        children: Eu,
-        placement: ju = "bottom"
-      } = uu;
-      const [su, Uu] = (0, qu.useState)(null);
-      return (0, qu.useEffect)((() => {
-        Uu(document.getElementById(`clientGameHud-${ju}`))
-      }), [ju]), su ? (0, fu.createPortal)(Eu, su) : null
+        children: bG,
+        placement: ZG = "bottom"
+      } = GG;
+      const [wG, SG] = (0, UG.useState)(null);
+      return (0, UG.useEffect)((() => {
+        SG(document.getElementById(`clientGameHud-${ZG}`))
+      }), [ZG]), wG ? (0, YG.createPortal)(bG, wG) : null
     }
   },
-  34547: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      b: () => Zu
+  34472: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => LG
     });
-    var su = ju(4723),
-      Uu = ju(4726);
+    var wG = ZG(4558),
+      SG = ZG(4561);
 
-    function Zu(uu) {
+    function LG(GG) {
       let {
-        children: Eu,
-        showing: ju,
-        globallyUniqueKey: Zu,
-        alwaysMountChildren: Xu = !1,
-        doGameplayStartStopOnShow: lu = !0,
-        keepsMovement: qu = !1
-      } = uu;
-      return (0, Uu.e)(!0, ju, Zu, qu), (0, su.e)(lu, ju), ju || Xu ? Eu : null
+        children: bG,
+        showing: ZG,
+        globallyUniqueKey: LG,
+        alwaysMountChildren: yG = !1,
+        doGameplayStartStopOnShow: kG = !0,
+        keepsMovement: UG = !1
+      } = GG;
+      return (0, SG.e)(!0, ZG, LG, UG), (0, wG.d)(kG, ZG), ZG || yG ? bG : null
     }
   },
-  37075: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => Zu,
-      f: () => Xu,
-      i: () => lu,
-      l: () => qu
+  37039: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => LG,
+      e: () => yG,
+      f: () => kG,
+      i: () => UG
     });
-    var su = ju(58),
-      Uu = ju(3285);
-    const Zu = 8,
-      Xu = "InGameHeaderContainer",
-      lu = "TopRightElements";
+    var wG = ZG(51),
+      SG = ZG(3100);
+    const LG = 8,
+      yG = "InGameHeaderContainer",
+      kG = "TopRightElements";
 
-    function qu(uu) {
-      const [Eu] = (0, Uu.d)(), [ju, qu] = (0, su.useState)(!1);
-      return (0, su.useLayoutEffect)((() => {
-        if (!uu) return;
-        const Eu = document.querySelector(`.${Xu}`),
-          ju = document.querySelector(`.${lu}`),
-          su = () => {
-            const su = uu.getBoundingClientRect(),
-              Uu = Eu ? Eu.getBoundingClientRect().right : 0,
-              Xu = ju ? ju.getBoundingClientRect().left : window.innerWidth,
-              lu = su.left < Uu + Zu,
-              fu = su.right > Xu - Zu;
-            qu(lu || fu)
+    function UG(GG) {
+      const [bG] = (0, SG.b)(), [ZG, UG] = (0, wG.useState)(!1);
+      return (0, wG.useLayoutEffect)((() => {
+        if (!GG) return;
+        const bG = document.querySelector(`.${yG}`),
+          ZG = document.querySelector(`.${kG}`),
+          wG = () => {
+            const wG = GG.getBoundingClientRect(),
+              SG = bG ? bG.getBoundingClientRect().right : 0,
+              yG = ZG ? ZG.getBoundingClientRect().left : window.innerWidth,
+              kG = wG.left < SG + LG,
+              YG = wG.right > yG - LG;
+            UG(kG || YG)
           };
-        su();
-        const Uu = new ResizeObserver(su);
-        return Uu.observe(uu), Eu && Uu.observe(Eu), ju && Uu.observe(ju), () => {
-          Uu.disconnect()
+        wG();
+        const SG = new ResizeObserver(wG);
+        return SG.observe(GG), bG && SG.observe(bG), ZG && SG.observe(ZG), () => {
+          SG.disconnect()
         }
-      }), [uu, Eu]), ju
+      }), [GG, bG]), ZG
     }
   },
-  37066: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Uu
+  37035: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => SG
     });
-    const su = [{
+    const wG = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -139,214 +139,214 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function Uu(uu, Eu, ju) {
-      const Uu = Math.abs(uu - Eu),
-        Zu = Date.now() - ju;
-      for (const Xu of su)
-        if (uu < Xu.maxDist) return Uu >= Xu.hardUpdateDist || Zu > Xu.timeBetweenSoftChecks && Uu >= Xu.softUpdateDist;
+    function SG(GG, bG, ZG) {
+      const SG = Math.abs(GG - bG),
+        LG = Date.now() - ZG;
+      for (const yG of wG)
+        if (GG < yG.maxDist) return SG >= yG.hardUpdateDist || LG > yG.timeBetweenSoftChecks && SG >= yG.softUpdateDist;
       return !1
     }
   },
-  8942: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Zu,
-      f: () => Uu
+  8759: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => LG,
+      g: () => SG
     });
-    let su = null;
-    const Uu = function(uu) {
-        const Eu = {
-          cycle: uu,
+    let wG = null;
+    const SG = function(GG) {
+        const bG = {
+          cycle: GG,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return su = Eu, () => {
-          su === Eu && (su = null)
+        return wG = bG, () => {
+          wG === bG && (wG = null)
         }
       },
-      Zu = () => {
-        var uu;
-        return null !== (uu = su) && void 0 !== uu && uu.canCycle() ? su.cycle : null
+      LG = () => {
+        var GG;
+        return null !== (GG = wG) && void 0 !== GG && GG.canCycle() ? wG.cycle : null
       }
   },
-  38857: (uu, Eu, ju) => {
-    function su(uu, Eu, ju) {
-      var su;
+  38957: (GG, bG, ZG) => {
+    function wG(GG, bG, ZG) {
+      var wG;
       const {
-        width: Uu,
-        height: Zu
-      } = ju, Xu = null !== (su = uu.text) && void 0 !== su ? su : uu, lu = (Xu.x / 100 - .5) * Uu, qu = (Xu.y / 100 - .5) * Zu, fu = Uu / 2 - Eu.x;
-      if (null !== uu.text && Math.abs(lu) <= fu && qu >= Eu.top - Zu / 2 && qu <= Zu / 2 - Eu.bottom) return {
-        x: Xu.x,
-        y: Xu.y
+        width: SG,
+        height: LG
+      } = ZG, yG = null !== (wG = GG.text) && void 0 !== wG ? wG : GG, kG = (yG.x / 100 - .5) * SG, UG = (yG.y / 100 - .5) * LG, YG = SG / 2 - bG.x;
+      if (null !== GG.text && Math.abs(kG) <= YG && UG >= bG.top - LG / 2 && UG <= LG / 2 - bG.bottom) return {
+        x: yG.x,
+        y: yG.y
       };
-      const Cu = Math.min(0 === lu ? 1 / 0 : fu / Math.abs(lu), qu > 0 ? (Zu / 2 - Eu.bottom) / qu : qu < 0 ? (Eu.top - Zu / 2) / qu : 1 / 0);
-      return !Number.isFinite(Cu) || Cu < 0 ? {
+      const VG = Math.min(0 === kG ? 1 / 0 : YG / Math.abs(kG), UG > 0 ? (LG / 2 - bG.bottom) / UG : UG < 0 ? (bG.top - LG / 2) / UG : 1 / 0);
+      return !Number.isFinite(VG) || VG < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + lu * Cu / Uu * 100,
-        y: 50 + qu * Cu / Zu * 100
+        x: 50 + kG * VG / SG * 100,
+        y: 50 + UG * VG / LG * 100
       }
     }
-    ju.d(Eu, {
-      d: () => su
+    ZG.d(bG, {
+      c: () => wG
     })
   },
-  36998: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Zu,
-      h: () => Yu,
-      j: () => hu,
-      k: () => lu,
-      o: () => cu,
-      q: () => Du,
-      r: () => bu,
-      t: () => Mu,
-      x: () => Ou,
-      y: () => gu
+  36955: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      b: () => LG,
+      f: () => hG,
+      h: () => dG,
+      j: () => kG,
+      k: () => fG,
+      m: () => JG,
+      p: () => pG,
+      r: () => zG,
+      t: () => KG,
+      x: () => rG
     });
-    var su = ju(22),
-      Uu = ju(24);
-    const Zu = "clientGameInventoryButtonsChanged",
-      Xu = new Map;
+    var wG = ZG(17),
+      SG = ZG(19);
+    const LG = "clientGameInventoryButtonsChanged",
+      yG = new Map;
 
-    function lu() {
-      return [...Xu.values()].sort(((uu, Eu) => {
-        var ju, su;
-        return (null !== (ju = uu.order) && void 0 !== ju ? ju : 0) - (null !== (su = Eu.order) && void 0 !== su ? su : 0)
+    function kG() {
+      return [...yG.values()].sort(((GG, bG) => {
+        var ZG, wG;
+        return (null !== (ZG = GG.order) && void 0 !== ZG ? ZG : 0) - (null !== (wG = bG.order) && void 0 !== wG ? wG : 0)
       }))
     }
-    let qu = null;
+    let UG = null;
 
-    function fu(uu) {
-      qu = uu
+    function YG(GG) {
+      UG = GG
     }
-    let Cu = !1;
+    let VG = !1;
 
-    function bu(uu) {
-      Cu = !0;
+    function pG(GG) {
+      VG = !0;
       try {
-        uu.onClick()
+        GG.onClick()
       } finally {
-        Cu = !1
+        VG = !1
       }
-      uu.panel && "clientGame" === su.d.get("openInGameMenuName") && fu(uu.id)
+      GG.panel && "clientGame" === wG.e.get("openInGameMenuName") && YG(GG.id)
     }
 
-    function cu() {
-      return Cu
+    function fG() {
+      return VG
     }
 
-    function Nu() {
-      return lu().filter((uu => uu.panel && !uu.disabled))
+    function QG() {
+      return kG().filter((GG => GG.panel && !GG.disabled))
     }
 
-    function Ou(uu) {
-      const Eu = Nu(),
-        ju = Eu.findIndex((uu => uu.id === qu));
-      return !(ju < 0 || Eu.length < 2) && (bu(Eu[(ju + uu + Eu.length) % Eu.length]), !0)
+    function KG(GG) {
+      const bG = QG(),
+        ZG = bG.findIndex((GG => GG.id === UG));
+      return !(ZG < 0 || bG.length < 2) && (pG(bG[(ZG + GG + bG.length) % bG.length]), !0)
     }
 
-    function Yu() {
-      return null !== qu && Nu().length > 1
+    function hG() {
+      return null !== UG && QG().length > 1
     }
 
-    function hu() {
-      fu(null)
+    function dG() {
+      YG(null)
     }
 
-    function Du() {
-      "inventory" !== su.d.get("openInGameMenuName") && fu(null)
+    function JG() {
+      "inventory" !== wG.e.get("openInGameMenuName") && YG(null)
     }
 
-    function gu() {
-      const uu = qu;
-      return fu(null), uu
+    function rG() {
+      const GG = UG;
+      return YG(null), GG
     }
 
-    function Mu(uu) {
-      return Xu.set(uu.id, uu), Uu.h.TY(Zu, lu(), !0), () => {
-        Xu.get(uu.id) === uu && (Xu.delete(uu.id), Uu.h.TY(Zu, lu()))
+    function zG(GG) {
+      return yG.set(GG.id, GG), SG.l.xh(LG, kG(), !0), () => {
+        yG.get(GG.id) === GG && (yG.delete(GG.id), SG.l.xh(LG, kG()))
       }
     }
   },
-  36992: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => lu,
-      e: () => hu,
-      g: () => Du,
-      k: () => cu,
-      l: () => fu,
-      m: () => Yu,
-      n: () => Nu,
-      o: () => Cu
+  36951: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      c: () => kG,
+      f: () => dG,
+      i: () => JG,
+      j: () => fG,
+      l: () => YG,
+      m: () => hG,
+      n: () => QG,
+      q: () => VG
     });
-    var su = ju(22),
-      Uu = ju(24),
-      Zu = ju(1343),
-      Xu = ju(36998);
-    const lu = "clientGameUiChanged";
-    let qu = null;
+    var wG = ZG(17),
+      SG = ZG(19),
+      LG = ZG(1251),
+      yG = ZG(36955);
+    const kG = "clientGameUiChanged";
+    let UG = null;
 
-    function fu() {
-      return qu
+    function YG() {
+      return UG
     }
 
-    function Cu(uu, Eu) {
-      const ju = {
-        content: uu,
-        menu: Eu
+    function VG(GG, bG) {
+      const ZG = {
+        content: GG,
+        menu: bG
       };
-      return qu = ju, Uu.h.TY(lu, qu, !0), () => {
-        qu === ju && (qu = null, Ou = !1, hu(), Uu.h.TY(lu, null))
+      return UG = ZG, SG.l.xh(kG, UG, !0), () => {
+        UG === ZG && (UG = null, KG = !1, dG(), SG.l.xh(kG, null))
       }
     }
-    let bu = null;
+    let pG = null;
 
-    function cu() {
-      return bu
+    function fG() {
+      return pG
     }
 
-    function Nu(uu) {
-      return bu = uu, () => {
-        bu === uu && (bu = null)
+    function QG(GG) {
+      return pG = GG, () => {
+        pG === GG && (pG = null)
       }
     }
-    let Ou = !1;
+    let KG = !1;
 
-    function Yu() {
-      const uu = su.d.get("openInGameMenuName");
-      "clientGame" !== uu && (Ou = "inventory" === uu), (0, Xu.o)() || (0, Xu.j)(), (0, Zu.t)(Zu.b), su.d.set({
+    function hG() {
+      const GG = wG.e.get("openInGameMenuName");
+      "clientGame" !== GG && (KG = "inventory" === GG), (0, yG.k)() || (0, yG.h)(), (0, LG.z)(LG.e), wG.e.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function hu() {
-      gu(!1)
+    function dG() {
+      rG(!1)
     }
 
-    function Du() {
-      gu(Ou)
+    function JG() {
+      rG(KG)
     }
 
-    function gu(uu) {
-      "clientGame" === su.d.get("openInGameMenuName") && su.d.set({
-        openInGameMenuName: uu ? "inventory" : null
-      }), uu || (0, Xu.j)(), Ou = !1
+    function rG(GG) {
+      "clientGame" === wG.e.get("openInGameMenuName") && wG.e.set({
+        openInGameMenuName: GG ? "inventory" : null
+      }), GG || (0, yG.h)(), KG = !1
     }
   },
-  39728: (uu, Eu, ju) => {
-    ju.r(Eu), ju.d(Eu, {
-      default: () => hE
+  39851: (GG, bG, ZG) => {
+    ZG.r(bG), ZG.d(bG, {
+      default: () => db
     });
-    const su = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
-    var Uu = ju(58),
-      Zu = ju(36992),
-      Xu = ju(37428),
-      lu = ju(37007),
-      qu = ju(1779),
-      fu = ju(24);
-    const Cu = {
+    const wG = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
+    var SG = ZG(51),
+      LG = ZG(36951),
+      yG = ZG(37396),
+      kG = ZG(36965),
+      UG = ZG(1702),
+      YG = ZG(19);
+    const VG = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -372,284 +372,284 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const bu = 32;
+    const pG = 32;
 
-    function cu(uu, Eu, ju, su) {
+    function fG(GG, bG, ZG, wG) {
       return {
         tag: "line",
         attrs: {
-          x1: uu,
-          y1: Eu,
-          x2: ju,
-          y2: su,
+          x1: GG,
+          y1: bG,
+          x2: ZG,
+          y2: wG,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function Nu(uu) {
+    function QG(GG) {
       return {
         tag: "circle",
         attrs: {
-          cx: bu,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bu,
-          r: uu,
+          cx: pG,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pG,
+          r: GG,
           class: "Fill"
         }
       }
     }
 
-    function Ou(uu, Eu) {
+    function KG(GG, bG) {
       return {
         tag: "path",
         attrs: {
-          d: uu,
-          "stroke-width": Eu
+          d: GG,
+          "stroke-width": bG
         }
       }
     }
 
-    function Yu(uu, Eu, ju) {
+    function hG(GG, bG, ZG) {
       return {
         tag: "circle",
         attrs: {
-          cx: bu,
-          cy: bu,
-          r: uu,
-          "stroke-width": Eu,
-          class: ju
+          cx: pG,
+          cy: pG,
+          r: GG,
+          "stroke-width": bG,
+          class: ZG
         }
       }
     }
 
-    function hu(uu, Eu, ju) {
+    function dG(GG, bG, ZG) {
       return {
         tag: "text",
         attrs: {
-          x: uu,
-          y: Eu,
+          x: GG,
+          y: bG,
           class: "Fill Label"
         },
-        text: ju
+        text: ZG
       }
     }
-    const Du = {
-      pistol: uu => [cu(bu, bu - uu - 5, bu, bu - uu), cu(bu - uu - 5, bu, bu - uu, bu), cu(bu + uu, bu, bu + uu + 5, bu), Nu(1.4)],
-      rifle: uu => [cu(bu, bu - uu - 8, bu, bu - uu), cu(bu, bu + uu, bu, bu + uu + 8), cu(bu - uu - 8, bu, bu - uu, bu), cu(bu + uu, bu, bu + uu + 8, bu), Nu(1)],
-      smg: uu => {
-        const Eu = Math.PI / 2,
-          ju = [];
-        for (let Xu = 0; Xu < 4; Xu++) ju.push((Uu = Xu * Eu + .35, Zu = (Xu + 1) * Eu - .35, Ou(`M${bu+(su=6+uu)*Math.cos(Uu)} ${bu+su*Math.sin(Uu)} A${su} ${su} 0 0 1 ${bu+su*Math.cos(Zu)} ${bu+su*Math.sin(Zu)}`, 2)));
-        var su, Uu, Zu;
-        return [...ju, Nu(1.4)]
+    const JG = {
+      pistol: GG => [fG(pG, pG - GG - 5, pG, pG - GG), fG(pG - GG - 5, pG, pG - GG, pG), fG(pG + GG, pG, pG + GG + 5, pG), QG(1.4)],
+      rifle: GG => [fG(pG, pG - GG - 8, pG, pG - GG), fG(pG, pG + GG, pG, pG + GG + 8), fG(pG - GG - 8, pG, pG - GG, pG), fG(pG + GG, pG, pG + GG + 8, pG), QG(1)],
+      smg: GG => {
+        const bG = Math.PI / 2,
+          ZG = [];
+        for (let yG = 0; yG < 4; yG++) ZG.push((SG = yG * bG + .35, LG = (yG + 1) * bG - .35, KG(`M${pG+(wG=6+GG)*Math.cos(SG)} ${pG+wG*Math.sin(SG)} A${wG} ${wG} 0 0 1 ${pG+wG*Math.cos(LG)} ${pG+wG*Math.sin(LG)}`, 2)));
+        var wG, SG, LG;
+        return [...ZG, QG(1.4)]
       },
-      shotgun: uu => [Yu(uu, 3, "Ring Outline"), Yu(uu, 1.5, "Ring")],
-      marksman: uu => [Ou(`M${26-uu/2} ${39+uu/2} L32 33 L${38+uu/2} ${39+uu/2}`, 2), cu(14 - uu, bu, 24 - uu, bu, 1.5), cu(40 + uu, bu, 50 + uu, bu, 1.5), cu(14 - uu, 30, 14 - uu, 34, 1.5), cu(50 + uu, 30, 50 + uu, 34, 1.5)],
-      machineGun: uu => {
-        const Eu = 10 + uu,
-          ju = [];
-        for (const [su, Uu] of [
+      shotgun: GG => [hG(GG, 3, "Ring Outline"), hG(GG, 1.5, "Ring")],
+      marksman: GG => [KG(`M${26-GG/2} ${39+GG/2} L32 33 L${38+GG/2} ${39+GG/2}`, 2), fG(14 - GG, pG, 24 - GG, pG, 1.5), fG(40 + GG, pG, 50 + GG, pG, 1.5), fG(14 - GG, 30, 14 - GG, 34, 1.5), fG(50 + GG, 30, 50 + GG, 34, 1.5)],
+      machineGun: GG => {
+        const bG = 10 + GG,
+          ZG = [];
+        for (const [wG, SG] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) ju.push(Ou(`M${bu+su*Eu} ${bu+Uu*(Eu-5)} L${bu+su*Eu} ${bu+Uu*Eu} L${bu+su*(Eu-5)} ${bu+Uu*Eu}`, 2));
-        return [...ju, cu(bu, 28, bu, 36, 1.5), cu(28, bu, 36, bu, 1.5)]
+          ]) ZG.push(KG(`M${pG+wG*bG} ${pG+SG*(bG-5)} L${pG+wG*bG} ${pG+SG*bG} L${pG+wG*(bG-5)} ${pG+SG*bG}`, 2));
+        return [...ZG, fG(pG, 28, pG, 36, 1.5), fG(28, pG, 36, pG, 1.5)]
       },
-      launcher: () => [cu(14, 30, 50, 30, 1.5), cu(bu, 24, bu, 52, 1.5), cu(28, 38, 36, 38, 1.5), cu(29, 44, 35, 44, 1.5), cu(30, 50, 34, 50, 1.5), hu(38, 40, "100"), hu(37, 46, "200"), Nu(1.4, 30)],
-      melee: () => [Ou("M32 26 L38 32 L32 38 L26 32 Z", 1.5), Nu(1.2)],
-      throwable: () => [Nu(1.6)]
+      launcher: () => [fG(14, 30, 50, 30, 1.5), fG(pG, 24, pG, 52, 1.5), fG(28, 38, 36, 38, 1.5), fG(29, 44, 35, 44, 1.5), fG(30, 50, 34, 50, 1.5), dG(38, 40, "100"), dG(37, 46, "200"), QG(1.4, 30)],
+      melee: () => [KG("M32 26 L38 32 L32 38 L26 32 Z", 1.5), QG(1.2)],
+      throwable: () => [QG(1.6)]
     };
 
-    function gu(uu) {
+    function rG(GG) {
       let {
-        tag: Eu,
-        attrs: ju,
-        text: su
-      } = uu, Uu = `<${Eu}`;
-      for (const [Zu, Xu] of Object.entries(ju)) Uu += ` ${Zu}="${Xu}"`;
-      return void 0 === su ? `${Uu}/>` : `${Uu}>${su}</${Eu}>`
+        tag: bG,
+        attrs: ZG,
+        text: wG
+      } = GG, SG = `<${bG}`;
+      for (const [LG, yG] of Object.entries(ZG)) SG += ` ${LG}="${yG}"`;
+      return void 0 === wG ? `${SG}/>` : `${SG}>${wG}</${bG}>`
     }
-    class Mu {
-      constructor(uu, Eu) {
-        this.api = uu, this.localPlayerId = Eu, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = uu => {
-          this.element = uu, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, uu && !this.enabled && (uu.style.display = "none")
+    class zG {
+      constructor(GG, bG) {
+        this.api = GG, this.localPlayerId = bG, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = GG => {
+          this.element = GG, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, GG && !this.enabled && (GG.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, qu.getRemInPx)()))
-        }, this.tokens = [fu.h.subscribe("aimingOverlay", (uu => {
-          this.sniperOverlay = "sniper" === uu
-        })), fu.h.subscribe("mouseState", (uu => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, UG.getRemInPx)()))
+        }, this.tokens = [YG.l.subscribe("aimingOverlay", (GG => {
+          this.sniperOverlay = "sniper" === GG
+        })), YG.l.subscribe("mouseState", (GG => {
           let {
-            isDown: Eu
-          } = uu;
-          this.mouseDown = Eu
+            isDown: bG
+          } = GG;
+          this.mouseDown = bG
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      Wk(uu) {
-        uu !== this.enabled && (this.enabled = uu, this.drawnVisible = null, uu || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      DW(GG) {
+        GG !== this.enabled && (this.enabled = GG, this.drawnVisible = null, GG || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(uu, Eu) {
-        var ju, su;
+      frame(GG, bG) {
+        var ZG, wG;
         if (!this.enabled) return;
         const {
-          api: Uu
-        } = this, Zu = Uu.isAlive(this.localPlayerId) && null !== (ju = null === (su = Uu.yEu(this.localPlayerId)) || void 0 === su ? void 0 : su.name) && void 0 !== ju ? ju : null, Xu = (lu = Zu) && Cu[lu] || null;
-        var lu;
-        if (this.setOwnsCrosshair(null !== Xu), !this.element) return;
-        const qu = Uu.getHeldGunInaccuracy(),
-          fu = null !== qu,
-          bu = null !== Xu && !this.sniperOverlay && Uu.isCrosshairShown();
-        if (bu !== this.drawnVisible && (this.drawnVisible = bu, this.element.style.display = bu ? "block" : "none"), !bu) return;
-        const cu = fu ? function(uu) {
-            return "launcher" === uu || "melee" === uu || "throwable" === uu ? "none" : "shotgun" === uu ? "cone" : "offset"
-          }(Xu) : "none",
-          Nu = null !== qu && void 0 !== qu ? qu : 0;
-        "cone" === cu ? this.drawCone(Xu, this.coneRadiusVh(Nu, Eu) * this.gapPerVh, uu) : (this.coneDrawn = !1, this.draw(Xu, "none" === cu ? 2 : this.offsetGap(Nu)));
-        const Ou = !fu && this.mouseDown;
-        Ou !== this.drawnPressed && (this.drawnPressed = Ou, this.element.classList.toggle("Pressed", Ou))
+          api: SG
+        } = this, LG = SG.isAlive(this.localPlayerId) && null !== (ZG = null === (wG = SG.YZG(this.localPlayerId)) || void 0 === wG ? void 0 : wG.name) && void 0 !== ZG ? ZG : null, yG = (kG = LG) && VG[kG] || null;
+        var kG;
+        if (this.setOwnsCrosshair(null !== yG), !this.element) return;
+        const UG = SG.getHeldGunInaccuracy(),
+          YG = null !== UG,
+          pG = null !== yG && !this.sniperOverlay && SG.isCrosshairShown();
+        if (pG !== this.drawnVisible && (this.drawnVisible = pG, this.element.style.display = pG ? "block" : "none"), !pG) return;
+        const fG = YG ? function(GG) {
+            return "launcher" === GG || "melee" === GG || "throwable" === GG ? "none" : "shotgun" === GG ? "cone" : "offset"
+          }(yG) : "none",
+          QG = null !== UG && void 0 !== UG ? UG : 0;
+        "cone" === fG ? this.drawCone(yG, this.coneRadiusVh(QG, bG) * this.gapPerVh, GG) : (this.coneDrawn = !1, this.draw(yG, "none" === fG ? 2 : this.offsetGap(QG)));
+        const KG = !YG && this.mouseDown;
+        KG !== this.drawnPressed && (this.drawnPressed = KG, this.element.classList.toggle("Pressed", KG))
       }
       dispose() {
-        for (const uu of this.tokens) fu.h.unsubscribe(uu);
+        for (const GG of this.tokens) YG.l.unsubscribe(GG);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(uu, Eu) {
-        var ju, su;
-        uu !== this.drawnFamily ? (this.drawnFamily = uu, this.drawnGap = Eu, this.element.innerHTML = function(uu, Eu) {
-          return `<svg viewBox="0 0 64 64">${Du[uu](Eu).map(gu).join("")}</svg>`
-        }(uu, Eu), this.shapes = Array.from(null !== (ju = null === (su = this.element.firstElementChild) || void 0 === su ? void 0 : su.children) && void 0 !== ju ? ju : [])) : Eu !== this.drawnGap && (this.drawnGap = Eu, function(uu, Eu, ju) {
-          const su = Du[Eu](ju);
-          for (let Uu = 0; Uu < su.length; Uu++)
-            for (const [Eu, ju] of Object.entries(su[Uu].attrs)) {
-              const su = String(ju);
-              uu[Uu].getAttribute(Eu) !== su && uu[Uu].setAttribute(Eu, su)
+      draw(GG, bG) {
+        var ZG, wG;
+        GG !== this.drawnFamily ? (this.drawnFamily = GG, this.drawnGap = bG, this.element.innerHTML = function(GG, bG) {
+          return `<svg viewBox="0 0 64 64">${JG[GG](bG).map(rG).join("")}</svg>`
+        }(GG, bG), this.shapes = Array.from(null !== (ZG = null === (wG = this.element.firstElementChild) || void 0 === wG ? void 0 : wG.children) && void 0 !== ZG ? ZG : [])) : bG !== this.drawnGap && (this.drawnGap = bG, function(GG, bG, ZG) {
+          const wG = JG[bG](ZG);
+          for (let SG = 0; SG < wG.length; SG++)
+            for (const [bG, ZG] of Object.entries(wG[SG].attrs)) {
+              const wG = String(ZG);
+              GG[SG].getAttribute(bG) !== wG && GG[SG].setAttribute(bG, wG)
             }
-        }(this.shapes, uu, Eu))
+        }(this.shapes, GG, bG))
       }
-      drawCone(uu, Eu, ju) {
-        uu === this.drawnFamily && this.coneDrawn ? this.shownRadius += (Eu - this.shownRadius) * (1 - Math.exp(-ju / 80)) : this.shownRadius = Eu, this.coneDrawn = !0, this.draw(uu, Math.round(4 * this.shownRadius) / 4)
+      drawCone(GG, bG, ZG) {
+        GG === this.drawnFamily && this.coneDrawn ? this.shownRadius += (bG - this.shownRadius) * (1 - Math.exp(-ZG / 80)) : this.shownRadius = bG, this.coneDrawn = !0, this.draw(GG, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(uu, Eu) {
-        if (!(Eu > 0)) return 1;
-        const ju = uu * Xu.h / 2;
-        return Math.max(50 * Math.tan(ju) / Eu, 1)
+      coneRadiusVh(GG, bG) {
+        if (!(bG > 0)) return 1;
+        const ZG = GG * yG.g / 2;
+        return Math.max(50 * Math.tan(ZG) / bG, 1)
       }
-      offsetGap(uu) {
-        const Eu = 2 + ((0, lu.e)(uu) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * Eu) / 2)
+      offsetGap(GG) {
+        const bG = 2 + ((0, kG.g)(GG) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * bG) / 2)
       }
-      setOwnsCrosshair(uu) {
-        uu !== this.ownsCrosshair && (this.ownsCrosshair = uu, document.body.classList.toggle("FrontlineCustomCrosshair", uu))
+      setOwnsCrosshair(GG) {
+        GG !== this.ownsCrosshair && (this.ownsCrosshair = GG, document.body.classList.toggle("FrontlineCustomCrosshair", GG))
       }
     }
-    const eu = "FrontlineCustomDamage",
-      Gu = .45,
-      pu = .2;
-    class wu {
-      constructor(uu, Eu) {
-        this.api = uu, this.localPlayerId = Eu, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+    const EG = "FrontlineCustomDamage",
+      oG = .45,
+      XG = .2;
+    class uG {
+      constructor(GG, bG) {
+        this.api = GG, this.localPlayerId = bG, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.ru = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = uu => {
-          var Eu, ju;
-          this.clearHits(), this.root = uu, this.lowLayer = null !== (Eu = null === uu || void 0 === uu ? void 0 : uu.querySelector(".FrontlineDamageLow")) && void 0 !== Eu ? Eu : null, this.arcLayer = null !== (ju = null === uu || void 0 === uu ? void 0 : uu.querySelector(".FrontlineDamageArcs")) && void 0 !== ju ? ju : null, this.showRoot(), this.drawLow()
-        }, this.token = fu.h.subscribe("damagedByOtherPlayer", (uu => {
+        }, this.maxHealth = null, this.aG = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = GG => {
+          var bG, ZG;
+          this.clearHits(), this.root = GG, this.lowLayer = null !== (bG = null === GG || void 0 === GG ? void 0 : GG.querySelector(".FrontlineDamageLow")) && void 0 !== bG ? bG : null, this.arcLayer = null !== (ZG = null === GG || void 0 === GG ? void 0 : GG.querySelector(".FrontlineDamageArcs")) && void 0 !== ZG ? ZG : null, this.showRoot(), this.drawLow()
+        }, this.token = YG.l.subscribe("damagedByOtherPlayer", (GG => {
           let {
-            direction: Eu,
-            Ku: ju
-          } = uu;
-          this.onHurt(Eu, ju)
-        })), this.syncHealth(), document.body.classList.add(eu)
+            direction: bG,
+            FG: ZG
+          } = GG;
+          this.onHurt(bG, ZG)
+        })), this.syncHealth(), document.body.classList.add(EG)
       }
-      Wk(uu) {
-        uu !== this.enabled && (this.enabled = uu, document.body.classList.toggle(eu, uu), uu || this.clearHits(), this.showRoot())
+      DW(GG) {
+        GG !== this.enabled && (this.enabled = GG, document.body.classList.toggle(EG, GG), GG || this.clearHits(), this.showRoot())
       }
-      frame(uu) {
-        this.syncHealth(), this.cameraHeading = uu;
-        for (const Eu of this.arcs) this.drawArcAngle(Eu)
+      frame(GG) {
+        this.syncHealth(), this.cameraHeading = GG;
+        for (const bG of this.arcs) this.drawArcAngle(bG)
       }
       dispose() {
-        fu.h.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(eu)
+        YG.l.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(EG)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const uu = this.api.getClientOption(this.localPlayerId, "_health"),
-          Eu = this.api.getClientOption(this.localPlayerId, "_shield"),
-          ju = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(uu, this.readHealth) && Object.is(Eu, this.readShield) && Object.is(ju, this.readMaxHealth)) return;
-        if (this.readHealth = uu, this.readShield = Eu, this.readMaxHealth = ju, null === uu || void 0 === uu || !ju) return this.lastHealthPool = null, this.maxHealth = null, this.ru = 1, this.dead = !1, void this.drawLow();
-        const su = uu + (null !== Eu && void 0 !== Eu ? Eu : 0);
-        if (null !== this.lastHealthPool && su < this.lastHealthPool) {
-          const uu = performance.now(),
-            Eu = (this.lastHealthPool - su) / ju;
-          this.lastDrop = uu - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + Eu,
+        const GG = this.api.getClientOption(this.localPlayerId, "_health"),
+          bG = this.api.getClientOption(this.localPlayerId, "_shield"),
+          ZG = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(GG, this.readHealth) && Object.is(bG, this.readShield) && Object.is(ZG, this.readMaxHealth)) return;
+        if (this.readHealth = GG, this.readShield = bG, this.readMaxHealth = ZG, null === GG || void 0 === GG || !ZG) return this.lastHealthPool = null, this.maxHealth = null, this.aG = 1, this.dead = !1, void this.drawLow();
+        const wG = GG + (null !== bG && void 0 !== bG ? bG : 0);
+        if (null !== this.lastHealthPool && wG < this.lastHealthPool) {
+          const GG = performance.now(),
+            bG = (this.lastHealthPool - wG) / ZG;
+          this.lastDrop = GG - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + bG,
             at: this.lastDrop.at
           } : {
-            frac: Eu,
-            at: uu
+            frac: bG,
+            at: GG
           }
         }
-        this.dead = uu <= 0, this.dead && this.clearHits(), this.lastHealthPool = su, this.maxHealth = ju, this.ru = uu > 0 ? uu / ju : 1, this.drawLow()
+        this.dead = GG <= 0, this.dead && this.clearHits(), this.lastHealthPool = wG, this.maxHealth = ZG, this.aG = GG > 0 ? GG / ZG : 1, this.drawLow()
       }
-      onHurt(uu, Eu) {
+      onHurt(GG, bG) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const ju = Math.min(1, this.takeDamageFrac(Eu) / .3);
-        null !== uu && this.showArc(uu, ju), this.flashEdge(null === uu ? null : uu - this.cameraHeading, .4 + .6 * ju)
+        const ZG = Math.min(1, this.takeDamageFrac(bG) / .3);
+        null !== GG && this.showArc(GG, ZG), this.flashEdge(null === GG ? null : GG - this.cameraHeading, .4 + .6 * ZG)
       }
-      takeDamageFrac(uu) {
-        if (void 0 !== uu && this.maxHealth) return uu / this.maxHealth;
+      takeDamageFrac(GG) {
+        if (void 0 !== GG && this.maxHealth) return GG / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: Eu
+          frac: bG
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, Eu
+        }, bG
       }
       drawLow() {
         if (!this.lowLayer) return;
-        const uu = du((Gu - this.ru) / .25),
-          Eu = du((pu - this.ru) / .15000000000000002),
-          ju = this.ru < Gu;
-        this.lowLayer.classList.toggle("Active", ju), this.lowLayer.classList.toggle("Critical", this.ru < pu), this.lowLayer.style.opacity = String(ju ? .55 + .3 * uu + .15 * Eu : 0)
+        const GG = CG((oG - this.aG) / .25),
+          bG = CG((XG - this.aG) / .15000000000000002),
+          ZG = this.aG < oG;
+        this.lowLayer.classList.toggle("Active", ZG), this.lowLayer.classList.toggle("Critical", this.aG < XG), this.lowLayer.style.opacity = String(ZG ? .55 + .3 * GG + .15 * bG : 0)
       }
-      showArc(uu, Eu) {
-        var ju, su;
+      showArc(GG, bG) {
+        var ZG, wG;
         if (!this.arcLayer) return;
-        let Uu = this.arcs.find((Eu => Ju(Eu.direction, uu) < .6));
-        if (!Uu) {
-          const Eu = document.createElement("div");
-          Eu.className = "FrontlineDamageArc", Eu.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(Eu), Uu = {
-            element: Eu,
-            direction: uu,
+        let SG = this.arcs.find((bG => iG(bG.direction, GG) < .6));
+        if (!SG) {
+          const bG = document.createElement("div");
+          bG.className = "FrontlineDamageArc", bG.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(bG), SG = {
+            element: bG,
+            direction: GG,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(Uu)
+          }, this.arcs.push(SG)
         }
-        Uu.direction = uu, this.drawArcAngle(Uu);
-        const Zu = Uu.fade ? Number(getComputedStyle(Uu.element).opacity) : 0;
-        null === (ju = Uu.fade) || void 0 === ju || ju.cancel(), null === (su = Uu.pop) || void 0 === su || su.cancel(), Uu.element.style.opacity = "1";
-        const Xu = Uu.element.animate([{
-          opacity: Zu
+        SG.direction = GG, this.drawArcAngle(SG);
+        const LG = SG.fade ? Number(getComputedStyle(SG.element).opacity) : 0;
+        null === (ZG = SG.fade) || void 0 === ZG || ZG.cancel(), null === (wG = SG.pop) || void 0 === wG || wG.cancel(), SG.element.style.opacity = "1";
+        const yG = SG.element.animate([{
+          opacity: LG
         }, {
           opacity: 1
         }], 144);
-        Uu.fade = Xu, Uu.pop = Uu.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * Eu
+        SG.fade = yG, SG.pop = SG.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * bG
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const lu = Uu;
-        Xu.onfinish = () => {
-          if (lu.fade !== Xu) return;
-          const uu = lu.element.animate([{
+        const kG = SG;
+        yG.onfinish = () => {
+          if (kG.fade !== yG) return;
+          const GG = kG.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -659,128 +659,128 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          uu.startTime = Xu.startTime, lu.fade = uu, uu.onfinish = () => {
-            lu.fade === uu && (lu.element.remove(), au(this.arcs, lu))
+          GG.startTime = yG.startTime, kG.fade = GG, GG.onfinish = () => {
+            kG.fade === GG && (kG.element.remove(), WG(this.arcs, kG))
           }
         }
       }
-      drawArcAngle(uu) {
-        const Eu = uu.direction - this.cameraHeading;
-        (null === uu.drawnAngle || Math.abs(Eu - uu.drawnAngle) > .005) && (uu.drawnAngle = Eu, uu.element.style.rotate = `${Eu}rad`)
+      drawArcAngle(GG) {
+        const bG = GG.direction - this.cameraHeading;
+        (null === GG.drawnAngle || Math.abs(bG - GG.drawnAngle) > .005) && (GG.drawnAngle = bG, GG.element.style.rotate = `${bG}rad`)
       }
-      flashEdge(uu, Eu) {
-        var ju, su, Uu;
+      flashEdge(GG, bG) {
+        var ZG, wG, SG;
         if (!this.root) return;
-        let Zu = this.flashes.find((Eu => null === Eu.angle || null === uu ? Eu.angle === uu : Ju(Eu.angle, uu) < .5));
-        if (!Zu) {
-          const Eu = document.createElement("div");
-          Eu.className = "FrontlineDamageFlash";
-          const ju = Eu.appendChild(document.createElement("div"));
-          ju.className = "FrontlineDamageFlashGlow", this.root.insertBefore(Eu, this.arcLayer), Zu = {
-            element: Eu,
-            glow: ju,
-            angle: uu,
+        let LG = this.flashes.find((bG => null === bG.angle || null === GG ? bG.angle === GG : iG(bG.angle, GG) < .5));
+        if (!LG) {
+          const bG = document.createElement("div");
+          bG.className = "FrontlineDamageFlash";
+          const ZG = bG.appendChild(document.createElement("div"));
+          ZG.className = "FrontlineDamageFlashGlow", this.root.insertBefore(bG, this.arcLayer), LG = {
+            element: bG,
+            glow: ZG,
+            angle: GG,
             level: 0,
             animation: null
-          }, this.flashes.push(Zu)
+          }, this.flashes.push(LG)
         }
-        const Xu = null === (ju = Zu.animation) || void 0 === ju || null === (su = ju.effect) || void 0 === su ? void 0 : su.getComputedTiming().progress,
-          lu = null === Xu || void 0 === Xu ? 0 : Zu.level * (1 - Xu);
-        Zu.level = Math.min(1, Math.max(Eu, lu + .6 * Eu)), Zu.angle = uu;
+        const yG = null === (ZG = LG.animation) || void 0 === ZG || null === (wG = ZG.effect) || void 0 === wG ? void 0 : wG.getComputedTiming().progress,
+          kG = null === yG || void 0 === yG ? 0 : LG.level * (1 - yG);
+        LG.level = Math.min(1, Math.max(bG, kG + .6 * bG)), LG.angle = GG;
         const {
-          x: qu,
-          y: fu,
-          rx: Cu,
-          ry: bu
-        } = function(uu, Eu) {
-          const ju = window.innerWidth,
-            su = window.innerHeight;
-          if (null === uu) return {
-            x: ju / 2,
-            y: su / 2,
+          x: UG,
+          y: YG,
+          rx: VG,
+          ry: pG
+        } = function(GG, bG) {
+          const ZG = window.innerWidth,
+            wG = window.innerHeight;
+          if (null === GG) return {
+            x: ZG / 2,
+            y: wG / 2,
             rx: 0,
             ry: 0
           };
-          const Uu = Math.sin(uu),
-            Zu = -Math.cos(uu),
-            Xu = ju / 2 / Math.max(1e-6, Math.abs(Uu)),
-            lu = su / 2 / Math.max(1e-6, Math.abs(Zu)),
-            qu = Math.min(Xu, lu),
-            fu = Math.round(ju / 2 + Uu * qu),
-            Cu = Math.round(su / 2 + Zu * qu),
-            bu = su / 100 * (.85 + .25 * Eu),
-            cu = Xu <= lu,
-            Nu = Math.round((cu ? 30 : 74) * bu),
-            Ou = Math.round((cu ? 58 : 26) * bu);
+          const SG = Math.sin(GG),
+            LG = -Math.cos(GG),
+            yG = ZG / 2 / Math.max(1e-6, Math.abs(SG)),
+            kG = wG / 2 / Math.max(1e-6, Math.abs(LG)),
+            UG = Math.min(yG, kG),
+            YG = Math.round(ZG / 2 + SG * UG),
+            VG = Math.round(wG / 2 + LG * UG),
+            pG = wG / 100 * (.85 + .25 * bG),
+            fG = yG <= kG,
+            QG = Math.round((fG ? 30 : 74) * pG),
+            KG = Math.round((fG ? 58 : 26) * pG);
           return {
-            x: fu,
-            y: Cu,
-            rx: Nu,
-            ry: Ou
+            x: YG,
+            y: VG,
+            rx: QG,
+            ry: KG
           }
-        }(uu, Zu.level), {
-          style: cu
-        } = Zu.glow;
-        Zu.glow.classList.toggle("Everywhere", null === uu), cu.setProperty("--glowX", `${qu}px`), cu.setProperty("--glowY", `${fu}px`), cu.setProperty("--glowRx", `${Cu}px`), cu.setProperty("--glowRy", `${bu}px`), Zu.element.style.transformOrigin = `${qu}px ${fu}px`, null === (Uu = Zu.animation) || void 0 === Uu || Uu.cancel();
-        const Nu = Zu.element.animate([{
+        }(GG, LG.level), {
+          style: fG
+        } = LG.glow;
+        LG.glow.classList.toggle("Everywhere", null === GG), fG.setProperty("--glowX", `${UG}px`), fG.setProperty("--glowY", `${YG}px`), fG.setProperty("--glowRx", `${VG}px`), fG.setProperty("--glowRy", `${pG}px`), LG.element.style.transformOrigin = `${UG}px ${YG}px`, null === (SG = LG.animation) || void 0 === SG || SG.cancel();
+        const QG = LG.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: Zu.level,
+          opacity: LG.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * Zu.level,
+          opacity: .8 * LG.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * Zu.level
+          duration: 520 + 180 * LG.level
         });
-        Zu.animation = Nu;
-        const Ou = Zu;
-        Nu.onfinish = () => {
-          Ou.animation === Nu && (Ou.element.remove(), au(this.flashes, Ou))
+        LG.animation = QG;
+        const KG = LG;
+        QG.onfinish = () => {
+          KG.animation === QG && (KG.element.remove(), WG(this.flashes, KG))
         }
       }
       clearHits() {
-        for (const su of this.arcs) {
-          var uu, Eu;
-          null === (uu = su.fade) || void 0 === uu || uu.cancel(), su.fade = null, null === (Eu = su.pop) || void 0 === Eu || Eu.cancel(), su.element.remove()
+        for (const wG of this.arcs) {
+          var GG, bG;
+          null === (GG = wG.fade) || void 0 === GG || GG.cancel(), wG.fade = null, null === (bG = wG.pop) || void 0 === bG || bG.cancel(), wG.element.remove()
         }
         this.arcs.length = 0;
-        for (const su of this.flashes) {
-          var ju;
-          null === (ju = su.animation) || void 0 === ju || ju.cancel(), su.element.remove()
+        for (const wG of this.flashes) {
+          var ZG;
+          null === (ZG = wG.animation) || void 0 === ZG || ZG.cancel(), wG.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function Ju(uu, Eu) {
-      return Math.abs(Math.atan2(Math.sin(uu - Eu), Math.cos(uu - Eu)))
+    function iG(GG, bG) {
+      return Math.abs(Math.atan2(Math.sin(GG - bG), Math.cos(GG - bG)))
     }
 
-    function du(uu) {
-      return Math.max(0, Math.min(1, uu))
+    function CG(GG) {
+      return Math.max(0, Math.min(1, GG))
     }
 
-    function au(uu, Eu) {
-      const ju = uu.indexOf(Eu); - 1 !== ju && uu.splice(ju, 1)
+    function WG(GG, bG) {
+      const ZG = GG.indexOf(bG); - 1 !== ZG && GG.splice(ZG, 1)
     }
-    var Pu = ju(1105),
-      ou = ju.n(Pu),
-      ku = ju(36990),
-      mu = ju(37075),
-      vu = ju(1244),
-      Ku = ju(1499);
-    const Vu = "frontlineHudChanged",
-      ru = "frontlineScoreboardChanged";
-    class Qu {
+    var mG = ZG(1006),
+      IG = ZG.n(mG),
+      FG = ZG(36946),
+      vG = ZG(37039),
+      aG = ZG(1151),
+      cG = ZG(1389);
+    const lG = "frontlineHudChanged",
+      jG = "frontlineScoreboardChanged";
+    class PG {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -793,101 +793,101 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      NO(uu) {
-        this.wire = uu, fu.h.TY(Vu, uu, !0)
+      hK(GG) {
+        this.wire = GG, YG.l.xh(lG, GG, !0)
       }
-      receiveScoreboard(uu) {
-        let Eu = "scoreboard" === uu[0] ? performance.now() + uu[5] : 0;
-        const ju = this.scoreboard.endsAt;
-        0 !== Eu && 0 !== ju && Math.abs(Eu - ju) < 1e3 && (Eu = ju), this.scoreboard = {
-          wire: uu,
-          endsAt: Eu
-        }, fu.h.TY(ru, this.scoreboard, !0)
+      receiveScoreboard(GG) {
+        let bG = "scoreboard" === GG[0] ? performance.now() + GG[5] : 0;
+        const ZG = this.scoreboard.endsAt;
+        0 !== bG && 0 !== ZG && Math.abs(bG - ZG) < 1e3 && (bG = ZG), this.scoreboard = {
+          wire: GG,
+          endsAt: bG
+        }, YG.l.xh(jG, this.scoreboard, !0)
       }
     }
-    var iu = ju(1154);
-    const Wu = {
+    var MG = ZG(1067);
+    const AG = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function Su(uu) {
-      const [Eu, ju] = (0, Uu.useState)((() => (uu - performance.now()) / 1e3));
-      return (0, Uu.useEffect)((() => {
-        if (0 === uu) return;
-        const Eu = () => {
-          ju((uu - performance.now()) / 1e3)
+    function sG(GG) {
+      const [bG, ZG] = (0, SG.useState)((() => (GG - performance.now()) / 1e3));
+      return (0, SG.useEffect)((() => {
+        if (0 === GG) return;
+        const bG = () => {
+          ZG((GG - performance.now()) / 1e3)
         };
-        Eu();
-        const su = window.setInterval(Eu, 250);
+        bG();
+        const wG = window.setInterval(bG, 250);
         return () => {
-          window.clearInterval(su)
+          window.clearInterval(wG)
         }
-      }), [uu]), Eu
+      }), [GG]), bG
     }
 
-    function Iu(uu) {
+    function qG(GG) {
       let {
-        className: Eu,
-        point: ju
-      } = uu;
-      const [su, Uu, Zu, Xu, lu, qu] = ju;
-      return (0, iu.jsxs)("div", {
-        className: ou()(Eu, `Owner-${Uu||"None"}`, `Leader-${Xu||"None"}`, {
-          Contested: lu,
-          Here: qu
+        className: bG,
+        point: ZG
+      } = GG;
+      const [wG, SG, LG, yG, kG, UG] = ZG;
+      return (0, MG.jsxs)("div", {
+        className: IG()(bG, `Owner-${SG||"None"}`, `Leader-${yG||"None"}`, {
+          Contested: kG,
+          Here: UG
         }),
-        children: [(0, iu.jsx)("span", {
+        children: [(0, MG.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: su
-        }), (0, iu.jsx)("i", {
+          children: wG
+        }), (0, MG.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${Zu}%`
+            width: `${LG}%`
           }
         })]
       })
     }
-    const Fu = (0, Uu.memo)((function(uu) {
+    const nG = (0, SG.memo)((function(GG) {
         let {
-          points: Eu,
-          markers: ju
-        } = uu;
+          points: bG,
+          markers: ZG
+        } = GG;
         const {
-          t: su
-        } = (0, vu.A)();
-        return Eu ? (0, iu.jsx)("div", {
+          t: wG
+        } = (0, aG.w)();
+        return bG ? (0, MG.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: Eu.map((uu => {
-            const [Eu, , , , , , , Uu] = uu;
-            return (0, iu.jsxs)("div", {
-              ref: ju.bindMarker(Eu),
+          children: bG.map((GG => {
+            const [bG, , , , , , , SG] = GG;
+            return (0, MG.jsxs)("div", {
+              ref: ZG.bindMarker(bG),
               className: "FrontlinePointMarker",
-              children: [(0, iu.jsx)(Iu, {
+              children: [(0, MG.jsx)(qG, {
                 className: "FrontlinePointMarkerTile",
-                point: uu
-              }), (0, iu.jsxs)("div", {
+                point: GG
+              }), (0, MG.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [Uu && (0, iu.jsx)("span", {
-                  className: ou()("FrontlinePointMarkerHomeTurf", `Team-${Uu}`),
-                  children: su("frontlineHud:homeTurf", {
-                    team: su(Wu[Uu])
+                children: [SG && (0, MG.jsx)("span", {
+                  className: IG()("FrontlinePointMarkerHomeTurf", `Team-${SG}`),
+                  children: wG("frontlineHud:homeTurf", {
+                    team: wG(AG[SG])
                   })
-                }), (0, iu.jsx)("span", {
+                }), (0, MG.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, Eu)
+            }, bG)
           }))
         }) : null
       })),
-      Bu = {
+      gG = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      Lu = {
+      eG = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -895,321 +895,321 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function tu(uu) {
+    function RG(GG) {
       let {
-        hud: Eu,
-        crosshair: ju,
-        damage: su,
-        markers: Uu
-      } = uu;
-      const Zu = (0, Ku.g)(Vu, Eu.getWire()),
-        Xu = (0, Ku.g)(ru, Eu.getScoreboard());
-      return (0, iu.jsxs)(iu.Fragment, {
-        children: [(0, iu.jsx)(xu, {
-          damage: su
-        }), (0, iu.jsx)(Fu, {
-          points: "scoreboard" === Xu.wire[0] ? Xu.wire[6] : null,
-          markers: Uu
-        }), (0, iu.jsx)(Hu, {
-          view: Xu
-        }), (0, iu.jsx)("div", {
+        hud: bG,
+        crosshair: ZG,
+        damage: wG,
+        markers: SG
+      } = GG;
+      const LG = (0, cG.j)(lG, bG.getWire()),
+        yG = (0, cG.j)(jG, bG.getScoreboard());
+      return (0, MG.jsxs)(MG.Fragment, {
+        children: [(0, MG.jsx)(TG, {
+          damage: wG
+        }), (0, MG.jsx)(nG, {
+          points: "scoreboard" === yG.wire[0] ? yG.wire[6] : null,
+          markers: SG
+        }), (0, MG.jsx)(tG, {
+          view: yG
+        }), (0, MG.jsx)("div", {
           className: "FrontlineReticle",
-          ref: ju.bindElement
-        }), (0, iu.jsx)(ku.h, {
-          children: (0, iu.jsx)(Tu, {
-            wire: Zu
+          ref: ZG.bindElement
+        }), (0, MG.jsx)(FG.d, {
+          children: (0, MG.jsx)(HG, {
+            wire: LG
           })
         })]
       })
     }
-    const xu = (0, Uu.memo)((function(uu) {
+    const TG = (0, SG.memo)((function(GG) {
         let {
-          damage: Eu
-        } = uu;
-        return (0, iu.jsxs)("div", {
+          damage: bG
+        } = GG;
+        return (0, MG.jsxs)("div", {
           className: "FrontlineDamage",
-          ref: Eu.bindElement,
-          children: [(0, iu.jsx)("div", {
+          ref: bG.bindElement,
+          children: [(0, MG.jsx)("div", {
             className: "FrontlineDamageLow",
-            children: (0, iu.jsx)("div", {
+            children: (0, MG.jsx)("div", {
               className: "FrontlineDamageShade"
             })
-          }), (0, iu.jsx)("div", {
+          }), (0, MG.jsx)("div", {
             className: "FrontlineDamageArcs"
           })]
         })
       })),
-      Tu = (0, Uu.memo)((function(uu) {
+      HG = (0, SG.memo)((function(GG) {
         let {
-          wire: Eu
-        } = uu;
+          wire: bG
+        } = GG;
         const {
-          t: ju
-        } = (0, vu.A)();
-        if ("capture" === Eu[0]) {
-          const [, uu, su, Uu, Zu, Xu, lu] = Eu, qu = Math.round(Uu / 100 * 24);
-          return (0, iu.jsxs)("div", {
-            className: ou()("FrontlinePlate", `Status-${su}`, `Leader-${Zu||"None"}`),
-            children: [(0, iu.jsx)(zu, {}), (0, iu.jsxs)("div", {
+          t: ZG
+        } = (0, aG.w)();
+        if ("capture" === bG[0]) {
+          const [, GG, wG, SG, LG, yG, kG] = bG, UG = Math.round(SG / 100 * 24);
+          return (0, MG.jsxs)("div", {
+            className: IG()("FrontlinePlate", `Status-${wG}`, `Leader-${LG||"None"}`),
+            children: [(0, MG.jsx)(xG, {}), (0, MG.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, iu.jsx)("span", {
+              children: [(0, MG.jsx)("span", {
                 className: "FrontlineObjective",
-                children: uu
-              }), (0, iu.jsxs)("div", {
+                children: GG
+              }), (0, MG.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, iu.jsx)("div", {
+                children: [(0, MG.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: ju("frontlineHud:objective", {
-                    point: uu,
-                    friendly: Xu,
-                    enemy: lu
+                  children: ZG("frontlineHud:objective", {
+                    point: GG,
+                    friendly: yG,
+                    enemy: kG
                   })
-                }), (0, iu.jsx)("div", {
+                }), (0, MG.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: ju(Bu[su])
+                  children: ZG(gG[wG])
                 })]
-              }), (0, iu.jsxs)("span", {
+              }), (0, MG.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(Uu).padStart(3, "0"), (0, iu.jsx)("small", {
+                children: [String(SG).padStart(3, "0"), (0, MG.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, iu.jsx)(nu, {
+            }), (0, MG.jsx)(NG, {
               segments: 24,
-              lit: qu
+              lit: UG
             })]
           })
         }
-        if ("alert" === Eu[0]) {
-          const [, uu, su, Uu] = Eu;
-          return (0, iu.jsxs)("div", {
-            className: ou()("FrontlinePlate", "FrontlineAlert", `Tone-${Uu}`),
-            children: [(0, iu.jsx)(zu, {}), (0, iu.jsx)("div", {
+        if ("alert" === bG[0]) {
+          const [, GG, wG, SG] = bG;
+          return (0, MG.jsxs)("div", {
+            className: IG()("FrontlinePlate", "FrontlineAlert", `Tone-${SG}`),
+            children: [(0, MG.jsx)(xG, {}), (0, MG.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: ju(Lu[uu])
-            }), (0, iu.jsx)("div", {
+              children: ZG(eG[GG])
+            }), (0, MG.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: su
+              children: wG
             })]
           })
         }
         return null
       })),
-      Hu = (0, Uu.memo)((function(uu) {
+      tG = (0, SG.memo)((function(GG) {
         let {
-          view: Eu
-        } = uu;
+          view: bG
+        } = GG;
         const {
-          t: ju
-        } = (0, vu.A)(), su = (0, Uu.useRef)(null), Zu = function(uu, Eu) {
-          const [ju, su] = (0, Uu.useState)(!1);
-          return (0, Uu.useLayoutEffect)((() => {
-            const Eu = uu.current;
-            if (!Eu) return;
-            const ju = document.querySelector(`.${mu.f}`),
-              Uu = document.querySelector(`.${mu.i}`),
-              Zu = () => {
-                var uu;
-                const Zu = Eu.querySelector(".FrontlineTeamTrack"),
-                  Xu = (0, qu.getRemInPx)(),
-                  lu = Eu.getBoundingClientRect().width - 2 * (null !== (uu = null === Zu || void 0 === Zu ? void 0 : Zu.getBoundingClientRect().width) && void 0 !== uu ? uu : 0),
-                  fu = window.innerWidth / 2,
-                  Cu = ju ? ju.getBoundingClientRect().right : 0,
-                  bu = Uu ? Uu.getBoundingClientRect().left : window.innerWidth,
-                  cu = Math.min(fu - Cu, bu - fu) - mu.e - lu / 2,
-                  Nu = cu < 6 * Xu,
-                  Ou = Nu ? (window.innerWidth - lu) / 2 - mu.e : cu;
-                Eu.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(Ou,14*Xu)))}px`), su(Nu)
+          t: ZG
+        } = (0, aG.w)(), wG = (0, SG.useRef)(null), LG = function(GG, bG) {
+          const [ZG, wG] = (0, SG.useState)(!1);
+          return (0, SG.useLayoutEffect)((() => {
+            const bG = GG.current;
+            if (!bG) return;
+            const ZG = document.querySelector(`.${vG.e}`),
+              SG = document.querySelector(`.${vG.f}`),
+              LG = () => {
+                var GG;
+                const LG = bG.querySelector(".FrontlineTeamTrack"),
+                  yG = (0, UG.getRemInPx)(),
+                  kG = bG.getBoundingClientRect().width - 2 * (null !== (GG = null === LG || void 0 === LG ? void 0 : LG.getBoundingClientRect().width) && void 0 !== GG ? GG : 0),
+                  YG = window.innerWidth / 2,
+                  VG = ZG ? ZG.getBoundingClientRect().right : 0,
+                  pG = SG ? SG.getBoundingClientRect().left : window.innerWidth,
+                  fG = Math.min(YG - VG, pG - YG) - vG.d - kG / 2,
+                  QG = fG < 6 * yG,
+                  KG = QG ? (window.innerWidth - kG) / 2 - vG.d : fG;
+                bG.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(KG,14*yG)))}px`), wG(QG)
               };
-            Zu();
-            const Xu = new ResizeObserver(Zu);
-            for (const uu of [Eu, ju, Uu]) uu && Xu.observe(uu);
-            return window.addEventListener("resize", Zu), () => {
-              Xu.disconnect(), window.removeEventListener("resize", Zu)
+            LG();
+            const yG = new ResizeObserver(LG);
+            for (const GG of [bG, ZG, SG]) GG && yG.observe(GG);
+            return window.addEventListener("resize", LG), () => {
+              yG.disconnect(), window.removeEventListener("resize", LG)
             }
-          }), [uu, Eu]), ju
-        }(su, "scoreboard" === Eu.wire[0]);
-        if ("scoreboard" !== Eu.wire[0]) return null;
-        const [, Xu, lu, fu, Cu, , bu] = Eu.wire, cu = "Red" === Xu ? "Blue" : "Red";
-        return (0, iu.jsxs)("div", {
-          className: ou()("FrontlineScoreboardContainer", {
-            Below: Zu
+          }), [GG, bG]), ZG
+        }(wG, "scoreboard" === bG.wire[0]);
+        if ("scoreboard" !== bG.wire[0]) return null;
+        const [, yG, kG, YG, VG, , pG] = bG.wire, fG = "Red" === yG ? "Blue" : "Red";
+        return (0, MG.jsxs)("div", {
+          className: IG()("FrontlineScoreboardContainer", {
+            Below: LG
           }),
-          children: [(0, iu.jsxs)("div", {
-            ref: su,
+          children: [(0, MG.jsxs)("div", {
+            ref: wG,
             className: "FrontlineScoreboard",
-            children: [(0, iu.jsx)(zu, {}), (0, iu.jsx)(Au, {
-              team: Xu,
-              tickets: lu,
-              goal: Cu,
+            children: [(0, MG.jsx)(xG, {}), (0, MG.jsx)(DG, {
+              team: yG,
+              tickets: kG,
+              goal: VG,
               side: "Friendly"
-            }), (0, iu.jsx)("div", {
+            }), (0, MG.jsx)("div", {
               className: "FrontlinePoints",
-              children: bu.map((uu => (0, iu.jsx)(Iu, {
+              children: pG.map((GG => (0, MG.jsx)(qG, {
                 className: "FrontlinePoint",
-                point: uu
-              }, uu[0])))
-            }), (0, iu.jsx)(Au, {
-              team: cu,
-              tickets: fu,
-              goal: Cu,
+                point: GG
+              }, GG[0])))
+            }), (0, MG.jsx)(DG, {
+              team: fG,
+              tickets: YG,
+              goal: VG,
               side: "Enemy"
             })]
-          }), (0, iu.jsxs)("div", {
+          }), (0, MG.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, iu.jsx)(yu, {
-              endsAt: Eu.endsAt
-            }), (0, iu.jsx)("div", {
+            children: [(0, MG.jsx)(OG, {
+              endsAt: bG.endsAt
+            }), (0, MG.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: ju("frontlineHud:ticketGoal", {
-                goal: Cu
+              children: ZG("frontlineHud:ticketGoal", {
+                goal: VG
               })
             })]
           })]
         })
       }));
 
-    function Au(uu) {
+    function DG(GG) {
       let {
-        team: Eu,
-        tickets: ju,
-        goal: su,
-        side: Uu
-      } = uu;
+        team: bG,
+        tickets: ZG,
+        goal: wG,
+        side: SG
+      } = GG;
       const {
-        t: Zu
-      } = (0, vu.A)(), Xu = String(ju).padStart(3, "0"), lu = Xu.search(/[1-9]/), qu = -1 === lu ? Xu : Xu.slice(0, lu), fu = Math.min(20, Math.floor(ju / su * 20));
-      return (0, iu.jsxs)("div", {
-        className: ou()("FrontlineTeamScore", Uu, `Team-${Eu}`),
-        children: [(0, iu.jsxs)("div", {
+        t: LG
+      } = (0, aG.w)(), yG = String(ZG).padStart(3, "0"), kG = yG.search(/[1-9]/), UG = -1 === kG ? yG : yG.slice(0, kG), YG = Math.min(20, Math.floor(ZG / wG * 20));
+      return (0, MG.jsxs)("div", {
+        className: IG()("FrontlineTeamScore", SG, `Team-${bG}`),
+        children: [(0, MG.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, iu.jsx)("span", {
+          children: [(0, MG.jsx)("span", {
             className: "Lead",
-            children: qu
-          }), -1 !== lu && Xu.slice(lu)]
-        }), (0, iu.jsxs)("div", {
+            children: UG
+          }), -1 !== kG && yG.slice(kG)]
+        }), (0, MG.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, iu.jsx)("div", {
+          children: [(0, MG.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: Zu(Wu[Eu])
-          }), (0, iu.jsx)(nu, {
+            children: LG(AG[bG])
+          }), (0, MG.jsx)(NG, {
             segments: 20,
-            lit: fu
+            lit: YG
           })]
         })]
       })
     }
 
-    function nu(uu) {
+    function NG(GG) {
       let {
-        segments: Eu,
-        lit: ju
-      } = uu;
-      return (0, iu.jsx)("div", {
+        segments: bG,
+        lit: ZG
+      } = GG;
+      return (0, MG.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: Eu
-        }, ((uu, Eu) => (0, iu.jsx)("i", {
-          className: ou()({
-            Lit: Eu < ju
+          length: bG
+        }, ((GG, bG) => (0, MG.jsx)("i", {
+          className: IG()({
+            Lit: bG < ZG
           })
-        }, Eu)))
+        }, bG)))
       })
     }
 
-    function yu(uu) {
+    function OG(GG) {
       let {
-        endsAt: Eu
-      } = uu;
-      const ju = Math.max(0, Math.ceil(Su(Eu)));
-      return (0, iu.jsxs)("div", {
-        className: ou()("FrontlineClock", {
-          Urgent: ju <= 60
+        endsAt: bG
+      } = GG;
+      const ZG = Math.max(0, Math.ceil(sG(bG)));
+      return (0, MG.jsxs)("div", {
+        className: IG()("FrontlineClock", {
+          Urgent: ZG <= 60
         }),
-        children: [Math.floor(ju / 60), ":", String(ju % 60).padStart(2, "0")]
+        children: [Math.floor(ZG / 60), ":", String(ZG % 60).padStart(2, "0")]
       })
     }
 
-    function zu() {
-      return (0, iu.jsxs)(iu.Fragment, {
-        children: [(0, iu.jsx)("i", {
+    function xG() {
+      return (0, MG.jsxs)(MG.Fragment, {
+        children: [(0, MG.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, iu.jsx)("i", {
+        }), (0, MG.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var Ru = ju(37066),
-      uE = ju(1303),
-      EE = ju(38813),
-      jE = ju(38857);
-    class sE {
-      constructor(uu) {
-        var Eu;
-        this.hud = uu, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var BG = ZG(37035),
+      Gb = ZG(1204),
+      bb = ZG(38901),
+      Zb = ZG(38957);
+    class wb {
+      constructor(GG) {
+        var bG;
+        this.hud = GG, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.fO = !1, this.rD = () => {
+        }, this.render = null, this.pK = !1, this.PJ = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.rD), null === (Eu = window.visualViewport) || void 0 === Eu || Eu.addEventListener("resize", this.rD)
+        }, window.addEventListener("resize", this.PJ), null === (bG = window.visualViewport) || void 0 === bG || bG.addEventListener("resize", this.PJ)
       }
-      bindMarker(uu) {
-        let Eu = this.refs.get(uu);
-        return Eu || (Eu = Eu => {
-          var ju;
-          null === (ju = this.markers.get(uu)) || void 0 === ju || ju.stopObserving(), this.markers.delete(uu), Eu && !this.fO && this.markers.set(uu, this.mount(Eu))
-        }, this.refs.set(uu, Eu)), Eu
+      bindMarker(GG) {
+        let bG = this.refs.get(GG);
+        return bG || (bG = bG => {
+          var ZG;
+          null === (ZG = this.markers.get(GG)) || void 0 === ZG || ZG.stopObserving(), this.markers.delete(GG), bG && !this.pK && this.markers.set(GG, this.mount(bG))
+        }, this.refs.set(GG, bG)), bG
       }
-      frame(uu, Eu) {
-        this.render = uu;
-        const ju = this.hud.getScoreboard().wire;
-        if ("scoreboard" === ju[0] && 0 !== this.markers.size)
-          for (const [su, , , , , , Uu] of ju[6]) {
-            const uu = this.markers.get(su);
-            uu && Uu && (uu.target ??= [0, 0, 0], uu.target[0] = Uu[0], uu.target[1] = Uu[1] + 2.5, uu.target[2] = Uu[2], this.place(uu), this.rE(uu, Eu && Math.hypot(Uu[0] - Eu[0], Uu[1] - Eu[1], Uu[2] - Eu[2])))
+      frame(GG, bG) {
+        this.render = GG;
+        const ZG = this.hud.getScoreboard().wire;
+        if ("scoreboard" === ZG[0] && 0 !== this.markers.size)
+          for (const [wG, , , , , , SG] of ZG[6]) {
+            const GG = this.markers.get(wG);
+            GG && SG && (GG.target ??= [0, 0, 0], GG.target[0] = SG[0], GG.target[1] = SG[1] + 2.5, GG.target[2] = SG[2], this.place(GG), this.Mb(GG, bG && Math.hypot(SG[0] - bG[0], SG[1] - bG[1], SG[2] - bG[2])))
           }
       }
       dispose() {
-        var uu;
-        this.fO = !0, window.removeEventListener("resize", this.rD), null === (uu = window.visualViewport) || void 0 === uu || uu.removeEventListener("resize", this.rD);
-        for (const Eu of this.markers.values()) Eu.stopObserving();
+        var GG;
+        this.pK = !0, window.removeEventListener("resize", this.PJ), null === (GG = window.visualViewport) || void 0 === GG || GG.removeEventListener("resize", this.PJ);
+        for (const bG of this.markers.values()) bG.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(uu) {
+      place(GG) {
         const {
-          render: Eu,
-          viewport: ju
+          render: bG,
+          viewport: ZG
         } = this;
-        if (!Eu || !uu.target) return;
-        const su = (50 - Eu.screenBandPct.y) / 100 * ju.height,
-          Uu = {
-            x: uu.halfSize.width + 8,
-            top: uu.halfSize.height + 8,
-            bottom: uu.halfSize.height + uu.labelsBelow + su
+        if (!bG || !GG.target) return;
+        const wG = (50 - bG.screenBandPct.y) / 100 * ZG.height,
+          SG = {
+            x: GG.halfSize.width + 8,
+            top: GG.halfSize.height + 8,
+            bottom: GG.halfSize.height + GG.labelsBelow + wG
           },
-          Zu = Eu.projectWorldPosToViewport(uu.target),
-          Xu = null !== Zu && void 0 !== Zu ? Zu : Eu.projectWorldPosToScreenPos(uu.target),
-          lu = (0, jE.d)({
-            x: Xu.x,
-            y: Xu.y,
-            text: Zu
-          }, Uu, ju);
-        (0, EE.d)(uu.root, Math.round(100 * lu.x) / 100, Math.round(100 * lu.y) / 100)
+          LG = bG.projectWorldPosToViewport(GG.target),
+          yG = null !== LG && void 0 !== LG ? LG : bG.projectWorldPosToScreenPos(GG.target),
+          kG = (0, Zb.c)({
+            x: yG.x,
+            y: yG.y,
+            text: LG
+          }, SG, ZG);
+        (0, bb.d)(GG.root, Math.round(100 * kG.x) / 100, Math.round(100 * kG.y) / 100)
       }
-      rE(uu, Eu) {
-        if (null === Eu) return void(null !== uu.metres && (uu.metres = null, uu.distance.textContent = ""));
-        const ju = Date.now();
-        (null === uu.metres || (0, Ru.c)(Eu, uu.metres, uu.metresShownAt)) && (uu.metres = Math.round(Eu), uu.metresShownAt = ju, uu.distance.textContent = (0, vu.x)(uE.h.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
-          distance: String(uu.metres)
+      Mb(GG, bG) {
+        if (null === bG) return void(null !== GG.metres && (GG.metres = null, GG.distance.textContent = ""));
+        const ZG = Date.now();
+        (null === GG.metres || (0, BG.d)(bG, GG.metres, GG.metresShownAt)) && (GG.metres = Math.round(bG), GG.metresShownAt = ZG, GG.distance.textContent = (0, aG.r)(Gb.d.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
+          distance: String(GG.metres)
         }))
       }
-      mount(uu) {
-        const Eu = {
-            root: uu,
-            distance: uu.querySelector(".FrontlinePointMarkerDistance"),
+      mount(GG) {
+        const bG = {
+            root: GG,
+            distance: GG.querySelector(".FrontlinePointMarkerDistance"),
             halfSize: {
               width: 0,
               height: 0
@@ -1220,26 +1220,26 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          ju = uu.querySelector(".FrontlinePointMarkerLabels"),
-          su = new ResizeObserver((() => {
-            Eu.halfSize = {
-              width: Math.max(uu.offsetWidth, ju.offsetWidth) / 2,
-              height: uu.offsetHeight / 2
-            }, Eu.labelsBelow = ju.offsetTop + ju.offsetHeight - uu.offsetHeight, this.place(Eu)
+          ZG = GG.querySelector(".FrontlinePointMarkerLabels"),
+          wG = new ResizeObserver((() => {
+            bG.halfSize = {
+              width: Math.max(GG.offsetWidth, ZG.offsetWidth) / 2,
+              height: GG.offsetHeight / 2
+            }, bG.labelsBelow = ZG.offsetTop + ZG.offsetHeight - GG.offsetHeight, this.place(bG)
           }));
-        return su.observe(uu, {
+        return wG.observe(GG, {
           box: "border-box"
-        }), su.observe(ju, {
+        }), wG.observe(ZG, {
           box: "border-box"
-        }), Eu.stopObserving = () => {
-          su.disconnect()
-        }, Eu
+        }), bG.stopObserving = () => {
+          wG.disconnect()
+        }, bG
       }
     }
-    var UE = ju(6644),
-      ZE = ju(2742);
-    const XE = "frontlineRoundEndChanged";
-    class lE {
+    var Sb = ZG(6453),
+      Lb = ZG(2602);
+    const yb = "frontlineRoundEndChanged";
+    class kb {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1250,245 +1250,245 @@ export const modules = {
       getView() {
         return this.view
       }
-      NO(uu) {
-        const Eu = "roundEnd" === uu[0] ? performance.now() + uu[5] : 0;
+      hK(GG) {
+        const bG = "roundEnd" === GG[0] ? performance.now() + GG[5] : 0;
         this.view = {
-          wire: uu,
+          wire: GG,
           key: this.view.key + 1,
-          endsAt: Eu
-        }, fu.h.TY(XE, this.view, !0)
+          endsAt: bG
+        }, YG.l.xh(yb, this.view, !0)
       }
     }
-    const qE = (0, Uu.lazy)((() => (0, ZE.d)(Promise.all([ju.e(239), ju.e(202)]).then((() => ju(42023))), (uu => uu.FrontlineMvpLineup)))),
-      fE = [4800, 4e3, 3200],
-      CE = [1, 0, 2],
-      bE = {
+    const Ub = (0, SG.lazy)((() => (0, Lb.e)(Promise.all([ZG.e(239), ZG.e(202)]).then((() => ZG(42210))), (GG => GG.FrontlineMvpLineup)))),
+      Yb = [4800, 4e3, 3200],
+      Vb = [1, 0, 2],
+      pb = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      cE = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      fb = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function NE(uu) {
+    function Qb(GG) {
       let {
-        controller: Eu
-      } = uu;
-      const ju = (0, Ku.g)(XE, Eu.getView()),
-        su = Su(ju.endsAt);
-      return "roundEnd" !== ju.wire[0] || 1e3 * su < -2e3 ? null : (0, iu.jsx)(OE, {
-        wire: ju.wire,
-        secondsLeft: Math.max(0, Math.ceil(su))
-      }, ju.key)
+        controller: bG
+      } = GG;
+      const ZG = (0, cG.j)(yb, bG.getView()),
+        wG = sG(ZG.endsAt);
+      return "roundEnd" !== ZG.wire[0] || 1e3 * wG < -2e3 ? null : (0, MG.jsx)(Kb, {
+        wire: ZG.wire,
+        secondsLeft: Math.max(0, Math.ceil(wG))
+      }, ZG.key)
     }
-    const OE = (0, Uu.memo)((function(uu) {
+    const Kb = (0, SG.memo)((function(GG) {
       let {
-        wire: Eu,
-        secondsLeft: ju
-      } = uu;
+        wire: bG,
+        secondsLeft: ZG
+      } = GG;
       const {
-        t: Zu
-      } = (0, vu.A)(), [, Xu, lu, qu, fu, , Cu, bu] = Eu, cu = (0, Uu.useMemo)((() => CE.filter((uu => uu < bu.length))), [bu]), Nu = (0, Uu.useMemo)((() => cu.map((uu => {
-        const [, , , , , Eu, ju] = bu[uu];
+        t: LG
+      } = (0, aG.w)(), [, yG, kG, UG, YG, , VG, pG] = bG, fG = (0, SG.useMemo)((() => Vb.filter((GG => GG < pG.length))), [pG]), QG = (0, SG.useMemo)((() => fG.map((GG => {
+        const [, , , , , bG, ZG] = pG[GG];
         return {
-          cosmetics: su.map(((uu, ju) => [uu, Eu[ju]])),
-          size: 0 === uu ? 1.15 : .85,
+          cosmetics: wG.map(((GG, ZG) => [GG, bG[ZG]])),
+          size: 0 === GG ? 1.15 : .85,
           heldGun: {
-            name: ju,
-            aimed: 0 === uu
+            name: ZG,
+            aimed: 0 === GG
           },
-          showAfterMs: fE[uu]
+          showAfterMs: Yb[GG]
         }
-      }))), [bu, cu]);
-      return (0, iu.jsxs)("div", {
-        className: ou()("FrontlineRoundEnd", `Result-${Xu}`),
+      }))), [pG, fG]);
+      return (0, MG.jsxs)("div", {
+        className: IG()("FrontlineRoundEnd", `Result-${yG}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, iu.jsx)("div", {
+        children: [(0, MG.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, iu.jsxs)("div", {
+        }), (0, MG.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, iu.jsxs)("div", {
+          children: [(0, MG.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, iu.jsx)("i", {
+            children: [(0, MG.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, iu.jsx)("i", {
+            }), (0, MG.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (Ou = Zu(bE[Xu]), /\p{Script=Arabic}/u.test(Ou) ? [Ou] : (0, UE.c)(Ou)).map(((uu, Eu) => (0, iu.jsx)("span", {
+            }), (KG = LG(pb[yG]), /\p{Script=Arabic}/u.test(KG) ? [KG] : (0, Sb.d)(KG)).map(((GG, bG) => (0, MG.jsx)("span", {
               style: {
-                "--letter": Eu
+                "--letter": bG
               },
-              children: uu
-            }, Eu)))]
-          }), (0, iu.jsxs)("div", {
+              children: GG
+            }, bG)))]
+          }), (0, MG.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [lu && "victory" === Xu && (0, iu.jsx)("span", {
+            children: [kG && "victory" === yG && (0, MG.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: Zu("frontlineRoundEnd:comeback")
-            }), (0, iu.jsxs)("span", {
+              children: LG("frontlineRoundEnd:comeback")
+            }), (0, MG.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, iu.jsx)("b", {
+              children: [(0, MG.jsx)("b", {
                 className: "Friendly",
-                children: qu
-              }), " \u2013 ", (0, iu.jsx)("b", {
+                children: UG
+              }), " \u2013 ", (0, MG.jsx)("b", {
                 className: "Enemy",
-                children: fu
+                children: YG
               })]
             })]
           })]
-        }), cu.length > 0 && (0, iu.jsxs)("div", {
+        }), fG.length > 0 && (0, MG.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": cu.length
+            "--columns": fG.length
           },
-          children: [(0, iu.jsx)(Uu.Suspense, {
+          children: [(0, MG.jsx)(SG.Suspense, {
             fallback: null,
-            children: (0, iu.jsx)(qE, {
+            children: (0, MG.jsx)(Ub, {
               className: "FrontlineRoundEndLineup",
-              players: Nu
+              players: QG
             })
-          }), cu.map((uu => (0, iu.jsx)(YE, {
-            mvp: bu[uu],
-            place: uu
-          }, uu)))]
-        }), (0, iu.jsx)("div", {
+          }), fG.map((GG => (0, MG.jsx)(hb, {
+            mvp: pG[GG],
+            place: GG
+          }, GG)))]
+        }), (0, MG.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: Zu("frontlineRoundEnd:nextFront", {
-            map: Cu,
-            seconds: String(ju)
+          children: LG("frontlineRoundEnd:nextFront", {
+            map: VG,
+            seconds: String(ZG)
           })
         })]
       });
-      var Ou
+      var KG
     }));
 
-    function YE(uu) {
+    function hb(GG) {
       let {
-        mvp: Eu,
-        place: ju
-      } = uu;
+        mvp: bG,
+        place: ZG
+      } = GG;
       const {
-        t: su
-      } = (0, vu.A)(), [Uu, Zu, Xu, lu, qu] = Eu, [fu, Cu] = su(function(uu, Eu) {
-        return 1 === Eu && "damage" !== uu ? `frontlineRoundEnd:${uu}One` : `frontlineRoundEnd:${uu}`
-      }(Xu, lu), {
+        t: wG
+      } = (0, aG.w)(), [SG, LG, yG, kG, UG] = bG, [YG, VG] = wG(function(GG, bG) {
+        return 1 === bG && "damage" !== GG ? `frontlineRoundEnd:${GG}One` : `frontlineRoundEnd:${GG}`
+      }(yG, kG), {
         name: "\0",
-        count: lu.toLocaleString()
+        count: kG.toLocaleString()
       }).split("\0");
-      return (0, iu.jsxs)("div", {
-        className: ou()("FrontlineMvpCard", `Place-${ju+1}`, `Team-${Zu}`),
+      return (0, MG.jsxs)("div", {
+        className: IG()("FrontlineMvpCard", `Place-${ZG+1}`, `Team-${LG}`),
         style: {
-          "--revealMs": `${fE[ju]}ms`
+          "--revealMs": `${Yb[ZG]}ms`
         },
-        children: [(0, iu.jsx)("i", {
+        children: [(0, MG.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, iu.jsx)("i", {
+        }), (0, MG.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, iu.jsx)("div", {
+        }), (0, MG.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: su(cE[ju])
-        }), (0, iu.jsxs)("div", {
+          children: wG(fb[ZG])
+        }), (0, MG.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [fu, (0, iu.jsx)("span", {
+          children: [YG, (0, MG.jsx)("span", {
             className: "FrontlineMvpName",
-            children: Uu
-          }), Cu]
-        }), (0, iu.jsx)("div", {
+            children: SG
+          }), VG]
+        }), (0, MG.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: qu
+          children: UG
         })]
       })
     }
-    const hE = function(uu, Eu, ju, su) {
+    const db = function(GG, bG, ZG, wG) {
       let {
-        localPlayerId: Xu
-      } = su;
-      const lu = new Qu,
-        qu = new lE;
-      let fu = null,
-        Cu = null,
-        bu = null,
-        cu = null,
-        Nu = null,
-        Ou = [!1, !1];
-      const Yu = () => {
-        var uu, Eu;
-        const [ju, su] = Ou;
-        null === (uu = Cu) || void 0 === uu || uu.Wk(!ju), null === (Eu = bu) || void 0 === Eu || Eu.Wk(!su)
+        localPlayerId: yG
+      } = wG;
+      const kG = new PG,
+        UG = new kb;
+      let YG = null,
+        VG = null,
+        pG = null,
+        fG = null,
+        QG = null,
+        KG = [!1, !1];
+      const hG = () => {
+        var GG, bG;
+        const [ZG, wG] = KG;
+        null === (GG = VG) || void 0 === GG || GG.DW(!ZG), null === (bG = pG) || void 0 === bG || bG.DW(!wG)
       };
       return {
-        onCreate: uu => {
-          fu = uu, Cu = new Mu(uu, Xu), bu = new wu(uu, Xu), cu = new sE(lu), Yu(), Nu = (0, Zu.o)((0, Uu.createElement)(Uu.Fragment, null, (0, Uu.createElement)(tu, {
-            hud: lu,
-            crosshair: Cu,
-            damage: bu,
-            markers: cu
-          }), (0, Uu.createElement)(NE, {
-            controller: qu
+        onCreate: GG => {
+          YG = GG, VG = new zG(GG, yG), pG = new uG(GG, yG), fG = new wb(kG), hG(), QG = (0, LG.q)((0, SG.createElement)(SG.Fragment, null, (0, SG.createElement)(RG, {
+            hud: kG,
+            crosshair: VG,
+            damage: pG,
+            markers: fG
+          }), (0, SG.createElement)(Qb, {
+            controller: UG
           })))
         },
         onClose: () => {
-          var uu, Eu, ju, su;
-          null === (uu = Nu) || void 0 === uu || uu(), null === (Eu = Cu) || void 0 === Eu || Eu.dispose(), Cu = null, null === (ju = bu) || void 0 === ju || ju.dispose(), bu = null, null === (su = cu) || void 0 === su || su.dispose(), cu = null, fu = null
+          var GG, bG, ZG, wG;
+          null === (GG = QG) || void 0 === GG || GG(), null === (bG = VG) || void 0 === bG || bG.dispose(), VG = null, null === (ZG = pG) || void 0 === ZG || ZG.dispose(), pG = null, null === (wG = fG) || void 0 === wG || wG.dispose(), fG = null, YG = null
         },
-        onAfterRender: (uu, Eu) => {
-          var ju, su, Uu, Zu;
-          null === (ju = Cu) || void 0 === ju || ju.frame(uu, Eu.tanHalfFovY), null === (su = bu) || void 0 === su || su.frame(Eu.cameraHeading), null === (Uu = cu) || void 0 === Uu || Uu.frame(Eu, null !== (Zu = fu) && void 0 !== Zu && Zu.checkValid(Xu) ? fu.bM(Xu) : null)
+        onAfterRender: (GG, bG) => {
+          var ZG, wG, SG, LG;
+          null === (ZG = VG) || void 0 === ZG || ZG.frame(GG, bG.tanHalfFovY), null === (wG = pG) || void 0 === wG || wG.frame(bG.cameraHeading), null === (SG = fG) || void 0 === SG || SG.frame(bG, null !== (LG = YG) && void 0 !== LG && LG.checkValid(yG) ? YG.HJ(yG) : null)
         },
-        onReceivedMessageFromServer: (uu, Eu) => {
-          "frontlineHud" === uu ? lu.NO(Eu) : "frontlineScoreboard" === uu ? lu.receiveScoreboard(Eu) : "frontlineRoundEnd" === uu ? qu.NO(Eu) : "frontlinePrefs" === uu && (Ou = Eu, Yu())
+        onReceivedMessageFromServer: (GG, bG) => {
+          "frontlineHud" === GG ? kG.hK(bG) : "frontlineScoreboard" === GG ? kG.receiveScoreboard(bG) : "frontlineRoundEnd" === GG ? UG.hK(bG) : "frontlinePrefs" === GG && (KG = bG, hG())
         }
       }
     }
   },
-  6644: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      c: () => Uu
+  6453: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => SG
     });
-    const su = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    const wG = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function Uu(uu) {
-      return null === su ? Array.from(uu) : Array.from(su.segment(uu), (uu => {
+    function SG(GG) {
+      return null === wG ? Array.from(GG) : Array.from(wG.segment(GG), (GG => {
         let {
-          segment: Eu
-        } = uu;
-        return Eu
+          segment: bG
+        } = GG;
+        return bG
       }))
     }
   },
-  38813: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      d: () => Xu,
-      f: () => Zu
+  38901: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      d: () => yG,
+      g: () => LG
     });
-    const su = new WeakMap;
+    const wG = new WeakMap;
 
-    function Uu(uu) {
-      let Eu = su.get(uu);
-      return Eu || (Eu = {
-        hidden: uu.hidden,
+    function SG(GG) {
+      let bG = wG.get(GG);
+      return bG || (bG = {
+        hidden: GG.hidden,
         x: NaN,
         y: NaN
-      }, su.set(uu, Eu)), Eu
+      }, wG.set(GG, bG)), bG
     }
 
-    function Zu(uu, Eu) {
-      const ju = Uu(uu);
-      ju.hidden !== Eu && (ju.hidden = Eu, uu.hidden = Eu)
+    function LG(GG, bG) {
+      const ZG = SG(GG);
+      ZG.hidden !== bG && (ZG.hidden = bG, GG.hidden = bG)
     }
 
-    function Xu(uu, Eu, ju) {
-      const su = Uu(uu);
-      su.x === Eu && su.y === ju || (su.x = Eu, su.y = ju, uu.style.translate = `${Eu}vw ${ju}vh`)
+    function yG(GG, bG, ZG) {
+      const wG = SG(GG);
+      wG.x === bG && wG.y === ZG || (wG.x = bG, wG.y = ZG, GG.style.translate = `${bG}vw ${ZG}vh`)
     }
   },
-  37467: (uu, Eu, ju) => {
-    ju.d(Eu, {
-      e: () => su
+  37420: (GG, bG, ZG) => {
+    ZG.d(bG, {
+      e: () => wG
     });
-    const su = {
+    const wG = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1650,4 +1650,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const GG in modules) Object.freeze(modules[GG]);
